@@ -1,0 +1,70 @@
+# Versioned release procedure
+
+The distribution source is `D1ChangGeng/UI-Spec-Studio`. The standard Skills CLI
+installs its skill directory directly from GitHub. The project requires no separate
+npm package publication.
+
+## Prepare the version
+
+Update VERSION, SKILL.md metadata, CHANGELOG, fixed-version install examples and
+`docs/releases/v<version>.md` together. Review the runtime references and public
+wrappers using [the writing standard](WRITING.md). Preserve the source and approved
+scope of the change in an ordinary Git commit.
+
+```bash
+python tools/validate_package.py
+python -m unittest discover -s tests -v
+python tools/package.py
+```
+
+The build produces a full source ZIP, standalone skill ZIP, per-file content
+inventory and SHA-256 checksums in `dist/`. ZIP entries use fixed timestamps,
+permissions, order and stored bytes; `.gitattributes` keeps source line endings
+consistent across platforms.
+
+## Automated publication
+
+A main-branch push changing VERSION runs the validation and installation jobs.
+The release job has repository-content write permission; ordinary validation jobs
+have read-only permissions. External Actions are pinned to reviewed commit SHAs.
+
+After gates pass, the release tool:
+
+1. Checks a clean checkout, repository identity, exact remote commit and tag safety.
+2. Validates source, reruns unit tests and builds release assets.
+3. Creates a draft release for the exact commit, or inspects an existing release.
+4. Downloads every expected asset and compares SHA-256 with the built files.
+5. Publishes the verified draft and reads its resulting tag/status/URL.
+
+An existing published release is accepted only when its tag and assets match.
+Conflicting tags or assets remain preserved for inspection. Changes to released
+source use a new version. A failed operation reports its error and leaves the
+actual remote state available to inspect.
+
+The workflow can also be dispatched from main with `publish_release` enabled.
+Ordinary commits that leave VERSION unchanged still run validation and installation.
+
+## Manual publication from an authorized checkout
+
+Use Git and an authenticated GitHub CLI with access to the existing repository.
+Credentials stay with GitHub CLI or its configured environment.
+
+```bash
+python tools/publish.py
+python tools/publish.py --owner D1ChangGeng --name UI-Spec-Studio --execute
+```
+
+The default prints the plan. `--execute` performs the release steps above; commit
+and push the intended source beforehand. Inspect a partial draft or conflicting
+existing release before retrying.
+
+## Verify what users receive
+
+```bash
+npx skills add D1ChangGeng/UI-Spec-Studio --list
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.1.0 --skill ui-spec
+```
+
+Read back the repository commit, tag, Actions result and release assets. Keep
+installation success distinct from host-agent invocation and product UI quality.
+The content inventory and checksums support byte-level inspection of each release.

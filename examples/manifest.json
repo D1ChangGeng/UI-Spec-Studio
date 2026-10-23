@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "project": "Research workspace example",
+  "phase": "init",
+  "revision": "replace-with-current-source-reference",
+  "design_revision": null,
+  "design_system_path": null,
+  "viewports": [
+    {
+      "id": "compact",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "wide",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "variants": [
+    {
+      "id": "en-light",
+      "locale": "en",
+      "theme": "light"
+    },
+    {
+      "id": "zh-dark",
+      "locale": "zh-CN",
+      "theme": "dark"
+    }
+  ],
+  "routes": [
+    {
+      "id": "collection",
+      "path": "/collection",
+      "purpose": "Find and select a research item",
+      "primary_state": "ready",
+      "states": [
+        "ready",
+        "empty",
+        "error"
+      ],
+      "critical_states": [
+        "empty",
+        "error"
+      ]
+    },
+    {
+      "id": "detail",
+      "path": "/collection/:id",
+      "purpose": "Read an item and return to results",
+      "primary_state": "ready",
+      "states": [
+        "ready",
+        "restricted"
+      ],
+      "critical_states": [
+        "restricted"
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "browse",
+      "routes": [
+        "collection",
+        "detail"
+      ],
+      "outcome": "Open a selected item and return with filters preserved"
+    }
+  ],
+  "requirements": [],
+  "checks": [
+    {
+      "id": "collection-ready-compact-en-light",
+      "kind": "visual",
+      "route": "collection",
+      "state": "ready",
+      "viewport": "compact",
+      "variant": "en-light",
+      "status": "planned"
+    },
+    {
+      "id": "collection-ready-compact-zh-dark",
+      "kind": "visual",
+      "route": "collection",
+      "state": "ready",
+      "viewport": "compact",
+      "variant": "zh-dark",
+      "status": "planned"
+    },
+    {
+      "id": "collection-ready-wide-en-light",
+      "kind": "visual",
+      "route": "collection",
+      "state": "ready",
+      "viewport": "wide",
+      "variant": "en-light",
+      "status": "planned"
+    },
+    {
+      "id": "collection-ready-wide-zh-dark",
+      "kind": "visual",
+      "route": "collection",
+      "state": "ready",
+      "viewport": "wide",
+      "variant": "zh-dark",
+      "status": "planned"
+    },
+    {
+      "id": "detail-ready-compact-en-light",
+      "kind": "visual",
+      "route": "detail",
+      "state": "ready",
+      "viewport": "compact",
+      "variant": "en-light",
+      "status": "planned"
+    },
+    {
+      "id": "detail-ready-compact-zh-dark",
+      "kind": "visual",
+      "route": "detail",
+      "state": "ready",
+      "viewport": "compact",
+      "variant": "zh-dark",
+      "status": "planned"
+    },
+    {
+      "id": "detail-ready-wide-en-light",
+      "kind": "visual",
+      "route": "detail",
+      "state": "ready",
+      "viewport": "wide",
+      "variant": "en-light",
+      "status": "planned"
+    },
+    {
+      "id": "detail-ready-wide-zh-dark",
+      "kind": "visual",
+      "route": "detail",
+      "state": "ready",
+      "viewport": "wide",
+      "variant": "zh-dark",
+      "status": "planned"
+    }
+  ],
+  "approvals": [],
+  "connections": [],
+  "exceptions": []
+}
