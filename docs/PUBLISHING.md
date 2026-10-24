@@ -44,6 +44,9 @@ actual remote state available to inspect.
 
 The workflow can also be dispatched from main with `publish_release` enabled.
 Ordinary commits that leave VERSION unchanged still run validation and installation.
+A correction to an unpublished version can complete its release after every gate
+passes: a missing version tag activates publication. Existing published tags and
+assets retain the release tool's identity and checksum protections.
 
 ## Manual publication from an authorized checkout
 

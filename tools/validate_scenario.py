@@ -2,7 +2,6 @@
 """Exercise the authored page-foundation study; report each evidence scope."""
 from __future__ import annotations
 import argparse
-import base64
 from functools import partial
 import hashlib
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -37,7 +36,7 @@ def validate(output: Path, browser_path=None, in_memory=False, source_preview=Fa
     threading.Thread(target=server.serve_forever,daemon=True).start()
     origin=f'http://127.0.0.1:{server.server_port}'
     document=(SCENARIO/'index.html').read_text(encoding='utf-8')
-    style=(SCENARIO/'styles.css').read_text().replace('@import url("tokens.css");',(SCENARIO/'tokens.css').read_text())
+    style=(SCENARIO/'styles.css').read_text(encoding='utf-8').replace('@import url("tokens.css");',(SCENARIO/'tokens.css').read_text(encoding='utf-8'))
     document=document.replace('<link rel="stylesheet" href="styles.css">','<style>'+style+'</style>').replace('<script src="app.js"></script>','<script>'+(SCENARIO/'app.js').read_text(encoding='utf-8')+'</script>')
     try:
         with sync_playwright() as p:
@@ -94,15 +93,13 @@ def validate(output: Path, browser_path=None, in_memory=False, source_preview=Fa
                 page.locator('.source-button').click();expect(page.locator('#source-dialog')).to_be_visible()
                 page.keyboard.press('Escape');expect(page.locator('.source-button')).to_be_focused()
                 capture(f'answer-{theme}',theme=theme)
-                if theme=='light':
-                    thumb=page.screenshot(type='jpeg',quality=45)
-                    print('ADAPTED_PREVIEW_JPEG_BASE64='+base64.b64encode(thumb).decode())
                 page.locator('.testbar summary').click();page.locator('#response').select_option('slow')
                 page.locator('#question').fill('请求中的问题');page.locator('#send').click();page.locator('#question').fill('回复到达前输入的新草稿')
                 expect(page.locator('.answer')).to_have_count(2);expect(page.locator('#question')).to_have_value('回复到达前输入的新草稿')
                 page.locator('#send').click();page.locator('#stop').click();page.wait_for_timeout(1900)
                 expect(page.locator('.answer')).to_have_count(2);expect(page.locator('#question')).to_have_value('回复到达前输入的新草稿')
                 page.locator('#response').select_option('error');page.locator('#send').click();expect(page.locator('.error')).to_be_visible()
+                expect(page.locator('.error')).to_be_in_viewport()
                 capture(f'error-{theme}',theme=theme)
                 page.locator('#response').select_option('ready');page.get_by_role('button',name='重试',exact=True).click()
                 expect(page.locator('.error')).to_have_count(0);expect(page.locator('.answer')).to_have_count(3)
@@ -144,8 +141,6 @@ def validate(output: Path, browser_path=None, in_memory=False, source_preview=Fa
                     upstream=browser.new_context(viewport={'width':1280,'height':900},color_scheme='light')
                     screen=upstream.new_page();screen.goto(observation['url'],wait_until='domcontentloaded',timeout=45000)
                     screen.wait_for_timeout(3000);screen.screenshot(path=str(output/'upstream-page.png'))
-                    small=screen.screenshot(type='jpeg',quality=45)
-                    print('SOURCE_PREVIEW_JPEG_BASE64='+base64.b64encode(small).decode())
                     observation['screenshot']='upstream-page.png';observation['status']='observed';upstream.close()
                 except Exception as error:
                     observation['status']='unavailable';observation['detail']=str(error)

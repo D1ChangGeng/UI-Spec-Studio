@@ -83,10 +83,13 @@
       const user = document.createElement('div'); user.className = 'message user'; user.textContent = question; $('thread').append(user);
     }
     const pending = document.createElement('p'); pending.className = 'pending'; pending.setAttribute('role', 'status'); pending.textContent = '正在组织示例结果…'; $('thread').append(pending);
+    $('thread').scrollTop = $('thread').scrollHeight;
     $('send').hidden = true; $('stop').hidden = false;
     const mode = $('response').value;
     timer = setTimeout(() => {
       if (token !== activeRequest) return;
+      const thread = $('thread');
+      const followLatest = thread.scrollHeight - thread.scrollTop - thread.clientHeight < 48;
       cancel();
       const answer = document.createElement('article'); answer.className = 'message answer';
       if (mode === 'error') {
@@ -105,6 +108,7 @@
         $('send').disabled = !$('question').value.trim();
       }
       $('thread').append(answer);
+      if (followLatest) thread.scrollTop = thread.scrollHeight;
       $('feedback').textContent = mode === 'error' ? '可调整模拟响应后重试。' : '示例结果已就绪，可继续追问。';
     }, mode === 'slow' ? 1800 : 180);
   }

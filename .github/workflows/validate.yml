@@ -138,6 +138,12 @@ jobs:
           else:
               files = subprocess.check_output(['git', 'diff', '--name-only', before, 'HEAD'], text=True).splitlines()
               changed = 'VERSION' in files
+          if not changed:
+              version = open('VERSION', encoding='utf-8').read().strip()
+              tag = subprocess.run(['git', 'show-ref', '--verify', '--quiet', f'refs/tags/v{version}']).returncode
+              if tag not in (0, 1):
+                  raise SystemExit('Could not inspect current version tag')
+              changed = tag == 1
           with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
               stream.write(f'publish={str(changed).lower()}\n')
           PY

@@ -1,5 +1,6 @@
 """Scoped structural/source tests; the separate browser job executes the scenario."""
 from __future__ import annotations
+import ast
 import json
 from html.parser import HTMLParser
 from pathlib import Path
@@ -34,11 +35,11 @@ class ProductIntentTests(unittest.TestCase):
         self.assertTrue(any('radix-ui.com/colors' in u for u in d.sources))
 
     def test_source_values_and_license_are_preserved(self):
-        css=(ROOT/'examples/product-intent/tokens.css').read_text()
+        css=(ROOT/'examples/product-intent/tokens.css').read_text(encoding='utf-8')
         for value in ('#fcfcfd','#60646c','#1c2024','#111113','#b0b4ba','#edeef0'):
             self.assertIn(value,css)
         self.assertIn('dbdb85470547c7d34b9001f48fddb08ded335979',css)
-        notice=(ROOT/'examples/product-intent/THIRD-PARTY.md').read_text()
+        notice=(ROOT/'examples/product-intent/THIRD-PARTY.md').read_text(encoding='utf-8')
         self.assertIn('Copyright (c) 2021-2022 Modulz',notice)
         self.assertIn('Copyright (c) 2022-Present WorkOS',notice)
         self.assertIn('MIT License',notice)
@@ -46,11 +47,11 @@ class ProductIntentTests(unittest.TestCase):
     def test_no_remote_runtime_is_required(self):
         text=(ROOT/'examples/product-intent/index.html').read_text(encoding='utf-8')
         self.assertNotIn('<script src="https:',text)
-        css=(ROOT/'examples/product-intent/styles.css').read_text()
+        css=(ROOT/'examples/product-intent/styles.css').read_text(encoding='utf-8')
         self.assertNotIn('url("https:',css)
 
     def test_source_uses_text_for_untrusted_user_content(self):
-        script=(ROOT/'examples/product-intent/app.js').read_text()
+        script=(ROOT/'examples/product-intent/app.js').read_text(encoding='utf-8')
         self.assertIn('user.textContent = question',script)
         self.assertNotIn('innerHTML',script)
 
@@ -65,17 +66,17 @@ class ProductIntentTests(unittest.TestCase):
 
     def test_decision_template_is_self_contained(self):
         path=ROOT/'skills/ui-spec/assets/templates/design-decisions.md'
-        text=path.read_text()
+        text=path.read_text(encoding='utf-8')
         for phrase in ('Direction and authority','Reuse assessment','Surface and resource selection','implementation/preview','approval'):
             self.assertIn(phrase,text)
         self.assertEqual(validator.validate(ROOT),[])
 
     def test_common_contract_retains_six_references(self):
-        entry=(ROOT/'skills/ui-spec/SKILL.md').read_text()
+        entry=(ROOT/'skills/ui-spec/SKILL.md').read_text(encoding='utf-8')
         for name in validator.COMMON:self.assertIn(f'references/{name}.md',entry)
         self.assertIn('optional `shape`',entry)
         self.assertIn('one-shot',entry)
-        self.assertIn('actual user decision', (ROOT/'skills/ui-spec/references/component-sourcing.md').read_text())
+        self.assertIn('actual user decision', (ROOT/'skills/ui-spec/references/component-sourcing.md').read_text(encoding='utf-8'))
 
     def test_standalone_distribution_contains_decision_template(self):
         with tempfile.TemporaryDirectory() as td:
@@ -91,19 +92,27 @@ class ProductIntentTests(unittest.TestCase):
                     self.assertIn('ui-spec-studio/examples/product-intent/'+name,archive.namelist())
 
     def test_scene_tests_keep_approval_and_storage_scope_explicit(self):
-        source=(ROOT/'tools/validate_scenario.py').read_text()
+        source=(ROOT/'tools/validate_scenario.py').read_text(encoding='utf-8')
         self.assertIn("'owner_approval':'pending'",source)
         self.assertIn("report['storage_verified']=True",source)
         self.assertIn('preview_pass_storage_pending',source)
         self.assertIn('local-http',source)
 
     def test_ci_requires_actual_browser_scenario_for_release(self):
-        source=(ROOT/'.github/workflows/validate.yml').read_text()
+        source=(ROOT/'.github/workflows/validate.yml').read_text(encoding='utf-8')
         self.assertIn('needs: [test, install, publication, scenario]',source)
         self.assertIn('python tools/validate_scenario.py --output-dir scenario-evidence',source)
         self.assertNotIn('--in-memory',source)
 
     def test_catalog_identity_is_retained(self):
-        data=json.loads((ROOT/'skills/ui-spec/assets/resource-catalog.json').read_text())
+        data=json.loads((ROOT/'skills/ui-spec/assets/resource-catalog.json').read_text(encoding='utf-8'))
         self.assertEqual(len(data['resources']),37)
         self.assertEqual(len({r['id'] for r in data['resources']}),37)
+
+    def test_new_text_readers_declare_utf8(self):
+        for name in ('tests/test_product_intent.py', 'tools/validate_scenario.py'):
+            source=(ROOT/name).read_text(encoding='utf-8')
+            for node in ast.walk(ast.parse(source)):
+                if isinstance(node,ast.Call) and isinstance(node.func,ast.Attribute) and node.func.attr=='read_text':
+                    with self.subTest(path=name,line=node.lineno):
+                        self.assertTrue(any(k.arg=='encoding' and isinstance(k.value,ast.Constant) and k.value.value=='utf-8' for k in node.keywords))
