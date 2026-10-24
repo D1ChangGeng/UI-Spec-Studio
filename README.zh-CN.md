@@ -1,146 +1,98 @@
 # UI Spec Studio
 
-**以成熟设计成果为起点的专业设计工程实践。**
+**以优秀的成熟成果为起点，设计真正属于当前产品的界面。**
 
 <picture>
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/assets/studio-compact-dark.svg">
   <source media="(max-width: 600px)" srcset="docs/assets/studio-compact-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/studio-dark.svg">
-  <img src="docs/assets/studio-light.svg" alt="从意义到形式：连接用户意图、经过设计的关系与可验证的实际结果。" width="1100">
+  <img src="docs/assets/studio-light.svg" alt="三个相互连接的设计判断：研究成熟成果，选择适合的设计基础，再形成可编辑、可验证的实际作品。" width="1100">
 </picture>
 
-[English](README.md) · [使用指南](docs/GUIDE.md) · [技能正文](skills/ui-spec/SKILL.md) · [正式版本](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
+[English](README.md) · [使用指南](docs/GUIDE.md) · [Skill 源码](skills/ui-spec/SKILL.md) · [正式版本](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
 
-从一个产品目标出发，形成协调、可审阅的界面，再把批准的体验接入真实使用。UI Spec Studio 是通用的 [Agent Skill](https://agentskills.io/specification)，适用于产品页面、文档、README、图表及其他屏幕表达。
+适用于**应用界面、README、文档、图表、演示文稿**等屏幕视觉作品的通用 [Agent Skill](https://agentskills.io/specification)。Agent 主动研究成熟设计成果，进行专业选型与适配整合，再验证实际效果。
 
-## 一条命令开始
+## 在项目中直接开始
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 ```
 
-然后向编程 Agent 发出任务：
+随后向编程 Agent 说明目标即可，设计方向可以由 Agent 主动研究：
 
 ```text
-使用 ui-spec，理解当前项目并完成第一轮有价值的 UI SPEC。
-我只有产品目标，还没有视觉方向。请推荐合适的设计并展示实际结果。
+使用 ui-spec，理解当前项目、目标用户和主要使用场景。
+主动寻找成熟的设计参考与实现，选择最适合的设计基础，
+完成第一份可审阅的 SPEC，并展示实际结果和关键选型依据。
 ```
 
-你可以提供详细参考，也可以只有一个目标。Agent 负责形成方向、选择下一项有价值的工作、实现并观察实际效果，再根据你的反馈继续。
+审阅通过后，只需说 **「本轮通过，继续」**，Agent 就会推进下一项有价值的工作；使用 **「ui-spec: finish」**，则会将已确认的设计接入真实内容、功能或作品的发布环境。[安装与宿主选项](docs/INSTALL.md) · [多轮使用指南](docs/GUIDE.md)
 
-已有批准的设计时，可以直接要求执行 `finish`，完成真实接线。[安装与宿主选项 →](docs/INSTALL.md)
+## 从有依据的设计起点开始
 
-## 从成熟设计成果建立起点
+**理解任务 → 实际搜索与浏览 → 专业比较和选择 → 适配整合 → 观察验证。**
 
-设计理论提供判断能力，UI 资源提供可研究、可比较、可复用的实际对象。
-新页面优先寻找最高适当复用层级：完整页面或设计系统、功能区块，再到组件与具体效果。
-继承有价值的层级、比例、排版节奏和交互关系，将自主创造集中用于产品差异、适配、整合与体验优化。
+设计理论帮助 Agent 判断一种设计*为什么有效*；成熟 UI 生态提供值得研究、比较和复用的*实际成果*。两类知识共同参与每一轮判断。新的资源发现可以完善最初的设计方向，最终渲染则用来检查方案是否真正适合当前任务。
 
-产品分析、实际搜索与浏览、专业比较、选型、实现和验证持续联动；新的资源发现也可以完善初始方案。
-局部改进则继承已确认的整体基础，在适当范围内继续工作。
+复用以**最高适当层级**为原则：从整页设计、设计系统与功能区块，到组件体系和局部视觉技法，选择最能解决当前问题的成熟基础。重点是继承其中相互协调的信息层级、空间比例、排版节奏、交互和状态设计，再根据产品定位完成适配。自主设计集中用于产品差异化、整体整合与必要的独特需求。
 
-<img src="docs/assets/foundation-study.png" alt="基于 assistant-ui 整页设计关系适配的研究样例，产品方向仍待用户确认。" width="1280">
+[资源发现与复用方法](skills/ui-spec/references/component-sourcing.md) · [37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md) · [资源复用指南](docs/RESOURCE-REUSE.md)
 
-[查看整体设计关系的来源与适配](examples/product-intent/FOUNDATION.md)。
+## 一套方法，适用于不同视觉媒介
 
-## 先确认用户期待怎样使用产品
+通用原则提供专业判断；**具体媒介决定表现形式与最终验收方式**。
 
-从第一项操作、主要工作对象和持续任务判断产品交互模型，再确定页面结构。
-成熟产品范式与具体 UI 工程资源并行研究；功能资产继续继承，视觉候选按目标品质评估。
-对仍有显著分歧的重要方向，Agent 提供推荐与少量有意义的选项，帮助用户确认。
+| 设计对象 | 用户首先需要完成的事 | SPEC 应当确认的结果 |
+|---|---|---|
+| **产品界面** | 发起、完成并继续一项任务 | 真实的交互状态、稳定布局、操作路径与业务结果 |
+| **README 与文档** | 理解工具、复制命令、找到下一步说明 | 阅读顺序、原生文字与链接、宿主渲染、主题图片和窄屏表现 |
+| **图解与数据表达** | 追踪关系、解读数据或比较方案 | 正确的关系语义、可读标注、数据映射与可访问的替代表达 |
+| **演示文稿与视觉媒体** | 随空间和时间顺序理解内容 | 清晰的注意力节奏、可编辑素材及实际展示/播放条件下的验证 |
 
-每份实质性 SPEC 与设计资源记录一同交付：选择了什么、为什么、如何改造、实际出现在哪里。
-[设计决策指南](docs/DESIGN-DECISIONS.md) · [可运行的双模型样例](examples/product-intent/README.md)
+[专业能力模型](docs/PROFESSIONAL-MODEL.md)与[条件明确的设计技法](skills/ui-spec/references/patterns.md)进一步连接排版、构图、色彩、素材、交互与时间表达。
 
-## 设计是一组相互连接的判断
+## 这份 README 本身就是一份 UI SPEC
 
-**意义 → 概念 → 表现形式 → 视觉语言 → 实现 → 证据。**
+仓库首页首先是一种**阅读与发布界面**。新读者需要快速理解 Skill 的作用、判断是否符合自己的任务，然后完成第一次使用。视觉表达服务于这条阅读路径，核心信息依然由 GitHub 原生 Markdown 承载。
 
-在选择卡片、表格、图解或动效之前，先明确用户需要理解什么。形成属于当前产品的设计概念，让重要关系在代码中可以控制，并通过实际结果判断效果。
+| 研究的成熟参考 | 继承的设计经验 | 当前 README 的具体实现 |
+|---|---|---|
+| [Vercel Skills CLI README](https://github.com/vercel-labs/skills/blob/main/README.md) | 开头建立产品用途，提供可复制的安装命令及深入文档入口 | 将 `ui-spec` 安装命令与第一条 Agent 指令放在阅读路径前段 |
+| [Typst README](https://github.com/typst/typst/blob/main/README.md) | 用实际视觉示例帮助理解，再通过正文解释实现机制 | 用可编辑的设计插图说明「研究 → 选择 → 实现」，正文保留完整文字解释 |
+| [GitHub Markdown 与图片规范](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github) | 使用原生标题、链接、代码块，以及适配主题的图片 | 四份独立的明暗／宽窄版 SVG，并提供文字替代说明 |
+| 现有 UI Spec Studio 视觉基础 | 克制的主题色、编辑式排版与视觉语言 | 在保留统一风格的基础上，将插图内容更新为成熟资源驱动的设计过程 |
 
-| 能力 | Agent 需要解决的问题 |
-|---|---|
-| **理解与观察** | 用户任务、内容意义、页面职责，以及行动前需要的信息 |
-| **构思与表达** | 有依据的方向、合适的表现形式、排版、色彩、空间、图像与注意力顺序 |
-| **制作与控制** | 用组件、素材与可编辑参数，将设计准确带入实际交付媒介 |
-| **判断与改进** | 观察整体意义、结构关系和细节，定位原因、修复并验证真实任务 |
+这里继承的是**成熟的信息组织和设计方法**，插图与 Markdown 内容由本仓库维护。[README 设计与选型记录](docs/design/README-SPEC.md)提供候选比较、具体实现、渲染核查及证据边界。
 
-[阅读专业能力模型](docs/PROFESSIONAL-MODEL.md) · [查看条件明确的技法案例](skills/ui-spec/references/patterns.md)
+另有一份[研究产品设计案例](examples/product-intent/README.md)，展示应用 UI 中的整页设计迁移，并保留[采用来源与继承关系](examples/product-intent/FOUNDATION.md)。
 
-## 连续推进，而不是反复重新指导
+## 从设计推进到真实结果
 
-**init（理解）→ iterate（迭代）→ finish（接线）**
+主线是 `init → iterate → finish`。可选 **shape** 用于收敛重要设计方向，**audit** 可在任何阶段检查质量与覆盖范围。这些是工作意图，使用自然语言即可启动。
 
-重要方向尚未明确时使用可选的 **shape（探索与收敛）**；需要系统检查时使用 **audit（审查）**。它们是工作意图，使用自然语言即可。
+每轮由 Agent 选择有价值、便于审阅的范围，完成实现与实际检查。确认后的设计可以进入真实产品接线，也可以完成文档、图表或演示内容本身的发布。既有决策持续继承，来源证据、渲染观察与用户批准分别记录。
 
-**开始。** Agent 读取产品与已有实现，继承已确认的决定，选择下一项有价值的结果。
+进入实质工作前，Agent 会**完整读取六份通用参考**：[工作流](skills/ui-spec/references/workflow.md)、[分析视角](skills/ui-spec/references/analysis.md)、[视觉原则](skills/ui-spec/references/principles.md)、[资源发现](skills/ui-spec/references/component-sourcing.md)、[交互与变体](skills/ui-spec/references/interaction-and-variants.md)、[验证方法](skills/ui-spec/references/verification.md)。真实业务接线另需[集成参考](skills/ui-spec/references/integration.md)。Skill 负责专业方法与读取契约，宿主负责工具、执行和上下文管理。
 
-**继续。** 只需说“本轮通过，继续”。每轮可以开发页面、补齐用户路径、完善组件族或修复共享问题。Agent 承担常规分析、组件调研和实际渲染检查。
-
-**接线。** Finish 对照批准设计，接入真实内容、服务、权限和持久化，并同时检查意义、结构、视觉与行为时序的保真。静态作品按实际发布边界完成交付。
-
-```text
-这个页面感觉有些偏低。请观察完整构图，分析原因并修复。
-
-继承已确认的方向，继续推进下一项最有价值的用户任务。
-
-当前审阅范围已经通过。接入真实产品，并验证设计表现与实际业务结果。
-```
-
-## 完整、持续可用的专业基础
-
-开始实质性工作前，Agent **完整读取六份通用参考**：
-
-[工作流](skills/ui-spec/references/workflow.md) · [分析视角](skills/ui-spec/references/analysis.md) · [视觉原则](skills/ui-spec/references/principles.md) · [组件与媒介](skills/ui-spec/references/component-sourcing.md) · [交互与变体](skills/ui-spec/references/interaction-and-variants.md) · [验证方法](skills/ui-spec/references/verification.md)
-
-涉及真实业务时，[接线参考](skills/ui-spec/references/integration.md)成为必读；技法与实例按任务需要补充。当前上下文中完整且有效的材料可以继续使用。
-
-Skill 提供专业方法与读取契约；宿主负责激活、工具、执行和上下文管理。常规设计判断由 Agent 承担，重要外部承诺遵循用户授权。
-
-## 主动利用整个 UI 生态
-
-**发现 → 评估 → 适配 → 集成 → 验证 → 沉淀经验。**
-
-Agent 主动寻找有价值的起点：项目已有组件、原生能力与外部优秀实现。既为明确需求寻找可靠方案，也通过资源探索发现更合适的表达。读取具体演示、源码变体和配置，再结合行为、设计适配、授权与总成本选择复用方式。
-
-可以直接采用、扩展改造、组合能力或借鉴技法。字体、空间、状态与动效最终融入同一个产品；实际渲染和任务操作确认组合后的品质。
-
-[浏览 37 个资源候选](skills/ui-spec/references/resource-catalog.md) · [阅读通用方法](skills/ui-spec/references/component-sourcing.md) · [使用目录与采用流程](docs/RESOURCE-REUSE.md)
-
-目录保留来源日期和证据范围，并说明七类信息获取机制。可选的本地工具支持按需求、技术范围和交付形态检索。适配且已批准的选择持续复用，新的设计需求由 Agent 主动研究和推进。
-
-## 根据任务选择表达方式
-
-复用当前工程，选择真正合适的手段：原生控件、组件体系、图标、实际图像、原创图形、数据可视化或专项工具。React/Vue Bits、Magic UI、Lucide 等是开放候选，按实际适配、交互、性能与授权选型。
-
-研究工作台、单任务表单和阅读型文档采用不同构图。共同原则支撑质量，产品内容与批准的需求决定风格。
-
-### 这份 README 本身就是一个案例
-
-阅读路径依次回答用途、安装、首次使用、专业方法和验证依据。关键信息保留为原生文字；编辑式视觉插图具有可编辑源码、明暗双版和独立窄屏构图。[查看设计说明与验证条件。](docs/design/README-SPEC.md)
-
-## 安装到实际工作环境
+## 安装、验证与维护
 
 ```bash
-# 当前项目，指定 Codex
+# 将 Skill 安装到当前项目的 Codex
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
-# 固定版本
+# 固定正式发布版本
 npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.4.0 --skill ui-spec
 ```
 
-安装测试也覆盖 Claude Code 和 OpenCode 目标。核心内容是 Markdown；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。
+安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。
 
-## 查看实际证据
-
-发行流水线检查包结构、本地引用、辅助工具、可复现构建与标准安装。发布检查覆盖双语 README、生成素材及浏览器呈现。Release 提供完整源码、独立 Skill 和校验和。
-
-这些证据对应实际执行的检查。设计质量与真实接线效果，仍在具体项目中通过视觉和任务验证。[保证范围](docs/EVALUATION.md) · [CI 记录](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/workflows/validate.yml) · [版本变更](CHANGELOG.md)
+工程检查覆盖文件引用、辅助工具、安装路径及可复现打包；发布检查覆盖双语 README、响应式图片和实际页面渲染。具体产品的设计品质与业务接线效果由该项目的实际验证决定。[验证与保证范围](docs/EVALUATION.md) · [CI](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/workflows/validate.yml) · [版本记录](CHANGELOG.md)
 
 <details>
-<summary><strong>维护者入口：模型、写作与发布</strong></summary>
+<summary><strong>维护者资料与本地检查</strong></summary>
 
-[完整理解模型](docs/MODEL.md) · [写作标准](docs/WRITING.md) · [v1.4 审查](docs/REVIEW-v1.4.0.md) · [研究来源](docs/RESEARCH.md) · [覆盖记录](docs/MANIFEST.md) · [发布流程](docs/PUBLISHING.md)
+[完整理解模型](docs/MODEL.md) · [写作标准](docs/WRITING.md) · [研究来源](docs/RESEARCH.md) · [README 设计记录](docs/design/README-SPEC.md) · [发布流程](docs/PUBLISHING.md) · [贡献指南](CONTRIBUTING.md) · [安全说明](SECURITY.md)
 
 ```bash
 python tools/validate_package.py
@@ -150,8 +102,6 @@ python -m unittest discover -s tests -v
 python tools/package.py
 ```
 
-另见[贡献指南](CONTRIBUTING.md)与[安全政策](SECURITY.md)。
-
 </details>
 
-独立维护专业方法与工具，并列出[参考出处](skills/ui-spec/references/sources.md)。采用 [MIT 许可证](LICENSE)。
+[MIT 许可证](LICENSE) · [设计与研究来源说明](skills/ui-spec/references/sources.md)

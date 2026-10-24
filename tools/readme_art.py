@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the README's editable, self-contained visual compositions."""
+"""Generate the README's editable, self-contained editorial plates."""
 from __future__ import annotations
 import argparse
 from html import escape
@@ -15,64 +15,85 @@ PALETTES = {
 
 def render(theme: str, compact: bool = False) -> str:
     p = PALETTES[theme]
-    w, h = (600, 510) if compact else (1100, 380)
+    w, h = (600, 470) if compact else (1100, 355)
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc">',
-             '<title id="title">From meaning to form</title>',
-             '<desc id="desc">UI Spec Studio connects meaning, visual form and working proof. An editorial illustration, not a product screenshot.</desc>',
+             '<title id="title">Build on what works — UI Spec Studio</title>',
+             '<desc id="desc">An editorial diagram of three design decisions: inspect mature sources, choose a fitting foundation, and adapt it into an editable published result.</desc>',
              f'<rect width="{w}" height="{h}" fill="{p["paper"]}"/>']
-    def line(x1,y1,x2,y2,color="line",width=1):
-        parts.append(f'<path d="M{x1} {y1}H{x2}" stroke="{p[color]}" stroke-width="{width}"/>' if y1==y2 else f'<path d="M{x1} {y1}L{x2} {y2}" stroke="{p[color]}" stroke-width="{width}"/>')
-    def text(x,y,s,size=20,color="ink",weight=400,serif=False):
+
+    def line(x1, y1, x2, y2, color="line", width=1):
+        parts.append(f'<path d="M{x1} {y1}L{x2} {y2}" stroke="{p[color]}" stroke-width="{width}" fill="none"/>')
+
+    def path(d, color="accent", width=1.5):
+        parts.append(f'<path d="{d}" fill="none" stroke="{p[color]}" stroke-width="{width}" stroke-linecap="round" stroke-linejoin="round"/>')
+
+    def text(x, y, s, size=20, color="ink", weight=400, serif=False, extra=""):
         family="Georgia, 'Times New Roman', serif" if serif else "Arial, Helvetica, sans-serif"
-        parts.append(f'<text x="{x}" y="{y}" fill="{p[color]}" font-family="{family}" font-size="{size}" font-weight="{weight}">{escape(s)}</text>')
-    def rect(x,y,width,height,color="surface",rx=0,stroke=None):
-        border=f' stroke="{p[stroke]}"' if stroke else ''
+        parts.append(f'<text x="{x}" y="{y}" fill="{p[color]}" font-family="{family}" font-size="{size}" font-weight="{weight}" {extra}>{escape(s)}</text>')
+
+    def rect(x, y, width, height, color="surface", rx=0, stroke=None):
+        border=f' stroke="{p[stroke]}" stroke-width="1"' if stroke else ''
         parts.append(f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="{rx}" fill="{p[color]}"{border}/>')
-    # The grid marks belong to this authored design plate, not to every consuming UI.
-    margin=38 if compact else 48
-    line(margin,28,w-margin,28)
+
+    def circle(x,y,r,color="accent"):
+        parts.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{p[color]}"/>')
+
+    margin=38 if compact else 47
+    line(margin, 28, w-margin, 28)
     if compact:
-        text(38,72,'UI SPEC STUDIO',18,'muted',600)
-        text(35,142,'From meaning',58,serif=True)
-        text(35,203,'to form.',58,serif=True)
-        y=260; xs=[38,220,402];pw=160;ph=160
+        text(38, 63, 'UI SPEC STUDIO   /   DESIGN ENGINEERING', 14, 'muted', 600)
+        text(34, 133, 'Build on', 66, serif=True)
+        text(34, 201, 'what works.', 66, serif=True)
+        text(38, 235, 'Research. Adapt. Verify.', 19, 'muted')
+        top=294; xs=(38,216,394); cw=168; ch=124
     else:
-        text(48,75,'UI SPEC STUDIO',17,'muted',600)
-        text(45,153,'From meaning',60,serif=True)
-        text(45,218,'to form.',60,serif=True)
-        text(48,274,'Design with intent.',20,'muted')
-        text(48,304,'Build with evidence.',20,'muted')
-        y=112;xs=[500,698,896];pw=158;ph=176
-    for i,(x,label) in enumerate(zip(xs,['Meaning','Form','Proof'])):
-        rect(x,y,pw,ph,stroke="line")
-        text(x+14,y-16,label,28 if compact else 20,'ink',600)
+        text(47, 73, 'UI SPEC STUDIO   /   DESIGN ENGINEERING', 14, 'muted', 600)
+        text(43, 145, 'Build on', 64, serif=True)
+        text(43, 211, 'what works.', 64, serif=True)
+        text(48, 263, 'Research. Adapt. Verify.', 20, 'muted')
+        top=116; xs=(513,705,897); cw=162; ch=173
+
+    headings=('01  STUDY','02  SELECT','03  REALIZE')
+    for i,x in enumerate(xs):
+        text(x, top-14, headings[i], 13 if not compact else 14, 'muted', 600)
+        rect(x, top, cw, ch, 'surface', 2, 'line')
         if i==0:
-            text(x+16,y+39,'Why this?',26 if compact else 22,'ink',400,True)
-            rect(x+16,y+57,pw-32,4,'accent')
-            rect(x+16,y+76,pw-50,3,'line')
-            rect(x+16,y+89,pw-39,3,'line')
-            rect(x+16,y+102,pw-64,3,'line')
-            text(x+16,y+ph-19,'intent',22 if compact else 16,'muted')
+            # Published references as editorial pages; a real readable unit.
+            rect(x+13, top+15, cw-26, 6, 'ink')
+            text(x+13, top+48, 'A better start', 15 if compact else 16, 'ink', 400, True)
+            for j,length in enumerate((cw-27,cw-45,cw-37)):
+                rect(x+13,top+59+11*j,length,3,'line')
+            rect(x+13,top+101 if not compact else top+98,cw-26,3,'accent')
+            if not compact:
+                text(x+13, top+ch-15,'SOURCE / PATTERN',11,'muted')
         elif i==1:
-            rect(x+13,y+16,pw-26,16,'ink')
-            rect(x+13,y+43,48,69 if compact else 85,'soft')
-            rect(x+71,y+43,pw-85,5,'accent')
-            for k,length in enumerate([pw-85,pw-98,pw-91]):
-                rect(x+71,y+58+k*13,length,3,'line')
-            rect(x+71,y+103,43,9,'accent')
-            text(x+13,y+ph-19,'arrange' if compact else 'relationships',22 if compact else 16,'muted')
+            # Explicit assessment: shared rhythm, selection and suitability.
+            text(x+14,top+48,'Aa',42 if not compact else 36,'ink',400,True)
+            line(x+65,top+19,x+65,top+91,'line')
+            for j,width in enumerate((cw-91,cw-99,cw-85)):
+                rect(x+77,top+22+18*j,width,3,'line')
+            circle(x+20,top+ch-31,8,'accent')
+            path(f'M{x+16} {top+ch-31}l3 3 5 -6','surface',1.7)
+            rect(x+36,top+ch-33,cw-52,4,'soft')
+            if not compact:
+                text(x+13,top+ch-15,'CHOICE / FIT',11,'muted')
         else:
-            rect(x+14,y+18,pw-28,ph-65,'soft')
-            line(x+30,y+51,x+pw-29,y+51,'line')
-            line(x+30,y+66,x+pw-43,y+66,'line')
-            rect(x+30,y+84,pw-60,18,'accent',2)
-            text(x+14,y+ph-19,'verify' if compact else 'working result',22 if compact else 16,'muted')
-        if i<2:
-            mid=y+ph/2;line(x+pw+5,mid,xs[i+1]-6,mid,'mark',1.5)
-            parts.append(f'<path d="M{xs[i+1]-12} {mid-4}l6 4-6 4" fill="none" stroke="{p["mark"]}" stroke-width="1.5"/>')
-    bottom=468 if compact else 343
+            # A published document rather than a miniature app UI.
+            rect(x+14, top+14, cw-28, ch-30, 'soft', 1)
+            text(x+27,top+45,'Field notes',18 if not compact else 16,'ink',400,True)
+            rect(x+27,top+57,cw-55,3,'accent')
+            for j,length in enumerate((cw-55,cw-71,cw-64)):
+                rect(x+27,top+72+10*j,length,2,'line')
+            rect(x+27,top+ch-43,cw-55,14,'accent',2)
+            if not compact:
+                text(x+35,top+ch-31,'OPEN / READ',9,'surface',600)
+        if i < 2:
+            y=top+(ch*0.53)
+            line(x+cw+2,y,xs[i+1]-5,y,'mark',1.6)
+            path(f'M{xs[i+1]-11} {y-4}l6 4 -6 4','mark',1.6)
+    bottom=h-30
     line(margin,bottom,w-margin,bottom)
-    text(margin,bottom+25,'A connected design practice.' if compact else 'UNDERSTAND  /  COMPOSE  /  BUILD  /  INSPECT',22 if compact else 13,'muted',400)
+    text(margin,h-10,'MATURE SOURCES   /   PROFESSIONAL JUDGMENT   /   EDITABLE RESULTS',11 if compact else 12,'muted')
     parts.append('</svg>')
     return '\n'.join(parts)+'\n'
 

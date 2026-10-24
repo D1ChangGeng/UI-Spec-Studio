@@ -1,151 +1,98 @@
 # UI Spec Studio
 
-**A resource-led design engineering practice for your agent.**
+**Build on what works. Design what makes it yours.**
 
 <picture>
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/assets/studio-compact-dark.svg">
   <source media="(max-width: 600px)" srcset="docs/assets/studio-compact-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/studio-dark.svg">
-  <img src="docs/assets/studio-light.svg" alt="From meaning to form: connect user intent, designed relationships and a working result." width="1100">
+  <img src="docs/assets/studio-light.svg" alt="Three connected decisions: study mature design sources, select a fitting foundation, and realize an editable result." width="1100">
 </picture>
 
-[简体中文](README.zh-CN.md) · [Start here](docs/GUIDE.md) · [Inside the skill](skills/ui-spec/SKILL.md) · [Releases](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
+[简体中文](README.zh-CN.md) · [Guide](docs/GUIDE.md) · [Skill source](skills/ui-spec/SKILL.md) · [Releases](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
 
-Turn a product goal into a coherent, reviewable interface—and carry the accepted experience into real use. UI Spec Studio is a portable [Agent Skill](https://agentskills.io/specification) for product screens, documentation, READMEs, diagrams and other screen-based work.
+A portable [Agent Skill](https://agentskills.io/specification) for **product interfaces, READMEs, documentation, diagrams and other screen-based work**. It helps agents study mature design foundations, adapt them to a task and verify the finished result.
 
-## Start with one command
+## Start in your project
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 ```
 
-Then ask your coding agent:
+Then give your coding agent a goal; a finished design brief is optional:
 
 ```text
-Use ui-spec. Understand this project and build the first useful UI SPEC.
-I have a goal but no visual direction. Recommend a direction and show the result.
+Use ui-spec. Understand this project and its audience.
+Find strong existing design references, choose a suitable foundation,
+and build the first reviewable SPEC. Show the result and your decisions.
 ```
 
-You can bring a detailed reference or just a goal. The agent develops the direction, chooses the next useful increment, makes it, inspects it and continues from your feedback.
+After reviewing, **“Approved, continue”** advances the next useful increment. **“Use ui-spec: finish”** connects an accepted design to its actual content, behavior and delivery boundary. [Installation and agent options](docs/INSTALL.md) · [Multi-round guide](docs/GUIDE.md)
 
-Already have an accepted design? Ask it to `finish` the real integration. [Installation and host options →](docs/INSTALL.md)
+## Design from an informed starting point
 
-## Build on mature design work
+**Understand the task → explore real work → compare and select → adapt → inspect.**
 
-Design theory supplies judgment; UI resources supply concrete work to study and
-adapt. Start at the highest appropriate reuse level—page or design system,
-functional block, component—so valuable hierarchy, proportions, typography and
-interaction decisions carry into the product together. Search and actual browsing
-inform the concept; comparison, adaptation and real checks keep improving it.
+Design theory explains *why* a composition works; the existing design ecosystem offers *what* can be studied and reused. The agent examines both while the direction is still open. New references can improve the design hypothesis, and the rendered result tests whether the choice was sound.
 
-Original work focuses on product differences, integration and the gaps that the
-chosen foundation leaves. A local improvement preserves its accepted foundation.
+Reuse happens at the **highest appropriate level**: a whole-page foundation or design system, a functional block, a component family or a focused visual technique. The goal is to inherit coherent decisions—information hierarchy, proportion, typography, state and interaction—then adapt them to the current task. Original design work concentrates on the product's distinctive needs and the connections between its parts.
 
-<img src="docs/assets/foundation-study.png" alt="Rendered research study adapted from a page-level assistant-ui foundation; the design choice remains pending owner confirmation." width="1280">
+[Resource discovery method](skills/ui-spec/references/component-sourcing.md) · [37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md) · [Resource reuse guide](docs/RESOURCE-REUSE.md)
 
-[Inspect the inherited page relationships](examples/product-intent/FOUNDATION.md).
+## One method, different surfaces
 
-## Begin with the experience people expect
+The principles transfer; the **medium determines the realization and verification**.
 
-Recognize the first action, working object and continuing loop before settling a
-new shell. Research mature product conventions and concrete UI resources in
-parallel. Preserve functional assets, assess visual candidates against the target,
-and make consequential direction choices together.
+| Surface | The user's primary experience | What a finished SPEC must establish |
+|---|---|---|
+| **Product UI** | Start, complete and resume a task | Usable states, stable layout, meaningful actions and real outcomes |
+| **READMEs & docs** | Understand a tool, copy a command, find the next answer | Reading order, native text and links, host rendering, image/theme and narrow-width behavior |
+| **Diagrams & data views** | Trace relationships, interpret values or compare alternatives | Correct semantics and encoding, readable labels, source mapping and accessible equivalents |
+| **Slides & visual media** | Follow an explanation through space and time | Clear attention sequence, editable assets and verified output at its intended size or playback conditions |
 
-Every substantive SPEC pairs its preview with a compact design/resource record:
-what was selected, why, how it was adapted and where its effect can be inspected.
-[Decision guide](docs/DESIGN-DECISIONS.md) · [Runnable two-model study](examples/product-intent/README.md)
+The [professional model](docs/PROFESSIONAL-MODEL.md) and [conditional techniques](skills/ui-spec/references/patterns.md) connect these decisions to typography, composition, color, imagery, interaction and timing.
 
-## Design is a chain of decisions
+## This README is a UI SPEC
 
-**Meaning → concept → representation → visual language → implementation → evidence.**
+This repository's own front page is a **reading and publishing surface**, rather than an application screen. Its first task is helping a new reader judge fit and try the skill. Its visual treatment carries that purpose without replacing native Markdown content.
 
-Before choosing a card, table, diagram or animation, establish what the person needs to understand. Develop a concept that belongs to the subject. Make its relationships controllable in code. Judge the actual result.
+| Studied foundation | What this README adopts | What was adapted here |
+|---|---|---|
+| [Vercel Skills CLI README](https://github.com/vercel-labs/skills/blob/main/README.md) | Immediate purpose, copyable install command and a route to deeper reference | The `ui-spec` install and first Agent instruction lead the reading path |
+| [Typst README](https://github.com/typst/typst/blob/main/README.md) | A concrete visual example alongside an explanation of its mechanism | An editable editorial plate illustrates source → decision → result; the method stays in selectable text |
+| [GitHub's Markdown and image guidance](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github) | Native headings, links, code blocks and theme-aware imagery | Four light/dark and wide/narrow SVG variants, with a readable text equivalent |
+| Existing UI Spec Studio art direction | Restrained color roles and editorial typography | A resource-led illustration generated from the repository's editable source |
 
-| Capability | What the agent works out |
-|---|---|
-| **Understand** | User tasks, content meaning, page responsibilities and the information needed to act |
-| **Compose** | A grounded direction, suitable representations, typography, color, space, imagery and attention over time |
-| **Build** | Components, media and editable controls that carry the intended design into the actual delivery format |
-| **Inspect** | Whole-surface meaning, structural relationships and details, followed by causal repair and real task verification |
+The relationships and documentation patterns are adapted as **design references**. The illustration and Markdown are maintained in this repository. The [README design record](docs/design/README-SPEC.md) tracks candidate sources, implementation choices, render checks and the limits of the evidence.
 
-[Read the professional model](docs/PROFESSIONAL-MODEL.md) · [Explore conditional techniques](skills/ui-spec/references/patterns.md)
+A separate [research-product example](examples/product-intent/README.md) shows page-level design transfer in an application context, including the [selected source and retained relationships](examples/product-intent/FOUNDATION.md).
 
-## One continuous practice
+## Continue through to a real result
 
-**init → iterate → finish**
+`init → iterate → finish` is the main path. Optional **shape** resolves a consequential open direction; **audit** examines quality or coverage at any point. These describe work intentions rather than shell commands.
 
-Use **shape** when an important direction is open. Use **audit** whenever the current scope needs examination. These are intent labels; ordinary language is enough.
+Each round gives the agent a useful scope to implement and inspect. An accepted design can continue into working product behavior, or into a document's actual publishing boundary. The agent carries forward decisions, evaluates the affected views and states, and keeps source evidence distinct from owner approval.
 
-**Begin.** The agent reads the product and existing implementation, inherits explicitly accepted decisions, evaluates existing presentation and selects a useful next outcome.
+Before substantive work, the agent reads **six common references in full**: [workflow](skills/ui-spec/references/workflow.md), [analysis](skills/ui-spec/references/analysis.md), [visual principles](skills/ui-spec/references/principles.md), [resource discovery](skills/ui-spec/references/component-sourcing.md), [interaction](skills/ui-spec/references/interaction-and-variants.md) and [verification](skills/ui-spec/references/verification.md). [Integration](skills/ui-spec/references/integration.md) applies when connecting real behavior. The host remains responsible for tool access, execution and context management.
 
-**Continue.** Say “approved, continue.” Each round can develop a page, connect a journey, refine a component family or repair a shared problem. The agent owns routine analysis, component research and rendered checks.
-
-**Connect.** Finish reconciles the approved design with real content, services, permissions and persistence. It verifies meaning, structure, visual fidelity and behavior/timing. Static artifacts finish against their own publishing boundary.
-
-```text
-This feels too low. Inspect the complete composition and fix the cause.
-
-Keep the accepted direction. Continue with the next valuable user task.
-
-The reviewed scope is approved. Connect it to the real product and verify both
-its design and its actual behavior.
-```
-
-## A complete professional foundation
-
-The agent reads **six common references in full** before substantive work:
-
-[Workflow](skills/ui-spec/references/workflow.md) · [Analysis](skills/ui-spec/references/analysis.md) · [Visual principles](skills/ui-spec/references/principles.md) · [Components & media](skills/ui-spec/references/component-sourcing.md) · [Interaction](skills/ui-spec/references/interaction-and-variants.md) · [Verification](skills/ui-spec/references/verification.md)
-
-[Integration](skills/ui-spec/references/integration.md) becomes required for real behavior. Techniques and examples add depth where useful. Existing context can be reused when complete and current.
-
-The skill supplies professional methods and a reading contract. Your host supplies activation, tools, execution and context management. Routine design decisions stay with the agent; consequential commitments stay within the user's authority.
-
-## Bring the UI ecosystem into the work
-
-**Discover → assess → adapt → integrate → verify → retain the useful lesson.**
-
-The agent actively looks for strong starting points: project components, native capabilities and external work. It explores both known requirements and better expressive possibilities. Exact demonstrations, source variants and configurations inform the choice; behavior, design fit, rights and total cost determine the reuse level.
-
-Adopt directly, extend, compose or transfer a technique into the current system. Typography, space, states and motion belong to one product. Real rendering and task checks establish the quality of the assembled result.
-
-[Browse 37 resource leads](skills/ui-spec/references/resource-catalog.md) · [Read the working method](skills/ui-spec/references/component-sourcing.md) · [Use the catalog and adoption workflow](docs/RESOURCE-REUSE.md)
-
-The catalog preserves source dates and evidence scope, plus seven documented access mechanisms. An optional local lookup filters by need, stack or delivery form. Existing suitable choices carry forward; new work can draw on the wider ecosystem without requiring the user to name a library.
-
-## Open to the right medium
-
-Use the current project and the means that fit its task: native controls, component systems, icons, actual imagery, authored graphics, data visualization or specialist tools. React/Vue Bits, Magic UI, Lucide and other sources are candidates—not a prescribed stack. Existing visual choices are assessed against the target; new choices are inspected for fit, behavior, performance and licensing.
-
-A research workspace, a focused form and a publication deserve different compositions. Shared principles support quality; the subject and accepted brief define the style.
-
-### This README is one worked example
-
-Its reading path moves from purpose to installation, first use, deeper methods and evidence. Essential instructions remain native text. The editorial artwork has editable source, light/dark versions and a distinct narrow composition. [See its design brief and verification conditions.](docs/design/README-SPEC.md)
-
-## Install where you work
+## Install, inspect, maintain
 
 ```bash
-# Project install for a specific host
+# Install for Codex in the current project
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
-# Fixed release
+# Pin the published skill release
 npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.4.0 --skill ui-spec
 ```
 
-Claude Code and OpenCode are also tested installer targets. The core is Markdown; optional record helpers use Python 3.10+ and its standard library. [Offline installation and updates](docs/INSTALL.md).
+The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).
 
-## Inspect the evidence
-
-The release pipeline checks package integrity, local references, helper behavior, reproducible archives and standard installer paths. Publication checks cover the bilingual README, generated assets and browser rendering. Release assets include source, the standalone skill and checksums.
-
-These establish the checks actually exercised. Design quality and real integration are reviewed in each consuming project. [Assurance boundaries](docs/EVALUATION.md) · [CI runs](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/workflows/validate.yml) · [Change log](CHANGELOG.md)
+Package checks cover references, helpers, installation paths and reproducible archives. The publication checks exercise the bilingual README, its responsive images and rendered layouts. A consuming project's design quality and connected behavior have their own verification evidence. [Assurance scope](docs/EVALUATION.md) · [CI](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/workflows/validate.yml) · [Changelog](CHANGELOG.md)
 
 <details>
-<summary><strong>For maintainers: model, writing and release tools</strong></summary>
+<summary><strong>Maintainer references and local checks</strong></summary>
 
-[Understanding model](docs/MODEL.md) · [Writing standard](docs/WRITING.md) · [v1.4 review](docs/REVIEW-v1.4.0.md) · [Research](docs/RESEARCH.md) · [Coverage records](docs/MANIFEST.md) · [Publishing](docs/PUBLISHING.md)
+[Understanding model](docs/MODEL.md) · [Writing standard](docs/WRITING.md) · [Research sources](docs/RESEARCH.md) · [README design record](docs/design/README-SPEC.md) · [Publication process](docs/PUBLISHING.md) · [Contribution guide](CONTRIBUTING.md) · [Security](SECURITY.md)
 
 ```bash
 python tools/validate_package.py
@@ -155,8 +102,6 @@ python -m unittest discover -s tests -v
 python tools/package.py
 ```
 
-See [contribution guidance](CONTRIBUTING.md) and [security policy](SECURITY.md).
-
 </details>
 
-Original methods and tooling, informed by [credited design and production references](skills/ui-spec/references/sources.md). [MIT License](LICENSE).
+[MIT License](LICENSE) · [Design and research acknowledgments](skills/ui-spec/references/sources.md)
