@@ -1,6 +1,8 @@
 name: Validate and release
 on:
   push:
+    branches-ignore:
+      - work/ui-spec-1.4-resource-foundations
   pull_request:
   workflow_dispatch:
     inputs:

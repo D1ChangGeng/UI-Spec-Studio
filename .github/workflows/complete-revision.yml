@@ -1,0 +1,74 @@
+name: Prepare resource-led candidate
+on:
+  push:
+    branches: [work/ui-spec-1.4-resource-foundations]
+    paths: ['tools/_revision_part*.py', '.github/workflows/complete-revision.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ui-spec-foundation-candidate
+  cancel-in-progress: false
+jobs:
+  complete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Assemble task-owned revision source
+        run: |
+          python - <<'PYCODE'
+          import pathlib, hashlib
+          data=b''.join(pathlib.Path(f'tools/_revision_part{i}.py').read_bytes() for i in (1,2,3))
+          pathlib.Path('tools/_complete_revision.py').write_bytes(data)
+          print('Revision source SHA-256:',hashlib.sha256(data).hexdigest())
+          PYCODE
+      - name: Apply mature-foundation revision
+        run: python tools/_complete_revision.py
+      - run: python -m pip install -r tools/requirements-preview.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
+      - name: Exercise foundation and inspect upstream
+        run: python tools/validate_scenario.py --output-dir scenario-evidence --source-preview
+      - name: Preserve rendered study in publication
+        run: cp scenario-evidence/conversation-light-1280.png docs/assets/foundation-study.png
+      - name: Validate final package and regressions
+        run: |
+          python tools/validate_package.py
+          python tools/catalog_docs.py --check
+          python tools/readme_art.py --check
+          python -m unittest discover -s tests -v
+          node --check examples/product-intent/app.js
+      - name: Render final bilingual publication source
+        run: python tools/preview_readme.py --output-dir publication-evidence/local
+      - name: Build distributable candidate
+        run: python tools/package.py
+      - name: Preserve validated final source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'feat: integrate mature design foundations'
+          echo "CANDIDATE_COMMIT=$(git rev-parse HEAD)"
+          echo "CANDIDATE_TREE=$(git rev-parse HEAD^{tree})"
+          git push origin HEAD:refs/heads/work/ui-spec-1.4-resource-foundations
+      - name: Retain exact candidate evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: mature-foundation-candidate
+          path: |
+            scenario-evidence/
+            publication-evidence/
+            dist/
+          if-no-files-found: warn
+          retention-days: 30
