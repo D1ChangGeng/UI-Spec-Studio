@@ -10,7 +10,7 @@ Keep its framework and working API. Inspect its routes, user tasks and current
 screens. Establish a coherent UI direction and implement the first useful slice.
 ```
 
-The agent reads all six common references, then the code, project instructions and accepted decisions. It identifies a user outcome, such as finding an item and reviewing its detail, and maps the relevant states and navigation. It records a compact brief. When direction is open, optional shape resolves the important questions through a reasoned recommendation and a representative render. For implementation requests it continues into a slice that proves the shell, a list/detail relationship and a meaningful interaction.
+The agent reads all six common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Relevant mature product flows and implementation sources help establish a primary model. When material alternatives remain open, optional shape presents a reasoned recommendation and a focused choice or representative preview. An implementation request with clear direction continues into a meaningful slice. The following collection/detail examples assume that this direction has been selected for the actual task.
 
 Existing instructions, design documents and tests remain useful. The optional templates are a starting point when equivalent records are absent.
 
@@ -100,9 +100,9 @@ actual result and tests a bounded repair. You review the effect. Common design
 principles are already part of the skill's working foundation.
 
 For a planning-only request, shape delivers decision support. For a design/build
-request, it continues when enough direction exists. Ask for a focused missing
-fact only when it determines a consequential commitment; reversible design
-choices can be shown directly.
+request, it continues when enough direction exists. Use a focused choice when an
+unresolved high-impact experience direction or consequential commitment needs the
+user's intent; routine reversible design choices can be shown directly.
 
 The same project can contain approved screens, pending states and connected
 features. Treat each scope's evidence separately. The current operation describes
@@ -132,3 +132,17 @@ Discovery leads retain their source and review date. Demo inspection and actual
 project checks are recorded separately. Existing approved resources remain useful
 while their conditions fit; a new requirement can justify a fresh comparison.
 See [the resource workflow](RESOURCE-REUSE.md) for examples and maintenance.
+
+## Confirm a consequential direction
+
+For a substantial redesign, the agent first identifies how people will use the
+product and what is already accepted. It preserves business/engineering assets
+while assessing visual candidates against the new target. When several plausible
+models would materially change the experience, it offers a recommendation, a
+small set of distinct options and useful references or previews.
+
+You can choose the experience that matches your intent. Component details remain
+agent work. Clear existing intent or explicit delegation supports direct progress;
+one-shot recommendations retain their provisional scope. The preview is delivered
+with a [design/resource record](DESIGN-DECISIONS.md) linking consequential sources
+to actual surfaces and observed results. Try the [worked study](../examples/product-intent/README.md).

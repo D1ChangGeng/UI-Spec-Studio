@@ -102,3 +102,11 @@ exploration, evaluates the exact item and selects an appropriate reuse layer.
 Platforms are differentiated by design need and delivery form. Official source
 links are retained in the [catalog](../skills/ui-spec/references/resource-catalog.md).
 The [release review](REVIEW-v1.3.0.md) connects research requirements to actual files.
+
+## Worked source reuse in 1.4
+
+The product-intent scenario in `examples/product-intent/` retains the actual
+sRGB Slate and Slate Dark values from the pinned Radix Colors source. Its
+`THIRD-PARTY.md` preserves the MIT notice and exact source identity. Other linked
+product conventions and component anatomy are identified as design references or
+technique transfer. Runtime skill instructions and helpers remain original work.

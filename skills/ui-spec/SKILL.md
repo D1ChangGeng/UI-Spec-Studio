@@ -1,11 +1,11 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, resource discovery and reuse, component selection, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, product interaction models, design options, traceable resource selection, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.3.0"
+  version: "1.4.0"
 ---
 
 # UI Spec Studio
@@ -53,7 +53,7 @@ Read project instructions, user goals, current code, existing design records and
 
 - Product facts, access rules and safety/accessibility obligations govern valid behavior.
 - Explicitly accepted design decisions govern the experience being preserved.
-- Current implementation establishes what exists and what can be reused.
+- Current implementation establishes business and engineering capabilities; visual and interaction elements are evaluated against the target quality. Design inheritance requires an explicit acceptance or a documented fit assessment.
 - Common principles guide professional judgment; project preferences supply aesthetic direction.
 - External examples supply ideas and technical candidates, with their scope and licenses checked.
 
@@ -61,11 +61,17 @@ Resolve a conflict at its responsible layer and explain material implications. P
 
 ## Lead the work with proportionate judgment
 
-Choose the next increment from user value, task continuity, shared impact, dependencies, uncertainty and effort. Take responsibility for routine design and engineering choices. Use reversible assumptions for low-impact gaps; obtain the specific missing decision for consequential commitments while advancing independent work.
+Choose the next increment from user value, task continuity, shared impact, dependencies, uncertainty and effort. Take responsibility for routine design and engineering choices. Use reversible assumptions for low-impact gaps. For an unresolved high-impact product model, primary navigation or visual direction with credible alternatives, present a compact recommendation and materially different options for user confirmation before broad implementation. Existing approval or explicit delegation supports direct progress; one-shot work carries a labeled provisional direction. Advance independent work while a consequential decision is pending.
 
 A round can develop a page, a connected journey, a component family or a shared-system repair. Keep it large enough to judge the intended outcome and small enough to revise coherently. Translate subjective feedback into hypotheses about the actual composition or behavior, inspect evidence, then fix the responsible layer.
 
 Keep the common quality floor active: clear hierarchy, readable content, accessible interaction, meaningful task paths, stable shared structure, appropriate scale/occupancy, purposeful motion and truthful state. Select palette, typography, imagery, density and expressiveness for this product. Review the rendered result at its actual viewing conditions.
+
+## Establish the product people will recognize
+
+Infer the interaction model from what users do first, the object they work on, the repeated action/result loop, how they resume, and where outcomes live. Business names and code modules supply domain facts; observed use supplies the interface model. Identify a primary model and any purposeful secondary model before fixing a new shell. Separate that choice from the visual theme.
+
+For a new design or substantive redesign, research relevant mature product conventions and concrete implementation resources while the direction is open. Compare the current UI as a candidate against the same target. The analysis reference provides the method and confirmation conditions. Keep a compact [design decision record](assets/templates/design-decisions.md), or equivalent existing record, visible with the preview: product evidence, meaningful alternatives, selected resources by surface/element, actual implementation locations and observed results. Preserve separate product-pattern and engineering-source links. A shortlist starts before implementation and is reconciled after rendering.
 
 ## Turn meaning into form
 
@@ -89,6 +95,6 @@ Track maturity by scope: implemented, inspected, approved, connected and verifie
 
 Run the intended task through visible controls; inspect actual viewport captures and important transitions. Check related surfaces when shared components change. Repair and recheck observed issues. Use fixture evidence for design review and real boundary evidence for integration claims.
 
-Before handing over, state the working result, preview or entry path, inspected scope, consequential design choices, executed checks and the next useful action. Offer a recommendation rather than a routine design questionnaire. Report blockers and unverified dimensions accurately. Keep sensitive project data within its authorized destination.
+Before handing over, state the working result, preview or entry path, inspected scope, consequential design choices, executed checks and the next useful action. Show the design decision record and the result together. Ask for a choice when a high-impact direction remains unresolved; use recommendations for routine details. Keep proposed, implemented, visually inspected and owner-approved states distinct. Report blockers and unverified dimensions accurately. Keep sensitive project data within its authorized destination.
 
 The optional [coverage checker](scripts/check_manifest.py) checks declared records and local evidence references. Browser inspection, user approval and real business outcomes remain distinct evidence sources. Its successful exit is a structural result, not a design-quality certificate.

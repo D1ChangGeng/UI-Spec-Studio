@@ -4,7 +4,7 @@ These examples illustrate application. They are not executed product evaluations
 
 ## A user with only a goal
 
-“Help me design this research workspace; I have no visual direction.” Read product facts and existing tasks. Use optional shape to identify the collection/detail/edit loop, shared shell and desired working density. Study a small set of useful references, recommend one direction and build a representative list/detail interaction. Present its actual render and a clear next increment. The user evaluates the result rather than selecting a component catalog.
+“Help me design this research workspace; I have no visual direction.” Read product facts and actual use. Determine whether people mainly ask and follow up, organize durable material, or manage work. Study the relevant mature flows and engineering candidates. Recommend a primary model and resolve material alternatives before expanding the shell; use a bounded provisional probe under one-shot delegation. Build a representative interaction, present its render with the decision map, and recommend the next increment. The user evaluates the experience while the agent owns routine component choices.
 
 ## A user with a precise reference
 
@@ -55,3 +55,21 @@ family catalog lives elsewhere. Use each entry for its intended role: inspect th
 actual typeface and glyph coverage in the catalog, then read version-matched usage
 and licensing guidance. An index's coverage informs retrieval; a current project
 render establishes typography fit.
+
+## An ambiguous research product
+
+“Redesign our research platform” leaves the primary interaction model open.
+Inspect how people begin, what they return to, and where their results live.
+Conversational research may prioritize a question composer, follow-ups and
+traceable sources; a durable knowledge space may prioritize pages, properties and
+collection navigation. Research comparable flows and present the consequential
+choice with the same representative task. Give a recommendation and explain its
+basis. An explicit one-shot request can use the recommendation as a provisional
+probe, with owner acceptance pending.
+
+Before building the major treatment, map concrete pattern and implementation
+sources to its shell, composer or editor, typography, surfaces, feedback and
+motion. Retain business contracts while assessing current UI on target quality.
+Show that map with the actual preview, then verify first-use, active work and
+resume. Related examples can use the same process for task systems, editors and
+reading surfaces without inheriting this scenario's aesthetics.

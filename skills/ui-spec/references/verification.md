@@ -118,3 +118,13 @@ Keep three evidence scopes distinct: source documentation establishes a platform
 Exercise the adapted item with representative content, supported inputs, real container constraints, theme/locale variants and product states. Check semantic behavior, visual fidelity, combined attention/runtime cost, cleanup and the relevant service boundary. Preserve rights and notices with the adopted material. Regression scope follows the component or shared system affected.
 
 A catalog lookup is discovery evidence. A mocked retrieval or record test verifies its declared mechanics. Report actual demo, image-inspection and integration observations separately. Use the project's existing evidence location; an optional adoption note can connect the significant decision to these observations.
+
+## Verify the design decision chain
+
+Before treating a new shell or substantial redesign as settled, review its user-level model, primary action, continuation and material alternatives. Check the authority for the selected direction. A one-shot recommendation remains provisional until an actual acceptance covers it. Existing UI reuse is supported by an approval or a target-based fit assessment.
+
+At review, open the design/resource record alongside the preview. Follow consequential rows from the product convention and exact implementation source to the actual page/state and code location. Inspect whether the adopted mechanism and expected quality survive composition. Update candidates that became native, authored, retained or replaced work. A record checks traceability; actual rendering and task execution establish the result.
+
+Walk first-use, active work and return/resume for the selected model. Exercise meaningful slow, empty, failure and long-content conditions. Measure readable contrast, overflow and targets where tools support it; visually review hierarchy, identity, scale and space. Include keyboard, reduced motion, response/cancel/retry and a representative performance observation. State the tested conditions rather than a universal speed or accessibility claim.
+
+Workflow validation may use a bounded, anonymized scenario with authored fixture data. Keep original-product verification, independent model behavior evaluation and owner design acceptance separate. A successful scenario demonstrates the exercised decisions and implementation paths; it does not establish how every model will use the skill.

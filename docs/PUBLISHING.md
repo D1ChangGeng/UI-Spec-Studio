@@ -24,7 +24,8 @@ consistent across platforms.
 
 ## Automated publication
 
-A main-branch push changing VERSION runs the validation, installation and publication-render jobs.
+A main-branch push changing VERSION runs validation, installation, publication-render
+and product-intent scenario checks.
 The release job has repository-content write permission; ordinary validation jobs
 have read-only permissions. External Actions are pinned to reviewed commit SHAs.
 
@@ -62,7 +63,7 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.3.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.4.0 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
@@ -83,3 +84,7 @@ Edit `skills/ui-spec/assets/resource-catalog.json` as the maintained source, the
 regenerate its readable map with `python tools/catalog_docs.py`. The test suite
 checks its exact correspondence and installed lookup. Preserve historical research
 dates; append scoped new observations when independently rechecked.
+
+The product-intent job executes the authored scenario through local HTTP, stores
+its captures and report, and verifies real browser local storage. Its result is
+a required release gate alongside the existing tests and publication checks.

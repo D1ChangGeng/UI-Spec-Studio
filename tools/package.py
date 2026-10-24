@@ -10,7 +10,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 TOP = {"README.md", "README.zh-CN.md", "LICENSE", "VERSION", "AGENTS.md", ".gitignore", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md", ".gitattributes"}
 DIRS = {"skills", "docs", "examples", "tools", "tests", ".github"}
-SUFFIXES = {".md", ".py", ".json", ".yml", ".yaml", ".txt", ".svg"}
+SUFFIXES = {".md", ".py", ".json", ".yml", ".yaml", ".txt", ".svg", ".html", ".css", ".js"}
 EXCLUDED = {"__pycache__", "node_modules", ".git", ".pytest_cache", "dist"}
 
 

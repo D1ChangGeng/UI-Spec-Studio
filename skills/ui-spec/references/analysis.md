@@ -6,7 +6,7 @@ Use these lenses together to understand the current increment. Give depth to the
 
 | Lens | What to establish | Effect on the work |
 |---|---|---|
-| People and outcomes | Who arrives, their context, main task and observable success | Choose a meaningful increment and the information it needs |
+| People and outcomes | Who arrives, their context, main task, recognizable interaction model and observable success | Choose a meaningful increment and the information it needs |
 | Product truth | Established capabilities, content, rules, permissions and commitments | Separate facts, fixtures and decisions requiring authority |
 | Information architecture | Page responsibility, naming, hierarchy, entry points and shared shell | Create, reuse, consolidate or adjust the right surface |
 | Journeys and states | Actions, guards, destinations, retained context, returns and recovery | Build a continuous task rather than isolated screens |
@@ -15,9 +15,42 @@ Use these lenses together to understand the current increment. Give depth to the
 | Inclusive use and performance | Input methods, assistive use, variants, content growth and device constraints | Make the intended experience usable in its actual conditions |
 | Verification and delivery | Required observations, review scope, dependencies and completion evidence | Design a result that can be inspected and continued |
 
+## Recognize the product through its use
+
+Start with the user's first meaningful action, primary working object, repeated action/result loop, session continuity and durable outcome. Observe actual flows or supplied evidence, and use source contracts to recover capabilities. Keep observation, inference and unresolved intent distinguishable. A screenshot supports a composition observation; runtime behavior and research activity require their own evidence.
+
+Describe the proposed experience in plain language: “people ask a question, examine an answer with sources, then continue the same thread,” or “people open a record, edit its properties and return to a filtered collection.” This working model is more useful than an internal label such as platform, desk or workspace.
+
+| Model candidate | Strong user-level signals | Consequences to investigate |
+|---|---|---|
+| Conversational assistant | Intent begins in a composer; responses lead to follow-ups | New and resumed threads, readable conversation, persistent input, generation/stop/retry and sources/artifacts |
+| Document / information space | People create, organize, edit and revisit durable objects | Hierarchy or collection views, content editing, search, linking and object continuity |
+| Task / operational system | People prioritize, assign, advance and inspect work items | Lists/boards, status, filters, detail, progress and efficient repeated operations |
+| Canvas / editor | People manipulate an artifact directly | Selection, tools, contextual properties, undo and spatial continuity |
+| Discovery / decision flow | People search, compare and commit to a choice | Scanable collections, comparison, detail, consequence and recovery |
+| Reading / publication | People follow an argument or locate an answer | Narrative order, headings, references and an appropriate next action |
+
+Use these as hypotheses, including other models the task warrants. A hybrid names its primary loop and explains when a secondary surface appears. For example, a conversation may open an evidence document alongside the thread. Each pane has a task and state owner. Product type, local page shape and visual language are separate decisions: a dense operational view and an empty assistant start screen should express their distinct jobs even within one brand.
+
+Inspect a relevant mature product's comparable flow: starting point, first action, navigation, result, continuation and recovery. Identify transferable conventions, actual source/date and observed states. Use official explanations for documented behavior; use live interaction or viewable examples for claims about motion or appearance. Describe current access limitations precisely. Product names orient discussion; the record explains which specific convention is adopted and why it fits. Keep original branding, content and distinctive implementation separate from those conventions.
+
+## Establish the reuse boundary for this assignment
+
+Read the requested change as a local improvement, visual refresh, interaction redesign or combined redesign. Infer the scope from the brief and confirm only a material ambiguity. Preserve working business rules, data contracts, permissions and necessary capabilities. Evaluate layout, navigation, components, typography, palette and motion against the new target, alongside external candidates.
+
+Existing source is evidence of what works and what can be adapted. Explicit user acceptance is evidence of approved design. Link inherited visual decisions to that acceptance or to a current fit assessment. Preserve valuable internal UI when it meets the target; improve or replace its presentation layer when another solution better serves the intended experience. Keep framework and architecture changes proportional to the work.
+
+## Confirm consequential direction with useful options
+
+Check whether credible alternatives would change the primary action, information architecture, enduring working object or overall visual identity. When those choices remain unresolved and reshape substantial work, present a small set of distinct directions, a recommendation and the practical tradeoff before expanding the shell or page family. Two or three options are often enough; one well-supported direction can be presented with its rationale.
+
+Make a comparison concrete: the same representative task and content, the first action, organization of results, continuation, relevant mature references and a small preview when spatial differences matter. Hold incidental styling steady when comparing interaction models; compare themes separately when that is the open choice. Give the user a focused choice about the experience they intend, while the agent owns component and implementation details.
+
+Established intent, an approved design or explicit delegated autonomy supports direct implementation. In one-shot/no-follow-up work, choose the best-supported direction and label its assumptions, unresolved alternatives and pending owner acceptance. A local prototype selection is a preference for that prototype; formal design approval retains its actual source and scope. Continue independent work while awaiting a significant choice.
+
 ## Lead users with different levels of direction
 
-When the user supplies only a product goal, infer a reasonable task and direction from project facts, study relevant examples and recommend a solution. Show a working result that can be evaluated. Routine choices belong to the agent's work.
+When the user supplies only a product goal, infer the task and candidate interaction models from usage signals, research comparable flows and recommend a direction. Use the consequential-direction check above before broad implementation. Show a result or bounded options the user can evaluate. Routine choices belong to the agent's work.
 
 When the user supplies preferences, references or selected components, identify the intended qualities and binding constraints. Fill the remaining gaps coherently. A precise implementation request warrants fidelity; a mood reference warrants interpretation of its relevant qualities. Preserve explicit preferences and explain material conflicts with behavior, accessibility or feasibility.
 
@@ -84,7 +117,7 @@ Choose the simplest representation that preserves the important relationship. Th
 
 Derive direction from the product's distinctive mechanism, subject, audience scene and available material. Name the organizing idea in plain words and connect it to concrete choices. “Evidence beside conclusions” can shape reading panes, citation treatment, comparison views and selection feedback. “Premium” alone leaves those decisions open.
 
-Separate inherited identity, the surface's composition and a local refinement. A coherent incumbent can be authoritative in code even without a design document. Preserve user-pinned decisions. For an open direction, explore materially different organizations when doing so can change the decision; choose a grounded recommendation and demonstrate it. Candidate counts follow useful uncertainty rather than a fixed ceremony.
+Separate inherited identity, the surface's composition and a local refinement. Existing code can embody accepted decisions when their approval or current fit is established. Preserve that evidence and user-pinned choices; assess other visual candidates against the intended model and quality target. For an open direction, explore materially different organizations when doing so can change the decision; choose a grounded recommendation and demonstrate it. Candidate counts follow useful uncertainty rather than a fixed ceremony.
 
 Evaluate a concept by product fit, clarity, distinctiveness, expansion to related surfaces, implementation feasibility and user control. Distinctiveness can be precise density and excellent status handling, not only expressive artwork. Use analogies to reveal relationships while preserving recognizable controls and accessibility. A concept earns its place through several mutually supporting decisions, not a decorative motif.
 

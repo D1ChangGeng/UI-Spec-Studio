@@ -30,6 +30,17 @@ You can bring a detailed reference or just a goal. The agent develops the direct
 
 Already have an accepted design? Ask it to `finish` the real integration. [Installation and host options →](docs/INSTALL.md)
 
+## Begin with the experience people expect
+
+Recognize the first action, working object and continuing loop before settling a
+new shell. Research mature product conventions and concrete UI resources in
+parallel. Preserve functional assets, assess visual candidates against the target,
+and make consequential direction choices together.
+
+Every substantive SPEC pairs its preview with a compact design/resource record:
+what was selected, why, how it was adapted and where its effect can be inspected.
+[Decision guide](docs/DESIGN-DECISIONS.md) · [Runnable two-model study](examples/product-intent/README.md)
+
 ## Design is a chain of decisions
 
 **Meaning → concept → representation → visual language → implementation → evidence.**
@@ -51,7 +62,7 @@ Before choosing a card, table, diagram or animation, establish what the person n
 
 Use **shape** when an important direction is open. Use **audit** whenever the current scope needs examination. These are intent labels; ordinary language is enough.
 
-**Begin.** The agent reads the product and existing implementation, inherits what is already decided and selects a useful next outcome.
+**Begin.** The agent reads the product and existing implementation, inherits explicitly accepted decisions, evaluates existing presentation and selects a useful next outcome.
 
 **Continue.** Say “approved, continue.” Each round can develop a page, connect a journey, refine a component family or repair a shared problem. The agent owns routine analysis, component research and rendered checks.
 
@@ -90,7 +101,7 @@ The catalog preserves source dates and evidence scope, plus seven documented acc
 
 ## Open to the right medium
 
-Use the current project and the means that fit its task: native controls, component systems, icons, actual imagery, authored graphics, data visualization or specialist tools. React/Vue Bits, Magic UI, Lucide and other sources are candidates—not a prescribed stack. Existing verified choices are a starting point; new choices are inspected for fit, behavior, performance and licensing.
+Use the current project and the means that fit its task: native controls, component systems, icons, actual imagery, authored graphics, data visualization or specialist tools. React/Vue Bits, Magic UI, Lucide and other sources are candidates—not a prescribed stack. Existing visual choices are assessed against the target; new choices are inspected for fit, behavior, performance and licensing.
 
 A research workspace, a focused form and a publication deserve different compositions. Shared principles support quality; the subject and accepted brief define the style.
 
@@ -105,7 +116,7 @@ Its reading path moves from purpose to installation, first use, deeper methods a
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Fixed release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.3.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.4.0 --skill ui-spec
 ```
 
 Claude Code and OpenCode are also tested installer targets. The core is Markdown; optional record helpers use Python 3.10+ and its standard library. [Offline installation and updates](docs/INSTALL.md).
@@ -119,7 +130,7 @@ These establish the checks actually exercised. Design quality and real integrati
 <details>
 <summary><strong>For maintainers: model, writing and release tools</strong></summary>
 
-[Understanding model](docs/MODEL.md) · [Writing standard](docs/WRITING.md) · [v1.3 review](docs/REVIEW-v1.3.0.md) · [Research](docs/RESEARCH.md) · [Coverage records](docs/MANIFEST.md) · [Publishing](docs/PUBLISHING.md)
+[Understanding model](docs/MODEL.md) · [Writing standard](docs/WRITING.md) · [v1.4 review](docs/REVIEW-v1.4.0.md) · [Research](docs/RESEARCH.md) · [Coverage records](docs/MANIFEST.md) · [Publishing](docs/PUBLISHING.md)
 
 ```bash
 python tools/validate_package.py

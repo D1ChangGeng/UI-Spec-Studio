@@ -47,8 +47,9 @@ with the source; copied helper scripts execute from the new project directory.
 
 This checks the installer, not a model session in each host. Read the Actions run
 for executed jobs, logs, failures and any skips. Merely including a workflow is
-not evidence that its jobs passed. The release job requires the test and install
-jobs, then verifies downloaded asset bytes before publishing its draft release.
+not evidence that its jobs passed. The release job requires test, install,
+publication and scenario checks, then verifies downloaded asset bytes before
+publishing its draft release.
 
 ## Logical scenario review
 
@@ -100,3 +101,19 @@ queries. Those observations validate retrieval paths and source interpretation,
 not every candidate's runtime or visual quality. [The resource review](REVIEW-v1.3.0.md)
 connects accepted requirements to code and documentation. The actual CI result
 identifies executed jobs; source presence alone does not establish a passing run.
+
+## Product-intent scenario
+
+`python tools/validate_scenario.py --output-dir scenario-evidence` executes the
+included research-model comparison with real browser input, dialogs, theme
+changes, failure/retry, cancellation, long content, reduced motion and local note
+persistence. Four viewports × two models × two themes produce 16 primary captures;
+additional active/error/edit/scroll captures document important states. Targeted
+color pairs and a synthetic input-to-frame sample are measured.
+
+The optional `--in-memory` mode renders exact local source without navigation.
+It exercises the storage-unavailable path and marks persistence pending. CI uses
+HTTP, and its successful job is required for release. Actual images are opened
+for visual judgment separately. The [scenario record](../examples/product-intent/README.md)
+contains sources, reuse decisions and explicit boundaries. Owner acceptance of a
+real project and independent model behavior remain separate evidence.

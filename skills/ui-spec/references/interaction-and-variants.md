@@ -72,3 +72,11 @@ Avoid imposing an app's scrolling or focus model on a document. Verify the host'
 When composing sourced parts, give focus, selection, scrolling, portals and request state clear owners. Preserve the primitive's semantic contract while adapting appearance. Verify touch, keyboard, dismissal, re-entry, rapid reversal and delayed results with the combined implementation. A positioning engine may need a separate semantic control; an animation layer follows confirmed or pending state supplied by the application.
 
 Coordinate listener scope, shared motion engines and teardown. Keep one meaningful feedback sequence for the user's action, with a readable quiet equivalent. Check actual localization, reduced motion, content growth and theme combinations after integration, because their behavior depends on the assembled product.
+
+## Preserve the primary loop and perceived responsiveness
+
+Define the continuing operation for the selected model: a composer follows the conversation, object editing retains the active object and selection, and task work retains filters and status context. For hybrid surfaces, opening supporting evidence or an artifact preserves the primary task and provides a clear return.
+
+Acknowledge input promptly, preserve drafts across interruption, and separate immediate feedback from service completion. Prepare predictable resources when useful and affordable; defer expensive work outside the interaction path. Verify input echo, submit/cancel/retry, rapid selection, loading and long-content scrolling under representative conditions. Measure the event or rendering path being claimed and record the environment. Synthetic timing supplies a regression signal for the fixture; real-device and service performance have their own evidence.
+
+Animate a state change according to meaning and frequency. Coordinate cleanup, reduced motion and focus when combining resources. Decorative motion can remain quiet when sustained reading or repeated operation benefits more from stability.

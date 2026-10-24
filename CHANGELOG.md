@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.0 — 2026-10-25
+
+- Recognize user-level interaction models before settling page structures.
+- Connect mature product references and concrete resource research to visible decisions.
+- Distinguish functional inheritance from target-based visual reuse.
+- Clarify high-impact user choices, delegation and one-shot provisional outcomes.
+- Add a surface/resource decision template and runnable two-model research scenario.
+- Gate publication on scoped browser interaction checks alongside existing release assurance.
+
 ## 1.3.0 — 2026-10-25
 
 - Integrate proactive ecosystem discovery, professional assessment and reuse across design and real connection work.
