@@ -71,7 +71,7 @@ class ProductIntentTests(unittest.TestCase):
             self.assertIn(phrase,text)
         self.assertEqual(validator.validate(ROOT),[])
 
-    def test_common_contract_retains_six_references(self):
+    def test_common_contract_retains_required_references(self):
         entry=(ROOT/'skills/ui-spec/SKILL.md').read_text(encoding='utf-8')
         for name in validator.COMMON:self.assertIn(f'references/{name}.md',entry)
         self.assertIn('optional `shape`',entry)

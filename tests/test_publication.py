@@ -74,11 +74,11 @@ class PublicationTests(unittest.TestCase):
 
     def test_professional_foundation_remains_bounded(self):
         total=sum((ROOT/f'skills/ui-spec/references/{name}.md').stat().st_size for name in validator.COMMON)
-        self.assertLess(total,96*1024,'Review common-reference density before extending the reading contract')
+        self.assertLess(total,128*1024,'Review common-reference density before extending the reading contract')
 
     def test_runtime_covers_design_and_medium(self):
         entry=(ROOT/'skills/ui-spec/SKILL.md').read_text(encoding='utf-8')
-        self.assertIn('read all six common references in full',entry)
+        self.assertIn('read all seven common references in full',entry)
         self.assertIn('references/patterns.md',entry)
         self.assertIn('README',entry)
         self.assertIn('The host controls activation',entry)

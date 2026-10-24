@@ -11,7 +11,7 @@ Use these lenses together to understand the current increment. Give depth to the
 | Information architecture | Page responsibility, naming, hierarchy, entry points and shared shell | Create, reuse, consolidate or adjust the right surface |
 | Journeys and states | Actions, guards, destinations, retained context, returns and recovery | Build a continuous task rather than isolated screens |
 | Visual direction | Subject, tone, hierarchy, density, composition, typography and assets | Form a coherent identity with purpose-specific expression |
-| Components and implementation | Existing components, candidate behavior, framework and data boundaries | Choose reliable parts and a practical implementation |
+| Components, assets and implementation | Existing components, visual material, production routes, framework and data boundaries | Choose reliable parts and a practical realization |
 | Inclusive use and performance | Input methods, assistive use, variants, content growth and device constraints | Make the intended experience usable in its actual conditions |
 | Verification and delivery | Required observations, review scope, dependencies and completion evidence | Design a result that can be inspected and continued |
 
@@ -144,3 +144,9 @@ Expose the meaningful controls in source: semantic type/color roles, composition
 Use external discovery both to realize a chosen idea and to reveal a stronger expression while the relevant choice is open. Translate the task into a perceptual outcome, interaction and material constraints, then inspect useful incumbent/native capabilities and ecosystem work. A concrete demonstration can expose a possibility that an abstract brief did not name.
 
 Assess the mechanism behind that possibility and its conditions. Preserve binding product direction; compare whether the candidate improves clarity, task behavior, quality or total cost. Choose the appropriate reuse layer before committing implementation effort. An existing suitable choice can continue; a meaningful new requirement merits a fit check. The [resource sourcing reference](component-sourcing.md) supplies the method, the catalog supplies leads, and actual project evidence establishes the result.
+
+## Let assets participate in the concept
+
+Identify which material carries identity, content, spatial meaning or attention, then inspect it while the concept and layout can still change. Distinguish routine functional icons, accurate third-party marks and original product identity. Type selection, custom lettering, illustration and 3D have different quality and delivery needs; apply the common [asset method](visual-assets.md).
+
+Compare significant candidates in the intended context, including actual small sizes and themes when relevant. Extract contour, proportion, material and timing relationships from references, and develop an independent product expression. Let users confirm consequential identity choices through equivalent previews, while the agent handles normal production decisions. Asset availability, permissions, tool access and output quality can each change the viable direction.

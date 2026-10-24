@@ -101,6 +101,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
       - name: Exercise product intent and resource decisions
         run: python tools/validate_scenario.py --output-dir scenario-evidence
+      - name: Exercise visual asset delivery
+        run: python tools/validate_assets.py --output-dir scenario-evidence/assets
       - name: Store scenario evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

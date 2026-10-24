@@ -13,7 +13,7 @@ Research baseline: 2026-10-23. Distribution format and tooling baseline rechecke
 | Emil Kowalski, Pick UI Library | Task-first source selection and respecting installed dependencies. | Open, framework-aware source selection across primitives, effects, icons and design references. |
 | Paul Bakaus, Impeccable | Product context, different surface purposes, specialized review/refinement, rendered verification. | A small lifecycle for connected multi-page specifications and eventual real integration. |
 | Leonxlnx, Taste Skill | Explicit art direction, subject-specific content, separate page/app concerns, browser look-and-fix. | Project-controlled visual identity with shared anchors, task continuity and acceptance evidence. |
-| Agent Skills specification | Portable directory/frontmatter and progressive disclosure. | One installable skill with six common required references, specialized supporting material and optional standard-library helpers. |
+| Agent Skills specification | Portable directory/frontmatter and progressive disclosure. | One installable skill with seven common required references, specialized supporting material and optional standard-library helpers. |
 | Vercel Skills CLI | Repository discovery and project/global agent installation. | Standard `npx skills add` distribution; no project-specific installer runtime. |
 | W3C WAI / WCAG | Accessible interaction patterns and reflow. | Explicit accessibility obligations alongside optical review. |
 | Playwright documentation | Real viewport capture and visual comparison mechanics. | Separate viewport, document and internal-scroll evidence with manual visual inspection. |
@@ -76,3 +76,12 @@ Primary mechanism references include [llms.txt](https://llmstxt.org/),
 [Markdown delivery](https://www.mintlify.com/docs/ai/markdown-export), and the
 [Vue Bits export implementation](https://github.com/DavidHDev/vue-bits/blob/3766ebeeed37ec35bce29f001b6d101c7b17da35/src/utils/aiExport.ts).
 These explain retrieval mechanisms; actual project checks establish adoption quality.
+
+## Visual assets and engineering (1.5)
+
+The [asset source map](asset-sources.md) identifies primary documentation inspected
+on 2026-10-25. Its documentation observations support the route-selection method;
+actual production and runtime claims remain tied to project evidence. The new
+seven-reference common foundation treats assets and structure as coupled design
+material. The asset record and bounded browser fixture are original project work;
+the fixture's sourced Lucide icon retains its applicable notices separately.

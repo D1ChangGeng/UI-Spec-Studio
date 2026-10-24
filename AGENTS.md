@@ -4,7 +4,7 @@ This repository distributes the `ui-spec` skill from `skills/ui-spec/`. Runtime
 instructions are English; user-facing introductions include English and Chinese.
 
 Read `docs/MODEL.md` and `docs/WRITING.md` for the accepted design and writing
-standards. Six common references form the complete professional foundation;
+standards. Seven common references form the complete professional foundation;
 integration is required for real behavior work. Shape stays optional. Preserve
 agent initiative, scoped approval and the Skill/host responsibility boundary.
 
@@ -50,3 +50,9 @@ record. Material unresolved directions receive focused user choice; explicit
 one-shot/delegated work retains its actual approval scope. Run the authored
 browser study with `python tools/validate_scenario.py --output-dir scenario-evidence`.
 The study validates its own fixture, not the user's private application or all models.
+
+Version 1.5 adds visual-assets.md as the seventh common reference. Asset work is
+coupled to layout, type and interaction. Keep rights, masters, derivatives and
+actual placements traceable. The focused source map complements the existing
+37-entry catalog. Browser asset checks exercise their stated fixture; specialist
+modeling, font production and legal review retain their own evidence boundaries.

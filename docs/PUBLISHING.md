@@ -66,7 +66,7 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.4.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.5.0 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
@@ -91,3 +91,8 @@ dates; append scoped new observations when independently rechecked.
 The product-intent job executes the authored scenario through local HTTP, stores
 its captures and report, and verifies real browser local storage. Its result is
 a required release gate alongside the existing tests and publication checks.
+
+The scenario gate also runs the asset-review fixture. Keep asset evidence scoped
+to actual files, viewing conditions and input paths. Public bundles carry only
+approved-to-distribute source and outputs; project-specific restricted masters
+remain in their authorized destinations.

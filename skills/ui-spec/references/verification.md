@@ -134,3 +134,11 @@ Workflow validation may use a bounded, anonymized scenario with authored fixture
 Identify the major relationships supplied by the selected page, system or block and compare them with the actual result. Verify the chosen reuse granularity, the important adaptations, and the evidence for using that foundation. Source attribution proves origin; rendered comparisons and real tasks establish retained quality. Treat a static design port, a runtime component integration and an accepted product as different observations.
 
 A useful review explains what mature work contributed to the overall composition and what original work solved. Check the assembled page with representative content and states, including changes that might undermine the foundation's hierarchy, proportions, reading rhythm or interaction continuity.
+
+## Verify assets from master to placement
+
+Follow the asset record from source and permission through transformation, derivative and actual placement. Inspect the delivered bytes rather than only the authoring preview. Apply the common [asset-family checks](visual-assets.md#accept-the-asset-in-use): small-size silhouette and optical weight; type/glyph readability and language coverage; image crop/alpha/color; spatial material and export fidelity; animation states and timing.
+
+Record actual CSS size, density, theme, viewport, content and load conditions. Exercise meaningful blocked-resource, reduced-motion, offscreen and runtime-unavailable states. Separate isolated craft, combined visual quality and measured engineering cost. Whole-page captures, close details and live playback answer different questions. A PNG, file signature or passing metadata check does not establish editable 3D, font shaping or animation behavior.
+
+Use a bounded real browser fixture to validate integration paths when full specialist tooling is outside the current environment. State which production routes were researched, executed or remain pending. Do not generalize that fixture into every asset family or host.

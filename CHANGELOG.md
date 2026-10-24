@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.5.0 — 2026-10-25
+
+- Add Visual Assets & Asset Engineering as the seventh common professional reference.
+- Couple asset direction, production and delivery to page structure and interaction.
+- Cover brand/interface icons, type/glyphs, 2D, spatial and dynamic asset methods.
+- Add a focused primary-source map, master-to-placement record and asset review guide.
+- Validate actual-size icons, responsive/theme artwork, content, failure and motion states in a browser fixture.
+- Preserve the approved README reading design and existing skill lifecycle.
+
 ## 1.4.0 — 2026-10-25
 
 - Use mature page/system/block foundations at the highest appropriate reuse level.

@@ -88,3 +88,9 @@ Handover includes the current preview, design/resource map, actual approval sour
 ## Preserve the foundation through real integration
 
 Carry the accepted page/block relationships and behavior into the current product rather than rebuilding their surface from memory. Keep source configuration and adaptation controls identifiable. Replace fixture boundaries with the real application's owners, preserving hierarchy, content measure, state continuity and editable design decisions. Reassess only the affected foundation choice when actual constraints materially change its fit.
+
+## Carry asset sources and delivery through Finish
+
+Resolve each significant asset to its authorized master, reproducible export and actual delivery variants. Map theme, crop, density, locale or runtime state to the correct file. Retain source/notice requirements and publish only material permitted for the destination. Keep protected masters within their authorized locations.
+
+Verify actual URLs, MIME, loading/cache behavior, decoding and dependency support in the product host. Recheck real text and state transitions after replacing fixtures; compare the exported spatial/material result in the target runtime. Validate delayed/failed loading, quiet/static alternatives and cumulative rendering cost. Deliver the editable source, transformation settings, usage locations and observed limits appropriate to the scope.

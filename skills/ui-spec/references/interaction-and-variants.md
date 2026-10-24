@@ -84,3 +84,9 @@ Animate a state change according to meaning and frequency. Coordinate cleanup, r
 ## Inherit behavior at its useful scope
 
 Study the foundation's complete task loop, not only its resting appearance. Preserve useful focus, input, scroll, loading, interruption and recovery decisions as a coordinated system. Directly adopt proven behavior when compatible; test the equivalent contract when porting. Product-specific authority and real service results remain owned by the current application.
+
+## Assets have runtime states
+
+Treat loading, ready, unavailable, paused, reduced-motion and renderer-limited conditions as designed states. Preserve intrinsic space and useful content while material becomes available. Give informative imagery an appropriate equivalent, functional icons an action name, and supporting decoration a quiet accessibility role.
+
+Asset state-machine inputs and events follow real application intent and outcomes. Manage visibility, interruption, cleanup, posters and fallbacks across media and canvas boundaries. Verify actual decoder/renderer and theme behavior. A font or image arriving late should retain usable reading and controls; a failed 3D or animation load should leave the primary task accessible.

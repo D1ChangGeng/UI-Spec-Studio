@@ -28,3 +28,10 @@ fonts, RTL where applicable and native-control treatment.
 
 Approved scope, revision, matching fixtures, screenshot/test references and approved
 intentional differences. Keep current decisions here; Git records prior revisions.
+
+## Visual asset language and delivery
+
+Identity/functional icon roles, type/glyph intent, image crop/lighting/material,
+spatial and motion relationships. Link significant masters and variants to the
+asset records; preserve their source, rights, runtime/fallback and acceptance.
+Evaluate each asset on its own and in the shared composition.

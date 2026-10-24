@@ -164,3 +164,9 @@ Review the resource map against the assembled viewport. Confirm the claimed effe
 Read a mature foundation as a connected set of decisions: content hierarchy, measure, alignment, spacing rhythm, surface roles, states and attention. Preserve the relationships that make it effective while changing the product-specific content and behavior. Evaluate a typography or spacing change through its effects on the whole composition rather than as an isolated improvement.
 
 Use theory to select, explain, combine and verify those relationships throughout discovery and implementation. A coherent page or block often provides a stronger starting point than separately invented regions. When combining sources, establish one governing visual language and adapt secondary parts to it. Confirm the selected foundation still works with actual content, states and viewing conditions.
+
+## Asset craft and page craft reinforce each other
+
+Judge the asset's silhouette, contours, material, color, typography or motion as a designed object, then judge its relation to the page. Coordinate light, perspective, focal point, negative space and visual weight with the selected composition. The figure can determine the layout as readily as the layout constrains the figure.
+
+Use actual viewing conditions: a mark's optical center and recognition at tab size, a wordmark's spacing and readable semantic name, a crop's subject at narrow width, or a moving object's peak brightness behind text. Preserve useful artistic character while meeting the asset's information and interaction role. Apply [asset engineering](visual-assets.md) to retain that quality through transformation and delivery.

@@ -79,3 +79,21 @@ reading surfaces without inheriting this scenario's aesthetics.
 For a conversational research surface, compare a suitable assistant page template with a task-dashboard template using the same primary loop and content. If the assistant page already resolves welcome composition, composer continuity, message measure and action placement, inherit those decisions together. Add the product's source inspection and research states within that language. A static cross-stack probe can port those relationships with its scope stated; a compatible production stack can retain the source components and runtime behavior directly.
 
 For a small control change inside an accepted interface, that accepted page is already the foundation. Research at the affected component level and preserve the rest. The useful granularity follows the actual problem.
+
+## A brand asset changes the page
+
+A product brief calls for a distinct spatial symbol. Compare suitable existing
+models, an original contour-to-3D route and a simpler 2D expression. Study the
+silhouette and its negative space in the intended composition. A fixed-view hero
+can use a refined render; a view-dependent explanation may justify a real-time
+model with a useful poster. Preserve the actual master and rights, export the
+chosen variants and inspect them beside real copy. The selected asset can change
+the composition before the page family expands.
+
+## A wordmark and everyday reading
+
+A user reference suggests interlocking letterforms and slower visual discovery.
+Extract the relevant contour and spacing qualities into an independent wordmark,
+then compare it at the header and small lockup sizes. Use appropriate ordinary
+text for navigation and the accessible name. Check font licenses and actual glyph
+coverage for the interface separately from the exported identity graphic.

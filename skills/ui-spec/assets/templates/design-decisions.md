@@ -46,3 +46,11 @@ version, changes and maintenance ownership.
 
 Working preview and source; inspected views, states and tasks; resulting changes;
 remaining high-impact choice; approval source and acceptance evidence; next useful increment.
+
+## Asset production and placement
+
+For identity-bearing or other consequential visual assets, link the shared asset ID
+to its purpose, source/permission, editable master, production route, export
+variants, delivery/placement and actual review. Use the asset record or existing
+project equivalent. Keep visual approval, usable file delivery and runtime
+verification scoped to their evidence.

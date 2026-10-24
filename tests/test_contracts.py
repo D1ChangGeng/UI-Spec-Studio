@@ -16,7 +16,7 @@ from test_tools import ROOT, load, sample, prepare, checker, package, validator
 class ContractTests(unittest.TestCase):
     def test_common_references_are_direct_and_complete(self):
         entry = (ROOT / "skills/ui-spec/SKILL.md").read_text(encoding="utf-8")
-        self.assertIn("read all six common references in full", entry)
+        self.assertIn("read all seven common references in full", entry)
         for name in validator.COMMON:
             self.assertIn(f"references/{name}.md", entry)
             self.assertGreater((ROOT / f"skills/ui-spec/references/{name}.md").stat().st_size, 500)

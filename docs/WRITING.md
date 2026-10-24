@@ -29,7 +29,7 @@ Keep established ideas compact. Prefer specific relationships over adjectives su
 
 SKILL.md owns activation guidance, common reading and core boundaries. Workflow owns execution order. References own detailed professional methods. Project documents own product choices. Code and runtime own observed implementation facts. A cross-reference connects these responsibilities without duplicating their full content.
 
-Read the six common references as a whole professional foundation. Keep each concise and complementary. An added paragraph should change a plausible decision, preserve a necessary constraint or explain how to verify a result.
+Read the seven common references as a whole professional foundation. Keep each concise and complementary. An added paragraph should change a plausible decision, preserve a necessary constraint or explain how to verify a result.
 
 ## Separate internal depth from user effort
 
@@ -77,3 +77,11 @@ work. Name the useful reuse granularity and explain which connected decisions
 are inherited. Distinguish resource scope from adoption method. State how new
 observations can change the choice and how adaptation preserves the valuable
 relationships. Original work has a product-specific role and verification target.
+
+## Treat assets as actionable design material
+
+State the asset's role, why its qualities matter, how production and delivery differ,
+and what the final placement must preserve. Distinguish a source of inspiration,
+an acquired file, editable master, runtime export and accepted result. Explain
+optical and technical judgment together. Reference tools as capabilities to verify
+in the host; express completion from actual outputs and observed conditions.

@@ -29,6 +29,14 @@ and build the first reviewable SPEC. Show the result and your decisions.
 
 After reviewing, **“Approved, continue”** advances the next useful increment. **“Use ui-spec: finish”** connects an accepted design to its actual content, behavior and delivery boundary. [Installation and agent options](docs/INSTALL.md) · [Multi-round guide](docs/GUIDE.md)
 
+## Visual material is part of the design
+
+Identity, icons, type, illustration, imagery, spatial graphics and dynamic assets
+work with layout and interaction. Research suitable material, choose a production
+route, keep editable masters and delivery variants connected, then inspect the
+actual placement, loading and quiet states. A strong asset can reshape the whole
+composition. [Asset practice](docs/VISUAL-ASSETS.md) · [Browser review fixture](examples/asset-review/README.md)
+
 ## Design from an informed starting point
 
 **Understand the task → explore real work → compare and select → adapt → inspect.**
@@ -73,7 +81,7 @@ A separate [research-product example](examples/product-intent/README.md) shows p
 
 Each round gives the agent a useful scope to implement and inspect. An accepted design can continue into working product behavior, or into a document's actual publishing boundary. The agent carries forward decisions, evaluates the affected views and states, and keeps source evidence distinct from owner approval.
 
-Before substantive work, the agent reads **six common references in full**: [workflow](skills/ui-spec/references/workflow.md), [analysis](skills/ui-spec/references/analysis.md), [visual principles](skills/ui-spec/references/principles.md), [resource discovery](skills/ui-spec/references/component-sourcing.md), [interaction](skills/ui-spec/references/interaction-and-variants.md) and [verification](skills/ui-spec/references/verification.md). [Integration](skills/ui-spec/references/integration.md) applies when connecting real behavior. The host remains responsible for tool access, execution and context management.
+Before substantive work, the agent reads **seven common references in full**: [workflow](skills/ui-spec/references/workflow.md), [analysis](skills/ui-spec/references/analysis.md), [visual principles](skills/ui-spec/references/principles.md), [resource discovery](skills/ui-spec/references/component-sourcing.md), [interaction](skills/ui-spec/references/interaction-and-variants.md), [verification](skills/ui-spec/references/verification.md) and [visual assets](skills/ui-spec/references/visual-assets.md). [Integration](skills/ui-spec/references/integration.md) applies when connecting real behavior. The host remains responsible for tool access, execution and context management.
 
 ## Install, inspect, maintain
 
@@ -82,7 +90,7 @@ Before substantive work, the agent reads **six common references in full**: [wor
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.4.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.5.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

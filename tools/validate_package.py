@@ -10,8 +10,8 @@ import sys
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-COMMON = ("workflow", "analysis", "principles", "component-sourcing", "interaction-and-variants", "verification")
-REQUIRED = ["examples/product-intent/FOUNDATION.md", "examples/product-intent/foundation.json", "docs/DESIGN-DECISIONS.md", "docs/REVIEW-v1.4.0.md", "skills/ui-spec/assets/templates/design-decisions.md", "examples/product-intent/index.html", "examples/product-intent/styles.css", "examples/product-intent/app.js", "examples/product-intent/tokens.css", "examples/product-intent/README.md", "examples/product-intent/THIRD-PARTY.md", "tools/validate_scenario.py", "README.md", "README.zh-CN.md", "LICENSE", "VERSION", "AGENTS.md", "SECURITY.md", "CONTRIBUTING.md",
+COMMON = ("workflow", "analysis", "principles", "component-sourcing", "interaction-and-variants", "verification", "visual-assets")
+REQUIRED = ["docs/VISUAL-ASSETS.md", "docs/REVIEW-v1.5.0.md", "skills/ui-spec/references/asset-sources.md", "skills/ui-spec/assets/templates/asset-record.md", "examples/asset-review/index.html", "examples/asset-review/README.md", "tools/validate_assets.py", "examples/product-intent/FOUNDATION.md", "examples/product-intent/foundation.json", "docs/DESIGN-DECISIONS.md", "docs/REVIEW-v1.4.0.md", "skills/ui-spec/assets/templates/design-decisions.md", "examples/product-intent/index.html", "examples/product-intent/styles.css", "examples/product-intent/app.js", "examples/product-intent/tokens.css", "examples/product-intent/README.md", "examples/product-intent/THIRD-PARTY.md", "tools/validate_scenario.py", "README.md", "README.zh-CN.md", "LICENSE", "VERSION", "AGENTS.md", "SECURITY.md", "CONTRIBUTING.md",
             "skills/ui-spec/SKILL.md", "skills/ui-spec/LICENSE", "skills/ui-spec/scripts/prepare.py",
             "skills/ui-spec/scripts/check_manifest.py", "docs/INSTALL.md", "docs/GUIDE.md", "docs/MODEL.md",
             "docs/WRITING.md", "docs/REVIEW.md", "docs/MANIFEST.md", "docs/RESEARCH.md", "docs/EVALUATION.md",

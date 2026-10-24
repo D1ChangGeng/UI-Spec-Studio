@@ -1,11 +1,11 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, product interaction models, design options, traceable resource selection, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, product interaction models, design options, traceable resource selection, visual assets, brand/icon/type craft, 2D/3D/media production and delivery, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.4.0"
+  version: "1.5.0"
 ---
 
 # UI Spec Studio
@@ -22,9 +22,15 @@ For a new surface or substantial redesign, seek the **highest appropriate reuse 
 
 Inherit valuable decisions about hierarchy, proportions, reading rhythm, interaction and states. Concentrate original design on product differences, missing capabilities, coherent adaptation and integration. Inspect concrete candidates and explain a native or original choice when its fit is stronger. A few sourced details do not establish a page-level foundation; show which important relationships the selected work actually supplies.
 
+## Design with visual assets
+
+Treat assets as first-class material alongside structure and interaction: identity marks, icons, fonts/glyphs, images, illustration, textures, spatial objects, scenes and dynamic visuals. Identify their role and quality target early. Discover mature material and production methods, then select direct use, adaptation or purposeful creation. A load-bearing asset can reshape the page's composition; develop both together.
+
+The reuse hierarchy describes scope rather than importance. Preserve mature design relationships while giving distinctive assets the craft their role warrants. Keep editable masters, delivery variants, rights, runtime behavior and actual placements connected. Show significant identity directions in context for user judgment; carry accepted choices through real integration and family-specific checks. Tool access and completed production are established from actual host capabilities and outputs.
+
 ## Establish the professional context
 
-Before substantive UI SPEC planning, implementation or review, **read all six common references in full**:
+Before substantive UI SPEC planning, implementation or review, **read all seven common references in full**:
 
 1. [Workflow](references/workflow.md) — organize the work and continue the current round.
 2. [Analysis](references/analysis.md) — understand the product, choose scope and reason about UX.
@@ -32,12 +38,13 @@ Before substantive UI SPEC planning, implementation or review, **read all six co
 4. [Resource discovery and reuse](references/component-sourcing.md) — find, assess, adapt and validate useful design and implementation resources.
 5. [Interaction and variants](references/interaction-and-variants.md) — preserve usable behavior across states.
 6. [Verification](references/verification.md) — inspect the result and support completion claims.
+7. [Visual assets and asset engineering](references/visual-assets.md) — research, prepare, produce, integrate and verify the visual material.
 
 These short references form a shared professional foundation. Reading them together supplies related knowledge before an unforeseen decision arises. Apply the parts relevant to the task; execution depth follows impact and uncertainty.
 
 Use the host's file-reading capability to obtain the actual text. Continue truncated reads until the required content is complete. Content already fully available and current in this execution context can be reused. When needed content is unavailable or its version is uncertain, read it again. A path, hash, checklist entry or earlier-session claim identifies a source; the source text supplies its guidance.
 
-**Specialized reading:** [Integration](references/integration.md) is required for `finish` and work involving real data, authority, persistence or consequential business behavior. [Examples](references/examples.md) illustrate application; [technique patterns](references/patterns.md) connect a communication problem to editable implementation and inspection; [sources](references/sources.md) provide research provenance. Read actual project contracts and selected component documentation as the work requires. The [resource catalog](references/resource-catalog.md) maps design needs to documented starting points; its [data](assets/resource-catalog.json) and optional [local lookup](scripts/find_resources.py) support focused retrieval. Read relevant entries and their actual sources as the task requires. Templates and scripts are optional resources.
+**Specialized reading:** [Integration](references/integration.md) is required for `finish` and work involving real data, authority, persistence or consequential business behavior. [Examples](references/examples.md) illustrate application; [technique patterns](references/patterns.md) connect a communication problem to editable implementation and inspection; [sources](references/sources.md) provide research provenance. Read actual project contracts and selected component documentation as the work requires. The [resource catalog](references/resource-catalog.md) maps design needs to documented starting points; its [data](assets/resource-catalog.json) and optional [local lookup](scripts/find_resources.py) support focused retrieval. Read relevant entries and their actual sources as the task requires. The [asset source map](references/asset-sources.md) provides production-specific leads; the [asset record](assets/templates/asset-record.md) supports master-to-delivery traceability. Templates and scripts are optional resources.
 
 The skill defines a reading and working contract. The host controls activation, tool access, context retention, compaction and execution. Describe missing capabilities precisely and continue work supported by available evidence. Keep this responsibility boundary explicit in reports and helper-tool claims.
 

@@ -126,3 +126,23 @@ composer radius, empty-state type and actual task continuity alongside its viewp
 captures. A public upstream preview can be captured with `--source-preview`; the
 runner verifies the pinned source blob and records live access separately.
 This remains a scoped example, not an upstream-runtime or model-quality certification.
+
+## Visual asset assurance (1.5)
+
+`python tools/validate_assets.py --output-dir scenario-evidence/assets` runs an
+HTTP browser fixture against existing README illustrations and a sourced Lucide
+icon. It checks actual file identity, responsive/theme selection, small CSS sizes
+at two densities, informative/decorative/functional semantics, blocked-resource
+fallback, preserved layout, motion pause/reduced preference and inactivity policy.
+Captures and measurements state their environment. The scenario job runs this
+with the existing product fixture before release.
+
+The publication illustrations retain their editable Python source and four SVG
+outputs. The fixture ships the selected icon and required notices, while fonts use
+the environment's installed system stack. Specialist 3D, custom font and authored
+animation-tool pipelines are method/research coverage rather than executed claims.
+
+The asset runner's optional `--in-memory` mode supports hosts that cannot navigate
+a local server. It embeds actual local source bytes and exercises an invalid-image
+decoder result; it explicitly leaves HTTP delivery unverified. The CI command uses
+the default HTTP path and is a required release check.

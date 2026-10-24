@@ -137,7 +137,7 @@ class ResourceTests(unittest.TestCase):
     def test_common_method_and_stage_links(self):
         skill=(ROOT/'skills/ui-spec/SKILL.md').read_text(encoding='utf-8')
         method=(ROOT/'skills/ui-spec/references/component-sourcing.md').read_text(encoding='utf-8')
-        self.assertIn('read all six common references in full',skill)
+        self.assertIn('read all seven common references in full',skill)
         self.assertIn('references/resource-catalog.md',skill)
         for term in ('Requirement-led','Opportunity-led','total cost','project acceptance','authorized review'):
             self.assertIn(term,method)

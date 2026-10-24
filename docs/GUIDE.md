@@ -10,7 +10,7 @@ Keep its framework and working API. Inspect its routes, user tasks and current
 screens. Establish a coherent UI direction and implement the first useful slice.
 ```
 
-The agent reads all six common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Relevant mature product flows and implementation sources help establish a primary model. When material alternatives remain open, optional shape presents a reasoned recommendation and a focused choice or representative preview. An implementation request with clear direction continues into a meaningful slice. The following collection/detail examples assume that this direction has been selected for the actual task.
+The agent reads all seven common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Relevant mature product flows and implementation sources help establish a primary model. When material alternatives remain open, optional shape presents a reasoned recommendation and a focused choice or representative preview. An implementation request with clear direction continues into a meaningful slice. The following collection/detail examples assume that this direction has been selected for the actual task.
 
 Existing instructions, design documents and tests remain useful. The optional templates are a starting point when equivalent records are absent.
 
@@ -146,3 +146,16 @@ agent work. Clear existing intent or explicit delegation supports direct progres
 one-shot recommendations retain their provisional scope. The preview is delivered
 with a [design/resource record](DESIGN-DECISIONS.md) linking consequential sources
 to actual surfaces and observed results. Try the [worked study](../examples/product-intent/README.md).
+
+## Design with visual assets
+
+The seventh common reference brings assets into the initial professional context.
+The agent identifies material that carries meaning, identity or composition, then
+researches mature candidates and chooses an appropriate production route. Asset
+findings can improve the layout. Important identity directions use comparable
+previews; normal adaptation follows the accepted direction.
+
+[The asset guide](VISUAL-ASSETS.md) covers marks/icons, type/glyphs, images,
+spatial work and dynamic assets. Masters, exports and placements remain linked.
+The [review fixture](../examples/asset-review/README.md) demonstrates a scoped,
+actual-browser check of image variants, small icons, motion and unavailable media.

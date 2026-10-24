@@ -62,7 +62,7 @@ Use the ui-spec skill. Read its entry point and tell me which operation
 matches this repository's current state, then carry out the requested work.
 ```
 
-The agent should read SKILL.md and all six common references for substantive work,
+The agent should read SKILL.md and all seven common references for substantive work,
 then use the operation appropriate to the project's current state. Integration is
 required for real behavior work. Reading and skill activation remain host-mediated.
 
@@ -106,7 +106,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.4.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.5.0 --skill ui-spec
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
