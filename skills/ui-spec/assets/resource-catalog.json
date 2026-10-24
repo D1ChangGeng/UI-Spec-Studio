@@ -1,0 +1,1182 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-24",
+  "purpose": "Open, task-oriented discovery map. Resolve exact items and verify them in the target product.",
+  "scope": "Curated from the accepted 2026-10-24 documentation/public-source research. The selected entries require current item, demo and project verification.",
+  "provenance": {
+    "source_name": "UI_Resource_Catalog_2026-10-24.json",
+    "sha256": "40119fe08cb18352c2bd18bc1d83433467b707e525b5f29db0e88149e70d749d"
+  },
+  "needs": {
+    "foundations": "Tokens, theme roles, scales and spacing",
+    "layout": "Page structure, navigation, blocks and responsive composition",
+    "controls": "Forms, menus, overlays, focus and feedback",
+    "visual-effects": "Backgrounds, surfaces, shaders and expressive treatments",
+    "typography": "Fonts, reading roles, glyph coverage and text treatment",
+    "icons": "Icon semantics, shapes and distribution",
+    "imagery": "Photography, illustration and editable graphics",
+    "motion": "Transitions, gestures, timelines and micro-interactions",
+    "complex-information": "Tables, charts, editors and data relationships",
+    "design-reference": "Patterns, flows and editable design sources"
+  },
+  "resources": [
+    {
+      "id": "react-bits",
+      "name": "React Bits",
+      "needs": [
+        "visual-effects",
+        "motion",
+        "typography"
+      ],
+      "forms": [
+        "source",
+        "demo"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Animated backgrounds, text, interactions and expressive display components.",
+      "access": "Index, category demos, source variants and documented component installation.",
+      "adoption_notes": "Select exact JS/TS and CSS/Tailwind variants; inspect the actual animation/rendering dependencies and preserve demonstration parameters.",
+      "aliases": [
+        "背景",
+        "文字动画"
+      ],
+      "sources": [
+        "https://reactbits.dev/llms.txt"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "vue-bits",
+      "name": "Vue Bits",
+      "needs": [
+        "visual-effects",
+        "motion",
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "demo"
+      ],
+      "stacks": [
+        "vue"
+      ],
+      "use_for": "Animated backgrounds, text, cards and visual interactions.",
+      "access": "Category demos, configuration/source, Copy for AI, documented registry/MCP and a source-linked llms index.",
+      "adoption_notes": "The snapshot located llms.txt in official source; its direct fetch was unavailable. Check the exact MIT + Commons Clause terms and host tool availability for adoption.",
+      "aliases": [
+        "背景",
+        "动画",
+        "卡片"
+      ],
+      "sources": [
+        "https://vue-bits.dev/get-started/mcp",
+        "https://vue-bits.dev/text-animations/fold-text",
+        "https://github.com/DavidHDev/vue-bits/blob/3766ebeeed37ec35bce29f001b6d101c7b17da35/src/utils/aiExport.ts",
+        "https://github.com/DavidHDev/vue-bits/blob/main/README.md"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "magic-ui",
+      "name": "Magic UI",
+      "needs": [
+        "visual-effects",
+        "motion",
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "blocks"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Expressive effects, text, backgrounds and display blocks.",
+      "access": "Component docs, Copy Page and documented MCP entry.",
+      "adoption_notes": "Identify the particular free component or separately sold template; review behavior and effect intensity in the complete page.",
+      "aliases": [
+        "动效",
+        "背景"
+      ],
+      "sources": [
+        "https://magicui.design/docs/mcp"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "aceternity",
+      "name": "Aceternity UI",
+      "needs": [
+        "visual-effects",
+        "motion",
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "blocks"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Backgrounds, cards, scroll effects, text and showcase compositions.",
+      "access": "Visual catalog, demos, usage code and component docs.",
+      "adoption_notes": "Review exact source, rights, dependencies and touch behavior; adapt strong effects to the accepted visual direction.",
+      "aliases": [
+        "卡片",
+        "背景"
+      ],
+      "sources": [
+        "https://ui.aceternity.com/components"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "inspira",
+      "name": "Inspira UI",
+      "needs": [
+        "visual-effects",
+        "motion",
+        "layout"
+      ],
+      "forms": [
+        "source"
+      ],
+      "stacks": [
+        "vue"
+      ],
+      "use_for": "Copyable Vue/Nuxt backgrounds, text, interaction and display components.",
+      "access": "Category documentation, demos/source and installation guide.",
+      "adoption_notes": "Match Vue, Tailwind and motion-library versions with the selected component documentation.",
+      "aliases": [
+        "组件",
+        "文字动画"
+      ],
+      "sources": [
+        "https://docs.inspira-ui.com/docs/en",
+        "https://docs.inspira-ui.com/docs/en/getting-started/installation"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "paper-shaders",
+      "name": "Paper Shaders",
+      "needs": [
+        "visual-effects"
+      ],
+      "forms": [
+        "package",
+        "demo"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Parameterized textures, light, metal and dot-grid surfaces.",
+      "access": "Live parameters and usage examples; the snapshot inspected React examples.",
+      "adoption_notes": "Review GPU cost, static equivalents, background pause and foreground contrast. Confirm the particular package and runtime.",
+      "aliases": [
+        "着色器",
+        "材质"
+      ],
+      "sources": [
+        "https://shaders.paper.design/dot-grid",
+        "https://shaders.paper.design/liquid-metal"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "uiverse",
+      "name": "Uiverse",
+      "needs": [
+        "controls",
+        "visual-effects"
+      ],
+      "forms": [
+        "source",
+        "reference"
+      ],
+      "stacks": [
+        "html-css",
+        "react"
+      ],
+      "use_for": "Community examples for buttons, loaders, forms and cards.",
+      "access": "Category search, live preview and item code.",
+      "adoption_notes": "Assess each author/item for semantics, license and maintainability; gallery membership identifies a lead.",
+      "aliases": [
+        "按钮",
+        "加载"
+      ],
+      "sources": [
+        "https://uiverse.io/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "21st",
+      "name": "21st.dev",
+      "needs": [
+        "layout",
+        "visual-effects"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "reference"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Community component, block, theme and template discovery.",
+      "access": "Search/catalog, previews and item-specific installation or prompt export.",
+      "adoption_notes": "Resolve original author/source, access terms and source completeness before adoption.",
+      "aliases": [
+        "区块",
+        "模板"
+      ],
+      "sources": [
+        "https://21st.dev/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "base-ui",
+      "name": "Base UI",
+      "needs": [
+        "controls"
+      ],
+      "forms": [
+        "package",
+        "primitive"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Customizable menus, overlays and form interaction foundations.",
+      "access": "llms index, APIs/examples and package installation.",
+      "adoption_notes": "Check controlled state, portals, focus and styling scope; validate accessibility in the composed result.",
+      "aliases": [
+        "菜单",
+        "表单"
+      ],
+      "sources": [
+        "https://base-ui.com/react/overview/quick-start",
+        "https://base-ui.com/llms.txt"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "radix-primitives",
+      "name": "Radix Primitives",
+      "needs": [
+        "controls"
+      ],
+      "forms": [
+        "package",
+        "primitive"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Composable menus, dialogs, selection and focus behavior.",
+      "access": "Categorized APIs, examples and interaction/accessibility documentation.",
+      "adoption_notes": "Preserve semantic/state contracts and map styling into project tokens; confirm package names for the selected version.",
+      "aliases": [
+        "菜单",
+        "弹窗"
+      ],
+      "sources": [
+        "https://www.radix-ui.com/primitives/docs/overview/introduction"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "react-aria",
+      "name": "React Aria",
+      "needs": [
+        "controls",
+        "complex-information"
+      ],
+      "forms": [
+        "package",
+        "primitive"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Input, collection, form and internationalized interaction capabilities.",
+      "access": "Component APIs, examples and styling guides.",
+      "adoption_notes": "Evaluate primitive behavior and the complete page separately; use the correct package and state model.",
+      "aliases": [
+        "表单",
+        "集合"
+      ],
+      "sources": [
+        "https://react-aria.adobe.com/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "reka",
+      "name": "Reka UI",
+      "needs": [
+        "controls"
+      ],
+      "forms": [
+        "package",
+        "primitive"
+      ],
+      "stacks": [
+        "vue"
+      ],
+      "use_for": "Vue menus, overlays, inputs and focus behavior.",
+      "access": "Component APIs, examples and Markdown documentation entry.",
+      "adoption_notes": "Compose stable interaction with tailored appearance; confirm controlled state and event wiring.",
+      "aliases": [
+        "菜单",
+        "焦点"
+      ],
+      "sources": [
+        "https://reka-ui.com/docs/overview/introduction"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "shadcn",
+      "name": "shadcn/ui",
+      "needs": [
+        "controls",
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "registry"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Product components and blocks delivered as editable source.",
+      "access": "llms index, demos/APIs, registry, CLI inspection/preview and MCP docs.",
+      "adoption_notes": "Inspect files, dependencies and global CSS changes before installation; copied source has local maintenance ownership.",
+      "aliases": [
+        "组件",
+        "注册表"
+      ],
+      "sources": [
+        "https://ui.shadcn.com/llms.txt",
+        "https://ui.shadcn.com/docs/cli",
+        "https://ui.shadcn.com/docs/registry/registry-item-json"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "shadcn-vue",
+      "name": "shadcn-vue",
+      "needs": [
+        "controls",
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "registry"
+      ],
+      "stacks": [
+        "vue"
+      ],
+      "use_for": "Editable Vue product components and blocks.",
+      "access": "Component documentation, registry/CLI and MCP guide.",
+      "adoption_notes": "Select the Vue source, CLI and dependencies explicitly; distribution schema and framework compatibility are separate facts.",
+      "aliases": [
+        "组件",
+        "注册表"
+      ],
+      "sources": [
+        "https://www.shadcn-vue.com/docs/mcp"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "nuxt-ui",
+      "name": "Nuxt UI",
+      "needs": [
+        "controls",
+        "layout",
+        "foundations"
+      ],
+      "forms": [
+        "package",
+        "system"
+      ],
+      "stacks": [
+        "vue"
+      ],
+      "use_for": "Product controls, themes, forms and layouts for Nuxt/Vue.",
+      "access": "llms index, per-page Markdown, examples and MCP/Skill documentation links.",
+      "adoption_notes": "Match the installed version and theme mechanism; documented tools become usable through actual host connections.",
+      "aliases": [
+        "主题",
+        "布局"
+      ],
+      "sources": [
+        "https://ui.nuxt.com/llms.txt"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "mui",
+      "name": "MUI",
+      "needs": [
+        "controls",
+        "layout",
+        "complex-information"
+      ],
+      "forms": [
+        "package",
+        "system"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Product components, themes and complex-interface foundations.",
+      "access": "Component APIs/demos, AI documentation and MCP guide.",
+      "adoption_notes": "Check the specific package/version and any commercial extension terms.",
+      "aliases": [
+        "主题",
+        "表格"
+      ],
+      "sources": [
+        "https://mui.com/material-ui/getting-started/mcp/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "ant-design",
+      "name": "Ant Design",
+      "needs": [
+        "controls",
+        "complex-information",
+        "layout"
+      ],
+      "forms": [
+        "package",
+        "system"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Data-dense forms, tables, navigation and feedback.",
+      "access": "Bilingual AI docs, component Markdown, semantic structure, design docs and MCP links.",
+      "adoption_notes": "Inspect component semantics and version; other framework implementations have their own contracts.",
+      "aliases": [
+        "表格",
+        "表单"
+      ],
+      "sources": [
+        "https://ant.design/docs/react/llms/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "motion",
+      "name": "Motion",
+      "needs": [
+        "motion"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "react",
+        "vue",
+        "javascript"
+      ],
+      "use_for": "Transitions, gestures, layout changes and motion control.",
+      "access": "Framework-specific docs/examples and separately authorized AI tooling.",
+      "adoption_notes": "Select APIs by interaction purpose and runtime; distinguish base capabilities from tools requiring additional access.",
+      "aliases": [
+        "动画",
+        "手势"
+      ],
+      "sources": [
+        "https://motion.dev/docs",
+        "https://motion.dev/docs/ai-kit"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "gsap",
+      "name": "GSAP",
+      "needs": [
+        "motion",
+        "typography"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "javascript",
+        "framework-neutral"
+      ],
+      "use_for": "Timelines, scroll, text and coordinated multi-element motion.",
+      "access": "llms index, core/plugin APIs and examples.",
+      "adoption_notes": "Check scope, teardown, reduced motion, repeated interaction and applicable license.",
+      "aliases": [
+        "时间线",
+        "动画"
+      ],
+      "sources": [
+        "https://gsap.com/llms.txt"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "rive",
+      "name": "Rive",
+      "needs": [
+        "motion",
+        "imagery"
+      ],
+      "forms": [
+        "asset",
+        "engine"
+      ],
+      "stacks": [
+        "multi-runtime"
+      ],
+      "use_for": "Designer-authored state-driven graphics and interactive animation.",
+      "access": "Runtime documentation, platform capability guides and animation files.",
+      "adoption_notes": "Check authoring access, asset rights and selected runtime capability/version separately.",
+      "aliases": [
+        "交互动画",
+        "状态机"
+      ],
+      "sources": [
+        "https://rive.app/docs/runtimes/getting-started"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "lottiefiles",
+      "name": "LottieFiles",
+      "needs": [
+        "motion",
+        "imagery"
+      ],
+      "forms": [
+        "asset",
+        "engine"
+      ],
+      "stacks": [
+        "multi-runtime"
+      ],
+      "use_for": "Graphic animation, loaders and feedback assets.",
+      "access": "Asset catalog, developer docs and framework/player integrations.",
+      "adoption_notes": "Check asset and player licenses separately; assess payload, renderer support and communicative value.",
+      "aliases": [
+        "加载",
+        "动画素材"
+      ],
+      "sources": [
+        "https://lottiefiles.com/developers"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "lucide",
+      "name": "Lucide",
+      "needs": [
+        "icons"
+      ],
+      "forms": [
+        "asset",
+        "package"
+      ],
+      "stacks": [
+        "framework-neutral"
+      ],
+      "use_for": "Consistent line icons with framework-specific delivery options.",
+      "access": "Icon catalog, framework guides, SVG and packages.",
+      "adoption_notes": "Match weight, size and accessible naming; retain an adequate interaction target around a small icon.",
+      "aliases": [
+        "图标",
+        "线条"
+      ],
+      "sources": [
+        "https://lucide.dev/guide/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "iconify",
+      "name": "Iconify",
+      "needs": [
+        "icons"
+      ],
+      "forms": [
+        "asset",
+        "package"
+      ],
+      "stacks": [
+        "framework-neutral"
+      ],
+      "use_for": "Search and distribute icons across multiple collections.",
+      "access": "Collection directory, APIs, components and offline icon data.",
+      "adoption_notes": "Check each collection license and visual fit; choose online retrieval or local bundling deliberately.",
+      "aliases": [
+        "图标",
+        "集合"
+      ],
+      "sources": [
+        "https://iconify.design/docs/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "fontsource",
+      "name": "Fontsource",
+      "needs": [
+        "typography"
+      ],
+      "forms": [
+        "font",
+        "package"
+      ],
+      "stacks": [
+        "framework-neutral"
+      ],
+      "use_for": "Self-hosted font families, weights, subsets and variable fonts.",
+      "access": "Font catalog, llms index/full docs, page Markdown and font API docs.",
+      "adoption_notes": "AI docs cover usage and exclude generated font catalog pages. Inspect actual family/glyph coverage and individual font terms separately.",
+      "aliases": [
+        "字体",
+        "字形"
+      ],
+      "sources": [
+        "https://fontsource.org/docs/getting-started/introduction",
+        "https://fontsource.org/docs/getting-started/ai-and-llms"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "open-props",
+      "name": "Open Props",
+      "needs": [
+        "foundations",
+        "motion"
+      ],
+      "forms": [
+        "tokens"
+      ],
+      "stacks": [
+        "framework-neutral"
+      ],
+      "use_for": "Reusable CSS sizes, spacing, colors, shadows and easing.",
+      "access": "Token directory, source and import guidance.",
+      "adoption_notes": "Map selected values into project semantic roles and one coherent set of scales.",
+      "aliases": [
+        "令牌",
+        "间距"
+      ],
+      "sources": [
+        "https://open-props.style/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "radix-colors",
+      "name": "Radix Colors",
+      "needs": [
+        "foundations"
+      ],
+      "forms": [
+        "tokens",
+        "package"
+      ],
+      "stacks": [
+        "framework-neutral"
+      ],
+      "use_for": "Color scales for surfaces, boundaries, emphasis and text across themes.",
+      "access": "Color/use guidance and source/package access.",
+      "adoption_notes": "Map colors to actual roles and verify contrast in real combinations.",
+      "aliases": [
+        "颜色",
+        "主题"
+      ],
+      "sources": [
+        "https://www.radix-ui.com/colors"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "utopia",
+      "name": "Utopia",
+      "needs": [
+        "foundations",
+        "typography",
+        "layout"
+      ],
+      "forms": [
+        "generator",
+        "reference"
+      ],
+      "stacks": [
+        "framework-neutral"
+      ],
+      "use_for": "Fluid type, space and grid tools.",
+      "access": "Generators, method guidance and CSS output.",
+      "adoption_notes": "Calibrate generated bounds to real content and device conditions; parameters are design choices.",
+      "aliases": [
+        "排版",
+        "栅格"
+      ],
+      "sources": [
+        "https://utopia.fyi/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "tanstack-table",
+      "name": "TanStack Table",
+      "needs": [
+        "complex-information"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "multi-framework"
+      ],
+      "use_for": "Headless sorting, filtering, columns and table state.",
+      "access": "Framework-adapter docs, APIs and examples.",
+      "adoption_notes": "Choose behavior and appearance separately; test actual data scale, keyboard behavior and server-query boundaries.",
+      "aliases": [
+        "表格",
+        "筛选"
+      ],
+      "sources": [
+        "https://tanstack.com/table/latest"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "embla",
+      "name": "Embla Carousel",
+      "needs": [
+        "motion",
+        "controls"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "javascript",
+        "multi-framework"
+      ],
+      "use_for": "Controlled carousel movement, dragging and slide relationships.",
+      "access": "Examples, parameter guides and framework packages.",
+      "adoption_notes": "Use a carousel when it serves the content; check focus, touch, autoplay and reduced motion.",
+      "aliases": [
+        "轮播",
+        "拖动"
+      ],
+      "sources": [
+        "https://www.embla-carousel.com/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "floating-ui",
+      "name": "Floating UI",
+      "needs": [
+        "controls"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "multi-framework"
+      ],
+      "use_for": "Floating-element alignment, collision and available-space handling.",
+      "access": "Live examples, positioning APIs and packages.",
+      "adoption_notes": "Assign positioning and complete control semantics separately; check scroll containers and layer ownership.",
+      "aliases": [
+        "浮层",
+        "定位"
+      ],
+      "sources": [
+        "https://floating-ui.com/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "tiptap",
+      "name": "Tiptap",
+      "needs": [
+        "complex-information"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "multi-framework"
+      ],
+      "use_for": "Extensible rich-text and structured editing.",
+      "access": "APIs, extension directory, framework guides and examples.",
+      "adoption_notes": "Check editor state, content format, persistence and extension rights against the real scope.",
+      "aliases": [
+        "编辑器",
+        "富文本"
+      ],
+      "sources": [
+        "https://tiptap.dev/docs/editor/getting-started/overview"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "echarts",
+      "name": "Apache ECharts",
+      "needs": [
+        "complex-information",
+        "imagery"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "javascript",
+        "framework-neutral"
+      ],
+      "use_for": "Charts, visual relationships, interaction and server-rendered graphics.",
+      "access": "Example editor with code export, APIs and handbook.",
+      "adoption_notes": "Choose the right representation and renderer; test real data and accessible equivalents.",
+      "aliases": [
+        "图表",
+        "可视化"
+      ],
+      "sources": [
+        "https://echarts.apache.org/handbook/en/basics/import/",
+        "https://echarts.apache.org/handbook/en/best-practices/canvas-vs-svg/",
+        "https://echarts.apache.org/handbook/en/how-to/cross-platform/server/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "codrops",
+      "name": "Codrops",
+      "needs": [
+        "design-reference",
+        "visual-effects",
+        "motion"
+      ],
+      "forms": [
+        "reference",
+        "source"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "Creative composition, graphics, interaction and implementation techniques.",
+      "access": "Search/categories, live demonstrations and tutorial/source pairs.",
+      "adoption_notes": "Extract transferable mechanisms and assess each example license, dependencies and product fit.",
+      "aliases": [
+        "灵感",
+        "教程"
+      ],
+      "sources": [
+        "https://tympanus.net/codrops/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "mobbin",
+      "name": "Mobbin",
+      "needs": [
+        "design-reference",
+        "layout"
+      ],
+      "forms": [
+        "reference"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "Product-screen and user-flow observation.",
+      "access": "Screen/flow search, visible previews and product records.",
+      "adoption_notes": "Use task and state relationships as reference; content access and permission to reuse product assets are separate.",
+      "aliases": [
+        "用户流程",
+        "参考"
+      ],
+      "sources": [
+        "https://mobbin.com/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "finesse",
+      "name": "Finesse UI",
+      "needs": [
+        "design-reference",
+        "layout",
+        "foundations"
+      ],
+      "forms": [
+        "design-file",
+        "reference"
+      ],
+      "stacks": [
+        "design-tool"
+      ],
+      "use_for": "Figma component, variant and page-composition reference.",
+      "access": "Design-kit catalog and Figma entry.",
+      "adoption_notes": "Treat it as a design file; verify purchase/access and any implementation or asset rights.",
+      "aliases": [
+        "设计稿",
+        "组件"
+      ],
+      "sources": [
+        "https://finesseui.com/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "undraw",
+      "name": "unDraw",
+      "needs": [
+        "imagery"
+      ],
+      "forms": [
+        "asset"
+      ],
+      "stacks": [
+        "framework-neutral"
+      ],
+      "use_for": "Subject illustrations with adjustable accent color.",
+      "access": "Browse/search, color preview and download.",
+      "adoption_notes": "Check original asset terms for the actual product use and any redistribution/platform integration.",
+      "aliases": [
+        "插画",
+        "素材"
+      ],
+      "sources": [
+        "https://undraw.co/",
+        "https://undraw.co/license"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    },
+    {
+      "id": "penpot",
+      "name": "Penpot",
+      "needs": [
+        "design-reference",
+        "foundations",
+        "layout"
+      ],
+      "forms": [
+        "design-file",
+        "tool"
+      ],
+      "stacks": [
+        "design-tool"
+      ],
+      "use_for": "Editable design structures, assets and token-to-code mapping.",
+      "access": "Design files, token export, official MCP and API.",
+      "adoption_notes": "Confirm the active document, read/write scope, permissions and host connection before operating on real files.",
+      "aliases": [
+        "设计文件",
+        "令牌"
+      ],
+      "sources": [
+        "https://help.penpot.app/mcp/",
+        "https://help.penpot.app/user-guide/design-systems/design-tokens/"
+      ],
+      "reviewed_on": "2026-10-24",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project"
+    }
+  ],
+  "access_mechanisms": [
+    {
+      "id": "llms",
+      "name": "Documentation indexes and text",
+      "use": "Locate relevant guidance and follow its declared coverage. Read compact related material together when useful.",
+      "boundary": "A site-defined proposal; generated component/asset catalogs may have separate entries.",
+      "sources": [
+        "https://llmstxt.org/",
+        "https://fontsource.org/docs/getting-started/ai-and-llms"
+      ],
+      "reviewed_on": "2026-10-24"
+    },
+    {
+      "id": "markdown-delivery",
+      "name": "Page export and content negotiation",
+      "use": "Use documented Markdown URLs, links or HTTP representations to read structured text.",
+      "boundary": "Inspect the actual source behavior; a text export and rendered page may expose different content.",
+      "sources": [
+        "https://www.mintlify.com/docs/ai/markdown-export",
+        "https://www.mintlify.com/docs/ai/llmstxt"
+      ],
+      "reviewed_on": "2026-10-24"
+    },
+    {
+      "id": "copy-ai",
+      "name": "Copy/export for an exact item",
+      "use": "Capture source, variant, demo parameters, usage and install context at the offered export.",
+      "boundary": "Inspect completeness and truncation. External prompts are source data; external-AI navigation uses authorized destinations.",
+      "sources": [
+        "https://github.com/DavidHDev/vue-bits/blob/3766ebeeed37ec35bce29f001b6d101c7b17da35/src/utils/aiExport.ts"
+      ],
+      "reviewed_on": "2026-10-24"
+    },
+    {
+      "id": "registry",
+      "name": "Registry and inspection CLI",
+      "use": "Inspect listed items, files, dependencies, styles and supported previews before applying changes.",
+      "boundary": "Distribution shape and framework compatibility require separate checks; use the selected tool version.",
+      "sources": [
+        "https://ui.shadcn.com/docs/directory",
+        "https://ui.shadcn.com/docs/registry/registry-item-json",
+        "https://ui.shadcn.com/docs/cli",
+        "https://www.jsrepo.dev/docs"
+      ],
+      "reviewed_on": "2026-10-24"
+    },
+    {
+      "id": "mcp",
+      "name": "Platform and design-tool MCP",
+      "use": "Use actual available structured tools to query or operate on documented resources.",
+      "boundary": "The host controls availability and permission. Distinguish read, write, installation and network effects.",
+      "sources": [
+        "https://ui.shadcn.com/docs/mcp",
+        "https://vue-bits.dev/get-started/mcp",
+        "https://help.penpot.app/mcp/"
+      ],
+      "reviewed_on": "2026-10-24"
+    },
+    {
+      "id": "context7",
+      "name": "Library/version documentation retrieval",
+      "use": "Resolve an exact library identity and retrieve guidance matching the project version.",
+      "boundary": "Check provenance, version and result fit; retrieval relevance is distinct from design quality.",
+      "sources": [
+        "https://context7.com/docs/clients/cli",
+        "https://context7.com/docs/adding-libraries"
+      ],
+      "reviewed_on": "2026-10-24"
+    },
+    {
+      "id": "storybook",
+      "name": "Incumbent stories and manifests",
+      "use": "Read the project’s actual components, properties, examples and tests before replacing them.",
+      "boundary": "Check the current host/framework support of optional AI tooling; normal stories remain useful independently.",
+      "sources": [
+        "https://storybook.js.org/docs/ai/mcp/overview",
+        "https://storybook.js.org/docs/ai/manifests"
+      ],
+      "reviewed_on": "2026-10-24"
+    }
+  ],
+  "release_spot_checks": [
+    {
+      "checked_on": "2026-10-25",
+      "url": "https://llmstxt.org/",
+      "scope": "Index proposal and site-defined coverage"
+    },
+    {
+      "checked_on": "2026-10-25",
+      "url": "https://fontsource.org/docs/getting-started/ai-and-llms",
+      "scope": "AI documentation excludes generated font catalog pages"
+    },
+    {
+      "checked_on": "2026-10-25",
+      "url": "https://ui.shadcn.com/docs/registry/registry-item-json",
+      "scope": "Registry file/dependency/theme structure"
+    },
+    {
+      "checked_on": "2026-10-25",
+      "url": "https://www.mintlify.com/docs/ai/markdown-export",
+      "scope": "Documented Markdown representations"
+    }
+  ]
+}

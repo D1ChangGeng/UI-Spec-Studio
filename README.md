@@ -76,6 +76,18 @@ The agent reads **six common references in full** before substantive work:
 
 The skill supplies professional methods and a reading contract. Your host supplies activation, tools, execution and context management. Routine design decisions stay with the agent; consequential commitments stay within the user's authority.
 
+## Bring the UI ecosystem into the work
+
+**Discover → assess → adapt → integrate → verify → retain the useful lesson.**
+
+The agent actively looks for strong starting points: project components, native capabilities and external work. It explores both known requirements and better expressive possibilities. Exact demonstrations, source variants and configurations inform the choice; behavior, design fit, rights and total cost determine the reuse level.
+
+Adopt directly, extend, compose or transfer a technique into the current system. Typography, space, states and motion belong to one product. Real rendering and task checks establish the quality of the assembled result.
+
+[Browse 37 resource leads](skills/ui-spec/references/resource-catalog.md) · [Read the working method](skills/ui-spec/references/component-sourcing.md) · [Use the catalog and adoption workflow](docs/RESOURCE-REUSE.md)
+
+The catalog preserves source dates and evidence scope, plus seven documented access mechanisms. An optional local lookup filters by need, stack or delivery form. Existing suitable choices carry forward; new work can draw on the wider ecosystem without requiring the user to name a library.
+
 ## Open to the right medium
 
 Use the current project and the means that fit its task: native controls, component systems, icons, actual imagery, authored graphics, data visualization or specialist tools. React/Vue Bits, Magic UI, Lucide and other sources are candidates—not a prescribed stack. Existing verified choices are a starting point; new choices are inspected for fit, behavior, performance and licensing.
@@ -93,7 +105,7 @@ Its reading path moves from purpose to installation, first use, deeper methods a
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Fixed release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.2.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.3.0 --skill ui-spec
 ```
 
 Claude Code and OpenCode are also tested installer targets. The core is Markdown; optional record helpers use Python 3.10+ and its standard library. [Offline installation and updates](docs/INSTALL.md).
@@ -107,11 +119,12 @@ These establish the checks actually exercised. Design quality and real integrati
 <details>
 <summary><strong>For maintainers: model, writing and release tools</strong></summary>
 
-[Understanding model](docs/MODEL.md) · [Writing standard](docs/WRITING.md) · [v1.2 review](docs/REVIEW-v1.2.0.md) · [Research](docs/RESEARCH.md) · [Coverage records](docs/MANIFEST.md) · [Publishing](docs/PUBLISHING.md)
+[Understanding model](docs/MODEL.md) · [Writing standard](docs/WRITING.md) · [v1.3 review](docs/REVIEW-v1.3.0.md) · [Research](docs/RESEARCH.md) · [Coverage records](docs/MANIFEST.md) · [Publishing](docs/PUBLISHING.md)
 
 ```bash
 python tools/validate_package.py
 python tools/readme_art.py --check
+python tools/catalog_docs.py --check
 python -m unittest discover -s tests -v
 python tools/package.py
 ```

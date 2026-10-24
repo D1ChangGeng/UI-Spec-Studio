@@ -16,7 +16,9 @@ REQUIRED = ["README.md", "README.zh-CN.md", "LICENSE", "VERSION", "AGENTS.md", "
             "skills/ui-spec/scripts/check_manifest.py", "docs/INSTALL.md", "docs/GUIDE.md", "docs/MODEL.md",
             "docs/WRITING.md", "docs/REVIEW.md", "docs/MANIFEST.md", "docs/RESEARCH.md", "docs/EVALUATION.md",
             "docs/PUBLISHING.md", "docs/PROFESSIONAL-MODEL.md", "docs/REVIEW-v1.2.0.md",
-            "docs/design/README-SPEC.md", "skills/ui-spec/references/patterns.md", "skills/ui-spec/references/integration.md",
+            "docs/RESOURCE-REUSE.md", "docs/REVIEW-v1.3.0.md", "skills/ui-spec/references/resource-catalog.md",
+            "skills/ui-spec/assets/resource-catalog.json", "skills/ui-spec/scripts/find_resources.py",
+            "skills/ui-spec/assets/templates/resource-adoption.md", "docs/design/README-SPEC.md", "skills/ui-spec/references/patterns.md", "skills/ui-spec/references/integration.md",
             *[f"skills/ui-spec/references/{name}.md" for name in COMMON]]
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 

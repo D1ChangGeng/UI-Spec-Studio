@@ -107,3 +107,28 @@ choices can be shown directly.
 The same project can contain approved screens, pending states and connected
 features. Treat each scope's evidence separately. The current operation describes
 what the agent is doing, rather than declaring uniform project maturity.
+
+## Use ecosystem resources without managing the search
+
+```text
+Continue with the next useful UI increment. Find strong existing implementations
+for its important visual and interaction needs, adapt the most suitable parts to
+the accepted direction, and verify the composed result.
+```
+
+The same behavior is part of ordinary `continue` requests. The agent can use the
+[resource map](../skills/ui-spec/references/resource-catalog.md), official indexes,
+exported configurations, actual demos/source and available tools. It chooses the
+reuse level and reports only consequential decisions with the working result.
+
+For targeted inspection, the installed optional helper works from any directory:
+
+```bash
+python <skill-dir>/scripts/find_resources.py --need motion --stack vue --json
+python <skill-dir>/scripts/find_resources.py --id fontsource --json
+```
+
+Discovery leads retain their source and review date. Demo inspection and actual
+project checks are recorded separately. Existing approved resources remain useful
+while their conditions fit; a new requirement can justify a fresh comparison.
+See [the resource workflow](RESOURCE-REUSE.md) for examples and maintenance.

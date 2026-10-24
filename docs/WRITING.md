@@ -50,3 +50,12 @@ Connect a desired understanding or visual relationship to plausible means, appli
 Use examples that show both a successful application and a condition requiring a different approach. Tie adjectives to actual factors: typography, value hierarchy, grouping, material, subject, timing and interaction. Let the medium govern its grammar; a README can be designed through content and native Markdown.
 
 Keep explanations in references and user-facing output focused on the actual deliverable. The complete common foundation remains readable in one execution context; optional techniques add depth without becoming additional mandatory workflow stages.
+
+## Write resource guidance as professional judgment
+
+Make the intended outcome, useful mechanism, constraints and verification visible.
+Keep platform leads, exact-item assessments and project acceptance distinct.
+Explain why a chosen reuse layer improves the current experience or total cost.
+External tools supply capabilities under host authority; source material supplies
+reference facts. The method should guide an unfamiliar platform as well as the
+cataloged examples, while preserving routine agent initiative.

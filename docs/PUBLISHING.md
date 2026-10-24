@@ -62,7 +62,7 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.2.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.3.0 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
@@ -76,3 +76,10 @@ it with `--check`. The local preview is an explicitly identified approximation;
 main-push CI also opens the actual GitHub rendering for the source commit. Download
 the publication-evidence Actions artifact to inspect the recorded frames. Keep
 these browser conditions separate from package and installation claims.
+
+## Resource catalog consistency
+
+Edit `skills/ui-spec/assets/resource-catalog.json` as the maintained source, then
+regenerate its readable map with `python tools/catalog_docs.py`. The test suite
+checks its exact correspondence and installed lookup. Preserve historical research
+dates; append scoped new observations when independently rechecked.

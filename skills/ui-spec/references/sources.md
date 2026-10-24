@@ -5,7 +5,7 @@ sources informed the research and remain useful companion references. External
 skills are independent projects; their runtime code and visual assets are not
 bundled here. Their authors have not endorsed this project.
 
-Research baseline: 2026-10-23. Distribution format and tooling rechecked for this release on 2026-10-24. Recheck live documentation when selecting dependencies.
+Research baseline: 2026-10-23. Distribution format and tooling baseline rechecked on 2026-10-24. Recheck live documentation when selecting dependencies.
 
 | Source | Research focus | Distinct application here |
 |---|---|---|
@@ -60,3 +60,19 @@ primary research. Treat examples and style presets as conditional material.
 These are references, not installed dependencies. Specialist tools require the
 host's actual access and appropriate permissions. Methods and source summaries
 support reasoning; they are not measured evidence of better model output.
+
+
+## Resource access and reuse research
+
+The [resource map](resource-catalog.md) and [curated data](../assets/resource-catalog.json)
+carry the accepted 2026-10-24 research, source URLs and explicit observation scope.
+They contain original summaries and pointers, with source-specific rights checked
+when an actual component or asset is adopted. The data distinguishes inherited
+research dates from selected release spot checks.
+
+Primary mechanism references include [llms.txt](https://llmstxt.org/),
+[Fontsource AI documentation](https://fontsource.org/docs/getting-started/ai-and-llms),
+[registry item structure](https://ui.shadcn.com/docs/registry/registry-item-json),
+[Markdown delivery](https://www.mintlify.com/docs/ai/markdown-export), and the
+[Vue Bits export implementation](https://github.com/DavidHDev/vue-bits/blob/3766ebeeed37ec35bce29f001b6d101c7b17da35/src/utils/aiExport.ts).
+These explain retrieval mechanisms; actual project checks establish adoption quality.

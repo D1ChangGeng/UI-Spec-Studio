@@ -87,3 +87,16 @@ performed separately by looking at the captures.
 check its inclusion, inert SVG, image alternatives and source references. Optional
 preview dependencies are isolated from the standard-library skill helpers. The
 README design record states the observation conditions and evidence limits.
+
+## Resource discovery assurance (1.3)
+
+The local lookup and generated map have deterministic regression coverage for
+schema, need/stack/form filters, exact item identity, empty results, provenance,
+date preservation, installed execution and archive inclusion. The standard
+installer smoke check also runs the installed lookup from its new project.
+
+Release work rechecks selected primary access mechanisms and exercises catalog
+queries. Those observations validate retrieval paths and source interpretation,
+not every candidate's runtime or visual quality. [The resource review](REVIEW-v1.3.0.md)
+connects accepted requirements to code and documentation. The actual CI result
+identifies executed jobs; source presence alone does not establish a passing run.

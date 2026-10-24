@@ -1,11 +1,11 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, component selection, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, resource discovery and reuse, component selection, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # UI Spec Studio
@@ -21,7 +21,7 @@ Before substantive UI SPEC planning, implementation or review, **read all six co
 1. [Workflow](references/workflow.md) — organize the work and continue the current round.
 2. [Analysis](references/analysis.md) — understand the product, choose scope and reason about UX.
 3. [Visual principles](references/principles.md) — judge composition and coherent visual quality.
-4. [Component sourcing](references/component-sourcing.md) — select and combine suitable implementations.
+4. [Resource discovery and reuse](references/component-sourcing.md) — find, assess, adapt and validate useful design and implementation resources.
 5. [Interaction and variants](references/interaction-and-variants.md) — preserve usable behavior across states.
 6. [Verification](references/verification.md) — inspect the result and support completion claims.
 
@@ -29,7 +29,7 @@ These short references form a shared professional foundation. Reading them toget
 
 Use the host's file-reading capability to obtain the actual text. Continue truncated reads until the required content is complete. Content already fully available and current in this execution context can be reused. When needed content is unavailable or its version is uncertain, read it again. A path, hash, checklist entry or earlier-session claim identifies a source; the source text supplies its guidance.
 
-**Specialized reading:** [Integration](references/integration.md) is required for `finish` and work involving real data, authority, persistence or consequential business behavior. [Examples](references/examples.md) illustrate application; [technique patterns](references/patterns.md) connect a communication problem to editable implementation and inspection; [sources](references/sources.md) provide research provenance. Read actual project contracts and selected component documentation as the work requires. Templates and scripts are optional resources.
+**Specialized reading:** [Integration](references/integration.md) is required for `finish` and work involving real data, authority, persistence or consequential business behavior. [Examples](references/examples.md) illustrate application; [technique patterns](references/patterns.md) connect a communication problem to editable implementation and inspection; [sources](references/sources.md) provide research provenance. Read actual project contracts and selected component documentation as the work requires. The [resource catalog](references/resource-catalog.md) maps design needs to documented starting points; its [data](assets/resource-catalog.json) and optional [local lookup](scripts/find_resources.py) support focused retrieval. Read relevant entries and their actual sources as the task requires. Templates and scripts are optional resources.
 
 The skill defines a reading and working contract. The host controls activation, tool access, context retention, compaction and execution. Describe missing capabilities precisely and continue work supported by available evidence. Keep this responsibility boundary explicit in reports and helper-tool claims.
 
@@ -72,6 +72,12 @@ Keep the common quality floor active: clear hierarchy, readable content, accessi
 Connect **task and facts → needed understanding → expression concept → information/visual/interaction grammar → assets and implementation → observed outcome**. This is a reasoning relationship, not a mandatory sequence of reports. Identify what the person needs to recognize, compare, believe on evidence or do; choose its representation before choosing a component.
 
 Develop a direction specific enough to influence structure, typography, imagery and behavior. Use references to learn mechanisms and set a craft target. Read them at whole-surface, relationship and detail levels; distinguish visible evidence from interpretation. Make consequential choices controllable in tokens, content models, component variants or explicit timing, then inspect their effect. The common references supply these methods even when the user only asks to continue.
+
+## Work with the UI ecosystem
+
+For a substantive visual or interaction need, actively inspect existing project capabilities and relevant external work. Find a strong starting point before committing to a custom build. Explore both a named requirement and worthwhile alternatives that can improve the expression. Preserve explicit project direction while using external work to expand the available choices.
+
+Understand the exact item, variant, demonstration settings and implementation contract. Choose direct adoption, adaptation, composition, technique transfer or original implementation by design fit, necessary behavior, compatibility, rights and total lifecycle cost. Preserve the valuable mechanism, integrate it into the project's visual and engineering system, then inspect the actual result. Carry forward suitable approved choices and record significant adaptations at their authoritative location. The common sourcing reference supplies the method; the catalog supplies leads; project evidence establishes acceptance.
 
 ## Carry decisions forward
 

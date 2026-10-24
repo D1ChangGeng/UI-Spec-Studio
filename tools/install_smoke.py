@@ -37,14 +37,15 @@ def run(source: str) -> dict[str, object]:
                     raise ValueError(f"Installed content differs: {target.name}/{relative}")
         target = project / ".agents/skills/ui-spec"
         for arguments in (["scripts/prepare.py", "--project-root", str(project)],
-                          ["scripts/check_manifest.py", "--project-root", str(project), "--mode", "draft"]):
+                          ["scripts/check_manifest.py", "--project-root", str(project), "--mode", "draft"],
+                          ["scripts/find_resources.py", "--id", "fontsource", "--json"]):
             executed = subprocess.run([sys.executable, str(target / arguments[0]), *arguments[1:]],
                                       cwd=project, text=True, encoding="utf-8", capture_output=True, timeout=30)
             if executed.returncode:
                 raise RuntimeError(executed.stderr or executed.stdout)
         return {"source": source, "installer": CLI, "requested_agents": ["codex", "claude-code", "opencode"],
                 "installed_copies": len(installed), "verified_files_per_copy": len(expected),
-                "helpers": "executed", "scope": "CLI installation and file integrity; host model execution is separate"}
+                "helpers": "prepare, coverage checker and resource lookup executed", "scope": "CLI installation and file integrity; host model execution is separate"}
 
 
 if __name__ == "__main__":

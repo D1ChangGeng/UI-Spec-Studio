@@ -99,3 +99,9 @@ Identify what carries the reference's quality, what relies on its content/assets
 For a consequential choice, retain a compact causal trace in the existing design record: the intended outcome, the relationship chosen, the means used, the important tradeoff and what rendering or task evidence would confirm it. This can be one paragraph. Routine adjustments stay in implementation.
 
 Expose the meaningful controls in source: semantic type/color roles, composition bounds, component states, content fields, image focal positions and timing relationships. Preserve their purpose so a later iteration or real integration can change content without losing the design. Treat a successful case as conditional evidence for a method, not as a universal template.
+
+## Let available excellence inform the solution
+
+Use external discovery both to realize a chosen idea and to reveal a stronger expression while the relevant choice is open. Translate the task into a perceptual outcome, interaction and material constraints, then inspect useful incumbent/native capabilities and ecosystem work. A concrete demonstration can expose a possibility that an abstract brief did not name.
+
+Assess the mechanism behind that possibility and its conditions. Preserve binding product direction; compare whether the candidate improves clarity, task behavior, quality or total cost. Choose the appropriate reuse layer before committing implementation effort. An existing suitable choice can continue; a meaningful new requirement merits a fit check. The [resource sourcing reference](component-sourcing.md) supplies the method, the catalog supplies leads, and actual project evidence establishes the result.

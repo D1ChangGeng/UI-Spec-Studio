@@ -106,9 +106,24 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.2.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.3.0 --skill ui-spec
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
 portable skill directory contains the full runtime text and helpers; user guides
 and maintainer tooling live in the complete repository bundle.
+
+## Optional local resource lookup
+
+The installed skill includes its self-contained discovery catalog and a read-only
+standard-library helper:
+
+```bash
+python <skill-dir>/scripts/find_resources.py --list-filters
+python <skill-dir>/scripts/find_resources.py --need controls --stack vue --json
+python <skill-dir>/scripts/find_resources.py --id fontsource --json
+```
+
+The helper performs local filtering only. It returns dated source leads with
+adoption cautions. Current external documents, demos, installation and project
+acceptance use the host's available tools and the task's permissions.

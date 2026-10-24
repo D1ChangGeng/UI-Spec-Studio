@@ -75,6 +75,18 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 
 Skill 提供专业方法与读取契约；宿主负责激活、工具、执行和上下文管理。常规设计判断由 Agent 承担，重要外部承诺遵循用户授权。
 
+## 主动利用整个 UI 生态
+
+**发现 → 评估 → 适配 → 集成 → 验证 → 沉淀经验。**
+
+Agent 主动寻找有价值的起点：项目已有组件、原生能力与外部优秀实现。既为明确需求寻找可靠方案，也通过资源探索发现更合适的表达。读取具体演示、源码变体和配置，再结合行为、设计适配、授权与总成本选择复用方式。
+
+可以直接采用、扩展改造、组合能力或借鉴技法。字体、空间、状态与动效最终融入同一个产品；实际渲染和任务操作确认组合后的品质。
+
+[浏览 37 个资源候选](skills/ui-spec/references/resource-catalog.md) · [阅读通用方法](skills/ui-spec/references/component-sourcing.md) · [使用目录与采用流程](docs/RESOURCE-REUSE.md)
+
+目录保留来源日期和证据范围，并说明七类信息获取机制。可选的本地工具支持按需求、技术范围和交付形态检索。适配且已批准的选择持续复用，新的设计需求由 Agent 主动研究和推进。
+
 ## 根据任务选择表达方式
 
 复用当前工程，选择真正合适的手段：原生控件、组件体系、图标、实际图像、原创图形、数据可视化或专项工具。React/Vue Bits、Magic UI、Lucide 等是开放候选，按实际适配、交互、性能与授权选型。
@@ -92,7 +104,7 @@ Skill 提供专业方法与读取契约；宿主负责激活、工具、执行�
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.2.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.3.0 --skill ui-spec
 ```
 
 安装测试也覆盖 Claude Code 和 OpenCode 目标。核心内容是 Markdown；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。
@@ -106,11 +118,12 @@ npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.2.0 --skill
 <details>
 <summary><strong>维护者入口：模型、写作与发布</strong></summary>
 
-[完整理解模型](docs/MODEL.md) · [写作标准](docs/WRITING.md) · [v1.2 审查](docs/REVIEW-v1.2.0.md) · [研究来源](docs/RESEARCH.md) · [覆盖记录](docs/MANIFEST.md) · [发布流程](docs/PUBLISHING.md)
+[完整理解模型](docs/MODEL.md) · [写作标准](docs/WRITING.md) · [v1.3 审查](docs/REVIEW-v1.3.0.md) · [研究来源](docs/RESEARCH.md) · [覆盖记录](docs/MANIFEST.md) · [发布流程](docs/PUBLISHING.md)
 
 ```bash
 python tools/validate_package.py
 python tools/readme_art.py --check
+python tools/catalog_docs.py --check
 python -m unittest discover -s tests -v
 python tools/package.py
 ```

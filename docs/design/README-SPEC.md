@@ -75,7 +75,7 @@ judge visual composition. Local preview and final-host observation are separatel
 reported in the generated JSON. The release CI also checks remote GitHub rendering
 where available; any missing observation keeps its explicit status.
 
-## Review record
+## Review record — v1.2 baseline
 
 Local Chromium rendering completed for all 12 language/theme/viewport combinations.
 The exact SVG bytes were embedded in the local renderer, preserving responsive
@@ -87,3 +87,12 @@ user-role paragraph below the immediate start path. The revised pages were recap
 This record describes the local approximation. The release Actions run supplies
 separate actual-GitHub conditions and captures for the committed source. Refer to
 its publication-check JSON for remote observations and the exact browser results.
+
+## v1.3 resource-reuse extension
+
+Retain the accepted artwork, native text, installation entry and theme/narrow
+compositions. Add one reading section after the common foundation that connects
+discovery, assessment, adaptation, integration, verification and retained lessons.
+Link directly to the resource map, working method and usage guide. Both language
+versions carry the same capability and evidence boundary. Re-run the existing
+local/remote viewport matrix because new content changes the full reading flow.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.0 — 2026-10-25
+
+- Integrate proactive ecosystem discovery, professional assessment and reuse across design and real connection work.
+- Add 37 dated resource leads and seven access mechanisms, with a generated map and optional offline lookup.
+- Define reuse depth, representative integration, composition quality and lightweight adoption records.
+- Extend bilingual guidance, scenario review, installed-tool checks and deterministic regression.
+
 ## 1.2.0 — 2026-10-24
 
 - Connect user understanding, expression concepts, representation, visual grammar and implementation.

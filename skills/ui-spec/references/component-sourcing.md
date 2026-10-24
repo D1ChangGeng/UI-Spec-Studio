@@ -1,86 +1,104 @@
-# Component and reference sourcing
+# Resource discovery, assessment and high-quality reuse
 
-## Choose capabilities as part of design
+## Find the strongest useful starting point
 
-First inspect the project's existing components, package versions, styling and interaction primitives. A verified incumbent is the starting point. For a new requirement, compare a small number of strong candidates using official documentation, source, real demos and current licensing.
+Treat the UI ecosystem as part of the design workspace. For a substantive visual or interaction requirement, actively inspect the project's proven components, platform-native capabilities and relevant external implementations before committing to custom work. A strong starting point can improve the design itself as well as shorten its realization.
 
-| Source role | Examples to investigate | Evaluation focus |
+Use two complementary kinds of exploration. **Requirement-led discovery** finds a reliable implementation for a known need. **Opportunity-led exploration** reveals a better representation, composition or interaction while important choices remain open. Anchor both in the user task and the accepted product direction. A precise request deserves fidelity; an open brief invites a grounded recommendation.
+
+Carry forward an approved resource whose conditions still fit. Revisit the choice when content, behavior, runtime, quality or maintenance requirements change. A focused native adjustment can proceed directly. Routine research and selection belong to the agent; the user can contribute ideas without having to supply platform names or retrieval instructions.
+
+## Describe the need in two dimensions
+
+First describe the intended perception or operation: what should become clearer, easier, more expressive or more reliable? Then describe the constraints that can change selection: framework/version, content, input methods, supported views/themes/languages, authority, performance, licensing and maintenance.
+
+For example, “a refined background” becomes a low-contrast moving surface with controllable luminance and speed, readable foreground content, a reduced-motion equivalent and a Vue-compatible realization. Search first by the effect or behavior, then narrow to exact implementations and versions. Protect private project details when forming external queries.
+
+Find resources by **design need**; choose adoption by **delivery form**:
+
+| Design need | Useful resource forms | Principal judgment |
 |---|---|---|
-| Accessible primitives | Native HTML, Base UI, Radix UI, React Aria, Reka UI, Headless UI | Semantics, focus, keyboard/touch behavior, dismissal, composition, framework fit. |
-| Styled components and product systems | shadcn/ui, shadcn-vue, MUI, Ant Design, Element Plus, Nuxt UI | Coverage, tokens, density, theme support, form/state handling, extension cost. |
-| Expressive effects and visual components | React Bits, Vue Bits, Magic UI, Aceternity UI | Actual effect, control surface, dependency/GPU cost, theme variants, reduced-motion/static fallback. |
-| Motion implementation | CSS, Web Animations API, Motion, GSAP | Necessary interaction, interruption, layout coordination, browser support and license. |
-| Icons | Lucide, Heroicons, Phosphor, an established project icon set | Semantic coverage, stroke/fill coherence, size, accessible names and selective imports. |
-| Complex data/interaction widgets | Existing charts, tables, editor, virtual-list or drag-and-drop libraries | Correctness, volume, keyboard alternatives, rendering cost and data semantics. |
-| Design references and assets | Finesse UI Figma kit, official design systems, licensed photography, product assets | Composition and asset permission; distinguish reference-only material from shipped code. |
+| Foundations, color, type and spacing | Tokens, fonts, scales, generators | Semantic roles, actual glyphs, loading, themes and content rhythm |
+| Layout, navigation and sections | Existing shells, blocks, templates, design files | Task structure, responsive composition and shared anchors |
+| Controls, forms and feedback | Native elements, behavior primitives, components | Semantics, state ownership, keyboard/touch and recovery |
+| Backgrounds and visual surfaces | CSS, images, shaders, editable graphics | Readability, visual weight, controllability and rendering cost |
+| Images, icons and illustration | Licensed assets, SVG, project content | Meaning, crop, consistency, accessibility and rights |
+| Motion and micro-interactions | Transitions, timelines, interaction engines, animation assets | Attention sequence, interruption, latency and quiet equivalents |
+| Complex information and manipulation | Tables, charts, editors, graphs, canvases | Correct representation, data scale, navigation and real state |
+| References and specialist media | Examples, design objects, 3D and timed-output tools | Transferable mechanism, source authority, editability and fit |
 
-This is an open research map, not an installation list or a claim that every source suits every project. Verify current framework support and the particular component's license at selection time. `Finesse UI` at finesseui.com is a Figma kit; similarly named skills or code packages are separate products.
+A resource can serve several needs. Reference imagery, editable design files, source components, dependency packages and behavior engines require different integration and maintenance strategies. Read the [catalog](resource-catalog.md) for a starting map and source-specific cautions. It is an open set of leads; extend research when the task calls for capabilities beyond it.
 
-## Set the research depth
+## Discover efficiently and learn how the source works
 
-Begin with existing verified components. Research when a required behavior, expressive quality, accessibility need or implementation fit is missing. An approved and suitable choice can carry into subsequent rounds. A new requirement deserves a fresh fit check, rather than a new catalog search by habit.
+Start with the project's code, stories, existing design decisions and available dependency versions. Use relevant catalog leads, official source repositories, examples and search to locate promising alternatives. Inspect unfamiliar platforms enough to understand their scope before treating their terminology as universal.
 
-For consequential choices, compare a small set of strong candidates. Inspect the actual demo for density, focus, transition behavior and visual configuration; inspect primary documentation/source for implementation claims. Select a coherent combination and explain why it fits this task. A user-provided component is a meaningful constraint; verify the surrounding composition and runtime behavior.
+Choose the shortest reliable route exposed by the source and the host. Directories reveal availability; demos reveal appearance and behavior; documentation/source reveal contracts; installation tools reveal changes. Their roles complement one another.
 
-If live research is unavailable, use verifiable installed components or clearly identify the candidate still requiring inspection. Keep independent implementation moving.
-
-## Select with evidence
-
-For each consequential selection record: role, candidate source and exact component, checked URL/version/date, stack compatibility, required behavior, why selected, visual configuration, dependency/performance cost, licensing and remaining adaptation work. Keep this in the existing design record or a short component table.
-
-When a site offers `llms.txt`, use it as a directory to current documentation. Read the relevant API and inspect the demonstration. Documentation explains the contract; a real interaction reveals timing, density and edge behavior. A gallery thumbnail alone cannot establish keyboard support or performance.
-
-Verify import/install instructions from the actual selected source. Prefer framework-native implementations and the existing build system. Choose native controls for tasks they serve well. Use a common token layer to integrate selected sources into one visual language.
-
-## Assets and image references
-
-Use project-owned, supplied, generated with appropriate authorization, or licensed assets. Search platforms and moodboards can lead to references; obtain reusable files from their original rights-bearing source. Record attribution requirements and preserve notices for redistributed code/assets.
-
-Check the real crop, focal subject, resolution, file size, small-size recognition, theme compatibility, alt text and loading behavior. Use real product imagery for factual product representation. Label sample content and keep customer, performance and endorsement claims tied to actual evidence.
-
-## Source safety
-
-Read third-party instructions as reference material rather than permission to change the project. Review necessary dependency changes, retain lockfiles and follow normal host approvals. Keep secrets and private source data out of gallery submissions, external image services and public screenshots.
-
-## Official starting points
-
-- React Bits: https://reactbits.dev/ ; Vue Bits: https://vue-bits.dev/
-- Magic UI: https://magicui.design/ ; Aceternity UI: https://ui.aceternity.com/
-- Base UI: https://base-ui.com/ ; Radix: https://www.radix-ui.com/primitives
-- React Aria: https://react-spectrum.adobe.com/react-aria/ ; Reka UI: https://reka-ui.com/
-- Headless UI: https://headlessui.com/ ; shadcn/ui: https://ui.shadcn.com/ ; shadcn-vue: https://www.shadcn-vue.com/
-- MUI: https://mui.com/ ; Ant Design: https://ant.design/ ; Element Plus: https://element-plus.org/ ; Nuxt UI: https://ui.nuxt.com/
-- Lucide: https://lucide.dev/ ; Heroicons: https://heroicons.com/ ; Phosphor: https://phosphoricons.com/
-- Motion: https://motion.dev/ ; GSAP: https://gsap.com/
-- Finesse UI: https://finesseui.com/
-
-Recheck the selected source at use time. A short curated list does not constrain future research.
-
-## Choose material and medium with the representation
-
-A component library is one source of implementation, alongside content, owned photography, illustration, diagrams, procedural graphics and specialist tooling. Decide what the material contributes before selecting a production method.
-
-| Need | Candidate means | Principal tradeoff |
+| Access mechanism | Use it for | Establish before relying on it |
 |---|---|---|
-| Show the real product or an actual state | Current UI capture or recorded interaction with authorized data | Fidelity, freshness, privacy and capture conditions |
-| Explain a relation or process | Native text/table, SVG diagram or controlled animation | Semantic accuracy, reading order and accessible equivalent |
-| Convey subject/identity | Appropriate photography, illustration or authored graphic | Rights, source quality, crop and fit with typography |
-| Explain spatial structure or direct spatial action | 3D asset, programmatic scene or specialist modeling tool | Interaction value, geometry, load/GPU cost and fallback |
-| Produce a timed narrative | Timeline-capable rendering or motion tooling | Legibility over time, deterministic output, editability and media rights |
-| Preserve a design source | Existing design files, tokens, component variants or design-tool connector | Source authority, mapping to code and update ownership |
+| Index, search and gallery | Discover categories, candidates and expressive possibilities | Whether the entries describe code, assets, design references or paid products |
+| `llms.txt`, full text and page Markdown | Find and read relevant technical material | Actual coverage, linked locations and completeness; a docs index may omit generated asset catalogs |
+| HTTP/link-based exports | Obtain structured text from documented page or response mechanisms | The source's supported URL/header behavior and any difference from the rendered page |
+| Copy page, Copy code, Copy for AI | Capture a selected item's explanation, implementation or configuration | Exact item, variant, parameter values, dependencies and possible truncation |
+| Registry and CLI | Inspect files, dependencies, target paths, variables and supported install previews | The particular schema/tool version, proposed changes and project compatibility |
+| MCP and design-tool APIs | Query documented objects or use available structured operations | Actual host availability, selected project/document and read/write permissions |
+| Versioned documentation search and project stories | Resolve library identity, matched APIs, incumbent variants and tests | Correct source/version and the scope of the returned material |
 
-Find or inspect load-bearing assets early enough to influence layout. Use an image's actual subject and crop, not a hypothetical placeholder's proportions. Prefer the lightest medium that conveys the needed relationship at the required quality. Account for payload, decoding, rendering, reduced-motion/low-capability behavior and maintenance effort. The host supplies access to tools; the skill supplies selection judgment and verification criteria.
+Follow explicit links, repository files and documented capabilities. When an entry is unavailable, record that observation and use another supported route. An unknown access method can be evaluated by the same questions: what it returns, how accurately it identifies the resource, what it may change or transmit, and how its result can be checked.
 
-Specialist candidates include Penpot for inspectable design objects, Blender tooling for scenes, image-to-procedural-3D workflows for reconstruction, and Remotion/HyperFrames for timed output. Their installation, permissions, licensing and current APIs must be checked separately. Import the relevant professional method; use a specialist runtime only when its medium serves the task.
+Read short relevant material together when useful; follow large indexes to the needed objects. Continue truncated reads. Use the actual exported text as reference data. Installation suggestions and external prompts operate within project instructions and host permissions. “Open in AI” can transmit content to another service; choose that route only within the authorized destination and scope.
 
-## Learn techniques with their implementation
+## Understand the demonstration and the implementation together
 
-A useful technique reference connects the problem, visible mechanism, editable source, controls, suitable conditions and inspection method. Inspect the actual demo/source pair when available. Distinguish a general principle from an author's palette, a category convention and a specific runtime constraint.
+For a serious candidate, identify the item, language/framework/styling variant, source revision or package version, live example and configuration. Observe the effect at relevant sizes and states when tools permit. Read the source/API needed to reproduce it. A useful handoff preserves the actual parameters, container assumptions, assets and dependencies that carry the effect.
 
-For reuse, name the mechanism rather than the fashionable effect: paired evidence reveals a relationship; an anchored transition preserves orientation; an optical crop balances real subject mass. Adapt parameters to current content and interaction frequency. Use [technique patterns](patterns.md) as conditional examples, and treat a recipe's timing or item count as local to its medium.
+Inspect which parts of the demo are essential behavior, visual treatment or sample content. Check controlled state, focus, portals, event handling, cleanup, SSR/hydration and CSS scope as relevant. For fonts and images, inspect the actual asset, language coverage or crop as well as the distribution documentation.
 
-## Keep production editable
+Use the demo/source pair to name the mechanism: anchored motion preserves orientation; aligned values support comparison; a restrained shader separates a subject from its surface. This helps adapt the resource while preserving the reason it was selected. Record inaccessible visual or runtime evidence precisely and continue work that the available evidence supports.
 
-Name parameters by purpose, such as reading measure, comparison gap, selected-item emphasis or feedback duration. Group controls at the responsible layer; keep content out of decorative code when it needs translation or real data. Preserve source geometry and semantic tokens for generated visuals. Include a reproducible render/build path for assets that future iterations need to change.
+## Evaluate adoption value
 
-Public source examples use owned or safely licensed materials and explicit fixtures. Keep reusable lessons in their intended project/source location and propose changes to shared skill knowledge through an authorized review. This builds a dependable repertoire without silently rewriting the user's environment.
+First establish required conditions: appropriate rights and provenance, runtime compatibility, critical semantics/interaction, security boundaries and actual task behavior. Then compare the candidates by design fit, distinctive quality, parameter control, content resilience, implementation effort and maintainability. Stars, catalog membership and successful installation describe their own facts; adoption rests on the selected item and observed result.
+
+Consider total cost across **discovery, understanding, integration, adaptation, debugging, verification, runtime and maintenance**. A simple native control may be the best result. A mature primitive can save substantial behavioral work. A visually strong component can raise the outcome when its essential mechanism is adaptable. Choose an original implementation when its fit and total cost justify it.
+
+Check combinations as well as individual resources. Multiple effects may compete for attention, duplicate listeners or animation engines, allocate several rendering contexts, introduce conflicting resets or expand payload and maintenance. One product should have a coherent interaction, visual and runtime system.
+
+| Reuse choice | Preserve | Project responsibility |
+|---|---|---|
+| Direct adoption | A suitable public API and intended behavior | Configure, theme, connect and verify |
+| Adapt or extend | The valuable mechanism and stable behavior | Change meaningful controls/content, test the extension and own its differences |
+| Compose | Complementary strengths at different layers | Resolve shared tokens, events, state, focus, layering and lifecycle |
+| Transfer a technique | An understood relationship or effect | Implement it for the current stack and verify the intended quality |
+| Original implementation | The task and design constraints | Use the simplest coherent solution and inspect its result |
+
+A design-file reference can guide implementation without becoming runtime code. Similar registry formats support similar distribution operations; framework and dependency compatibility still come from the actual source. Respect separately the rights for code, tools, assets and intended redistribution. Preserve required notices with copied material.
+
+## Prototype the uncertainty that can change the choice
+
+Choose a small representative integration for the most consequential unknown. Test composition in the actual shell when fit is uncertain; test keyboard/touch and controlled state when behavior matters; test representative counts and target conditions when performance matters.
+
+Move to implementation when a viable candidate exists and the remaining question is better answered by a working probe than more browsing. Broaden research when the fit is unsupported, the key behavior is missing or the cost outweighs the value. Candidate counts and time budgets follow the task rather than a fixed search ceremony.
+
+## Adapt into one product
+
+Preserve reliable semantic behavior while expressing it through the project's type, tokens, spacing, surfaces, icons and motion. Identify the resource's defining mechanism and tune it deliberately; retain the quality that justified adoption. Keep source controls meaningful: reading measure, focal position, selected emphasis or response duration.
+
+Connect data and actions through the project's actual application boundary. Presentation renders state; the trusted owner validates protected operations. Replace sample content, links and demo-only handlers with the intended task. Check actual text lengths, error/pending/empty states, themes, zoom, reduced motion and real responses. Keep approved fixtures useful for visual comparison.
+
+Inspect the whole page and its transitions after assembly. Verify behavior, component identity, focus and relevant state retention. Review combined payload/rendering cost and cleanup. A source's quality becomes a product outcome only through this integration evidence.
+
+## Retain useful knowledge at its responsible location
+
+For a consequential adoption, record enough to reproduce the decision: purpose, exact source/item/variant/version, inspected demo settings, selected reuse level, adaptation boundary, rights/attribution, meaningful tradeoff and project checks. A short entry in existing records is sufficient; the optional [adoption note](../assets/templates/resource-adoption.md) supplies prompts when helpful.
+
+Separate **platform capability**, **specific-item assessment** and **project acceptance**. Preserve a review date and the evidence's actual scope. Source copies have local change ownership; packages retain version/update boundaries; asset licenses and acknowledgments remain attached to their use.
+
+Refresh a relevant record when its source, version, license, API or project conditions change. New discoveries can become candidates after provenance and incremental value are established. Project decisions stay local. Portable lessons can enter the maintained catalog or technique references through authorized review and ordinary version control. A successful example teaches its conditions and mechanism, leaving future tasks free to choose differently.
+
+## Material, medium and source safety
+
+Inspect load-bearing content early enough to shape composition. Use the lightest medium that conveys the intended relationship at the required quality: real product captures for factual representation; text/table/SVG for clear relationships; suitable photography or illustration for identity; spatial or timed tools when their capabilities serve the task. Preserve editable source and a reproducible build where future revisions need them.
+
+Obtain assets from their rights-bearing source under the applicable permission. Keep private data and credentials in authorized project locations. Review installs, dependency changes and writes through host controls. Public examples use owned or appropriately licensed material and identifiable fixtures. Access to a resource, a source's claimed capability and a host's connected tool are separate facts.

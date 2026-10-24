@@ -144,3 +144,9 @@ Preserve coherence when intensifying a design: increase the strength of the chos
 ## Broader screen-based surfaces
 
 A README, slide, diagram, report or motion piece has an audience, a sequence of attention and a delivery environment. Apply the same reasoning with medium-specific realization. For a README, render essential explanations as selectable text, make commands copyable, give images meaningful alternatives and keep navigation usable on narrow displays. For a presentation, inspect at its display size and expected viewing distance. For motion, inspect readable holds and the final encoded frames in addition to stills. An artifact's completion follows its actual medium and scope.
+
+## Compose external strengths into a coherent whole
+
+Treat a selected resource as a set of valuable mechanisms and adjustable expressions. Preserve its reliable behavior and the distinctive relationship that earned adoption; align its typography, space, depth, color and movement with the project's intended language. Combining resources can divide responsibilities clearly, such as an accessible interaction primitive beneath a tailored visual treatment.
+
+Judge the assembled result at page and journey scale. Competing accents, simultaneous animation, mismatched density or inconsistent surfaces can weaken otherwise accomplished components. Tune the relationships and inspect actual content and states. Existing project elements, native capabilities and external work are all valid starting points when they serve the same coherent experience.

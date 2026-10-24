@@ -68,3 +68,11 @@ Identify the relationships that carry the concept, then expose them through sema
 For a static publication, connect the actual links, install instructions, source assets and publishing path. For a diagram, connect the real data/relationships and reproducible export. For timed media, preserve source timing and inspect encoded output. These are real delivery boundaries even when a backend is not part of the artifact.
 
 A precise handover explains what can be adjusted, where the authoritative content/state lives, which conditions were inspected and what remains external. Keep high-quality source editable so future refinement improves the existing design rather than reconstructing it from pixels.
+
+## Carry adopted resources through the real boundary
+
+Reconcile each consequential external item with its exact source, version/variant, local adaptation and ownership. Reuse approved resources while their conditions hold. Check actual dependency/CSS impact, SSR or hydration where relevant, lifecycle cleanup, content growth and the data adapter. Source copies retain local maintenance responsibility; package updates follow their version and compatibility contracts.
+
+Map demo callbacks and sample data to real application intent and trusted outcomes. Protected prices, permissions, entitlements and workflow decisions remain with their authoritative owners. Preserve the selected visual mechanism while real loading, denied actions and failures become meaningful states. Validate the combination at representative scale as well as each item independently.
+
+Keep license notices, asset permission and reproducible configuration with the resulting source. Capture integration evidence in project records and propose reusable lessons through authorized maintenance. Final connection quality is the actual product's behavior and appearance, supported by its observed conditions.

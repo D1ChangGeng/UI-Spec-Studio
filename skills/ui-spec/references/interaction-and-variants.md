@@ -66,3 +66,9 @@ For an authored sequence, use explicit timing, readable holds, seekable states a
 A reading surface can have interaction through anchors, links, code copying, expandable detail and media alternatives. Use these affordances intentionally. Give the reader a clear route from orientation to a next action; preserve essential content as text instead of hiding it in artwork. Test language and theme variants where promised. Static SVG or images should carry meaning at their actual display width and have a suitable text equivalent.
 
 Avoid imposing an app's scrolling or focus model on a document. Verify the host's supported markup and its rendered output. A local preview validates its stated renderer; the final publishing environment needs its own readback and, when available, direct visual inspection.
+
+## Preserve behavior across resource boundaries
+
+When composing sourced parts, give focus, selection, scrolling, portals and request state clear owners. Preserve the primitive's semantic contract while adapting appearance. Verify touch, keyboard, dismissal, re-entry, rapid reversal and delayed results with the combined implementation. A positioning engine may need a separate semantic control; an animation layer follows confirmed or pending state supplied by the application.
+
+Coordinate listener scope, shared motion engines and teardown. Keep one meaningful feedback sequence for the user's action, with a readable quiet equivalent. Check actual localization, reduced motion, content growth and theme combinations after integration, because their behavior depends on the assembled product.

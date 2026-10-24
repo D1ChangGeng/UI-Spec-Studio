@@ -36,3 +36,9 @@ screen-based artifacts. README is a designed product surface; preserve its nativ
 text and installation path, theme/narrow assets and documented render conditions.
 Run `python tools/readme_art.py --check` to verify its generated artwork. Browser
 preview dependencies and checks are documented in docs/design/README-SPEC.md.
+
+Version 1.3 connects proactive ecosystem discovery with assessment, reuse depth,
+adaptation and project verification. `assets/resource-catalog.json` inside the
+skill is the maintained discovery data; `tools/catalog_docs.py` generates its
+readable map. Preserve original observation dates and evidence scope. Run
+`python tools/catalog_docs.py --check` with the existing release checks.

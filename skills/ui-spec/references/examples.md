@@ -29,3 +29,29 @@ Reconcile the approved editor with existing services. Map create/edit/conflict/r
 ## A changed design rule in an active project
 
 When the user changes the family density, update its authoritative tokens and design decision, then recheck dependent pages. Preserve unaffected approved choices. The runtime supplies the execution context; project sources provide the current facts the agent can reread.
+
+
+## A Vue account menu assembled from the right layers
+
+Start from the project's existing shell and accepted identity. Find a reliable
+menu primitive when one is needed, a coherent icon/owned avatar and an appropriate
+transition. Use the catalog to locate Vue candidates, then read the exact APIs and
+observe focus, dismissal and controlled state. Compose behavior and visual treatment
+under shared tokens; test keyboard/touch, narrow layouts and real session state.
+Keep the selected source/variant and adaptation in the project record.
+
+## A visual direction improved by discovery
+
+For an open introduction surface, research a small set of visual mechanisms that
+support the subject. A parameterized background may create depth while leaving
+copy readable. Inspect its actual controls and source, then place a representative
+instance behind real content. Keep the valuable mechanism, tune its intensity to
+the project and test the composed cost/quiet equivalent before extending it.
+
+## A document index with a separate asset catalog
+
+A font provider's AI documentation can describe installation while its generated
+family catalog lives elsewhere. Use each entry for its intended role: inspect the
+actual typeface and glyph coverage in the catalog, then read version-matched usage
+and licensing guidance. An index's coverage informs retrieval; a current project
+render establishes typography fit.

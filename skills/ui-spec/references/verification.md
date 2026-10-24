@@ -110,3 +110,11 @@ For diagrams, confirm data/relationship semantics before styling. For timed outp
 When a technique materially improves a result, preserve the problem, mechanism, relevant conditions, editable realization, evidence and observed limits in an appropriate existing record. Keep a project-specific preference with that project. A portable example can be proposed for the skill's maintained repertoire with clear provenance and maintenance authorization.
 
 These records make future decisions better grounded; they do not establish automatic model improvement. Favor a few explanatory examples over a catalog of unexplained attractive screenshots.
+
+## Validate resource adoption in context
+
+Keep three evidence scopes distinct: source documentation establishes a platform capability; a demo and exact implementation support an item assessment; the assembled product establishes project acceptance. Record the source revision/variant and demonstration settings needed to reproduce important effects. A link failure describes access on that attempt; seek another legitimate route and retain the unobserved scope accurately.
+
+Exercise the adapted item with representative content, supported inputs, real container constraints, theme/locale variants and product states. Check semantic behavior, visual fidelity, combined attention/runtime cost, cleanup and the relevant service boundary. Preserve rights and notices with the adopted material. Regression scope follows the component or shared system affected.
+
+A catalog lookup is discovery evidence. A mocked retrieval or record test verifies its declared mechanics. Report actual demo, image-inspection and integration observations separately. Use the project's existing evidence location; an optional adoption note can connect the significant decision to these observations.

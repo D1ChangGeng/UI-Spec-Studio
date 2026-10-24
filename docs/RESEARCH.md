@@ -87,3 +87,18 @@ GitHub's [documented picture markup](https://docs.github.com/en/get-started/writ
 informs theme-aware publication. The actual asset behavior and local preview are
 verified separately. [Agent Skills](https://agentskills.io/specification) remains
 the distribution-format reference.
+
+## Resource ecosystem integration (1.3)
+
+The accepted resource research snapshot of 2026-10-24 supplies 37 candidates and
+7 access mechanisms. The shipped catalog translates that material into English
+working descriptions, preserves original IDs/source URLs/review dates, and records
+its source SHA-256. Release spot checks on 2026-10-25 cover llms.txt, Fontsource,
+shadcn registry structure and Mintlify Markdown delivery. Those checks do not
+change the observation date or project-validation status of every candidate.
+
+The transferable method pairs requirement-led discovery with opportunity-led
+exploration, evaluates the exact item and selects an appropriate reuse layer.
+Platforms are differentiated by design need and delivery form. Official source
+links are retained in the [catalog](../skills/ui-spec/references/resource-catalog.md).
+The [release review](REVIEW-v1.3.0.md) connects research requirements to actual files.
