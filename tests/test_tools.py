@@ -321,7 +321,7 @@ class DistributionTests(TempCase):
     def test_publish_plan_is_nonmutating(self):
         with mock.patch.object(publisher,"command",side_effect=AssertionError("unexpected command")):
             plan=publisher.plan("D1ChangGeng","ui-spec-studio")
-        self.assertEqual(plan["tag"],"v1.1.0")
+        self.assertEqual(plan["tag"],"v"+(ROOT/"VERSION").read_text().strip())
         self.assertIn("skills/ui-spec/SKILL.md",plan["source_files"])
 
     def test_publish_rejects_bad_destination(self):

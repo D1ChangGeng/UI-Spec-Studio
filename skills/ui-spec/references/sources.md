@@ -40,3 +40,23 @@ before reuse. This project's original files use MIT.
 The lifecycle, optional shape capability, common-reference contract, coverage
 manifest, approval/integration distinction and scripts are project design decisions. They are not standards prescribed by
 the cited authors or measured evidence of better visual output.
+
+## Further professional methods in v1.2
+
+The common references incorporate original, medium-aware synthesis from the following
+primary research. Treat examples and style presets as conditional material.
+
+- [Impeccable typography and craft](https://github.com/pbakaus/impeccable/tree/main/.agents/skills/impeccable/reference): concrete visual judgment and rendered critique.
+- [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill): searchable candidate knowledge with applicability checked against the actual task.
+- [MCP for Blender](https://github.com/ahujasid/mcp-for-blender): specialist scene-production access.
+- [img2threejs](https://github.com/img2threejs/img2threejs): layered observation and identity-bearing fidelity.
+- [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft): purpose, recipe, implementation and observable motion linked together.
+- [HyperFrames](https://github.com/heygen-com/hyperframes): editable, medium-aware timed production.
+- [Penpot](https://github.com/penpot/penpot): inspectable design objects, tokens and variants.
+- [Remotion](https://github.com/remotion-dev/remotion): explicit time and editable source structure.
+- [Lemo-Opuscar](https://github.com/lemomo-ai/lemo-opuscar): expression concepts, benchmarks and authored rhythm.
+- [Diagram Design](https://github.com/cathrynlavery/diagram-design): semantic relation before visual type.
+
+These are references, not installed dependencies. Specialist tools require the
+host's actual access and appropriate permissions. Methods and source summaries
+support reasoning; they are not measured evidence of better model output.

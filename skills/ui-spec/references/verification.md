@@ -80,3 +80,33 @@ For an existing project with an adequate native test matrix, use that matrix and
 - Playwright visual comparisons: https://playwright.dev/docs/test-snapshots
 - W3C reflow guidance: https://www.w3.org/WAI/WCAG22/Understanding/reflow.html
 - WAI interaction patterns: https://www.w3.org/WAI/ARIA/apg/
+
+## Read the result at three scales
+
+**Whole surface:** identify the task, dominant subject, information order, total visual mass and intended character. Check whether someone can discover what to do or understand without the designer's explanation.
+
+**Relationships:** inspect grouping, alignment, comparison structure, proportions, image/text relationships and the shared shell. Check which relationship a transition makes visible and whether unrelated areas remain stable.
+
+**Details:** inspect typographic roles, real copy, image edges, icon weight, surface boundaries, native controls, focus and timed feedback. Compare against the project's craft target and intended identity rather than unrelated stylistic preferences.
+
+Record observation separately from interpretation. “The summary is separated from the items by most of the viewport” is an observation; “the groups feel unrelated because their distance outweighs the section grouping” is a hypothesis to test. Cite the actual frame/state for either. A screenshot alone cannot establish unseen interaction or audience response.
+
+## Diagnose and improve the strongest relationship
+
+Find the most consequential weak relationship before choosing a parameter to change. Structural or semantic errors deserve structural repairs; detail polish follows a coherent composition. Compare under controlled conditions and change one causal group of variables at a time where useful. Batching related fixes is efficient when their effects remain attributable.
+
+A positive reference helps define the intended quality: why its comparison reads clearly, why its image carries the subject, or how its transition preserves orientation. Identify the condition that makes the technique work before applying it here. Identity-bearing features merit explicit checks even when other details are polished. Mechanical metrics diagnose their measured properties; aesthetic quality has no universal numeric pass score.
+
+Assess task correctness and accessible operation, then communication clarity, identity/coherence and execution craft. This is a review order, not a weighted total that permits a critical failure to disappear in an average. Record an actual improvement as a scoped observation, keeping assumptions about broader user response explicit.
+
+## Verify the publishing medium
+
+For a README or documentation artifact, inspect hierarchy, selectable text, copyable commands, local links, alt text, image width, narrow-screen code/table handling and light/dark variants. Check the actual host-supported markup. A locally rendered approximation is labeled with its renderer and cannot alone prove remote platform appearance.
+
+For diagrams, confirm data/relationship semantics before styling. For timed output, inspect meaningful intermediate states, readability and final playback. For externally generated assets, inspect the delivered file as well as its editable source. Match claims to the output and environment actually observed.
+
+## Retain lessons with boundaries
+
+When a technique materially improves a result, preserve the problem, mechanism, relevant conditions, editable realization, evidence and observed limits in an appropriate existing record. Keep a project-specific preference with that project. A portable example can be proposed for the skill's maintained repertoire with clear provenance and maintenance authorization.
+
+These records make future decisions better grounded; they do not establish automatic model improvement. Favor a few explanatory examples over a catalog of unexplained attractive screenshots.

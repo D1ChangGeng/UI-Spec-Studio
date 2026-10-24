@@ -56,3 +56,46 @@ User intent explains the desired outcome; approved design describes accepted exp
 For development builds, evolve current code and data models with reproducible initialization. For operating products, derive compatibility, data and availability work from actual obligations. Use the current framework and meaningful abstractions. Scope architecture changes to what the desired experience truly requires.
 
 Record reusable decisions where the project already keeps them. Keep source links and the smallest rationale needed for another round to make the right choice. This enables continuity while leaving detailed implementation in code and history in Git.
+
+## Design the understanding before the arrangement
+
+For the current task, identify what the person knows on arrival, what they must understand next, what evidence supports that understanding and which action becomes reasonable afterward. Use this to order and group content. A reachable purchase button establishes access; clear differences, obligations and credible evidence establish an informed choice.
+
+Give each meaningful region a communication job: orient, explain, compare, substantiate, decide, act or recover. Several jobs may share a region. Choose copy, examples, comparisons, imagery, diagrams or direct manipulation by how well they answer the user's question. A README often needs fit, a working installation command, a usage example and a way to inspect evidence before its full architecture. A workspace may expose the next action alongside the evidence needed to take it.
+
+Write with representative real content early. Headings state meaning; labels name objects consistently; actions describe their consequences; feedback explains actual state and recovery. Distinguish facts, hypotheses, illustrative values and promises. Respect user-authored content and factual copy when improving expression. Treat length, terminology, units and localization as part of the design material.
+
+## Choose a representation before a component
+
+Match the user's cognitive operation to a useful form. These are candidate relationships, not automatic prescriptions:
+
+| Needed understanding or operation | Candidate representation | Check before choosing |
+|---|---|---|
+| Compare the same properties across objects | Aligned table, comparison rows or coordinated small multiples | Comparable units, consistent order, missing values and narrow-screen reading |
+| Find one item in a repeated collection | List/grid with meaningful filters and selection | Distinguishing attributes, scan density and retained query context |
+| Understand a dependency or state transition | Diagram, timeline or explicit state presentation | Correct direction, guards, cycles and a readable alternative |
+| Inspect the basis for a claim | Claim/evidence pairing, traceable citation or coordinated panes | Provenance, visible association, permissions and navigation back |
+| See how a parameter changes a result | Direct manipulation with timely feedback | Safe bounds, actual authority, latency and reversible changes |
+| Learn a sequence | Ordered steps, worked example or progressive disclosure | Prerequisites, exceptions, recovery and whether order actually matters |
+
+Choose the simplest representation that preserves the important relationship. Then select the component or production technique. A graph's visual attraction is useful only when its topology helps the task. Distinguish categories, quantities, sequence and uncertainty in data graphics; show units, scale, baseline and missingness honestly. Simulated charts are labeled as fixtures.
+
+## Form a concept that carries across surfaces
+
+Derive direction from the product's distinctive mechanism, subject, audience scene and available material. Name the organizing idea in plain words and connect it to concrete choices. “Evidence beside conclusions” can shape reading panes, citation treatment, comparison views and selection feedback. “Premium” alone leaves those decisions open.
+
+Separate inherited identity, the surface's composition and a local refinement. A coherent incumbent can be authoritative in code even without a design document. Preserve user-pinned decisions. For an open direction, explore materially different organizations when doing so can change the decision; choose a grounded recommendation and demonstrate it. Candidate counts follow useful uncertainty rather than a fixed ceremony.
+
+Evaluate a concept by product fit, clarity, distinctiveness, expansion to related surfaces, implementation feasibility and user control. Distinctiveness can be precise density and excellent status handling, not only expressive artwork. Use analogies to reveal relationships while preserving recognizable controls and accessibility. A concept earns its place through several mutually supporting decisions, not a decorative motif.
+
+## Read references as mechanisms
+
+Select references for a named quality: a comparison's scanability, a publication's type hierarchy, a transition's orientation, or a visual identity's discipline. Use whole → relationships → details observation. Describe what is visible first, then the mechanism you infer. Record uncertain claims as hypotheses; observe live behavior when motion or interaction matters.
+
+Identify what carries the reference's quality, what relies on its content/assets/platform, and what transfers to this task. A photographic composition depends on suitable imagery; its grid alone may carry little of its effect. Learn the grammar while producing original composition and respecting assets' rights. Product popularity and an author's preferred palette supply context rather than universal rules.
+
+## Make decisions explainable and adjustable
+
+For a consequential choice, retain a compact causal trace in the existing design record: the intended outcome, the relationship chosen, the means used, the important tradeoff and what rendering or task evidence would confirm it. This can be one paragraph. Routine adjustments stay in implementation.
+
+Expose the meaningful controls in source: semantic type/color roles, composition bounds, component states, content fields, image focal positions and timing relationships. Preserve their purpose so a later iteration or real integration can change content without losing the design. Treat a successful case as conditional evidence for a method, not as a universal template.

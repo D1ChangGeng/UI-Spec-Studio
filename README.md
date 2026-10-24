@@ -1,115 +1,123 @@
 # UI Spec Studio
 
-**Start with a goal. Review a working interface. Continue to a real product.**
+**A design practice for your agent.**
 
-[简体中文](README.zh-CN.md) · [Install](docs/INSTALL.md) · [Guide](docs/GUIDE.md) · [Design model](docs/MODEL.md) · [Release notes](CHANGELOG.md)
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/assets/studio-compact-dark.svg">
+  <source media="(max-width: 600px)" srcset="docs/assets/studio-compact-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/studio-dark.svg">
+  <img src="docs/assets/studio-light.svg" alt="From meaning to form: connect user intent, designed relationships and a working result." width="1100">
+</picture>
 
-UI Spec Studio is a framework-neutral [Agent Skill](https://agentskills.io/specification) for coherent, multi-page UI design and implementation. The agent understands the project, chooses useful increments, researches suitable components, builds interactive specifications, inspects actual renders and connects approved designs to real behavior.
+[简体中文](README.zh-CN.md) · [Start here](docs/GUIDE.md) · [Inside the skill](skills/ui-spec/SKILL.md) · [Releases](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
 
-A **UI SPEC** is a runnable design reference with meaningful interactions, representative content, connected user tasks and an identifiable review scope. It can live in your current app, component stories or preview workspace.
+Turn a product goal into a coherent, reviewable interface—and carry the accepted experience into real use. UI Spec Studio is a portable [Agent Skill](https://agentskills.io/specification) for product screens, documentation, READMEs, diagrams and other screen-based work.
 
-## Install
+## Start with one command
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 ```
 
-Choose your target host when useful:
-
-```bash
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a claude-code
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a opencode
-```
-
-For a fixed release, install from the `v1.1.0` tree:
-
-```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.1.0 --skill ui-spec
-```
-
-The standard CLI needs a supported Node.js runtime and network access. The skill's core is Markdown. Optional record helpers use Python 3.10+ and its standard library. See [installation](docs/INSTALL.md) for local copies, updates and capability requirements.
-
-## Use ordinary language
+Then ask your coding agent:
 
 ```text
-Use ui-spec to design this project. I have a goal but no visual direction.
-Inspect what exists, recommend a direction and build the first useful result.
-
-Approved, continue with the next useful iteration.
-
-This view feels unbalanced. Inspect the whole composition and fix its cause.
-
-The selected SPEC is approved. Use ui-spec to finish the real integration.
+Use ui-spec. Understand this project and build the first useful UI SPEC.
+I have a goal but no visual direction. Recommend a direction and show the result.
 ```
 
-The agent owns routine analysis and implementation. Your detailed references become constraints when supplied; a concise goal is enough to begin. Review actual results and give feedback in your own terms.
+You can bring a detailed reference or just a goal. The agent develops the direction, chooses the next useful increment, makes it, inspects it and continues from your feedback.
 
-## Workflow
+Already have an accepted design? Ask it to `finish` the real integration. [Installation and host options →](docs/INSTALL.md)
 
-```mermaid
-flowchart LR
-  I[init: understand] --> R[iterate: implement and inspect]
-  I -. direction needed .-> S[shape: optional exploration]
-  S --> R
-  R -. new uncertainty .-> S
-  R <--> A[audit: evidence and repair]
-  R --> F[finish: connect and verify]
-  F -->|affected design review| R
+## Design is a chain of decisions
+
+**Meaning → concept → representation → visual language → implementation → evidence.**
+
+Before choosing a card, table, diagram or animation, establish what the person needs to understand. Develop a concept that belongs to the subject. Make its relationships controllable in code. Judge the actual result.
+
+| Capability | What the agent works out |
+|---|---|
+| **Understand** | User tasks, content meaning, page responsibilities and the information needed to act |
+| **Compose** | A grounded direction, suitable representations, typography, color, space, imagery and attention over time |
+| **Build** | Components, media and editable controls that carry the intended design into the actual delivery format |
+| **Inspect** | Whole-surface meaning, structural relationships and details, followed by causal repair and real task verification |
+
+[Read the professional model](docs/PROFESSIONAL-MODEL.md) · [Explore conditional techniques](skills/ui-spec/references/patterns.md)
+
+## One continuous practice
+
+**init → iterate → finish**
+
+Use **shape** when an important direction is open. Use **audit** whenever the current scope needs examination. These are intent labels; ordinary language is enough.
+
+**Begin.** The agent reads the product and existing implementation, inherits what is already decided and selects a useful next outcome.
+
+**Continue.** Say “approved, continue.” Each round can develop a page, connect a journey, refine a component family or repair a shared problem. The agent owns routine analysis, component research and rendered checks.
+
+**Connect.** Finish reconciles the approved design with real content, services, permissions and persistence. It verifies meaning, structure, visual fidelity and behavior/timing. Static artifacts finish against their own publishing boundary.
+
+```text
+This feels too low. Inspect the complete composition and fix the cause.
+
+Keep the accepted direction. Continue with the next valuable user task.
+
+The reviewed scope is approved. Connect it to the real product and verify both
+its design and its actual behavior.
 ```
 
-| Operation | Purpose |
-|---|---|
-| `init` | Establish project facts, users, constraints and a justified next increment |
-| optional `shape` | Resolve important product/design uncertainty through focused analysis and representative rendering |
-| `iterate` | Add, refine, merge or repair a meaningful slice; inspect it and carry accepted decisions forward |
-| `audit` | Inspect a declared scope and diagnose causes; repair when authorized |
-| `finish` | Reconcile, contract, sequence, connect, verify and deliver real product behavior |
+## A complete professional foundation
 
-Operations are intent labels, not terminal commands. Enter at the project's actual state. Audit participates in each implemented round. Shape is available when a decision needs it. Finish includes real data, authority, persistence and design regression for the architecture actually being built.
+The agent reads **six common references in full** before substantive work:
 
-## Professional context that travels with the work
+[Workflow](skills/ui-spec/references/workflow.md) · [Analysis](skills/ui-spec/references/analysis.md) · [Visual principles](skills/ui-spec/references/principles.md) · [Components & media](skills/ui-spec/references/component-sourcing.md) · [Interaction](skills/ui-spec/references/interaction-and-variants.md) · [Verification](skills/ui-spec/references/verification.md)
 
-Before substantive work, the agent reads six common references together: workflow, analysis, visual principles, component sourcing, interaction/variants and verification. Integration guidance becomes required when working on real behavior. Examples and research sources remain supporting material.
+[Integration](skills/ui-spec/references/integration.md) becomes required for real behavior. Techniques and examples add depth where useful. Existing context can be reused when complete and current.
 
-This is a reading contract, not a context-management runtime. The host controls activation, tool access, retention and compaction. The skill instructs the agent to read necessary text, reuse current available material and reopen missing sources. It does not certify model understanding.
+The skill supplies professional methods and a reading contract. Your host supplies activation, tools, execution and context management. Routine design decisions stay with the agent; consequential commitments stay within the user's authority.
 
-## What remains consistent
+## Open to the right medium
 
-**Product reasoning:** eight lenses connect user outcomes, product facts, page responsibilities, state journeys, visual direction, components, inclusive use and evidence. The next round follows value and dependencies, rather than page count.
+Use the current project and the means that fit its task: native controls, component systems, icons, actual imagery, authored graphics, data visualization or specialist tools. React/Vue Bits, Magic UI, Lucide and other sources are candidates—not a prescribed stack. Existing verified choices are a starting point; new choices are inspected for fit, behavior, performance and licensing.
 
-**Visual judgment:** readable hierarchy, stable core scale, appropriate composition occupancy, relational whitespace, optical balance, family anchors and continuous states. Compact tasks, reading surfaces and workspaces use suitable layouts; identity and expression remain project choices.
+A research workspace, a focused form and a publication deserve different compositions. Shared principles support quality; the subject and accepted brief define the style.
 
-**Open sourcing:** accessible primitives, product components, effects, motion, icons, data widgets and design-only references have distinct roles. React/Vue Bits, Magic UI, Lucide, Finesse UI and other sources are candidates evaluated for actual fit, behavior, cost and license.
+### This README is one worked example
 
-**Real completion:** design approval, connection, verification and release are separate scope-level facts. Reuse approved components and evolve the current project. Protected decisions belong to their trusted owners.
+Its reading path moves from purpose to installation, first use, deeper methods and evidence. Essential instructions remain native text. The editorial artwork has editable source, light/dark versions and a distinct narrow composition. [See its design brief and verification conditions.](docs/design/README-SPEC.md)
 
-## Distribution and assurance
+## Install where you work
 
-The package includes self-contained instructions, references, optional templates, local record helpers, deterministic tests and a reproducible build. CI checks supported Python/platform combinations and standard Skills CLI installation; a versioned release is published after its gates pass.
+```bash
+# Project install for a specific host
+npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
-These checks establish packaging and tool behavior. Design quality is assessed through the actual product's renders and tasks. This release uses logical scenario analysis for workflow design; large comparative model evaluations are outside its release gate. See [assurance and evidence](docs/EVALUATION.md).
+# Fixed release
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.2.0 --skill ui-spec
+```
 
-## Documentation
+Claude Code and OpenCode are also tested installer targets. The core is Markdown; optional record helpers use Python 3.10+ and its standard library. [Offline installation and updates](docs/INSTALL.md).
 
-| Need | Reference |
-|---|---|
-| Installation and updates | [INSTALL](docs/INSTALL.md) |
-| Start, continue, review and finish | [GUIDE](docs/GUIDE.md) |
-| Integrated design and responsibility model | [MODEL](docs/MODEL.md) |
-| Agent-facing writing standard | [WRITING](docs/WRITING.md) |
-| File-by-file review and change scope | [REVIEW](docs/REVIEW.md) |
-| Optional coverage records | [MANIFEST](docs/MANIFEST.md) |
-| Sources and design rationale | [RESEARCH](docs/RESEARCH.md) |
-| Tests and release assurance | [EVALUATION](docs/EVALUATION.md) |
-| Maintainer release procedure | [PUBLISHING](docs/PUBLISHING.md) |
+## Inspect the evidence
 
-## Contribute
+The release pipeline checks package integrity, local references, helper behavior, reproducible archives and standard installer paths. Publication checks cover the bilingual README, generated assets and browser rendering. Release assets include source, the standalone skill and checksums.
+
+These establish the checks actually exercised. Design quality and real integration are reviewed in each consuming project. [Assurance boundaries](docs/EVALUATION.md) · [CI runs](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/workflows/validate.yml) · [Change log](CHANGELOG.md)
+
+<details>
+<summary><strong>For maintainers: model, writing and release tools</strong></summary>
+
+[Understanding model](docs/MODEL.md) · [Writing standard](docs/WRITING.md) · [v1.2 review](docs/REVIEW-v1.2.0.md) · [Research](docs/RESEARCH.md) · [Coverage records](docs/MANIFEST.md) · [Publishing](docs/PUBLISHING.md)
 
 ```bash
 python tools/validate_package.py
+python tools/readme_art.py --check
 python -m unittest discover -s tests -v
 python tools/package.py
 ```
 
-See [contribution guidance](CONTRIBUTING.md) and [security policy](SECURITY.md). Research references include [Emil Kowalski](https://github.com/emilkowalski/skills), [Impeccable](https://github.com/pbakaus/impeccable) and [Taste Skill](https://github.com/Leonxlnx/taste-skill). The lifecycle, text and tools here are independently maintained. [MIT](LICENSE).
+See [contribution guidance](CONTRIBUTING.md) and [security policy](SECURITY.md).
+
+</details>
+
+Original methods and tooling, informed by [credited design and production references](skills/ui-spec/references/sources.md). [MIT License](LICENSE).

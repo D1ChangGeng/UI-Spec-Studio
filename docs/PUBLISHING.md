@@ -24,7 +24,7 @@ consistent across platforms.
 
 ## Automated publication
 
-A main-branch push changing VERSION runs the validation and installation jobs.
+A main-branch push changing VERSION runs the validation, installation and publication-render jobs.
 The release job has repository-content write permission; ordinary validation jobs
 have read-only permissions. External Actions are pinned to reviewed commit SHAs.
 
@@ -62,9 +62,17 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.1.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.2.0 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
 installation success distinct from host-agent invocation and product UI quality.
 The content inventory and checksums support byte-level inspection of each release.
+
+## Publication assets
+
+Regenerate original README artwork with `python tools/readme_art.py` and verify
+it with `--check`. The local preview is an explicitly identified approximation;
+main-push CI also opens the actual GitHub rendering for the source commit. Download
+the publication-evidence Actions artifact to inspect the recorded frames. Keep
+these browser conditions separate from package and installation claims.

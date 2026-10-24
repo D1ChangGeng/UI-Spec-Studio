@@ -2,6 +2,8 @@
 """Validate portable package structure, metadata and local reference integrity."""
 from __future__ import annotations
 import json
+from html.parser import HTMLParser
+import xml.etree.ElementTree as ET
 from pathlib import Path
 import re
 import sys
@@ -13,10 +15,51 @@ REQUIRED = ["README.md", "README.zh-CN.md", "LICENSE", "VERSION", "AGENTS.md", "
             "skills/ui-spec/SKILL.md", "skills/ui-spec/LICENSE", "skills/ui-spec/scripts/prepare.py",
             "skills/ui-spec/scripts/check_manifest.py", "docs/INSTALL.md", "docs/GUIDE.md", "docs/MODEL.md",
             "docs/WRITING.md", "docs/REVIEW.md", "docs/MANIFEST.md", "docs/RESEARCH.md", "docs/EVALUATION.md",
-            "docs/PUBLISHING.md", "skills/ui-spec/references/integration.md",
+            "docs/PUBLISHING.md", "docs/PROFESSIONAL-MODEL.md", "docs/REVIEW-v1.2.0.md",
+            "docs/design/README-SPEC.md", "skills/ui-spec/references/patterns.md", "skills/ui-spec/references/integration.md",
             *[f"skills/ui-spec/references/{name}.md" for name in COMMON]]
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 
+
+
+class ImageLinks(HTMLParser):
+    """Read passive image sources from native Markdown HTML."""
+    def __init__(self):
+        super().__init__(); self.targets=[]; self.errors=[]
+    def handle_starttag(self, tag, attrs):
+        values=dict(attrs)
+        if tag == 'img':
+            if not values.get('alt'): self.errors.append('Image requires meaningful alt text')
+            if values.get('src'): self.targets.append(values['src'])
+        if tag == 'source' and values.get('srcset'):
+            for item in values['srcset'].split(','):
+                target=item.strip().split()
+                if target: self.targets.append(target[0])
+
+
+def check_svg(path: Path) -> list[str]:
+    """Publication SVG is static local geometry with no embedded active content."""
+    errors=[]
+    try:
+        text=path.read_text(encoding='utf-8')
+        if '<!DOCTYPE' in text.upper() or '<!ENTITY' in text.upper():
+            return ['SVG must use literal self-contained markup']
+        root=ET.fromstring(text)
+    except (OSError, UnicodeError, ET.ParseError) as exc:
+        return [f'Invalid SVG: {exc}']
+    if root.tag != '{http://www.w3.org/2000/svg}svg' or not root.get('viewBox'):
+        errors.append('SVG needs its namespace and responsive viewBox')
+    if not any(e.tag.endswith('}title') and e.text for e in root):
+        errors.append('SVG needs a descriptive title')
+    for element in root.iter():
+        name=element.tag.rsplit('}',1)[-1].lower()
+        if name in {'script','foreignobject','image','use','style','animate','animatetransform','set'}:
+            errors.append(f'Publication SVG must be inert geometry: {name}')
+        for attr,value in element.attrib.items():
+            local=attr.rsplit('}',1)[-1].lower()
+            if local.startswith('on') or local in {'href','src'} or 'url(' in value.lower():
+                errors.append(f'Publication SVG must be self-contained: {local}')
+    return errors
 
 def validate(root: Path = ROOT) -> list[str]:
     root = root.resolve()
@@ -80,7 +123,10 @@ def validate(root: Path = ROOT) -> list[str]:
         except (OSError, UnicodeError) as exc:
             errors.append(f"Markdown read failed: {md.relative_to(root)}: {exc}")
             continue
-        for target in re.findall(r"\[[^\]]*\]\(([^)\s]+)(?:\s+[^)]*)?\)", body):
+        images=ImageLinks();images.feed(body)
+        errors.extend(f'{md.relative_to(root)}: {message}' for message in images.errors)
+        targets=re.findall(r"\[[^\]]*\]\(([^)\s]+)(?:\s+[^)]*)?\)", body)+images.targets
+        for target in targets:
             if target.startswith(("http:", "https:", "mailto:", "#")):
                 continue
             target = unquote(target.split("#", 1)[0])
@@ -94,6 +140,8 @@ def validate(root: Path = ROOT) -> list[str]:
                 errors.append(f"Broken local link: {md.relative_to(root)} -> {target}")
             if md.is_relative_to(skill.parent) and not candidate.is_relative_to(skill.parent):
                 errors.append(f"Installed skill reference leaves its bundle: {target}")
+    for svg in (root / 'docs/assets').glob('*.svg'):
+        errors.extend(f'{svg.relative_to(root)}: {message}' for message in check_svg(svg))
     return errors
 
 

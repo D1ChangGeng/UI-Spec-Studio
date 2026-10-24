@@ -20,7 +20,7 @@ Use shape when the user requests exploration or an unresolved choice materially 
 
 1. **Frame the outcome.** Identify the user task, context, product facts, relevant content and success condition. Classify open questions as product, aesthetic, technical or consequential business uncertainty.
 2. **Structure the experience.** Establish the responsibilities, meaningful entries/exits, key states and shared page family for the affected scope. Reuse the current journey map; include return, retry and recovery.
-3. **Form a direction.** Relate hierarchy, density, typography, palette roles, imagery and motion to the subject and task. Use established brand choices as constraints. When direction is open, inspect suitable references and form a coherent recommendation.
+3. **Form a direction.** Identify what the user needs to understand, then choose an organizing concept and suitable information/interaction representation. Relate hierarchy, density, typography, palette roles, imagery and motion to that concept. Use established brand choices as constraints. When direction is open, read relevant references for their mechanisms and form a coherent recommendation.
 4. **Check implementation fit.** Review existing components, actual candidate demos, content availability and material service constraints. Read integration guidance when authority, persistence or real business behavior affects the design. Explore high-impact technical uncertainty with a small probe.
 5. **Make the important choice inspectable.** Build a representative composition or interaction where rendering will resolve uncertainty. Compare a small number of genuinely different alternatives only when the comparison can change the choice. Keep experiments within the smallest useful scope.
 6. **Carry a usable decision forward.** Record the selected direction, rationale, inherited constraints, remaining material questions and next increment. Continue implementation when the user's scope permits it. Seek review of significant direction choices using the actual result.
@@ -33,11 +33,11 @@ Shape ends when there is enough grounded direction for the next useful increment
 
 **Define the slice.** Identify affected pages/states, shared dependencies, the user outcome and review conditions. Prefer an end-to-end task or coherent family when the relationships matter. Establish what will be observable at the end of this round.
 
-**Design and select.** Apply the analysis lenses and visual principles. Reuse proven components and tokens. Research a bounded candidate set for a real capability or quality gap. Use optional shape to resolve a material direction question; keep familiar parts moving.
+**Design and select.** Connect content meaning to an expression concept, a representation and concrete visual/interaction grammar. Apply the analysis lenses and visual principles. Source load-bearing assets early and choose the appropriate medium. Reuse proven components and tokens. Research a bounded candidate set for a real capability or quality gap. Use optional shape to resolve a material direction question; keep familiar parts moving.
 
 **Implement.** Work in the existing project. Use representative short, typical and long content, realistic data density and meaningful state changes. Keep fixture values identifiable and real product claims evidence-based. Structure data boundaries so accepted components can later use real services.
 
-**Inspect and correct.** Run actual UI paths and inspect real viewport captures. Review affected cross-page anchors, states and variants. Diagnose the responsible layer, repair it and recheck the impacted scope. End a round when its task is coherent, its required evidence exists and it is ready for the user's judgment.
+**Inspect and correct.** Inspect whole-surface meaning, structural relationships and details against the intended craft target. Run actual UI paths and inspect real viewport captures. Review affected cross-page anchors, states and variants. Diagnose the responsible layer, repair it and recheck the impacted scope. End a round when its task is coherent, its required evidence exists and it is ready for the user's judgment.
 
 **Present and continue.** Provide the working entry, a concise account of consequential choices, the inspected scope and the next recommended increment. Record explicit approval already supplied for a clear scope. Preserve open review items. User feedback guides the next round without requiring the user to restate common principles.
 
@@ -68,3 +68,9 @@ Prefer existing project documents and tests. A useful minimal record contains th
 The optional `.ui-spec` manifest records declared coverage, scoped approval and real connection evidence. Its `phase` identifies the active operation. Different scopes can have different maturity within one project. Use the existing task system or scoped records to express that difference.
 
 Preserve one current implementation and its Git history. Evidence references identify reviewed conditions. Update reusable knowledge once at its authoritative location. The host owns session persistence and context management; these project records supply sources an agent can read when needed.
+
+## Apply the practice to the actual medium
+
+A README, publication, chart, slide or visual explanation can use the same understanding → expression → realization → observation loop. Identify its reading or interaction task, host constraints and actual deliverable. Keep the workflow proportionate: a static document can finish through valid content, working links, editable assets and rendered publication checks. A live product additionally requires its real state and service boundaries.
+
+Keep design reasoning and execution connected without producing a document at every intermediate step. A brief causal record for a significant choice is enough. Use small representative probes for uncertainty; extend an established direction directly. Improve the reusable method when warranted while preserving current project choices and host responsibilities.

@@ -67,3 +67,23 @@ Report approval, connection, verification and release separately.
 
 Project evidence containing private data stays within its authorized location.
 Publishing this skill does not publish a consuming project's screenshots or data.
+
+## v1.2 publication and professional content
+
+The professional expansion is reviewed as a connected model: content meaning,
+concept, representation, concrete visual grammar, material/medium, timing,
+observation and editable realization. Conditional patterns include both useful
+applications and circumstances that call for another approach. This is source and
+logical review, not a model-quality benchmark.
+
+The publication job generates Chromium captures for the English and Chinese
+READMEs at 390×844, 768×1024 and 1440×1000 in light and dark. It checks local
+Markdown rendering, then the actual GitHub host on main pushes. Reports identify
+the renderer and source commit. The job checks image loading/selection, native
+installation text, disclosure behavior and document overflow; visual judgment is
+performed separately by looking at the captures.
+
+`tools/readme_art.py --check` verifies deterministic source artwork. Package tests
+check its inclusion, inert SVG, image alternatives and source references. Optional
+preview dependencies are isolated from the standard-library skill helpers. The
+README design record states the observation conditions and evidence limits.

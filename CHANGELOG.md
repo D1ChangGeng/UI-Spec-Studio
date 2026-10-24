@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.0 — 2026-10-24
+
+- Connect user understanding, expression concepts, representation, visual grammar and implementation.
+- Expand typography, color, composition, materials, media selection and timed attention methods.
+- Add six conditional technique patterns and whole/relationship/detail diagnosis.
+- Preserve meaning, structure, visual language and behavior/timing during real integration.
+- Apply the practice to screen-based documents, READMEs and explanatory artifacts.
+- Design bilingual READMEs with editable, theme-aware and narrow-screen artwork.
+- Validate publication assets, local references, reproducible bundles and browser render checks.
+
 ## 1.1.0 — 2026-10-24
 
 - Establish six common required references with specialized integration guidance.

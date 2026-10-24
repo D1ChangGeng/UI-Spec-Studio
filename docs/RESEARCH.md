@@ -57,3 +57,33 @@ guarantee runtime activation, retention or comprehension.
 The [writing standard](WRITING.md) uses final-state, task-oriented language informed
 by [no-negative-echo](https://github.com/LB623/no-negative-echo). The accepted model
 and file-level review are documented separately from runtime instructions.
+
+## v1.2 professional-capability research
+
+The following primary documents were reviewed in the preceding design analysis.
+Their described mechanisms inform this release; output quality was not benchmarked
+across the ten projects. Counts, popularity and marketing claims are not acceptance
+criteria. This release independently synthesizes the transferable methods.
+
+| Primary project/document | Method studied | Application and boundary |
+|---|---|---|
+| [Impeccable craft and typeset](https://github.com/pbakaus/impeccable/tree/main/.agents/skills/impeccable/reference) | Surface purpose, art direction, detailed typography and separate critique/detection | Contextual visual grammar and positive craft targets; author-specific bans remain local to that style |
+| [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Searchable style, type, color, UX and implementation guidance | A repertoire of candidates with explicit applicability; category mappings are recommendations, not universal evidence |
+| [MCP for Blender](https://github.com/ahujasid/mcp-for-blender) | Scene access and executable production tooling | Specialist media capability when useful; host access and tool security are separate responsibilities |
+| [img2threejs](https://github.com/img2threejs/img2threejs/blob/main/SKILL.md) | Layered observation, identity-bearing features and staged realization | Whole/relationship/detail reference reading and fidelity review, adapted to screen design |
+| [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft/blob/main/SKILL.md) | Intent, recipe, editable source and preview; brand continuity | Conditional technique patterns and coordinated attention; film timing does not become a UI rule |
+| [HyperFrames](https://github.com/heygen-com/hyperframes) | Media-aware production, seekable rendering and translation of brand tokens into frames | Medium selection, reproducible realization and editable assets |
+| [Penpot](https://github.com/penpot/penpot) | Tokens, design objects, component variants and code/design mapping | Explicit design controls and authoritative source mapping |
+| [Remotion markup](https://github.com/remotion-dev/remotion/blob/main/packages/skills/skills/remotion-markup/SKILL.md) | Time-dependent markup and editable animation parameters | Source structure that preserves intended timing and later refinement; runtime-specific restrictions stay scoped |
+| [Lemo-Opuscar directing](https://github.com/lemomo-ai/lemo-opuscar/blob/main/DIRECTOR.md) | Benchmark intent, concept/story, styleframes and coordinated production | Expression concepts and reference mechanisms; film/sound prescriptions stay with their medium |
+| [Diagram Design](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/SKILL.md) | Semantic relationship before layout type, brand roles and readable density | Representation before component selection, semantic integrity and accessible equivalents |
+
+The reasoning chain, eight capability dimensions, conditional patterns and four
+fidelity boundaries are UI Spec Studio's own synthesis. No third-party skill code,
+artwork, fonts or media was copied into this release. Original README artwork is
+generated from the repository's own source.
+
+GitHub's [documented picture markup](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github)
+informs theme-aware publication. The actual asset behavior and local preview are
+verified separately. [Agent Skills](https://agentskills.io/specification) remains
+the distribution-format reference.

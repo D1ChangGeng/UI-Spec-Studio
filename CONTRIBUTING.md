@@ -18,3 +18,9 @@ Pull requests should state the change, relevant evidence, compatibility impact a
 remaining checks. The release workflow tests Python/platform combinations and
 Skills CLI installation. Maintainers review the exact source and version before
 publication. See [publishing](docs/PUBLISHING.md).
+
+For publication changes, maintain native readable text and the bilingual reading
+path. Regenerate SVG from `tools/readme_art.py`, run its check and inspect browser
+captures using the optional preview requirements. Keep the current GitHub rendering
+and local approximation distinct in evidence. Add reusable professional methods
+with conditions, editable realization and observational limits.

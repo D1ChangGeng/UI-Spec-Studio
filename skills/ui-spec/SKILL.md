@@ -1,18 +1,18 @@
 ---
 name: ui-spec
-description: "Develop coherent multi-page UI specifications and connect approved designs to real product behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, component selection, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, component selection, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # UI Spec Studio
 
 Develop a coherent interface through small, reviewable increments, then carry the accepted experience into the real product. Own the analysis, design decisions, component research, implementation and verification. The user can start the work, evaluate the result and approve the next round; specific ideas and references become useful additional direction.
 
-A **UI SPEC** is a runnable, interactive design reference with representative content, connected task paths and identifiable review scope. Use the project's existing framework, components and preview mechanism. One working implementation can serve both fixture-driven review and real data adapters.
+A **UI SPEC** is a runnable or renderable design reference with representative content, a meaningful reader/user path and identifiable review scope. Product interfaces, documentation, READMEs, diagrams, presentations and other screen-based artifacts share this practice. Choose the actual medium's capabilities and conventions: a document can deliver a complete reading task without an application shell. Use the project's existing framework, format and preview mechanism. One working implementation can serve both fixture-driven review and real data adapters.
 
 ## Establish the professional context
 
@@ -29,7 +29,7 @@ These short references form a shared professional foundation. Reading them toget
 
 Use the host's file-reading capability to obtain the actual text. Continue truncated reads until the required content is complete. Content already fully available and current in this execution context can be reused. When needed content is unavailable or its version is uncertain, read it again. A path, hash, checklist entry or earlier-session claim identifies a source; the source text supplies its guidance.
 
-**Specialized reading:** [Integration](references/integration.md) is required for `finish` and work involving real data, authority, persistence or consequential business behavior. [Examples](references/examples.md) illustrate application; [sources](references/sources.md) provide research provenance. Read actual project contracts and selected component documentation as the work requires. Templates and scripts are optional resources.
+**Specialized reading:** [Integration](references/integration.md) is required for `finish` and work involving real data, authority, persistence or consequential business behavior. [Examples](references/examples.md) illustrate application; [technique patterns](references/patterns.md) connect a communication problem to editable implementation and inspection; [sources](references/sources.md) provide research provenance. Read actual project contracts and selected component documentation as the work requires. Templates and scripts are optional resources.
 
 The skill defines a reading and working contract. The host controls activation, tool access, context retention, compaction and execution. Describe missing capabilities precisely and continue work supported by available evidence. Keep this responsibility boundary explicit in reports and helper-tool claims.
 
@@ -67,11 +67,17 @@ A round can develop a page, a connected journey, a component family or a shared-
 
 Keep the common quality floor active: clear hierarchy, readable content, accessible interaction, meaningful task paths, stable shared structure, appropriate scale/occupancy, purposeful motion and truthful state. Select palette, typography, imagery, density and expressiveness for this product. Review the rendered result at its actual viewing conditions.
 
+## Turn meaning into form
+
+Connect **task and facts → needed understanding → expression concept → information/visual/interaction grammar → assets and implementation → observed outcome**. This is a reasoning relationship, not a mandatory sequence of reports. Identify what the person needs to recognize, compare, believe on evidence or do; choose its representation before choosing a component.
+
+Develop a direction specific enough to influence structure, typography, imagery and behavior. Use references to learn mechanisms and set a craft target. Read them at whole-surface, relationship and detail levels; distinguish visible evidence from interpretation. Make consequential choices controllable in tokens, content models, component variants or explicit timing, then inspect their effect. The common references supply these methods even when the user only asks to continue.
+
 ## Carry decisions forward
 
 Prefer the project's established design and task records. Keep accepted direction, shared rules, relevant component decisions, current scope, unresolved facts and evidence references in their authoritative locations. Optional [brief](assets/templates/brief.md), [design-system](assets/templates/design-system.md) and [review](assets/templates/review.md) templates support projects needing lightweight records.
 
-Track maturity by scope: implemented, inspected, approved, connected and verified are separate facts. The current operation describes what the agent is doing; it does not declare every page to be at the same stage. Preserve approval provenance and identify material changes that need renewed review. Git supplies source history.
+Track maturity by scope: implemented, inspected, approved, connected and verified are separate facts. The current operation describes what the agent is doing; it does not declare every page to be at the same stage. Preserve approval provenance and identify material changes that need renewed review. Git supplies source history. Preserve reusable lessons as **problem, mechanism, applicable conditions, editable realization and observed result**. Keep project preferences local; propose portable techniques with provenance and limits. Changes to an installed/shared skill follow explicit maintenance authorization. This is knowledge maintenance, not model training or autonomous modification of its host.
 
 ## Finish the current increment
 

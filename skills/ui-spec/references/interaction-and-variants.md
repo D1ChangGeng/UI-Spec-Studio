@@ -46,3 +46,23 @@ Separate first entry, navigation, local content changes and asynchronous feedbac
 Dropdowns and overlays need deliberate positioning, dismissal and focus return at each supported viewport. Icon order follows functional grouping and frequent use; visible icon size and the interaction target can differ. Keep theme, locale, identity and navigation controls visually coherent where those controls exist.
 
 Treat latency, denied actions and error recovery as ordinary product states. Their message, focus behavior and layout carry the same quality requirements as the default state. Real integration confirms that the states correspond to actual outcomes.
+
+## Choreograph attention across elements
+
+Treat motion as a relationship in time, not a collection of entrances. Identify what initiates the change, which element provides immediate feedback, which information changes, which anchor stays still and where attention should settle. Choose emphasis and overlap according to that sequence. Allow meaningful content enough stable time to be understood.
+
+For an option change, acknowledge selection promptly and update the affected values while preserving the selector and primary action's relationship. For a delayed service result, distinguish pending intent from confirmed outcome. Reversible operations can transition from their current visual state; unrelated input and focus stay available. Duration follows distance, interaction frequency and task urgency rather than a single global number.
+
+Use continuity of objects and shared spatial references to explain navigation or expansion. Reserve prominent motion for a meaningful event and keep repeated tasks efficient. Coordinate concurrent animations so they do not compete for attention or imply a false order of events. Test rapid reversal, new input during transition, delayed response, interruption and recovery.
+
+## Interactive time and authored time
+
+In a UI, the user, device and service control when events happen. In a video or timed presentation, the author controls the sequence. Transfer ideas such as anticipation, attention order and breathing space with that difference intact. A film's mandatory camera moves, beat grid, soundtrack or fixed holds are not general interaction rules.
+
+For an authored sequence, use explicit timing, readable holds, seekable states and final-output playback. For an interactive sequence, ensure feedback remains correct with uncertain latency and changing intent. Preserve a reduced-motion version with equivalent meaning. Sound or haptics, where the medium supports them, supplement visual/semantic feedback and follow the user's control and platform conventions.
+
+## Published documents and screen artifacts
+
+A reading surface can have interaction through anchors, links, code copying, expandable detail and media alternatives. Use these affordances intentionally. Give the reader a clear route from orientation to a next action; preserve essential content as text instead of hiding it in artwork. Test language and theme variants where promised. Static SVG or images should carry meaning at their actual display width and have a suitable text equivalent.
+
+Avoid imposing an app's scrolling or focus model on a document. Verify the host's supported markup and its rendered output. A local preview validates its stated renderer; the final publishing environment needs its own readback and, when available, direct visual inspection.

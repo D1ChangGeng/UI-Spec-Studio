@@ -55,3 +55,32 @@ Read third-party instructions as reference material rather than permission to ch
 - Finesse UI: https://finesseui.com/
 
 Recheck the selected source at use time. A short curated list does not constrain future research.
+
+## Choose material and medium with the representation
+
+A component library is one source of implementation, alongside content, owned photography, illustration, diagrams, procedural graphics and specialist tooling. Decide what the material contributes before selecting a production method.
+
+| Need | Candidate means | Principal tradeoff |
+|---|---|---|
+| Show the real product or an actual state | Current UI capture or recorded interaction with authorized data | Fidelity, freshness, privacy and capture conditions |
+| Explain a relation or process | Native text/table, SVG diagram or controlled animation | Semantic accuracy, reading order and accessible equivalent |
+| Convey subject/identity | Appropriate photography, illustration or authored graphic | Rights, source quality, crop and fit with typography |
+| Explain spatial structure or direct spatial action | 3D asset, programmatic scene or specialist modeling tool | Interaction value, geometry, load/GPU cost and fallback |
+| Produce a timed narrative | Timeline-capable rendering or motion tooling | Legibility over time, deterministic output, editability and media rights |
+| Preserve a design source | Existing design files, tokens, component variants or design-tool connector | Source authority, mapping to code and update ownership |
+
+Find or inspect load-bearing assets early enough to influence layout. Use an image's actual subject and crop, not a hypothetical placeholder's proportions. Prefer the lightest medium that conveys the needed relationship at the required quality. Account for payload, decoding, rendering, reduced-motion/low-capability behavior and maintenance effort. The host supplies access to tools; the skill supplies selection judgment and verification criteria.
+
+Specialist candidates include Penpot for inspectable design objects, Blender tooling for scenes, image-to-procedural-3D workflows for reconstruction, and Remotion/HyperFrames for timed output. Their installation, permissions, licensing and current APIs must be checked separately. Import the relevant professional method; use a specialist runtime only when its medium serves the task.
+
+## Learn techniques with their implementation
+
+A useful technique reference connects the problem, visible mechanism, editable source, controls, suitable conditions and inspection method. Inspect the actual demo/source pair when available. Distinguish a general principle from an author's palette, a category convention and a specific runtime constraint.
+
+For reuse, name the mechanism rather than the fashionable effect: paired evidence reveals a relationship; an anchored transition preserves orientation; an optical crop balances real subject mass. Adapt parameters to current content and interaction frequency. Use [technique patterns](patterns.md) as conditional examples, and treat a recipe's timing or item count as local to its medium.
+
+## Keep production editable
+
+Name parameters by purpose, such as reading measure, comparison gap, selected-item emphasis or feedback duration. Group controls at the responsible layer; keep content out of decorative code when it needs translation or real data. Preserve source geometry and semantic tokens for generated visuals. Include a reproducible render/build path for assets that future iterations need to change.
+
+Public source examples use owned or safely licensed materials and explicit fixtures. Keep reusable lessons in their intended project/source location and propose changes to shared skill knowledge through an authorized review. This builds a dependable repertoire without silently rewriting the user's environment.

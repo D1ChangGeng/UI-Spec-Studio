@@ -42,3 +42,11 @@ Maintain enough flexibility for a brief to govern aesthetics. Explore where evid
 Review titles, filenames, body text, examples, code comments and release notes from the accepted final state. Keep historical comparisons in the requested review/changelog where they explain real changes. Preserve accurate limitations, external actions and security facts. Read back published surfaces and derive delivery claims from their actual state.
 
 This standard follows the final-state writing approach documented by [no-negative-echo](https://github.com/LB623/no-negative-echo). It is a writing method, not a guarantee of model behavior or runtime context retention.
+
+## Write generative knowledge
+
+Connect a desired understanding or visual relationship to plausible means, applicable conditions, editable realization and observable effects. Explain enough causality for the agent to choose between alternatives. Preserve the distinction between a transferable mechanism, a local aesthetic choice and a tool-specific constraint.
+
+Use examples that show both a successful application and a condition requiring a different approach. Tie adjectives to actual factors: typography, value hierarchy, grouping, material, subject, timing and interaction. Let the medium govern its grammar; a README can be designed through content and native Markdown.
+
+Keep explanations in references and user-facing output focused on the actual deliverable. The complete common foundation remains readable in one execution context; optional techniques add depth without becoming additional mandatory workflow stages.

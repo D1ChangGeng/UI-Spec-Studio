@@ -53,3 +53,18 @@ Provide working entry/run instructions, actual configuration boundaries, impleme
 A request to finish authorizes the scoped implementation. Production operations, real payments, publication and third-party account actions use the user's applicable authorization and host controls. Existing authorization can be reused for its stated scope.
 
 Complete independent work while credentials or external services are pending. Describe the next required resource and the behavior it will verify. Final handover states what is working and observed, so the next developer can continue directly from the current source and evidence.
+
+## Preserve design intent at four boundaries
+
+| Fidelity | What to preserve in real integration | Example verification |
+|---|---|---|
+| Meaning | Content roles, terminology, provenance, user commitments and honest state | Real values and errors express the same task meaning as the accepted design |
+| Structure | Information grouping, reading order, stable anchors and task-local paths | Variable content and permissions retain coherent relationships |
+| Visual | Type roles, proportions, image treatment, hierarchy and supported variants | Equivalent states match intent and real extremes stay readable |
+| Behavior and timing | User control, focus/selection, response ownership and attention sequence | Slow, failed, repeated and out-of-order actions preserve correct feedback |
+
+Identify the relationships that carry the concept, then expose them through semantic tokens, content fields, component variants and state/timing logic. Preserve these controls when replacing fixtures. A decorative rebuild is unnecessary when approved components can render the real states.
+
+For a static publication, connect the actual links, install instructions, source assets and publishing path. For a diagram, connect the real data/relationships and reproducible export. For timed media, preserve source timing and inspect encoded output. These are real delivery boundaries even when a backend is not part of the artifact.
+
+A precise handover explains what can be adjusted, where the authoritative content/state lives, which conditions were inspected and what remains external. Keep high-quality source editable so future refinement improves the existing design rather than reconstructing it from pixels.
