@@ -1,0 +1,103 @@
+name: Prepare visual asset candidate
+on:
+  push:
+    branches: [work/ui-spec-1.5-assets]
+    paths: ['tools/_asset_delta*.txt', '.github/workflows/prepare-assets.yml']
+permissions:
+  contents: write
+concurrency:
+  group: ui-spec-asset-candidate
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Apply the reviewed source delta and verify the exact tree
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, lzma, pathlib, subprocess
+          root = pathlib.Path.cwd()
+          encoded = ''.join((root/f'tools/_asset_delta{i}.txt').read_text(encoding='utf-8').strip() for i in range(1,5))
+          raw = lzma.decompress(base64.b64decode(encoded, validate=True))
+          assert hashlib.sha256(raw).hexdigest() == '9fef3d4c3bf3b6016fcee03a6341e4e68c265d858227b21eabb60049c076c32f'
+          delta = json.loads(raw)
+          assert subprocess.check_output(['git','rev-parse','HEAD^^{tree}'],text=True).strip() == delta['baseline_tree']
+          prepared = []
+          for item in delta['files']:
+              rel = pathlib.PurePosixPath(item['path'])
+              assert not rel.is_absolute() and '..' not in rel.parts
+              path = root.joinpath(*rel.parts)
+              assert not path.is_symlink()
+              if 'text' in item:
+                  assert not path.exists(), item['path']
+                  content = item['text']
+              else:
+                  old = path.read_bytes()
+                  assert hashlib.sha256(old).hexdigest() == item['base_sha256'], item['path']
+                  content = old.decode('utf-8')
+                  for start, end, replacement in reversed(item['ops']):
+                      content = content[:start] + replacement + content[end:]
+              data = content.encode('utf-8')
+              assert hashlib.sha256(data).hexdigest() == item['sha256'], item['path']
+              prepared.append((path,data))
+          for path, data in prepared:
+              path.parent.mkdir(parents=True,exist_ok=True)
+              path.write_bytes(data)
+          for i in range(1,5):
+              (root/f'tools/_asset_delta{i}.txt').unlink()
+          (root/'.github/workflows/prepare-assets.yml').unlink()
+          subprocess.run(['git','add','-A'],check=True)
+          tree = subprocess.check_output(['git','write-tree'],text=True).strip()
+          assert tree == delta['target_tree'], tree
+          print('EXACT_REVIEWED_TREE='+tree)
+          PY
+      - name: Validate package, source assets and regressions
+        run: |
+          python tools/validate_package.py
+          python tools/readme_art.py --check
+          python tools/catalog_docs.py --check
+          python -m unittest discover -s tests -v
+          node --check examples/asset-review/app.js
+      - run: python -m pip install -r tools/requirements-preview.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
+      - name: Execute real HTTP asset delivery
+        run: python tools/validate_assets.py --output-dir scenario-evidence/assets
+      - name: Regress product behavior
+        run: python tools/validate_scenario.py --output-dir scenario-evidence/product
+      - name: Render actual publication source
+        run: python tools/preview_readme.py --output-dir publication-evidence/local
+      - run: python tools/install_smoke.py --source "$GITHUB_WORKSPACE"
+      - name: Build and preserve the validated candidate
+        run: |
+          python tools/package.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          test "$(git write-tree)" = '2fc6fec943b9bc1bfad009977064ab712e217059'
+          git commit -m 'feat: integrate visual assets and asset engineering'
+          echo "CANDIDATE_COMMIT=$(git rev-parse HEAD)"
+          echo "CANDIDATE_TREE=$(git rev-parse HEAD^{tree})"
+          git push origin HEAD:refs/heads/work/ui-spec-1.5-assets
+      - name: Preserve scoped evidence and candidate packages
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: visual-asset-candidate
+          path: |
+            scenario-evidence/
+            publication-evidence/
+            dist/
+          if-no-files-found: warn
+          retention-days: 30
