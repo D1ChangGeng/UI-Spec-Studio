@@ -149,7 +149,7 @@ class ResourceTests(unittest.TestCase):
             text=(ROOT/path).read_text(encoding='utf-8')
             self.assertIn('skills/ui-spec/references/resource-catalog.md',text)
             self.assertIn('docs/RESOURCE-REUSE.md',text)
-            self.assertIn('tree/v1.3.0',text)
+            self.assertIn('tree/v'+(ROOT/'VERSION').read_text().strip(),text)
 
 
 if __name__=='__main__':unittest.main()

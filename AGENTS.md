@@ -42,3 +42,11 @@ adaptation and project verification. `assets/resource-catalog.json` inside the
 skill is the maintained discovery data; `tools/catalog_docs.py` generates its
 readable map. Preserve original observation dates and evidence scope. Run
 `python tools/catalog_docs.py --check` with the existing release checks.
+
+Version 1.4 grounds the design in user-recognizable product models. Preserve
+functional contracts and evaluate visual candidates against the target. Keep
+product conventions and engineering sources distinct in the visible decision
+record. Material unresolved directions receive focused user choice; explicit
+one-shot/delegated work retains its actual approval scope. Run the authored
+browser study with `python tools/validate_scenario.py --output-dir scenario-evidence`.
+The study validates its own fixture, not the user's private application or all models.

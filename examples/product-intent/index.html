@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-model="conversation">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>产品交互模型 · UI Spec Studio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="studybar">
+ <div class="study-name"><strong>UI SPEC STUDIO</strong><span>产品模型研究 <span class="badge">示例 · 待确认</span></span></div>
+ <div class="tools"><button id="decision-open">设计依据</button><button id="theme" aria-label="切换深色主题">深色</button></div>
+</header>
+<section class="direction" aria-label="比较产品使用方式">
+ <div><span class="eyebrow">同一个研究任务，两种使用方式</span><p id="model-description">从问题发起，在同一条对话中追问并核对来源。</p></div>
+ <fieldset><legend class="sr-only">产品交互模型</legend><label><input type="radio" name="model" value="conversation" checked><span>01 对话研究</span></label><label><input type="radio" name="model" value="documents"><span>02 资料空间</span></label></fieldset>
+</section>
+<div class="app">
+ <aside class="sidebar" aria-label="研究导航"><div class="identity"><span class="brand-mark">S</span><div><strong>Study</strong><small>研究你的下一步</small></div></div>
+ <button id="new" class="new">＋ <span>新建研究</span></button>
+ <nav><span class="nav-label" id="nav-label">最近对话</span><button data-topic="城市供热如何降低高峰负荷？" class="topic active">城市供热与高峰负荷<small>今天 · 研究示例</small></button><button data-topic="如何评估储能的适用条件？" class="topic">储能的适用条件<small>昨天 · 研究示例</small></button></nav>
+ <div class="sidebar-foot"><span class="avatar">R</span><span>个人研究空间<small>本地交互样例</small></span></div>
+ </aside>
+ <main id="main" tabindex="-1">
+  <div class="workspace-head"><button id="history" class="mobile-only">历史</button><span id="breadcrumb">研究 / 新对话</span><span class="data-note">全部结果为演示数据</span></div>
+  <section id="conversation" aria-label="对话研究">
+   <div class="welcome"><span class="eyebrow">理解问题 · 核对依据</span><h1>从哪里开始这次研究？</h1><p>把问题说清楚，让结论始终与依据相连。</p></div>
+   <section id="thread" aria-label="研究对话" hidden></section>
+   <form id="composer"><label for="question" class="sr-only">研究问题</label><div class="composer-row"><textarea id="question" placeholder="描述一个问题，或继续追问…" rows="1" maxlength="3000"></textarea><button type="submit" id="send" disabled aria-label="发送研究问题"><span aria-hidden="true">↑</span></button><button id="stop" type="button" hidden aria-label="停止研究"><span aria-hidden="true">■</span></button></div><div class="composer-footer">演示研究 · 不发送外部请求</div></form>
+   <div class="suggestions" id="suggestions"><span class="eyebrow">从一个具体方向切入</span><button data-prompt="城市供热如何降低高峰负荷？">城市供热如何降低高峰负荷？ <span aria-hidden="true">↗</span></button><button data-prompt="如何评估储能的适用条件？">如何评估储能的适用条件？ <span aria-hidden="true">↗</span></button></div>
+  </section>
+  <section id="documents" aria-label="资料空间" hidden><div class="doc-heading"><div><span class="eyebrow">持续整理 · 形成知识</span><h1>研究资料</h1><p>从一份材料开始，组织问题、笔记与结论。</p></div><button id="create-note" class="primary">＋ 新建笔记</button></div>
+   <div class="collection" id="collection"><div class="table-head"><span>名称</span><span>状态</span><span>更新</span></div><button class="document" data-doc="城市供热与高峰负荷"><strong>城市供热与高峰负荷</strong><span class="status-pill">待核查</span><span>今天</span></button><button class="document" data-doc="储能的适用条件"><strong>储能的适用条件</strong><span class="status-pill">整理中</span><span>昨天</span></button></div>
+   <article id="editor" hidden><button id="back">← 返回资料</button><label for="note-title">笔记名称</label><input id="note-title" value="城市供热与高峰负荷"><label for="note-body">研究内容</label><textarea id="note-body" rows="8">这是可编辑的示例笔记。记录问题、材料与尚待验证的结论。</textarea><div class="editor-footer"><span id="save-status">修改仅保存在当前浏览器的示例空间</span><button id="save-note" class="primary">保存笔记</button></div></article>
+  </section>
+  <div id="feedback" role="status" aria-live="polite"></div>
+ </main>
+ <aside id="evidence" aria-label="来源与依据"><div class="evidence-top"><span class="eyebrow">结果的另一半</span><h2>保留依据，<br>也保留疑问。</h2><p>研究开始后，在这里查看来源与核查状态。</p></div><div class="evidence-item"><span class="source-index">01</span><div><strong>资料与结论相互关联</strong><p>在对话中阅读结果，通过来源按钮检查演示材料。</p></div></div><div class="evidence-item"><span class="source-index">02</span><div><strong>继续同一个问题</strong><p>保留输入、阅读位置和正在进行的任务。</p></div></div><div class="evidence-bottom">此方案以成熟对话页面为基础。<br>产品负责人可在预览后确认方向。</div></aside>
+</div>
+<footer class="testbar"><details><summary>验证条件</summary><label>模拟响应 <select id="response"><option value="ready">正常</option><option value="slow">延迟</option><option value="error">失败</option><option value="long">长内容</option></select></label><span>可测试发送、停止、重试、资料编辑与主题切换。</span></details><span id="preference">当前预览：对话研究 · 产品方向待确认</span></footer>
+<dialog id="decision-dialog" aria-labelledby="decision-title"><div class="dialog-head"><div><span class="eyebrow">从参考到实际结果</span><h2 id="decision-title">设计依据与选型</h2></div><button id="decision-close" aria-label="关闭设计依据">关闭</button></div><p>交互模型与视觉主题分别选择。这里记录具体来源、采用层级与实现位置；示例选择不表示真实项目已获批准。</p><div class="decision-grid"><article><h3>01 对话研究 · 推荐</h3><p>先提问，再追问；来源随结果查看。适合以澄清问题和形成判断为主的连续任务。</p><a href="https://www.anthropic.com/news/projects" target="_blank" rel="noreferrer">Claude：对话与并列成果的官方说明 ↗</a></article><article><h3>02 资料空间</h3><p>先打开或创建资料，再编辑和组织。适合以长期维护文档及结构化材料为主的任务。</p><a href="https://www.notion.com/help/intro-to-databases" target="_blank" rel="noreferrer">Notion：资料集合的官方说明 ↗</a></article></div><div class="decision-table" tabindex="0" aria-label="设计资源对应表"><table><thead><tr><th>维度与页面</th><th>具体来源 / 采用方式</th><th>当前落点与核查</th></tr></thead><tbody>
+<tr data-foundation="assistant-ui-chatgpt"><td>整体页面 / 对话研究</td><td><a href="https://www.assistant-ui.com/examples/chatgpt">assistant-ui · ChatGPT page</a> · 页面级设计迁移</td><td>继承空态构图、768px 阅读宽度、共享输入区、消息比例与状态布局；见 FOUNDATION.md 的来源、变化和范围</td></tr>
+<tr><td>导航 / 共同结构</td><td><a href="https://ui.shadcn.com/docs/components/radix/sidebar">shadcn Sidebar</a> · 结构技法迁移</td><td><code>.sidebar</code>、固定导航与内容滚动；项目独立实现</td></tr>
+<tr><td>输入 / 对话研究</td><td><a href="https://ui.shadcn.com/docs/components/radix/input-group">Input Group</a> · 输入与附属动作关系</td><td><code>#composer</code>、原生表单与准确状态</td></tr>
+<tr><td>表面 / 两个模型</td><td><a href="https://www.radix-ui.com/colors/docs/palette-composition/understanding-the-scale">Radix Colors · Slate</a> · 真实色值复用</td><td><code>tokens.css</code>，MIT 声明随源；检查实际对比度</td></tr>
+<tr><td>浮层 / 设计依据</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">原生 dialog</a> · 直接采用</td><td><code>#decision-dialog</code>；Escape、焦点返回与窄屏阅读</td></tr>
+<tr><td>字体 / 全部</td><td>系统字体栈 · 项目编排</td><td><code>styles.css</code>；实际中英字形与换行</td></tr>
+<tr><td>图标与动效 / 全部</td><td>带文字的原生符号、局部短过渡 · 自主实现</td><td>读取舒适与即时反馈优先；支持减少动效</td></tr>
+</tbody></table></div><p class="footnote">本文档示例研究访问日期：2026-10-25。来源说明行为或实现机制；其产品品牌与原版界面均未复制。完整采用记录见同目录 README。</p></dialog>
+<dialog id="history-dialog" aria-labelledby="history-title"><div class="dialog-head"><h2 id="history-title">最近的研究</h2><button id="history-close">关闭</button></div><button data-history="城市供热如何降低高峰负荷？">城市供热与高峰负荷</button><button data-history="如何评估储能的适用条件？">储能的适用条件</button></dialog>
+<dialog id="source-dialog" aria-labelledby="source-title"><div class="dialog-head"><h2 id="source-title">演示来源 01</h2><button id="source-close">关闭</button></div><p>这里展示来源与结论的对应关系。当前材料是用于验证界面和交互的合成内容，未检索真实研究资料。</p><p>正式接线需要真实来源标识、访问权限、引用范围与原文入口。</p></dialog>
+<script src="app.js"></script>
+</body></html>

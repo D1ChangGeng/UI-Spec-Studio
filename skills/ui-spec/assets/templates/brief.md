@@ -43,3 +43,14 @@ approval reference and next meaningful action.
 Identify implemented, inspected, approved, connected and verified scopes separately.
 Record the source of approval and what the next round should inherit. The active
 operation describes current work; individual scopes can have different maturity.
+
+## User-level product model
+
+First action, working object, continuing loop, result location, mature flow
+references and primary/secondary model. State observed facts and provisional
+assumptions. Link the design decision/resource map and its direction authority.
+
+## Reuse scope
+
+Preserved business/engineering assets, accepted design constraints, and current
+visual candidates assessed against the new quality target.

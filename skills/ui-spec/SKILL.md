@@ -1,18 +1,26 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, resource discovery and reuse, component selection, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, product interaction models, design options, traceable resource selection, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.3.0"
+  version: "1.4.0"
 ---
 
 # UI Spec Studio
 
-Develop a coherent interface through small, reviewable increments, then carry the accepted experience into the real product. Own the analysis, design decisions, component research, implementation and verification. The user can start the work, evaluate the result and approve the next round; specific ideas and references become useful additional direction.
+Build from suitable mature design work, refine it through small, reviewable increments, then carry the accepted experience into the real product. Own the analysis, design decisions, component research, implementation and verification. The user can start the work, evaluate the result and approve the next round; specific ideas and references become useful additional direction.
 
 A **UI SPEC** is a runnable or renderable design reference with representative content, a meaningful reader/user path and identifiable review scope. Product interfaces, documentation, READMEs, diagrams, presentations and other screen-based artifacts share this practice. Choose the actual medium's capabilities and conventions: a document can deliver a complete reading task without an application shell. Use the project's existing framework, format and preview mechanism. One working implementation can serve both fixture-driven review and real data adapters.
+
+## Start from mature design work
+
+Use design theory and resource knowledge together. Theory explains quality, fit and tradeoffs; resource knowledge exposes concrete work that can carry those qualities. Apply both while searching, browsing, comparing, adapting and verifying. Resource discovery can improve the initial idea before the direction is settled.
+
+For a new surface or substantial redesign, seek the **highest appropriate reuse level**: a coherent product/page template or design system, a substantial layout or functional block, then the components, primitives and effects needed to complete it. Choose the largest useful set of design relationships that fits the task, not the largest code package. An established accepted page may need only a component-level change.
+
+Inherit valuable decisions about hierarchy, proportions, reading rhythm, interaction and states. Concentrate original design on product differences, missing capabilities, coherent adaptation and integration. Inspect concrete candidates and explain a native or original choice when its fit is stronger. A few sourced details do not establish a page-level foundation; show which important relationships the selected work actually supplies.
 
 ## Establish the professional context
 
@@ -53,7 +61,7 @@ Read project instructions, user goals, current code, existing design records and
 
 - Product facts, access rules and safety/accessibility obligations govern valid behavior.
 - Explicitly accepted design decisions govern the experience being preserved.
-- Current implementation establishes what exists and what can be reused.
+- Current implementation establishes business and engineering capabilities; visual and interaction elements are evaluated against the target quality. Design inheritance requires an explicit acceptance or a documented fit assessment.
 - Common principles guide professional judgment; project preferences supply aesthetic direction.
 - External examples supply ideas and technical candidates, with their scope and licenses checked.
 
@@ -61,21 +69,27 @@ Resolve a conflict at its responsible layer and explain material implications. P
 
 ## Lead the work with proportionate judgment
 
-Choose the next increment from user value, task continuity, shared impact, dependencies, uncertainty and effort. Take responsibility for routine design and engineering choices. Use reversible assumptions for low-impact gaps; obtain the specific missing decision for consequential commitments while advancing independent work.
+Choose the next increment from user value, task continuity, shared impact, dependencies, uncertainty and effort. Take responsibility for routine design and engineering choices. Use reversible assumptions for low-impact gaps. For an unresolved high-impact product model, primary navigation or visual direction with credible alternatives, present a compact recommendation and materially different options for user confirmation before broad implementation. Existing approval or explicit delegation supports direct progress; one-shot work carries a labeled provisional direction. Advance independent work while a consequential decision is pending.
 
 A round can develop a page, a connected journey, a component family or a shared-system repair. Keep it large enough to judge the intended outcome and small enough to revise coherently. Translate subjective feedback into hypotheses about the actual composition or behavior, inspect evidence, then fix the responsible layer.
 
 Keep the common quality floor active: clear hierarchy, readable content, accessible interaction, meaningful task paths, stable shared structure, appropriate scale/occupancy, purposeful motion and truthful state. Select palette, typography, imagery, density and expressiveness for this product. Review the rendered result at its actual viewing conditions.
 
+## Establish the product people will recognize
+
+Infer the interaction model from what users do first, the object they work on, the repeated action/result loop, how they resume, and where outcomes live. Business names and code modules supply domain facts; observed use supplies the interface model. Identify a primary model and any purposeful secondary model before fixing a new shell. Separate that choice from the visual theme.
+
+For a new design or substantive redesign, research relevant mature product conventions and concrete implementation resources while the direction is open. Compare the current UI as a candidate against the same target. The analysis reference provides the method and confirmation conditions. Keep a compact [design decision record](assets/templates/design-decisions.md), or equivalent existing record, visible with the preview: product evidence, compared foundations, chosen reuse granularity, relationships being inherited, meaningful alternatives, selected resources by surface/element, actual implementation locations and observed results. Preserve separate product-pattern and engineering-source links. A shortlist starts before implementation and is reconciled after rendering.
+
 ## Turn meaning into form
 
-Connect **task and facts → needed understanding → expression concept → information/visual/interaction grammar → assets and implementation → observed outcome**. This is a reasoning relationship, not a mandatory sequence of reports. Identify what the person needs to recognize, compare, believe on evidence or do; choose its representation before choosing a component.
+Connect **product intent → search and actual browsing → professional comparison → foundation and reuse decisions → adaptation and integration → observed outcome**. Keep needed understanding, expression concept and visual/interaction grammar active as questions throughout this loop. This is a reasoning relationship, not a mandatory sequence of reports. Identify what the person needs to recognize, compare, believe on evidence or do; choose its representation before choosing a component.
 
 Develop a direction specific enough to influence structure, typography, imagery and behavior. Use references to learn mechanisms and set a craft target. Read them at whole-surface, relationship and detail levels; distinguish visible evidence from interpretation. Make consequential choices controllable in tokens, content models, component variants or explicit timing, then inspect their effect. The common references supply these methods even when the user only asks to continue.
 
 ## Work with the UI ecosystem
 
-For a substantive visual or interaction need, actively inspect existing project capabilities and relevant external work. Find a strong starting point before committing to a custom build. Explore both a named requirement and worthwhile alternatives that can improve the expression. Preserve explicit project direction while using external work to expand the available choices.
+For a substantive visual or interaction need, identify the highest useful scope and inspect relevant mature implementations while major choices remain open. Evaluate internal candidates against the same target. Find a strong design foundation before committing to an original page composition or custom build. Explore both a named requirement and worthwhile alternatives that can improve the expression. Preserve explicit project direction while using external work to expand the available choices.
 
 Understand the exact item, variant, demonstration settings and implementation contract. Choose direct adoption, adaptation, composition, technique transfer or original implementation by design fit, necessary behavior, compatibility, rights and total lifecycle cost. Preserve the valuable mechanism, integrate it into the project's visual and engineering system, then inspect the actual result. Carry forward suitable approved choices and record significant adaptations at their authoritative location. The common sourcing reference supplies the method; the catalog supplies leads; project evidence establishes acceptance.
 
@@ -89,6 +103,6 @@ Track maturity by scope: implemented, inspected, approved, connected and verifie
 
 Run the intended task through visible controls; inspect actual viewport captures and important transitions. Check related surfaces when shared components change. Repair and recheck observed issues. Use fixture evidence for design review and real boundary evidence for integration claims.
 
-Before handing over, state the working result, preview or entry path, inspected scope, consequential design choices, executed checks and the next useful action. Offer a recommendation rather than a routine design questionnaire. Report blockers and unverified dimensions accurately. Keep sensitive project data within its authorized destination.
+Before handing over, state the working result, preview or entry path, inspected scope, consequential design choices, executed checks and the next useful action. Show the design decision record and the result together. Ask for a choice when a high-impact direction remains unresolved; use recommendations for routine details. Keep proposed, implemented, visually inspected and owner-approved states distinct. Report blockers and unverified dimensions accurately. Keep sensitive project data within its authorized destination.
 
 The optional [coverage checker](scripts/check_manifest.py) checks declared records and local evidence references. Browser inspection, user approval and real business outcomes remain distinct evidence sources. Its successful exit is a structural result, not a design-quality certificate.

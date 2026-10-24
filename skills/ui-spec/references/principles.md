@@ -150,3 +150,17 @@ A README, slide, diagram, report or motion piece has an audience, a sequence of 
 Treat a selected resource as a set of valuable mechanisms and adjustable expressions. Preserve its reliable behavior and the distinctive relationship that earned adoption; align its typography, space, depth, color and movement with the project's intended language. Combining resources can divide responsibilities clearly, such as an accessible interaction primitive beneath a tailored visual treatment.
 
 Judge the assembled result at page and journey scale. Competing accents, simultaneous animation, mismatched density or inconsistent surfaces can weaken otherwise accomplished components. Tune the relationships and inspect actual content and states. Existing project elements, native capabilities and external work are all valid starting points when they serve the same coherent experience.
+
+## Ground the visual direction in the interaction model
+
+Let the first meaningful action, working object and continuation determine hierarchy before applying an aesthetic treatment. A conversational start can foreground a composer and reserve result space for the subsequent thread. A document-centered tool can foreground durable objects and their organization. Treat the reference's useful convention and its brand expression as separate choices.
+
+Set a positive craft target before retaining or selecting major treatments: what the focal action communicates, how content reads, which relationships create character, and which benchmark makes that quality inspectable. Evaluate current UI and external candidates on those same relationships. Use background, type, color and motion to reinforce the intended model and content. A restrained surface can demonstrate strong craft through exact hierarchy, proportion, state design and reading comfort.
+
+Review the resource map against the assembled viewport. Confirm the claimed effect is visible, secondary regions support rather than duplicate the primary task, and the important content remains readable in each theme. Distinctiveness comes from a coherent product-specific relationship; library count and ornamental intensity measure other things.
+
+## Inherit and adapt resolved relationships
+
+Read a mature foundation as a connected set of decisions: content hierarchy, measure, alignment, spacing rhythm, surface roles, states and attention. Preserve the relationships that make it effective while changing the product-specific content and behavior. Evaluate a typography or spacing change through its effects on the whole composition rather than as an isolated improvement.
+
+Use theory to select, explain, combine and verify those relationships throughout discovery and implementation. A coherent page or block often provides a stronger starting point than separately invented regions. When combining sources, establish one governing visual language and adapt secondary parts to it. Confirm the selected foundation still works with actual content, states and viewing conditions.

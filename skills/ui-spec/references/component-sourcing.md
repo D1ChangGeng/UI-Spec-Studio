@@ -2,11 +2,42 @@
 
 ## Find the strongest useful starting point
 
-Treat the UI ecosystem as part of the design workspace. For a substantive visual or interaction requirement, actively inspect the project's proven components, platform-native capabilities and relevant external implementations before committing to custom work. A strong starting point can improve the design itself as well as shorten its realization.
+Treat the UI ecosystem as a primary source of design and engineering foundations. For a substantive visual or interaction requirement, actively inspect relevant external implementations and platform-native capabilities, and evaluate project components against the same design target before committing to the major treatment or custom work. A strong foundation carries resolved relationships in layout, hierarchy, type, interaction and implementation. Its value is the useful design decisions inherited, as well as the work saved.
 
 Use two complementary kinds of exploration. **Requirement-led discovery** finds a reliable implementation for a known need. **Opportunity-led exploration** reveals a better representation, composition or interaction while important choices remain open. Anchor both in the user task and the accepted product direction. A precise request deserves fidelity; an open brief invites a grounded recommendation.
 
 Carry forward an approved resource whose conditions still fit. Revisit the choice when content, behavior, runtime, quality or maintenance requirements change. A focused native adjustment can proceed directly. Routine research and selection belong to the agent; the user can contribute ideas without having to supply platform names or retrieval instructions.
+
+## Choose the highest appropriate reuse level
+
+Match the scope of the design problem to the largest coherent set of mature decisions worth inheriting. For a new page, inspect page/application templates and design systems before assembling isolated parts. For an accepted page with a local gap, investigate the relevant block or component directly. Reuse granularity and adoption method are separate choices: a whole-page composition can be transferred across stacks, while one primitive can be adopted as a package.
+
+| Reuse level | Valuable decisions to inherit | Fit to establish |
+|---|---|---|
+| Product/page template or design system | Primary loop, shell, information hierarchy, proportions, typography, tokens and state family | Product model, content, rights, supported states and practical adaptation boundary |
+| Layout or functional block | A coherent region, internal hierarchy, spacing rhythm and connected interaction | Region responsibility, surrounding composition, responsive behavior and shared state |
+| Component family or behavior primitive | Consistent semantics, variants, focus and reliable controls | Required behavior, design-system integration and real state ownership |
+| Asset, background, motion or micro-interaction | A specific expressive or feedback mechanism | Role, restraint, attention, accessibility and combined runtime cost |
+
+The highest appropriate level is the most valuable coherent fit, not the maximum amount of imported code. A full template with the wrong task model may impose more redesign than a suitable block. Prefer one compatible visual language for the major regions, then use complementary parts where they add value. A copied design system's completeness, a source's popularity and the current product's quality remain separate evidence.
+
+Read, view and compare the actual candidate at its consequential states and sizes. Preserve the mechanism and relationships that justify selection. When an otherwise useful source crosses frameworks, assess both a matching-stack implementation and a deliberate design/code port. Keep rights, behavior and maintenance responsibilities clear. Use original implementation for the gaps or tradeoffs that the comparison actually establishes.
+
+## Research product conventions and implementation resources in parallel
+
+Product references explain the familiar task model: first action, organization, state progression and continuity. Engineering resources supply code, assets, behavior or visual mechanisms. Preserve a link and purpose for each role. A product screenshot can support an observation about layout; a package demo can support an implementation candidate. Check the transfer from both into the current task.
+
+For new or substantially redesigned surfaces, external exploration occurs while product model, composition and defining treatment can still change. Use concrete product flows and concrete resource items, with sufficient accessible evidence to support the choice. An evaluated project implementation may win on fit and quality. Retained approval supports continued use. Native or original work has an explicit fit/cost rationale. Keep inaccessible references as candidates and label the unverified part.
+
+## Make selection visible by surface and design dimension
+
+Maintain a compact design/resource selection record alongside each substantial SPEC increment. Reuse existing project records or the [design decision template](../assets/templates/design-decisions.md). Start the foundation comparison and shortlist before implementation; reconcile them with code and observed output at review. Name the selected granularity, the relationships inherited together, material changes and why that level is appropriate. Share its location and consequential rows with the preview so the user can inspect how research affected the result.
+
+For each relevant dimension, connect **surface/state → intended experience → product pattern/source → engineering item/source → choice and reason → reuse/adaptation → implementation/preview → evidence and status**. Group shared decisions once and reference their IDs from affected pages. Link the exact example, component, source file or API rather than only a platform homepage. For inherited or authored elements, identify their local source and the quality rationale.
+
+Consider layout/navigation, background, typography, components, icons/assets, state feedback, micro-interactions, general motion and text animation. Add dimensions demanded by the product; mark deliberately quiet or inapplicable treatments with their intended benefit. The record describes meaningful decisions and coverage, with no quota of websites, libraries or effects.
+
+Keep provenance states distinct: considered, selected, implemented and inspected describe different evidence. Owner approval refers to an actual user decision and scope. A code path alone establishes location; inspect the rendered state to claim its visible effect. If the chosen source changes, update the reason and the implementation mapping. Optional detailed [adoption notes](../assets/templates/resource-adoption.md) can hold version, license and maintenance details beneath a compact row.
 
 ## Describe the need in two dimensions
 
@@ -14,7 +45,7 @@ First describe the intended perception or operation: what should become clearer,
 
 For example, “a refined background” becomes a low-contrast moving surface with controllable luminance and speed, readable foreground content, a reduced-motion equivalent and a Vue-compatible realization. Search first by the effect or behavior, then narrow to exact implementations and versions. Protect private project details when forming external queries.
 
-Find resources by **design need**; choose adoption by **delivery form**:
+Search by **product pattern and design need**, choose the useful **reuse granularity**, then determine **delivery form and adoption method**:
 
 | Design need | Useful resource forms | Principal judgment |
 |---|---|---|
@@ -31,7 +62,7 @@ A resource can serve several needs. Reference imagery, editable design files, so
 
 ## Discover efficiently and learn how the source works
 
-Start with the project's code, stories, existing design decisions and available dependency versions. Use relevant catalog leads, official source repositories, examples and search to locate promising alternatives. Inspect unfamiliar platforms enough to understand their scope before treating their terminology as universal.
+Inspect project code, stories and dependency versions to understand constraints and candidates. Establish visual quality from the target and reference evidence; read explicit accepted decisions separately from existing presentation. Use relevant catalog leads, official source repositories, examples and search to locate promising alternatives. Inspect unfamiliar platforms enough to understand their scope before treating their terminology as universal.
 
 Choose the shortest reliable route exposed by the source and the host. Directories reveal availability; demos reveal appearance and behavior; documentation/source reveal contracts; installation tools reveal changes. Their roles complement one another.
 

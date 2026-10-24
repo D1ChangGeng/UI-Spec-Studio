@@ -76,3 +76,15 @@ Reconcile each consequential external item with its exact source, version/varian
 Map demo callbacks and sample data to real application intent and trusted outcomes. Protected prices, permissions, entitlements and workflow decisions remain with their authoritative owners. Preserve the selected visual mechanism while real loading, denied actions and failures become meaningful states. Validate the combination at representative scale as well as each item independently.
 
 Keep license notices, asset permission and reproducible configuration with the resulting source. Capture integration evidence in project records and propose reusable lessons through authorized maintenance. Final connection quality is the actual product's behavior and appearance, supported by its observed conditions.
+
+## Carry the selected product model and its decision record
+
+Read the accepted model, primary action/result loop, retained context and scoped resource map with the approved SPEC. Preserve business contracts inherited from the existing project while connecting the presentation chosen for the new target. Reuse local visual code because its fit is documented or accepted, and preserve unrelated work.
+
+Resolve every consequential selection row to its real component/data adapter and visible state. Check that resumed work, pending results, permission boundaries and durable outcomes still match the agreed experience. When an engineering constraint changes the product model or key interaction, explain the affected tradeoff and return that decision to the appropriate owner. Keep unaffected integration moving.
+
+Handover includes the current preview, design/resource map, actual approval source, connected task outcomes and observed conditions. The next developer can then distinguish a studied reference, adopted implementation and accepted product result.
+
+## Preserve the foundation through real integration
+
+Carry the accepted page/block relationships and behavior into the current product rather than rebuilding their surface from memory. Keep source configuration and adaptation controls identifiable. Replace fixture boundaries with the real application's owners, preserving hierarchy, content measure, state continuity and editable design decisions. Reassess only the affected foundation choice when actual constraints materially change its fit.

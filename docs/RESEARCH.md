@@ -38,7 +38,7 @@ The design is grounded in repeated practical concerns: page proliferation withou
 
 ## Source boundaries and licensing
 
-The skill text, templates and Python tools are original to this repository. Source projects are linked for methodological attribution; their scripts, images, fonts and skill bundles are not redistributed here. There is no endorsement or affiliation claim.
+The skill text, record templates and Python tools are original to this repository. Methodological references are credited separately from copied implementation material. The worked example identifies its adapted source relationships and preserves the notices for Radix Colors and assistant-ui. Source access, license scope, project adoption and endorsement remain distinct facts.
 
 At review time, Emil's skills and Taste Skill declared MIT licenses; Impeccable declared Apache-2.0. If a future contribution copies code or material, preserve the relevant license notices and identify the actual copied portion. Component and asset licenses must be checked at selection time.
 
@@ -79,8 +79,8 @@ criteria. This release independently synthesizes the transferable methods.
 | [Diagram Design](https://github.com/cathrynlavery/diagram-design/blob/main/skills/diagram-design/SKILL.md) | Semantic relationship before layout type, brand roles and readable density | Representation before component selection, semantic integrity and accessible equivalents |
 
 The reasoning chain, eight capability dimensions, conditional patterns and four
-fidelity boundaries are UI Spec Studio's own synthesis. No third-party skill code,
-artwork, fonts or media was copied into this release. Original README artwork is
+fidelity boundaries are UI Spec Studio's own synthesis. In that 1.2 revision, no third-party skill code,
+artwork, fonts or media was copied into the distribution. Original README artwork is
 generated from the repository's own source.
 
 GitHub's [documented picture markup](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github)
@@ -102,3 +102,21 @@ exploration, evaluates the exact item and selects an appropriate reuse layer.
 Platforms are differentiated by design need and delivery form. Official source
 links are retained in the [catalog](../skills/ui-spec/references/resource-catalog.md).
 The [release review](REVIEW-v1.3.0.md) connects research requirements to actual files.
+
+## Worked source reuse in 1.4
+
+The product-intent scenario in `examples/product-intent/` retains the actual
+sRGB Slate and Slate Dark values from the pinned Radix Colors source. Its
+`THIRD-PARTY.md` preserves the MIT notice and exact source identity. Other linked
+product conventions and component anatomy are identified as design references or
+technique transfer. Runtime skill instructions and helpers remain original work.
+
+## Mature page foundation (1.4)
+
+The assistant-ui ChatGPT example and its exact source at commit
+`1fbf00dd0388fee912af95401876a6cc3c232b2c` were inspected for whole-page relationships:
+welcome positioning, reading measure, shared composer, primary action, message
+shape and active reading layout. The sample records design transfer and its real
+fixture checks separately from upstream runtime behavior. Official shadcn blocks
+provide a contrasting page/block discovery route. Candidate maturity is assessed
+through the relevant evidence rather than inferred from popularity.

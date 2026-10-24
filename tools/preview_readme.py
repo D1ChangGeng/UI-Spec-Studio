@@ -64,8 +64,8 @@ def preview(output: Path, browser_path: str | None = None, live_commit: str | No
         raise ValueError('Use an exact 40-character source commit for live readback')
     output=output.resolve();output.mkdir(parents=True,exist_ok=True)
     results=[]
-    asset_urls = {path.name: 'data:image/svg+xml;base64,' + base64.b64encode(path.read_bytes()).decode('ascii')
-                  for path in (ROOT / 'docs/assets').glob('*.svg')}
+    asset_urls = {path.name: ('data:image/svg+xml;base64,' if path.suffix == '.svg' else 'data:image/png;base64,') + base64.b64encode(path.read_bytes()).decode('ascii')
+                  for path in (ROOT / 'docs/assets').iterdir() if path.suffix in {'.svg', '.png'}}
     with sync_playwright() as pw:
         options={'headless':True}
         if browser_path: options['executable_path']=browser_path

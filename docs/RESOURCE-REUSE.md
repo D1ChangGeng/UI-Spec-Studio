@@ -102,3 +102,26 @@ python -m unittest discover -s tests -v
 The readable map is generated from this data. CI checks schema, map consistency,
 installed access, deterministic queries and self-contained distribution. No
 catalog-wide install or quality claim is inferred from those checks.
+
+## Inspect decisions with the SPEC
+
+Product-flow references and engineering-source references have different roles.
+Study both before settling a major redesign. Keep a surface/dimension shortlist
+while choosing, then reconcile it with code and the rendered result. Existing
+visual work earns reuse through approval or target-based assessment; established
+business contracts continue at their authoritative layer.
+
+Show this record with the preview: intended result, concrete reference/item,
+reason, reuse depth, adaptation, implementation location and observed status.
+Use the [decision template](../skills/ui-spec/assets/templates/design-decisions.md)
+or equivalent project documentation. Shared rows can serve a page family; detailed
+version/license records remain in adoption notes. See the [worked study](../examples/product-intent/README.md).
+
+## Start at the highest useful level
+
+For substantial new work, begin with suitable page/application templates, design
+systems and functional blocks. Compare which coherent decisions they already
+resolve, then select smaller pieces for the remaining needs. Reuse granularity is
+separate from delivery form: a whole-page design can be ported, and one primitive
+can be installed. Match the level to the task; preserve an accepted foundation for
+local changes. Record the inherited relationships and verify them in the result.

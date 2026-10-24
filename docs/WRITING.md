@@ -59,3 +59,21 @@ Explain why a chosen reuse layer improves the current experience or total cost.
 External tools supply capabilities under host authority; source material supplies
 reference facts. The method should guide an unfamiliar platform as well as the
 cataloged examples, while preserving routine agent initiative.
+
+## Make consequential decisions observable
+
+Describe the user-level signals that support a product model. State how a mature
+convention differs from a component implementation and how either influences the
+result. Tie visual inheritance to explicit approval or fit assessment. Explain
+when a user choice changes the design enough to merit a checkpoint, and how
+one-shot/delegated work preserves that decision's actual authority. A selection
+record connects reference, implementation and outcome; its value comes from that
+connection rather than field count.
+
+## Write from mature design foundations
+
+Express professional knowledge as guidance for investigating and applying concrete
+work. Name the useful reuse granularity and explain which connected decisions
+are inherited. Distinguish resource scope from adoption method. State how new
+observations can change the choice and how adaptation preserves the valuable
+relationships. Original work has a product-specific role and verification target.

@@ -1,0 +1,48 @@
+{
+  "id": "assistant-ui-chatgpt",
+  "scope": "conversation page composition",
+  "granularity": "page",
+  "method": "cross-stack design transfer",
+  "source_commit": "1fbf00dd0388fee912af95401876a6cc3c232b2c",
+  "source_path": "apps/docs/components/pages/examples/chatgpt.tsx",
+  "source_blob": "0f22e7855a954269ecdee0fd9963240c966e1bc1",
+  "demo": "https://www.assistant-ui.com/examples/chatgpt",
+  "source": "https://github.com/assistant-ui/assistant-ui/blob/1fbf00dd0388fee912af95401876a6cc3c232b2c/apps/docs/components/pages/examples/chatgpt.tsx",
+  "reviewed_on": "2026-10-25",
+  "approval": "pending",
+  "preserved": [
+    "welcome composition and primary action",
+    "48rem reading measure",
+    "shared composer across empty and active states",
+    "28px composer and 22px user-message radii",
+    "right-aligned bounded user messages",
+    "independently growing reading area with reachable composer",
+    "theme roles and state-prioritized actions"
+  ],
+  "adapted": [
+    "Chinese research content",
+    "source-inspection action",
+    "native fixture state and one local note",
+    "44px phone action targets",
+    "85% narrow user bubble",
+    "legible placeholder color"
+  ],
+  "scope_limits": [
+    "The React runtime is not installed in this native fixture.",
+    "Voice, attachments, hosted history and real research services are outside the fixture.",
+    "The document model remains a comparison probe, not the selected production foundation."
+  ],
+  "alternatives": [
+    {
+      "item": "shadcn dashboard-01",
+      "source": "https://ui.shadcn.com/blocks",
+      "decision": "Its dashboard cards/charts address a different primary task; useful for an operational surface."
+    },
+    {
+      "item": "shadcn sidebar-07",
+      "source": "https://ui.shadcn.com/blocks/sidebar",
+      "decision": "Useful shell block; it leaves the conversation page decisions open."
+    }
+  ],
+  "verification": "report.json from tools/validate_scenario.py; image inspection and actual project acceptance remain scoped"
+}

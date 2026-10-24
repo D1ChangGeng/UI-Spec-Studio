@@ -1,6 +1,6 @@
 # UI Spec Studio
 
-**给 Agent 一套完整的设计实践。**
+**以成熟设计成果为起点的专业设计工程实践。**
 
 <picture>
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="docs/assets/studio-compact-dark.svg">
@@ -29,6 +29,28 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 你可以提供详细参考，也可以只有一个目标。Agent 负责形成方向、选择下一项有价值的工作、实现并观察实际效果，再根据你的反馈继续。
 
 已有批准的设计时，可以直接要求执行 `finish`，完成真实接线。[安装与宿主选项 →](docs/INSTALL.md)
+
+## 从成熟设计成果建立起点
+
+设计理论提供判断能力，UI 资源提供可研究、可比较、可复用的实际对象。
+新页面优先寻找最高适当复用层级：完整页面或设计系统、功能区块，再到组件与具体效果。
+继承有价值的层级、比例、排版节奏和交互关系，将自主创造集中用于产品差异、适配、整合与体验优化。
+
+产品分析、实际搜索与浏览、专业比较、选型、实现和验证持续联动；新的资源发现也可以完善初始方案。
+局部改进则继承已确认的整体基础，在适当范围内继续工作。
+
+<img src="docs/assets/foundation-study.png" alt="基于 assistant-ui 整页设计关系适配的研究样例，产品方向仍待用户确认。" width="1280">
+
+[查看整体设计关系的来源与适配](examples/product-intent/FOUNDATION.md)。
+
+## 先确认用户期待怎样使用产品
+
+从第一项操作、主要工作对象和持续任务判断产品交互模型，再确定页面结构。
+成熟产品范式与具体 UI 工程资源并行研究；功能资产继续继承，视觉候选按目标品质评估。
+对仍有显著分歧的重要方向，Agent 提供推荐与少量有意义的选项，帮助用户确认。
+
+每份实质性 SPEC 与设计资源记录一同交付：选择了什么、为什么、如何改造、实际出现在哪里。
+[设计决策指南](docs/DESIGN-DECISIONS.md) · [可运行的双模型样例](examples/product-intent/README.md)
 
 ## 设计是一组相互连接的判断
 
@@ -104,7 +126,7 @@ Agent 主动寻找有价值的起点：项目已有组件、原生能力与外�
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.3.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.4.0 --skill ui-spec
 ```
 
 安装测试也覆盖 Claude Code 和 OpenCode 目标。核心内容是 Markdown；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。
@@ -118,7 +140,7 @@ npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.3.0 --skill
 <details>
 <summary><strong>维护者入口：模型、写作与发布</strong></summary>
 
-[完整理解模型](docs/MODEL.md) · [写作标准](docs/WRITING.md) · [v1.3 审查](docs/REVIEW-v1.3.0.md) · [研究来源](docs/RESEARCH.md) · [覆盖记录](docs/MANIFEST.md) · [发布流程](docs/PUBLISHING.md)
+[完整理解模型](docs/MODEL.md) · [写作标准](docs/WRITING.md) · [v1.4 审查](docs/REVIEW-v1.4.0.md) · [研究来源](docs/RESEARCH.md) · [覆盖记录](docs/MANIFEST.md) · [发布流程](docs/PUBLISHING.md)
 
 ```bash
 python tools/validate_package.py
