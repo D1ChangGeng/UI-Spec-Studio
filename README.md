@@ -56,14 +56,14 @@ The [professional model](docs/PROFESSIONAL-MODEL.md) and [conditional techniques
 
 This repository's own front page is a **reading and publishing surface**, rather than an application screen. Its first task is helping a new reader judge fit and try the skill. Its visual treatment carries that purpose without replacing native Markdown content.
 
-| Studied foundation | What this README adopts | What was adapted here |
-|---|---|---|
-| [Vercel Skills CLI README](https://github.com/vercel-labs/skills/blob/main/README.md) | Immediate purpose, copyable install command and a route to deeper reference | The `ui-spec` install and first Agent instruction lead the reading path |
-| [Typst README](https://github.com/typst/typst/blob/main/README.md) | A concrete visual example alongside an explanation of its mechanism | An editable editorial plate illustrates source → decision → result; the method stays in selectable text |
-| [GitHub's Markdown and image guidance](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github) | Native headings, links, code blocks and theme-aware imagery | Four light/dark and wide/narrow SVG variants, with a readable text equivalent |
-| Existing UI Spec Studio art direction | Restrained color roles and editorial typography | A resource-led illustration generated from the repository's editable source |
+The design borrows **relationships and publishing techniques**, with the full adoption record in the [README design specification](docs/design/README-SPEC.md):
 
-The relationships and documentation patterns are adapted as **design references**. The illustration and Markdown are maintained in this repository. The [README design record](docs/design/README-SPEC.md) tracks candidate sources, implementation choices, render checks and the limits of the evidence.
+- **[Vercel Skills CLI](https://github.com/vercel-labs/skills/blob/main/README.md) — start with an action.** Its quick install and deeper reference path inform the placement of our first command and Agent instruction.
+- **[Typst](https://github.com/typst/typst/blob/main/README.md) — show the idea, then explain it.** An editable editorial plate makes the source → decision → result relationship visible; the method remains in readable text.
+- **[GitHub's Markdown guidance](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github) — use the host's own strengths.** Native headings, links and code blocks are paired with four theme/viewport-aware SVG variants.
+- **Existing UI Spec Studio artwork — inherit a coherent identity.** Its restrained palette and editorial typography carry forward into the new resource-led composition.
+
+These are design-reference adaptations. The illustration and Markdown are maintained in this repository; the [design record](docs/design/README-SPEC.md) links candidate sources, implementation, render checks and evidence limits.
 
 A separate [research-product example](examples/product-intent/README.md) shows page-level design transfer in an application context, including the [selected source and retained relationships](examples/product-intent/FOUNDATION.md).
 

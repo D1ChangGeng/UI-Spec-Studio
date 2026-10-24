@@ -56,14 +56,14 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 
 仓库首页首先是一种**阅读与发布界面**。新读者需要快速理解 Skill 的作用、判断是否符合自己的任务，然后完成第一次使用。视觉表达服务于这条阅读路径，核心信息依然由 GitHub 原生 Markdown 承载。
 
-| 研究的成熟参考 | 继承的设计经验 | 当前 README 的具体实现 |
-|---|---|---|
-| [Vercel Skills CLI README](https://github.com/vercel-labs/skills/blob/main/README.md) | 开头建立产品用途，提供可复制的安装命令及深入文档入口 | 将 `ui-spec` 安装命令与第一条 Agent 指令放在阅读路径前段 |
-| [Typst README](https://github.com/typst/typst/blob/main/README.md) | 用实际视觉示例帮助理解，再通过正文解释实现机制 | 用可编辑的设计插图说明「研究 → 选择 → 实现」，正文保留完整文字解释 |
-| [GitHub Markdown 与图片规范](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github) | 使用原生标题、链接、代码块，以及适配主题的图片 | 四份独立的明暗／宽窄版 SVG，并提供文字替代说明 |
-| 现有 UI Spec Studio 视觉基础 | 克制的主题色、编辑式排版与视觉语言 | 在保留统一风格的基础上，将插图内容更新为成熟资源驱动的设计过程 |
+本次复用侧重**信息组织和发布媒介的成熟设计关系**。完整的候选比较与采用范围保存在 [README 设计说明](docs/design/README-SPEC.md)：
 
-这里继承的是**成熟的信息组织和设计方法**，插图与 Markdown 内容由本仓库维护。[README 设计与选型记录](docs/design/README-SPEC.md)提供候选比较、具体实现、渲染核查及证据边界。
+- **[Vercel Skills CLI](https://github.com/vercel-labs/skills/blob/main/README.md) — 先让读者开始行动。** 借鉴其清晰的产品用途、快速安装与深入文档路径，将首次命令和 Agent 指令前置。
+- **[Typst](https://github.com/typst/typst/blob/main/README.md) — 用视觉例子解释方法。** 通过可编辑插图说明「研究 → 选择 → 实现」，同时以原生正文保留完整说明。
+- **[GitHub Markdown 规范](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github) — 充分利用宿主能力。** 标题、链接和代码块使用原生结构，插图分别适配明暗主题及宽窄视口。
+- **原有 UI Spec Studio 视觉体系 — 延续统一的设计语言。** 保留克制的主题色与编辑式排版，将表达重点调整为成熟成果驱动的设计过程。
+
+这里继承的是成熟的设计方法，插图与 Markdown 内容由本仓库维护。[设计记录](docs/design/README-SPEC.md)同时说明实现位置、渲染核查与证据边界。
 
 另有一份[研究产品设计案例](examples/product-intent/README.md)，展示应用 UI 中的整页设计迁移，并保留[采用来源与继承关系](examples/product-intent/FOUNDATION.md)。
 
