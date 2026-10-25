@@ -25,7 +25,7 @@ consistent across platforms.
 ## Automated publication
 
 A main-branch push changing VERSION runs validation, installation, publication-render
-and product-intent scenario checks.
+and the product, asset, content and temporal scenario checks.
 The release job has repository-content write permission; ordinary validation jobs
 have read-only permissions. External Actions are pinned to reviewed commit SHAs.
 
@@ -66,7 +66,7 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.6.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.7.0 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
@@ -102,3 +102,10 @@ read/write/delete boundaries, draft continuity, accessible state/focus behavior,
 failure recovery, content growth and text-spacing adaptation. The gate requires
 real persistence. A routed in-memory preview is recorded as limited and remains
 ineligible for the real-storage release gate.
+
+The temporal-review fixture captures meaningful interaction episodes and stores
+ordered visual evidence with source identity and event/capture timing. The scenario
+gate checks its declared state and continuity contracts. Reviewers open the relevant
+frames or clips and record visual findings separately. Preserve natural-time and
+controlled-time evidence labels; source presence, a completed capture or a successful
+assertion does not by itself establish motion quality.

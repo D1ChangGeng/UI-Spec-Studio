@@ -1,11 +1,11 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, shaping an unclear direction, product interaction models, design options, traceable resource selection, visual assets, content design, UX writing, typography, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, responsive audits, scroll and motion continuity, performance experience, operational content and batch workflows, complete states, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, shaping direction, product interaction models, visual reasoning and inspection, temporal observation through video or ordered frames, traceable resource selection, visual assets, content design, UX writing, typography, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, responsive audits, scroll and motion continuity, performance, operational content and batch workflows, complete states, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.6.0"
+  version: "1.7.0"
 ---
 
 # UI Spec Studio
@@ -13,6 +13,14 @@ metadata:
 Build from accurate content and suitable mature design work, refine it through small, reviewable increments, then carry the accepted experience into the real product. Own the analysis, design decisions, component research, implementation and verification. The user can start the work, evaluate the result and approve the next round; specific ideas and references become useful additional direction.
 
 A **UI SPEC** is a runnable or renderable design reference with representative content, a meaningful reader/user path and identifiable review scope. Product interfaces, documentation, READMEs, diagrams, presentations and other screen-based artifacts share this practice. Choose the actual medium's capabilities and conventions: a document can deliver a complete reading task without an application shell. Use the project's existing framework, format and preview mechanism. One working implementation can serve both fixture-driven review and real data adapters.
+
+## Observe the design as people experience it
+
+Use **Visual Reasoning & Visual Inspection** throughout research, selection, composition, production, implementation and acceptance. Actually view consequential candidates and the rendered result. Recognize qualities worth inheriting as well as problems to resolve. Connect a visible phenomenon to its likely perceptual effect, interpret it through professional principles and product context, choose a fitting action, then inspect the affected result. New observations can reopen a resource, layout or implementation choice.
+
+Judge at three connected scopes: the whole frame and its details, a meaningful continuous episode, and the user's journey across views. For **Temporal Visual Inspection**, observe the trigger, transition and settled outcome; include relevant reversal, interruption, repeated input, loading and loop boundaries. Choose live interaction, video or ordered timestamped frames according to the behavior and available host tools. The observation window follows the design question and the event's actual span. The [verification method](references/verification.md) defines capture conditions and evidence limits.
+
+Inspect the source resource, assembled composition and delivered runtime separately. Visible quality supports an appearance judgment; code, state and timing evidence help explain causes and verify behavior. Keep recorded media, actually viewed evidence, professional interpretation and owner acceptance distinguishable. Use **Observe → Interpret → Evaluate → Decide → Implement → Inspect → Refine** as a working loop within the existing operations. Present important choices with inspectable candidates or results and the reason the observation changed the decision.
 
 ## Start from mature design work
 
@@ -49,7 +57,7 @@ Before substantive UI SPEC planning, implementation or review, **read all eight 
 3. [Visual principles](references/principles.md) — judge composition and coherent visual quality.
 4. [Resource discovery and reuse](references/component-sourcing.md) — find, assess, adapt and validate useful design and implementation resources.
 5. [Interaction and variants](references/interaction-and-variants.md) — preserve usable behavior across states.
-6. [Verification](references/verification.md) — inspect the result and support completion claims.
+6. [Verification](references/verification.md) — inspect spatial, temporal and journey evidence and support completion claims.
 7. [Visual assets and asset engineering](references/visual-assets.md) — research, prepare, produce, integrate and verify the visual material.
 8. [Content design and UX writing](references/content-design.md) — decide content roles, voice, timing and typography; verify user comprehension.
 
@@ -121,7 +129,7 @@ Track maturity by scope: implemented, inspected, approved, connected and verifie
 
 ## Finish the current increment
 
-Run the intended task through visible controls; inspect actual viewport captures and important transitions. Check related surfaces when shared components change. Repair and recheck observed issues. Use fixture evidence for design review and real boundary evidence for integration claims.
+Run the intended task through visible controls; inspect actual viewport captures and the relevant continuous episodes. Connect frames or video intervals to their trigger, state, source revision and viewing conditions. Check related surfaces when shared components change. Repair and recheck observed issues. Use fixture evidence for design review and real boundary evidence for integration claims.
 
 Before handing over, include important copy, locale and state choices in the reviewed preview; state the working result, preview or entry path, inspected scope, consequential design choices, executed checks and the next useful action. Show the design decision record and the result together. Ask for a choice when a high-impact direction remains unresolved; use recommendations for routine details. Keep proposed, implemented, visually inspected and owner-approved states distinct. Report blockers and unverified dimensions accurately. Keep sensitive project data within its authorized destination.
 

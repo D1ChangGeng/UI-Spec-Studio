@@ -4,6 +4,10 @@ Treat visual assets as designed parts of the experience. They can establish iden
 
 This common reference supplies asset judgment for every round. The actual task determines production depth. The reuse ladder describes scope, not visual importance: a load-bearing photograph, wordmark or spatial object can shape the whole page. Discover suitable assets alongside mature page foundations, and let a strong finding improve the composition. Preserve an asset-light direction when it serves the product.
 
+## Contents
+
+[Role and conditions](#establish-the-role-and-the-viewing-condition) · [Research and selection](#research-compare-and-choose-a-production-route) · [Identity](#brand-and-icon-craft) · [Type](#type-glyphs-and-wordmarks) · [2D](#2d-preparation-and-image-direction) · [Spatial production](#spatial-and-3d-production) · [Dynamic assets](#dynamic-assets-and-procedural-presentation) · [Delivery and acceptance](#engineer-masters-derivatives-and-placements)
+
 ## Establish the role and the viewing condition
 
 Name the asset's job, target surface/state, intended perception and the relationship it must preserve with text, components and motion. Classify its meaning as identity, informative content, functional cue, expressive focus or supporting atmosphere; one asset can have different roles in different placements. The role determines alternatives, accessible naming, priority and failure behavior.
@@ -27,7 +31,7 @@ Use this as a connected classification rather than a demand to include every fam
 
 Apply the common sourcing method to exact asset candidates and relevant production examples. Study visible quality, actual files and rights-bearing sources. A moodboard supplies direction; the original asset or author supplies provenance. Record separately what is observed, inferred, usable and accepted.
 
-Read references at three scales: whole silhouette/composition, relationships between forms and content, then contours, edges, material and motion. Extract transferable properties such as line tension, aperture, optical center, letter joining or light softness. Turn them into a product-specific brief instead of a brand-shaped template. Third-party marks used to identify their services retain the owner's approved identity and permitted variations. Original product identity has its own form.
+View references at whole-composition, relationship and detail scales; inspect dynamic candidates across their meaningful cycle or interaction. Extract properties such as line tension, optical center, letter joining, light softness and object continuity into a product-specific brief. Compare material in isolation and beside actual text/controls: a strong asset can change the layout, and the layout can expose an asset's limitation. Third-party service marks retain the owner's approved identity and permitted variations.
 
 Choose direct use, adaptation, composition, technique transfer or original production by design fit, required uniqueness, permissions, available tools and total cost. A mature icon library is a strong starting point for routine controls; a distinctive brand symbol may justify original drawing and refinement. Generative tools can explore concepts or supply a base; inspect the actual output and refine it for the required use. A raster preview proves an image result, while editable curves, geometry, animation or a font require their actual source artifacts.
 
@@ -79,7 +83,7 @@ For **static rendering**, optimize the final image and its responsive crops. For
 
 Choose CSS/SVG for suitable local state changes, an animation runtime such as Rive or Lottie for compatible authored assets, video for predetermined sequences, and real-time graphics when the interaction or changing scene warrants them. Verify the particular exported features, renderer and dependencies. Connect state-machine inputs and events to actual application state; a loop should not imply progress or success that the system has not established.
 
-Keep readable stable states, intentional duration/loop boundaries, interruption and a quiet alternative. Give prolonged nonessential motion suitable pause/control. Honor reduced-motion preferences, suspension when offscreen/backgrounded, cleanup on removal and supported input methods. Inspect the full animation or live operation, including an important failure state; selected still frames establish only those frames.
+Keep readable stable states, intentional loop boundaries, interruption and a quiet alternative. Give prolonged nonessential motion suitable pause/control; honor reduced-motion preferences, offscreen suspension and cleanup. Observe the delivered sequence at its actual placement, including the loop join, maximum reach/brightness and a relevant unavailable state. For nonperiodic effects, choose a window that samples their meaningful variation and state its limits. Use ordered frames to locate a defect and normal-time playback or interaction to judge rhythm; the [temporal verification method](verification.md) keeps observation and capture conditions explicit.
 
 ## Engineer masters, derivatives and placements
 

@@ -66,3 +66,11 @@ Preserve project-specific choices as conditional examples.
 Run the authored content browser scenario along with the existing test and
 publication gates. Keep source-based editorial review distinct from mechanical
 and real-user comprehension evidence.
+
+Version 1.7 makes visual reasoning and temporal inspection part of every design
+stage. Preserve actual candidate viewing, human-perception judgment, source versus
+composition versus runtime scope, and behavior-sized observation windows. Keep
+capture, viewed evidence, interpretation, interaction tests and owner acceptance
+explicit. Normal-time viewing and controlled probes establish different properties.
+Run the temporal fixture with the existing browser gates; retain event order,
+source identity and capture conditions, then inspect the relevant frames or clips.

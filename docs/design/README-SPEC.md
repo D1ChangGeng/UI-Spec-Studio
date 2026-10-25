@@ -52,7 +52,7 @@ python tools/readme_art.py
 python tools/readme_art.py --check
 ```
 
-The current [v1.4.0](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.4.0) remains the pinned skill release. This README exercise changes the repository's public documentation and editable visual source; it does not change the distributed Agent Skill's behavior or assert a new release.
+The original README exercise was completed against v1.4.0. Its artwork and reading structure remain the foundation for subsequent documentation updates. Current installation examples follow the repository's `VERSION`; version-specific release and review records identify the corresponding Skill changes and executed checks.
 
 ## Inspection plan and evidence levels
 
@@ -70,3 +70,17 @@ The local renderer uses Markdown-It with a GitHub-like stylesheet. Actual GitHub
 ## Transferable lesson for general screen-based design
 
 The same professional cycle can improve a document by choosing the **host-native document foundation** rather than a component library. Product UI may instead inherit a page shell or component system; a diagram inherits a representation technique; a presentation inherits an editorial sequence and editable source. Their medium-specific completion conditions differ. This README supplies observed evidence for a GitHub publication, while the other media require their own task-based implementation and inspection.
+
+## Visual inspection method in the current reading path
+
+The visual-observation introduction follows the resource method and precedes the
+content and runtime sections. It explains how real viewing informs the choices
+already introduced, using frames, changing interactions and connected journeys as
+its three scopes. The primary install command, editorial artwork and first-use
+prompt keep their existing positions. Detailed capture conditions and temporal
+qualities live in the linked [visual guide](../VISUAL-INSPECTION.md).
+
+Review each language in the existing theme/viewport matrix. Inspect paragraph
+measure, section rhythm and links at their actual size, including lower sections
+through document scrolling. The current version's review record owns actual
+observations; this section records the design decision and verification scope.

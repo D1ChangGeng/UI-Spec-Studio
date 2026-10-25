@@ -163,3 +163,17 @@ actual-browser check of image variants, small icons, motion and unavailable medi
 ## Design content with the screen
 
 When adding or revising a page, establish the audience's next question and the fact owner before writing visible strings. Study comparable product wording where it helps, then decide headings, labels, help, status, tone and actual placement with the layout. Use short, typical and long strings in each supported language. Run the task, including failure and recovery, to verify that copy matches actual behavior. The [content reference](../skills/ui-spec/references/content-design.md) provides the shared judgment method; a [working example](../examples/content-review/README.md) covers localized local-save states.
+
+## Observe the frame, the change and the journey
+
+Ask the agent to use the [visual observation method](VISUAL-INSPECTION.md) when
+researching candidates and refining the real result. Important choices should
+show what was viewed, the relationship that matters and why it fits the task.
+Observe the source resource, the assembled composition and the working product
+in their own conditions.
+
+For changing UI, follow the relevant episode through its trigger, progression and
+settled outcome. Extend the window for return, interruption, repetition, waiting
+or loop boundaries when those affect the design. Live interaction, video and
+ordered frames are chosen by the question and available host capabilities. Keep
+capture, actual viewing, interaction checks and approval explicit in the handover.

@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.7.0 — 2026-10-26
+
+- Make Visual Reasoning & Visual Inspection a continuous method across resource discovery, selection, composition, asset production, implementation and acceptance.
+- Ground optical balance, typography, material, focus and design-language judgments in actual rendered evidence and product context.
+- Extend observation from frames to meaningful temporal episodes and connected journeys, with behavior-specific windows and seven motion/continuity qualities.
+- Link consequential choices and repairs to viewed evidence, perceptual interpretation, implementation causes and inspected results.
+- Distinguish captured media, actual visual inspection, interaction checks, runtime measurements and owner approval; retain the limits of sparse and controlled-time evidence.
+- Add a runnable temporal review fixture and chronological capture workflow alongside the existing publication and browser checks.
+- Preserve the eight common references, established operations and proportionate use of optional records.
+
 ## 1.6.0 — 2026-10-25
 
 - Integrate Content Design, UX Writing and Typography as the eighth common professional reference.

@@ -169,3 +169,31 @@ and one fresh-context forward application to an image-organizing tool. That task
 produced a design proposal, researched sources and proposed verification; it did
 not implement the tool or measure a performance improvement. The nine experience
 dimensions guide judgment while each claim retains its own evidence boundary.
+
+## Visual reasoning and temporal assurance (1.7)
+
+The [visual observation guide](VISUAL-INSPECTION.md) describes the common method;
+the [temporal fixture](../examples/temporal-review/README.md) provides a bounded
+runtime in which to exercise it. The browser runner generates chronological
+visual evidence and checks declared action/state relationships. Its report
+identifies source content, viewing conditions, trigger and capture timing, and
+the time-control mode where one is used.
+
+Captured media and actual visual inspection are separate records. Opened frames
+support judgments about those moments and their observed relationship; normal-time
+playback supports the pace of the recorded interval under its capture conditions.
+Controlled-time probes help isolate ordering and intermediate geometry. Sparse
+samples or encoding frame rates cannot establish application frame delivery or
+rule out a stall between samples. Motion/performance claims require matching
+observation and runtime evidence.
+
+Assess source-resource appearance, the assembled composition and the delivered
+runtime at their respective boundaries. Link consequential findings to a visible
+relationship, its likely perceptual effect, a cause to investigate and the result
+of the correction. Actual user comprehension, owner acceptance and comparative
+agent performance remain independently established outcomes.
+
+The version review records the checks actually executed, the media actually viewed,
+observed repairs and remaining conditions. CI retains its actual assertions and
+capture artifacts. A consuming product follows the same method using its own
+content, services, devices and user journey.

@@ -2,15 +2,15 @@
 
 ## Contents
 
-[Foundations](#find-the-strongest-useful-starting-point) · [Selection records](#make-selection-visible-by-surface-and-design-dimension) · [Discovery channels](#discover-efficiently-and-learn-how-the-source-works) · [Adoption](#evaluate-adoption-value) · [Integration](#adapt-into-one-product) · [Assets and content](#material-medium-and-source-safety)
+[Foundations](#find-the-strongest-useful-starting-point) · [Selection records](#make-selection-visible-by-surface-and-design-dimension) · [Discovery channels](#discover-efficiently-and-learn-how-the-source-works) · [Visual and temporal study](#understand-the-demonstration-and-the-implementation-together) · [Adoption](#evaluate-adoption-value) · [Integration](#adapt-into-one-product) · [Assets and content](#material-medium-and-source-safety)
 
 ## Find the strongest useful starting point
 
-Treat the UI ecosystem as a primary source of design and engineering foundations. Before committing to a major treatment or custom work, inspect relevant external implementations and platform-native capabilities; evaluate project components against the same target. A strong foundation carries resolved layout, hierarchy, type and interaction relationships. Its value includes inherited design decisions and work saved.
+Treat the UI ecosystem as a primary source of resolved design and engineering decisions. Before committing to major custom work, open relevant rendered examples and examine platform-native capabilities; evaluate project components against the same target. A strong foundation carries useful hierarchy, proportions, type, interaction and states.
 
-Use **Requirement-led discovery** for known needs and **Opportunity-led exploration** for better representations, compositions or interactions while important choices remain open. Anchor both in the user task and accepted direction. A precise request deserves fidelity; an open brief invites a grounded recommendation.
+Use **Requirement-led discovery** for known needs and **Opportunity-led exploration** for better representations or visual mechanisms while choices remain open. Anchor both in the task and accepted direction. Let actual visual findings improve the initial hypothesis.
 
-Carry forward approved resources while their conditions fit; reassess when content, behavior, runtime, quality or maintenance needs change. Focused native adjustments can proceed directly. The agent handles routine research and selection; users need not supply platform names or retrieval instructions.
+Carry approved resources forward while their content, behavior, runtime and craft still fit. Focused native adjustments can proceed directly. The agent handles routine discovery and selection; the user supplies direction and consequential choices.
 
 ## Choose the highest appropriate reuse level
 
@@ -30,19 +30,19 @@ Compare actual candidates at consequential states and sizes. Preserve the relati
 
 ## Research product conventions and implementation resources in parallel
 
-Product references explain task models: first action, organization, states and continuity. Engineering resources supply code, assets and mechanisms. Link each source to its role: a screenshot supports a layout observation; a package demo supports an implementation candidate. Check how each transfers into the current task.
+Product references expose task models and visual relationships; engineering resources supply contracts, code, assets and mechanisms. Identify each source's role and actual evidence. A directory is a discovery lead, viewed frames show their visible states, and running a task exposes the exercised behavior.
 
-Explore new or substantially redesigned surfaces while their model, composition and defining treatment can still change. Use concrete flows and resource items with evidence sufficient for the choice. Evaluated project implementations may win on quality and fit. Keep inaccessible references as candidates and identify unverified claims.
+Research new surfaces while model, composition and defining treatment can change. Compare concrete flows and resource items, including suitable internal work. Keep unavailable visual conditions explicitly unobserved, and seek a supported original preview, recording or local rendering when it can resolve the choice.
 
 ## Make selection visible by surface and design dimension
 
-Keep a compact selection record with each substantial SPEC increment, using existing records or the [design decision template](../assets/templates/design-decisions.md). Compare foundations before implementation; reconcile choices with code and observed output at review. State the reuse scope, inherited relationships, material changes and rationale. Share the record with the preview so research decisions are inspectable.
+Keep a compact selection record with the preview, using existing records or the [design decision template](../assets/templates/design-decisions.md). Compare foundations before implementation and reconcile them with code and observed output. State reuse scope, inherited relationships, adaptations and reasons.
 
-Connect **surface/state → intended experience → product and engineering sources → choice/reason → adaptation → implementation/preview → evidence/status**. Reference shared decisions from affected pages. Link exact examples, components, files or APIs; identify local sources and quality rationale for retained or authored elements.
+Connect **surface/state → intended experience → product and engineering sources → observed qualities → choice/reason → implementation/preview → evidence/status**. Link exact items and representative frames or time ranges with their viewing conditions. Explain which visible relationship supports the choice, the inferred benefit and where it will be applied. Shared decisions can be referenced from affected surfaces.
 
-Cover relevant layout/navigation, background, type, components, assets, feedback and motion dimensions. Explain deliberately quiet or inapplicable treatments by their benefit. Record meaningful decisions and coverage; research volume follows the task.
+Cover the meaningful layout, type, material, asset, feedback and motion choices. A small comparison of researched alternatives helps when perceptual differences change direction. Routine decisions need proportionate records, with optional [adoption notes](../assets/templates/resource-adoption.md) for version, license and maintenance detail.
 
-Distinguish considered, selected, implemented and inspected evidence. Owner approval refers to an actual user decision and scope; visible-effect claims require rendered observation. Update reasons and implementation mappings when sources change. Optional [adoption notes](../assets/templates/resource-adoption.md) hold version, license and maintenance detail beneath a compact row.
+Distinguish considered, selected, implemented and actually inspected work. Owner approval refers to an actual user decision and scope. Update mappings when observation changes the choice; visual evidence, source explanation and approval retain their separate meanings.
 
 ## Describe the need in two dimensions
 
@@ -87,11 +87,15 @@ Read relevant material together; follow large indexes to needed objects and comp
 
 ## Understand the demonstration and the implementation together
 
-Identify the serious candidate's item, language/framework/styling variant, revision, demo and configuration. Observe relevant sizes and states; read the source/API needed to reproduce the effect. Preserve its parameters, container assumptions, assets and dependencies in the handoff.
+Identify the candidate's exact item, variant, revision, demo settings and rendering conditions. Open the actual effect at a useful scale while selection is still open. Read source/API details to explain and reproduce the observed mechanism; retain relevant parameters, container assumptions, assets and dependencies.
 
-Separate essential behavior, visual treatment and sample content. Check controlled state, focus, portals, events, cleanup, SSR/hydration and CSS scope as relevant. Inspect actual font coverage and image crops alongside distribution documentation.
+Observe the qualities that matter to its role: component proportion, type, borders/material and states; background contrast, movement and text clearance; image crop and family consistency; a spatial object's intended views, light and silhouette; a page's hierarchy, rhythm and task relationships. Compare whole context and local detail. Identify which relationships supply the candidate's value and which depend on demo content, background or timing. Carry that explanation into the integration probe; attractive isolated detail can require substantial adjustment in the intended composition.
 
-Use the demo/source pair to explain the mechanism, such as anchored motion preserving orientation or aligned values supporting comparison. Preserve that mechanism during adaptation. Identify unavailable evidence and continue work supported by what can be inspected.
+For changing resources, observe a meaningful time window: a complete micro-interaction and return, a loop including its seam or changing emphasis, an asynchronous wait-to-result, or connected navigation. Include representative interruption or rapid input when relevant. Judge timing, object continuity, motion range and feedback from the observed sequence. The [verification method](verification.md) owns recording/sampling conditions and their limits.
+
+Use host-supported live demos, author recordings, original files or local source renders. Record which one was viewed, its actual states and time range. Keep unviewed captures identified as awaiting visual inspection. An unavailable demo leaves its live behavior unobserved. Continue supported source assessment or compare other candidates, and identify what would resolve the remaining visual question.
+
+Separate essential behavior, visual treatment and sample content. Inspect control/state ownership, focus, portals, events, cleanup, SSR/hydration and CSS scope as needed. A demo can suggest why anchored motion preserves orientation; implementation and the adapted runtime test that explanation.
 
 ## Evaluate adoption value
 
@@ -113,25 +117,25 @@ Design files can guide implementation without runtime code. Registry similarity 
 
 ## Prototype the uncertainty that can change the choice
 
-Probe the consequential unknown in a small integration: composition in the actual shell, keyboard/touch and controlled state, or representative data counts and runtime conditions.
+Probe the consequential unknown in a small integration: actual-shell composition, keyboard/touch and state behavior, or representative content volume and runtime conditions. View the result and its relevant transitions before expanding.
 
-Implement when a working probe will resolve the remaining question. Broaden research when fit is unsupported, behavior is missing or cost exceeds value. Set research depth from the task.
+Implement when the probe can settle fit. Continue research when visible quality, necessary behavior or total cost remains unsuitable. Match exploration depth to the decision.
 
 ## Adapt into one product
 
-Express reliable semantics through project type, tokens, spacing, surfaces, icons and motion. Tune the defining mechanism through meaningful controls such as reading measure, focal position, selection emphasis or response duration.
+Express reliable semantics through the project's type, spacing, surfaces, icons and motion. Tune controls that carry the intended quality: measure, focal location, material response, selection emphasis or timing. Preserve the useful mechanism while allowing real content and visual findings to reshape the combination.
 
-Connect data/actions at the application boundary: presentation renders state; trusted owners validate protected operations. Replace sample content, links and handlers. Check actual text lengths, error/pending/empty states, themes, zoom, reduced motion and real responses; retain approved comparison fixtures.
+Connect data/actions at their owner. Replace sample content, links and handlers; trusted owners validate protected operations. Test actual text lengths, states, variants, zoom, reduced motion and real responses; retain approved comparison fixtures.
 
-Inspect the assembled page and transitions for behavior, component identity, focus, state retention, combined payload/rendering cost and cleanup. Use this evidence to establish the integrated result.
+Inspect three distinct results: the source resource in its demonstrated conditions, the assembled composition, and the actual runtime journey. Compare attention, density, material, object/focus continuity and coordinated movement. Check payload, rendering cost and cleanup separately. A good source supports selection; observations of the integrated product establish its final fit.
 
 ## Retain useful knowledge at its responsible location
 
-Extend the selection record with the exact variant/version, inspected settings, rights/attribution and maintenance boundary needed to reproduce consequential adoptions. Keep it in existing project records or the optional [adoption note](../assets/templates/resource-adoption.md).
+Keep exact versions/settings, rights, maintenance ownership and observation conditions needed to reproduce consequential choices in existing records or the optional [adoption note](../assets/templates/resource-adoption.md).
 
-Separate **platform capability**, **specific-item assessment** and **project acceptance**. Preserve a review date and the evidence's actual scope. Source copies have local change ownership; packages retain version/update boundaries; asset licenses and acknowledgments remain attached to their use.
+Separate **platform capability**, **specific-item assessment** and **project acceptance**, retaining dates and actual evidence scope. Source copies need local change ownership; packages keep version/update boundaries; notices follow the asset.
 
-Refresh records when sources, versions, licenses, APIs or project conditions change. Assess new discoveries by provenance and added value. Keep project decisions local; add transferable mechanisms and their conditions to the catalog or references through authorized review and version control.
+Refresh records as sources or project conditions change. Keep project decisions local; add transferable mechanisms, applicable conditions and observed results to the catalog or references through authorized review and version control.
 
 ## Material, medium and source safety
 

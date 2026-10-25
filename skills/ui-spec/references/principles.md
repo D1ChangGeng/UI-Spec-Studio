@@ -1,58 +1,60 @@
 # Visual principles
 
+## Contents
+
+[Instruction strength](#understand-the-strength-of-each-statement) · [Scale and balance](#3-core-scale-and-composition-occupancy) · [Motion](#8-motion-supports-continuity) · [Evidence and diagnosis](#11-visual-judgment-and-measurements-work-together) · [Visual grammar](#visual-grammar-choose-a-means-for-an-intended-relationship) · [Assets and content](#asset-craft-and-page-craft-reinforce-each-other)
+
 ## Understand the strength of each statement
 
 **Invariants — requirements:** readable content, comprehensible hierarchy, valid task paths, accessible controls, visible focus, accurate state, stable shared structure, coherent feedback, truthful claims, inspectable evidence and trusted business boundaries.
 
-**Principles — professional judgment:** typography scale, density, content widths, spacing rhythm, optical corrections, scroll ownership, animation timing and page composition. Apply them according to the task, input method and page family.
+**Principles — professional judgment:** type scale, density, measure, spacing, optical corrections, scroll ownership, timing and composition. Apply them to the task, input method and page family.
 
-**Preferences — project direction:** palette, serif/sans typography, expressive vs restrained style, material effects, imagery, identity, preferred composition and motion intensity. Respect approved direction. A universal workflow serves multiple aesthetics.
+**Preferences — project direction:** palette, type character, expression, materials, imagery, identity and motion intensity. Respect approved direction. **Defaults** supply a starting treatment; **examples** explain a contextual choice. Keep their instruction strength distinct.
 
-**Defaults** offer a starting treatment when the brief leaves a choice open. **Examples** demonstrate reasoning in a particular context. Apply the requirement firmly, the principle with judgment, and the default according to the task. This distinction preserves a reliable quality floor and room for distinct visual work.
-
-A designed interface makes consequential choices coherent: typography, content, imagery, composition and interaction support the same purpose. Precision can distinguish a dense tool; expressive art direction can distinguish a gallery. Give each surface the kind of ambition its user task benefits from.
+Make typography, content, imagery, composition and interaction serve one purpose. Precision can distinguish a dense tool; expressive art can distinguish a gallery. Judge both in their actual product context.
 
 ## 1. Hierarchy follows meaning
 
-Give the current task and its most useful information appropriate prominence. Arrange labels, values, actions and feedback by relationship. Use type, contrast, position and spacing together. Supporting information stays legible; visual simplification preserves required meaning.
+Give the task and its useful information appropriate prominence. Group labels, values, actions and feedback through type, contrast, position and spacing. Preserve legible supporting information and necessary meaning.
 
-Choose typefaces for language coverage, readability and character. Test actual scripts, punctuation, digits, weights, line-height and fallback rendering. Use typography and content width to establish readable rhythm. Long localized labels and realistic values belong in the review set.
+Choose type for character, language coverage and reading. Inspect actual scripts, punctuation, numerals, weights, line height and fallback. Use real localized labels and values to establish hierarchy and rhythm.
 
 ## 2. Design tokens express a system
 
-Use shared roles for foreground/background, emphasis, status, borders, elevations, typography, radii, spacing and motion. Tokens encode relationships rather than a screenshot's incidental coordinates. Shared components express interaction rules consistently.
+Use shared roles for surfaces/text, emphasis, status, borders, elevation, type, radii, spacing and motion. Tokens express relationships; components preserve interaction rules.
 
-Work at three levels: product-wide identity, page-family shell and page-specific composition. Changes at a shared level require related-page checks. Cross-page consistency does not require every kind of page to have the same width or top offset.
+Separate product identity, page-family shell and local composition. A shared change needs related-page checks. Different page responsibilities can require different widths or origins within one system.
 
 ## 3. Core scale and composition occupancy
 
-Judge core controls and the whole content composition separately. Stable control sizes can coexist with a responsive composition. A larger screen may allow wider containers, additional columns, broader contextual areas or more outer space; a narrower screen may reflow and reduce columns.
+Judge control scale and total composition separately. Stable control sizes can coexist with responsive containers, columns, context areas and outer space.
 
-Evaluate readable dimensions, content density, dominant visual mass and distance between related elements. Use bounded fluid values where useful. Treat viewport percentages and ratios as diagnostic aids, not an aesthetic pass threshold. Browser zoom is a user accessibility control and must remain effective.
+Inspect readable dimensions, density, dominant mass and distance between related elements. Bounded fluid values can help; viewport ratios provide diagnostics rather than aesthetic scores. Preserve effective browser zoom.
 
-Distinguish CSS layout dimensions from CSS transforms, animated projection, preview fitting and screenshot display scaling. A card turned edge-on looks narrow without its layout box becoming smaller. Pause or standardize motion for static comparisons, then review the real transition separately.
+Distinguish layout dimensions, transforms, animated projection, preview fitting and screenshot display scale. A card at the edge of a turn appears narrow without shrinking its layout box. Standardize a moment for static comparison, then observe the full transition at its intended scale and pace.
 
 ## 4. Whitespace is relational
 
-Separate internal padding, group spacing, section spacing and outer margins. Tighten related information; provide stronger separation between distinct tasks. Evaluate negative space around the composition as well as gaps within it.
+Separate padding, group/section spacing and outer margins. Tighten related information and distinguish separate tasks. Judge negative space around the whole composition alongside internal gaps.
 
-Collections use meaningful component widths and consistent gaps. Container growth need not distribute a handful of items across the entire screen. For a justified gallery or a task requiring equal column allocation, record that intentional layout behavior. Width follows content and purpose rather than an unconditional rule.
+Give collections meaningful item widths and gaps. Additional container space can become outer margin or intentional columns according to the task; avoid distributing items without a compositional reason. Width follows content and purpose.
 
 ## 5. Optical balance
 
-Judge visual weight from text, component mass, imagery, contrast, depth, background and space. Geometric alignment is a tool. The resulting page should feel composed when viewed at the actual size.
+Judge perceived weight from visible shapes, text, imagery, contrast, material, depth and negative space at actual viewing size. Bounding boxes and geometric alignment help construct the result; compare how the resulting masses direct attention.
 
-For a compact, fixed-content task surface, visual centering and a slightly upper-centered composition are equally useful starting preferences; a slightly lower center warrants a reason grounded in the composition. Keep controls comfortably reachable and allow short viewports to scroll. Reading surfaces begin at a readable top origin; workspaces follow stable navigation; expressive layouts can intentionally be asymmetric. A project's stated preference can refine this heuristic.
+Compact tasks can start visually centered or slightly above center; another placement needs a reason in the composition. Reading begins at a usable top origin, workspaces follow stable navigation, and expressive layouts can be asymmetric. Respect project preferences, reachable controls and short-viewport scrolling.
 
-Inspect the entire frame rather than declaring balance from `top: 50%`. Keep the dominant mass comfortably within the usable frame; reserve deliberate extreme placement for a brief that benefits from it. Evaluate dynamic backgrounds across time so transient highlights do not undermine readability or perceived balance.
+Inspect the full frame with the actual background. A geometric center can coexist with unequal visible weight from a bright image, dark block or irregular silhouette. Adjust the contributing relationship and view the result again. Across time, watch whether moving highlights displace the intended focus.
 
-Reserve space from a moving element's full visible envelope: rotation, expansion, particles and changing brightness can affect nearby text and controls beyond the resting box. Inspect peak overlap and meaningful intermediate frames at narrow and wide sizes. An intended overlap can remain when hierarchy, readability and input targets stay clear throughout the motion.
+Reserve space for the full visible motion envelope: rotation, expansion, particles, shadows and brightness. Observe closest approaches and meaningful intermediate states at relevant viewports. Deliberate overlap is viable when important text, hierarchy and input targets remain clear throughout.
 
 ## 6. Page-family anchors remain stable
 
-Headers, tabs, navigation and content start positions within the same family remain stable at matching viewport and scroll conditions. A short settings panel and a long activity list inherit the same shell. Their content areas handle their own growth.
+At equivalent viewport and scroll conditions, keep shared headers, tabs, navigation and content origins stable. Let each content area handle its growth.
 
-Switching tabs or records preserves shared component identity and relevant focus/input/selection. Allow intrinsic size changes where necessary, while controlling how neighboring content moves. Validate slow loading and errors as well as steady states.
+Switch through related views to observe retained identity, focus, input and selection. Necessary intrinsic changes need deliberate effects on neighbors. Include late content, loading and errors, then inspect both the transition and settled result.
 
 ## 7. Choose layout by task shape
 
@@ -69,39 +71,39 @@ These categories can coexist within one product. Use the shape of the surface ra
 
 ## 8. Motion supports continuity
 
-Every transition has a purpose: feedback, revealing a relationship, preserving orientation or explaining a change. Match timing and emphasis to interaction frequency and context. Repeated actions deserve immediate feedback and low friction.
+Give each transition a purpose: feedback, a revealed relationship, orientation or a state change. Choose timing for distance, frequency and task urgency; repeated actions need prompt acknowledgment and low friction.
 
-Prefer predictable, interruptible transitions for reversible interactions. Anchor menus to their triggers, preserve shared identity during option changes, and keep layout boxes stable when effects only change the visual layer. Check actual rapid interactions, reduced motion and low-capability devices.
+Observe trigger, intermediate movement and settling, including reversal or new input when supported. Judge the same object's identity, readable holds, competing motion and the attention destination. Anchored menus and stable layout boxes can preserve orientation while a visual layer moves. Review the combined sequence with reduced motion and representative devices; the [interaction method](interaction-and-variants.md) owns behavioral details.
 
 ## 9. Scrolling is a design decision
 
-Choose document scrolling for natural reading and content growth. Use internal scroll regions for bounded workspaces when they improve orientation. Each region has a clear owner, reachable content, keyboard behavior and sensible restoration. Horizontal scrolling is appropriate for genuinely two-dimensional content with a clear affordance.
+Choose document scrolling for continuous reading and content growth, or bounded regions where workspace orientation benefits. Each region needs clear ownership, reachable content, keyboard use and sensible restoration. Scope horizontal scrolling to content whose relationships need it.
 
-Style scrollbars consistently within the supported platform's capabilities. Honor operating-system visibility and high-contrast preferences. Any fade treatment preserves discoverability and operability. Keep content width stable when scrollbars appear. Test shorter viewports, zoom, virtual keyboards, expanded content and overlays.
+Coordinate scrollbars with themes, platform visibility and high contrast. Preserve discoverability, operability and stable content width. Exercise short heights, zoom, virtual keyboards, growth and overlays; actually scroll to verify hidden content.
 
 ## 10. Variants are complete designs
 
-Themes have coherent semantic color and elevation roles. Languages have natural copy, appropriate typography and formatting. Content extremes, permissions and failure states retain the same design quality as the default screen. Shared labels and state feedback belong to centralized mechanisms where the project supports them.
+Give themes coherent color and elevation roles; give languages natural copy, typography and formatting. Content extremes, permissions and failures retain the default's design quality. Centralize shared labels and state mechanisms where supported.
 
-Icons share stroke/shape/weight conventions, semantic labels and usable targets. Group utility, identity and global-navigation controls by meaning and usage. The order follows the project's mental model and input constraints.
+Coordinate icon stroke, shape and weight with semantic names and usable targets. Group utilities, identity and navigation by actual meaning and use; order them for the project's mental model and inputs.
 
 ## 11. Visual judgment and measurements work together
 
-Use DOM geometry, contrast tools, screenshot differences and performance traces to locate issues. Then view the rendered result, complete tasks and make the aesthetic judgment. Automated success is evidence for a particular check, not a substitute for looking.
+View the rendered frame or sequence to judge hierarchy, optical balance, material, type, asset fit and motion character. Use geometry, contrast checks, source analysis and traces to test causes and required engineering properties. Keep the visible phenomenon separate from its inferred cause and from measured user response.
 
-Compare equivalent content, theme, locale, browser, viewport, font readiness and animation state. Document intentional differences. A coherent screenshot does not establish that the real API, permissions or persistence are connected; those need separate behavioral evidence.
+Compare equivalent content, theme, locale, browser, viewport, font readiness and temporal conditions. Preserve the time context of a moving comparison. Document intentional differences and capture limits. Runtime behavior, authority, accessibility and persistence need their corresponding checks. The [verification method](verification.md) connects these complementary forms of evidence.
 
 ## Diagnose a relationship before changing a coordinate
 
-When a screen looks oversized, separate the control scale, dominant content mass, reading distance and surrounding space. A wider container or smaller gap can correct occupancy while preserving legible controls. When a screen feels too low, inspect the complete frame, image weight and shared shell before changing its vertical origin.
+For an oversized surface, inspect control scale, dominant mass, reading distance and surrounding space. A wider region or smaller gap may improve occupancy while preserving readable controls. For a low-feeling composition, compare the full frame, asset weight and shell before shifting its origin.
 
-When related pages shift during navigation, preserve the family anchors and solve local balance inside the content region. When a real response introduces a long label or error, allow the content its necessary space and re-evaluate neighboring alignment. These are examples of reasoning, not prescribed layouts.
+For navigation jumps, preserve family anchors and solve local balance within the content region. For a long response or error, provide necessary space and inspect neighboring movement. Form a causal hypothesis from the observed frames; test a bounded change and compare again.
 
-Fix a shared cause at the token, shell or component level when the evidence supports it. Revisit the affected family under comparable conditions. Read the result visually; use numeric measurements to explain and reproduce the diagnosis.
+Repair shared causes in tokens, shell or components and recheck affected views. Use measurements to explain and reproduce the change; accept its perceptual effect from the actual rendered result.
 
 ## Visual grammar: choose a means for an intended relationship
 
-Use these methods to generate a coherent result as well as diagnose one. Context, content and the accepted direction determine the final parameters. Start with the important relationship and inspect the effect at its actual viewing size.
+Use these methods to create and diagnose the intended relationship. Content, product purpose and accepted direction determine parameters; inspect the result at actual size and, where it changes, across time.
 
 ### Typography as information and voice
 
@@ -139,36 +141,36 @@ Inspect focus rings, text selection, caret, link treatment, form controls, scrol
 
 ## A positive craft target
 
-Describe what a successful result will make clear and what gives it character. Choose a relevant reference or self-authored probe for the particular quality, with its context stated. Compare structure before ornament and the key identity-bearing features before minor detail. A design can satisfy mechanical checks and still need a stronger organizing idea; it can be expressive and still need clearer content.
+State what the design should make clear and what gives it character. Use an inspected reference or rendered probe to ground that target in context. Compare structure and defining identity before local decoration; mechanical checks and aesthetic judgment retain distinct responsibilities.
 
-Preserve coherence when intensifying a design: increase the strength of the chosen idea, rather than adding unrelated effects. When quieting a design, keep the relationships that explain its identity. An effective refinement raises clarity or craft while preserving the accepted purpose.
+Strengthen or quiet the chosen idea coherently. Preserve the relationships that explain its identity, and accept a refinement through improved clarity or craft in the intended task.
 
 ## Broader screen-based surfaces
 
-A README, slide, diagram, report or motion piece has an audience, a sequence of attention and a delivery environment. Apply the same reasoning with medium-specific realization. For a README, render essential explanations as selectable text, make commands copyable, give images meaningful alternatives and keep navigation usable on narrow displays. For a presentation, inspect at its display size and expected viewing distance. For motion, inspect readable holds and the final encoded frames in addition to stills. An artifact's completion follows its actual medium and scope.
+A README, slide, diagram, report or motion piece has an audience, attention sequence and delivery environment. Use its native capabilities: selectable explanation, copyable commands, image alternatives and narrow navigation in a README; expected size/distance for slides; readable holds and final playback for timed work. Verify completion in the actual medium.
 
 ## Compose external strengths into a coherent whole
 
-Preserve the mechanism that earned each resource's adoption, then coordinate its type, spacing, surfaces and motion with one product language. Complementary layers can combine a semantic primitive with tailored appearance. Inspect the assembled journey for competing emphasis, simultaneous motion, mismatched density and combined runtime cost. Judge the relationships under actual content and states.
+Preserve each resource's useful mechanism while coordinating type, spacing, materials and motion. A semantic primitive can support tailored appearance. View the assembled journey for competing emphasis, simultaneous motion, mismatched density and background dependence. Check combined runtime cost with the appropriate measurements.
 
 ## Ground the visual direction in the interaction model
 
-Let the first action, working object and continuation guide hierarchy. A conversation can foreground its composer; a document tool can foreground durable objects. Separate useful conventions from another brand's expression. Set an inspectable craft target for action clarity, reading and character; compare incumbent and external candidates against it. Check that secondary regions support the primary task and that claimed effects survive both themes and real content.
+Let the first action, working object and continuation govern hierarchy. A conversation may foreground a composer; a document tool may foreground durable objects. Set an inspectable target for action clarity, reading and character, and compare internal/external candidates in the same task. Keep secondary regions supportive across real content and themes.
 
 ## Inherit and adapt resolved relationships
 
-Read the selected foundation as connected hierarchy, measure, alignment, rhythm, surfaces and states. Preserve valuable relationships while adapting product-specific content and behavior. Judge type and spacing changes through the whole composition. One governing visual language coordinates complementary sources; actual content, states and viewing conditions establish the resulting fit.
+Read a foundation as connected hierarchy, measure, alignment, rhythm, surfaces and states. Preserve valuable relationships while adapting the current product's content and behavior. Compare the original resource, composed surface and real runtime separately: quality at one level informs the next, whose fit still needs observation.
 
 ## Asset craft and page craft reinforce each other
 
-Judge the asset's silhouette, contours, material, color, typography or motion as a designed object, then judge its relation to the page. Coordinate light, perspective, focal point, negative space and visual weight with the selected composition. The figure can determine the layout as readily as the layout constrains the figure.
+Judge silhouette, contours, material, color, lettering and movement in the asset itself, then with the page. Coordinate light, perspective, focal point, negative space and weight. A defining asset can reshape layout.
 
-Use actual viewing conditions: a mark's optical center and recognition at tab size, a wordmark's spacing and readable semantic name, a crop's subject at narrow width, or a moving object's peak brightness behind text. Preserve useful artistic character while meeting the asset's information and interaction role. Apply [asset engineering](visual-assets.md) to retain that quality through transformation and delivery.
+Inspect actual tab-size marks, wordmark spacing, narrow crops and moving highlights behind text. Preserve artistic character and semantic purpose through delivery using [asset engineering](visual-assets.md). Show close detail with its full-placement context so enlargement does not conceal small-size problems.
 
 ## Content and typography are one composition
 
-Define the content's job before fixing its shape. Title, navigation, field labels, explanations and state messages carry different semantic and visual weight. Use a stable vocabulary, natural line breaks, balanced text measures and actual locale-specific strings to organize the reading path. Give critical conditions enough emphasis at the moment of choice. When copy length changes layout, adjust wording and composition together while preserving factual meaning.
+Give titles, navigation, labels, explanations and feedback distinct semantic and visual roles. Compose actual locale strings with stable vocabulary, natural breaks, readable measures and appropriate emphasis at the decision point. Adjust wording and layout together while preserving facts.
 
-Voice sets recognizable character; tone responds to the task and consequence. A playful introduction and precise error message can belong to the same product. Choose punctuation and sentence structure by meaning, language and element role. Review visible text and the entire frame: readable glyphs, optical balance, whitespace, contrast and real text density form a connected result. Use the [content design method](content-design.md) to reason about these decisions.
+Voice carries product character; tone follows the task. Choose punctuation by language and element role. Inspect rendered glyphs, contrast, density, whitespace and optical balance through the [content method](content-design.md).
 
-Compare perceived type weight in each supported theme with equivalent content and font readiness. Adjust contrast, weight or surrounding space when observation establishes a problem; keep a balanced treatment when it already works. Locale, zoom and user text-spacing settings can require reflow without weakening important information. Character counts, fixed line counts and automatic dark-theme size changes are poor substitutes for inspecting the actual composition.
+Compare perceived type weight under equivalent content and font readiness in both themes. Adjust contrast, weight or space when a visible imbalance warrants it. Preserve working treatments; let locale, zoom and text-spacing settings reflow important information naturally.

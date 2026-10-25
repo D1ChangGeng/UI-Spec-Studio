@@ -45,6 +45,14 @@ Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付�
 
 [资源发现与复用方法](skills/ui-spec/references/component-sourcing.md) · [37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md) · [资源复用指南](docs/RESOURCE-REUSE.md)
 
+## 通过真实观察理解设计
+
+**Visual Reasoning & Visual Inspection**（视觉推理与视觉观察）将设计知识连接到用户实际看到的界面。Agent 查看重要候选的比例、排版、材质与交互，再观察所选资源组合后的整体效果。新的视觉发现可以推动资源选型、构图与实现一起调整。
+
+观察覆盖**单个画面、连续变化与完整使用旅程**。Temporal Visual Inspection（时序视觉观察）通过实际操作、视频或有序帧，跟随触发、过渡与稳定结果。观察窗口由行为决定：一次完整的翻转与返回、一轮动态背景、异步结果到达，或相关页面之间的切换。
+
+实际画面支持设计判断，代码、状态与运行数据帮助分析原因并验证行为。重要选择配合可查看的效果与清晰理由交付。[视觉观察指南](docs/VISUAL-INSPECTION.md) · [时序观察样例](examples/temporal-review/README.md)
+
 ## 文字内容也是完整的 UI 设计对象
 
 Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自然表达，以及文字如何在页面中呈现**。内容设计与 UX Writing 将真实产品信息、用户熟悉的术语、操作文案、动态反馈、本地化和字体排版与页面结构、视觉素材一同设计。文字变化可以推动布局调整，实际渲染也可以反过来优化内容。
@@ -100,7 +108,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.6.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.7.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

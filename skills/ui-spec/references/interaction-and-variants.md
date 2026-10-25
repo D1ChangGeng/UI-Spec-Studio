@@ -1,135 +1,140 @@
 # Interaction, accessibility, language and themes
 
-Apply these requirements to the interaction and variants the product actually supports. Include their important consequences while planning a screen, then verify them in the resulting interface.
+Design supported interactions and variants in the context of the task. Observe states and transitions during resource selection, composition and verification.
 
 ## Contents
 
 - [Controls, objects and choices](#control-semantics-and-focus)
 - [Language and themes](#language-and-content)
-- [Motion and dynamic space](#motion)
-- [Scrolling and content growth](#scrolling-and-content-growth)
-- [State and task continuity](#continuity-is-a-user-visible-contract)
-- [Resource boundaries](#preserve-behavior-across-resource-boundaries)
+- [Motion and temporal qualities](#motion)
+- [Scrolling and growth](#scrolling-and-content-growth)
+- [Task and resource continuity](#continuity-is-a-user-visible-contract)
 - [Responsiveness and preparation](#preserve-the-primary-loop-and-perceived-responsiveness)
 - [Asset and content states](#assets-have-runtime-states)
 
 ## Control semantics and focus
 
-Use native elements or appropriate accessible primitives. Every icon-only action has an accessible name and a usable target. Hover hints supplement discoverability; they do not replace names or touch behavior. Menus, dialogs, tabs, comboboxes and tooltips follow the relevant interaction pattern, including focus entry, movement, dismissal and return.
+Use native elements or suitable accessible primitives. Name icon-only controls and provide usable targets; hover hints supplement names and touch. Follow each control pattern's focus entry, movement, dismissal and return. When a control disappears, return focus to a usable, visible task element.
 
-Complete key paths with keyboard and pointer/touch. Check visible focus, loading/disabled semantics, error association and announcements for meaningful asynchronous changes. Color is one cue among multiple cues for status. Meet the project's target accessibility standard; record what automated and manual checks actually covered.
+Complete key paths with keyboard and pointer/touch. Check focus visibility, pending/disabled semantics, field-error association and useful announcements. Reinforce color status with language, shape or icons. Meet the project's accessibility target and report the checks actually performed.
 
 Reference patterns: https://www.w3.org/WAI/ARIA/apg/
 WCAG 2.2: https://www.w3.org/TR/WCAG22/
 
 ## Objects, choices and action relationships
 
-Choose the interaction carrier from the object people recognize and the work they do with it: a record, product, file, conversation or media item may suit a card, row, table, message or editor. Keep its identity and selection clear while details, status and available actions change. When the object itself opens or transforms, make its affordance and result legible; keep independent actions separately operable and avoid nested interactive targets.
+Choose a carrier from the recognizable object and task: a product, record, file, conversation or media item may suit a card, row, table, message or editor. Preserve identity and selection as details and actions change. Make object-level opening or transformation discoverable; keep independent actions separately operable and avoid nested interactive targets.
 
-Derive controls from actual decisions. Offer a selector for meaningful alternatives, show an already determined value clearly, and preserve a way to revise it when the journey allows that choice. A single valid option may need confirmation or explanation, without needing a multi-option control. Identify whether actions are primary/secondary, peers, successive steps or consequential commitments before assigning visual weight and position. Two equally prominent buttons are appropriate only when the task supports their equal standing.
+Offer controls for real choices; show determined values and permitted revision clearly. A single option can need confirmation without a multi-option selector. Establish primary/secondary, peer, sequential or consequential relationships before assigning weight and position.
 
-Judge component material and state together. Inspect resting, hovered, focused, expanded, selected, pending, disabled and invalid states where supported. Text, icons, borders, translucency and elevation must keep their meaning against the actual background. A glass surface or decorative layer still needs readable contrast, clear selection and visible keyboard focus. Keep the state language coherent across the component family.
+Judge material and state together: resting, hovered, focused, expanded, selected, pending, disabled and invalid where supported. Inspect text, icon, border, translucency and elevation against the actual background. Clear selection, contrast and focus remain necessary on glass or decorative surfaces.
 
 ## Language and content
 
-Localize the declared supported languages, including menus, dialogs, form errors, empty states and dynamic content that the product owns. Preserve fixed identifiers, brand names and user-authored content as appropriate. Keep natural phrasing and consistent terminology rather than translating layout labels independently.
+Localize menus, dialogs, validation, empty states and dynamic product text with natural, consistent terminology. Preserve fixed identifiers, brand names and user-authored content.
 
-Decide locale initialization, explicit preference priority and persistence. Preserve current task state during switching. Format dates, times, numbers and units according to the product contract; changing language does not automatically change stored values or contractual currency.
-
-Test long labels, fallback fonts, glyph coverage, mixed scripts, right-to-left behavior when supported, and content from real service responses. Define an intentional fallback and make missing translations discoverable in development.
+Define locale initialization, preference priority and persistence; preserve the task during switching. Format dates, numbers and units according to the contract. Language selection does not itself change stored values or contractual currency. Check long labels, actual responses, mixed scripts, font fallback and supported writing direction. Define missing-translation fallback and make omissions discoverable during development.
 
 ## Themes and perception
 
-Map surfaces, text, borders, focus, states, elevation and visual effects to semantic theme roles. Review each supported theme independently. Brightness and background contrast change perceived weight, so recheck composition as well as color values.
+Map surfaces, type, borders, focus, status, elevation and effects to semantic roles. View each theme under actual backgrounds and font rendering: brightness and contrast affect perceived weight and legibility.
 
-Define preference initialization, system preference where supported and explicit user overrides. Initialize the intended theme before the first meaningful paint using the project's supported rendering mechanism. Keep forms, menus, scrollbars, charts, effects and icons consistent across theme changes. Preserve task state.
-
-Theme controls communicate the action or current state consistently through visual and accessible labeling. Locale, theme, identity and navigation utilities have a stable grouped order in each responsive layout.
+Define initialization, system preference and explicit overrides; establish theme before meaningful paint. Keep all components coherent and retain task state during switching. Controls communicate action or current state consistently. Group locale, theme, identity and navigation utilities by meaning.
 
 ## Motion
 
-Define which events animate: first entrance, navigation, local state update, direct manipulation or status feedback. Choose timing and easing by purpose and frequency, and preserve rapid reversal/interruption where interaction requires it.
+Name the event and purpose: entry, navigation, direct manipulation, local change or feedback. Choose timing, trajectory and easing from that purpose and interaction frequency. Inspect the actual progression in a mature candidate, the assembled design and its runtime. Static endpoints leave movement and intermediate relationships unresolved.
 
-Check reduced-motion preferences and provide a quiet equivalent that preserves meaning and access. Pause or simplify long-running decorative motion when appropriate. Match touch and keyboard expectations; optional pointer effects should not carry essential information.
+Preserve object identity through expansion, reversal and return. A flip needs coordinated faces, pivot, visibility and active hit regions; test reversal from intermediate positions. Acknowledgment can begin before data arrives, while pending presentation carries unresolved work. A completed animation does not establish business completion.
 
-Preserve the same object's identity through expansion, reversal, replacement and return. For a flip, align both faces and the pivot, coordinate which face is visible and interactive, and test both directions from interrupted states. Coordinate animation with data readiness: movement can acknowledge intent while a truthful pending state carries an unresolved result. A completed animation alone does not establish a completed business action.
+Compose the full visible movement: rotation, scaling, particles, shadows and brightness can reach beyond a resting box. Observe closest approach to text and controls over the cycle and across relevant viewports. Adjust amplitude, layers, masks, layout or delivery according to the intended effect. Deliberate overlap retains readable content, recognizable motion and operable targets.
 
-Compose the full motion envelope: rotation, scaling, particles, shadows and drifting elements occupy space beyond a resting box. Check their closest approach to text and controls across the cycle and at supported viewports. Adjust amplitude, layer order, masks, layout or delivery mode according to the intended effect. Clipping is deliberate composition only when it preserves important content, recognizable motion and operable controls.
+Honor reduced-motion preferences with equivalent meaning and access. Provide appropriate control for prolonged nonessential motion. Essential information remains available through keyboard and touch without optional pointer effects. Use the [temporal observation method](verification.md#inspect-a-time-bounded-visual-episode) to choose windows, recordings and frame sequences; the relevant behavior determines the sampling depth.
+
+## Read motion through perceptible qualities
+
+Judge these connected qualities in actual episodes; correlate findings with code, state and traces. Use them for diagnosis rather than a single aesthetic score.
+
+| Quality | What to observe | Design decision it informs |
+|---|---|---|
+| Temporal continuity | Input, acknowledgment, change and completion have understandable order; meaningful content has a readable hold | Sequence feedback and dependent changes without delaying unrelated work |
+| Object continuity | Shape, content, pivot, position and selection preserve the identity of the object through change | Choose shared anchors and transitions; reconcile replacement, reversal and return |
+| Motion quality | Perceived speed, easing, trajectory, rhythm and settling match the event | Tune timing and path in context, including frequent/reversed operation |
+| Dynamic composition | Moving elements, light and text maintain hierarchy and usable space throughout their range | Coordinate concurrent effects, movement bounds, masking and foreground placement |
+| State and feedback alignment | Progress, content, animation and available actions describe the same current outcome | Bind presentation to valid intent and authoritative readiness/completion |
+| Temporal stability | Late resources, changing content and repeated input preserve readable layout and control | Reserve needed space, handle stale responses and retain focus/scroll context |
+| Cross-view continuity | Navigation, overlays and task steps preserve recognizable identity and orientation | Coordinate shared chrome, transition meaning and return/resume state |
+
+A stationary trigger can clarify expansion; an unrelated shifting panel can weaken it. Compare episodes when selecting candidates. Diagnose material, wording, layout and state ownership alongside easing.
 
 ## Resilience
 
-Review short heights, text zoom, browser zoom, mobile virtual keyboard, safe areas, slow assets, offline/error states and repeated actions where applicable. Reflow should preserve information and function. A two-dimensional table or editor may need scoped horizontal scrolling, while the surrounding page remains usable.
+Exercise short heights, text/browser zoom, mobile keyboards, safe areas, slow assets, offline/errors and repeated actions where relevant. Reflow preserves content and operation. A table or editor may use scoped horizontal scrolling while the surrounding page remains usable.
 
-Initial evidence can use deterministic fixtures. Complete integration evidence should include actual service responses, authorization outcomes and persistence appropriate to the scope.
+Use fixtures for reproducible scenarios and real integration for service responses, authorization and persistence.
 
 ## Scrolling and content growth
 
-Choose document, local-region or multiple-region scrolling from page responsibility and expected growth. Reading benefits from a continuous document; a workspace may retain navigation and scroll its active content. Give each independent region a clear task and boundary. Check wheel, touch and keyboard traversal, focus reveal, sticky controls and overlay behavior, including short heights and an open virtual keyboard.
+Choose document, local or multiple-region scrolling from the task and growth pattern. Continuous reading often suits a document; a workspace may retain navigation around an active region. Give each independent region a clear role and boundary. Test wheel, touch, keyboard, focus reveal, sticky controls and overlays, including short heights and a virtual keyboard.
 
-Preserve the reader's location when content arrives, expands or changes. Define when a new result should be brought into view, when an existing reading position should remain, and what returning to an object restores. In a live feed, following new content and reading older material are different user intentions. Retain stable object anchors when pagination or virtualization replaces DOM nodes; verify search, focus and assistive use under the chosen approach.
+Preserve reading position as content arrives or expands. Decide when to reveal a new result, retain an existing reading point or restore an object's position on return. Following a live feed and reading older material are distinct intentions. Pagination or virtualization needs stable anchors and usable search/focus/assistive behavior.
 
-Coordinate scrollbar color, visibility and width with themes and platform behavior. Reserve space where a classic scrollbar would otherwise shift the composition; [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter) is one available mechanism, with different effects for classic and overlay scrollbars. Maintain discoverability and comfortable operation. Test the actual scrolling region rather than inferring its hidden content from a full-page screenshot.
+Coordinate scrollbar visibility, color and width with theme and platform behavior. Reserve space when classic scrollbars would shift composition; [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter) has different effects for classic and overlay scrollbars. Verify discoverability and actual access to hidden content through the scrolling control.
 
 ## Continuity is a user-visible contract
 
-Separate first entry, navigation, local content changes and asynchronous feedback. Keep shared controls mounted and retain meaningful input, focus, selection and scroll context. Transition the part whose meaning changed. For rapid successive requests, ensure the displayed result belongs to the latest valid intent and reconcile optimistic state with the authoritative outcome.
+Distinguish first entry, navigation, local edits and asynchronous feedback. Retain meaningful input, focus, selection and scroll; transition the part whose meaning changes. For rapid requests, show the latest valid intent and reconcile optimistic state with its authority.
 
-Dropdowns and overlays need deliberate positioning, dismissal and focus return at each supported viewport. Icon order follows functional grouping and frequent use; visible icon size and the interaction target can differ. Keep theme, locale, identity and navigation controls visually coherent where those controls exist.
-
-Treat latency, denied actions and error recovery as ordinary product states. Their message, focus behavior and layout carry the same quality requirements as the default state. Real integration confirms that the states correspond to actual outcomes.
+Overlays need deliberate positioning, dismissal and focus return at supported sizes. Latency, denied actions and recovery receive the same content and material care as the default state. Inspect the departure, intervening presentation and arrival across related views; stable endpoints alone can conceal a shared-shell flash or context loss.
 
 ## Choreograph attention across elements
 
-Treat motion as a relationship in time, not a collection of entrances. Identify what initiates the change, which element provides immediate feedback, which information changes, which anchor stays still and where attention should settle. Choose emphasis and overlap according to that sequence. Allow meaningful content enough stable time to be understood.
+Identify what initiates change, what acknowledges it, which information updates, which anchor stays and where attention settles. Coordinate emphasis and overlap to express those relationships. Allow important text enough stable time to read.
 
-For an option change, acknowledge selection promptly and update the affected values while preserving the selector and primary action's relationship. For a delayed service result, distinguish pending intent from confirmed outcome. Reversible operations can transition from their current visual state; unrelated input and focus stay available. Duration follows distance, interaction frequency and task urgency rather than a single global number.
+For option changes, acknowledge selection while preserving the selector/action relationship. For delayed results, distinguish pending intent from confirmation. Start reversible transitions from the current presentation where appropriate; keep unrelated input and focus usable. Duration follows movement, frequency and urgency.
 
-Use continuity of objects and shared spatial references to explain navigation or expansion. Reserve prominent motion for a meaningful event and keep repeated tasks efficient. Coordinate concurrent animations so they do not compete for attention or imply a false order of events. Test rapid reversal, new input during transition, delayed response, interruption and recovery.
+Coordinate concurrent effects around the task's attention order. Observe normal, reversed, interrupted and rapid input, including new results during movement. Deliberate asymmetry or pauses can serve the product.
 
 ## Interactive time and authored time
 
-In a UI, the user, device and service control when events happen. In a video or timed presentation, the author controls the sequence. Transfer ideas such as anticipation, attention order and breathing space with that difference intact. A film's mandatory camera moves, beat grid, soundtrack or fixed holds are not general interaction rules.
+Users, devices and services control UI timing; an author controls a predetermined video. Transfer anticipation and attention order within that distinction. Camera moves, beat grids and fixed holds are context-specific.
 
-For an authored sequence, use explicit timing, readable holds, seekable states and final-output playback. For an interactive sequence, ensure feedback remains correct with uncertain latency and changing intent. Preserve a reduced-motion version with equivalent meaning. Sound or haptics, where the medium supports them, supplement visual/semantic feedback and follow the user's control and platform conventions.
+Authored output needs readable holds, seeking and final encoded playback. Interactive output needs valid feedback under uncertain latency and changing intent. Keep equivalent reduced-motion meaning. Sound and haptics, where supported, supplement semantic/visual feedback under user and platform control.
 
 ## Published documents and screen artifacts
 
-A reading surface can have interaction through anchors, links, code copying, expandable detail and media alternatives. Use these affordances intentionally. Give the reader a clear route from orientation to a next action; preserve essential content as text instead of hiding it in artwork. Test language and theme variants where promised. Static SVG or images should carry meaning at their actual display width and have a suitable text equivalent.
-
-Avoid imposing an app's scrolling or focus model on a document. Verify the host's supported markup and its rendered output. A local preview validates its stated renderer; the final publishing environment needs its own readback and, when available, direct visual inspection.
+Anchors, links, copyable code, disclosures and media alternatives form a document's interaction. Preserve essential text and a clear route to the next action. Inspect promised language/theme variants and graphics at actual display widths. Use the host's supported markup, scroll and focus behavior. A local preview establishes its renderer; final-host readback and visible inspection establish publication conditions.
 
 ## Preserve behavior across resource boundaries
 
-When composing sourced parts, give focus, selection, scrolling, portals and request state clear owners. Preserve the primitive's semantic contract while adapting appearance. Verify touch, keyboard, dismissal, re-entry, rapid reversal and delayed results with the combined implementation. A positioning engine may need a separate semantic control; an animation layer follows confirmed or pending state supplied by the application.
+Assign focus, selection, scrolling, portals and request state clear owners when composing resources. Retain semantic contracts while adapting appearance. A positioning engine may need a separate semantic control; an animation layer follows application-supplied intent and outcome.
 
-Coordinate listener scope, shared motion engines and teardown. Keep one meaningful feedback sequence for the user's action, with a readable quiet equivalent. Check actual localization, reduced motion, content growth and theme combinations after integration, because their behavior depends on the assembled product.
+Coordinate listeners, engines and cleanup. Exercise combined controls with keyboard/touch, re-entry, reversal, delayed results, real text, themes, growth and reduced motion. Judge cumulative attention and runtime cost.
 
 ## Preserve the primary loop and perceived responsiveness
 
-Define the continuing operation for the selected model: a composer follows the conversation, object editing retains the active object and selection, and task work retains filters and status context. For hybrid surfaces, opening supporting evidence or an artifact preserves the primary task and provides a clear return.
+Identify the continuing operation: conversation preserves its composer; editing preserves the object and selection; task work preserves filters and progress. Supporting evidence or artifacts retain a clear return to that primary work.
 
-Acknowledge input promptly, preserve drafts across interruption, and separate immediate feedback from a usable result and authoritative completion. Trace the task through input handling, calculation, network, asset decoding, state updates, layout/paint and final feedback. Identify which dependency delays the user's next meaningful action before choosing an optimization.
+Acknowledge input promptly and preserve drafts. Separate feedback, usable result and authoritative completion. Trace input handling, calculation, requests, decoding, state updates and layout/paint to the dependency delaying the next action.
 
-Prepare predictable data or assets at a useful entry point when their probability of use, validity and cost justify it. Parallelize independent preparation within a concurrency and resource budget; prioritize visible or likely next objects and retain capacity for direct input. Reuse in-flight work and valid results, defer low-value material, and stop or ignore obsolete work. A large eager batch can delay the first interaction and consume unused resources, so compare it with staged preparation. The [integration reference](integration.md#prepare-data-with-correct-authority-and-lifetime) owns freshness, identity and commitment boundaries.
+Prepare likely data/assets when use probability, validity and cost justify it. Bound concurrency, prioritize current/next objects and retain capacity for direct input. Deduplicate in-flight work, reuse valid results and defer or discard obsolete work. Compare large eager batches with staged preparation. The [integration reference](integration.md#prepare-data-with-correct-authority-and-lifetime) owns identity, freshness and commitment boundaries.
 
-For a collection people open rapidly, prepare likely results as the page becomes useful, keep each object's state independent and let ready objects respond immediately. Give unready objects an understandable local state while other work continues. Page entry alone cannot guarantee every result is ready; choose preparation and fallback behavior from observed latency and the business contract. Speculation that consumes a quota, reserves inventory or creates a commitment needs that operation's actual authority.
+Keep independently operated objects independent: ready items respond immediately, while unready items provide truthful local feedback. Entry-time preparation does not guarantee readiness. Speculation that consumes quota, reserves inventory or creates a commitment follows the real authority contract.
 
-Keep event work small enough for feedback to render; where measurements justify it, split costly work, move suitable computation off the main thread, reduce repeated layout or render fewer active items. Select animation and media complexity for target devices and sustained use. Measure both the saved wait and any extra requests, bytes or processing introduced. [INP guidance](https://web.dev/articles/optimize-inp) explains input, processing and presentation delays; an end-to-end service result needs its own measurement.
+Where measurement supports it, split expensive work, move suitable computation off the main thread, reduce repeated layout or render fewer active items. Choose media/motion complexity for target devices and sustained use. Compare saved wait with added requests, bytes and processing. [INP guidance](https://web.dev/articles/optimize-inp) explains input, processing and presentation delay; service completion needs its own measure.
 
-Verify input echo, submit/cancel/retry, rapid selection, loading and long-content scrolling under representative conditions. Synthetic timing supplies a regression signal for the fixture; real-device and service performance have their own evidence. Keep the measured boundary and environment explicit.
-
-Animate a state change according to meaning and frequency. Coordinate cleanup, reduced motion and focus when combining resources. Decorative motion can remain quiet when sustained reading or repeated operation benefits more from stability.
+Exercise input, submit/cancel/retry, rapid selection, loading and long-content scrolling. Correlate observed stalls with runtime evidence. Synthetic timing retains its fixture scope and stated environment. Keep repeated work efficient and decoration proportionate to sustained reading.
 
 ## Inherit behavior at its useful scope
 
-Study the foundation's complete task loop, not only its resting appearance. Preserve useful focus, input, scroll, loading, interruption and recovery decisions as a coordinated system. Directly adopt proven behavior when compatible; test the equivalent contract when porting. Product-specific authority and real service results remain owned by the current application.
+Study a foundation's complete task loop. Preserve valuable focus, input, scrolling, loading, interruption and recovery relationships together. Adopt compatible behavior or test equivalent contracts when porting. The current application retains authority over product-specific operations and real outcomes.
 
 ## Assets have runtime states
 
-Treat loading, ready, unavailable, paused, reduced-motion and renderer-limited conditions as designed states. Preserve intrinsic space and useful content while material becomes available. Give informative imagery an appropriate equivalent, functional icons an action name, and supporting decoration a quiet accessibility role.
+Design loading, ready, unavailable, paused, reduced-motion and renderer-limited conditions. Retain intrinsic space and useful content during arrival. Informative imagery needs an equivalent, functional icons an action name and decoration a suitable accessibility role.
 
-Asset state-machine inputs and events follow real application intent and outcomes. Manage visibility, interruption, cleanup, posters and fallbacks across media and canvas boundaries. Verify actual decoder/renderer and theme behavior. A font or image arriving late should retain usable reading and controls; a failed 3D or animation load should leave the primary task accessible.
+Connect asset state inputs to actual intent/outcomes; manage visibility, interruption, teardown, posters and fallbacks across media/canvas boundaries. Observe late fonts/images and failure paths from initial appearance through the stable result. A failed renderer leaves the primary task accessible.
 
 ## Content communicates state and intent
 
-Pair every consequential action with words that describe what the control really does and what the user should expect. Keep pending, confirmed, denied and failed outcomes distinguishable. Input errors identify the affected field and available correction; focus and announcements expose the message to people using assistive technologies. Keep drafts and user state during retry, cancellation and locale switching. Localize meaning, accessible labels and state text together with the visible interface; recheck layout after real translations change length and line breaking. The [content reference](content-design.md) owns detailed writing decisions, while this file owns their interaction semantics.
+Pair consequential controls with accurate action and outcome language. Distinguish pending, confirmed, denied and failed states; associate errors with fields and expose them through focus and announcements. Preserve drafts through retry, cancellation and locale changes. Localize visible copy, names and state text together, then inspect the changed layout. The [content method](content-design.md) owns writing decisions; this file owns their interaction semantics.

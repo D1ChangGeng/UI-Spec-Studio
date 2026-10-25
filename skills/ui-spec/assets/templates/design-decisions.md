@@ -17,7 +17,7 @@ source and affected scope. A preview option selection records only its stated sc
 ## Foundation comparison and selected granularity
 
 Concrete mature page/system/block candidates, source/demo/revision, actual observed
-states and evidence. Explain the selected level, valuable design relationships
+states, meaningful episodes and evidence. Explain the selected level, valuable design relationships
 inherited together, adaptation boundaries and meaningful alternatives. State what
 is direct code reuse, configuration, composition, design transfer or original work.
 
@@ -42,10 +42,18 @@ selected, implemented, inspected and owner-approved states. Describe actual
 observations and pending verification; detailed adoption notes may hold license,
 version, changes and maintenance ownership.
 
+Link important choices to the visible relationship and its expected perceptual
+effect in this product. Retain representative viewed frames or time ranges with
+their conditions. Inspect the original resource, assembled result and delivered
+runtime at their own boundaries; new evidence can reopen the choice.
+
 ## Review and continuation
 
 Working preview and source; inspected views, states and tasks; resulting changes;
 remaining high-impact choice; approval source and acceptance evidence; next useful increment.
+For motion-dependent decisions, identify the observed interval, trigger and
+endpoint and which temporal questions remain open. Captured media and viewed
+evidence retain distinct statuses in the linked review.
 
 ## Asset production and placement
 

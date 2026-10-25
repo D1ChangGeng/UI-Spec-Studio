@@ -20,6 +20,10 @@ REQUIRED = ["docs/CONTENT-DESIGN.md", "docs/REVIEW-v1.6.0.md", "skills/ui-spec/r
             "skills/ui-spec/assets/resource-catalog.json", "skills/ui-spec/scripts/find_resources.py",
             "skills/ui-spec/assets/templates/resource-adoption.md", "docs/design/README-SPEC.md", "skills/ui-spec/references/patterns.md", "skills/ui-spec/references/integration.md",
             *[f"skills/ui-spec/references/{name}.md" for name in COMMON]]
+REQUIRED += ["docs/VISUAL-INSPECTION.md", "docs/REVIEW-v1.7.0.md",
+             "examples/temporal-review/index.html", "examples/temporal-review/styles.css",
+             "examples/temporal-review/app.js", "examples/temporal-review/README.md",
+             "tools/validate_temporal.py"]
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 
 

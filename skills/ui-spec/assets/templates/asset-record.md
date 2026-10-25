@@ -38,3 +38,9 @@ asset-family checks; accessible role/name; loading/error/reduced-motion behavior
 measured transfer/startup/rendering conditions; actual visual observations;
 known limits, approval and remaining work. Recheck affected placements when the
 master, export, runtime or target conditions change.
+
+Link actually viewed evidence for isolated craft and the composed placement. For
+dynamic material, retain the relevant cycle/transition and peak reach, brightness
+or loop seam with its event/time context. State the capture and viewing method;
+record a visual finding, its perceptual effect and any resulting production or
+layout decision. A recorded clip remains available evidence until it is inspected.

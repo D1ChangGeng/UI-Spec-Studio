@@ -47,6 +47,14 @@ Reuse happens at the **highest appropriate level**: a whole-page foundation or d
 
 [Resource discovery method](skills/ui-spec/references/component-sourcing.md) · [37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md) · [Resource reuse guide](docs/RESOURCE-REUSE.md)
 
+## See the design in use
+
+**Visual Reasoning & Visual Inspection** connects design knowledge to what people actually see. The agent views meaningful resource candidates, studies their proportions, type, material and behavior, then inspects how the selected parts work together. New observations can improve the resource choice, the composition or the implementation.
+
+Review spans **the frame, the changing interaction and the connected journey**. Temporal Visual Inspection follows a meaningful episode through its trigger, movement and settled result using live interaction, video or ordered frames. Its window follows the behavior: a complete flip and return, a background loop, a delayed result or navigation between related views.
+
+Visible evidence supports the design judgment; code, state and runtime measurements help explain the cause and verify the behavior. Important decisions come with viewable examples and clear reasons. [Visual observation guide](docs/VISUAL-INSPECTION.md) · [Temporal review example](examples/temporal-review/README.md)
+
 ## Words are part of the interface
 
 The agent designs **what people need to understand, where the message belongs, how it sounds and how it reads on screen**. Content design and UX writing connect accurate product facts, user vocabulary, action labels, dynamic feedback, localization and typography with the existing page and visual system. A line of copy can change layout or a task path; the rendered result can improve the wording.
@@ -102,7 +110,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.6.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.7.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

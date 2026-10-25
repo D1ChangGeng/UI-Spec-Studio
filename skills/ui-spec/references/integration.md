@@ -51,7 +51,7 @@ Use real content lengths and errors to refine layout within the accepted system.
 
 ## 5. Verify design and behavior together
 
-**Design track:** compare approved and integrated states with equivalent content, viewport, fonts, theme, locale and animation state. Inspect the whole frame, shared anchors, internal scrolling, responsive behavior and transitions. Preserve the reference conditions and document intentional differences.
+**Design track:** compare approved and integrated views with equivalent content, viewport, fonts, theme and locale. Inspect whole frames and meaningful continuous episodes, preserving shared anchors, reading, scrolling and object identity. Align comparisons by task event and state; service responses may have different elapsed times. Include waiting, result arrival, interruption and return where they affect the experience. Preserve capture conditions and explain intentional differences.
 
 **Product track:** execute the actual UI path, observe the authority/persistence result, then verify feedback and recovery. Check relevant permissions, failure/retry, repeat actions, refresh and direct entry. Evidence should connect the visible action to the real result.
 

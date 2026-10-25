@@ -10,6 +10,8 @@ User task, desired perception/behavior, accepted direction, runtime/content requ
 
 Resource/item, original source, version or commit, implementation variant, demonstration configuration,
 access method and observation date. Distinguish documented capability, inspected item and project evidence.
+Link the viewed demonstration, relevant states/episode and rendering conditions.
+Explain the visible quality that supports this candidate and its intended placement.
 
 ## Judgment and reuse
 
@@ -25,3 +27,6 @@ rights/required notices; local source or package update responsibility.
 
 Actual viewports/content/states, input checks, combined runtime behavior, evidence references,
 accepted scope and remaining observations. Keep project-specific choices in this project.
+For changing resources, retain the trigger-to-result or cycle window, inspected
+frames/video intervals and capture limits. Compare the source, combination and
+delivered runtime separately; record how observation changed or confirmed the choice.

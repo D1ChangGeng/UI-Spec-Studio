@@ -89,3 +89,12 @@ in the host; express completion from actual outputs and observed conditions.
 ## Write UI content as design material
 
 Agent-facing instructions and user-facing copy have different audiences. Use this writing standard for the former and the [content reference](../skills/ui-spec/references/content-design.md) for product language. In skill guidance, explain the semantic role, business authority, presentation condition and observable outcome. In real UI copy, choose voice and tone from the product, not from the skill's own technical style. Preserve the actual meaning while improving expression, timing and type. Final-state phrasing follows the accepted result and its user-visible truth.
+
+## Write visual judgments from observed relationships
+
+Connect a visible phenomenon to its viewing condition, likely perceptual effect,
+relevant principle, cause to test and inspected result. Name the frame or meaningful
+interval when that supports a consequential decision. Keep professional interpretation,
+actual user response and measured runtime properties distinct. Temporal instructions
+should explain which event determines the window and what a capture can resolve.
+Use the smallest record that lets another person inspect the choice and continue.
