@@ -141,9 +141,7 @@ Inspect focus rings, text selection, caret, link treatment, form controls, scrol
 
 ## A positive craft target
 
-State what the design should make clear and what gives it character. Use an inspected reference or rendered probe to ground that target in context. Compare structure and defining identity before local decoration; mechanical checks and aesthetic judgment retain distinct responsibilities.
-
-Strengthen or quiet the chosen idea coherently. Preserve the relationships that explain its identity, and accept a refinement through improved clarity or craft in the intended task.
+State the intended understanding and character through observed relationships: attention, proportion, density, material and rhythm. Ground the target in inspected work and product context. Compare structure and identity before detail, then accept refinement through rendered clarity and craft. Mechanical checks and perceptual judgment establish their respective properties.
 
 ## Broader screen-based surfaces
 
@@ -151,7 +149,7 @@ A README, slide, diagram, report or motion piece has an audience, attention sequ
 
 ## Compose external strengths into a coherent whole
 
-Preserve each resource's useful mechanism while coordinating type, spacing, materials and motion. A semantic primitive can support tailored appearance. View the assembled journey for competing emphasis, simultaneous motion, mismatched density and background dependence. Check combined runtime cost with the appropriate measurements.
+Establish a leading design language; fit specialized references through coordinated type, density, color, material, controls and motion. A semantic primitive can support tailored appearance. Inspect the assembled journey for competing emphasis, simultaneous motion and background dependence. Measure combined runtime cost separately.
 
 ## Ground the visual direction in the interaction model
 
@@ -159,7 +157,7 @@ Let the first action, working object and continuation govern hierarchy. A conver
 
 ## Inherit and adapt resolved relationships
 
-Read a foundation as connected hierarchy, measure, alignment, rhythm, surfaces and states. Preserve valuable relationships while adapting the current product's content and behavior. Compare the original resource, composed surface and real runtime separately: quality at one level informs the next, whose fit still needs observation.
+Read foundations as connected hierarchy, measure, alignment, rhythm, surfaces and states. Explain the visible effect, its likely perceptual benefit, the relationship carrying it and the part worth inheriting. Adapt parameters to actual content and use. Inspect source, composition and runtime separately, asking whether the same relationship still works; a successful resource can need adjustment in combination.
 
 ## Asset craft and page craft reinforce each other
 

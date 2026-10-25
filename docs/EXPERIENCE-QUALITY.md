@@ -1,6 +1,6 @@
 # UI Spec Studio｜完整产品体验的设计与验证
 
-高质量 UI 由视觉表现、信息表达、交互行为、运行体验与业务结果共同形成。UI Spec Studio 将这些关系落实到既有设计流程，使 Agent 能够发现问题所在的设计层面，选择适合当前产品的方法，再通过实际结果确认改善。
+高质量 UI 由视觉表现、信息表达、交互行为、运行体验与业务结果共同形成。UI Spec Studio 以[产品 UI 体验对齐](PRODUCT-ALIGNMENT.md)组织这些目标，从成熟参照中研究可继承的关系，再通过资源适配和实际结果判断其价值。用户是否指定产品决定探索入口；当前产品的任务与使用条件决定最终选择。
 
 ## 九个相互关联的设计维度
 
@@ -16,7 +16,7 @@
 | 性能与体验工程 | 哪段执行链路产生等待，哪些准备与调度有实际收益 | [交互](../skills/ui-spec/references/interaction-and-variants.md#preserve-the-primary-loop-and-perceived-responsiveness)、[接线](../skills/ui-spec/references/integration.md#prepare-data-with-correct-authority-and-lifetime)与[测量](../skills/ui-spec/references/verification.md#measure-performance-across-the-complete-task) |
 | 运营体验与内容维护 | 内容由谁更新，共用与覆盖如何生效，批量操作如何恢复 | [内容](../skills/ui-spec/references/content-design.md#maintain-content-through-roles-and-updates)与[接线](../skills/ui-spec/references/integration.md#support-content-maintenance-and-operational-work) |
 
-九个维度描述需要管理的设计对象；八份共同参考组织专业方法。它们共同参与 `init → iterate → finish`，`shape` 按需使用，`audit` 贯穿检查。任务决定需要深入的维度，已有项目记录可以继续沿用。
+九个维度描述需要管理的设计对象；八份共同参考组织专业方法。它们共同参与 `init → iterate → finish`，`shape` 按需使用，`audit` 贯穿检查。任务决定需要深入的维度，已有项目记录可以继续沿用。每个高影响问题都应获得合适依据；已研究的统一组件规则可以覆盖相同条件下的实例。先验证关键任务切片，再在组合后的多页面、状态和旅程中重新回答研究阶段的问题。
 
 ## 内容、结构与素材共同设计
 

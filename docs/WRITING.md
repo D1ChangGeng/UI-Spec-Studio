@@ -98,3 +98,9 @@ interval when that supports a consequential decision. Keep professional interpre
 actual user response and measured runtime properties distinct. Temporal instructions
 should explain which event determines the window and what a capture can resolve.
 Use the smallest record that lets another person inspect the choice and continue.
+
+## Write exploration as a decision process
+
+Give research an experience target and a question that can change a choice. Connect a visible clue to a useful action, the observed subject, a transferable relationship and its application in the current product. Distinguish the hosting page, media player, demonstrated interface and authored content when their visual languages differ.
+
+Keep design-reference reasoning separate from implementation-resource claims while showing how they connect. Revisit the research question in a runnable result. State adequate coverage through decision impact and remaining uncertainty; routine instances can inherit a verified system rule. Capture, actual inspection, sufficient support for a conclusion and owner approval each retain their own evidence.

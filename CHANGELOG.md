@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.8.0 — 2026-10-26
+
+- Make Product UI Experience Alignment the default design objective for named references, open briefs, existing products and novel combinations.
+- Turn product analogies into concrete experience questions and investigate components, states and their spatial, temporal and task relationships.
+- Use Active Visual Exploration & Design Reconnaissance to follow relevant browsing, scrolling, playback and interaction cues until consequential decisions have sufficient evidence.
+- Attribute observations to the hosting page, media player, demonstrated application or authored content, with explicit conditions for edited demonstrations and actual operation.
+- Connect inherited design decisions to suitable implementation resources, proportionate custom work and early runnable slices; revisit the original research questions in the delivered product.
+- Extend temporal observation and tool selection with evidence-driven sampling, normal-speed and detailed review, scroll context and capability-specific engineering checks.
+- Preserve the eight common references, existing operations, host authority and lightweight decision records.
+
 ## 1.7.0 — 2026-10-26
 
 - Make Visual Reasoning & Visual Inspection a continuous method across resource discovery, selection, composition, asset production, implementation and acceptance.

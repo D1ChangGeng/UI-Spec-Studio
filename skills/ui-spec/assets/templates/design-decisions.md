@@ -4,7 +4,9 @@
 
 Task and audience; requested redesign scope; current business/engineering facts.
 Primary working object, first meaningful action, repeated loop, continuation and
-result location. Separate observed facts, inferred model and open intent.
+result location. State the target experience with or without a named product
+reference. Expand names or style descriptions into the relevant task, surface,
+state and relationship. Separate observations, inferred model and open intent.
 
 ## Direction and authority
 
@@ -20,6 +22,12 @@ Concrete mature page/system/block candidates, source/demo/revision, actual obser
 states, meaningful episodes and evidence. Explain the selected level, valuable design relationships
 inherited together, adaptation boundaries and meaningful alternatives. State what
 is direct code reuse, configuration, composition, design transfer or original work.
+
+Keep the design reference and implementation resource identifiable. Record the
+research question, useful clue/action and conclusion: observed phenomenon,
+likely perceptual effect, underlying relationship and what this product inherits.
+Attribute evidence to its carrier page, player, depicted product UI or displayed
+work; retain edited-demo or actual-operation context where it changes the claim.
 
 ## Reuse assessment
 
@@ -52,8 +60,10 @@ runtime at their own boundaries; new evidence can reopen the choice.
 Working preview and source; inspected views, states and tasks; resulting changes;
 remaining high-impact choice; approval source and acceptance evidence; next useful increment.
 For motion-dependent decisions, identify the observed interval, trigger and
-endpoint and which temporal questions remain open. Captured media and viewed
-evidence retain distinct statuses in the linked review.
+endpoint and which temporal questions remain open. Distinguish media acquired,
+actually examined content and conclusions it can support. Record sufficient,
+partial and missing evidence by decision impact; carry remaining questions into
+the runnable slice and re-answer them under current product conditions.
 
 ## Asset production and placement
 

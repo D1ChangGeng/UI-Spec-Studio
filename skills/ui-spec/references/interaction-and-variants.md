@@ -1,6 +1,6 @@
 # Interaction, accessibility, language and themes
 
-Design supported interactions and variants in the context of the task. Observe states and transitions during resource selection, composition and verification.
+Align interactions with the current task. Study mature behavior through its relevant controls and states, then verify the inherited relationships in composition and runtime.
 
 ## Contents
 
@@ -75,7 +75,7 @@ Use fixtures for reproducible scenarios and real integration for service respons
 
 ## Scrolling and content growth
 
-Choose document, local or multiple-region scrolling from the task and growth pattern. Continuous reading often suits a document; a workspace may retain navigation around an active region. Give each independent region a clear role and boundary. Test wheel, touch, keyboard, focus reveal, sticky controls and overlays, including short heights and a virtual keyboard.
+Choose scroll ownership from the task and content growth: continuous reading often suits a document; workspaces may retain navigation around a local region. Give regions clear roles. Observe entry, hold, exit and reverse browsing with scroll position/direction retained. Test wheel, touch, keyboard, focus reveal, sticky controls and overlays at relevant short heights and virtual-keyboard conditions.
 
 Preserve reading position as content arrives or expands. Decide when to reveal a new result, retain an existing reading point or restore an object's position on return. Following a live feed and reading older material are distinct intentions. Pagination or virtualization needs stable anchors and usable search/focus/assistive behavior.
 
@@ -127,7 +127,7 @@ Exercise input, submit/cancel/retry, rapid selection, loading and long-content s
 
 ## Inherit behavior at its useful scope
 
-Study a foundation's complete task loop. Preserve valuable focus, input, scrolling, loading, interruption and recovery relationships together. Adopt compatible behavior or test equivalent contracts when porting. The current application retains authority over product-specific operations and real outcomes.
+Study a foundation's complete task loop through actual controls, including concealed menus, panels and return paths. For an auxiliary area, observe width allocation, stable task entry, reading measure and focus through opening and closing. Transfer the useful relationship and test it with current content, input, loading and recovery. The current application owns product-specific behavior and outcomes.
 
 ## Assets have runtime states
 

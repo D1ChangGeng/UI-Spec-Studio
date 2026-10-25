@@ -1,8 +1,6 @@
 # Discover, assess and reuse excellent UI work
 
-Resource discovery is part of design, not a separate user-managed research phase.
-The agent looks for worthwhile existing work, understands why it is effective,
-chooses a reuse level and verifies the result in the current product.
+Resource discovery serves [product experience alignment](PRODUCT-ALIGNMENT.md). The agent researches worthwhile existing work, understands its useful relationships, chooses a reuse level and verifies the result in the current product. It supplies the references for an open functional brief and expands a named reference into concrete experience questions.
 
 ## The working relationship
 
@@ -11,7 +9,9 @@ chooses a reuse level and verifies the result in the current product.
 Requirement-led search finds an implementation for a known need. Opportunity-led
 exploration finds a better expression while meaningful design choices remain
 open. Both use the project's task, accepted direction and actual constraints.
-Existing suitable choices carry forward.
+Existing suitable choices carry forward. Search terms evolve with the research: task and user intent, interaction pattern, component role, visual relationship and implementation constraints. A newly discovered resource can also reveal a better product direction.
+
+Design references establish relationships worth inheriting; implementation resources make those relationships buildable. Inspect actual demos and relevant states before selection. A screenshot may suggest a paired workspace, while an interactive example can establish resizing, focus movement and return behavior. Keep the observed carrier and subject clear when a showcase embeds another product or artwork.
 
 ## Use the included resource map
 
@@ -43,9 +43,7 @@ visual value, required behavior, compatibility, rights and total cost from resea
 through maintenance. The result should belong to one coherent product.
 
 Before integration, identify the exact variant/version, demonstration settings,
-source/dependencies and changes to project files. Resolve the most important
-unknown with a small representative probe. Inspect the complete result under real
-content, views and states. Preserve the mechanism that earned adoption and the
+source/dependencies and changes to project files. Resolve the most important unknown with a small representative probe. Revisit the originating research question under real content, corresponding interaction stages, useful display scale and normal playback conditions. Then inspect the complete result across its views and states. Preserve the mechanism that earned adoption and the
 behavior that makes the task reliable.
 
 ## Read platform mechanisms by responsibility
@@ -68,7 +66,7 @@ update owner. Existing component/design records are preferred. The optional
 [adoption note](../skills/ui-spec/assets/templates/resource-adoption.md) is available
 when a project needs a starting structure.
 
-Platform documentation, item inspection and project acceptance remain separate.
+Converge when the important experience goals have evidence, consequential states and relationships are understood, and the selected resources have a workable adaptation path. Track remaining gaps by their potential effect on the next decision. Platform documentation, item inspection and project acceptance remain separate.
 Successful project-specific choices stay in that project. Portable findings can
 enter the shared catalog through authorized maintenance and ordinary version
 control. Add a new candidate when its source is credible and it supplies meaningful

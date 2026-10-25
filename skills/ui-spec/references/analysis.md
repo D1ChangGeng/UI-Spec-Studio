@@ -2,7 +2,15 @@
 
 ## Contents
 
-[Experience dimensions](#nine-dimensions-one-coherent-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Product model](#recognize-the-product-through-its-use) · [Direction and scope](#confirm-consequential-direction-with-useful-options) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)
+[Alignment target](#establish-the-products-target-experience) · [Experience dimensions](#nine-dimensions-one-coherent-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Product model](#recognize-the-product-through-its-use) · [Direction and scope](#confirm-consequential-direction-with-useful-options) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)
+
+## Establish the product's target experience
+
+Use **Product UI Experience Alignment** to connect the current user's tasks, business conditions and aesthetic goals to mature design evidence and verified implementation. Reference Product Alignment is one route; systems, component demonstrations, assets and platform conventions can independently provide useful design references. Reuse-first guides adoption, active exploration obtains evidence, and temporal inspection explains continuous experience.
+
+Treat a product name as a compressed experience description. Establish whether it refers to a public website, working application, flow, brand character or particular relationship. “Like a conversational AI product” could concern task entry, attachments, history, long-answer reading or a companion workspace. Turn the relevant interpretation into questions about space, actions, content, feedback and continuity. Show researched options when interpretations materially change direction; infer and investigate routine details.
+
+Without a named reference, find candidates from the task and working objects. For an upgrade, preserve proven semantics and suitable assets while researching actual gaps. For novel interactions, study mature local patterns and verify their new combination. Product/task, page/region, component/state, asset/language and temporal relationships can use different sources; establish a leading design language before combining them. Evaluate each source in its conditions: a famous product can contain a weak choice or a choice suited to a different task.
 
 ## Nine dimensions, one coherent experience
 
@@ -24,7 +32,9 @@ Content can reshape navigation; a key asset can alter composition; realistic lat
 
 ## Use theory to investigate real design work
 
-Use design theory while searching, viewing, comparing, adapting and rechecking concrete work. For a new surface, investigate a coherent page, system or block before local parts; a bounded correction can inherit the accepted foundation. Let a strong visual discovery revise the initial idea. Original work fills product-specific gaps and coordinates the result.
+Use design knowledge to ask what needs investigation, then revise the questions from actual browsing. Search by task, interaction pattern, component, visual property and implementation need after finding the initial brand/source. A new surface benefits from a coherent page, system or block; a bounded correction can inherit its accepted foundation.
+
+Cover **parts, states and relationships**: what composes the surface, how relevant conditions change it, and how elements affect one another in space, time and the task. Give each consequential dimension an inspected reference or verified basis. Study distinctive/core behavior deeply; routine controls can share a researched system. Track understood, partly observed and consequentially unknown areas to choose the next observation.
 
 Connect **observed phenomenon → perceptual effect → causal hypothesis → design choice → rendered recheck**. Describe the visible relationship and its viewing condition, then explain how it may affect attention, grouping, reading or object recognition. Inspect implementation where it can test the cause. A reference may keep its selected row visible as details expand, suggesting an anchor worth adopting. A bright side panel may dominate the intended working area because its area and contrast outweigh the primary content. Compare the proposed adoption or repair in the complete frame and relevant sequence. Keep professional judgment and observed user response distinguishable.
 
@@ -47,7 +57,7 @@ Describe the experience in user terms: “ask a question, examine a sourced answ
 
 Treat these as hypotheses and include other models when needed. A hybrid names its primary loop and the secondary surface's purpose: a conversation may open an evidence document beside the thread. Give each pane a task and state owner. Product model, local page shape and visual language are separate choices; a dense workspace and an empty assistant entry can share a brand while serving different jobs.
 
-Inspect a mature product's comparable starting point, action, result, continuation and recovery. Record the specific convention, source/date and states actually viewed. Official explanations support documented behavior; visible examples and live operation support appearance and motion judgments. Preserve source identity and rights when transferring a convention.
+Inspect comparable starting points, actions, results, continuation and recovery. Retain the convention, source/date and states viewed. Documentation supports described behavior; actual views and operation support their observed appearance and motion. Preserve provenance and rights when transferring a convention.
 
 ## Establish the reuse boundary for this assignment
 
@@ -63,15 +73,13 @@ Compare the same task and representative content: first action, result organizat
 
 Established intent, approval or delegated autonomy supports direct progress. One-shot work retains its assumptions, unresolved alternatives and pending owner acceptance. Prototype preference and formal approval keep their actual scope. Continue independent work while a significant choice is pending.
 
-## Lead users with different levels of direction
-
-For a goal-only request, infer likely tasks, research comparable flows and recommend a reviewable direction. Determine whether supplied references express exact requirements, aesthetic qualities or constraints; preserve the binding parts and develop the rest. Carry prior decisions forward. Resolve routine details independently, asking only when an unavailable fact determines a consequential commitment.
-
 ## Reason about uncertainty
 
 Match the next observation to the uncertainty: task/content analysis for product questions, a rendered composition or sequence for aesthetic questions, and an isolated probe for implementation questions. Consequential business commitments require authoritative facts or authorization.
 
-Choose by impact, reversibility, current evidence and the cost of learning more. Test reversible assumptions in a visible trial; establish constraints early when they can invalidate substantial work. Make direction concrete through audience, task, content hierarchy, type, density, imagery and motion. Use real supplied facts for promises and identifiable fixtures for exploration.
+Choose by impact, reversibility, evidence and learning cost. Test reversible assumptions visibly; establish constraints that can invalidate substantial work early. Distinguish binding supplied direction from examples and develop the open parts. Use real facts for promises and identifiable fixtures for exploration.
+
+Continue research when another observation could change a choice, resolve significant uncertainty or cover a critical experience. Begin integration when the main target is grounded, important parts/states and temporal relationships are understood, and a feasible implementation path exists. Carry remaining questions into verification. Decision coverage determines sufficiency; browsing counts and recording duration describe effort.
 
 ## Define each surface by responsibility
 
@@ -140,9 +148,9 @@ Judge clarity, distinctiveness, coherence across surfaces, feasibility and contr
 
 ## Read references as mechanisms
 
-Select a reference for a named quality, then actually view it at **whole surface → relationships → details**. Follow motion across its relevant duration and navigation across the linked task. Note what changed, what remained stable and where attention settled. A still identifies a moment; a sequence supports the observed transition.
+Select references for named questions and view them at **whole surface → relationships → details**. Follow relevant motion and linked tasks. Explain **observed phenomenon → perceptual effect → design relationship → suitable inheritance**. Keep an inferred implementation cause or untested user response identified as such.
 
-Explain which visible relationships carry the quality and which depend on content, assets, timing or platform. A photographic composition may owe more to the subject and crop than the grid. Transfer the useful mechanism under its conditions, respecting source rights and the current identity. Revisit the hypothesis when new views or frames show a different result.
+For an opening companion panel, inspect width changes, retained input/selection, reading measure, focus and the transition. A transferable goal might be to preserve the primary task entry and reading focus while making added space understandable. Test that relationship in the current product; dimensions and styling follow its conditions. Expand “simple” or “refined” into attention, grouping, proportion, material and rhythm. New evidence can change the hypothesis.
 
 ## Make decisions explainable and adjustable
 

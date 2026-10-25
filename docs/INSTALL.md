@@ -93,7 +93,7 @@ python <skill-dir>/scripts/check_manifest.py --project-root /path/to/project --m
 
 ## Runtime capabilities
 
-The agent needs project read/write and execution capabilities to implement a runnable UI. Real visual review needs browser and image-inspection capabilities. Temporal review uses available live interaction, video playback or ordered-frame inspection; the observed conditions determine what can be concluded. Source research needs network access or already available primary documentation. The optional checker needs Python 3.10+.
+The agent needs project read/write and execution capabilities to implement a runnable UI. Real visual review needs browser and image-inspection capabilities. Temporal review uses available live interaction, video playback or ordered-frame inspection; the observed conditions determine what can be concluded. Active reference research needs authorized browsing and interaction, network access or already available primary material. Playback, recording, network/media inspection and traces depend on the actual host tools and permissions; the Skill selects methods by the evidence question and describes remaining gaps. The optional checker needs Python 3.10+.
 
 A standard skill format is a portability mechanism. Actual host invocation, browser availability and quality depend on the installed agent. See [evaluation status](EVALUATION.md) for the tests actually performed on this release.
 
@@ -106,7 +106,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.7.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.8.0 --skill ui-spec
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
@@ -132,11 +132,8 @@ acceptance use the host's available tools and the task's permissions.
 
 The installed Skill includes the common [content design method](../skills/ui-spec/references/content-design.md), a focused [source map](../skills/ui-spec/references/content-sources.md) and an optional [decision template](../skills/ui-spec/assets/templates/content-decisions.md). User-facing copy, localization and typography are part of ordinary design rounds. A runnable example is included in the complete repository source under `examples/content-review/`.
 
-## Visual and temporal observation
+## Product alignment and visual exploration
 
-The installed Skill carries visual reasoning through its eight common references.
-Consequential resource choices and final surfaces use actual viewing; changing
-interactions use a meaningful time window. The [visual guide](VISUAL-INSPECTION.md)
-explains the method. The complete source bundle includes `examples/temporal-review/`
+The installed Skill carries product experience alignment, active exploration and visual reasoning through its eight common references. It researches suitable foundations whether or not the user names a reference product. Consequential choices use actual viewing and interaction; changing interfaces use a meaningful time window. The [alignment guide](PRODUCT-ALIGNMENT.md) connects research to decisions, and the [visual guide](VISUAL-INSPECTION.md) explains inspection. The complete source bundle includes `examples/temporal-review/`
 and its browser capture tool; these development fixtures are separate from the
 portable Skill's optional standard-library helpers.

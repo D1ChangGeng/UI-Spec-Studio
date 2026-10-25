@@ -28,7 +28,7 @@ Establish the product model, audience, experience level, first task, familiar vo
 - **Best carrier:** heading, comparison, form label, short instruction, source, direct manipulation or another medium.
 - **Time and placement:** what should be visible on arrival, at decision, during progress and after the outcome.
 
-Research comparable mature products at the same interaction step, not simply the same industry. Observe how they name the working object, set expectations, label controls, explain consequential actions and communicate system state. Distinguish a transferable writing pattern from that product's promises, pricing, policies and identity. Use the accepted product voice and actual business facts for the current solution.
+Research mature products at the same interaction step. Open relevant menus/help and observe transitions to find when wording appears, which user question it answers and what it permits next. Attribute marketing copy, interface labels and authored work to their own surfaces. Transfer useful naming, expectation and feedback patterns using this product's voice and facts; reference promises, pricing and policies retain their source's authority.
 
 Domain and engineering terms clarify how the system works. Choose user-facing names by what users recognize, search for and act on. Define technical language at the point of need when it is essential to the task. Keep one stable name for the same object, action or state across navigation, panels, notifications and documentation. A synonym can signal a meaningful change in scope; use it intentionally.
 
@@ -109,7 +109,7 @@ A record is most useful for substantive navigation or product-language choices, 
 
 ## Verify through comprehension and real behavior
 
-Review semantic correctness first: can a reader identify the page, choice, consequence and next action from the visible content? Follow first use, active work, errors and recovery while reading the actual labels. Check the content inventory for the chosen scope, including page and component states. Measure what tools can establish: accessible associations, string coverage, clipping, reflow, focus, status changes and locale/viewport variants. Inspect actual screenshots for hierarchy, density, rhythm and optical balance. Use the [primary references](content-sources.md) for the relevant platform and language conditions.
+Revisit the research question with actual words: can a reader identify the page, choice, consequence and next action? Follow first use, work, errors and recovery. Check scoped page/component content, accessible associations, string coverage, clipping, reflow, focus, status and locale/viewport variants. Inspect hierarchy, density, rhythm and optical balance at comparable content length and scale. Use the [primary references](content-sources.md) for platform and language conditions.
 
 Test the promises made by copy against actual capabilities: a button named “Save” must reach a real save boundary or be clearly labeled as a demo; a success message follows a confirmed result; permission and price text reflect the authoritative system. Use representative scenarios and source-backed review for consequential text. When direct comprehension research is warranted and available, observe users attempting credible tasks without telling them the intended path. Report automated checks, editorial judgment and actual user observations as distinct evidence.
 

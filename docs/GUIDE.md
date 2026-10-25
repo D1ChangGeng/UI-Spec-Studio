@@ -10,7 +10,7 @@ Keep its framework and working API. Inspect its routes, user tasks and current
 screens. Establish a coherent UI direction and implement the first useful slice.
 ```
 
-The agent reads all eight common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Relevant mature product flows and implementation sources help establish a primary model. When material alternatives remain open, optional shape presents a reasoned recommendation and a focused choice or representative preview. An implementation request with clear direction continues into a meaningful slice. The following collection/detail examples assume that this direction has been selected for the actual task.
+The agent reads all eight common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Product UI Experience Alignment establishes the intended experience from real tasks, content and operating conditions. If the user supplies a product name, the agent expands it into relevant pages, flows and qualities; otherwise it proactively finds mature patterns, design systems and implementation sources. Both entry points establish a primary model through actual exploration. When material alternatives remain open, optional shape presents a reasoned recommendation and a focused choice or representative preview. An implementation request with clear direction continues into a meaningful slice. The following collection/detail examples assume that this direction has been selected for the actual task.
 
 Existing instructions, design documents and tests remain useful. The optional templates are a starting point when equivalent records are absent.
 
@@ -166,14 +166,10 @@ When adding or revising a page, establish the audience's next question and the f
 
 ## Observe the frame, the change and the journey
 
-Ask the agent to use the [visual observation method](VISUAL-INSPECTION.md) when
-researching candidates and refining the real result. Important choices should
-show what was viewed, the relationship that matters and why it fits the task.
-Observe the source resource, the assembled composition and the working product
-in their own conditions.
+[Product alignment and active exploration](PRODUCT-ALIGNMENT.md) are part of ordinary design work. The agent turns uncertain product relationships into research questions, then follows useful clues: play a demo, scroll a region, change a tab, open and close a panel, or compare a variant. Inspect composition, states and relationships at the depth each decision needs. Routine members of a researched component family can inherit the established rule.
 
-For changing UI, follow the relevant episode through its trigger, progression and
-settled outcome. Extend the window for return, interruption, repetition, waiting
-or loop boundaries when those affect the design. Live interaction, video and
-ordered frames are chosen by the question and available host capabilities. Keep
-capture, actual viewing, interaction checks and approval explicit in the handover.
+Attribute evidence to its actual subject: hosting page, player, demonstrated product or edited content. Separate design references from implementation resources, and use the observed relationship to find an appropriate reusable foundation. Important choices show what was viewed, what it suggests for the current task and which part the implementation inherits.
+
+For changing UI, follow the trigger, first feedback, progression and settled outcome. Extend the window for return, interruption, repetition, waiting or loop boundaries when useful. Choose live interaction, video and ordered frames by the question and host capabilities; distinguish capture, actual viewing, supported conclusions and approval.
+
+Build a runnable slice once the important choices have evidence and an adaptation path. Revisit the same questions with the product's real content, matching interaction stages and useful viewing conditions. Review the assembled product across its related views and states. Carry unresolved evidence gaps into the next relevant check. The [visual observation method](VISUAL-INSPECTION.md) supplies the inspection details.

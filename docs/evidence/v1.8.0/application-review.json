@@ -1,0 +1,413 @@
+{
+  "scope": "Maintainer supplemental check of a fresh-context, synthetic research-notes prototype; not a comparative benchmark or production product acceptance.",
+  "skill_method_input_sha256": "2ae9571fc1295181695b4c99aa4668de83d5c53aa346674fc305da686b4fc6b6",
+  "browser_conditions": {
+    "runtime": "isolated executor Chromium",
+    "locale": "zh-CN",
+    "theme": "light",
+    "device_pixel_ratio": 1,
+    "font_config": "Noto CJK",
+    "viewports": [
+      {
+        "width": 1348,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ]
+  },
+  "independent_agent_product_browser_check": "blocked by host network separation and file URL policy; no bypass attempted",
+  "first_runtime": {
+    "checks": [
+      {
+        "name": "desktop_document_width",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "citation_opens_reference_from_focus_mode",
+        "pass": false,
+        "details": null
+      },
+      {
+        "name": "desktop_note_stays_visible_beside_reference",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reference_to_discussion_preserves_unsent_draft",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reference_to_discussion_preserves_note",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reload_restores_title",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reload_restores_draft",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reload_restores_note",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "insert_reference_adds_editable_content",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "fixture_send_contains_original_message",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_document_width",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_return_preserves_note",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_return_focus_on_citation",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_reload_restores_active_note",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_reload_restores_unsent_draft",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "blocked_storage_does_not_claim_saved",
+        "pass": true,
+        "details": null
+      }
+    ],
+    "source_hashes": {
+      "index.html": "515baaf16aca9a3ff9f3f18c42aa398fc69a95ffb2923d75ecc5c7942c8e7825",
+      "src/main.js": "677d01d1697a16090534a99658deb7a60f1bc63ce7a0982ca58494eeab0006eb",
+      "src/style.css": "6fa95bdfa9e9d2faf5a2ea0f39b5752503f11e238f34ce95df054d59034b3273",
+      "src/store.js": "fb1cfaecc8f0fc3ca19d37eeeba86306328e02950e0baa25d9233dfd3c87276d",
+      "src/fixtures.js": "95dc7a125d1133cdeb89cc77ab6b294641d92547646c52aeed42988233e00643",
+      "package.json": "c9faa9661964756631951affd782af13b158dd86f972ebf1c46fdd17cf354930",
+      "package-lock.json": "b6de524f83dc0d69f5170e80cb055364f0f8a95be5d99246f6e8226f420b923a"
+    },
+    "all_checks_passed": false,
+    "viewed_capture_count": 10
+  },
+  "final_runtime": {
+    "started_at_utc": "2026-10-25T20:50:45.147172+00:00",
+    "finished_at_utc": "2026-10-25T20:50:51.629830+00:00",
+    "checks": [
+      {
+        "name": "desktop_document_width",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "citation_opens_reference_from_focus_mode",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "desktop_note_stays_visible_beside_reference",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reference_to_discussion_preserves_unsent_draft",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reference_to_discussion_preserves_note",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reload_restores_title",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reload_restores_draft",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "reload_restores_note",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "insert_reference_adds_editable_content",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "fixture_send_contains_original_message",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "fixture_response_is_explicitly_preset",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "selection_reveals_discussion_from_focus_mode",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "selection_preserves_existing_draft",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_document_width",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_feedback_does_not_cover_reference_actions",
+        "pass": true,
+        "details": {
+          "toast": {
+            "x": 87.5,
+            "y": 636.40625,
+            "width": 215,
+            "height": 37.59375
+          },
+          "actions": {
+            "x": 0,
+            "y": 686,
+            "width": 390,
+            "height": 93
+          }
+        }
+      },
+      {
+        "name": "mobile_return_preserves_note",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_return_focus_on_citation",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_reference_reload_returns_focus_to_visible_note",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_backup_has_action_name",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_discuss_has_action_name",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_reload_restores_active_note",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "mobile_reload_restores_unsent_draft",
+        "pass": true,
+        "details": null
+      },
+      {
+        "name": "blocked_storage_does_not_claim_saved",
+        "pass": true,
+        "details": null
+      }
+    ],
+    "errors": [],
+    "source_stable": true,
+    "all_checks_passed": true,
+    "source_hashes": {
+      "index.html": "515baaf16aca9a3ff9f3f18c42aa398fc69a95ffb2923d75ecc5c7942c8e7825",
+      "src/main.js": "a19a9cd22f794de2e2fe7c46eebe49d18e8e782188c5d21f3646b4a689b4a663",
+      "src/style.css": "6fa95bdfa9e9d2faf5a2ea0f39b5752503f11e238f34ce95df054d59034b3273",
+      "src/store.js": "befb91ec4e67a9d7029e6b14cae37933a2eef8fca94746fe317818c3547d9563",
+      "src/fixtures.js": "95dc7a125d1133cdeb89cc77ab6b294641d92547646c52aeed42988233e00643",
+      "package.json": "5eac1c637abdc0896c92f708a64d6479623e111f3ca25edaa7671bcefe4d6bc7",
+      "package-lock.json": "b6de524f83dc0d69f5170e80cb055364f0f8a95be5d99246f6e8226f420b923a"
+    },
+    "state_contract_cases_passed": 10
+  },
+  "viewed_final_captures": [
+    {
+      "file": "01-desktop-initial.png",
+      "viewport": {
+        "width": 1348,
+        "height": 900
+      },
+      "captured_at_utc": "2026-10-25T20:50:46.363865+00:00",
+      "sha256": "a1debdce74ccc4a99a5c25b04cd64a2a92ad981fc547f6a979ec026419bb5655",
+      "bytes": 191029,
+      "actually_viewed": true,
+      "archived_file": null
+    },
+    {
+      "file": "02-desktop-citation-from-focus.png",
+      "viewport": {
+        "width": 1348,
+        "height": 900
+      },
+      "captured_at_utc": "2026-10-25T20:50:46.758640+00:00",
+      "sha256": "d4cbdbdb234468a55ff75224d9bbf2221f66b4e44ab2853969fc3ee37d101d5e",
+      "bytes": 201138,
+      "actually_viewed": true,
+      "archived_file": "named-reference-desktop.png"
+    },
+    {
+      "file": "03-desktop-reference.png",
+      "viewport": {
+        "width": 1348,
+        "height": 900
+      },
+      "captured_at_utc": "2026-10-25T20:50:46.851480+00:00",
+      "sha256": "b36cce86ca78540e74f98b30ed31e83e4d16c83ec0f50cb6ba52c8c402bda1db",
+      "bytes": 201066,
+      "actually_viewed": true,
+      "archived_file": null
+    },
+    {
+      "file": "04-desktop-discussion-context.png",
+      "viewport": {
+        "width": 1348,
+        "height": 900
+      },
+      "captured_at_utc": "2026-10-25T20:50:47.001323+00:00",
+      "sha256": "d6d24ea96aac8d073eb8a8549a804ab1b23cca587fe4c17881b31503e3b3483e",
+      "bytes": 201787,
+      "actually_viewed": true,
+      "archived_file": null
+    },
+    {
+      "file": "06-desktop-preset-response-complete.png",
+      "viewport": {
+        "width": 1348,
+        "height": 900
+      },
+      "captured_at_utc": "2026-10-25T20:50:48.094251+00:00",
+      "sha256": "8abe27b7a4717b9272fc1f5bb5fb8ebdcb98a114c87e374058fb00042653bfa9",
+      "bytes": 201382,
+      "actually_viewed": true,
+      "archived_file": null
+    },
+    {
+      "file": "06b-desktop-selection-from-focus.png",
+      "viewport": {
+        "width": 1348,
+        "height": 900
+      },
+      "captured_at_utc": "2026-10-25T20:50:48.405764+00:00",
+      "sha256": "6ec6aa01cf8187cc3b9268470acc13673be838c40d90d8253279ed1366c6a3ec",
+      "bytes": 220221,
+      "actually_viewed": true,
+      "archived_file": null
+    },
+    {
+      "file": "07-mobile-note.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "captured_at_utc": "2026-10-25T20:50:48.518255+00:00",
+      "sha256": "d2382e756ae4e85297795b4c7074e65b29ad650ba7fab4e66befaede0c5f6435",
+      "bytes": 97865,
+      "actually_viewed": true,
+      "archived_file": null
+    },
+    {
+      "file": "08-mobile-reference.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "captured_at_utc": "2026-10-25T20:50:48.635774+00:00",
+      "sha256": "22e6b461c12b63c50b246ea11ae24fa97f3c66efe129659f7da7d9781c341336",
+      "bytes": 71676,
+      "actually_viewed": true,
+      "archived_file": null
+    },
+    {
+      "file": "08b-mobile-feedback-reference.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "captured_at_utc": "2026-10-25T20:50:48.828890+00:00",
+      "sha256": "f4a57b02644d450532682a8de730cbca8c8c6f6f2d59b5c8f1a5be17408c991d",
+      "bytes": 71899,
+      "actually_viewed": true,
+      "archived_file": "named-reference-mobile.png"
+    },
+    {
+      "file": "09-mobile-discussion-restored.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "captured_at_utc": "2026-10-25T20:50:50.682657+00:00",
+      "sha256": "8677024386140955479b629e8d29502d5a7412d3235c2714ff75e9786112142e",
+      "bytes": 90650,
+      "actually_viewed": true,
+      "archived_file": null
+    },
+    {
+      "file": "10-mobile-storage-unavailable.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "captured_at_utc": "2026-10-25T20:50:51.395098+00:00",
+      "sha256": "3b731fdcd10a8d9ccca11e9b640b9a44330288b4685fde57387967bbe9060b95",
+      "bytes": 81600,
+      "actually_viewed": true,
+      "archived_file": null
+    }
+  ],
+  "temporal_scope": "Ordered action/state screenshots were actually opened. Trace was recorded but not replayed. No continuous playback, frame delivery or motion-quality claim. Final preset response is synchronous; the earlier artificial 450ms delay was removed before final inspection.",
+  "visual_findings": [
+    "The desktop reference area reappears from focus mode beside the same note.",
+    "The mobile toast stays above the fixed source actions after immediate navigation.",
+    "Note hierarchy, current citation highlighting and draft context remain visible in the observed states."
+  ],
+  "remaining_conditions": [
+    "real mobile device and soft keyboard",
+    "IME composition behavior",
+    "screen readers and high contrast",
+    "multi-tab concurrency",
+    "external AI and source services",
+    "long-running performance and real user comprehension"
+  ],
+  "public_scope": "Representative final renders and check identities are retained here. The temporary application is an evaluation subject, not an additional shipped product or installed skill dependency."
+}

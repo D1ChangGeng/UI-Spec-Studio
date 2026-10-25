@@ -29,9 +29,9 @@ Use this as a connected classification rather than a demand to include every fam
 
 ## Research, compare and choose a production route
 
-Apply the common sourcing method to exact asset candidates and relevant production examples. Study visible quality, actual files and rights-bearing sources. A moodboard supplies direction; the original asset or author supplies provenance. Record separately what is observed, inferred, usable and accepted.
+Study exact candidates, production examples, actual files and rights-bearing sources. Attribute observed qualities to their object: artwork inside a demo can inform content or lettering, while application chrome informs UI language. A moodboard supplies direction; the original source supplies provenance. Keep observed, inferred, usable and accepted status distinct.
 
-View references at whole-composition, relationship and detail scales; inspect dynamic candidates across their meaningful cycle or interaction. Extract properties such as line tension, optical center, letter joining, light softness and object continuity into a product-specific brief. Compare material in isolation and beside actual text/controls: a strong asset can change the layout, and the layout can expose an asset's limitation. Third-party service marks retain the owner's approved identity and permitted variations.
+View whole composition, relationships and details; rotate available spatial previews, vary relevant parameters and play meaningful cycles. Translate line tension, optical center, lettering, light and continuity into a product-specific brief. Compare material alone and beside actual text/controls, allowing either to change the other. Third-party marks retain their approved identity and permitted variations.
 
 Choose direct use, adaptation, composition, technique transfer or original production by design fit, required uniqueness, permissions, available tools and total cost. A mature icon library is a strong starting point for routine controls; a distinctive brand symbol may justify original drawing and refinement. Generative tools can explore concepts or supply a base; inspect the actual output and refine it for the required use. A raster preview proves an image result, while editable curves, geometry, animation or a font require their actual source artifacts.
 

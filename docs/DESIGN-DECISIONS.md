@@ -1,8 +1,6 @@
 # Product intent, reference research and visible design decisions
 
-UI Spec Studio establishes the product through the user's actions, then connects
-that model to concrete design and engineering choices. Users can provide detailed
-direction or simply evaluate a small number of meaningful alternatives.
+Product UI Experience Alignment connects current users, tasks and operating conditions to a concrete target experience. UI Spec Studio finds useful mature references whether the user supplies a product name, a functional goal or an existing product to improve. The [alignment and exploration guide](PRODUCT-ALIGNMENT.md) explains how research questions become observed design relationships and verifiable implementation choices.
 
 ## Mature work is the default design starting point
 
@@ -33,13 +31,11 @@ what the actual product can do.
 
 ## Study two kinds of reference
 
-**Product references** explain how a familiar task works: entry, navigation,
-primary action, state, result and return. **Implementation references** identify a
-specific component, asset, primitive or technique that can realize a design.
+**Design references** explain useful experience relationships at the product, page, region, component, content, asset or temporal level. Reference Product Alignment is one application of this broader practice. **Implementation resources** supply a concrete template, design system, block, component, asset or technique that can carry the relationship in the current stack. A source can serve both roles.
 
-Research both while the major model, layout and treatment can still change.
-Describe the specific convention or mechanism being adopted, its source and
-conditions. A resource's design quality is demonstrated in the assembled product.
+Research both while the model, layout and treatment can still change. Expand a named product into the relevant surface and task; for a functional brief, find candidates from the primary loop and uncertain relationships. Follow visual clues through playback, scrolling and state changes. Attribute the evidence to the hosting page, player, demonstrated UI or its content, and distinguish observed behavior from inferred cause.
+
+Describe what is useful, which conditions it relies on and what the current product will inherit or adjust. Reuse includes inherited design decisions and adopted implementation; custom code can be the adaptation connecting them. Demonstrate the relationship in a runnable slice and revisit the original research question in the assembled product.
 
 ## Inherit at the right layer
 
@@ -64,9 +60,7 @@ from a working preview or successful test.
 
 ## Pair the selection record with the preview
 
-The record connects each consequential surface/dimension to its intended result,
-product-pattern reference, concrete resource, reuse choice, adaptation,
-implementation location and observed status. Include layout/navigation,
+The record connects each consequential surface/dimension to its intended experience, research question, correctly attributed observation, transferable relationship, selected resource, adaptation, implementation location and observed result. Preserve the relevant source/page/interval and conditions when needed to inspect a decision. Shared references can cover routine members of a component family; depth follows design impact. Include layout/navigation,
 background, typography, components, icons, feedback and movement where relevant.
 Quiet/native/inherited treatments can be deliberate choices with a brief reason.
 

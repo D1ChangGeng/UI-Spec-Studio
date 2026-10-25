@@ -74,3 +74,12 @@ capture, viewed evidence, interpretation, interaction tests and owner acceptance
 explicit. Normal-time viewing and controlled probes establish different properties.
 Run the temporal fixture with the existing browser gates; retain event order,
 source identity and capture conditions, then inspect the relevant frames or clips.
+
+Version 1.8 makes product UI experience alignment the organizing objective and
+active visual exploration its evidence-gathering method. Named products and open
+briefs both lead to relevant mature references. Preserve the distinction between
+design references and implementation resources, inherited decisions and reused
+code, and the hosting page, player, demonstrated UI and authored content. Follow
+useful cues, close consequential evidence gaps and verify the same design questions
+in the current product. Exploration depth follows decision value. Keep actual
+forward applications, observed browser evidence and deterministic tests distinct.

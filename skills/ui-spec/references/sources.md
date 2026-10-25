@@ -89,3 +89,18 @@ the fixture's sourced Lucide icon retains its applicable notices separately.
 ## Content design sources
 
 The [content source map](content-sources.md) records primary GOV.UK, Microsoft, IBM Carbon and W3C references reviewed for content, tone, UI writing and accessible labels/errors. Each contributes task-specific guidance while the actual product remains authoritative for its business facts, voice, languages and approvals.
+
+## Product alignment and active exploration (1.8)
+
+Primary method and tool documentation inspected on 2026-10-26:
+
+- [USWDS design principles](https://designsystem.digital.gov/design-principles/) grounds decisions in actual user needs and testing with people. Reference research and expert judgment support design; observed user outcomes retain their own evidence.
+- [Design Council's framework](https://www.designcouncil.org.uk/resources/framework-for-innovation/) connects divergent exploration, focused action and iterative learning. UI Spec Studio applies that relationship within its existing operations.
+- [GOV.UK components](https://design-system.service.gov.uk/components/) and [adoption guidance](https://design-system.service.gov.uk/get-started/) explain reusable components/patterns and the relevance of their research context. The current product establishes its own fit.
+- [Chrome Network](https://developer.chrome.com/docs/devtools/network/), [Media](https://developer.chrome.com/docs/devtools/media-panel) and [Animations](https://developer.chrome.com/docs/devtools/css/animations/) document question-specific inspection capabilities. Verify the available version and rendering mechanism; these documents do not grant host access.
+- [Playwright Trace Viewer](https://playwright.dev/docs/trace-viewer) relates recorded actions, snapshots, sampled images, console and network evidence. Actual viewing, continuous-motion conclusions and runtime performance remain separate claims.
+
+Product UI Experience Alignment and Active Visual Exploration & Design
+Reconnaissance are this project's synthesis. Use the primary sources for their
+stated scope, and keep candidate observation, current-product verification and
+user acceptance identifiable.

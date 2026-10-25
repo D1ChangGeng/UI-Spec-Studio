@@ -84,3 +84,19 @@ Review each language in the existing theme/viewport matrix. Inspect paragraph
 measure, section rhythm and links at their actual size, including lower sections
 through document scrolling. The current version's review record owns actual
 observations; this section records the design decision and verification scope.
+
+## Product alignment and active exploration in 1.8
+
+The existing foundation section now explains the product's target experience,
+named or agent-discovered references, and the two layers of reuse. The observation
+section turns relevant visual clues into browsing actions and explains attribution
+and evidence sufficiency. Keep the install path, native reading structure and
+existing artwork intact. The resource-reuse guide remains a visible next step.
+
+Local review on 2026-10-26 opened all 24 viewport/full-document images across the
+declared bilingual/theme/viewport matrix, plus readable crops of the changed
+sections. Restoring the resource-guide link required a final recapture and visual
+recheck of all 12 affected section crops; the preceding full-image review and the
+final localized recheck retain their separate source identities. The
+[version review](../REVIEW-v1.8.0.md) records hashes, findings and limits. GitHub
+rendering of the published commit has its own CI evidence and visual readback.

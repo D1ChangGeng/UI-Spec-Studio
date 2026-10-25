@@ -7,6 +7,8 @@ Use this as a compact note or as fields in the project's existing design/resourc
 Asset ID/family; product task and intended perception; destination surface/state;
 relationship with layout, type and components; comparison/reference observations;
 selected direction, alternatives and approval source/scope.
+Attribute reference qualities to the actual artwork, application UI or surrounding
+presentation; link the studied property to its intended use in this product.
 
 ## Source and allowed use
 
@@ -44,3 +46,5 @@ dynamic material, retain the relevant cycle/transition and peak reach, brightnes
 or loop seam with its event/time context. State the capture and viewing method;
 record a visual finding, its perceptual effect and any resulting production or
 layout decision. A recorded clip remains available evidence until it is inspected.
+Revisit the original selection question at actual placement, scale and content;
+separate the demonstrated effect, adopted file and verified integrated result.

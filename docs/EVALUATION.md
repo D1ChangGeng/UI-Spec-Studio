@@ -197,3 +197,30 @@ The version review records the checks actually executed, the media actually view
 observed repairs and remaining conditions. CI retains its actual assertions and
 capture artifacts. A consuming product follows the same method using its own
 content, services, devices and user journey.
+
+## Product alignment and active exploration assurance (1.8)
+
+The [alignment guide](PRODUCT-ALIGNMENT.md) connects target experience, research
+questions, actual observation, resource adaptation and verification in use.
+Review the common instructions for that connected behavior, including open briefs,
+named product analogies, reference-object attribution and decision-based convergence.
+Text or keyword presence alone does not establish that an agent performed research.
+
+For a forward application, provide a frozen skill and an ordinary task in a fresh
+context. Retain the input identities and requested scope. Let the agent choose
+its sources and actions; keep the maintainer's diagnosis, expected choices and
+other applications outside that context. Inspect the produced artifact and actual
+tool evidence after the task. A scheme-only brief establishes research and design
+decisions; a runnable brief can additionally establish the implementation and
+specific runtime conditions exercised.
+
+Judge useful evidence coverage: what experience was selected, what was actually
+seen or operated, how findings changed the choice, which resource carries the
+relationship, and whether the current result answered the original question.
+Record blocked access and partial temporal observation without expanding the
+conclusion. Keep these applications distinct from the deterministic fixtures,
+installation checks, real-user outcomes and a comparative model campaign.
+
+The [version review](REVIEW-v1.8.0.md) records the actual applications, checks,
+viewed conditions and limits. Existing product, asset, content and temporal gates
+continue to exercise their declared runtime contracts before release.

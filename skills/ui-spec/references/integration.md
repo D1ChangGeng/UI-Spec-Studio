@@ -51,7 +51,7 @@ Use real content lengths and errors to refine layout within the accepted system.
 
 ## 5. Verify design and behavior together
 
-**Design track:** compare approved and integrated views with equivalent content, viewport, fonts, theme and locale. Inspect whole frames and meaningful continuous episodes, preserving shared anchors, reading, scrolling and object identity. Align comparisons by task event and state; service responses may have different elapsed times. Include waiting, result arrival, interruption and return where they affect the experience. Preserve capture conditions and explain intentional differences.
+**Design track:** re-answer the reference research questions in the connected product: does the task entry remain available, reading clear and state change understandable? Compare approved and integrated views with comparable content density, scale, fonts, theme and locale. Inspect whole frames and continuous episodes through waiting, result arrival, interruption and return. Align by task event/state; real latency may differ from a demo. Preserve shared anchors, scrolling and object identity, recording conditions and intentional differences.
 
 **Product track:** execute the actual UI path, observe the authority/persistence result, then verify feedback and recovery. Check relevant permissions, failure/retry, repeat actions, refresh and direct entry. Evidence should connect the visible action to the real result.
 
@@ -92,7 +92,7 @@ Keep license notices, asset permission and reproducible configuration with the r
 
 Read the accepted model, primary action/result loop, retained context and scoped resource map with the approved SPEC. Preserve business contracts inherited from the existing project while connecting the presentation chosen for the new target. Reuse local visual code because its fit is documented or accepted, and preserve unrelated work.
 
-Resolve every consequential selection row to its real component/data adapter and visible state. Check that resumed work, pending results, permission boundaries and durable outcomes still match the agreed experience. When an engineering constraint changes the product model or key interaction, explain the affected tradeoff and return that decision to the appropriate owner. Keep unaffected integration moving.
+Resolve consequential decisions from the studied relationship through the selected implementation resource and adaptation to the real component/adapter and visible state. Check resumed work, pending results, permissions and durable outcomes against the experience target. When runtime constraints change the model or key interaction, reopen that decision with evidence and the appropriate owner; continue unaffected integration.
 
 Handover includes the current preview, design/resource map, actual approval source, connected task outcomes and observed conditions. The next developer can then distinguish a studied reference, adopted implementation and accepted product result.
 

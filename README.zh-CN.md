@@ -11,7 +11,7 @@
 
 [English](README.md) · [使用指南](docs/GUIDE.md) · [Skill 源码](skills/ui-spec/SKILL.md) · [正式版本](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
 
-适用于**应用界面、README、文档、图表、演示文稿**等屏幕视觉作品的通用 [Agent Skill](https://agentskills.io/specification)。Agent 主动研究成熟设计成果，进行专业选型与适配整合，再验证实际效果。
+适用于**应用界面、README、文档、图表、演示文稿**等屏幕视觉作品的通用 [Agent Skill](https://agentskills.io/specification)。Agent 从产品意图出发，通过成熟参照、主动视觉探索与复用适配建立体验目标，再以真实运行验证结果。
 
 ## 在项目中直接开始
 
@@ -35,23 +35,23 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付变体，并在实际界面中检查视觉、加载与降级状态。
 素材也可以反向决定构图与排版。[资产工程方法](docs/VISUAL-ASSETS.md) · [浏览器验收样例](examples/asset-review/README.md)
 
-## 从有依据的设计起点开始
+## 以当前产品的目标体验组织设计
 
-**理解任务 → 实际搜索与浏览 → 专业比较和选择 → 适配整合 → 观察验证。**
+**产品意图 → 研究问题 → 主动探索 → 设计关系 → 复用适配 → 实际体验验证。**
 
-设计理论帮助 Agent 判断一种设计*为什么有效*；成熟 UI 生态提供值得研究、比较和复用的*实际成果*。两类知识共同参与每一轮判断。新的资源发现可以完善最初的设计方向，最终渲染则用来检查方案是否真正适合当前任务。
+**Product UI Experience Alignment**（产品 UI 体验对齐）让设计围绕当前用户、任务、内容和运行条件展开。用户指定产品时，Agent 研究具体页面、流程或品质；没有指定时，主动寻找合适的产品范式、设计系统与实现。专业判断将实际观察转为可执行的选择。
 
-复用以**最高适当层级**为原则：从整页设计、设计系统与功能区块，到组件体系和局部视觉技法，选择最能解决当前问题的成熟基础。重点是继承其中相互协调的信息层级、空间比例、排版节奏、交互和状态设计，再根据产品定位完成适配。自主设计集中用于产品差异化、整体整合与必要的独特需求。
+复用连接**成熟设计决策的继承与工程实现的采用**。一个产品可以提供工作区关系的参照，另一个来源提供实现。Agent 从整页、设计系统、区块、组件或素材中选择**最高适当层级**，将定制集中于已经识别的差异。最初的研究问题先在可运行切片中复验，再用于审阅整体产品。
 
-[资源发现与复用方法](skills/ui-spec/references/component-sourcing.md) · [37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md) · [资源复用指南](docs/RESOURCE-REUSE.md)
+[产品对齐与主动探索](docs/PRODUCT-ALIGNMENT.md) · [资源复用指南](docs/RESOURCE-REUSE.md) · [37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md)
 
-## 通过真实观察理解设计
+## 沿着界面线索主动深入探索
 
-**Visual Reasoning & Visual Inspection**（视觉推理与视觉观察）将设计知识连接到用户实际看到的界面。Agent 查看重要候选的比例、排版、材质与交互，再观察所选资源组合后的整体效果。新的视觉发现可以推动资源选型、构图与实现一起调整。
+**Active Visual Exploration & Design Reconnaissance**（主动视觉探索与设计研究）将研究问题转为行动：播放相关演示、实际滚动、展开面板、切换状态或比较组件参数。新线索可以改变搜索方向。每项观察都明确归属：承载页面、播放器、演示中的应用，或应用内展示的作品。
 
-观察覆盖**单个画面、连续变化与完整使用旅程**。Temporal Visual Inspection（时序视觉观察）通过实际操作、视频或有序帧，跟随触发、过渡与稳定结果。观察窗口由行为决定：一次完整的翻转与返回、一轮动态背景、异步结果到达，或相关页面之间的切换。
+**Visual Reasoning & Visual Inspection**（视觉推理与视觉观察）将实际比例、排版、材质和行为转为产品判断。观察覆盖**单个画面、连续变化与完整使用旅程**。时序视觉观察跟随触发、首次反馈、过渡与稳定结果，并纳入有价值的返回或中断路径；窗口与采样随行为和问题确定。
 
-实际画面支持设计判断，代码、状态与运行数据帮助分析原因并验证行为。重要选择配合可查看的效果与清晰理由交付。[视觉观察指南](docs/VISUAL-INSPECTION.md) · [时序观察样例](examples/temporal-review/README.md)
+已经采集、实际查看和足以支持动态结论，分别说明其事实。代码、状态与运行数据帮助解释原因和验证行为。当重要选择已有足够依据、资源具备适配路径时，研究进入实现与复验。[视觉观察指南](docs/VISUAL-INSPECTION.md) · [时序观察样例](examples/temporal-review/README.md)
 
 ## 文字内容也是完整的 UI 设计对象
 
@@ -108,7 +108,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.7.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.8.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

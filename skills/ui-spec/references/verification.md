@@ -5,6 +5,7 @@
 - [Coverage and assurance](#build-the-coverage-inventory-from-reality)
 - [Viewing conditions and actual interaction](#capture-the-actual-viewing-condition)
 - [Temporal visual inspection](#inspect-a-time-bounded-visual-episode)
+- [Tools for the question](#choose-methods-for-the-evidence-question)
 - [Findings, comparison and status](#findings-and-repair)
 - [Judgment at three scales](#read-the-result-at-three-scales)
 - [Publishing and resource adoption](#verify-the-publishing-medium)
@@ -15,25 +16,25 @@
 
 Reconcile routes, navigation, roles, overlays, runtime states and UX records. Include every implemented in-scope page family; missing legitimate entries are findings. State how dynamic data shapes, lengths and permissions are sampled.
 
-Keep the complete inventory separate from the current verification scope. A round checks its changed scope and affected dependants; final acceptance reconciles the full approved inventory. State that scope when reporting coverage.
+Keep inventory and current scope distinct: a round checks changes and affected dependants; final acceptance reconciles the full approved inventory. Report that scope.
 
 Declare supported viewports and theme/locale combinations from target use. Inspect every route's primary state at every declared viewport and variant. Exercise each additional critical state in every declared variant, extending viewport coverage where layout or risk differs. Preserve user-requested exhaustive coverage and record approved exclusions with their reasons. Include short heights and actual narrow-input conditions where supported; fixed dimensions are project choices.
 
-Include transitions and journeys whose quality exists across time. Name the trigger, meaningful intermediate states, completion or stopping condition, and return/recovery path. A state inventory locates scenes; temporal coverage connects them.
+Include temporal relationships: trigger, meaningful progression, stopping condition and return/recovery. State inventories locate scenes; episodes connect them.
 
 ## Match assurance to impact
 
 Check local changes in their surrounding layout, shared changes across dependants, and journeys through transitions/recovery. Integration needs visual and business-boundary evidence. Choose depth from consequence, variability and decision value.
 
-Explain sampling and remaining conditions. Package/tool tests, logical scenarios, visual inspection, interaction execution, user research and real integration establish different facts. Large comparative model evaluations are separate research.
+Explain sampling and remaining conditions. Package checks, scenarios, viewed pixels, executed interactions, user research and real integration establish different facts; comparative model evaluations are separate research.
 
 ## Capture the actual viewing condition
 
-Set the browser's CSS viewport directly. Record viewport, device pixel ratio, browser, locale/theme, content identity, source revision and relevant zoom. Distinguish browser/text enlargement from a fitted preview canvas or scaled screenshot display. View the actual route or independently sized frame at a useful inspection scale.
+Set the CSS viewport directly. Record viewport, pixel ratio, browser, locale/theme, content, revision and relevant zoom. Distinguish browser/text enlargement from fitted previews or scaled images. Inspect the actual route or independently sized frame at a useful scale.
 
 For steady-state comparisons, wait for the intended state, fonts and images; hold data and animation phase comparable. For loading or transition observations, begin before the event and retain the arrival process. Capture the whole content viewport, including shell, background and surrounding space; browser chrome is optional.
 
-Use **viewport evidence** for visible composition and scroll boundaries, and **content evidence** for a document or real-scroll checkpoints. Internal scrolling needs its own checkpoints. Keep viewport dimensions unchanged while inspecting long content. Observe sticky controls, overlays, short-height states and intentional horizontal scrolling directly. Full-document captures can retain a fixed overlay at an incidental scroll position; inspect the actual viewport or another checkpoint before calling its covered text missing.
+Use **viewport evidence** for composition and scroll boundaries, and **content evidence** for documents or real-scroll checkpoints. Inspect internal scroll regions separately without resizing the viewport. Exercise sticky controls, overlays, short heights and intended horizontal scrolling. Full-document captures can retain fixed overlays at incidental positions; verify covered text in an actual viewport before diagnosing missing content.
 
 Record video dimensions/scaling separately from the viewport. [Playwright video](https://playwright.dev/docs/videos) can scale output and needs context closure to finish writing. Preserve useful resolution, with full-size stills for small type or optical detail.
 
@@ -43,11 +44,13 @@ Open the required images and observe the relevant video or ordered frames with a
 
 Run tasks through real affordances. Observe navigation, keyboard focus, input retention, loading, errors and recovery. Switch related pages under comparable conditions to judge anchors and visual language. Their individual compositions may differ with their responsibilities.
 
-Use geometry, contrast checks, accessibility inspection, console/network results and screenshot differences to locate or substantiate findings. Use visible output to judge perceived balance, material and motion. Technical measurements explain their measured properties; user comprehension requires user observation.
+Use geometry, contrast, accessibility, console/network evidence and image differences to locate causes or verify measured properties. Pixels support perceived balance, material and motion judgments; user comprehension requires user observation.
+
+Attribute each observation to the **carrier page, media player, product UI shown inside media, or work/content displayed by that UI**. Carrier DOM or requests can explain its page/player; the depicted application's implementation needs application evidence. Identify edited promotion, authored demo or actual operation recording, retaining source/version and conditions. Edited media supports displayed relationships; real response, failure and completion need corresponding runtime evidence.
 
 ## Inspect a time-bounded visual episode
 
-Observe change as an episode with visible starting context, trigger, progression and endpoint. Apply it to external candidates, assembled designs and actual runtime, establishing each result at its own boundary.
+Observe **pre-trigger state → action → first feedback → progression → settled result** in candidates, compositions and runtime. Existing demonstrations reveal the author's selected flow; record authorized operations to fill consequential gaps, such as return, interruption or recovery. Use playback, live observation or suitable media analysis to obtain the needed evidence; acquiring a file alone leaves it uninspected.
 
 Choose the window from the behavior:
 
@@ -55,16 +58,17 @@ Choose the window from the behavior:
 |---|---|---|
 | Micro-interaction or local transition | Before input through acknowledgment, motion and a readable settled state | Reverse, interrupt or repeat while the object is changing |
 | Loop, dynamic background or spatial scene | Enough progression to reveal its cycle, changing emphasis and seam or return | Inspect peak reach/brightness, interacting cycles and relevant views; nonperiodic motion needs representative intervals |
+| Scroll-driven change | Relevant entry, hold and exit at known scroll positions and direction | Reverse direction; inspect sticky, local and horizontal regions where relationships change |
 | Asynchronous task | Before intent through waiting, intermediate feedback and the valid outcome or recovery state | Exercise early/late response, failure, cancellation and new intent during pending work |
 | Navigation or connected journey | Linked episodes covering departure, transition, arrival and continuation/return | Preserve object, focus, scroll and shared-shell context across the boundaries |
 
-Observe live progression or natural-speed playback for rhythm and continuity, then pause, slow or examine neighboring frames to locate a problem. Apply the [seven temporal qualities](interaction-and-variants.md#read-motion-through-perceptible-qualities) to the affected object and surrounding content, including its hidden or replacement intervals.
+When supported, view at normal speed, pause/replay or enlarge relevant frames, then return to normal speed to judge rhythm. Apply the [seven temporal qualities](interaction-and-variants.md#read-motion-through-perceptible-qualities) to the object and its surroundings, including hidden/replacement intervals.
 
-Choose recording or a consecutive capture sequence capable of resolving the relevant change. Start capture before the trigger. Retain frame order, actual timestamps or offsets from a named event, capture cadence and meaningful actions/states. Identify the clock or source of those times; when only capture start/end times are known, retain that interval rather than assigning an exact presentation instant. A planned delay between screenshot calls is not the actual sampling interval.
+Start recording or consecutive capture before the trigger. Retain frame order, actual timestamps or named-event offsets, cadence, actions/states and clock source. Keep capture-time brackets when presentation instants are unknown. Planned delays between screenshot calls do not establish actual sampling intervals.
 
-Keep each episode tied to its run and identify resets, reruns or edited joins. Preserve the link between extracted frames and their source recording. Keyframes and contact sheets help compare events; open important frames at usable size and examine the intervening interval when judging continuity. For a long journey, retain the order and state connecting shorter episodes and identify unobserved intervals.
+Tie episodes to runs, marking resets, reruns and edited joins. Link extracted frames to their recording. Use keyframes/contact sheets to compare events, opening important frames at usable size and intervening intervals for continuity. Retain order, connecting state and unobserved gaps across a longer journey.
 
-Select sampling density and duration from motion speed, event uncertainty and the question. Increase coverage where a seam, flash, overlap, jump or late update may fall between samples. Mark gaps and omitted intervals. Sparse samples establish their observed states; endpoints alone leave the transition unknown. If a viewer cannot play video, inspect an ordered frame sequence and state that scope, keeping playback-dependent judgments pending. Do not report watching a clip from its filename, metadata or a single preview frame.
+Let behavior determine duration, change speed determine sampling density, and design impact determine analysis depth. Increase coverage for possible seams, flashes, overlap, jumps or late updates. Mark omitted intervals. Sparse samples support their observed states; endpoints leave the transition unknown. If playback is unavailable, inspect ordered frames and keep playback-dependent claims pending. Distinguish media acquired, content actually viewed or analyzed, and evidence sufficient for the particular conclusion. Metadata or one preview frame establishes neither playback nor continuous visual inspection.
 
 Keep natural-time observation separate from controlled-time probes. Frame stepping, slowed playback and a [simulated clock](https://playwright.dev/docs/clock) help expose state ordering and intermediate geometry; they do not establish unmodified runtime pacing or smoothness. Record how time was controlled. A natural-time sequence still reflects its capture overhead, sampling and environment; measured frame delivery requires the corresponding runtime trace.
 
@@ -74,7 +78,7 @@ For a finding, point to the interval and the visual change: for example, the car
 
 ## Findings and repair
 
-Connect page/state/view or time interval, observed phenomenon, user impact, design intent, evidence, likely cause, repair and retest. Keep observation and causal inference distinguishable. Prioritize task blockers, hidden controls, shared defects and consequential composition/continuity problems before minor detail.
+Connect the viewed state/interval, phenomenon, task/perceptual effect, intent, likely cause, repair and recheck. Keep observation and causal inference distinct. Prioritize blocked tasks, hidden controls, shared defects and consequential composition/continuity problems.
 
 Repair at the responsible layer: source selection, asset, content, token, shell, component, timing, state ownership or data contract. Check affected neighbors and journeys. Preserve approved context and unrelated work. New visual evidence can improve the SPEC as well as its implementation.
 
@@ -102,14 +106,19 @@ Present when the task is inspectable, required checks complete, blockers resolve
 
 The optional checker validates declared coverage and evidence references; `--mode finish` also checks recorded approvals and integration cases. It does not launch browsers, inspect pixels, verify identity or certify quality. Use an adequate existing project matrix instead of duplicating it.
 
-## Primary references
+## Choose methods for the evidence question
 
-- [Playwright screenshots](https://playwright.dev/docs/screenshots), [emulation](https://playwright.dev/docs/emulation) and [visual comparisons](https://playwright.dev/docs/test-snapshots) support reproducible browser conditions.
-- [Chrome animation inspection](https://developer.chrome.com/docs/devtools/css/animations) supports replay, slowing and timeline inspection for supported animation mechanisms; check tool/version coverage.
-- [Chrome runtime performance](https://developer.chrome.com/docs/devtools/performance/reference) relates interactions, frames, rendering and network activity to a recorded interval.
-- [W3C reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) and [WAI interaction patterns](https://www.w3.org/WAI/ARIA/apg/) support accessible layout and behavior checks.
+Begin with visible behavior; use host-supported inspection to resolve a named uncertainty, then interpret the result in the rendered experience. Verify tool/version coverage and permissions before use.
 
-These sources describe capabilities and conditions. Actual use, visual judgment and project outcomes retain their own evidence.
+| Question | Useful capability and its boundary |
+|---|---|
+| Which resource arrived, and what requested it? | [Network](https://developer.chrome.com/docs/devtools/network/) exposes observed requests, types, content and initiators |
+| What happened to playback? | [Media](https://developer.chrome.com/docs/devtools/media-panel) exposes player properties, events, messages and playback/buffering timelines |
+| How does a supported animation progress? | [Animations](https://developer.chrome.com/docs/devtools/css/animations) supports pause, replay and timeline inspection; verify the rendering mechanism's coverage |
+| Which action/state/request preceded the change? | [Playwright Trace Viewer](https://playwright.dev/docs/trace-viewer) correlates captured action snapshots, filmstrip, console and network evidence |
+| Did the runtime deliver frames and respond as intended? | [Performance traces](https://developer.chrome.com/docs/devtools/performance/reference) support measured timing; captured filmstrips retain their sampling limits |
+
+Use scripts/console checks only within authorized page/resource access. Data changes, messages and transactions follow their applicable authorization. Keep private media and traces in authorized destinations. These capabilities provide evidence, not automatic tool access or design conclusions. [Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) and [interaction patterns](https://www.w3.org/WAI/ARIA/apg/) guide corresponding accessibility checks.
 
 ## Read the result at three scales
 
@@ -139,7 +148,7 @@ Retain a lesson's problem, mechanism, conditions, editable realization, evidence
 
 ## Validate resource adoption in context
 
-Separate discovery, item assessment and project acceptance. Documentation supplies leads/contracts; viewed demonstrations support visual claims about a specific item; the assembled product needs its own inspection. Record exact revision, variant, settings, rights and relevant episode. A static gallery image supports its depicted state, while motion or interaction claims require corresponding observation.
+Separate discovery, item assessment and project acceptance. Documents supply leads/contracts; viewed demos support their visible states; the assembled product needs inspection. Retain revision, variant, settings, rights and relevant episode. Motion and interaction claims need corresponding process evidence.
 
 Check adopted items with their dependants for combined attention, runtime cost, cleanup and service boundaries. Keep mocked record/retrieval checks distinct from actual browsing, rendering and integration.
 
@@ -147,7 +156,7 @@ Check adopted items with their dependants for combined attention, runtime cost, 
 
 Check product model, primary action, continuation, meaningful alternatives and selection authority. Existing UI reuse needs approval or target-based fit; a provisional choice retains that status.
 
-Open the decision record beside the preview. Trace convention/source to adopted mechanism, code and observed result; reconcile retained, replaced and authored work. Exercise first use, active work and resume. An authored fixture establishes its own paths; original-product acceptance, independent agent evaluation and user research remain separate.
+Open the decision record beside the preview. Re-answer the research questions with current content, comparable scale/density and corresponding interaction phases. Trace reference to inherited relationship, implementation resource, adaptation and observed result; reconcile retained, replaced and authored work. Exercise first use, active work and resume. A fixture establishes its own paths; product acceptance, agent evaluation and user research retain their separate scope.
 
 ## Inspect inherited design value
 

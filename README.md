@@ -11,7 +11,7 @@
 
 [简体中文](README.zh-CN.md) · [Guide](docs/GUIDE.md) · [Skill source](skills/ui-spec/SKILL.md) · [Releases](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
 
-A portable [Agent Skill](https://agentskills.io/specification) for **product interfaces, READMEs, documentation, diagrams and other screen-based work**. It helps agents study mature design foundations, adapt them to a task and verify the finished result.
+A portable [Agent Skill](https://agentskills.io/specification) for **product interfaces, READMEs, documentation, diagrams and other screen-based work**. It helps agents turn product intent into an experience grounded in mature references, active visual research and verified implementation.
 
 ## Start in your project
 
@@ -37,23 +37,23 @@ route, keep editable masters and delivery variants connected, then inspect the
 actual placement, loading and quiet states. A strong asset can reshape the whole
 composition. [Asset practice](docs/VISUAL-ASSETS.md) · [Browser review fixture](examples/asset-review/README.md)
 
-## Design from an informed starting point
+## Align the product experience
 
-**Understand the task → explore real work → compare and select → adapt → inspect.**
+**Product intent → research questions → actual exploration → design relationships → reuse and adaptation → verified experience.**
 
-Design theory explains *why* a composition works; the existing design ecosystem offers *what* can be studied and reused. The agent examines both while the direction is still open. New references can improve the design hypothesis, and the rendered result tests whether the choice was sound.
+**Product UI Experience Alignment** gives the work its goal: an experience that fits the current users, tasks, content and operating conditions. When a user names a product, the agent identifies which page, flow or quality matters. When no reference is supplied, it finds useful product patterns, design systems and implementations. Professional judgment turns those observations into concrete choices.
 
-Reuse happens at the **highest appropriate level**: a whole-page foundation or design system, a functional block, a component family or a focused visual technique. The goal is to inherit coherent decisions—information hierarchy, proportion, typography, state and interaction—then adapt them to the current task. Original design work concentrates on the product's distinctive needs and the connections between its parts.
+Reuse connects **inherited design decisions and reusable implementation**. A product can guide a workspace relationship while another source supplies its implementation. Start at the **highest appropriate level**—page, design system, block, component or asset—and concentrate custom work on the identified differences. Revisit the original research questions in a running slice, then across the assembled product.
 
-[Resource discovery method](skills/ui-spec/references/component-sourcing.md) · [37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md) · [Resource reuse guide](docs/RESOURCE-REUSE.md)
+[Product alignment and exploration](docs/PRODUCT-ALIGNMENT.md) · [Resource reuse guide](docs/RESOURCE-REUSE.md) · [37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md)
 
-## See the design in use
+## Explore what the interface reveals
 
-**Visual Reasoning & Visual Inspection** connects design knowledge to what people actually see. The agent views meaningful resource candidates, studies their proportions, type, material and behavior, then inspects how the selected parts work together. New observations can improve the resource choice, the composition or the implementation.
+**Active Visual Exploration & Design Reconnaissance** turns research questions into actions: play a relevant demo, scroll through a layout, open a panel, switch states or compare component settings. New clues can change the search. Attribute each observation to its subject: the hosting page, media player, demonstrated application or content inside that application.
 
-Review spans **the frame, the changing interaction and the connected journey**. Temporal Visual Inspection follows a meaningful episode through its trigger, movement and settled result using live interaction, video or ordered frames. Its window follows the behavior: a complete flip and return, a background loop, a delayed result or navigation between related views.
+**Visual Reasoning & Visual Inspection** connects the observed proportions, type, materials and behavior to product judgment. Review spans **the frame, the changing interaction and the connected journey**. Temporal Visual Inspection follows the trigger, first feedback, transition and settled outcome, including useful return or interruption paths. Windows and sampling follow the behavior and the question.
 
-Visible evidence supports the design judgment; code, state and runtime measurements help explain the cause and verify the behavior. Important decisions come with viewable examples and clear reasons. [Visual observation guide](docs/VISUAL-INSPECTION.md) · [Temporal review example](examples/temporal-review/README.md)
+Recorded evidence, actual viewing and support for a dynamic conclusion are separate facts. Code, state and runtime measurements help explain causes and verify behavior. Research converges when consequential decisions have adequate evidence and a workable adaptation path. [Visual observation guide](docs/VISUAL-INSPECTION.md) · [Temporal review example](examples/temporal-review/README.md)
 
 ## Words are part of the interface
 
@@ -110,7 +110,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.7.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.8.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).
