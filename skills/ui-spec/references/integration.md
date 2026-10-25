@@ -94,3 +94,9 @@ Carry the accepted page/block relationships and behavior into the current produc
 Resolve each significant asset to its authorized master, reproducible export and actual delivery variants. Map theme, crop, density, locale or runtime state to the correct file. Retain source/notice requirements and publish only material permitted for the destination. Keep protected masters within their authorized locations.
 
 Verify actual URLs, MIME, loading/cache behavior, decoding and dependency support in the product host. Recheck real text and state transitions after replacing fixtures; compare the exported spatial/material result in the target runtime. Validate delayed/failed loading, quiet/static alternatives and cumulative rendering cost. Deliver the editable source, transformation settings, usage locations and observed limits appropriate to the scope.
+
+## Connect content to real product truth
+
+Before replacing fixture values, map important strings to their actual source: brand vocabulary, product copy, service responses, localization catalog, business rule, price, eligibility, permission or persisted content. The trusted owner supplies protected facts and action outcomes. The application selects the right text for loading, success, failure, recovery and conditional display; design components render it in the accepted hierarchy.
+
+Carry consistent user-level labels through routes, notifications and documentation. Keep translation keys and dynamic substitutions meaningful, encode values safely, preserve formatting and verify supported locale variants. Test that interface promises match actual results: saved, submitted, paid, published and delivered are distinct states. Material new contractual or product claims receive the appropriate approval. Preserve the reviewed text composition under genuine content lengths, themes and accessibility requirements.

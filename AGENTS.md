@@ -56,3 +56,10 @@ coupled to layout, type and interaction. Keep rights, masters, derivatives and
 actual placements traceable. The focused source map complements the existing
 37-entry catalog. Browser asset checks exercise their stated fixture; specialist
 modeling, font production and legal review retain their own evidence boundaries.
+
+Version 1.6 connects content design, UX writing and typography through a common
+content reference. Maintain user-level terminology, voice/tone, source authority,
+state language and language-specific layout in their responsible references.
+Run the authored content browser scenario along with the existing test and
+publication gates. Keep source-based editorial review distinct from mechanical
+and real-user comprehension evidence.

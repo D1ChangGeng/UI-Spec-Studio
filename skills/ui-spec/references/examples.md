@@ -97,3 +97,9 @@ Extract the relevant contour and spacing qualities into an independent wordmark,
 then compare it at the header and small lockup sizes. Use appropriate ordinary
 text for navigation and the accessible name. Check font licenses and actual glyph
 coverage for the interface separately from the exported identity graphic.
+
+## A research note with truthful state wording
+
+The task is to name a note and save it locally. A short title orients the editor; a persistent field label identifies the input; supporting text explains the local saving boundary. “Save note” names the actual action. A missing title receives field-level guidance; a simulated storage failure identifies its boundary and preserves the draft; success appears only after the local write succeeds. Chinese and English variants keep the same outcome but allow different sentence length and line breaking. Test the page's typography and interaction with real strings rather than placeholder rectangles.
+
+For a live product, the same patterns map to its real service and access rules. This example carries content decisions without prescribing the language personality of every product.

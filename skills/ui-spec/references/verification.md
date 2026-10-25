@@ -142,3 +142,9 @@ Follow the asset record from source and permission through transformation, deriv
 Record actual CSS size, density, theme, viewport, content and load conditions. Exercise meaningful blocked-resource, reduced-motion, offscreen and runtime-unavailable states. Separate isolated craft, combined visual quality and measured engineering cost. Whole-page captures, close details and live playback answer different questions. A PNG, file signature or passing metadata check does not establish editable 3D, font shaping or animation behavior.
 
 Use a bounded real browser fixture to validate integration paths when full specialist tooling is outside the current environment. State which production routes were researched, executed or remain pending. Do not generalize that fixture into every asset family or host.
+
+## Verify meaning and actual words in context
+
+Inspect the full visible content scope: page and component strings, headings and navigation, labels, hints, instructions, status, validation, error, empty and confirmation states. Use task execution to check what the user understands and what the words promise. Verify business facts against their owner; the UI reflects actual state, including delayed, denied or failed results. Localize and inspect supported languages with realistic strings, typography, viewports and themes.
+
+Check accessible names, explicit labels, error associations, announcements, truncation, overlap, line breaks and focus. Mechanical checks establish the properties measured; rendered review establishes rhythm and balance; actual user comprehension requires its own evidence. Compare related pages for terminology, placement and cross-step information responsibility. Explain findings at the content, structure, component, localization or authority layer, then recheck the affected journey.

@@ -14,11 +14,11 @@ assets = load('asset_checks', 'tools/validate_assets.py')
 
 class AssetTests(unittest.TestCase):
     def test_seventh_reference_is_complete_and_direct(self):
-        self.assertEqual(len(validator.COMMON), 7)
+        self.assertEqual(len(validator.COMMON), 8)
         self.assertIn('visual-assets', validator.COMMON)
         entry = (ROOT / 'skills/ui-spec/SKILL.md').read_text(encoding='utf-8')
         self.assertIn('references/visual-assets.md', entry)
-        self.assertIn('read all seven common references in full', entry)
+        self.assertIn('read all eight common references in full', entry)
 
     def test_asset_method_covers_distinct_routes_and_roles(self):
         text = (ROOT / 'skills/ui-spec/references/visual-assets.md').read_text(encoding='utf-8')

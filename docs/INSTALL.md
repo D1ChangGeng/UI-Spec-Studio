@@ -62,7 +62,7 @@ Use the ui-spec skill. Read its entry point and tell me which operation
 matches this repository's current state, then carry out the requested work.
 ```
 
-The agent should read SKILL.md and all seven common references for substantive work,
+The agent should read SKILL.md and all eight common references for substantive work,
 then use the operation appropriate to the project's current state. Integration is
 required for real behavior work. Reading and skill activation remain host-mediated.
 
@@ -106,7 +106,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.5.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.6.0 --skill ui-spec
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
@@ -127,3 +127,7 @@ python <skill-dir>/scripts/find_resources.py --id fontsource --json
 The helper performs local filtering only. It returns dated source leads with
 adoption cautions. Current external documents, demos, installation and project
 acceptance use the host's available tools and the task's permissions.
+
+## Content and UX writing
+
+The installed Skill includes the common [content design method](../skills/ui-spec/references/content-design.md), a focused [source map](../skills/ui-spec/references/content-sources.md) and an optional [decision template](../skills/ui-spec/assets/templates/content-decisions.md). User-facing copy, localization and typography are part of ordinary design rounds. A runnable example is included in the complete repository source under `examples/content-review/`.

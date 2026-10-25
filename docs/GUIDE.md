@@ -10,7 +10,7 @@ Keep its framework and working API. Inspect its routes, user tasks and current
 screens. Establish a coherent UI direction and implement the first useful slice.
 ```
 
-The agent reads all seven common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Relevant mature product flows and implementation sources help establish a primary model. When material alternatives remain open, optional shape presents a reasoned recommendation and a focused choice or representative preview. An implementation request with clear direction continues into a meaningful slice. The following collection/detail examples assume that this direction has been selected for the actual task.
+The agent reads all eight common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Relevant mature product flows and implementation sources help establish a primary model. When material alternatives remain open, optional shape presents a reasoned recommendation and a focused choice or representative preview. An implementation request with clear direction continues into a meaningful slice. The following collection/detail examples assume that this direction has been selected for the actual task.
 
 Existing instructions, design documents and tests remain useful. The optional templates are a starting point when equivalent records are absent.
 
@@ -159,3 +159,7 @@ previews; normal adaptation follows the accepted direction.
 spatial work and dynamic assets. Masters, exports and placements remain linked.
 The [review fixture](../examples/asset-review/README.md) demonstrates a scoped,
 actual-browser check of image variants, small icons, motion and unavailable media.
+
+## Design content with the screen
+
+When adding or revising a page, establish the audience's next question and the fact owner before writing visible strings. Study comparable product wording where it helps, then decide headings, labels, help, status, tone and actual placement with the layout. Use short, typical and long strings in each supported language. Run the task, including failure and recovery, to verify that copy matches actual behavior. The [content reference](../skills/ui-spec/references/content-design.md) provides the shared judgment method; a [working example](../examples/content-review/README.md) covers localized local-save states.

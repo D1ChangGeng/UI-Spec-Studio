@@ -138,3 +138,7 @@ Obtain assets from their rights-bearing source under the applicable permission. 
 ## Include asset production in the choice
 
 Pair resource discovery with the [asset engineering method](visual-assets.md). Inspect actual files and their rights-bearing sources; compare a mature asset, a meaningful adaptation and a production route by the target quality and total cost. Keep the construction route distinct from its delivery mode: an authored 3D scene can yield an image, video or real-time object. Link the chosen material, master, derivatives and page/state in the design record. Use the [asset sources](asset-sources.md) as an open specialist map.
+
+## Research mature language patterns with interface resources
+
+Study the exact step of a mature product's task: what its headline communicates, how a control is named, how important conditions are distributed, and what status follows an action. Transfer useful information and writing patterns while keeping the current product's facts, identity and commitments authoritative. A template's attractive copy is a candidate for analysis, not a factual source for the consuming product. The [content method](content-design.md) guides writing and verification alongside the visual reference study.

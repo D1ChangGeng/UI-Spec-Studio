@@ -54,3 +54,7 @@ to its purpose, source/permission, editable master, production route, export
 variants, delivery/placement and actual review. Use the asset record or existing
 project equivalent. Keep visual approval, usable file delivery and runtime
 verification scoped to their evidence.
+
+## Content and language decisions
+
+For consequential content, link the user question, surface/state, factual authority, localized wording, typography role and observed result. Reference the existing product content record or optional [content template](content-decisions.md). Keep routine strings in their component/content source.

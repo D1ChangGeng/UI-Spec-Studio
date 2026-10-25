@@ -170,3 +170,9 @@ Use theory to select, explain, combine and verify those relationships throughout
 Judge the asset's silhouette, contours, material, color, typography or motion as a designed object, then judge its relation to the page. Coordinate light, perspective, focal point, negative space and visual weight with the selected composition. The figure can determine the layout as readily as the layout constrains the figure.
 
 Use actual viewing conditions: a mark's optical center and recognition at tab size, a wordmark's spacing and readable semantic name, a crop's subject at narrow width, or a moving object's peak brightness behind text. Preserve useful artistic character while meeting the asset's information and interaction role. Apply [asset engineering](visual-assets.md) to retain that quality through transformation and delivery.
+
+## Content and typography are one composition
+
+Define the content's job before fixing its shape. Title, navigation, field labels, explanations and state messages carry different semantic and visual weight. Use a stable vocabulary, natural line breaks, balanced text measures and actual locale-specific strings to organize the reading path. Give critical conditions enough emphasis at the moment of choice. When copy length changes layout, adjust wording and composition together while preserving factual meaning.
+
+Voice sets recognizable character; tone responds to the task and consequence. A playful introduction and precise error message can belong to the same product. Choose punctuation and sentence structure by meaning, language and element role. Review visible text and the entire frame: readable glyphs, optical balance, whitespace, contrast and real text density form a connected result. Use the [content design method](content-design.md) to reason about these decisions.

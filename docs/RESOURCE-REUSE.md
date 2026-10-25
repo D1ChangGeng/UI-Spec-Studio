@@ -125,3 +125,7 @@ resolve, then select smaller pieces for the remaining needs. Reuse granularity i
 separate from delivery form: a whole-page design can be ported, and one primitive
 can be installed. Match the level to the task; preserve an accepted foundation for
 local changes. Record the inherited relationships and verify them in the result.
+
+## Learn content patterns from mature products
+
+Examine headings, navigation language, input labels, decision-time information and state feedback in a comparable real task. Adopt useful content relationships and conventions at their appropriate scope. Current product facts, legal wording, permissions and brand Voice retain their own authority. Link substantial selections to actual strings, components and observed states. The [content method](../skills/ui-spec/references/content-design.md) supports these decisions.

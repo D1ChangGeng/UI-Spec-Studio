@@ -90,3 +90,7 @@ Study the foundation's complete task loop, not only its resting appearance. Pres
 Treat loading, ready, unavailable, paused, reduced-motion and renderer-limited conditions as designed states. Preserve intrinsic space and useful content while material becomes available. Give informative imagery an appropriate equivalent, functional icons an action name, and supporting decoration a quiet accessibility role.
 
 Asset state-machine inputs and events follow real application intent and outcomes. Manage visibility, interruption, cleanup, posters and fallbacks across media and canvas boundaries. Verify actual decoder/renderer and theme behavior. A font or image arriving late should retain usable reading and controls; a failed 3D or animation load should leave the primary task accessible.
+
+## Content communicates state and intent
+
+Pair every consequential action with words that describe what the control really does and what the user should expect. Keep pending, confirmed, denied and failed outcomes distinguishable. Input errors identify the affected field and available correction; focus and announcements expose the message to people using assistive technologies. Keep drafts and user state during retry, cancellation and locale switching. Localize meaning, accessible labels and state text together with the visible interface; recheck layout after real translations change length and line breaking. The [content reference](content-design.md) owns detailed writing decisions, while this file owns their interaction semantics.

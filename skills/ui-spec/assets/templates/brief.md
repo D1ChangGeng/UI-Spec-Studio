@@ -54,3 +54,7 @@ assumptions. Link the design decision/resource map and its direction authority.
 
 Preserved business/engineering assets, accepted design constraints, and current
 visual candidates assessed against the new quality target.
+
+## Content and language scope
+
+User-facing content owner, core terminology, supported languages, product Voice and situational Tone, key consequential conditions, and important state copy. Link established content/style guidance or the relevant content decision record.

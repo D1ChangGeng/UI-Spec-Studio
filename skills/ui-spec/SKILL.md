@@ -1,16 +1,16 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, product interaction models, design options, traceable resource selection, visual assets, brand/icon/type craft, 2D/3D/media production and delivery, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, product interaction models, design options, traceable resource selection, visual assets, content design, UX writing, typographic hierarchy, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.5.0"
+  version: "1.6.0"
 ---
 
 # UI Spec Studio
 
-Build from suitable mature design work, refine it through small, reviewable increments, then carry the accepted experience into the real product. Own the analysis, design decisions, component research, implementation and verification. The user can start the work, evaluate the result and approve the next round; specific ideas and references become useful additional direction.
+Build from accurate content and suitable mature design work, refine it through small, reviewable increments, then carry the accepted experience into the real product. Own the analysis, design decisions, component research, implementation and verification. The user can start the work, evaluate the result and approve the next round; specific ideas and references become useful additional direction.
 
 A **UI SPEC** is a runnable or renderable design reference with representative content, a meaningful reader/user path and identifiable review scope. Product interfaces, documentation, READMEs, diagrams, presentations and other screen-based artifacts share this practice. Choose the actual medium's capabilities and conventions: a document can deliver a complete reading task without an application shell. Use the project's existing framework, format and preview mechanism. One working implementation can serve both fixture-driven review and real data adapters.
 
@@ -28,9 +28,15 @@ Treat assets as first-class material alongside structure and interaction: identi
 
 The reuse hierarchy describes scope rather than importance. Preserve mature design relationships while giving distinctive assets the craft their role warrants. Keep editable masters, delivery variants, rights, runtime behavior and actual placements connected. Show significant identity directions in context for user judgment; carry accepted choices through real integration and family-specific checks. Tool access and completed production are established from actual host capabilities and outputs.
 
+## Design the content people understand
+
+Treat visible language as product behavior and visual material. Determine what users need to know, decide or do; assign content to the right surface, control and state; write natural words in a product voice that responds to each situation. Study mature product-language patterns while maintaining real business facts and user vocabulary. Compose actual strings with type, spacing, components and media early enough to influence the layout.
+
+Carry content through initial, pending, success, failure and recovery states, localization and actual service boundaries. Use real copy where authorized and clearly identified fixtures where necessary. Review the reader's task and the rendered typography together: accurate wording can reshape navigation, layout or the interaction path. Significant content decisions remain traceable to their source and approval.
+
 ## Establish the professional context
 
-Before substantive UI SPEC planning, implementation or review, **read all seven common references in full**:
+Before substantive UI SPEC planning, implementation or review, **read all eight common references in full**:
 
 1. [Workflow](references/workflow.md) — organize the work and continue the current round.
 2. [Analysis](references/analysis.md) — understand the product, choose scope and reason about UX.
@@ -39,12 +45,13 @@ Before substantive UI SPEC planning, implementation or review, **read all seven 
 5. [Interaction and variants](references/interaction-and-variants.md) — preserve usable behavior across states.
 6. [Verification](references/verification.md) — inspect the result and support completion claims.
 7. [Visual assets and asset engineering](references/visual-assets.md) — research, prepare, produce, integrate and verify the visual material.
+8. [Content design and UX writing](references/content-design.md) — decide content roles, voice, timing and typography; verify user comprehension.
 
 These short references form a shared professional foundation. Reading them together supplies related knowledge before an unforeseen decision arises. Apply the parts relevant to the task; execution depth follows impact and uncertainty.
 
 Use the host's file-reading capability to obtain the actual text. Continue truncated reads until the required content is complete. Content already fully available and current in this execution context can be reused. When needed content is unavailable or its version is uncertain, read it again. A path, hash, checklist entry or earlier-session claim identifies a source; the source text supplies its guidance.
 
-**Specialized reading:** [Integration](references/integration.md) is required for `finish` and work involving real data, authority, persistence or consequential business behavior. [Examples](references/examples.md) illustrate application; [technique patterns](references/patterns.md) connect a communication problem to editable implementation and inspection; [sources](references/sources.md) provide research provenance. Read actual project contracts and selected component documentation as the work requires. The [resource catalog](references/resource-catalog.md) maps design needs to documented starting points; its [data](assets/resource-catalog.json) and optional [local lookup](scripts/find_resources.py) support focused retrieval. Read relevant entries and their actual sources as the task requires. The [asset source map](references/asset-sources.md) provides production-specific leads; the [asset record](assets/templates/asset-record.md) supports master-to-delivery traceability. Templates and scripts are optional resources.
+**Specialized reading:** [Integration](references/integration.md) is required for `finish` and work involving real data, authority, persistence or consequential business behavior. [Examples](references/examples.md) illustrate application; [technique patterns](references/patterns.md) connect a communication problem to editable implementation and inspection; [sources](references/sources.md) provide research provenance. Read actual project contracts and selected component documentation as the work requires. The [resource catalog](references/resource-catalog.md) maps design needs to documented starting points; its [data](assets/resource-catalog.json) and optional [local lookup](scripts/find_resources.py) support focused retrieval. Read relevant entries and their actual sources as the task requires. The [asset source map](references/asset-sources.md) provides production-specific leads; the [asset record](assets/templates/asset-record.md) supports master-to-delivery traceability. [Content sources](references/content-sources.md) offer primary guidance; the optional [content decision record](assets/templates/content-decisions.md) links user understanding to real strings, states and owners. Templates and scripts are optional resources.
 
 The skill defines a reading and working contract. The host controls activation, tool access, context retention, compaction and execution. Describe missing capabilities precisely and continue work supported by available evidence. Keep this responsibility boundary explicit in reports and helper-tool claims.
 
@@ -80,7 +87,7 @@ Choose the next increment from user value, task continuity, shared impact, depen
 
 A round can develop a page, a connected journey, a component family or a shared-system repair. Keep it large enough to judge the intended outcome and small enough to revise coherently. Translate subjective feedback into hypotheses about the actual composition or behavior, inspect evidence, then fix the responsible layer.
 
-Keep the common quality floor active: clear hierarchy, readable content, accessible interaction, meaningful task paths, stable shared structure, appropriate scale/occupancy, purposeful motion and truthful state. Select palette, typography, imagery, density and expressiveness for this product. Review the rendered result at its actual viewing conditions.
+Keep the common quality floor active: clear hierarchy, accurate user-facing language, readable content, accessible interaction, meaningful task paths, stable shared structure, appropriate scale/occupancy, purposeful motion and truthful state. Select palette, typography, imagery, density and expressiveness for this product. Review the rendered result at its actual viewing conditions.
 
 ## Establish the product people will recognize
 
@@ -90,7 +97,7 @@ For a new design or substantive redesign, research relevant mature product conve
 
 ## Turn meaning into form
 
-Connect **product intent → search and actual browsing → professional comparison → foundation and reuse decisions → adaptation and integration → observed outcome**. Keep needed understanding, expression concept and visual/interaction grammar active as questions throughout this loop. This is a reasoning relationship, not a mandatory sequence of reports. Identify what the person needs to recognize, compare, believe on evidence or do; choose its representation before choosing a component.
+Connect **product intent → search and actual browsing → professional comparison → foundation and reuse decisions → adaptation and integration → observed outcome**. Keep needed understanding, expression concept and visual/interaction grammar active as questions throughout this loop. This is a reasoning relationship, not a mandatory sequence of reports. identify what the person needs to recognize, compare, believe on evidence or do; decide what each visible string communicates, where and when; choose its representation before choosing a component.
 
 Develop a direction specific enough to influence structure, typography, imagery and behavior. Use references to learn mechanisms and set a craft target. Read them at whole-surface, relationship and detail levels; distinguish visible evidence from interpretation. Make consequential choices controllable in tokens, content models, component variants or explicit timing, then inspect their effect. The common references supply these methods even when the user only asks to continue.
 
@@ -110,6 +117,6 @@ Track maturity by scope: implemented, inspected, approved, connected and verifie
 
 Run the intended task through visible controls; inspect actual viewport captures and important transitions. Check related surfaces when shared components change. Repair and recheck observed issues. Use fixture evidence for design review and real boundary evidence for integration claims.
 
-Before handing over, state the working result, preview or entry path, inspected scope, consequential design choices, executed checks and the next useful action. Show the design decision record and the result together. Ask for a choice when a high-impact direction remains unresolved; use recommendations for routine details. Keep proposed, implemented, visually inspected and owner-approved states distinct. Report blockers and unverified dimensions accurately. Keep sensitive project data within its authorized destination.
+Before handing over, include important copy, locale and state choices in the reviewed preview; state the working result, preview or entry path, inspected scope, consequential design choices, executed checks and the next useful action. Show the design decision record and the result together. Ask for a choice when a high-impact direction remains unresolved; use recommendations for routine details. Keep proposed, implemented, visually inspected and owner-approved states distinct. Report blockers and unverified dimensions accurately. Keep sensitive project data within its authorized destination.
 
 The optional [coverage checker](scripts/check_manifest.py) checks declared records and local evidence references. Browser inspection, user approval and real business outcomes remain distinct evidence sources. Its successful exit is a structural result, not a design-quality certificate.

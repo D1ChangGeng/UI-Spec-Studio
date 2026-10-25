@@ -20,3 +20,7 @@ Finding | evidence | affected rule/task | responsible layer | repair | retest
 ## Result
 
 Executed checks, current status, recorded user approval, evidence and remaining conditions.
+
+## Content review
+
+Identify the current task question, intended message, source fact, actual wording/state, typography/layout result, locale coverage and observed behavior. Scope editorial judgment, user comprehension and business approval separately.

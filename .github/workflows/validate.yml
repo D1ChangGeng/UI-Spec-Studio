@@ -103,6 +103,8 @@ jobs:
         run: python tools/validate_scenario.py --output-dir scenario-evidence
       - name: Exercise visual asset delivery
         run: python tools/validate_assets.py --output-dir scenario-evidence/assets
+      - name: Exercise bilingual content and UX writing
+        run: python tools/validate_content.py --output-dir scenario-evidence/content
       - name: Store scenario evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

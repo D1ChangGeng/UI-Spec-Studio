@@ -86,3 +86,7 @@ pending acceptance. It does not replace the consuming project's product decision
 Run it from source and review the browser evidence. The same method applies to a
 service dashboard, editor, public decision flow or screen-based document. See
 [the version review](REVIEW-v1.4.0.md) for the change scope and assurance boundaries.
+
+## Content carries design decisions
+
+For consequential user-visible language, the [content decision record](../skills/ui-spec/assets/templates/content-decisions.md) connects user question, role, placement, actual copy, locale variants, source authority and observed behavior. Use existing project records where possible. A revised label or state message can change the layout or journey; render the result together with the selected wording.

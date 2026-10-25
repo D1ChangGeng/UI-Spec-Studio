@@ -13,7 +13,7 @@ Research baseline: 2026-10-23. Distribution format and tooling baseline rechecke
 | Emil Kowalski, Pick UI Library | Task-first source selection and respecting installed dependencies. | Open, framework-aware source selection across primitives, effects, icons and design references. |
 | Paul Bakaus, Impeccable | Product context, different surface purposes, specialized review/refinement, rendered verification. | A small lifecycle for connected multi-page specifications and eventual real integration. |
 | Leonxlnx, Taste Skill | Explicit art direction, subject-specific content, separate page/app concerns, browser look-and-fix. | Project-controlled visual identity with shared anchors, task continuity and acceptance evidence. |
-| Agent Skills specification | Portable directory/frontmatter and progressive disclosure. | One installable skill with seven common required references, specialized supporting material and optional standard-library helpers. |
+| Agent Skills specification | Portable directory/frontmatter and progressive disclosure. | One installable skill with eight common required references, specialized supporting material and optional standard-library helpers. |
 | Vercel Skills CLI | Repository discovery and project/global agent installation. | Standard `npx skills add` distribution; no project-specific installer runtime. |
 | W3C WAI / WCAG | Accessible interaction patterns and reflow. | Explicit accessibility obligations alongside optical review. |
 | Playwright documentation | Real viewport capture and visual comparison mechanics. | Separate viewport, document and internal-scroll evidence with manual visual inspection. |
@@ -85,3 +85,7 @@ actual production and runtime claims remain tied to project evidence. The new
 seven-reference common foundation treats assets and structure as coupled design
 material. The asset record and bounded browser fixture are original project work;
 the fixture's sourced Lucide icon retains its applicable notices separately.
+
+## Content design sources
+
+The [content source map](content-sources.md) records primary GOV.UK, Microsoft, IBM Carbon and W3C references reviewed for content, tone, UI writing and accessible labels/errors. Each contributes task-specific guidance while the actual product remains authoritative for its business facts, voice, languages and approvals.

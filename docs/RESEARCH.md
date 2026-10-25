@@ -120,3 +120,7 @@ shape and active reading layout. The sample records design transfer and its real
 fixture checks separately from upstream runtime behavior. Official shadcn blocks
 provide a contrasting page/block discovery route. Candidate maturity is assessed
 through the relevant evidence rather than inferred from popularity.
+
+## Content design primary-source research (1.6)
+
+The content-design method draws from documented GOV.UK content design and user needs, Microsoft's interface writing guidance, IBM Carbon's content foundations and W3C WCAG 2.2 guidance on visible input labels and error identification. These references inform content roles, scanning, tone, terminology, state writing and accessible feedback. The [dated source map](../skills/ui-spec/references/content-sources.md) lists exact links and scope. UI Spec Studio's workflow and scenario are its own synthesis, with current project facts and approvals providing authority.

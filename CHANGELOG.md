@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.0 — 2026-10-25
+
+- Integrate Content Design, UX Writing and Typography as the eighth common professional reference.
+- Establish content roles, placement, source authority, product Voice/Tone, natural writing and localized visual composition.
+- Carry action, validation, pending, success and failure wording across real user journeys and integration.
+- Add primary writing references, an optional decision record, and a runnable bilingual content-state fixture.
+- Extend regression and publication checks to verify content behavior and rendered language variants.
+
 ## 1.5.0 — 2026-10-25
 
 - Add Visual Assets & Asset Engineering as the seventh common professional reference.

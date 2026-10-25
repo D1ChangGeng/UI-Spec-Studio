@@ -47,6 +47,12 @@ Reuse happens at the **highest appropriate level**: a whole-page foundation or d
 
 [Resource discovery method](skills/ui-spec/references/component-sourcing.md) · [37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md) · [Resource reuse guide](docs/RESOURCE-REUSE.md)
 
+## Words are part of the interface
+
+The agent designs **what people need to understand, where the message belongs, how it sounds and how it reads on screen**. Content design and UX writing connect accurate product facts, user vocabulary, action labels, dynamic feedback, localization and typography with the existing page and visual system. A line of copy can change layout or a task path; the rendered result can improve the wording.
+
+[Content design guide](docs/CONTENT-DESIGN.md) · [Working bilingual example](examples/content-review/README.md)
+
 ## One method, different surfaces
 
 The principles transfer; the **medium determines the realization and verification**.
@@ -81,7 +87,7 @@ A separate [research-product example](examples/product-intent/README.md) shows p
 
 Each round gives the agent a useful scope to implement and inspect. An accepted design can continue into working product behavior, or into a document's actual publishing boundary. The agent carries forward decisions, evaluates the affected views and states, and keeps source evidence distinct from owner approval.
 
-Before substantive work, the agent reads **seven common references in full**: [workflow](skills/ui-spec/references/workflow.md), [analysis](skills/ui-spec/references/analysis.md), [visual principles](skills/ui-spec/references/principles.md), [resource discovery](skills/ui-spec/references/component-sourcing.md), [interaction](skills/ui-spec/references/interaction-and-variants.md), [verification](skills/ui-spec/references/verification.md) and [visual assets](skills/ui-spec/references/visual-assets.md). [Integration](skills/ui-spec/references/integration.md) applies when connecting real behavior. The host remains responsible for tool access, execution and context management.
+Before substantive work, the agent reads **eight common references in full**: [workflow](skills/ui-spec/references/workflow.md), [analysis](skills/ui-spec/references/analysis.md), [visual principles](skills/ui-spec/references/principles.md), [resource discovery](skills/ui-spec/references/component-sourcing.md), [interaction](skills/ui-spec/references/interaction-and-variants.md), [verification](skills/ui-spec/references/verification.md) [visual assets](skills/ui-spec/references/visual-assets.md), and [content & UX writing](skills/ui-spec/references/content-design.md). [Integration](skills/ui-spec/references/integration.md) applies when connecting real behavior. The host remains responsible for tool access, execution and context management.
 
 ## Install, inspect, maintain
 
@@ -90,7 +96,7 @@ Before substantive work, the agent reads **seven common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.5.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.6.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

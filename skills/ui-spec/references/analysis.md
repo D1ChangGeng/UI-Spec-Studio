@@ -96,6 +96,10 @@ For development builds, evolve current code and data models with reproducible in
 
 Record reusable decisions where the project already keeps them. Keep source links and the smallest rationale needed for another round to make the right choice. This enables continuity while leaving detailed implementation in code and history in Git.
 
+## Make content decisions with the product model
+
+Establish who owns the facts and what users need to comprehend at each step. Analyze text as a design object: names, labels, guidance, status, error and consequential conditions can determine whether a page or component is useful. Research mature product copy and vocabulary alongside layout and resource candidates. Preserve the difference between a useful wording convention and another product's actual claims. Align significant navigation or commitment language with the product owner. Apply the [common content method](content-design.md) when turning these decisions into actual copy and typography.
+
 ## Design the understanding before the arrangement
 
 For the current task, identify what the person knows on arrival, what they must understand next, what evidence supports that understanding and which action becomes reasonable afterward. Use this to order and group content. A reachable purchase button establishes access; clear differences, obligations and credible evidence establish an informed choice.

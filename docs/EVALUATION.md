@@ -146,3 +146,7 @@ The asset runner's optional `--in-memory` mode supports hosts that cannot naviga
 a local server. It embeds actual local source bytes and exercises an invalid-image
 decoder result; it explicitly leaves HTTP delivery unverified. The CI command uses
 the default HTTP path and is a required release check.
+
+## Content design assurance (1.6)
+
+The content example validates the wording/state mapping, actual labels and associations, two locales, two themes, representative viewports, local write success, validation failure, simulated storage failure and recovery. Automated checks establish declared DOM and action observations; screenshots support visual inspection; editorial quality and real-user comprehension require contextual human evidence. The content source map documents adopted methods rather than claiming that referenced design systems certify this skill.
