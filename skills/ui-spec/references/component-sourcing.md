@@ -1,16 +1,20 @@
 # Resource discovery, assessment and high-quality reuse
 
+## Contents
+
+[Foundations](#find-the-strongest-useful-starting-point) · [Selection records](#make-selection-visible-by-surface-and-design-dimension) · [Discovery channels](#discover-efficiently-and-learn-how-the-source-works) · [Adoption](#evaluate-adoption-value) · [Integration](#adapt-into-one-product) · [Assets and content](#material-medium-and-source-safety)
+
 ## Find the strongest useful starting point
 
-Treat the UI ecosystem as a primary source of design and engineering foundations. For a substantive visual or interaction requirement, actively inspect relevant external implementations and platform-native capabilities, and evaluate project components against the same design target before committing to the major treatment or custom work. A strong foundation carries resolved relationships in layout, hierarchy, type, interaction and implementation. Its value is the useful design decisions inherited, as well as the work saved.
+Treat the UI ecosystem as a primary source of design and engineering foundations. Before committing to a major treatment or custom work, inspect relevant external implementations and platform-native capabilities; evaluate project components against the same target. A strong foundation carries resolved layout, hierarchy, type and interaction relationships. Its value includes inherited design decisions and work saved.
 
-Use two complementary kinds of exploration. **Requirement-led discovery** finds a reliable implementation for a known need. **Opportunity-led exploration** reveals a better representation, composition or interaction while important choices remain open. Anchor both in the user task and the accepted product direction. A precise request deserves fidelity; an open brief invites a grounded recommendation.
+Use **Requirement-led discovery** for known needs and **Opportunity-led exploration** for better representations, compositions or interactions while important choices remain open. Anchor both in the user task and accepted direction. A precise request deserves fidelity; an open brief invites a grounded recommendation.
 
-Carry forward an approved resource whose conditions still fit. Revisit the choice when content, behavior, runtime, quality or maintenance requirements change. A focused native adjustment can proceed directly. Routine research and selection belong to the agent; the user can contribute ideas without having to supply platform names or retrieval instructions.
+Carry forward approved resources while their conditions fit; reassess when content, behavior, runtime, quality or maintenance needs change. Focused native adjustments can proceed directly. The agent handles routine research and selection; users need not supply platform names or retrieval instructions.
 
 ## Choose the highest appropriate reuse level
 
-Match the scope of the design problem to the largest coherent set of mature decisions worth inheriting. For a new page, inspect page/application templates and design systems before assembling isolated parts. For an accepted page with a local gap, investigate the relevant block or component directly. Reuse granularity and adoption method are separate choices: a whole-page composition can be transferred across stacks, while one primitive can be adopted as a package.
+Match the problem to the largest coherent set of mature decisions worth inheriting. For a new page, inspect page/application templates and design systems before isolated parts. For an accepted page's local gap, investigate the relevant block or component. Reuse granularity and adoption method are separate choices: whole-page composition can transfer across stacks; one primitive can be adopted as a package.
 
 | Reuse level | Valuable decisions to inherit | Fit to establish |
 |---|---|---|
@@ -20,31 +24,31 @@ Match the scope of the design problem to the largest coherent set of mature deci
 | Visual asset or coordinated asset family | Identity, imagery, type, material, spatial or dynamic expression | Role, production quality, surrounding composition, rights and delivery conditions |
 | Local effect or micro-interaction | A focused expressive or feedback mechanism | Attention, behavior, accessibility and combined runtime cost |
 
-The hierarchy describes reuse scope, not the importance of the material. An asset-led composition can begin with a brand symbol, image, type treatment or spatial scene; compare suitable page foundations around that material. The highest appropriate level is the most valuable coherent fit, not the maximum amount of imported code. A full template with the wrong task model may impose more redesign than a suitable block. Prefer one compatible visual language for the major regions, then use complementary parts where they add value. A copied design system's completeness, a source's popularity and the current product's quality remain separate evidence.
+Reuse scope does not rank visual importance. A brand symbol, image, type treatment or spatial scene can lead the composition; compare page foundations around it. The highest appropriate level is the most valuable coherent fit: a full template with the wrong task model may require more redesign than a suitable block. Keep major regions in a compatible visual language. A source's completeness and popularity describe that source; product quality requires project evidence.
 
-Read, view and compare the actual candidate at its consequential states and sizes. Preserve the mechanism and relationships that justify selection. When an otherwise useful source crosses frameworks, assess both a matching-stack implementation and a deliberate design/code port. Keep rights, behavior and maintenance responsibilities clear. Use original implementation for the gaps or tradeoffs that the comparison actually establishes.
+Compare actual candidates at consequential states and sizes. Preserve the relationships that justify selection. For cross-framework sources, assess matching-stack alternatives and deliberate design/code ports, including rights, behavior and maintenance. Use original implementation where the comparison establishes its value.
 
 ## Research product conventions and implementation resources in parallel
 
-Product references explain the familiar task model: first action, organization, state progression and continuity. Engineering resources supply code, assets, behavior or visual mechanisms. Preserve a link and purpose for each role. A product screenshot can support an observation about layout; a package demo can support an implementation candidate. Check the transfer from both into the current task.
+Product references explain task models: first action, organization, states and continuity. Engineering resources supply code, assets and mechanisms. Link each source to its role: a screenshot supports a layout observation; a package demo supports an implementation candidate. Check how each transfers into the current task.
 
-For new or substantially redesigned surfaces, external exploration occurs while product model, composition and defining treatment can still change. Use concrete product flows and concrete resource items, with sufficient accessible evidence to support the choice. An evaluated project implementation may win on fit and quality. Retained approval supports continued use. Native or original work has an explicit fit/cost rationale. Keep inaccessible references as candidates and label the unverified part.
+Explore new or substantially redesigned surfaces while their model, composition and defining treatment can still change. Use concrete flows and resource items with evidence sufficient for the choice. Evaluated project implementations may win on quality and fit. Keep inaccessible references as candidates and identify unverified claims.
 
 ## Make selection visible by surface and design dimension
 
-Maintain a compact design/resource selection record alongside each substantial SPEC increment. Reuse existing project records or the [design decision template](../assets/templates/design-decisions.md). Start the foundation comparison and shortlist before implementation; reconcile them with code and observed output at review. Name the selected granularity, the relationships inherited together, material changes and why that level is appropriate. Share its location and consequential rows with the preview so the user can inspect how research affected the result.
+Keep a compact selection record with each substantial SPEC increment, using existing records or the [design decision template](../assets/templates/design-decisions.md). Compare foundations before implementation; reconcile choices with code and observed output at review. State the reuse scope, inherited relationships, material changes and rationale. Share the record with the preview so research decisions are inspectable.
 
-For each relevant dimension, connect **surface/state → intended experience → product pattern/source → engineering item/source → choice and reason → reuse/adaptation → implementation/preview → evidence and status**. Group shared decisions once and reference their IDs from affected pages. Link the exact example, component, source file or API rather than only a platform homepage. For inherited or authored elements, identify their local source and the quality rationale.
+Connect **surface/state → intended experience → product and engineering sources → choice/reason → adaptation → implementation/preview → evidence/status**. Reference shared decisions from affected pages. Link exact examples, components, files or APIs; identify local sources and quality rationale for retained or authored elements.
 
-Consider layout/navigation, background, typography, components, icons/assets, state feedback, micro-interactions, general motion and text animation. Add dimensions demanded by the product; mark deliberately quiet or inapplicable treatments with their intended benefit. The record describes meaningful decisions and coverage, with no quota of websites, libraries or effects.
+Cover relevant layout/navigation, background, type, components, assets, feedback and motion dimensions. Explain deliberately quiet or inapplicable treatments by their benefit. Record meaningful decisions and coverage; research volume follows the task.
 
-Keep provenance states distinct: considered, selected, implemented and inspected describe different evidence. Owner approval refers to an actual user decision and scope. A code path alone establishes location; inspect the rendered state to claim its visible effect. If the chosen source changes, update the reason and the implementation mapping. Optional detailed [adoption notes](../assets/templates/resource-adoption.md) can hold version, license and maintenance details beneath a compact row.
+Distinguish considered, selected, implemented and inspected evidence. Owner approval refers to an actual user decision and scope; visible-effect claims require rendered observation. Update reasons and implementation mappings when sources change. Optional [adoption notes](../assets/templates/resource-adoption.md) hold version, license and maintenance detail beneath a compact row.
 
 ## Describe the need in two dimensions
 
-First describe the intended perception or operation: what should become clearer, easier, more expressive or more reliable? Then describe the constraints that can change selection: framework/version, content, input methods, supported views/themes/languages, authority, performance, licensing and maintenance.
+Describe the intended perception or operation, then the constraints that change selection: framework/version, content, input methods, views/themes/languages, authority, performance, licensing and maintenance.
 
-For example, “a refined background” becomes a low-contrast moving surface with controllable luminance and speed, readable foreground content, a reduced-motion equivalent and a Vue-compatible realization. Search first by the effect or behavior, then narrow to exact implementations and versions. Protect private project details when forming external queries.
+For example, define a background through contrast, luminance/speed controls, readable foregrounds, reduced-motion behavior and stack compatibility. Search by effect or behavior, then exact implementation/version. Keep private project details out of external queries.
 
 Search by **product pattern and design need**, choose the useful **reuse granularity**, then determine **delivery form and adoption method**:
 
@@ -59,13 +63,13 @@ Search by **product pattern and design need**, choose the useful **reuse granula
 | Complex information and manipulation | Tables, charts, editors, graphs, canvases | Correct representation, data scale, navigation and real state |
 | References and specialist media | Examples, design objects, 3D and timed-output tools | Transferable mechanism, source authority, editability and fit |
 
-A resource can serve several needs. Reference imagery, editable design files, source components, dependency packages and behavior engines require different integration and maintenance strategies. Read the [catalog](resource-catalog.md) for a starting map and source-specific cautions. It is an open set of leads; extend research when the task calls for capabilities beyond it.
+A resource can serve several needs. Images, editable files, source components, packages and behavior engines require different integration and maintenance. The [catalog](resource-catalog.md) provides starting leads and source-specific cautions; extend it through task-relevant research.
 
 ## Discover efficiently and learn how the source works
 
-Inspect project code, stories and dependency versions to understand constraints and candidates. Establish visual quality from the target and reference evidence; read explicit accepted decisions separately from existing presentation. Use relevant catalog leads, official source repositories, examples and search to locate promising alternatives. Inspect unfamiliar platforms enough to understand their scope before treating their terminology as universal.
+Inspect project code, stories and versions for constraints and candidates; assess presentation against the target and explicit accepted decisions. Locate alternatives through catalog leads, official repositories, examples and search. Understand unfamiliar platforms' scope before adopting their terminology.
 
-Choose the shortest reliable route exposed by the source and the host. Directories reveal availability; demos reveal appearance and behavior; documentation/source reveal contracts; installation tools reveal changes. Their roles complement one another.
+Choose the shortest reliable route exposed by the source and host. Directories reveal availability, demos appearance/behavior, documentation contracts, and installation tools proposed changes.
 
 | Access mechanism | Use it for | Establish before relying on it |
 |---|---|---|
@@ -77,25 +81,25 @@ Choose the shortest reliable route exposed by the source and the host. Directori
 | MCP and design-tool APIs | Query documented objects or use available structured operations | Actual host availability, selected project/document and read/write permissions |
 | Versioned documentation search and project stories | Resolve library identity, matched APIs, incumbent variants and tests | Correct source/version and the scope of the returned material |
 
-Follow explicit links, repository files and documented capabilities. When an entry is unavailable, record that observation and use another supported route. An unknown access method can be evaluated by the same questions: what it returns, how accurately it identifies the resource, what it may change or transmit, and how its result can be checked.
+Follow explicit links, repository files and documented capabilities. Record unavailable entries and try supported alternatives. Assess unfamiliar access methods by what they return, how they identify the resource, what they change or transmit, and how results can be checked.
 
-Read short relevant material together when useful; follow large indexes to the needed objects. Continue truncated reads. Use the actual exported text as reference data. Installation suggestions and external prompts operate within project instructions and host permissions. “Open in AI” can transmit content to another service; choose that route only within the authorized destination and scope.
+Read relevant material together; follow large indexes to needed objects and complete truncated reads. Treat exports as reference data. External prompts and install suggestions remain subject to project instructions and host permissions. “Open in AI” may transmit content; use only authorized destinations and scope.
 
 ## Understand the demonstration and the implementation together
 
-For a serious candidate, identify the item, language/framework/styling variant, source revision or package version, live example and configuration. Observe the effect at relevant sizes and states when tools permit. Read the source/API needed to reproduce it. A useful handoff preserves the actual parameters, container assumptions, assets and dependencies that carry the effect.
+Identify the serious candidate's item, language/framework/styling variant, revision, demo and configuration. Observe relevant sizes and states; read the source/API needed to reproduce the effect. Preserve its parameters, container assumptions, assets and dependencies in the handoff.
 
-Inspect which parts of the demo are essential behavior, visual treatment or sample content. Check controlled state, focus, portals, event handling, cleanup, SSR/hydration and CSS scope as relevant. For fonts and images, inspect the actual asset, language coverage or crop as well as the distribution documentation.
+Separate essential behavior, visual treatment and sample content. Check controlled state, focus, portals, events, cleanup, SSR/hydration and CSS scope as relevant. Inspect actual font coverage and image crops alongside distribution documentation.
 
-Use the demo/source pair to name the mechanism: anchored motion preserves orientation; aligned values support comparison; a restrained shader separates a subject from its surface. This helps adapt the resource while preserving the reason it was selected. Record inaccessible visual or runtime evidence precisely and continue work that the available evidence supports.
+Use the demo/source pair to explain the mechanism, such as anchored motion preserving orientation or aligned values supporting comparison. Preserve that mechanism during adaptation. Identify unavailable evidence and continue work supported by what can be inspected.
 
 ## Evaluate adoption value
 
-First establish required conditions: appropriate rights and provenance, runtime compatibility, critical semantics/interaction, security boundaries and actual task behavior. Then compare the candidates by design fit, distinctive quality, parameter control, content resilience, implementation effort and maintainability. Stars, catalog membership and successful installation describe their own facts; adoption rests on the selected item and observed result.
+Establish rights/provenance, runtime compatibility, critical semantics, security boundaries and task behavior. Compare design fit, distinctive quality, parameter control, content resilience, effort and maintainability. Adoption rests on the item and observed result; popularity or successful installation alone cannot establish suitability.
 
-Consider total cost across **discovery, understanding, integration, adaptation, debugging, verification, runtime and maintenance**. A simple native control may be the best result. A mature primitive can save substantial behavioral work. A visually strong component can raise the outcome when its essential mechanism is adaptable. Choose an original implementation when its fit and total cost justify it.
+Compare total **discovery, understanding, integration, adaptation, debugging, verification, runtime and maintenance** cost. Native controls, mature primitives, expressive components and original work each have value when their fit and total cost justify adoption.
 
-Check combinations as well as individual resources. Multiple effects may compete for attention, duplicate listeners or animation engines, allocate several rendering contexts, introduce conflicting resets or expand payload and maintenance. One product should have a coherent interaction, visual and runtime system.
+Check combinations for competing attention, duplicate listeners/engines, extra rendering contexts, conflicting resets and payload or maintenance growth. Build one coherent interaction, visual and runtime system.
 
 | Reuse choice | Preserve | Project responsibility |
 |---|---|---|
@@ -105,40 +109,40 @@ Check combinations as well as individual resources. Multiple effects may compete
 | Transfer a technique | An understood relationship or effect | Implement it for the current stack and verify the intended quality |
 | Original implementation | The task and design constraints | Use the simplest coherent solution and inspect its result |
 
-A design-file reference can guide implementation without becoming runtime code. Similar registry formats support similar distribution operations; framework and dependency compatibility still come from the actual source. Respect separately the rights for code, tools, assets and intended redistribution. Preserve required notices with copied material.
+Design files can guide implementation without runtime code. Registry similarity does not establish framework/dependency compatibility; inspect the source. Check code, tool, asset and redistribution rights separately; preserve required notices.
 
 ## Prototype the uncertainty that can change the choice
 
-Choose a small representative integration for the most consequential unknown. Test composition in the actual shell when fit is uncertain; test keyboard/touch and controlled state when behavior matters; test representative counts and target conditions when performance matters.
+Probe the consequential unknown in a small integration: composition in the actual shell, keyboard/touch and controlled state, or representative data counts and runtime conditions.
 
-Move to implementation when a viable candidate exists and the remaining question is better answered by a working probe than more browsing. Broaden research when the fit is unsupported, the key behavior is missing or the cost outweighs the value. Candidate counts and time budgets follow the task rather than a fixed search ceremony.
+Implement when a working probe will resolve the remaining question. Broaden research when fit is unsupported, behavior is missing or cost exceeds value. Set research depth from the task.
 
 ## Adapt into one product
 
-Preserve reliable semantic behavior while expressing it through the project's type, tokens, spacing, surfaces, icons and motion. Identify the resource's defining mechanism and tune it deliberately; retain the quality that justified adoption. Keep source controls meaningful: reading measure, focal position, selected emphasis or response duration.
+Express reliable semantics through project type, tokens, spacing, surfaces, icons and motion. Tune the defining mechanism through meaningful controls such as reading measure, focal position, selection emphasis or response duration.
 
-Connect data and actions through the project's actual application boundary. Presentation renders state; the trusted owner validates protected operations. Replace sample content, links and demo-only handlers with the intended task. Check actual text lengths, error/pending/empty states, themes, zoom, reduced motion and real responses. Keep approved fixtures useful for visual comparison.
+Connect data/actions at the application boundary: presentation renders state; trusted owners validate protected operations. Replace sample content, links and handlers. Check actual text lengths, error/pending/empty states, themes, zoom, reduced motion and real responses; retain approved comparison fixtures.
 
-Inspect the whole page and its transitions after assembly. Verify behavior, component identity, focus and relevant state retention. Review combined payload/rendering cost and cleanup. A source's quality becomes a product outcome only through this integration evidence.
+Inspect the assembled page and transitions for behavior, component identity, focus, state retention, combined payload/rendering cost and cleanup. Use this evidence to establish the integrated result.
 
 ## Retain useful knowledge at its responsible location
 
-For a consequential adoption, record enough to reproduce the decision: purpose, exact source/item/variant/version, inspected demo settings, selected reuse level, adaptation boundary, rights/attribution, meaningful tradeoff and project checks. A short entry in existing records is sufficient; the optional [adoption note](../assets/templates/resource-adoption.md) supplies prompts when helpful.
+Extend the selection record with the exact variant/version, inspected settings, rights/attribution and maintenance boundary needed to reproduce consequential adoptions. Keep it in existing project records or the optional [adoption note](../assets/templates/resource-adoption.md).
 
 Separate **platform capability**, **specific-item assessment** and **project acceptance**. Preserve a review date and the evidence's actual scope. Source copies have local change ownership; packages retain version/update boundaries; asset licenses and acknowledgments remain attached to their use.
 
-Refresh a relevant record when its source, version, license, API or project conditions change. New discoveries can become candidates after provenance and incremental value are established. Project decisions stay local. Portable lessons can enter the maintained catalog or technique references through authorized review and ordinary version control. A successful example teaches its conditions and mechanism, leaving future tasks free to choose differently.
+Refresh records when sources, versions, licenses, APIs or project conditions change. Assess new discoveries by provenance and added value. Keep project decisions local; add transferable mechanisms and their conditions to the catalog or references through authorized review and version control.
 
 ## Material, medium and source safety
 
-Inspect load-bearing content early enough to shape composition. Use the lightest medium that conveys the intended relationship at the required quality: real product captures for factual representation; text/table/SVG for clear relationships; suitable photography or illustration for identity; spatial or timed tools when their capabilities serve the task. Preserve editable source and a reproducible build where future revisions need them.
+Inspect defining content early enough to shape composition. Choose the lightest medium meeting the intended quality: product captures for factual representation; text/table/SVG for relationships; photography or illustration for identity; spatial or timed tools for suitable tasks. Preserve editable sources and reproducible builds where revision needs them.
 
-Obtain assets from their rights-bearing source under the applicable permission. Keep private data and credentials in authorized project locations. Review installs, dependency changes and writes through host controls. Public examples use owned or appropriately licensed material and identifiable fixtures. Access to a resource, a source's claimed capability and a host's connected tool are separate facts.
+Obtain assets from rights-bearing sources under applicable permissions. Keep private data/credentials in authorized locations; use host controls for installs, dependency changes and writes. Public examples use owned/licensed material and identifiable fixtures. Resource access, claimed capabilities and connected host tools are separate facts.
 
 ## Include asset production in the choice
 
-Pair resource discovery with the [asset engineering method](visual-assets.md). Inspect actual files and their rights-bearing sources; compare a mature asset, a meaningful adaptation and a production route by the target quality and total cost. Keep the construction route distinct from its delivery mode: an authored 3D scene can yield an image, video or real-time object. Link the chosen material, master, derivatives and page/state in the design record. Use the [asset sources](asset-sources.md) as an open specialist map.
+Use the [asset method](visual-assets.md) to compare mature assets, adaptations and production routes by target quality and total cost. Inspect actual files; distinguish construction from delivery: a 3D scene can yield an image, video or real-time object. Link material, master, derivatives and page/state. The [asset sources](asset-sources.md) provide specialist leads.
 
 ## Research mature language patterns with interface resources
 
-Study the exact step of a mature product's task: what its headline communicates, how a control is named, how important conditions are distributed, and what status follows an action. Transfer useful information and writing patterns while keeping the current product's facts, identity and commitments authoritative. A template's attractive copy is a candidate for analysis, not a factual source for the consuming product. The [content method](content-design.md) guides writing and verification alongside the visual reference study.
+Study the exact task step: headline purpose, control names, condition placement and action feedback. Transfer useful patterns while retaining the current product's facts, identity and commitments. Treat template copy as a writing candidate, not business evidence. Use the [content method](content-design.md) for writing and verification alongside visual research.

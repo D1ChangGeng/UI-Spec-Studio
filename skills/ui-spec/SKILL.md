@@ -1,6 +1,6 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, choosing the next iteration, shaping an unclear design direction, product interaction models, design options, traceable resource selection, visual assets, content design, UX writing, typographic hierarchy, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, visual/UX feedback, responsive audits, shared-layout stability, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for starting or continuing UI SPEC work, shaping an unclear direction, product interaction models, design options, traceable resource selection, visual assets, content design, UX writing, typography, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, responsive audits, scroll and motion continuity, performance experience, operational content and batch workflows, complete states, theme/language variants, and real integration. Leads the work when the user supplies only a goal or says continue; inherits detailed guidance when supplied. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
@@ -34,6 +34,12 @@ Treat visible language as product behavior and visual material. Determine what u
 
 Carry content through initial, pending, success, failure and recovery states, localization and actual service boundaries. Use real copy where authorized and clearly identified fixtures where necessary. Review the reader's task and the rendered typography together: accurate wording can reshape navigation, layout or the interaction path. Significant content decisions remain traceable to their source and approval.
 
+## Design the complete product experience
+
+Coordinate the product model, visual direction, assets, content, spatial layout, component states, motion, performance and ongoing operation as one experience. The [analysis reference](references/analysis.md) maps these nine design dimensions to practical decisions. The shared references hold their methods; the current task determines depth.
+
+Work from the user's intended sequence to the real execution and content lifecycle. Prepare useful data and assets at a justified time, keep repeated actions responsive, and bind feedback to the actual outcome. Design for content growth, role-specific information, maintenance and recovery where the product needs them. Evaluate a slow interaction through its critical path and a repeated operational task through its actual workload. Carry successful project mechanisms forward with their applicable conditions; palette, layout, equal-priority actions and scroll choices remain product decisions.
+
 ## Establish the professional context
 
 Before substantive UI SPEC planning, implementation or review, **read all eight common references in full**:
@@ -47,7 +53,7 @@ Before substantive UI SPEC planning, implementation or review, **read all eight 
 7. [Visual assets and asset engineering](references/visual-assets.md) — research, prepare, produce, integrate and verify the visual material.
 8. [Content design and UX writing](references/content-design.md) — decide content roles, voice, timing and typography; verify user comprehension.
 
-These short references form a shared professional foundation. Reading them together supplies related knowledge before an unforeseen decision arises. Apply the parts relevant to the task; execution depth follows impact and uncertainty.
+These complementary references form a shared professional foundation. Reading them together supplies related knowledge before an unforeseen decision arises. Apply the parts relevant to the task; execution depth follows impact and uncertainty.
 
 Use the host's file-reading capability to obtain the actual text. Continue truncated reads until the required content is complete. Content already fully available and current in this execution context can be reused. When needed content is unavailable or its version is uncertain, read it again. A path, hash, checklist entry or earlier-session claim identifies a source; the source text supplies its guidance.
 
@@ -87,7 +93,7 @@ Choose the next increment from user value, task continuity, shared impact, depen
 
 A round can develop a page, a connected journey, a component family or a shared-system repair. Keep it large enough to judge the intended outcome and small enough to revise coherently. Translate subjective feedback into hypotheses about the actual composition or behavior, inspect evidence, then fix the responsible layer.
 
-Keep the common quality floor active: clear hierarchy, accurate user-facing language, readable content, accessible interaction, meaningful task paths, stable shared structure, appropriate scale/occupancy, purposeful motion and truthful state. Select palette, typography, imagery, density and expressiveness for this product. Review the rendered result at its actual viewing conditions.
+Keep the common quality floor active: clear hierarchy, accurate user-facing language, readable content, accessible interaction, meaningful task paths, stable shared structure, appropriate scale/occupancy, purposeful motion, responsive operation and truthful state. Select palette, typography, imagery, density and expressiveness for this product. Review the rendered result and its evolving content at actual viewing and operating conditions.
 
 ## Establish the product people will recognize
 
@@ -97,7 +103,7 @@ For a new design or substantive redesign, research relevant mature product conve
 
 ## Turn meaning into form
 
-Connect **product intent → search and actual browsing → professional comparison → foundation and reuse decisions → adaptation and integration → observed outcome**. Keep needed understanding, expression concept and visual/interaction grammar active as questions throughout this loop. This is a reasoning relationship, not a mandatory sequence of reports. identify what the person needs to recognize, compare, believe on evidence or do; decide what each visible string communicates, where and when; choose its representation before choosing a component.
+Connect **product intent → search and actual browsing → professional comparison → foundation and reuse decisions → adaptation and integration → observed outcome**. Keep needed understanding, expression concept and visual/interaction grammar active as questions throughout this loop. This is a reasoning relationship, not a mandatory sequence of reports. Identify what the person needs to recognize, compare, believe on evidence or do; decide what each visible string communicates, where and when; choose its representation before choosing a component.
 
 Develop a direction specific enough to influence structure, typography, imagery and behavior. Use references to learn mechanisms and set a craft target. Read them at whole-surface, relationship and detail levels; distinguish visible evidence from interpretation. Make consequential choices controllable in tokens, content models, component variants or explicit timing, then inspect their effect. The common references supply these methods even when the user only asks to continue.
 

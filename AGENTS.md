@@ -4,7 +4,7 @@ This repository distributes the `ui-spec` skill from `skills/ui-spec/`. Runtime
 instructions are English; user-facing introductions include English and Chinese.
 
 Read `docs/MODEL.md` and `docs/WRITING.md` for the accepted design and writing
-standards. Seven common references form the complete professional foundation;
+standards. Eight common references form the complete professional foundation;
 integration is required for real behavior work. Shape stays optional. Preserve
 agent initiative, scoped approval and the Skill/host responsibility boundary.
 
@@ -60,6 +60,9 @@ modeling, font production and legal review retain their own evidence boundaries.
 Version 1.6 connects content design, UX writing and typography through a common
 content reference. Maintain user-level terminology, voice/tone, source authority,
 state language and language-specific layout in their responsible references.
+The nine experience dimensions include performance, continuity and operating work;
+keep their methods in the existing eight common references and integration.
+Preserve project-specific choices as conditional examples.
 Run the authored content browser scenario along with the existing test and
 publication gates. Keep source-based editorial review distinct from mechanical
 and real-user comprehension evidence.

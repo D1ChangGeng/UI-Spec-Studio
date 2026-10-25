@@ -8,7 +8,7 @@ Use the common references as one professional foundation. The work below organiz
 
 ## init — establish a useful working understanding
 
-Read the actual project, supplied requirements, existing screens, approved design, dependencies, run/test commands and product maturity. Understand people, intended outcomes, content, platform and material business constraints. Find existing sources of design and task truth. Inventory available masters, asset rights and production capabilities alongside functional and design assets. Identify existing terminology, content ownership, approved copy and supported locales.
+Read the actual project, supplied requirements, existing screens, approved design, dependencies, run/test commands and product maturity. Understand people, intended outcomes, content, platform and material business constraints. Find existing sources of design and task truth. Inventory available masters, asset rights and production capabilities alongside functional and design assets. Identify existing terminology, content ownership, approved copy and supported locales. Establish relevant consumer/operator roles, update frequency, content growth and actual device/network conditions.
 
 Identify the user-level product model, primary loop, result location, page families, core journeys and immediate gaps. Establish the requested redesign scope and separate preserved functional assets from visual candidates. Review explicit approval before inheriting a design. Start the design decision record with the observed facts and any high-impact open choices. Distinguish established facts from assumptions. Select the next useful increment and determine whether its direction is already clear or benefits from shape. Keep the working brief compact and linked to actual sources.
 
@@ -26,6 +26,8 @@ Use shape when the user requests exploration or an unresolved choice materially 
 6. **Make the important choice inspectable.** Build a representative composition or interaction where rendering will resolve uncertainty. Compare a small number of genuinely different alternatives only when the comparison can change the choice. Keep experiments within the smallest useful scope.
 7. **Carry a usable decision forward.** Apply the consequential-direction check: obtain user choice when credible, unresolved alternatives materially alter the experience; proceed under clear intent or explicit delegation. Record the selected or provisional direction, rationale, decision authority, inherited constraints, remaining questions and next increment. Continue implementation when the user's scope permits it. Seek review of significant direction choices using the actual result.
 
+For repeated or asynchronous tasks, examine the execution path while selecting the interaction: what is prepared on entry, requested on intent, shown immediately and confirmed later. Compare preparation cost, freshness and side effects before choosing preloading, parallel work or caching. For frequently maintained content, establish source ownership, reusable defaults, meaningful overrides and the operator's actual selection/recovery path. These judgments can change the design before broad implementation.
+
 Shape ends when there is enough grounded direction for the next useful increment. Later findings can reopen the affected decision. A well-supported choice remains adjustable; uncertainty alone does not require a larger questionnaire or a fixed set of alternatives.
 
 ## iterate — deliver one meaningful increment
@@ -40,6 +42,8 @@ Shape ends when there is enough grounded direction for the next useful increment
 
 **Inspect and correct.** Inspect whole-surface meaning, structural relationships and details against the intended craft target. Run actual UI paths and inspect real viewport captures. Review affected cross-page anchors, states, user-visible copy, terminology consistency and locale variants. Inspect the delivered assets at their actual sizes and placements, then check reused parts together for semantic behavior, style/layer conflicts, attention competition, runtime cost and cleanup. Include asset loading/failure, theme/crop and quiet states where relevant. Diagnose the responsible layer, repair it and recheck the impacted scope. End a round when its task is coherent, its required evidence exists and it is ready for the user's judgment.
 
+When the slice concerns performance or operating work, observe its complete sequence: repeated input, usable result, confirmed completion and recovery. Compare changes under named conditions using appropriate task measurements. Inspect motion across time, scroll position under content growth, and the effective content after shared or individual updates. Keep changes to perceived feedback, actual task duration and resource consumption distinguishable.
+
 **Present and continue.** Provide the working entry and the updated design decision record together, including consequential content decisions and their authority. Show which sources shaped each important surface, how they were used, where the implementation lives, and what was observed. Relate the resulting primary action and continuing task to the selected product model. Present unresolved high-impact choices explicitly, then state the inspected scope and next recommended increment. Record explicit approval already supplied for a clear scope. Preserve open review items. User feedback guides the next round without requiring the user to restate common principles.
 
 ### Turn subjective feedback into a useful repair
@@ -52,7 +56,7 @@ State the most likely explanation after inspecting the result, use a bounded cha
 
 Match review-only versus repair authorization. Reconcile the scope with routes, navigation, roles, overlays and actual task paths. Inspect whole-product structure, page families and then local details. Use the verification reference for coverage and evidence.
 
-A finding connects an observed result to user impact, the relevant principle, likely cause and repair scope. Shared issues receive shared fixes and related-page checks. Report inspected coverage separately from the complete inventory. Preserve the distinction between pending, blocked, failed and approved exceptions.
+A finding connects an observed result to user impact, the relevant principle, likely cause and repair scope. Use the nine experience dimensions in analysis to locate missing responsibilities; inspect only the conditions relevant to the authorized task. Shared issues receive shared fixes and related-page checks. Report inspected coverage separately from the complete inventory. Preserve the distinction between pending, blocked, failed and approved exceptions.
 
 ## finish — complete real connection work
 
@@ -60,22 +64,14 @@ Read the integration reference and use its six-part flow: **reconcile → contra
 
 Confirm the accepted product model, reference-informed design and resource map from existing approval. Preserve the chosen primary action and continuation while translating the mapped implementations into real behavior. Compare it with actual services, data, permissions and code. Resolve the missing behavior at its real owner, connect complete user tasks, and regress both design and product outcomes. Common visual and UX principles continue to apply to real data, errors and asynchronous states. Carry asset masters, export settings, delivery variants, rights and measured runtime/fallback conditions into the handover. Carry resource configuration, attribution and modification ownership into the product; verify controlled state, delayed responses and combined runtime behavior at the real boundary.
 
+Connect source-owned content, localization and operational changes to the same outcomes shown by the UI. Validate freshness, permissions, duplicate actions, partial completion and unknown results when applicable. Explain which runtime and maintenance conditions have been observed and where the authoritative source can be updated.
+
 A material change to accepted appearance, task meaning or user commitment returns the affected scope for review. Continue independent integration while that decision is pending. Deployment or real-world actions follow the applicable authorization; a local, static or service-backed product finishes against its own actual boundary.
 
 ## Continuity with lightweight records
 
-Prefer existing project documents and tests. A useful minimal record contains the accepted direction, current outcome, shared constraints, component decisions worth reusing, review scope, evidence and next priority. Store route details close to their implementation where practical.
-
-The optional `.ui-spec` manifest records declared coverage, scoped approval and real connection evidence. Its `phase` identifies the active operation. Different scopes can have different maturity within one project. Use the existing task system or scoped records to express that difference.
-
-Preserve one current implementation and its Git history. Evidence references identify reviewed conditions. Update reusable knowledge once at its authoritative location. The host owns session persistence and context management; these project records supply sources an agent can read when needed.
+Use existing project records for accepted direction, current outcome, shared rules, reusable component decisions, reviewed conditions and next priority. The optional `.ui-spec` manifest records declared coverage, scoped approval and connection evidence; its phase describes current work while individual scopes retain their own maturity. Keep one current implementation with Git history and update decisions at their authoritative location. These records supply readable evidence; the host owns session persistence and context management.
 
 ## Apply the practice to the actual medium
 
-A README, publication, chart, slide or visual explanation can use the same understanding → expression → realization → observation loop. Identify its reading or interaction task, host constraints and actual deliverable. Keep the workflow proportionate: a static document can finish through valid content, working links, editable assets and rendered publication checks. A live product additionally requires its real state and service boundaries.
-
-Keep design reasoning and execution connected without producing a document at every intermediate step. A brief causal record for a significant choice is enough. Use small representative probes for uncertainty; extend an established direction directly. Improve the reusable method when warranted while preserving current project choices and host responsibilities.
-
-## Content works across the operations
-
-Init recovers product terminology, content sources and existing factual commitments. Shape determines the information users need and the suitable tone/representation before broad layout work. Iterate writes actual component and state copy, tests its visual fit and improves it with feedback. Audit checks placement, necessity, language consistency and comprehension across the intended journey. Finish connects copy to real state, localization and authoritative business values, then validates promises against observed outcomes. These are content responsibilities within the existing workflow; their depth follows the present task.
+A README, chart, slide or visual explanation uses the same understanding → expression → realization → observation loop with its own reading task and host constraints. A static document finishes through valid content, working links, editable assets and rendered publication checks; a live product also requires its state and service boundaries. Record significant causes and decisions compactly. Probe uncertainty where it can change the result, extend established direction directly, and preserve project choices when improving reusable methods.

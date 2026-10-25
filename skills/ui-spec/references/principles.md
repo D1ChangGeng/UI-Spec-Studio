@@ -46,6 +46,8 @@ For a compact, fixed-content task surface, visual centering and a slightly upper
 
 Inspect the entire frame rather than declaring balance from `top: 50%`. Keep the dominant mass comfortably within the usable frame; reserve deliberate extreme placement for a brief that benefits from it. Evaluate dynamic backgrounds across time so transient highlights do not undermine readability or perceived balance.
 
+Reserve space from a moving element's full visible envelope: rotation, expansion, particles and changing brightness can affect nearby text and controls beyond the resting box. Inspect peak overlap and meaningful intermediate frames at narrow and wide sizes. An intended overlap can remain when hierarchy, readability and input targets stay clear throughout the motion.
+
 ## 6. Page-family anchors remain stable
 
 Headers, tabs, navigation and content start positions within the same family remain stable at matching viewport and scroll conditions. A short settings panel and a long activity list inherit the same shell. Their content areas handle their own growth.
@@ -147,23 +149,15 @@ A README, slide, diagram, report or motion piece has an audience, a sequence of 
 
 ## Compose external strengths into a coherent whole
 
-Treat a selected resource as a set of valuable mechanisms and adjustable expressions. Preserve its reliable behavior and the distinctive relationship that earned adoption; align its typography, space, depth, color and movement with the project's intended language. Combining resources can divide responsibilities clearly, such as an accessible interaction primitive beneath a tailored visual treatment.
-
-Judge the assembled result at page and journey scale. Competing accents, simultaneous animation, mismatched density or inconsistent surfaces can weaken otherwise accomplished components. Tune the relationships and inspect actual content and states. Existing project elements, native capabilities and external work are all valid starting points when they serve the same coherent experience.
+Preserve the mechanism that earned each resource's adoption, then coordinate its type, spacing, surfaces and motion with one product language. Complementary layers can combine a semantic primitive with tailored appearance. Inspect the assembled journey for competing emphasis, simultaneous motion, mismatched density and combined runtime cost. Judge the relationships under actual content and states.
 
 ## Ground the visual direction in the interaction model
 
-Let the first meaningful action, working object and continuation determine hierarchy before applying an aesthetic treatment. A conversational start can foreground a composer and reserve result space for the subsequent thread. A document-centered tool can foreground durable objects and their organization. Treat the reference's useful convention and its brand expression as separate choices.
-
-Set a positive craft target before retaining or selecting major treatments: what the focal action communicates, how content reads, which relationships create character, and which benchmark makes that quality inspectable. Evaluate current UI and external candidates on those same relationships. Use background, type, color and motion to reinforce the intended model and content. A restrained surface can demonstrate strong craft through exact hierarchy, proportion, state design and reading comfort.
-
-Review the resource map against the assembled viewport. Confirm the claimed effect is visible, secondary regions support rather than duplicate the primary task, and the important content remains readable in each theme. Distinctiveness comes from a coherent product-specific relationship; library count and ornamental intensity measure other things.
+Let the first action, working object and continuation guide hierarchy. A conversation can foreground its composer; a document tool can foreground durable objects. Separate useful conventions from another brand's expression. Set an inspectable craft target for action clarity, reading and character; compare incumbent and external candidates against it. Check that secondary regions support the primary task and that claimed effects survive both themes and real content.
 
 ## Inherit and adapt resolved relationships
 
-Read a mature foundation as a connected set of decisions: content hierarchy, measure, alignment, spacing rhythm, surface roles, states and attention. Preserve the relationships that make it effective while changing the product-specific content and behavior. Evaluate a typography or spacing change through its effects on the whole composition rather than as an isolated improvement.
-
-Use theory to select, explain, combine and verify those relationships throughout discovery and implementation. A coherent page or block often provides a stronger starting point than separately invented regions. When combining sources, establish one governing visual language and adapt secondary parts to it. Confirm the selected foundation still works with actual content, states and viewing conditions.
+Read the selected foundation as connected hierarchy, measure, alignment, rhythm, surfaces and states. Preserve valuable relationships while adapting product-specific content and behavior. Judge type and spacing changes through the whole composition. One governing visual language coordinates complementary sources; actual content, states and viewing conditions establish the resulting fit.
 
 ## Asset craft and page craft reinforce each other
 
@@ -176,3 +170,5 @@ Use actual viewing conditions: a mark's optical center and recognition at tab si
 Define the content's job before fixing its shape. Title, navigation, field labels, explanations and state messages carry different semantic and visual weight. Use a stable vocabulary, natural line breaks, balanced text measures and actual locale-specific strings to organize the reading path. Give critical conditions enough emphasis at the moment of choice. When copy length changes layout, adjust wording and composition together while preserving factual meaning.
 
 Voice sets recognizable character; tone responds to the task and consequence. A playful introduction and precise error message can belong to the same product. Choose punctuation and sentence structure by meaning, language and element role. Review visible text and the entire frame: readable glyphs, optical balance, whitespace, contrast and real text density form a connected result. Use the [content design method](content-design.md) to reason about these decisions.
+
+Compare perceived type weight in each supported theme with equivalent content and font readiness. Adjust contrast, weight or surrounding space when observation establishes a problem; keep a balanced treatment when it already works. Locale, zoom and user text-spacing settings can require reflow without weakening important information. Character counts, fixed line counts and automatic dark-theme size changes are poor substitutes for inspecting the actual composition.

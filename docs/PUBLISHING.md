@@ -66,7 +66,7 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.5.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.6.0 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
@@ -96,3 +96,9 @@ The scenario gate also runs the asset-review fixture. Keep asset evidence scoped
 to actual files, viewing conditions and input paths. Public bundles carry only
 approved-to-distribute source and outputs; project-specific restricted masters
 remain in their authorized destinations.
+
+The content-review fixture additionally exercises both locales, real browser-local
+read/write/delete boundaries, draft continuity, accessible state/focus behavior,
+failure recovery, content growth and text-spacing adaptation. The gate requires
+real persistence. A routed in-memory preview is recorded as limited and remains
+ineligible for the real-storage release gate.

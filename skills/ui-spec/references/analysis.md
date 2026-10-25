@@ -1,25 +1,26 @@
 # Analysis: decide what is worth building
 
-## Eight lenses, one useful decision
+## Nine dimensions, one coherent experience
 
-Use these lenses together to understand the current increment. Give depth to the questions that can change the outcome; a concise decision with sound reasons is sufficient.
+Use these dimensions together to understand the current increment. User outcomes, authoritative product facts, inclusive use and observable evidence apply across them. Give depth to the questions that can change the outcome; a concise decision with sound reasons is sufficient. The dimensions identify design objects, while the eight common references organize the professional methods.
 
-| Lens | What to establish | Effect on the work |
+| Dimension | What to establish | Effect on the work |
 |---|---|---|
-| People and outcomes | Who arrives, their context, main task, recognizable interaction model and observable success | Choose a meaningful increment and the information it needs |
-| Product truth | Established capabilities, content, rules, permissions and commitments | Separate facts, fixtures and decisions requiring authority |
-| Information architecture | Page responsibility, naming, hierarchy, entry points and shared shell | Create, reuse, consolidate or adjust the right surface |
-| Journeys and states | Actions, guards, destinations, retained context, returns and recovery | Build a continuous task rather than isolated screens |
-| Visual direction | Subject, tone, hierarchy, density, composition, typography and assets | Form a coherent identity with purpose-specific expression |
-| Components, assets and implementation | Existing components, visual material, production routes, framework and data boundaries | Choose reliable parts and a practical realization |
-| Inclusive use and performance | Input methods, assistive use, variants, content growth and device constraints | Make the intended experience usable in its actual conditions |
-| Verification and delivery | Required observations, review scope, dependencies and completion evidence | Design a result that can be inspected and continued |
+| Product and interaction model | People, primary objects, recognizable task loop, real choices, roles and outcomes | Choose a meaningful surface and its operating relationships |
+| Visual design and art direction | Hierarchy, character, material, composition and craft target | Establish a coherent direction and compare mature foundations |
+| Visual assets and asset engineering | Identity, type, imagery, spatial/dynamic material, production and delivery | Let suitable assets shape the concept and reach the final placement |
+| Content design and typography | Needed understanding, factual authority, voice, placement, language and text weight | Compose real messages with the reading and action path |
+| Layout and spatial composition | Proportions, stable anchors, responsive behavior, motion envelope and content growth | Allocate space and choose scroll ownership by task |
+| Components and interaction states | Semantics, actual choice space, materials, input methods and complete states | Preserve understandable and accessible behavior |
+| Motion and interaction continuity | Object identity, transitions, timing, interruption and feedback | Express real changes while retaining orientation and control |
+| Performance and experience engineering | Input-to-result path, readiness, scheduling, loading, resource cost and recovery | Improve repeated work and verify gains under stated conditions |
+| Operational UX and sustainable content | Content sources, editing roles, templates/overrides, bulk work and lifecycle | Keep routine maintenance efficient and published results reliable |
+
+Content can reshape navigation; a key asset can alter composition; realistic latency can alter preparation and feedback; frequent updates can require reusable content or a bulk operation. Follow those relationships to the responsible method. [Content](content-design.md), [visual principles](principles.md), [assets](visual-assets.md), [interaction](interaction-and-variants.md), [verification](verification.md) and real [integration](integration.md) supply complementary decisions rather than separate pass scores.
 
 ## Use theory to investigate real design work
 
-Treat theoretical knowledge and UI resource knowledge as complementary working material. Theory makes hierarchy, rhythm, visual weight, interaction and engineering tradeoffs legible. Resource knowledge gives those judgments concrete candidates and realistic implementation choices. Analyze to guide the search; browse to find possibilities; compare to select; implement to test the fit. Findings can refine the original representation or product hypothesis.
-
-For an open surface, ask which mature page, system or substantial block already resolves most of its important relationships. Study that whole before separating out local components. Carry forward a coherent foundation when it fits, and identify the particular changes the product needs. Original design fills meaningful gaps and coordinates the result. For a bounded correction in an accepted system, inherit that foundation and investigate only the affected decision.
+Use design theory to assess concrete mature work: hierarchy, rhythm, weight, interaction, implementation and fit. Search while the representation is open, compare connected decisions, implement and observe. A useful discovery can improve the initial idea. For a new surface, investigate a coherent page, system or block before local parts; for a bounded correction, inherit the accepted foundation and focus on the affected relationship. Original work fills product-specific gaps and coordinates the result.
 
 ## Recognize the product through its use
 
@@ -56,11 +57,7 @@ Established intent, an approved design or explicit delegated autonomy supports d
 
 ## Lead users with different levels of direction
 
-When the user supplies only a product goal, infer the task and candidate interaction models from usage signals, research comparable flows and recommend a direction. Use the consequential-direction check above before broad implementation. Show a result or bounded options the user can evaluate. Routine choices belong to the agent's work.
-
-When the user supplies preferences, references or selected components, identify the intended qualities and binding constraints. Fill the remaining gaps coherently. A precise implementation request warrants fidelity; a mood reference warrants interpretation of its relevant qualities. Preserve explicit preferences and explain material conflicts with behavior, accessibility or feasibility.
-
-Participation can vary by surface and by round. Carry the user's established decisions forward, while continuing to make the open professional choices. Ask a focused question when a missing fact determines a consequential commitment and cannot be recovered from authorized sources. Continue independent work with clearly scoped assumptions.
+For a goal-only request, infer likely tasks and interaction models, research comparable flows and recommend a reviewable direction. Use the consequential-direction check above for material open choices. Supplied references may express exact implementation, aesthetic qualities or product constraints; identify which, preserve binding preferences and fill the remaining gaps. Existing decisions continue across rounds. Resolve routine details independently and ask only when an unrecoverable fact determines a consequential commitment, while advancing unaffected work.
 
 ## Reason about uncertainty
 
@@ -123,13 +120,23 @@ Match the user's cognitive operation to a useful form. These are candidate relat
 
 Choose a representation that preserves the important relationship, and test it against concrete mature implementations. A strong candidate can refine that choice. Select the appropriate page, block, component or production technique at the useful reuse level. A graph's visual attraction is useful only when its topology helps the task. Distinguish categories, quantities, sequence and uncertainty in data graphics; show units, scale, baseline and missingness honestly. Simulated charts are labeled as fixtures.
 
+## Organize actions around the object and real choices
+
+Identify the object the person believes they are acting on and keep its information, controls and feedback visibly associated. A card can hold detail and a state change when that fits the task; a list, table or conversation can provide a clearer carrier for another product. Preserve a stable identity when the object moves, expands, flips or changes state, including the return path.
+
+Inventory decisions the user actually has to make. Multiple valid configurations need a usable choice; a single valid configuration usually needs a clear value; a choice already made upstream needs an understandable summary and an appropriate way to revise it. Keep necessary control and important conditions visible. Determine whether actions are primary/secondary, equal alternatives, sequential steps or consequential commitments before assigning visual weight. Two checkout actions being equal in one flow is evidence for that flow, not a default button rule.
+
+## Understand the operating life of the design
+
+Identify who supplies and maintains content, how often it changes, the volume of repeated work and which variants need individual treatment. A shared template can remove repeated editing while a deliberate override preserves object-specific differences. Make the effective content, its source and the impact of a shared change understandable. Choose batch controls from real workload, selection scope and recovery needs rather than adding an administration layer to every product.
+
+Describe each role's task using the same authoritative facts. A consumer may need service availability and a next action; an operator may need affected objects, diagnostic context and a repair path. Derive useful information and control from that role's actual permission. Let maintenance needs affect the content model and interface early; use the content and integration references for ownership, publication, conflict and partial-result details.
+
 ## Form a concept that carries across surfaces
 
-Derive direction from the product's distinctive mechanism, subject, audience scene and available material. Name the organizing idea in plain words and connect it to concrete choices. “Evidence beside conclusions” can shape reading panes, citation treatment, comparison views and selection feedback. “Premium” alone leaves those decisions open.
+Derive an organizing idea from the product's mechanism, audience, subject and available material. “Evidence beside conclusions” can guide reading panes, citations and source selection; “premium” needs those concrete relationships. Separate inherited identity, surface composition and local refinement. Use accepted choices as constraints, then compare materially different organizations when the choice can improve the task.
 
-Separate inherited identity, the surface's composition and a local refinement. Existing code can embody accepted decisions when their approval or current fit is established. Preserve that evidence and user-pinned choices; assess other visual candidates against the intended model and quality target. For an open direction, explore materially different organizations when doing so can change the decision; choose a grounded recommendation and demonstrate it. Candidate counts follow useful uncertainty rather than a fixed ceremony.
-
-Evaluate a concept by product fit, clarity, distinctiveness, expansion to related surfaces, implementation feasibility and user control. Distinctiveness can be precise density and excellent status handling, not only expressive artwork. Use analogies to reveal relationships while preserving recognizable controls and accessibility. A concept earns its place through several mutually supporting decisions, not a decorative motif.
+Evaluate product fit, clarity, distinctiveness, extension to related surfaces, feasibility and user control. Precise density and excellent status handling can distinguish a tool as effectively as expressive art distinguishes a gallery. Keep controls recognizable and accessible. A concept earns its place through mutually supporting decisions.
 
 ## Read references as mechanisms
 
@@ -139,15 +146,11 @@ Identify what carries the reference's quality, what relies on its content/assets
 
 ## Make decisions explainable and adjustable
 
-For a consequential choice, retain a compact causal trace in the existing design record: the intended outcome, the relationship chosen, the means used, the important tradeoff and what rendering or task evidence would confirm it. This can be one paragraph. Routine adjustments stay in implementation.
-
-Expose the meaningful controls in source: semantic type/color roles, composition bounds, component states, content fields, image focal positions and timing relationships. Preserve their purpose so a later iteration or real integration can change content without losing the design. Treat a successful case as conditional evidence for a method, not as a universal template.
+Keep significant choices traceable through intended outcome, selected relationship, implementation, tradeoff and confirming observation. A paragraph in existing records can suffice. Expose meaningful controls in source: semantic tokens, content fields, component states, composition bounds, image focal points and timing. Preserve their purpose across later changes. Routine adjustments stay in code; successful examples retain their applicable conditions.
 
 ## Let available excellence inform the solution
 
-Use external discovery both to realize a chosen idea and to reveal a stronger expression while the relevant choice is open. Translate the task into a perceptual outcome, interaction and material constraints, then inspect useful incumbent/native capabilities and ecosystem work. A concrete demonstration can expose a possibility that an abstract brief did not name.
-
-Assess the mechanism behind that possibility and its conditions. Preserve binding product direction; compare whether the candidate improves clarity, task behavior, quality or total cost. Choose the appropriate reuse layer before committing implementation effort. An existing suitable choice can continue; a meaningful new requirement merits a fit check. The [resource sourcing reference](component-sourcing.md) supplies the method, the catalog supplies leads, and actual project evidence establishes the result.
+Translate the desired perceptual outcome and operation into concrete resource candidates while the relevant decision remains open. Compare useful internal, native and external work by clarity, task behavior, quality and total cost. Preserve binding direction and record why the selected scope fits. The [sourcing reference](component-sourcing.md) owns discovery and adoption methods; the catalog supplies leads; project evidence establishes the result.
 
 ## Let assets participate in the concept
 

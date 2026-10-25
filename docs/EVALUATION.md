@@ -16,9 +16,11 @@ deterministic engineering checks. These establish different facts:
 | Actual product browser review | Visual quality and task behavior in the observed UI scope |
 | Real integration tests | The authority, persistence and outcomes exercised in that environment |
 
-The final two rows belong to consuming product tasks. Host-model understanding
-and comparative design quality need their own observations. Large comparative
-agent campaigns are optional research, rather than a release prerequisite.
+The final two rows require an executed interface and its actual boundary. The
+repository fixtures provide scoped observations; consuming products establish
+their own outcomes. Host-model understanding and comparative design quality need
+their own observations. Large comparative agent campaigns are optional research,
+rather than a release prerequisite.
 
 ## Run deterministic checks
 
@@ -149,4 +151,21 @@ the default HTTP path and is a required release check.
 
 ## Content design assurance (1.6)
 
-The content example validates the wording/state mapping, actual labels and associations, two locales, two themes, representative viewports, local write success, validation failure, simulated storage failure and recovery. Automated checks establish declared DOM and action observations; screenshots support visual inspection; editorial quality and real-user comprehension require contextual human evidence. The content source map documents adopted methods rather than claiming that referenced design systems certify this skill.
+The content example validates wording/state mapping, visible and accessible names,
+two locales, two themes, representative viewports and real browser-local storage.
+Read, write and removal faults exercise truthful recovery at the native Storage
+boundary. Controlled-clock cases cover edits during a save, repeated submission,
+clearing pending work and language changes; they establish state ordering rather
+than a performance score. The report lists each viewport/full-document capture
+and records native persistence separately from the optional simulated mode.
+
+Automated checks establish declared DOM and action observations. Opened screenshots
+support actual visual judgment; independent user comprehension requires its own
+observation. The content source map documents adopted methods rather than claiming
+that referenced design systems certify this skill.
+
+The [1.6 review](REVIEW-v1.6.0.md) records the executed local checks, observed repairs
+and one fresh-context forward application to an image-organizing tool. That task
+produced a design proposal, researched sources and proposed verification; it did
+not implement the tool or measure a performance improvement. The nine experience
+dimensions guide judgment while each claim retains its own evidence boundary.

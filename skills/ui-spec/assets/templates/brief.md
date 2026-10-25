@@ -58,3 +58,9 @@ visual candidates assessed against the new quality target.
 ## Content and language scope
 
 User-facing content owner, core terminology, supported languages, product Voice and situational Tone, key consequential conditions, and important state copy. Link established content/style guidance or the relevant content decision record.
+
+## Runtime and maintenance context
+
+Relevant repeated tasks, readiness and completion points, device/network conditions,
+content growth, update roles/frequency, shared sources and meaningful overrides.
+Record the consequential uncertainty and planned observation in the existing brief.

@@ -7,6 +7,9 @@
 - Carry action, validation, pending, success and failure wording across real user journeys and integration.
 - Add primary writing references, an optional decision record, and a runnable bilingual content-state fixture.
 - Extend regression and publication checks to verify content behavior and rendered language variants.
+- Unify nine experience dimensions across the existing eight common references, including actual choice space, motion/scroll continuity, performance and sustainable operations.
+- Connect early preparation, bounded concurrency, freshness and commitment boundaries to task-specific measurements; cover content inheritance, role-specific facts and partial batch recovery.
+- Correct browser-local read/reset failure feedback, draft and locale continuity, repeated saving and retry focus in the content fixture.
 
 ## 1.5.0 — 2026-10-25
 

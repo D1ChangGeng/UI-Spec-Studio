@@ -2,6 +2,17 @@
 
 Read this reference for finish and whenever a design depends on actual data, authority, persistence or consequential business rules. Apply the common analysis and visual principles throughout. Real content and asynchronous states continue to be design work.
 
+## Contents
+
+- [Reconcile the scope](#1-reconcile-the-accepted-scope-with-the-actual-system)
+- [Establish the contract](#2-establish-the-behavior-contract)
+- [Sequence and connect outcomes](#3-sequence-complete-user-outcomes)
+- [Verify and deliver](#5-verify-design-and-behavior-together)
+- [Preserve design and resource decisions](#preserve-design-intent-at-four-boundaries)
+- [Connect assets and content](#carry-asset-sources-and-delivery-through-finish)
+- [Prepare data with correct authority and lifetime](#prepare-data-with-correct-authority-and-lifetime)
+- [Support content maintenance and operational work](#support-content-maintenance-and-operational-work)
+
 ## 1. Reconcile the accepted scope with the actual system
 
 Identify the routes, states, interactions and shared rules the user approved. Use approval already supplied in context and relate it to a reproducible source reference, content and captures. Read current implementation, existing APIs, business rules, tests and runtime configuration.
@@ -100,3 +111,23 @@ Verify actual URLs, MIME, loading/cache behavior, decoding and dependency suppor
 Before replacing fixture values, map important strings to their actual source: brand vocabulary, product copy, service responses, localization catalog, business rule, price, eligibility, permission or persisted content. The trusted owner supplies protected facts and action outcomes. The application selects the right text for loading, success, failure, recovery and conditional display; design components render it in the accepted hierarchy.
 
 Carry consistent user-level labels through routes, notifications and documentation. Keep translation keys and dynamic substitutions meaningful, encode values safely, preserve formatting and verify supported locale variants. Test that interface promises match actual results: saved, submitted, paid, published and delivered are distinct states. Material new contractual or product claims receive the appropriate approval. Preserve the reviewed text composition under genuine content lengths, themes and accessibility requirements.
+
+## Prepare data with correct authority and lifetime
+
+Map preparation to the real operation before moving it earlier. Distinguish read-only calculation from creating an offer, consuming a quota, reserving stock or submitting an order. The trusted owner decides protected values and validity. A prepared quote can accelerate display while checkout still follows its validation or reservation contract; client readiness and animation completion do not extend its validity or prove purchase success.
+
+Identify the inputs that make a cached or in-flight result reusable: object and variant, user/permission context, quantity, currency, rule revision and any relevant time window. Invalidate or revalidate when those inputs change, and handle expiration while the page remains open or resumes from the background. Keep personalized results within their authorized scope. Match HTTP caching to the server's freshness and privacy policy; application caches also need their own keys, ownership and lifetime. [HTTP caching guidance](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) explains freshness, revalidation and response variation.
+
+Bound concurrency, deduplicate matching work and preserve per-object progress and recovery. Give direct user actions priority over optional preparation. Reconcile out-of-order responses against current intent and the result's validity. Abort supported obsolete reads and release resources, using mechanisms such as [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController); reconcile consequential operations with their trusted owner because a locally aborted wait does not establish server rollback. A lost response can leave an outcome unknown, requiring status recovery before a retry could duplicate it.
+
+Measure the complete task with the actual adapter as well as the reproducible fixture. Verify cold entry, warm reuse, rapid independent actions, expiration, input changes and partial failure at the affected boundary. Preserve correctness and input responsiveness while checking the resource cost of preparation. Record the observed improvement and remaining service dependency.
+
+## Support content maintenance and operational work
+
+Trace maintained content from its editing source through validation, localization, rendering and publication. Establish who can change it, which surfaces consume it and how the current value is determined. Where the product needs templates and individual overrides, define inheritance and reset behavior, distinguish missing values from intentional emptiness, and preview which objects a shared change affects. Use the existing content model when it expresses these responsibilities clearly.
+
+Test replacement images, long names, optional fields, special values, rich text or Markdown, translation changes and new records in the actual components. Render authored content through the project's safe content boundary. Preserve the design's hierarchy as data changes; important business conditions remain visible at their decision points. Keep editable sources, locale versions and asset references maintainable at their actual owner.
+
+Design batch operations from operator frequency, scale and exceptions. Make selection scope explicit across filters and pagination; show what will change and preserve individual control where needed. Enforce permission and validation per affected object. Report completed, failed, skipped, pending or unknown results according to actual outcomes, retain successful work, and offer retry or correction for the appropriate remaining scope. Distinguish a stopped client wait from cancellation of queued or completed work. Use atomic application, partial completion or rollback according to the underlying contract and expose the resulting behavior clearly.
+
+Present the same underlying service state according to each role's task and access. A customer needs the impact on availability, commitment and next action; an operator may need the reason, affected objects and a diagnostic or recovery route. Derive both from the same business truth, retaining authorized detail at the appropriate surface. Verify cross-role consistency, persistent results, override behavior and recovery through actual UI paths. These operational choices apply where the product has maintained content or repeated management work; a static artifact uses its simpler publishing and editing boundary.

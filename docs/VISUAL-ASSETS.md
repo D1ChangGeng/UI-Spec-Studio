@@ -8,7 +8,7 @@ UI Spec Studio 将 **Visual Assets & Asset Engineering** 纳入共同专业基�
 
 素材既可以来自成熟资源，也可以通过有依据的原创制作形成。复用层级说明采用范围，不代表重要性排序。选用高质量素材，也需要将它的比例、色彩、光影、视觉重量、信息意义和运行方式融入当前产品。
 
-Agent 完整读取新增的 [visual-assets.md](../skills/ui-spec/references/visual-assets.md)。共七份通用参考提供判断依据，实际任务决定制作深度。专项 [asset-sources.md](../skills/ui-spec/references/asset-sources.md) 保留本轮检查的官方资料与适用提醒；原有 37 项资源目录及其历史核查日期保持完整。
+Agent 完整读取新增的 [visual-assets.md](../skills/ui-spec/references/visual-assets.md)。共八份通用参考提供判断依据，实际任务决定制作深度。专项 [asset-sources.md](../skills/ui-spec/references/asset-sources.md) 保留本轮检查的官方资料与适用提醒；原有 37 项资源目录及其历史核查日期保持完整。
 
 ## 五类素材与不同的专业判断
 

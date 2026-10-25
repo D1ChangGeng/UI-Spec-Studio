@@ -1,5 +1,16 @@
 # Verification: coverage, inspection and honest evidence
 
+## Contents
+
+- [Coverage and assurance](#build-the-coverage-inventory-from-reality)
+- [Viewing conditions and actual interaction](#capture-the-actual-viewing-condition)
+- [Findings, comparison and status](#findings-and-repair)
+- [Judgment at three scales](#read-the-result-at-three-scales)
+- [Publishing and resource adoption](#verify-the-publishing-medium)
+- [Decision, asset and content evidence](#verify-the-design-decision-chain)
+- [Performance across the complete task](#measure-performance-across-the-complete-task)
+- [Motion, growth and operational change](#exercise-motion-growth-and-operational-change)
+
 ## Build the coverage inventory from reality
 
 Reconcile the route configuration, navigation, authorized roles, overlays, runtime states and existing UX records. Include every implemented in-scope page family. Dynamic records use representative data shapes, lengths and permissions; list the sampling rule. An implemented route without a legitimate product entry is a finding.
@@ -113,27 +124,21 @@ These records make future decisions better grounded; they do not establish autom
 
 ## Validate resource adoption in context
 
-Keep three evidence scopes distinct: source documentation establishes a platform capability; a demo and exact implementation support an item assessment; the assembled product establishes project acceptance. Record the source revision/variant and demonstration settings needed to reproduce important effects. A link failure describes access on that attempt; seek another legitimate route and retain the unobserved scope accurately.
+Separate discovery, item assessment and project acceptance. Catalog/source documentation establishes leads or capabilities; an inspected demo and exact source support the item; the assembled product needs its own checks. Record revision, variant, demo settings and rights. A link failure leaves that observation pending.
 
-Exercise the adapted item with representative content, supported inputs, real container constraints, theme/locale variants and product states. Check semantic behavior, visual fidelity, combined attention/runtime cost, cleanup and the relevant service boundary. Preserve rights and notices with the adopted material. Regression scope follows the component or shared system affected.
-
-A catalog lookup is discovery evidence. A mocked retrieval or record test verifies its declared mechanics. Report actual demo, image-inspection and integration observations separately. Use the project's existing evidence location; an optional adoption note can connect the significant decision to these observations.
+Apply the coverage and inspection methods above to adopted items and their dependants, including combined attention/runtime cost, cleanup and service boundaries. Keep mocked retrieval/record tests distinct from actual demo, render and integration evidence.
 
 ## Verify the design decision chain
 
-Before treating a new shell or substantial redesign as settled, review its user-level model, primary action, continuation and material alternatives. Check the authority for the selected direction. A one-shot recommendation remains provisional until an actual acceptance covers it. Existing UI reuse is supported by an approval or a target-based fit assessment.
+Check the model, primary action, continuation, alternatives and selection authority. Existing UI reuse needs approval or target-based fit; one-shot direction remains provisional until accepted.
 
-At review, open the design/resource record alongside the preview. Follow consequential rows from the product convention and exact implementation source to the actual page/state and code location. Inspect whether the adopted mechanism and expected quality survive composition. Update candidates that became native, authored, retained or replaced work. A record checks traceability; actual rendering and task execution establish the result.
+Open the decision record beside the preview. Trace choices from convention/source to code and visible state; reconcile retained, replaced and authored work. Exercise first-use, active work and resume.
 
-Walk first-use, active work and return/resume for the selected model. Exercise meaningful slow, empty, failure and long-content conditions. Measure readable contrast, overflow and targets where tools support it; visually review hierarchy, identity, scale and space. Include keyboard, reduced motion, response/cancel/retry and a representative performance observation. State the tested conditions rather than a universal speed or accessibility claim.
-
-Workflow validation may use a bounded, anonymized scenario with authored fixture data. Keep original-product verification, independent model behavior evaluation and owner design acceptance separate. A successful scenario demonstrates the exercised decisions and implementation paths; it does not establish how every model will use the skill.
+An anonymized fixture establishes its exercised paths. Original-product verification, independent model evaluation, user research and owner approval remain separate evidence.
 
 ## Inspect inherited design value
 
-Identify the major relationships supplied by the selected page, system or block and compare them with the actual result. Verify the chosen reuse granularity, the important adaptations, and the evidence for using that foundation. Source attribution proves origin; rendered comparisons and real tasks establish retained quality. Treat a static design port, a runtime component integration and an accepted product as different observations.
-
-A useful review explains what mature work contributed to the overall composition and what original work solved. Check the assembled page with representative content and states, including changes that might undermine the foundation's hierarchy, proportions, reading rhythm or interaction continuity.
+Compare inherited hierarchy, proportions, reading rhythm and state continuity with the rendered product. Explain reuse scope, adaptations and original contributions. Attribution proves origin; real tasks establish retained value. Distinguish a static port, runtime integration and accepted product.
 
 ## Verify assets from master to placement
 
@@ -145,6 +150,31 @@ Use a bounded real browser fixture to validate integration paths when full speci
 
 ## Verify meaning and actual words in context
 
-Inspect the full visible content scope: page and component strings, headings and navigation, labels, hints, instructions, status, validation, error, empty and confirmation states. Use task execution to check what the user understands and what the words promise. Verify business facts against their owner; the UI reflects actual state, including delayed, denied or failed results. Localize and inspect supported languages with realistic strings, typography, viewports and themes.
+Inspect the full visible content scope: page and component strings, headings and navigation, labels, hints, instructions, status, validation, error, empty and confirmation states. Use task execution to inspect the information available at each decision and the outcome each phrase promises. Verify business facts against their owner; the UI reflects actual state, including delayed, denied, partial, unknown or failed results. Localize and inspect supported languages with realistic strings, typography, viewports and themes.
 
 Check accessible names, explicit labels, error associations, announcements, truncation, overlap, line breaks and focus. Mechanical checks establish the properties measured; rendered review establishes rhythm and balance; actual user comprehension requires its own evidence. Compare related pages for terminology, placement and cross-step information responsibility. Explain findings at the content, structure, component, localization or authority layer, then recheck the affected journey.
+
+## Measure performance across the complete task
+
+Choose measurements from the operation people need to finish. Record the task, starting data/cache state, device/browser, network conditions, workload and source revision. Separate first response, usable content and authoritative completion, then capture enough of the execution path to identify the delay. A fast input acknowledgment can coexist with a slow business result.
+
+| Experience question | Useful observation | Interpretation boundary |
+|---|---|---|
+| Does input receive timely feedback? | Event delay, handler work and presentation of the next relevant frame | Browser responsiveness does not measure all downstream service work |
+| When can the user take the next meaningful action? | Task-specific marks from entry/action to usable content or confirmed result | Define whether the endpoint is local readiness, server acceptance or completed work |
+| Does interaction stay smooth? | Frame timing, long tasks and dropped or interrupted transitions during the target operation | A screenshot or average rate can hide a consequential stall |
+| Does the page remain stable? | Layout shifts plus observed focus, object and scroll-position continuity | A layout metric covers only its defined shifts; inspect task stability separately |
+| What does preparation cost? | Requests, transferred bytes, duplicate work, concurrency, decoding and sustained memory/resource use | Compare saved waiting against work the user never uses |
+| Does the result remain correct under stress? | Final object state, response ownership, partial results and recovery after repeated or delayed actions | Speed gains retain the same required business outcome |
+
+Use field observations when available and controlled browser runs for diagnosis and regression. [User-centric metrics](https://web.dev/articles/user-centric-performance-metrics) connect measures to user experience; [INP](https://web.dev/articles/optimize-inp) concerns interaction responsiveness. Task-specific [performance measures](https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure) require explicitly placed start/end marks. An automation elapsed time or a double-animation-frame sample retains that label and scope; it is not a field INP measurement.
+
+Compare equivalent before/after tasks under the same conditions, with repeated samples where variability can change the decision. Include cold and warm paths, realistic content volume, rapid independent operations and relevant slow/failing boundaries. Check expiration and input changes when preparation or caching is involved. Choose budgets from product needs and target environments. Report the measured result and tradeoff; simulated service delays and desktop browser observations keep their stated limits.
+
+## Exercise motion, growth and operational change
+
+Inspect motion through its full relevant cycle and both directions, including interruption, reversal and reduced motion. Check object identity, face visibility, focus and interactive regions. Observe maximum visual reach and overlap with important content at supported viewports. A completed transition must show the current valid state; test responses arriving before, during and after it.
+
+Exercise content expansion, late media/fonts, new records, long text and permission-dependent controls in the actual scrolling regions. Check lower content through real scrolling, sticky controls, overlay dismissal, keyboard reveal and position on return. Compare ready, loading and failure states for both component material and readability. Verify that collapsing a resolved choice preserves its meaning and any permitted way to revise it.
+
+For maintained content and management workflows, change a shared template and an overridden item, then inspect the affected consumers and supported language versions. Exercise selection across pagination/filter changes, batch results with mixed outcomes, interruption and scoped retry. Confirm that completed work remains and reported counts match the actual item outcomes. Compare customer and operator views of the same service condition for consistent facts and appropriate actions. Derive repeated-task efficiency from observed steps, elapsed work and recovery effort at representative scale; a single default-state screenshot cannot establish it.

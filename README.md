@@ -53,6 +53,12 @@ The agent designs **what people need to understand, where the message belongs, h
 
 [Content design guide](docs/CONTENT-DESIGN.md) · [Working bilingual example](examples/content-review/README.md)
 
+## Design for actual use and continued operation
+
+Connect the product model, visual material, content, layout, component states and motion with **responsive tasks and maintainable content**. Trace repeated actions from input to usable result and confirmed completion; choose preparation, concurrency and caching by their actual benefit and validity. Keep object and scroll continuity through change. Design shared content, individual overrides and batch recovery around the work the product really supports.
+
+[Complete experience model](docs/EXPERIENCE-QUALITY.md) · [Runtime and operational integration](skills/ui-spec/references/integration.md) · [Verification methods](skills/ui-spec/references/verification.md)
+
 ## One method, different surfaces
 
 The principles transfer; the **medium determines the realization and verification**.
@@ -87,7 +93,7 @@ A separate [research-product example](examples/product-intent/README.md) shows p
 
 Each round gives the agent a useful scope to implement and inspect. An accepted design can continue into working product behavior, or into a document's actual publishing boundary. The agent carries forward decisions, evaluates the affected views and states, and keeps source evidence distinct from owner approval.
 
-Before substantive work, the agent reads **eight common references in full**: [workflow](skills/ui-spec/references/workflow.md), [analysis](skills/ui-spec/references/analysis.md), [visual principles](skills/ui-spec/references/principles.md), [resource discovery](skills/ui-spec/references/component-sourcing.md), [interaction](skills/ui-spec/references/interaction-and-variants.md), [verification](skills/ui-spec/references/verification.md) [visual assets](skills/ui-spec/references/visual-assets.md), and [content & UX writing](skills/ui-spec/references/content-design.md). [Integration](skills/ui-spec/references/integration.md) applies when connecting real behavior. The host remains responsible for tool access, execution and context management.
+Before substantive work, the agent reads **eight common references in full**: [workflow](skills/ui-spec/references/workflow.md), [analysis](skills/ui-spec/references/analysis.md), [visual principles](skills/ui-spec/references/principles.md), [resource discovery](skills/ui-spec/references/component-sourcing.md), [interaction](skills/ui-spec/references/interaction-and-variants.md), [verification](skills/ui-spec/references/verification.md), [visual assets](skills/ui-spec/references/visual-assets.md), and [content & UX writing](skills/ui-spec/references/content-design.md). [Integration](skills/ui-spec/references/integration.md) applies when connecting real behavior. The host remains responsible for tool access, execution and context management.
 
 ## Install, inspect, maintain
 

@@ -51,6 +51,12 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 
 [内容设计指南](docs/CONTENT-DESIGN.md) · [双语可运行示例](examples/content-review/README.md)
 
+## 面向真实使用与持续运营设计
+
+产品模型、视觉素材、内容、布局、组件状态和动效共同服务于**流畅的操作与可持续维护的内容**。Agent 从连续操作追踪输入、可用结果和权威完成，根据实际收益与有效性选择提前准备、并发和缓存；保持对象变化与滚动的位置连续性，再围绕真实维护任务设计共享内容、单项覆盖和批量恢复。
+
+[完整体验模型](docs/EXPERIENCE-QUALITY.md) · [运行与运营接线](skills/ui-spec/references/integration.md) · [验证方法](skills/ui-spec/references/verification.md)
+
 ## 一套方法，适用于不同视觉媒介
 
 通用原则提供专业判断；**具体媒介决定表现形式与最终验收方式**。

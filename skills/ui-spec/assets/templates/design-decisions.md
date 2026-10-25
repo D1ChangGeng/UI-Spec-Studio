@@ -31,8 +31,8 @@ what makes each worth retaining, adapting or replacing against the target.
 | ID / surface / state / dimension | Intended outcome and product-pattern reference | Exact implementation source / variant | Choice, reason and reuse depth | Adaptation and implementation/preview location | Evidence, date and current status |
 |---|---|---|---|---|---|
 
-Consider layout/navigation, background, typography, components, icons/assets,
-feedback, micro-interactions, general motion and text animation as applicable.
+Consider product objects, layout/navigation, content/typography, components, assets,
+feedback, motion, runtime readiness and operating work as applicable.
 Shared IDs can serve multiple pages. For native, authored or retained work,
 identify the actual source and fit rationale. Link the exact source and demo when
 external work is selected. Use an existing equivalent record instead of duplicating it.
@@ -58,3 +58,10 @@ verification scoped to their evidence.
 ## Content and language decisions
 
 For consequential content, link the user question, surface/state, factual authority, localized wording, typography role and observed result. Reference the existing product content record or optional [content template](content-decisions.md). Keep routine strings in their component/content source.
+
+## Runtime and operating decisions
+
+For consequential choices, connect the intended sequence to preparation, validity,
+resource cost, authoritative completion and recovery. Link relevant content/template
+ownership, override behavior, role information and batch scope. Record measured
+conditions and observed outcomes where evaluated; routine implementation stays in code.

@@ -1,8 +1,20 @@
 # Content design, UX writing and typographic expression
 
+## Contents
+
+- [Purpose and product understanding](#treat-words-as-product-behavior-and-design-material)
+- [Information placement](#give-information-a-home-along-the-journey)
+- [Element-level writing](#write-at-the-scale-of-the-element)
+- [Voice and tone](#establish-voice-and-adapt-tone)
+- [Text and composition](#compose-actual-words-with-the-interface)
+- [State language](#write-every-meaningful-state)
+- [Localization](#localize-the-message-and-its-composition)
+- [Roles and maintenance](#maintain-content-through-roles-and-updates)
+- [Decisions and verification](#keep-a-traceable-content-decision-where-it-matters)
+
 ## Treat words as product behavior and design material
 
-Content design decides what people need to understand, at which moment, in which place and form. UX writing gives each interface utterance the right meaning, voice and action. Typography makes that content readable and gives it visual weight in the composition. Design these together with structure, controls, assets and states from the first meaningful slice.
+Content design decides what people need to understand, at which moment, in which place and form. UX writing gives interface text the right meaning, voice and action. Typography makes that content readable and gives it visual weight in the composition. Design these together with structure, controls, assets and states from the first meaningful slice.
 
 Use the same professional loop that governs visual work: **user/task and source facts → needed understanding → content roles and distribution → product-language research → wording and tone → composition and behavior → real reading/action checks**. Revisit earlier decisions as rendered content, new reference work or authentic product data changes what is needed. The loop is a judgment method, not a required document sequence.
 
@@ -24,7 +36,7 @@ Domain and engineering terms clarify how the system works. Choose user-facing na
 
 Map the user's next question to the surface responsible for answering it. Page headings orient; navigation labels establish destinations; controls express available actions; help text explains an input or condition; comparison content makes differences visible; feedback reports actual outcomes and recovery. Each region can carry several of these responsibilities when their relationship is clear.
 
-Prefer **progressive clarity**: present the information needed for the current decision, then provide sufficient detail when the user explores or commits. Put facts affecting trust, money, safety, eligibility, access or irreversible actions at the decision point where they matter. An important condition may appear at more than one step when context or risk requires it. Evaluate duplication by purpose and timing rather than counting identical strings.
+Present the information needed for the current decision, then provide sufficient detail when the user explores or commits. Put facts affecting trust, money, safety, eligibility, access or irreversible actions at the decision point where they matter. An important condition may appear at more than one step when context or risk requires it. Evaluate duplication by purpose and timing. Repeated presentation can use a shared fact source while expressing that fact appropriately for each step.
 
 Choose the best expression for the information. A short label can replace a paragraph when the action is evident; a table can clarify repeated differences; an inline example can clarify an unfamiliar input; a link can lead to extended instructions. The design should make the content's job evident without requiring ornamental explanation. If the meaning changes the information architecture, revisit the page/section relationship.
 
@@ -55,19 +67,21 @@ Write and review for accuracy, natural rhythm and semantic precision. Prefer the
 
 Preserve legally or operationally necessary qualifiers. Copy concerning money, eligibility, delivery, privacy, permissions and guarantees is tied to an authoritative rule or explicit approval. Representative fixture wording is identified as such. A preview action and its message should describe the actual simulated boundary rather than suggest production completion.
 
-## Compose actual words, not empty boxes
+## Compose actual words with the interface
 
 Text occupies space. Consider wording, typography and the container together: length, line breaks, script, punctuation, measure, weight, contrast and surrounding space determine hierarchy and optical balance. Design with representative short, common and long content before fixing the layout. Choose fonts by actual language coverage, metric behavior and text role; distinguish a display/wordmark asset from a reusable reading font.
 
-Assign clear roles to display titles, headings, body, labels, supporting explanations, alerts and comparable data. A heading may need semantic line breaks and artistic rhythm; dense operational content needs scanable alignment; reading text needs sustained measure and line rhythm. Text size, wrapping and visible occupancy must remain useful across supported viewports, zoom and themes. Validate actual font readiness, fallback, numeral treatment and mixed scripts in the renderer.
+Assign clear roles to display titles, headings, body, labels, supporting explanations, alerts and comparable data. A heading may need semantic line breaks and artistic rhythm; dense operational content needs scannable alignment; reading text needs sustained measure and line rhythm. Text size, wrapping and visible occupancy must remain useful across supported viewports, zoom and themes. Validate actual font readiness, fallback, numeral treatment, punctuation and mixed scripts in the renderer. Adjust theme-specific optical weight only when observation shows a real imbalance. Check that user text-spacing overrides preserve content and controls; accessibility test values describe supported overrides, not default typography tokens.
 
 When content gets longer, choose among precise editing, variable layout, wrapping, disclosure and a different representation according to what the user needs. Text and design can influence one another: a simpler name can improve navigation; a consequential qualification can require a different section; a real image may change where text is readable. A layout constraint alone is not a reason to change the factual meaning.
 
 ## Write every meaningful state
 
-Design the initial state and the state transitions together. For an asynchronous action, connect **user intent → immediate acknowledgment → pending explanation → authoritative outcome → next action**. A progress indicator and its words refer to the same operation. For repeated, cancelled or stale requests, the visible message follows the latest valid task state. A retry preserves useful user input.
+Design the initial state and the state transitions together. For an asynchronous action, connect **user intent → immediate acknowledgment → pending explanation → authoritative outcome → next action**. Distinguish request receipt, saved data and completed service work when those are separate boundaries. A timeout can leave the outcome unknown: describe what is known and offer the supported status check or recovery path. Retry wording must match whether repeating the action is safe. For partial completion, identify the affected scope and remaining work. Progress, animation and words refer to the same operation; repeated, cancelled or stale requests follow the latest valid task state. Preserve useful input through recovery.
 
-Errors identify the affected item or operation, explain what can be done when known and support the actual recovery path. Inline validation is associated with the relevant field; a page-level summary can aid navigation for complex forms. Warnings state consequences before commitments. Empty states reflect whether no record exists, no result matches the filter or access is restricted; those conditions lead to different next steps. Live announcements and focus behavior follow semantic, accessible patterns.
+Errors identify the affected item or operation, explain what can be done when known and support the actual recovery path. Associate input errors with their fields; a page-level summary can aid navigation for complex forms. Present service failures, capacity limits and permission conditions where their task-level effect can be explained. Warnings state consequences before commitments. Empty states reflect whether no record exists, no result matches the filter or access is restricted; those conditions lead to different next steps. Keep live announcements useful and proportionate, and preserve focus unless the task requires moving it.
+
+Keep visible labels and accessible names aligned: the accessible name of a text-labelled control contains its visible label. Name icon-only controls by their action and context. Localize accessible names and state announcements with visible copy, and verify that feedback can be perceived in the current reading position and through the implemented accessibility semantics.
 
 Review user-visible content wherever it appears: menus, tooltips, status regions, overlays, first-use guidance, notifications, accessibility names, placeholders, exports and external communication when within task scope. Asset failures and permission-denied paths also need meaningful language.
 
@@ -75,9 +89,17 @@ Review user-visible content wherever it appears: menus, tooltips, status regions
 
 For each supported locale, produce natural target-language copy while preserving the same product facts, user decision and action outcome. Translate meanings and user vocabulary in context, including errors, conditional strings, accessibility labels and dynamic information. Maintain a lightweight glossary for recurring product terms, action labels and protected names. User-authored content and fixed product identities keep their intended ownership.
 
-Consider plurality, script width, punctuation, case, date/time/unit formatting, numbers, variable interpolation and language-specific line breaking. Use the project's localization format and escape substitutions safely. Verify the UI with actual strings, long names, supported writing direction and font fallbacks. Keep locale switching compatible with task state. Currency or business terms follow their real authority and are not silently changed with language.
+Use complete, contextual translation units. Preserve translator context for the object, action, state and variable meanings; allow variables and clauses to be reordered. Reuse a message when its meaning and grammatical role are shared, rather than because individual source-language words happen to match. Use the project's localization format for plurality and interpolation, and escape substitutions safely.
+
+Consider script width, punctuation, case, date/time/unit formatting, numbers and language-specific line breaking. Verify the UI with actual strings, long names, supported writing direction and font fallbacks. Keep locale switching compatible with task state. Currency and business terms follow their real authority; language selection changes their presentation only within that authority.
 
 A locale can use different lengths or sentence structures while preserving information and brand character. Revisit component dimensions, image-text balance, reading order and line wraps as needed. Judge both language versions at their actual viewports and themes rather than assuming a string-level equivalence proves layout equivalence.
+
+## Maintain content through roles and updates
+
+Express shared facts according to each role's task and permissions. A customer may need service availability, delivery impact and an available next action; an operator may need the cause, affected items and a recovery control. Both views describe the same underlying condition. Keep useful technical detail with the role that can act on it.
+
+Identify which content comes from code, business data, shared templates, object-specific overrides or editorial tools. Choose the inheritance and override model the product needs, and make the effective content understandable to its editor. Define the meaning of missing, intentionally empty and untranslated values where they differ. Preview actual inherited content and long or unusual values in the consuming interface. Distinguish draft, saved and published results when those states exist. Keep owners, source revisions, locale updates and affected placements traceable for important changes; stale wording should be revised with the fact it describes.
 
 ## Keep a traceable content decision where it matters
 
@@ -87,8 +109,8 @@ A record is most useful for substantive navigation or product-language choices, 
 
 ## Verify through comprehension and real behavior
 
-Review semantic correctness first: can a reader identify the page, choice, consequence and next action from the visible content? Follow first use, active work, errors and recovery while reading the actual labels. Check complete content inventory for the chosen scope, including both page and component states. Measure what tools can establish: accessible associations, string coverage, clipping, reflow, focus, status changes and locale/viewport variants. Inspect actual screenshots for hierarchy, density, rhythm and optical balance.
+Review semantic correctness first: can a reader identify the page, choice, consequence and next action from the visible content? Follow first use, active work, errors and recovery while reading the actual labels. Check the content inventory for the chosen scope, including page and component states. Measure what tools can establish: accessible associations, string coverage, clipping, reflow, focus, status changes and locale/viewport variants. Inspect actual screenshots for hierarchy, density, rhythm and optical balance. Use the [primary references](content-sources.md) for the relevant platform and language conditions.
 
-Test the promises made by copy against actual capabilities: a button named “Save” must reach a real save boundary or be clearly labeled as a demo; a success message follows a confirmed result; permission and price text reflect the authoritative system. Use representative scenarios and source-backed review for high-risk text. Observe comprehension directly with users when that validation is warranted and available; automated checks and a designer's reading remain distinct kinds of evidence.
+Test the promises made by copy against actual capabilities: a button named “Save” must reach a real save boundary or be clearly labeled as a demo; a success message follows a confirmed result; permission and price text reflect the authoritative system. Use representative scenarios and source-backed review for consequential text. When direct comprehension research is warranted and available, observe users attempting credible tasks without telling them the intended path. Report automated checks, editorial judgment and actual user observations as distinct evidence.
 
 The strongest content outcome makes the next meaningful decision understandable at the moment it is needed, while retaining coherent brand voice and a clear visual place in the product.

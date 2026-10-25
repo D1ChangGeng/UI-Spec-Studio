@@ -2,6 +2,17 @@
 
 Apply these requirements to the interaction and variants the product actually supports. Include their important consequences while planning a screen, then verify them in the resulting interface.
 
+## Contents
+
+- [Controls, objects and choices](#control-semantics-and-focus)
+- [Language and themes](#language-and-content)
+- [Motion and dynamic space](#motion)
+- [Scrolling and content growth](#scrolling-and-content-growth)
+- [State and task continuity](#continuity-is-a-user-visible-contract)
+- [Resource boundaries](#preserve-behavior-across-resource-boundaries)
+- [Responsiveness and preparation](#preserve-the-primary-loop-and-perceived-responsiveness)
+- [Asset and content states](#assets-have-runtime-states)
+
 ## Control semantics and focus
 
 Use native elements or appropriate accessible primitives. Every icon-only action has an accessible name and a usable target. Hover hints supplement discoverability; they do not replace names or touch behavior. Menus, dialogs, tabs, comboboxes and tooltips follow the relevant interaction pattern, including focus entry, movement, dismissal and return.
@@ -10,6 +21,14 @@ Complete key paths with keyboard and pointer/touch. Check visible focus, loading
 
 Reference patterns: https://www.w3.org/WAI/ARIA/apg/
 WCAG 2.2: https://www.w3.org/TR/WCAG22/
+
+## Objects, choices and action relationships
+
+Choose the interaction carrier from the object people recognize and the work they do with it: a record, product, file, conversation or media item may suit a card, row, table, message or editor. Keep its identity and selection clear while details, status and available actions change. When the object itself opens or transforms, make its affordance and result legible; keep independent actions separately operable and avoid nested interactive targets.
+
+Derive controls from actual decisions. Offer a selector for meaningful alternatives, show an already determined value clearly, and preserve a way to revise it when the journey allows that choice. A single valid option may need confirmation or explanation, without needing a multi-option control. Identify whether actions are primary/secondary, peers, successive steps or consequential commitments before assigning visual weight and position. Two equally prominent buttons are appropriate only when the task supports their equal standing.
+
+Judge component material and state together. Inspect resting, hovered, focused, expanded, selected, pending, disabled and invalid states where supported. Text, icons, borders, translucency and elevation must keep their meaning against the actual background. A glass surface or decorative layer still needs readable contrast, clear selection and visible keyboard focus. Keep the state language coherent across the component family.
 
 ## Language and content
 
@@ -33,11 +52,23 @@ Define which events animate: first entrance, navigation, local state update, dir
 
 Check reduced-motion preferences and provide a quiet equivalent that preserves meaning and access. Pause or simplify long-running decorative motion when appropriate. Match touch and keyboard expectations; optional pointer effects should not carry essential information.
 
+Preserve the same object's identity through expansion, reversal, replacement and return. For a flip, align both faces and the pivot, coordinate which face is visible and interactive, and test both directions from interrupted states. Coordinate animation with data readiness: movement can acknowledge intent while a truthful pending state carries an unresolved result. A completed animation alone does not establish a completed business action.
+
+Compose the full motion envelope: rotation, scaling, particles, shadows and drifting elements occupy space beyond a resting box. Check their closest approach to text and controls across the cycle and at supported viewports. Adjust amplitude, layer order, masks, layout or delivery mode according to the intended effect. Clipping is deliberate composition only when it preserves important content, recognizable motion and operable controls.
+
 ## Resilience
 
 Review short heights, text zoom, browser zoom, mobile virtual keyboard, safe areas, slow assets, offline/error states and repeated actions where applicable. Reflow should preserve information and function. A two-dimensional table or editor may need scoped horizontal scrolling, while the surrounding page remains usable.
 
 Initial evidence can use deterministic fixtures. Complete integration evidence should include actual service responses, authorization outcomes and persistence appropriate to the scope.
+
+## Scrolling and content growth
+
+Choose document, local-region or multiple-region scrolling from page responsibility and expected growth. Reading benefits from a continuous document; a workspace may retain navigation and scroll its active content. Give each independent region a clear task and boundary. Check wheel, touch and keyboard traversal, focus reveal, sticky controls and overlay behavior, including short heights and an open virtual keyboard.
+
+Preserve the reader's location when content arrives, expands or changes. Define when a new result should be brought into view, when an existing reading position should remain, and what returning to an object restores. In a live feed, following new content and reading older material are different user intentions. Retain stable object anchors when pagination or virtualization replaces DOM nodes; verify search, focus and assistive use under the chosen approach.
+
+Coordinate scrollbar color, visibility and width with themes and platform behavior. Reserve space where a classic scrollbar would otherwise shift the composition; [scrollbar-gutter](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter) is one available mechanism, with different effects for classic and overlay scrollbars. Maintain discoverability and comfortable operation. Test the actual scrolling region rather than inferring its hidden content from a full-page screenshot.
 
 ## Continuity is a user-visible contract
 
@@ -77,7 +108,15 @@ Coordinate listener scope, shared motion engines and teardown. Keep one meaningf
 
 Define the continuing operation for the selected model: a composer follows the conversation, object editing retains the active object and selection, and task work retains filters and status context. For hybrid surfaces, opening supporting evidence or an artifact preserves the primary task and provides a clear return.
 
-Acknowledge input promptly, preserve drafts across interruption, and separate immediate feedback from service completion. Prepare predictable resources when useful and affordable; defer expensive work outside the interaction path. Verify input echo, submit/cancel/retry, rapid selection, loading and long-content scrolling under representative conditions. Measure the event or rendering path being claimed and record the environment. Synthetic timing supplies a regression signal for the fixture; real-device and service performance have their own evidence.
+Acknowledge input promptly, preserve drafts across interruption, and separate immediate feedback from a usable result and authoritative completion. Trace the task through input handling, calculation, network, asset decoding, state updates, layout/paint and final feedback. Identify which dependency delays the user's next meaningful action before choosing an optimization.
+
+Prepare predictable data or assets at a useful entry point when their probability of use, validity and cost justify it. Parallelize independent preparation within a concurrency and resource budget; prioritize visible or likely next objects and retain capacity for direct input. Reuse in-flight work and valid results, defer low-value material, and stop or ignore obsolete work. A large eager batch can delay the first interaction and consume unused resources, so compare it with staged preparation. The [integration reference](integration.md#prepare-data-with-correct-authority-and-lifetime) owns freshness, identity and commitment boundaries.
+
+For a collection people open rapidly, prepare likely results as the page becomes useful, keep each object's state independent and let ready objects respond immediately. Give unready objects an understandable local state while other work continues. Page entry alone cannot guarantee every result is ready; choose preparation and fallback behavior from observed latency and the business contract. Speculation that consumes a quota, reserves inventory or creates a commitment needs that operation's actual authority.
+
+Keep event work small enough for feedback to render; where measurements justify it, split costly work, move suitable computation off the main thread, reduce repeated layout or render fewer active items. Select animation and media complexity for target devices and sustained use. Measure both the saved wait and any extra requests, bytes or processing introduced. [INP guidance](https://web.dev/articles/optimize-inp) explains input, processing and presentation delays; an end-to-end service result needs its own measurement.
+
+Verify input echo, submit/cancel/retry, rapid selection, loading and long-content scrolling under representative conditions. Synthetic timing supplies a regression signal for the fixture; real-device and service performance have their own evidence. Keep the measured boundary and environment explicit.
 
 Animate a state change according to meaning and frequency. Coordinate cleanup, reduced motion and focus when combining resources. Decorative motion can remain quiet when sustained reading or repeated operation benefits more from stability.
 
