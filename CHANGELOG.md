@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.14.0 — 2026-10-27
+
+- Add the multiscale design evidence map, six scales, transverse relations and two-way coverage challenge.
+- Connect consequential decisions to actual evidence, resource adoption, scoped verification and gap-driven next actions within the existing workflow.
+- Preserve separate research, implementation, check and owner-approval facts; use three views of one record with optional serialization.
+- Add a portable read-only declaration checker and matched experiment preparation, keeping real Agent comparisons explicitly unexecuted.
+- Preserve every prior runtime file's substantive bytes, all historical evidence and the no-content-cap policy; extend bilingual guidance and inspect the README change.
+
 ## 1.13.0 — 2026-10-27
 
 - Audit v1.1.0–v1.12.1 history for compression pressure and weakened executable design guidance.

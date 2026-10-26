@@ -32,6 +32,13 @@ REQUIRED += ["docs/EXPERIENCE-RESEARCH.md", "docs/REVIEW-v1.12.0.md"]
 REQUIRED += ["docs/CONTENT-INTEGRITY.md", "docs/REVIEW-v1.13.0.md",
              "docs/evidence/v1.13.0/lineage.json",
              "tests/test_content_integrity.py"]
+REQUIRED += ["docs/DESIGN-EVIDENCE.md", "docs/REVIEW-v1.14.0.md",
+             "skills/ui-spec/references/evidence-map.md", "skills/ui-spec/references/evidence-actions.md",
+             "skills/ui-spec/references/evidence-records.md", "skills/ui-spec/scripts/check_design_evidence.py",
+             "skills/ui-spec/assets/templates/design-evidence.json", "tests/test_design_evidence.py",
+             "tests/test_multiscale_release.py", "tools/prepare_design_experiment.py",
+             "docs/experiments/design-evidence/PROTOCOL.md", "docs/experiments/design-evidence/baseline-identity.json",
+             "docs/evidence/v1.14.0/source-preservation.json", "docs/evidence/v1.14.0/engineering-checks.json"]
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 
 

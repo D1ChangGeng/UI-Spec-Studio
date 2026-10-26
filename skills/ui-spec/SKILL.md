@@ -5,7 +5,7 @@ license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.13.0"
+  version: "1.14.0"
 ---
 
 # UI Spec Studio
@@ -13,6 +13,14 @@ metadata:
 Use **Intent-Grounded Experience Research & Evidence-Driven UI Design** to organize **Product UI Experience Alignment**: understand the intended experience, plan and explore evidence, challenge design choices, adopt mature work and verify actual use. Do this with or without a user-named reference. Own understanding, research, selection, implementation and verification through reviewable increments. The user supplies intent and evaluates results; observed products and resources calibrate professional judgment under this product's conditions.
 
 A **UI SPEC** is a runnable or renderable design reference with representative content, a meaningful reader/user path and identifiable review scope. Establish whether the deliverable is a working product, representative product demonstration or authored visual work; select realization and evidence for that boundary. Documents can complete reading tasks without an application shell. Use the project's framework, format and preview mechanism; one implementation can support fixtures and real adapters. A fixed-stage demonstration does not establish an interactive product.
+
+## Keep a multiscale design evidence map
+
+For consequential design work, maintain **Design Coverage**, **Evidence Traceability** and **Evidence-Guided Action** together. Use the [Multiscale Design Evidence & Decision Model](references/evidence-map.md): L0 intended experience, L1 journeys, L2 pages, L3 regions/components, L4 perceptual detail, and L5 realization/assurance linked to every scale. Connect state/time, conditions, shared dependencies and evidence sources; challenge initial scope against both user tasks and actual mature-product discoveries.
+
+For each important decision, preserve an inspectable purpose, research question, actual evidence/limits, professional judgment, alternatives/choice, adopted implementation and verification/next action. Unknowns stay explicit. Keep acquired, observed, compared, trialed, adopted, verified and owner-approved facts separate. Use existing records or the [extended decision template](assets/templates/design-decisions.md); a schema or new document is optional, the consequential evidence relationships are required. Overview, Design Detail and Execution & Assurance are views of the same facts. Routine low-impact changes can inherit current, matching-condition decisions and use a short scoped note.
+
+Read the map when establishing or revising consequential decisions, coverage or evidence claims. Read the optional [record profile](references/evidence-records.md) only when using its [read-only checker](scripts/check_design_evidence.py); structural success does not establish actual research or UI quality.
 
 ## Understand the experience and plan its evidence
 
@@ -35,6 +43,10 @@ Begin with the whole visible interface at its intended viewing scale. Read its a
 Judge at three connected scopes: the whole frame and its details, a meaningful continuous episode, and the user's journey across views. For **Temporal Visual Inspection**, observe the trigger, transition and settled outcome; include relevant reversal, interruption, repeated input, loading and loop boundaries. Choose live interaction, video or ordered timestamped frames according to the behavior and available host tools. The observation window follows the design question and the event's actual span. The [verification method](references/verification.md) defines capture conditions and evidence limits.
 
 Inspect four objects at their own boundaries: the design reference, candidate's original demonstration, local trial with current product conditions, and integrated interface/journey. Visible quality supports an appearance judgment; code, state and timing evidence help explain causes and verify behavior. Keep recorded media, actually viewed evidence, professional interpretation and owner acceptance distinguishable. Use **Observe → Interpret → Evaluate → Decide → Implement → Inspect → Refine** within the existing operations. Present consequential choices with inspectable evidence and the reason it changed the decision.
+
+## Bind consequential gaps to the next action
+
+Before a consequential commitment, apply the [evidence-to-action rules](references/evidence-actions.md). An unresolved high-impact question needs a concrete next evidence-producing action and a bounded dependent scope. Continue supported independent work; use reversible probes to learn, without presenting them as validated foundations. Match research, comparison, trial, implementation or repair to the actual gap, and reopen affected claims when dependencies or conditions change. Record and execute the next useful action within the existing operations; writing the plan alone is not its completion. Keep structural validity, observed Agent behavior and resulting UI quality separately evidenced.
 
 ## Choose the next action from evidence maturity
 

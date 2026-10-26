@@ -179,3 +179,11 @@ Compare internal, native and external work by observed quality, behavior and tot
 ## Let assets participate in the concept
 
 Inspect defining material while composition can change. The [asset method](visual-assets.md) covers icons, accurate third-party marks, original identity and type/spatial production. Compare consequential candidates in equivalent placements; rights, tools and observed fit can change the route.
+
+## Multiscale coverage and decision units
+
+Use the [design evidence map](evidence-map.md) for important product/visual choices. L0 establishes the target experience; L1 connects task journeys; L2 explains page/region architecture; L3 describes functional regions and components; L4 examines perceptual relationships; L5 links actual realization and assurance at every scale. Keep state/time, conditions, shared dependencies and evidence as cross-links rather than forcing all information into a containment tree.
+
+Perform **Coverage Discovery & Challenge** from two directions: derive necessary experience from user tasks, then test that inventory against observed mature-product navigation, tutorials, states and continuous use. Include newly relevant findings, explain justified exclusions, and retain uncertain findings with their evidence question. A map complete relative to its own initial list is not proof of complete product coverage. Current-product needs absent from the main reference warrant other suitable sources.
+
+Use a **Design Decision Unit** for each consequential choice rather than each CSS property: purpose, question, actual evidence, judgment, meaningful alternatives/choice, implementation/adaptation, verification/next action. Expand detail by impact and uncertainty. A high-impact small mark warrants deeper work; a verified routine family can support a short inherited decision under matching conditions. The map's three views share IDs and facts; none is a separate mandatory report.

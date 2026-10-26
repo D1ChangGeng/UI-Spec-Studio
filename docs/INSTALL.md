@@ -106,7 +106,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.13.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.14.0 --skill ui-spec
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
@@ -144,3 +144,19 @@ and the [visual guide](VISUAL-INSPECTION.md) explains inspection.
 The complete source bundle includes `examples/temporal-review/`
 and its browser capture tool; these development fixtures are separate from the
 portable Skill's optional standard-library helpers.
+
+## Optional design evidence views
+
+The installed bundle includes a planned, unfilled
+`assets/templates/design-evidence.json` and a read-only helper. Copy a template
+only when the project chooses this format; `prepare.py` does not create it.
+Use the project root as the evidence/implementation path boundary.
+
+```bash
+python <skill-dir>/scripts/check_design_evidence.py --project-root <project> --view overview
+python <skill-dir>/scripts/check_design_evidence.py --project-root <project> --view execution --changed <object-id>
+```
+
+[Format and limits](../skills/ui-spec/references/evidence-records.md) explain
+all fields and paths. A successful exit means declaration consistency, not
+actual observation, approval, complete coverage or design quality.

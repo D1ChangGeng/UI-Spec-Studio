@@ -1,0 +1,235 @@
+{
+  "baseline_tag": "v1.13.0",
+  "baseline_commit": "c096276527a47e20fa0cd0f4e1e81e9ac345abe2",
+  "method": "Byte-preservation check of every preexisting runtime file; no semantic loss claimed merely from length or keywords",
+  "files": [
+    {
+      "path": "skills/ui-spec/LICENSE",
+      "before_bytes": 1068,
+      "before_sha256": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db",
+      "after_sha256": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/SKILL.md",
+      "before_bytes": 27786,
+      "before_sha256": "d75dc48dd45a14466d16218d4b9e3ff4177b6a3adfb251f2892f649f8be73f60",
+      "after_sha256": "97d00e1cd815c7d7254600532be07c1ee1ae64b14068b7d3b8e5ca8f7397d5f2",
+      "mode": "additive-entry-and-version",
+      "reverse_replacements": [
+        {
+          "new": "  version: \"1.14.0\"",
+          "old": "  version: \"1.13.0\""
+        },
+        {
+          "new": "## Bind consequential gaps to the next action\n\nBefore a consequential commitment, apply the [evidence-to-action rules](references/evidence-actions.md). An unresolved high-impact question needs a concrete next evidence-producing action and a bounded dependent scope. Continue supported independent work; use reversible probes to learn, without presenting them as validated foundations. Match research, comparison, trial, implementation or repair to the actual gap, and reopen affected claims when dependencies or conditions change. Record and execute the next useful action within the existing operations; writing the plan alone is not its completion. Keep structural validity, observed Agent behavior and resulting UI quality separately evidenced.\n\n## Choose the next action from evidence maturity",
+          "old": "## Choose the next action from evidence maturity"
+        },
+        {
+          "new": "## Keep a multiscale design evidence map\n\nFor consequential design work, maintain **Design Coverage**, **Evidence Traceability** and **Evidence-Guided Action** together. Use the [Multiscale Design Evidence & Decision Model](references/evidence-map.md): L0 intended experience, L1 journeys, L2 pages, L3 regions/components, L4 perceptual detail, and L5 realization/assurance linked to every scale. Connect state/time, conditions, shared dependencies and evidence sources; challenge initial scope against both user tasks and actual mature-product discoveries.\n\nFor each important decision, preserve an inspectable purpose, research question, actual evidence/limits, professional judgment, alternatives/choice, adopted implementation and verification/next action. Unknowns stay explicit. Keep acquired, observed, compared, trialed, adopted, verified and owner-approved facts separate. Use existing records or the [extended decision template](assets/templates/design-decisions.md); a schema or new document is optional, the consequential evidence relationships are required. Overview, Design Detail and Execution & Assurance are views of the same facts. Routine low-impact changes can inherit current, matching-condition decisions and use a short scoped note.\n\nRead the map when establishing or revising consequential decisions, coverage or evidence claims. Read the optional [record profile](references/evidence-records.md) only when using its [read-only checker](scripts/check_design_evidence.py); structural success does not establish actual research or UI quality.\n\n## Understand the experience and plan its evidence",
+          "old": "## Understand the experience and plan its evidence"
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/assets/resource-catalog.json",
+      "before_bytes": 36517,
+      "before_sha256": "5ba46251e7d44eef6214d158c19c51b3e7cbe5bb73bf31a82773a21fdc52bbd0",
+      "after_sha256": "5ba46251e7d44eef6214d158c19c51b3e7cbe5bb73bf31a82773a21fdc52bbd0",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/asset-record.md",
+      "before_bytes": 2853,
+      "before_sha256": "bd53e913b675d9a83c4211ca67e1cf608b636f31357d31a0a3b768e13acb31b6",
+      "after_sha256": "bd53e913b675d9a83c4211ca67e1cf608b636f31357d31a0a3b768e13acb31b6",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/brief.md",
+      "before_bytes": 3376,
+      "before_sha256": "0cb7f216d8242ae9c04770b3d3d993e1bb08f7fac63f839c3a8dbcbcffc0d626",
+      "after_sha256": "0cb7f216d8242ae9c04770b3d3d993e1bb08f7fac63f839c3a8dbcbcffc0d626",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/content-decisions.md",
+      "before_bytes": 2057,
+      "before_sha256": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd",
+      "after_sha256": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-decisions.md",
+      "before_bytes": 7237,
+      "before_sha256": "b97c0085827b200940209472481dd97dc431fe16a4453406d141318cbd8c6fd0",
+      "after_sha256": "b4fcc5cd7433ef2aa293141cff2a17d5ab8a4007bbf38dae0ff26d9ec671d5e8",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-system.md",
+      "before_bytes": 1803,
+      "before_sha256": "328f3ce70079b2bfc2f2bbfaa4dd961c33f521d0bfd533db18450975a9d5d84d",
+      "after_sha256": "328f3ce70079b2bfc2f2bbfaa4dd961c33f521d0bfd533db18450975a9d5d84d",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/manifest.json",
+      "before_bytes": 497,
+      "before_sha256": "90dc366e81c1cee705aac46786cc6d22ec891fa397bd5eb60d24717941a9eaa0",
+      "after_sha256": "90dc366e81c1cee705aac46786cc6d22ec891fa397bd5eb60d24717941a9eaa0",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/resource-adoption.md",
+      "before_bytes": 3375,
+      "before_sha256": "b15b7d0a701c7f85cf429dec72b9b02c99ed8c98f56dd55ad5bbf0ed42fa6dd5",
+      "after_sha256": "b15b7d0a701c7f85cf429dec72b9b02c99ed8c98f56dd55ad5bbf0ed42fa6dd5",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/review.md",
+      "before_bytes": 4941,
+      "before_sha256": "cf6b754a8ab5b6a195f5fcd65ce0fa3a849f6c34fbdc7af575b54c2006992241",
+      "after_sha256": "cf6b754a8ab5b6a195f5fcd65ce0fa3a849f6c34fbdc7af575b54c2006992241",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/references/analysis.md",
+      "before_bytes": 22990,
+      "before_sha256": "1a7a4b0a123dae0adb9aebe26f834f734c1fce1f35edc9b905158811a0255f89",
+      "after_sha256": "7ff0c399f66480837348f793c14bb100e61bd29006ce264e094182b637c367a8",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/references/asset-sources.md",
+      "before_bytes": 6618,
+      "before_sha256": "423ff1aa51590d8b78d9f165853e145bc3b6398f123fa5ca8aac7586da173227",
+      "after_sha256": "423ff1aa51590d8b78d9f165853e145bc3b6398f123fa5ca8aac7586da173227",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/references/component-sourcing.md",
+      "before_bytes": 21787,
+      "before_sha256": "5fa3edcb3f055433b06ba66d706efbec49861b67825e6f8e5886d2f4f94077d3",
+      "after_sha256": "08868d03f443186efe0bca0181e4e84fc20e1fc38fa3d944577ad92e53b2f1cb",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/references/content-design.md",
+      "before_bytes": 17156,
+      "before_sha256": "0cfc63321af1835523abca1ffb226c90798ed23c7b813531776c5b1ac59e9406",
+      "after_sha256": "8a5f116893def4537d286e2ed44199ecf9252f3cdc1d548facd10962c0967a84",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/references/content-sources.md",
+      "before_bytes": 5465,
+      "before_sha256": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45",
+      "after_sha256": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/references/examples.md",
+      "before_bytes": 8259,
+      "before_sha256": "f8febc6fb3bf48b032961a9e01c820b7338d82c6422ed04d82c6d692101dc6c8",
+      "after_sha256": "f8febc6fb3bf48b032961a9e01c820b7338d82c6422ed04d82c6d692101dc6c8",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/references/integration.md",
+      "before_bytes": 18475,
+      "before_sha256": "f193b19dcabbf50240ec6ef2180214eb381859b4f548bab202bca92e5d84cf31",
+      "after_sha256": "6d9246e1c6a98e0027dd06daf84e08676ab0cc53e34f6013dc987c8811c27c26",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/references/interaction-and-variants.md",
+      "before_bytes": 16192,
+      "before_sha256": "d732911f1f73b6e1def89b65b1a4007a1ca85607b60b948bf3a42fa2a61a51a0",
+      "after_sha256": "41f542af98bf3989afccbaf4f004ef908fefab1b500327a867b815c9ef8bb461",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/references/patterns.md",
+      "before_bytes": 9322,
+      "before_sha256": "ea3fbd20c04058e7991c9b93e07ec172410fd5f5b078528eacfdf3ef27a59d9e",
+      "after_sha256": "ea3fbd20c04058e7991c9b93e07ec172410fd5f5b078528eacfdf3ef27a59d9e",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/references/principles.md",
+      "before_bytes": 23229,
+      "before_sha256": "ff67a25efdbc19a7129ec79f5b5c95fab4eb58336bff2cbbe1fdab9512a643ef",
+      "after_sha256": "ca962f01f3ab3f7ae33ca075aa64f8324651f846b8c153bb113115942fef3142",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/references/resource-catalog.md",
+      "before_bytes": 26653,
+      "before_sha256": "72c11991b1e6f6fe82a27f5b138577cc288b707e4158124ba658379eaf27af7b",
+      "after_sha256": "72c11991b1e6f6fe82a27f5b138577cc288b707e4158124ba658379eaf27af7b",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/references/sources.md",
+      "before_bytes": 13835,
+      "before_sha256": "7f8fa7589c29438438c44c263256515232fab89059c502be2a119d8837793806",
+      "after_sha256": "7f8fa7589c29438438c44c263256515232fab89059c502be2a119d8837793806",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/references/verification.md",
+      "before_bytes": 26405,
+      "before_sha256": "c022cf6cabe76fa77cd5b81e84daf7ba0a4d580e7cb29b02cdec6b49f91e1056",
+      "after_sha256": "b0241e2eae964ed0c4ab3efdbbaafb8bccacc8b246e023501c046242b5529995",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/references/visual-assets.md",
+      "before_bytes": 17182,
+      "before_sha256": "78c50b9e7128940042db84c5eb4d8e584bcf24204c81968cdb73dcf51efee80f",
+      "after_sha256": "b467ea78f86e17c24a26ba29f056b3c422cb1823196ebc53bbbc5eb2609ab715",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/references/workflow.md",
+      "before_bytes": 13271,
+      "before_sha256": "bf42a591f3edde429aefd6058a8cae44cd8b4e643fa88caa9413f2661a5abe66",
+      "after_sha256": "d309030ff26268c6a905354d69b265c10c5268f4d2654a54a9d38013c708b47a",
+      "mode": "append-only"
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_manifest.py",
+      "before_bytes": 15528,
+      "before_sha256": "866beb1b294e7943c15aa8aa957f279905248dbbf5515b03dd2bd6bc65ce87f9",
+      "after_sha256": "866beb1b294e7943c15aa8aa957f279905248dbbf5515b03dd2bd6bc65ce87f9",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/scripts/find_resources.py",
+      "before_bytes": 8610,
+      "before_sha256": "403a50f038ebfccc87ceb5b310c7770652b549080cbd3a7066133db1cc16c675",
+      "after_sha256": "403a50f038ebfccc87ceb5b310c7770652b549080cbd3a7066133db1cc16c675",
+      "mode": "unchanged"
+    },
+    {
+      "path": "skills/ui-spec/scripts/prepare.py",
+      "before_bytes": 2841,
+      "before_sha256": "5890f35f51d580ff78f281689cef09621efa5f9d250088680bef6c3ae717ab1f",
+      "after_sha256": "5890f35f51d580ff78f281689cef09621efa5f9d250088680bef6c3ae717ab1f",
+      "mode": "unchanged"
+    }
+  ],
+  "new_runtime_files": [
+    "skills/ui-spec/assets/templates/design-evidence.json",
+    "skills/ui-spec/references/evidence-actions.md",
+    "skills/ui-spec/references/evidence-map.md",
+    "skills/ui-spec/references/evidence-records.md",
+    "skills/ui-spec/scripts/check_design_evidence.py"
+  ],
+  "historical_evidence_files_unchanged": 90,
+  "common_before_bytes": 158212,
+  "common_after_bytes": 167514,
+  "scope": "All old runtime bytes remain intact after reversing the two entry insertions and metadata change. New content correctness and actual model behavior require separate review."
+}

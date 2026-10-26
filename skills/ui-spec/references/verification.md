@@ -231,3 +231,15 @@ Use the temporal method to check full relevant motion, reverse/interrupted paths
 Exercise expansion, late assets/fonts, new records, long text and permission changes in actual scrolling regions. Inspect lower content, sticky controls, overlays, keyboard reveal and return position. Compare readable material across ready/loading/failure states. A collapsed resolved choice preserves its meaning and any permitted revision path.
 
 For operating workflows, change a shared template and an overridden item, then inspect consuming surfaces and locales. Exercise selection across filters/pages, mixed batch outcomes, interruption and scoped retry. Confirm completed work remains and counts match actual items. Compare customer/operator views for consistent facts and appropriate action. Derive repeated-task efficiency from observed work and recovery at representative scale.
+
+## Verify the map and the scope of each claim
+
+Use [the evidence map](evidence-map.md) to reconcile coverage, source roles, decisions, actual implementation and checked conditions. Acquired/observed/compared, trialed/adopted, verified and owner-approved describe different facts; blocked and confirmed exceptions do not become passes. Keep outcome and evidence scope for each claim, including failures and conditions still unexamined. A parent page or journey needs its own assembled observation.
+
+Check both directions: a decision should resolve to the evidence and actual adopted location that supports it; a changed source, condition or shared dependency should lead back to affected claims. Reference-product appearance, candidate-demo quality, local fit and integrated behavior have distinct subjects. Old evidence stays historical when applicability changes; establish a current recheck or a justified carry-forward scope.
+
+The optional [read-only record checker](../scripts/check_design_evidence.py) implements the [structured profile](evidence-records.md). It can flag missing local files, inconsistent IDs, stale claims, unsupported object/condition declarations and action/gap contradictions. It does not observe media, authenticate user approval or certify truthful research, behavior or aesthetics. A structurally valid record may describe incomplete work.
+
+## Review action follow-through separately from declarations
+
+Use [the action rules](evidence-actions.md) to determine whether a consequential gap actually led to suitable research, comparison, trial or repair. Link the resulting artifact/tool trace and decision change, not just a planned next step. Keep three conclusions separate: Skill content integrity, Agent behavior effectiveness and actual UI quality. A deterministic fixture demonstrates its authored conditions; only fresh Agent runs with auditable outputs support behavior comparisons. Preserve pending experiments as pending.

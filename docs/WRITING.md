@@ -173,3 +173,20 @@ for the next action: further research, a bounded trial or broader implementation
 Tie convergence to supported decisions, with optional records that expose the
 important evidence and result. Research volume and fluent descriptions alone do
 not establish execution quality.
+
+## Write multiscale evidence as useful decision support
+
+Give each consequential decision a purpose, question, evidence scope, professional
+judgment, meaningful alternative, adoption route and verification/next action.
+Allow unknown and blocked facts to remain honestly incomplete. Use concrete
+observations rather than a fluent recap of general design knowledge. Coverage
+itself should be challenged by external sources, not certified by filling the
+agent's initial list. Keep a single object/evidence identity across summary,
+local detail and execution views.
+
+Translate important gaps into actions and commitment limits. State what evidence
+would change the choice, how a local trial can answer fit, and what independent
+work can proceed. Keep states non-linear and source/condition-specific. Records
+are mandatory in meaning for important choices, optional in serialization and
+scaled in depth. Do not turn the model into another execution lifecycle or
+require arbitrary counts, scores, repeated approvals or exhaustive CSS records.

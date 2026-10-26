@@ -144,3 +144,9 @@ Connect asset state inputs to actual intent/outcomes; manage visibility, interru
 ## Content communicates state and intent
 
 Pair consequential controls with accurate action and outcome language. Distinguish pending, confirmed, denied and failed states; associate errors with fields and expose them through focus and announcements. Preserve drafts through retry, cancellation and locale changes. Localize visible copy, names and state text together, then inspect the changed layout. The [content method](content-design.md) owns writing decisions; this file owns their interaction semantics.
+
+## Map episodes across components and conditions
+
+Associate a meaningful transition with the journey, affected page/regions and shared controls in [the evidence map](evidence-map.md). Name pre-trigger state, action, first feedback, changing objects, anchors, result and return. Connect focus, selection, draft, scroll and reading-width effects across the same episode. Preserve the actual observation window and relevant interruption/reversal states.
+
+Conditions belong to the observed episode: viewport, theme, language, content growth, motion preference, device/input and service timing may change its behavior. Viewed endpoints or a downloaded clip leave intervening claims open. When a dependency changes, preserve historical observations and identify affected conditions for recheck; do not promote every related state from one successful run.

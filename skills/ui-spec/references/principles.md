@@ -206,3 +206,9 @@ Judge silhouette, contour, material, color, lettering and motion alone and in pl
 Give titles, navigation, labels, explanations and feedback distinct roles. Compose actual locale strings with stable vocabulary, natural breaks, readable measures and appropriate emphasis. Adjust wording and layout together while preserving facts. Voice carries character; tone follows the task; punctuation follows language and element role.
 
 Use the [content method](content-design.md) for rendered glyphs, contrast, density, whitespace and optical balance. Compare type weight under equivalent content/font readiness in both themes. Correct visible imbalance through contrast, weight or space while preserving working treatments. Let locale, zoom and text-spacing settings reflow important information naturally.
+
+## Connect perceptual detail to its decision and dependencies
+
+Locate a finding in the [design map](evidence-map.md): a local optical defect may arise from L4 contrast, L3 action hierarchy or L1 task order. Explain the observed relationship and inspect the relevant parent composition before choosing a repair. Keep facts, inferred effects and causes to test distinct. L5 checks identify the actual source, adaptation and viewed result rather than stand in for visual judgment.
+
+A changed font, image crop, material or motion envelope can affect multiple pages and states. Follow shared-use links and re-inspect actual neighbors, relevant themes/locales and temporal conditions. A parent design result does not automatically pass because its component records are filled. Use comparable original demos, current-project trials and assembled views to judge retained quality.
