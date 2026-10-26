@@ -14,6 +14,8 @@ Expand a named reference into the relevant working experience, structure, visual
 
 Record established facts, assumptions and high-impact questions compactly. Preserve functional contracts and assess current presentation against the target. Init is sufficient when the agent can explain the task, preserve constraints and choose a justified next action. Continue an implementation request into shape or iterate; a planning request ends with its requested decision support.
 
+The initial inventory includes the existing project, accepted screens and decisions, working code and tests, source-owned content, languages, relevant user/operator roles, current devices and network conditions, and rights or production constraints for defining assets. Distinguish what must remain functionally true from what is still a visual candidate. Establish the first meaningful action, durable working object, result location and continuation path before treating a named technical workbench as an interface type. Link significant open assumptions to the evidence that could resolve them.
+
 ## shape — resolve just enough direction to build well
 
 Use shape for requested exploration or unresolved choices affecting product model, page responsibilities, identity or feasibility. Complete the open parts of supplied direction; an open brief receives an agent-led recommendation with inspectable evidence.
@@ -40,9 +42,13 @@ Choose research, trial or expansion by what the evidence supports. Similar new r
 
 **Trial and adapt.** Work in the existing project. Trial high-impact choices with real or identified fixture content, fonts, themes, extremes and states before expansion. Preserve valuable source relationships through configuration, composition and focused changes. Connect business actions at their owner. Recheck affected mechanisms and replace candidates whose fit fails.
 
+**Carry the concrete implementation conditions.** Keep the selected item's exact variant, revision, public configuration, dependencies, source, editable assets and delivery derivatives with the implementation. Choose the appropriate static, authored-time or live delivery boundary. Test short, typical and long real or explicitly identified fixture strings, realistic content density, locale differences and meaningful pending/empty/error states. Compose copy, type scale and spacing together. Preserve business-fact authority, source permissions and the distinction between illustrative fixture values and real product claims. A representative integration should resolve the most consequential unknown before broad reuse.
+
 **Integrate and inspect.** Compare whole → region → detail → whole, related views and continuous use under relevant conditions. Check populated core tasks, long content, repeated operation, failure and reduced motion for usability and expression. Locate gaps in experience understanding, reference, resource, adaptation or combination; return to that level and recheck. Make necessary changes to accepted direction explicit.
 
 For performance or operating work, observe the sequence through input, usable result, authoritative completion and recovery. Compare under named conditions. Separate feedback speed, actual task time and resource consumption; inspect position under content growth and effective content after shared/individual updates.
+
+**Inspect the assembled responsibility boundary.** In addition to the whole composition, examine cross-page anchors, actual-size assets and crops, shared focus and scrolling, listener or motion-engine conflicts, overlapping layers, cumulative runtime cost, cleanup and quiet/loading/failure states. Verify keyboard, touch and reduced-motion behavior as relevant. A pass for an isolated component does not establish coherence after multiple resources, real services and content are combined. Repair the responsible source, adapter, composition or state owner, then revisit the affected states and pages.
 
 **Present and continue.** Supply the working entry, important choices and inspected outcome. Connect goals, evidence, actual adoption, retained mechanisms and adaptations. Distinguish studied, compared, trialled and adopted resources; use representative frames/intervals where useful. State consequential gaps, observed conditions, approval scope and next useful work. The user need not restate the method.
 

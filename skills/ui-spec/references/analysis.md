@@ -87,6 +87,14 @@ Compare the same task and content at comparable completion. Hold incidental styl
 
 Established intent, approval or delegated autonomy supports direct progress. One-shot work retains its assumptions, unresolved alternatives and pending owner acceptance. Prototype preference and formal approval keep their actual scope. Continue independent work while a significant choice is pending.
 
+## Lead users at different levels of design direction
+
+A goal-only request calls for agent-led product analysis: infer plausible tasks and interaction models, research comparable flows, explain the strongest reviewable direction and preserve the uncertainty that could change it. A named reference may express an exact interaction, a visual quality, a familiar product model or a technical constraint. Determine which parts are binding rather than treating every visible detail or the product name as an instruction to copy its shell.
+
+For a detailed brief, preserve stated priorities, accepted decisions and supplied materials; investigate gaps that affect delivery without asking the user to repeat established direction. For a partially directed request, make low-impact reversible decisions, present concise evidence-backed alternatives only where a different choice would materially affect the product, and continue independent work. Ask for an unavailable fact or authorized asset when it determines a consequential commitment. User input selects the desired outcome; professional analysis, ordinary sourcing, component choices and implementation detail remain agent responsibilities.
+
+Contrast the current user's stated expectation with audience conventions and the reference product's actually observed version and behavior. If the evidence revises the original experience hypothesis, explain which task, navigation, status, content or aesthetic decision changes before expanding implementation.
+
 ## Reason about uncertainty
 
 Match evidence to uncertainty: task/content research for product questions, viewed compositions/sequences for visual questions and isolated trials for implementation fit. Consequential commitments require authoritative facts or authorization. Test reversible assumptions visibly and resolve constraints that could invalidate broad work early.

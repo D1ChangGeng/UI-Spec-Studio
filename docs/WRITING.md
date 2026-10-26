@@ -2,6 +2,28 @@
 
 Write for a capable agent carrying out a UI task. The document should improve its next decision and action. Keep the runtime instructions in English as one authoritative version; human introductions can be localized.
 
+## Preserve information before reducing words
+
+Professional scope must accumulate across releases. For a proposed shortening,
+compare the old and new guidance by **problem, preconditions, design relationship,
+decision, implementation action, variant or failure case, and verification**.
+A paraphrase is equivalent only if an agent still has enough specificity to make
+the same consequential choices under the same conditions. A shared topic or
+keyword is not proof that its distinct instructions survive.
+
+Record whether a material instruction is **retained, equivalently rewritten,
+moved within the installed skill, superseded for a reason, or lost/narrowed
+and requiring restoration**. A repository-only guide is not a valid destination
+for a rule the installed agent needs but never reads. Deletions need concrete
+justification such as demonstrated error, real conflict, duplication of the same
+operative detail, or a complete replacement. Prefer clear organization and
+cross-links over discarding valid exceptions or steps.
+
+If an old byte or line budget conflicts with preserving actual capability,
+revise the budget. Use examples where they clarify conditional behavior and
+retain the observation or source scope. The [content integrity procedure](CONTENT-INTEGRITY.md)
+defines historical comparisons and accountable revision records.
+
 ## Express the accepted behavior
 
 Use direct verbs, concrete decision objects and the conditions that matter. Describe the desired result and how to observe it. Keep the user's source content and third-party reference material clearly distinct from instructions.
@@ -29,7 +51,7 @@ Keep established ideas compact. Prefer specific relationships over adjectives su
 
 SKILL.md owns activation guidance, common reading and core boundaries. Workflow owns execution order. References own detailed professional methods. Project documents own product choices. Code and runtime own observed implementation facts. A cross-reference connects these responsibilities without duplicating their full content.
 
-Read the eight common references as a whole professional foundation. Keep each concise and complementary. An added paragraph should change a plausible decision, preserve a necessary constraint or explain how to verify a result.
+Read the eight common references as a whole professional foundation. Keep each complete, specific and complementary. An added paragraph should change a plausible decision, preserve a necessary constraint or explain how to verify a result.
 
 ## Separate internal depth from user effort
 
@@ -49,7 +71,7 @@ Connect a desired understanding or visual relationship to plausible means, appli
 
 Use examples that show both a successful application and a condition requiring a different approach. Tie adjectives to actual factors: typography, value hierarchy, grouping, material, subject, timing and interaction. Let the medium govern its grammar; a README can be designed through content and native Markdown.
 
-Keep explanations in references and user-facing output focused on the actual deliverable. The complete common foundation remains readable in one execution context; optional techniques add depth without becoming additional mandatory workflow stages.
+Keep explanations in references and user-facing output focused on the actual deliverable. Keep the complete common foundation accessible through the skill's actual reading contract; read longer references in complete chunks if a host requires it. Optional specialized references add depth without becoming mandatory workflow stages.
 
 ## Write resource guidance as professional judgment
 

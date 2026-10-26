@@ -8,6 +8,21 @@ standards. Eight common references form the complete professional foundation;
 integration is required for real behavior work. Shape stays optional. Preserve
 agent initiative, scoped approval and the Skill/host responsibility boundary.
 
+Keep detailed rules at their responsible source. **Knowledge completeness and
+behavioral specificity precede text minimization.** Review changed instructions
+for their decision preconditions, causal relationships, execution steps, variants
+and verification consequences. A preserved heading or keyword alone cannot
+establish information continuity. Use the source-lineage procedure in
+docs/CONTENT-INTEGRITY.md when editing professional guidance.
+
+The eight common references must remain readable in full, but they have **no
+shared byte/word budget**. When context cost grows, use better organization and
+conditional specialized references without exchanging valid knowledge for
+shorter wording. Keep essential rules inside the installed skill; the complete
+repository's maintainer docs are not a substitute for runtime instructions.
+Classify each material deletion as equivalent, moved to an installed source,
+reasonably superseded, or a capability loss requiring restoration.
+
 Keep detailed rules at their responsible source. Prefer task-oriented reasoning,
 clear causal explanations and final-state language. Project-specific design
 choices remain in the consuming project. Keep supplied references and external
@@ -103,7 +118,7 @@ workflow and verification apply them to actual choices and inspected outcomes.
 Keep visible facts, professional interpretation, causal hypotheses, engineering
 measurements and observed user response distinct. A crop or enlarged overview has
 its stated scope. Local refinement needs contextual reinspection, and temporal
-claims need actually viewed process evidence. Preserve the eight-reference budget,
+claims need actually viewed process evidence. Preserve the eight common reference responsibilities,
 existing release gates and independent forward-application integrity.
 
 Version 1.11 connects art direction, expressive contrast, visual systems, asset
@@ -116,7 +131,7 @@ selected/approved target; image differences remain diagnostic. Keep working
 products, demonstrations and authored timed output at their own evidence boundaries.
 Controlled captures do not establish natural responsiveness or frame delivery.
 Resolve concrete failures while preserving accepted direction; retain the eight
-common references, their budget and the existing release/validation requirements.
+common references and the existing release/validation requirements, without a content-volume cap.
 
 Version 1.12 grounds research in the user's intended experience. Preserve revisable
 experience hypotheses, question-led evidence planning, distinct user/audience/product
@@ -127,6 +142,13 @@ meaningful alternatives and observed support for consequential choices, pursue
 normal authorized acquisition routes, and distinguish further research, bounded
 trials and broader implementation. Reconcile discoveries with actual adopted work
 and integrated quality. Keep records optional and proportionate, retain the eight
-common references below their existing budget, and separate independent applications
+common references without a shared size budget, and separate independent applications
 from deterministic checks and user acceptance. Apply the revised skill to its README
 and record final-host evidence under the existing publication procedure.
+
+Version 1.13 removes the previous shared-byte limit and rigid SKILL entry-line
+cap after historical review found compressed operative guidance. Preserve the
+11 tracked restoration sites in docs/evidence/v1.13.0/lineage.json, as well as
+other valid professional knowledge. Structural tests protect known details;
+semantic comparison and consuming-agent behavior need independent review.
+Do not silently replace existing capability with new abstract wording.

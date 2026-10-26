@@ -22,6 +22,17 @@ inventory and SHA-256 checksums in `dist/`. ZIP entries use fixed timestamps,
 permissions, order and stored bytes; `.gitattributes` keeps source line endings
 consistent across platforms.
 
+## Capability-continuity review
+
+Before deleting, condensing or relocating agent-facing professional guidance,
+compare the actual earlier tagged source with the installed Skill using
+[the content integrity procedure](CONTENT-INTEGRITY.md). Preserve distinct
+conditions, decisions, actions, failures and verification obligations. Record
+material continuity judgments and justified removals in the version review
+and lineage. No shared-byte budget limits the eight required references;
+choose better organization or conditional specialist reading instead.
+A passing unit test certifies its checks, not semantic or model-behavior parity.
+
 ## Automated publication
 
 A main-branch push changing VERSION runs validation, installation, publication-render
@@ -72,7 +83,7 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.1 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.13.0 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep

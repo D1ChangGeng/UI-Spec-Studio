@@ -134,7 +134,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.1 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.13.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).
@@ -144,7 +144,7 @@ Package checks cover references, helpers, installation paths and reproducible ar
 <details>
 <summary><strong>Maintainer references and local checks</strong></summary>
 
-[Understanding model](docs/MODEL.md) · [Writing standard](docs/WRITING.md) · [Research sources](docs/RESEARCH.md) · [README design record](docs/design/README-SPEC.md) · [Publication process](docs/PUBLISHING.md) · [Contribution guide](CONTRIBUTING.md) · [Security](SECURITY.md)
+[Content integrity audit](docs/REVIEW-v1.13.0.md) · [Continuity procedure](docs/CONTENT-INTEGRITY.md) · [Understanding model](docs/MODEL.md) · [Writing standard](docs/WRITING.md) · [Research sources](docs/RESEARCH.md) · [README design record](docs/design/README-SPEC.md) · [Publication process](docs/PUBLISHING.md) · [Contribution guide](CONTRIBUTING.md) · [Security](SECURITY.md)
 
 ```bash
 python tools/validate_package.py

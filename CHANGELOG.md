@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.13.0 — 2026-10-27
+
+- Audit v1.1.0–v1.12.1 history for compression pressure and weakened executable design guidance.
+- Remove the historical 128/144 KiB common-reference gate and rigid entry-line condition; prioritize knowledge fidelity.
+- Restore brief handling, positive craft targets, resource composition and acquisition, five reuse operations, complete iteration conditions, concurrent motion and three-scope verification.
+- Add permanent continuity guidance, a source-tagged ability lineage and detailed structural regression guards.
+- Preserve eight common references, existing workflow, bilingual publication, installation, and all CI/release gates.
+
 ## 1.12.1 — 2026-10-26
 
 - Include the observed `/etc/apt/apt-mirrors.txt` in Ubuntu mirror selection for both browser jobs, alongside direct APT source files.

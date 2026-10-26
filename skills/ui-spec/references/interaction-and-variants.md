@@ -95,6 +95,12 @@ A professional tool can combine prompt routine feedback with expressive result f
 
 Inspect normal, reversed, interrupted and rapid input, including new results during movement. Resolve competing attention or blocked operation at its cause while retaining the accepted expressive direction.
 
+### Coordinate concurrent feedback without inventing an event order
+
+When multiple controls, panels or assets move, distinguish which change acknowledges the input, which depends on a service response, which can operate concurrently and which must remain anchored. Coordinate motion to keep the user's object and primary action identifiable; simultaneous effects should not compete for attention or imply a false sequence of confirmed results. For frequent actions, favor stable layout and promptly readable feedback over repeated entrance choreography.
+
+Exercise rapid reversal, new input during an active transition, delayed completion, interruption and recovery. Keep selector, results and focus associated when values change; a decorative animation can finish while the business result is still pending. Recheck the combined implementation with language expansion, scrolling, reduced motion, keyboard and touch.
+
 ## Interactive time and authored time
 
 Choose the intended output. A **working product** needs semantic, operable components and truthful feedback under user/service timing. A **product demonstration** selects representative tasks and identifies staged data or timing. An **authored visual work** can use a fixed stage, layers and deterministic timeline; inspect seeking, readable holds, resets, loop joins and final encoded playback. Shared assets do not make their validation interchangeable.

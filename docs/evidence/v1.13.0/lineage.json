@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "purpose": "Review content continuity by operative decisions, not keyword or byte-count equivalence",
+  "historic_tags_checked": [
+    "v1.1.0",
+    "v1.2.0",
+    "v1.3.0",
+    "v1.4.0",
+    "v1.5.0",
+    "v1.6.0",
+    "v1.7.0",
+    "v1.8.0",
+    "v1.9.0",
+    "v1.10.0",
+    "v1.11.0",
+    "v1.12.0",
+    "v1.12.1"
+  ],
+  "earliest_accessible_release_tag": "v1.1.0",
+  "unavailable_in_this_audit": "v1.0.0 was described as locally delivered in changelogs but is not available as a public v1.0.0 tag",
+  "measurement_keys": [
+    "tag",
+    "required_reference_count",
+    "required_reference_bytes",
+    "entry_bytes",
+    "entire_skill_bytes"
+  ],
+  "historical_measurements": [
+    [
+      "v1.1.0",
+      6,
+      43710,
+      8795,
+      87918
+    ],
+    [
+      "v1.2.0",
+      6,
+      67006,
+      10501,
+      122790
+    ],
+    [
+      "v1.3.0",
+      6,
+      75933,
+      11900,
+      209576
+    ],
+    [
+      "v1.4.0",
+      6,
+      96368,
+      15278,
+      239901
+    ],
+    [
+      "v1.5.0",
+      7,
+      118045,
+      16635,
+      274642
+    ],
+    [
+      "v1.6.0",
+      8,
+      146333,
+      19209,
+      322212
+    ],
+    [
+      "v1.7.0",
+      8,
+      142429,
+      21157,
+      323438
+    ],
+    [
+      "v1.8.0",
+      8,
+      145011,
+      21425,
+      330111
+    ],
+    [
+      "v1.9.0",
+      8,
+      143387,
+      22543,
+      332839
+    ],
+    [
+      "v1.10.0",
+      8,
+      145332,
+      23329,
+      337769
+    ],
+    [
+      "v1.11.0",
+      8,
+      145472,
+      23883,
+      345161
+    ],
+    [
+      "v1.12.0",
+      8,
+      146719,
+      27786,
+      353835
+    ],
+    [
+      "v1.12.1",
+      8,
+      146719,
+      27786,
+      353835
+    ]
+  ],
+  "budget_history": [
+    {
+      "tag": "v1.5.0",
+      "file": "tests/test_publication.py",
+      "rule": "total < 128 * 1024"
+    },
+    {
+      "tag": "v1.6.0",
+      "file": "tests/test_publication.py",
+      "rule": "total < 144 * 1024"
+    },
+    {
+      "tag": "v1.12.1",
+      "file": "tests/test_publication.py",
+      "rule": "total < 144 * 1024"
+    }
+  ],
+  "method": "Inspect historical and current source at heading, paragraph, condition and action granularity; measure bytes separately. Require installed-path proof of restoration. Structural checks below cannot prove semantic equivalence or model behavior.",
+  "restored": [
+    {
+      "id": "H01",
+      "source_tag": "v1.1.0",
+      "source_path": "skills/ui-spec/references/analysis.md",
+      "source_heading": "Lead users with different levels of direction",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.1.0/skills/ui-spec/references/analysis.md",
+      "prior_finding": "Explicit handling of goal-only, detailed and partially directed briefs weakened when a full section disappeared.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/analysis.md",
+      "current_heading": "Lead users at different levels of design direction",
+      "required_details": [
+        "goal-only request",
+        "binding",
+        "unavailable fact"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H02",
+      "source_tag": "v1.5.0",
+      "source_path": "skills/ui-spec/references/principles.md",
+      "source_heading": "A positive craft target",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.5.0/skills/ui-spec/references/principles.md",
+      "prior_finding": "Positive visual outcome and preservation of an accepted aesthetic idea were compressed to broad craft wording.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/principles.md",
+      "current_heading": "Define a positive, inspectable craft target",
+      "required_details": [
+        "mechanically valid layout",
+        "making a design more expressive",
+        "actual complete render"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H03",
+      "source_tag": "v1.5.0",
+      "source_path": "skills/ui-spec/references/principles.md",
+      "source_heading": "Compose external strengths into a coherent whole",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.5.0/skills/ui-spec/references/principles.md",
+      "prior_finding": "Composite resources lost explicit semantic-versus-visual ownership and conflicting expression examples.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/principles.md",
+      "current_heading": "Compose mature resources as one visual and interaction system",
+      "required_details": [
+        "accessible state/focus primitive",
+        "Competing accents",
+        "font substitution"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H04",
+      "source_tag": "v1.5.0",
+      "source_path": "skills/ui-spec/references/principles.md",
+      "source_heading": "Inherit and adapt resolved relationships",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.5.0/skills/ui-spec/references/principles.md",
+      "prior_finding": "Source relationships were present in abbreviated form but depended on preserving more specific conditional examples.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/principles.md",
+      "current_heading": "Compose mature resources as one visual and interaction system",
+      "required_details": [
+        "hierarchy, measure, alignment",
+        "one governing language",
+        "after adaptation"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H05",
+      "source_tag": "v1.6.0",
+      "source_path": "skills/ui-spec/references/workflow.md",
+      "source_heading": "iterate — deliver one meaningful increment",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.6.0/skills/ui-spec/references/workflow.md",
+      "prior_finding": "Iterate contracted from detailed design-selection, real-content, source-adaptation and assembled verification instructions to brief stages.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/workflow.md",
+      "current_heading": "iterate — deliver one meaningful increment",
+      "required_details": [
+        "exact variant",
+        "short, typical and long",
+        "cumulative runtime cost"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H06",
+      "source_tag": "v1.6.0",
+      "source_path": "skills/ui-spec/references/workflow.md",
+      "source_heading": "init — establish a useful working understanding",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.6.0/skills/ui-spec/references/workflow.md",
+      "prior_finding": "Starting inventory lost explicit business/content, device and asset-production conditions.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/workflow.md",
+      "current_heading": "init — establish a useful working understanding",
+      "required_details": [
+        "current devices and network conditions",
+        "rights or production constraints",
+        "result location"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H07",
+      "source_tag": "v1.6.0",
+      "source_path": "skills/ui-spec/references/component-sourcing.md",
+      "source_heading": "Discover efficiently and learn how the source works",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.6.0/skills/ui-spec/references/component-sourcing.md",
+      "prior_finding": "Seven acquisition mechanisms were reduced to five general bullets; source-specific evidence limitations were no longer explicit.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/component-sourcing.md",
+      "current_heading": "Match the acquisition route to the evidence needed",
+      "required_details": [
+        "llms.txt",
+        "Manifest/schema version",
+        "possible transmission"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H08",
+      "source_tag": "v1.6.0",
+      "source_path": "skills/ui-spec/references/component-sourcing.md",
+      "source_heading": "Understand the demonstration and the implementation together",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.6.0/skills/ui-spec/references/component-sourcing.md",
+      "prior_finding": "Exact candidate configuration and runtime assumptions became easy to omit.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/component-sourcing.md",
+      "current_heading": "Understand the demonstration and the implementation together",
+      "required_details": [
+        "framework/styling variant",
+        "container assumptions",
+        "server rendering/hydration"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H09",
+      "source_tag": "v1.6.0",
+      "source_path": "skills/ui-spec/references/component-sourcing.md",
+      "source_heading": "Evaluate adoption value",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.6.0/skills/ui-spec/references/component-sourcing.md",
+      "prior_finding": "The explicit five-way reuse decision and responsibility matrix disappeared under a smaller set of generic operations.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/component-sourcing.md",
+      "current_heading": "Choose the adoption operation and the responsibilities it creates",
+      "required_details": [
+        "Technique transfer",
+        "Direct adoption",
+        "redistribution rights"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H10",
+      "source_tag": "v1.6.0",
+      "source_path": "skills/ui-spec/references/interaction-and-variants.md",
+      "source_heading": "Choreograph attention across elements",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.6.0/skills/ui-spec/references/interaction-and-variants.md",
+      "prior_finding": "Coordinated concurrent animations and misleading service-order cues were no longer expressed with the earlier detail.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/interaction-and-variants.md",
+      "current_heading": "Coordinate concurrent feedback without inventing an event order",
+      "required_details": [
+        "false sequence of confirmed results",
+        "rapid reversal",
+        "business result is still pending"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    },
+    {
+      "id": "H11",
+      "source_tag": "v1.6.0",
+      "source_path": "skills/ui-spec/references/verification.md",
+      "source_heading": "Read the result at three scales",
+      "source_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/blob/v1.6.0/skills/ui-spec/references/verification.md",
+      "prior_finding": "Distinct whole/relationships/details viewing questions were compressed into a single overview paragraph.",
+      "disposition": "restored_with_current_methods",
+      "current_path": "skills/ui-spec/references/verification.md",
+      "current_heading": "Preserve three distinct levels of visual observation",
+      "required_details": [
+        "Whole surface",
+        "Relationships",
+        "Details"
+      ],
+      "review_requirement": "Read the complete current section and compare problem, conditions, action, boundaries and effect against the historical section; exact-string checks only guard accidental removal."
+    }
+  ],
+  "retained_or_merged": [
+    {
+      "id": "M01",
+      "from": "v1.4.0",
+      "topic": "Eight lenses, one useful decision",
+      "finding": "Reorganized as Nine dimensions, one coherent experience; expanded dimension coverage rather than declared lost from heading rename alone."
+    },
+    {
+      "id": "M02",
+      "from": "v1.7.0",
+      "topic": "Temporal Visual Inspection",
+      "finding": "Relevant continuous-episode verification gained new explicit guidance; no total loss inferred from changed section title."
+    },
+    {
+      "id": "M03",
+      "from": "v1.6.0",
+      "topic": "Content design and visual assets",
+      "finding": "Headings and representative operative passages persist into v1.12.1; no blocking loss identified in sampled comparison. Not a blanket claim of word-for-word equivalence."
+    }
+  ],
+  "review_limits": [
+    "Length changes establish pressure, not automatic loss.",
+    "A restored phrase may pass a structural test while still failing a consuming agent's task.",
+    "Histories retained as referenced source, not copied wholesale.",
+    "Migrations to repo-only docs do not count as runtime restoration.",
+    "Independent comparative model tests were not run by the historical diff itself."
+  ]
+}

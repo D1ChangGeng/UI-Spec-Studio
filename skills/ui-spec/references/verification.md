@@ -151,6 +151,16 @@ Use the [multiscale method](principles.md) at normal use scale: whole impression
 
 “The summary is separated by most of the viewport” is observed; “the gap weakens grouping” is an interpretation. Test causes through comparison or implementation evidence. Unseen interaction and audience response remain unverified.
 
+### Preserve three distinct levels of visual observation
+
+**Whole surface:** identify the primary task, dominant subject, information order, total visual mass and intended character. Check whether the user's next meaningful action and reading path are discoverable without explanation from the designer.
+
+**Relationships:** inspect grouping, alignment, comparison structure, proportions, image/text balance, shared shell and spatial anchors. For a transition, inspect which relation it reveals, what stays stable and whether other areas move unexpectedly.
+
+**Details:** inspect actual typography and copy, image boundaries and crops, icon weight, material edges, focus visibility, native controls and timed feedback. Judge the details against the selected craft target rather than unrelated stylistic preferences, then return to the full composition to see whether the improvement holds.
+
+Assess task correctness and accessible operation, communication clarity, identity/coherence and implementation craft as complementary obligations rather than a weighted score that can hide a critical failure. Automated geometry, console, network and accessibility checks establish their measured properties; source images, actual human-visible rendering and meaningful task operation are still needed to judge the visual result.
+
 ## Diagnose and improve the strongest relationship
 
 Identify the weak relationship before tuning parameters. Repair structure or meaning, then detail. Compare equivalent conditions; group related changes when their effects remain attributable.

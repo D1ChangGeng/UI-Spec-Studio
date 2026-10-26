@@ -173,11 +173,25 @@ For quantities, use encodings suited to comparison, explicit scales/units, meani
 
 Inspect focus, selection, caret, links, controls, scrollbars, formatting and default errors. Adapt within platform/accessibility expectations. In GitHub Markdown and similar hosts, use supported headings, links, code, tables and images; let native responsive behavior support original content organization and assets.
 
+## Define a positive, inspectable craft target
+
+State what the finished design should make understandable and what distinct character it should communicate. Identify a reference or a local probe for each defining quality, keeping its content, viewport, medium and actual observation conditions visible. Compare the organization and principal relationships before ornament; inspect identity-bearing details before making minor aesthetic corrections. A mechanically valid layout may still lack a convincing organizing idea, while an expressive composition may still obscure a user's next action.
+
+When making a design more expressive, intensify the established idea through type, subject, composition, material and motion rather than accumulating unrelated effects. When quieting the expression, preserve the relationships that communicate its identity. Assess the intended primary action, useful content, proportional balance, practical readability and coherent character together. Judge a proposed improvement by the actual complete render and task, not by adjective, library count or compliance score.
+
 ## Understand craft through coordinated decisions
 
 Expand “refined,” “premium” or “textured” into purpose, precise relationships, coherent language, suitable expression and stability in use. Inspect focal intent, optical baselines/icon weight and material rules as content changes. Equal icon boxes can need optical correction. Expression intensity and design maturity are distinct; judge both against the brief, including populated work and repeated use.
 
 Coordinate a mature foundation and valuable additions through type, density, color, material and motion. Judge hierarchy through the first action, working object and continuation. A behavior primitive's visual layer needs its own foundation. Apply the [sourcing method](component-sourcing.md) to preserve observed design value through trials and adaptation; revalidate rewritten mechanisms and measure combined runtime cost.
+
+## Compose mature resources as one visual and interaction system
+
+Read a mature foundation as linked decisions about hierarchy, measure, alignment, spacing rhythm, roles, states and attention. Preserve the quality-producing relationships when altering the product's content or behavior. A font substitution can change line wraps, widths, alignment and the page's perceived balance; test it in context rather than treating typography as an isolated variable.
+
+When combining resources, assign compatible responsibilities. For example, an accessible state/focus primitive can carry interaction semantics while a separately sourced visual treatment supplies character; an animation library must not silently take ownership of the product's confirmed state. Establish one governing language for density, type, color, depth and movement, then adapt supporting sources to it.
+
+Inspect the assembled page and continuous task. Competing accents, simultaneous animation, inconsistent surfaces, duplicate feedback and incompatible densities can degrade otherwise mature parts. Judge the candidate's original quality separately from the quality retained after adaptation. The selected component, existing project elements and platform-native capabilities all remain candidates when they suit the intended experience.
 
 ## Broader screen-based surfaces
 
