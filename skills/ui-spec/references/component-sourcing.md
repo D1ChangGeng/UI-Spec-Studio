@@ -100,7 +100,7 @@ Identify item, variant/revision, settings and viewing conditions. Separate **car
 
 View at useful scale; label edited promotion, author operation, live demo or local render. Edited media leaves actual latency, omitted states and failures unresolved. Use APIs/source to test explanations; retain relevant settings, containers, assets and dependencies.
 
-Observe role-specific craft: component proportion, type, material and states; background contrast and text clearance; image crop; spatial views, light and silhouette; page hierarchy and rhythm. Compare context and detail. Identify the valuable relationships and their dependence on demo content, background or timing; test those dependencies in the local trial.
+Apply the [multiscale perceptual method](principles.md): read the normal-scale whole, composition, relevant region and details, then return to the whole. Select dimensions for the object: input edges/type/icons, background luminance and text clearance, image crop, spatial light/silhouette or page rhythm. Identify which relationships create the effect and depend on demo content, background or timing; carry those dependencies into candidate comparison and local trials.
 
 For changing resources, observe complete micro-interaction/return, loop/seam, wait-to-result or connected navigation, including relevant interruption or rapid input. Judge timing, object continuity, motion range and feedback from the sequence. Follow the [verification method](verification.md) for sampling and evidence limits.
 
@@ -110,7 +110,7 @@ Separate behavior, treatment and sample content. Inspect state ownership, focus,
 
 ## Evaluate adoption value
 
-Establish provenance/rights, runtime compatibility, critical semantics, security and task behavior. Compare observed craft, design fit, controls, content resilience and maintainability. Popularity or installation success alone cannot establish suitability.
+Establish provenance/rights, compatibility, semantics, security and task behavior. Compare intrinsic visual craft, product fit, useful relationships retained through reuse, and quality in current-project composition. Explain which observed difference changes selection or adaptation. Popularity or installation success alone cannot establish suitability.
 
 Compare total cost across **research, trials, integration, adaptation, debugging, verification, runtime and maintenance**. Early research and trials can prevent broad rework; first-code speed alone cannot justify custom implementation.
 
@@ -137,7 +137,7 @@ Before wider integration, trial the structures, components, assets and motion th
 | Local trial in the current project | Retained quality with actual fonts, content, theme, containers and behavior |
 | Assembled page and journey | Coherence and continuity between adopted parts |
 
-Use a runnable scene with revealing content/states: long labels, multiline input, missing images, loading/errors, required languages and views. Revisit the question at comparable scale, density and event phase. Review details and continuous processes. A strong demo supports selection, a successful trial expansion; the whole journey still needs review.
+Use a runnable scene with revealing content/states: long labels, multiline input, missing images, loading/errors, required languages and views. Revisit the observed relationship at comparable scale, density and event phase. Inspect details and continuous processes, then the region beside actual neighbors. A strong demo supports selection, a successful trial expansion; the whole journey still needs review.
 
 Converge when consequential candidates have demonstrated fit and a clear adaptation path. Routine instances can inherit an applicable verified family rule. If fit is unresolved, retain the candidates and actual shortcomings, then choose further research, assistance, a revised local scheme or bounded custom work according to decision value.
 

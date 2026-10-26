@@ -116,3 +116,17 @@ Primary documentation inspected on 2026-10-26:
 These are documentation observations, not runtime trials of those libraries. UI Spec Studio's
 four-object comparison, default adoption rule and impact-based trial scope are the project's
 synthesis of the accepted requirements. Candidate maturity and local fit remain separate facts.
+
+## Human-centered perceptual inspection (1.10)
+
+Primary documentation inspected on 2026-10-26:
+
+- [Atlassian spacing](https://atlassian.design/foundations/spacing) connects grouping, hierarchy and rhythm to spacing, and describes optical adjustments for unequal visual weight. Its spacing scale is system-specific; the transferable judgment is to inspect the relationship produced by the values.
+- [Atlassian typography](https://atlassian.design/foundations/typography) treats type styles as coordinated family, size, line-height and spacing decisions, with attention to reading and context. Current-product language, actual glyphs and surrounding composition still need their own review.
+- [Carbon icon guidelines](https://www.carbondesignsystem.com/building-blocks/foundations/icons/guidelines) discusses icon/type pairing, alignment and visual size versus touch area. Those exact pairings belong to Carbon and IBM Plex; they illustrate why a selected family's rendered relationships matter.
+
+These are documentation observations, not visual or runtime trials of those systems.
+Human-centered Visual Inspection & Perceptual Design Analysis, its multiscale loop
+and selective lenses synthesize the user's accepted methodology with the existing
+design foundation. They guide expert judgment without claiming measured user
+attention, universal aesthetic values or comparative model improvement.

@@ -15,6 +15,8 @@ Design references establish relationships worth inheriting; implementation resou
 
 Judge maturity through the qualities the task needs: readable type, optical alignment, coherent material, discernible states, stable content growth and understandable transitions. Compare corresponding tasks, content and conditions. A candidate with a different appearance may preserve these relationships more effectively. Keep visual judgment, functional correctness, accessibility and runtime performance supported by their respective evidence.
 
+Use the [perceptual inspection method](VISUAL-INSPECTION.md) to understand why a candidate works: begin with the whole at normal display scale, examine composition, functional regions and consequential details, then return to the assembled context. Compare the resource's own craft, product fit, completeness of inherited relationships and their survival after integration. A quiet boundary, balanced icon or changing surface gains meaning through its background, content and adjacent controls. Let the observation change the candidate, reuse level, configuration or trial question.
+
 ## Use the included resource map
 
 The [readable catalog](../skills/ui-spec/references/resource-catalog.md) provides
@@ -80,7 +82,11 @@ content, variable labels, unavailable media, loading/error states and display
 conditions. Routine members of a verified system can inherit checks within the
 same conditions.
 
-Inspect detail and whole composition. For changing UI, observe the trigger, first
+Inspect details at their intended size and use enlargement to diagnose a specific
+relationship. Return to normal scale, neighboring regions and the whole after a
+local change; contact sheets and scaled full-page images have their own detail
+limits. Keep comparable fonts, content, viewports and states when judging an
+adaptation. For changing UI, observe the trigger, first
 feedback, progression and settled state, plus useful reverse, repeated or
 interrupted actions. Apply this to the reference, candidate and local trial as
 needed. Captured media, actually viewed intervals and sufficient support for a
@@ -146,6 +152,13 @@ alone do not establish that relationship. Existing component/design records are
 preferred. The optional
 [adoption note](../skills/ui-spec/assets/templates/resource-adoption.md) is available
 when a project needs a starting structure.
+
+For a consequential visual choice, connect the visible fact and viewing condition
+to a perceptual interpretation, supported relationship or cause still to test,
+adopted implementation and inspected result. A professional interpretation guides
+the choice; actual user response and implementation cause need their respective
+evidence. Record a small comparison when it resolves uncertainty, then use the
+result to preserve or revise the chosen mechanism.
 
 Show consequential choices beside the working SPEC using the
 [decision template](../skills/ui-spec/assets/templates/design-decisions.md) or

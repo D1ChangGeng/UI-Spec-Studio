@@ -125,3 +125,19 @@ for English and
 `23ebc46acf6285a948a986e26c5ca96bcbc7ea225ea37e4bbe21f24e12839057`
 for Chinese. The [version review](../REVIEW-v1.9.0.md) separates these local
 observations from exact-source GitHub publication evidence.
+
+## Human-centered observation in 1.10
+
+The exploration section now describes the whole-to-detail-to-whole perceptual
+method and how it informs mature-resource choice. A separate short paragraph
+connects the frame, continuous interaction and journey. Installation, native
+content, theme/narrow artwork and the existing reading structure remain the
+publication foundation.
+
+The local review opened all 24 viewport/full-document images and 12 original-pixel
+crops of the changed section in the established language/theme/viewport matrix.
+Full-document views supplied overview; contextual crops supplied readable detail.
+No blocking finding was observed. At 768px, a short English final line and a Chinese
+guide-link character wrapping were recorded as nonblocking. Native horizontal
+code scrolling and actual GitHub presentation keep their separate evidence scope.
+The [version review](../REVIEW-v1.10.0.md) records source hashes and actual conditions.

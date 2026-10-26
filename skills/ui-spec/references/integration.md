@@ -51,7 +51,7 @@ Use real content lengths and errors to refine layout within the accepted system.
 
 ## 5. Verify design and behavior together
 
-**Design track:** re-answer the reference research questions in the connected product: does the task entry remain available, reading clear and state change understandable? Compare approved and integrated views with comparable content density, scale, fonts, theme and locale. Inspect whole frames and continuous episodes through waiting, result arrival, interruption and return. Align by task event/state; real latency may differ from a demo. Preserve shared anchors, scrolling and object identity, recording conditions and intentional differences.
+**Design track:** re-answer the reference research questions in the connected product: does the task entry remain available, reading clear and state change understandable? Compare approved and integrated views with comparable content density, scale, fonts, theme and locale. Follow the [perceptual method](principles.md) from normal-scale whole to affected regions/details and back; inspect continuous episodes through waiting, result arrival, interruption and return. Align by task event/state; real latency may differ from a demo. Preserve shared anchors, scrolling and object identity, recording conditions and intentional differences.
 
 **Product track:** execute the actual UI path, observe the authority/persistence result, then verify feedback and recovery. Check relevant permissions, failure/retry, repeat actions, refresh and direct entry. Evidence should connect the visible action to the real result.
 

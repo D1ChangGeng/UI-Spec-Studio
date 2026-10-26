@@ -1,11 +1,11 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for UI SPEC work, product UI experience alignment, active visual exploration and design research, interpreting reference products, shaping interaction models, visual reasoning, temporal inspection through video or ordered frames, mature resource reuse, local trials and controlled adaptation, visual assets, content design, UX writing, typography, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, responsive audits, scroll and motion continuity, performance, operational content and batch workflows, complete states, theme/language variants, and real integration. Leads when the user supplies only a goal or says continue; develops supplied guidance through actual research. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for UI SPEC work, product experience alignment, active visual research, reference products, interaction models, human-centered multiscale visual inspection and perceptual design analysis, temporal inspection through video or ordered frames, mature resource reuse, local trials and controlled adaptation, visual assets, content design, UX writing, typography, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, responsive audits, scroll and motion continuity, performance, operational content and batch workflows, complete states, theme/language variants, and real integration. Leads when the user supplies only a goal or says continue; develops supplied guidance through actual research. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.9.0"
+  version: "1.10.0"
 ---
 
 # UI Spec Studio
@@ -16,7 +16,9 @@ A **UI SPEC** is a runnable or renderable design reference with representative c
 
 ## Observe the design as people experience it
 
-Use **Active Visual Exploration & Design Reconnaissance** to turn product intent into research questions and visible clues into useful actions: scroll, play, switch, expand and operate relevant examples. Follow discoveries while they can change a decision. Apply **Visual Reasoning & Visual Inspection** to what is actually seen across research, selection, composition, production, implementation and acceptance. Connect the phenomenon, likely perceptual effect, design relationship and suitable inheritance or repair, then inspect the affected result. New evidence can revise the target, search or implementation.
+Use **Active Visual Exploration & Design Reconnaissance** to turn product intent into research questions and visible clues into useful actions: scroll, play, switch, expand and operate relevant examples. Follow discoveries while they can change a decision. Apply **Human-centered Visual Inspection & Perceptual Design Analysis** across research, selection, composition, production, implementation and acceptance: see the design, understand the relationships that shape its perceived quality, and apply that understanding to resource choice and adaptation. New evidence can revise the target, search or implementation.
+
+Begin with the whole visible interface at its intended viewing scale. Read its attention and product character, then composition and spatial hierarchy, functional regions, and consequential component/asset details. Return to the whole after close inspection or a change. Use the [perceptual method](references/principles.md) to choose useful dimensions, judge optical relationships and connect visible facts → likely perceptual effects → design relationships or hypotheses → product fit → implementation choice → inspected result. Crops and enlargement explain details; normal-scale context establishes their effect. Depth follows design impact, without a fixed checklist or aesthetic score.
 
 Judge at three connected scopes: the whole frame and its details, a meaningful continuous episode, and the user's journey across views. For **Temporal Visual Inspection**, observe the trigger, transition and settled outcome; include relevant reversal, interruption, repeated input, loading and loop boundaries. Choose live interaction, video or ordered timestamped frames according to the behavior and available host tools. The observation window follows the design question and the event's actual span. The [verification method](references/verification.md) defines capture conditions and evidence limits.
 
@@ -115,7 +117,7 @@ Expand a named product into the intended page, task, brand qualities or particul
 
 Connect **product intent → observed quality target → implementation candidates → local trials → targeted adaptation → integrated-use verification**. Active exploration and temporal inspection inform each choice; discoveries can revise the target or source. Identify what the person needs to recognize, compare, understand or do; choose content and representation with available mature work. This loop operates within the existing workflow.
 
-Develop a direction specific enough to influence structure, typography, imagery and behavior. Use references to learn mechanisms and set a craft target. Read them at whole-surface, relationship and detail levels; distinguish visible evidence from interpretation. Make consequential choices controllable in tokens, content models, component variants or explicit timing, then inspect their effect. The common references supply these methods even when the user only asks to continue.
+Develop a direction specific enough to influence structure, typography, imagery and behavior. Use references to learn mechanisms and set a craft target suited to the product. Study how intent, precise detail, coherent language and stability in use work together; expressive complexity is a style choice. Make consequential choices controllable in tokens, content models, component variants or explicit timing, then inspect their local and whole-interface effects. The common references supply these methods even when the user only asks to continue.
 
 ## Work with the UI ecosystem
 

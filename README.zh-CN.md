@@ -51,7 +51,9 @@ Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付�
 
 **Active Visual Exploration & Design Reconnaissance**（主动视觉探索与设计研究）将研究问题转为行动：播放相关演示、实际滚动、展开面板、切换状态或比较组件参数。新线索可以改变搜索方向。每项观察都明确归属：承载页面、播放器、演示中的应用，或应用内展示的作品。
 
-**Visual Reasoning & Visual Inspection**（视觉推理与视觉观察）将实际比例、排版、材质和行为转为产品判断。观察覆盖**单个画面、连续变化与完整使用旅程**。时序视觉观察跟随触发、首次反馈、过渡与稳定结果，并纳入有价值的返回或中断路径；窗口与采样随行为和问题确定。
+**Human-centered Visual Inspection & Perceptual Design Analysis**（面向人类视觉感知的观察与设计分析）将真实观看转为专业判断。从正常尺度下的整体印象与注意力层级开始，深入构图、功能区域及重要组件或素材细节，再回到完整界面。按问题选择排版、光学平衡、色彩、材质和动效等维度，理解品质如何形成，并据此选择能够承接这些关系的成熟实现。
+
+观察覆盖**单个画面、连续变化与完整使用旅程**。时序视觉观察跟随触发、首次反馈、过渡与稳定结果；先以正常速度理解体验，再通过有价值的细节观察与重放分析原因，最后回到完整过程判断。行为与设计影响决定观察深度。
 
 已经采集、实际查看和足以支持动态结论，分别说明其事实。代码、状态与运行数据帮助解释原因和验证行为。当重要选择已有足够依据、资源具备适配路径时，研究进入实现与复验。[视觉观察指南](docs/VISUAL-INSPECTION.md) · [时序观察样例](examples/temporal-review/README.md)
 
@@ -110,7 +112,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.9.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.10.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

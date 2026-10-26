@@ -52,9 +52,10 @@ Owner approval remains separate. A consequential trial uses current content, typ
 themes and states before wider integration. Detailed notes may hold rights, versions,
 modified mechanisms and maintenance ownership; reuse is assessed by the responsibilities carried.
 
-Link important choices to the visible relationship and its expected perceptual
-effect in this product. Retain representative viewed frames or time ranges with
-their conditions. Inspect the reference, original resource demo, local trial and
+Link important choices to a visible fact, likely perceptual effect, explanatory relationship
+or hypothesis, product fit and actual implementation decision. Retain representative viewed
+frames or time ranges and their display/crop/zoom conditions. Follow consequential details
+back to their region, neighboring elements and whole-page effect. Inspect the reference, original resource demo, local trial and
 integrated result separately; new evidence can reopen the choice. Retain quality
 gaps, their responsible layer and any explicit decision changing the target or scope.
 

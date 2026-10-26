@@ -53,7 +53,9 @@ Review the assembled interface and continuous task again. The adoption record sh
 
 **Active Visual Exploration & Design Reconnaissance** turns research questions into actions: play a relevant demo, scroll through a layout, open a panel, switch states or compare component settings. New clues can change the search. Attribute each observation to its subject: the hosting page, media player, demonstrated application or content inside that application.
 
-**Visual Reasoning & Visual Inspection** connects the observed proportions, type, materials and behavior to product judgment. Review spans **the frame, the changing interaction and the connected journey**. Temporal Visual Inspection follows the trigger, first feedback, transition and settled outcome, including useful return or interruption paths. Windows and sampling follow the behavior and the question.
+**Human-centered Visual Inspection & Perceptual Design Analysis** turns real viewing into design judgment. Start at normal scale with the whole impression and attention hierarchy; examine composition, functional regions and consequential component or asset details; then return to the whole. Choose relevant dimensions such as type, optical balance, color, material and motion to explain how the relationships create quality and which mature implementation can carry it.
+
+Review spans **the frame, the changing interaction and the connected journey**. Temporal Visual Inspection follows the trigger, first feedback, transition and settled outcome. Normal-speed observation establishes the overall experience; useful detail views and replay explain it before another contextual review. The behavior and decision determine depth.
 
 Recorded evidence, actual viewing and support for a dynamic conclusion are separate facts. Code, state and runtime measurements help explain causes and verify behavior. Research converges when consequential decisions have adequate evidence and a workable adaptation path. [Visual observation guide](docs/VISUAL-INSPECTION.md) · [Temporal review example](examples/temporal-review/README.md)
 
@@ -112,7 +114,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.9.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.10.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

@@ -32,13 +32,13 @@ Content can reshape navigation; a key asset can alter composition; realistic lat
 
 ## Use theory to investigate real design work
 
-Use design knowledge to ask what needs investigation, then revise the questions from actual browsing. Search by task, interaction pattern, component, visual property and implementation need after finding the initial brand/source. A new surface benefits from a coherent page, system or block; a bounded correction can inherit its accepted foundation.
+Turn product intent into questions that can change selection or implementation. Search by task, pattern, component role, visual relationship and implementation need; revise the questions from actual browsing. A new surface benefits from a coherent page, system or block; a bounded correction can inherit its accepted foundation.
 
-Cover **parts, states and relationships**: what composes the surface, how relevant conditions change it, and how elements affect one another in space, time and the task. Give each consequential dimension an inspected reference or verified basis. Study distinctive/core behavior deeply; routine controls can share a researched system. Track understood, partly observed and consequentially unknown areas to choose the next observation.
+Cover **parts, states and relationships**: what composes the surface, how conditions change it, and how elements affect one another in space, time and the task. Give consequential dimensions an inspected reference or verified basis; routine instances can share a researched system. Track what is understood, partly observed and consequentially unknown to choose the next useful observation.
 
-Connect **observed phenomenon → perceptual effect → causal hypothesis → design choice → rendered recheck**. Describe the visible relationship and its viewing condition, then explain how it may affect attention, grouping, reading or object recognition. Inspect implementation where it can test the cause. A reference may keep its selected row visible as details expand, suggesting an anchor worth adopting. A bright side panel may dominate the intended working area because its area and contrast outweigh the primary content. Compare the proposed adoption or repair in the complete frame and relevant sequence. Keep professional judgment and observed user response distinguishable.
+Apply the [multi-scale perceptual method](principles.md#inspect-from-whole-to-detail-and-back): natural first impression, composition, region, relevant detail, then whole-product review. Use appropriate lenses to explain attention, grouping, reading, object recognition or product character. A bright side panel may outweigh the intended work area; retaining a selected row while details expand may preserve orientation. These are hypotheses to examine in actual context, not universal layout choices.
 
-Choose a frame, related sequence or connected journey that contains the behavior. Distinguish the reference, original resource demo, local trial and integrated result. Pair each consequential quality question with candidates capable of carrying it. A candidate can improve the plan; a trial can reopen selection. The [verification method](verification.md) governs conditions and evidence limits.
+Connect the visible fact, likely effect, relationship or cause to test, product fit, resource/adaptation decision and rendered recheck. Keep professional interpretation and observed user response distinct. Pair consequential quality questions with implementations capable of carrying them. Distinguish reference, original demo, current-content trial and integrated journey; a candidate can improve the plan and a trial can reopen selection. [Verification](verification.md) governs conditions and evidence limits.
 
 ## Recognize the product through its use
 
@@ -148,9 +148,9 @@ Judge clarity, distinctiveness, coherence across surfaces, feasibility and contr
 
 ## Read references as mechanisms
 
-Select references for named questions and view them at **whole surface → relationships → details**. Follow relevant motion and linked tasks. Explain **observed phenomenon → perceptual effect → design relationship → suitable inheritance**. Keep an inferred implementation cause or untested user response identified as such.
+Study a reference for a question that matters to the current product. Use the perceptual method to unpack impressions such as “simple” or “refined” into actual attention, proportion, material and rhythm. Preserve inferred causes and untested user effects as hypotheses.
 
-For an opening companion panel, inspect width changes, retained input/selection, reading measure, focus and the transition. A transferable goal might be to preserve the primary task entry and reading focus while making added space understandable. Test that relationship in the current product; dimensions and styling follow its conditions. Expand “simple” or “refined” into attention, grouping, proportion, material and rhythm. New evidence can change the hypothesis.
+For an opening companion panel, inspect width changes, retained input/selection, reading measure, focus and the transition. A useful relationship may preserve the task entry and reading focus while explaining added space. Find mature resources that carry it, then verify local details and the complete frame/sequence with current content. Dimensions and styling follow product conditions; a new observation can change the selection or target.
 
 ## Make decisions explainable and adjustable
 

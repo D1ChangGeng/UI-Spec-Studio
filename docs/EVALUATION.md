@@ -257,3 +257,24 @@ source identities, adopted implementations, local-trial and final evidence,
 repairs and remaining conditions. Distinguish those observations from source
 review, package/installer checks, authored regression fixtures and real-user
 acceptance. The existing release gates retain their declared boundaries.
+
+## Human-centered perceptual assurance (1.10)
+
+The [visual guide](VISUAL-INSPECTION.md) and runtime principles provide a multiscale
+method: inspect at intended scale, deepen into consequential regions and details,
+then revisit the complete interface and continuous task. Judge whether observations
+identify concrete relationships, distinguish visible facts from effects or causal
+hypotheses, and change or justify resource selection, preservation and adaptation.
+A dimension inventory or repeated method vocabulary does not establish execution.
+
+In a fresh-context application, provide the frozen skill and an ordinary task with
+raw source or visual material. Keep diagnoses, anticipated repairs, prior reviews
+and sibling outputs outside the input. Inspect actual viewed evidence and the
+resulting source, including local-to-whole rechecks. Preserve scale, crop, source
+and time conditions. A professional reading of hierarchy or material remains
+distinct from measured attention, user comprehension and preference.
+
+Record executed applications and their limits in the [version review](REVIEW-v1.10.0.md).
+Existing package, installation, publication and browser fixtures retain their
+mechanical scope. Perceptual-method changes do not introduce a new numeric quality
+gate, fixed capture count or additional installed dependency.

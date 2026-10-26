@@ -7,7 +7,7 @@
 - [Temporal visual inspection](#inspect-a-time-bounded-visual-episode)
 - [Tools for the question](#choose-methods-for-the-evidence-question)
 - [Findings, comparison and status](#findings-and-repair)
-- [Judgment at three scales](#read-the-result-at-three-scales)
+- [Multiscale judgment](#inspect-from-whole-to-detail-and-back)
 - [Publishing and resource adoption](#verify-the-publishing-medium)
 - [Decision, asset and content evidence](#verify-the-design-decision-chain)
 - [Performance and operational change](#measure-performance-across-the-complete-task)
@@ -38,9 +38,11 @@ Use **viewport evidence** for composition/scroll boundaries and **content eviden
 
 Record video dimensions/scaling separately from the viewport. [Playwright video](https://playwright.dev/docs/videos) can scale output and needs context closure to finish writing. Preserve useful resolution, with full-size stills for small type or optical detail.
 
+Record display scaling. Fitted full-page images and contact sheets support overview; reading and optical judgments need views at intended use scale. Retain crop location and neighbors. Enlargement supports diagnosis; return to normal scale to judge its effect.
+
 ## View the images and use the interface
 
-Open required images and relevant video/ordered frames. Generated files, DOM snapshots and successful capture commands establish availability; visual inspection requires viewing pixels. Review composition, scale, hierarchy, type, whitespace, materials, clipping, assets and persistent controls.
+Open required images and relevant video/ordered frames. Files, DOM snapshots and capture commands establish availability; visual inspection requires viewing pixels. Select perceptual dimensions from the actual subject and task.
 
 Run tasks through real affordances: navigation, keyboard focus, input retention, loading, errors and recovery. Compare related pages' anchors and visual language under corresponding conditions; page responsibilities can justify different compositions.
 
@@ -122,15 +124,13 @@ Begin with visible behavior; use host-supported inspection to resolve a named un
 
 Use scripts within authorized page/resource access. Data changes, messages and transactions retain their authorization; private media/traces stay in authorized destinations. Capabilities supply evidence, not automatic access or conclusions. [Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) and [interaction patterns](https://www.w3.org/WAI/ARIA/apg/) guide accessibility checks.
 
-## Read the result at three scales
+## Inspect from whole to detail and back
 
-**Whole surface:** identify task, dominant subject, information order, visual mass and character. Judge discoverability without the designer's explanation.
+Start at normal scale with the complete viewport and task context. Establish attention order and product impression before isolating details. Inspect composition, consequential regions and component/material details using the [multiscale method](principles.md); retain the surrounding relationships that explain the finding.
 
-**Relationships:** inspect grouping, alignment, proportions, image/text balance and shared anchors. Follow the explained relationship and stable areas through transitions.
+After a local correction, return to the whole: did clearer boundaries or stronger type improve hierarchy, or make a supporting region compete with the task? Recheck affected neighbors, states and related pages. Follow the same relationship through relevant episodes. Let decision impact determine depth; an enlarged difference warrants a change when it matters at intended use size.
 
-**Details:** inspect glyphs, copy, edges, icon weight, surfaces, controls, focus and timed feedback at use size against the craft target.
-
-“The summary is separated from the items by most of the viewport” describes an observation. “The gap weakens their grouping” is an interpretation to assess against the task. Anchor both to actual evidence; an unseen interaction or audience response remains a separate question.
+“The summary is separated from the items by most of the viewport” is observed; “the gap weakens their grouping” is a task-dependent interpretation. Test a causal explanation through comparison or implementation evidence. An unseen interaction or audience response remains unverified.
 
 ## Diagnose and improve the strongest relationship
 

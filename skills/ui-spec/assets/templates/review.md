@@ -10,11 +10,13 @@ displayed work; source/date and edited demonstration or operation record.
 
 ## Observation
 
-Whole-frame hierarchy, core scale and occupancy, optical balance, whitespace,
-readability, shared anchors, scroll ownership and reachable controls.
-Link the viewed frame or interval to the visible relationship, its likely effect
-on perception, and the product goal. Record useful strengths as well as problems:
-an observation can justify adopting or preserving a design.
+Start with the whole visible interface at its intended scale, then examine consequential
+composition, functional regions and component/asset detail. Name the perceptual dimensions
+that answer this task's question. Preserve neighbors/background in detail views and return
+to the whole after the close reading or change. Identify native-size, cropped, enlarged,
+overview or browser-zoom conditions; record only relevant observations, without a fixed score.
+Link the viewed frame or interval to the visible relationship, its likely perceptual effect
+and product fit. Record strengths worth adopting or preserving as well as problems.
 State the clue that prompted further browsing, the relevant operation and the
 newly understood relationship when these explain the decision.
 
@@ -40,10 +42,10 @@ Task steps, focus/input/selection retention, transitions, error/retry and result
 
 ## Findings and repair
 
-Observed relationship and evidence → perceptual/task effect → cause to investigate
-→ design choice and responsible layer → changed result and recheck.
+Visual fact and condition → likely perceptual/task effect → design relationship or cause
+to investigate → product fit → resource/adaptation choice → local and whole-result recheck.
 
-Keep visual observation, professional interpretation and verified cause distinct.
+Keep visual observation, professional interpretation, verified cause and observed user response distinct.
 Compare equivalent conditions and meaningful event phases. Attribute a gap to resource fit,
 adaptation, real content, conflicting composition or target/task mismatch. Recheck the affected
 interval and connected path after changes; keep residual gaps and target changes explicit.

@@ -94,3 +94,14 @@ Review which mature mechanisms survive adaptation, with verification proportiona
 to the change. Normal user-assisted access can close consequential resource gaps.
 Keep actual adoption, viewed quality, behavior checks and unresolved targets
 inspectable without adding fixed quotas, mandatory records or new host powers.
+
+Version 1.10 makes human-centered perceptual analysis an executable observation
+method. Start at intended scale with whole impression, composition, functional
+regions and consequential details, then return to the complete interface and use.
+Principles owns the selective perceptual lenses and craft reasoning; sourcing,
+workflow and verification apply them to actual choices and inspected outcomes.
+Keep visible facts, professional interpretation, causal hypotheses, engineering
+measurements and observed user response distinct. A crop or enlarged overview has
+its stated scope. Local refinement needs contextual reinspection, and temporal
+claims need actually viewed process evidence. Preserve the eight-reference budget,
+existing release gates and independent forward-application integrity.

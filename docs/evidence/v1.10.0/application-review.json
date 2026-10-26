@@ -1,0 +1,4581 @@
+{
+  "version": "1.10.0",
+  "record_scope": "Final pre-publication source identities, actual adopted mechanisms, executed checks and actually viewed application evidence. Post-publication CI, GitHub rendering and release readback retain their own remote records.",
+  "frozen_methods": {
+    "files": {
+      "SKILL.md": "8064123e124d1463845c04ff2729a493e8d13d4bd1af3b75d4ded44e03a98af8",
+      "references/workflow.md": "14330ced19070d7c7b6e770dcc0c931538f0171f40a14d712a6b74cace8cedcf",
+      "references/analysis.md": "2a78b3d1c1d668f0ca1cbe944923ee0d35b084e4ce5115f7368064ef4f924fd6",
+      "references/principles.md": "9dc33d53cbd56e060de96cead880987b2bcfab03e6d0276c6505753e72cebc86",
+      "references/component-sourcing.md": "c2a14b2b92b677e0d04cae0543b8c76a5780cda262ae18184d465b88f562defc",
+      "references/interaction-and-variants.md": "d92f4d3298cb351eda6b658ff52b49fed9c5a3f30f914dd92679b52f5019ffdb",
+      "references/verification.md": "a761717ee0c28f5068c223c1d89cd1a4826433efb91527db3e0300963dc2ea69",
+      "references/visual-assets.md": "510d1edb2151b14a98f7f4daea56334a8ff7800cdfec89b3896e94a81e79973f",
+      "references/content-design.md": "1e8739b9646e07e24fd558009da89272d0623c927306a5ff6868b9b5b893afec",
+      "references/integration.md": "1dc15ad6e05c75eba82f148333c41f5ece867ed8ccffce2cba2984f3d2ff223b"
+    },
+    "aggregate_sha256": "311681aca058b51b277b7644117e98a21eb38ba4acb2ede1202444c059ba0814",
+    "common_bytes": 145332
+  },
+  "input_projects": {
+    "question-polish": {
+      "source_project": "/tmp/ui-spec-forward-v190/question-workspace",
+      "files": {
+        "index.html": "d7fce8d10ed0ae2a93a6a27b81c7c55b080e3ef36562b4e04255fd8a9f5a55d0",
+        "package-lock.json": "d660b43bc70fb5e1186f7760350da2a641dcb55b30bc51630324be745de2a66b",
+        "package.json": "83343cb30c661d0a77a4aead4717fcbeb9fe8456321a3b8721ce4a7e9bb56dd9",
+        "playwright.config.ts": "243cc893a7ef9b33f050e44fb055f90ceaa7dd63758be047263cc7d2b5020281",
+        "public/favicon.svg": "dc46ed62433916a6ef9c710ea3d6467ef7144261e1aca814abf2cfe5679d4964",
+        "scripts/make-fixtures.mjs": "f06074b16c8c0e8b5b94309ec09aa967040ed4d8e0ade40c4564400198df90a2",
+        "src/App.tsx": "4d6156d6c5a4851e62176a47129ff09c46dc1d7f8e73a394d56fa1969cd20f8c",
+        "src/Trial.tsx": "3db3f39168f5c4dc6474d33879f9beb3f956b7cb6a22670aa8018d6d2da73593",
+        "src/components/Answer.tsx": "d350653662c7efee7f6c0bbe82004b61aff534f010c9d00ecd66fb21f981bbe9",
+        "src/components/Composer.tsx": "d4b85550d1b1afd9e1fee2ad95d9b43fc87148e3d4c6314e1cbcfa264a0395bc",
+        "src/components/Materials.tsx": "c37eaf68cbe947d66924530b60efdf99e7a90970cc920c95be34709dc5dc51de",
+        "src/import-material.ts": "14709da4e05aac7297d186fb58eda3d1cfdde7a40ce176048b08638151b8dd9e",
+        "src/main.tsx": "ced43c48857c4f32f9e3e4358cc03421339d1f4e2dae71280d7ed35831ed53c1",
+        "src/model.ts": "6ceac2077a21bd4c398df91fbb6ec2d70096847cefbbe8262b44e48c52167d18",
+        "src/storage.ts": "8f060344f734937e6d65906e518f0cdcbb64aaabd10c25d008e5b90dbe8ae16c",
+        "src/styles.css": "e3b5d9ced37bd61d3339a05a30e07aef8c1b86b23cb0a9d99d5a8986a7fe5198",
+        "src/theme.ts": "fed4bc6c0f505eac66090b3f4f1c62560b442c343ba00dd934902413eb2f4faa",
+        "tests/core.spec.ts": "53308ef372a909e9830155165b36151021147fe3d7b8cf7b2e5ad74981ad038c",
+        "tests/fixtures/broken.pdf": "82a681ed95cb7104837b3864b71384e31a5c4d4c39b3c83408e3427bacf32282",
+        "tests/fixtures/empty.txt": "2106c36011520fe73876d45bfb9ef8bf7b2e9f4362096a320376d8ee9b27ef12",
+        "tests/fixtures/interview.txt": "adbf0e2f97070b27a16c1341f8491130e1a486ac35b4cd7a8544e86c170b687b",
+        "tests/fixtures/invalid-encoding.txt": "8c7a3d4e61dfa3272e38bf76d7dd3a852b11a076cf5aaf2ddc0096e00bf123d4",
+        "tests/fixtures/no-text.pdf": "7cf0735be0a4ab8a8a85fc015ee71357b4ce12fe2d8566a010487035a04ae9dc",
+        "tests/fixtures/walking.pdf": "03b3772a17ad086f9beac8aff613e6e7da153df67f36dd8b7739f1058179891b",
+        "tests/fixtures/城市观察.md": "f39683c646b954b8fe5f4488d9863ebd9da6698a92bad09226e5f675061b1f05",
+        "tsconfig.json": "49c3322c9196cb5b5a487b5ef90c79a7ebddc775f149a847b484d29be478c831",
+        "vite.config.ts": "824b79b1f2ddb1ddc4684238701a871d25e38b6142f5f4677be3b382a7c35a03"
+      }
+    },
+    "reading-craft": {
+      "source_project": "/tmp/ui-spec-forward-v190/notes-upgrade",
+      "files": {
+        "index.html": "515baaf16aca9a3ff9f3f18c42aa398fc69a95ffb2923d75ecc5c7942c8e7825",
+        "licenses/Lucide-LICENSE.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+        "licenses/Tiptap-MIT.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+        "package-lock.json": "b6de524f83dc0d69f5170e80cb055364f0f8a95be5d99246f6e8226f420b923a",
+        "package.json": "5eac1c637abdc0896c92f708a64d6479623e111f3ca25edaa7671bcefe4d6bc7",
+        "public/THIRD_PARTY_NOTICES.txt": "75e249ec9acef12bff4f0f8051db9b5b7b2d9d6b40a96853a527c7e32b89bb9a",
+        "scripts/collect-notices.mjs": "1dc4b49d49f61c94f113397940d022ceae5ebd15ba600335bfc07a30fc202a1b",
+        "scripts/make-standalone.mjs": "1488b6558f1e33bb0047abf25101092918da72d6a960264b5037a52fed0619dd",
+        "src/fixtures.js": "95dc7a125d1133cdeb89cc77ab6b294641d92547646c52aeed42988233e00643",
+        "src/main.js": "b5c76464fa735e66bc1f5eda8718832ecf4e22b409eaec3b23bf9452037ca81f",
+        "src/reading-tools.js": "f91f52db5313d467bd4007758c25081283f0ea4e73cfe2d7f1a68837991fd3cd",
+        "src/store.js": "befb91ec4e67a9d7029e6b14cae37933a2eef8fca94746fe317818c3547d9563",
+        "src/store.test.js": "0749e7d1cc874cf9ce63383a50e4737f4bbb3036006a766d7e52f0a3a4ea875e",
+        "src/style.css": "a3992e598935e3b2b005e807416320607bb41fc9ffa6f5dbbacde78b31676e45"
+      }
+    }
+  },
+  "readme_local": {
+    "reviewer": "/root/perceptual_docs",
+    "review_type": "Actual local README image review; source identity and crop geometry checks",
+    "reviewed_at_utc": "2026-10-26T07:14:04.252393+00:00",
+    "reviewed_at_jst": "2026-10-26T16:14:04.252393+09:00",
+    "source_files": {
+      "README.md": {
+        "sha256": "b56c861f06f32e944394dd274d60338b858c0f3b934a9c5d72594847327b9b2e",
+        "matches_capture_report": true
+      },
+      "README.zh-CN.md": {
+        "sha256": "ddd1637b08aed0834a9b358db770590270038ebbc1e29d61f8f5551a5a52f8fa",
+        "matches_capture_report": true
+      }
+    },
+    "capture_report": {
+      "path": "/tmp/ui-spec-v1100-readme-local/report.json",
+      "sha256": "ca00b38765e4907ddf7c9e70aa5d804d26fdabb8186902db32ea3cfc8eac6f83"
+    },
+    "scope": {
+      "renderer": "Local Markdown-It with GitHub-like stylesheet; not actual GitHub",
+      "languages": [
+        "en",
+        "zh"
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "viewports": [
+        [
+          390,
+          844
+        ],
+        [
+          768,
+          1024
+        ],
+        [
+          1440,
+          1000
+        ]
+      ],
+      "device_scale_factor": 1,
+      "browser_locale": "en-US",
+      "document_languages": [
+        "en",
+        "zh-CN"
+      ],
+      "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+      "browser_path": "/tmp/ui-spec-browser-runtime/extracted/chromium",
+      "original_images_opened": 24,
+      "original_size_section_crops_opened": 12
+    },
+    "original_images": [
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-light-390.png",
+        "sha256": "ebb54f0cc81c03fe7eb836b1300a9070f634b106a4422556fc58580c0546fefb",
+        "dimensions": [
+          390,
+          844
+        ],
+        "language": "en",
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-light-390-full.png",
+        "sha256": "c0c0a0e7734ed3ae35fbd5e74be61dc193b9aa508a20e2564d23c8a12b9ffd1d",
+        "dimensions": [
+          390,
+          7918
+        ],
+        "language": "en",
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-light-768.png",
+        "sha256": "5a7f5d838ab683a83ca55572f99eda8b8172feb4d78d082c39b9f0348ab0b536",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "language": "en",
+        "theme": "light",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-light-768-full.png",
+        "sha256": "222a5710f644a94a55dd77dcf9fbff143e01651ba0eb0ea99f2fc328bde69e0b",
+        "dimensions": [
+          768,
+          5044
+        ],
+        "language": "en",
+        "theme": "light",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-light-1440.png",
+        "sha256": "f45ec88c895d03e47008b6f47d5ed0e31b693008b6e32c4e6eb439c425d877cf",
+        "dimensions": [
+          1440,
+          1000
+        ],
+        "language": "en",
+        "theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-light-1440-full.png",
+        "sha256": "7d68e64b5d3822ad33110e3be06fd326b7d4c03fb012880702a7f05bbdb0a2ab",
+        "dimensions": [
+          1440,
+          4542
+        ],
+        "language": "en",
+        "theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-dark-390.png",
+        "sha256": "d1e0e3182198f49c8d0ee2ed215484ff170f2e68cb2faf3b1cbd5561ac5eed89",
+        "dimensions": [
+          390,
+          844
+        ],
+        "language": "en",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-dark-390-full.png",
+        "sha256": "1af5aee768d1ffcc640d9b7d147c3e3348e7447bc1a99902085ea4ec1f5cdbea",
+        "dimensions": [
+          390,
+          7918
+        ],
+        "language": "en",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-dark-768.png",
+        "sha256": "be646f261b20baf029943bb3e8f0e89f636473d8efd012bfd1b2187773185649",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "language": "en",
+        "theme": "dark",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-dark-768-full.png",
+        "sha256": "4cf326c15d196f45875f535529558a4169513999ee1ff93edb1c8c71dffd9841",
+        "dimensions": [
+          768,
+          5044
+        ],
+        "language": "en",
+        "theme": "dark",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-dark-1440.png",
+        "sha256": "9a7563a985757f972898f32c7c178fdb2e20c861b6372e7a9853ce48c9b3d7c1",
+        "dimensions": [
+          1440,
+          1000
+        ],
+        "language": "en",
+        "theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-en-dark-1440-full.png",
+        "sha256": "9ee590fa0fdbda3059f0d4c53b4ecfb316c2368a9b8827a67309298d4f649758",
+        "dimensions": [
+          1440,
+          4542
+        ],
+        "language": "en",
+        "theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-light-390.png",
+        "sha256": "f9b15b01d93202eda7b68fa24ee22dabdef51b94e104df3c24e50213e55506f9",
+        "dimensions": [
+          390,
+          844
+        ],
+        "language": "zh",
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-light-390-full.png",
+        "sha256": "7803f2373d2277b1d1a099938732b981a1f428f0e5dc24ea9f327ba0e651ec31",
+        "dimensions": [
+          390,
+          5855
+        ],
+        "language": "zh",
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-light-768.png",
+        "sha256": "16e0ada37b8b3d1861a9baf6ba7a27ce65440fb4ea2971069e73f255f2a2e860",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "language": "zh",
+        "theme": "light",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-light-768-full.png",
+        "sha256": "e16d202969ebf36d1f686c80325d6b40a85d134f262ed29586753e21f190b7c4",
+        "dimensions": [
+          768,
+          4325
+        ],
+        "language": "zh",
+        "theme": "light",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-light-1440.png",
+        "sha256": "78b48b1c04b7ff4f069d7dafb006e99fe49048acf7fbc41fb272a207fe2a7332",
+        "dimensions": [
+          1440,
+          1000
+        ],
+        "language": "zh",
+        "theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-light-1440-full.png",
+        "sha256": "06eb7b03ccf0d7952736204cf9bfa0f8a8c9f4e0754bcb264fa74524a94c12db",
+        "dimensions": [
+          1440,
+          3947
+        ],
+        "language": "zh",
+        "theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-dark-390.png",
+        "sha256": "a18e8ad2f709945a7740e55d002930d99da55b555e902ebcdcb4d8b38135a845",
+        "dimensions": [
+          390,
+          844
+        ],
+        "language": "zh",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-dark-390-full.png",
+        "sha256": "360ffa664b89faf4d405ca0af68434e9178df6fe6a3cdce835738ece9df7ffd5",
+        "dimensions": [
+          390,
+          5855
+        ],
+        "language": "zh",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-dark-768.png",
+        "sha256": "4529a2e920328cb349c8d1bab64212c3b8a03fb5ef5a5d737756e1f519d89814",
+        "dimensions": [
+          768,
+          1024
+        ],
+        "language": "zh",
+        "theme": "dark",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-dark-768-full.png",
+        "sha256": "008ee2527dffa8310b0ed37ba15e7606ee925a69f624c7040c6b8274f9b11d46",
+        "dimensions": [
+          768,
+          4325
+        ],
+        "language": "zh",
+        "theme": "dark",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-dark-1440.png",
+        "sha256": "4f040667464ea4f1d738d653cd7b3f8239f04c61df0d3ec9a24ec9b9575d5b1a",
+        "dimensions": [
+          1440,
+          1000
+        ],
+        "language": "zh",
+        "theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "kind": "viewport",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "First screen and natural viewport composition"
+      },
+      {
+        "path": "/tmp/ui-spec-v1100-readme-local/local-zh-dark-1440-full.png",
+        "sha256": "1519e8ff179569f469f3f09adba60b76cb709e8b5eebd490241ae8ea240ef516",
+        "dimensions": [
+          1440,
+          3947
+        ],
+        "language": "zh",
+        "theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "kind": "full_document_overview",
+        "actually_opened": true,
+        "viewer": "view_image, high detail",
+        "viewing_scope": "Scaled long-document overview; not native-size small-text proof"
+      }
+    ],
+    "section_crops": [
+      {
+        "language": "en",
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-en-light-390-full.png",
+        "source_sha256": "c0c0a0e7734ed3ae35fbd5e74be61dc193b9aa508a20e2564d23c8a12b9ffd1d",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-en-light-390-perceptual.png",
+        "crop_sha256": "92dc1d70844c874d87692e08ecf689646c9a506dd0b53268865cb161453bca20",
+        "crop_box_source_pixels": [
+          0,
+          2445,
+          390,
+          3649
+        ],
+        "crop_dimensions": [
+          390,
+          1204
+        ],
+        "geometry": {
+          "heading": {
+            "x": 16,
+            "y": 2515.71875,
+            "width": 358,
+            "height": 34.453125,
+            "top": 2515.71875,
+            "right": 374,
+            "bottom": 2550.171875,
+            "left": 16
+          },
+          "next": {
+            "x": 16,
+            "y": 3563.65625,
+            "width": 358,
+            "height": 34.453125,
+            "top": 3563.65625,
+            "right": 374,
+            "bottom": 3598.109375,
+            "left": 16
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "en",
+        "theme": "light",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-en-light-768-full.png",
+        "source_sha256": "222a5710f644a94a55dd77dcf9fbff143e01651ba0eb0ea99f2fc328bde69e0b",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-en-light-768-perceptual.png",
+        "crop_sha256": "f804935378241409a60bfbf46c28a63e999cbce629732e84f6dda287059235d2",
+        "crop_box_source_pixels": [
+          0,
+          1739,
+          768,
+          2478
+        ],
+        "crop_dimensions": [
+          768,
+          739
+        ],
+        "geometry": {
+          "heading": {
+            "x": 33,
+            "y": 1809.15625,
+            "width": 702,
+            "height": 38.1875,
+            "top": 1809.15625,
+            "right": 735,
+            "bottom": 1847.34375,
+            "left": 33
+          },
+          "next": {
+            "x": 33,
+            "y": 2389.6875,
+            "width": 702,
+            "height": 38.1875,
+            "top": 2389.6875,
+            "right": 735,
+            "bottom": 2427.875,
+            "left": 33
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "en",
+        "theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-en-light-1440-full.png",
+        "source_sha256": "7d68e64b5d3822ad33110e3be06fd326b7d4c03fb012880702a7f05bbdb0a2ab",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-en-light-1440-perceptual.png",
+        "crop_sha256": "22475d632b7fb518239950f2b793b4f885f60566b14ffa1accc80fa6cfbe15cf",
+        "crop_box_source_pixels": [
+          230,
+          1634,
+          1210,
+          2274
+        ],
+        "crop_dimensions": [
+          980,
+          640
+        ],
+        "geometry": {
+          "heading": {
+            "x": 263,
+            "y": 1704,
+            "width": 914,
+            "height": 38.1875,
+            "top": 1704,
+            "right": 1177,
+            "bottom": 1742.1875,
+            "left": 263
+          },
+          "next": {
+            "x": 263,
+            "y": 2185.34375,
+            "width": 914,
+            "height": 38.1875,
+            "top": 2185.34375,
+            "right": 1177,
+            "bottom": 2223.53125,
+            "left": 263
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "en",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-en-dark-390-full.png",
+        "source_sha256": "1af5aee768d1ffcc640d9b7d147c3e3348e7447bc1a99902085ea4ec1f5cdbea",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-en-dark-390-perceptual.png",
+        "crop_sha256": "bdeffad5825e155d6836abe0ec4783c8b1930a6a24f07cd834b66ce324d62f12",
+        "crop_box_source_pixels": [
+          0,
+          2445,
+          390,
+          3649
+        ],
+        "crop_dimensions": [
+          390,
+          1204
+        ],
+        "geometry": {
+          "heading": {
+            "x": 16,
+            "y": 2515.71875,
+            "width": 358,
+            "height": 34.453125,
+            "top": 2515.71875,
+            "right": 374,
+            "bottom": 2550.171875,
+            "left": 16
+          },
+          "next": {
+            "x": 16,
+            "y": 3563.65625,
+            "width": 358,
+            "height": 34.453125,
+            "top": 3563.65625,
+            "right": 374,
+            "bottom": 3598.109375,
+            "left": 16
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "en",
+        "theme": "dark",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-en-dark-768-full.png",
+        "source_sha256": "4cf326c15d196f45875f535529558a4169513999ee1ff93edb1c8c71dffd9841",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-en-dark-768-perceptual.png",
+        "crop_sha256": "5dad0528aec38f6d48b8757d5d8844536899bf29118bb89095e9f3d932d58dc1",
+        "crop_box_source_pixels": [
+          0,
+          1739,
+          768,
+          2478
+        ],
+        "crop_dimensions": [
+          768,
+          739
+        ],
+        "geometry": {
+          "heading": {
+            "x": 33,
+            "y": 1809.15625,
+            "width": 702,
+            "height": 38.1875,
+            "top": 1809.15625,
+            "right": 735,
+            "bottom": 1847.34375,
+            "left": 33
+          },
+          "next": {
+            "x": 33,
+            "y": 2389.6875,
+            "width": 702,
+            "height": 38.1875,
+            "top": 2389.6875,
+            "right": 735,
+            "bottom": 2427.875,
+            "left": 33
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "en",
+        "theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-en-dark-1440-full.png",
+        "source_sha256": "9ee590fa0fdbda3059f0d4c53b4ecfb316c2368a9b8827a67309298d4f649758",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-en-dark-1440-perceptual.png",
+        "crop_sha256": "f751ed2dee65d514ef615e9855bdcbfd01a26c5e79a190b58e994206e5882f0d",
+        "crop_box_source_pixels": [
+          230,
+          1634,
+          1210,
+          2274
+        ],
+        "crop_dimensions": [
+          980,
+          640
+        ],
+        "geometry": {
+          "heading": {
+            "x": 263,
+            "y": 1704,
+            "width": 914,
+            "height": 38.1875,
+            "top": 1704,
+            "right": 1177,
+            "bottom": 1742.1875,
+            "left": 263
+          },
+          "next": {
+            "x": 263,
+            "y": 2185.34375,
+            "width": 914,
+            "height": 38.1875,
+            "top": 2185.34375,
+            "right": 1177,
+            "bottom": 2223.53125,
+            "left": 263
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "zh",
+        "theme": "light",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-zh-light-390-full.png",
+        "source_sha256": "7803f2373d2277b1d1a099938732b981a1f428f0e5dc24ea9f327ba0e651ec31",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-zh-light-390-perceptual.png",
+        "crop_sha256": "541dcf13e9437c066e7c588d777417e4bf49e144d846afdf7ea8f03ea5395f08",
+        "crop_box_source_pixels": [
+          0,
+          1947,
+          390,
+          2828
+        ],
+        "crop_dimensions": [
+          390,
+          881
+        ],
+        "geometry": {
+          "heading": {
+            "x": 16,
+            "y": 2017.59375,
+            "width": 358,
+            "height": 34.453125,
+            "top": 2017.59375,
+            "right": 374,
+            "bottom": 2052.046875,
+            "left": 16
+          },
+          "next": {
+            "x": 16,
+            "y": 2743.171875,
+            "width": 358,
+            "height": 34.453125,
+            "top": 2743.171875,
+            "right": 374,
+            "bottom": 2777.625,
+            "left": 16
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "zh",
+        "theme": "light",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-zh-light-768-full.png",
+        "source_sha256": "e16d202969ebf36d1f686c80325d6b40a85d134f262ed29586753e21f190b7c4",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-zh-light-768-perceptual.png",
+        "crop_sha256": "d02bc91dcd2d99f6bdb33363ed115837b292c6fd8fdf785a54e908088a756648",
+        "crop_box_source_pixels": [
+          0,
+          1491,
+          768,
+          2106
+        ],
+        "crop_dimensions": [
+          768,
+          615
+        ],
+        "geometry": {
+          "heading": {
+            "x": 33,
+            "y": 1561.1875,
+            "width": 702,
+            "height": 38.1875,
+            "top": 1561.1875,
+            "right": 735,
+            "bottom": 1599.375,
+            "left": 33
+          },
+          "next": {
+            "x": 33,
+            "y": 2017.734375,
+            "width": 702,
+            "height": 38.1875,
+            "top": 2017.734375,
+            "right": 735,
+            "bottom": 2055.921875,
+            "left": 33
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "zh",
+        "theme": "light",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-zh-light-1440-full.png",
+        "source_sha256": "06eb7b03ccf0d7952736204cf9bfa0f8a8c9f4e0754bcb264fa74524a94c12db",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-zh-light-1440-perceptual.png",
+        "crop_sha256": "969a71999719bcd0e21a0be7e854b98c313ff15e6ddca50cd9429a6bece8401f",
+        "crop_box_source_pixels": [
+          230,
+          1485,
+          1210,
+          2026
+        ],
+        "crop_dimensions": [
+          980,
+          541
+        ],
+        "geometry": {
+          "heading": {
+            "x": 263,
+            "y": 1555.21875,
+            "width": 914,
+            "height": 38.1875,
+            "top": 1555.21875,
+            "right": 1177,
+            "bottom": 1593.40625,
+            "left": 263
+          },
+          "next": {
+            "x": 263,
+            "y": 1937.375,
+            "width": 914,
+            "height": 38.1875,
+            "top": 1937.375,
+            "right": 1177,
+            "bottom": 1975.5625,
+            "left": 263
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "zh",
+        "theme": "dark",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-zh-dark-390-full.png",
+        "source_sha256": "360ffa664b89faf4d405ca0af68434e9178df6fe6a3cdce835738ece9df7ffd5",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-zh-dark-390-perceptual.png",
+        "crop_sha256": "3a50d236e0e3366cb74b0aef541a788c69e7cc4a590c77043a232b3fa10d022d",
+        "crop_box_source_pixels": [
+          0,
+          1947,
+          390,
+          2828
+        ],
+        "crop_dimensions": [
+          390,
+          881
+        ],
+        "geometry": {
+          "heading": {
+            "x": 16,
+            "y": 2017.59375,
+            "width": 358,
+            "height": 34.453125,
+            "top": 2017.59375,
+            "right": 374,
+            "bottom": 2052.046875,
+            "left": 16
+          },
+          "next": {
+            "x": 16,
+            "y": 2743.171875,
+            "width": 358,
+            "height": 34.453125,
+            "top": 2743.171875,
+            "right": 374,
+            "bottom": 2777.625,
+            "left": 16
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "zh",
+        "theme": "dark",
+        "viewport": {
+          "width": 768,
+          "height": 1024
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-zh-dark-768-full.png",
+        "source_sha256": "008ee2527dffa8310b0ed37ba15e7606ee925a69f624c7040c6b8274f9b11d46",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-zh-dark-768-perceptual.png",
+        "crop_sha256": "717f44ae0c1b7fe5ee67e9246a123fcf87e7a7a24bcad8135b3d7164f80a9541",
+        "crop_box_source_pixels": [
+          0,
+          1491,
+          768,
+          2106
+        ],
+        "crop_dimensions": [
+          768,
+          615
+        ],
+        "geometry": {
+          "heading": {
+            "x": 33,
+            "y": 1561.1875,
+            "width": 702,
+            "height": 38.1875,
+            "top": 1561.1875,
+            "right": 735,
+            "bottom": 1599.375,
+            "left": 33
+          },
+          "next": {
+            "x": 33,
+            "y": 2017.734375,
+            "width": 702,
+            "height": 38.1875,
+            "top": 2017.734375,
+            "right": 735,
+            "bottom": 2055.921875,
+            "left": 33
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      },
+      {
+        "language": "zh",
+        "theme": "dark",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "source_image": "/tmp/ui-spec-v1100-readme-local/local-zh-dark-1440-full.png",
+        "source_sha256": "1519e8ff179569f469f3f09adba60b76cb709e8b5eebd490241ae8ea240ef516",
+        "crop": "/tmp/ui-spec-v1100-readme-local/inspection-crops/local-zh-dark-1440-perceptual.png",
+        "crop_sha256": "c476af893f7dd82ed8acb71e949b76a2ca05d9f428a8ad7edf79ad7c2734da7c",
+        "crop_box_source_pixels": [
+          230,
+          1485,
+          1210,
+          2026
+        ],
+        "crop_dimensions": [
+          980,
+          541
+        ],
+        "geometry": {
+          "heading": {
+            "x": 263,
+            "y": 1555.21875,
+            "width": 914,
+            "height": 38.1875,
+            "top": 1555.21875,
+            "right": 1177,
+            "bottom": 1593.40625,
+            "left": 263
+          },
+          "next": {
+            "x": 263,
+            "y": 1937.375,
+            "width": 914,
+            "height": 38.1875,
+            "top": 1937.375,
+            "right": 1177,
+            "bottom": 1975.5625,
+            "left": 263
+          },
+          "dpr": 1,
+          "zoom": "1"
+        },
+        "geometry_matches_original_article": true,
+        "pixel_rescaling": false,
+        "actually_opened": true,
+        "viewer": "view_image, original detail",
+        "viewing_scope": "Changed exploration/perceptual section at original source-pixel size, with preceding links and following section context",
+        "crop_edge_clipping": "Neighbor text may cross crop edges; target section is complete"
+      }
+    ],
+    "crop_method": {
+      "source_pixels": "Pillow crop of existing full screenshots; no resize or image-content alteration",
+      "geometry": "Offline rerender with existing preview_readme.render_document and embedded local artwork; original article x/y/width/height matched within0.01CSSpx in all12conditions",
+      "geometry_script": "/tmp/ui-spec-v1100-readme-crops.py",
+      "geometry_script_sha256": "c8acc664815b22fd55428b8a636d46b8384f92d0d4438debf276b2a0d9b4e15a",
+      "external_requests": "All requests blocked in geometry contexts; document and artwork provided inline",
+      "permissions": "Auto-reviewed require_escalated was used because normal sandbox Chromium launch was unavailable; no TLS-ignore or security interstitial bypass",
+      "source_changes": false
+    },
+    "result": "No blocking visual findings within observed local-render scope",
+    "findings": [
+      {
+        "severity": "pass",
+        "scope": "All12conditions",
+        "observation": "Headings, changed perceptual-method paragraph, four paragraphs of exploration/temporal explanation, bold emphasis and guide links render with clear separation and no target-section overlap or clipped text."
+      },
+      {
+        "severity": "pass",
+        "scope": "Chinese12original images plus6sectioncrops",
+        "observation": "CJK glyphs are visible; no missing-glyph boxes observed. New English method name wraps within the Chinese paragraph without crossing content bounds."
+      },
+      {
+        "severity": "pass",
+        "scope": "Whole-document overviews and first-screen views",
+        "observation": "Retained editorial artwork, installation-first reading path and section rhythm remain coherent. Compact artwork is used at390 and wide artwork at768/1440 as reported by the capture runner."
+      },
+      {
+        "severity": "nonblocking",
+        "scope": "English768light/darksectioncrops",
+        "observation": "The new method paragraph ends with a short final line: carry it. All text remains readable; no clipping or overlap."
+      },
+      {
+        "severity": "nonblocking",
+        "scope": "Chinese768light/darksectioncrops",
+        "observation": "The visual-observation guide link wraps its final character 南 onto the next line before the separator and temporal link. The link remains legible; no loss or overlap."
+      },
+      {
+        "severity": "scope_note",
+        "scope": "390firstscreens",
+        "observation": "Long installation text continues beyond the native code viewport; the English install block begins near the bottom of the first screen. The screenshot establishes partial visibility, not independent clipboard or horizontal-scroll operation."
+      }
+    ],
+    "mechanical_evidence_separate": {
+      "source": "Original capture report and read-only geometry rerender",
+      "all12_document_overflow_false": true,
+      "native_install_text_checks": "Original runner checks presence of native text; reviewer did not independently copy to clipboard",
+      "disclosure": "Original runner reports exercised; image reviewer did not independently operate it",
+      "asset_selection_and_alt": "Original report checks; no claim of screen-reader validation"
+    },
+    "limits": [
+      "Actual GitHub rendering remains a separate later review.",
+      "Full-document images were inspected as scaled overviews, not every line at original size.",
+      "All12changed-section crops preserve original pixels and context; they do not establish an actual human display size or real-device reading comfort.",
+      "Reviewer did not operate copy, links, horizontal code scrolling, disclosure, keyboard navigation or assistive technology.",
+      "No video, motion-quality, real-user comprehension or performance conclusion is made.",
+      "Geometry-only rerender did not replace original captures, modify repository source or create new UI interaction evidence."
+    ],
+    "remaining_visual_blockers": [],
+    "recapture_required": false
+  },
+  "maintainer_baseline_inspection": {
+    "reviewer": "/root",
+    "viewed_at_utc": "2026-10-26T07:17:14.155211+00:00",
+    "records": [
+      {
+        "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/mobile-example-settled.png",
+        "copy": "/tmp/ui-spec-v1100-maintainer-observation/question-before-mobile.png",
+        "sha256": "f64fc1986ea179f2d22aeb945879540fe136860eef61d3703b7fd3b5133e9ede",
+        "actually_opened": true,
+        "viewer": "view_image original detail",
+        "observations": "At the settled mobile frame, the fixed header covers the upper part of the question area; the question label is not visible. The answer identity, example notice and persistent composer remain visible. This corroborates the application author finding; it does not independently establish the scroll cause."
+      },
+      {
+        "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/desktop-example.png",
+        "copy": "/tmp/ui-spec-v1100-maintainer-observation/question-before-desktop.png",
+        "sha256": "cecafa33787ab5adc83c399a0ce933350b8830fab613e1026512b784a36d4c32",
+        "actually_opened": true,
+        "viewer": "view_image original detail",
+        "observations": "The quiet green left material column and bounded main reading/composer region form a coherent whole. Material counts, item indices, metadata and footer guidance carry much less visible weight than the question and answer. Their task prominence is a professional interpretation, not measured user attention."
+      },
+      {
+        "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/before-mobile.png",
+        "copy": "/tmp/ui-spec-v1100-maintainer-observation/reading-before-mobile.png",
+        "sha256": "27112034c025a8e202f09b7df2643e2afb67447ef7dea7c7d7f30e76d403e478",
+        "actually_opened": true,
+        "viewer": "view_image original detail",
+        "observations": "The narrow frame has distinct header, object controls, formatting tools, reading surface and bottom navigation. Aa uses letterforms larger than neighboring line symbols; toolbar groups and icon weights differ. The content remains visible. A judgment of refinement needs later normal-scale/contextual comparison."
+      }
+    ],
+    "limits": "Static image review only. The author had already reported likely findings. No new interface operation or temporal viewing by this maintainer pass."
+  },
+  "applications": {
+    "question-polish": {
+      "request": "Improve the existing local material-and-question workspace, especially page/composer/material coherence and maturity for long Chinese/English content on desktop and phone. Preserve real local features and data; keep preset-answer disclosure; add no real AI, account or upload service.",
+      "author": "/root/question_polish",
+      "source": {
+        "files": {
+          "index.html": "d7fce8d10ed0ae2a93a6a27b81c7c55b080e3ef36562b4e04255fd8a9f5a55d0",
+          "package-lock.json": "d660b43bc70fb5e1186f7760350da2a641dcb55b30bc51630324be745de2a66b",
+          "package.json": "83343cb30c661d0a77a4aead4717fcbeb9fe8456321a3b8721ce4a7e9bb56dd9",
+          "playwright.config.ts": "243cc893a7ef9b33f050e44fb055f90ceaa7dd63758be047263cc7d2b5020281",
+          "public/favicon.svg": "dc46ed62433916a6ef9c710ea3d6467ef7144261e1aca814abf2cfe5679d4964",
+          "scripts/inspect-ui.py": "e15a5c9c7de76ab01af24e4f4ba4e6d17c53ab125053412dfbc0bf648a430493",
+          "scripts/make-fixtures.mjs": "f06074b16c8c0e8b5b94309ec09aa967040ed4d8e0ade40c4564400198df90a2",
+          "src/App.tsx": "1baa23c2681d27554b01d9659a8c6f392d2dd1a33922b179fb08c01527c4a2a2",
+          "src/Trial.tsx": "3db3f39168f5c4dc6474d33879f9beb3f956b7cb6a22670aa8018d6d2da73593",
+          "src/components/Answer.tsx": "9fa3e0e1a21399268d7c052e1dd9dc29fe582fedf61cb05020e400b8193d3443",
+          "src/components/Composer.tsx": "ac1a5445d8a8800c01602e5733b533830803c040d2e34a7880cc8cf3f72f5830",
+          "src/components/Materials.tsx": "a8cb7f5434c58e4b25a3365d149664a9bd09a4913b946002d03a46c20af8d9df",
+          "src/import-material.ts": "14709da4e05aac7297d186fb58eda3d1cfdde7a40ce176048b08638151b8dd9e",
+          "src/main.tsx": "ced43c48857c4f32f9e3e4358cc03421339d1f4e2dae71280d7ed35831ed53c1",
+          "src/model.ts": "6ceac2077a21bd4c398df91fbb6ec2d70096847cefbbe8262b44e48c52167d18",
+          "src/storage.ts": "8f060344f734937e6d65906e518f0cdcbb64aaabd10c25d008e5b90dbe8ae16c",
+          "src/styles.css": "e83432158fcb2e2b09553b7bc6c4baf61b349534eab271a09ebb5a8908a0f86e",
+          "src/theme.ts": "fed4bc6c0f505eac66090b3f4f1c62560b442c343ba00dd934902413eb2f4faa",
+          "tests/capacity.spec.ts": "3684b12c32bf03dde2485618d9e9dba5ee3c61285648339ac54445a55e53659d",
+          "tests/core.spec.ts": "2b6a5807db479596ba92e967074305602e49e674be3bba360997bbf63b8c90a7",
+          "tests/fixtures/broken.pdf": "82a681ed95cb7104837b3864b71384e31a5c4d4c39b3c83408e3427bacf32282",
+          "tests/fixtures/empty.txt": "2106c36011520fe73876d45bfb9ef8bf7b2e9f4362096a320376d8ee9b27ef12",
+          "tests/fixtures/interview.txt": "adbf0e2f97070b27a16c1341f8491130e1a486ac35b4cd7a8544e86c170b687b",
+          "tests/fixtures/invalid-encoding.txt": "8c7a3d4e61dfa3272e38bf76d7dd3a852b11a076cf5aaf2ddc0096e00bf123d4",
+          "tests/fixtures/no-text.pdf": "7cf0735be0a4ab8a8a85fc015ee71357b4ce12fe2d8566a010487035a04ae9dc",
+          "tests/fixtures/walking.pdf": "03b3772a17ad086f9beac8aff613e6e7da153df67f36dd8b7739f1058179891b",
+          "tests/fixtures/城市观察.md": "f39683c646b954b8fe5f4488d9863ebd9da6698a92bad09226e5f675061b1f05",
+          "tests/writing.spec.ts": "dcb6571669411304ec97ba4c20add1c4550366c357a5176308d407383abc768e",
+          "tsconfig.json": "49c3322c9196cb5b5a487b5ef90c79a7ebddc775f149a847b484d29be478c831",
+          "vite.config.ts": "824b79b1f2ddb1ddc4684238701a871d25e38b6142f5f4677be3b382a7c35a03"
+        },
+        "unchanged_input_files": [
+          "index.html",
+          "package-lock.json",
+          "package.json",
+          "playwright.config.ts",
+          "public/favicon.svg",
+          "scripts/make-fixtures.mjs",
+          "src/Trial.tsx",
+          "src/import-material.ts",
+          "src/main.tsx",
+          "src/model.ts",
+          "src/storage.ts",
+          "src/theme.ts",
+          "tests/fixtures/broken.pdf",
+          "tests/fixtures/empty.txt",
+          "tests/fixtures/interview.txt",
+          "tests/fixtures/invalid-encoding.txt",
+          "tests/fixtures/no-text.pdf",
+          "tests/fixtures/walking.pdf",
+          "tests/fixtures/城市观察.md",
+          "tsconfig.json",
+          "vite.config.ts"
+        ],
+        "changed_input_files": [
+          "src/App.tsx",
+          "src/components/Answer.tsx",
+          "src/components/Composer.tsx",
+          "src/components/Materials.tsx",
+          "src/styles.css",
+          "tests/core.spec.ts"
+        ],
+        "new_files": [
+          "scripts/inspect-ui.py",
+          "tests/capacity.spec.ts",
+          "tests/writing.spec.ts"
+        ],
+        "identity_scope": "Raw project sources, configuration, locks, fixtures, notices and verification scripts; excludes node_modules, built products and captured evidence."
+      },
+      "author_report": {
+        "path": "/tmp/ui-spec-forward-v1100/question-polish/DESIGN_REVIEW.md",
+        "sha256": "2013c2ddddf6df072093ecc8f0cae38aa3c3d31992ed9dcbe7d6005e4883852d",
+        "bytes": 13861
+      },
+      "dependencies": {
+        "@mantine/core": "9.7.4",
+        "@mantine/dropzone": "9.7.4",
+        "@mantine/hooks": "9.7.4",
+        "@tabler/icons-react": "3.49.0",
+        "idb-keyval": "6.3.0",
+        "pdfjs-dist": "6.4.299",
+        "react": "19.3.1",
+        "react-dom": "19.3.1"
+      },
+      "actual_adoption": [
+        {
+          "resource": "Mantine core/hooks/dropzone 9.7.4",
+          "status": "retained and adapted",
+          "mechanisms": "AppShell header/navbar/main offsets and breakpoint; Textarea native editing and autosize; Modal/Drawer portal, focus and close-return; Menu, Checkbox, Button and Dropzone.",
+          "adaptation": "304px material region, bounded reading width, text/surface hierarchy, clear expansion entry, public row configuration, pane-owned scrolling and short-height context.",
+          "source_evidence": {
+            "src/App.tsx": [
+              {
+                "line": 2,
+                "text": "import { ActionIcon, Alert, AppShell, Badge, Button, Drawer, Group, Modal, Text, Textarea, Tooltip } from '@mantine/core';"
+              },
+              {
+                "line": 45,
+                "text": "      reader.scrollTo({ top: Math.max(0, top), behavior: reducedMotion ? 'instant' : 'smooth' });"
+              },
+              {
+                "line": 51,
+                "text": "    composerRef.current?.focus({ preventScroll: true });"
+              },
+              {
+                "line": 59,
+                "text": "      reader.scrollTo({ top: reader.scrollTop + bounds.top - viewport.top - 24, behavior: reducedMotion ? 'instant' : 'smooth' });"
+              },
+              {
+                "line": 146,
+                "text": "    <AppShell header={{ height: 64 }} navbar={{ width: 304, breakpoint: 'md', collapsed: { mobile: true } }} transitionDuration={reducedMotion ? 0 : 160} className=\"research-shell\">"
+              }
+            ],
+            "src/components/Composer.tsx": [
+              {
+                "line": 2,
+                "text": "import { Button, Paper, Textarea, Tooltip } from '@mantine/core';"
+              },
+              {
+                "line": 25,
+                "text": "      <Textarea id=\"question-draft\" ref={ref} name=\"question\" variant=\"unstyled\" className=\"question-input\" value={draft} onChange={event => onChange(event.currentTarget.value)} autosize minRows={hasTurns ? 1 : 3} maxRows={hasTurns ? 4 : 9} placeholder={hasTurns ? '补充一个问题，继续探索……' : '写下想弄清楚的问题。可以补充背景、关注点，或希望比较的观点……'} aria-describedby={`composer-help${over ? ' question-error' : ''}`} aria-invalid={over || undefined} onKeyDown={event => {"
+              },
+              {
+                "line": 31,
+                "text": "    <div className={`composer-help${atLimit ? ' at-limit' : ''}`} id=\"composer-help\"><span>{atLimit ? '当前话题已达 50 轮，可导出内容后开始新话题。' : '所有回答均为预设示例，未接入 AI'}</span><span className=\"keyboard-hint\">Enter 换行 <span>·</span> <kbd>Ctrl / ⌘</kbd> + <kbd>Enter</kbd> 查看示例</span></div>"
+              }
+            ]
+          }
+        },
+        {
+          "resource": "Tabler React 3.49.0",
+          "status": "retained",
+          "mechanisms": "One line-icon family for book, attachment, expansion, file types and actions; local size/placement adaptation."
+        },
+        {
+          "resource": "Existing local product",
+          "status": "retained",
+          "mechanisms": "Green identity, question/answer/material relationships, IndexedDB v1, material/import contracts, fixed example content and honest disclosures.",
+          "unchanged_core": [
+            "src/model.ts",
+            "src/storage.ts",
+            "src/import-material.ts",
+            "package.json",
+            "package-lock.json"
+          ]
+        }
+      ],
+      "research": [
+        {
+          "url": "https://mantine.dev/app-shell/?e=BasicAppShell",
+          "kind": "original live demo",
+          "actual_observation_by_author": "Opened and inspected the complete desktop shell; then inspected existing local /?trial and application.",
+          "archive_limit": "Original demo was viewed through the browser tool; no project screenshot archive was saved."
+        },
+        {
+          "url": "https://mantine.dev/core/textarea/",
+          "kind": "original live demo",
+          "actual_observation_by_author": "Entered six mixed Chinese/English lines into the four-row autosize demo; observed growth limit and internal scrolling. Read installed autosize source for measurement/resize/font behavior.",
+          "archive_limit": "The local trial and final application are archived; external demo images were only viewed in the browser tool."
+        },
+        {
+          "url": "https://mantine.dev/core/modal/",
+          "kind": "documentation",
+          "actual_observation_by_author": "Documentation plus actual local modal/drawer/menu/import paths. Does not claim all original Modal demos were operated."
+        }
+      ],
+      "observed_decisions": [
+        {
+          "fact": "Auxiliary text of 9–11px and narrow material rows had weak visual presence beside the main content.",
+          "interpretation": "Secondary information and independent material actions needed a more coordinated scale.",
+          "decision": "Retain the mature structure; adjust type, surfaces, selected rows, file icons, expansion wording and current-content layout.",
+          "validation": "Whole-page and local final frames in Chinese/English and desktop/phone; independent image review."
+        },
+        {
+          "fact": "At 390×844, entering the example scrolled the outer page by 64px and hid question metadata behind the fixed header.",
+          "cause_evidence": "Baseline geometry plus scrollIntoView behavior in the old implementation.",
+          "decision": "Scroll only the reading pane and focus with preventScroll.",
+          "result": {
+            "window_scroll_y_before": 64,
+            "window_scroll_y_after": 0,
+            "reader_top_after_css_px": 64
+          },
+          "validation": "Corresponding final pixels and an added regression assertion."
+        },
+        {
+          "fact": "At 844×390 the nonempty 1,332-character draft looked blank while its count and submit action remained visible.",
+          "initial_hypothesis": "Autosize/CSS-height synchronization.",
+          "revised_explanation": "The unchanged draft ended with two newlines; the two-line-height viewport correctly followed the end caret into blank lines. Moving the caret into body text immediately revealed it. No data loss was observed.",
+          "decision": "Raise the short-height input cap from 72px to 96px, preserving the same draft and trailing newlines.",
+          "result": "Trailing sentence is visible; reader retains 121px at 844×390 and 174px at 390×440. Expansion and submit remain in view.",
+          "validation": "Author diagnosis, independent before/after pixels, root before/after observation and final rotation/editing regression.",
+          "boundary": "390×440 is a reduced-height proxy, not a physical mobile keyboard test."
+        },
+        {
+          "fact": "The short-height helper row also hid the 50-turn limit explanation.",
+          "decision": "Keep capacity explanation visible while compacting ordinary shortcut help.",
+          "validation": "Created 50 turns through the UI and tested new-topic recovery in the final nine-scenario run."
+        }
+      ],
+      "checks": {
+        "summary": {
+          "recordedAt": "2026-10-26T07:34:47.274762+00:00",
+          "sourceHashesMatchCurrentFiles": true,
+          "finalRevision": "short-viewport context 96px",
+          "tests": {
+            "startTime": "2026-10-26T07:29:39.670Z",
+            "duration": 54794.361,
+            "expected": 9,
+            "skipped": 0,
+            "unexpected": 0,
+            "flaky": 0
+          },
+          "build": "passed",
+          "visualCaptureCount": 23,
+          "geometryRecordCount": 9,
+          "preview": "http://127.0.0.1:5177/",
+          "sourceFilesChanged": [
+            "src/App.tsx",
+            "src/components/Composer.tsx",
+            "src/components/Materials.tsx",
+            "src/components/Answer.tsx",
+            "src/styles.css"
+          ],
+          "preservedContracts": [
+            "src/model.ts",
+            "src/storage.ts",
+            "src/import-material.ts",
+            "package.json",
+            "package-lock.json"
+          ],
+          "newVerification": [
+            "tests/capacity.spec.ts",
+            "tests/writing.spec.ts",
+            "scripts/inspect-ui.py"
+          ],
+          "record": "DESIGN_REVIEW.md",
+          "limits": [
+            "no real handset software keyboard",
+            "no Safari or Firefox",
+            "no human screen-reader walkthrough",
+            "no continuous video/frame-rate claim",
+            "no owner design acceptance claimed"
+          ]
+        },
+        "build": {
+          "command": "npm run build",
+          "exitCode": 0,
+          "recordedAt": "2026-10-26T07:33:41.216889+00:00",
+          "scope": "Build completed after the final 96px short-viewport refinement.",
+          "warning": "Vite reports one main JavaScript chunk over 500 kB (552.51 kB minified); PDF worker 1,264.34 kB. No performance improvement claim.",
+          "assets": [
+            {
+              "path": "dist/assets/index-Bbo1Dck7.js",
+              "bytes": 552513
+            },
+            {
+              "path": "dist/assets/index-CdvFkyY0.css",
+              "bytes": 275262
+            },
+            {
+              "path": "dist/assets/pdf-BHx8b9rl.js",
+              "bytes": 430170
+            },
+            {
+              "path": "dist/assets/pdf.worker.min--Ao2iAXA.js",
+              "bytes": 65
+            },
+            {
+              "path": "dist/assets/pdf.worker.min-CjEcRF4W.mjs",
+              "bytes": 1264342
+            }
+          ],
+          "sourceHashes": {
+            "src/App.tsx": "1baa23c2681d27554b01d9659a8c6f392d2dd1a33922b179fb08c01527c4a2a2",
+            "src/Trial.tsx": "3db3f39168f5c4dc6474d33879f9beb3f956b7cb6a22670aa8018d6d2da73593",
+            "src/components/Answer.tsx": "9fa3e0e1a21399268d7c052e1dd9dc29fe582fedf61cb05020e400b8193d3443",
+            "src/components/Composer.tsx": "ac1a5445d8a8800c01602e5733b533830803c040d2e34a7880cc8cf3f72f5830",
+            "src/components/Materials.tsx": "a8cb7f5434c58e4b25a3365d149664a9bd09a4913b946002d03a46c20af8d9df",
+            "src/import-material.ts": "14709da4e05aac7297d186fb58eda3d1cfdde7a40ce176048b08638151b8dd9e",
+            "src/main.tsx": "ced43c48857c4f32f9e3e4358cc03421339d1f4e2dae71280d7ed35831ed53c1",
+            "src/model.ts": "6ceac2077a21bd4c398df91fbb6ec2d70096847cefbbe8262b44e48c52167d18",
+            "src/storage.ts": "8f060344f734937e6d65906e518f0cdcbb64aaabd10c25d008e5b90dbe8ae16c",
+            "src/styles.css": "e83432158fcb2e2b09553b7bc6c4baf61b349534eab271a09ebb5a8908a0f86e",
+            "src/theme.ts": "fed4bc6c0f505eac66090b3f4f1c62560b442c343ba00dd934902413eb2f4faa"
+          }
+        },
+        "accessibility": {
+          "desktop-empty": {
+            "violations": [],
+            "incomplete": [],
+            "passes": 24
+          },
+          "import-dialog": {
+            "violations": [],
+            "incomplete": [
+              {
+                "id": "color-contrast",
+                "impact": "serious",
+                "nodes": [
+                  {
+                    "target": [
+                      "#mantine-ose72los4-body > .m_4081bf90.mantine-Group-root > .m_b6d8b162.mantine-Text-root[data-size=\"xs\"]"
+                    ],
+                    "html": "<p class=\"mantine-focus-auto m_b6d8b162 mantine-Text-root\" data-size=\"xs\" style=\"--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); color: var(--mantine-color-dimmed);\">还可加入 10 份资料</p>",
+                    "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+                  }
+                ]
+              }
+            ],
+            "passes": 27
+          },
+          "desktop-example": {
+            "violations": [],
+            "incomplete": [],
+            "passes": 28
+          },
+          "mobile-drawer-reduced-motion": {
+            "violations": [],
+            "incomplete": [],
+            "passes": 28
+          }
+        },
+        "contrast_followup": {
+          "text": "还可加入 10 份资料",
+          "color": "rgb(101, 113, 100)",
+          "fontSize": "12px",
+          "opacity": "1",
+          "panelBackground": "rgb(255, 255, 255)",
+          "panelOpacity": "1",
+          "uncovered": true,
+          "rect": {
+            "x": 442,
+            "y": 534.484375,
+            "width": 102.734375,
+            "height": 16.796875
+          },
+          "contrastRatio": 5.122686862848738,
+          "scope": "Manual follow-up of the one Axe incomplete color-contrast node in a settled import dialog. No claim of full accessibility conformance."
+        },
+        "local_boundary": {
+          "externalRequests": [],
+          "nonGetRequests": [],
+          "runtimeErrors": [],
+          "exercised": "text and PDF import, editing, two turns, clipboard, download, reload, undo, reset",
+          "at": "2026-10-26T07:30:09.059Z"
+        },
+        "visual_capture": {
+          "captures": [
+            {
+              "file": "desktop-welcome.png",
+              "note": "Fresh first-use composition",
+              "captureStartMs": 1792999779708,
+              "captureEndMs": 1792999779776,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "desktop-long-draft.png",
+              "note": "Long Chinese question; bounded input retains toolbar",
+              "captureStartMs": 1792999780086,
+              "captureEndMs": 1792999780154,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "desktop-expanded-question.png",
+              "note": "Mantine Modal with the same long draft",
+              "captureStartMs": 1792999780514,
+              "captureEndMs": 1792999780671,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "desktop-materials.png",
+              "note": "Long English filename and distinct included/excluded materials",
+              "captureStartMs": 1792999783883,
+              "captureEndMs": 1792999783961,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "desktop-english-material.png",
+              "note": "Long English text, paragraphs and a long unbroken reference",
+              "captureStartMs": 1792999784341,
+              "captureEndMs": 1792999784506,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "desktop-english-answer.png",
+              "note": "Fixed English example with local-source context",
+              "captureStartMs": 1792999785742,
+              "captureEndMs": 1792999785827,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "desktop-reading-end.png",
+              "note": "End of answer, attached material and continuation",
+              "captureStartMs": 1792999786100,
+              "captureEndMs": 1792999786160,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "desktop-long-followup.png",
+              "note": "Long draft keeps a large reading region",
+              "captureStartMs": 1792999786528,
+              "captureEndMs": 1792999786586,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "desktop-long-question-answer.png",
+              "note": "Long submitted question is previewed with an explicit expansion control",
+              "captureStartMs": 1792999787459,
+              "captureEndMs": 1792999787536,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-welcome.png",
+              "note": "390 × 844 first-use composition",
+              "captureStartMs": 1792999788505,
+              "captureEndMs": 1792999788548,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-example-entry.png",
+              "note": "Immediate example entry; natural-time capture",
+              "captureStartMs": 1792999788774,
+              "captureEndMs": 1792999788821,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 0
+            },
+            {
+              "file": "mobile-example.png",
+              "note": "Settled example; question metadata remains below the fixed header",
+              "captureStartMs": 1792999789526,
+              "captureEndMs": 1792999789561,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-reading-end.png",
+              "note": "Reading reaches attached materials and all continuation controls",
+              "captureStartMs": 1792999789820,
+              "captureEndMs": 1792999789857,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-long-followup.png",
+              "note": "Long Chinese draft at phone size",
+              "captureStartMs": 1792999790225,
+              "captureEndMs": 1792999790253,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-expanded-question.png",
+              "note": "Full editing surface retains readable text and reachable controls",
+              "captureStartMs": 1792999790857,
+              "captureEndMs": 1792999790920,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-materials.png",
+              "note": "Mobile drawer with mixed-script long filenames",
+              "captureStartMs": 1792999793071,
+              "captureEndMs": 1792999793109,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-english-material.png",
+              "note": "English editing opened from the material drawer",
+              "captureStartMs": 1792999793513,
+              "captureEndMs": 1792999793574,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-materials-ten.png",
+              "note": "Full ten-item collection; addition disabled at the existing capacity",
+              "captureStartMs": 1792999795090,
+              "captureEndMs": 1792999795134,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-materials-list-end.png",
+              "note": "Last material remains reachable within the list",
+              "captureStartMs": 1792999795400,
+              "captureEndMs": 1792999795439,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "long-followup-320x740.png",
+              "note": "Narrow phone with the long follow-up draft",
+              "captureStartMs": 1792999795885,
+              "captureEndMs": 1792999795922,
+              "viewport": {
+                "width": 320,
+                "height": 740
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "long-followup-844x390.png",
+              "note": "Short landscape viewport with bounded writing and reading regions",
+              "captureStartMs": 1792999796202,
+              "captureEndMs": 1792999796238,
+              "viewport": {
+                "width": 844,
+                "height": 390
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "long-followup-390x440.png",
+              "note": "Reduced-height viewport proxy; not a real mobile keyboard test",
+              "captureStartMs": 1792999796518,
+              "captureEndMs": 1792999796536,
+              "viewport": {
+                "width": 390,
+                "height": 440
+              },
+              "settleWaitMs": 250
+            },
+            {
+              "file": "mobile-long-question-answer.png",
+              "note": "Long submitted question and fixed example retain their hierarchy",
+              "captureStartMs": 1792999797442,
+              "captureEndMs": 1792999797477,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "settleWaitMs": 250
+            }
+          ],
+          "geometry": [
+            {
+              "state": "desktop-first-answer",
+              "windowY": 0,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "documentWidth": 1440,
+              "reader": {
+                "top": 64,
+                "bottom": 755.3125,
+                "width": 1136,
+                "height": 691.3125,
+                "scrollHeight": 1290,
+                "clientHeight": 691,
+                "scrollWidth": 1126,
+                "clientWidth": 1126
+              },
+              "questionMeta": {
+                "top": 157.59375,
+                "bottom": 176.640625,
+                "width": 736,
+                "height": 19.046875,
+                "scrollHeight": 19,
+                "clientHeight": 19,
+                "scrollWidth": 736,
+                "clientWidth": 736
+              },
+              "composer": {
+                "top": 755.3125,
+                "bottom": 960,
+                "width": 1136,
+                "height": 204.6875,
+                "scrollHeight": 204,
+                "clientHeight": 204,
+                "scrollWidth": 1136,
+                "clientWidth": 1136
+              },
+              "input": {
+                "top": 812.3125,
+                "bottom": 854.3125,
+                "width": 698,
+                "height": 42,
+                "scrollHeight": 40,
+                "clientHeight": 40,
+                "scrollWidth": 696,
+                "clientWidth": 696
+              }
+            },
+            {
+              "state": "desktop-long-followup",
+              "windowY": 0,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "documentWidth": 1440,
+              "reader": {
+                "top": 64,
+                "bottom": 668.3125,
+                "width": 1136,
+                "height": 604.3125,
+                "scrollHeight": 1290,
+                "clientHeight": 604,
+                "scrollWidth": 1126,
+                "clientWidth": 1126
+              },
+              "questionMeta": {
+                "top": -441.40625,
+                "bottom": -422.359375,
+                "width": 736,
+                "height": 19.046875,
+                "scrollHeight": 19,
+                "clientHeight": 19,
+                "scrollWidth": 736,
+                "clientWidth": 736
+              },
+              "composer": {
+                "top": 668.3125,
+                "bottom": 960,
+                "width": 1136,
+                "height": 291.6875,
+                "scrollHeight": 291,
+                "clientHeight": 291,
+                "scrollWidth": 1136,
+                "clientWidth": 1136
+              },
+              "input": {
+                "top": 725.3125,
+                "bottom": 854.3125,
+                "width": 698,
+                "height": 129,
+                "scrollHeight": 1768,
+                "clientHeight": 127,
+                "scrollWidth": 696,
+                "clientWidth": 696
+              }
+            },
+            {
+              "state": "desktop-second-answer",
+              "windowY": 0,
+              "viewport": {
+                "width": 1440,
+                "height": 960
+              },
+              "documentWidth": 1440,
+              "reader": {
+                "top": 64,
+                "bottom": 755.3125,
+                "width": 1136,
+                "height": 691.3125,
+                "scrollHeight": 2424,
+                "clientHeight": 691,
+                "scrollWidth": 1126,
+                "clientWidth": 1126
+              },
+              "questionMeta": {
+                "top": -1020.40625,
+                "bottom": -1001.359375,
+                "width": 736,
+                "height": 19.046875,
+                "scrollHeight": 19,
+                "clientHeight": 19,
+                "scrollWidth": 736,
+                "clientWidth": 736
+              },
+              "composer": {
+                "top": 755.3125,
+                "bottom": 960,
+                "width": 1136,
+                "height": 204.6875,
+                "scrollHeight": 204,
+                "clientHeight": 204,
+                "scrollWidth": 1136,
+                "clientWidth": 1136
+              },
+              "input": {
+                "top": 812.3125,
+                "bottom": 854.3125,
+                "width": 698,
+                "height": 42,
+                "scrollHeight": 40,
+                "clientHeight": 40,
+                "scrollWidth": 696,
+                "clientWidth": 696
+              }
+            },
+            {
+              "state": "mobile-example-settled",
+              "windowY": 0,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "documentWidth": 390,
+              "reader": {
+                "top": 64,
+                "bottom": 649.3125,
+                "width": 390,
+                "height": 585.3125,
+                "scrollHeight": 1718,
+                "clientHeight": 585,
+                "scrollWidth": 390,
+                "clientWidth": 390
+              },
+              "questionMeta": {
+                "top": 141.59375,
+                "bottom": 160.640625,
+                "width": 350,
+                "height": 19.046875,
+                "scrollHeight": 19,
+                "clientHeight": 19,
+                "scrollWidth": 350,
+                "clientWidth": 350
+              },
+              "composer": {
+                "top": 649.3125,
+                "bottom": 844,
+                "width": 390,
+                "height": 194.6875,
+                "scrollHeight": 194,
+                "clientHeight": 194,
+                "scrollWidth": 390,
+                "clientWidth": 390
+              },
+              "input": {
+                "top": 702.3125,
+                "bottom": 743.3125,
+                "width": 336,
+                "height": 41,
+                "scrollHeight": 39,
+                "clientHeight": 39,
+                "scrollWidth": 334,
+                "clientWidth": 334
+              }
+            },
+            {
+              "state": "mobile-long-followup",
+              "windowY": 0,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "documentWidth": 390,
+              "reader": {
+                "top": 64,
+                "bottom": 565.3125,
+                "width": 390,
+                "height": 501.3125,
+                "scrollHeight": 1718,
+                "clientHeight": 501,
+                "scrollWidth": 390,
+                "clientWidth": 390
+              },
+              "questionMeta": {
+                "top": -991.40625,
+                "bottom": -972.359375,
+                "width": 350,
+                "height": 19.046875,
+                "scrollHeight": 19,
+                "clientHeight": 19,
+                "scrollWidth": 350,
+                "clientWidth": 350
+              },
+              "composer": {
+                "top": 565.3125,
+                "bottom": 844,
+                "width": 390,
+                "height": 278.6875,
+                "scrollHeight": 278,
+                "clientHeight": 278,
+                "scrollWidth": 390,
+                "clientWidth": 390
+              },
+              "input": {
+                "top": 618.3125,
+                "bottom": 743.3125,
+                "width": 336,
+                "height": 125,
+                "scrollHeight": 2727,
+                "clientHeight": 123,
+                "scrollWidth": 334,
+                "clientWidth": 334
+              }
+            },
+            {
+              "state": "long-followup-320x740",
+              "windowY": 0,
+              "viewport": {
+                "width": 320,
+                "height": 740
+              },
+              "documentWidth": 320,
+              "reader": {
+                "top": 64,
+                "bottom": 461.3125,
+                "width": 320,
+                "height": 397.3125,
+                "scrollHeight": 1834,
+                "clientHeight": 397,
+                "scrollWidth": 320,
+                "clientWidth": 320
+              },
+              "questionMeta": {
+                "top": -1107.40625,
+                "bottom": -1088.359375,
+                "width": 280,
+                "height": 19.046875,
+                "scrollHeight": 19,
+                "clientHeight": 19,
+                "scrollWidth": 280,
+                "clientWidth": 280
+              },
+              "composer": {
+                "top": 461.3125,
+                "bottom": 740,
+                "width": 320,
+                "height": 278.6875,
+                "scrollHeight": 278,
+                "clientHeight": 278,
+                "scrollWidth": 320,
+                "clientWidth": 320
+              },
+              "input": {
+                "top": 514.3125,
+                "bottom": 639.3125,
+                "width": 270,
+                "height": 125,
+                "scrollHeight": 3399,
+                "clientHeight": 123,
+                "scrollWidth": 268,
+                "clientWidth": 268
+              }
+            },
+            {
+              "state": "long-followup-844x390",
+              "windowY": 0,
+              "viewport": {
+                "width": 844,
+                "height": 390
+              },
+              "documentWidth": 844,
+              "reader": {
+                "top": 64,
+                "bottom": 185,
+                "width": 844,
+                "height": 121,
+                "scrollHeight": 1399,
+                "clientHeight": 121,
+                "scrollWidth": 844,
+                "clientWidth": 844
+              },
+              "questionMeta": {
+                "top": -1091.40625,
+                "bottom": -1072.359375,
+                "width": 736,
+                "height": 19.046875,
+                "scrollHeight": 19,
+                "clientHeight": 19,
+                "scrollWidth": 736,
+                "clientWidth": 736
+              },
+              "composer": {
+                "top": 185,
+                "bottom": 390,
+                "width": 844,
+                "height": 205,
+                "scrollHeight": 204,
+                "clientHeight": 204,
+                "scrollWidth": 844,
+                "clientWidth": 844
+              },
+              "input": {
+                "top": 230,
+                "bottom": 326,
+                "width": 698,
+                "height": 96,
+                "scrollHeight": 1768,
+                "clientHeight": 94,
+                "scrollWidth": 696,
+                "clientWidth": 696
+              }
+            },
+            {
+              "state": "long-followup-390x440",
+              "windowY": 0,
+              "viewport": {
+                "width": 390,
+                "height": 440
+              },
+              "documentWidth": 390,
+              "reader": {
+                "top": 64,
+                "bottom": 238,
+                "width": 390,
+                "height": 174,
+                "scrollHeight": 1718,
+                "clientHeight": 174,
+                "scrollWidth": 390,
+                "clientWidth": 390
+              },
+              "questionMeta": {
+                "top": -1107.40625,
+                "bottom": -1088.359375,
+                "width": 350,
+                "height": 19.046875,
+                "scrollHeight": 19,
+                "clientHeight": 19,
+                "scrollWidth": 350,
+                "clientWidth": 350
+              },
+              "composer": {
+                "top": 238,
+                "bottom": 440,
+                "width": 390,
+                "height": 202,
+                "scrollHeight": 201,
+                "clientHeight": 201,
+                "scrollWidth": 390,
+                "clientWidth": 390
+              },
+              "input": {
+                "top": 281,
+                "bottom": 377,
+                "width": 336,
+                "height": 96,
+                "scrollHeight": 2727,
+                "clientHeight": 94,
+                "scrollWidth": 334,
+                "clientWidth": 334
+              }
+            },
+            {
+              "state": "mobile-second-answer",
+              "windowY": 0,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              },
+              "documentWidth": 390,
+              "reader": {
+                "top": 64,
+                "bottom": 649.3125,
+                "width": 390,
+                "height": 585.3125,
+                "scrollHeight": 3460,
+                "clientHeight": 585,
+                "scrollWidth": 390,
+                "clientWidth": 390
+              },
+              "questionMeta": {
+                "top": -1363.40625,
+                "bottom": -1344.359375,
+                "width": 350,
+                "height": 19.046875,
+                "scrollHeight": 19,
+                "clientHeight": 19,
+                "scrollWidth": 350,
+                "clientWidth": 350
+              },
+              "composer": {
+                "top": 649.3125,
+                "bottom": 844,
+                "width": 390,
+                "height": 194.6875,
+                "scrollHeight": 194,
+                "clientHeight": 194,
+                "scrollWidth": 390,
+                "clientWidth": 390
+              },
+              "input": {
+                "top": 702.3125,
+                "bottom": 743.3125,
+                "width": 336,
+                "height": 41,
+                "scrollHeight": 39,
+                "clientHeight": 39,
+                "scrollWidth": 334,
+                "clientWidth": 334
+              }
+            }
+          ],
+          "externalRequests": [],
+          "runtimeErrors": [],
+          "browser": "143.0.7499.0",
+          "date": "2026-10-26T07:29:38.869855+00:00",
+          "theme": "light",
+          "locale": "zh-CN",
+          "dpr": 1,
+          "browserZoom": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "motion": "natural-time; ordered stills do not establish continuous frame delivery",
+          "sourceHashes": {
+            "src/App.tsx": "1baa23c2681d27554b01d9659a8c6f392d2dd1a33922b179fb08c01527c4a2a2",
+            "src/Trial.tsx": "3db3f39168f5c4dc6474d33879f9beb3f956b7cb6a22670aa8018d6d2da73593",
+            "src/components/Answer.tsx": "9fa3e0e1a21399268d7c052e1dd9dc29fe582fedf61cb05020e400b8193d3443",
+            "src/components/Composer.tsx": "ac1a5445d8a8800c01602e5733b533830803c040d2e34a7880cc8cf3f72f5830",
+            "src/components/Materials.tsx": "a8cb7f5434c58e4b25a3365d149664a9bd09a4913b946002d03a46c20af8d9df",
+            "src/import-material.ts": "14709da4e05aac7297d186fb58eda3d1cfdde7a40ce176048b08638151b8dd9e",
+            "src/main.tsx": "ced43c48857c4f32f9e3e4358cc03421339d1f4e2dae71280d7ed35831ed53c1",
+            "src/model.ts": "6ceac2077a21bd4c398df91fbb6ec2d70096847cefbbe8262b44e48c52167d18",
+            "src/storage.ts": "8f060344f734937e6d65906e518f0cdcbb64aaabd10c25d008e5b90dbe8ae16c",
+            "src/styles.css": "e83432158fcb2e2b09553b7bc6c4baf61b349534eab271a09ebb5a8908a0f86e",
+            "src/theme.ts": "fed4bc6c0f505eac66090b3f4f1c62560b442c343ba00dd934902413eb2f4faa"
+          }
+        },
+        "final_playwright_record": {
+          "path": "/tmp/ui-spec-forward-v1100/question-polish/evidence/playwright-results.json",
+          "sha256": "2880df0a438128f70cf080006362b55d2de02ea7e2a850f7b80575320734e531",
+          "bytes": 12947
+        },
+        "temporal_capture": {
+          "browser": "143.0.7499.0",
+          "viewport": {
+            "width": 1440,
+            "height": 960
+          },
+          "deviceScaleFactor": 1,
+          "zoom": 1,
+          "reducedMotion": false,
+          "actionStart": 1792999828886,
+          "clock": "Node Date.now capture-time brackets; browser natural-time animation; screenshot overhead included",
+          "note": "Ordered stills support observed progression, not a measured frame-rate or a video smoothness claim.",
+          "frames": [
+            {
+              "name": "01-before-import",
+              "captureStartMs": 1792999828818,
+              "captureEndMs": 1792999828880,
+              "activeElement": {
+                "tag": "BODY",
+                "name": null
+              }
+            },
+            {
+              "name": "02-modal-first-frame",
+              "captureStartMs": 1792999829022,
+              "captureEndMs": 1792999829229,
+              "activeElement": {
+                "tag": "BUTTON",
+                "name": "关闭添加资料"
+              }
+            },
+            {
+              "name": "03-modal-progress",
+              "captureStartMs": 1792999829313,
+              "captureEndMs": 1792999829548,
+              "activeElement": {
+                "tag": "BUTTON",
+                "name": "关闭添加资料"
+              }
+            },
+            {
+              "name": "04-modal-settled",
+              "captureStartMs": 1792999829737,
+              "captureEndMs": 1792999829879,
+              "activeElement": {
+                "tag": "BUTTON",
+                "name": "关闭添加资料"
+              }
+            },
+            {
+              "name": "05-modal-closing",
+              "captureStartMs": 1792999829948,
+              "captureEndMs": 1792999830109,
+              "activeElement": {
+                "tag": "BUTTON",
+                "name": null
+              }
+            },
+            {
+              "name": "06-focus-return",
+              "captureStartMs": 1792999830206,
+              "captureEndMs": 1792999830264,
+              "activeElement": {
+                "tag": "BUTTON",
+                "name": null
+              }
+            },
+            {
+              "name": "07-answer-entry",
+              "captureStartMs": 1792999830455,
+              "captureEndMs": 1792999830525,
+              "activeElement": {
+                "tag": "BODY",
+                "name": null
+              }
+            },
+            {
+              "name": "08-answer-settled",
+              "captureStartMs": 1792999830795,
+              "captureEndMs": 1792999830853,
+              "activeElement": {
+                "tag": "BODY",
+                "name": null
+              }
+            },
+            {
+              "name": "09-reading-bottom",
+              "captureStartMs": 1792999830901,
+              "captureEndMs": 1792999830963,
+              "activeElement": {
+                "tag": "BODY",
+                "name": null
+              }
+            },
+            {
+              "name": "10-followup-draft",
+              "captureStartMs": 1792999831162,
+              "captureEndMs": 1792999831243,
+              "activeElement": {
+                "tag": "TEXTAREA",
+                "name": null
+              }
+            }
+          ]
+        },
+        "temporal_viewing": {
+          "author_reported_complete_frames": [
+            "02-modal-first-frame.png",
+            "03-modal-progress.png",
+            "05-modal-closing.png",
+            "06-focus-return.png"
+          ],
+          "attempted_but_not_counted": "04-modal-settled.png was read by view_image, but its return did not support an independent complete-frame judgment.",
+          "not_individually_opened_by_author": [
+            "01-before-import.png",
+            "07-answer-entry.png",
+            "08-answer-settled.png",
+            "09-reading-bottom.png",
+            "10-followup-draft.png"
+          ],
+          "view": "Original PNG through default view_image; no contact sheet/crop replacement; physical 1:1 display scale was not calibrated.",
+          "version_scope": "Reported path-based observations during iteration; no frozen-at-view hash record. Do not treat them as a final-source complete-episode visual review.",
+          "normal_speed_playback": false,
+          "continuous_video_viewed": false,
+          "limit": "Ten files captured does not mean ten files viewed. Similar after/ states do not replace specific episode observations. No full transition, smoothness or frame-rate conclusion."
+        }
+      },
+      "independent_visual_review": {
+        "record_identity": {
+          "path": "/tmp/ui-spec-v1100-question-visual-review.json",
+          "sha256": "0701f606c9f02dae72064c7c928cb8a2a48f642b6f2179c162cd7e53e828bed6",
+          "bytes": 30375
+        },
+        "record": {
+          "review": "Independent visual review of question workspace refinement",
+          "project": "/tmp/ui-spec-forward-v1100/question-polish",
+          "updatedUtc": "2026-10-26T07:32:43.504149+00:00",
+          "status": "complete",
+          "summary": "All 23 final after frames are reconciled to actual visual inspection: six changed images were reopened, and 17 are byte-identical to the versions already opened. Six baseline frames and an immutable pre-repair copy were also inspected. The blank 844x390 editor is resolved in refreshed pixels; only minor nonblocking observations remain.",
+          "openedVisualFiles": [
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-welcome.png",
+              "sha256": "e5fecc96d949bd99b4c80ef375773d967c4d03c45702cb01e699b8d60266491d",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-long-draft.png",
+              "sha256": "6cb3517e37c49898e437d2f9bf63599b47a8aa7a93085774914ea998c0ac4580",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-expanded-question.png",
+              "sha256": "1e598d7ae5dacace5b923e2fe628f75f82102777e781002dc8d38c10f6548e0c",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-materials.png",
+              "sha256": "7398775372044184c2df22c5901a33551afed8de0df3f316a948e32ea5ac04c9",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-english-material.png",
+              "sha256": "a0d413613e3e4ea5c0758d8d2643b09f0780a17cba63d19a58b193016e3162b1",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-english-answer.png",
+              "sha256": "fab291b3b0441d499d1c26f84ebb6c9219aab08a68ccc94ecb203594512cd425",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view; reopened after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-reading-end.png",
+              "sha256": "14d07346f70f5f79412907f37f41ed29e16ba0a90301623a8554bd88a83d74a3",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view; reopened after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-long-followup.png",
+              "sha256": "c97266f17e9b2c437b919828073fda1355c5fa8c6be09ae9710212d80ced2831",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view; reopened after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-long-question-answer.png",
+              "sha256": "cbafaf684c6e502c2fc4ed9b571be512e573228f3dd0481d05e794e8484650eb",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view; reopened after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-welcome.png",
+              "sha256": "eabdd275436a43b075ca2eca7cdeebf1ffa62625fa5ac1a3670efabcb240721c",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-example-entry.png",
+              "sha256": "ffedf3fd0c80e4ef7cd0bb0d9ea3a2bd8cb3dd4625b64297b42c18514b602f6f",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-example.png",
+              "sha256": "ffedf3fd0c80e4ef7cd0bb0d9ea3a2bd8cb3dd4625b64297b42c18514b602f6f",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-reading-end.png",
+              "sha256": "390a839454f5bd8a8bf5f4443795519e6bc89c27fdb15a1cca8cb2a61f2f6592",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-long-followup.png",
+              "sha256": "500d8557f4c38a1f1d582d16ed5a6c2bd35a4ffacf88b6e7b2fa5f226a9a8a4f",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-expanded-question.png",
+              "sha256": "c686b2fd2f36fe1cb211ca949d5e88c7bebfd148f7f58f7e9003ffca9a66159b",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-materials.png",
+              "sha256": "820e541c16b8a31942d2fac05540463e75ff8ee27c27cdef600aa9e4802f1c27",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-english-material.png",
+              "sha256": "0056b9876c20de15b9263f203ce86c5197ac80eb61cc1e8d2cfac9a61fc5c085",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-materials-ten.png",
+              "sha256": "ddbbab917ce4ca1692382e3614bfd475f4394393ed46d37cb620550a7ee77197",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-materials-list-end.png",
+              "sha256": "c944efe50411ed2780d98dc95dc9b1ea409baf55e88e2ae6eeaece1b672e9a01",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-320x740.png",
+              "sha256": "4ff737711522f84a44163bf0bd6174f1ae138e79e9813be795fbad92c06ce101",
+              "size": [
+                320,
+                740
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-844x390.png",
+              "sha256": "a65a50b842bb4dab38ed36865a93242e6e44b203cd4f3f157e9b536f920d5165",
+              "size": [
+                844,
+                390
+              ],
+              "view": "entire image, original-resolution view; reopened after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-390x440.png",
+              "sha256": "c4f08f7fb427e2930a4d5bf38b4cb6bf06ddfb34b876cfac46173e3952c6d533",
+              "size": [
+                390,
+                440
+              ],
+              "view": "entire image, original-resolution view; reopened after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-long-question-answer.png",
+              "sha256": "9c17a3dcb336d66617891f8ddff089a5fb739d3f75601a57c5a11b6fbdd459bc",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view; byte-identical after refresh",
+              "role": "candidate"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/desktop-welcome.png",
+              "sha256": "898c9c67f68211f00b408a9fbf591b3d9a69aaab934f1676960eb971170e8ade",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view",
+              "role": "baseline"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/mobile-welcome.png",
+              "sha256": "d902f651aac0dda41ea115ac4541a4fec9d0bdda0616d4550ef1e025c139d06e",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view",
+              "role": "baseline"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/desktop-example.png",
+              "sha256": "cecafa33787ab5adc83c399a0ce933350b8830fab613e1026512b784a36d4c32",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view",
+              "role": "baseline"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/mobile-example-settled.png",
+              "sha256": "f64fc1986ea179f2d22aeb945879540fe136860eef61d3703b7fd3b5133e9ede",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view",
+              "role": "baseline"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/mobile-materials.png",
+              "sha256": "e9645705c1942953806b67a1b7c72f96dde036f4f362111934b713d349858c53",
+              "size": [
+                390,
+                844
+              ],
+              "view": "entire image, original-resolution view",
+              "role": "baseline"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/desktop-reading-end.png",
+              "sha256": "9ef9c9963d5aa79bbdb8a20c2ae64ae933204dd2e48e38a1f84ac7a1384b2f30",
+              "size": [
+                1440,
+                960
+              ],
+              "view": "entire image, original-resolution view",
+              "role": "baseline"
+            },
+            {
+              "file": "/tmp/ui-spec-v1100-maintainer-observation/question-landscape-before-repair.png",
+              "sha256": "0041d10a15d2ebd83f73625fbc6b37101b76bc3de422aa24dfb12b8f7ce1878d",
+              "size": [
+                844,
+                390
+              ],
+              "view": "entire image, original-resolution view",
+              "role": "retained immutable copy of pre-repair landscape evidence"
+            }
+          ],
+          "detailViews": [
+            {
+              "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-materials.png",
+              "sourceSha256": "7398775372044184c2df22c5901a33551afed8de0df3f316a948e32ea5ac04c9",
+              "crop": [
+                12,
+                88,
+                291,
+                478
+              ],
+              "scale": 2,
+              "derivedFile": "/tmp/ui-spec-v1100-question-review-crops/desktop-materials-sidebar.png",
+              "derivedSha256": "64160f655f77027a6fc6bb70e998e4e6de8acde07298e9163904cc7da144df9d",
+              "version": "initial evidence; source hash identifies viewed version"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-reading-end.png",
+              "sourceSha256": "6fac8ddc1c3f568b21b0570e3ee1d61a14cd03a34ca9ce963536e49be6b0a59d",
+              "crop": [
+                490,
+                750,
+                1250,
+                956
+              ],
+              "scale": 2,
+              "derivedFile": "/tmp/ui-spec-v1100-question-review-crops/desktop-composer.png",
+              "derivedSha256": "6130bc5070dbac2b922c3fa44c1191946f5a7d2e052f222da871b75aa7ed6f6e",
+              "version": "initial evidence; source hash identifies viewed version"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-english-material.png",
+              "sourceSha256": "0056b9876c20de15b9263f203ce86c5197ac80eb61cc1e8d2cfac9a61fc5c085",
+              "crop": [
+                20,
+                112,
+                368,
+                706
+              ],
+              "scale": 2,
+              "derivedFile": "/tmp/ui-spec-v1100-question-review-crops/mobile-material-editor.png",
+              "derivedSha256": "4e8060688373a2306ab548d6328ab53ada71fcf3eac851b95ac07a5ce7dee427",
+              "version": "initial evidence; source hash identifies viewed version"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-long-question-answer.png",
+              "sourceSha256": "9c17a3dcb336d66617891f8ddff089a5fb739d3f75601a57c5a11b6fbdd459bc",
+              "crop": [
+                12,
+                110,
+                378,
+                460
+              ],
+              "scale": 2,
+              "derivedFile": "/tmp/ui-spec-v1100-question-review-crops/mobile-long-question-preview.png",
+              "derivedSha256": "0dac398aa551b635f036539ecb0d8ce4adc0fd486ab3ae3ffdfc09a093dd1080",
+              "version": "initial evidence; source hash identifies viewed version"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-844x390.png",
+              "sourceSha256": "a65a50b842bb4dab38ed36865a93242e6e44b203cd4f3f157e9b536f920d5165",
+              "crop": [
+                54,
+                194,
+                790,
+                382
+              ],
+              "scale": 2,
+              "derivedFile": "/tmp/ui-spec-v1100-question-review-crops/repaired-landscape-composer.png",
+              "derivedSha256": "a3d25836001d1b836778b0072ff3d21268722599499b8b2300f808f1e5c87c90",
+              "version": "final refreshed evidence"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-390x440.png",
+              "sourceSha256": "c4f08f7fb427e2930a4d5bf38b4cb6bf06ddfb34b876cfac46173e3952c6d533",
+              "crop": [
+                12,
+                246,
+                378,
+                432
+              ],
+              "scale": 2,
+              "derivedFile": "/tmp/ui-spec-v1100-question-review-crops/repaired-short-phone-composer.png",
+              "derivedSha256": "a2c0ce1f0c5bf21410f6f7bcbbaa1dd7ea2899ba2b79f3690dabcd8d5fcf6403",
+              "version": "final refreshed evidence"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-reading-end.png",
+              "sourceSha256": "14d07346f70f5f79412907f37f41ed29e16ba0a90301623a8554bd88a83d74a3",
+              "crop": [
+                490,
+                750,
+                1250,
+                956
+              ],
+              "scale": 2,
+              "derivedFile": "/tmp/ui-spec-v1100-question-review-crops/desktop-composer-refreshed.png",
+              "derivedSha256": "6130bc5070dbac2b922c3fa44c1191946f5a7d2e052f222da871b75aa7ed6f6e",
+              "version": "final refreshed evidence"
+            }
+          ],
+          "readContextFiles": [
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/inspection.json",
+              "sha256": "48d2057a7f0b90691711a795293583f8dfa6e31cc2aca09b6cf3363f31f8d3a8"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/conditions.json",
+              "sha256": "01e368ddaa411754afc0de561cb66512df359361972afbb57e1b4e50dd4e646c"
+            }
+          ],
+          "conditions": {
+            "browser": "143.0.7499.0",
+            "theme": "light",
+            "locale": "zh-CN",
+            "dpr": 1,
+            "browserZoom": 1,
+            "desktop": [
+              1440,
+              960
+            ],
+            "phone": [
+              390,
+              844
+            ],
+            "additionalViewports": [
+              [
+                320,
+                740
+              ],
+              [
+                844,
+                390
+              ],
+              [
+                390,
+                440
+              ]
+            ],
+            "captureNotes": "Read as supplied context, not accepted as conclusions. Most frames have a 250 ms settle wait; immediate example-entry has zero settle wait."
+          },
+          "comparisons": [
+            {
+              "before": "evidence/before/desktop-welcome.png",
+              "after": "evidence/after/desktop-welcome.png",
+              "match": "same viewport and first-use state",
+              "observation": "Consistent sidebar/main alignment and typography; composer now separates writing from actions with a divider and labels the expansion control."
+            },
+            {
+              "before": "evidence/before/mobile-welcome.png",
+              "after": "evidence/after/mobile-welcome.png",
+              "match": "same viewport and first-use state",
+              "observation": "Primary entry, example actions and preset-answer label all fit. Expansion is now labeled; no horizontal clipping of the page."
+            },
+            {
+              "before": "evidence/before/mobile-example-settled.png",
+              "after": "evidence/after/mobile-example.png",
+              "match": "same viewport and same Chinese example content",
+              "observation": "Question metadata and complete question now sit below the fixed header; the baseline starts its question at the header edge and shows no metadata. Bottom composer controls remain separated from reading content."
+            },
+            {
+              "before": "evidence/before/mobile-materials.png",
+              "after": "evidence/after/mobile-materials.png",
+              "match": "same drawer layout/viewport, different item count and content",
+              "observation": "Materials now form bounded rows with distinct checkbox, name, metadata and overflow controls. Additional English item wraps to two lines with an ellipsis."
+            },
+            {
+              "before": "evidence/before/desktop-example.png; evidence/before/desktop-reading-end.png",
+              "after": "evidence/after/desktop-english-answer.png; evidence/after/desktop-reading-end.png",
+              "match": "same viewport and broad reading positions, different language/content; not a content-identical comparison",
+              "observation": "Used for broad layout/context only, not for claims about content density or exact space gains."
+            }
+          ],
+          "findings": [
+            {
+              "id": "QVIS-01",
+              "status": "resolved_in_refreshed_stills",
+              "title": "Landscape editor is blank despite a nonzero draft count",
+              "evidence": [
+                {
+                  "file": "evidence/after/long-followup-844x390.png",
+                  "sha256": "0041d10a15d2ebd83f73625fbc6b37101b76bc3de422aa24dfb12b8f7ce1878d",
+                  "region": [
+                    54,
+                    218,
+                    790,
+                    382
+                  ]
+                },
+                {
+                  "file": "/tmp/ui-spec-v1100-maintainer-observation/question-landscape-before-repair.png",
+                  "sha256": "0041d10a15d2ebd83f73625fbc6b37101b76bc3de422aa24dfb12b8f7ce1878d",
+                  "region": [
+                    72,
+                    254,
+                    772,
+                    326
+                  ]
+                }
+              ],
+              "observation": "The visible writing region contains no draft text, while the toolbar shows 1,332 / 20,000 and an enabled primary action. Both page header and full composer are in the viewport.",
+              "impact": "The user cannot visually check the nonempty draft from this captured state, creating a direct editing/review problem. The still does not establish data loss or a root cause.",
+              "originalSeverity": "blocking",
+              "currentSeverity": "none",
+              "resolution": {
+                "evidence": [
+                  {
+                    "file": "evidence/after/long-followup-844x390.png",
+                    "sha256": "a65a50b842bb4dab38ed36865a93242e6e44b203cd4f3f157e9b536f920d5165",
+                    "region": [
+                      54,
+                      194,
+                      790,
+                      382
+                    ]
+                  },
+                  {
+                    "file": "evidence/after/long-followup-390x440.png",
+                    "sha256": "c4f08f7fb427e2930a4d5bf38b4cb6bf06ddfb34b876cfac46173e3952c6d533",
+                    "region": [
+                      12,
+                      246,
+                      378,
+                      432
+                    ]
+                  }
+                ],
+                "observation": "The landscape editor now visibly shows the complete trailing Chinese sentence, and the 390x440 editor shows its final two lines. Both retain expansion, selected-material count, character count and primary action. The original blank presentation is no longer present.",
+                "tradeoff": "Supplied geometry shows input height increasing from 72 to 96 px. Reader height is 121 px at 844x390 and 174 px at 390x440; whole-frame inspection confirms the header and composer still fit.",
+                "scope": "Resolution is based on these pixels, not on a claim about data loss, root cause, smoothness or interaction behavior."
+              }
+            }
+          ],
+          "nonblockingObservations": [
+            {
+              "id": "QVIS-N1",
+              "files": [
+                "evidence/after/mobile-english-material.png",
+                "evidence/after/mobile-materials.png"
+              ],
+              "regions": [
+                [
+                  31,
+                  143,
+                  359,
+                  180
+                ],
+                [
+                  20,
+                  424,
+                  340,
+                  525
+                ]
+              ],
+              "observation": "The long English name is ellipsized in the material list and only its beginning fits in the single-line name editor. Paragraphs, close and save controls remain legible and inside the modal.",
+              "implication": "Users comparing similarly prefixed filenames may need to move through the name field; no interaction failure is demonstrated."
+            },
+            {
+              "id": "QVIS-N2",
+              "files": [
+                "evidence/after/desktop-long-draft.png",
+                "evidence/after/long-followup-320x740.png"
+              ],
+              "regions": [
+                [
+                  510,
+                  400,
+                  1223,
+                  425
+                ],
+                [
+                  27,
+                  512,
+                  295,
+                  543
+                ]
+              ],
+              "observation": "The bounded draft area begins with a partly clipped line at its internal top edge in these captured scroll positions. Trailing text and all toolbar actions remain visible.",
+              "implication": "Minor presentation detail at an internal text-scroll boundary. These two files are unchanged after refresh, so the observation remains. No scrolling failure is demonstrated and this is not a blocker."
+            }
+          ],
+          "coverage": [
+            {
+              "area": "Desktop whole page",
+              "files": [
+                "desktop-welcome.png",
+                "desktop-materials.png",
+                "desktop-english-answer.png",
+                "desktop-reading-end.png"
+              ],
+              "assessment": "The material sidebar, constrained central reading column and composer share a coherent hierarchy. Main controls and preset-answer disclosures remain visible in the reviewed frames."
+            },
+            {
+              "area": "Phone whole page",
+              "files": [
+                "mobile-welcome.png",
+                "mobile-example.png",
+                "mobile-reading-end.png"
+              ],
+              "assessment": "Header and primary controls stay within the viewport. At reading end, both attached files, copy action, three continuation controls and composer are visible together."
+            },
+            {
+              "area": "Material list and capacity",
+              "files": [
+                "mobile-materials.png",
+                "mobile-materials-ten.png",
+                "mobile-materials-list-end.png",
+                "desktop-materials.png"
+              ],
+              "assessment": "Counts, checkboxes, item names and menus are distinct. The ten-item frame shows disabled addition; the list-end frame shows the last complete card above the fixed local-storage footer."
+            },
+            {
+              "area": "English content",
+              "files": [
+                "desktop-english-material.png",
+                "mobile-english-material.png",
+                "desktop-english-answer.png"
+              ],
+              "assessment": "Visible English paragraphs wrap without page overflow; paragraph spacing supports reading. Modal actions remain inside the frame. The long unbroken reference mentioned in metadata is not visible in the supplied editor captures and was not visually verified."
+            },
+            {
+              "area": "Long Chinese draft and submitted question",
+              "files": [
+                "desktop-expanded-question.png",
+                "mobile-expanded-question.png",
+                "desktop-long-question-answer.png",
+                "mobile-long-question-answer.png"
+              ],
+              "assessment": "Expanded editors show readable paragraphs with completion/close controls. Submitted questions use an explicit expansion link and a visible ellipsis; sample-answer labeling remains below the preview."
+            },
+            {
+              "area": "Short/narrow draft boundary",
+              "files": [
+                "long-followup-320x740.png",
+                "long-followup-844x390.png",
+                "long-followup-390x440.png"
+              ],
+              "assessment": "Final 320x740, 844x390 and 390x440 captures all show trailing draft text and toolbar controls. The formerly blank landscape region is resolved; the narrow frame still shows a partly clipped first visible line at the internal scroll edge."
+            }
+          ],
+          "limits": [
+            "Read-only screenshot review. No project source was changed, no browser/server was operated, and no prior-project or sibling-task directories were read.",
+            "No interaction, focus order, assistive-technology behavior, data preservation, import/save correctness, scrolling restoration or real mobile keyboard behavior is established by still images.",
+            "390x440 is a reduced-height viewport proxy rather than a real virtual-keyboard test.",
+            "Immediate and settled example frames do not establish continuous motion, smoothness or dropped-frame behavior.",
+            "No user preference is inferred from appearance. The assessment concerns visible hierarchy, legibility, clipping and control reachability.",
+            "No dark-theme, browser zoom greater than 1, non-Chromium rendering, real-device safe-area, or long unbroken English reference screenshot was available for this review.",
+            "The initial source capture was superseded during review. All 23 final image hashes were reconciled; all six changed frames were reopened. The final source itself was not audited in this visual review."
+          ],
+          "priorViewedVersions": [
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-english-answer.png",
+              "sha256": "95f6d073b508a3b481b300a4515a3c1d6b37426064295eba36c913235e9f89c1",
+              "view": "entire image, original-resolution view before refresh",
+              "status": "superseded; same path now holds refreshed image"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-reading-end.png",
+              "sha256": "6fac8ddc1c3f568b21b0570e3ee1d61a14cd03a34ca9ce963536e49be6b0a59d",
+              "view": "entire image, original-resolution view before refresh",
+              "status": "superseded; same path now holds refreshed image"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-long-followup.png",
+              "sha256": "cdf9feb0e9cd3daa0049c112688b3a9ffa734fb7e1236c72c0f239e352aab6a9",
+              "view": "entire image, original-resolution view before refresh",
+              "status": "superseded; same path now holds refreshed image"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-long-question-answer.png",
+              "sha256": "d7a5fd947a255739fc5527c7068cc107ee58bffde418655ac8c3cb716bc1e0e2",
+              "view": "entire image, original-resolution view before refresh",
+              "status": "superseded; same path now holds refreshed image"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-844x390.png",
+              "sha256": "0041d10a15d2ebd83f73625fbc6b37101b76bc3de422aa24dfb12b8f7ce1878d",
+              "view": "entire image, original-resolution view before refresh",
+              "status": "superseded; same path now holds refreshed image"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-390x440.png",
+              "sha256": "5cf4edd058c0dba810168cc45ed28d84b94b1da463a8c79b4f458f4baf33f8e2",
+              "view": "entire image, original-resolution view before refresh",
+              "status": "superseded; same path now holds refreshed image"
+            }
+          ],
+          "verdict": "no_remaining_visual_blocker_in_reviewed_final_frames",
+          "activeBlockingFindingCount": 0,
+          "refreshReconciliation": {
+            "changedAndReopened": [
+              {
+                "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-english-answer.png",
+                "sha256": "fab291b3b0441d499d1c26f84ebb6c9219aab08a68ccc94ecb203594512cd425",
+                "previousSha256": "95f6d073b508a3b481b300a4515a3c1d6b37426064295eba36c913235e9f89c1",
+                "changed": true
+              },
+              {
+                "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-reading-end.png",
+                "sha256": "14d07346f70f5f79412907f37f41ed29e16ba0a90301623a8554bd88a83d74a3",
+                "previousSha256": "6fac8ddc1c3f568b21b0570e3ee1d61a14cd03a34ca9ce963536e49be6b0a59d",
+                "changed": true
+              },
+              {
+                "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-long-followup.png",
+                "sha256": "c97266f17e9b2c437b919828073fda1355c5fa8c6be09ae9710212d80ced2831",
+                "previousSha256": "cdf9feb0e9cd3daa0049c112688b3a9ffa734fb7e1236c72c0f239e352aab6a9",
+                "changed": true
+              },
+              {
+                "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-long-question-answer.png",
+                "sha256": "cbafaf684c6e502c2fc4ed9b571be512e573228f3dd0481d05e794e8484650eb",
+                "previousSha256": "d7a5fd947a255739fc5527c7068cc107ee58bffde418655ac8c3cb716bc1e0e2",
+                "changed": true
+              },
+              {
+                "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-844x390.png",
+                "sha256": "a65a50b842bb4dab38ed36865a93242e6e44b203cd4f3f157e9b536f920d5165",
+                "previousSha256": "0041d10a15d2ebd83f73625fbc6b37101b76bc3de422aa24dfb12b8f7ce1878d",
+                "changed": true
+              },
+              {
+                "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-390x440.png",
+                "sha256": "c4f08f7fb427e2930a4d5bf38b4cb6bf06ddfb34b876cfac46173e3952c6d533",
+                "previousSha256": "5cf4edd058c0dba810168cc45ed28d84b94b1da463a8c79b4f458f4baf33f8e2",
+                "changed": true
+              }
+            ],
+            "unchangedAndPreviouslyOpenedCount": 17,
+            "refreshedInspectionDate": "2026-10-26T07:29:38.869855+00:00"
+          },
+          "priorReadContextVersions": [
+            {
+              "file": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/inspection.json",
+              "sha256": "80232821a6e8c76c6c7001cdb3b2d82e8e7258520ee40c8bb86a1a6216550e52"
+            }
+          ],
+          "reviewerActions": {
+            "projectFilesChanged": false,
+            "appOrServerOperated": false,
+            "projectSourceFilesRead": [],
+            "unrelatedProjectDirectoriesRead": []
+          }
+        }
+      },
+      "representative_images": [
+        {
+          "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/before/mobile-example-settled.png",
+          "repository_path": "docs/evidence/v1.10.0/question-before-mobile.png",
+          "sha256": "f64fc1986ea179f2d22aeb945879540fe136860eef61d3703b7fd3b5133e9ede",
+          "role": "Baseline example entry; same viewport and Chinese content as final mobile example.",
+          "transformed": false
+        },
+        {
+          "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-example.png",
+          "repository_path": "docs/evidence/v1.10.0/question-after-mobile.png",
+          "sha256": "ffedf3fd0c80e4ef7cd0bb0d9ea3a2bd8cb3dd4625b64297b42c18514b602f6f",
+          "role": "Final example entry with question metadata below the fixed header.",
+          "transformed": false
+        },
+        {
+          "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/desktop-materials.png",
+          "repository_path": "docs/evidence/v1.10.0/question-after-desktop.png",
+          "sha256": "7398775372044184c2df22c5901a33551afed8de0df3f316a948e32ea5ac04c9",
+          "role": "Final integrated desktop material region and writing area.",
+          "transformed": false
+        },
+        {
+          "source": "/tmp/ui-spec-v1100-maintainer-observation/question-landscape-before-repair.png",
+          "repository_path": "docs/evidence/v1.10.0/question-landscape-before.png",
+          "sha256": "0041d10a15d2ebd83f73625fbc6b37101b76bc3de422aa24dfb12b8f7ce1878d",
+          "role": "Preserved intermediate blank visible draft, before 96px refinement.",
+          "transformed": false
+        },
+        {
+          "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-844x390.png",
+          "repository_path": "docs/evidence/v1.10.0/question-landscape-after.png",
+          "sha256": "a65a50b842bb4dab38ed36865a93242e6e44b203cd4f3f157e9b536f920d5165",
+          "role": "Final same long draft with trailing newlines and visible context.",
+          "transformed": false
+        }
+      ],
+      "limits": [
+        "No physical mobile keyboard, Safari, Firefox or human screen-reader walkthrough.",
+        "Four zero-violation Axe states plus a scoped incomplete follow-up are not full accessibility certification.",
+        "Vite reports a main bundle over 500kB; no device-performance improvement is claimed.",
+        "Ordered stills are not continuous video playback or frame-rate evidence.",
+        "No real-user preference or acceptance study."
+      ]
+    },
+    "reading-craft": {
+      "request": "Refine the existing local research-notes tool through typography, toolbar/navigation icons and small browser-tab identity. Preserve editing, citations, versions and v1 import/export; add no account, cloud service or real AI.",
+      "author": "/root/reading_craft",
+      "source": {
+        "files": {
+          "index.html": "aee6c9c7765b0c98cf2fea31db50f733a84cf1fb6b5a33ac1794516f3c448aed",
+          "licenses/Lucide-LICENSE.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+          "licenses/Tiptap-MIT.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+          "package-lock.json": "df553ca70d1cfc56b1195decd3aacd1ecf28ac8143524f46cc8a37b40b9a8a96",
+          "package.json": "7ce79ce493899ee52a2f798094a359ccc0afeb3aedfaeb4ccf5f77d144b67a2c",
+          "public/THIRD_PARTY_NOTICES.txt": "200e46f1a6bd6a4d4d66cc0b02040d333eac1f5a582afb8a3f68951e8793f143",
+          "public/favicon-32.png": "940c6a100f43831dc3f0a45b6b4581f0ce4dfbe55ec8f29d1b9c0bf9ea9f686f",
+          "public/favicon.ico": "30c3e565286c910fc90debd0df3d751edad01ba233f120dc649b09ff5af229ef",
+          "public/favicon.svg": "29a9b6e28d88d5225841e6804a8f193d682430d00d7debcc07345697af26b4bf",
+          "scripts/collect-notices.mjs": "dcf1cc2ac82ab52e90acdc2c101d7f28063662cfa2ae7112869bff393c3c258b",
+          "scripts/make-standalone.mjs": "3c48febdcad30ccc24b4019723afa7073eaa44bb84fe33020a5ce632cbd716eb",
+          "scripts/render-icons.py": "081a48d7483c2dbfae999c526a16e090a8c533cfcc0cbb3864476d93ec188eba",
+          "scripts/verify-ui.py": "dfaf6768ec8d3ea2fa3fc4d8c21c8ec2da45ac2313f08056df6ed619c7a31450",
+          "src/assets/brand-mark.svg": "3fa7cdc9be0e1ec4aa3985bdb558d83988a94ae8b4849c5f98cee2ef0bc653b1",
+          "src/fixtures.js": "95dc7a125d1133cdeb89cc77ab6b294641d92547646c52aeed42988233e00643",
+          "src/main.js": "f2f43760d52090f865b663e2547eb2f1a9aebc8bd24ef134164da70e3a1082b3",
+          "src/reading-tools.js": "0d2791fe7fa5a4323e94e890b8fcb6fd8e02214ab0699f4cf59560833e304e0b",
+          "src/store.js": "befb91ec4e67a9d7029e6b14cae37933a2eef8fca94746fe317818c3547d9563",
+          "src/store.test.js": "0749e7d1cc874cf9ce63383a50e4737f4bbb3036006a766d7e52f0a3a4ea875e",
+          "src/style.css": "80d6d0ddbeaa368f46ab785316fe3b76ae7d87a539226d93c2bdd101701a399e"
+        },
+        "unchanged_input_files": [
+          "licenses/Lucide-LICENSE.txt",
+          "licenses/Tiptap-MIT.md",
+          "src/fixtures.js",
+          "src/store.js",
+          "src/store.test.js"
+        ],
+        "changed_input_files": [
+          "index.html",
+          "package-lock.json",
+          "package.json",
+          "public/THIRD_PARTY_NOTICES.txt",
+          "scripts/collect-notices.mjs",
+          "scripts/make-standalone.mjs",
+          "src/main.js",
+          "src/reading-tools.js",
+          "src/style.css"
+        ],
+        "new_files": [
+          "public/favicon-32.png",
+          "public/favicon.ico",
+          "public/favicon.svg",
+          "scripts/render-icons.py",
+          "scripts/verify-ui.py",
+          "src/assets/brand-mark.svg"
+        ],
+        "identity_scope": "Raw project sources, configuration, locks, fixtures, notices and verification scripts; excludes node_modules, built products and captured evidence."
+      },
+      "runtime_revision": "7860bf3b9d0aa28d",
+      "author_report": {
+        "path": "/tmp/ui-spec-forward-v1100/reading-craft/DESIGN_NOTES.md",
+        "sha256": "bce1d823b3ca4e2103b0f32c0315dcb317d118bae3265e09b71946fa004460bc",
+        "bytes": 10469
+      },
+      "dependencies": {
+        "@fontsource-variable/noto-sans-sc": "5.3.1",
+        "@fontsource-variable/noto-serif-sc": "5.3.1",
+        "@tiptap/core": "3.32.0",
+        "@tiptap/pm": "3.32.0",
+        "@tiptap/starter-kit": "3.32.0",
+        "lucide": "1.61.0",
+        "vite": "8.3.5"
+      },
+      "actual_adoption": [
+        {
+          "resource": "Existing Tiptap 3.32.0 workspace",
+          "status": "retained",
+          "mechanisms": "Document model, selection, formatting, history and citation nodes; three-region context/note/outline relationship and phone views.",
+          "unchanged_core": [
+            "src/store.js",
+            "src/store.test.js",
+            "src/fixtures.js"
+          ],
+          "boundary": "Tiptap React Simple Editor is a design reference; its React UI template was not transplanted into the vanilla-JS project."
+        },
+        {
+          "resource": "Lucide 1.61.0",
+          "status": "retained and adapted",
+          "mechanisms": "Original paths in a 24-unit coordinate system; consistent stroke 2, 18px tool glyphs, 20px phone navigation; ALargeSmall replaces the detached Georgia Aa label.",
+          "adaptation": "Tool grouping, native select presentation, shared phone overflow buttons, labels and focus return."
+        },
+        {
+          "resource": "Fontsource Noto Sans SC Variable and Noto Serif SC Variable 5.3.1",
+          "status": "new actual asset adoption",
+          "mechanisms": "Unmodified local WOFF2 with Unicode-range loading; sans UI, serif title/default body, user-selectable sans reading; actual weight variation and retained system fallback.",
+          "rights": "OFL 1.1 notices included and collected into builds.",
+          "adaptation": "Font-loaded title measurement, style-only synthesis for CJK italics, 17/19/21px settings and local reading preference; no change to workspace v1 backup."
+        },
+        {
+          "resource": "Original book-and-bookmark identity",
+          "status": "bounded custom asset",
+          "mechanisms": "32-unit editable SVG master, optical 16-unit favicon, 16/32px ICO and PNG; title synchronization.",
+          "boundary": "Constructed size specimen and in-app identity were inspected. Native browser tab strip and browser cache behavior were not observed."
+        }
+      ],
+      "adoption_source_evidence": {
+        "src/main.js": [
+          {
+            "line": 1,
+            "text": "import { Editor, Node, mergeAttributes } from '@tiptap/core';"
+          },
+          {
+            "line": 2,
+            "text": "import StarterKit from '@tiptap/starter-kit';"
+          },
+          {
+            "line": 3,
+            "text": "import { createIcons, NotebookPen, MessageSquare, Files, FileText, ArrowUp, ArrowLeft, ArrowUpRight, Check, ChevronRight, ChevronDown, BookOpen, Quote, Bold, Italic, List, Undo2, Redo2, History, Download, X, Info, PanelLeftClose, PanelLeftOpen, CircleAlert, CornerDownLeft, Archive, Upload, RotateCcw, ListTree, PencilLine, Ellipsis, ALargeSmall } from 'lucide';"
+          },
+          {
+            "line": 7,
+            "text": "import brandMark from './assets/brand-mark.svg?raw';"
+          },
+          {
+            "line": 8,
+            "text": "import '@fontsource-variable/noto-sans-sc';"
+          },
+          {
+            "line": 9,
+            "text": "import '@fontsource-variable/noto-serif-sc';"
+          },
+          {
+            "line": 13,
+            "text": "const icons=()=>createIcons({icons:iconSet,attrs:{'stroke-width':2,'aria-hidden':'true',focusable:'false'}});"
+          }
+        ]
+      },
+      "research": [
+        {
+          "url": "https://lucide.dev/icons/notebook-pen",
+          "actual_observation_by_author": "Original contour, 100% size and See in action button/navigation contexts.",
+          "status": "Used installed family paths; local optical adaptation."
+        },
+        {
+          "url": "https://template.tiptap.dev/preview/templates/simple",
+          "actual_observation_by_author": "Full initial editor, focused state and expanded heading menu.",
+          "status": "Design reference only, then retained and adapted the existing editor."
+        },
+        {
+          "url": "https://tiptap.dev/docs/ui-components/templates/simple-editor",
+          "actual_observation_by_author": "React/template scope and MIT documentation.",
+          "status": "Documentation supporting integration boundary."
+        },
+        {
+          "url": "https://fontsource.org/fonts/noto-serif-sc",
+          "actual_observation_by_author": "Paragraph specimen at 17px/400 with mixed Chinese and English.",
+          "status": "Local same-content serif/sans trial before actual font adoption."
+        },
+        {
+          "url": "https://fontsource.org/fonts/noto-serif-sc/about",
+          "actual_observation_by_author": "Font origin, variable range and OFL conditions.",
+          "status": "License/source documentation."
+        }
+      ],
+      "observed_decisions": [
+        {
+          "fact": "The baseline declared CJK family names without shipping fonts; the observed fallback showed weak weight differences. Global font-synthesis:none suppressed visible CJK italic style.",
+          "interpretation": "Reading text and interface controls needed stable but distinct typographic roles.",
+          "decision": "Trial serif body/sans UI against all-sans; adopt local variable fonts, preserve a user-selectable sans body, allow style synthesis and remeasure title after font readiness.",
+          "validation": "Normal-size desktop/phone, large text, selected italic/undo/redo, font failure, current-content local trial and independent pixels.",
+          "tradeoff": "The offline standalone embeds all font segments and is about 14.7MB; this is not a network-performance result."
+        },
+        {
+          "fact": "The separate Aa label differed in optical weight from neighboring outline icons.",
+          "decision": "Retain Lucide paths and standardize weight/placement; use ALargeSmall, cohesive tool groups and original native select behavior.",
+          "validation": "Whole editor and related discussion/material views, phone overflow and keyboard focus checks."
+        },
+        {
+          "fact": "The product mark reused a functional notebook idea.",
+          "decision": "Create a distinct bounded book/bookmark identity and small-size optical variant while retaining Lucide for functions.",
+          "validation": "Native-size specimen at 16/32px on shown light/dark surfaces and in-app headers; favicon responses and declarations verified separately."
+        }
+      ],
+      "checks": {
+        "original_storage_tests": {
+          "passed": 10,
+          "unchanged_test_file": "src/store.test.js",
+          "scope": "Actual original storage contract tests, reported by application author."
+        },
+        "verification": {
+          "url": "http://127.0.0.1:4175",
+          "checks": [
+            {
+              "name": "本地中文字体实际加载；字体请求均来自本地服务",
+              "status": "pass",
+              "detail": {
+                "requests": 26,
+                "bytes": 1615572
+              }
+            },
+            {
+              "name": "字体、字号与阅读模式刷新保留，工作区正文未改变",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "工具栏单一 Tab 入口及左右方向键定位",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "选区通过工具栏应用中文/英文斜体，撤销和重做保留内容",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "选文带到讨论保留已有草稿",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "引用查看及原位返回，引用插入与撤销",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "手动版本及恢复前快照；标题与浏览器标签同步",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "v1 JSON 下载/导入、导入前恢复及无效备份拒绝",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "实际 localStorage 保存并刷新恢复标题、正文与草稿",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "连续保存过程：输入后待保存，实际持久化后才显示已保存",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "手机更多格式可展开，Escape 关闭并返回触发控件",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "手机字体/字号、阅读模式、目录跳转可用",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "手机引用与原位返回、三视图导航及草稿保持",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "320 px 窄屏无页面横溢；500 px 短屏设置可滚动完成",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "字体资源不可用时系统字体回退可读，标题不裁切",
+              "status": "pass",
+              "detail": null
+            },
+            {
+              "name": "存储失败真实显示未保存，当前输入及下载补救仍可用",
+              "status": "pass",
+              "detail": null
+            }
+          ],
+          "frames": [
+            {
+              "file": "desktop-editing.png",
+              "capture_start": 83302.742082591,
+              "capture_end": 83302.833773275,
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              }
+            },
+            {
+              "file": "desktop-reading.png",
+              "capture_start": 83302.910943526,
+              "capture_end": 83302.990225585,
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              }
+            },
+            {
+              "file": "desktop-format-selection.png",
+              "capture_start": 83305.080267825,
+              "capture_end": 83305.15411075,
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              }
+            },
+            {
+              "file": "desktop-citation.png",
+              "capture_start": 83305.288523639,
+              "capture_end": 83305.378567992,
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              }
+            },
+            {
+              "file": "desktop-backup-error.png",
+              "capture_start": 83306.537345893,
+              "capture_end": 83306.698624658,
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              }
+            },
+            {
+              "file": "save-episode-before.png",
+              "capture_start": 83307.519468227,
+              "capture_end": 83307.602293568,
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              }
+            },
+            {
+              "file": "save-episode-pending.png",
+              "capture_start": 83307.613566752,
+              "capture_end": 83307.68399918,
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              }
+            },
+            {
+              "file": "save-episode-saved.png",
+              "capture_start": 83308.045112973,
+              "capture_end": 83308.115806176,
+              "viewport": {
+                "width": 1440,
+                "height": 1000
+              }
+            },
+            {
+              "file": "mobile-editing.png",
+              "capture_start": 83309.533091509,
+              "capture_end": 83309.570299006,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            },
+            {
+              "file": "mobile-more-format.png",
+              "capture_start": 83309.61095669,
+              "capture_end": 83309.635718179,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            },
+            {
+              "file": "mobile-reading-settings.png",
+              "capture_start": 83309.706100303,
+              "capture_end": 83309.759975213,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            },
+            {
+              "file": "mobile-large-reading.png",
+              "capture_start": 83309.961326749,
+              "capture_end": 83309.986231094,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            },
+            {
+              "file": "mobile-outline-location.png",
+              "capture_start": 83310.096275146,
+              "capture_end": 83310.135386117,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            },
+            {
+              "file": "mobile-citation.png",
+              "capture_start": 83310.262642077,
+              "capture_end": 83310.301035717,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            },
+            {
+              "file": "mobile-discussion.png",
+              "capture_start": 83310.428145471,
+              "capture_end": 83310.453234524,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            },
+            {
+              "file": "mobile-source-list.png",
+              "capture_start": 83310.634734639,
+              "capture_end": 83310.668258253,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            },
+            {
+              "file": "mobile-320.png",
+              "capture_start": 83310.953222501,
+              "capture_end": 83310.997776057,
+              "viewport": {
+                "width": 320,
+                "height": 740
+              }
+            },
+            {
+              "file": "mobile-short-dialog.png",
+              "capture_start": 83311.070366511,
+              "capture_end": 83311.103050684,
+              "viewport": {
+                "width": 390,
+                "height": 500
+              }
+            },
+            {
+              "file": "mobile-font-fallback.png",
+              "capture_start": 83312.521479232,
+              "capture_end": 83312.551594362,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            },
+            {
+              "file": "mobile-storage-failure.png",
+              "capture_start": 83314.450349989,
+              "capture_end": 83314.489400715,
+              "viewport": {
+                "width": 390,
+                "height": 844
+              }
+            }
+          ],
+          "console_errors": [],
+          "browser": "143.0.7499.0",
+          "fonts": {
+            "requests": 26,
+            "bytes": 1615572
+          },
+          "status": "pass",
+          "runtime_revision": "7860bf3b9d0aa28d",
+          "source_sha256": {
+            "index.html": "aee6c9c7765b0c98cf2fea31db50f733a84cf1fb6b5a33ac1794516f3c448aed",
+            "src/main.js": "f2f43760d52090f865b663e2547eb2f1a9aebc8bd24ef134164da70e3a1082b3",
+            "src/reading-tools.js": "0d2791fe7fa5a4323e94e890b8fcb6fd8e02214ab0699f4cf59560833e304e0b",
+            "src/style.css": "80d6d0ddbeaa368f46ab785316fe3b76ae7d87a539226d93c2bdd101701a399e",
+            "src/store.js": "befb91ec4e67a9d7029e6b14cae37933a2eef8fca94746fe317818c3547d9563",
+            "src/fixtures.js": "95dc7a125d1133cdeb89cc77ab6b294641d92547646c52aeed42988233e00643",
+            "src/assets/brand-mark.svg": "3fa7cdc9be0e1ec4aa3985bdb558d83988a94ae8b4849c5f98cee2ef0bc653b1",
+            "public/favicon.svg": "29a9b6e28d88d5225841e6804a8f193d682430d00d7debcc07345697af26b4bf",
+            "public/favicon.ico": "30c3e565286c910fc90debd0df3d751edad01ba233f120dc649b09ff5af229ef",
+            "package-lock.json": "df553ca70d1cfc56b1195decd3aacd1ecf28ac8143524f46cc8a37b40b9a8a96"
+          }
+        },
+        "delivery": {
+          "checks": [
+            {
+              "viewport": [
+                1280,
+                800
+              ],
+              "overflow": false,
+              "focus_return": true
+            },
+            {
+              "viewport": [
+                900,
+                700
+              ],
+              "overflow": false,
+              "focus_return": true
+            }
+          ],
+          "favicon": {
+            "svg_status": 200,
+            "ico_status": 200,
+            "proof": "asset-proof.png"
+          },
+          "standalone": {
+            "offline": true,
+            "http_requests": 0,
+            "page_errors": [],
+            "bytes": 14725956,
+            "sha256": "f11dee347b9cf99546e77733678d54f1f778a778afc54a5b1b26bdc8f070011f"
+          },
+          "runtime_revision": "7860bf3b9d0aa28d",
+          "checked_at_utc": "2026-10-26T07:33:40.937725+00:00"
+        },
+        "revision": {
+          "runtime_revision": "7860bf3b9d0aa28d",
+          "recorded_at_utc": "2026-10-26T07:33:40.938233+00:00",
+          "source_sha256": {
+            "index.html": "aee6c9c7765b0c98cf2fea31db50f733a84cf1fb6b5a33ac1794516f3c448aed",
+            "src/main.js": "f2f43760d52090f865b663e2547eb2f1a9aebc8bd24ef134164da70e3a1082b3",
+            "src/reading-tools.js": "0d2791fe7fa5a4323e94e890b8fcb6fd8e02214ab0699f4cf59560833e304e0b",
+            "src/style.css": "80d6d0ddbeaa368f46ab785316fe3b76ae7d87a539226d93c2bdd101701a399e",
+            "src/store.js": "befb91ec4e67a9d7029e6b14cae37933a2eef8fca94746fe317818c3547d9563",
+            "src/fixtures.js": "95dc7a125d1133cdeb89cc77ab6b294641d92547646c52aeed42988233e00643",
+            "src/assets/brand-mark.svg": "3fa7cdc9be0e1ec4aa3985bdb558d83988a94ae8b4849c5f98cee2ef0bc653b1",
+            "public/favicon.svg": "29a9b6e28d88d5225841e6804a8f193d682430d00d7debcc07345697af26b4bf",
+            "public/favicon.ico": "30c3e565286c910fc90debd0df3d751edad01ba233f120dc649b09ff5af229ef",
+            "package-lock.json": "df553ca70d1cfc56b1195decd3aacd1ecf28ac8143524f46cc8a37b40b9a8a96"
+          },
+          "functional_checks": "verification.json",
+          "delivery_checks": "delivery-checks.json",
+          "viewed_evidence": [
+            "desktop-editing.png",
+            "desktop-reading.png",
+            "mobile-editing.png",
+            "mobile-reading-settings.png",
+            "mobile-more-format.png",
+            "desktop-format-selection.png",
+            "desktop-citation.png",
+            "mobile-citation.png",
+            "mobile-discussion.png",
+            "mobile-source-list.png",
+            "mobile-short-dialog.png",
+            "mobile-font-fallback.png",
+            "mobile-storage-failure.png",
+            "asset-proof.png",
+            "standalone-offline.png"
+          ],
+          "screenshot_sha256": {
+            "after-desktop.png": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1",
+            "after-mobile.png": "6f52756217313d26ca5ff1ef90b6b42eacd94f673ac467cd4dc94ce10ed772c4",
+            "after-small-mobile.png": "138a6c38a384269daa00e4f50047c54b229ef41aa1427ad98241f12002b3e18a",
+            "asset-proof.png": "7a7836ddc80f97ce49faf833c6105670dceff7d42865dbfda1b5afdf01dd688d",
+            "before-desktop.png": "a395b56c89a48181e870178a9207c2d82ef9aa915280aaf004ee95f5e3a0e8f7",
+            "before-mobile.png": "27112034c025a8e202f09b7df2643e2afb67447ef7dea7c7d7f30e76d403e478",
+            "desktop-backup-error.png": "710e7d3d6d4e0c2d68597c20268834f22192aa0736ae7849e275f1d967a5bcf8",
+            "desktop-citation.png": "b466c49b049c65b113e6f8bf272a15ebd1e928367fa415a63804678a0140810d",
+            "desktop-editing.png": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1",
+            "desktop-format-selection.png": "58414220c56e5905e1eef3d44d53cd2d4645b60cd06c2fb284c6e4575d1934eb",
+            "desktop-reading.png": "c778f45819b406094c8687b777e28b0201b7f47ba4adf8732d3000e029236bc8",
+            "laptop.png": "0ce68e13757ee2a1019b89f286b6e369df20bce0dfbdacbcca7436d1b0e5bb60",
+            "mobile-320.png": "e4b5bce9e5d0cbf376692791925fdfb15d54e1b68381b1880a51adb67a05c875",
+            "mobile-citation.png": "8b1889e1ba11c4e0727d6673f823607dfc3ebcb1644254d3a49ff7f778ae45d9",
+            "mobile-discussion.png": "3092196f7cdd1db60c06f2fe2dabd2d08107a756924860c5b7fb25b413f05803",
+            "mobile-editing.png": "ce61d04da250c956f83427dc2a16c1a8b2eb37ef491c841d1dd44000b5ce342b",
+            "mobile-font-fallback.png": "bd4c3b0166b879e094c26961844d729f02096bef028dd1234403cceddde0e7a3",
+            "mobile-large-reading.png": "77441d3e98c9ebb3ee5394cb8eab7fdaed34ee442c671a595473d82107c48e5e",
+            "mobile-more-format.png": "52d7952ba388c29561138f15ac506c7fcb6583a4a93a781a0b8b9ee8bce7ef8b",
+            "mobile-outline-location.png": "791b3bc7ef294520e19172029ac46ab8d50a31597663d5f0257201a10f231ed8",
+            "mobile-reading-settings.png": "6a92c35bbbd29097353dd76c4ef04ef02e5daeb4e30443b259cb4587ccd7ca2c",
+            "mobile-short-dialog.png": "7baefb9adea19745db6e6ef932646acfddde8db02a4013c6aca7f1575bd33494",
+            "mobile-source-list.png": "1d64d39f15df2dd542d7f04119e06b57eedfae7217a3d83f8b07eac7dfe90a70",
+            "mobile-storage-failure.png": "765f694d1a4149e2473afbf1ae1b64a93ae8f3705758c20c7a8c1d2180d676b5",
+            "narrow-desktop.png": "d4b33dab0d365da7554565a8673dce16b6e124d7ce04da1523638c8006eb2810",
+            "save-episode-before.png": "f64db6c395b198661edc76db30aace1e6d0e78954dc508fb855f8e46ab42e14a",
+            "save-episode-pending.png": "1d047ed3696372d2b4865853a0148e033b67d6f8edd3ec69699f43586e29c7c9",
+            "save-episode-saved.png": "03fc55c20c1757cd1c0f2ab23739a8298f28d537d64643ccdf2f8b4c4f00bca8",
+            "standalone-offline.png": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1",
+            "type-toolbar-trial.png": "34e6a18dc37891e07e0f642d66ba85b58c7e1f2d30f5fa975bde987387ffbf71"
+          },
+          "limits": [
+            "Native browser tab strip not captured; asset-proof.png is a size specimen.",
+            "Chromium mobile emulation only; physical keyboard/IME, Safari, Firefox and screen readers not verified."
+          ]
+        },
+        "build_log": {
+          "path": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/build.log",
+          "sha256": "18f35d33c9edafe24c9d2a52c9e06f140ea7ad221bba3e3e77a275e14218f4c6",
+          "bytes": 15469
+        },
+        "font_cost": {
+          "default_first_screen_local_segments": 26,
+          "decoded_resource_bytes": 1615572,
+          "standalone_bytes": 14725956,
+          "scope": "Observed loading/packaging cost, not response-time, transfer-compression or device-performance benchmark."
+        }
+      },
+      "independent_visual_review": {
+        "record_identity": {
+          "path": "/tmp/ui-spec-v1100-reading-visual-review.json",
+          "sha256": "b7ca94a902a36e0af267f9629788f49c26322e1e1b9eb278b68597dd2539cfed",
+          "bytes": 18875
+        },
+        "record": {
+          "review": "Independent visual review of research-notes reader/editor refinement",
+          "project": "/tmp/ui-spec-forward-v1100/reading-craft",
+          "updatedUtc": "2026-10-26T07:36:28.687512+00:00",
+          "status": "complete",
+          "runtimeRevision": "7860bf3b9d0aa28d",
+          "verdict": "no_visual_blocker_found_in_reviewed_final_evidence",
+          "activeBlockingFindingCount": 0,
+          "summary": "Opened 20 whole screenshots, including desktop/phone baselines, final editing/reading states, settings, citation context, overflow formatting, narrow/short layouts, fallback fonts, storage failure and the small-size asset specimen. Six enlarged pixel crops were also inspected. All 20 final file hashes are unchanged from the reviewed versions and match the frozen revision record. No concrete visual blocker was found.",
+          "wholeViewMethod": "Each listed image was actually opened with original-resolution image viewing. Whole-page context was inspected before the listed detail crops. Enlarged crops are for pixel inspection, not an assertion of usability at that enlarged display scale.",
+          "openedVisualFiles": [
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/before-desktop.png",
+              "sha256": "a395b56c89a48181e870178a9207c2d82ef9aa915280aaf004ee95f5e3a0e8f7",
+              "size": [
+                1440,
+                1000
+              ],
+              "role": "baseline"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/desktop-editing.png",
+              "sha256": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1",
+              "size": [
+                1440,
+                1000
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/before-mobile.png",
+              "sha256": "27112034c025a8e202f09b7df2643e2afb67447ef7dea7c7d7f30e76d403e478",
+              "size": [
+                390,
+                844
+              ],
+              "role": "baseline"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-editing.png",
+              "sha256": "ce61d04da250c956f83427dc2a16c1a8b2eb37ef491c841d1dd44000b5ce342b",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/desktop-reading.png",
+              "sha256": "c778f45819b406094c8687b777e28b0201b7f47ba4adf8732d3000e029236bc8",
+              "size": [
+                1440,
+                1000
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-reading-settings.png",
+              "sha256": "6a92c35bbbd29097353dd76c4ef04ef02e5daeb4e30443b259cb4587ccd7ca2c",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-more-format.png",
+              "sha256": "52d7952ba388c29561138f15ac506c7fcb6583a4a93a781a0b8b9ee8bce7ef8b",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-citation.png",
+              "sha256": "8b1889e1ba11c4e0727d6673f823607dfc3ebcb1644254d3a49ff7f778ae45d9",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-font-fallback.png",
+              "sha256": "bd4c3b0166b879e094c26961844d729f02096bef028dd1234403cceddde0e7a3",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-storage-failure.png",
+              "sha256": "765f694d1a4149e2473afbf1ae1b64a93ae8f3705758c20c7a8c1d2180d676b5",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/asset-proof.png",
+              "sha256": "7a7836ddc80f97ce49faf833c6105670dceff7d42865dbfda1b5afdf01dd688d",
+              "size": [
+                920,
+                650
+              ],
+              "role": "constructed size specimen, not browser chrome"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-320.png",
+              "sha256": "e4b5bce9e5d0cbf376692791925fdfb15d54e1b68381b1880a51adb67a05c875",
+              "size": [
+                320,
+                740
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-short-dialog.png",
+              "sha256": "7baefb9adea19745db6e6ef932646acfddde8db02a4013c6aca7f1575bd33494",
+              "size": [
+                390,
+                500
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-large-reading.png",
+              "sha256": "77441d3e98c9ebb3ee5394cb8eab7fdaed34ee442c671a595473d82107c48e5e",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/desktop-format-selection.png",
+              "sha256": "58414220c56e5905e1eef3d44d53cd2d4645b60cd06c2fb284c6e4575d1934eb",
+              "size": [
+                1440,
+                1000
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-outline-location.png",
+              "sha256": "791b3bc7ef294520e19172029ac46ab8d50a31597663d5f0257201a10f231ed8",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-discussion.png",
+              "sha256": "3092196f7cdd1db60c06f2fe2dabd2d08107a756924860c5b7fb25b413f05803",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-source-list.png",
+              "sha256": "1d64d39f15df2dd542d7f04119e06b57eedfae7217a3d83f8b07eac7dfe90a70",
+              "size": [
+                390,
+                844
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/narrow-desktop.png",
+              "sha256": "d4b33dab0d365da7554565a8673dce16b6e124d7ce04da1523638c8006eb2810",
+              "size": [
+                900,
+                700
+              ],
+              "role": "final evidence"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/laptop.png",
+              "sha256": "0ce68e13757ee2a1019b89f286b6e369df20bce0dfbdacbcca7436d1b0e5bb60",
+              "size": [
+                1280,
+                800
+              ],
+              "role": "final evidence"
+            }
+          ],
+          "detailViews": [
+            {
+              "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/desktop-editing.png",
+              "sourceSha256": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1",
+              "crop": [
+                360,
+                118,
+                680,
+                171
+              ],
+              "scale": 3,
+              "resampling": "nearest; pixel inspection only",
+              "derivedFile": "/tmp/ui-spec-v1100-reading-review-crops/desktop-logo-toolbar.png",
+              "derivedSha256": "c1c491aeb273b61468b1f503a7d9737075dd989a3da3ec47bedfd4f76cac2de2"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/desktop-editing.png",
+              "sourceSha256": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1",
+              "crop": [
+                450,
+                395,
+                1140,
+                545
+              ],
+              "scale": 2,
+              "resampling": "nearest; pixel inspection only",
+              "derivedFile": "/tmp/ui-spec-v1100-reading-review-crops/desktop-body-citation.png",
+              "derivedSha256": "907a84c2f582a437c5722c947bbdd003806056940367119920d3c11a72a8758b"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-editing.png",
+              "sourceSha256": "ce61d04da250c956f83427dc2a16c1a8b2eb37ef491c841d1dd44000b5ce342b",
+              "crop": [
+                0,
+                53,
+                390,
+                157
+              ],
+              "scale": 2,
+              "resampling": "nearest; pixel inspection only",
+              "derivedFile": "/tmp/ui-spec-v1100-reading-review-crops/mobile-toolbar.png",
+              "derivedSha256": "951153ac583d75c628b7f6dbb6312f73bfe183e91913493d12b2b5a3b80f4cf9"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-editing.png",
+              "sourceSha256": "ce61d04da250c956f83427dc2a16c1a8b2eb37ef491c841d1dd44000b5ce342b",
+              "crop": [
+                0,
+                778,
+                390,
+                844
+              ],
+              "scale": 2,
+              "resampling": "nearest; pixel inspection only",
+              "derivedFile": "/tmp/ui-spec-v1100-reading-review-crops/mobile-navigation.png",
+              "derivedSha256": "5aabc966d1b27ab5cb08ef49426a72eea798e74646b41840dafce2344f22a7d5"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/asset-proof.png",
+              "sourceSha256": "7a7836ddc80f97ce49faf833c6105670dceff7d42865dbfda1b5afdf01dd688d",
+              "crop": [
+                104,
+                171,
+                338,
+                238
+              ],
+              "scale": 6,
+              "resampling": "nearest; pixel inspection only",
+              "derivedFile": "/tmp/ui-spec-v1100-reading-review-crops/asset-light-size-detail.png",
+              "derivedSha256": "1d3547d4024eda8f948b462da002f53dd1637256e00d69d40c2e95db4cd78953"
+            },
+            {
+              "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/asset-proof.png",
+              "sourceSha256": "7a7836ddc80f97ce49faf833c6105670dceff7d42865dbfda1b5afdf01dd688d",
+              "crop": [
+                493,
+                171,
+                727,
+                238
+              ],
+              "scale": 6,
+              "resampling": "nearest; pixel inspection only",
+              "derivedFile": "/tmp/ui-spec-v1100-reading-review-crops/asset-dark-size-detail.png",
+              "derivedSha256": "c73ff5ba320d760ba37d9a5edd9051c000291a0f0e6a747a2756ee592e1738e9"
+            }
+          ],
+          "readContextFiles": [
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/verification.json",
+              "sha256": "2d529ae8fa0468470341343c1aa0f938c9adb6bd010006952ac337be3d557493"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/delivery-checks.json",
+              "sha256": "8c5a4c37ed3d86b31c7420b62cf1de69215044af132c4a590c5036042855fa33"
+            },
+            {
+              "file": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/revision.json",
+              "sha256": "6a7c0a75cc673b2cf0b6947331c192c91b5a2d762f769012e0a859f156e4dcc9"
+            }
+          ],
+          "freezeReconciliation": {
+            "all20WholeImagesMatchFrozenRevisionRecord": true,
+            "changedAfterSemanticRefresh": [],
+            "authorConfirmedFreeze": true,
+            "sourceAuditPerformed": false
+          },
+          "conditions": {
+            "browserFromVerification": "143.0.7499.0",
+            "normalDesktop": [
+              1440,
+              1000
+            ],
+            "phone": [
+              390,
+              844
+            ],
+            "additionalWholeViewSizes": [
+              [
+                320,
+                740
+              ],
+              [
+                390,
+                500
+              ],
+              [
+                1280,
+                800
+              ],
+              [
+                900,
+                700
+              ]
+            ],
+            "assetProofPixels": [
+              920,
+              650
+            ],
+            "dpr": "not specified in reviewed condition files",
+            "browserZoom": "not specified in reviewed condition files",
+            "appThemeObserved": "light",
+            "localeObserved": "Chinese UI with a mixed Chinese/English italic selection example"
+          },
+          "comparisons": [
+            {
+              "before": "evidence/before-desktop.png",
+              "after": "evidence/desktop-editing.png",
+              "match": "1440x1000, same main example and editing composition; save status differs",
+              "observation": "The final image distinguishes serif article text, stronger title/section hierarchy and sans-serif application controls. Bold opening clauses and citation badges remain visibly distinct; toolbar glyphs retain whitespace and separators."
+            },
+            {
+              "before": "evidence/before-mobile.png",
+              "after": "evidence/mobile-editing.png",
+              "match": "390x844, same main example and editing composition",
+              "observation": "The final title and headings have clearer weight hierarchy, the title wraps without clipping, and both toolbar rows and labeled bottom navigation fit inside the frame. The new filled brand mark is visually distinct from the outline note-navigation icon."
+            }
+          ],
+          "findings": [],
+          "observations": [
+            {
+              "id": "RV-01",
+              "area": "Typography and reading hierarchy",
+              "files": [
+                "evidence/desktop-editing.png",
+                "evidence/desktop-reading.png",
+                "evidence/mobile-editing.png",
+                "evidence/mobile-large-reading.png"
+              ],
+              "regions": {
+                "desktopArticle": [
+                  450,
+                  210,
+                  1140,
+                  954
+                ],
+                "phoneArticle": [
+                  20,
+                  182,
+                  370,
+                  748
+                ]
+              },
+              "assessment": "Title, section headings, paragraph text, bold clauses and citation badges have distinct hierarchy. Chinese glyphs and line spacing remain readable in both the normal serif view and the larger sans-serif reading view. No overlapping text or cut-off title was observed."
+            },
+            {
+              "id": "RV-02",
+              "area": "Toolbar and navigation icons",
+              "files": [
+                "evidence/desktop-editing.png",
+                "evidence/mobile-editing.png",
+                "evidence/mobile-more-format.png",
+                "evidence/mobile-discussion.png",
+                "evidence/mobile-source-list.png"
+              ],
+              "regions": {
+                "desktopFormatting": [
+                  360,
+                  118,
+                  680,
+                  171
+                ],
+                "phoneHeaderActions": [
+                  0,
+                  53,
+                  390,
+                  157
+                ],
+                "phoneNavigation": [
+                  0,
+                  778,
+                  390,
+                  844
+                ]
+              },
+              "assessment": "Formatting glyphs use consistent stroke and spacing; groups and undo/redo are separated. Phone overflow reveals labeled italic and quote controls in a distinct additional row. Bottom discussion/note/material destinations retain visible labels and an active-state background. Several secondary phone-header actions remain icon-only; the stills do not establish tooltip or accessible-name behavior."
+            },
+            {
+              "id": "RV-03",
+              "area": "Editing/reading and cited context",
+              "files": [
+                "evidence/desktop-reading.png",
+                "evidence/desktop-format-selection.png",
+                "evidence/mobile-citation.png",
+                "evidence/mobile-outline-location.png"
+              ],
+              "assessment": "The reading frame removes the formatting row and exposes a labeled edit action. The selection frame visibly shows the active italic control and a mixed Chinese/English selection. Citation context presents the current excerpt distinctly with reachable return and cite/discuss actions; the outline-location frame visibly marks the destination heading. These are state observations, not independent proof of the transitions or document correctness."
+            },
+            {
+              "id": "RV-04",
+              "area": "Narrow, short and dialog layouts",
+              "files": [
+                "evidence/mobile-320.png",
+                "evidence/mobile-short-dialog.png",
+                "evidence/mobile-reading-settings.png",
+                "evidence/narrow-desktop.png",
+                "evidence/laptop.png"
+              ],
+              "assessment": "No page-edge horizontal clipping was seen. At 320 px, title/body wrap while toolbar and bottom navigation remain inside the viewport. The normal settings modal shows choices and Done together. The 390x500 frame is scrolled within the dialog and shows its lower settings/preview and Done; its upper heading and close icon are not visible in that captured scroll position, so the frame establishes lower-action reachability only."
+            },
+            {
+              "id": "RV-05",
+              "area": "Fallback fonts and unsaved state",
+              "files": [
+                "evidence/mobile-font-fallback.png",
+                "evidence/mobile-storage-failure.png"
+              ],
+              "assessment": "The fallback-font frame is visibly thinner than the normal font state but remains readable and keeps title, toolbar and navigation inside the frame. The storage-failure frame has an amber explanatory banner, a visible backup action and an unsaved status, while the editable title and main content remain visible. Persistence, recovery and successful export were not independently tested in this review."
+            },
+            {
+              "id": "RV-06",
+              "area": "Small-size brand/tab identity specimen",
+              "files": [
+                "evidence/asset-proof.png",
+                "evidence/desktop-editing.png",
+                "evidence/mobile-editing.png"
+              ],
+              "assessment": "The specimen shows labeled 16 px SVG/ICO and 32 px PNG samples on light and dark cards, plus a constructed title strip. At normal specimen scale and enlarged pixel inspection, the page silhouette, central page split and right-side accent remain present. The in-app header uses the same filled-book identity distinctly from functional outline icons.",
+              "limit": "This is a constructed size specimen. No native browser tab strip, real browser favicon rasterization, active/inactive browser theme or operating-system integration was observed."
+            }
+          ],
+          "reportedChecksVersusReview": {
+            "verificationRecord": "The provided verification.json reports 16 passing functional checks including editing, citations, versions, v1 backup, saving and navigation. These reported checks informed state interpretation but were not rerun or treated as independently established by still images.",
+            "deliveryRecord": "The provided delivery-checks.json reports overflow/focus checks, favicon HTTP responses and offline delivery. The review establishes only the listed visible frames and their hashes."
+          },
+          "limits": [
+            "Read-only visual review. No app or server was operated and no project source or DESIGN_NOTES.md was read or modified.",
+            "No user preference, motion smoothness, continuous rendering, typing latency or focus-transition behavior is inferred from still images.",
+            "Editing correctness, version restore, v1 import/export compatibility, citation insertion/return, keyboard semantics, persistence and recovery are not independently verified here.",
+            "A storage-failure screenshot establishes the visible warning and available action, not whether the backup download succeeds.",
+            "The font-fallback frame establishes its shown rendering only; no font request log or operating-system fallback stack was independently tested.",
+            "Only the app light theme was observed. Dark backgrounds exist only in the constructed asset specimen.",
+            "Native browser tabs, actual favicon rendering in multiple browsers, physical mobile devices, virtual keyboards, IME composition, Safari, Firefox, screen readers, browser zoom and DPR variations remain unobserved.",
+            "The provided viewport dimensions describe screenshot framing. Enlarged nearest-neighbor crops were not substituted for normal-context inspection.",
+            "The source revision identity comes from the supplied revision record; this visual review is not a code or accessibility audit."
+          ],
+          "reviewerActions": {
+            "projectFilesChanged": false,
+            "appOrServerOperated": false,
+            "projectSourceFilesRead": [],
+            "designNotesRead": false,
+            "otherProductFindingsIncluded": false
+          }
+        }
+      },
+      "representative_images": [
+        {
+          "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/before-mobile.png",
+          "repository_path": "docs/evidence/v1.10.0/reading-before-mobile.png",
+          "sha256": "27112034c025a8e202f09b7df2643e2afb67447ef7dea7c7d7f30e76d403e478",
+          "role": "Baseline phone editor at 390×844.",
+          "transformed": false
+        },
+        {
+          "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-editing.png",
+          "repository_path": "docs/evidence/v1.10.0/reading-after-mobile.png",
+          "sha256": "ce61d04da250c956f83427dc2a16c1a8b2eb37ef491c841d1dd44000b5ce342b",
+          "role": "Final phone editor with current-content typographic and icon relationships.",
+          "transformed": false
+        },
+        {
+          "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/desktop-editing.png",
+          "repository_path": "docs/evidence/v1.10.0/reading-after-desktop.png",
+          "sha256": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1",
+          "role": "Final whole desktop editor, context panel and outline.",
+          "transformed": false
+        },
+        {
+          "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/type-toolbar-trial.png",
+          "repository_path": "docs/evidence/v1.10.0/reading-type-trial.png",
+          "sha256": "34e6a18dc37891e07e0f642d66ba85b58c7e1f2d30f5fa975bde987387ffbf71",
+          "role": "Same-content serif/sans local trial; design comparison, not a user preference study.",
+          "transformed": false
+        },
+        {
+          "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/asset-proof.png",
+          "repository_path": "docs/evidence/v1.10.0/reading-brand-size-specimen.png",
+          "sha256": "7a7836ddc80f97ce49faf833c6105670dceff7d42865dbfda1b5afdf01dd688d",
+          "role": "Constructed 16/32px specimen; not native browser chrome.",
+          "transformed": false
+        }
+      ],
+      "limits": [
+        "Chromium mobile emulation only; physical keyboards/IME, Safari/WebKit, Firefox, OS zoom and screen-reader operation remain unverified.",
+        "Native browser tab strip was not observed.",
+        "Ordered save-state captures are not a frame-rate or smoothness measurement.",
+        "The light app theme was inspected; dark surfaces belong to the identity specimen only.",
+        "No real-user long-reading comfort or brand-preference study."
+      ]
+    }
+  },
+  "recorded_at_utc": "2026-10-26T07:38:11.704457+00:00",
+  "application_setup": {
+    "fresh_context": true,
+    "method_copy": "/tmp/ui-spec-forward-v1100/ui-spec",
+    "provided": [
+      "Ordinary product-improvement request",
+      "Frozen skill entry and references",
+      "Raw project source and required lock/test/license files",
+      "Neutral Chromium, Python dependency and CJK-font paths"
+    ],
+    "excluded": [
+      "Maintainer diagnosis",
+      "Expected library or repair",
+      "Previous review reports",
+      "Sibling-task results"
+    ],
+    "dependency_cache": "Neutral optional caches were offered later. Both authors completed npm ci through normal auto-reviewed execution; cache use is not claimed.",
+    "scope": "Two bounded independent applications, not a controlled old/new-model comparison or real-user acceptance study."
+  },
+  "maintainer_final_inspection": {
+    "reviewer": "/root",
+    "method": "Each listed image was actually opened individually with view_image detail original; no image transformation.",
+    "frames": [
+      {
+        "path": "/tmp/ui-spec-v1100-maintainer-observation/question-landscape-before-repair.png",
+        "sha256": "0041d10a15d2ebd83f73625fbc6b37101b76bc3de422aa24dfb12b8f7ce1878d",
+        "bytes": 29145,
+        "observation": "At 844×390 the draft area is visibly empty while the counter reads 1,332 / 20,000 and submit remains available. Pixels alone do not establish data loss or cause."
+      },
+      {
+        "path": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/long-followup-844x390.png",
+        "sha256": "a65a50b842bb4dab38ed36865a93242e6e44b203cd4f3f157e9b536f920d5165",
+        "bytes": 40503,
+        "observation": "The same-sized final frame shows the trailing Chinese sentence. Header, expansion, count and submit remain visible; reading space is reduced."
+      },
+      {
+        "path": "/tmp/ui-spec-forward-v1100/question-polish/evidence/after/mobile-example.png",
+        "sha256": "ffedf3fd0c80e4ef7cd0bb0d9ea3a2bd8cb3dd4625b64297b42c18514b602f6f",
+        "bytes": 82869,
+        "observation": "Question metadata and question text are below the fixed header; the answer disclosure and follow-up controls are visible."
+      },
+      {
+        "path": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/mobile-editing.png",
+        "sha256": "ce61d04da250c956f83427dc2a16c1a8b2eb37ef491c841d1dd44000b5ce342b",
+        "bytes": 80184,
+        "observation": "Whole phone frame has distinct title/heading/body weight, coherent toolbar glyphs, visible labeled navigation and a filled identity mark."
+      },
+      {
+        "path": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/desktop-editing.png",
+        "sha256": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1",
+        "bytes": 249933,
+        "observation": "Desktop context, bounded article and outline retain their roles. Serif article/sans interface differentiation and citation badges are visible."
+      },
+      {
+        "path": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/asset-proof.png",
+        "sha256": "7a7836ddc80f97ce49faf833c6105670dceff7d42865dbfda1b5afdf01dd688d",
+        "bytes": 49566,
+        "observation": "At normal specimen scale, 16px book silhouette and central split are visible on the shown surfaces. This is not an observed browser tab strip."
+      }
+    ],
+    "scope": "Actual pixels plus separately read source and runtime records. No additional app operations, normal-speed video playback, user study or native tab-strip inspection by this reviewer.",
+    "prior_interim_inspection": {
+      "reviewer": "/root",
+      "viewed_at_utc": "2026-10-26T07:22:04.822617+00:00",
+      "scope": "Interim application frames; final source and evidence identities require later reconciliation. Static pixels only.",
+      "records": [
+        {
+          "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/episodes/08-answer-settled.png",
+          "copy": "/tmp/ui-spec-v1100-maintainer-observation/question-interim-desktop.png",
+          "sha256": "436be8da3326fcf0a7740317cb066adfacafa058a9011eb238071bbacb5ab716",
+          "actually_opened": true,
+          "viewer": "view_image original detail",
+          "observation": "The desktop settled frame gives the selected material rows distinct bounded surfaces, stronger metadata and a shared alignment; the question/answer/composer still form the main task column. This is a static look at one state."
+        },
+        {
+          "source": "/tmp/ui-spec-forward-v1100/question-polish/evidence/screens/reflow-390x844.png",
+          "copy": "/tmp/ui-spec-v1100-maintainer-observation/question-interim-mobile-end.png",
+          "sha256": "226ea2ac535def423c41feb030079deb54d6d9c8d7bcca2615a36d95fc8f2141",
+          "actually_opened": true,
+          "viewer": "view_image original detail",
+          "observation": "At this scrolled reading endpoint the follow-up prompts and composer are visible, the empty composer is bounded and focused, and the material attachment remains identified. Its content/scroll differ from the before-mobile starting frame; it is not a matched repair comparison."
+        },
+        {
+          "source": "/tmp/ui-spec-forward-v1100/reading-craft/evidence/after-mobile.png",
+          "copy": "/tmp/ui-spec-v1100-maintainer-observation/reading-interim-mobile.png",
+          "sha256": "6f52756217313d26ca5ff1ef90b6b42eacd94f673ac467cd4dc94ce10ed772c4",
+          "actually_opened": true,
+          "viewer": "view_image original detail",
+          "observation": "The new serif reading face has a more explicit title/section/body weight hierarchy; the small typography control is closer in apparent size to neighboring symbols. A filled green book mark now accompanies the name. This supports rendered appearance in this mobile frame, not native browser-tab appearance or long-term reading comfort."
+        }
+      ]
+    }
+  },
+  "evidence_availability": "Representative unmodified PNGs and this record are committed. Other temporary paths identify original observations and checks by SHA-256; they are not links to publicly archived files. The skill installation does not include these application projects or their dependencies.",
+  "engineering_source_checks": {
+    "checks": [
+      {
+        "command": [
+          "python",
+          "tools/validate_package.py"
+        ],
+        "exit_code": 0,
+        "duration_seconds": 0.072
+      },
+      {
+        "command": [
+          "python",
+          "tools/readme_art.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "duration_seconds": 0.03
+      },
+      {
+        "command": [
+          "python",
+          "tools/catalog_docs.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "duration_seconds": 0.037
+      },
+      {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "duration_seconds": 1.629
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "duration_seconds": 0.012
+      }
+    ],
+    "method_mismatches": [],
+    "log": "/tmp/ui-spec-v1100-final-source-checks.log",
+    "readme_sha256": {
+      "README.md": "b56c861f06f32e944394dd274d60338b858c0f3b934a9c5d72594847327b9b2e",
+      "README.zh-CN.md": "ddd1637b08aed0834a9b358db770590270038ebbc1e29d61f8f5551a5a52f8fa"
+    },
+    "unit_test_count": 153,
+    "installation": {
+      "cli": "1.7.4",
+      "requested_targets": [
+        "codex",
+        "claude-code",
+        "opencode"
+      ],
+      "actual_copies": 2,
+      "files_per_copy": 29,
+      "helpers_executed": [
+        "prepare",
+        "coverage checker",
+        "resource lookup"
+      ],
+      "scope": "Installer and exact file/helper checks; not three host model sessions."
+    }
+  },
+  "record_checks": {
+    "independent_read_only_record_review": "No blocking contradiction; ten representative PNG hashes and relative links, method identity, input counts and unchanged README hashes checked. No files changed and no UI/tests rerun in that pass.",
+    "late_scope_clarification": "Question episode viewing was clarified directly with the application author after record review; the narrower actual viewing scope is retained explicitly."
+  }
+}

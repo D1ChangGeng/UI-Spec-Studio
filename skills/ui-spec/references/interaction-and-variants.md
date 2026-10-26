@@ -47,7 +47,7 @@ Name the event and purpose: entry, navigation, manipulation, local change or fee
 
 Preserve object identity through expansion, reversal and return. A flip needs coordinated faces, pivot, visibility and active hit regions; test reversal from intermediate positions. Acknowledgment can begin before data arrives, while pending presentation carries unresolved work. A completed animation does not establish business completion.
 
-Compose the full visible movement: rotation, scaling, particles, shadows and brightness can reach beyond a resting box. Observe closest approach to text and controls over the cycle and across relevant viewports. Adjust amplitude, layers, masks, layout or delivery according to the intended effect. Deliberate overlap retains readable content, recognizable motion and operable targets.
+Compose the full movement: rotation, scaling, particles, shadows and brightness extend beyond a resting box and shift visual weight. Observe text clearance, hierarchy and material coherence across the range. Adjust amplitude, layers, masks, layout or delivery, then judge the complete scene again. Deliberate overlap retains readable content, recognizable motion and operable targets.
 
 Honor reduced-motion preferences with equivalent meaning and access. Provide appropriate control for prolonged nonessential motion. Essential information remains available through keyboard and touch without optional pointer effects. Use the [temporal observation method](verification.md#inspect-a-time-bounded-visual-episode) to choose windows, recordings and frame sequences; the relevant behavior determines the sampling depth.
 

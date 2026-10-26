@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.10.0 — 2026-10-26
+
+- Make human-centered perceptual analysis a practical whole → composition → region → detail → whole observation method.
+- Combine nine perceptual lenses according to the object and decision; connect visible facts, effects, explanatory hypotheses and current-product fit.
+- Explain craft through intention, optical precision, coherent language, appropriate expression and stability in actual use.
+- Carry perceptual findings into mature-resource comparison, consequential local trials, controlled adaptation and contextual reinspection.
+- Preserve normal-scale, crop, enlargement, overview and temporal evidence boundaries, alongside separate engineering and real-user evidence.
+- Keep the eight common references, current workflow, optional records, mature-implementation default and existing release gates.
+
 ## 1.9.0 — 2026-10-26
 
 - Carry product visual and interaction quality into actual mature implementations as the default source for common UI, from complete structures to components, assets and motion.

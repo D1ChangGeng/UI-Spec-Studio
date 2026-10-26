@@ -42,6 +42,13 @@ Research both while the model, layout and treatment can still change. Expand a n
 
 Describe what is useful, which conditions it relies on and what the current product will inherit or adjust. Before wider integration, trial consequential candidates with current fonts, content, theme and states. Distinguish the mature reference, original resource demo, local trial and assembled journey. Suitable family members can share already established evidence under the same conditions. Revisit the original quality question after adaptation and in continuous use.
 
+Apply [multiscale perceptual inspection](VISUAL-INSPECTION.md) while making that
+choice: establish the whole-page impression at normal scale, examine composition,
+regions and high-impact details, then return to the surrounding interface. State
+the visible relationship rather than relying on an adjective alone. Optical
+weight, typography, boundary contrast and material can explain craft in a quiet
+tool or an expressive brand surface; product context determines suitable emphasis.
+
 Start adaptation with content, public configuration and composition. Identify the purpose and affected states of internal changes; substantial changes to layout, state or motion require corresponding inspection of the current implementation. Preserve useful source evidence while judging the version actually delivered.
 
 ## Inherit at the right layer
@@ -70,6 +77,13 @@ from a working preview or successful test.
 The record connects each consequential surface/dimension to its intended experience, research question, correctly attributed observation, transferable relationship, selected resource, adaptation, implementation location and observed result. Preserve the relevant source/page/interval and conditions when needed to inspect a decision. Shared references can cover routine members of a component family; depth follows design impact. Include layout/navigation,
 background, typography, components, icons, feedback and movement where relevant.
 Quiet/native/inherited treatments can be deliberate choices with a brief reason.
+
+Keep the visible fact, perceptual interpretation and causal explanation distinct.
+An uncertain cause remains a hypothesis until comparison, code or runtime evidence
+supports it. Show how the finding changes resource choice or adaptation and what
+was seen when the local result returned to the whole page and related states.
+Actual user understanding retains its own evidence. Existing records can express
+this reasoning in prose; the relationship matters more than a fixed field format.
 
 Start it as a shortlist, then distinguish researched candidates, completed trials,
 actual adoption and verified results. Link important adopted parts to their source,
