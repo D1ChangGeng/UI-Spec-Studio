@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.12.0 — 2026-10-26
+
+- Ground design research in a revisable understanding of intended experience, separating current-user intent, target-user experience and reference-product evidence.
+- Plan text, visual and behavioral evidence around tasks, pages, states and their relationships, with relevant historical version, platform and observation conditions.
+- Scale exploration by design impact, uncertainty and potential improvement; support sustained research across independent sources and meaningful design directions.
+- Turn each useful discovery into the next research action and challenge early preferences through materially different candidates under comparable conditions.
+- Judge evidence through breadth, depth, temporal coverage, relevance and reliability; distinguish continued research, local trials and broader implementation by decision maturity.
+- Carry research into actual mature-resource adoption, focused adaptation and real-use verification; maintain authorized alternative access and specific user-assisted acquisition.
+- Update bilingual product guidance and add a complete experience-research guide while retaining artistic goals, general screen-based media, eight common references and the existing workflow and release gates.
+
 ## 1.11.0 — 2026-10-26
 
 - Connect art direction, role-based visual systems, asset engineering and semantic motion storytelling to mature-resource adoption and actual product use.

@@ -1,0 +1,582 @@
+{
+  "review_type": "independent_source_and_logical_scenario_review",
+  "reviewed_at_utc": "2026-10-26T16:15:03.044317+00:00",
+  "repository": "/workspace/scratch/80a5a322a00d/UI-Spec-Studio",
+  "baseline": {
+    "version": "1.11.0",
+    "commit": "2fc97a9a37f55e4d1a1d8c92eeeea04c0f272a1e",
+    "head_verified": "2fc97a9a37f55e4d1a1d8c92eeeea04c0f272a1e"
+  },
+  "candidate": {
+    "version": "1.12.0",
+    "state": "uncommitted working tree"
+  },
+  "verdict": {
+    "source_release_blocker": false,
+    "required_source_corrections": [],
+    "summary": "在本次受托源文件与逻辑情境审阅范围内，没有发现应阻止发布的缺陷。v1.12.0 将用户意图、体验假设、证据规划、深度探索、实质候选比较、成熟资源采用与真实验证连接为可执行的下一步判断；原有专业基础、表达自由、作用范围、授权边界与适度迭代保持成立。",
+    "publication_scope": "这是源文件一致性与逻辑可执行性结论，不替代确定性发布门禁、真实浏览器观察、README 最终宿主检查、独立应用结果或用户验收。未建议绕过任何既有发布门禁。"
+  },
+  "method": [
+    "先完整读取 AGENTS.md、docs/MODEL.md、docs/WRITING.md。",
+    "随后完整读取入口、八份公共参考、integration.md、四份修改模板以及 EXPERIENCE-RESEARCH.md；工具输出出现截断的读取均再次取得完整文本。",
+    "逐段查看全部受托运行时文件及模板相对指定 HEAD 的新增、删除与改写；interaction-and-variants.md 与 HEAD 内容一致。",
+    "交叉查看维护者文件及相关指南的全部改动，检查新方法与既有责任分工是否一致。",
+    "根据源文件进行边界情境推演；未启动浏览器、未构建应用、未审阅其他 Agent 的应用产物、未修改仓库。"
+  ],
+  "files_read_in_full": [
+    {
+      "file": "AGENTS.md",
+      "bytes": 8634,
+      "sha256": "29479975b3fb48e5516d64f352ad61b6b77793e25ed376d0ced0e03e73224f24",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "docs/MODEL.md",
+      "bytes": 22902,
+      "sha256": "346c2a51b1af3083bcd0ee1ce74e2b6b09d03c8b661abc2e53944a8c6f8e9674",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "docs/WRITING.md",
+      "bytes": 11537,
+      "sha256": "beb4965530938561891ae559eb14c2d97a785a622fafe2ca1a12642b7bf2c8f6",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/SKILL.md",
+      "bytes": 27786,
+      "sha256": "fa661e9e0057147d5884ab004b619a3d8e80de66d847c6dacce6dd24d07ee87a",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/references/workflow.md",
+      "bytes": 11344,
+      "sha256": "715e561c2cfed31bbffde675bbc0a89af643079998fce3a7a3cd6a3ee42394a4",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/references/analysis.md",
+      "bytes": 21485,
+      "sha256": "7d5f9380fb33e2a166309863f6dfdeebe0f25533cb74d03cb7208a2cc855e07e",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/references/principles.md",
+      "bytes": 20818,
+      "sha256": "1c2cc24fff1a410b73f831c4f7b50888ed4427214de39eac068b22824917ce5f",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/references/component-sourcing.md",
+      "bytes": 18373,
+      "sha256": "28f0d43d72af2eed14d6ba8ae93653525832c9b54df885d90c6e0d5837ce038f",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/references/interaction-and-variants.md",
+      "bytes": 15275,
+      "sha256": "53e9951f6308e2ac002af0cbf12f6fcb8f9ef1a73779ba91f1add0be24aa201a",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/references/verification.md",
+      "bytes": 25086,
+      "sha256": "60f54ae4f66c9e0019ab745bc94e653fc0160e405cb84c652e9b009670d278e9",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/references/visual-assets.md",
+      "bytes": 17182,
+      "sha256": "78c50b9e7128940042db84c5eb4d8e584bcf24204c81968cdb73dcf51efee80f",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/references/content-design.md",
+      "bytes": 17156,
+      "sha256": "0cfc63321af1835523abca1ffb226c90798ed23c7b813531776c5b1ac59e9406",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/references/integration.md",
+      "bytes": 18475,
+      "sha256": "f193b19dcabbf50240ec6ef2180214eb381859b4f548bab202bca92e5d84cf31",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/assets/templates/brief.md",
+      "bytes": 3376,
+      "sha256": "0cb7f216d8242ae9c04770b3d3d993e1bb08f7fac63f839c3a8dbcbcffc0d626",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/assets/templates/design-decisions.md",
+      "bytes": 7237,
+      "sha256": "b97c0085827b200940209472481dd97dc431fe16a4453406d141318cbd8c6fd0",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/assets/templates/resource-adoption.md",
+      "bytes": 3375,
+      "sha256": "b15b7d0a701c7f85cf429dec72b9b02c99ed8c98f56dd55ad5bbf0ed42fa6dd5",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "skills/ui-spec/assets/templates/review.md",
+      "bytes": 4941,
+      "sha256": "cf6b754a8ab5b6a195f5fcd65ce0fa3a849f6c34fbdc7af575b54c2006992241",
+      "read_scope": "full current text",
+      "baseline_comparison": "full diff against baseline"
+    },
+    {
+      "file": "docs/EXPERIENCE-RESEARCH.md",
+      "bytes": 15428,
+      "sha256": "08f2cc5fbec89cd7c55f4f4c3849f51c66fb9f92cfb575007f43c5edd541e1f1",
+      "read_scope": "full current text",
+      "baseline_comparison": "new file; full text reviewed"
+    }
+  ],
+  "additional_diff_only_reads": [
+    "docs/DESIGN-DECISIONS.md",
+    "docs/PRODUCT-ALIGNMENT.md",
+    "docs/RESOURCE-REUSE.md",
+    "docs/GUIDE.md",
+    "docs/EVALUATION.md",
+    "docs/PUBLISHING.md"
+  ],
+  "additional_targeted_reads": [
+    {
+      "file": "tests/test_publication.py",
+      "lines": "75-77",
+      "purpose": "确认既有八份公共参考总字节预算，未运行该测试。"
+    },
+    {
+      "file": "tools/validate_package.py",
+      "scope": "COMMON 定义与相关检索结果",
+      "purpose": "核对八份公共参考名单，没有用关键词命中代替正文语义审阅。"
+    }
+  ],
+  "behavior_chain": [
+    {
+      "step": "用户意图 → 可修正的体验假设",
+      "assessment": "成立，新增要求具有具体输入和决策对象。",
+      "evidence": [
+        "skills/ui-spec/SKILL.md:17-23",
+        "skills/ui-spec/references/analysis.md:7-17",
+        "skills/ui-spec/references/workflow.md:9-15"
+      ],
+      "reason": "从用户、对象、第一项操作、持续任务、信息关系、感知目标和结果展开概括性需求；将当前用户意图、受众经验与参考产品事实分开，保留版本、平台、角色及适用条件。未把产品名称或工程模块直接当成界面模型。"
+    },
+    {
+      "step": "体验假设 → 证据规划",
+      "assessment": "成立，问题先于来源或工具。",
+      "evidence": [
+        "skills/ui-spec/references/analysis.md:37-51",
+        "skills/ui-spec/references/workflow.md:20-22",
+        "skills/ui-spec/assets/templates/brief.md:10-21"
+      ],
+      "reason": "要求映射重要页面、区域、对象、状态、任务及空间/时间关系，并按问题选择文字、实际渲染、操作或连续媒体；说明何种新发现会改变选择。既可采用已有笔记，也可随新证据调整范围。"
+    },
+    {
+      "step": "证据规划 → 深度探索",
+      "assessment": "成立，深度表现为自适应行动，未转成耗时或次数门槛。",
+      "evidence": [
+        "skills/ui-spec/SKILL.md:25-37",
+        "skills/ui-spec/references/analysis.md:90-106",
+        "skills/ui-spec/references/component-sourcing.md:55-98"
+      ],
+      "reason": "根据设计影响、不确定性和潜在改进选择投入；描述搜索、播放、滚动、展开、切换、操作、改写问题和试装之间的循环。允许跨领域和长时研究，也明确常规已验证条件可以直接适配。百步级、小时级和数十候选是能力示例，正文明确否认固定配额和停止阈值。"
+    },
+    {
+      "step": "深度探索 → 实质候选比较",
+      "assessment": "成立，新增比较标准足以反对仅换颜色或重复收集同源链接的做法。",
+      "evidence": [
+        "skills/ui-spec/references/component-sourcing.md:100-106",
+        "skills/ui-spec/references/analysis.md:82-88",
+        "skills/ui-spec/references/principles.md:51",
+        "skills/ui-spec/assets/templates/design-decisions.md:55-58"
+      ],
+      "reason": "要求挑战早期首选，寻找在构图、字体、材质、任务组织、交互机制或时间语言上有不同优势的候选；同源转载不等于独立设计空间。比较内容、任务、视口、主题和完成度，说明差异为何改变选型或试装。"
+    },
+    {
+      "step": "候选比较 → 成熟资源实际采用",
+      "assessment": "成立，保留 v1.9-v1.11 的成熟实现优先原则和采用真实性边界。",
+      "evidence": [
+        "skills/ui-spec/SKILL.md:49-57",
+        "skills/ui-spec/references/component-sourcing.md:7-37",
+        "skills/ui-spec/references/component-sourcing.md:108-135",
+        "skills/ui-spec/assets/templates/resource-adoption.md:10-48"
+      ],
+      "reason": "从最高适当复用层级研究实际实现，保留设计参考与代码/资产采用的区别；记录具体来源、版本、配置、保留机制与修改责任。通用 UI 定制需要已观察到的具体缺口，原始演示和当前条件下的局部试装在扩大整合前确认关键适用性。"
+    },
+    {
+      "step": "实际采用 → 整体使用与真实业务验证",
+      "assessment": "成立，完成条件落在当前产品和相应交付边界。",
+      "evidence": [
+        "skills/ui-spec/references/verification.md:32-46",
+        "skills/ui-spec/references/verification.md:170-184",
+        "skills/ui-spec/references/integration.md:52-68",
+        "skills/ui-spec/references/integration.md:93-99"
+      ],
+      "reason": "集成后重新回答研究问题，检查完整页面、连续任务、当前内容及真实服务结果；体验成立性和表达完成度分别保留结论。来源、原始演示、局部试装与组合结果各有范围，运行发现可以重新打开理解、选型或适配。"
+    }
+  ],
+  "preservation_and_risk_checks": [
+    {
+      "topic": "专业基础与必读契约",
+      "status": "preserved",
+      "details": "八份公共参考仍完整必读；integration 在真实业务边界与 finish 中必读；九个体验维度、内容设计、视觉资产、可访问性、主题/语言、性能与运营职责均保留。interaction-and-variants.md 未修改。",
+      "evidence": [
+        "skills/ui-spec/SKILL.md:77-96",
+        "skills/ui-spec/references/analysis.md:19-35"
+      ]
+    },
+    {
+      "topic": "表达自由与艺术要求",
+      "status": "preserved",
+      "details": "艺术目标继续与任务要求同属交付要求；专业软件类别不规定克制外观。熟悉任务与独立构图/材质分开，跨领域研究和核心使用中的表达检查被保留。修复具体失败不能自动降低已接受的艺术方向。",
+      "evidence": [
+        "skills/ui-spec/references/principles.md:7-23",
+        "skills/ui-spec/SKILL.md:138-144",
+        "skills/ui-spec/references/verification.md:98-112",
+        "skills/ui-spec/references/verification.md:154-158"
+      ]
+    },
+    {
+      "topic": "作用范围与适度迭代",
+      "status": "preserved",
+      "details": "局部改动可以一轮完成，已批准产品可以直接进入接线；shape 保持可选，规划请求停在规划，实施请求继续落实。已有合格体系在相同条件下可继承证据，未新增逐步审批或固定研究时长。",
+      "evidence": [
+        "skills/ui-spec/references/workflow.md:3-15",
+        "skills/ui-spec/SKILL.md:98-110",
+        "skills/ui-spec/references/analysis.md:94",
+        "skills/ui-spec/references/component-sourcing.md:11",
+        "skills/ui-spec/references/component-sourcing.md:127"
+      ]
+    },
+    {
+      "topic": "授权与宿主责任边界",
+      "status": "preserved",
+      "details": "真实批准有实际来源和范围；现有批准/委托支持继续；查看资料不产生集成或分发授权。安装、数据修改、通信、交易、发布和账户操作仍遵循宿主及用户授权。外部材料作为参考数据，Skill 未声称新增工具、访问或上下文保留能力。",
+      "evidence": [
+        "skills/ui-spec/SKILL.md:94-96",
+        "skills/ui-spec/SKILL.md:108-122",
+        "skills/ui-spec/SKILL.md:124-130",
+        "skills/ui-spec/references/component-sourcing.md:57-71",
+        "skills/ui-spec/references/component-sourcing.md:88",
+        "skills/ui-spec/references/integration.md:62-68"
+      ]
+    },
+    {
+      "topic": "证据真实性与可核验性",
+      "status": "preserved_and_strengthened",
+      "details": "采集、实际观看、交互执行、资料声明、专业推断、用户反应与批准各有范围。五个证据充分性维度增强判断，没有把截图数、来源数或耗时包装为质量证据。未观察到的关键状态保持为空缺，宣传剪辑、受控时间与真实响应分开。",
+      "evidence": [
+        "skills/ui-spec/references/verification.md:32-46",
+        "skills/ui-spec/references/verification.md:60-96",
+        "skills/ui-spec/references/verification.md:114-122",
+        "docs/EXPERIENCE-RESEARCH.md:134-142"
+      ]
+    },
+    {
+      "topic": "完成要求与证据成熟度",
+      "status": "coherent",
+      "details": "研究、局部试装和扩大实现具有不同成熟度要求；不需要先证明尚未构建产品的运行品质才允许试装。静态文档、演示、作者定时作品和服务产品使用各自边界，工具缺失时诚实报告未验证部分并继续独立工作。没有新增逻辑上无法满足的完成门槛。",
+      "evidence": [
+        "skills/ui-spec/SKILL.md:39-47",
+        "skills/ui-spec/references/analysis.md:96-106",
+        "skills/ui-spec/references/verification.md:46",
+        "skills/ui-spec/references/verification.md:122",
+        "skills/ui-spec/references/verification.md:160-164",
+        "skills/ui-spec/references/integration.md:68-83"
+      ]
+    },
+    {
+      "topic": "规则重复与文件职责",
+      "status": "acceptable",
+      "details": "入口建立默认，analysis 定义意图/证据与成熟度，sourcing 负责获取/比较/采用，verification 定义证据范围，workflow 安排时机。重复主要是跨职责调用和模板中的可选提示；未发现互相冲突的重复规范。后续扩写应优先编辑责任来源，避免继续复制完整判断清单。",
+      "evidence": [
+        "docs/MODEL.md:52-67",
+        "docs/WRITING.md:26-32",
+        "skills/ui-spec/references/workflow.md:7",
+        "skills/ui-spec/references/verification.md:32-46"
+      ]
+    },
+    {
+      "topic": "模板与记录负担",
+      "status": "proportionate",
+      "details": "四份模板的变更均为增加相关提示，没有新增强制表单字段或记录系统。brief 与 design-decisions 的开头明确只取必要部分，可用已有等价记录；resource-adoption 和 review 同样保持可选。需要让重要判断可检查，与强制单独制作一份模板不是同一要求。",
+      "evidence": [
+        "skills/ui-spec/assets/templates/brief.md:1-4",
+        "skills/ui-spec/assets/templates/design-decisions.md:1-4",
+        "skills/ui-spec/assets/templates/resource-adoption.md:1-3",
+        "skills/ui-spec/assets/templates/review.md:63-74"
+      ]
+    }
+  ],
+  "deletion_review": [
+    {
+      "area": "workflow.md 的压缩",
+      "conclusion": "保留语义；未发现专业行为被删去。",
+      "details": "init/shape/iterate/audit/finish 主线、局部一轮结束、直接接线、实施继续、审阅授权、真实结果、资产交付、操作维护与独立推进均仍存在。被压缩的字体/内容极值、母版、来源配置和具体状态方法在相应公共参考及 integration 中完整保留。"
+    },
+    {
+      "area": "analysis.md 的压缩与改写",
+      "conclusion": "保留原有分析职责并补充前置研究，不构成重写产品范围。",
+      "details": "产品模型、reuse boundary、方向确认、页面职责、可运行增量、内容语义、表示选择、真实操作选择、运营、艺术概念与可调整实现仍在。删去部分例子和重述后，场景条件可在 content、interaction、principles 或 integration 追溯。"
+    },
+    {
+      "area": "component-sourcing.md 的压缩与重组",
+      "conclusion": "保留成熟采用、来源权限、局部试装、适配责任和维护约束；新增反偏见式比较。",
+      "details": "直接采用/扩展/组合表改为紧凑段落，仍指明配置、具体缺口、共享 token/state/focus/lifecycle、累计成本和自有代码责任。采集与观看、外部指令、研究与集成权利、source-copy 维护、主对象区分均保留。"
+    },
+    {
+      "area": "SKILL description 与维护者模型措辞",
+      "conclusion": "激活摘要调整未删除正文能力；深度放宽仍受任务价值与范围约束。",
+      "details": "摘要不再逐字列出的一些能力（例如 operational content、motion storytelling、source fidelity）仍在正文和公共参考中。删除小范围探索/小步的泛化限制，是为高价值研究留出适当投入，不等于允许无界行动；bounded increment、accepted direction、scope 和 resource constraints 保留。"
+    },
+    {
+      "area": "其余参考与四份模板",
+      "conclusion": "均为局部增补或同义替换。",
+      "details": "principles 加入实质比较，content-design 补齐三类来源，visual-assets 强调定义性素材的投入，verification 增加证据充分性并连接决策链，integration 增加经验问题回传；未改变各专业方法和业务权威边界。"
+    }
+  ],
+  "logical_scenarios": [
+    {
+      "scenario": "用户提到某对话产品，但可能期待其历史版本的阅读与辅助工作区关系。",
+      "expected_action": "区分个人期待、群体惯例与产品事实，核对版本/平台；围绕开始、输入、阅读、打开/关闭辅助区和恢复规划证据，再比较影响主模型的选择。",
+      "result": "supported",
+      "sources": [
+        "analysis.md:11-17",
+        "analysis.md:37-51",
+        "workflow.md:13"
+      ]
+    },
+    {
+      "scenario": "只有功能目标，没有参照名称。",
+      "expected_action": "从真实任务与工作对象提出可修正模型，主动寻找任务级和表达性参照，并行寻找实现，不让用户补齐全部设计方法。",
+      "result": "supported",
+      "sources": [
+        "analysis.md:15",
+        "analysis.md:59-74",
+        "component-sourcing.md:27-31"
+      ]
+    },
+    {
+      "scenario": "已批准页面只需调整一个现有控件。",
+      "expected_action": "继承已验证的设计和组件依据，直接进行有边界的改动及上下文复验，无须重新做全产品研究或三套方向。",
+      "result": "supported",
+      "sources": [
+        "workflow.md:5",
+        "analysis.md:94",
+        "component-sourcing.md:11",
+        "component-sourcing.md:127"
+      ]
+    },
+    {
+      "scenario": "一个很小的字体或背景决定整个产品的品牌表达。",
+      "expected_action": "按影响而非像素体量增加研究；跨独立来源和领域比较，完整观察动态，试装到真实文本与控件，检查低动态/性能条件。",
+      "result": "supported",
+      "sources": [
+        "SKILL.md:29",
+        "visual-assets.md:31-39",
+        "visual-assets.md:82-88",
+        "verification.md:186-192"
+      ]
+    },
+    {
+      "scenario": "多个搜索结果是同一作品的转载，候选只有颜色不同。",
+      "expected_action": "追溯共同来源并改写检索方向，寻找任务结构、构图、材质或时间机制的不同优势，不以链接数或变体数宣布充分比较。",
+      "result": "supported",
+      "sources": [
+        "component-sourcing.md:57",
+        "component-sourcing.md:100-106",
+        "verification.md:44"
+      ]
+    },
+    {
+      "scenario": "关键资源需要登录或授权下载。",
+      "expected_action": "完成可行的正常研究，寻找原作者、公开演示/视频或支持的本地运行；仍有关键空缺时集中请求具体正常用户操作，保留未观察状态并继续独立工作。",
+      "result": "supported",
+      "sources": [
+        "component-sourcing.md:69-71",
+        "component-sourcing.md:88",
+        "SKILL.md:150"
+      ]
+    },
+    {
+      "scenario": "用户明确一次性交付并委托设计选择。",
+      "expected_action": "在委托范围内主动选择、试装和实现，记录假设与临时方向；不伪造用户审美批准，也不添加每一步确认。",
+      "result": "supported",
+      "sources": [
+        "SKILL.md:126",
+        "analysis.md:88",
+        "workflow.md:27"
+      ]
+    },
+    {
+      "scenario": "只完成了录像采集，或者仅有静态截图，尚未查看连续过程。",
+      "expected_action": "保留采集成功但视觉/连续性未验证的事实；实际查看相关像素或顺序帧后才提出其证据支持的结论。",
+      "result": "supported",
+      "sources": [
+        "verification.md:60-96",
+        "verification.md:114-122"
+      ]
+    },
+    {
+      "scenario": "候选演示优秀，但当前字体和业务状态下组合失败。",
+      "expected_action": "区分演示质量、试装适用性和组合结果，定位到资源、适配、内容或结构；重新打开相应选择，不以安装成功或上游成熟度宣布当前品质合格。",
+      "result": "supported",
+      "sources": [
+        "component-sourcing.md:114-135",
+        "verification.md:98-104",
+        "verification.md:182-184"
+      ]
+    },
+    {
+      "scenario": "用户要求鲜明艺术表达，运行中出现可读性或性能问题。",
+      "expected_action": "分别判定体验有效性和表达完成度，修复具体原因并复验；必要的方向变更明确提出，不把专业应用一概改成低表达外观。",
+      "result": "supported",
+      "sources": [
+        "principles.md:17-23",
+        "verification.md:154-158",
+        "integration.md:52-60"
+      ]
+    },
+    {
+      "scenario": "交付物是 README 或静态出版物。",
+      "expected_action": "用本媒介的文字、链接、代码、图像及阅读任务实现，检查最终宿主与声明的变体；无需伪造服务端业务来满足 finish。",
+      "result": "supported",
+      "sources": [
+        "workflow.md:73-75",
+        "verification.md:160-164",
+        "integration.md:81-83",
+        "docs/EXPERIENCE-RESEARCH.md:142"
+      ]
+    },
+    {
+      "scenario": "用户只授权审阅源码或提出方案。",
+      "expected_action": "按 review-only/planning 范围给出结论；未建成或未试装部分保留 pending，不以新研究方法为理由擅自实现或外发。",
+      "result": "supported",
+      "sources": [
+        "SKILL.md:110",
+        "workflow.md:15",
+        "workflow.md:31",
+        "workflow.md:53-57"
+      ]
+    }
+  ],
+  "findings": [],
+  "non_blocking_notes": [
+    {
+      "id": "N1",
+      "severity": "low",
+      "type": "wording_hardening",
+      "release_blocking": false,
+      "location": "skills/ui-spec/references/analysis.md:102; skills/ui-spec/references/component-sourcing.md:102",
+      "observation": "扩大实现表格和挑战首选段落在单独阅读时，实质替代方案的措辞较绝对；同文件及入口已经有充分的常规已验证工作例外，因此整体语义不存在发布级冲突。",
+      "mitigating_text": [
+        "analysis.md:84 允许一个有充分依据的方向",
+        "analysis.md:94 常规已验证工作可直接适配",
+        "component-sourcing.md:11 常规调整直接继续",
+        "component-sourcing.md:127 相同条件继承体系规则",
+        "SKILL.md:41 alternatives where useful"
+      ],
+      "optional_improvement": "若以后出现局部任务被过度研究的实际现象，可在该表行加上针对开放且重要的选择的条件，或直接链接到相同条件下的证据继承规则。当前没有必须修正的来源缺陷，也不建议为此增加新阶段或配额。"
+    },
+    {
+      "id": "N2",
+      "severity": "informational",
+      "type": "budget_headroom",
+      "release_blocking": false,
+      "location": "tests/test_publication.py:75-77",
+      "observation": "八份公共参考仍低于既有预算，但距离阈值只剩 737 字节；严格小于门禁意味着不压缩其他内容时最多还能增加 736 字节。",
+      "optional_improvement": "后续增加运行时规则时优先改写责任来源并删除重复说明；本次无需为通过预算而进一步删减专业方法。"
+    }
+  ],
+  "common_reference_budget": {
+    "unchanged_rule": "total < 144 * 1024 bytes",
+    "threshold_bytes": 147456,
+    "baseline_bytes": 145472,
+    "candidate_bytes": 146719,
+    "delta_bytes": 1247,
+    "distance_to_threshold_bytes": 737,
+    "source_size_check_pass": true,
+    "per_file": [
+      {
+        "file": "skills/ui-spec/references/workflow.md",
+        "base_bytes": 12929,
+        "candidate_bytes": 11344,
+        "delta": -1585
+      },
+      {
+        "file": "skills/ui-spec/references/analysis.md",
+        "base_bytes": 20154,
+        "candidate_bytes": 21485,
+        "delta": 1331
+      },
+      {
+        "file": "skills/ui-spec/references/principles.md",
+        "base_bytes": 20653,
+        "candidate_bytes": 20818,
+        "delta": 165
+      },
+      {
+        "file": "skills/ui-spec/references/component-sourcing.md",
+        "base_bytes": 19205,
+        "candidate_bytes": 18373,
+        "delta": -832
+      },
+      {
+        "file": "skills/ui-spec/references/interaction-and-variants.md",
+        "base_bytes": 15275,
+        "candidate_bytes": 15275,
+        "delta": 0
+      },
+      {
+        "file": "skills/ui-spec/references/verification.md",
+        "base_bytes": 23148,
+        "candidate_bytes": 25086,
+        "delta": 1938
+      },
+      {
+        "file": "skills/ui-spec/references/visual-assets.md",
+        "base_bytes": 17046,
+        "candidate_bytes": 17182,
+        "delta": 136
+      },
+      {
+        "file": "skills/ui-spec/references/content-design.md",
+        "base_bytes": 17062,
+        "candidate_bytes": 17156,
+        "delta": 94
+      }
+    ],
+    "test_execution": "not executed; direct byte calculation only"
+  },
+  "evidence_limits": [
+    "本报告是源文本和逻辑判断；没有实际执行新 Skill 的前向应用，不能证明模型稳定遵守或总体质量提升。",
+    "未运行仓库确定性测试、打包或安装检查；相关状态由主审单独核实。",
+    "未作浏览器观察、真实服务集成、README 最终宿主审查或发布操作。",
+    "未审阅其他 Agent 的应用实现或把其结果用作本次结论。",
+    "报告指向当前散列对应的未提交源文件；发生内容修改后，相关部分需重新核对。"
+  ],
+  "repository_mutations_by_reviewer": [],
+  "report_output": "/tmp/ui-spec-source-review.json"
+}

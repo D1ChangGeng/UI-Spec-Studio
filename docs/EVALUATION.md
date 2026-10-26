@@ -303,3 +303,36 @@ normal-speed playback and measured runtime performance have distinct scopes.
 Record sources, actual viewing, repairs and remaining conditions in the
 [version review](REVIEW-v1.11.0.md). Existing deterministic and publication gates
 continue without a new aesthetic score, mandatory style or installed dependency.
+
+## Intent-grounded research and evidence maturity assurance (1.12)
+
+The [experience research guide](EXPERIENCE-RESEARCH.md) connects user intent,
+revisable experience hypotheses, question-led evidence planning and adaptive
+exploration to actual adoption. Source review checks that current-user intent,
+audience conventions and observed products retain their different authority;
+text, renders and behavior retain their evidence limits; and meaningful new
+findings can change both the product model and resource choice. Review additions
+and deletions together so the richer research method preserves previous craft,
+integration and proportionate-iteration requirements.
+
+For a fresh-context application, freeze the complete skill and provide an ordinary
+task with complete raw inputs. Keep the maintainer's diagnosis, expected resources
+and anticipated solution outside the application. Inspect the actual source
+visits, viewed media, revised questions, candidate differences, adoption decisions
+and produced result. Record any input correction or later review-directed repair
+separately. A scoped local edit should be able to reuse an accepted direction;
+an open product brief should establish the experience and consequential evidence.
+
+Judge research by what it changed or justified. Search counts and elapsed time
+describe activity; they do not establish sufficient exploration or better design.
+Hundred-step or hours-long research remains available for valuable uncertainty,
+without turning that capability into a release test quota. Captured media, actual
+viewing, source assertions, interpreted fit and owner acceptance keep their own
+scope. A proposal can establish a feasible direction and scoped trial; it cannot
+establish an unbuilt product's operational quality.
+
+The [version review](REVIEW-v1.12.0.md) records executed checks, independent
+applications, README self-application, source identities and limitations. Existing
+product, asset, content and temporal fixtures remain deterministic release gates.
+Their results do not measure general model improvement or human preference.
+Publication readback is tied to the actual committed source and release assets.

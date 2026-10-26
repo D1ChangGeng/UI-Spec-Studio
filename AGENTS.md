@@ -117,3 +117,16 @@ products, demonstrations and authored timed output at their own evidence boundar
 Controlled captures do not establish natural responsiveness or frame delivery.
 Resolve concrete failures while preserving accepted direction; retain the eight
 common references, their budget and the existing release/validation requirements.
+
+Version 1.12 grounds research in the user's intended experience. Preserve revisable
+experience hypotheses, question-led evidence planning, distinct user/audience/product
+sources and textual, visual and behavioral evidence with version/platform conditions.
+Research effort follows design impact, uncertainty and improvement potential;
+hundred-step or hours-long exploration is a capability, never a quota. Require
+meaningful alternatives and observed support for consequential choices, pursue
+normal authorized acquisition routes, and distinguish further research, bounded
+trials and broader implementation. Reconcile discoveries with actual adopted work
+and integrated quality. Keep records optional and proportionate, retain the eight
+common references below their existing budget, and separate independent applications
+from deterministic checks and user acceptance. Apply the revised skill to its README
+and record final-host evidence under the existing publication procedure.

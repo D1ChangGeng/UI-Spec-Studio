@@ -106,7 +106,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.11.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.0 --skill ui-spec
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
@@ -132,8 +132,15 @@ acceptance use the host's available tools and the task's permissions.
 
 The installed Skill includes the common [content design method](../skills/ui-spec/references/content-design.md), a focused [source map](../skills/ui-spec/references/content-sources.md) and an optional [decision template](../skills/ui-spec/assets/templates/content-decisions.md). User-facing copy, localization and typography are part of ordinary design rounds. A runnable example is included in the complete repository source under `examples/content-review/`.
 
-## Product alignment and visual exploration
+## Experience research and visual exploration
 
-The installed Skill carries product experience alignment, active exploration and visual reasoning through its eight common references. It researches suitable foundations whether or not the user names a reference product. Consequential choices use actual viewing and interaction; changing interfaces use a meaningful time window. The [alignment guide](PRODUCT-ALIGNMENT.md) connects research to decisions, and the [visual guide](VISUAL-INSPECTION.md) explains inspection. The complete source bundle includes `examples/temporal-review/`
+The installed Skill carries intent analysis, experience-based evidence planning,
+deep exploration and visual judgment through its eight common references. It
+combines text, visual and behavioral evidence, compares meaningful alternatives,
+and chooses continued research, local trials or wider implementation from what
+the evidence supports. The [research guide](EXPERIENCE-RESEARCH.md) explains the
+method, the [alignment guide](PRODUCT-ALIGNMENT.md) connects it to product choices,
+and the [visual guide](VISUAL-INSPECTION.md) explains inspection.
+The complete source bundle includes `examples/temporal-review/`
 and its browser capture tool; these development fixtures are separate from the
 portable Skill's optional standard-library helpers.

@@ -1,0 +1,60 @@
+{
+  "source_sha256": {
+    "index.html": "e9822969c216e2d722a0c8c134eec2930468671e622471d00e6a37183a82b93b",
+    "styles.css": "92058281491237f5da41ee6bfd306f6b8f389fded4f966d34d9997e6c0d13400",
+    "app.js": "5f4affc74156492c058387dea004c9e1459bb45fd911612108c8a9152256b9c3"
+  },
+  "reviewer": "UI implementation agent",
+  "review_method": "Actually viewed viewport screenshots and native-size state sheets; no user comprehension study or screen-reader listening test",
+  "viewed_baseline": [
+    "zh-light-1280-empty.png",
+    "en-light-320-failure.png",
+    "zh-dark-390-failure.png"
+  ],
+  "viewed_current_viewports": [
+    "verification/results/views/en-dark-1280-empty.png",
+    "verification/results/views/en-dark-1280-long-saved.png",
+    "verification/results/views/en-dark-320-empty.png",
+    "verification/results/views/en-dark-320-failure-context.png",
+    "verification/results/views/en-dark-390-empty.png",
+    "verification/results/views/en-dark-390-long-saved.png",
+    "verification/results/views/en-light-1280-empty.png",
+    "verification/results/views/en-light-1280-long-saved.png",
+    "verification/results/views/en-light-320-empty.png",
+    "verification/results/views/en-light-320-failure-context.png",
+    "verification/results/views/en-light-390-empty.png",
+    "verification/results/views/en-light-390-long-saved.png",
+    "verification/results/views/zh-dark-1280-empty.png",
+    "verification/results/views/zh-dark-1280-long-saved.png",
+    "verification/results/views/zh-dark-320-empty.png",
+    "verification/results/views/zh-dark-320-failure-context.png",
+    "verification/results/views/zh-dark-390-empty.png",
+    "verification/results/views/zh-dark-390-long-saved.png",
+    "verification/results/views/zh-light-1280-empty.png",
+    "verification/results/views/zh-light-1280-long-saved.png",
+    "verification/results/views/zh-light-320-empty.png",
+    "verification/results/views/zh-light-320-failure-context.png",
+    "verification/results/views/zh-light-390-empty.png",
+    "verification/results/views/zh-light-390-long-saved.png"
+  ],
+  "viewed_state_sheets": [
+    "verification/results/contact-sheets/clearFailure.png",
+    "verification/results/contact-sheets/edited.png",
+    "verification/results/contact-sheets/invalidStored.png",
+    "verification/results/contact-sheets/loaded.png",
+    "verification/results/contact-sheets/readFailure.png",
+    "verification/results/contact-sheets/readRecoveredDraft.png",
+    "verification/results/contact-sheets/resetDone.png",
+    "verification/results/contact-sheets/saved.png",
+    "verification/results/contact-sheets/savedEarlier.png",
+    "verification/results/contact-sheets/saving.png",
+    "verification/results/contact-sheets/simulatedFailure.png",
+    "verification/results/contact-sheets/writeFailure.png"
+  ],
+  "notes": [
+    "Readability checked at screenshot native size; state sheets do not resize screenshots",
+    "Changed status text was recaptured and rechecked after the last wording refinement",
+    "Horizontal scrolling inside the existing single-line title field is preserved; the saved title wraps completely in the recent-note region",
+    "Final source hashes match the passing automated report"
+  ]
+}

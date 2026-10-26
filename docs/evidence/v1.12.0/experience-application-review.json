@@ -1,0 +1,203 @@
+{
+  "date_utc": "2026-10-26",
+  "kind": "Fresh-context forward application of a frozen skill, followed by output review and scoped repairs",
+  "ordinary_prompt": "使用 /tmp/ui-spec-forward-1_12/ui-spec 的 UI Spec Studio 完成这项产品方案工作。我想做一个面向个人用户的资料研究助手：可以上传资料、围绕资料提问、查看引用、保留研究记录。工程暂名“研究工作台”，但我希望平时主要像熟悉的对话产品一样开展研究，也希望资料和产出方便重访。我喜欢成熟感和一些独立的视觉气质；没有指定最终页面布局。这一轮先完成产品体验研究和可实施的方案建议，不开发完整产品。请按当前可获取的真实材料自行研究，做专业选择；将完整研究稿及你实际取得的可检查材料写到 /tmp/ui-spec-forward-1_12/research-proposal/，不要发布到外部服务。给我说明为什么适合这个产品、准备如何落地，以及下一步最值得验证什么。",
+  "input_boundary": "Neutral runtime/font/browser locations supplied; no expected UI model, library, findings, diagnoses or sibling results. Maintainer clarified sole ownership when the agent initially treated its assignment as partial.",
+  "frozen_skill_identity_map_sha256": "a5620a444436e00b9226ed8c59551d236fb11daeb58864ce80bbb96700019d5f",
+  "full_local_outputs": {
+    "research-proposal.md": {
+      "sha256": "8b4d6ac626e6942ba8bbc6fcdb5ade30a7ef6e58842875ab261917520551cb09",
+      "bytes": 29105
+    },
+    "evidence-notes.md": {
+      "sha256": "c4676c5bd3b20c601ce2c6773f719375d3864800932f398b87a3805c3e9c4953",
+      "bytes": 12672
+    },
+    "decision-register.md": {
+      "sha256": "d1ceeaa0cb7baa1b9680e91a027fb90d04d07ba5e995386240e7222fe229741d",
+      "bytes": 6092
+    },
+    "implementation-resources.md": {
+      "sha256": "e9d8a4ccf119a641a1fe35bce2fb0718a4e0e9d432f3d96b2ef13eb19591e2b0",
+      "bytes": 18143
+    },
+    "trial-report.md": {
+      "sha256": "c208b9b631839d0c107e4c5dcc4fde7010feae55a92c1f394d8b5828cc876f32",
+      "bytes": 8842
+    },
+    "prototype.html": {
+      "sha256": "e04f01df24496d8609e91ce467178a11dcb76cc260462066c45fa99b41ee40bf",
+      "bytes": 37983
+    },
+    "verify_local.py": {
+      "sha256": "9e7a3e6422034187da5456683c96e6e2da474b42dd05e2433845a67cd44928f1",
+      "bytes": 8255
+    }
+  },
+  "decisions": [
+    {
+      "question": "What should lead the experience?",
+      "evidence": "Explicit conversational work preference; product/material observations; same-content comparisons of three structures.",
+      "decision": "Conversation-first research container, sources and records reachable, evidence on demand.",
+      "limits": "A professional recommendation, not audience research or owner approval."
+    },
+    {
+      "question": "Are alternatives actually different?",
+      "evidence": "Conversation-first, persistent three-column and document-first arrangements; paper-note and denser index-desk visual directions.",
+      "decision": "Retain alternatives and explain their appropriate tasks; prefer paper-note conversation for this request.",
+      "limits": "Both wide conversation/three-column conditions retain 700 px reading width. Width differences alone do not prove preference or task speed."
+    },
+    {
+      "question": "Which mature implementation can carry the experience?",
+      "evidence": "Public original demos, official documentation and pinned source/package/license inspections.",
+      "decision": "Propose assistant-ui Thread/runtime for the next bounded integration; separate document/version/citation responsibilities.",
+      "limits": "No assistant-ui/shadcn/Vercel runtime was installed, integrated or adopted in the HTML probe."
+    },
+    {
+      "question": "Does the layout work in current conditions?",
+      "evidence": "Authored HTML/CSS probe with controlled sample materials; actual 1440/1024/390 captures, visual review and local assertions.",
+      "decision": "Continue to a real document-to-citation-to-saved-record trial before expanding the product.",
+      "limits": "No model, backend, PDF/OCR, retrieval correctness or real-user outcome validated."
+    }
+  ],
+  "repairs": [
+    {
+      "stage": "Author visual iteration",
+      "finding": "390 px reading column was zero despite the no-horizontal-overflow assertion passing.",
+      "action": "Corrected grid placement, added a minimum reading-width assertion, recaptured and actually viewed the result.",
+      "retained_failure": "experience-narrow-before.png and experience-before-repair-*.json"
+    },
+    {
+      "stage": "Independent output review",
+      "finding": "Prototype revision and capture/run identities had diverged during final edits.",
+      "action": "Re-executed the existing bounded script, recaptured all 15 images and synchronized actual observations to the final prototype hash."
+    },
+    {
+      "stage": "Independent output review",
+      "finding": "A sample limitation claim cited only one of its two relevant source passages.",
+      "action": "Linked citations 2 and 3 to the claim and checked the final narrow lower view."
+    },
+    {
+      "stage": "Independent output review",
+      "finding": "Visual-direction coverage wording exceeded retained combinations.",
+      "action": "Specified paper direction in three viewports; index direction at 1440 only."
+    },
+    {
+      "stage": "Author/reviewer boundary correction",
+      "finding": "Save/reload wording could imply full record serialization although only a favorite marker and draft persisted.",
+      "action": "Narrowed UI/report wording to prewritten sample records; added failure-write behavior and its executed assertion."
+    }
+  ],
+  "runtime": {
+    "report": "experience-runtime-checks.json",
+    "passed_assertions": 15,
+    "captures": 15,
+    "prototype_sha256": "e04f01df24496d8609e91ce467178a11dcb76cc260462066c45fa99b41ee40bf"
+  },
+  "author_visual_review": {
+    "all_final_captures_viewed": true,
+    "count": 15,
+    "inspected_at_utc": "2026-10-26T16:25:00.071335+00:00",
+    "scope": "Only sampled states in the recorded three viewports, not full animation or device testing."
+  },
+  "maintainer_review": {
+    "text_scope": "Read the four complete core documents, final trial report, final decision register and current capture/runtime records; inspected relevant final revision boundaries.",
+    "actual_images": [
+      {
+        "source": "evidence/local/L05-model-chat-1440.png",
+        "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+        "scope": "Original-pixel image actually opened"
+      },
+      {
+        "source": "evidence/local/L05-model-three-1440.png",
+        "sha256": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc",
+        "scope": "Original-pixel image actually opened"
+      },
+      {
+        "source": "evidence/local/L05-model-reader-1440.png",
+        "sha256": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118",
+        "scope": "Original-pixel image actually opened"
+      },
+      {
+        "source": "evidence/local/L06-index-chat-1440.png",
+        "sha256": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d",
+        "scope": "Original-pixel image actually opened"
+      },
+      {
+        "source": "evidence/local/L10-chat-390.png",
+        "sha256": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595",
+        "scope": "Original-pixel image actually opened"
+      },
+      {
+        "source": "evidence/local/L11-citation-390.png",
+        "sha256": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d",
+        "scope": "Original-pixel image actually opened"
+      },
+      {
+        "source": "evidence/local/L12-chat-lower-390.png",
+        "sha256": "86e26b28faf7c61584abd06a0f09d66114c9b875d2469d1869b2b65edc511d2f",
+        "scope": "Original-pixel image actually opened"
+      },
+      {
+        "source": "evidence/local/L03-records-1440.png",
+        "sha256": "5aa9c8c8a385a873d7a609e954d34fceca530e3393e08aa68596bde8b3e30394",
+        "scope": "Original-pixel image actually opened"
+      },
+      {
+        "source": "evidence/local/L04-record-evidence-1440.png",
+        "sha256": "214fb9cb8038055821ab8637fb25b604332d74572abf11adeb3692e85bba5ab8",
+        "scope": "Original-pixel image actually opened"
+      },
+      {
+        "source": "evidence/local/attempts/before-grid-repair-L10-chat-390.png",
+        "sha256": "7ca2efd7ac3c5d1d25c61cf8db1a1a5e73b01b129be2f2d307aa309dfa4d55d8",
+        "scope": "Original-pixel image actually opened"
+      }
+    ],
+    "finding": "No blocking visual issue in the sampled final views. Before-repair failure also opened. Fixed sample UI and future retention semantics do not establish real conversation persistence."
+  },
+  "independent_review": {
+    "report": "experience-independent-review.json",
+    "sha256": "e2b2de36b839e5d2728fd6fd665b08f55271227bc09f5ef45a9861b8e4c440be",
+    "scope": "Independent text/source consistency and actual image inspection; initial findings and final dispositions retained."
+  },
+  "retained_images": [
+    {
+      "source": "evidence/local/L05-model-chat-1440.png",
+      "retained_as": "experience-conversation.png",
+      "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a"
+    },
+    {
+      "source": "evidence/local/L05-model-three-1440.png",
+      "retained_as": "experience-three-columns.png",
+      "sha256": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc"
+    },
+    {
+      "source": "evidence/local/L05-model-reader-1440.png",
+      "retained_as": "experience-document-first.png",
+      "sha256": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118"
+    },
+    {
+      "source": "evidence/local/L06-index-chat-1440.png",
+      "retained_as": "experience-index-direction.png",
+      "sha256": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d"
+    },
+    {
+      "source": "evidence/local/L10-chat-390.png",
+      "retained_as": "experience-narrow.png",
+      "sha256": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595"
+    },
+    {
+      "source": "evidence/local/L11-citation-390.png",
+      "retained_as": "experience-narrow-citation.png",
+      "sha256": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d"
+    },
+    {
+      "source": "evidence/local/attempts/before-grid-repair-L10-chat-390.png",
+      "retained_as": "experience-narrow-before.png",
+      "sha256": "7ca2efd7ac3c5d1d25c61cf8db1a1a5e73b01b129be2f2d307aa309dfa4d55d8"
+    }
+  ],
+  "distribution_boundary": "The public evidence bundle retains this curated decision record, selected author-created screenshots and raw run/capture records. Complete local proposal files are identified by hash, not promised as bundled runnable application. Third-party media/code/font downloads remain study inputs, not MIT-distributed product assets.",
+  "conclusion_scope": "This bounded application shows intent interpretation, candidate challenge, research-to-implementation planning and actual visual repair. It does not measure general model improvement, research sufficiency for every task or production readiness of the proposed research assistant."
+}

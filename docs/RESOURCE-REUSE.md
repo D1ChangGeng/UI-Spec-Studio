@@ -1,10 +1,10 @@
 # Discover, assess and reuse excellent UI work
 
-Resource discovery serves [product experience alignment](PRODUCT-ALIGNMENT.md). The agent identifies the intended visual and interaction maturity, finds implementations capable of carrying it, trials consequential choices and preserves their value through adaptation. It supplies references for an open functional brief and expands a named reference into concrete experience questions. The result develops the current product's own expression.
+Resource discovery serves [product experience alignment](PRODUCT-ALIGNMENT.md). The agent first develops a revisable understanding of the intended tasks, working objects, familiar relationships and aesthetic goals. It plans the evidence needed, finds implementations capable of carrying the observed qualities, trials consequential choices and preserves their value through adaptation. The result develops the current product's own expression. The [experience research guide](EXPERIENCE-RESEARCH.md) explains the complete evidence and decision loop.
 
 ## The working relationship
 
-**Target quality → paired reference/resource research → local trial → controlled adaptation → integrated verification.**
+**Intended experience → evidence questions → paired reference/resource research → candidate comparison → local trial → adaptation → integrated verification.**
 
 Requirement-led search finds an implementation for a known need. Opportunity-led
 exploration finds a better expression while meaningful design choices remain
@@ -18,6 +18,27 @@ Within design research, distinguish functional/experience references from artist
 Judge maturity through the qualities the task needs: readable type, optical alignment, coherent material, discernible states, stable content growth and understandable transitions. Compare corresponding tasks, content and conditions. A candidate with a different appearance may preserve these relationships more effectively. Keep visual judgment, functional correctness, accessibility and runtime performance supported by their respective evidence.
 
 Use the [perceptual inspection method](VISUAL-INSPECTION.md) to understand why a candidate works: begin with the whole at normal display scale, examine composition, functional regions and consequential details, then return to the assembled context. Compare the resource's own craft, product fit, completeness of inherited relationships and their survival after integration. A boundary, sculptural asset or changing surface gains meaning through its background, content and adjacent controls. Let the observation change the candidate, reuse level, configuration or trial question.
+
+## Explore by decision value
+
+Match effort to design impact, uncertainty and potential improvement. A defining
+font, background, asset or interaction can justify sustained exploration across
+many independent sources and dozens of candidates. Multi-round, hundred-step or
+hour-scale research is available when its value warrants it; established suitable
+components can proceed with focused checks. Respect the task's actual scope and
+resource constraints while retaining consequential evidence gaps.
+
+Use text to understand meaning and conditions, actual views to judge craft, and
+interaction or continuous media to understand behavior. Follow discoveries between
+product, page, component, asset and design-language levels. After a useful pass,
+identify what changed in the understanding and take the action most likely to
+resolve the next important uncertainty.
+
+Challenge a preferred candidate through alternatives with materially different
+strengths. Different URLs can reproduce the same source or visual mechanism;
+compare actual task structure, composition, type, material, state or motion.
+Keep representative content and viewing conditions comparable. Explain why an
+observed difference changes selection, trial or adaptation.
 
 ## Use the included resource map
 
@@ -181,10 +202,12 @@ version/license information can stay in adoption notes. See the
 [worked study](../examples/product-intent/README.md) for its stated adoption and
 verification scope.
 
-Converge when important quality requirements have evidence, consequential choices
-have passed their local trials, relevant states have been observed and the
-adaptation path is clear. Continue searching where it could change selection,
-resolve a major gap or avoid substantial rework. If candidates remain unsuitable,
+Choose the next commitment from evidence maturity. Continue research while a
+material gap or alternative could change the target or selection. Trial a supported
+candidate when current-project conditions are the remaining uncertainty. Expand
+after important qualities have evidence, consequential trials preserve them and
+the adaptation path is clear. Similar new results support convergence only when
+the relevant directions have actually been explored. If candidates remain unsuitable,
 keep their actual shortcomings and options visible, then choose further research,
 targeted assistance, a bounded plan adjustment or limited custom implementation.
 Platform documentation, item inspection and project acceptance remain separate.

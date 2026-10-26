@@ -1,0 +1,261 @@
+--- before/index.html
++++ after/index.html
+@@ -23,21 +23,25 @@
+     <section class="editor-panel" aria-labelledby="main-title">
+       <header class="intro"><p class="section-index">01 <span data-i18n="step">记录想法</span></p><h1 id="main-title" data-i18n="pageTitle">把研究线索整理成笔记</h1><p data-i18n="pageIntro">先记下问题和背景，再回来继续完善。</p></header>
+       <form id="note-form" novalidate>
+-        <div class="field"><label for="note-title"><span data-i18n="titleLabel">笔记标题</span><span aria-hidden="true" class="required">*</span></label><p id="title-hint" class="field-hint" data-i18n="titleHint">用一句话写清想研究的问题</p><input id="note-title" name="title" type="text" maxlength="150" autocomplete="off" aria-describedby="title-hint title-error" aria-required="true" placeholder="例如：城市供热如何降低高峰负荷？"/><p id="title-error" class="field-error" role="alert" hidden></p></div>
++        <div class="field"><label for="note-title"><span data-i18n="titleLabel">笔记标题</span><span aria-hidden="true" class="required">*</span></label><p id="title-hint" class="field-hint" data-i18n="titleHint">用一句话写清想研究的问题</p><input id="note-title" name="title" type="text" maxlength="150" autocomplete="off" aria-describedby="title-hint title-error" aria-required="true" placeholder="例如：如何降低供热高峰负荷？"/><p id="title-error" class="field-error" role="alert" hidden></p></div>
+         <div class="field"><label for="note-body"><span data-i18n="bodyLabel">背景与线索</span><span class="optional" data-i18n="optional">选填</span></label><p id="body-hint" class="field-hint" data-i18n="bodyHint">补充已有材料、疑问或仍需核查的判断</p><textarea id="note-body" name="body" rows="5" maxlength="3000" aria-describedby="body-hint" placeholder="记下材料、想法或需要验证的线索…"></textarea></div>
+-        <div class="form-actions"><button id="save" type="submit" class="primary"><span data-i18n="save">保存笔记</span><span aria-hidden="true">↗</span></button><p class="storage-note"><span aria-hidden="true" class="storage-dot"></span><span data-i18n="storage">仅保存在当前浏览器</span></p></div>
+-        <div class="state-area"><p id="state-message" role="status" aria-live="polite" aria-atomic="true"></p><button id="retry" type="button" hidden data-i18n="retry">重试保存</button></div>
++        <div class="form-actions"><button id="save" type="submit" class="primary" aria-describedby="save-hint"><span id="save-label" data-i18n="save">保存笔记</span><span aria-hidden="true">↗</span></button><p class="storage-note"><span aria-hidden="true" class="storage-dot"></span><span data-i18n="storage">手动保存 · 仅此浏览器</span></p></div>
++        <p id="save-hint" class="save-hint" data-i18n="saveHint">每次保存会替换上一版。离开此页前请保存。</p>
++        <div class="state-area">
++          <div id="save-status" role="status" aria-live="polite" aria-atomic="true"><p id="state-message"></p><p id="state-detail" class="state-detail" hidden></p></div>
++          <button id="retry" type="button" hidden data-i18n="retry">重试保存</button>
++        </div>
+       </form>
+     </section>
+     <aside class="context-panel" aria-label="研究笔记预览">
+-      <div class="context-top"><p class="section-index">02 <span data-i18n="asideStep">继续研究</span></p><h2 data-i18n="asideTitle">最近保存</h2><p data-i18n="asideIntro">已保存的笔记会显示在这里，便于继续编辑。</p></div>
+-      <div class="recent-card" id="recent-card" aria-live="polite"><div class="recent-icon" aria-hidden="true">↳</div><div><p id="recent-title" class="recent-title" data-i18n="recentEmpty">还没有保存的笔记</p><p id="recent-meta" class="recent-meta" data-i18n="recentEmptyHint">保存后可在此查看</p></div></div>
+-      <div class="aside-footer"><p data-i18n="disclosure">这是交互演示。笔记会保存在此浏览器中，不会发送到外部服务。</p></div>
++      <div class="context-top"><p class="section-index">02 <span data-i18n="asideStep">继续研究</span></p><h2 data-i18n="asideTitle">最近保存</h2><p data-i18n="asideIntro">这里显示上次保存的标题。重新打开此页时，会载入已保存的笔记。</p></div>
++      <div class="recent-card" id="recent-card"><div class="recent-icon" aria-hidden="true">↳</div><div><p id="recent-title" class="recent-title" data-i18n="recentEmpty">还没有保存的笔记</p><p id="recent-meta" class="recent-meta" data-i18n="recentEmptyHint">保存成功后，标题会显示在这里</p></div></div>
++      <div class="aside-footer"><p data-i18n="disclosure">这是交互演示。笔记只保存在此浏览器中，不会发送到外部服务。清除浏览器数据会删除笔记。</p></div>
+     </aside>
+   </div>
+ </main>
+ <footer class="fixture-controls">
+-  <details><summary data-i18n="previewSettings">预览状态设置</summary><div class="fixture-body"><label><input id="simulate-failure" type="checkbox"> <span data-i18n="failureSwitch">模拟写入失败</span></label><label><input id="simulate-slow" type="checkbox"> <span data-i18n="slowSwitch">延迟写入 1 秒</span></label><button id="long-example" type="button" data-i18n="loadLong">填写较长标题</button><button id="reset" type="button" data-i18n="reset">清除本地演示数据</button></div></details>
++  <details id="preview-controls"><summary data-i18n="previewSettings">预览状态设置</summary><div class="fixture-body"><label><input id="simulate-failure" type="checkbox"> <span data-i18n="failureSwitch">模拟写入失败</span></label><label><input id="simulate-slow" type="checkbox"> <span data-i18n="slowSwitch">延迟写入 1 秒</span></label><button id="long-example" type="button" data-i18n="loadLong">填写较长标题</button><button id="reset" type="button" data-i18n="reset" aria-describedby="reset-hint">清除本地演示数据</button></div><p id="reset-hint" class="reset-hint" data-i18n="resetHint">清除会删除已保存的笔记，并清空当前输入。需要保留时，请先复制文本。</p></details>
+   <span class="fixture-status" data-i18n="fixtureLabel">内容与交互状态实例 · 本地运行</span>
+ </footer>
+ <script src="app.js"></script>
+--- before/app.js
++++ after/app.js
+@@ -14,10 +14,100 @@
+   let retryAction = null;
+   const copy = {
+     zh: {
+-      brandSubtitle:'研究笔记',eyebrow:'研究空间 / 笔记',scope:'本地演示',step:'记录想法',pageTitle:'把研究线索整理成笔记',pageIntro:'先记下问题和背景，再回来继续完善。',titleLabel:'笔记标题',titleHint:'用一句话写清想研究的问题',titlePlaceholder:'例如：城市供热如何降低高峰负荷？',bodyLabel:'背景与线索',optional:'选填',bodyHint:'补充已有材料、疑问或仍需核查的判断',bodyPlaceholder:'记下材料、想法或需要验证的线索…',save:'保存笔记',saving:'正在保存到此浏览器…',saved:'笔记已保存在此浏览器。',savedEarlier:'上一版已保存。当前修改仍需再次保存。',edited:'当前修改尚未保存。',missing:'填写笔记标题后再保存。',failed:'当前无法保存这份笔记。输入内容仍在页面中。',retry:'重试保存',storage:'仅保存在当前浏览器',asideStep:'继续研究',asideTitle:'最近保存',asideIntro:'已保存的笔记会显示在这里，便于继续编辑。',recentEmpty:'还没有保存的笔记',recentEmptyHint:'保存后可在此查看',recentSaved:'已保存 · 当前浏览器',disclosure:'这是交互演示。笔记会保存在此浏览器中，不会发送到外部服务。',previewSettings:'预览状态设置',failureSwitch:'模拟写入失败',slowSwitch:'延迟写入 1 秒',loadLong:'填写较长标题',reset:'清除本地演示数据',fixtureLabel:'内容与交互状态实例 · 本地运行',langButton:'EN',langAria:'EN · Switch to English',themeDark:'切换深色主题',themeLight:'切换浅色主题',resetDone:'本地演示数据已清除。',clearFailed:'未能清除本地演示数据。当前输入仍在页面中，请重试。',clearRetry:'重试清除',readFailed:'暂时无法读取已保存的笔记。当前输入仍在页面中，请重试读取后再保存。',invalidStored:'已保存的笔记数据无法识别。请在预览设置中清除本地演示数据后再保存。',readRetry:'重试读取',readRecovered:'已重新读取本地笔记。',readRecoveredEmpty:'本地存储已恢复，尚无已保存的笔记。',readRecoveredEmptyDraft:'本地存储已恢复。当前输入尚未保存。',readRecoveredDraft:'已重新读取本地笔记。当前输入仍在页面中，保存后会替换已存内容。',recentUnreadable:'暂时无法读取笔记',recentUnreadableHint:'重试读取后可确认已保存的内容',longTitle:'比较不同城市在能源供应高峰期间如何调节供热需求，并梳理可供进一步核查的具体研究证据',htmlTitle:'研究笔记 · 内容设计实例',skip:'跳到主要内容'
++      brandSubtitle:'研究笔记', eyebrow:'研究空间 / 笔记', scope:'本地演示',
++      step:'记录想法', pageTitle:'把研究线索整理成笔记',
++      pageIntro:'先记下问题和背景，再回来继续完善。',
++      titleLabel:'笔记标题', titleHint:'用一句话写清想研究的问题',
++      titlePlaceholder:'例如：如何降低供热高峰负荷？',
++      bodyLabel:'背景与线索', optional:'选填',
++      bodyHint:'补充已有材料、疑问或仍需核查的判断',
++      bodyPlaceholder:'记下材料、想法或需要验证的线索…',
++      save:'保存笔记', savingButton:'正在保存…',
++      saveHint:'每次保存会替换上一版。离开此页前请保存。',
++      missing:'填写笔记标题后再保存。', retry:'重试保存',
++      storage:'手动保存 · 仅此浏览器', asideStep:'继续研究', asideTitle:'最近保存',
++      asideIntro:'这里显示上次保存的标题。重新打开此页时，会载入已保存的笔记。',
++      recentEmpty:'还没有保存的笔记', recentEmptyHint:'保存成功后，标题会显示在这里',
++      recentSaved:'上次保存的版本 · 此浏览器',
++      disclosure:'这是交互演示。笔记只保存在此浏览器中，不会发送到外部服务。清除浏览器数据会删除笔记。',
++      previewSettings:'预览状态设置', failureSwitch:'模拟写入失败',
++      slowSwitch:'延迟写入 1 秒', loadLong:'填写较长标题', reset:'清除本地演示数据',
++      resetHint:'清除会删除已保存的笔记，并清空当前输入。需要保留时，请先复制文本。',
++      fixtureLabel:'内容与交互状态实例 · 本地运行',
++      langButton:'EN', langAria:'EN · Switch to English',
++      themeDark:'切换深色主题', themeLight:'切换浅色主题',
++      clearRetry:'重试清除', readRetry:'重试读取',
++      recentUnreadable:'暂时无法读取笔记', recentUnreadableHint:'重试读取后可确认已保存的内容',
++      longTitle:'比较不同城市在能源供应高峰期间如何调节供热需求，并梳理可供进一步核查的具体研究证据',
++      htmlTitle:'研究笔记 · 内容设计实例', skip:'跳到主要内容'
+     },
+     en: {
+-      brandSubtitle:'Research notes',eyebrow:'Research / Notes',scope:'Local demo',step:'Capture an idea',pageTitle:'Turn a research lead into a note',pageIntro:'Start with the question and its context. Return to the same note as your research develops.',titleLabel:'Note title',titleHint:'Name the question you want to investigate',titlePlaceholder:'For example: Reducing peak demand',bodyLabel:'Context and leads',optional:'Optional',bodyHint:'Add sources, open questions, or assumptions to check',bodyPlaceholder:'Capture the source material or questions to verify…',save:'Save note',saving:'Saving in this browser…',saved:'Note saved in this browser.',savedEarlier:'An earlier version was saved. Save again to keep your new edits.',edited:'You have unsaved changes.',missing:'Add a note title before saving.',failed:'This note could not be saved. Your text is still here.',retry:'Try saving again',storage:'Saved only in this browser',asideStep:'Continue your work',asideTitle:'Recently saved',asideIntro:'Saved notes appear here so you can return to your work.',recentEmpty:'No notes saved yet',recentEmptyHint:'Your note will appear after saving',recentSaved:'Saved · This browser',disclosure:'This is an interactive demo. Notes stay in this browser and are not sent to an external service.',previewSettings:'Preview state controls',failureSwitch:'Simulate a write failure',slowSwitch:'Delay the write by 1 second',loadLong:'Use a longer example title',reset:'Clear local demo data',fixtureLabel:'Content and state example · Local demo',langButton:'中文',langAria:'切换到中文',themeDark:'Switch to dark theme',themeLight:'Switch to light theme',resetDone:'Local demo data cleared.',clearFailed:'Local demo data could not be cleared. Your text is still here. Try again.',clearRetry:'Try clearing again',readFailed:'Saved notes could not be read. Your text is still here. Try reading again before saving.',invalidStored:'The saved note data is not readable. Clear local demo data in the preview controls before saving.',readRetry:'Try reading again',readRecovered:'The local note has been read again.',readRecoveredEmpty:'Local storage is available again. No notes have been saved.',readRecoveredEmptyDraft:'Local storage is available again. Your current text has not been saved.',readRecoveredDraft:'The local note has been read again. Your current text is still here. Saving will replace the stored note.',recentUnreadable:'Saved note unavailable',recentUnreadableHint:'Try reading again to check the saved content',longTitle:'Compare how different cities manage district-heating demand during peak energy use and identify which evidence needs to be verified',htmlTitle:'Research notes · Content design example',skip:'Skip to main content'
++      brandSubtitle:'Research notes', eyebrow:'Research / Notes', scope:'Local demo',
++      step:'Capture an idea', pageTitle:'Turn a research lead into a note',
++      pageIntro:'Start with the question and its context. Return to the same note as your research develops.',
++      titleLabel:'Note title', titleHint:'Name the question you want to investigate',
++      titlePlaceholder:'e.g. Peak heating demand',
++      bodyLabel:'Context and leads', optional:'Optional',
++      bodyHint:'Add sources, open questions, or assumptions to check',
++      bodyPlaceholder:'Capture the source material or questions to verify…',
++      save:'Save note', savingButton:'Saving…',
++      saveHint:'Each save replaces the previous version. Save before leaving this page.',
++      missing:'Add a note title before saving.', retry:'Try saving again',
++      storage:'Manual save · This browser only', asideStep:'Continue your work', asideTitle:'Recently saved',
++      asideIntro:'The last saved title appears here. Reopening this page loads that saved note.',
++      recentEmpty:'No note saved yet', recentEmptyHint:'The title appears here after a successful save',
++      recentSaved:'Last saved version · This browser',
++      disclosure:'This is an interactive demo. The note stays in this browser and is not sent to an external service. Clearing browser data deletes the note.',
++      previewSettings:'Preview state controls', failureSwitch:'Simulate a write failure',
++      slowSwitch:'Delay the write by 1 second', loadLong:'Use a longer example title', reset:'Clear local demo data',
++      resetHint:'Clearing deletes the saved note and empties the current fields. Copy any text you want to keep first.',
++      fixtureLabel:'Content and state example · Local demo',
++      langButton:'中文', langAria:'切换到中文',
++      themeDark:'Switch to dark theme', themeLight:'Switch to light theme',
++      clearRetry:'Try clearing again', readRetry:'Try reading again',
++      recentUnreadable:'Saved note unavailable', recentUnreadableHint:'Try reading again to check the saved content',
++      longTitle:'Compare how different cities manage district-heating demand during peak energy use and identify which evidence needs to be verified',
++      htmlTitle:'Research notes · Content design example', skip:'Skip to main content'
++    }
++  };
++  // A short outcome leads each message; the detail explains the consequence or recovery.
++  // These statements describe the existing single-note, manual localStorage contract.
++  const messages = {
++    zh: {
++      empty:['尚未保存笔记', '内容不会自动保存，请先填写标题。'],
++      loaded:['已载入上次保存的笔记', '可以继续编辑；修改后需要再次保存。'],
++      saving:['正在保存到此浏览器…', '可以继续编辑；新修改需再次保存。'],
++      saved:['已保存到此浏览器', '重新打开此页时，会载入这份笔记。'],
++      savedEarlier:['已保存点击时的版本', '保存期间的新修改尚未保存。请再次保存，更新本地版本。'],
++      edited:['有尚未保存的修改', '当前修改仍只在此页。刷新或关闭页面前，请先保存。'],
++      failed:['保存未完成', '输入仍在此页，尚未保存。请重试；若仍失败，先复制文本备份，再检查浏览器的存储设置。刷新或关闭页面会丢失未保存的修改。'],
++      simulatedFailure:['本次模拟保存失败', '输入仍在此页，尚未保存。在「预览状态设置」中关闭「模拟写入失败」，再重试保存。离开此页前请先保存或复制文本。'],
++      resetDone:['本地演示数据已清除', '已保存的笔记和当前输入均已清空，可以开始新笔记。'],
++      clearFailed:['未能清除本地演示数据', '当前输入仍在此页。可以重试清除；需要保留的文本请先复制备份。'],
++      readFailed:['暂时无法读取已保存的笔记', '保存已暂停，以免覆盖未能读取的内容。请重试读取；当前输入仍在此页，离开前请先复制备份。'],
++      invalidStored:['已保存的笔记格式无法识别', '保存已暂停。可先重试读取；若仍失败，先复制当前输入，再到「预览状态设置」清除本地演示数据。清除也会清空当前输入。'],
++      readRecovered:['已重新读取本地笔记', '上次保存的内容已载入。修改后需要再次保存。'],
++      readRecoveredEmpty:['已恢复读取，尚无已保存的笔记', '填写标题后即可保存。内容不会自动保存。'],
++      readRecoveredEmptyDraft:['已恢复读取，当前输入尚未保存', '输入已保留。选择「保存笔记」，将它保存在此浏览器中。'],
++      readRecoveredDraft:['已恢复读取，当前输入已保留', '「最近保存」显示上次保存的标题。再次保存会用当前输入替换已保存的笔记。']
++    },
++    en: {
++      empty:['No note saved yet', 'Add a title to begin. Changes are not saved automatically.'],
++      loaded:['Last saved note loaded', 'Continue editing. Save again to keep any changes.'],
++      saving:['Saving in this browser…', 'You can keep editing. Changes made during this save will need another save.'],
++      saved:['Saved in this browser', 'Reopen this page to continue editing this note.'],
++      savedEarlier:['The version you submitted was saved', 'Edits made while saving are still unsaved. Save again to keep those changes.'],
++      edited:['You have unsaved changes', 'These edits are only on this page. Save before refreshing or closing it.'],
++      failed:['The note could not be saved', 'Your text is still here and is unsaved. Try again. If it still fails, copy your text before checking browser storage settings. Refreshing or closing the page loses unsaved edits.'],
++      simulatedFailure:['This save failure was simulated', 'Your text is still here and is unsaved. Turn off "Simulate a write failure" in "Preview state controls", then try saving again. Save or copy your text before leaving.'],
++      resetDone:['Local demo data cleared', 'The saved note and current fields are empty. You can start a new note.'],
++      clearFailed:['Local demo data could not be cleared', 'Your current text is still here. Try clearing again. Copy any text you want to keep first.'],
++      readFailed:['The saved note could not be read', 'Saving is paused to avoid overwriting unread content. Try reading again. Your current text is still here; copy it before leaving.'],
++      invalidStored:['The saved note has an unreadable format', 'Saving is paused. Try reading again. If it still fails, copy your current text, then clear local demo data in "Preview state controls". Clearing also empties the current fields.'],
++      readRecovered:['Local note read successfully', 'The last saved content is loaded. Save again after editing.'],
++      readRecoveredEmpty:['Reading restored; no note saved yet', 'Add a title to save a note. Changes are not saved automatically.'],
++      readRecoveredEmptyDraft:['Reading restored; your text is unsaved', 'Your input is still here. Choose "Save note" to keep it in this browser.'],
++      readRecoveredDraft:['Reading restored; your input is unchanged', '"Recently saved" shows the stored title. Saving now replaces the stored note with your current input.']
+     }
+   };
+   function t(name) { return copy[locale][name]; }
+@@ -25,16 +115,21 @@
+   function updateControls() {
+     $('save').disabled = pending !== null || storageState !== 'ready';
+     $('save').setAttribute('aria-busy', String(pending !== null));
++    $('save-label').textContent = t(pending !== null ? 'savingButton' : 'save');
+   }
+ 
+   function showStatus(next) {
+     status = next;
+     const retry = $('retry');
+     const retryHadFocus = document.activeElement === retry;
+-    const actions = {failed:'save', readFailed:'read', invalidStored:'read', clearFailed:'clear'};
++    const actions = {failed:'save', simulatedFailure:'save', readFailed:'read', invalidStored:'read', clearFailed:'clear'};
+     retryAction = actions[next] || null;
+-    $('state-message').textContent = next ? t(next) : '';
+-    $('state-message').parentElement.dataset.status = retryAction ? 'error' : next;
++    const [heading, detail] = messages[locale][next] || ['', ''];
++    // Avoid re-announcing the same unsaved message on every keystroke.
++    if ($('state-message').textContent !== heading) $('state-message').textContent = heading;
++    if ($('state-detail').textContent !== detail) $('state-detail').textContent = detail;
++    $('state-detail').hidden = !detail;
++    $('save-status').parentElement.dataset.status = retryAction ? 'error' : next;
+     retry.hidden = retryAction === null;
+     const labels = {save:'retry', read:'readRetry', clear:'clearRetry'};
+     if (retryAction) retry.textContent = t(labels[retryAction]);
+@@ -67,7 +162,9 @@
+         $('note-title').value = data ? data.title : '';
+         $('note-body').value = data ? data.body : '';
+       }
+-      if (!initial) {
++      if (initial) {
++        showStatus(data ? 'loaded' : 'empty');
++      } else {
+         showStatus(draftTouched
+           ? (data ? 'readRecoveredDraft' : 'readRecoveredEmptyDraft')
+           : (data ? 'readRecovered' : 'readRecoveredEmpty'));
+@@ -99,6 +196,7 @@
+     if (!$('title-error').hidden) $('title-error').textContent = t('missing');
+     showStatus(status);
+     renderSaved();
++    updateControls();
+   }
+ 
+   function clearFieldError() {
+@@ -143,7 +241,7 @@
+         showStatus(draftEdited ? 'savedEarlier' : 'saved');
+         renderSaved();
+       } catch {
+-        showStatus('failed');
++        showStatus($('simulate-failure').checked ? 'simulatedFailure' : 'failed');
+       }
+       updateControls();
+     }, delay);
+@@ -179,8 +277,8 @@
+     draftEdited = savedRecord
+       ? JSON.stringify(record) !== JSON.stringify(savedRecord)
+       : Boolean(record.title || record.body);
+-    if (['saved', 'savedEarlier', 'edited', 'resetDone', 'readRecovered', 'readRecoveredDraft', 'readRecoveredEmpty', 'readRecoveredEmptyDraft'].includes(status)) {
+-      showStatus(draftEdited ? 'edited' : (savedRecord ? 'saved' : ''));
++    if (['', 'empty', 'loaded', 'saved', 'savedEarlier', 'edited', 'resetDone', 'readRecovered', 'readRecoveredDraft', 'readRecoveredEmpty', 'readRecoveredEmptyDraft'].includes(status)) {
++      showStatus(draftEdited ? 'edited' : (savedRecord ? 'saved' : 'empty'));
+     }
+   }
+ 
+--- before/styles.css
++++ after/styles.css
+@@ -5,4 +5,54 @@
+   color-scheme:dark; --paper:#141c19; --surface:#1b2621; --ink:#edf1e9; --muted:#b0c1b6; --stroke:#405149; --accent:#c8dac9; --accent-hover:#ecf4ed; --accent-ink:#142219; --soft:#25382f; --alert:#ffaaa2;
+ }
+ *{box-sizing:border-box}html{min-width:280px}body{min-height:100dvh;display:flex;flex-direction:column;margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC","Microsoft YaHei",sans-serif;font-size:15px;line-height:1.6}button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.skip{position:absolute;top:-80px;left:10px;background:var(--surface);padding:8px;z-index:5}.skip:focus{top:6px}.site-header{height:80px;padding:0 clamp(20px,5vw,72px);border-bottom:1px solid var(--stroke);display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px}.brand strong{font:500 25px/1.2 Georgia,"Noto Serif CJK SC",serif;letter-spacing:-.05em;display:block}.brand small{display:block;color:var(--muted);font-size:11px}.monogram{height:37px;width:37px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:italic 24px Georgia,serif}.utilities{display:flex;align-items:center;gap:8px}.spec-label{font-size:10px;letter-spacing:.16em;color:var(--muted);margin-right:16px;font-weight:600}.separator{padding:0 7px}.utility{min-height:36px;min-width:36px;padding:5px 9px;background:transparent;color:var(--ink);border:1px solid var(--stroke);border-radius:8px}.utility:hover{background:var(--soft)}.page-shell{width:min(1080px,calc(100% - 40px));margin:0 auto;padding:clamp(40px,6vh,84px) 0 70px;flex:1}.eyebrow{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px}.circle{width:7px;height:7px;background:var(--accent);border-radius:50%}.eyebrow-divider{width:28px;height:1px;background:var(--stroke)}.layout{display:grid;grid-template-columns:minmax(0,1.32fr) minmax(260px,.78fr);gap:clamp(40px,6.3vw,96px);align-items:start}.editor-panel{min-width:0}.intro{margin-bottom:35px}.section-index{font-size:11px;color:var(--accent);font-weight:650;letter-spacing:.08em;margin:0 0 22px}.section-index span{margin-left:10px;color:var(--muted);font-weight:500}h1{font-family:"Noto Serif CJK SC","Noto Serif",Georgia,serif;font-size:clamp(30px,3.4vw,46px);line-height:1.3;font-weight:500;letter-spacing:-.035em;margin:0 0 14px;text-wrap:balance}h2{font-family:"Noto Serif CJK SC",Georgia,serif;font-size:27px;font-weight:500;margin:0 0 14px}p{margin:0}.intro>p:last-child,.context-top>p:last-child{max-width:43ch;color:var(--muted);font-size:14px;line-height:1.85}.field{margin-bottom:26px}.field label{display:flex;gap:9px;align-items:baseline;font-size:14px;font-weight:600}.required{color:var(--alert)}.optional{font-weight:400;color:var(--muted);font-size:12px}.field-hint{font-size:12px;color:var(--muted);margin:4px 0 11px}input[type=text],textarea{display:block;width:100%;background:var(--surface);color:var(--ink);border:1px solid var(--stroke);border-radius:11px;padding:12px 14px;min-height:49px;line-height:1.55;transition:border-color .15s ease;overflow-wrap:anywhere}textarea{resize:vertical;min-height:145px}input::placeholder,textarea::placeholder{color:var(--muted);opacity:.85}input:hover,textarea:hover{border-color:var(--muted)}[aria-invalid=true]{border-color:var(--alert)!important}.field-error{color:var(--alert);font-size:13px;margin:9px 0 0}.form-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px}.primary{background:var(--accent);color:var(--accent-ink);border:0;border-radius:9px;min-height:46px;padding:10px 18px;display:flex;gap:28px;align-items:center;font-weight:600}.primary:hover{background:var(--accent-hover)}.primary:disabled{opacity:.6;cursor:wait}.storage-note{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}.storage-dot{display:inline-block;width:7px;height:7px;background:var(--accent);border-radius:50%}.state-area{min-height:52px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:12px}.state-area p{color:inherit}.state-area[data-status=error]{color:var(--alert)}.state-area[data-status=saved]{color:var(--accent)}#retry{border:1px solid var(--stroke);color:var(--ink);background:var(--surface);border-radius:7px;padding:5px 12px;min-height:32px}.context-panel{border-left:1px solid var(--stroke);padding-left:clamp(30px,4vw,52px);min-width:0}.context-top{margin-bottom:36px}.recent-card{display:flex;gap:16px;align-items:flex-start;border-block:1px solid var(--stroke);padding:24px 0;min-width:0}.recent-icon{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--soft);color:var(--accent);font-size:20px}.recent-title{font-weight:600;font-size:14px;overflow-wrap:anywhere}.recent-meta{font-size:12px;color:var(--muted);margin-top:3px}.aside-footer{padding-top:22px;color:var(--muted);font-size:12px;max-width:32ch;line-height:1.75}.fixture-controls{min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px clamp(20px,5vw,72px);border-top:1px solid var(--stroke);font-size:11px;color:var(--muted)}.fixture-controls summary{cursor:pointer;font-weight:600;color:var(--ink)}.fixture-body{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:12px 0}.fixture-body button{background:var(--soft);border:1px solid var(--stroke);border-radius:8px;padding:6px 10px;color:var(--ink)}.fixture-body label{display:flex;align-items:center;gap:7px}.fixture-status{white-space:nowrap}@media (max-width:790px){.layout{grid-template-columns:1fr;gap:30px}.context-panel{border-left:0;border-top:1px solid var(--stroke);padding-left:0;padding-top:28px}.context-top{margin-bottom:14px}.recent-card{max-width:620px}.page-shell{padding-top:38px}.intro{margin-bottom:25px}}@media(max-width:450px){.site-header{height:66px;padding:0 16px}.spec-label{display:none}.page-shell{width:calc(100% - 32px);padding:26px 0 38px}.eyebrow{margin-bottom:23px;gap:8px}.section-index{margin-bottom:12px}h1{font-size:28px}.intro{margin-bottom:25px}.field{margin-bottom:23px}.storage-note{font-size:11px}.fixture-controls{padding:9px 16px;flex-wrap:wrap;gap:6px}.fixture-status{white-space:normal}.context-panel{padding-top:24px}}
++/* Keep the existing composition; give bilingual status and recovery text room to reflow. */
++[hidden] { display: none !important; }
++.utility { min-width: 44px; min-height: 44px; }
++.field-hint { font-size: 13px; line-height: 1.7; }
++input[type=text], textarea { font-size: 16px; }
++.primary { max-width: 100%; text-align: left; }
++.primary > span:first-child { overflow-wrap: anywhere; }
++.primary > span:last-child, .storage-dot { flex: none; }
++.primary:disabled { cursor: not-allowed; }
++.primary[aria-busy=true] { cursor: wait; }
++.storage-note { font-size: 12px; align-items: baseline; min-width: 0; }
++.save-hint { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.7; }
++.state-area {
++  min-height: 88px;
++  flex-direction: column;
++  align-items: flex-start;
++  gap: 12px;
++  margin-top: 16px;
++  padding-top: 14px;
++  border-top: 1px solid var(--stroke);
++  color: var(--ink);
++  font-size: 14px;
++  line-height: 1.7;
++  overflow-wrap: anywhere;
++}
++#save-status { width: 100%; min-width: 0; }
++#state-message { font-weight: 600; }
++.state-area .state-detail { margin-top: 4px; color: var(--muted); }
++.state-area[data-status=loaded], .state-area[data-status=readRecovered] { color: var(--accent); }
++#retry { min-height: 44px; max-width: 100%; padding: 8px 14px; text-align: left; }
++.recent-card > div:last-child { min-width: 0; }
++.recent-title, .recent-meta, .context-top, .aside-footer { overflow-wrap: anywhere; }
++.recent-meta, .aside-footer { font-size: 13px; line-height: 1.75; }
++.fixture-controls { font-size: 12px; }
++.fixture-controls details { min-width: 0; }
++.fixture-controls summary { padding: 10px 0; min-height: 44px; }
++.fixture-body { gap: 10px 16px; padding-top: 4px; }
++.fixture-body label { min-height: 44px; min-width: 0; }
++.fixture-body input { flex: none; }
++.fixture-body button { min-height: 44px; max-width: 100%; text-align: left; }
++.reset-hint { max-width: 65ch; padding: 0 0 12px; line-height: 1.7; overflow-wrap: anywhere; }
++:lang(zh-CN) .state-area, :lang(zh-CN) .save-hint { line-break: strict; }
++@media (max-width: 450px) {
++  .form-actions { gap: 12px; }
++  .storage-note { flex-basis: 100%; }
++  .state-area { min-height: 104px; }
++  .aside-footer { max-width: none; }
++  .fixture-controls { align-items: flex-start; }
++  .fixture-status { max-width: 100%; overflow-wrap: anywhere; }
++}
+ @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}

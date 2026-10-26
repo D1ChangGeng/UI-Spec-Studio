@@ -135,3 +135,19 @@ direction. Keep experience validity and expressive completion independently
 evidenced. Source-fidelity diagnostics compare a declared target; perceptual
 judgment evaluates actual quality. Authored time and live runtime retain their
 separate capture, playback and performance boundaries.
+
+## Connect intended experience to evidence and action
+
+Expand a compressed user request into revisable questions about people, objects,
+tasks and perceptual qualities. Keep the current user's intent, audience conventions
+and actual product observations distinct. Explain which text, view or behavior can
+resolve a consequential uncertainty, including version and platform conditions.
+
+Write depth as an adaptive capability: impact, uncertainty and improvement potential
+justify sustained exploration. A new finding should lead to a useful search,
+observation, comparison or trial. Distinguish independent sources from repeated
+listings and different design mechanisms from cosmetic variants. Express readiness
+for the next action: further research, a bounded trial or broader implementation.
+Tie convergence to supported decisions, with optional records that expose the
+important evidence and result. Research volume and fluent descriptions alone do
+not establish execution quality.

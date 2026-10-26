@@ -1,0 +1,88 @@
+{
+  "kind": "fresh-context forward application, not a controlled model comparison",
+  "prompt": "使用 /tmp/ui-spec-forward-1_12/ui-spec 的 UI Spec Studio 改进 /tmp/ui-spec-forward-1_12/content-editor/index.html。这个本地帮助文章编辑器已经选定现有结构和视觉方向。我想让保存状态与失败恢复的说明更清楚，并保证中英文在窄视口下都容易读懂。请基于现有实现完成必要修改和本地验证，保持内容读写与现有业务含义，不用重新选择整体产品方向。只在 /tmp/ui-spec-forward-1_12/content-editor/ 下工作，不发布外部服务。最后留下实际改动和验证记录。",
+  "input_context": "Complete frozen 29-file skill, ordinary task and runtime/browser/font paths. No maintainer diagnosis, expected copy, library choice or sibling result.",
+  "input_correction": "Initial setup supplied only HTML. The agent identified missing CSS/JS; the maintainer paused changes and supplied the original two files before any implementation edits. No behavior diagnosis was supplied.",
+  "baseline_commit": "2fc97a9a37f55e4d1a1d8c92eeeea04c0f272a1e",
+  "baseline_files": {
+    "index.html": "d8f65f613f388d77f94d073e6bf6ccef5a7aab47d4147b25615f4a7468960034",
+    "app.js": "8c3181ff6e6dcb364b6c0a543ee2b7a89145f0f687fc5dbaa588c6e7465a83dd",
+    "styles.css": "4840d6fe8a67579a9994871ac4997fb3b28ea844f60e394a28c230dfc59758d7"
+  },
+  "terminology": "The ordinary prompt called it a help-article editor; supplied source owned a research-note contract. The agent retained the actual business meaning.",
+  "final_source_sha256": {
+    "index.html": "e9822969c216e2d722a0c8c134eec2930468671e622471d00e6a37183a82b93b",
+    "styles.css": "92058281491237f5da41ee6bfd306f6b8f389fded4f966d34d9997e6c0d13400",
+    "app.js": "5f4affc74156492c058387dea004c9e1459bb45fd911612108c8a9152256b9c3"
+  },
+  "actual_result": {
+    "checks_passed": 113,
+    "captures": 72,
+    "browser": "143.0.7499.4",
+    "result": "pass",
+    "real_local_storage": true,
+    "faults": "Controlled browser Storage API injection and the existing preview toggle are separate paths."
+  },
+  "maintainer_review": {
+    "read": "Final app.js, source diff, author review and actual report; eight representative final images opened at original pixels.",
+    "images": [
+      {
+        "file": "views/zh-light-1280-empty.png",
+        "sha256": "5478e52851270fe14c65deabccd1d078ce8a4a43ecf833937e702b7e1f3061fc"
+      },
+      {
+        "file": "views/en-dark-390-long-saved.png",
+        "sha256": "706efcd1d6c661db01943ac264d3f404c0694de2af0d22df57dff444a7461200"
+      },
+      {
+        "file": "views/en-light-320-failure-context.png",
+        "sha256": "343e679ade2625cb8570d0061a4517707e9da118b090ce24e2d6ce0f14d36d16"
+      },
+      {
+        "file": "states/zh-dark-320-simulatedFailure.png",
+        "sha256": "0daabb1aa106ddaad7e6a838a28f41a4179c06774947eabcea638917c66bc490"
+      },
+      {
+        "file": "states/en-light-320-writeFailure.png",
+        "sha256": "cffecd45f1c6585485eec449452e69f5f67590ef942239c1d1929c6383770105"
+      },
+      {
+        "file": "states/zh-light-320-savedEarlier.png",
+        "sha256": "0eccd5a2e1867027392323110099b2952c5915d2877da1d58978dbbf783b26d1"
+      },
+      {
+        "file": "states/en-dark-320-readRecoveredDraft.png",
+        "sha256": "0c42e2634352e712904420bb0203a10579353d6dd8b5fe6d18b5d5ae6aed4631"
+      },
+      {
+        "file": "views/zh-dark-390-long-saved.png",
+        "sha256": "62944d184ca41bc5ba426c881d30f6ec4a4943cd0a0d903793c8f871c333c297"
+      }
+    ],
+    "finding": "No blocking issue observed within the sampled scope. The save result is separate from manual-storage scope; retry and recovery instructions remain beside the state; saved-snapshot and current-input meanings are explicit.",
+    "review_directed_repairs": []
+  },
+  "retained_files": {
+    "source": "content-application/",
+    "runtime_record": "content-runtime-checks.json",
+    "author_viewing": "content-author-visual-review.json",
+    "source_diff": "content-source-changes.txt",
+    "excluded_probe": "content-excluded-zoom-probe.json",
+    "representative_images": {
+      "views/zh-light-1280-empty.png": "content-wide.png",
+      "views/en-light-320-failure-context.png": "content-narrow-recovery.png",
+      "states/zh-light-320-savedEarlier.png": "content-saved-snapshot.png"
+    }
+  },
+  "limits": [
+    "Chromium desktop emulation only; no real mobile keyboard",
+    "DOM/live-region semantics checked; no screen-reader listening test",
+    "Ordered screenshots capture discrete states, not continuous playback",
+    "Storage faults injected at the browser API boundary; no real exhausted disk/quota",
+    "320 CSS-pixel reflow and text-spacing overrides checked; native browser zoom not tested",
+    "The complete set of 72 screenshots is not reproduced here; selected images, their identities and the executed record are retained.",
+    "The author viewed the final matrix; maintainer viewing is limited to the eight listed images.",
+    "No real-user understanding test, owner acceptance or external publication."
+  ],
+  "excluded_probe": "A CSS body zoom probe was found not to model native browser zoom and removed from acceptance; its original result remains preserved."
+}

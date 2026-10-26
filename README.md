@@ -11,7 +11,7 @@
 
 [简体中文](README.zh-CN.md) · [Guide](docs/GUIDE.md) · [Skill source](skills/ui-spec/SKILL.md) · [Releases](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
 
-A portable [Agent Skill](https://agentskills.io/specification) for **product interfaces, READMEs, documentation, diagrams and other screen-based work**. It helps agents carry mature design quality into the current product through active visual research, actual resource adoption, focused adaptation and verified implementation.
+A portable [Agent Skill](https://agentskills.io/specification) for **product interfaces, READMEs, documentation, diagrams and other screen-based work**. Understand the intended experience, investigate real evidence, compare mature work and carry its quality into a verified result.
 
 ## Start in your project
 
@@ -22,12 +22,20 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 Then give your coding agent a goal; a finished design brief is optional:
 
 ```text
-Use ui-spec. Understand this project and its audience.
-Find strong existing design references, choose a suitable foundation,
-and build the first reviewable SPEC. Show the result and your decisions.
+Use ui-spec. Understand this project, its audience and the experience they expect.
+Research the important questions, compare mature references and implementations,
+and build the first reviewable SPEC. Show the result and the evidence behind it.
 ```
 
 After reviewing, **“Approved, continue”** advances the next useful increment. **“Use ui-spec: finish”** connects an accepted design to its actual content, behavior and delivery boundary. [Installation and agent options](docs/INSTALL.md) · [Multi-round guide](docs/GUIDE.md)
+
+## Understand the experience before choosing the design
+
+“Like this product” can describe a familiar way of working, information structure, visual character or interaction detail. The agent develops a revisable interpretation, using your stated intent, relevant user experience and the reference product's actual behavior as distinct evidence.
+
+Research follows the **task, pages, states and their relationships**. Product documentation and user material explain meaning; rendered interfaces reveal visual craft; actual operation and continuous media reveal behavior over time. The useful version, platform and conditions follow the intended experience. Findings can change the product model, search direction or chosen resource.
+
+[Experience research and evidence planning](docs/EXPERIENCE-RESEARCH.md) · [Product alignment](docs/PRODUCT-ALIGNMENT.md)
 
 ## Visual material is part of the design
 
@@ -57,15 +65,19 @@ For **Expressive Contrast**, study functional experience, cross-domain expressio
 
 Review **experience validity** and **expressive completion** independently. Source fidelity protects selected or approved design details; perceptual inspection judges the rendered result. Authored timelines can support repeatable frame comparisons, while working products need actual interaction and runtime evidence. [Art direction and expressive design](docs/ART-DIRECTION.md)
 
-## Explore what the interface reveals
+## Explore until the important choices have evidence
 
-**Active Visual Exploration & Design Reconnaissance** turns research questions into actions: play a relevant demo, scroll through a layout, open a panel, switch states or compare component settings. New clues can change the search. Attribute each observation to its subject: the hosting page, media player, demonstrated application or content inside that application.
+**Evidence-driven exploration** connects a question to search, actual observation, comparison and the next useful question. Research effort follows design impact, uncertainty and potential improvement. A defining font, background or interaction can warrant sustained work across many independent sources; an established component can proceed with focused validation.
+
+Inspect materially different candidates and seek alternatives that could change the initial choice. Follow useful clues through playback, scrolling, state changes, source research and local trials. When access is incomplete, pursue legitimate alternative evidence and request focused user assistance where needed. Keep observed facts, source descriptions, professional judgments and remaining gaps identifiable.
 
 **Human-centered Visual Inspection & Perceptual Design Analysis** turns real viewing into design judgment. Start at normal scale with the whole impression and attention hierarchy; examine composition, functional regions and consequential component or asset details; then return to the whole. Choose relevant dimensions such as type, optical balance, color, material and motion to explain how the relationships create quality and which mature implementation can carry it.
 
 Review spans **the frame, the changing interaction and the connected journey**. Temporal Visual Inspection follows the trigger, first feedback, transition and settled outcome. Normal-speed observation establishes the overall experience; useful detail views and replay explain it before another contextual review. The behavior and decision determine depth.
 
-Recorded evidence, actual viewing and support for a dynamic conclusion are separate facts. Code, state and runtime measurements help explain causes and verify behavior. Research converges when consequential decisions have adequate evidence and a workable adaptation path. [Visual observation guide](docs/VISUAL-INSPECTION.md) · [Temporal review example](examples/temporal-review/README.md)
+Judge evidence through coverage, detail, time, relevance and reliability. Continue where a gap or a better candidate could change the choice; trial a supported direction; expand after consequential fit is demonstrated. Search counts and elapsed time describe effort, while the decision rests on what the evidence establishes.
+
+[Research method](docs/EXPERIENCE-RESEARCH.md) · [Visual observation](docs/VISUAL-INSPECTION.md) · [Temporal example](examples/temporal-review/README.md)
 
 ## Words are part of the interface
 
@@ -122,7 +134,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.11.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

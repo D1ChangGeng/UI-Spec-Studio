@@ -96,7 +96,7 @@ Read the accepted model, primary action/result loop, retained context and scoped
 
 Resolve consequential decisions from the studied relationship through the selected implementation resource and adaptation to the real component/adapter and visible state. Check resumed work, pending results, permissions and durable outcomes against the experience target. When runtime constraints change the model or key interaction, reopen that decision with evidence and the appropriate owner; continue unaffected integration.
 
-Handover includes the current preview, design/resource map, actual approval source, connected task outcomes and observed conditions. The next developer can then distinguish a studied reference, adopted implementation and accepted product result.
+Handover includes the current preview, experience questions, design/resource map, actual approval source, connected task outcomes and observed conditions. Preserve why the chosen reference fits this user, task and platform. Runtime findings can reopen experience understanding, resource choice or adaptation at the responsible layer. The next developer can distinguish a studied reference, adopted implementation and accepted product result.
 
 ## Preserve the foundation through real integration
 

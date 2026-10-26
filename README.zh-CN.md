@@ -11,7 +11,7 @@
 
 [English](README.md) · [使用指南](docs/GUIDE.md) · [Skill 源码](skills/ui-spec/SKILL.md) · [正式版本](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
 
-适用于**应用界面、README、文档、图表、演示文稿**等屏幕视觉作品的通用 [Agent Skill](https://agentskills.io/specification)。Agent 从产品意图出发，通过主动视觉探索、实际资源采用、针对性适配与运行验证，让成熟设计品质进入当前产品。
+适用于**应用界面、README、文档、图表、演示文稿**等屏幕视觉作品的通用 [Agent Skill](https://agentskills.io/specification)。理解用户期待的体验，深入研究真实证据，比较并采用成熟成果，在实际使用中检验品质。
 
 ## 在项目中直接开始
 
@@ -22,12 +22,20 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 随后向编程 Agent 说明目标即可，设计方向可以由 Agent 主动研究：
 
 ```text
-使用 ui-spec，理解当前项目、目标用户和主要使用场景。
-主动寻找成熟的设计参考与实现，选择最适合的设计基础，
-完成第一份可审阅的 SPEC，并展示实际结果和关键选型依据。
+使用 ui-spec，理解当前项目、目标用户及其期待的体验。
+研究重要问题，比较成熟设计参照与可采用的实现，
+完成第一份可审阅的 SPEC，展示实际结果和关键证据。
 ```
 
 审阅通过后，只需说 **「本轮通过，继续」**，Agent 就会推进下一项有价值的工作；使用 **「ui-spec: finish」**，则会将已确认的设计接入真实内容、功能或作品的发布环境。[安装与宿主选项](docs/INSTALL.md) · [多轮使用指南](docs/GUIDE.md)
+
+## 先理解体验，再选择设计
+
+「像某个产品」可能指熟悉的工作方式、信息组织、视觉气质或交互细节。Agent 先形成可修正的理解，分别研究当前用户的明确意图、相关用户经验与参考产品的真实表现。
+
+研究围绕**任务、页面、状态及其关系**展开。产品资料与用户材料解释含义，真实界面揭示视觉品质，实际操作与连续画面呈现时间体验。参考版本、平台和使用条件由目标体验决定，新的发现可以改变产品模型、搜索方向或资源选择。
+
+[体验研究与证据规划](docs/EXPERIENCE-RESEARCH.md) · [产品对齐方法](docs/PRODUCT-ALIGNMENT.md)
 
 ## 视觉素材与界面共同设计
 
@@ -55,15 +63,19 @@ Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付�
 
 **体验成立性**与**表达完成度**分别审阅。源设计保真保护已采用或确认的细节，感知评估判断真实呈现；作者时间轴支持可重复的画面比较，真实产品另需实际操作与运行证据。[艺术指导与表达性设计](docs/ART-DIRECTION.md)
 
-## 沿着界面线索主动深入探索
+## 持续探索，让重要选择有据可依
 
-**Active Visual Exploration & Design Reconnaissance**（主动视觉探索与设计研究）将研究问题转为行动：播放相关演示、实际滚动、展开面板、切换状态或比较组件参数。新线索可以改变搜索方向。每项观察都明确归属：承载页面、播放器、演示中的应用，或应用内展示的作品。
+**证据驱动探索**连接研究问题、搜索、实际观察、候选比较与下一项问题。投入由设计影响、不确定性和潜在改进价值决定。一个决定产品气质的字体、背景或交互可以获得跨大量独立来源的持续研究；已有可靠依据的常规组件可以较快进入验证。
+
+比较具有实质差异的候选，主动寻找可能改变初始选择的方案。沿着新线索播放、滚动、切换状态、研究实现并局部试装。访问不完整时继续寻找合理的替代证据，必要时请求具体取材协助。实际观察、资料描述、专业判断与剩余缺口分别保留依据。
 
 **Human-centered Visual Inspection & Perceptual Design Analysis**（面向人类视觉感知的观察与设计分析）将真实观看转为专业判断。从正常尺度下的整体印象与注意力层级开始，深入构图、功能区域及重要组件或素材细节，再回到完整界面。按问题选择排版、光学平衡、色彩、材质和动效等维度，理解品质如何形成，并据此选择能够承接这些关系的成熟实现。
 
 观察覆盖**单个画面、连续变化与完整使用旅程**。时序视觉观察跟随触发、首次反馈、过渡与稳定结果；先以正常速度理解体验，再通过有价值的细节观察与重放分析原因，最后回到完整过程判断。行为与设计影响决定观察深度。
 
-已经采集、实际查看和足以支持动态结论，分别说明其事实。代码、状态与运行数据帮助解释原因和验证行为。当重要选择已有足够依据、资源具备适配路径时，研究进入实现与复验。[视觉观察指南](docs/VISUAL-INSPECTION.md) · [时序观察样例](examples/temporal-review/README.md)
+从覆盖、细节、时间、相关性和可靠性判断证据。可能改变选择的缺口继续研究；已有依据的方向进入试装；关键适配成立后扩大实现。搜索次数和用时描述投入，证据实际回答了什么决定下一步。
+
+[研究方法](docs/EXPERIENCE-RESEARCH.md) · [视觉观察](docs/VISUAL-INSPECTION.md) · [时序样例](examples/temporal-review/README.md)
 
 ## 文字内容也是完整的 UI 设计对象
 
@@ -120,7 +132,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.11.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

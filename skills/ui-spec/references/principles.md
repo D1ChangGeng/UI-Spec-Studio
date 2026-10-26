@@ -48,7 +48,7 @@ Choose lenses by object and decision; investigate their relationships without in
 | States and movement | Focus/selection, feedback, trajectory, speed, settling and object continuity |
 | System and identity | Related type, density, color, material, icon and interaction choices across views |
 
-A favicon needs silhouette, negative space and recognition at tab size; a three-pane workspace needs allocation, density and reading continuity. Reuse established judgments where conditions match. Deepen observation when it can change selection, adaptation or acceptance.
+A favicon needs silhouette, negative space and recognition at tab size; a three-pane workspace needs allocation, density and reading continuity. Reuse established judgments where conditions match. Compare important candidates through materially different relationships at comparable content, scale and completion; explain which difference changes selection or adaptation. Deepen observation where the target's quality remains uncertain.
 
 ## 1. Hierarchy follows meaning
 

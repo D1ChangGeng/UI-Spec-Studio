@@ -1,8 +1,23 @@
 # UI SPEC project brief
 
+Use the portions that clarify this task, or equivalent existing notes. This is an
+optional aid; confirmed facts, useful questions and next actions matter more than fields.
+
 ## Product and people
 
 Purpose, audience, use context, primary tasks and observable success.
+
+## Intended experience and evidence questions
+
+What the current user explicitly expects; what relevant audience evidence suggests;
+what the reference product actually shows. Expand named products into task,
+information, visual and temporal relationships, with the pertinent version/platform.
+Separate confirmed goals, supported conventions, provisional hypotheses and gaps.
+
+Map consequential parts, states, journeys and their relationships to the textual,
+visual or behavioral evidence needed. State what discovery could change the next
+choice. Allocate research by impact, uncertainty and plausible improvement; carry
+the evolving experience model in the existing design record.
 
 ## Current project
 

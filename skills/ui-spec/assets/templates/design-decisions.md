@@ -1,5 +1,8 @@
 # Design decisions and resource map
 
+Use only the portions needed for consequential choices, or equivalent existing
+records. Keep representative evidence and decision changes rather than a search log.
+
 ## Product and scope
 
 Task and audience; requested redesign scope; current business/engineering facts.
@@ -7,6 +10,20 @@ Primary working object, first meaningful action, repeated loop, continuation and
 result location. State the target experience with or without a named product
 reference. Expand names or style descriptions into the relevant task, surface,
 state and relationship. Separate observations, inferred model and open intent.
+
+Keep current-user intent, audience conventions and actual product practice distinct.
+Identify the version, platform, role and conditions relevant to the target experience.
+
+## Research question and evidence plan
+
+Link the experience hypothesis to important parts, states, journeys and relationships.
+Explain which text, rendered view or interaction can answer each consequential
+question. Keep source statements, actual observations, interpretations and missing
+evidence distinguishable. Name a finding that could change the current choice.
+
+Record the significant discovery, its effect on understanding and the next useful
+search, observation, comparison or trial. Independent origins and materially different
+design relationships establish breadth; repeated listings retain their common lineage.
 
 ## Direction and authority
 
@@ -34,6 +51,10 @@ research question, useful clue/action and conclusion: observed phenomenon,
 likely perceptual effect, underlying relationship and what this product inherits.
 Attribute evidence to its carrier page, player, depicted product UI or displayed
 work; retain edited-demo or actual-operation context where it changes the claim.
+
+Compare alternatives under corresponding content, scale, theme and state. Explain
+the competing strengths, the evidence behind the current preference and unresolved
+tradeoffs. Preserve a promising unexamined direction when it could close a quality gap.
 
 ## Reuse assessment
 
@@ -73,6 +94,11 @@ endpoint and which temporal questions remain open. Distinguish media acquired,
 actually examined content and conclusions it can support. Record sufficient,
 partial and missing evidence by decision impact; carry remaining questions into
 the runnable slice and re-answer them under current product conditions.
+
+Choose further research, a bounded trial or broader implementation from current
+evidence maturity. Consider breadth, depth, temporal coverage, relevance and reliability
+together. State which open question could overturn the decision and how the next
+action will resolve or contain it. User approval keeps its actual scope.
 
 ## Asset production and placement
 

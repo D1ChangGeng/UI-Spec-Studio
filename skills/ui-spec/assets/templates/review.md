@@ -66,6 +66,13 @@ which conclusion remains unsupported. For adoption, identify the source and mech
 actually retained in the current implementation, local trial scope and expanded verification.
 Existing notes can carry this optional record.
 
+For a research or selection decision, assess coverage breadth, inspection depth,
+temporal completeness, relevance and reliability together. Identify evidence that
+changed the experience hypothesis or candidate choice; keep unobserved conditions
+and material disagreements visible. Explain whether the next useful action is
+further discovery, a bounded trial or broader implementation. An accomplished
+search sequence alone does not establish design readiness.
+
 ## Content review
 
 Identify the current task question, intended message, source fact, actual wording/state, typography/layout result, locale coverage and observed behavior. Scope editorial judgment, user comprehension and business approval separately.

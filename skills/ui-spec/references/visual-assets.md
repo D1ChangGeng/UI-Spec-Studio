@@ -29,7 +29,7 @@ Use this as a connected classification rather than a demand to include every fam
 
 ## Research, compare and choose a production route
 
-Study exact candidates, production examples, actual files and rights-bearing sources. Attribute observed qualities to their object: artwork inside a demo can inform content or lettering, while application chrome informs UI language. A moodboard supplies direction; the original source supplies provenance. Keep observed, inferred, usable and accepted status distinct.
+Study exact candidates, production examples, actual files and rights-bearing sources. A small defining asset can justify sustained cross-domain research when impact, uncertainty and improvement potential are high; follow the [discovery method](component-sourcing.md). Attribute qualities to their object: artwork informs content or lettering, application chrome informs UI. A moodboard supplies direction; original sources supply provenance. Keep observed, inferred, usable and accepted status distinct.
 
 Use the [multiscale method](principles.md): inspect composition, relationships and details, then return to the intended placement. Rotate spatial previews, vary relevant parameters and play meaningful cycles. Translate line tension, optical center, lettering, light and continuity into a product-specific brief. Compare material alone and beside actual text/controls; a refined asset can still overpower its neighbors. Third-party marks retain their approved identity and permitted variations.
 

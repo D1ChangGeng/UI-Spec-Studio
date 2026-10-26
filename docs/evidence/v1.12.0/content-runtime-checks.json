@@ -1,0 +1,1537 @@
+{
+  "checks": [
+    "zh-light-320 empty: no page or text/control horizontal overflow",
+    "zh-light-320: atomic polite status region",
+    "zh-light-320: missing title identifies and focuses the required field; no write",
+    "zh-light-320: first edit reports unsaved and does not autosave",
+    "zh-light-320: pending save commits its snapshot once; later input is retained",
+    "zh-light-320: second manual save commits the new edit",
+    "zh-light-320: reload restores the unchanged title/body schema",
+    "zh-light-320: fixture failure explains the enabled simulation",
+    "zh-light-320: failure leaves the earlier saved note unchanged",
+    "zh-light-320 failure: no page or text/control horizontal overflow",
+    "zh-light-320: switching languages retains authored text and recovery state",
+    "zh-light-320: visible retry saves retained input and returns focus to a usable field",
+    "zh-light-320: actual exception path does not claim a simulated failure",
+    "zh-light-320: injected write exception does not overwrite stored data",
+    "zh-light-320: failed clear retains stored data",
+    "zh-light-320: clear removes only this demo note and clears its fields",
+    "zh-light-320: read recovery preserves a typed draft and the stored note separately",
+    "zh-light-320 recovered read: no page or text/control horizontal overflow",
+    "zh-light-320: malformed stored data is not overwritten or cleared",
+    "zh-light-320: retry can recover externally repaired data without discarding current input",
+    "zh-light-390 initial: no page or text/control horizontal overflow",
+    "zh-light-390 long saved title: no page or text/control horizontal overflow",
+    "zh-light-390 text-spacing override: no page or text/control horizontal overflow",
+    "zh-light-1280 initial: no page or text/control horizontal overflow",
+    "zh-light-1280 long saved title: no page or text/control horizontal overflow",
+    "zh-light-1280 text-spacing override: no page or text/control horizontal overflow",
+    "zh-dark-320 empty: no page or text/control horizontal overflow",
+    "zh-dark-320: atomic polite status region",
+    "zh-dark-320: missing title identifies and focuses the required field; no write",
+    "zh-dark-320: first edit reports unsaved and does not autosave",
+    "zh-dark-320: pending save commits its snapshot once; later input is retained",
+    "zh-dark-320: second manual save commits the new edit",
+    "zh-dark-320: reload restores the unchanged title/body schema",
+    "zh-dark-320: fixture failure explains the enabled simulation",
+    "zh-dark-320: failure leaves the earlier saved note unchanged",
+    "zh-dark-320 failure: no page or text/control horizontal overflow",
+    "zh-dark-320: switching languages retains authored text and recovery state",
+    "zh-dark-320: visible retry saves retained input and returns focus to a usable field",
+    "zh-dark-320: actual exception path does not claim a simulated failure",
+    "zh-dark-320: injected write exception does not overwrite stored data",
+    "zh-dark-320: failed clear retains stored data",
+    "zh-dark-320: clear removes only this demo note and clears its fields",
+    "zh-dark-320: read recovery preserves a typed draft and the stored note separately",
+    "zh-dark-320 recovered read: no page or text/control horizontal overflow",
+    "zh-dark-320: malformed stored data is not overwritten or cleared",
+    "zh-dark-320: retry can recover externally repaired data without discarding current input",
+    "zh-dark-390 initial: no page or text/control horizontal overflow",
+    "zh-dark-390 long saved title: no page or text/control horizontal overflow",
+    "zh-dark-390 text-spacing override: no page or text/control horizontal overflow",
+    "zh-dark-1280 initial: no page or text/control horizontal overflow",
+    "zh-dark-1280 long saved title: no page or text/control horizontal overflow",
+    "zh-dark-1280 text-spacing override: no page or text/control horizontal overflow",
+    "en-light-320 empty: no page or text/control horizontal overflow",
+    "en-light-320: atomic polite status region",
+    "en-light-320: missing title identifies and focuses the required field; no write",
+    "en-light-320: first edit reports unsaved and does not autosave",
+    "en-light-320: pending save commits its snapshot once; later input is retained",
+    "en-light-320: second manual save commits the new edit",
+    "en-light-320: reload restores the unchanged title/body schema",
+    "en-light-320: fixture failure explains the enabled simulation",
+    "en-light-320: failure leaves the earlier saved note unchanged",
+    "en-light-320 failure: no page or text/control horizontal overflow",
+    "en-light-320: switching languages retains authored text and recovery state",
+    "en-light-320: visible retry saves retained input and returns focus to a usable field",
+    "en-light-320: actual exception path does not claim a simulated failure",
+    "en-light-320: injected write exception does not overwrite stored data",
+    "en-light-320: failed clear retains stored data",
+    "en-light-320: clear removes only this demo note and clears its fields",
+    "en-light-320: read recovery preserves a typed draft and the stored note separately",
+    "en-light-320 recovered read: no page or text/control horizontal overflow",
+    "en-light-320: malformed stored data is not overwritten or cleared",
+    "en-light-320: retry can recover externally repaired data without discarding current input",
+    "en-light-390 initial: no page or text/control horizontal overflow",
+    "en-light-390 long saved title: no page or text/control horizontal overflow",
+    "en-light-390 text-spacing override: no page or text/control horizontal overflow",
+    "en-light-1280 initial: no page or text/control horizontal overflow",
+    "en-light-1280 long saved title: no page or text/control horizontal overflow",
+    "en-light-1280 text-spacing override: no page or text/control horizontal overflow",
+    "en-dark-320 empty: no page or text/control horizontal overflow",
+    "en-dark-320: atomic polite status region",
+    "en-dark-320: missing title identifies and focuses the required field; no write",
+    "en-dark-320: first edit reports unsaved and does not autosave",
+    "en-dark-320: pending save commits its snapshot once; later input is retained",
+    "en-dark-320: second manual save commits the new edit",
+    "en-dark-320: reload restores the unchanged title/body schema",
+    "en-dark-320: fixture failure explains the enabled simulation",
+    "en-dark-320: failure leaves the earlier saved note unchanged",
+    "en-dark-320 failure: no page or text/control horizontal overflow",
+    "en-dark-320: switching languages retains authored text and recovery state",
+    "en-dark-320: visible retry saves retained input and returns focus to a usable field",
+    "en-dark-320: actual exception path does not claim a simulated failure",
+    "en-dark-320: injected write exception does not overwrite stored data",
+    "en-dark-320: failed clear retains stored data",
+    "en-dark-320: clear removes only this demo note and clears its fields",
+    "en-dark-320: read recovery preserves a typed draft and the stored note separately",
+    "en-dark-320 recovered read: no page or text/control horizontal overflow",
+    "en-dark-320: malformed stored data is not overwritten or cleared",
+    "en-dark-320: retry can recover externally repaired data without discarding current input",
+    "en-dark-390 initial: no page or text/control horizontal overflow",
+    "en-dark-390 long saved title: no page or text/control horizontal overflow",
+    "en-dark-390 text-spacing override: no page or text/control horizontal overflow",
+    "en-dark-1280 initial: no page or text/control horizontal overflow",
+    "en-dark-1280 long saved title: no page or text/control horizontal overflow",
+    "en-dark-1280 text-spacing override: no page or text/control horizontal overflow",
+    "maximum permitted 150/3000 character fields save without a schema change",
+    "320×480 maximum-length content: no page or text/control horizontal overflow",
+    "maximum permitted content survives actual reload",
+    "clearing while pending cancels the delayed write; removed content does not reappear",
+    "keyboard skip link reaches the main editor",
+    "reduced-motion preference removes the input transition",
+    "no JavaScript page errors",
+    "no browser console errors",
+    "no external network requests from the editor"
+  ],
+  "captures": [
+    {
+      "file": "verification/results/views/zh-light-320-empty.png",
+      "case": "zh-light-320",
+      "state": "empty",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        111.5,
+        155.5
+      ],
+      "status": "尚未保存笔记\n\n内容不会自动保存，请先填写标题。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-edited.png",
+      "case": "zh-light-320",
+      "state": "edited",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        303.6000000014901,
+        376.69999999925494
+      ],
+      "status": "有尚未保存的修改\n\n当前修改仍只在此页。刷新或关闭页面前，请先保存。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-saving.png",
+      "case": "zh-light-320",
+      "state": "saving",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 625,
+      "capture_bracket_ms": [
+        536.1000000014901,
+        605.5
+      ],
+      "status": "正在保存到此浏览器…\n\n可以继续编辑；新修改需再次保存。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-savedEarlier.png",
+      "case": "zh-light-320",
+      "state": "savedEarlier",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 57,
+      "capture_bracket_ms": [
+        1536.9000000022352,
+        1606.699999999255
+      ],
+      "status": "已保存点击时的版本\n\n保存期间的新修改尚未保存。请再次保存，更新本地版本。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-saved.png",
+      "case": "zh-light-320",
+      "state": "saved",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 629,
+      "capture_bracket_ms": [
+        1886.4000000022352,
+        1957.699999999255
+      ],
+      "status": "已保存到此浏览器\n\n重新打开此页时，会载入这份笔记。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-loaded.png",
+      "case": "zh-light-320",
+      "state": "loaded",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 455,
+      "capture_bracket_ms": [
+        117.5,
+        188.89999999850988
+      ],
+      "status": "已载入上次保存的笔记\n\n可以继续编辑；修改后需要再次保存。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-simulatedFailure.png",
+      "case": "zh-light-320",
+      "state": "simulatedFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 629,
+      "capture_bracket_ms": [
+        500.30000000074506,
+        570.3999999985099
+      ],
+      "status": "本次模拟保存失败\n\n输入仍在此页，尚未保存。在「预览状态设置」中关闭「模拟写入失败」，再重试保存。离开此页前请先保存或复制文本。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-light-320-failure-context.png",
+      "case": "zh-light-320",
+      "state": "failure-context",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 629,
+      "capture_bracket_ms": [
+        584.6999999992549,
+        617.3999999985099
+      ],
+      "status": "本次模拟保存失败\n\n输入仍在此页，尚未保存。在「预览状态设置」中关闭「模拟写入失败」，再重试保存。离开此页前请先保存或复制文本。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-writeFailure.png",
+      "case": "zh-light-320",
+      "state": "writeFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 25,
+      "capture_bracket_ms": [
+        1184.5999999977648,
+        1274.800000000745
+      ],
+      "status": "保存未完成\n\n输入仍在此页，尚未保存。请重试；若仍失败，先复制文本备份，再检查浏览器的存储设置。刷新或关闭页面会丢失未保存的修改。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-clearFailure.png",
+      "case": "zh-light-320",
+      "state": "clearFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 647,
+      "capture_bracket_ms": [
+        1554.0999999977648,
+        1620.699999999255
+      ],
+      "status": "未能清除本地演示数据\n\n当前输入仍在此页。可以重试清除；需要保留的文本请先复制备份。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-resetDone.png",
+      "case": "zh-light-320",
+      "state": "resetDone",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        1718.300000000745,
+        1789.3999999985099
+      ],
+      "status": "本地演示数据已清除\n\n已保存的笔记和当前输入均已清空，可以开始新笔记。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-readFailure.png",
+      "case": "zh-light-320",
+      "state": "readFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 25,
+      "capture_bracket_ms": [
+        113.40000000223517,
+        185.30000000074506
+      ],
+      "status": "暂时无法读取已保存的笔记\n\n保存已暂停，以免覆盖未能读取的内容。请重试读取；当前输入仍在此页，离开前请先复制备份。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-readRecoveredDraft.png",
+      "case": "zh-light-320",
+      "state": "readRecoveredDraft",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 25,
+      "capture_bracket_ms": [
+        295.70000000298023,
+        367
+      ],
+      "status": "已恢复读取，当前输入已保留\n\n「最近保存」显示上次保存的标题。再次保存会用当前输入替换已保存的笔记。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-light-320-invalidStored.png",
+      "case": "zh-light-320",
+      "state": "invalidStored",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 25,
+      "capture_bracket_ms": [
+        92.80000000074506,
+        163.80000000074506
+      ],
+      "status": "已保存的笔记格式无法识别\n\n保存已暂停。可先重试读取；若仍失败，先复制当前输入，再到「预览状态设置」清除本地演示数据。清除也会清空当前输入。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-light-390-empty.png",
+      "case": "zh-light-390",
+      "state": "empty",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        58.400000002235174,
+        96.80000000074506
+      ],
+      "status": "尚未保存笔记\n\n内容不会自动保存，请先填写标题。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-light-390-long-saved.png",
+      "case": "zh-light-390",
+      "state": "long-saved",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 354,
+      "capture_bracket_ms": [
+        413.1000000014901,
+        450.5
+      ],
+      "status": "已保存到此浏览器\n\n重新打开此页时，会载入这份笔记。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-light-1280-empty.png",
+      "case": "zh-light-1280",
+      "state": "empty",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        59.899999998509884,
+        114
+      ],
+      "status": "尚未保存笔记\n\n内容不会自动保存，请先填写标题。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-light-1280-long-saved.png",
+      "case": "zh-light-1280",
+      "state": "long-saved",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "scroll_y": 177,
+      "capture_bracket_ms": [
+        425.5,
+        495.79999999701977
+      ],
+      "status": "已保存到此浏览器\n\n重新打开此页时，会载入这份笔记。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-dark-320-empty.png",
+      "case": "zh-dark-320",
+      "state": "empty",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        92.5,
+        124.89999999850988
+      ],
+      "status": "尚未保存笔记\n\n内容不会自动保存，请先填写标题。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-edited.png",
+      "case": "zh-dark-320",
+      "state": "edited",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        252.80000000074506,
+        320.8999999985099
+      ],
+      "status": "有尚未保存的修改\n\n当前修改仍只在此页。刷新或关闭页面前，请先保存。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-saving.png",
+      "case": "zh-dark-320",
+      "state": "saving",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 625,
+      "capture_bracket_ms": [
+        484.6000000014901,
+        554.1999999992549
+      ],
+      "status": "正在保存到此浏览器…\n\n可以继续编辑；新修改需再次保存。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-savedEarlier.png",
+      "case": "zh-dark-320",
+      "state": "savedEarlier",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 57,
+      "capture_bracket_ms": [
+        1484.6000000014901,
+        1555.300000000745
+      ],
+      "status": "已保存点击时的版本\n\n保存期间的新修改尚未保存。请再次保存，更新本地版本。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-saved.png",
+      "case": "zh-dark-320",
+      "state": "saved",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 629,
+      "capture_bracket_ms": [
+        1818.1000000014901,
+        1887.1000000014901
+      ],
+      "status": "已保存到此浏览器\n\n重新打开此页时，会载入这份笔记。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-loaded.png",
+      "case": "zh-dark-320",
+      "state": "loaded",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        105.90000000223517,
+        178.5
+      ],
+      "status": "已载入上次保存的笔记\n\n可以继续编辑；修改后需要再次保存。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-simulatedFailure.png",
+      "case": "zh-dark-320",
+      "state": "simulatedFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 629,
+      "capture_bracket_ms": [
+        471.5,
+        544.4000000022352
+      ],
+      "status": "本次模拟保存失败\n\n输入仍在此页，尚未保存。在「预览状态设置」中关闭「模拟写入失败」，再重试保存。离开此页前请先保存或复制文本。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-dark-320-failure-context.png",
+      "case": "zh-dark-320",
+      "state": "failure-context",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 629,
+      "capture_bracket_ms": [
+        553.5,
+        589
+      ],
+      "status": "本次模拟保存失败\n\n输入仍在此页，尚未保存。在「预览状态设置」中关闭「模拟写入失败」，再重试保存。离开此页前请先保存或复制文本。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-writeFailure.png",
+      "case": "zh-dark-320",
+      "state": "writeFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 25,
+      "capture_bracket_ms": [
+        1106.5,
+        1178.6000000014901
+      ],
+      "status": "保存未完成\n\n输入仍在此页，尚未保存。请重试；若仍失败，先复制文本备份，再检查浏览器的存储设置。刷新或关闭页面会丢失未保存的修改。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-clearFailure.png",
+      "case": "zh-dark-320",
+      "state": "clearFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 647,
+      "capture_bracket_ms": [
+        1455.9000000022352,
+        1526.9000000022352
+      ],
+      "status": "未能清除本地演示数据\n\n当前输入仍在此页。可以重试清除；需要保留的文本请先复制备份。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-resetDone.png",
+      "case": "zh-dark-320",
+      "state": "resetDone",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        1623.1000000014901,
+        1693.1000000014901
+      ],
+      "status": "本地演示数据已清除\n\n已保存的笔记和当前输入均已清空，可以开始新笔记。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-readFailure.png",
+      "case": "zh-dark-320",
+      "state": "readFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 25,
+      "capture_bracket_ms": [
+        157.10000000149012,
+        228.60000000149012
+      ],
+      "status": "暂时无法读取已保存的笔记\n\n保存已暂停，以免覆盖未能读取的内容。请重试读取；当前输入仍在此页，离开前请先复制备份。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-readRecoveredDraft.png",
+      "case": "zh-dark-320",
+      "state": "readRecoveredDraft",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 25,
+      "capture_bracket_ms": [
+        341.8999999985099,
+        409.5
+      ],
+      "status": "已恢复读取，当前输入已保留\n\n「最近保存」显示上次保存的标题。再次保存会用当前输入替换已保存的笔记。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/zh-dark-320-invalidStored.png",
+      "case": "zh-dark-320",
+      "state": "invalidStored",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 25,
+      "capture_bracket_ms": [
+        137.59999999776483,
+        209
+      ],
+      "status": "已保存的笔记格式无法识别\n\n保存已暂停。可先重试读取；若仍失败，先复制当前输入，再到「预览状态设置」清除本地演示数据。清除也会清空当前输入。",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-dark-390-empty.png",
+      "case": "zh-dark-390",
+      "state": "empty",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        87.59999999776483,
+        118.29999999701977
+      ],
+      "status": "尚未保存笔记\n\n内容不会自动保存，请先填写标题。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-dark-390-long-saved.png",
+      "case": "zh-dark-390",
+      "state": "long-saved",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 354,
+      "capture_bracket_ms": [
+        447.5999999977648,
+        485.19999999925494
+      ],
+      "status": "已保存到此浏览器\n\n重新打开此页时，会载入这份笔记。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-dark-1280-empty.png",
+      "case": "zh-dark-1280",
+      "state": "empty",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        104,
+        164
+      ],
+      "status": "尚未保存笔记\n\n内容不会自动保存，请先填写标题。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/zh-dark-1280-long-saved.png",
+      "case": "zh-dark-1280",
+      "state": "long-saved",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "zh-CN",
+      "theme": "dark",
+      "scroll_y": 177,
+      "capture_bracket_ms": [
+        495.30000000074506,
+        558.6000000014901
+      ],
+      "status": "已保存到此浏览器\n\n重新打开此页时，会载入这份笔记。",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-light-320-empty.png",
+      "case": "en-light-320",
+      "state": "empty",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        110.40000000223517,
+        136
+      ],
+      "status": "No note saved yet\n\nAdd a title to begin. Changes are not saved automatically.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-edited.png",
+      "case": "en-light-320",
+      "state": "edited",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 91,
+      "capture_bracket_ms": [
+        235.5,
+        305.4000000022352
+      ],
+      "status": "You have unsaved changes\n\nThese edits are only on this page. Save before refreshing or closing it.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-saving.png",
+      "case": "en-light-320",
+      "state": "saving",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 312,
+      "capture_bracket_ms": [
+        468.6000000014901,
+        555.3000000007451
+      ],
+      "status": "Saving in this browser…\n\nYou can keep editing. Changes made during this save will need another save.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-savedEarlier.png",
+      "case": "en-light-320",
+      "state": "savedEarlier",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 312,
+      "capture_bracket_ms": [
+        1468.300000000745,
+        1537.7000000029802
+      ],
+      "status": "The version you submitted was saved\n\nEdits made while saving are still unsaved. Save again to keep those changes.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-saved.png",
+      "case": "en-light-320",
+      "state": "saved",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 312,
+      "capture_bracket_ms": [
+        1805.9000000022352,
+        1872.300000000745
+      ],
+      "status": "Saved in this browser\n\nReopen this page to continue editing this note.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-loaded.png",
+      "case": "en-light-320",
+      "state": "loaded",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 91,
+      "capture_bracket_ms": [
+        117.19999999925494,
+        186.30000000074506
+      ],
+      "status": "Last saved note loaded\n\nContinue editing. Save again to keep any changes.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-simulatedFailure.png",
+      "case": "en-light-320",
+      "state": "simulatedFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 635,
+      "capture_bracket_ms": [
+        498.80000000074506,
+        571
+      ],
+      "status": "This save failure was simulated\n\nYour text is still here and is unsaved. Turn off \"Simulate a write failure\" in \"Preview state controls\", then try saving again. Save or copy your text before leaving.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-light-320-failure-context.png",
+      "case": "en-light-320",
+      "state": "failure-context",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 635,
+      "capture_bracket_ms": [
+        580.6999999992549,
+        618.6000000014901
+      ],
+      "status": "This save failure was simulated\n\nYour text is still here and is unsaved. Turn off \"Simulate a write failure\" in \"Preview state controls\", then try saving again. Save or copy your text before leaving.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-writeFailure.png",
+      "case": "en-light-320",
+      "state": "writeFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 205,
+      "capture_bracket_ms": [
+        1149.1000000014901,
+        1219.199999999255
+      ],
+      "status": "The note could not be saved\n\nYour text is still here and is unsaved. Try again. If it still fails, copy your text before checking browser storage settings. Refreshing or closing the page loses unsaved edits.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-clearFailure.png",
+      "case": "en-light-320",
+      "state": "clearFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 887,
+      "capture_bracket_ms": [
+        1499.9000000022352,
+        1569.199999999255
+      ],
+      "status": "Local demo data could not be cleared\n\nYour current text is still here. Try clearing again. Copy any text you want to keep first.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-resetDone.png",
+      "case": "en-light-320",
+      "state": "resetDone",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 91,
+      "capture_bracket_ms": [
+        1671.300000000745,
+        1819.9000000022352
+      ],
+      "status": "Local demo data cleared\n\nThe saved note and current fields are empty. You can start a new note.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-readFailure.png",
+      "case": "en-light-320",
+      "state": "readFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 181,
+      "capture_bracket_ms": [
+        201.60000000149012,
+        286.19999999925494
+      ],
+      "status": "The saved note could not be read\n\nSaving is paused to avoid overwriting unread content. Try reading again. Your current text is still here; copy it before leaving.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-readRecoveredDraft.png",
+      "case": "en-light-320",
+      "state": "readRecoveredDraft",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 181,
+      "capture_bracket_ms": [
+        395.80000000074506,
+        471.9000000022352
+      ],
+      "status": "Reading restored; your input is unchanged\n\n\"Recently saved\" shows the stored title. Saving now replaces the stored note with your current input.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-light-320-invalidStored.png",
+      "case": "en-light-320",
+      "state": "invalidStored",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 181,
+      "capture_bracket_ms": [
+        146.10000000149012,
+        217.30000000074506
+      ],
+      "status": "The saved note has an unreadable format\n\nSaving is paused. Try reading again. If it still fails, copy your current text, then clear local demo data in \"Preview state controls\". Clearing also empties the current fields.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-light-390-empty.png",
+      "case": "en-light-390",
+      "state": "empty",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        114.19999999925494,
+        143.89999999850988
+      ],
+      "status": "No note saved yet\n\nAdd a title to begin. Changes are not saved automatically.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-light-390-long-saved.png",
+      "case": "en-light-390",
+      "state": "long-saved",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 728,
+      "capture_bracket_ms": [
+        459.69999999925494,
+        497.5999999977648
+      ],
+      "status": "Saved in this browser\n\nReopen this page to continue editing this note.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-light-1280-empty.png",
+      "case": "en-light-1280",
+      "state": "empty",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        117.30000000074506,
+        162.90000000223517
+      ],
+      "status": "No note saved yet\n\nAdd a title to begin. Changes are not saved automatically.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-light-1280-long-saved.png",
+      "case": "en-light-1280",
+      "state": "long-saved",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "light",
+      "scroll_y": 180,
+      "capture_bracket_ms": [
+        478.4000000022352,
+        540.2000000029802
+      ],
+      "status": "Saved in this browser\n\nReopen this page to continue editing this note.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-dark-320-empty.png",
+      "case": "en-dark-320",
+      "state": "empty",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        142,
+        165.90000000223517
+      ],
+      "status": "No note saved yet\n\nAdd a title to begin. Changes are not saved automatically.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-edited.png",
+      "case": "en-dark-320",
+      "state": "edited",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 91,
+      "capture_bracket_ms": [
+        284.5,
+        354
+      ],
+      "status": "You have unsaved changes\n\nThese edits are only on this page. Save before refreshing or closing it.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-saving.png",
+      "case": "en-dark-320",
+      "state": "saving",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 312,
+      "capture_bracket_ms": [
+        515.5,
+        586.9000000022352
+      ],
+      "status": "Saving in this browser…\n\nYou can keep editing. Changes made during this save will need another save.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-savedEarlier.png",
+      "case": "en-dark-320",
+      "state": "savedEarlier",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 312,
+      "capture_bracket_ms": [
+        1517.300000000745,
+        1587.4000000022352
+      ],
+      "status": "The version you submitted was saved\n\nEdits made while saving are still unsaved. Save again to keep those changes.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-saved.png",
+      "case": "en-dark-320",
+      "state": "saved",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 312,
+      "capture_bracket_ms": [
+        1850.800000000745,
+        1919.9000000022352
+      ],
+      "status": "Saved in this browser\n\nReopen this page to continue editing this note.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-loaded.png",
+      "case": "en-dark-320",
+      "state": "loaded",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 91,
+      "capture_bracket_ms": [
+        156.30000000074506,
+        243.19999999925494
+      ],
+      "status": "Last saved note loaded\n\nContinue editing. Save again to keep any changes.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-simulatedFailure.png",
+      "case": "en-dark-320",
+      "state": "simulatedFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 635,
+      "capture_bracket_ms": [
+        542.6000000014901,
+        611.3000000007451
+      ],
+      "status": "This save failure was simulated\n\nYour text is still here and is unsaved. Turn off \"Simulate a write failure\" in \"Preview state controls\", then try saving again. Save or copy your text before leaving.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-dark-320-failure-context.png",
+      "case": "en-dark-320",
+      "state": "failure-context",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 635,
+      "capture_bracket_ms": [
+        620.6999999992549,
+        655.6000000014901
+      ],
+      "status": "This save failure was simulated\n\nYour text is still here and is unsaved. Turn off \"Simulate a write failure\" in \"Preview state controls\", then try saving again. Save or copy your text before leaving.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-writeFailure.png",
+      "case": "en-dark-320",
+      "state": "writeFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 205,
+      "capture_bracket_ms": [
+        1156.199999999255,
+        1227.300000000745
+      ],
+      "status": "The note could not be saved\n\nYour text is still here and is unsaved. Try again. If it still fails, copy your text before checking browser storage settings. Refreshing or closing the page loses unsaved edits.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-clearFailure.png",
+      "case": "en-dark-320",
+      "state": "clearFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 887,
+      "capture_bracket_ms": [
+        1506.5,
+        1578.1000000014901
+      ],
+      "status": "Local demo data could not be cleared\n\nYour current text is still here. Try clearing again. Copy any text you want to keep first.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-resetDone.png",
+      "case": "en-dark-320",
+      "state": "resetDone",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 91,
+      "capture_bracket_ms": [
+        1673.300000000745,
+        1745.1000000014901
+      ],
+      "status": "Local demo data cleared\n\nThe saved note and current fields are empty. You can start a new note.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-readFailure.png",
+      "case": "en-dark-320",
+      "state": "readFailure",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 181,
+      "capture_bracket_ms": [
+        187.69999999925494,
+        265.4000000022352
+      ],
+      "status": "The saved note could not be read\n\nSaving is paused to avoid overwriting unread content. Try reading again. Your current text is still here; copy it before leaving.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-readRecoveredDraft.png",
+      "case": "en-dark-320",
+      "state": "readRecoveredDraft",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 181,
+      "capture_bracket_ms": [
+        388.9000000022352,
+        458.19999999925494
+      ],
+      "status": "Reading restored; your input is unchanged\n\n\"Recently saved\" shows the stored title. Saving now replaces the stored note with your current input.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/states/en-dark-320-invalidStored.png",
+      "case": "en-dark-320",
+      "state": "invalidStored",
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 181,
+      "capture_bracket_ms": [
+        205.69999999925494,
+        277.1000000014901
+      ],
+      "status": "The saved note has an unreadable format\n\nSaving is paused. Try reading again. If it still fails, copy your current text, then clear local demo data in \"Preview state controls\". Clearing also empties the current fields.",
+      "scope": "status region at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-dark-390-empty.png",
+      "case": "en-dark-390",
+      "state": "empty",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        132.5,
+        162.90000000223517
+      ],
+      "status": "No note saved yet\n\nAdd a title to begin. Changes are not saved automatically.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-dark-390-long-saved.png",
+      "case": "en-dark-390",
+      "state": "long-saved",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 728,
+      "capture_bracket_ms": [
+        491.69999999925494,
+        528.1000000014901
+      ],
+      "status": "Saved in this browser\n\nReopen this page to continue editing this note.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-dark-1280-empty.png",
+      "case": "en-dark-1280",
+      "state": "empty",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 0,
+      "capture_bracket_ms": [
+        147.59999999776483,
+        191.39999999850988
+      ],
+      "status": "No note saved yet\n\nAdd a title to begin. Changes are not saved automatically.",
+      "scope": "viewport at native CSS size"
+    },
+    {
+      "file": "verification/results/views/en-dark-1280-long-saved.png",
+      "case": "en-dark-1280",
+      "state": "long-saved",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "locale": "en",
+      "theme": "dark",
+      "scroll_y": 180,
+      "capture_bracket_ms": [
+        521.5999999977648,
+        595.6999999992549
+      ],
+      "status": "Saved in this browser\n\nReopen this page to continue editing this note.",
+      "scope": "viewport at native CSS size"
+    }
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "external_requests": [],
+  "started_at_utc": "2026-10-26T16:06:21.637087+00:00",
+  "source_sha256": {
+    "index.html": "e9822969c216e2d722a0c8c134eec2930468671e622471d00e6a37183a82b93b",
+    "styles.css": "92058281491237f5da41ee6bfd306f6b8f389fded4f966d34d9997e6c0d13400",
+    "app.js": "5f4affc74156492c058387dea004c9e1459bb45fd911612108c8a9152256b9c3"
+  },
+  "environment": {
+    "chromium": "/tmp/ui-spec-render-runtime/chrome-headless-shell-linux64/chrome-headless-shell",
+    "fontconfig": "/tmp/ui-spec-render-runtime/fontconfig.xml",
+    "device_scale_factor": 1,
+    "binding": "127.0.0.1 only",
+    "variant_matrix": {
+      "locale": [
+        "zh",
+        "en"
+      ],
+      "theme": [
+        "light",
+        "dark"
+      ],
+      "viewports": [
+        [
+          320,
+          900
+        ],
+        [
+          390,
+          900
+        ],
+        [
+          1280,
+          900
+        ]
+      ]
+    },
+    "fixture_delay_ms": 1000,
+    "limitations": [
+      "Chromium desktop emulation only; no real mobile keyboard",
+      "DOM/live-region semantics checked; no screen-reader listening test",
+      "Ordered screenshots capture discrete states, not continuous playback",
+      "Storage faults injected at the browser API boundary; no real exhausted disk/quota",
+      "320 CSS-pixel reflow and text-spacing overrides checked; native browser zoom not tested"
+    ]
+  },
+  "browser_version": "143.0.7499.4",
+  "result": "pass",
+  "elapsed_seconds": 25.13
+}

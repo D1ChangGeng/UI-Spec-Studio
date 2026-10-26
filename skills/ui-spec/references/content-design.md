@@ -28,7 +28,7 @@ Establish the product model, audience, experience level, first task, familiar vo
 - **Best carrier:** heading, comparison, form label, short instruction, source, direct manipulation or another medium.
 - **Time and placement:** what should be visible on arrival, at decision, during progress and after the outcome.
 
-Research mature products at the same interaction step. Open relevant menus/help and observe transitions to find when wording appears, which user question it answers and what it permits next. Attribute marketing copy, interface labels and authored work to their own surfaces. Transfer useful naming, expectation and feedback patterns using this product's voice and facts; reference promises, pricing and policies retain their source's authority.
+Use product documentation, tutorials, research and feedback to investigate meaning, operating conditions and familiar vocabulary. Keep the current user's intent, audience evidence and reference-product claims distinct. Follow important textual findings into actual views and operation at the same task step. Attribute marketing copy, interface labels and authored work to their own surfaces. Transfer useful naming and feedback patterns using this product's voice and facts; promises, pricing and policies retain their source's authority.
 
 Domain and engineering terms clarify how the system works. Choose user-facing names by what users recognize, search for and act on. Define technical language at the point of need when it is essential to the task. Keep one stable name for the same object, action or state across navigation, panels, notifications and documentation. A synonym can signal a meaningful change in scope; use it intentionally.
 

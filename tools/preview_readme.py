@@ -103,7 +103,7 @@ def preview(output: Path, browser_path: str | None = None, live_commit: str | No
                     context.close()
         finally:browser.close()
     report={'source_files':{n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ['README.md','README.zh-CN.md']},
-            'captures':results,'scope':'DOM, asset selection, native copy, disclosure and overflow checks; inspect screenshots separately for visual judgment',
+            'captures':results,'scope':'DOM, asset selection, native installation text, disclosure and overflow checks; clipboard operation is not exercised; inspect screenshots separately for visual judgment',
             'local_renderer':'Markdown-It with a GitHub-like stylesheet; not pixel-identical to GitHub',
             'live_commit':live_commit}
     (output/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

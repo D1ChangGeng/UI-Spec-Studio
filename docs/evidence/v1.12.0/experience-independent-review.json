@@ -1,0 +1,1139 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent experience review sub-agent /root/experience_review",
+  "status": "最终限定复核完成；本审阅范围内无尚未解决的必须修正项",
+  "created_utc": "2026-10-26T16:22:17.503783+00:00",
+  "scope": "按委托完整阅读四份研究/方案核心文档，独立查看 evidence/local 下15张最终原尺寸视口图，并阅读有限原型/验证脚本和必要本地原始源码；没有修改被审阅文件，没有重新搜索外部材料，没有另外建设完整测试。",
+  "actual_text_reads": [
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/research-proposal.md",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": "d205e1d23a52811af7db6c1cbef5350128ed38f5cf5f69754e1e95f800fd9da9",
+      "sha256_when_report_drafted": "8b4d6ac626e6942ba8bbc6fcdb5ade30a7ef6e58842875ab261917520551cb09",
+      "final_sha256": "8b4d6ac626e6942ba8bbc6fcdb5ade30a7ef6e58842875ab261917520551cb09",
+      "actually_read": true,
+      "final_read_scope": "完整重读最终文本"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/decision-register.md",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": "83f8ef2760e0c87b697b652b4ee6e15c2ce4b9566266491ce3b81c1ad9bad6e3",
+      "sha256_when_report_drafted": "634f401080e09c0bc79020a32cdf3c6fa09bd77db7da8b641f08abbf7b88bd5f",
+      "final_sha256": "d1ceeaa0cb7baa1b9680e91a027fb90d04d07ba5e995386240e7222fe229741d",
+      "actually_read": true,
+      "final_read_scope": "完整重读最终文本"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence-notes.md",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": "14e69fcc2de45d00edee1ec24d0e56f0cf32d5d20370e8c86ff9eb1c194bfd3e",
+      "sha256_when_report_drafted": "14e69fcc2de45d00edee1ec24d0e56f0cf32d5d20370e8c86ff9eb1c194bfd3e",
+      "final_sha256": "c4676c5bd3b20c601ce2c6773f719375d3864800932f398b87a3805c3e9c4953",
+      "actually_read": true,
+      "final_read_scope": "完整重读最终文本"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/implementation-resources.md",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": "e9d8a4ccf119a641a1fe35bce2fb0718a4e0e9d432f3d96b2ef13eb19591e2b0",
+      "sha256_when_report_drafted": "e9d8a4ccf119a641a1fe35bce2fb0718a4e0e9d432f3d96b2ef13eb19591e2b0",
+      "final_sha256": "e9d8a4ccf119a641a1fe35bce2fb0718a4e0e9d432f3d96b2ef13eb19591e2b0",
+      "actually_read": true,
+      "final_read_scope": "初审完整读取；终审确认SHA一致"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/verify_local.py",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": "409b61ec0abb0357737bf3b72be977c459eda54cb8644cd2921dffd216b2423d",
+      "sha256_when_report_drafted": "9e7a3e6422034187da5456683c96e6e2da474b42dd05e2433845a67cd44928f1",
+      "final_sha256": "9e7a3e6422034187da5456683c96e6e2da474b42dd05e2433845a67cd44928f1",
+      "actually_read": true,
+      "final_read_scope": "完整重读最终文本"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/prototype.html",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": "5e11849d00f75c355d184349b5139923da2f28cfbf5d9db1655c67b0767b868d",
+      "sha256_when_report_drafted": "faf69715317bbfa18ee49e12d104a5842ee0b3fea9a9d4acb2bdc39b36956416",
+      "final_sha256": "e04f01df24496d8609e91ce467178a11dcb76cc260462066c45fa99b41ee40bf",
+      "actually_read": true,
+      "final_read_scope": "初审完整读取HTML/CSS/JS；终审完整重读JS与资料不足的HTML片段，复核保存、返回与引用修订"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/local-captures.json",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": null,
+      "sha256_when_report_drafted": "c27a458b22979d67be06103d0520749ae7545e688367ebe2efeac580d1d46930",
+      "final_sha256": "9a45d833ff3f07a2861c6da67dbb7b81da6411221f210831fe3ebb66fc5ce82e",
+      "actually_read": true,
+      "final_read_scope": "初审完整读取JSON；终审解析全文件并逐项核对15条的路径、原型SHA、视口、采集时间、查看标记、几何以及实际PNG SHA"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/interaction-checks.json",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": null,
+      "sha256_when_report_drafted": "a9987536248a7cf02ca14dc869abb8b93aa75c8b1d8a7610ad6e4c37ef5f2662",
+      "final_sha256": "d8e936845151242b5379d3f68de091f6ccc7ac2afe6a0ffd29847720a16b200f",
+      "actually_read": true,
+      "final_read_scope": "完整重读最终文本"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/fixtures/research-materials.txt",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": null,
+      "sha256_when_report_drafted": "6408175f714536ceadbba3019b67e74e0bff4ba7dd9d156ebd17fb8b6c46bf0c",
+      "final_sha256": "6408175f714536ceadbba3019b67e74e0bff4ba7dd9d156ebd17fb8b6c46bf0c",
+      "actually_read": true,
+      "final_read_scope": "初审完整读取；终审确认SHA一致"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/resources/vercel-chatbot-upload-route.ts",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": null,
+      "sha256_when_report_drafted": "05b8a1b6a3f23bca859ec0a445c87b1cd0a268162cd945fabd8f2fa7e8fd37b8",
+      "final_sha256": "05b8a1b6a3f23bca859ec0a445c87b1cd0a268162cd945fabd8f2fa7e8fd37b8",
+      "actually_read": true,
+      "final_read_scope": "初审完整读取；终审确认SHA一致"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/resources/assistant-ui-ai-sdk-package.json",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": null,
+      "sha256_when_report_drafted": "5b602aeecfdcf33dcacd3afb85f8a26dc71c9fdc6abf5833c5763216fa5322d3",
+      "final_sha256": "5b602aeecfdcf33dcacd3afb85f8a26dc71c9fdc6abf5833c5763216fa5322d3",
+      "actually_read": true,
+      "final_read_scope": "初审完整读取；终审确认SHA一致"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/resources/assistant-ui-react-package.json",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": null,
+      "sha256_when_report_drafted": "72934da3ae0a20c7be56ed8e7a2972867054bbb2a68357621351db8c06ccdf57",
+      "final_sha256": "72934da3ae0a20c7be56ed8e7a2972867054bbb2a68357621351db8c06ccdf57",
+      "actually_read": true,
+      "final_read_scope": "初审完整读取；终审确认SHA一致"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/resources/vercel-chatbot-package.json",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": null,
+      "sha256_when_report_drafted": "b1ca1259ccaf3ec22abfc534c954a64d2749357db583789d8f9aa10ff8ed548c",
+      "final_sha256": "b1ca1259ccaf3ec22abfc534c954a64d2749357db583789d8f9aa10ff8ed548c",
+      "actually_read": true,
+      "final_read_scope": "初审完整读取；终审确认SHA一致"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/resources/source-revisions.json",
+      "read_scope": "完整文本",
+      "sha256_at_initial_snapshot": null,
+      "sha256_when_report_drafted": "f5256e5cd7545dcced145520b9685f8352ef7608400ba364a47aab5c0f80dd84",
+      "final_sha256": "f5256e5cd7545dcced145520b9685f8352ef7608400ba364a47aab5c0f80dd84",
+      "actually_read": true,
+      "final_read_scope": "初审完整读取；终审确认SHA一致"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/trial-report.md",
+      "read_scope": "最终版本完整文本",
+      "sha256_at_initial_snapshot": null,
+      "sha256_when_report_drafted": "c208b9b631839d0c107e4c5dcc4fde7010feae55a92c1f394d8b5828cc876f32",
+      "final_sha256": "c208b9b631839d0c107e4c5dcc4fde7010feae55a92c1f394d8b5828cc876f32",
+      "actually_read": true,
+      "final_read_scope": "完整重读最终文本"
+    }
+  ],
+  "integrity_before": [
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/prototype.html",
+      "sha256": "5e11849d00f75c355d184349b5139923da2f28cfbf5d9db1655c67b0767b868d",
+      "bytes": 37717
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/verify_local.py",
+      "sha256": "409b61ec0abb0357737bf3b72be977c459eda54cb8644cd2921dffd216b2423d",
+      "bytes": 7667
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/research-proposal.md",
+      "sha256": "d205e1d23a52811af7db6c1cbef5350128ed38f5cf5f69754e1e95f800fd9da9",
+      "bytes": 28674
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/decision-register.md",
+      "sha256": "83f8ef2760e0c87b697b652b4ee6e15c2ce4b9566266491ce3b81c1ad9bad6e3",
+      "bytes": 6013
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence-notes.md",
+      "sha256": "14e69fcc2de45d00edee1ec24d0e56f0cf32d5d20370e8c86ff9eb1c194bfd3e",
+      "bytes": 12452
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/implementation-resources.md",
+      "sha256": "e9d8a4ccf119a641a1fe35bce2fb0718a4e0e9d432f3d96b2ef13eb19591e2b0",
+      "bytes": 18143
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L01-paper-chat-1440.png",
+      "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "bytes": 146958,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L02-paper-citation-1440.png",
+      "sha256": "f893dbad6e6a824f0135314672ff63e5c75827a1f20a1d700368b5dfd25e656f",
+      "bytes": 214717,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L03-records-1440.png",
+      "sha256": "726cd11d21f878f9fd8a317c5c8205a8f9da21ed26d6a5d80d755b5192e269e2",
+      "bytes": 104879,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L04-record-evidence-1440.png",
+      "sha256": "0f7fdbf4fd11a8895462bc92e4239a4f10bff4ebb4dd890c772294ec08fd2002",
+      "bytes": 151482,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-chat-1440.png",
+      "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "bytes": 146958,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-reader-1440.png",
+      "sha256": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118",
+      "bytes": 193423,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-three-1440.png",
+      "sha256": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc",
+      "bytes": 141098,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L06-index-chat-1440.png",
+      "sha256": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d",
+      "bytes": 151168,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L07-index-citation-1440.png",
+      "sha256": "4ec781e822754ef9c83488655dcfeece4500cc6cc5f2184813f583cc48d0b1f4",
+      "bytes": 217763,
+      "dimensions": [
+        1440,
+        900
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-chat-1024.png",
+      "sha256": "064fda6f7dea7d144915d79403b8397a4616e940fa3bf955dbf8c785e7f34c61",
+      "bytes": 121797,
+      "dimensions": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-three-1024.png",
+      "sha256": "ce75bc522fd7d3e225710c8719a9dd566733febd8ece2693182ef72b967d3491",
+      "bytes": 114341,
+      "dimensions": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L09-citation-1024.png",
+      "sha256": "4fb5a13fa5f06c7e1d2d87ad789f7ea4d71aa2d13a15cca6f58e190c4988c7dc",
+      "bytes": 152823,
+      "dimensions": [
+        1024,
+        768
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L10-chat-390.png",
+      "sha256": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595",
+      "bytes": 88320,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L11-citation-390.png",
+      "sha256": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d",
+      "bytes": 75966,
+      "dimensions": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L12-chat-lower-390.png",
+      "sha256": "dd493367cde0c33781f6b0c69a19558ec356dd49870984a05c3c1a16e43888fb",
+      "bytes": 94295,
+      "dimensions": [
+        390,
+        844
+      ]
+    }
+  ],
+  "integrity_after": [
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/prototype.html",
+      "sha256_at_first_review": "5e11849d00f75c355d184349b5139923da2f28cfbf5d9db1655c67b0767b868d",
+      "sha256_at_completion": "e04f01df24496d8609e91ce467178a11dcb76cc260462066c45fa99b41ee40bf",
+      "unchanged_since_first_review": false
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/verify_local.py",
+      "sha256_at_first_review": "409b61ec0abb0357737bf3b72be977c459eda54cb8644cd2921dffd216b2423d",
+      "sha256_at_completion": "9e7a3e6422034187da5456683c96e6e2da474b42dd05e2433845a67cd44928f1",
+      "unchanged_since_first_review": false
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/research-proposal.md",
+      "sha256_at_first_review": "d205e1d23a52811af7db6c1cbef5350128ed38f5cf5f69754e1e95f800fd9da9",
+      "sha256_at_completion": "8b4d6ac626e6942ba8bbc6fcdb5ade30a7ef6e58842875ab261917520551cb09",
+      "unchanged_since_first_review": false
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/decision-register.md",
+      "sha256_at_first_review": "83f8ef2760e0c87b697b652b4ee6e15c2ce4b9566266491ce3b81c1ad9bad6e3",
+      "sha256_at_completion": "d1ceeaa0cb7baa1b9680e91a027fb90d04d07ba5e995386240e7222fe229741d",
+      "unchanged_since_first_review": false
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence-notes.md",
+      "sha256_at_first_review": "14e69fcc2de45d00edee1ec24d0e56f0cf32d5d20370e8c86ff9eb1c194bfd3e",
+      "sha256_at_completion": "c4676c5bd3b20c601ce2c6773f719375d3864800932f398b87a3805c3e9c4953",
+      "unchanged_since_first_review": false
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/implementation-resources.md",
+      "sha256_at_first_review": "e9d8a4ccf119a641a1fe35bce2fb0718a4e0e9d432f3d96b2ef13eb19591e2b0",
+      "sha256_at_completion": "e9d8a4ccf119a641a1fe35bce2fb0718a4e0e9d432f3d96b2ef13eb19591e2b0",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L01-paper-chat-1440.png",
+      "sha256_at_first_review": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "sha256_at_completion": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L02-paper-citation-1440.png",
+      "sha256_at_first_review": "f893dbad6e6a824f0135314672ff63e5c75827a1f20a1d700368b5dfd25e656f",
+      "sha256_at_completion": "f893dbad6e6a824f0135314672ff63e5c75827a1f20a1d700368b5dfd25e656f",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L03-records-1440.png",
+      "sha256_at_first_review": "726cd11d21f878f9fd8a317c5c8205a8f9da21ed26d6a5d80d755b5192e269e2",
+      "sha256_at_completion": "5aa9c8c8a385a873d7a609e954d34fceca530e3393e08aa68596bde8b3e30394",
+      "unchanged_since_first_review": false
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L04-record-evidence-1440.png",
+      "sha256_at_first_review": "0f7fdbf4fd11a8895462bc92e4239a4f10bff4ebb4dd890c772294ec08fd2002",
+      "sha256_at_completion": "214fb9cb8038055821ab8637fb25b604332d74572abf11adeb3692e85bba5ab8",
+      "unchanged_since_first_review": false
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-chat-1440.png",
+      "sha256_at_first_review": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "sha256_at_completion": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-reader-1440.png",
+      "sha256_at_first_review": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118",
+      "sha256_at_completion": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-three-1440.png",
+      "sha256_at_first_review": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc",
+      "sha256_at_completion": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L06-index-chat-1440.png",
+      "sha256_at_first_review": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d",
+      "sha256_at_completion": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L07-index-citation-1440.png",
+      "sha256_at_first_review": "4ec781e822754ef9c83488655dcfeece4500cc6cc5f2184813f583cc48d0b1f4",
+      "sha256_at_completion": "4ec781e822754ef9c83488655dcfeece4500cc6cc5f2184813f583cc48d0b1f4",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-chat-1024.png",
+      "sha256_at_first_review": "064fda6f7dea7d144915d79403b8397a4616e940fa3bf955dbf8c785e7f34c61",
+      "sha256_at_completion": "064fda6f7dea7d144915d79403b8397a4616e940fa3bf955dbf8c785e7f34c61",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-three-1024.png",
+      "sha256_at_first_review": "ce75bc522fd7d3e225710c8719a9dd566733febd8ece2693182ef72b967d3491",
+      "sha256_at_completion": "ce75bc522fd7d3e225710c8719a9dd566733febd8ece2693182ef72b967d3491",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L09-citation-1024.png",
+      "sha256_at_first_review": "4fb5a13fa5f06c7e1d2d87ad789f7ea4d71aa2d13a15cca6f58e190c4988c7dc",
+      "sha256_at_completion": "4fb5a13fa5f06c7e1d2d87ad789f7ea4d71aa2d13a15cca6f58e190c4988c7dc",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L10-chat-390.png",
+      "sha256_at_first_review": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595",
+      "sha256_at_completion": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L11-citation-390.png",
+      "sha256_at_first_review": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d",
+      "sha256_at_completion": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d",
+      "unchanged_since_first_review": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L12-chat-lower-390.png",
+      "sha256_at_first_review": "dd493367cde0c33781f6b0c69a19558ec356dd49870984a05c3c1a16e43888fb",
+      "sha256_at_completion": "86e26b28faf7c61584abd06a0f09d66114c9b875d2469d1869b2b65edc511d2f",
+      "unchanged_since_first_review": false
+    }
+  ],
+  "findings": [
+    {
+      "id": "ER-01",
+      "severity": "必须修正：证据同步",
+      "status": "已解决；最终限定复核确认",
+      "summary": "最终原型与截图/验证记录版本不一致。",
+      "evidence": [
+        "初审 prototype.html SHA-256=5e11849d00f75c355d184349b5139923da2f28cfbf5d9db1655c67b0767b868d；local-captures.json 的15项 script_sha256 均为21ff1e7dfdec51d94a93f3b43117376ee29271cc0d6bfba9862d336733252b44。",
+        "verify_local.py 已有 local_saved_marker_survives_reload、storage_failure_does_not_claim_saved；初读 interaction-checks.json 尚为旧 local_sample_record_survives_reload 且没有存储失败检查。",
+        "初读 L03/L04 仍显示“样例本地保存”“保存快照”“返回回答”；初读原型代码已改为“预置样例”“快照结构样例”“返回记录”。"
+      ],
+      "required_action": "运行现有有限验证并重采集，把截图、记录、原型散列同步；或明确将旧记录标为历史版本。不要手工把旧运行结果标成新版本通过。",
+      "initial_status": "已反馈作者，待最终复核",
+      "resolution_details": {
+        "resolution": "已解决",
+        "evidence": [
+          "15项local-captures均指向最终prototype SHA e04f01df24496d8609e91ce467178a11dcb76cc260462066c45fa99b41ee40bf",
+          "interaction-checks记录对应prototype与verify脚本SHA，15项检查均通过；存储失败与精选标记测试名称已同步。",
+          "L03/L04最终原图已重新打开查看，文案与当前原型一致。"
+        ],
+        "basis": "读取最终元数据/脚本、复核散列、实际查看变更原图；未独立重跑作者验证。"
+      }
+    },
+    {
+      "id": "ER-02",
+      "severity": "必须修正：样例引用对应",
+      "status": "已解决；最终限定复核确认",
+      "summary": "样例“资料不足”的具体断言只有引用3，原文依据却部分在资料2。",
+      "evidence": [
+        "L12-chat-lower-390.png 与初读 prototype：还不能回答哪种模式整体更高效；“样例中没有长期对照数据，也没有统一的效率指标”后只有引用3。",
+        "fixtures/research-materials.txt 把该限制映射到 S02§3 + S03§3；S02§3 明确写没有长期对照数据，引用3打开的个人研究笔记§3只说现有资料不足以得出普遍结论。"
+      ],
+      "required_action": "增加能直接到达相应资料限制的引用，或收窄断言并使样例映射一致。这是自编样例局部修正，不要求实现真实检索。",
+      "initial_status": "已反馈作者，待最终复核",
+      "resolution_details": {
+        "resolution": "已解决",
+        "evidence": [
+          "最终prototype在资料不足的句群末尾包含data-cite=2与data-cite=3。",
+          "最终L12原尺寸截图实际可见引用2、3；引用2的数据带S02§3邻近上下文，引用3带个人笔记限制，和样例映射一致。"
+        ],
+        "basis": "最终HTML/JS、已读fixtures与最终L12原尺寸画面。"
+      }
+    },
+    {
+      "id": "ER-03",
+      "severity": "应修正：覆盖范围措辞",
+      "status": "已解决；最终限定复核确认",
+      "summary": "“已在三个视口查看两种方向”超出已保留的组合覆盖。",
+      "evidence": [
+        "decision-register.md 的视觉成熟度行用了此表述。",
+        "现有15张视口图与 verify_local.py 支持：纸页方向1440/1024/390；索引台只有1440的对话和引用状态。"
+      ],
+      "required_action": "改为“纸页方向在三个视口检查；两种方向在1440同任务对比”，或确有新增观察时另保留证据。",
+      "initial_status": "已反馈作者，待最终复核",
+      "resolution_details": {
+        "resolution": "已解决",
+        "evidence": [
+          "decision-register视觉成熟度行明确纸页方向三个视口、索引台仅1440px。",
+          "trial-report条件、截图索引与最终15项metadata保持相同覆盖范围。"
+        ],
+        "basis": "完整重读最终决策/试验报告，核对最终采集metadata。"
+      }
+    },
+    {
+      "id": "ER-04",
+      "severity": "边界应更明确",
+      "status": "已解决；最终限定复核确认",
+      "summary": "刷新演示验证精选标记和草稿持久化，预置记录正文/引用没有做真实序列化往返。",
+      "evidence": [
+        "初读 prototype safeStore 只保存 rw-note 标记与 rw-draft；记录正文、原回答和引用均为固定fixture。",
+        "原型已直接写“此页按本地精选标记展示预置记录。正文与引用未做存储往返”。",
+        "核心文档初读使用“本地样例保存刷新成功”“本地样例保存→刷新→返回原对话”等概括，建议与原型边界一致。"
+      ],
+      "required_action": "在交付边界、覆盖结论处明确“精选标记/草稿刷新恢复；正文和引用是预置结构”，保留未来真实持久化验收。",
+      "initial_status": "原型已出现更精确文案，文档待最终复核",
+      "resolution_details": {
+        "resolution": "已解决",
+        "evidence": [
+          "主方案第10节、决策D05/记录成熟度、trial-report第4节都明确只存草稿与精选标记；正文/来源/引用/版本为预置，所选范围等不跨刷新恢复。",
+          "最终L03写预置样例并显示已保存样例精选标记；L04为快照结构样例和返回记录。",
+          "最终safeStore返回写入成功状态，saveNote失败时不置saved；作者存储失败检查记录通过。"
+        ],
+        "basis": "完整重读最终文档、最终JS与检查结果，实际重看L03/L04。"
+      }
+    }
+  ],
+  "positive_findings": [
+    {
+      "topic": "用户意图与默认结构",
+      "assessment": "推荐对话优先有直接需求依据。L01/L05-chat把回答与输入放在主区域，资料和记录有顶部/研究内入口；没有从“工作台”名称强推常驻多栏。"
+    },
+    {
+      "topic": "替代结构比较",
+      "assessment": "三种结构使用相同研究主题、三份样例资料、同一问题与回答。宽屏A/B均保留700px阅读列，文档承认B在1440下仍可读；1024下B变为567px，阅读优先聊天为328px，结论按条件成立。布局比较不是目标人群偏好测量。"
+    },
+    {
+      "topic": "两种视觉方向",
+      "assessment": "纸页方向的衬线标题、细线、暖白/墨绿、编号与宽读列在回答、引用和记录之间一致。索引台改变字形角色、辅助栏重量、正文密度和条目节奏，确实不只是换色。成熟感与独立气质属于设计判断，未冒称用户已批准。"
+    },
+    {
+      "topic": "引用与记录可读性",
+      "assessment": "桌面引用展示来源名、sample-1版本、段落位置、前后文和高亮片段；1024先收拢导航。记录有标题、摘要、来源关联和返回原对话入口。窄屏引用使用单一详情面，L12明确可见保存动作和草稿。"
+    },
+    {
+      "topic": "候选/采用边界",
+      "assessment": "四份文档一致说明assistant-ui、shadcn、Vercel尚未在本项目安装/集成/采用。原型为作者HTML/CSS与固定样例，正式Thread/runtime及数据合同属于下一阶段。"
+    },
+    {
+      "topic": "实现选择的局部源码依据",
+      "assessment": "本次独立读到的Vercel upload route确为JPEG/PNG、5MB、public Blob；package也分别声明assistant-ui react 0.15.31、adapter 0.0.15/ai ^7.0.101、Vercel ai 7.0.15，与实现附录一致。它们是固定材料的声明，没有安装或兼容构建结果。"
+    }
+  ],
+  "review_boundaries": [
+    "本审阅直接查看15张PNG原图、完整读取指定四文档与列出的补充文本；未重看所有第三方媒体/演示，也未重访官方网页。对第三方完整观察链的判断限于文档内部一致性和所检查本地源码。",
+    "没有把静态截图当作交互运行结果。本审阅读取verify_local及已有JSON理解其范围；没有独立运行完整浏览器流程。",
+    "本地保存标记、静态记录、来源范围显示、固定文本引用只能证明有限布局/流程的关系；不能证明真实文件解析、PDF/OCR定位、检索过滤、语义支持率或服务器持久化。",
+    "窄视口是390×844桌面浏览器视口；不能证明真实手机键盘、触屏、读屏、200%文本缩放或WCAG 2.2 AA完整符合。",
+    "缺少真实后端、真实用户访谈、生产组件集成与外部发布均属本轮明确范围，不列为方案缺陷。",
+    "作者正在完成入口文档，index.html与alternatives.html不在本次初审验收对象；它们的最终完整性由主任务核验。",
+    "初审期间作者进行了修订，报告保留首次问题和散列。收到核心稳定信号后，完整重读变化文档、复核最终JS/元数据、重看三张变化原图；另外12张最终图与首次已查看图SHA一致。另检测到trial-report末次Markdown空格修订，完整重读后更新终审基线；最终24项跟踪文件未再变化。"
+  ],
+  "overall_assessment": "最终版本在本轮本地研究与可实施方案范围内可以交付；研究证据、候选建议、实际采用和未验证边界保持一致，具体画面支持对话优先、按需证据与重访记录的推荐。首次发现的证据版本同步、样例引用对应、视口覆盖措辞和样例持久化边界均已修正并限定复核。没有尚未解决的必须修正问题。真实后端、生产组件集成和用户验证仍属下一阶段，未将其缺席当作本轮方案缺陷。",
+  "completed_utc": "2026-10-26T16:27:47.828204+00:00",
+  "final_prototype_sha256": "e04f01df24496d8609e91ce467178a11dcb76cc260462066c45fa99b41ee40bf",
+  "final_verification_script_sha256": "9e7a3e6422034187da5456683c96e6e2da474b42dd05e2433845a67cd44928f1",
+  "first_review_images": [
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L01-paper-chat-1440.png",
+      "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "bytes": 146958,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L02-paper-citation-1440.png",
+      "sha256": "f893dbad6e6a824f0135314672ff63e5c75827a1f20a1d700368b5dfd25e656f",
+      "bytes": 214717,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L03-records-1440.png",
+      "sha256": "726cd11d21f878f9fd8a317c5c8205a8f9da21ed26d6a5d80d755b5192e269e2",
+      "bytes": 104879,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L04-record-evidence-1440.png",
+      "sha256": "0f7fdbf4fd11a8895462bc92e4239a4f10bff4ebb4dd890c772294ec08fd2002",
+      "bytes": 151482,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-chat-1440.png",
+      "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "bytes": 146958,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-reader-1440.png",
+      "sha256": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118",
+      "bytes": 193423,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-three-1440.png",
+      "sha256": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc",
+      "bytes": 141098,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L06-index-chat-1440.png",
+      "sha256": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d",
+      "bytes": 151168,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L07-index-citation-1440.png",
+      "sha256": "4ec781e822754ef9c83488655dcfeece4500cc6cc5f2184813f583cc48d0b1f4",
+      "bytes": 217763,
+      "dimensions": [
+        1440,
+        900
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-chat-1024.png",
+      "sha256": "064fda6f7dea7d144915d79403b8397a4616e940fa3bf955dbf8c785e7f34c61",
+      "bytes": 121797,
+      "dimensions": [
+        1024,
+        768
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-three-1024.png",
+      "sha256": "ce75bc522fd7d3e225710c8719a9dd566733febd8ece2693182ef72b967d3491",
+      "bytes": 114341,
+      "dimensions": [
+        1024,
+        768
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L09-citation-1024.png",
+      "sha256": "4fb5a13fa5f06c7e1d2d87ad789f7ea4d71aa2d13a15cca6f58e190c4988c7dc",
+      "bytes": 152823,
+      "dimensions": [
+        1024,
+        768
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L10-chat-390.png",
+      "sha256": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595",
+      "bytes": 88320,
+      "dimensions": [
+        390,
+        844
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L11-citation-390.png",
+      "sha256": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d",
+      "bytes": 75966,
+      "dimensions": [
+        390,
+        844
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L12-chat-lower-390.png",
+      "sha256": "dd493367cde0c33781f6b0c69a19558ec356dd49870984a05c3c1a16e43888fb",
+      "bytes": 94295,
+      "dimensions": [
+        390,
+        844
+      ],
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)，逐图返回并实际查看；未用联系表替代",
+      "round": "首次审阅"
+    }
+  ],
+  "actual_image_views": [
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L01-paper-chat-1440.png",
+      "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "bytes": 146958,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L02-paper-citation-1440.png",
+      "sha256": "f893dbad6e6a824f0135314672ff63e5c75827a1f20a1d700368b5dfd25e656f",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "bytes": 214717,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L03-records-1440.png",
+      "sha256": "5aa9c8c8a385a873d7a609e954d34fceca530e3393e08aa68596bde8b3e30394",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "bytes": 104569,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "最终版本重新逐图查看",
+      "reopened_in_final_cycle": true,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L04-record-evidence-1440.png",
+      "sha256": "214fb9cb8038055821ab8637fb25b604332d74572abf11adeb3692e85bba5ab8",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "bytes": 151769,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "最终版本重新逐图查看",
+      "reopened_in_final_cycle": true,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-chat-1440.png",
+      "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "bytes": 146958,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-reader-1440.png",
+      "sha256": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "bytes": 193423,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-three-1440.png",
+      "sha256": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "bytes": 141098,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L06-index-chat-1440.png",
+      "sha256": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "bytes": 151168,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L07-index-citation-1440.png",
+      "sha256": "4ec781e822754ef9c83488655dcfeece4500cc6cc5f2184813f583cc48d0b1f4",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "bytes": 217763,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-chat-1024.png",
+      "sha256": "064fda6f7dea7d144915d79403b8397a4616e940fa3bf955dbf8c785e7f34c61",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "bytes": 121797,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-three-1024.png",
+      "sha256": "ce75bc522fd7d3e225710c8719a9dd566733febd8ece2693182ef72b967d3491",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "bytes": 114341,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L09-citation-1024.png",
+      "sha256": "4fb5a13fa5f06c7e1d2d87ad789f7ea4d71aa2d13a15cca6f58e190c4988c7dc",
+      "dimensions": [
+        1024,
+        768
+      ],
+      "bytes": 152823,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L10-chat-390.png",
+      "sha256": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595",
+      "dimensions": [
+        390,
+        844
+      ],
+      "bytes": 88320,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L11-citation-390.png",
+      "sha256": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d",
+      "dimensions": [
+        390,
+        844
+      ],
+      "bytes": 75966,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "初审实际逐图查看；最终版本字节与已查看图完全相同，终审前后SHA-256均复核一致",
+      "reopened_in_final_cycle": false,
+      "final_cycle_sha256_unchanged": true
+    },
+    {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L12-chat-lower-390.png",
+      "sha256": "86e26b28faf7c61584abd06a0f09d66114c9b875d2469d1869b2b65edc511d2f",
+      "dimensions": [
+        390,
+        844
+      ],
+      "bytes": 89015,
+      "actually_viewed": true,
+      "view_method": "tools.view_image(detail=original)",
+      "review_provenance": "最终版本重新逐图查看",
+      "reopened_in_final_cycle": true,
+      "final_cycle_sha256_unchanged": true
+    }
+  ],
+  "integrity_final_cycle": {
+    "all_24_tracked_artifacts_stable": true,
+    "checks": [
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/research-proposal.md",
+        "sha256_before_final_review": "8b4d6ac626e6942ba8bbc6fcdb5ade30a7ef6e58842875ab261917520551cb09",
+        "sha256_after_final_review": "8b4d6ac626e6942ba8bbc6fcdb5ade30a7ef6e58842875ab261917520551cb09",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/decision-register.md",
+        "sha256_before_final_review": "d1ceeaa0cb7baa1b9680e91a027fb90d04d07ba5e995386240e7222fe229741d",
+        "sha256_after_final_review": "d1ceeaa0cb7baa1b9680e91a027fb90d04d07ba5e995386240e7222fe229741d",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence-notes.md",
+        "sha256_before_final_review": "c4676c5bd3b20c601ce2c6773f719375d3864800932f398b87a3805c3e9c4953",
+        "sha256_after_final_review": "c4676c5bd3b20c601ce2c6773f719375d3864800932f398b87a3805c3e9c4953",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/implementation-resources.md",
+        "sha256_before_final_review": "e9d8a4ccf119a641a1fe35bce2fb0718a4e0e9d432f3d96b2ef13eb19591e2b0",
+        "sha256_after_final_review": "e9d8a4ccf119a641a1fe35bce2fb0718a4e0e9d432f3d96b2ef13eb19591e2b0",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/prototype.html",
+        "sha256_before_final_review": "e04f01df24496d8609e91ce467178a11dcb76cc260462066c45fa99b41ee40bf",
+        "sha256_after_final_review": "e04f01df24496d8609e91ce467178a11dcb76cc260462066c45fa99b41ee40bf",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/verify_local.py",
+        "sha256_before_final_review": "9e7a3e6422034187da5456683c96e6e2da474b42dd05e2433845a67cd44928f1",
+        "sha256_after_final_review": "9e7a3e6422034187da5456683c96e6e2da474b42dd05e2433845a67cd44928f1",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/trial-report.md",
+        "sha256_before_final_review": "c208b9b631839d0c107e4c5dcc4fde7010feae55a92c1f394d8b5828cc876f32",
+        "sha256_after_final_review": "c208b9b631839d0c107e4c5dcc4fde7010feae55a92c1f394d8b5828cc876f32",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/local-captures.json",
+        "sha256_before_final_review": "9a45d833ff3f07a2861c6da67dbb7b81da6411221f210831fe3ebb66fc5ce82e",
+        "sha256_after_final_review": "9a45d833ff3f07a2861c6da67dbb7b81da6411221f210831fe3ebb66fc5ce82e",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/interaction-checks.json",
+        "sha256_before_final_review": "d8e936845151242b5379d3f68de091f6ccc7ac2afe6a0ffd29847720a16b200f",
+        "sha256_after_final_review": "d8e936845151242b5379d3f68de091f6ccc7ac2afe6a0ffd29847720a16b200f",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L01-paper-chat-1440.png",
+        "sha256_before_final_review": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+        "sha256_after_final_review": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L02-paper-citation-1440.png",
+        "sha256_before_final_review": "f893dbad6e6a824f0135314672ff63e5c75827a1f20a1d700368b5dfd25e656f",
+        "sha256_after_final_review": "f893dbad6e6a824f0135314672ff63e5c75827a1f20a1d700368b5dfd25e656f",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L03-records-1440.png",
+        "sha256_before_final_review": "5aa9c8c8a385a873d7a609e954d34fceca530e3393e08aa68596bde8b3e30394",
+        "sha256_after_final_review": "5aa9c8c8a385a873d7a609e954d34fceca530e3393e08aa68596bde8b3e30394",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L04-record-evidence-1440.png",
+        "sha256_before_final_review": "214fb9cb8038055821ab8637fb25b604332d74572abf11adeb3692e85bba5ab8",
+        "sha256_after_final_review": "214fb9cb8038055821ab8637fb25b604332d74572abf11adeb3692e85bba5ab8",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-chat-1440.png",
+        "sha256_before_final_review": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+        "sha256_after_final_review": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-reader-1440.png",
+        "sha256_before_final_review": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118",
+        "sha256_after_final_review": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L05-model-three-1440.png",
+        "sha256_before_final_review": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc",
+        "sha256_after_final_review": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L06-index-chat-1440.png",
+        "sha256_before_final_review": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d",
+        "sha256_after_final_review": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L07-index-citation-1440.png",
+        "sha256_before_final_review": "4ec781e822754ef9c83488655dcfeece4500cc6cc5f2184813f583cc48d0b1f4",
+        "sha256_after_final_review": "4ec781e822754ef9c83488655dcfeece4500cc6cc5f2184813f583cc48d0b1f4",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-chat-1024.png",
+        "sha256_before_final_review": "064fda6f7dea7d144915d79403b8397a4616e940fa3bf955dbf8c785e7f34c61",
+        "sha256_after_final_review": "064fda6f7dea7d144915d79403b8397a4616e940fa3bf955dbf8c785e7f34c61",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L08-model-three-1024.png",
+        "sha256_before_final_review": "ce75bc522fd7d3e225710c8719a9dd566733febd8ece2693182ef72b967d3491",
+        "sha256_after_final_review": "ce75bc522fd7d3e225710c8719a9dd566733febd8ece2693182ef72b967d3491",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L09-citation-1024.png",
+        "sha256_before_final_review": "4fb5a13fa5f06c7e1d2d87ad789f7ea4d71aa2d13a15cca6f58e190c4988c7dc",
+        "sha256_after_final_review": "4fb5a13fa5f06c7e1d2d87ad789f7ea4d71aa2d13a15cca6f58e190c4988c7dc",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L10-chat-390.png",
+        "sha256_before_final_review": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595",
+        "sha256_after_final_review": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L11-citation-390.png",
+        "sha256_before_final_review": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d",
+        "sha256_after_final_review": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d",
+        "unchanged": true
+      },
+      {
+        "path": "/tmp/ui-spec-forward-1_12/research-proposal/evidence/local/L12-chat-lower-390.png",
+        "sha256_before_final_review": "86e26b28faf7c61584abd06a0f09d66114c9b875d2469d1869b2b65edc511d2f",
+        "sha256_after_final_review": "86e26b28faf7c61584abd06a0f09d66114c9b875d2469d1869b2b65edc511d2f",
+        "unchanged": true
+      }
+    ],
+    "preceding_formatting_revision": {
+      "path": "/tmp/ui-spec-forward-1_12/research-proposal/trial-report.md",
+      "previous_sha256": "418b53d4f62495dc1f586088b800a3226cefc029412f7aa13bc0bd5bfac63960",
+      "final_sha256": "c208b9b631839d0c107e4c5dcc4fde7010feae55a92c1f394d8b5828cc876f32",
+      "review_action": "检测到首段Markdown空格修订后完整重读最终trial-report并建立新终审基线；其余核心内容及图像未变化。"
+    }
+  },
+  "final_evidence_synchronization": {
+    "all_15_capture_prototype_hashes_match": true,
+    "interaction_record_prototype_hash_matches": true,
+    "interaction_record_verification_script_hash_matches": true,
+    "author_recorded_automated_checks": {
+      "passed": 15,
+      "total": 15,
+      "independently_reexecuted_by_this_reviewer": false
+    },
+    "capture_bracket_utc": [
+      "2026-10-26T16:23:59.231364+00:00",
+      "2026-10-26T16:24:01.960051+00:00"
+    ],
+    "author_marked_final_images_inspected": true,
+    "reviewer_actual_final_image_coverage": {
+      "total": 15,
+      "reopened_changed_pngs": 3,
+      "identical_sha_previously_viewed_pngs": 12
+    }
+  },
+  "unresolved_must_fix": [],
+  "recommended_next_validation": [
+    "按主方案真实纵向试装计划，用真实Thread/匹配adapter、私有测试文件、解析/检索/生成和服务保存检验文件到回答再到记录的闭环。",
+    "以真实中文长文、手机键盘、触屏和读屏测试阅读连续性与可访问性；当前桌面窄视口不替代这些观察。",
+    "将引用可打开、原文定位正确与语义充分支持分别验收；本次固定样例没有证明真实生成的证据正确性。"
+  ]
+}

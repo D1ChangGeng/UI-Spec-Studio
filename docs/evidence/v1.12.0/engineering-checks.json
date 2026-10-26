@@ -1,0 +1,111 @@
+{
+  "date_utc": "2026-10-26",
+  "scope": "Executed local maintainer checks; CI, publication and real-user outcomes retain separate scope.",
+  "runtime": "Python 3.12, Playwright 1.57.0, Chrome Headless Shell 143.0.7499.4, isolated Noto CJK fontconfig",
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 153,
+    "log_sha256": "cd71bc557e3532796e1c87c6784fa29a2ae90504555cb74b0ed849107f55dcf4",
+    "source_boundary": "Final runtime, guides and retained application evidence; full suite rerun after final review records were assembled."
+  },
+  "installer": {
+    "command": "python tools/install_smoke.py --source <local checkout>",
+    "cli": "skills@1.7.4",
+    "target_labels": [
+      "codex",
+      "claude-code",
+      "opencode"
+    ],
+    "installed_file_count": 29,
+    "physical_install_directories": 2,
+    "scope": "Discovery, installed file identity and installed helper execution; not model sessions in each host.",
+    "log_sha256": "7bfae727aa403e9acf788504ad22fecefe0072b7f100bf1419c07904b7de3854"
+  },
+  "format_validation": {
+    "reference_command": "skills-ref validate skills/ui-spec",
+    "reference_commit": "69ef37e9424c0a7ea9dd2293b559e43ec8176379",
+    "reference_result": "Valid skill: skills/ui-spec",
+    "generic_helper": "quick_validate.py rejects compatibility; same result on unmodified v1.11.0. Preserved valid standard metadata; no helper failure reported as a pass."
+  },
+  "fixture_reports": {
+    "product": {
+      "path": "scenario-evidence/report.json",
+      "sha256": "98ffb448e1cc5d86e5e74746cc1cd9136e9a2f1673076f723d56bd8b0d3bb1d4",
+      "scope": "Authored native design port; original product approval and upstream React runtime integration remain separate",
+      "result": "pass",
+      "checks": 18,
+      "captures": 28,
+      "storage_verified": true,
+      "browser": "143.0.7499.4",
+      "errors": [],
+      "external_requests": []
+    },
+    "assets": {
+      "path": "scenario-evidence/assets/report.json",
+      "sha256": "9fad80db8b7af8f53afe989196cf99fbb608fdd3e04c55818a474ecba0b702a0",
+      "scope": "Actual files and browser states in the asset-review fixture; visual approval and specialist production remain separate",
+      "result": "pass",
+      "checks": 8,
+      "views": 8,
+      "browser": "143.0.7499.4",
+      "errors": []
+    },
+    "content": {
+      "path": "scenario-evidence/content/report.json",
+      "sha256": "a773f5fd034752242b0d7d56ab6d09f377ad5d8b28b042f7d93fe05b19a5be98",
+      "scope": "Authored bilingual fixture: browser mechanics, content/state assertions and captures. In-memory storage is simulated. Visual judgment, user comprehension and production-service performance need their own evidence.",
+      "result": "pass",
+      "tests": 39,
+      "captures": 53,
+      "storage_verified": true,
+      "visual_review": "captures_ready_for_inspection",
+      "browser_version": "143.0.7499.4",
+      "page_errors": [],
+      "external_requests": []
+    },
+    "temporal": {
+      "path": "scenario-evidence/temporal/report.json",
+      "sha256": "0864d6c58ff1bd0f170979e89a4a44bd329369c782ddfe466742cd509b6f3d70",
+      "scope": "Authored local browser fixture with real Storage, normal-time interactions and scoped fault injection.",
+      "result": "pass",
+      "checks": 23,
+      "episodes": 23,
+      "videos": 0,
+      "storage_verified": true,
+      "visual_review": "pending: captured media requires actual viewing",
+      "browser": "143.0.7499.4",
+      "page_errors": [],
+      "external_requests": [],
+      "captures": 223
+    }
+  },
+  "temporal_limits": "Local temporal command used --no-video. Captured frames were not reviewed as continuous motion. CI uses the original normal video-producing gate.",
+  "fixture_source_sha256": {
+    "examples/asset-review/app.js": "a0c47395cf9d49fc887dd33b6edd68ddff79ef5ed5469921f0e95f005f7c0c05",
+    "examples/asset-review/index.html": "10fd92877b9bf8f93f39dbac7b4173d17c2d9314ce408ea180826059c17a5496",
+    "examples/asset-review/styles.css": "cf7ee6d222d9e21d18b8e95be4bb5600a288e9cbaba68508186abbd4c18edec0",
+    "examples/content-review/app.js": "8c3181ff6e6dcb364b6c0a543ee2b7a89145f0f687fc5dbaa588c6e7465a83dd",
+    "examples/content-review/index.html": "d8f65f613f388d77f94d073e6bf6ccef5a7aab47d4147b25615f4a7468960034",
+    "examples/content-review/styles.css": "4840d6fe8a67579a9994871ac4997fb3b28ea844f60e394a28c230dfc59758d7",
+    "examples/product-intent/app.js": "fd4921a47211f683a4efa34bf1c983dcad23cafa2572a551745ed5511b12d916",
+    "examples/product-intent/index.html": "2bdb4fa92cc12e1c07f1c3d2a2001d385d4b642505e49c3497e133df75a3ea5e",
+    "examples/product-intent/styles.css": "1c02b220d52d21aa7ad87bdff42a811e4dedf4016cf98029e04dbf55fb440ccb",
+    "examples/product-intent/tokens.css": "02f86bb6ca43363b47f88dff7bbe5e339304ffbd263ed8eac0fe84df7a6a16de",
+    "examples/temporal-review/app.js": "8cb00044e3c1ed0939a2ec1ae5f37e792b3f3beaf33518db6df2f4bc731710a0",
+    "examples/temporal-review/index.html": "25045f01f6214aedad57af2bbe9dfdbc6b5183c29dd74e7696313f9852af2327",
+    "examples/temporal-review/styles.css": "7eee394aca570e9a0d7754cde2401be9de2d0970ac5a6165705e28069c0eb231"
+  },
+  "runner_source_sha256": {
+    "tools/validate_assets.py": "4a2b6ef9b5189707e82c3048ba59e1fa57efef8834ef13b0aeaec7f9a69229c0",
+    "tools/validate_content.py": "2e3afe1b80687364096c56ea299cf661c94bf596a0ea0b19ff470863a9721bee",
+    "tools/validate_package.py": "9639c5fe9799b123efcad791c238a274604d78aeca9a93b81cd11b9eacdd90aa",
+    "tools/validate_scenario.py": "33e9ec0c8afde7d9e42e0765bf6eb41619528c85da9f236fb116536af2f6d236",
+    "tools/validate_temporal.py": "e1761aeb89245b506b63a7dff6205fcdcf51c74afa53bc90e86cc1079a287a54"
+  },
+  "final_source_identity": {
+    "frozen_runtime_files_matched": 29,
+    "independent_audited_source_files_matched": 18,
+    "readme_source_hashes_matched": true,
+    "git_diff_check": "pass"
+  }
+}

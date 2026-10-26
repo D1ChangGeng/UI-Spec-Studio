@@ -170,3 +170,38 @@ text availability, image selection/alt, the first disclosure and document overfl
 were checked by the maintained renderer. Clipboard, code scrolling and full
 keyboard use were not exercised. Actual GitHub presentation retains its separate
 exact-source CI evidence and post-publication visual readback.
+
+## Intended experience and evidence maturity in 1.12
+
+The front page is still a reading and installation interface. Its revised premise
+and first prompt connect intended experience, actual evidence and mature-resource
+comparison to a reviewable result. A short section after installation explains
+how product analogies become revisable research questions. The exploration section
+connects impact, uncertainty, distinct candidates and evidence quality to the next
+action: further research, a local trial or wider implementation. The new
+[experience research guide](../EXPERIENCE-RESEARCH.md) holds detailed application.
+
+This uses the existing GitHub-native foundation and established editorial art.
+The 2026-10-25 source observations above retain their original date; they were not
+newly repeated for this wording change. The current question was how to expose the
+richer method without delaying installation or replacing readable native content.
+
+On 2026-10-26 UTC, the maintainer opened the final 12 initial viewports and 24
+original-pixel crops of the two changed sections across English/Chinese,
+light/dark and 390/768/1440 px. Four full documents were viewed as overviews.
+Inspection found a narrow Chinese guide link splitting after its first character;
+placing the link group in a separate paragraph in both languages repaired it.
+The complete matrix was recaptured and the affected sections re-inspected.
+The remaining existing 768 px Chinese multi-round-guide wrap is visible and
+nonblocking. Installation, hierarchy, CJK rendering and theme artwork remained
+readable in the inspected scope.
+
+The final README source SHA-256 values are
+`99b0776181259e2ac2af2c3141bf60a1db29163ff0300281b3fd204aaa3e7452`
+for English and
+`21db7fa3246c0fc4935397d00a41d699f260b0ef34a2f24d0c23a9336db44074`
+for Chinese. The [local record](../evidence/v1.12.0/readme-local-review.json)
+identifies actual images, crop coordinates, viewing scope, conditions and limits.
+The renderer now describes its native-text assertion precisely; it does not claim
+a clipboard action. Actual GitHub presentation retains the exact-commit CI gate
+and separate publication readback described above.

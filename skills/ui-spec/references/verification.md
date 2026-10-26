@@ -3,6 +3,7 @@
 ## Contents
 
 - [Coverage and assurance](#build-the-coverage-inventory-from-reality)
+- [Evidence sufficiency](#judge-evidence-for-the-decision)
 - [Viewing conditions and actual interaction](#capture-the-actual-viewing-condition)
 - [Temporal visual inspection](#inspect-a-time-bounded-visual-episode)
 - [Tools for the question](#choose-methods-for-the-evidence-question)
@@ -27,6 +28,22 @@ Include temporal relationships: trigger, meaningful progression, stopping condit
 Check local changes in context, shared changes across dependants and journeys through transitions/recovery. Integration needs visual and business evidence; depth follows consequence, variability and decision value.
 
 Explain sampling and remaining conditions. Package checks, scenarios, viewed pixels, executed interactions, user research and real integration establish different facts; comparative model evaluations are separate research.
+
+## Judge evidence for the decision
+
+Choose the next observation by the unresolved experience question. Assess these dimensions together, at the scope of the proposed decision:
+
+| Dimension | What sufficiency means |
+|---|---|
+| Coverage breadth | Important parts, states, views, alternative directions and relationships have a relevant basis |
+| Inspection depth | The consequential composition, type, material, proportions and details have actually been examined |
+| Temporal coverage | The observed process covers the behavior claimed, with gaps and sampling limits retained |
+| Evidence relevance | Conditions and subject answer this product's question, including its user's intended version or platform |
+| Evidence reliability | Origin, date/revision, platform, role/plan, editing and viewing conditions support the conclusion |
+
+Quantity cannot compensate for a missing dimension. Multiple reposts share an origin; a detailed still leaves movement unresolved. Separate actual observation, source statements, professional inference and missing evidence. Corroborate consequential claims through appropriate text, renders or operation; preserve conflicts for investigation rather than silently merging versions or users.
+
+Before broader implementation, revisit target understanding, explored alternatives, the observed reason for selection, implementation fit and uncertainty that could overturn it. A bounded trial can resolve fit without claiming the target is already met. After integration, check experience alignment, visual craft, distinctive expression and engineering reliability on the real task; carry residual gaps at their own scope. The [analysis](analysis.md) and [sourcing](component-sourcing.md) methods guide whether further discovery or trial is valuable.
 
 ## Capture the actual viewing condition
 
@@ -158,7 +175,7 @@ Keep research, comparison, trial, adoption and inspection distinct. Retain sourc
 
 ## Verify the design decision chain
 
-Check product model, primary action, continuation, alternatives and selection authority. Existing UI needs target-based fit; provisional choices retain their status.
+Connect user intent, experience hypothesis, research question, product/user evidence, viewed relationships, candidate comparison, adopted implementation and result. Check primary action, continuation and selection authority; provisional choices retain their status.
 
 Re-answer research questions beside the preview with current content, comparable scale/density and corresponding interaction phases. Trace the desired quality to the adopted implementation, adaptation and observed result. Exercise first use, active work and resume. Fixture results, product acceptance, agent evaluation and user research retain separate scope.
 

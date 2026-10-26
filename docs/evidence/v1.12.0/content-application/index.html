@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A working bilingual UX content specimen with real local persistence and explicit status copy.">
+  <title>研究笔记 · 内容设计实例</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a id="skip" class="skip" href="#main">跳到主要内容</a>
+<header class="site-header">
+  <div class="brand"><div class="monogram" aria-hidden="true">S</div><div><strong>Study</strong><small data-i18n="brandSubtitle">研究笔记</small></div></div>
+  <div class="utilities">
+    <span class="spec-label">UI SPEC <span class="separator">/</span> CONTENT</span>
+    <button id="locale-toggle" class="utility" type="button" aria-label="EN · Switch to English" lang="en">EN</button>
+    <button id="theme-toggle" class="utility" type="button" aria-label="切换深色主题"><span aria-hidden="true">◐</span></button>
+  </div>
+</header>
+<main id="main" tabindex="-1" class="page-shell">
+  <div class="eyebrow"><span class="circle"></span><span data-i18n="eyebrow">研究空间 / 笔记</span><span class="eyebrow-divider"></span><span data-i18n="scope">本地演示</span></div>
+  <div class="layout">
+    <section class="editor-panel" aria-labelledby="main-title">
+      <header class="intro"><p class="section-index">01 <span data-i18n="step">记录想法</span></p><h1 id="main-title" data-i18n="pageTitle">把研究线索整理成笔记</h1><p data-i18n="pageIntro">先记下问题和背景，再回来继续完善。</p></header>
+      <form id="note-form" novalidate>
+        <div class="field"><label for="note-title"><span data-i18n="titleLabel">笔记标题</span><span aria-hidden="true" class="required">*</span></label><p id="title-hint" class="field-hint" data-i18n="titleHint">用一句话写清想研究的问题</p><input id="note-title" name="title" type="text" maxlength="150" autocomplete="off" aria-describedby="title-hint title-error" aria-required="true" placeholder="例如：如何降低供热高峰负荷？"/><p id="title-error" class="field-error" role="alert" hidden></p></div>
+        <div class="field"><label for="note-body"><span data-i18n="bodyLabel">背景与线索</span><span class="optional" data-i18n="optional">选填</span></label><p id="body-hint" class="field-hint" data-i18n="bodyHint">补充已有材料、疑问或仍需核查的判断</p><textarea id="note-body" name="body" rows="5" maxlength="3000" aria-describedby="body-hint" placeholder="记下材料、想法或需要验证的线索…"></textarea></div>
+        <div class="form-actions"><button id="save" type="submit" class="primary" aria-describedby="save-hint"><span id="save-label" data-i18n="save">保存笔记</span><span aria-hidden="true">↗</span></button><p class="storage-note"><span aria-hidden="true" class="storage-dot"></span><span data-i18n="storage">手动保存 · 仅此浏览器</span></p></div>
+        <p id="save-hint" class="save-hint" data-i18n="saveHint">每次保存会替换上一版。离开此页前请保存。</p>
+        <div class="state-area">
+          <div id="save-status" role="status" aria-live="polite" aria-atomic="true"><p id="state-message"></p><p id="state-detail" class="state-detail" hidden></p></div>
+          <button id="retry" type="button" hidden data-i18n="retry">重试保存</button>
+        </div>
+      </form>
+    </section>
+    <aside class="context-panel" aria-label="研究笔记预览">
+      <div class="context-top"><p class="section-index">02 <span data-i18n="asideStep">继续研究</span></p><h2 data-i18n="asideTitle">最近保存</h2><p data-i18n="asideIntro">这里显示上次保存的标题。重新打开此页时，会载入已保存的笔记。</p></div>
+      <div class="recent-card" id="recent-card"><div class="recent-icon" aria-hidden="true">↳</div><div><p id="recent-title" class="recent-title" data-i18n="recentEmpty">还没有保存的笔记</p><p id="recent-meta" class="recent-meta" data-i18n="recentEmptyHint">保存成功后，标题会显示在这里</p></div></div>
+      <div class="aside-footer"><p data-i18n="disclosure">这是交互演示。笔记只保存在此浏览器中，不会发送到外部服务。清除浏览器数据会删除笔记。</p></div>
+    </aside>
+  </div>
+</main>
+<footer class="fixture-controls">
+  <details id="preview-controls"><summary data-i18n="previewSettings">预览状态设置</summary><div class="fixture-body"><label><input id="simulate-failure" type="checkbox"> <span data-i18n="failureSwitch">模拟写入失败</span></label><label><input id="simulate-slow" type="checkbox"> <span data-i18n="slowSwitch">延迟写入 1 秒</span></label><button id="long-example" type="button" data-i18n="loadLong">填写较长标题</button><button id="reset" type="button" data-i18n="reset" aria-describedby="reset-hint">清除本地演示数据</button></div><p id="reset-hint" class="reset-hint" data-i18n="resetHint">清除会删除已保存的笔记，并清空当前输入。需要保留时，请先复制文本。</p></details>
+  <span class="fixture-status" data-i18n="fixtureLabel">内容与交互状态实例 · 本地运行</span>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

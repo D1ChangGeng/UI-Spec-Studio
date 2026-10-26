@@ -6,6 +6,9 @@ Use this optional note for a consequential choice, or equivalent facts in existi
 
 User task, desired perception/behavior, accepted direction, runtime/content requirements.
 
+Research question, target experience evidence and the uncertainty this resource
+must resolve. Keep the current user's intent distinct from audience or product claims.
+
 ## Selected starting point
 
 Resource/item, original source, version or commit, implementation variant, demonstration configuration,
@@ -22,6 +25,11 @@ Connect the quality target to the
 actual package, copied source, configuration or asset carrying it. Scope behavior primitives and
 visual foundations separately. Explain the concrete gap behind custom work and alternatives
 actually assessed; research or design transfer alone does not establish implementation adoption.
+
+For consequential alternatives, describe the material differences in composition,
+type, material, interaction or time, along with comparison conditions and common
+source lineage. Record evidence that challenged the first preference and why the
+choice now fits; a source count alone cannot explain it.
 
 ## Local trial
 

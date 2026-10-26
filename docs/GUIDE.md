@@ -10,7 +10,7 @@ Keep its framework and working API. Inspect its routes, user tasks and current
 screens. Establish a coherent UI direction and implement the first useful slice.
 ```
 
-The agent reads all eight common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Product UI Experience Alignment establishes the intended experience from real tasks, content and operating conditions. A product name opens research into relevant pages, flows and qualities; an open brief prompts the agent to find mature patterns and implementations. Reference research and resource selection develop together.
+The agent reads all eight common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Product UI Experience Alignment establishes the intended experience from real tasks, content and operating conditions. A product name opens a revisable interpretation of relevant tasks, pages and qualities; an open brief prompts the agent to find mature patterns and implementations. The current user's intent, target-user experience and reference-product facts retain their own sources and conditions.
 
 Explicit goals for artistry, visual impact or differentiation remain delivery
 requirements alongside usability and truthful behavior. The product category
@@ -20,6 +20,26 @@ preserving understandable objects, actions, results and continuation.
 Mature implementations supply general UI by default, at the highest appropriate reuse level. The agent trials consequential choices with the project's content, fonts, theme and states before expanding integration. Optional shape resolves material open directions through a recommendation and focused choice or representative preview; clear direction supports direct progress. The following collection/detail examples assume that this direction has been selected for the actual task.
 
 Existing instructions, design documents and tests remain useful. The optional templates are a starting point when equivalent records are absent.
+
+### Let the experience determine the research
+
+The agent plans evidence around important tasks, pages, states and their
+relationships. Documentation and user material explain meaning and context;
+rendered views establish visual relationships; operation and continuous media
+explain behavior over time. Findings can revise the experience hypothesis and
+implementation search.
+
+Research effort follows impact, uncertainty and potential improvement. Important
+visual or interaction choices can warrant sustained exploration across many
+independent sources. The agent compares materially different candidates and
+actively investigates alternatives to its first preference. Familiar, accepted
+work can continue with focused validation under matching conditions.
+
+You receive the key choices and useful evidence with the result. A substantial
+gap leads to further research, a supported candidate to a revealing local trial,
+and a demonstrated fit to wider implementation. Specific access needs can prompt
+one focused request for normal authorized material. The agent keeps responsibility
+for analysis, selection and verification. See [the research method](EXPERIENCE-RESEARCH.md).
 
 ## 2. Review a named scope
 

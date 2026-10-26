@@ -2,6 +2,13 @@
 
 Product UI Experience Alignment connects current users, tasks and operating conditions to a concrete target experience. UI Spec Studio finds useful mature references whether the user supplies a product name, a functional goal or an existing product to improve. The [alignment and exploration guide](PRODUCT-ALIGNMENT.md) explains how research questions become observed design relationships and verifiable implementation choices.
 
+Begin with a revisable experience hypothesis. Distinguish the current user's
+intent, relevant user-group experience and the reference product's actual
+behavior. Preserve version, platform, role and observation conditions where they
+affect fit. Plan text, visual and behavioral evidence around tasks, parts, states
+and their relationships. The [experience research guide](EXPERIENCE-RESEARCH.md)
+explains this planning and its connection to continued exploration.
+
 Record task requirements and explicit aesthetic goals together. Familiarity can
 come from understandable objects, labels, outcomes and continuation while layout,
 type, material and motion develop an independent expression. A professional
@@ -86,9 +93,22 @@ from a working preview or successful test.
 
 ## Pair the selection record with the preview
 
-The record connects each consequential surface/dimension to its intended experience, research question, correctly attributed observation, transferable relationship, selected resource, adaptation, implementation location and observed result. Preserve the relevant source/page/interval and conditions when needed to inspect a decision. Shared references can cover routine members of a component family; depth follows design impact. Include layout/navigation,
+The record connects each consequential surface/dimension to its intended experience, research question, correctly attributed observation, meaningful alternatives, selected resource, adaptation, implementation location and observed result. Preserve the relevant source/page/interval and conditions when needed to inspect a decision. Shared references can cover routine members of a component family; depth follows design impact. Include layout/navigation,
 background, typography, components, icons, feedback and movement where relevant.
 Quiet/native/inherited treatments can be deliberate choices with a brief reason.
+
+Explain which finding strengthened, revised or overturned an earlier assumption,
+and what decision follows. A consequential selection should show the different
+advantages actually compared and why the chosen direction fits this task. Three
+near-identical treatments may support a narrow theme choice while leaving the
+larger direction unexplored. Keep documentary facts, observed pixels/behavior,
+professional interpretations and unobserved conditions distinguishable.
+
+Use the record to choose the next commitment: continue research, run a local trial
+or expand a demonstrated fit. Weigh target understanding, evidence coverage and
+depth, candidate diversity, comparison quality, adoption feasibility and remaining
+uncertainty. Each factor matters through the decision it could change; an existing
+prose record can express it without a fixed form or numerical score.
 
 Keep the visible fact, perceptual interpretation and causal explanation distinct.
 An uncertain cause remains a hypothesis until comparison, code or runtime evidence
