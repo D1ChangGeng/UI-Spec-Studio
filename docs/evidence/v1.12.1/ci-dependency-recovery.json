@@ -1,0 +1,67 @@
+{
+  "date_utc": "2026-10-26",
+  "previous_source_commit": "73add60f9754af67ed5b32c2fed72e964ae7e3e5",
+  "run_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40359989786",
+  "observed_attempts": [
+    {
+      "attempt": 1,
+      "job_id": 121702650364,
+      "conclusion": "cancelled",
+      "apt_download": "25.9 MB in 9min 47s (44.2 kB/s)",
+      "location": "azure.archive.ubuntu.com/ubuntu",
+      "following_state": "Chromium downloaded; 61.2 MB fonts-noto-cjk download cancelled",
+      "scenario_assertions_executed": false,
+      "release": "skipped"
+    },
+    {
+      "attempt": 2,
+      "job_id": 121709626237,
+      "conclusion": "cancelled",
+      "apt_download": "25.4 MB in 9min 44s (43.4 kB/s)",
+      "location": "azure.archive.ubuntu.com/ubuntu",
+      "following_state": "System/browser dependency step cancelled after downloads; CJK and four scenarios never started",
+      "scenario_assertions_executed": false,
+      "release": "skipped"
+    }
+  ],
+  "control": "Same-source publication job: 25.9 MB system dependencies in 9s and 61.2 MB fonts in 6s; test, install and publication gates succeeded.",
+  "inference": "The observed slow runner-to-mirror transfer consumed the configured job time budget. Logs state operation canceled; they do not explicitly name timeout or establish a global mirror outage.",
+  "repair": "Precisely replace existing Azure Ubuntu /ubuntu URI with archive.ubuntu.com before Playwright dependencies in both browser jobs; support .list, .sources and the observed /etc/apt/apt-mirrors.txt.",
+  "preserved": [
+    "HTTP/HTTPS scheme",
+    "suite and components",
+    "architecture and Signed-By",
+    "package names and APT signature checks",
+    "other sources and near-miss paths",
+    "job timeouts",
+    "all assertions, artifacts, permissions, action pins and release dependencies",
+    "skill behavior and 28 unchanged runtime files; SKILL metadata version advances to 1.12.1"
+  ],
+  "local_check": {
+    "command": "Actual sed -E expression on mixed .list, DEB822 and plain weighted mirrorlist fixtures",
+    "result": "pass",
+    "expected_URI_replacements": 4,
+    "near_miss_paths_unchanged": true,
+    "other_hosts_keyrings_and_mirror_priority_unchanged": true
+  },
+  "official_reference": "https://documentation.ubuntu.com/security/software-integrity/archive-verification/",
+  "workflow_sha256": "ec232e76024edb228575eb23b796f500ba6c2623dc6522ab09992e16a818e271",
+  "publication_boundary": "v1.12.0 was published at 843a2f7cd0a03bea291fa70fa48370f75be16ec9 before this mirrorlist correction. Its tag and assets are preserved. A new full workflow and public asset readback are required for v1.12.1; this source record does not predeclare their results.",
+  "independent_review": {
+    "path": "ci-mirror-review.json",
+    "sha256": "543429a2cd26494514327d63757e74c0746a509a0145dff537d67623600034b8",
+    "result": "pass; includes earlier direct-source coverage omission and exact two-line mirrorlist correction"
+  },
+  "original_log_sha256": {
+    "ui-spec-1_12-scenario-attempt1.log": "c84623b167a0d18aa2cdd34fa6b3e4615bd314d5d3cf26292d23120c8a84f6b8",
+    "ui-spec-1_12-scenario-attempt2.log": "2d0ab2dd9912a93daaa4ac77094bf7f51262774591460eb9ac0f5632db66b784"
+  },
+  "first_URI_revision": {
+    "commit": "843a2f7cd0a03bea291fa70fa48370f75be16ec9",
+    "run_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40364112684",
+    "observation": "Mirror replacement step exited successfully, but both browser jobs read file:/etc/apt/apt-mirrors.txt and actual requests still used azure.archive.ubuntu.com. Direct source files alone did not cover the runner configuration.",
+    "browser_results": "Publication and all four scenarios passed during this run; actual download speed recovered on Azure. This is not evidence that the mirror transformation had taken effect.",
+    "final_adjustment": "Include the explicitly observed /etc/apt/apt-mirrors.txt alongside direct .list/.sources files; verify actual request hosts in the next CI."
+  },
+  "patch_version": "1.12.1"
+}

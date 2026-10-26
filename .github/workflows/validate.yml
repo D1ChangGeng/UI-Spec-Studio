@@ -73,7 +73,7 @@ jobs:
       - name: Use the Ubuntu archive for system dependencies
         shell: bash
         run: |
-          for apt_source in /etc/apt/sources.list /etc/apt/sources.list.d/*.list /etc/apt/sources.list.d/*.sources; do
+          for apt_source in /etc/apt/sources.list /etc/apt/sources.list.d/*.list /etc/apt/sources.list.d/*.sources /etc/apt/apt-mirrors.txt; do
             if [[ -f "$apt_source" ]]; then
               sudo sed -i -E \
                 's@(https?://)azure\.archive\.ubuntu\.com/ubuntu([/[:space:]]|$)@\1archive.ubuntu.com/ubuntu\2@g' \
@@ -111,7 +111,7 @@ jobs:
       - name: Use the Ubuntu archive for system dependencies
         shell: bash
         run: |
-          for apt_source in /etc/apt/sources.list /etc/apt/sources.list.d/*.list /etc/apt/sources.list.d/*.sources; do
+          for apt_source in /etc/apt/sources.list /etc/apt/sources.list.d/*.list /etc/apt/sources.list.d/*.sources /etc/apt/apt-mirrors.txt; do
             if [[ -f "$apt_source" ]]; then
               sudo sed -i -E \
                 's@(https?://)azure\.archive\.ubuntu\.com/ubuntu([/[:space:]]|$)@\1archive.ubuntu.com/ubuntu\2@g' \

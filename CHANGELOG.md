@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.12.1 — 2026-10-26
+
+- Include the observed `/etc/apt/apt-mirrors.txt` in Ubuntu mirror selection for both browser jobs, alongside direct APT source files.
+- Preserve package verification, workflow permissions, timeouts, action pins, scenario assertions and release dependencies.
+- Keep the design method and runtime references unchanged; advance release metadata and current installation pins to 1.12.1.
+- Record the distinction between successful v1.12.0 gates and actual APT mirror selection; the patch review tracks the new run's observed request host and publication result.
+
 ## 1.12.0 — 2026-10-26
 
 - Ground design research in a revisable understanding of intended experience, separating current-user intent, target-user experience and reference-product evidence.

@@ -1,0 +1,52 @@
+{
+  "date_utc": "2026-10-26",
+  "version": "1.12.1",
+  "scope": "Actual local patch checks; final CI, public assets and model behavior have separate evidence.",
+  "checks": {
+    "package_structure": "pass",
+    "readme_artwork": "pass",
+    "resource_catalog": "pass"
+  },
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 153,
+    "log_sha256": "fc2ebf00ca618afb111b5de369c6e01243d7fe3adde2b26b95d740441684b4df"
+  },
+  "installation": {
+    "result": {
+      "source": "prepared local checkout",
+      "installer": "skills@1.7.4",
+      "requested_agents": [
+        "codex",
+        "claude-code",
+        "opencode"
+      ],
+      "installed_copies": 2,
+      "verified_files_per_copy": 29,
+      "helpers": "prepare, coverage checker and resource lookup executed",
+      "scope": "CLI installation and file integrity; host model execution is separate"
+    },
+    "log_sha256": "7bfae727aa403e9acf788504ad22fecefe0072b7f100bf1419c07904b7de3854"
+  },
+  "readme": {
+    "report_sha256": "a157655a7e142ee42ac3b62dd972f00a2b78e592fcbbf0500b1ee9a40d14ab68",
+    "source_files": {
+      "README.md": "1481d5f8f349275043dd391e85f3b7a8bf739b8f44694c36759bf4dd8edc2c32",
+      "README.zh-CN.md": "b49d8bb2f0ae746a4c057a6ecee4954833e52ec0c5f79d3db5a0a3d6122bce46"
+    },
+    "conditions": 12,
+    "result": "pass",
+    "visual_review": "See readme-local-review.json for actually viewed installation captures; generated matrix is not equivalent to viewed matrix.",
+    "scope": "DOM, asset selection, native installation text, disclosure and overflow checks; clipboard operation is not exercised; inspect screenshots separately for visual judgment",
+    "local_renderer": "Markdown-It with a GitHub-like stylesheet; not pixel-identical to GitHub"
+  },
+  "runtime_source_identity": "patch-source-identity.json",
+  "historical_application_scope": "Frozen 1.12.0 inputs and results remain recorded under ../v1.12.0; only SKILL metadata changes in this patch.",
+  "ci_dependency_recovery": {
+    "record": "ci-dependency-recovery.json",
+    "workflow_sha256": "ec232e76024edb228575eb23b796f500ba6c2623dc6522ab09992e16a818e271",
+    "local_URI_boundaries": "pass",
+    "release_gates": "unchanged; final patch requires its own full CI run"
+  },
+  "prior_release": "prior-release-observation.json"
+}

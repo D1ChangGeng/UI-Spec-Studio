@@ -1,0 +1,53 @@
+{
+  "version": "1.12.1",
+  "comparison_source_commit": "843a2f7cd0a03bea291fa70fa48370f75be16ec9",
+  "original_application_input": "../v1.12.0/frozen-skill-identity.json",
+  "unchanged_runtime_files": 28,
+  "changed_runtime_files": {
+    "SKILL.md": "Only metadata.version 1.12.0 -> 1.12.1; exact replacement asserted"
+  },
+  "current_runtime_sha256": {
+    "LICENSE": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db",
+    "SKILL.md": "1520bbabe2a2e2dce7a6e03fc533aac56ac9c3367d229b9f124cdb33058b9681",
+    "assets/resource-catalog.json": "5ba46251e7d44eef6214d158c19c51b3e7cbe5bb73bf31a82773a21fdc52bbd0",
+    "assets/templates/asset-record.md": "bd53e913b675d9a83c4211ca67e1cf608b636f31357d31a0a3b768e13acb31b6",
+    "assets/templates/brief.md": "0cb7f216d8242ae9c04770b3d3d993e1bb08f7fac63f839c3a8dbcbcffc0d626",
+    "assets/templates/content-decisions.md": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd",
+    "assets/templates/design-decisions.md": "b97c0085827b200940209472481dd97dc431fe16a4453406d141318cbd8c6fd0",
+    "assets/templates/design-system.md": "328f3ce70079b2bfc2f2bbfaa4dd961c33f521d0bfd533db18450975a9d5d84d",
+    "assets/templates/manifest.json": "90dc366e81c1cee705aac46786cc6d22ec891fa397bd5eb60d24717941a9eaa0",
+    "assets/templates/resource-adoption.md": "b15b7d0a701c7f85cf429dec72b9b02c99ed8c98f56dd55ad5bbf0ed42fa6dd5",
+    "assets/templates/review.md": "cf6b754a8ab5b6a195f5fcd65ce0fa3a849f6c34fbdc7af575b54c2006992241",
+    "references/analysis.md": "7d5f9380fb33e2a166309863f6dfdeebe0f25533cb74d03cb7208a2cc855e07e",
+    "references/asset-sources.md": "423ff1aa51590d8b78d9f165853e145bc3b6398f123fa5ca8aac7586da173227",
+    "references/component-sourcing.md": "28f0d43d72af2eed14d6ba8ae93653525832c9b54df885d90c6e0d5837ce038f",
+    "references/content-design.md": "0cfc63321af1835523abca1ffb226c90798ed23c7b813531776c5b1ac59e9406",
+    "references/content-sources.md": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45",
+    "references/examples.md": "f8febc6fb3bf48b032961a9e01c820b7338d82c6422ed04d82c6d692101dc6c8",
+    "references/integration.md": "f193b19dcabbf50240ec6ef2180214eb381859b4f548bab202bca92e5d84cf31",
+    "references/interaction-and-variants.md": "53e9951f6308e2ac002af0cbf12f6fcb8f9ef1a73779ba91f1add0be24aa201a",
+    "references/patterns.md": "ea3fbd20c04058e7991c9b93e07ec172410fd5f5b078528eacfdf3ef27a59d9e",
+    "references/principles.md": "1c2cc24fff1a410b73f831c4f7b50888ed4427214de39eac068b22824917ce5f",
+    "references/resource-catalog.md": "72c11991b1e6f6fe82a27f5b138577cc288b707e4158124ba658379eaf27af7b",
+    "references/sources.md": "7f8fa7589c29438438c44c263256515232fab89059c502be2a119d8837793806",
+    "references/verification.md": "60f54ae4f66c9e0019ab745bc94e653fc0160e405cb84c652e9b009670d278e9",
+    "references/visual-assets.md": "78c50b9e7128940042db84c5eb4d8e584bcf24204c81968cdb73dcf51efee80f",
+    "references/workflow.md": "715e561c2cfed31bbffde675bbc0a89af643079998fce3a7a3cd6a3ee42394a4",
+    "scripts/check_manifest.py": "866beb1b294e7943c15aa8aa957f279905248dbbf5515b03dd2bd6bc65ce87f9",
+    "scripts/find_resources.py": "403a50f038ebfccc87ceb5b310c7770652b549080cbd3a7066133db1cc16c675",
+    "scripts/prepare.py": "5890f35f51d580ff78f281689cef09621efa5f9d250088680bef6c3ae717ab1f"
+  },
+  "readme_comparison": {
+    "README.md": {
+      "before_sha256": "99b0776181259e2ac2af2c3141bf60a1db29163ff0300281b3fd204aaa3e7452",
+      "after_sha256": "1481d5f8f349275043dd391e85f3b7a8bf739b8f44694c36759bf4dd8edc2c32",
+      "change": "Fixed installation version token only"
+    },
+    "README.zh-CN.md": {
+      "before_sha256": "21db7fa3246c0fc4935397d00a41d699f260b0ef34a2f24d0c23a9336db44074",
+      "after_sha256": "b49d8bb2f0ae746a4c057a6ecee4954833e52ec0c5f79d3db5a0a3d6122bce46",
+      "change": "Fixed installation version token only"
+    }
+  },
+  "behavioral_application_scope": "Earlier fresh-context applications used the frozen 1.12.0 input. This differential check establishes unchanged instruction content, not a new agent application."
+}

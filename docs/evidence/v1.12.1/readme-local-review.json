@@ -1,0 +1,59 @@
+{
+  "version": "1.12.1",
+  "source_files": {
+    "README.md": "1481d5f8f349275043dd391e85f3b7a8bf739b8f44694c36759bf4dd8edc2c32",
+    "README.zh-CN.md": "b49d8bb2f0ae746a4c057a6ecee4954833e52ec0c5f79d3db5a0a3d6122bce46"
+  },
+  "renderer": "Markdown-It with a GitHub-like stylesheet; not pixel-identical to GitHub",
+  "browser": "Chrome Headless Shell 143.0.7499.4",
+  "playwright": "1.57.0",
+  "font": "Noto Sans CJK SC with isolated fontconfig; system Latin fallback",
+  "generated_matrix_conditions": 12,
+  "actually_viewed": [
+    {
+      "file": "install-en-light-1440.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "version_text": "# Install for Codex in the current project\nnpx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex\n\n# Pin the published skill release\nnpx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.1 --skill ui-spec\n",
+      "code_overflows": false,
+      "horizontal_scroll": "initial",
+      "sha256": "abe20788fbca79f8d4bdf5d8322f1c719296ca386e2ba3337441a03414b226ee"
+    },
+    {
+      "file": "install-zh-dark-390.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "version_text": "# 将 Skill 安装到当前项目的 Codex\nnpx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex\n\n# 固定正式发布版本\nnpx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.1 --skill ui-spec\n",
+      "code_overflows": true,
+      "horizontal_scroll": "initial",
+      "sha256": "ceb19028f9c2927de8f6eeac816f8989aff22eff8c729e5667393fdadd654f02"
+    },
+    {
+      "file": "install-zh-dark-390-scrolled.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "version_text": "# 将 Skill 安装到当前项目的 Codex\nnpx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex\n\n# 固定正式发布版本\nnpx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.1 --skill ui-spec\n",
+      "horizontal_scroll": "right end",
+      "sha256": "19b1a16f0a2c3e86558c92b4f566b1883c9e2568e5cb13e440ab4b38b25a429b"
+    }
+  ],
+  "findings": [
+    "Desktop English installation block shows the full 1.12.1 command with unchanged hierarchy and spacing.",
+    "Narrow Chinese text remains readable; the code block uses horizontal overflow within the document. The initial and right-end scroll views were both inspected, and the right-end view exposes v1.12.1.",
+    "No blocking issue was observed in the changed installation area."
+  ],
+  "scope_limits": [
+    "The other 12 generated matrix captures were not all re-viewed for this one-token patch. Earlier 1.12.0 full-matrix and actual-host reviews retain their original source identities.",
+    "This local stylesheet approximates GitHub. Actual-host checks and source readback occur in the publication workflow.",
+    "Clipboard operation and real-user comprehension were not tested."
+  ]
+}

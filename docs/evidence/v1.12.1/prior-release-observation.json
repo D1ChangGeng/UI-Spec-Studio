@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "record_type": "prior_release_observation",
+  "observed_on": "2026-10-26",
+  "scope": "Retained v1.12.0 CI log and public GitHub metadata observations; not verification of v1.12.1.",
+  "repository": "D1ChangGeng/UI-Spec-Studio",
+  "version": "1.12.0",
+  "commit": "843a2f7cd0a03bea291fa70fa48370f75be16ec9",
+  "tree": "ccd4ba87fecf4a751880c2cf6a600a513ab24a2e",
+  "sources": {
+    "workflow": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40364112684",
+    "publication_job": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40364112684/job/121717036837",
+    "scenario_job": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40364112684/job/121717037250",
+    "release_job": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40364112684/job/121720027424",
+    "release": "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.12.0",
+    "tag_ref": "https://api.github.com/repos/D1ChangGeng/UI-Spec-Studio/git/ref/tags/v1.12.0"
+  },
+  "ci": {
+    "run_id": 40364112684,
+    "attempt": 1,
+    "conclusion": "success",
+    "jobs": {
+      "publication": "success",
+      "scenario": "success",
+      "test (windows-latest, 3.13)": "success",
+      "test (ubuntu-latest, 3.13)": "success",
+      "install": "success",
+      "test (macos-latest, 3.13)": "success",
+      "test (ubuntu-latest, 3.10)": "success",
+      "release": "success"
+    },
+    "unit_tests_per_matrix": 153,
+    "package_validation_resource_map_and_packaging": "passed in all four test matrices",
+    "installation": {
+      "tested_sources": [
+        "local checkout",
+        "observed commit",
+        "v1.12.0 tag"
+      ],
+      "installer": "skills@1.7.4",
+      "requested_agents": [
+        "codex",
+        "claude-code",
+        "opencode"
+      ],
+      "verified_copies_per_install": 2,
+      "verified_files_per_copy": 29,
+      "helpers_executed": [
+        "prepare",
+        "coverage checker",
+        "resource lookup"
+      ],
+      "scope": "CLI installation and file integrity; host-model execution is not established by these checks."
+    }
+  },
+  "publication": {
+    "local_captures_generated": 12,
+    "github_captures_generated": 24,
+    "live_commit": "843a2f7cd0a03bea291fa70fa48370f75be16ec9",
+    "automated_checks": "DOM, asset selection, native installation text, disclosure and overflow passed; evidence uploaded.",
+    "clipboard_exercised": false
+  },
+  "scenario": {
+    "product_intent": {
+      "result": "pass",
+      "checks": 18,
+      "captures_generated": 28,
+      "storage_verified": true
+    },
+    "asset_delivery": {
+      "result": "pass",
+      "browser_views": 8,
+      "state_checks": 8
+    },
+    "bilingual_content": {
+      "result": "pass",
+      "tests": 39,
+      "captures_generated": 53,
+      "storage_verified": true,
+      "storage_mode": "in-memory simulation"
+    },
+    "temporal": {
+      "result": "pass",
+      "episodes": 23,
+      "captures_generated": 228,
+      "videos_generated": 2,
+      "storage_verified": true,
+      "ci_visual_review_status": "pending: captured media requires actual viewing"
+    },
+    "evidence_upload": "completed"
+  },
+  "release": {
+    "published_at": "2026-10-26T17:03:20Z",
+    "draft": false,
+    "prerelease": false,
+    "tag": "v1.12.0",
+    "tag_target": "843a2f7cd0a03bea291fa70fa48370f75be16ec9",
+    "ci_asset_readback": "sha256-verified",
+    "published_tag_installation": "success",
+    "asset_observation_scope": "Uploaded asset metadata and CI readback result; no independent binary download is claimed by this record.",
+    "assets": [
+      {
+        "name": "contents.json",
+        "sha256": "bc404af083932201836f4c89be7a9d54a7c71bdc04c16eecf17ca3302a2f1adc"
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "sha256": "c827dccb8233f63f4190262b8b7a04eae092a0494afda4f8df73783d22745249"
+      },
+      {
+        "name": "ui-spec-1.12.0.zip",
+        "sha256": "097367cdd26cd429344cb4d23d79461cfccfb80887c5213584bae2f2baa12d45"
+      },
+      {
+        "name": "ui-spec-studio-1.12.0.zip",
+        "sha256": "b3888e64207f6dc5810377dc038454cbb57bbe4ae6c0b903a8f3db53ddf6af2f"
+      }
+    ]
+  },
+  "mirror_noop_observation": {
+    "step_result_in_both_browser_jobs": "success",
+    "intended_host": "archive.ubuntu.com",
+    "observed_apt_host_in_both_jobs": "azure.archive.ubuntu.com",
+    "mirrorlist_read_by_apt": "/etc/apt/apt-mirrors.txt",
+    "files_enumerated_by_step": [
+      "/etc/apt/sources.list",
+      "/etc/apt/sources.list.d/*.list",
+      "/etc/apt/sources.list.d/*.sources"
+    ],
+    "mirrorlist_was_in_enumerated_files": false,
+    "apt_reported_MB_per_second": {
+      "publication_dependencies": 47.4,
+      "publication_cjk_fonts": 78.6,
+      "scenario_dependencies": 60.2,
+      "scenario_cjk_fonts": 149.0
+    },
+    "finding": "The command exited successfully but did not change the observed APT host. Fast downloads and passing jobs do not demonstrate that the intended mirror switch took effect."
+  },
+  "evidence_boundaries": {
+    "capture_vs_viewed_motion": "Generated and uploaded screenshots/videos are acquired capture evidence. This record does not establish that motion was viewed or visually approved; CI marked temporal visual review pending.",
+    "proposal_vs_live_adoption": "Authored fixture checks and draft/candidate proposals do not establish live product adoption. Original-product approval and upstream React integration require separate evidence.",
+    "production_scope": "Fixture storage assertions do not establish production-service performance or user comprehension; visual judgment and specialist production are separate."
+  }
+}

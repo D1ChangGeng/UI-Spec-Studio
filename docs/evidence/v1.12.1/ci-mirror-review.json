@@ -1,0 +1,86 @@
+{
+  "reviewed_at_utc": "2026-10-26T17:02:49.744621+00:00",
+  "reviewer": "ci_dependency_review",
+  "independent_review": "mirror_patch_check: passed read-only diff and plain mirrorlist logic review",
+  "repository": "/workspace/scratch/80a5a322a00d/UI-Spec-Studio",
+  "base_commit": "843a2f7cd0a03bea291fa70fa48370f75be16ec9",
+  "path": ".github/workflows/validate.yml",
+  "workflow_sha256": "ec232e76024edb228575eb23b796f500ba6c2623dc6522ab09992e16a818e271",
+  "base_workflow_sha256": "193a25231c672a99bbd0046efb2ea178be7046578fb208e4ab9c8c5458b59bff",
+  "decision": "pass",
+  "findings": [],
+  "checks": {
+    "only_two_for_loop_lines_changed": true,
+    "each_loop_adds_only_observed_apt_mirrors_txt": true,
+    "all_other_workflow_bytes_equal_to_base": true,
+    "base_workflow_matches_previous_review_sha256": true,
+    "regex_unchanged": true,
+    "plain_mirrorlist_line_order_preserved": true,
+    "plain_mirrorlist_protocol_and_trailing_metadata_preserved": true,
+    "nonmatching_uris_preserved": true,
+    "validation_gates_preserved": true,
+    "timeouts_preserved": true,
+    "permissions_preserved": true,
+    "action_pins_preserved": true,
+    "release_needs_preserved": true,
+    "fonts_and_evidence_steps_preserved": true,
+    "diff_whitespace_check_passed": true
+  },
+  "conclusion": "The two loop lines now include the observed /etc/apt/apt-mirrors.txt file. The unchanged expression matches an HTTP(S) Azure Ubuntu URI in a plain mirrorlist while preserving protocol, following slash or whitespace, line order, trailing metadata and nonmatching URIs. Other workflow bytes are unchanged. This closes the observed source-file coverage gap; successful exit alone does not establish which mirror APT actually selected.",
+  "correction_of_previous_review": {
+    "coverage_gap": "The direct-source-only implementation covered sources.list, *.list and *.sources but omitted an external mirrorlist file. The earlier scope-preservation review passed, but did not establish runtime coverage of the runner actual APT source mechanism.",
+    "observed_runtime_evidence": {
+      "reported_by": "root",
+      "workflow_run_id": 40364112684,
+      "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40364112684",
+      "reported_log_observation": "APT fetched file:/etc/apt/apt-mirrors.txt (Mirrorlist, 144 B), and actual package downloads still used azure.archive.ubuntu.com. Publication and scenario passed quickly; their success did not prove mirror replacement.",
+      "independently_fetched_in_this_review": false
+    },
+    "reason_for_correction": "The real runner evidence revealed an additional URI-bearing file; adding only that observed file is narrower than redesigning dependency installation.",
+    "interpretation": "sed returns success even if no text matches. Step exit 0 and fast job completion must not be cited as proof that archive.ubuntu.com was selected."
+  },
+  "runtime_verification": {
+    "status": "pending",
+    "required_evidence": "New CI logs must show the actual Ubuntu package download host after this change; all existing gates must complete for the final commit."
+  },
+  "scope": "Read-only review of the two-line workflow correction against HEAD. Other repository changes are outside this review.",
+  "limitations": [
+    "This reviewer did not execute sed against APT source fixtures or run sudo; root owns the actual URI boundary checks.",
+    "Did not run repository gates or trigger, rerun, or cancel external jobs.",
+    "Does not guarantee archive.ubuntu.com performance or availability, or prove new CI mirror selection."
+  ],
+  "previous_review": {
+    "reviewed_at_utc": "2026-10-26T16:56:10.320093+00:00",
+    "reviewer": "ci_dependency_review",
+    "independent_review": "mirror_patch_check: passed read-only diff review",
+    "repository": "/workspace/scratch/80a5a322a00d/UI-Spec-Studio",
+    "base_commit": "73add60f9754af67ed5b32c2fed72e964ae7e3e5",
+    "path": ".github/workflows/validate.yml",
+    "workflow_sha256": "193a25231c672a99bbd0046efb2ea178be7046578fb208e4ab9c8c5458b59bff",
+    "base_workflow_sha256": "9caba13f38833970a2b6dfb2e8152561829de1abe5eb3b8a3a51d1be607589ba",
+    "decision": "pass",
+    "findings": [],
+    "checks": {
+      "exactly_two_identical_reviewed_steps": true,
+      "placement_before_playwright_with_deps": {
+        "publication": true,
+        "scenario": true
+      },
+      "all_other_workflow_bytes_equal_to_base": true,
+      "validation_gates_preserved": true,
+      "timeouts_preserved": true,
+      "permissions_preserved": true,
+      "action_pins_preserved": true,
+      "release_needs_preserved": true,
+      "fonts_and_evidence_steps_preserved": true,
+      "diff_whitespace_check_passed": true
+    },
+    "conclusion": "Only two matching Azure Ubuntu URI rewrite steps were inserted. Existing suites, components, architecture filters, signature/keyring configuration and other repository URIs are preserved by the reviewed transformation. All other workflow bytes are unchanged.",
+    "scope": "Read-only review of .github/workflows/validate.yml against HEAD. Other repository changes are outside this review.",
+    "limitations": [
+      "Did not execute sed against APT source files or run sudo.",
+      "Did not run repository gates or trigger, rerun, or cancel GitHub jobs.",
+      "Does not establish performance or availability of archive.ubuntu.com; new CI must verify the reviewed commit."
+    ]
+  }
+}

@@ -28,8 +28,9 @@ A main-branch push changing VERSION runs validation, installation, publication-r
 and the product, asset, content and temporal scenario checks.
 Before browser dependency installation, the two Ubuntu browser jobs replace an
 existing Azure Ubuntu archive URI with `archive.ubuntu.com`. The precise replacement
-supports both `.list` and `.sources`, retaining suites, components, keyrings and
-other repositories. APT continues to download and verify packages normally; see
+supports `.list`, `.sources` and the runner's `/etc/apt/apt-mirrors.txt`, retaining
+suites, components, keyrings and other repositories. APT continues to download
+and verify packages normally; see
 [Ubuntu archive verification](https://documentation.ubuntu.com/security/software-integrity/archive-verification/).
 The release job has repository-content write permission; ordinary validation jobs
 have read-only permissions. External Actions are pinned to reviewed commit SHAs.
@@ -71,7 +72,7 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.12.1 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
