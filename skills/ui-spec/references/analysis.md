@@ -2,7 +2,7 @@
 
 ## Contents
 
-[Alignment target](#establish-the-products-target-experience) · [Experience dimensions](#nine-dimensions-one-coherent-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Product model](#recognize-the-product-through-its-use) · [Direction and scope](#confirm-consequential-direction-with-useful-options) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)
+[Alignment target](#establish-the-products-target-experience) · [Experience dimensions](#nine-dimensions-one-coherent-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Exploration value](#calibrate-exploration-and-design-confidence) · [Product model](#recognize-the-product-through-its-use) · [Direction and scope](#confirm-consequential-direction-with-useful-options) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)
 
 ## Establish the product's target experience
 
@@ -39,6 +39,14 @@ Turn intent into questions that can change a choice. Search by task, pattern, co
 Cover **parts, states and relationships**: what composes the surface, how conditions change it, and how elements affect one another in space, time and the task. Give consequential dimensions an inspected reference or verified basis; routine instances can share a researched system. Track what is understood, partly observed and consequentially unknown to choose the next useful observation.
 
 Use the [perceptual method](principles.md#inspect-from-whole-to-detail-and-back) to explain observed relationships and hypotheses, then choose implementations capable of carrying them. A bright panel may outweigh the task; retained selection may preserve orientation. Test these in context. Keep reference, original demo, local trial and journey evidence distinct; a trial can reopen selection. [Verification](verification.md) governs conditions and claim limits.
+
+## Calibrate exploration and design confidence
+
+For each consequential decision, consider three qualitative variables: **impact** on product perception or use, **uncertainty** about what mature work offers, and **potential improvement** from further discovery. Ask whether the next useful evidence comes from broader research, a deeper perceptual reading, a missing state, a distinct alternative or a local trial. Investigate small but defining assets with the same seriousness as dominant page structures when their design leverage warrants it.
+
+Confidence belongs to a specific claim supported by evidence, not to an arbitrary percentage or agent familiarity. Ask what was **actually viewed**, which conditions were covered, how reliable and relevant the source is, whether alternatives differ in substance and whether the chosen resource survives a product-context trial. Many similar candidates do not establish breadth; a beautiful promotional cut does not establish continuous operation.
+
+Look for a credible counterexample: which different composition, type, asset, interaction or motion might change this choice? Follow cross-domain findings even if they challenge the initial product-style hypothesis. Converge when consequential questions are answered well enough for implementation and continued search has lower expected value than testing or delivery; carry any material unobserved condition forward without imagining its result.
 
 ## Recognize the product through its use
 

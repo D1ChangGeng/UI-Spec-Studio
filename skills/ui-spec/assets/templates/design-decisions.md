@@ -21,6 +21,17 @@ Name functional, cross-domain expressive and implementation source roles. Show
 consequential art directions with actual material and comparable completion;
 identify what stays familiar, what changes and how the theme persists in core work.
 
+## Exploration basis and confidence (for consequential decisions)
+
+Name the design question, impact, uncertainty and what a better discovery could
+change. Reference the strongest sources actually viewed, their conditions and
+evidence limits rather than titles alone. Summarize materially different
+candidates, including a credible challenge to the initial favorite. Note where
+many results share one design family. State which relationship tipped selection,
+what could reverse it and whether search, visual inspection, trial or integration
+is the next useful action. This is optional decision support, not a required
+search quota or invented confidence percentage.
+
 ## Foundation comparison and selected granularity
 
 Concrete mature page/system/block candidates, source/demo/revision, actual observed

@@ -28,6 +28,16 @@ Check local changes in context, shared changes across dependants and journeys th
 
 Explain sampling and remaining conditions. Package checks, scenarios, viewed pixels, executed interactions, user research and real integration establish different facts; comparative model evaluations are separate research.
 
+## Audit the evidence behind a design selection
+
+For influential design decisions, evaluate the *decision itself* rather than search counts or page-capture totals. Identify the specific quality claim, actually viewed evidence and conditions, credible alternative, observed reason for preferring the current choice, adoption mechanism, local result and missing evidence that could reverse it. Separate an item located, a demo viewed, an interaction operated, source behavior inspected and a candidate tried in this project.
+
+Check sufficiency across **coverage breadth, inspection depth, temporal coverage, evidence relevance and evidence reliability**. Many stills may leave the critical action unseen; detailed crops may remove overall context; code can explain implementation but not replace normal-scale visual inspection; a promotional edit cannot prove real operation or failure states. Use the original subject, source/revision, captured conditions and actual viewing record to calibrate each claim, without arbitrary confidence percentages.
+
+When candidates cluster around one style, a consequential state remains unseen or a plausible different solution has not been checked, revisit search. Trialing or integrating a resource can also expose a new uncertainty and reopen selection. Converge when the design questions with material influence have sufficient evidence and further search is less useful than trial or delivery; retain and address the highest-value remaining unknown.
+
+**Do not confuse method validation with outcome validation.** Structural tests can check that the Skill expresses this cycle; they do not prove an agent searched, viewed, compared or improved a product. A stronger evaluation uses a fresh design task, an initial leading candidate, a deliberately different discovered alternative, actual viewed evidence, resulting selection/adoption change and inspected output. Report tested behavior separately from user preference, aesthetics and real-world performance.
+
 ## Capture the actual viewing condition
 
 Set the CSS viewport directly; record viewport, pixel ratio, browser, locale/theme, content, revision and zoom. Distinguish browser/text enlargement from image scaling; inspect the actual route or independently sized frame at useful scale.

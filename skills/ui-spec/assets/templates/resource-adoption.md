@@ -37,6 +37,15 @@ composition or internals, with purpose and affected states. Actual implementatio
 data boundaries, dependencies, cleanup, rights/notices and update ownership. A substantial
 mechanism rewrite carries its own validation responsibility.
 
+## Candidate challenge and remaining evidence
+
+For a consequential resource, name the quality target and actually observed
+demo/frames/states. Identify the strongest viable, materially different
+alternative and the specific visual or behavioral advantage of the choice
+for this product. Keep missing demo states, rights, compatibility and local
+conditions separate. A strong still or package listing cannot prove unseen
+motion or the final result. Name the next action if a gap could reverse adoption.
+
 ## Observed result
 
 Actual viewports/content/states, input checks, combined runtime behavior, evidence references,

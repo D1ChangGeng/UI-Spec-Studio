@@ -2,7 +2,7 @@
 
 ## Contents
 
-[Foundations](#find-the-strongest-useful-starting-point) · [Selection records](#make-selection-visible-by-surface-and-design-dimension) · [Discovery channels](#discover-efficiently-and-learn-how-the-source-works) · [Active browsing](#follow-visual-clues-to-answer-design-questions) · [Visual and temporal study](#understand-the-demonstration-and-the-implementation-together) · [Adoption](#evaluate-adoption-value) · [Local trials](#confirm-consequential-parts-in-a-local-trial) · [Integration](#adapt-into-one-product) · [Assets and content](#material-medium-and-source-safety)
+[Foundations](#find-the-strongest-useful-starting-point) · [Selection records](#make-selection-visible-by-surface-and-design-dimension) · [Discovery channels](#discover-efficiently-and-learn-how-the-source-works) · [Deep evidence loop](#run-deep-exploration-to-improve-a-decision) · [Active browsing](#follow-visual-clues-to-answer-design-questions) · [Visual and temporal study](#understand-the-demonstration-and-the-implementation-together) · [Adoption](#evaluate-adoption-value) · [Local trials](#confirm-consequential-parts-in-a-local-trial) · [Integration](#adapt-into-one-product) · [Assets and content](#material-medium-and-source-safety)
 
 ## Find the strongest useful starting point
 
@@ -79,6 +79,22 @@ Assess unfamiliar methods by returned scope, identity, changes/transmission and 
 
 For material requiring login, licensed download, an official client or manual access, first identify the gap from available evidence. Ask for the specific action, naming the source, relevant states/complete interaction and decision supported. The user can supply an authorized recording, export or package; keep analysis and selection responsibility. Follow normal authorized access, distinguish research from integration rights, and inspect supplied material.
 
+## Run deep exploration to improve a decision
+
+**Allocate attention by design leverage.** Estimate how much the object shapes identity, reading, interaction or cohesion; what about quality, existing paradigms or implementation is unknown; and whether new directions could realistically produce a better result. A defining background, font, 3D object or motion may merit extensive specialist research even when physically small. A routine control with a validated family implementation can proceed. Tens or hundreds of observations are possible for important uncertainty, never a required quota.
+
+**Pair target and implementation searches.** Target-experience research examines the visual and interaction quality established by mature products and cross-domain art. Implementation research examines exact demos, layouts, blocks, components, editable assets, source packages and production methods that can carry that quality. Discoveries flow in both directions: a strong reference redirects sourcing; an unexpectedly excellent implementation can reshape the target. Name source roles without implying that a visual reference grants reusable code or production rights.
+
+**Let new evidence branch the search.** Begin with task or product context; follow distinguishing details into typography, composition, material, imagery, interaction, motion or specific authors/projects. Revisit the wider product after understanding the part. Search official demos, repositories, galleries, artist portfolios, video and specialist resources. If results repeat one family, change the vocabulary, medium or originating category instead of treating duplicates as breadth. A new search should answer a question exposed by the previous observation.
+
+**Assess evidence along five connected dimensions.** *Coverage breadth* encompasses significant objects, views, states and truly different approaches. *Inspection depth* explains their perceptual mechanisms, rather than merely naming effects. *Temporal coverage* observes relevant transitions, starts, outcomes and returns. *Relevance* connects each observation to the current product decision. *Reliability* concerns source, version, editing context, actual visibility and repeatability. A large screenshot set can still miss key operations; a detail crop can miss surrounding relationships; source code does not prove delivered visual quality.
+
+**Challenge the early favorite.** Identify what makes it promising and find a credible alternative with a different advantage: composition, artistic language, type, material, integrated state family or dynamic behavior. Compare corresponding content, viewpoint, completion level and relevant states. Prefer candidates with genuinely different strengths over several color variants of the same mechanism. A first strong candidate is provisional until the uncertainty appropriate to its impact is resolved.
+
+**Choose the next evidence-producing action.** Broaden when a new class of design may matter; deepen when crucial details are unclear; inspect live interaction or full media when timing is material; inspect source/permissions when reuse is uncertain; trial locally when current-product fit is unknown. If a critical source is inaccessible, find authorized alternative demonstrations or ask the user for precisely scoped normal-access evidence. Keep the agent responsible for analysis and selection. If important gaps persist, continue or explicitly retain uncertainty; if alternatives no longer change the choice and adaptation is viable, proceed.
+
+For consequential choices, a short note is enough: question/impact, source and actually viewed conditions, a meaningfully different alternative, observed quality relationship, selected implementation/production route, trial outcome and remaining gap. This is a decision explanation, not a search diary. A marketing demonstration does not establish real latency, a source listing does not establish visual craft, and a local installation does not prove correct user experience.
+
 ## Follow visual clues to answer design questions
 
 Use **Active Visual Exploration & Design Reconnaissance** to turn a clue into the next useful observation. Operate relevant controls and follow newly revealed relationships while they can change a choice.
@@ -92,7 +108,7 @@ Use **Active Visual Exploration & Design Reconnaissance** to turn a clue into th
 | Parameterized component demo | Compare meaningful variants in context | Which configuration preserves the desired relationships? |
 | Description, code or isolated still only | Seek a running example, usage recording or supported local render | Which visual or behavioral question remains unresolved? |
 
-Use authorized operations; data changes, communications and transactions follow host controls. A revealed panel may justify replay, another view or a more specific search. Converge when consequential questions have evidence and an adaptation path.
+Use authorized operations; data changes, communications and transactions follow host controls. A revealed panel may justify replay, another view or a more specific search. Converge when consequential questions have sufficiently relevant evidence, a credible challenge to the leading choice, and an adaptation path. Material unobserved states or plausible alternative advantages can warrant further exploration; repetitive results alone cannot establish quality.
 
 ## Understand the demonstration and the implementation together
 

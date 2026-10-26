@@ -50,6 +50,15 @@ Compare equivalent conditions and meaningful event phases. Attribute a gap to re
 adaptation, real content, conflicting composition or target/task mismatch. Recheck the affected
 interval and connected path after changes; keep residual gaps and target changes explicit.
 
+## Research sufficiency and decision challenge (when relevant)
+
+Specify which design claim is supported by which inspected source/revision,
+actual actions/frames, comparisons, adoption mechanism and local result. Judge
+breadth, depth, time, relevance and reliability. Note the strongest distinct
+alternative, not a near-duplicate, and material gaps that could change selection.
+Decide whether to expand research, inspect another state, trial or integrate.
+No source-count quota or numeric certainty is needed.
+
 ## Result
 
 State experience-validity and expressive-completion findings independently. Inspect
