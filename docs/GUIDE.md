@@ -12,6 +12,11 @@ screens. Establish a coherent UI direction and implement the first useful slice.
 
 The agent reads all eight common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Product UI Experience Alignment establishes the intended experience from real tasks, content and operating conditions. A product name opens research into relevant pages, flows and qualities; an open brief prompts the agent to find mature patterns and implementations. Reference research and resource selection develop together.
 
+Explicit goals for artistry, visual impact or differentiation remain delivery
+requirements alongside usability and truthful behavior. The product category
+informs tasks and conditions; visual form can be researched independently while
+preserving understandable objects, actions, results and continuation.
+
 Mature implementations supply general UI by default, at the highest appropriate reuse level. The agent trials consequential choices with the project's content, fonts, theme and states before expanding integration. Optional shape resolves material open directions through a recommendation and focused choice or representative preview; clear direction supports direct progress. The following collection/detail examples assume that this direction has been selected for the actual task.
 
 Existing instructions, design documents and tests remain useful. The optional templates are a starting point when equivalent records are absent.
@@ -57,6 +62,12 @@ Three independent comparisons matter:
 | Across states | Do selection, focus, input and visual continuity survive changes? |
 
 Language/theme/role variants extend the matrix where supported. A compact sign-in view, a long article and an operational workspace use different composition and scrolling rules.
+
+Review experience validity and expressive completion separately. Check the
+promised visual direction after the first action, with populated results, long
+content and repeated use. When implementing selected or approved design work,
+inspect source fidelity as well: comparable-image differences can diagnose a
+specific reproduction target, while actual viewing establishes perceptual quality.
 
 ## 5. Run a broader audit
 
@@ -173,6 +184,30 @@ spatial work and dynamic assets. Masters, exports and placements remain linked.
 The [review fixture](../examples/asset-review/README.md) demonstrates a scoped,
 actual-browser check of image variants, small icons, motion and unavailable media.
 
+## Give a professional product an expressive direction
+
+```text
+Keep the research workspace's reliable tasks and data. Develop a distinctive
+artistic direction that remains visible in the populated input, results and
+navigation. Research functional references, cross-domain visual work and mature
+implementations together. Show meaningful options where direction is still open,
+then trial the defining assets with real components and carry the chosen direction
+through the working journey.
+```
+
+The agent develops an art direction specific enough to change subject,
+composition, typography, material or motion. Options use representative content
+and comparable production care. Familiar task relationships can survive changes
+to position and form; real operation establishes that they do.
+
+A visual system gives expressive titles, reading text, main assets, controls and
+motion distinct roles within one coherent language. Actual assets and mature UI
+resources carry those decisions into the product. A specific reading, input or
+runtime problem calls for a targeted repair, followed by checks of both use and
+the retained direction. The [art-direction guide](ART-DIRECTION.md) explains this
+method, including source fidelity and separate product, demonstration and authored
+output boundaries.
+
 ## Design content with the screen
 
 When adding or revising a page, establish the audience's next question and the fact owner before writing visible strings. Study comparable product wording where it helps, then decide headings, labels, help, status, tone and actual placement with the layout. Use short, typical and long strings in each supported language. Run the task, including failure and recovery, to verify that copy matches actual behavior. The [content reference](../skills/ui-spec/references/content-design.md) provides the shared judgment method; a [working example](../examples/content-review/README.md) covers localized local-save states.
@@ -184,6 +219,12 @@ When adding or revising a page, establish the audience's next question and the f
 Attribute evidence to its actual subject: hosting page, player, demonstrated product or edited content. Pair design-reference questions with implementation candidates and use each to improve the other. Important choices show what was viewed, what it means for the current task and which actual implementation carries the relationship.
 
 For changing UI, follow the trigger, first feedback, progression and settled outcome. Extend the window for return, interruption, repetition, waiting or loop boundaries when useful. Choose live interaction, video and ordered frames by the question and host capabilities; distinguish capture, actual viewing, supported conclusions and approval.
+
+Give motion a semantic role: what relationship forms, what updates and where
+attention settles. Deterministic timelines can support repeatable authored-output
+or regression comparisons under recorded conditions; normal runtime still needs
+its own interaction and pacing evidence. Check encoded playback for timed works,
+and preserve meaning and identity in reduced-motion or static presentations.
 
 Use the local trial to resolve consequential resource fit before broad integration. Revisit the same questions with real content, matching interaction stages and useful viewing conditions. Begin with the normal-scale whole, examine composition, functional regions and consequential details, then return to the complete result. Choose perceptual dimensions that can change a decision and connect visible facts to likely effects, explanatory hypotheses and actual resource/adaptation choices.
 

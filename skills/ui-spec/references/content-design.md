@@ -65,7 +65,7 @@ Choose a voice from the actual brand and users; describe it through observable w
 
 Write and review for accuracy, natural rhythm and semantic precision. Prefer the user's vocabulary and active, concrete verbs when actions are involved. Sentence fragments can serve headings and control labels; complete sentences clarify relationships and causes. Use punctuation according to language, component and meaning: labels and short headings commonly need no terminal period, while warnings, instructions, explanations and errors may need normal sentence punctuation. Respect intentional brand expression where it serves recognition.
 
-Preserve legally or operationally necessary qualifiers. Copy concerning money, eligibility, delivery, privacy, permissions and guarantees is tied to an authoritative rule or explicit approval. Representative fixture wording is identified as such. A preview action and its message should describe the actual simulated boundary rather than suggest production completion.
+Preserve necessary qualifiers. Money, eligibility, delivery, privacy, permissions and guarantees need authoritative rules or approval. Customer counts, testimonials, cases and service promises use confirmed facts; mark illustrative content clearly. Preview actions and messages describe their actual simulated boundary.
 
 ## Compose actual words with the interface
 

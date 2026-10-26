@@ -30,9 +30,9 @@ Compare consequential states and sizes, including matching-stack alternatives to
 
 ## Research product conventions and implementation resources in parallel
 
-Label design-reference and implementation roles; one demo may serve both. Pair observations with resource questions: an expandable workspace needs layout, resizing, focus and transitions. Research both while shaping the design, allowing excellent existing blocks to improve the structure.
+Research three source roles together: **functional experience** supplies tasks, objects and feedback; **artistic expression** supplies subject, typography, material, composition and rhythm; **implementation resources** carry those relationships into usable code/assets. One source can serve several roles; name what was actually observed and adopted. For an artistic brief, search beyond peer products into publishing, photography, exhibitions, industrial design or motion work as the concept warrants.
 
-Seek comparable maturity in local craft and overall experience: hierarchy, readable type, stable states and continuous motion can support a distinct appearance. Research should improve adoption; understanding a mechanism alone does not justify rebuilding suitable available UI.
+Let expressive discoveries and mature blocks improve the plan while preserving task requirements. A brand website can demonstrate an art system without establishing work-interface usability or asset reuse rights. Trial defining material beside real controls/content early. Understanding a mechanism alone does not justify rebuilding available suitable UI.
 
 ## Make selection visible by surface and design dimension
 
@@ -48,7 +48,7 @@ Distinguish researched, compared, locally trialled, adopted and inspected work. 
 
 Describe the intended perception/operation and selection constraints: stack/version, content, inputs, views/themes/languages, authority, performance, rights and maintenance.
 
-For a background, define contrast, luminance/speed controls, readable foregrounds and reduced motion. Search by effect/behavior, then exact implementation/version. Keep private details out of external queries.
+For a background, define its expressive role, foreground relationship and motion controls. Search by effect/behavior, then implementation/version. Keep private details out of queries.
 
 Search by **product pattern and design need**, choose the useful **reuse granularity**, then determine **delivery form and adoption method**:
 

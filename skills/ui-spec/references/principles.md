@@ -2,7 +2,7 @@
 
 ## Contents
 
-[Instruction strength](#understand-the-strength-of-each-statement) · [Perceptual inspection](#inspect-from-whole-to-detail-and-back) · [Scale and balance](#3-core-scale-and-composition-occupancy) · [Motion](#8-motion-supports-continuity) · [Evidence and diagnosis](#11-visual-judgment-and-measurements-work-together) · [Visual grammar](#visual-grammar-choose-a-means-for-an-intended-relationship) · [Assets and content](#asset-craft-and-page-craft-reinforce-each-other)
+[Instruction strength](#understand-the-strength-of-each-statement) · [Art direction](#art-direction-and-expressive-contrast) · [Perceptual inspection](#inspect-from-whole-to-detail-and-back) · [Scale and balance](#3-core-scale-and-composition-occupancy) · [Motion](#8-motion-supports-continuity) · [Evidence and diagnosis](#11-visual-judgment-and-measurements-work-together) · [Visual grammar](#visual-grammar-choose-a-means-for-an-intended-relationship) · [Assets and content](#asset-craft-and-page-craft-reinforce-each-other)
 
 ## Understand the strength of each statement
 
@@ -10,9 +10,17 @@
 
 **Principles — professional judgment:** type scale, density, measure, spacing, optical corrections, scroll ownership, timing and composition. Apply them to the task, input method and page family.
 
-**Preferences — project direction:** palette, type character, expression, materials, imagery, identity and motion intensity. Respect approved direction. **Defaults** supply a starting treatment; **examples** explain a contextual choice. Keep their instruction strength distinct.
+**Project requirements:** explicit aesthetic goals and accepted direction govern expression, identity and craft alongside task requirements. **Preferences** guide open choices; **defaults** supply starting treatments; **examples** explain contextual decisions. Conventional palettes, grids or navigation forms remain revisable.
 
-Make typography, content, imagery, composition and interaction serve one purpose. Precision can distinguish a dense tool; expressive art can distinguish a gallery. Judge both in their actual product context.
+Make typography, content, imagery, composition and interaction serve a clear direction. Professional tools can combine precise tasks with photography, sculpture, expressive type and motion. Product category informs operating conditions; judge the chosen expression in actual use.
+
+## Art direction and expressive contrast
+
+Define the intended character, first impression and memorable relationships from audience, content and aesthetic intent. Assign expressive roles across composition, type, assets, surfaces and motion. Study functional experience, cross-domain expression and adoptable implementations together. An artistic brief needs candidates that materially change subject, composition or movement, shown at comparable completion with the same representative task.
+
+**Expressive Contrast** combines understandable tasks with a distinctive visual language. Identify the familiar relationship, the expectation being changed and the theme connecting them. Contrast may join dense information with open space, technical type with organic form, or immediate operation with a staged result. It can reach navigation, inputs and populated work; identity must survive the first action. The theme may express brand, culture or emotion without literally illustrating each function.
+
+Coordinate strong focal elements and supporting echoes. Repair concrete failures in contrast, reachability, motion or resource cost while preserving confirmed expression. Reposition, mask, pause during input or change delivery where evidence supports it. A necessary direction change is explicit. [Verification](verification.md) assesses experience validity and expressive completion independently.
 
 ## Inspect from whole to detail and back
 
@@ -50,9 +58,9 @@ Choose type for character, language coverage and reading. Inspect actual scripts
 
 ## 2. Design tokens express a system
 
-Use shared roles for surfaces/text, emphasis, status, borders, elevation, type, radii, spacing and motion. Tokens express relationships; components preserve interaction rules.
+Translate the trialed direction into roles for type, space, color, shape, material, icons, asset crops and motion. Use tokens, component variables and shared styles for repeated decisions. Establish type/line scales, spacing rhythm, nested-radius relationships and optical icon/text weights from actual references and renders; numeric equality alone does not establish harmony.
 
-Separate product identity, page-family shell and local composition. A shared change needs related-page checks. Different page responsibilities can require different widths or origins within one system.
+Preserve purposeful differences through roles: display and reading type, expressive results and direct repeated feedback can share one system. Separate identity, page-family anchors and local composition; explain exceptional treatments and where they apply. Validate real content and related pages when shared rules change.
 
 ## 3. Core scale and composition occupancy
 
@@ -80,7 +88,7 @@ Reserve space for the full visible motion envelope: rotation, expansion, particl
 
 ## 6. Page-family anchors remain stable
 
-At equivalent viewport and scroll conditions, keep shared headers, tabs, navigation and content origins stable. Let each content area handle its growth.
+Within the chosen system, keep shared headers, navigation and content origins predictable at corresponding viewport/scroll conditions. A redesigned composition can establish new anchors; verify its orientation cues. Let each region handle growth.
 
 Switch through related views to observe retained identity, focus, input and selection. Necessary intrinsic changes need deliberate effects on neighbors. Include late content, loading and errors, then inspect both the transition and settled result.
 
@@ -153,11 +161,11 @@ Compose imagery and text together: crop, focal point, aspect and adjacent space 
 
 Use borders, fill, elevation, transparency and blur to express grouping, overlap, modality or material. Maintain consistent light/depth logic: a shadow implies elevation, an opaque boundary defines structure, and translucency preserves context only while the underlying information remains understandable.
 
-Tie texture, masks and perspective to subject or function. Inspect edges, alpha, background dependence, contrast and compositing cost; provide a readable equivalent when an effect is unavailable. Select effects for their purpose and actual result.
+Tie texture, masks and perspective to the selected subject, identity or atmosphere. Inspect edges, alpha, background dependence, contrast and compositing cost; preserve the visual language and readable task when an effect is unavailable.
 
 ### Images and graphics as evidence or expression
 
-Choose actual content, photographs, illustrations, diagrams or procedural graphics by their role. Preserve factual subjects and disclose illustrative substitutes. Explain an expressive asset's contribution; decorative work should support the reading/action path.
+Choose content, photographs, illustrations, diagrams or procedural graphics by role. Preserve factual subjects and disclose illustrative substitutes. Judge expressive assets through focal, material, thematic or emotional relationships and continued task access.
 
 For quantities, use encodings suited to comparison, explicit scales/units, meaningful order and visible missingness/uncertainty. A relationship diagram preserves topology and meaning before optimizing spacing. Provide text or tables when needed for access or precision.
 
@@ -167,13 +175,9 @@ Inspect focus, selection, caret, links, controls, scrollbars, formatting and def
 
 ## Understand craft through coordinated decisions
 
-Expand “refined,” “premium” or “textured” into purpose, precise relationships, consistent language, suitable expression and stability in use. Look for focus tied to the task, optical baselines and icon weight, coherent light/material rules, and quality retained as content or states change. Equally sized icons can need different optical treatment. A restrained tool and an expressive art surface can both be well resolved; decorative complexity alone establishes neither maturity nor fit.
+Expand “refined,” “premium” or “textured” into purpose, precise relationships, coherent language, suitable expression and stability in use. Inspect focal intent, optical baselines/icon weight and material rules as content changes. Equal icon boxes can need optical correction. Expression intensity and design maturity are distinct; judge both against the brief, including populated work and repeated use.
 
-Prefer a coherent system or structure as the visual base. Coordinate additions through type, density, color, material and motion; inspect competing emphasis and background dependence across the journey. A semantic primitive supplies behavior; its visible layer needs a mature foundation and its own inspection. Measure combined runtime cost separately.
-
-Let the first action, working object and continuation govern hierarchy. A conversation may foreground its composer; a document tool its durable objects. Compare candidates in the same task and keep secondary regions supportive through actual content and themes.
-
-Read mature resources as connected design decisions. Identify their perceptible value and actual implementation carrier, inspect the original demo and a current-content trial, then preserve those relationships through adaptation. Rewriting core visual/state/motion mechanisms expands the current version's verification responsibility.
+Coordinate a mature foundation and valuable additions through type, density, color, material and motion. Judge hierarchy through the first action, working object and continuation. A behavior primitive's visual layer needs its own foundation. Apply the [sourcing method](component-sourcing.md) to preserve observed design value through trials and adaptation; revalidate rewritten mechanisms and measure combined runtime cost.
 
 ## Broader screen-based surfaces
 

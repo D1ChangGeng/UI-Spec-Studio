@@ -130,3 +130,20 @@ Human-centered Visual Inspection & Perceptual Design Analysis, its multiscale lo
 and selective lenses synthesize the user's accepted methodology with the existing
 design foundation. They guide expert judgment without claiming measured user
 attention, universal aesthetic values or comparative model improvement.
+
+## Art direction, expressive systems and fidelity (1.11)
+
+Primary documentation inspected on 2026-10-26:
+
+- [Pentagram's Intrinsic case](https://www.pentagram.com/work/intrinsic) describes generative robotic forms combined with technical typography and identity graphics. It provides brand and website-expression evidence, not a work-interface usability study or permission to reuse its assets.
+- [IBM Developer typography](https://www.ibm.com/brand/experience-guides/developer/brand/typography/) assigns expressive and informative roles to different type treatments. The transferable relationship is role-based coherence; its exact families and brand/language policies remain IBM-specific.
+- [Carbon motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview) coordinates productive and expressive motion in one interface. Product teams own choreography across components. Its cadence is an example, not a universal ceiling on an artistic brief.
+- [WCAG 2.2.2](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide) concerns automatic moving/blinking/scrolling information lasting over five seconds alongside other content, and automatic updates under their stated conditions; the update branch has no five-second threshold. It is Level A. [2.3.3](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions) addresses disabling nonessential interaction-triggered motion at Level AAA. Apply criteria at their actual scope; a broader project motion policy is a separate decision.
+- [Playwright visual comparisons](https://playwright.dev/docs/test-snapshots), [clock control](https://playwright.dev/docs/clock) and [screenshot animation settings](https://playwright.dev/docs/api/class-page#page-screenshot-option-animations) document baseline conditions and controlled capture. Disabling animations alters progression; clock control exposes selected state/timing behavior without measuring natural responsiveness.
+
+These are primary-text observations, not visual trials or completed asset production.
+Art Direction, Expressive Contrast and the independent experience/expression review
+synthesize the user's requirements with the existing foundation. Source fidelity
+protects selected or approved work; perceived quality and real use require their own
+inspection. No cited system supplies blanket endorsement, aesthetic scores or
+comparative model evidence for this skill.

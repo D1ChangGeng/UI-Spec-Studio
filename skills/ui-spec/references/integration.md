@@ -51,9 +51,11 @@ Use real content lengths and errors to refine layout within the accepted system.
 
 ## 5. Verify design and behavior together
 
-**Design track:** re-answer the reference research questions in the connected product: does the task entry remain available, reading clear and state change understandable? Compare approved and integrated views with comparable content density, scale, fonts, theme and locale. Follow the [perceptual method](principles.md) from normal-scale whole to affected regions/details and back; inspect continuous episodes through waiting, result arrival, interruption and return. Align by task event/state; real latency may differ from a demo. Preserve shared anchors, scrolling and object identity, recording conditions and intentional differences.
+**Design track:** re-answer the research questions in the connected product, including whether the selected art direction survives populated navigation, inputs, results and repeated work. Compare approved and integrated views at corresponding content, scale, fonts, theme and locale. Inspect whole → detail → whole and waiting, arrival, interruption and return. Source-fidelity differences locate departures from approved/adopted work; perceptual review judges the actual expression. Preserve anchors, scrolling and object identity; record intentional differences and real latency.
 
 **Product track:** execute the actual UI path, observe the authority/persistence result, then verify feedback and recovery. Check relevant permissions, failure/retry, repeat actions, refresh and direct entry. Evidence should connect the visible action to the real result.
+
+Keep experience validity and expressive completion separately evidenced; success in one leaves failures in the other open. Repair concrete conflicts while retaining the accepted direction, with any necessary direction change made explicit. A demonstration's staged completion does not replace the product's actual outcome.
 
 Fixture checks establish design behavior. Mocked boundary checks establish the exercised contract. Real integration checks establish the specific environment and actions executed. Record these distinctions alongside pending external validation. Recheck related components when a common cause is repaired.
 

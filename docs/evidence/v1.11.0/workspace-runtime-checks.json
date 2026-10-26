@@ -1,0 +1,491 @@
+{
+  "started": "2026-10-26T10:01:52.714Z",
+  "checks": [
+    {
+      "name": "wide/light: populated research, source Escape/focus return, collection and editor; no editor-page horizontal overflow",
+      "pass": true,
+      "detail": {
+        "viewport": 1440,
+        "body": 1440
+      }
+    },
+    {
+      "name": "wide/dark: populated research, source Escape/focus return, collection and editor; no editor-page horizontal overflow",
+      "pass": true,
+      "detail": {
+        "viewport": 1440,
+        "body": 1440
+      }
+    },
+    {
+      "name": "narrow/light: populated research, source Escape/focus return, collection and editor; no editor-page horizontal overflow",
+      "pass": true,
+      "detail": {
+        "viewport": 390,
+        "body": 390
+      }
+    },
+    {
+      "name": "narrow/dark: populated research, source Escape/focus return, collection and editor; no editor-page horizontal overflow",
+      "pass": true,
+      "detail": {
+        "viewport": 390,
+        "body": 390
+      }
+    },
+    {
+      "name": "Cancellation invalidates delayed completion and retains input",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Failure and retry retain the original question without duplicating its turn",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "New composer draft survives earlier request completion",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "View switching retains composer draft",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Long content contains Chinese and English; wheel scrolling exercised",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Answer-to-note capture retains explicit simulated-content provenance",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Unsaved new note title/body restore after reload at the same hash route",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Explicitly saved body persists after reload",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Restore loads the prior version as a draft without overwriting the saved version",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Markdown export contains current draft text",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Independent notes and drafts retain separate identity",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Malformed primary storage loads the backup note body and leaves the corrupt raw value unchanged",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Existing ui-spec-study-note body is imported and its original serialized key value remains",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "Storage denial preserves input, states failure and exports the current draft from its inline recovery action",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "name": "320×568 short viewport and reduced-motion mode retain composer access with no horizontal overflow",
+      "pass": true,
+      "detail": true
+    }
+  ],
+  "captures": [
+    {
+      "file": "final-wide-light-empty.png",
+      "before": 1793008912995,
+      "after": 1793008913108,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-wide-light-research.png",
+      "before": 1793008914039,
+      "after": 1793008914153,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-wide-light-source.png",
+      "before": 1793008914228,
+      "after": 1793008914466,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-wide-light-collection.png",
+      "before": 1793008914569,
+      "after": 1793008914682,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/#notes"
+    },
+    {
+      "file": "final-wide-light-note.png",
+      "before": 1793008914753,
+      "after": 1793008914854,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/#notes/heating"
+    },
+    {
+      "file": "final-wide-dark-empty.png",
+      "before": 1793008914961,
+      "after": 1793008915070,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-wide-dark-research.png",
+      "before": 1793008915976,
+      "after": 1793008916080,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-wide-dark-source.png",
+      "before": 1793008916174,
+      "after": 1793008916600,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-wide-dark-collection.png",
+      "before": 1793008916692,
+      "after": 1793008916811,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/#notes"
+    },
+    {
+      "file": "final-wide-dark-note.png",
+      "before": 1793008916899,
+      "after": 1793008917020,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/#notes/heating"
+    },
+    {
+      "file": "final-narrow-light-empty.png",
+      "before": 1793008917126,
+      "after": 1793008917185,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-narrow-light-research.png",
+      "before": 1793008918120,
+      "after": 1793008918172,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-narrow-light-source.png",
+      "before": 1793008918239,
+      "after": 1793008918348,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-narrow-light-collection.png",
+      "before": 1793008918401,
+      "after": 1793008918456,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/#notes"
+    },
+    {
+      "file": "final-narrow-light-note.png",
+      "before": 1793008918523,
+      "after": 1793008918579,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/#notes/heating"
+    },
+    {
+      "file": "final-narrow-dark-empty.png",
+      "before": 1793008918689,
+      "after": 1793008918746,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-narrow-dark-research.png",
+      "before": 1793008919683,
+      "after": 1793008919721,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-narrow-dark-source.png",
+      "before": 1793008919778,
+      "after": 1793008919846,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-narrow-dark-collection.png",
+      "before": 1793008919900,
+      "after": 1793008919939,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/#notes"
+    },
+    {
+      "file": "final-narrow-dark-note.png",
+      "before": 1793008919999,
+      "after": 1793008920038,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/#notes/heating"
+    },
+    {
+      "file": "episode-00-before.png",
+      "before": 1793008920299,
+      "after": 1793008920398,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "episode-01-pending.png",
+      "before": 1793008920449,
+      "after": 1793008920529,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "episode-02-stopped.png",
+      "before": 1793008920564,
+      "after": 1793008920646,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-error-light.png",
+      "before": 1793008924515,
+      "after": 1793008924604,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "episode-03-retried-result.png",
+      "before": 1793008925608,
+      "after": 1793008925704,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    },
+    {
+      "file": "final-long-mixed-content.png",
+      "before": 1793008929840,
+      "after": 1793008929935,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/#research"
+    },
+    {
+      "file": "final-recovered-draft.png",
+      "before": 1793008930262,
+      "after": 1793008930363,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/#notes/note-535ef012-cfd2-4418-aecc-598db006551b"
+    },
+    {
+      "file": "final-backup-recovery.png",
+      "before": 1793008930816,
+      "after": 1793008930894,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/#notes/storage"
+    },
+    {
+      "file": "final-storage-unavailable-dark-narrow.png",
+      "before": 1793008931705,
+      "after": 1793008931753,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:4191/#notes/note-7f764c79-151c-4199-930c-bb4d7186c0f6"
+    },
+    {
+      "file": "final-short-reduced-motion.png",
+      "before": 1793008932845,
+      "after": 1793008932882,
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "theme": "light",
+      "url": "http://127.0.0.1:4191/"
+    }
+  ],
+  "consoleErrors": [],
+  "network": [
+    {
+      "variant": "wide-light",
+      "url": "http://127.0.0.1:4191/assets/fonts/StudySansUI.woff2",
+      "status": 200
+    },
+    {
+      "variant": "wide-light",
+      "url": "http://127.0.0.1:4191/assets/fonts/StudySerifUI.woff2",
+      "status": 200
+    },
+    {
+      "variant": "wide-dark",
+      "url": "http://127.0.0.1:4191/assets/fonts/StudySansUI.woff2",
+      "status": 200
+    },
+    {
+      "variant": "wide-dark",
+      "url": "http://127.0.0.1:4191/assets/fonts/StudySerifUI.woff2",
+      "status": 200
+    },
+    {
+      "variant": "narrow-light",
+      "url": "http://127.0.0.1:4191/assets/fonts/StudySansUI.woff2",
+      "status": 200
+    },
+    {
+      "variant": "narrow-light",
+      "url": "http://127.0.0.1:4191/assets/fonts/StudySerifUI.woff2",
+      "status": 200
+    },
+    {
+      "variant": "narrow-dark",
+      "url": "http://127.0.0.1:4191/assets/fonts/StudySansUI.woff2",
+      "status": 200
+    },
+    {
+      "variant": "narrow-dark",
+      "url": "http://127.0.0.1:4191/assets/fonts/StudySerifUI.woff2",
+      "status": 200
+    }
+  ],
+  "browser": "134.0.6998.35",
+  "pendingTrigger": 1793008920402,
+  "ended": "2026-10-26T10:02:12.887Z",
+  "pass": true
+}

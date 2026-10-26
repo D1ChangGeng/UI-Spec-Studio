@@ -27,6 +27,7 @@ REQUIRED += ["docs/VISUAL-INSPECTION.md", "docs/REVIEW-v1.7.0.md",
 REQUIRED += ["docs/PRODUCT-ALIGNMENT.md", "docs/REVIEW-v1.8.0.md"]
 REQUIRED += ["docs/REVIEW-v1.9.0.md"]
 REQUIRED += ["docs/REVIEW-v1.10.0.md"]
+REQUIRED += ["docs/ART-DIRECTION.md", "docs/REVIEW-v1.11.0.md"]
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 
 

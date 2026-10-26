@@ -62,6 +62,26 @@ Read these when a concrete technique helps the current design. They are original
 
 **Inspect.** Trace a path against the source, check overlaps at actual size and verify color-independent meaning. For a simple list, native prose or a table may be more direct. A visually elegant diagram with incorrect topology is not an acceptable tradeoff.
 
+## Familiar work with an expressive visual language
+
+**Problem.** A professional research tool needs an independent artistic identity while preserving understandable questions, sources and durable results.
+
+**Mechanism.** Separate the familiar task relationship from its visual form. Study conversation and evidence inspection as functional references, then investigate cross-domain type, photography, material or editorial composition. Select a coherent theme and mature implementations that can carry it into working inputs, results and navigation.
+
+**Realization.** Trial defining assets beside actual text and controls before scaling the design. Assign display, reading and control type roles; make crop, surfaces, spacing and motion adjustable. Existing input, focus and state mechanisms can remain while the product's visual relationships change. A theme might connect covers, citations and result sections through proportion or material rather than one repeated decoration. This is one application, not a prescribed editorial style.
+
+**Inspect.** Compare equally resolved directions with representative content. Check populated work, long results, returning to sources, repeated input and a reduced-motion treatment. Record usability and expressive completion independently. If an animated asset competes with input, test its location, local intensity, suspension or delivery; preserve the selected direction where feasible. A simple local repair in an already accepted product can inherit its expression without opening a new art-direction study.
+
+## A faithful source becomes an authored sequence
+
+**Problem.** A selected static composition needs a timed presentation explaining its relationships without losing its visual craft.
+
+**Mechanism.** Preserve the source's meaningful layers, typography, material and spatial relationships; animate a semantic sequence such as evidence connecting to a decision and then to a result. Give important text stable reading intervals and the loop an intentional reset.
+
+**Realization.** Reuse editable source layers and a suitable timeline/runtime. Fix stage, content, assets and relevant seeds; expose timeline positions for repeatable frame comparisons. Preserve a full-quality source view for matched-region fidelity inspection. Identify output format and actual encoded duration separately from the authoring clock.
+
+**Inspect.** View source, keyframes, intermediate states, seam and final playback at useful scale. Differences locate unintended departures; perceived composition and rhythm need visual judgment. This establishes an authored work. A live product additionally needs semantic controls, variable content, user interruption and actual completion authority; its responsiveness cannot be inferred from the deterministic film.
+
 ## Preserve a useful technique
 
 When adapting one of these patterns, keep a short record only if it will improve future work: the task, the transferable relationship, local constraints, editable source, inspected evidence and limits. Separate the project's aesthetic choice from the general mechanism. Add new shared patterns through an authorized maintenance change, with provenance and a concrete counterexample that shows where the technique should change.

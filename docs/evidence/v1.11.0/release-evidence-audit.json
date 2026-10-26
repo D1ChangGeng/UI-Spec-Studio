@@ -1,0 +1,215 @@
+{
+  "record_type": "independent_release_evidence_claim_audit",
+  "version": "1.11.0",
+  "reviewer": "/root/release_evidence_audit",
+  "completed_utc": "2026-10-26T10:09:13.098828+00:00",
+  "status": "no_required_correction",
+  "repository": "/workspace/scratch/199d5b56cb0b/UI-Spec-Studio",
+  "scope": {
+    "purpose": "Read-only consistency audit of release claims, supporting records, source/output identities, evidence limits and local links.",
+    "primary_documents": [
+      "docs/REVIEW-v1.11.0.md",
+      "docs/releases/v1.11.0.md"
+    ],
+    "selected_application_reads": [
+      "research-workspace/scripts/verify.cjs",
+      "studio-film/scripts/inspect.mjs",
+      "Current application source/output files hashed against recorded identities",
+      "Embedded application design/verification/notice/task/CSS/timeline records compared with their actual files"
+    ],
+    "prior_source_audit": "Reviewed the recorded method-source-audit conclusion and identity; did not repeat the prior complete runtime-method source audit.",
+    "actions_not_performed": [
+      "No repository or application files modified",
+      "No application or browser started",
+      "No new application tests or media decodes run",
+      "No new image or continuous video viewing",
+      "No external publication or GitHub CI inspection"
+    ],
+    "evidence_records_parsed_and_examined": [
+      "docs/evidence/v1.11.0/application-review.json",
+      "docs/evidence/v1.11.0/film-handoff-checks.json",
+      "docs/evidence/v1.11.0/film-identities-and-fidelity.json",
+      "docs/evidence/v1.11.0/film-independent-review.json",
+      "docs/evidence/v1.11.0/film-initial-review.json",
+      "docs/evidence/v1.11.0/film-runtime-checks.json",
+      "docs/evidence/v1.11.0/frozen-skill-identity.json",
+      "docs/evidence/v1.11.0/method-source-audit.json",
+      "docs/evidence/v1.11.0/readme-local-review.json",
+      "docs/evidence/v1.11.0/workspace-independent-review.json",
+      "docs/evidence/v1.11.0/workspace-runtime-checks.json",
+      "docs/evidence/v1.11.0/workspace-source-identity.json",
+      "docs/evidence/v1.11.0/workspace-viewed-images.json"
+    ],
+    "record_reading_boundary": "Primary Markdown documents read in full. JSON evidence parsed in full; material claim, identity, count, viewing-scope and limitation fields examined. No claim of a second complete source-method or visual audit."
+  },
+  "document_identities_at_audit": {
+    "docs/REVIEW-v1.11.0.md": {
+      "bytes": 19340,
+      "sha256": "29c2018fa20ccded5a5d3f8a8d12aa21cbfc191d0c7534581e14a71d05e4ce9c"
+    },
+    "docs/releases/v1.11.0.md": {
+      "bytes": 2071,
+      "sha256": "8f44008ff39cba826293c3e5622ff17708056218ca23e988bab17c32d8e31c93"
+    }
+  },
+  "findings": [],
+  "required_corrections": [],
+  "verified": {
+    "frozen_runtime": {
+      "recorded_and_actual_files": 29,
+      "current_equals_frozen": true,
+      "aggregate_sha256": "b1f243ec6f8fbbd8b64d3255984821d597c319a3853a51c32372a6b928c5b730",
+      "common_reference_bytes": 145472,
+      "common_reference_limit": 147456,
+      "skill_lines": 144
+    },
+    "public_evidence_inventory": {
+      "files": 27,
+      "all_sizes_and_sha256_values_match": true
+    },
+    "workspace": {
+      "five_raw_input_hashes_match_recorded_base_commit": true,
+      "base_commit": "ecd19d01e58546580fecaf923779c9f692d72c91",
+      "final_runtime_files": 12,
+      "final_runtime_aggregate_sha256": "0cadd53205f8ae36fdbae6931c111c5bcf27f49618d3492ed923e9f082d744da",
+      "aggregate_algorithm": "SHA256 of UTF-8 sorted relative path + TAB + SHA256 + LF records, including a final LF.",
+      "runtime_files_match": true,
+      "final_checks": 19,
+      "final_captures": 30,
+      "all_final_checks_pass": true,
+      "initial_and_final_scenario_counts_not_added": true,
+      "maintainer_reviewed_states": 9,
+      "unchanged_reviewed_images": 7,
+      "changed_images_reopened": 2,
+      "final_image_identities_match": true,
+      "recorded_playwright_version_matches_available_package": "1.62.1",
+      "recorded_chromium_version": "134.0.6998.35",
+      "font_bytes": {
+        "standard_ui_subsets": 308856,
+        "full_sc_fallbacks": 14531952
+      },
+      "page_error_claim_limited_to_monitored_contexts": true,
+      "direct_backup_legacy_storage_assertions_and_inline_export_operating_assertion_present_in_verifier": true
+    },
+    "film": {
+      "source_matches_repository_svg": true,
+      "source_license_matches_repository_license": true,
+      "source_sha256": "75167f18a564528ce0c36aa706131c033c83825bcb297c0a132e90ad2cd884a9",
+      "listed_source_output_files": 13,
+      "all_listed_identities_match": true,
+      "public_lossless_source_and_poster_bytes_equal": true,
+      "poster_sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+      "browser_timeline_checks": 9,
+      "all_checks_pass": true,
+      "browser_playback_codec": "VP9 WebM",
+      "mp4_browser_playback_not_claimed": true,
+      "recorded_dimensions": [
+        2200,
+        710
+      ],
+      "recorded_fps": 60,
+      "recorded_duration_seconds": 12,
+      "recorded_decoded_frame_counts": {
+        "mp4": 720,
+        "webm": 720
+      },
+      "independent_decode_record_reports_matching_yuv_frame_hashes": true,
+      "hold_interval_seconds": [
+        6.85,
+        10.9
+      ],
+      "initial_authored_samples": 32,
+      "unchanged_authored_samples": 27,
+      "changed_authored_samples_reinspected": 5,
+      "repaired_authored_samples_viewed": 16,
+      "final_independently_decoded_mp4_samples_viewed": 12,
+      "reviewed_sheet_inventory": [
+        {
+          "file": "authored-type-handoff-01.png",
+          "actually_viewed": true,
+          "source_frame_count": 4
+        },
+        {
+          "file": "authored-type-handoff-02.png",
+          "actually_viewed": true,
+          "source_frame_count": 4
+        },
+        {
+          "file": "authored-type-handoff-03.png",
+          "actually_viewed": true,
+          "source_frame_count": 4
+        },
+        {
+          "file": "authored-type-handoff-04.png",
+          "actually_viewed": true,
+          "source_frame_count": 4
+        },
+        {
+          "file": "encoded-type-handoff-01.png",
+          "actually_viewed": true,
+          "source_frame_count": 4
+        },
+        {
+          "file": "encoded-type-handoff-02.png",
+          "actually_viewed": true,
+          "source_frame_count": 4
+        },
+        {
+          "file": "encoded-type-handoff-03.png",
+          "actually_viewed": true,
+          "source_frame_count": 4
+        }
+      ],
+      "source_poster_hold_and_seam_claims_are_pre_codec": true,
+      "normal_speed_continuous_visual_playback_not_claimed": true
+    },
+    "readme": {
+      "english_source_sha256": "ab6e27449fbc4c2064492a24618326c807808dfdc276a63879fb25f2ed51ec57",
+      "chinese_source_sha256": "59327e3a960d98ebcbc721e395053ab79e45bbc264b3b4339a946f8bb4c0b4cd",
+      "both_current_sources_match": true,
+      "viewed_viewport_images": 12,
+      "viewed_full_document_overviews": 12,
+      "viewed_original_pixel_section_crops": 12,
+      "all_36_recorded_image_identities_match": true,
+      "local_approximation_distinguished_from_actual_github_rendering": true,
+      "superseded_missing_cjk_run_excluded": true,
+      "chinese_768px_final_character_wrap_recorded": true,
+      "clipboard_keyboard_and_comprehension_limits_retained": true
+    },
+    "local_markdown_links": {
+      "checked": 21,
+      "missing": 0
+    },
+    "embedded_current_application_documents": {
+      "compared": 9,
+      "all_equal": true
+    },
+    "copied_application_records": {
+      "compared": 6,
+      "all_equal": true
+    },
+    "original_applications_and_review_directed_fixes_separated": true,
+    "synthetic_content_local_persistence_owner_acceptance_and_device_limits_retained": true
+  },
+  "advisory": [
+    {
+      "severity": "optional_wording_clarification",
+      "location": "docs/evidence/v1.11.0/film-runtime-checks.json: checks[2].name; also copied in film-independent-review.json",
+      "text": "Last encoded sample / first sample",
+      "observation": "The underlying inspect.mjs compares authored PNGs at 719/60 and 0 seconds, not decoded encoded-video frames. The details identify PNGs and the release review and application VALIDATION.md explicitly call this raw/uncompressed; the independent encoded measurement separately records non-identical first/last RGB pixels.",
+      "recommendation": "For future generated reports, name this check Last raw sample / first sample. No release-narrative correction or new execution is required; preserve the original executed record or explicitly identify any annotation."
+    }
+  ],
+  "audit_interpretation": [
+    "Source/evidence identity checks establish that the summaries refer to the inspected recorded artifacts; they do not independently reproduce the author runtime results.",
+    "A historical initial_original encoded-playback path now contains the final capture. The final independent record explicitly gives different initial/final identities, marks same_as_actually_viewed_source false and final_image_reopened false; this is correctly bounded historical evidence, not an unreported final identity mismatch.",
+    "Relative consulted-skill paths in workspace-source-identity.json resolve against frozen_skill.path; they are not application-relative missing files.",
+    "Absolute local paths in preserved JSON records are observation provenance, as explicitly declared in application-review.json; they are not promised public download links."
+  ],
+  "pending_or_outside_scope": [
+    "The final engineering source build and required recheck are owned by the parent task. The reviewed paragraph honestly states they are pending; this audit does not pre-assert their outcome.",
+    "The earlier 153-test integration and standard Skills CLI installation claims were not rerun by this audit.",
+    "Actual exact-source GitHub CI rendering and post-publication visual readback remain future evidence.",
+    "No independent user acceptance, continuous natural-speed visual review, real-device performance, accessibility conformance or comprehension claim is added."
+  ]
+}

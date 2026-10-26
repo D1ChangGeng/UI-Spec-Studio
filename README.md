@@ -49,6 +49,14 @@ Review the assembled interface and continuous task again. The adoption record sh
 
 [37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md)
 
+## Give familiar work an independent visual language
+
+**Art Direction** coordinates subject, type, composition, material and motion around the product's intended character. Professional tools can carry strong artistic expression. Explicit aesthetic goals remain delivery requirements alongside clear tasks, accurate states and reliable use.
+
+For **Expressive Contrast**, study functional experience, cross-domain expression and actual implementation resources together. Compare meaningful directions through equally resolved previews, then translate the choice into a role-based visual system. Mature resources and focused asset production carry that language into populated inputs, navigation, results and repeated work.
+
+Review **experience validity** and **expressive completion** independently. Source fidelity protects selected or approved design details; perceptual inspection judges the rendered result. Authored timelines can support repeatable frame comparisons, while working products need actual interaction and runtime evidence. [Art direction and expressive design](docs/ART-DIRECTION.md)
+
 ## Explore what the interface reveals
 
 **Active Visual Exploration & Design Reconnaissance** turns research questions into actions: play a relevant demo, scroll through a layout, open a panel, switch states or compare component settings. New clues can change the search. Attribute each observation to its subject: the hosting page, media player, demonstrated application or content inside that application.
@@ -114,7 +122,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.10.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.11.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

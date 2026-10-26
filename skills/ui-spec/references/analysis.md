@@ -6,11 +6,13 @@
 
 ## Establish the product's target experience
 
-Use **Product UI Experience Alignment** to connect current tasks, conditions and aesthetic goals to mature evidence and verified implementation. Target product-appropriate maturity through readable hierarchy, component detail, complete states and continuous use. Preserve independent brand expression; judge meaningful qualities rather than resemblance percentages. Product references, systems, demos, assets and platform conventions provide evidence. Reuse-first carries that quality into actual adopted implementations.
+Use **Product UI Experience Alignment** to connect tasks and aesthetic goals to mature evidence and verified implementation. Establish readable hierarchy, component craft, complete states and continuous use through adopted resources, with independent product expression. Judge specific qualities rather than resemblance percentages.
+
+Separate required behavior/accessibility/business conditions, explicit aesthetic requirements, and revisable visual conventions. Artistic impact or differentiation requested by the user remains an acceptance requirement in professional software too. Task familiarity concerns understandable objects, actions and results; navigation geometry, component shape and material can change when the new cues work. Resolve concrete conflicts through trials before revising the agreed direction.
 
 Treat a product name as a compressed experience description. Establish whether it refers to a public website, working application, flow, brand character or particular relationship. “Like a conversational AI product” could concern task entry, attachments, history, long-answer reading or a companion workspace. Turn the relevant interpretation into questions about space, actions, content, feedback and continuity. Show researched options when interpretations materially change direction; infer and investigate routine details.
 
-Without a named reference, find candidates from the task and working objects. For an upgrade, preserve proven semantics and suitable assets while researching actual gaps. For novel interactions, study mature local patterns and verify their new combination. Product/task, page/region, component/state, asset/language and temporal relationships can use different sources; establish a leading design language before combining them. Evaluate each source in its conditions: a famous product can contain a weak choice or a choice suited to a different task.
+Without a named reference, research the task and working objects. Preserve proven semantics and suitable assets in upgrades; verify new combinations of mature patterns for novel interactions. Sources may address task, region, state, asset or time. Coordinate them through a leading visual language and judge fit in context; reputation alone is insufficient.
 
 ## Nine dimensions, one coherent experience
 
@@ -32,13 +34,11 @@ Content can reshape navigation; a key asset can alter composition; realistic lat
 
 ## Use theory to investigate real design work
 
-Turn product intent into questions that can change selection or implementation. Search by task, pattern, component role, visual relationship and implementation need; revise the questions from actual browsing. A new surface benefits from a coherent page, system or block; a bounded correction can inherit its accepted foundation.
+Turn intent into questions that can change a choice. Search by task, pattern, component role, expression and implementation need; revise questions from actual browsing. New surfaces benefit from coherent foundations; bounded corrections can inherit accepted work.
 
 Cover **parts, states and relationships**: what composes the surface, how conditions change it, and how elements affect one another in space, time and the task. Give consequential dimensions an inspected reference or verified basis; routine instances can share a researched system. Track what is understood, partly observed and consequentially unknown to choose the next useful observation.
 
-Apply the [multi-scale perceptual method](principles.md#inspect-from-whole-to-detail-and-back): natural first impression, composition, region, relevant detail, then whole-product review. Use appropriate lenses to explain attention, grouping, reading, object recognition or product character. A bright side panel may outweigh the intended work area; retaining a selected row while details expand may preserve orientation. These are hypotheses to examine in actual context, not universal layout choices.
-
-Connect the visible fact, likely effect, relationship or cause to test, product fit, resource/adaptation decision and rendered recheck. Keep professional interpretation and observed user response distinct. Pair consequential quality questions with implementations capable of carrying them. Distinguish reference, original demo, current-content trial and integrated journey; a candidate can improve the plan and a trial can reopen selection. [Verification](verification.md) governs conditions and evidence limits.
+Use the [perceptual method](principles.md#inspect-from-whole-to-detail-and-back) to explain observed relationships and hypotheses, then choose implementations capable of carrying them. A bright panel may outweigh the task; retained selection may preserve orientation. Test these in context. Keep reference, original demo, local trial and journey evidence distinct; a trial can reopen selection. [Verification](verification.md) governs conditions and claim limits.
 
 ## Recognize the product through its use
 
@@ -69,7 +69,7 @@ Code establishes current capability; explicit acceptance establishes approved de
 
 Check whether credible alternatives would change the primary action, information architecture, enduring working object or overall identity. When unresolved choices reshape substantial work, offer a small set of distinct directions, a recommendation and the practical tradeoff before extending the shell or page family. One well-supported direction may suffice.
 
-Compare the same task and representative content: first action, result organization, continuation and relevant mature examples. Show a small rendered probe when spatial or temporal differences affect the decision. Hold incidental styling steady when comparing interaction models; compare themes separately when that is the question. The user chooses consequential direction; the agent handles routine implementation.
+Compare the same task and content at comparable completion. Hold incidental styling steady for interaction-model comparisons; for art direction, show material differences in assets, composition or motion. Use actual renders or runnable fragments, including populated core use. Color swaps or unequal polish cannot establish a fair direction comparison. The user resolves consequential open choices; routine implementation remains agent work.
 
 Established intent, approval or delegated autonomy supports direct progress. One-shot work retains its assumptions, unresolved alternatives and pending owner acceptance. Prototype preference and formal approval keep their actual scope. Continue independent work while a significant choice is pending.
 
@@ -142,15 +142,13 @@ Express the same authoritative condition for each role's task and permission. A 
 
 ## Form a concept that carries across surfaces
 
-Derive an organizing idea from mechanism, audience, subject and available material. “Evidence beside conclusions” can guide panes, citations and selection; an aesthetic adjective needs concrete relationships. Separate inherited identity, surface composition and local refinement. Use accepted choices as constraints and compare alternatives when they can improve the task.
+Derive an organizing idea from audience, subject, brand/emotion, task and available material. Define what remains familiar, what perception changes and which relationships connect them. An editorial archive or sculptural identity can shape a working tool's navigation, inputs and results. Let actual cross-domain sources inform the expression rather than prescribing these examples as styles.
 
-Judge clarity, distinctiveness, coherence across surfaces, feasibility and control. Precise density/status handling can distinguish a tool as expressive art distinguishes a gallery. Keep controls recognizable and accessible; let the concept earn its place through mutually supporting choices.
+Coordinate focal and supporting roles through the [art-direction method](principles.md#art-direction-and-expressive-contrast). Test clarity, distinctiveness, feasibility and continuity with real content. Preserve confirmed aesthetic goals while repairing the specific failing relationship; communicate a necessary scope/direction change explicitly.
 
 ## Read references as mechanisms
 
-Study a reference for a question that matters to the current product. Use the perceptual method to unpack impressions such as “simple” or “refined” into actual attention, proportion, material and rhythm. Preserve inferred causes and untested user effects as hypotheses.
-
-For an opening companion panel, inspect width changes, retained input/selection, reading measure, focus and the transition. A useful relationship may preserve the task entry and reading focus while explaining added space. Find mature resources that carry it, then verify local details and the complete frame/sequence with current content. Dimensions and styling follow product conditions; a new observation can change the selection or target.
+Read impressions such as “refined” through observed attention, proportion, material and rhythm; preserve inferred causes and user effects as hypotheses. For an opening companion panel, inspect width, retained input/selection, reading measure, focus and transition. Inherit the relationship that preserves task continuity through added space, using suitable resources and current-content verification. Dimensions and styling follow the project.
 
 ## Make decisions explainable and adjustable
 
@@ -160,10 +158,8 @@ Expose meaningful controls in tokens, content, variants, composition bounds, foc
 
 ## Let available excellence inform the solution
 
-Translate the intended perception and operation into candidates while the choice remains open. Compare useful internal, native and external work by visible quality, task behavior and total cost. Preserve binding direction and explain the selected scope. The [sourcing reference](component-sourcing.md) owns discovery/adoption, the catalog provides leads, and project observation establishes the result.
+Compare internal, native and external candidates by visible quality, behavior and total cost under the binding direction. The [sourcing method](component-sourcing.md) owns adoption; catalog leads need current-project verification.
 
 ## Let assets participate in the concept
 
-Inspect material that carries identity, meaning or attention while layout can still change. Distinguish functional icons, accurate third-party marks and original identity. Apply the [asset method](visual-assets.md) to type, lettering, imagery and spatial production.
-
-Compare significant candidates in intended placements, actual small sizes, themes and movement where relevant. Extract contour, proportion, material and timing into an independent expression. Show equivalent previews for consequential identity choices; proceed with routine craft under the accepted direction. Availability, rights, tools and observed output can each change the viable route.
+Inspect identity/meaning-bearing material while layout can change. Use the [asset method](visual-assets.md) for functional icons, accurate third-party marks, original identity and type/spatial production. Compare important candidates in equivalent placements and conditions; availability, rights, tools and observed quality can change the route. Proceed with routine craft under accepted direction.

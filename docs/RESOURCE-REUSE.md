@@ -13,9 +13,11 @@ Existing suitable choices carry forward. Search terms evolve with the research: 
 
 Design references establish relationships worth inheriting; implementation resources carry those relationships into the product. Research them together while the solution is still open. A promising block can improve the proposed layout; an observed interaction can refine the search for a suitable implementation. Inspect actual demos and relevant states. A paired workspace may require resizing, focus movement and return behavior as well as a convincing still image. Keep the carrier and observed subject clear when a showcase embeds another product or artwork.
 
+Within design research, distinguish functional/experience references from artistic/expression references. Explicit expressive goals call for relevant cross-domain study of subjects, type, material, composition and motion, alongside mature task patterns. Both inform the implementation search. A professional application can inherit a familiar task loop while adopting a distinct visual language. The [art-direction guide](ART-DIRECTION.md) explains this combined practice.
+
 Judge maturity through the qualities the task needs: readable type, optical alignment, coherent material, discernible states, stable content growth and understandable transitions. Compare corresponding tasks, content and conditions. A candidate with a different appearance may preserve these relationships more effectively. Keep visual judgment, functional correctness, accessibility and runtime performance supported by their respective evidence.
 
-Use the [perceptual inspection method](VISUAL-INSPECTION.md) to understand why a candidate works: begin with the whole at normal display scale, examine composition, functional regions and consequential details, then return to the assembled context. Compare the resource's own craft, product fit, completeness of inherited relationships and their survival after integration. A quiet boundary, balanced icon or changing surface gains meaning through its background, content and adjacent controls. Let the observation change the candidate, reuse level, configuration or trial question.
+Use the [perceptual inspection method](VISUAL-INSPECTION.md) to understand why a candidate works: begin with the whole at normal display scale, examine composition, functional regions and consequential details, then return to the assembled context. Compare the resource's own craft, product fit, completeness of inherited relationships and their survival after integration. A boundary, sculptural asset or changing surface gains meaning through its background, content and adjacent controls. Let the observation change the candidate, reuse level, configuration or trial question.
 
 ## Use the included resource map
 
@@ -82,6 +84,12 @@ content, variable labels, unavailable media, loading/error states and display
 conditions. Routine members of a verified system can inherit checks within the
 same conditions.
 
+Trial defining artistic material with the real business components while layout
+can still change. Distinguish reference-only work, exploratory concepts and usable
+product assets; confirm production quality, permitted use, editable sources,
+delivery variants and cumulative cost. Reuse can carry the structure and motion,
+while purposeful professional production supplies an independent identity.
+
 Inspect details at their intended size and use enlargement to diagnose a specific
 relationship. Return to normal scale, neighboring regions and the whole after a
 local change; contact sheets and scaled full-page images have their own detail
@@ -121,6 +129,12 @@ When assembly exposes a quality gap, choose the repair layer deliberately:
 If the target remains unreachable under current constraints, show the actual gap,
 its impact and viable paths. A necessary scope or direction change is an explicit
 decision; completed integration does not itself change the quality target.
+
+Preserve the confirmed expression while repairing a specific conflict. A moving
+asset may need a different position, input-time pause, local contrast or delivery
+mode. Recheck both use and expression after that change, including populated input,
+results, navigation and details. Compare fidelity against the selected source or
+approved trial separately from the current composition's perceptual quality.
 
 ## Read platform mechanisms by responsibility
 
@@ -186,6 +200,7 @@ coverage or a better fit; refresh relevant records when conditions change.
 | Existing approved menu still fits | Reuse it; inspect only changed conditions | Affected controls and actual states |
 | New Vue account entry | Trial a fitting complete block or coherent behavior/visual foundation; read exact contracts | Local states, keyboard, touch, dismissal, theme and real session results |
 | Open visual direction | Inspect a small set of promising mechanisms; recommend and prototype | Whole-frame effect, readability, controls and combined cost |
+| Expressive professional workspace | Pair mature task patterns with cross-domain expression and adoptable resources; trial their combination | Distinct direction retained in populated core views, reliable tasks and inspected material/motion |
 | Font discovery | Use family catalog for glyphs; AI docs for usage | Real text, variants, loading and licensing |
 | Cross-stack reference | Compare native mature implementations and feasible ports before a custom gap | Actual inherited mechanism, current stack behavior and intended visual quality |
 | Paid or unavailable resource | Request a specific authorized export or observation when it changes selection; compare viable alternatives | Actual inspection, adoption rights, remaining conditions and independent progress |

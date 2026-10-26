@@ -2,6 +2,12 @@
 
 Product UI Experience Alignment connects current users, tasks and operating conditions to a concrete target experience. UI Spec Studio finds useful mature references whether the user supplies a product name, a functional goal or an existing product to improve. The [alignment and exploration guide](PRODUCT-ALIGNMENT.md) explains how research questions become observed design relationships and verifiable implementation choices.
 
+Record task requirements and explicit aesthetic goals together. Familiarity can
+come from understandable objects, labels, outcomes and continuation while layout,
+type, material and motion develop an independent expression. A professional
+product's category supplies context; the requested artistic direction remains a
+delivery requirement. See the [art-direction guide](ART-DIRECTION.md).
+
 ## Mature work is the default design starting point
 
 Design theory and UI resource knowledge work together throughout the process:
@@ -34,11 +40,11 @@ observed behavior, inferred direction and an unresolved product preference.
 Screenshot feedback supports visible observations; code and live tasks establish
 what the actual product can do.
 
-## Study two kinds of reference
+## Study complementary reference roles
 
-**Design references** explain useful experience relationships at the product, page, region, component, content, asset or temporal level. Reference Product Alignment is one application of this broader practice. **Implementation resources** supply adoptable templates, design systems, blocks, components, assets or interaction code. A source can serve both roles; transferring its technique creates a design basis and leaves the authored implementation responsible for its own quality.
+**Functional and experience references** explain task, object, state and continuity relationships. **Artistic and expression references** expand the available subject, composition, type, material and motion language, including useful cross-domain work. **Implementation resources** supply adoptable templates, systems, blocks, components, assets or interaction code. The first two are design-reference roles; a source can also provide implementation. Record which role each observation supports. Transferring a technique creates a design basis and leaves the authored implementation responsible for its own quality.
 
-Research both while the model, layout and treatment can still change. Expand a named product into the relevant surface and task; for a functional brief, find candidates from the primary loop and uncertain relationships. Follow visual clues through playback, scrolling and state changes. Attribute the evidence to the hosting page, player, demonstrated UI or its content, and distinguish observed behavior from inferred cause.
+Research these roles together while the model, layout and treatment can still change. Expand a named product into the relevant surface and task; for a functional brief, find candidates from the primary loop and uncertain relationships. Follow visual clues through playback, scrolling and state changes. Attribute the evidence to the hosting page, player, demonstrated UI or its content, and distinguish observed behavior from inferred cause.
 
 Describe what is useful, which conditions it relies on and what the current product will inherit or adjust. Before wider integration, trial consequential candidates with current fonts, content, theme and states. Distinguish the mature reference, original resource demo, local trial and assembled journey. Suitable family members can share already established evidence under the same conditions. Revisit the original quality question after adaptation and in continuous use.
 
@@ -46,8 +52,9 @@ Apply [multiscale perceptual inspection](VISUAL-INSPECTION.md) while making that
 choice: establish the whole-page impression at normal scale, examine composition,
 regions and high-impact details, then return to the surrounding interface. State
 the visible relationship rather than relying on an adjective alone. Optical
-weight, typography, boundary contrast and material can explain craft in a quiet
-tool or an expressive brand surface; product context determines suitable emphasis.
+weight, typography, boundary contrast and material can explain craft at different
+expression levels within the same product; the task and explicit direction
+determine suitable emphasis.
 
 Start adaptation with content, public configuration and composition. Identify the purpose and affected states of internal changes; substantial changes to layout, state or motion require corresponding inspection of the current implementation. Preserve useful source evidence while judging the version actually delivered.
 
@@ -67,6 +74,11 @@ number of distinct options. Use comparable content, concrete sources and a
 bounded preview where useful. Ask for the user's intended experience, not a
 catalog of component decisions.
 
+For an artistic direction, make alternatives visibly distinct through subject,
+composition or motion language, with comparable care and relevant populated
+states. Identify the task relationships retained and the visual expectations
+reorganized. Color substitutions alone cover a narrower theme choice.
+
 Clear intent, accepted direction or delegated autonomy supports direct progress.
 One-shot work can deliver a well-supported provisional recommendation and identify
 its open choices. User approval is recorded from its actual source, not inferred
@@ -84,6 +96,13 @@ supports it. Show how the finding changes resource choice or adaptation and what
 was seen when the local result returned to the whole page and related states.
 Actual user understanding retains its own evidence. Existing records can express
 this reasoning in prose; the relationship matters more than a fixed field format.
+
+Keep experience validity and expressive completion findings separate: what works
+through use, and whether the promised direction survives in everyday input,
+results, navigation and details. For selected or approved source work, record the
+fidelity target and intentional changes. Image differences diagnose reproduction;
+actual viewing judges the current composition. Link a repair to its specific
+constraint and recheck the confirmed expression alongside the task.
 
 Start it as a shortlist, then distinguish researched candidates, completed trials,
 actual adoption and verified results. Link important adopted parts to their source,

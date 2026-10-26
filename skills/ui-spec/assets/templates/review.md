@@ -52,6 +52,12 @@ interval and connected path after changes; keep residual gaps and target changes
 
 ## Result
 
+State experience-validity and expressive-completion findings independently. Inspect
+the promised language in populated core use, long content, repetition and reduced
+motion. For source-fidelity work, identify the baseline, corresponding regions,
+intentional differences and capture controls; image metrics remain diagnostic.
+Distinguish authored-timeline output from actual product response and performance.
+
 Captured evidence; actually inspected frames/intervals; executed interaction and
 engineering checks; current result; actual user approval and remaining conditions.
 Provide inspectable candidates or before/after results when they explain an

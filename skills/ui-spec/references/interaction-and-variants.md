@@ -43,13 +43,13 @@ Define initialization, system preference and explicit overrides; establish theme
 
 ## Motion
 
-Name the event and purpose: entry, navigation, manipulation, local change or feedback. Choose timing, trajectory and easing for its meaning and frequency. Inspect corresponding episodes in the reference, candidate demo, local trial and integrated use. Recheck after theme, container or state-adapter changes; endpoints leave the intervening movement unresolved.
+Name the event and purpose: entry, navigation, manipulation, local change, feedback or expressive emphasis. Choose timing, trajectory and easing for its meaning and frequency. Inspect corresponding reference, demo, trial and integrated episodes; recheck affected motion after theme, container or state-adapter changes. Endpoints leave the transition unresolved.
 
 Preserve object identity through expansion, reversal and return. A flip needs coordinated faces, pivot, visibility and active hit regions; test reversal from intermediate positions. Acknowledgment can begin before data arrives, while pending presentation carries unresolved work. A completed animation does not establish business completion.
 
 Compose the full movement: rotation, scaling, particles, shadows and brightness extend beyond a resting box and shift visual weight. Observe text clearance, hierarchy and material coherence across the range. Adjust amplitude, layers, masks, layout or delivery, then judge the complete scene again. Deliberate overlap retains readable content, recognizable motion and operable targets.
 
-Honor reduced-motion preferences with equivalent meaning and access. Provide appropriate control for prolonged nonessential motion. Essential information remains available through keyboard and touch without optional pointer effects. Use the [temporal observation method](verification.md#inspect-a-time-bounded-visual-episode) to choose windows, recordings and frame sequences; the relevant behavior determines the sampling depth.
+Honor reduced-motion preferences with equivalent meaning and access; retain identity through type, composition, material and static relationships. Provide appropriate control for prolonged nonessential motion. Essential information remains available through keyboard and touch without optional pointer effects. The [temporal method](verification.md#inspect-a-time-bounded-visual-episode) governs behavior-sized windows, sampling and evidence limits.
 
 ## Read motion through perceptible qualities
 
@@ -57,13 +57,13 @@ Judge these connected qualities in actual episodes; correlate findings with code
 
 | Quality | What to observe | Design decision it informs |
 |---|---|---|
-| Temporal continuity | Input, acknowledgment, change and completion have understandable order; meaningful content has a readable hold | Sequence feedback and dependent changes without delaying unrelated work |
-| Object continuity | Shape, content, pivot, position and selection preserve the identity of the object through change | Choose shared anchors and transitions; reconcile replacement, reversal and return |
-| Motion quality | Perceived speed, easing, trajectory, rhythm and settling match the event | Tune timing and path in context, including frequent/reversed operation |
-| Dynamic composition | Moving elements, light and text maintain hierarchy and usable space throughout their range | Coordinate concurrent effects, movement bounds, masking and foreground placement |
-| State and feedback alignment | Progress, content, animation and available actions describe the same current outcome | Bind presentation to valid intent and authoritative readiness/completion |
-| Temporal stability | Late resources, changing content and repeated input preserve readable layout and control | Reserve needed space, handle stale responses and retain focus/scroll context |
-| Cross-view continuity | Navigation, overlays and task steps preserve recognizable identity and orientation | Coordinate shared chrome, transition meaning and return/resume state |
+| Temporal continuity | Input, acknowledgment, change and completion have clear order and readable holds | Sequence dependencies without delaying unrelated work |
+| Object continuity | Shape, content, pivot, position and selection retain identity through change | Coordinate anchors, replacement, reversal and return |
+| Motion quality | Speed, easing, trajectory, rhythm and settling fit the event | Tune paths and timing, including frequent/reversed use |
+| Dynamic composition | Moving elements, light and text retain hierarchy and usable space | Coordinate effects, bounds, masks and foreground placement |
+| State and feedback alignment | Progress, content, animation and controls describe the same outcome | Bind presentation to valid intent and authoritative readiness/completion |
+| Temporal stability | Late resources, content changes and repeated input retain layout and control | Reserve space, reconcile stale responses and preserve focus/scroll |
+| Cross-view continuity | Navigation, overlays and task steps retain identity and orientation | Coordinate chrome, transitions and return/resume state |
 
 A stationary trigger can clarify expansion; an unrelated shifting panel can weaken it. Compare episodes when selecting candidates. Diagnose material, wording, layout and state ownership alongside easing.
 
@@ -89,17 +89,17 @@ Overlays need deliberate positioning, dismissal and focus return at supported si
 
 ## Choreograph attention across elements
 
-Identify what initiates change, what acknowledges it, which information updates, which anchor stays and where attention settles. Coordinate emphasis and overlap to express those relationships. Allow important text enough stable time to read.
+Use **Motion Storytelling** to express a relationship: signals propagate, evidence groups, objects connect or results form. Establish the trigger, first acknowledgment, dependent changes, retained anchor and attention destination. Sequence, stagger and hold elements to make that relationship perceptible; important text needs readable holds.
 
-For option changes, acknowledge selection while preserving the selector/action relationship. For delayed results, distinguish pending intent from confirmation. Start reversible transitions from the current presentation where appropriate; keep unrelated input and focus usable. Duration follows movement, frequency and urgency.
+A professional tool can combine prompt routine feedback with expressive result formation or a branded stage change. Assign these motion roles within one system. Keep selection/actions associated, pending distinct from confirmed, and unrelated input usable. Resume reversible motion from its current presentation where appropriate; duration follows distance, frequency and urgency.
 
-Coordinate concurrent effects around the task's attention order. Observe normal, reversed, interrupted and rapid input, including new results during movement. Deliberate asymmetry or pauses can serve the product.
+Inspect normal, reversed, interrupted and rapid input, including new results during movement. Resolve competing attention or blocked operation at its cause while retaining the accepted expressive direction.
 
 ## Interactive time and authored time
 
-Users, devices and services control UI timing; an author controls a predetermined video. Transfer anticipation and attention order within that distinction. Camera moves, beat grids and fixed holds are context-specific.
+Choose the intended output. A **working product** needs semantic, operable components and truthful feedback under user/service timing. A **product demonstration** selects representative tasks and identifies staged data or timing. An **authored visual work** can use a fixed stage, layers and deterministic timeline; inspect seeking, readable holds, resets, loop joins and final encoded playback. Shared assets do not make their validation interchangeable.
 
-Authored output needs readable holds, seeking and final encoded playback. Interactive output needs valid feedback under uncertain latency and changing intent. Keep equivalent reduced-motion meaning. Sound and haptics, where supported, supplement semantic/visual feedback under user and platform control.
+Transfer anticipation and attention order within those boundaries. Sound and haptics supplement semantic/visual feedback under user and platform control. Preserve expressive identity in reduced-motion equivalents.
 
 ## Published documents and screen artifacts
 
@@ -123,7 +123,7 @@ Keep independently operated objects independent: ready items respond immediately
 
 Where measurement supports it, split expensive work, move suitable computation off the main thread, reduce repeated layout or render fewer active items. Choose media/motion complexity for target devices and sustained use. Compare saved wait with added requests, bytes and processing. [INP guidance](https://web.dev/articles/optimize-inp) explains input, processing and presentation delay; service completion needs its own measure.
 
-Exercise input, submit/cancel/retry, rapid selection, loading and long-content scrolling. Correlate observed stalls with runtime evidence. Synthetic timing retains its fixture scope and stated environment. Keep repeated work efficient and decoration proportionate to sustained reading.
+Exercise input, submit/cancel/retry, rapid selection, loading and long-content scrolling. Correlate stalls with runtime evidence; synthetic timing retains its fixture scope. Tune resource and motion cost to observed sustained-use needs while preserving accepted expression.
 
 ## Inherit behavior at its useful scope
 

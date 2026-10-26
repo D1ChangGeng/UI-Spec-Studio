@@ -1,0 +1,976 @@
+{
+  "review": "Independent output audit of the completed UI Spec Studio authored film",
+  "reviewer": "/root/expression_docs",
+  "completed_utc": "2026-10-26T09:56:29.098973+00:00",
+  "scope": "Output audit against the ordinary supplied-artwork brief; no application of the skill, no application/repository modifications.",
+  "brief": "Preserve the supplied 1100×355 source identity, words, typography/proportions/details and faithful settled view in a polished 12-second study→select→realize loop, with meaningful movement, readable hold, loop join, editable implementation, playable export and local controls.",
+  "verdict": "No blocking defect found within the inspected output and runtime-evidence scope. One concrete nonblocking type-transfer polish concern remains.",
+  "blocking_findings": [],
+  "residual_quality_concerns": [
+    {
+      "id": "type_crossfade_overlap",
+      "severity": "minor_nonblocking",
+      "observed": "At 5.45 seconds the translucent Aa copy crosses the selection rules; at 5.95 seconds it overlaps the emerging Field notes title, producing briefly doubled initial letterforms. The title is clean by the 6.2-second sample and in the settled view.",
+      "evidence": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/transfer-detail-native.png",
+          "sha256": "7f4fb6a57af1d1808a9180341a0c318c58127660fe3d6c061208406a34456752",
+          "bytes": 95423
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-950.png",
+          "sha256": "955d46bd7c28fcb8a8b500673993adfc119be279251b89c6143959074c945cf6",
+          "bytes": 83410
+        }
+      ],
+      "interpretation": "The copied type gives the handoff recognizable continuity, but the overlap makes that short destination state less crisp than the final composition. This judgment concerns sampled visual detail, not a claim about perceived flicker at normal playback speed.",
+      "possible_refinement": "If further motion polish is desired, finish fading the type specimen before the destination title becomes substantially visible, while preserving the transfer path and the settled source."
+    },
+    {
+      "id": "mobile_source_reading_scale",
+      "severity": "delivery_condition",
+      "observed": "The 375-pixel preview preserves the wide artwork ratio, so internal source labels are very small. Player controls and explanatory text remain readable; a source transcript and downloadable output are present.",
+      "interpretation": "This is a fixed-composition film, not a responsive re-layout of the source artwork. Fine source lettering should be reviewed near its intended 1100-pixel display width."
+    }
+  ],
+  "visual_findings": [
+    {
+      "id": "settled_fidelity",
+      "observation": "The final poster retains the large serif headline on the left, three ordered paper-like cards on the right, original green/cream/copper relationships, labels, rules, arrows, type sample, selection marker and final page. No final-word substitution, composition displacement or cropping was observed.",
+      "evidence": "Actual full poster inspection plus independent source/phrase and pixel checks; pixel equality is a separate measured result."
+    },
+    {
+      "id": "semantic_sequence",
+      "observation": "The source study pass precedes a transferable rule crossing to SELECT; the type/divider/rules and check resolve before the REALIZE page forms. Copies of selected rules, type and the green action move into destination roles while the headline, card shells, stage labels and source remain stable.",
+      "evidence": "All 32 ordered authored samples in eight inspected contact sheets; 12 separately decoded MP4 samples confirm selected encoded states."
+    },
+    {
+      "id": "readable_hold",
+      "observation": "The complete original relationship is visible at the 6.85, 8.0 and 10.9-second samples. Main title and source captions are available throughout the sequence.",
+      "evidence": "Actual sample inspection. The 4.05-second hold duration is established by inspected timeline code and endpoint comparisons, not by a human playback timing measurement."
+    },
+    {
+      "id": "loop_join",
+      "observation": "The result and selection recede in the 11.1/11.3/11.5-second samples; the 11.7, last encoded-time sample and 12.0 states return to the same study composition as the beginning. No composition shift is visible across these sampled boundary states.",
+      "evidence": "Ordered authored seam sheet and independent MP4-decoded seam sheet. Sample evidence does not prove absence of every intervening-frame or playback-delivery issue."
+    },
+    {
+      "id": "local_preview",
+      "observation": "The desktop local preview presents a clear stage and play/replay/seek/loop/settled-view controls with phase shortcuts and output links. The narrow reduced-motion preview keeps controls and supporting text readable and shows a settled composition. The encoded-playback screenshot displays native video controls.",
+      "evidence": "Three actual preview screenshot reads; author-produced runtime results are reported separately."
+    }
+  ],
+  "independent_measurements": {
+    "source_identity": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/source.svg",
+      "sha256": "75167f18a564528ce0c36aa706131c033c83825bcb297c0a132e90ad2cd884a9",
+      "bytes": 4533
+    },
+    "source_render_identity": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/source-render-2200x710.png",
+      "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+      "bytes": 83108
+    },
+    "source_phrase_count": 14,
+    "baked_phrases_equal_original_source_in_order": true,
+    "source_phrases": [
+      "UI SPEC STUDIO   /   DESIGN ENGINEERING",
+      "Build on",
+      "what works.",
+      "Research. Adapt. Verify.",
+      "01  STUDY",
+      "A better start",
+      "SOURCE / PATTERN",
+      "02  SELECT",
+      "Aa",
+      "CHOICE / FIT",
+      "03  REALIZE",
+      "Field notes",
+      "OPEN / READ",
+      "MATURE SOURCES   /   PROFESSIONAL JUDGMENT   /   EDITABLE RESULTS"
+    ],
+    "lossless_poster_vs_source_rgb_difference_bbox": null,
+    "hold_samples_vs_poster_rgb_difference_bbox": {
+      "6-850.png": null,
+      "8-000.png": null,
+      "10-900.png": null
+    },
+    "authored_first_last_rgb_difference_bbox": null,
+    "authored_first_end_rgb_difference_bbox": null,
+    "encoded_first_last_comparison": {
+      "encoded_first_last_difference_bbox": [
+        78,
+        48,
+        2122,
+        696
+      ],
+      "encoded_first_last_mean_absolute_rgb_difference_0_255": [
+        0.3027989756722151,
+        0.18755249679897568,
+        0.2699122919334187
+      ],
+      "encoded_first_last_max_channel_difference": 53
+    },
+    "encoded_comparison_interpretation": "The lossy MP4 first/last frames are not pixel-identical even though the uncompressed authored boundary states are. The mean/max differences are diagnostics, not a visual quality score or proof of a perceptually invisible seam.",
+    "media": {
+      "mp4": {
+        "identity": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/studio-film.mp4",
+          "sha256": "7a01e62d9ac778f95dc7697a5ac2accdb97c2990a246fc60cc35f6eb69b8ce8d",
+          "bytes": 296432
+        },
+        "independently_probed": {
+          "programs": [],
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2200,
+              "height": 710,
+              "pix_fmt": "yuv420p",
+              "r_frame_rate": "60/1",
+              "avg_frame_rate": "60/1",
+              "duration": "12.000000",
+              "nb_frames": "720"
+            }
+          ],
+          "format": {
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "duration": "12.000000",
+            "size": "296432"
+          }
+        },
+        "full_decode_exit_code": 0,
+        "full_decode_error_output": ""
+      },
+      "webm": {
+        "identity": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/studio-film.webm",
+          "sha256": "de86c62f205667921e9f4d416b46850d42488174f94914b4d4358c1e81326f13",
+          "bytes": 1394517
+        },
+        "independently_probed": {
+          "programs": [],
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "vp9",
+              "codec_type": "video",
+              "width": 2200,
+              "height": 710,
+              "pix_fmt": "yuv420p",
+              "r_frame_rate": "60/1",
+              "avg_frame_rate": "60/1"
+            }
+          ],
+          "format": {
+            "format_name": "matroska,webm",
+            "duration": "12.000000",
+            "size": "1394517"
+          }
+        },
+        "full_decode_exit_code": 0,
+        "full_decode_error_output": ""
+      }
+    },
+    "hold_interval_from_timeline_seconds": [
+      6.85,
+      10.9
+    ],
+    "hold_duration_from_timeline_seconds": 4.05,
+    "full_media_decode_scope": "Both complete final media files decoded through FFmpeg without reported errors. This establishes decodability in that decoder, not every client platform."
+  },
+  "author_runtime_evidence_reviewed": {
+    "source": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/validation.json",
+      "sha256": "743448cb1f373afc7642e6a0085e46abd5579db2296115d37147ca7dd3aa16ec",
+      "bytes": 1543
+    },
+    "results": {
+      "browser": "134.0.6998.35",
+      "date": "2026-10-26T09:53:24.408Z",
+      "sourceSha256": "75167f18a564528ce0c36aa706131c033c83825bcb297c0a132e90ad2cd884a9",
+      "checks": [
+        {
+          "name": "Timeline duration",
+          "pass": true,
+          "details": 12
+        },
+        {
+          "name": "Exact 0 / 12 s loop state",
+          "pass": true,
+          "details": "PNG bytes equal at DPR 2"
+        },
+        {
+          "name": "Last encoded sample / first sample",
+          "pass": true,
+          "details": "PNG bytes equal at t=719/60 and t=0"
+        },
+        {
+          "name": "Source text retained",
+          "pass": true,
+          "details": "14 unchanged source phrases"
+        },
+        {
+          "name": "Live player controls",
+          "pass": true,
+          "details": "Pause, settled view, replay, keyboard seeking executed"
+        },
+        {
+          "name": "Natural-clock loop",
+          "pass": true,
+          "details": "Play from 11.9 s advanced into the next cycle"
+        },
+        {
+          "name": "Encoded WebM browser playback",
+          "pass": true,
+          "details": {
+            "duration": 12,
+            "width": 2200,
+            "height": 710,
+            "source": "studio-film.webm",
+            "time": 5.609577,
+            "paused": false,
+            "readyState": 4
+          }
+        },
+        {
+          "name": "Reduced motion and narrow preview",
+          "pass": true,
+          "details": {
+            "paused": true,
+            "time": 8,
+            "scroll": 375,
+            "width": 375
+          }
+        },
+        {
+          "name": "Browser console",
+          "pass": true,
+          "details": "No page errors in exercised routes"
+        }
+      ],
+      "errors": []
+    },
+    "performed_by": "/root/faithful_motion, application author",
+    "independently_rerun_by_reviewer": false,
+    "distinction": "These are machine/runtime checks reviewed by the auditor. The auditor personally viewed the recorded preview screenshots and ordered frame evidence, not continuous normal-speed browser playback.",
+    "codec_boundary": "The production Chromium headless shell lacks H.264 decoding. The final preview places the VP9 WebM source first and the MP4 as another source. Its successful browser playback check is WebM; MP4 decodability was checked with FFmpeg."
+  },
+  "editable_implementation_review": {
+    "source": "source.svg preserves original editable text and geometry; film.js holds named authored transfers, timeline labels, timing, easing, holds and reset.",
+    "portable_asset": "assets/stage.svg retains vector shapes while text is baked as complete phrase artwork at production resolution; assets/source-text.json maps original wording.",
+    "limitation": "Text/type editing requires the documented font preparation and rebake route. Baked phrase output is not fully editable vector text; no portability or arbitrary-resolution claim is inferred.",
+    "read_scope": "Read the source artwork, timeline, renderer, inspection script, preview HTML/JS/CSS, package metadata, README, design notes, phrase map and listed evidence JSON; did not reproduce the complete clean-machine font bake."
+  },
+  "normal_speed_visual_playback": {
+    "actually_observed_by_reviewer": false,
+    "claim": "No normal-speed motion smoothness, audience comprehension, delivered-frame-rate or perceptual seam guarantee is made. Ordered samples support choreography/state judgments; runtime checks establish limited functional progression."
+  },
+  "final_output_identities": [
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/source.svg",
+      "sha256": "75167f18a564528ce0c36aa706131c033c83825bcb297c0a132e90ad2cd884a9",
+      "bytes": 4533
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/film.js",
+      "sha256": "3b4dc6ddefbd9a06263cd537450664e24637c3d1e5e982d643060b9b88869108",
+      "bytes": 8532
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/assets/stage.svg",
+      "sha256": "476f54b270a0fc40b0b3ec5ca31b26555d7314448e7a345799267661a7e4a567",
+      "bytes": 108913
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/assets/source-text.json",
+      "sha256": "5a303cdee5f03138f369902a7cb81d836aeebbd772eab2b3c638d61d13a8d188",
+      "bytes": 1883
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/poster.png",
+      "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+      "bytes": 83108
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/poster.svg",
+      "sha256": "476f54b270a0fc40b0b3ec5ca31b26555d7314448e7a345799267661a7e4a567",
+      "bytes": 108913
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/studio-film.mp4",
+      "sha256": "7a01e62d9ac778f95dc7697a5ac2accdb97c2990a246fc60cc35f6eb69b8ce8d",
+      "bytes": 296432
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/studio-film.webm",
+      "sha256": "de86c62f205667921e9f4d416b46850d42488174f94914b4d4358c1e81326f13",
+      "bytes": 1394517
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/index.html",
+      "sha256": "79a5054f870fbe58c67a2daca9b99dd49677769db8cc46a4997864f0328a60bd",
+      "bytes": 3834
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/preview.js",
+      "sha256": "ddf2677da7194dc23d007e365677703456236ac6efc09e6ac9c1d2b5aad38def",
+      "bytes": 2817
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/preview.css",
+      "sha256": "99972ff7fc0998b28946069a0c9a7c24f3f504b38899436882deb94713c25e5d",
+      "bytes": 4496
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/validation.json",
+      "sha256": "743448cb1f373afc7642e6a0085e46abd5579db2296115d37147ca7dd3aa16ec",
+      "bytes": 1543
+    }
+  ],
+  "read_files": [
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/source.svg",
+      "sha256": "75167f18a564528ce0c36aa706131c033c83825bcb297c0a132e90ad2cd884a9",
+      "bytes": 4533
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/DESIGN-NOTES.md",
+      "sha256": "0b3ce6928c09388c457637200f50c3e61197c6e2fdc313f7ac1c9524015ecb84",
+      "bytes": 3589
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/package.json",
+      "sha256": "3ec725dca29182c31149e52dab29a3f9a7587405d5d893f05e6916dd29f9938f",
+      "bytes": 486
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/README.md",
+      "sha256": "6e163384baf0ce5c55e3ee22856ce278d4269e31bbf3d3d362438dcfe9ac8623",
+      "bytes": 9823
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/film.js",
+      "sha256": "3b4dc6ddefbd9a06263cd537450664e24637c3d1e5e982d643060b9b88869108",
+      "bytes": 8532
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/scripts/render.mjs",
+      "sha256": "2c32d7f0755920a3f086cc50e23d1e8449c4ff2d2b50b0b09d7589976f993208",
+      "bytes": 2895
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/scripts/inspect.mjs",
+      "sha256": "868d72551d2ebb66ad18b11e64a1b5b1dfd7ebf71993730b53120e269e49254b",
+      "bytes": 5922
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/index.html",
+      "sha256": "79a5054f870fbe58c67a2daca9b99dd49677769db8cc46a4997864f0328a60bd",
+      "bytes": 3834
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/preview.js",
+      "sha256": "ddf2677da7194dc23d007e365677703456236ac6efc09e6ac9c1d2b5aad38def",
+      "bytes": 2817
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/preview.css",
+      "sha256": "99972ff7fc0998b28946069a0c9a7c24f3f504b38899436882deb94713c25e5d",
+      "bytes": 4496
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/identities-and-fidelity.json",
+      "sha256": "146bd8f8b30238dcafc3abc6714f40942fa62221c8c3dc266432029a2619f711",
+      "bytes": 2186
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/assets/source-text.json",
+      "sha256": "5a303cdee5f03138f369902a7cb81d836aeebbd772eab2b3c638d61d13a8d188",
+      "bytes": 1883
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/validation.json",
+      "sha256": "743448cb1f373afc7642e6a0085e46abd5579db2296115d37147ca7dd3aa16ec",
+      "bytes": 1543
+    }
+  ],
+  "viewed_files": [
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/poster.png",
+      "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+      "bytes": 83108,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "Complete settled composition at production 2200×710 resolution; words, identity, hierarchy, boundaries and proportional relationships."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/authored-process-01.png",
+      "sha256": "2cd0b25f2117757e4092b113aded6df0f8a2563b1bbfdd39189899e9a6691044",
+      "bytes": 265047,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "ordered narrative states; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 captured pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/0-000.png",
+          "sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "bytes": 70879
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/0-350.png",
+          "sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "bytes": 70879
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/0-700.png",
+          "sha256": "1ec38d917f9dd8ff19e05c1158c4e340b591937674d418755091256faaa9e66d",
+          "bytes": 71318
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/1-050.png",
+          "sha256": "9722060119143064adc7b6d7f06b7fbe97527195c81eefdd2b78e3efa4233985",
+          "bytes": 71360
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/authored-process-02.png",
+      "sha256": "59103bef67d5fa26fb35017a08163c9ca3bf7979bcc3dc7e41da34700f051ef9",
+      "bytes": 267607,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "ordered narrative states; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 captured pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/1-400.png",
+          "sha256": "cb03f8540030f41b0ad6b097fa2a5aad8bbf967135e04f8acf116029b1f00ff9",
+          "bytes": 71286
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/1-700.png",
+          "sha256": "84092c8f59d785bf4b6c5a639b0e9910b14003f46894ec46b74d42bb379335e7",
+          "bytes": 71350
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/1-900.png",
+          "sha256": "0a1ba1d9ca511065cd13b51ac736cbd26432ccbaf2fb3c30298ebb60760aaad3",
+          "bytes": 71529
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/2-150.png",
+          "sha256": "59c0dfd9052833dcd450e0749c189be111e5ff0c192ec42d7af7aacb9c75bafa",
+          "bytes": 71754
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/authored-process-03.png",
+      "sha256": "3f88a0b1689d2885bbd970d7564a5e00592535b18c8618436b234a09440e847d",
+      "bytes": 278899,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "ordered narrative states; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 captured pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/2-400.png",
+          "sha256": "25492cbe608440933c7cff869d5c22cf917d1b704b9297a659399d820b22c4e8",
+          "bytes": 71824
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/2-700.png",
+          "sha256": "7af7e45f23837d2717437968f6caf11712b13f5f768ee675607f5523763ba8f2",
+          "bytes": 76221
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/3-100.png",
+          "sha256": "2175494acfb0c1995ede2de6d1bfdb5e85f477a94701e046058961db5dd2a44e",
+          "bytes": 75575
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/3-500.png",
+          "sha256": "f8223e860f1adf74b61862c866b2ce31fb19107e1c70927a9dbfc7845932fe60",
+          "bytes": 76490
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/authored-process-04.png",
+      "sha256": "e9f31950e7a5fa9bbb4b803fa2de8a3ef05e0a5cb5422b9f7ea6640d44170125",
+      "bytes": 286443,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "ordered narrative states; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 captured pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/3-850.png",
+          "sha256": "f921222a9ece82ba6f16d71e5a4e3820a9309f077e8d53d30a48a8187aa23226",
+          "bytes": 76838
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/4-200.png",
+          "sha256": "66c88de1e39f6cc7bc473636db848030b20d55d5631e8c03b8ce7a45058b9eaa",
+          "bytes": 76831
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/4-450.png",
+          "sha256": "0f59adc5e426d06a3e171a9b3974821d1f8cffb3e3de0d4ae4b672489e5f1cad",
+          "bytes": 77524
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/4-700.png",
+          "sha256": "424e049db3edf1c78b7f57a475fffc2e8b419dbd25a46688c871bc139a66488b",
+          "bytes": 77497
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/authored-process-05.png",
+      "sha256": "fd60ffc380e994e7ce4dd5b1753dad6139c29d9b25759fc161d72c42c4014b34",
+      "bytes": 291204,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "ordered narrative states; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 captured pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/4-950.png",
+          "sha256": "95c257887ba73eb9cbddc2f4d3ce4519c135684209352365ce1286f1229707bd",
+          "bytes": 77889
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-200.png",
+          "sha256": "fc092ffa203b7768446f5ab9c53de46d3bd5cca2576fce0e2b6df156f2ef5902",
+          "bytes": 78767
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-450.png",
+          "sha256": "d5b05517764dd20243c309d92f8ad71fb75872557b84d2d3d8eccac7a3a1d1c9",
+          "bytes": 81512
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-700.png",
+          "sha256": "8d10549556cd49b44c2094b1e9a1d0205f0be9240d39b4c81222c6d6f22644b6",
+          "bytes": 78821
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/authored-process-06.png",
+      "sha256": "36bc372f5bcb761e184c480b2dcabc23f4ba55230286559eb7bb0116123dc112",
+      "bytes": 303469,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "ordered narrative states; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 captured pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-950.png",
+          "sha256": "955d46bd7c28fcb8a8b500673993adfc119be279251b89c6143959074c945cf6",
+          "bytes": 83410
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-200.png",
+          "sha256": "8914fcefcceedef4eb38f1e920b201f1c5b5bc274e346e3ebb0b55bfbbf57e38",
+          "bytes": 81627
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-500.png",
+          "sha256": "bcb925862039ef8d258d5c0912a78b43a5ab9e80e1e647376d04e81288c4655b",
+          "bytes": 81466
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-850.png",
+          "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+          "bytes": 83108
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/authored-process-07.png",
+      "sha256": "c84208d5a6b63cd4bb809f78080ae7a9c34da6118c903c74bc5e567052be5203",
+      "bytes": 301438,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "ordered narrative states; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 captured pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/8-000.png",
+          "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+          "bytes": 83108
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/10-900.png",
+          "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+          "bytes": 83108
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/11-100.png",
+          "sha256": "ef5d5fb749f7b8fbe3e25919e611e360d5ff3eac2af2ac6569171e704ab947d7",
+          "bytes": 84763
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/11-300.png",
+          "sha256": "92299e0c79e50f55a7f45f0df1e1cde72c9874c0e7ce591e386d8d308f104c87",
+          "bytes": 82091
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/authored-process-08.png",
+      "sha256": "28ae72f4b55e820b4aea4a1ea8e2b869315c15218534648c638ce8d3656bc275",
+      "bytes": 265292,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "ordered narrative states; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 captured pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/11-500.png",
+          "sha256": "4895c5fd3b2e47f22c3d6f295b5a472c097e09c3a4fe4514b9ce15d19a332dc9",
+          "bytes": 72308
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/11-700.png",
+          "sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "bytes": 70879
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/11-983.png",
+          "sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "bytes": 70879
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/12-000.png",
+          "sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "bytes": 70879
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/encoded-process-01.png",
+      "sha256": "547b2d625b1c6ed85ebfe82258d0d94a4d53c927b5d926c0ad08d8e3efac9240",
+      "bytes": 364416,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "selected encoded states and seam; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 encoded pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-01.png",
+          "sha256": "ff75ef9bf403517400dd4a4eaa99193ad76c0b3ee6eb8976b01b0e163f5d6834",
+          "bytes": 202652,
+          "frame_index": 0,
+          "time_seconds": 0.0
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-02.png",
+          "sha256": "41a8180c0aa88d4f93126b809d51d3562d1e95a68f61ee56c03ab41db6826e13",
+          "bytes": 206106,
+          "frame_index": 114,
+          "time_seconds": 1.9
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-03.png",
+          "sha256": "ec2b1b111ae2ac9b2f0e430539e25fc88995c94bde95f6d2bc102ece1d8533f1",
+          "bytes": 207091,
+          "frame_index": 129,
+          "time_seconds": 2.15
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-04.png",
+          "sha256": "a17bf1945bea502f3c676746a6d2ddcf3672574c300511120067303d145d1d72",
+          "bytes": 207082,
+          "frame_index": 282,
+          "time_seconds": 4.7
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/encoded-process-02.png",
+      "sha256": "ea876da5420eca4868164ae91989915e19bf2fe405297c7d5eeaa316c3921201",
+      "bytes": 392736,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "selected encoded states and seam; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 encoded pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-05.png",
+          "sha256": "ecbb24a75bd4d320a5c686304c3369a56abfff8f29e7e37444d549c94a7480f1",
+          "bytes": 210632,
+          "frame_index": 312,
+          "time_seconds": 5.2
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-06.png",
+          "sha256": "b6b3af4c5b499ad4ed873311fb974837c6979d91162b9baddd168f053cd50504",
+          "bytes": 210094,
+          "frame_index": 342,
+          "time_seconds": 5.7
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-07.png",
+          "sha256": "c537a1ec6183b17f7945d67d164915565804007a5cd49e90e18a86e1f5284827",
+          "bytes": 221294,
+          "frame_index": 372,
+          "time_seconds": 6.2
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-08.png",
+          "sha256": "61e40e92469b1ee374c23478f35989e4cb8a5be3f1746f34e94572ab3d669b36",
+          "bytes": 224559,
+          "frame_index": 480,
+          "time_seconds": 8.0
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/encoded-process-03.png",
+      "sha256": "edd134dc3ba206f53371d9c6e2eed46a9b264f13df630d4e5feeaceabb1af808",
+      "bytes": 362012,
+      "actually_viewed": true,
+      "detail": "original",
+      "scope": "selected encoded states and seam; not a full-speed playback observation",
+      "display_scale": "0.5 from 2200×710 encoded pixels; intended 1100×355 display scale",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-09.png",
+          "sha256": "f0f72aa8f210b8a3e4ac481d59c7ba4c58111333f43471c13c64ccb589a011f2",
+          "bytes": 223601,
+          "frame_index": 666,
+          "time_seconds": 11.1
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-10.png",
+          "sha256": "545ac90fef3a33a6cd9ef5fd5d0900d17dfbe0f91111cf06db70e7c67bb88c7a",
+          "bytes": 191449,
+          "frame_index": 690,
+          "time_seconds": 11.5
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-11.png",
+          "sha256": "cb77afe442c68847becfd7b78da94d46b43361e04d2daf9b909b7f5e81ca0ee0",
+          "bytes": 190478,
+          "frame_index": 702,
+          "time_seconds": 11.7
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-12.png",
+          "sha256": "4323688b2132a8f87499dfa70e8d2af6fc3226039cdb3652243c5c9d7c5d492e",
+          "bytes": 190531,
+          "frame_index": 719,
+          "time_seconds": 11.983333333333333
+        }
+      ]
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/view-preview-desktop.png",
+      "sha256": "cdaed2b0483d433466acef8b535716c4db8a751dfeff1191bfdcff3031a7c73e",
+      "bytes": 215876,
+      "actually_viewed": true,
+      "detail": "original",
+      "source": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/preview-desktop.png",
+        "sha256": "3635eb6eba72544af47d7cb4312b27ae84824127b972a6efbaf2965637aa9b9f",
+        "bytes": 245582
+      },
+      "source_dimensions": [
+        2560,
+        1862
+      ],
+      "view_dimensions": [
+        1280,
+        931
+      ],
+      "resampling": "Lanczos 0.5× from DPR2 capture to CSS display scale",
+      "scope": "Local preview controls and composition; screenshot alone is not normal-speed playback observation."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/view-preview-mobile-reduced.png",
+      "sha256": "846f4f3f641b20705ad0e3d0e981ff7e3eba8b7ef7885af10585b2248348bee4",
+      "bytes": 73594,
+      "actually_viewed": true,
+      "detail": "original",
+      "source": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/preview-mobile-reduced.png",
+        "sha256": "74a6865cd88df131b26a327880e88aaf7431898ca0fad5094d380921a8634595",
+        "bytes": 74157
+      },
+      "source_dimensions": [
+        375,
+        1058
+      ],
+      "view_dimensions": [
+        375,
+        1058
+      ],
+      "resampling": "none",
+      "scope": "Local preview controls and composition; screenshot alone is not normal-speed playback observation."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/view-encoded-playback.png",
+      "sha256": "9b1a1092a549b9014c35ff278e9e9164cdc42eb7a21e031d4761ad45c7910fce",
+      "bytes": 217977,
+      "actually_viewed": true,
+      "detail": "original",
+      "source": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/encoded-playback.png",
+        "sha256": "ce0291876dbf788249ac80b9789f807e8c059c354e7fd748dd6a0822050ca72e",
+        "bytes": 349321
+      },
+      "source_dimensions": [
+        2560,
+        1800
+      ],
+      "view_dimensions": [
+        1280,
+        900
+      ],
+      "resampling": "Lanczos 0.5× from DPR2 capture to CSS display scale",
+      "scope": "Local preview controls and composition; screenshot alone is not normal-speed playback observation."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/transfer-detail-native.png",
+      "sha256": "7f4fb6a57af1d1808a9180341a0c318c58127660fe3d6c061208406a34456752",
+      "bytes": 95423,
+      "actually_viewed": true,
+      "detail": "original",
+      "resampling": "none; exact crops",
+      "scope": "Transferring type and action at 5.45, 5.95 and 6.2 seconds. Three exact pixel crops x1000:2160, y180:590, vertically arranged with time labels.",
+      "represented_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-450.png",
+          "sha256": "d5b05517764dd20243c309d92f8ad71fb75872557b84d2d3d8eccac7a3a1d1c9",
+          "bytes": 81512
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-950.png",
+          "sha256": "955d46bd7c28fcb8a8b500673993adfc119be279251b89c6143959074c945cf6",
+          "bytes": 83410
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-200.png",
+          "sha256": "8914fcefcceedef4eb38f1e920b201f1c5b5bc274e346e3ebb0b55bfbbf57e38",
+          "bytes": 81627
+        }
+      ]
+    }
+  ],
+  "represented_authored_sample_count": 32,
+  "independently_decoded_mp4_samples": [
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-01.png",
+      "sha256": "ff75ef9bf403517400dd4a4eaa99193ad76c0b3ee6eb8976b01b0e163f5d6834",
+      "bytes": 202652,
+      "frame_index": 0,
+      "time_seconds": 0.0
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-02.png",
+      "sha256": "41a8180c0aa88d4f93126b809d51d3562d1e95a68f61ee56c03ab41db6826e13",
+      "bytes": 206106,
+      "frame_index": 114,
+      "time_seconds": 1.9
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-03.png",
+      "sha256": "ec2b1b111ae2ac9b2f0e430539e25fc88995c94bde95f6d2bc102ece1d8533f1",
+      "bytes": 207091,
+      "frame_index": 129,
+      "time_seconds": 2.15
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-04.png",
+      "sha256": "a17bf1945bea502f3c676746a6d2ddcf3672574c300511120067303d145d1d72",
+      "bytes": 207082,
+      "frame_index": 282,
+      "time_seconds": 4.7
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-05.png",
+      "sha256": "ecbb24a75bd4d320a5c686304c3369a56abfff8f29e7e37444d549c94a7480f1",
+      "bytes": 210632,
+      "frame_index": 312,
+      "time_seconds": 5.2
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-06.png",
+      "sha256": "b6b3af4c5b499ad4ed873311fb974837c6979d91162b9baddd168f053cd50504",
+      "bytes": 210094,
+      "frame_index": 342,
+      "time_seconds": 5.7
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-07.png",
+      "sha256": "c537a1ec6183b17f7945d67d164915565804007a5cd49e90e18a86e1f5284827",
+      "bytes": 221294,
+      "frame_index": 372,
+      "time_seconds": 6.2
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-08.png",
+      "sha256": "61e40e92469b1ee374c23478f35989e4cb8a5be3f1746f34e94572ab3d669b36",
+      "bytes": 224559,
+      "frame_index": 480,
+      "time_seconds": 8.0
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-09.png",
+      "sha256": "f0f72aa8f210b8a3e4ac481d59c7ba4c58111333f43471c13c64ccb589a011f2",
+      "bytes": 223601,
+      "frame_index": 666,
+      "time_seconds": 11.1
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-10.png",
+      "sha256": "545ac90fef3a33a6cd9ef5fd5d0900d17dfbe0f91111cf06db70e7c67bb88c7a",
+      "bytes": 191449,
+      "frame_index": 690,
+      "time_seconds": 11.5
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-11.png",
+      "sha256": "cb77afe442c68847becfd7b78da94d46b43361e04d2daf9b909b7f5e81ca0ee0",
+      "bytes": 190478,
+      "frame_index": 702,
+      "time_seconds": 11.7
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/decoded/frame-12.png",
+      "sha256": "4323688b2132a8f87499dfa70e8d2af6fc3226039cdb3652243c5c9d7c5d492e",
+      "bytes": 190531,
+      "frame_index": 719,
+      "time_seconds": 11.983333333333333
+    }
+  ],
+  "supporting_records": [
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/inspection-manifest.json",
+      "sha256": "f532fc8a208ddf26014ebee7430a9abe7e1c5da517de3177303c702977de3b6b",
+      "bytes": 22473
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/independent-measurements.json",
+      "sha256": "f2f443146fba609f4ca3bb5e1436f8ec0f5f765d1758cedbdbd9a3c2aaf809ef",
+      "bytes": 723
+    }
+  ],
+  "evidence_limits": [
+    "Static images and ordered samples were actually viewed. The reviewer did not personally watch normal-speed continuous playback.",
+    "Contact sheets display 2200×710 captures at intended 1100×355 scale; native-detail inspection uses the full poster and explicitly identified unresampled crops.",
+    "The authored samples are deterministic paused timeline renders; they are separate from natural-clock playback and cannot establish actual response/performance.",
+    "The source reference is an author-produced render under the documented Chromium/source-font environment. The reviewer independently checked exact pixel and phrase correspondence but did not recreate the source-font acquisition or bake.",
+    "The exact source-fidelity and raw seam match apply to the lossless rendered states. Lossy encoded output is measured and viewed separately.",
+    "Author runtime checks cover selected controls, short WebM playback, a natural-clock loop crossing and a reduced-motion viewport; they do not constitute a full accessibility, platform compatibility or user-comprehension audit.",
+    "Native video controls obscure some artwork while visible; the full poster and clean encoded frames provide unobstructed inspection evidence.",
+    "No application, repository, release or published content was modified by the reviewer."
+  ]
+}

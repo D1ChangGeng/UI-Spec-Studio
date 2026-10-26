@@ -1,18 +1,18 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for UI SPEC work, product experience alignment, active visual research, reference products, interaction models, human-centered multiscale visual inspection and perceptual design analysis, temporal inspection through video or ordered frames, mature resource reuse, local trials and controlled adaptation, visual assets, content design, UX writing, typography, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, responsive audits, scroll and motion continuity, performance, operational content and batch workflows, complete states, theme/language variants, and real integration. Leads when the user supplies only a goal or says continue; develops supplied guidance through actual research. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences and connect approved designs to real behavior. Use for product UI, UI SPECs, READMEs, docs, diagrams and visual media; product alignment, reference research, art direction, expressive contrast, visual systems, human-centered perceptual inspection, source fidelity, temporal inspection, motion storytelling, mature-resource adoption, local trials and adaptation, asset engineering, brand/icon/type craft, 2D/3D/media, content design, UX writing, multilingual typography, responsive/accessibility audits, complete states, theme/language variants, performance, operational content and real integration. Coordinates familiar task relationships with independent artistic expression and verifies both in actual use. Leads from a goal or continuation, develops supplied guidance through research, and supports init, iterate, audit, finish and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.10.0"
+  version: "1.11.0"
 ---
 
 # UI Spec Studio
 
 Use **Product UI Experience Alignment** as the default goal: establish the experience this product needs, research suitable mature work, decide what to inherit and adapt, then verify it in actual use. Do this with or without a user-named reference. Own product understanding, research, selection, implementation and verification through small, reviewable increments. The user supplies intent, evaluates results and resolves consequential choices; mature references provide evidence for the current product's needs and conditions.
 
-A **UI SPEC** is a runnable or renderable design reference with representative content, a meaningful reader/user path and identifiable review scope. Product interfaces, documentation, READMEs, diagrams, presentations and other screen-based artifacts share this practice. Choose the actual medium's capabilities and conventions: a document can deliver a complete reading task without an application shell. Use the project's existing framework, format and preview mechanism. One working implementation can serve both fixture-driven review and real data adapters.
+A **UI SPEC** is a runnable or renderable design reference with representative content, a meaningful reader/user path and identifiable review scope. Establish whether the deliverable is a working product, representative product demonstration or authored visual work; select realization and evidence for that boundary. Documents can complete reading tasks without an application shell. Use the project's framework, format and preview mechanism; one implementation can support fixtures and real adapters. A fixed-stage demonstration does not establish an interactive product.
 
 ## Observe the design as people experience it
 
@@ -117,7 +117,9 @@ Expand a named product into the intended page, task, brand qualities or particul
 
 Connect **product intent → observed quality target → implementation candidates → local trials → targeted adaptation → integrated-use verification**. Active exploration and temporal inspection inform each choice; discoveries can revise the target or source. Identify what the person needs to recognize, compare, understand or do; choose content and representation with available mature work. This loop operates within the existing workflow.
 
-Develop a direction specific enough to influence structure, typography, imagery and behavior. Use references to learn mechanisms and set a craft target suited to the product. Study how intent, precise detail, coherent language and stability in use work together; expressive complexity is a style choice. Make consequential choices controllable in tokens, content models, component variants or explicit timing, then inspect their local and whole-interface effects. The common references supply these methods even when the user only asks to continue.
+Use **Art Direction** to coordinate character, focus, visual material and motion. Preserve explicit aesthetic goals alongside task requirements; professional software can have strong artistic expression. For **Expressive Contrast**, inherit understandable tasks and mature craft while researching cross-domain visual languages and actual implementation sources. Compare materially different, similarly resolved previews when direction is open. Carry the selected language into populated core work, not only first-entry imagery.
+
+Translate the direction into a **Visual System** of roles and controllable relationships, with purposeful differences across type, space, material, assets and motion. **Asset Engineering** and **Motion Storytelling** realize that expression through mature resources and bounded specialist production. Diagnose concrete failures while retaining confirmed direction. Verify experience validity and expressive completion independently; use **Source Fidelity** for preserving selected/approved designs and **Perceptual Quality** for judging actual results. The common references own these methods.
 
 ## Work with the UI ecosystem
 

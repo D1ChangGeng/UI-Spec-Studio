@@ -1,0 +1,1047 @@
+{
+  "review": "UI Spec Studio v1.11.0 local README visual review",
+  "reviewer": "/root/expression_docs",
+  "completed_utc": "2026-10-26T09:46:32.139178+00:00",
+  "result": "No blocking README visual defect found within the stated local-review scope. No README source edits made.",
+  "status": "completed_local_review_only",
+  "source_files": {
+    "README.md": "ab6e27449fbc4c2064492a24618326c807808dfdc276a63879fb25f2ed51ec57",
+    "README.zh-CN.md": "59327e3a960d98ebcbc721e395053ab79e45bbc264b3b4339a946f8bb4c0b4cd"
+  },
+  "source_unchanged_since_capture": true,
+  "repository": "/workspace/scratch/199d5b56cb0b/UI-Spec-Studio",
+  "renderer": {
+    "workflow": {
+      "path": "/workspace/scratch/199d5b56cb0b/UI-Spec-Studio/tools/preview_readme.py",
+      "sha256": "a661cd120fae96d44c454de46727cad346a5f651fece831e17350fe2141c690b",
+      "bytes": 9219
+    },
+    "kind": "Markdown-It with a GitHub-like stylesheet; not pixel-identical to GitHub",
+    "browser_executable": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/.cache/ms-playwright/chromium_headless_shell-1161/chrome-linux/headless_shell",
+    "browser_version": "134.0.6998.35",
+    "device_scale_factor": 1,
+    "locale": "en-US",
+    "document_languages": {
+      "README.md": "en",
+      "README.zh-CN.md": "zh-CN"
+    },
+    "viewports": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "width": 1440,
+        "height": 1000
+      }
+    ],
+    "color_schemes": [
+      "light",
+      "dark"
+    ],
+    "fontconfig": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/fonts.conf",
+      "sha256": "1062ef4d55893012146c1c7257363a90350b8a4b4a0b43e926afbde5689bb4c3",
+      "bytes": 319
+    },
+    "font_setup": {
+      "reason": "Observed missing CJK glyphs in initial local render",
+      "scope": "Temporary fontconfig environment for local review; no repository source changes",
+      "fonts": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/font-assets/NotoSansCJK-Regular.ttc",
+          "source": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTC/NotoSansCJK-Regular.ttc",
+          "bytes": 19484784,
+          "sha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/font-assets/NotoSansCJK-Bold.ttc",
+          "source": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTC/NotoSansCJK-Bold.ttc",
+          "bytes": 20050760,
+          "sha256": "faa5f3656a78b2e2d450d27fe8382c778bc2b6bb5ea29c986664a6a435056ceb"
+        }
+      ],
+      "config": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/fonts.conf"
+    },
+    "repository_css_modified": false,
+    "assets": [
+      {
+        "path": "/workspace/scratch/199d5b56cb0b/UI-Spec-Studio/docs/assets/studio-light.svg",
+        "sha256": "75167f18a564528ce0c36aa706131c033c83825bcb297c0a132e90ad2cd884a9",
+        "bytes": 4533
+      },
+      {
+        "path": "/workspace/scratch/199d5b56cb0b/UI-Spec-Studio/docs/assets/studio-dark.svg",
+        "sha256": "0a9d198985d3bef939e1674f397635cecc932c7b67ce3c8d67defdc5eb0c4017",
+        "bytes": 4533
+      },
+      {
+        "path": "/workspace/scratch/199d5b56cb0b/UI-Spec-Studio/docs/assets/studio-compact-light.svg",
+        "sha256": "d85babd4151c082d624f3b84d13e2c375206a762692a780c987893d6b840f103",
+        "bytes": 4117
+      },
+      {
+        "path": "/workspace/scratch/199d5b56cb0b/UI-Spec-Studio/docs/assets/studio-compact-dark.svg",
+        "sha256": "81862db1991ed4e59ef64e02f13b6e1aab9e053996a7b7478e4d13a6dcd1c83e",
+        "bytes": 4117
+      }
+    ],
+    "launch": "Default sandbox denied Chromium startup; authorized local verification completed using an approved escalated browser launch.",
+    "reproduction_command": "FONTCONFIG_FILE=/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/fonts.conf /tmp/ui-spec-v1110-preview-env/bin/python tools/preview_readme.py --output-dir /workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme --browser-path /workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/.cache/ms-playwright/chromium_headless_shell-1161/chrome-linux/headless_shell",
+    "working_directory": "/workspace/scratch/199d5b56cb0b/UI-Spec-Studio"
+  },
+  "actual_visual_scope": {
+    "viewport_images_viewed": 12,
+    "full_document_overviews_viewed": 12,
+    "native_pixel_section_crops_viewed": 12,
+    "all_final_images_opened": true,
+    "image_opening_method": "tools.view_image with original detail for viewport and section crops, high detail for tall full-document overview, emitted as image output and visually inspected.",
+    "source_read_scope": "Read both current README source files and the maintained preview workflow. The rendered fine-detail review covers the initial viewports and the complete new art-direction section; other rendered content is covered only at overview scale.",
+    "crop_method": "Measured target h2 and next h2 using the same renderer, viewport, theme and temporary font configuration. Verified document height against the final full image; cropped those exact PNG pixels with no resampling.",
+    "crop_viewing_note": "A six-image crop output was truncated by context capacity and was not counted as review evidence. All 12 crops were subsequently opened and inspected in smaller successful batches.",
+    "target_headings": [
+      "Give familiar work an independent visual language",
+      "让熟悉的任务拥有独立的视觉语言"
+    ]
+  },
+  "automated_checks_from_maintained_runner": {
+    "conditions": 12,
+    "document_horizontal_overflow": "None in the 12 measured conditions.",
+    "artwork": "All rendered assets loaded; correct compact asset at 390 px and wide asset at 768/1440 px, with theme-matching source.",
+    "install_command": "Native DOM code text contains the complete expected primary installation command in all conditions. No clipboard operation was tested.",
+    "disclosure": "The first details disclosure was opened and closed by click in all 12 conditions. Images were captured before these actions. This does not verify every disclosure or a full keyboard journey.",
+    "image_alt": "Expected artwork alt text present in all conditions.",
+    "report": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/report.json",
+      "sha256": "fd5a39a1ebc22dccf6d9c52961e4d49ccff0e7b7687951a058cc36266456d0f3",
+      "bytes": 8628
+    }
+  },
+  "findings": [
+    {
+      "id": "cjk_environment",
+      "severity": "resolved_environment_defect",
+      "observed": "The initial Chinese 390 px viewport displayed missing-glyph boxes; the English viewport also lacked Chinese locale-link glyphs.",
+      "cause_evidence": "No CJK fonts were returned by fc-list :lang=zh in the initial environment.",
+      "action": "Downloaded official Noto CJK regular and bold collections and used an isolated Fontconfig file. The maintained CSS already names Noto Sans CJK SC, so no style/source change was required. Recreated all 24 screenshots.",
+      "verification": "The final initial viewports and all Chinese target-section crops show readable Chinese glyphs.",
+      "superseded_record": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/superseded-missing-cjk/scope.json",
+        "sha256": "029aa5098f5e453274ea4388eded9ef8292991a97ba89ae97a4f07f11b56b5b7",
+        "bytes": 4347
+      }
+    },
+    {
+      "id": "new_section_hierarchy",
+      "severity": "observation",
+      "observed": "The art-direction section has a distinct heading, three readable paragraphs, selective bold terms and a visible guide link at every captured width/theme. Surrounding section boundaries remain clear.",
+      "basis": "Twelve actual native-pixel section-crop reads.",
+      "decision": "No layout correction indicated within these conditions."
+    },
+    {
+      "id": "zh_768_guide_link_wrap",
+      "severity": "minor_nonblocking",
+      "observed": "At 768 px in both themes, the final character 计 of 艺术指导与表达性设计 wraps onto a separate line. The link remains complete and readable.",
+      "basis": [
+        "local-zh-light-768-art-direction.png",
+        "local-zh-dark-768-art-direction.png"
+      ],
+      "decision": "Reported to root; no source change proposed for this ordinary responsive line wrap."
+    },
+    {
+      "id": "native_install_mobile",
+      "severity": "evidence_boundary",
+      "observed": "At 390 px, the native code line extends beyond the visible code region horizontally. The complete command is present in the DOM; the page itself does not overflow. The English install block enters the bottom of the initial viewport; the Chinese install block is visible.",
+      "basis": "Initial 390 px viewport images plus maintained DOM checks.",
+      "decision": "No clipping-loss claim: horizontal code scrolling and clipboard copying were not exercised in this review."
+    },
+    {
+      "id": "first_view_and_artwork",
+      "severity": "observation",
+      "observed": "Title, tagline, responsive artwork, locale/navigation links, introduction and install entry maintain a clear sequence. The 768/1440 px views also show native installation and first-task content without overlap. Dark backgrounds preserve discernible text/emphasis/link separation.",
+      "basis": "Twelve actual viewport-image reads. This is visual inspection, not measured contrast compliance or user testing."
+    },
+    {
+      "id": "whole_document",
+      "severity": "observation",
+      "observed": "Overview images retain coherent section rhythm and artwork placement, with no large visible layout break.",
+      "basis": "Twelve tall full-document images viewed at overview scale.",
+      "decision": "No fine-readability conclusion is drawn from the reduced full-document previews."
+    }
+  ],
+  "blocking_readme_defects": [],
+  "repository_changes_for_this_review": [],
+  "superseded_capture_policy": "The initial 24 images under superseded-missing-cjk are excluded from final quality claims. Only their en-light-390 and zh-light-390 viewport files were actually viewed before the environment repair, as recorded in scope.json.",
+  "supporting_records": [
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/report.json",
+      "sha256": "fd5a39a1ebc22dccf6d9c52961e4d49ccff0e7b7687951a058cc36266456d0f3",
+      "bytes": 8628
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/section-geometry.json",
+      "sha256": "6ec492f58897bec050766ff592152b7cd93cc6cfc527a21c12102156dcdbc1ac",
+      "bytes": 11278
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/crop-manifest.json",
+      "sha256": "088364712b28a8d9c4cb16101c88e9db85c3929c00dd0dca087a8690987d6849",
+      "bytes": 6924
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/font-setup.json",
+      "sha256": "9670313c75816724614099c92c44cbe34a1135b7981d6a05012d680f1372b9c8",
+      "bytes": 946
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/fonts.conf",
+      "sha256": "1062ef4d55893012146c1c7257363a90350b8a4b4a0b43e926afbde5689bb4c3",
+      "bytes": 319
+    }
+  ],
+  "images": [
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-light-390.png",
+      "sha256": "b475565a7427342cb1a95222e903315c2d6ce12461d136c6376c2f7f90b17615",
+      "bytes": 77036,
+      "filename": "local-en-light-390.png",
+      "language": "en",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pixel_dimensions": [
+        390,
+        844
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-light-390-full.png",
+      "sha256": "04d649f03ad824aa11eac05ec0e8d252c85ddb65851fc566221d2090807c7b7e",
+      "bytes": 976263,
+      "filename": "local-en-light-390-full.png",
+      "language": "en",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pixel_dimensions": [
+        390,
+        8758
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-light-768.png",
+      "sha256": "8da1dc542c83446c024f7f971930ddab0ff44db404f88e1f3b299d66dff3b161",
+      "bytes": 129670,
+      "filename": "local-en-light-768.png",
+      "language": "en",
+      "theme": "light",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "pixel_dimensions": [
+        768,
+        1024
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-light-768-full.png",
+      "sha256": "62b0aeba65ad5f80d233e785149c22797fa53505d59589aac93758d3e91245a6",
+      "bytes": 1051613,
+      "filename": "local-en-light-768-full.png",
+      "language": "en",
+      "theme": "light",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "pixel_dimensions": [
+        768,
+        5535
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-light-1440.png",
+      "sha256": "d7e1cf7862357947dd8065f7318538a5abad3cdb02d09a4d55d2531df8eef1ca",
+      "bytes": 137615,
+      "filename": "local-en-light-1440.png",
+      "language": "en",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pixel_dimensions": [
+        1440,
+        1000
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-light-1440-full.png",
+      "sha256": "49bd35465537f88f1255a072911371e7313a8812d1c22ecef29038377409b3c7",
+      "bytes": 976293,
+      "filename": "local-en-light-1440-full.png",
+      "language": "en",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pixel_dimensions": [
+        1440,
+        4933
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-dark-390.png",
+      "sha256": "186046f7609b9ffa812c0cc00b31552ebad8ccc7039b65141f045ec8d568ad70",
+      "bytes": 77501,
+      "filename": "local-en-dark-390.png",
+      "language": "en",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pixel_dimensions": [
+        390,
+        844
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-dark-390-full.png",
+      "sha256": "b176b98313f3e4f30e7e785be253037d00ede182cc686fa27fea37e946e944b8",
+      "bytes": 980115,
+      "filename": "local-en-dark-390-full.png",
+      "language": "en",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pixel_dimensions": [
+        390,
+        8758
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-dark-768.png",
+      "sha256": "e615c90e0ab0a436e80d42518bfcdaf8353a687cc1d8f713bc0f30fdcd53d8b2",
+      "bytes": 128878,
+      "filename": "local-en-dark-768.png",
+      "language": "en",
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "pixel_dimensions": [
+        768,
+        1024
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-dark-768-full.png",
+      "sha256": "bccab4aaa3816b23acec72e344df0798daf74feb96da898b23725f69cba07096",
+      "bytes": 1062292,
+      "filename": "local-en-dark-768-full.png",
+      "language": "en",
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "pixel_dimensions": [
+        768,
+        5535
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-dark-1440.png",
+      "sha256": "fc4838afafa58913e60de89e39e140f7bf60df08462e82d8d54ce90a3916b4db",
+      "bytes": 137165,
+      "filename": "local-en-dark-1440.png",
+      "language": "en",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pixel_dimensions": [
+        1440,
+        1000
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-dark-1440-full.png",
+      "sha256": "784d5e609c0f67a4c1c57343d8df11badd24821947ad997c6d791a562d336e02",
+      "bytes": 959229,
+      "filename": "local-en-dark-1440-full.png",
+      "language": "en",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pixel_dimensions": [
+        1440,
+        4933
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-light-390.png",
+      "sha256": "28ba0d76b11a4eb325988b28317f2aeb41a4c4d9d6e862297e52d001eb34dc72",
+      "bytes": 89898,
+      "filename": "local-zh-light-390.png",
+      "language": "zh",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pixel_dimensions": [
+        390,
+        844
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-light-390-full.png",
+      "sha256": "417dd5abc5fca9ac3f868ea4c5571dcc752300e3aefddfa6b4199bd9be55e4bb",
+      "bytes": 1154585,
+      "filename": "local-zh-light-390-full.png",
+      "language": "zh",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pixel_dimensions": [
+        390,
+        6344
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-light-768.png",
+      "sha256": "06456b65251189b3f0e1cc31712f096d1e50e3658e52054fd113f61b0ab9ad33",
+      "bytes": 157778,
+      "filename": "local-zh-light-768.png",
+      "language": "zh",
+      "theme": "light",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "pixel_dimensions": [
+        768,
+        1024
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-light-768-full.png",
+      "sha256": "5d606e65af267a88367f3325f06edbb7d6c352135e885473b6f66af5a6addc4d",
+      "bytes": 1199923,
+      "filename": "local-zh-light-768-full.png",
+      "language": "zh",
+      "theme": "light",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "pixel_dimensions": [
+        768,
+        4642
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-light-1440.png",
+      "sha256": "2c75bbd488c2aa18849a6f4729da8850bf06dbf100ecd84bcbd01c14b33350cf",
+      "bytes": 159333,
+      "filename": "local-zh-light-1440.png",
+      "language": "zh",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pixel_dimensions": [
+        1440,
+        1000
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-light-1440-full.png",
+      "sha256": "b3fe03f8ba022a06f01040a596b00dabede03fbd7a8810b4e4335d69e7af745d",
+      "bytes": 1163771,
+      "filename": "local-zh-light-1440-full.png",
+      "language": "zh",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pixel_dimensions": [
+        1440,
+        4239
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-dark-390.png",
+      "sha256": "cac3880c78e203897ceb8c58f8d6c8327d197aa7cb42539b105304c4ae8ad451",
+      "bytes": 90465,
+      "filename": "local-zh-dark-390.png",
+      "language": "zh",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pixel_dimensions": [
+        390,
+        844
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-dark-390-full.png",
+      "sha256": "cee97312bdfca7f8b0c095ab9560e481b3e7a8fa449ce165e7592c1648f378d7",
+      "bytes": 1162839,
+      "filename": "local-zh-dark-390-full.png",
+      "language": "zh",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pixel_dimensions": [
+        390,
+        6344
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-dark-768.png",
+      "sha256": "798c099ae1fc1c644574b8ab65c8764b05759b2b9ce4491c43e264e6c39240f6",
+      "bytes": 158338,
+      "filename": "local-zh-dark-768.png",
+      "language": "zh",
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "pixel_dimensions": [
+        768,
+        1024
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-dark-768-full.png",
+      "sha256": "2479a296ba2505835b2cbe0c1d7117dff208aa9806c7f718d1a1d82766f519f1",
+      "bytes": 1206734,
+      "filename": "local-zh-dark-768-full.png",
+      "language": "zh",
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "pixel_dimensions": [
+        768,
+        4642
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-dark-1440.png",
+      "sha256": "d1d05875a216283837d3115c368df68f1f6911eabdd7a6e8daad846c337367fc",
+      "bytes": 158792,
+      "filename": "local-zh-dark-1440.png",
+      "language": "zh",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pixel_dimensions": [
+        1440,
+        1000
+      ],
+      "kind": "viewport",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "read_scope": "Native-pixel initial viewport: title, tagline, responsive artwork, locale/navigation links, introduction, install entry and whatever install/first-task content is visible inside this viewport. Content below the viewport was not read at native size from this image.",
+      "visual_observation": "Title, introduction, artwork and install entry remain separated and legible in the available viewport. Correct light/dark and compact/wide artwork is visible. CJK glyphs display after the temporary font repair."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-dark-1440-full.png",
+      "sha256": "50268ef5e0997233eb991d01ef3a9818edce7d2f66821fb073bb4fb1e110df7a",
+      "bytes": 1140987,
+      "filename": "local-zh-dark-1440-full.png",
+      "language": "zh",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pixel_dimensions": [
+        1440,
+        4239
+      ],
+      "kind": "full_document",
+      "actually_viewed": true,
+      "view_image_detail": "high",
+      "read_scope": "Whole-document overview: section order, large-scale spacing, artwork position, broad layout rhythm; not a fine-text or glyph-readability review.",
+      "visual_observation": "Large-scale hierarchy and section spacing remain coherent; no visible large blank regions or displaced artwork in this overview."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-light-390-art-direction.png",
+      "sha256": "38e564e45084c179cc1e2df6e435b2e2c1e6e421db128027067125b304f995d1",
+      "bytes": 97856,
+      "filename": "local-en-light-390-art-direction.png",
+      "language": "en",
+      "theme": "light",
+      "viewport_width": 390,
+      "pixel_dimensions": [
+        390,
+        887
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-en-light-390-full.png",
+      "source_full_image_sha256": "04d649f03ad824aa11eac05ec0e8d252c85ddb65851fc566221d2090807c7b7e",
+      "crop_box": [
+        0,
+        2478,
+        390,
+        3365
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-light-768-art-direction.png",
+      "sha256": "aa62c9aed33136295d04b1a2785c9ca95e239d9a34ab106f0868297ab6dda818",
+      "bytes": 115064,
+      "filename": "local-en-light-768-art-direction.png",
+      "language": "en",
+      "theme": "light",
+      "viewport_width": 768,
+      "pixel_dimensions": [
+        768,
+        567
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-en-light-768-full.png",
+      "source_full_image_sha256": "62b0aeba65ad5f80d233e785149c22797fa53505d59589aac93758d3e91245a6",
+      "crop_box": [
+        0,
+        1745,
+        768,
+        2312
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-light-1440-art-direction.png",
+      "sha256": "eb97f5928c975f124665adc519a9d175b759d51745df0529dcde67881a2ba764",
+      "bytes": 101439,
+      "filename": "local-en-light-1440-art-direction.png",
+      "language": "en",
+      "theme": "light",
+      "viewport_width": 1440,
+      "pixel_dimensions": [
+        996,
+        493
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-en-light-1440-full.png",
+      "source_full_image_sha256": "49bd35465537f88f1255a072911371e7313a8812d1c22ecef29038377409b3c7",
+      "crop_box": [
+        222,
+        1640,
+        1218,
+        2133
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-dark-390-art-direction.png",
+      "sha256": "2eaa6be83084da1ebadf9526b8f6e38ba05e4d411326ff3400f35adf9e364e63",
+      "bytes": 98005,
+      "filename": "local-en-dark-390-art-direction.png",
+      "language": "en",
+      "theme": "dark",
+      "viewport_width": 390,
+      "pixel_dimensions": [
+        390,
+        887
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-en-dark-390-full.png",
+      "source_full_image_sha256": "b176b98313f3e4f30e7e785be253037d00ede182cc686fa27fea37e946e944b8",
+      "crop_box": [
+        0,
+        2478,
+        390,
+        3365
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-dark-768-art-direction.png",
+      "sha256": "8d5aaf94dbeae33466692490b8cd2ae0a53b4757db9227bc9b5600809e5fdae5",
+      "bytes": 116337,
+      "filename": "local-en-dark-768-art-direction.png",
+      "language": "en",
+      "theme": "dark",
+      "viewport_width": 768,
+      "pixel_dimensions": [
+        768,
+        567
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-en-dark-768-full.png",
+      "source_full_image_sha256": "bccab4aaa3816b23acec72e344df0798daf74feb96da898b23725f69cba07096",
+      "crop_box": [
+        0,
+        1745,
+        768,
+        2312
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-en-dark-1440-art-direction.png",
+      "sha256": "70df2a45cace2c052eb0ec537441c0e56b0d468718ad85201383c1fbcdd76397",
+      "bytes": 99707,
+      "filename": "local-en-dark-1440-art-direction.png",
+      "language": "en",
+      "theme": "dark",
+      "viewport_width": 1440,
+      "pixel_dimensions": [
+        996,
+        493
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-en-dark-1440-full.png",
+      "source_full_image_sha256": "784d5e609c0f67a4c1c57343d8df11badd24821947ad997c6d791a562d336e02",
+      "crop_box": [
+        222,
+        1640,
+        1218,
+        2133
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-light-390-art-direction.png",
+      "sha256": "3e69b70386ee899de05b6294e715ef0961bdadf8bc4c622e2b3d81dd87da8586",
+      "bytes": 117086,
+      "filename": "local-zh-light-390-art-direction.png",
+      "language": "zh",
+      "theme": "light",
+      "viewport_width": 390,
+      "pixel_dimensions": [
+        390,
+        585
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-zh-light-390-full.png",
+      "source_full_image_sha256": "417dd5abc5fca9ac3f868ea4c5571dcc752300e3aefddfa6b4199bd9be55e4bb",
+      "crop_box": [
+        0,
+        1953,
+        390,
+        2538
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-light-768-art-direction.png",
+      "sha256": "c2b426a57db77a2c41a879bdf751f0e58d62a9fadebafda7d04e38c7ebeea03d",
+      "bytes": 122722,
+      "filename": "local-zh-light-768-art-direction.png",
+      "language": "zh",
+      "theme": "light",
+      "viewport_width": 768,
+      "pixel_dimensions": [
+        768,
+        443
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-zh-light-768-full.png",
+      "source_full_image_sha256": "5d606e65af267a88367f3325f06edbb7d6c352135e885473b6f66af5a6addc4d",
+      "crop_box": [
+        0,
+        1497,
+        768,
+        1940
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs and emphasis are readable without overlap or clipping. The guide link wraps its final Chinese character onto a separate line at 768 px; minor ordinary line wrapping, with the full link retained."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-light-1440-art-direction.png",
+      "sha256": "edee8305536e65d329a49e80833554bf3ab513c111001ef63fadaf6deb0ba7f3",
+      "bytes": 114945,
+      "filename": "local-zh-light-1440-art-direction.png",
+      "language": "zh",
+      "theme": "light",
+      "viewport_width": 1440,
+      "pixel_dimensions": [
+        996,
+        394
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-zh-light-1440-full.png",
+      "source_full_image_sha256": "b3fe03f8ba022a06f01040a596b00dabede03fbd7a8810b4e4335d69e7af745d",
+      "crop_box": [
+        222,
+        1491,
+        1218,
+        1885
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-dark-390-art-direction.png",
+      "sha256": "d67abe20fc1bf2b045f50878ff2d5d39363786cbfe60315822735963828a1f3a",
+      "bytes": 117667,
+      "filename": "local-zh-dark-390-art-direction.png",
+      "language": "zh",
+      "theme": "dark",
+      "viewport_width": 390,
+      "pixel_dimensions": [
+        390,
+        585
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-zh-dark-390-full.png",
+      "source_full_image_sha256": "cee97312bdfca7f8b0c095ab9560e481b3e7a8fa449ce165e7592c1648f378d7",
+      "crop_box": [
+        0,
+        1953,
+        390,
+        2538
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-dark-768-art-direction.png",
+      "sha256": "b7e793ea9e316fdaa1f997ea819d9cf9c60de8eaa65c44db695fad410d59c11c",
+      "bytes": 123282,
+      "filename": "local-zh-dark-768-art-direction.png",
+      "language": "zh",
+      "theme": "dark",
+      "viewport_width": 768,
+      "pixel_dimensions": [
+        768,
+        443
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-zh-dark-768-full.png",
+      "source_full_image_sha256": "2479a296ba2505835b2cbe0c1d7117dff208aa9806c7f718d1a1d82766f519f1",
+      "crop_box": [
+        0,
+        1497,
+        768,
+        1940
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs and emphasis are readable without overlap or clipping. The guide link wraps its final Chinese character onto a separate line at 768 px; minor ordinary line wrapping, with the full link retained."
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-local-readme/local-zh-dark-1440-art-direction.png",
+      "sha256": "996ba0d7ce7c556b85a522177aee29cbf9430d3af422d5cb01922ccf35113767",
+      "bytes": 112048,
+      "filename": "local-zh-dark-1440-art-direction.png",
+      "language": "zh",
+      "theme": "dark",
+      "viewport_width": 1440,
+      "pixel_dimensions": [
+        996,
+        394
+      ],
+      "kind": "native_pixel_section_crop",
+      "actually_viewed": true,
+      "view_image_detail": "original",
+      "source_full_image": "local-zh-dark-1440-full.png",
+      "source_full_image_sha256": "50268ef5e0997233eb991d01ef3a9818edce7d2f66821fb073bb4fb1e110df7a",
+      "crop_box": [
+        222,
+        1491,
+        1218,
+        1885
+      ],
+      "resampling": "none; exact captured pixels",
+      "read_scope": "Complete new art-direction section at captured pixel scale, including heading, three paragraphs, emphasis and guide link; preceding resource-link context and following section heading are included. The crop boundary may cut surrounding content outside the target section.",
+      "visual_observation": "Target heading, paragraphs, emphasis and guide link are readable without overlap or clipping. English heading takes two lines at 390 px and one line at 768/1440 px; Chinese heading fits one line in the captured widths."
+    }
+  ],
+  "evidence_limits": [
+    "Local Markdown-It rendering with a GitHub-like stylesheet; no live GitHub page, live commit, branch page, release page or published rendering was viewed.",
+    "Operating-system fonts and the temporary Noto CJK setup influence glyph metrics; this review does not establish identical wrapping on other systems.",
+    "Tall full-page images were viewed as overviews only; fine text and glyph judgments rely on the initial viewports and the native-pixel art-direction crops.",
+    "The guide link and other navigation targets were visually reviewed but not clicked during this local pass.",
+    "The primary install command is native complete DOM text; clipboard copying and horizontal scrolling of narrow code containers were not tested.",
+    "Only the first details disclosure was exercised by the maintained runner; full keyboard, screen-reader, accessibility, comprehension and user-task validation remain outside scope.",
+    "This README review is static and does not validate application motion, runtime performance, product behavior or the methodological capability claims made by the documentation.",
+    "No repository files were edited, no code was committed, and no content was published by this review."
+  ],
+  "live_commit": null
+}

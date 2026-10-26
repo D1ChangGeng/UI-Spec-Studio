@@ -278,3 +278,28 @@ Record executed applications and their limits in the [version review](REVIEW-v1.
 Existing package, installation, publication and browser fixtures retain their
 mechanical scope. Perceptual-method changes do not introduce a new numeric quality
 gate, fixed capture count or additional installed dependency.
+
+## Art direction and expressive experience assurance (1.11)
+
+The [art-direction guide](ART-DIRECTION.md) connects familiar task relationships,
+cross-domain expression, mature implementations and controlled production. Source
+review checks whether explicit aesthetic goals retain their authority across
+analysis, selection, system rules, adaptation and verification. Product categories
+must remain task/operating context rather than automatic style restrictions.
+
+Evaluate actual applications for decisions and outcomes: which expressive sources
+were observed, which resources carry their relationships, whether meaningful
+visual differences reach populated core work, and how concrete defects were
+repaired. Review experience validity and expressive completion separately. A source
+comparison additionally tests preservation of an identified design; its image
+metrics do not establish artistic quality. Do not infer effectiveness from method
+terminology, dependency counts or documentation length.
+
+Use ordinary tasks and raw artifacts with frozen skill bytes in fresh contexts.
+Keep expected styles, diagnoses and sibling outputs outside the inputs. A working
+application can establish its exercised local behavior; an authored film establishes
+its own source fidelity and viewed temporal output. Controlled frame capture,
+normal-speed playback and measured runtime performance have distinct scopes.
+Record sources, actual viewing, repairs and remaining conditions in the
+[version review](REVIEW-v1.11.0.md). Existing deterministic and publication gates
+continue without a new aesthetic score, mandatory style or installed dependency.

@@ -141,3 +141,32 @@ No blocking finding was observed. At 768px, a short English final line and a Chi
 guide-link character wrapping were recorded as nonblocking. Native horizontal
 code scrolling and actual GitHub presentation keep their separate evidence scope.
 The [version review](../REVIEW-v1.10.0.md) records source hashes and actual conditions.
+
+## Art direction and expressive contrast in 1.11
+
+A dedicated section after the resource leads connects explicit aesthetic goals,
+functional and cross-domain references, mature implementations, populated core
+work and independent experience/expression review. It links the detailed
+[art-direction guide](../ART-DIRECTION.md). Native text, installation placement,
+existing artwork and the host's reading structure remain the publication foundation.
+
+Local review on 2026-10-26 opened all 24 viewport/full-document images and all
+12 original-pixel crops of this new section across the established bilingual,
+theme and viewport matrix. Full documents supplied overview; initial viewports
+and contextual crops supplied readable detail. No blocking defect was observed.
+The final character of the Chinese guide link wraps at 768px, without lost text
+or clipping. The maintainer separately opened the English 1440px light and
+Chinese 390px dark section crops.
+
+An initial missing-CJK-font run was superseded after an isolated Noto CJK font
+configuration repaired the local environment. No README CSS change was needed.
+The final source hashes are
+`ab6e27449fbc4c2064492a24618326c807808dfdc276a63879fb25f2ed51ec57`
+for English and
+`59327e3a960d98ebcbc721e395053ab79e45bbc264b3b4339a946f8bb4c0b4cd`
+for Chinese. The [local review record](../evidence/v1.11.0/readme-local-review.json)
+preserves image hashes, conditions, findings and the exact viewing scope. Native
+text availability, image selection/alt, the first disclosure and document overflow
+were checked by the maintained renderer. Clipboard, code scrolling and full
+keyboard use were not exercised. Actual GitHub presentation retains its separate
+exact-source CI evidence and post-publication visual readback.

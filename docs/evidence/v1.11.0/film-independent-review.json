@@ -1,0 +1,877 @@
+{
+  "review": "Independent authored-film output audit, closed after the focused review-directed repair",
+  "reviewer": "/root/expression_docs",
+  "completed_utc": "2026-10-26T10:03:28.800520+00:00",
+  "brief": "Preserve the supplied 1100×355 source identity, words, typography/proportions/details and faithful settled view in a polished 12-second study→select→realize loop, with meaningful movement, readable hold, loop join, editable implementation, playable export and local controls.",
+  "verdict": "No blocking defect found within the audited scope. The observed type/title overlap was corrected and re-inspected in final authored and encoded samples. No unresolved concrete polish defect remains from this review.",
+  "blocking_findings": [],
+  "unresolved_concrete_polish_findings": [],
+  "initial_review": {
+    "record": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/initial-review.json",
+      "sha256": "b23c510a9da4e920e348ebb45b0b3a3e84311701a6d842ea6eb0183515f12226",
+      "bytes": 46718
+    },
+    "archive_manifest": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/initial-archive-manifest.json",
+      "sha256": "5c4b32392e17bc12a4efc541b0be3448592984847c35cd13b085570827e76c60",
+      "bytes": 15469
+    },
+    "status": "Preserved unchanged. It records the independent initial finding and the original output identities. Its type-overlap concern is resolved by the review-directed repair below; its original media hashes are superseded."
+  },
+  "review_directed_repair": {
+    "initial_finding": "The translucent Aa copy crossed selection rules at 5.45 s and overlapped the emerging Field notes title at 5.95 s, creating doubled initial letterforms.",
+    "provenance": "Found by the independent reviewer from actual ordered images and a native-pixel detail strip. Root inspected that evidence and requested a focused author repair. It was not silently omitted from the initial audit.",
+    "initial_visual_evidence": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/transfer-detail-native.png",
+      "sha256": "7f4fb6a57af1d1808a9180341a0c318c58127660fe3d6c061208406a34456752",
+      "bytes": 95423
+    },
+    "author_change": "The type specimen now follows the lower open region, rises through the gap, arrives in the header position, fades to zero by 6.10 s, and the destination title begins at 6.12 s. The title reaches its settled form at 6.38 s. Other transfers, total duration, reading hold and final composition are preserved.",
+    "code_review": "Compared the final film.js to the archived initial file. The changed block is the type-transfer route, fade and destination-title timing at 5.15–6.38 s.",
+    "actual_reinspection": "Opened four native-pixel sheets covering 16 final authored samples from 5.20 through 6.50 s, then three independently decoded final MP4 sheets covering 12 samples, including the repaired span plus first, settled and last states. Crops retain exact production pixels with no resampling.",
+    "observed_result": "At 5.45 s the moving specimen occupies open space beneath the selection rules. At 5.95/6.05 s it appears without destination title text; by 6.10 s the specimen is absent. The destination title appears alone at 6.20 s and is clean at 6.38/6.3833 s. No doubled destination letterforms are visible in these repaired samples.",
+    "status": "Resolved in observed final samples; no normal-speed perceptual smoothness claim is inferred.",
+    "author_targeted_runtime_evidence": {
+      "record": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/handoff-recheck.json",
+        "sha256": "11035915cb8387c0f07b72ff7128bf3810d2b627ef9e3f29456a4c2aef5f4da0",
+        "bytes": 686
+      },
+      "results": {
+        "date": "2026-10-26T09:58:53.377Z",
+        "browser": "134.0.6998.35",
+        "changedSpan": "5.15–6.38 s",
+        "checks": [
+          {
+            "name": "No simultaneous transient Aa and final title",
+            "pass": true,
+            "condition": "112 explicit 60 Hz samples from 5.00 through 6.85 s",
+            "overlap": []
+          },
+          {
+            "name": "Clear lower route at 5.45 s",
+            "pass": true,
+            "typeTop": 212.55911254882812,
+            "selectionLastRuleBottom": 177,
+            "verticalGap": 35.559112548828125
+          },
+          {
+            "name": "Uncompressed loop remains identical",
+            "pass": true
+          },
+          {
+            "name": "Settled sample remains the delivered poster",
+            "pass": true
+          }
+        ]
+      },
+      "performed_by": "application author",
+      "reviewer_did_not_rerun_this_opacity_sampling": true
+    }
+  },
+  "final_visual_findings": [
+    {
+      "scope": "Complete settled composition",
+      "finding": "Source identity, wording, typography/proportions and details remain those already inspected in the poster. The final poster bytes are unchanged, and source/hold pixel checks remain exact."
+    },
+    {
+      "scope": "Sequence and anchors",
+      "finding": "The original 32-state narrative inspection remains applicable outside the repaired span: 27 baseline PNGs are byte-identical. All five changed baseline samples were re-inspected within the 16-sample repair set. Study/selection/realization roles, stable main headline and structural anchors are retained."
+    },
+    {
+      "scope": "Type handoff",
+      "finding": "The review-directed route and non-overlapping title handoff remove the specific observed visual collision while retaining a recognizable copied type specimen."
+    },
+    {
+      "scope": "Read hold and loop",
+      "finding": "The 6.85/8/10.9-second authored samples are exact matches to the unchanged poster. The raw 0/11.983/12-second states are unchanged and identical. Independently decoded final first/settled/last samples preserve the corresponding visible card composition."
+    },
+    {
+      "scope": "Local preview",
+      "finding": "Desktop/mobile layout and local controls were visually inspected in the initial audit. Their underlying preview code was not changed by the type repair; final author runtime evidence again exercises controls, loop, encoded WebM playback and reduced-motion layout."
+    }
+  ],
+  "final_output_identities": [
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/source.svg",
+      "sha256": "75167f18a564528ce0c36aa706131c033c83825bcb297c0a132e90ad2cd884a9",
+      "bytes": 4533
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/film.js",
+      "sha256": "b6af1ffae826af586584c36494febdbfe8b4bd3eef920bc163106125ba8fb1b9",
+      "bytes": 8927
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/assets/stage.svg",
+      "sha256": "476f54b270a0fc40b0b3ec5ca31b26555d7314448e7a345799267661a7e4a567",
+      "bytes": 108913
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/assets/source-text.json",
+      "sha256": "5a303cdee5f03138f369902a7cb81d836aeebbd772eab2b3c638d61d13a8d188",
+      "bytes": 1883
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/poster.png",
+      "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+      "bytes": 83108
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/poster.svg",
+      "sha256": "476f54b270a0fc40b0b3ec5ca31b26555d7314448e7a345799267661a7e4a567",
+      "bytes": 108913
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/studio-film.mp4",
+      "sha256": "079e9f7c087bac85489c604de31ce533c2eda53ab229565bf2325cef2a72def9",
+      "bytes": 295480
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/studio-film.webm",
+      "sha256": "6fabbd822ff98371ffcdf16ba41012637f4600412d2bf157f20dda72fa817ff5",
+      "bytes": 1381638
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/index.html",
+      "sha256": "79a5054f870fbe58c67a2daca9b99dd49677769db8cc46a4997864f0328a60bd",
+      "bytes": 3834
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/preview.js",
+      "sha256": "ddf2677da7194dc23d007e365677703456236ac6efc09e6ac9c1d2b5aad38def",
+      "bytes": 2817
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/preview.css",
+      "sha256": "99972ff7fc0998b28946069a0c9a7c24f3f504b38899436882deb94713c25e5d",
+      "bytes": 4496
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/validation.json",
+      "sha256": "de5ade32b936a7b21a8617df576e5e0393af64276a762f219ed7386fba152465",
+      "bytes": 1794
+    }
+  ],
+  "independent_final_measurements": {
+    "source_svg_unchanged_from_initial": true,
+    "stage_asset_unchanged_from_initial": true,
+    "poster_unchanged_from_initial": true,
+    "source_poster_rgb_difference_bbox": null,
+    "hold_samples_vs_poster_rgb_difference_bbox": {
+      "6-850.png": null,
+      "8-000.png": null,
+      "10-900.png": null
+    },
+    "raw_seam_png_sha256": {
+      "0-000.png": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+      "11-983.png": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+      "12-000.png": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009"
+    },
+    "authored_duration_seconds": 12,
+    "hold_interval_seconds": [
+      6.85,
+      10.9
+    ],
+    "hold_duration_seconds": 4.05,
+    "baseline_frame_identity": {
+      "unchanged_count": 27,
+      "changed_count": 5,
+      "unchanged": [
+        {
+          "name": "0-000.png",
+          "initial_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "final_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009"
+        },
+        {
+          "name": "0-350.png",
+          "initial_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "final_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009"
+        },
+        {
+          "name": "0-700.png",
+          "initial_sha256": "1ec38d917f9dd8ff19e05c1158c4e340b591937674d418755091256faaa9e66d",
+          "final_sha256": "1ec38d917f9dd8ff19e05c1158c4e340b591937674d418755091256faaa9e66d"
+        },
+        {
+          "name": "1-050.png",
+          "initial_sha256": "9722060119143064adc7b6d7f06b7fbe97527195c81eefdd2b78e3efa4233985",
+          "final_sha256": "9722060119143064adc7b6d7f06b7fbe97527195c81eefdd2b78e3efa4233985"
+        },
+        {
+          "name": "1-400.png",
+          "initial_sha256": "cb03f8540030f41b0ad6b097fa2a5aad8bbf967135e04f8acf116029b1f00ff9",
+          "final_sha256": "cb03f8540030f41b0ad6b097fa2a5aad8bbf967135e04f8acf116029b1f00ff9"
+        },
+        {
+          "name": "1-700.png",
+          "initial_sha256": "84092c8f59d785bf4b6c5a639b0e9910b14003f46894ec46b74d42bb379335e7",
+          "final_sha256": "84092c8f59d785bf4b6c5a639b0e9910b14003f46894ec46b74d42bb379335e7"
+        },
+        {
+          "name": "1-900.png",
+          "initial_sha256": "0a1ba1d9ca511065cd13b51ac736cbd26432ccbaf2fb3c30298ebb60760aaad3",
+          "final_sha256": "0a1ba1d9ca511065cd13b51ac736cbd26432ccbaf2fb3c30298ebb60760aaad3"
+        },
+        {
+          "name": "10-900.png",
+          "initial_sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+          "final_sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110"
+        },
+        {
+          "name": "11-100.png",
+          "initial_sha256": "ef5d5fb749f7b8fbe3e25919e611e360d5ff3eac2af2ac6569171e704ab947d7",
+          "final_sha256": "ef5d5fb749f7b8fbe3e25919e611e360d5ff3eac2af2ac6569171e704ab947d7"
+        },
+        {
+          "name": "11-300.png",
+          "initial_sha256": "92299e0c79e50f55a7f45f0df1e1cde72c9874c0e7ce591e386d8d308f104c87",
+          "final_sha256": "92299e0c79e50f55a7f45f0df1e1cde72c9874c0e7ce591e386d8d308f104c87"
+        },
+        {
+          "name": "11-500.png",
+          "initial_sha256": "4895c5fd3b2e47f22c3d6f295b5a472c097e09c3a4fe4514b9ce15d19a332dc9",
+          "final_sha256": "4895c5fd3b2e47f22c3d6f295b5a472c097e09c3a4fe4514b9ce15d19a332dc9"
+        },
+        {
+          "name": "11-700.png",
+          "initial_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "final_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009"
+        },
+        {
+          "name": "11-983.png",
+          "initial_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "final_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009"
+        },
+        {
+          "name": "12-000.png",
+          "initial_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009",
+          "final_sha256": "37c379d086c3c79aefd2cc85b1dc63699a1872b3ed8d0d9eac01c6300d439009"
+        },
+        {
+          "name": "2-150.png",
+          "initial_sha256": "59c0dfd9052833dcd450e0749c189be111e5ff0c192ec42d7af7aacb9c75bafa",
+          "final_sha256": "59c0dfd9052833dcd450e0749c189be111e5ff0c192ec42d7af7aacb9c75bafa"
+        },
+        {
+          "name": "2-400.png",
+          "initial_sha256": "25492cbe608440933c7cff869d5c22cf917d1b704b9297a659399d820b22c4e8",
+          "final_sha256": "25492cbe608440933c7cff869d5c22cf917d1b704b9297a659399d820b22c4e8"
+        },
+        {
+          "name": "2-700.png",
+          "initial_sha256": "7af7e45f23837d2717437968f6caf11712b13f5f768ee675607f5523763ba8f2",
+          "final_sha256": "7af7e45f23837d2717437968f6caf11712b13f5f768ee675607f5523763ba8f2"
+        },
+        {
+          "name": "3-100.png",
+          "initial_sha256": "2175494acfb0c1995ede2de6d1bfdb5e85f477a94701e046058961db5dd2a44e",
+          "final_sha256": "2175494acfb0c1995ede2de6d1bfdb5e85f477a94701e046058961db5dd2a44e"
+        },
+        {
+          "name": "3-500.png",
+          "initial_sha256": "f8223e860f1adf74b61862c866b2ce31fb19107e1c70927a9dbfc7845932fe60",
+          "final_sha256": "f8223e860f1adf74b61862c866b2ce31fb19107e1c70927a9dbfc7845932fe60"
+        },
+        {
+          "name": "3-850.png",
+          "initial_sha256": "f921222a9ece82ba6f16d71e5a4e3820a9309f077e8d53d30a48a8187aa23226",
+          "final_sha256": "f921222a9ece82ba6f16d71e5a4e3820a9309f077e8d53d30a48a8187aa23226"
+        },
+        {
+          "name": "4-200.png",
+          "initial_sha256": "66c88de1e39f6cc7bc473636db848030b20d55d5631e8c03b8ce7a45058b9eaa",
+          "final_sha256": "66c88de1e39f6cc7bc473636db848030b20d55d5631e8c03b8ce7a45058b9eaa"
+        },
+        {
+          "name": "4-450.png",
+          "initial_sha256": "0f59adc5e426d06a3e171a9b3974821d1f8cffb3e3de0d4ae4b672489e5f1cad",
+          "final_sha256": "0f59adc5e426d06a3e171a9b3974821d1f8cffb3e3de0d4ae4b672489e5f1cad"
+        },
+        {
+          "name": "4-700.png",
+          "initial_sha256": "424e049db3edf1c78b7f57a475fffc2e8b419dbd25a46688c871bc139a66488b",
+          "final_sha256": "424e049db3edf1c78b7f57a475fffc2e8b419dbd25a46688c871bc139a66488b"
+        },
+        {
+          "name": "4-950.png",
+          "initial_sha256": "95c257887ba73eb9cbddc2f4d3ce4519c135684209352365ce1286f1229707bd",
+          "final_sha256": "95c257887ba73eb9cbddc2f4d3ce4519c135684209352365ce1286f1229707bd"
+        },
+        {
+          "name": "6-500.png",
+          "initial_sha256": "bcb925862039ef8d258d5c0912a78b43a5ab9e80e1e647376d04e81288c4655b",
+          "final_sha256": "bcb925862039ef8d258d5c0912a78b43a5ab9e80e1e647376d04e81288c4655b"
+        },
+        {
+          "name": "6-850.png",
+          "initial_sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+          "final_sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110"
+        },
+        {
+          "name": "8-000.png",
+          "initial_sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110",
+          "final_sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110"
+        }
+      ],
+      "changed_and_reinspected": [
+        {
+          "name": "5-200.png",
+          "initial_sha256": "fc092ffa203b7768446f5ab9c53de46d3bd5cca2576fce0e2b6df156f2ef5902",
+          "final_sha256": "028644e1bad6cde5619fba5328b70dac39204c2b4db42fb93db474fe9686ed5a"
+        },
+        {
+          "name": "5-450.png",
+          "initial_sha256": "d5b05517764dd20243c309d92f8ad71fb75872557b84d2d3d8eccac7a3a1d1c9",
+          "final_sha256": "88c6acf6b4aafbf503646a7321ec1c826348624e32460b54d08512d4b6d15634"
+        },
+        {
+          "name": "5-700.png",
+          "initial_sha256": "8d10549556cd49b44c2094b1e9a1d0205f0be9240d39b4c81222c6d6f22644b6",
+          "final_sha256": "03d251fd527413600173f9cdc99cf811d1c8a63afef1b184b62018ecdba9c0ce"
+        },
+        {
+          "name": "5-950.png",
+          "initial_sha256": "955d46bd7c28fcb8a8b500673993adfc119be279251b89c6143959074c945cf6",
+          "final_sha256": "8aff8fbc3713b4f80d6af4238935e87065dd8ab482bc748bd66889c312743faa"
+        },
+        {
+          "name": "6-200.png",
+          "initial_sha256": "8914fcefcceedef4eb38f1e920b201f1c5b5bc274e346e3ebb0b55bfbbf57e38",
+          "final_sha256": "fcf9057ee7cbc2431e4254f040156ad471a5718554b8a062bcea5b0568197697"
+        }
+      ]
+    },
+    "media": {
+      "mp4": {
+        "identity": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/studio-film.mp4",
+          "sha256": "079e9f7c087bac85489c604de31ce533c2eda53ab229565bf2325cef2a72def9",
+          "bytes": 295480
+        },
+        "independent_probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "codec_type": "video",
+              "width": 2200,
+              "height": 710,
+              "pix_fmt": "yuv420p",
+              "r_frame_rate": "60/1",
+              "avg_frame_rate": "60/1",
+              "duration": "12.000000",
+              "nb_frames": "720"
+            }
+          ],
+          "format": {
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "duration": "12.000000",
+            "size": "295480"
+          }
+        },
+        "independent_full_decode": {
+          "exit_code": 0,
+          "error_output": "",
+          "decoded_frame_count": 720
+        }
+      },
+      "webm": {
+        "identity": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/exports/studio-film.webm",
+          "sha256": "6fabbd822ff98371ffcdf16ba41012637f4600412d2bf157f20dda72fa817ff5",
+          "bytes": 1381638
+        },
+        "independent_probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "vp9",
+              "codec_type": "video",
+              "width": 2200,
+              "height": 710,
+              "pix_fmt": "yuv420p",
+              "r_frame_rate": "60/1",
+              "avg_frame_rate": "60/1"
+            }
+          ],
+          "format": {
+            "format_name": "matroska,webm",
+            "duration": "12.000000",
+            "size": "1381638"
+          }
+        },
+        "independent_full_decode": {
+          "exit_code": 0,
+          "error_output": "",
+          "decoded_frame_count": 720
+        }
+      }
+    },
+    "mp4_webm_decoded_yuv_frames": {
+      "all_720_corresponding_frame_hashes_equal": true,
+      "scope": "Independent FFmpeg framemd5 comparison. Confirms identical decoded YUV frame content between these final media files in that decoder; not continuous visual viewing or every-client compatibility."
+    },
+    "encoded_mp4_first_last_rgb_difference": {
+      "bbox": [
+        78,
+        48,
+        2122,
+        696
+      ],
+      "mean_absolute_channels_0_255": [
+        0.3027989756722151,
+        0.18755249679897568,
+        0.2699122919334187
+      ],
+      "max_channel_difference": 53,
+      "interpretation": "Lossy first and last encoded frames are not required to be byte/pixel identical. These diagnostics do not constitute a quality score or perceptual seam guarantee."
+    }
+  },
+  "final_author_runtime_evidence": {
+    "record": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/validation.json",
+      "sha256": "de5ade32b936a7b21a8617df576e5e0393af64276a762f219ed7386fba152465",
+      "bytes": 1794
+    },
+    "results": {
+      "browser": "134.0.6998.35",
+      "date": "2026-10-26T10:00:49.008Z",
+      "sourceSha256": "75167f18a564528ce0c36aa706131c033c83825bcb297c0a132e90ad2cd884a9",
+      "filmSha256": "b6af1ffae826af586584c36494febdbfe8b4bd3eef920bc163106125ba8fb1b9",
+      "mp4Sha256": "079e9f7c087bac85489c604de31ce533c2eda53ab229565bf2325cef2a72def9",
+      "webmSha256": "6fabbd822ff98371ffcdf16ba41012637f4600412d2bf157f20dda72fa817ff5",
+      "checks": [
+        {
+          "name": "Timeline duration",
+          "pass": true,
+          "details": 12
+        },
+        {
+          "name": "Exact 0 / 12 s loop state",
+          "pass": true,
+          "details": "PNG bytes equal at DPR 2"
+        },
+        {
+          "name": "Last encoded sample / first sample",
+          "pass": true,
+          "details": "PNG bytes equal at t=719/60 and t=0"
+        },
+        {
+          "name": "Source text retained",
+          "pass": true,
+          "details": "14 unchanged source phrases"
+        },
+        {
+          "name": "Live player controls",
+          "pass": true,
+          "details": "Pause, settled view, replay, keyboard seeking executed"
+        },
+        {
+          "name": "Natural-clock loop",
+          "pass": true,
+          "details": "Play from 11.9 s advanced into the next cycle"
+        },
+        {
+          "name": "Encoded WebM browser playback",
+          "pass": true,
+          "details": {
+            "duration": 12,
+            "width": 2200,
+            "height": 710,
+            "source": "studio-film.webm",
+            "time": 5.609095,
+            "paused": false,
+            "readyState": 4
+          }
+        },
+        {
+          "name": "Reduced motion and narrow preview",
+          "pass": true,
+          "details": {
+            "paused": true,
+            "time": 8,
+            "scroll": 375,
+            "width": 375
+          }
+        },
+        {
+          "name": "Browser console",
+          "pass": true,
+          "details": "No page errors in exercised routes"
+        }
+      ],
+      "errors": []
+    },
+    "performed_by": "/root/faithful_motion",
+    "independently_rerun_by_reviewer": false,
+    "scope": "Nine passing checks tied to final film/MP4/WebM hashes; reviewed as engineering evidence, separate from the reviewer’s actual sampled visual inspection."
+  },
+  "viewed_repair_files": [
+    {
+      "identity": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/authored-type-handoff-01.png",
+        "sha256": "76a25a60629812101f5cf2c682b205a9cb7f5efa6d1d1d73ce548983c2df35f1",
+        "bytes": 121557
+      },
+      "actually_viewed": true,
+      "detail": "original",
+      "resampling": "none",
+      "crop_box": [
+        1000,
+        180,
+        2160,
+        590
+      ],
+      "source_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-200.png",
+          "sha256": "028644e1bad6cde5619fba5328b70dac39204c2b4db42fb93db474fe9686ed5a"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-350.png",
+          "sha256": "9100e190d60e205494ce9cbf82b4a49be98ff1705e5c8c848e0d2dd96c9b5c89"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-420.png",
+          "sha256": "3e48f401eba6a3ca8cc7fe072144e24ddd2d7e3a796ede7c4c4567c09e1a08aa"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-450.png",
+          "sha256": "88c6acf6b4aafbf503646a7321ec1c826348624e32460b54d08512d4b6d15634"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/authored-type-handoff-02.png",
+        "sha256": "4d0502304779f2f10d2265be15b2356545fbacf51ef6cfa58103d78fa34fae67",
+        "bytes": 117580
+      },
+      "actually_viewed": true,
+      "detail": "original",
+      "resampling": "none",
+      "crop_box": [
+        1000,
+        180,
+        2160,
+        590
+      ],
+      "source_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-550.png",
+          "sha256": "6a888920402e7835cc96a7f73c1cf40161b8e89191ae22d2d6f72755511beb65"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-700.png",
+          "sha256": "03d251fd527413600173f9cdc99cf811d1c8a63afef1b184b62018ecdba9c0ce"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-850.png",
+          "sha256": "6e4c6e8c63142ffab5186ade9faa48fcff3c9ca22b5e673614eadd5d857ecd9a"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-910.png",
+          "sha256": "2f8c569e86a46ae6e105eb28dba6f30e8dd0bd0eae29b89d6c2269deef8d0232"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/authored-type-handoff-03.png",
+        "sha256": "cbae5db582b26d0df6ce7f8ce61d7f8bb555dab0b41fd933ec63cb5d140e25f1",
+        "bytes": 117850
+      },
+      "actually_viewed": true,
+      "detail": "original",
+      "resampling": "none",
+      "crop_box": [
+        1000,
+        180,
+        2160,
+        590
+      ],
+      "source_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/5-950.png",
+          "sha256": "8aff8fbc3713b4f80d6af4238935e87065dd8ab482bc748bd66889c312743faa"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-030.png",
+          "sha256": "844da18ea07036d5498d8f73253a53828203c059e637ca5839232af83b834750"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-050.png",
+          "sha256": "d097aa0a5f87aafc2e825db5adf2cc7e6e795aa79264ab98c1cf4b2a997027b4"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-100.png",
+          "sha256": "a9b2ee08ba50d2f0867bae330bb20960e36e71e33b80d3deef25b97d6d8347f1"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/authored-type-handoff-04.png",
+        "sha256": "71e04565e00d17ee652fe136c845f8ebaf03e550c12cfa946f29dbab7be3f4f4",
+        "bytes": 121926
+      },
+      "actually_viewed": true,
+      "detail": "original",
+      "resampling": "none",
+      "crop_box": [
+        1000,
+        180,
+        2160,
+        590
+      ],
+      "source_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-120.png",
+          "sha256": "7c8ea96b96b1067ce19297afd24b7dd7b9a28a1a9791834ed3675f42644e538d"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-200.png",
+          "sha256": "fcf9057ee7cbc2431e4254f040156ad471a5718554b8a062bcea5b0568197697"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-380.png",
+          "sha256": "7d1a43ad0248e88ad17a42f73abccef551d59be117c913ba2f41af21e98b96ca"
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/frames/6-500.png",
+          "sha256": "bcb925862039ef8d258d5c0912a78b43a5ab9e80e1e647376d04e81288c4655b"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/encoded-type-handoff-01.png",
+        "sha256": "8a52503a90cc81a6b96a9b0103b7683d1225eb4d4f32eb655c9e83de6a42e31e",
+        "bytes": 241285
+      },
+      "actually_viewed": true,
+      "detail": "original",
+      "resampling": "none",
+      "crop_box": [
+        1000,
+        180,
+        2160,
+        590
+      ],
+      "source_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-01.png",
+          "sha256": "ff75ef9bf403517400dd4a4eaa99193ad76c0b3ee6eb8976b01b0e163f5d6834",
+          "frame_index": 0,
+          "time_seconds": 0.0
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-02.png",
+          "sha256": "fc6e4b3cad2a7e0917a91122b2430b8b6b086f1fa3d7af1a6f3c959e27fe08ed",
+          "frame_index": 327,
+          "time_seconds": 5.45
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-03.png",
+          "sha256": "95ae8e9ef020ae65cf1b3135220004be38bae194effce337d77294f4eee79d10",
+          "frame_index": 342,
+          "time_seconds": 5.7
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-04.png",
+          "sha256": "2dba37e0b01f2b5ffed96202a35d29a958a7b6a84a8a2e50e2d9d93553d25754",
+          "frame_index": 351,
+          "time_seconds": 5.85
+        }
+      ]
+    },
+    {
+      "identity": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/encoded-type-handoff-02.png",
+        "sha256": "265fbba43ef3880179c59bf17d1531019b4e9787f7b0a164c9e46fb682d0e905",
+        "bytes": 259227
+      },
+      "actually_viewed": true,
+      "detail": "original",
+      "resampling": "none",
+      "crop_box": [
+        1000,
+        180,
+        2160,
+        590
+      ],
+      "source_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-05.png",
+          "sha256": "8fdc238613beff851636adcaf89e5916a7c86a4a57123509cc930a4ef20a1b00",
+          "frame_index": 357,
+          "time_seconds": 5.95
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-06.png",
+          "sha256": "83c29a8f1581c3cd8842f709132346381e2c8278b94e753b074920386516b2ab",
+          "frame_index": 363,
+          "time_seconds": 6.05
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-07.png",
+          "sha256": "374096fe9a247890ea14bec24f417730e73b85b8920e8fa2c2e2de49ff9b072a",
+          "frame_index": 366,
+          "time_seconds": 6.1
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-08.png",
+          "sha256": "b030ffc16e6929fe4703d60a4669d29c5b338d9377382acdb004f1effcbf937e",
+          "frame_index": 368,
+          "time_seconds": 6.133333333333334
+        }
+      ]
+    },
+    {
+      "identity": {
+        "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/encoded-type-handoff-03.png",
+        "sha256": "a4ac0a4f01b47808d1333e9f4ee34a51e4257e6d67f0a503d15529b9daeb6323",
+        "bytes": 261586
+      },
+      "actually_viewed": true,
+      "detail": "original",
+      "resampling": "none",
+      "crop_box": [
+        1000,
+        180,
+        2160,
+        590
+      ],
+      "source_frames": [
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-09.png",
+          "sha256": "8b90db6eece046bb5a28f984f9a37371c2b2ea4e14321fa0dac378f2e458a826",
+          "frame_index": 372,
+          "time_seconds": 6.2
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-10.png",
+          "sha256": "b2a24859db7171911d7dc87d572b734f7effd93deaecd0771904ff924ec5d0cd",
+          "frame_index": 383,
+          "time_seconds": 6.383333333333334
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-11.png",
+          "sha256": "59f46751859bb29f31e7d36c7dc810ccc57d5287cc5811ce6e59f844fcf62f60",
+          "frame_index": 480,
+          "time_seconds": 8.0
+        },
+        {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/decoded/frame-12.png",
+          "sha256": "4323688b2132a8f87499dfa70e8d2af6fc3226039cdb3652243c5c9d7c5d492e",
+          "frame_index": 719,
+          "time_seconds": 11.983333333333333
+        }
+      ]
+    }
+  ],
+  "inherited_actual_viewing": {
+    "initial_scope_record": {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/initial-review.json",
+      "sha256": "b23c510a9da4e920e348ebb45b0b3a3e84311701a6d842ea6eb0183515f12226",
+      "bytes": 46718
+    },
+    "initial_poster_and_32_authored_samples": "The initial complete poster and 32 ordered source samples were actually viewed. The unchanged poster/27 unchanged sample identities plus the five re-inspected changed sample identities establish the stated final coverage.",
+    "initial_encoded_samples": "The initial 12 decoded MP4 samples remain historical evidence for the initial version; final encoded judgments use the new final samples.",
+    "preview_capture_identity_comparison": [
+      {
+        "initial_view": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/view-preview-desktop.png",
+          "sha256": "cdaed2b0483d433466acef8b535716c4db8a751dfeff1191bfdcff3031a7c73e",
+          "bytes": 215876
+        },
+        "initial_original": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/preview-desktop.png",
+          "sha256": "3635eb6eba72544af47d7cb4312b27ae84824127b972a6efbaf2965637aa9b9f",
+          "bytes": 245582
+        },
+        "final_original": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/preview-desktop.png",
+          "sha256": "3635eb6eba72544af47d7cb4312b27ae84824127b972a6efbaf2965637aa9b9f",
+          "bytes": 245582
+        },
+        "same_as_actually_viewed_source": true,
+        "final_image_reopened": false
+      },
+      {
+        "initial_view": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/view-preview-mobile-reduced.png",
+          "sha256": "846f4f3f641b20705ad0e3d0e981ff7e3eba8b7ef7885af10585b2248348bee4",
+          "bytes": 73594
+        },
+        "initial_original": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/preview-mobile-reduced.png",
+          "sha256": "74a6865cd88df131b26a327880e88aaf7431898ca0fad5094d380921a8634595",
+          "bytes": 74157
+        },
+        "final_original": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/preview-mobile-reduced.png",
+          "sha256": "74a6865cd88df131b26a327880e88aaf7431898ca0fad5094d380921a8634595",
+          "bytes": 74157
+        },
+        "same_as_actually_viewed_source": true,
+        "final_image_reopened": false
+      },
+      {
+        "initial_view": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/view-encoded-playback.png",
+          "sha256": "9b1a1092a549b9014c35ff278e9e9164cdc42eb7a21e031d4761ad45c7910fce",
+          "bytes": 217977
+        },
+        "initial_original": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/encoded-playback.png",
+          "sha256": "ce0291876dbf788249ac80b9789f807e8c059c354e7fd748dd6a0822050ca72e",
+          "bytes": 349321
+        },
+        "final_original": {
+          "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film/evidence/encoded-playback.png",
+          "sha256": "de5e25eb0e523244c10cef4e9704fd7de2b3adf58e998b82d7071a1ffad03534",
+          "bytes": 348457
+        },
+        "same_as_actually_viewed_source": false,
+        "final_image_reopened": false
+      }
+    ]
+  },
+  "normal_speed_visual_playback": {
+    "actually_observed_by_reviewer": false,
+    "claim": "No continuous normal-speed visual playback, audience-comprehension, delivered-frame-rate or perceptual seam guarantee is claimed. Deterministic samples support observed route/state judgments; runtime evidence supports limited functional progression."
+  },
+  "residual_delivery_conditions": [
+    "Fine lettering in this fixed 1100×355 artwork becomes small in the 375-pixel preview. Controls, explanatory text and transcript remain available; intended-scale viewing is required for fine source detail.",
+    "The portable stage bakes complete text phrases while preserving editable original SVG wording. Text/type changes require the documented font preparation and rebake; source shapes and timeline remain editable.",
+    "The tested Chromium headless shell lacks H.264 decode. The local player successfully uses the final VP9 WebM source; both final formats independently decoded through FFmpeg. Browser MP4 playback is not claimed.",
+    "Motion polish still benefits from a human normal-speed viewing pass; this audit does not convert ordered frames or a short runtime progress check into that perceptual claim."
+  ],
+  "limits": [
+    "This is an output audit, not an independent rerun or application of the UI Spec Studio skill.",
+    "The initial record, raw evidence archive, repair observations and final identities are kept separate so review-directed improvement is attributable.",
+    "Source fidelity and raw seam checks apply to lossless authored states; encoded media is measured and inspected separately.",
+    "No complete clean-machine font bake, all-platform playback, full accessibility audit or audience study was performed by the reviewer.",
+    "The reviewer did not modify the application or repository and did not publish any work."
+  ],
+  "supporting_records": [
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/native-span-manifest.json",
+      "sha256": "d908ce802f5d59a59017762619da1f5e9b9006521cfeea2b38ed4098cc9daa12",
+      "bytes": 4891
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/encoded-span-manifest.json",
+      "sha256": "1ba87fd94c5f95a4b1fa9259302cbe272f72cbd403c515f6cc9dbcaa37f17a4f",
+      "bytes": 4644
+    },
+    {
+      "path": "/workspace/scratch/199d5b56cb0b/ui-spec-v1.11-applications/studio-film-independent-review/repair/pre-encode-checks.json",
+      "sha256": "338334b8812ab615a8d78eeb3597ef7affa9aa9ab9690d1f98b66818a1d1147b",
+      "bytes": 1142
+    }
+  ]
+}

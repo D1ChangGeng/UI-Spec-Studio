@@ -16,6 +16,11 @@ alternatives and differences in actual use when a significant choice is open.
 Record user choice, explicit delegation or provisional recommendation with its
 source and affected scope. A preview option selection records only its stated scope.
 
+Separate required task behavior, explicit aesthetic goals and revisable conventions.
+Name functional, cross-domain expressive and implementation source roles. Show
+consequential art directions with actual material and comparable completion;
+identify what stays familiar, what changes and how the theme persists in core work.
+
 ## Foundation comparison and selected granularity
 
 Concrete mature page/system/block candidates, source/demo/revision, actual observed

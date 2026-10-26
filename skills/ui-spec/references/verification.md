@@ -30,15 +30,15 @@ Explain sampling and remaining conditions. Package checks, scenarios, viewed pix
 
 ## Capture the actual viewing condition
 
-Set the CSS viewport directly. Record viewport, pixel ratio, browser, locale/theme, content, revision and zoom. Distinguish browser/text enlargement from image scaling; inspect the actual route or independently sized frame at useful scale.
+Set the CSS viewport directly; record viewport, pixel ratio, browser, locale/theme, content, revision and zoom. Distinguish browser/text enlargement from image scaling; inspect the actual route or independently sized frame at useful scale.
 
-For steady states, wait for intended content, fonts and images; keep data and animation phase comparable. For loading/transitions, begin before the event and retain progression. Capture the whole content viewport, including shell, background and surrounding space; browser chrome is optional.
+Wait for intended content, fonts and images for steady states; keep data and animation phase comparable. Begin loading/transition capture before the event. Include shell, background and surrounding space in the whole viewport; browser chrome is optional.
 
-Use **viewport evidence** for composition/scroll boundaries and **content evidence** for documents or scroll checkpoints. Inspect internal scroll regions without resizing the viewport. Exercise sticky controls, overlays, short heights and intended horizontal scrolling. Full-document captures can place fixed overlays incidentally; check covered text in an actual viewport before diagnosing loss.
+Use **viewport evidence** for composition/scroll boundaries and **content evidence** for documents or scroll checkpoints. Inspect internal regions without resizing the viewport; exercise sticky controls, overlays, short heights and intended horizontal scrolling. Full-document capture can place fixed overlays incidentally; check an actual viewport before diagnosing loss.
 
-Record video dimensions/scaling separately from the viewport. [Playwright video](https://playwright.dev/docs/videos) can scale output and needs context closure to finish writing. Preserve useful resolution, with full-size stills for small type or optical detail.
+Record video dimensions/scaling separately. [Playwright video](https://playwright.dev/docs/videos) can scale output and needs context closure to finish writing. Retain full-size stills for small type or optical detail.
 
-Record display scaling. Fitted full-page images and contact sheets support overview; reading and optical judgments need views at intended use scale. Retain crop location and neighbors. Enlargement supports diagnosis; return to normal scale to judge its effect.
+Record display scaling. Fitted pages/contact sheets support overview; reading and optical judgments need intended use scale. Retain crop location and neighbors; return from enlargement to normal scale to judge its effect.
 
 ## View the images and use the interface
 
@@ -52,7 +52,7 @@ Attribute observations to **carrier page, player, depicted product UI or its dis
 
 ## Inspect a time-bounded visual episode
 
-Observe **pre-trigger state → action → first feedback → progression → settled result** in references, candidates, trials and runtime. Existing demos expose a selected flow; authorized operations can fill consequential return, interruption or recovery gaps. Use playback, live observation or suitable media analysis; acquisition alone leaves content uninspected.
+Observe **pre-trigger state → action → first feedback → progression → settled result** in references, candidates, trials and runtime. Demos expose a selected flow; authorized operations can fill return, interruption or recovery gaps. Playback, live observation or media analysis supplies inspection; acquisition alone does not.
 
 Choose the window from the behavior:
 
@@ -64,31 +64,35 @@ Choose the window from the behavior:
 | Asynchronous task | Before intent through waiting, intermediate feedback and the valid outcome or recovery state | Exercise early/late response, failure, cancellation and new intent during pending work |
 | Navigation or connected journey | Linked episodes covering departure, transition, arrival and continuation/return | Preserve object, focus, scroll and shared-shell context across the boundaries |
 
-When supported, view at normal speed, pause/replay or enlarge relevant frames, then return to normal speed to judge rhythm. Apply the [seven temporal qualities](interaction-and-variants.md#read-motion-through-perceptible-qualities) to the object and its surroundings, including hidden/replacement intervals.
+When supported, view normally, pause/replay or enlarge relevant frames, then return to normal speed to judge rhythm. Apply the [seven temporal qualities](interaction-and-variants.md#read-motion-through-perceptible-qualities), including hidden/replacement intervals and surrounding elements.
 
-Start before the trigger. Retain frame order, actual timestamps/event offsets, cadence, actions/states and clock source; use capture-time brackets when presentation instants are unknown. Planned screenshot delays do not establish actual intervals.
+Retain frame order, actual timestamps/event offsets, cadence, actions/states and clock source; use capture-time brackets when presentation instants are unknown. Planned screenshot delays do not establish actual intervals.
 
-Tie episodes and extracted frames to runs/recordings, marking resets, reruns and edits. Use keyframes/contact sheets to compare events; open important frames at useful size and intervening intervals for continuity. Retain connecting state, order and gaps across journeys.
+Tie episodes/frames to runs or recordings; mark resets, reruns and edits. Contact sheets locate events; open important frames at useful size and connecting intervals for continuity. Retain state, order and gaps across journeys.
 
-Let behavior determine duration, change speed sampling density, and design impact analysis depth. Extend coverage for seams, flashes, overlap, jumps or late updates; mark omissions. Sparse samples support observed states; endpoints leave transitions unknown. Without playback, inspect ordered frames and retain playback-dependent claims as pending. Distinguish acquisition, actual inspection and sufficient support for a conclusion. Metadata or a preview frame establishes neither playback nor continuity.
+Let behavior determine duration, change speed sampling density, and design impact analysis depth. Extend for seams, flashes, overlap, jumps or late updates; mark omissions. Sparse samples establish sampled states, not intervening continuity. Without playback, inspect ordered frames and leave playback-dependent claims pending. Acquisition, actual inspection and sufficient support remain distinct; metadata or a poster establishes neither playback nor continuity.
 
-Separate natural-time observation from controlled probes. Frame stepping, slowed playback and a [simulated clock](https://playwright.dev/docs/clock) expose ordering and intermediate geometry, not unmodified pacing or smoothness. Record time controls. Natural-time captures still reflect sampling, overhead and environment; frame-delivery measurements need runtime traces.
+For reproducible authored timelines or regression probes, fix source, stage/viewport, content, fonts, assets, initial state and relevant seeds; seek explicit times when supported. Record controlled clocks/mechanisms and remaining nondeterminism. Compare progression, reset and loop seams through contact sheets and full playback. Frame stepping, slowed playback and a [simulated clock](https://playwright.dev/docs/clock) reveal ordering/geometry; natural-time observation separately establishes experienced pacing. Capture overhead and environment still apply; frame-delivery claims need runtime traces.
 
-Check capture settings before relying on a temporal record. [Disabling animations for a Playwright screenshot](https://playwright.dev/docs/api/class-page#page-screenshot-option-animations) can fast-forward finite animations and reset infinite ones. Such output can support a declared static comparison, while natural progression needs a separate run with the intended motion enabled. Record relevant masks, injected styles and diagnostic overlays: these alter what can be observed. For a focus/caret question, preserve the indicator being examined.
+Check capture settings. [Disabling screenshot animations](https://playwright.dev/docs/api/class-page#page-screenshot-option-animations) can fast-forward finite animations and reset infinite ones: use that output for declared static comparison, with motion enabled in a separate natural-progression run. Record masks, injected styles and overlays that alter evidence; preserve the indicator when examining focus/caret.
 
-Locate the visible change within its interval: a card shifts relative to its stationary action during reversal, or a moving highlight obscures a label. Correlate state events, layout, animation ownership or traces to test the cause. Missing frames may reflect capture; investigate before blaming rendering. After repair, inspect the interval and replay the complete episode and return.
+Locate the change within its interval, such as a reversing card shifting against its stationary action. Test causes with state, layout, animation ownership or traces; missing frames may reflect capture. After repair, reinspect the interval and complete episode/return.
 
 ## Findings and repair
 
 Connect the viewed state/interval, phenomenon, task/perceptual effect, intent, cause to test, repair and recheck. Prioritize blocked tasks, hidden controls, shared defects and consequential composition/continuity problems.
 
-Locate the quality gap before extending implementation: replace an unsuitable source; repair adaptation that lost valuable relationships; review content and structure when real content exposes a gap; reconcile conflicting resources with the design language; revisit the target when it mismatches the task. Then correct the responsible asset, token, component, timing, state or data contract and recheck affected journeys. Keep observation and causal inference distinct.
+Locate the gap: unsuitable source, damaged adaptation, content/structure mismatch, conflicting resources or an unworkable target. Correct the responsible asset, token, component, timing, state or data contract and recheck affected journeys. Preserve the accepted art direction while resolving concrete reading, operation or runtime problems; change its scope explicitly when necessary. Keep observation and causal inference distinct.
 
 New evidence can improve the SPEC. If the target remains unattainable, state the gap, effect and viable options for the consequential user decision. Integration progress does not establish quality acceptance; preserve the agreed standard until its scope or direction is explicitly revised.
 
 ## Comparing SPEC and connected product
 
-Compare equivalent content, viewports, font readiness, themes, locales and states. Align episodes by meaningful events and object identity; explain latency/data differences. Tie reviewed evidence to its revision, retaining reproducible fixtures beside real-service checks. Improve the reference when new evidence justifies it.
+Distinguish **Source Fidelity** from **Perceptual Quality**. Fidelity protects an identified approved design or adopted source: structure, assets, type, proportion, material and behavior. Perceptual review judges the actual composition, craft and continuous experience. Reference-informed original work can inherit maturity with an independent appearance.
+
+For strict restoration, identify the exact target/revision and intended differences; match content, viewport, pixel ratio/zoom, browser/rendering conditions, fonts, themes, locales and event phase. Use overlays, regional differences or pixel metrics to locate deviations, with task-justified tolerances and disclosed masks. Diagnose rendering variation; a similarity score cannot certify design quality.
+
+Align episodes by meaningful events/object identity; explain latency/data differences. Keep reproducible fixtures beside real-service evidence. Revise an approved target explicitly when new evidence warrants it.
 
 ## Status meanings
 
@@ -126,23 +130,21 @@ Use scripts within authorized page/resource access. Data changes, messages and t
 
 ## Inspect from whole to detail and back
 
-Start at normal scale with the complete viewport and task context. Establish attention order and product impression before isolating details. Inspect composition, consequential regions and component/material details using the [multiscale method](principles.md); retain the surrounding relationships that explain the finding.
+Use the [multiscale method](principles.md) at normal use scale: whole impression, composition, consequential regions/details, then whole task. Retain neighbors and context. After correction, recheck hierarchy across affected states, pages and episodes; an enlarged difference matters when it changes the intended-size result.
 
-After a local correction, return to the whole: did clearer boundaries or stronger type improve hierarchy, or make a supporting region compete with the task? Recheck affected neighbors, states and related pages. Follow the same relationship through relevant episodes. Let decision impact determine depth; an enlarged difference warrants a change when it matters at intended use size.
-
-“The summary is separated from the items by most of the viewport” is observed; “the gap weakens their grouping” is a task-dependent interpretation. Test a causal explanation through comparison or implementation evidence. An unseen interaction or audience response remains unverified.
+“The summary is separated by most of the viewport” is observed; “the gap weakens grouping” is an interpretation. Test causes through comparison or implementation evidence. Unseen interaction and audience response remain unverified.
 
 ## Diagnose and improve the strongest relationship
 
 Identify the weak relationship before tuning parameters. Repair structure or meaning, then detail. Compare equivalent conditions; group related changes when their effects remain attributable.
 
-Compare design maturity through the task's important qualities: readable type, optical balance, coherent materials, state clarity and continuity. A different appearance can meet the target better. Review correctness, accessibility, communication and craft separately; similarity percentages or an averaged quality score cannot establish these relationships.
+Assess **experience validity** and **expressive completion** independently: can people understand and complete the task reliably, and does the promised art direction appear with mature assets, composition, detail and motion? Strength in one cannot compensate for a gap in the other. Inspect first encounter, populated core work, long content, repeated use and related views. A different appearance can meet the quality target; names or averaged scores cannot establish it.
 
 ## Verify the publishing medium
 
 For documentation, inspect hierarchy, selectable text, copyable commands, links, alt text, image width, narrow code/table handling and declared variants in supported markup. Check hidden content through the actual scroll/disclosure mechanism. A local approximation identifies its renderer; the publishing host needs its own readback and visible inspection.
 
-For diagrams, confirm relationship/data semantics. For timed output, inspect readable holds, intermediate changes and final playback. For generated assets, inspect delivered bytes as well as editable sources. Match claims to the output and environment observed.
+A working product needs semantic controls, actual content/state and boundary checks. A product demonstration needs an accurate representative flow and disclosed staging. Authored visual work can use fixed layers/stage/timing; inspect fidelity, holds, transitions, resets/seams and final encoded playback. A video of a UI does not establish its operability. Verify diagram semantics and generated assets' delivered bytes alongside editable sources; match claims to the observed medium.
 
 ## Retain lessons with boundaries
 
@@ -150,9 +152,9 @@ Retain a lesson's problem, mechanism, conditions, editable realization, evidence
 
 ## Validate resource adoption in context
 
-Verify the [four observation objects](component-sourcing.md#confirm-consequential-parts-in-a-local-trial): reference, original candidate demo, current-project trial and assembled journey. Match conclusions to the object actually inspected. Trial consequential parts before broader integration, using the fonts, language, content, theme and states that could change the choice. Recheck combined attention, runtime cost, cleanup and service boundaries after composition.
+Inspect the [four objects](component-sourcing.md#confirm-consequential-parts-in-a-local-trial) separately: reference, original demo, current-project trial and assembled journey. Trial consequential parts before expansion under the content, fonts, language, theme and states that could change fit; recheck combined attention, cost, cleanup and service boundaries.
 
-Keep researched, compared, trialled, adopted and inspected status distinct. Retain source/revision, settings, relevant views or episodes, changed scope and unresolved conditions. Motion claims require viewed process evidence; supplied recordings and downloaded source still require inspection. Record/retrieval tests establish their own mechanics.
+Keep research, comparison, trial, adoption and inspection distinct. Retain source/revision, settings, viewed states/episodes, changes and gaps. Supplied files need inspection; record/retrieval checks establish only their mechanics.
 
 ## Verify the design decision chain
 
@@ -162,9 +164,7 @@ Re-answer research questions beside the preview with current content, comparable
 
 ## Inspect inherited design value
 
-Inspect which mature layout, visual and interaction mechanisms survive in the final code/assets and runtime. Explain retained, changed and authored responsibilities; a package name or reference attribution establishes neither adopted scope nor quality. A behavior primitive supports its implemented behavior, while the authored visual surface needs its own basis and verification.
-
-Compare local craft and whole-page hierarchy, proportions, reading rhythm and continuity. Broaden revalidation when adaptation rewrites core layout, state or motion mechanisms. Upstream maturity supports retained work; current-product evidence supports the changed result. Judge reuse by high-impact responsibilities fulfilled, not dependency totals or code share.
+Identify retained, changed and authored mechanisms in code/assets and runtime. Attribution or a package name proves neither adopted scope nor quality; authored surfaces need their own basis. Compare local craft, whole-page hierarchy, proportions, reading rhythm and continuity. Revalidate rewritten layout/state/motion; upstream maturity covers retained mechanisms. Judge reuse by consequential responsibilities fulfilled, not dependency totals or code share.
 
 ## Verify assets from master to placement
 

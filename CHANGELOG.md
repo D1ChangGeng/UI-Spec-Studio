@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.11.0 — 2026-10-26
+
+- Connect art direction, role-based visual systems, asset engineering and semantic motion storytelling to mature-resource adoption and actual product use.
+- Preserve explicit aesthetic requirements alongside task reliability; professional software can carry strong artistic expression.
+- Research functional experience, cross-domain expression and implementation sources together; compare materially distinct directions at comparable completion.
+- Carry expressive contrast into populated navigation, inputs, results and repeated work, including reduced-motion treatments.
+- Assess experience validity and expressive completion independently; distinguish source fidelity to selected/approved work from actual perceptual quality.
+- Separate working products, representative demonstrations and authored visual output, with scoped deterministic capture and natural-time verification.
+- Repair concrete content, composition, control or runtime failures while preserving accepted direction; retain the eight-reference budget and existing workflow/release gates.
+
 ## 1.10.0 — 2026-10-26
 
 - Make human-centered perceptual analysis a practical whole → composition → region → detail → whole observation method.

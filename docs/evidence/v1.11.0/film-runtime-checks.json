@@ -1,0 +1,69 @@
+{
+  "browser": "134.0.6998.35",
+  "date": "2026-10-26T10:00:49.008Z",
+  "sourceSha256": "75167f18a564528ce0c36aa706131c033c83825bcb297c0a132e90ad2cd884a9",
+  "filmSha256": "b6af1ffae826af586584c36494febdbfe8b4bd3eef920bc163106125ba8fb1b9",
+  "mp4Sha256": "079e9f7c087bac85489c604de31ce533c2eda53ab229565bf2325cef2a72def9",
+  "webmSha256": "6fabbd822ff98371ffcdf16ba41012637f4600412d2bf157f20dda72fa817ff5",
+  "checks": [
+    {
+      "name": "Timeline duration",
+      "pass": true,
+      "details": 12
+    },
+    {
+      "name": "Exact 0 / 12 s loop state",
+      "pass": true,
+      "details": "PNG bytes equal at DPR 2"
+    },
+    {
+      "name": "Last encoded sample / first sample",
+      "pass": true,
+      "details": "PNG bytes equal at t=719/60 and t=0"
+    },
+    {
+      "name": "Source text retained",
+      "pass": true,
+      "details": "14 unchanged source phrases"
+    },
+    {
+      "name": "Live player controls",
+      "pass": true,
+      "details": "Pause, settled view, replay, keyboard seeking executed"
+    },
+    {
+      "name": "Natural-clock loop",
+      "pass": true,
+      "details": "Play from 11.9 s advanced into the next cycle"
+    },
+    {
+      "name": "Encoded WebM browser playback",
+      "pass": true,
+      "details": {
+        "duration": 12,
+        "width": 2200,
+        "height": 710,
+        "source": "studio-film.webm",
+        "time": 5.609095,
+        "paused": false,
+        "readyState": 4
+      }
+    },
+    {
+      "name": "Reduced motion and narrow preview",
+      "pass": true,
+      "details": {
+        "paused": true,
+        "time": 8,
+        "scroll": 375,
+        "width": 375
+      }
+    },
+    {
+      "name": "Browser console",
+      "pass": true,
+      "details": "No page errors in exercised routes"
+    }
+  ],
+  "errors": []
+}

@@ -47,6 +47,14 @@ Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付�
 
 [37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md)
 
+## 让熟悉的任务拥有独立的视觉语言
+
+**Art Direction**（艺术指导）围绕产品气质协调题材、字形、构图、材质与动态表达。专业工具同样可以拥有鲜明艺术性。明确提出的审美目标与任务清晰、状态准确、使用可靠共同构成交付要求。
+
+**Expressive Contrast**（表达性反差）同时研究功能体验、跨领域表达与实际实现资源，通过完成度相称的预览比较实质方向，再将选择转为按角色组织的视觉系统。成熟资源与针对性素材制作，让视觉语言进入填入内容后的输入、导航、结果与连续工作。
+
+**体验成立性**与**表达完成度**分别审阅。源设计保真保护已采用或确认的细节，感知评估判断真实呈现；作者时间轴支持可重复的画面比较，真实产品另需实际操作与运行证据。[艺术指导与表达性设计](docs/ART-DIRECTION.md)
+
 ## 沿着界面线索主动深入探索
 
 **Active Visual Exploration & Design Reconnaissance**（主动视觉探索与设计研究）将研究问题转为行动：播放相关演示、实际滚动、展开面板、切换状态或比较组件参数。新线索可以改变搜索方向。每项观察都明确归属：承载页面、播放器、演示中的应用，或应用内展示的作品。
@@ -112,7 +120,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.10.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.11.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

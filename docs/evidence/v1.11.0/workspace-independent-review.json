@@ -1,0 +1,199 @@
+{
+  "reviewer": "/root",
+  "completed_utc": "2026-10-26T10:06:29.727142+00:00",
+  "initial_review": {
+    "reviewer": "/root",
+    "review_role": "independent of application author; maintainer of skill",
+    "recorded_utc": "2026-10-26T10:02:21.864819+00:00",
+    "scope": "Nine final-version stills actually viewed; not independent UI operation or natural-speed playback",
+    "images": [
+      {
+        "file": "final-wide-light-research.png",
+        "sha256": "b268b4c11a4b8bcddc8d25614dbc18eb796f431976305b9a281c54e65f088fbc",
+        "bytes": 194423,
+        "modified_utc": "2026-10-26T09:56:34.470299+00:00",
+        "actually_opened": true,
+        "method": "view_image original, one image per response"
+      },
+      {
+        "file": "final-narrow-light-research.png",
+        "sha256": "5de68254a1eb2feda78569dbbe845153d703f97a43e9d812ae0e72499196fd8e",
+        "bytes": 82887,
+        "modified_utc": "2026-10-26T09:56:38.214246+00:00",
+        "actually_opened": true,
+        "method": "view_image original, one image per response"
+      },
+      {
+        "file": "final-wide-dark-research.png",
+        "sha256": "88f419eafbd0e1625d6d22c60c7bfacd5f3745d3d5b204a3accc67ba90fa35a4",
+        "bytes": 196590,
+        "modified_utc": "2026-10-26T09:56:36.366272+00:00",
+        "actually_opened": true,
+        "method": "view_image original, one image per response"
+      },
+      {
+        "file": "final-wide-light-collection.png",
+        "sha256": "af2d3b481513f7fb2f225fce1fe9a5077f82ec0bc03e71bb31ff1e8729d7395a",
+        "bytes": 134719,
+        "modified_utc": "2026-10-26T09:56:34.958292+00:00",
+        "actually_opened": true,
+        "method": "view_image original, one image per response"
+      },
+      {
+        "file": "final-recovered-draft.png",
+        "sha256": "130b9d3c5497fb9b517c8ff8a4924240b69c3a40ef1fab64a50f0d7b2ff772cb",
+        "bytes": 111973,
+        "modified_utc": "2026-10-26T09:56:50.358070+00:00",
+        "actually_opened": true,
+        "method": "view_image original, one image per response"
+      },
+      {
+        "file": "final-narrow-dark-source.png",
+        "sha256": "752faf0a0acacaf07d97109f9b43c46f841903215582889725ef5d6260bbccb1",
+        "bytes": 90391,
+        "modified_utc": "2026-10-26T09:56:39.774223+00:00",
+        "actually_opened": true,
+        "method": "view_image original, one image per response"
+      },
+      {
+        "file": "final-short-reduced-motion.png",
+        "sha256": "873b9d198916ff22e99cd87f5d12697560fdda6100c6fadc82f03d86c3b1ca2a",
+        "bytes": 50977,
+        "modified_utc": "2026-10-26T09:56:52.638038+00:00",
+        "actually_opened": true,
+        "method": "view_image original, one image per response"
+      },
+      {
+        "file": "final-long-mixed-content.png",
+        "sha256": "325248ca39f57cb11dad6113b4f0af975706877afef451e5a36fce1d1dea3834",
+        "bytes": 203749,
+        "modified_utc": "2026-10-26T09:56:49.938076+00:00",
+        "actually_opened": true,
+        "method": "view_image original, one image per response"
+      },
+      {
+        "file": "final-storage-unavailable-dark-narrow.png",
+        "sha256": "6c99f2f8872a8fb2ad11b953f288bb4541150b708ebebaa8a0a249f41a95146a",
+        "bytes": 31423,
+        "modified_utc": "2026-10-26T09:56:51.562053+00:00",
+        "actually_opened": true,
+        "method": "view_image original, one image per response"
+      }
+    ],
+    "findings": [
+      {
+        "kind": "observation",
+        "finding": "Editorial identity persists through populated answers, numbered source margin, inline narrow sidenotes, notes collection, recovered mixed-language note and source dialog."
+      },
+      {
+        "kind": "observation",
+        "finding": "Long mixed-language reading, 320x568 reduced-motion state and major light/dark layouts remain visibly composed in the sampled images."
+      },
+      {
+        "kind": "review_directed_repair",
+        "file": "final-storage-unavailable-dark-narrow.png",
+        "finding": "Failure copy instructs export while only Save is visible alongside it; header Export is scrolled out of the narrow view. Requested a direct export action at failure feedback without changing successful save layout."
+      }
+    ],
+    "limits": [
+      "No measured accessibility conformance",
+      "No real handset keyboard or assistive-technology operation",
+      "No continuous pacing or frame-delivery judgment",
+      "Source/resource adoption and interaction claims use separately inspected code/reports"
+    ]
+  },
+  "final_images": [
+    {
+      "file": "evidence/review-iteration/final-wide-light-research.png",
+      "bytes": 194423,
+      "sha256": "b268b4c11a4b8bcddc8d25614dbc18eb796f431976305b9a281c54e65f088fbc",
+      "unchanged_from_initial_view": true,
+      "final_pixels_actually_viewed": true,
+      "reopened_after_repair": false
+    },
+    {
+      "file": "evidence/review-iteration/final-narrow-light-research.png",
+      "bytes": 82887,
+      "sha256": "5de68254a1eb2feda78569dbbe845153d703f97a43e9d812ae0e72499196fd8e",
+      "unchanged_from_initial_view": true,
+      "final_pixels_actually_viewed": true,
+      "reopened_after_repair": false
+    },
+    {
+      "file": "evidence/review-iteration/final-wide-dark-research.png",
+      "bytes": 196590,
+      "sha256": "88f419eafbd0e1625d6d22c60c7bfacd5f3745d3d5b204a3accc67ba90fa35a4",
+      "unchanged_from_initial_view": true,
+      "final_pixels_actually_viewed": true,
+      "reopened_after_repair": false
+    },
+    {
+      "file": "evidence/review-iteration/final-wide-light-collection.png",
+      "bytes": 134719,
+      "sha256": "af2d3b481513f7fb2f225fce1fe9a5077f82ec0bc03e71bb31ff1e8729d7395a",
+      "unchanged_from_initial_view": true,
+      "final_pixels_actually_viewed": true,
+      "reopened_after_repair": false
+    },
+    {
+      "file": "evidence/review-iteration/final-recovered-draft.png",
+      "bytes": 111982,
+      "sha256": "2e58d04190ad01415c6e3977ac6c1e61750e75bc9282612139d147246cf9905f",
+      "unchanged_from_initial_view": false,
+      "final_pixels_actually_viewed": true,
+      "reopened_after_repair": true
+    },
+    {
+      "file": "evidence/review-iteration/final-narrow-dark-source.png",
+      "bytes": 90391,
+      "sha256": "752faf0a0acacaf07d97109f9b43c46f841903215582889725ef5d6260bbccb1",
+      "unchanged_from_initial_view": true,
+      "final_pixels_actually_viewed": true,
+      "reopened_after_repair": false
+    },
+    {
+      "file": "evidence/review-iteration/final-short-reduced-motion.png",
+      "bytes": 50977,
+      "sha256": "873b9d198916ff22e99cd87f5d12697560fdda6100c6fadc82f03d86c3b1ca2a",
+      "unchanged_from_initial_view": true,
+      "final_pixels_actually_viewed": true,
+      "reopened_after_repair": false
+    },
+    {
+      "file": "evidence/review-iteration/final-long-mixed-content.png",
+      "bytes": 203749,
+      "sha256": "325248ca39f57cb11dad6113b4f0af975706877afef451e5a36fce1d1dea3834",
+      "unchanged_from_initial_view": true,
+      "final_pixels_actually_viewed": true,
+      "reopened_after_repair": false
+    },
+    {
+      "file": "evidence/review-iteration/final-storage-unavailable-dark-narrow.png",
+      "bytes": 31326,
+      "sha256": "ce9d634a3b85b80a26b10fded676525539572167d41dba0f82895f4d7d48038b",
+      "unchanged_from_initial_view": false,
+      "final_pixels_actually_viewed": true,
+      "reopened_after_repair": true
+    }
+  ],
+  "resolution": "The narrow storage-failure frame now exposes Export current draft beside its feedback, with intact input. The changed recovered-draft frame was reopened and retains the folio reading/editing composition. Other seven reviewed images are byte-identical.",
+  "blocking_visual_findings": [],
+  "code_and_report_read": [
+    "DESIGN.md",
+    "README.md",
+    "THIRD-PARTY.md",
+    "TASK.md",
+    "VERIFICATION.md",
+    "scripts/verify.cjs",
+    "scripts/build_fonts.py",
+    "vendor/tufte-notes.css",
+    "evidence/review-iteration/verification.json"
+  ],
+  "engineering_evidence": "Author executed the 19-check final run; maintainer read the report and verification implementation and requested strengthened direct storage assertions. Maintainer did not independently operate this app.",
+  "limits": [
+    "No measured accessibility conformance",
+    "No real handset keyboard or assistive-technology operation",
+    "No continuous pacing or frame-delivery judgment",
+    "Source/resource adoption and interaction claims use separately inspected code/reports"
+  ]
+}

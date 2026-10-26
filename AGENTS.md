@@ -105,3 +105,15 @@ measurements and observed user response distinct. A crop or enlarged overview ha
 its stated scope. Local refinement needs contextual reinspection, and temporal
 claims need actually viewed process evidence. Preserve the eight-reference budget,
 existing release gates and independent forward-application integrity.
+
+Version 1.11 connects art direction, expressive contrast, visual systems, asset
+engineering and motion storytelling. Preserve explicit aesthetic requirements
+alongside valid task behavior; professional-product categories do not prescribe
+visual restraint. Research functional, cross-domain expressive and implementation
+roles together, and verify expression in populated core work. Assess experience
+validity and expressive completion independently. Source fidelity protects a
+selected/approved target; image differences remain diagnostic. Keep working
+products, demonstrations and authored timed output at their own evidence boundaries.
+Controlled captures do not establish natural responsiveness or frame delivery.
+Resolve concrete failures while preserving accepted direction; retain the eight
+common references, their budget and the existing release/validation requirements.

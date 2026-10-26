@@ -119,3 +119,19 @@ relationships instead of unsupported aesthetic scores.
 Give research an experience target and a question that can change a choice. Connect a visible clue to a useful action, the observed subject, a transferable relationship and its application in the current product. Distinguish the hosting page, media player, demonstrated interface and authored content when their visual languages differ.
 
 Keep design-reference reasoning separate from implementation-resource claims while showing how they connect. Revisit the research question in a runnable result. State adequate coverage through decision impact and remaining uncertainty; routine instances can inherit a verified system rule. Capture, actual inspection, sufficient support for a conclusion and owner approval each retain their own evidence.
+
+## Write art direction as a product responsibility
+
+Give explicit aesthetic goals the strength of delivery requirements. Product types
+explain task and operating conditions; they do not fix visual intensity. Describe
+familiar object/action relationships and independently chosen expression through
+actual type, subject, composition, material and motion. Research source roles can
+overlap; their actual observation and adoption remain identifiable.
+
+Tie visual-system rules to roles and purposeful differences. Compare directions
+at comparable completion and verify their expression in populated core use.
+Describe concrete failures and responsible repairs while preserving accepted
+direction. Keep experience validity and expressive completion independently
+evidenced. Source-fidelity diagnostics compare a declared target; perceptual
+judgment evaluates actual quality. Authored time and live runtime retain their
+separate capture, playback and performance boundaries.
