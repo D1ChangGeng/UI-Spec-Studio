@@ -33,7 +33,7 @@ Study exact candidates, production examples, actual files and rights-bearing sou
 
 View whole composition, relationships and details; rotate available spatial previews, vary relevant parameters and play meaningful cycles. Translate line tension, optical center, lettering, light and continuity into a product-specific brief. Compare material alone and beside actual text/controls, allowing either to change the other. Third-party marks retain their approved identity and permitted variations.
 
-Choose direct use, adaptation, composition, technique transfer or original production by design fit, required uniqueness, permissions, available tools and total cost. A mature icon library is a strong starting point for routine controls; a distinctive brand symbol may justify original drawing and refinement. Generative tools can explore concepts or supply a base; inspect the actual output and refine it for the required use. A raster preview proves an image result, while editable curves, geometry, animation or a font require their actual source artifacts.
+Prefer suitable mature files, scenes, fonts and effects through direct use, adaptation or composition. Trial consequential material with current text, theme, scale and runtime before broad placement. Purposeful original identity/art or a concrete source gap can justify creation; retain the design and validation responsibility. Generative tools can supply concepts or a base to inspect and refine. A raster preview proves an image result; editable curves, geometry, animation or fonts need their actual source artifacts.
 
 Before an image transformation, establish the usable input and its authorized scope. Before invoking a specialist tool, inspect the host's available capabilities, project/version and export options. Tool awareness, access to a tool, a successful production run and verified output are separate facts. Use available tools directly when appropriate; otherwise identify the precise production dependency and complete independent design work. Keep private reference material within its authorized destinations. Preserve unrelated files and existing masters.
 
@@ -97,7 +97,7 @@ Assess total resource cost: transferred bytes, decode/startup, decoded image/tex
 
 ## Accept the asset in use
 
-Compare the original intention, the delivered file and its actual placement. Inspect intrinsic asset craft and composed page quality separately. Use real size, theme, contrast, density, text and viewports; review at least the intended critical states. A large source preview is useful for editing, while small-size and final-host views establish use quality.
+Connect reference qualities, the acquired source, local placement trial and integrated result. Inspect intrinsic craft and composed quality at actual size, theme, text and critical states. Identify which qualities survive export and adaptation; a large source preview leaves small-size and final-host quality to their own checks.
 
 Apply family-specific checks: icon recognition and optical weight; wordmark readability/identity; language and font fallback; crop/alpha/color; model geometry/material/light; loop/state continuity; load failure, motion preference and runtime fallback. Verify accessible meaning according to the asset's role. File dimensions, licenses, byte counts and tests provide engineering evidence; the visual result still needs inspection.
 

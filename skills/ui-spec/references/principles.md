@@ -149,7 +149,7 @@ A README, slide, diagram, report or motion piece has an audience, attention sequ
 
 ## Compose external strengths into a coherent whole
 
-Establish a leading design language; fit specialized references through coordinated type, density, color, material, controls and motion. A semantic primitive can support tailored appearance. Inspect the assembled journey for competing emphasis, simultaneous motion and background dependence. Measure combined runtime cost separately.
+Prefer a coherent system or structure as the visual base; fit valuable additions through coordinated type, density, color, material and motion. A semantic primitive supplies its behavior; the visual layer needs its own mature basis and inspection. Judge the assembled journey for competing emphasis, motion and background dependence. Measure combined runtime cost separately.
 
 ## Ground the visual direction in the interaction model
 
@@ -157,7 +157,7 @@ Let the first action, working object and continuation govern hierarchy. A conver
 
 ## Inherit and adapt resolved relationships
 
-Read foundations as connected hierarchy, measure, alignment, rhythm, surfaces and states. Explain the visible effect, its likely perceptual benefit, the relationship carrying it and the part worth inheriting. Adapt parameters to actual content and use. Inspect source, composition and runtime separately, asking whether the same relationship still works; a successful resource can need adjustment in combination.
+Read mature resources as connected hierarchy, measure, alignment, rhythm, surfaces and states. Explain the perceptible value and identify its carrier in the adopted implementation. Inspect the original demo, then a local trial with actual type, content and states before wider composition. Preserve effective relationships while adapting parameters. Rewriting their main visual or motion mechanisms creates new quality obligations; validate the changed scope accordingly.
 
 ## Asset craft and page craft reinforce each other
 

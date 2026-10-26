@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.9.0 — 2026-10-26
+
+- Carry product visual and interaction quality into actual mature implementations as the default source for common UI, from complete structures to components, assets and motion.
+- Pair reference-quality research with resource discovery while design choices remain open; judge product-appropriate maturity through meaningful relationships and observed states.
+- Distinguish the design reference, original candidate demo, current-project local trial and integrated journey; trial consequential parts before wider integration.
+- Preserve valuable layout, visual, state and motion mechanisms through focused configuration, composition and adaptation; bound custom work to evidenced gaps.
+- Trace actual adoption in code/assets and inspected results, separating design inheritance, behavioral primitives, local trials and retained implementation responsibilities.
+- Diagnose quality gaps at the resource, adaptation, content, combination or target, with explicit decisions when scope or quality expectations must change.
+- Request focused authorized user assistance for consequential access or material gaps, then continue professional analysis and verification.
+- Preserve the eight common references, established workflow, host authority, optional records and evidence boundaries.
+
 ## 1.8.0 — 2026-10-26
 
 - Make Product UI Experience Alignment the default design objective for named references, open briefs, existing products and novel combinations.

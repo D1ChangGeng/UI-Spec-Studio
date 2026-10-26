@@ -83,3 +83,14 @@ code, and the hosting page, player, demonstrated UI and authored content. Follow
 useful cues, close consequential evidence gaps and verify the same design questions
 in the current product. Exploration depth follows decision value. Keep actual
 forward applications, observed browser evidence and deterministic tests distinct.
+
+Version 1.9 connects target craft to adopted mature implementations. Preserve the
+default of integrating, configuring, composing and adapting suitable existing UI
+work; custom implementation addresses demonstrated gaps. Distinguish design
+inheritance from actual implementation adoption. Inspect the reference, original
+demo, local trial and assembled journey at their own boundaries; establish
+consequential components in current content and states before wider integration.
+Review which mature mechanisms survive adaptation, with verification proportional
+to the change. Normal user-assisted access can close consequential resource gaps.
+Keep actual adoption, viewed quality, behavior checks and unresolved targets
+inspectable without adding fixed quotas, mandatory records or new host powers.

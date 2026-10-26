@@ -224,3 +224,36 @@ installation checks, real-user outcomes and a comparative model campaign.
 The [version review](REVIEW-v1.8.0.md) records the actual applications, checks,
 viewed conditions and limits. Existing product, asset, content and temporal gates
 continue to exercise their declared runtime contracts before release.
+
+## Mature implementation and local-trial assurance (1.9)
+
+The [resource reuse guide](RESOURCE-REUSE.md) connects a craft target to actual
+implementation adoption. Evaluate this through the produced source and observed
+application: identify which mature structures, components, assets or behaviors
+carry consequential UI responsibilities, why they fit and which mechanisms survive
+adaptation. A studied reference establishes design evidence; an installed package
+establishes availability. Each implementation and quality claim needs its own
+support. Dependency counts, code ratios and matching instruction keywords do not
+establish retained design value.
+
+For an ordinary fresh-context application, inspect the agent's actual sequence:
+which reference qualities guided the resource comparison, which consequential
+candidates were trialed under current content and states, and what the trial
+changed before wider integration. Keep reference, upstream demonstration, local
+trial and assembled journey observations distinct. A verified system can cover
+routine instances under matching conditions. Let the user task determine useful
+coverage rather than prescribing a library, source count or expected result.
+
+Review adaptation through concrete source changes and rendered behavior. Public
+configuration and composition may preserve mature relationships; changed layout,
+state or motion mechanisms expand the current implementation's verification
+responsibility. Check that custom work addresses an identified gap and that the
+complete product is inspected after the parts are combined. Target changes,
+remaining quality gaps and user-assisted acquisition keep their actual scope and
+authority. A local fixture does not establish a live service outcome.
+
+Use the [version review](REVIEW-v1.9.0.md) to record applications actually performed,
+source identities, adopted implementations, local-trial and final evidence,
+repairs and remaining conditions. Distinguish those observations from source
+review, package/installer checks, authored regression fixtures and real-user
+acceptance. The existing release gates retain their declared boundaries.

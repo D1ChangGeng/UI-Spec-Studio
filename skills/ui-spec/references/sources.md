@@ -104,3 +104,15 @@ Product UI Experience Alignment and Active Visual Exploration & Design
 Reconnaissance are this project's synthesis. Use the primary sources for their
 stated scope, and keep candidate observation, current-product verification and
 user acceptance identifiable.
+
+## Mature implementation and controlled adaptation (1.9)
+
+Primary documentation inspected on 2026-10-26:
+
+- [GOV.UK adoption guidance](https://design-system.service.gov.uk/get-started/) provides research context for choosing patterns and calls for verification in the service's own use. [Extending and modifying components](https://design-system.service.gov.uk/get-started/extending-and-modifying-components/) connects supported overrides, scoped modifications, larger forks, maintenance and accessibility rechecks. Its specific techniques apply to GOV.UK; the adaptation responsibility is transferable.
+- [shadcn/ui introduction](https://ui.shadcn.com/docs) describes actual component source distribution, editable implementation and composable defaults. Source adoption can retain substantial design work without being a package import; the selected item still needs project-specific inspection.
+- [Radix Primitives styling](https://www.radix-ui.com/primitives/docs/guides/styling) assigns presentation and functional styling to the integrator. A behavioral primitive's reuse establishes its stated responsibility; a mature visual result requires an appropriate visual foundation and actual observation.
+
+These are documentation observations, not runtime trials of those libraries. UI Spec Studio's
+four-object comparison, default adoption rule and impact-based trial scope are the project's
+synthesis of the accepted requirements. Candidate maturity and local fit remain separate facts.

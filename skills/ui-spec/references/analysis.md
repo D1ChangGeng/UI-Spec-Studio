@@ -6,7 +6,7 @@
 
 ## Establish the product's target experience
 
-Use **Product UI Experience Alignment** to connect the current user's tasks, business conditions and aesthetic goals to mature design evidence and verified implementation. Reference Product Alignment is one route; systems, component demonstrations, assets and platform conventions can independently provide useful design references. Reuse-first guides adoption, active exploration obtains evidence, and temporal inspection explains continuous experience.
+Use **Product UI Experience Alignment** to connect current tasks, conditions and aesthetic goals to mature evidence and verified implementation. Target product-appropriate maturity through readable hierarchy, component detail, complete states and continuous use. Preserve independent brand expression; judge meaningful qualities rather than resemblance percentages. Product references, systems, demos, assets and platform conventions provide evidence. Reuse-first carries that quality into actual adopted implementations.
 
 Treat a product name as a compressed experience description. Establish whether it refers to a public website, working application, flow, brand character or particular relationship. “Like a conversational AI product” could concern task entry, attachments, history, long-answer reading or a companion workspace. Turn the relevant interpretation into questions about space, actions, content, feedback and continuity. Show researched options when interpretations materially change direction; infer and investigate routine details.
 
@@ -38,7 +38,7 @@ Cover **parts, states and relationships**: what composes the surface, how releva
 
 Connect **observed phenomenon → perceptual effect → causal hypothesis → design choice → rendered recheck**. Describe the visible relationship and its viewing condition, then explain how it may affect attention, grouping, reading or object recognition. Inspect implementation where it can test the cause. A reference may keep its selected row visible as details expand, suggesting an anchor worth adopting. A bright side panel may dominate the intended working area because its area and contrast outweigh the primary content. Compare the proposed adoption or repair in the complete frame and relevant sequence. Keep professional judgment and observed user response distinguishable.
 
-Choose an observation unit that contains the behavior being judged: a rendered frame, a time-related sequence or a connected journey. Inspect source-resource quality, the combined composition and actual runtime results separately. A selected asset or component can change the layout it joins; an integration finding can reopen the selection. The [verification method](verification.md) governs capture conditions, temporal evidence and honest inspection claims.
+Choose a frame, related sequence or connected journey that contains the behavior. Distinguish the reference, original resource demo, local trial and integrated result. Pair each consequential quality question with candidates capable of carrying it. A candidate can improve the plan; a trial can reopen selection. The [verification method](verification.md) governs conditions and evidence limits.
 
 ## Recognize the product through its use
 
@@ -79,7 +79,7 @@ Match the next observation to the uncertainty: task/content analysis for product
 
 Choose by impact, reversibility, evidence and learning cost. Test reversible assumptions visibly; establish constraints that can invalidate substantial work early. Distinguish binding supplied direction from examples and develop the open parts. Use real facts for promises and identifiable fixtures for exploration.
 
-Continue research when another observation could change a choice, resolve significant uncertainty or cover a critical experience. Begin integration when the main target is grounded, important parts/states and temporal relationships are understood, and a feasible implementation path exists. Carry remaining questions into verification. Decision coverage determines sufficiency; browsing counts and recording duration describe effort.
+Continue research when it can change a choice or resolve a consequential gap. Expand implementation when key qualities have evidence, consequential candidates have passed local trials and adaptation is clear. When access or fit remains unresolved, retain the actual gap and choose further research, targeted user assistance, a scoped design change or bounded customization. Assess total delivery/rework cost; decision coverage determines sufficiency.
 
 ## Define each surface by responsibility
 

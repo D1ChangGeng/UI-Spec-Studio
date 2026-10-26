@@ -5,16 +5,21 @@ Product UI Experience Alignment connects current users, tasks and operating cond
 ## Mature work is the default design starting point
 
 Design theory and UI resource knowledge work together throughout the process:
-product understanding → search and actual browsing → comparison → foundation and
-reuse decisions → adaptation/integration → real verification. New discoveries can
-refine the initial concept. Theory supplies judgment; resources supply concrete
-objects for that judgment; implementation and observation test the result.
+product understanding → paired reference/resource exploration → candidate
+comparison → local trial → adoption and adaptation → whole-experience verification.
+New discoveries can refine the initial concept. References establish appropriate
+craft targets; adopted implementations carry them into the product. Compare
+readability, hierarchy, detail and state continuity in the actual task; identity
+and surface form remain product choices.
 
 For a new surface, explore the highest appropriate reuse level: a complete page or
 design system, a functional block, then the required components and effects.
 Inherit coherent hierarchy, proportions, typography rhythm and interaction
-relationships. Original work concentrates on product differences, integration and
-gaps. For a local correction, the accepted product can already be the foundation.
+relationships through suitable existing implementations. Configure, compose and
+adapt them before adding custom work for demonstrated gaps. Data connections and
+adaptation code can carry reuse; a studied relationship alone establishes design
+inheritance. For a local correction, an accepted and still-suitable product can
+already be the foundation.
 
 ## Recognize use before fixing the shell
 
@@ -31,11 +36,13 @@ what the actual product can do.
 
 ## Study two kinds of reference
 
-**Design references** explain useful experience relationships at the product, page, region, component, content, asset or temporal level. Reference Product Alignment is one application of this broader practice. **Implementation resources** supply a concrete template, design system, block, component, asset or technique that can carry the relationship in the current stack. A source can serve both roles.
+**Design references** explain useful experience relationships at the product, page, region, component, content, asset or temporal level. Reference Product Alignment is one application of this broader practice. **Implementation resources** supply adoptable templates, design systems, blocks, components, assets or interaction code. A source can serve both roles; transferring its technique creates a design basis and leaves the authored implementation responsible for its own quality.
 
 Research both while the model, layout and treatment can still change. Expand a named product into the relevant surface and task; for a functional brief, find candidates from the primary loop and uncertain relationships. Follow visual clues through playback, scrolling and state changes. Attribute the evidence to the hosting page, player, demonstrated UI or its content, and distinguish observed behavior from inferred cause.
 
-Describe what is useful, which conditions it relies on and what the current product will inherit or adjust. Reuse includes inherited design decisions and adopted implementation; custom code can be the adaptation connecting them. Demonstrate the relationship in a runnable slice and revisit the original research question in the assembled product.
+Describe what is useful, which conditions it relies on and what the current product will inherit or adjust. Before wider integration, trial consequential candidates with current fonts, content, theme and states. Distinguish the mature reference, original resource demo, local trial and assembled journey. Suitable family members can share already established evidence under the same conditions. Revisit the original quality question after adaptation and in continuous use.
+
+Start adaptation with content, public configuration and composition. Identify the purpose and affected states of internal changes; substantial changes to layout, state or motion require corresponding inspection of the current implementation. Preserve useful source evidence while judging the version actually delivered.
 
 ## Inherit at the right layer
 
@@ -64,11 +71,19 @@ The record connects each consequential surface/dimension to its intended experie
 background, typography, components, icons, feedback and movement where relevant.
 Quiet/native/inherited treatments can be deliberate choices with a brief reason.
 
-Start it as a shortlist, update it during implementation, then reconcile it with
-the rendered result. Shared rows can serve several surfaces. Keep it in the
-project's existing design record; the [template](../skills/ui-spec/assets/templates/design-decisions.md)
-is a starting structure, not a new tracking service. The complete source and
-rights details can remain in linked adoption notes.
+Start it as a shortlist, then distinguish researched candidates, completed trials,
+actual adoption and verified results. Link important adopted parts to their source,
+implementation location, preserved mechanisms and meaningful adaptations. Judge
+the responsibilities shaping the main experience; dependency counts and code
+ratios describe different properties. Shared rows can serve several surfaces.
+Keep the record in existing project documentation; the [template](../skills/ui-spec/assets/templates/design-decisions.md)
+is optional. Source, rights and maintenance detail can remain in adoption notes.
+
+Use available evidence first. If consequential material requires normal user
+access, request the specific source, operation, states or authorized export that
+will resolve the decision. Continue the supported work and retain the difference
+between research access and permission to integrate an asset. Keep remaining
+quality gaps visible; changes to the target or scope are explicit decisions.
 
 ## Inspect a worked scenario
 

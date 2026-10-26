@@ -1,11 +1,11 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for UI SPEC work, product UI experience alignment, active visual exploration and design research, interpreting reference products, shaping interaction models, visual reasoning, temporal inspection through video or ordered frames, mature resource reuse, visual assets, content design, UX writing, typography, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, responsive audits, scroll and motion continuity, performance, operational content and batch workflows, complete states, theme/language variants, and real integration. Leads when the user supplies only a goal or says continue; develops supplied guidance through actual research. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
+description: "Design coherent screen-based experiences: product UI, documentation, READMEs, diagrams and interactive specifications; connect approved designs to real behavior. Use for UI SPEC work, product UI experience alignment, active visual exploration and design research, interpreting reference products, shaping interaction models, visual reasoning, temporal inspection through video or ordered frames, mature resource reuse, local trials and controlled adaptation, visual assets, content design, UX writing, typography, multilingual copy, brand/icon/type craft, 2D/3D/media delivery, responsive audits, scroll and motion continuity, performance, operational content and batch workflows, complete states, theme/language variants, and real integration. Leads when the user supplies only a goal or says continue; develops supplied guidance through actual research. Supports init, iterate, audit, finish, and optional shape across frameworks and product domains."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.8.0"
+  version: "1.9.0"
 ---
 
 # UI Spec Studio
@@ -20,7 +20,7 @@ Use **Active Visual Exploration & Design Reconnaissance** to turn product intent
 
 Judge at three connected scopes: the whole frame and its details, a meaningful continuous episode, and the user's journey across views. For **Temporal Visual Inspection**, observe the trigger, transition and settled outcome; include relevant reversal, interruption, repeated input, loading and loop boundaries. Choose live interaction, video or ordered timestamped frames according to the behavior and available host tools. The observation window follows the design question and the event's actual span. The [verification method](references/verification.md) defines capture conditions and evidence limits.
 
-Inspect the source resource, assembled composition and delivered runtime separately. Visible quality supports an appearance judgment; code, state and timing evidence help explain causes and verify behavior. Keep recorded media, actually viewed evidence, professional interpretation and owner acceptance distinguishable. Use **Observe → Interpret → Evaluate → Decide → Implement → Inspect → Refine** as a working loop within the existing operations. Present important choices with inspectable candidates or results and the reason the observation changed the decision.
+Inspect four objects at their own boundaries: the design reference, candidate's original demonstration, local trial with current product conditions, and integrated interface/journey. Visible quality supports an appearance judgment; code, state and timing evidence help explain causes and verify behavior. Keep recorded media, actually viewed evidence, professional interpretation and owner acceptance distinguishable. Use **Observe → Interpret → Evaluate → Decide → Implement → Inspect → Refine** within the existing operations. Present consequential choices with inspectable evidence and the reason it changed the decision.
 
 ## Start from mature design work
 
@@ -28,7 +28,9 @@ Use design theory and resource knowledge together. Theory explains quality, fit 
 
 For a new surface or substantial redesign, seek the **highest appropriate reuse level**: a coherent product/page template or design system, a substantial layout or functional block, then the components, primitives and effects needed to complete it. Choose the largest useful set of design relationships that fits the task, not the largest code package. An established accepted page may need only a component-level change.
 
-Reuse has two connected layers: inherit valuable design decisions about hierarchy, proportions, reading rhythm and states; adopt suitable engineering implementations. Their sources may differ. Research mature solutions before custom work on common UI responsibilities. Concentrate original work on identified gaps, product differences, coherent adaptation and integration. Explain what the chosen foundation supplies and why any native or original choice fits better; adaptation code can itself carry a reuse-led solution.
+Make mature implementations the default source for common UI: integrate, configure, compose and adapt suitable existing structures, blocks, components, assets and motion. Pair reference qualities with actual implementation candidates while design can still change. Inheriting a design relationship and adopting implementation are distinct achievements; their sources may differ. Judge product-appropriate maturity through specific visual and interaction relationships, with room for the current product's own expression.
+
+Before expanding a consequential component or structure across the product, inspect its original demonstration and a runnable local trial with representative fonts, content, themes and states. Preserve the valuable mechanisms through targeted adaptation, then verify the whole journey. New adapter, theme and business code can serve genuine reuse. Custom generic UI needs a specific evidenced gap in suitable candidates; apparent simplicity, familiarity or faster initial coding alone do not justify rebuilding. Extend a mature base where possible and bound the new responsibility. Purposeful original identity/art retains its own craft and validation.
 
 ## Design with visual assets
 
@@ -111,7 +113,7 @@ Expand a named product into the intended page, task, brand qualities or particul
 
 ## Turn meaning into form
 
-Connect **product intent → research questions → search and active browsing → observed evidence → design relationships → mature implementation → adaptation → actual-use verification**. Let discoveries update the preceding choices. Identify what the person needs to recognize, compare, believe on evidence or do; decide what each visible string communicates, where and when; choose its representation before a component. The loop organizes reasoning within existing operations.
+Connect **product intent → observed quality target → implementation candidates → local trials → targeted adaptation → integrated-use verification**. Active exploration and temporal inspection inform each choice; discoveries can revise the target or source. Identify what the person needs to recognize, compare, understand or do; choose content and representation with available mature work. This loop operates within the existing workflow.
 
 Develop a direction specific enough to influence structure, typography, imagery and behavior. Use references to learn mechanisms and set a craft target. Read them at whole-surface, relationship and detail levels; distinguish visible evidence from interpretation. Make consequential choices controllable in tokens, content models, component variants or explicit timing, then inspect their effect. The common references supply these methods even when the user only asks to continue.
 
@@ -119,7 +121,9 @@ Develop a direction specific enough to influence structure, typography, imagery 
 
 For a substantive visual or interaction need, identify the highest useful scope and inspect relevant mature implementations while major choices remain open. Evaluate internal candidates against the same target. Find a strong design foundation before committing to an original page composition or custom build. Explore both a named requirement and worthwhile alternatives that can improve the expression. Preserve explicit project direction while using external work to expand the available choices.
 
-Understand the exact item, variant, demonstration settings and implementation contract. Choose direct adoption, adaptation, composition, technique transfer or original implementation by design fit, necessary behavior, compatibility, rights and total lifecycle cost. Preserve the valuable mechanism, integrate it into the project's visual and engineering system, then inspect the actual result. Carry forward suitable approved choices and record significant adaptations at their authoritative location. The common sourcing reference supplies the method; the catalog supplies leads; project evidence establishes acceptance.
+Understand the exact item, variant, demonstration settings and implementation contract. Assess design fit, behavior, compatibility, rights and total delivery/maintenance cost. Prefer a coherent foundation and prove consequential fit locally before wider integration. When a needed source is inaccessible, use available evidence and request specific normal authorized user assistance for the remaining material gap. Continue independent work. The [sourcing method](references/component-sourcing.md) governs selection, controlled adaptation and bounded custom work; the catalog supplies leads.
+
+Keep studied, compared, trialed and actually adopted resources identifiable. Explain which source now carries each consequential visual or behavioral responsibility, what survived adaptation and what the inspected result establishes. Judge reuse by its contribution to the user's main experience. When quality falls short, repair the responsible source, adaptation, content or composition; make a necessary target/scope change explicit.
 
 ## Carry decisions forward
 

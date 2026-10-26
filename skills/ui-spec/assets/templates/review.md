@@ -2,7 +2,7 @@
 
 ## Scope and condition
 
-Design question; source resource, assembled composition or delivered runtime;
+Design question; reference, candidate's original demo, local trial or integrated journey;
 routes/states, viewport, browser, theme, locale, data/font readiness, revision and
 actual entry path. Retain the conditions needed to interpret and repeat this review.
 For external study, identify the carrier page, player, depicted application or
@@ -44,8 +44,9 @@ Observed relationship and evidence → perceptual/task effect → cause to inves
 → design choice and responsible layer → changed result and recheck.
 
 Keep visual observation, professional interpretation and verified cause distinct.
-Compare equivalent conditions and meaningful event phases. Recheck the affected
-interval and connected path after changing a shared component, asset or state owner.
+Compare equivalent conditions and meaningful event phases. Attribute a gap to resource fit,
+adaptation, real content, conflicting composition or target/task mismatch. Recheck the affected
+interval and connected path after changes; keep residual gaps and target changes explicit.
 
 ## Result
 
@@ -53,7 +54,9 @@ Captured evidence; actually inspected frames/intervals; executed interaction and
 engineering checks; current result; actual user approval and remaining conditions.
 Provide inspectable candidates or before/after results when they explain an
 important choice. State which research question the runnable result answers and
-which conclusion remains unsupported. Existing notes can carry this optional record.
+which conclusion remains unsupported. For adoption, identify the source and mechanisms
+actually retained in the current implementation, local trial scope and expanded verification.
+Existing notes can carry this optional record.
 
 ## Content review
 

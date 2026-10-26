@@ -43,7 +43,7 @@ Define initialization, system preference and explicit overrides; establish theme
 
 ## Motion
 
-Name the event and purpose: entry, navigation, direct manipulation, local change or feedback. Choose timing, trajectory and easing from that purpose and interaction frequency. Inspect the actual progression in a mature candidate, the assembled design and its runtime. Static endpoints leave movement and intermediate relationships unresolved.
+Name the event and purpose: entry, navigation, manipulation, local change or feedback. Choose timing, trajectory and easing for its meaning and frequency. Inspect corresponding episodes in the reference, candidate demo, local trial and integrated use. Recheck after theme, container or state-adapter changes; endpoints leave the intervening movement unresolved.
 
 Preserve object identity through expansion, reversal and return. A flip needs coordinated faces, pivot, visibility and active hit regions; test reversal from intermediate positions. Acknowledgment can begin before data arrives, while pending presentation carries unresolved work. A completed animation does not establish business completion.
 
@@ -107,7 +107,7 @@ Anchors, links, copyable code, disclosures and media alternatives form a documen
 
 ## Preserve behavior across resource boundaries
 
-Assign focus, selection, scrolling, portals and request state clear owners when composing resources. Retain semantic contracts while adapting appearance. A positioning engine may need a separate semantic control; an animation layer follows application-supplied intent and outcome.
+Assign focus, selection, scrolling, portals and request state clear owners. Prefer the source's supported configuration/composition; preserve its effective state and motion mechanisms. Trial consequential changes under actual content and adapters. A positioning engine needs the relevant semantic control; animation follows application intent and outcome.
 
 Coordinate listeners, engines and cleanup. Exercise combined controls with keyboard/touch, re-entry, reversal, delayed results, real text, themes, growth and reduced motion. Judge cumulative attention and runtime cost.
 

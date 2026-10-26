@@ -20,8 +20,9 @@ source and affected scope. A preview option selection records only its stated sc
 
 Concrete mature page/system/block candidates, source/demo/revision, actual observed
 states, meaningful episodes and evidence. Explain the selected level, valuable design relationships
-inherited together, adaptation boundaries and meaningful alternatives. State what
-is direct code reuse, configuration, composition, design transfer or original work.
+inherited together, local trial and meaningful alternatives. Identify the implementation actually
+adopted and the mechanisms preserved. Classify code reuse, configuration, composition,
+design transfer and original work accurately; give the evidenced gap for custom common UI.
 
 Keep the design reference and implementation resource identifiable. Record the
 research question, useful clue/action and conclusion: observed phenomenon,
@@ -45,15 +46,17 @@ Shared IDs can serve multiple pages. For native, authored or retained work,
 identify the actual source and fit rationale. Link the exact source and demo when
 external work is selected. Use an existing equivalent record instead of duplicating it.
 
-Start candidates before substantial implementation. After rendering, reconcile
-selected, implemented, inspected and owner-approved states. Describe actual
-observations and pending verification; detailed adoption notes may hold license,
-version, changes and maintenance ownership.
+Start candidates while direction is open. Reconcile studied, compared, trialed,
+actually adopted and verified status with real code/assets and observed conditions.
+Owner approval remains separate. A consequential trial uses current content, type,
+themes and states before wider integration. Detailed notes may hold rights, versions,
+modified mechanisms and maintenance ownership; reuse is assessed by the responsibilities carried.
 
 Link important choices to the visible relationship and its expected perceptual
 effect in this product. Retain representative viewed frames or time ranges with
-their conditions. Inspect the original resource, assembled result and delivered
-runtime at their own boundaries; new evidence can reopen the choice.
+their conditions. Inspect the reference, original resource demo, local trial and
+integrated result separately; new evidence can reopen the choice. Retain quality
+gaps, their responsible layer and any explicit decision changing the target or scope.
 
 ## Review and continuation
 

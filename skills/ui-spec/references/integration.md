@@ -82,9 +82,9 @@ A precise handover explains what can be adjusted, where the authoritative conten
 
 ## Carry adopted resources through the real boundary
 
-Reconcile each consequential external item with its exact source, version/variant, local adaptation and ownership. Reuse approved resources while their conditions hold. Check actual dependency/CSS impact, SSR or hydration where relevant, lifecycle cleanup, content growth and the data adapter. Source copies retain local maintenance responsibility; package updates follow their version and compatibility contracts.
+Reconcile each consequential adopted item with its exact source, version/variant, local trial, preserved mechanisms, modifications and ownership. Retain proven resources while conditions hold; replace fixture adapters without rebuilding their effective UI. Check actual dependency/CSS impact, SSR or hydration where relevant, cleanup, content growth and real data states. Source copies retain local maintenance responsibility; package updates follow their compatibility contracts.
 
-Map demo callbacks and sample data to real application intent and trusted outcomes. Protected prices, permissions, entitlements and workflow decisions remain with their authoritative owners. Preserve the selected visual mechanism while real loading, denied actions and failures become meaningful states. Validate the combination at representative scale as well as each item independently.
+Map demo callbacks and sample data to real intent and trusted outcomes. Protected prices, permissions, entitlements and workflow decisions remain with their authorities. Recheck the affected visual/state relationships under real loading, denial and failure. A substantial rewrite of the original layout, state or motion mechanism needs validation of that new responsibility. Validate components and the integrated journey separately; diagnose a quality gap at its source rather than silently changing the accepted target.
 
 Keep license notices, asset permission and reproducible configuration with the resulting source. Capture integration evidence in project records and propose reusable lessons through authorized maintenance. Final connection quality is the actual product's behavior and appearance, supported by its observed conditions.
 

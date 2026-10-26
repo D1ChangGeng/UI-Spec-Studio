@@ -100,3 +100,28 @@ recheck of all 12 affected section crops; the preceding full-image review and th
 final localized recheck retain their separate source identities. The
 [version review](../REVIEW-v1.8.0.md) records hashes, findings and limits. GitHub
 rendering of the published commit has its own CI evidence and visual readback.
+
+## Mature resource adoption in 1.9
+
+The foundation section connects target quality, adopted implementation, local
+trial, focused adaptation and integrated use. It states the default source of
+general UI and keeps actual adoption distinct from research. Native GitHub
+Markdown, installation placement, resource-guide links and existing artwork
+continue as the publication foundation. The shorter Chinese section heading
+preserves a clean narrow reading break.
+
+Local review on 2026-10-26 opened all 24 viewport/full-page images in the existing
+12-condition matrix, then all 12 original-size crops of the changed section.
+The long full-page images were viewed as overviews. Actual CJK glyphs, heading
+wrapping, emphasis, paragraph rhythm and source links were inspected without
+blocking findings. Initial captures with missing CJK fonts were superseded by
+the font-ready run. The renderer exercised native installation text, image
+selection/alternatives, disclosure and document overflow; the visual reviewer
+did not operate copy, links or horizontal code scrolling.
+
+The reviewed source SHA-256 values are
+`f55a4d923b0ce12e650cb4d9940dc96daeb31cb91a495d3b195489ee8cf7c59b`
+for English and
+`23ebc46acf6285a948a986e26c5ca96bcbc7ea225ea37e4bbe21f24e12839057`
+for Chinese. The [version review](../REVIEW-v1.9.0.md) separates these local
+observations from exact-source GitHub publication evidence.

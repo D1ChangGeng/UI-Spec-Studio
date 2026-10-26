@@ -72,11 +72,18 @@ connection rather than field count.
 
 ## Write from mature design foundations
 
-Express professional knowledge as guidance for investigating and applying concrete
-work. Name the useful reuse granularity and explain which connected decisions
-are inherited. Distinguish resource scope from adoption method. State how new
-observations can change the choice and how adaptation preserves the valuable
-relationships. Original work has a product-specific role and verification target.
+Express professional knowledge as guidance for investigating and adopting concrete
+work. Give suitable mature implementations priority for common UI responsibilities;
+explain the specific gap that calls for custom work. Name the useful reuse scope,
+actual implementation and connected decisions it preserves. Design inheritance
+and implementation adoption can have different sources and evidence.
+
+Connect target quality to the original demo, local trial and assembled result.
+Describe which mechanisms survive adaptation and what changes need renewed
+inspection. Focus records on consequential choices; dependency counts and code
+ratios cannot explain retained design value. Keep source access, permitted use,
+actual adoption and verified quality distinct. Write user-assistance requests
+around the missing object, action, states and decision they will support.
 
 ## Treat assets as actionable design material
 

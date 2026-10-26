@@ -11,7 +11,7 @@
 
 [English](README.md) · [使用指南](docs/GUIDE.md) · [Skill 源码](skills/ui-spec/SKILL.md) · [正式版本](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
 
-适用于**应用界面、README、文档、图表、演示文稿**等屏幕视觉作品的通用 [Agent Skill](https://agentskills.io/specification)。Agent 从产品意图出发，通过成熟参照、主动视觉探索与复用适配建立体验目标，再以真实运行验证结果。
+适用于**应用界面、README、文档、图表、演示文稿**等屏幕视觉作品的通用 [Agent Skill](https://agentskills.io/specification)。Agent 从产品意图出发，通过主动视觉探索、实际资源采用、针对性适配与运行验证，让成熟设计品质进入当前产品。
 
 ## 在项目中直接开始
 
@@ -35,15 +35,17 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付变体，并在实际界面中检查视觉、加载与降级状态。
 素材也可以反向决定构图与排版。[资产工程方法](docs/VISUAL-ASSETS.md) · [浏览器验收样例](examples/asset-review/README.md)
 
-## 以当前产品的目标体验组织设计
+## 让成熟实现承接产品品质
 
-**产品意图 → 研究问题 → 主动探索 → 设计关系 → 复用适配 → 实际体验验证。**
+**品质目标 → 成熟实现 → 局部试装 → 针对性适配 → 完整体验验证。**
 
-**Product UI Experience Alignment**（产品 UI 体验对齐）让设计围绕当前用户、任务、内容和运行条件展开。用户指定产品时，Agent 研究具体页面、流程或品质；没有指定时，主动寻找合适的产品范式、设计系统与实现。专业判断将实际观察转为可执行的选择。
+**Product UI Experience Alignment**（产品 UI 体验对齐）以符合当前用户、任务、内容和运行条件的设计成熟度为目标。指定产品提供探索入口，开放需求由 Agent 主动建立参照。研究提炼构图、排版、组件细节、状态反馈与连续交互中值得继承的关系，再形成当前产品自己的表达。
 
-复用连接**成熟设计决策的继承与工程实现的采用**。一个产品可以提供工作区关系的参照，另一个来源提供实现。Agent 从整页、设计系统、区块、组件或素材中选择**最高适当层级**，将定制集中于已经识别的差异。最初的研究问题先在可运行切片中复验，再用于审阅整体产品。
+**成熟实现是通用 UI 的默认来源。** 参照研究与资源选型持续配对，从整页、设计系统、布局、区块、组件、素材或动效中选择最高适当层级。重要候选先查看原始演示，再用项目的真实内容、字体、主题与状态局部试装，通过后扩大集成。配置、组合和二次开发保留使其值得采用的关系，定制解决已确认的具体缺口。
 
-[产品对齐与主动探索](docs/PRODUCT-ALIGNMENT.md) · [资源复用指南](docs/RESOURCE-REUSE.md) · [37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md)
+整合后的界面与连续任务再次接受审阅。采用记录说明实际由哪个实现承担目标品质、进行了哪些改动、验证到什么程度，并区分研究来源与最终采用。[产品对齐与主动探索](docs/PRODUCT-ALIGNMENT.md) · [资源复用指南](docs/RESOURCE-REUSE.md)
+
+[37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md)
 
 ## 沿着界面线索主动深入探索
 
@@ -108,7 +110,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.8.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.9.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

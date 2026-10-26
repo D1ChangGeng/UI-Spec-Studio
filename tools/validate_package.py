@@ -25,6 +25,7 @@ REQUIRED += ["docs/VISUAL-INSPECTION.md", "docs/REVIEW-v1.7.0.md",
              "examples/temporal-review/app.js", "examples/temporal-review/README.md",
              "tools/validate_temporal.py"]
 REQUIRED += ["docs/PRODUCT-ALIGNMENT.md", "docs/REVIEW-v1.8.0.md"]
+REQUIRED += ["docs/REVIEW-v1.9.0.md"]
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 
 

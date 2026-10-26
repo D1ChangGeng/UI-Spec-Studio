@@ -11,7 +11,7 @@
 
 [简体中文](README.zh-CN.md) · [Guide](docs/GUIDE.md) · [Skill source](skills/ui-spec/SKILL.md) · [Releases](https://github.com/D1ChangGeng/UI-Spec-Studio/releases)
 
-A portable [Agent Skill](https://agentskills.io/specification) for **product interfaces, READMEs, documentation, diagrams and other screen-based work**. It helps agents turn product intent into an experience grounded in mature references, active visual research and verified implementation.
+A portable [Agent Skill](https://agentskills.io/specification) for **product interfaces, READMEs, documentation, diagrams and other screen-based work**. It helps agents carry mature design quality into the current product through active visual research, actual resource adoption, focused adaptation and verified implementation.
 
 ## Start in your project
 
@@ -37,15 +37,17 @@ route, keep editable masters and delivery variants connected, then inspect the
 actual placement, loading and quiet states. A strong asset can reshape the whole
 composition. [Asset practice](docs/VISUAL-ASSETS.md) · [Browser review fixture](examples/asset-review/README.md)
 
-## Align the product experience
+## Carry reference quality into the implementation
 
-**Product intent → research questions → actual exploration → design relationships → reuse and adaptation → verified experience.**
+**Target quality → mature implementation → local trial → focused adaptation → verified product experience.**
 
-**Product UI Experience Alignment** gives the work its goal: an experience that fits the current users, tasks, content and operating conditions. When a user names a product, the agent identifies which page, flow or quality matters. When no reference is supplied, it finds useful product patterns, design systems and implementations. Professional judgment turns those observations into concrete choices.
+**Product UI Experience Alignment** gives the work its goal: design maturity suited to the current users, tasks, content and operating conditions. A named reference supplies an entry point; an open brief prompts the agent to find one. Research identifies useful relationships in composition, type, component detail, state feedback and continuous interaction, while the current product develops its own expression.
 
-Reuse connects **inherited design decisions and reusable implementation**. A product can guide a workspace relationship while another source supplies its implementation. Start at the **highest appropriate level**—page, design system, block, component or asset—and concentrate custom work on the identified differences. Revisit the original research questions in a running slice, then across the assembled product.
+**Mature implementations are the default source for general UI.** Pair reference research with resource selection at the highest appropriate level: page, design system, layout, block, component, asset or motion. Inspect consequential candidates in their original demos, then trial them with the project's content, fonts, theme and states before broad integration. Configure, compose and extend the selected implementation while preserving the relationships that earned adoption. Custom work addresses demonstrated gaps.
 
-[Product alignment and exploration](docs/PRODUCT-ALIGNMENT.md) · [Resource reuse guide](docs/RESOURCE-REUSE.md) · [37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md)
+Review the assembled interface and continuous task again. The adoption record shows which implementation actually carries the intended quality, what changed and what was verified; studying a source and using it are recorded separately. [Product alignment and exploration](docs/PRODUCT-ALIGNMENT.md) · [Resource reuse guide](docs/RESOURCE-REUSE.md)
+
+[37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md)
 
 ## Explore what the interface reveals
 
@@ -110,7 +112,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.8.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.9.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

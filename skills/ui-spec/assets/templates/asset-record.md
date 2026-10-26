@@ -18,7 +18,7 @@ third-party brand/subject conditions where relevant; generated-output provenance
 
 ## Production and editable master
 
-Direct adoption, adaptation, composition, technique transfer or original work;
+Direct adoption, adaptation or composition; concrete source gap or identity/art purpose for original work;
 available tool/version and selected route; original and working source location;
 meaningful editable parameters; dependencies, transforms and export steps.
 Distinguish an image result, vector outlines, a functioning font, editable scene
@@ -41,7 +41,8 @@ measured transfer/startup/rendering conditions; actual visual observations;
 known limits, approval and remaining work. Recheck affected placements when the
 master, export, runtime or target conditions change.
 
-Link actually viewed evidence for isolated craft and the composed placement. For
+Link the original source, local placement trial and integrated result to actually viewed evidence.
+Identify qualities preserved or changed by production and export. For
 dynamic material, retain the relevant cycle/transition and peak reach, brightness
 or loop seam with its event/time context. State the capture and viewing method;
 record a visual finding, its perceptual effect and any resulting production or

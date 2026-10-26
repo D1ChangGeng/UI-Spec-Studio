@@ -10,7 +10,9 @@ Keep its framework and working API. Inspect its routes, user tasks and current
 screens. Establish a coherent UI direction and implement the first useful slice.
 ```
 
-The agent reads all eight common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Product UI Experience Alignment establishes the intended experience from real tasks, content and operating conditions. If the user supplies a product name, the agent expands it into relevant pages, flows and qualities; otherwise it proactively finds mature patterns, design systems and implementation sources. Both entry points establish a primary model through actual exploration. When material alternatives remain open, optional shape presents a reasoned recommendation and a focused choice or representative preview. An implementation request with clear direction continues into a meaningful slice. The following collection/detail examples assume that this direction has been selected for the actual task.
+The agent reads all eight common references, then the code, project instructions and accepted decisions. It identifies how people start, what they work on and how the task continues. Product UI Experience Alignment establishes the intended experience from real tasks, content and operating conditions. A product name opens research into relevant pages, flows and qualities; an open brief prompts the agent to find mature patterns and implementations. Reference research and resource selection develop together.
+
+Mature implementations supply general UI by default, at the highest appropriate reuse level. The agent trials consequential choices with the project's content, fonts, theme and states before expanding integration. Optional shape resolves material open directions through a recommendation and focused choice or representative preview; clear direction supports direct progress. The following collection/detail examples assume that this direction has been selected for the actual task.
 
 Existing instructions, design documents and tests remain useful. The optional templates are a starting point when equivalent records are absent.
 
@@ -40,11 +42,11 @@ state. Reuse the approved shell and inspect both the narrow and wide views.
 
 The next round checks where the user starts, what the action means, which conditions apply, where the result appears, and how the user returns or retries. If two routes express the same task, the agent considers consolidating them. If the journey is broken by a missing control, repairing the control outranks drawing another page.
 
-New components are selected by actual role. An accessible popover primitive, an icon set and a decorative background can come from different sources while sharing the project's tokens and behavior.
+New components are selected by actual role and local trial. A coherent layout or functional block can carry several related decisions; supplementary components and assets fill specific needs. Configuration, composition and focused extension preserve the selected implementation's useful visual and interaction relationships. Custom work addresses demonstrated gaps.
 
 ## 4. Inspect rendered evidence
 
-A useful round report contains the working preview entry, scope, selected components when new, observed checks, captures and pending review items. The agent opens the captures and uses the interface.
+A useful round report contains the working preview entry, scope, actual resources adopted, relevant adaptations, observed checks and remaining conditions. The agent opens the captures and uses the interface. Reference qualities, the original resource demo, the local trial and the assembled result each receive the observation needed for their role. A source may have been researched without being adopted; a successful local trial still needs review in the full composition.
 
 Three independent comparisons matter:
 
@@ -112,14 +114,18 @@ what the agent is doing, rather than declaring uniform project maturity.
 
 ```text
 Continue with the next useful UI increment. Find strong existing implementations
-for its important visual and interaction needs, adapt the most suitable parts to
-the accepted direction, and verify the composed result.
+for its important visual and interaction needs, trial the most suitable choices
+with our content and states, and adapt them to the accepted direction. Preserve
+what makes them useful, then verify the composed result.
 ```
 
 The same behavior is part of ordinary `continue` requests. The agent can use the
 [resource map](../skills/ui-spec/references/resource-catalog.md), official indexes,
 exported configurations, actual demos/source and available tools. It chooses the
-reuse level and reports only consequential decisions with the working result.
+reuse level and reports consequential decisions with the working result. Packages,
+licensed source, exports and feasible implementation ports all provide adoption
+paths. Integration code connects them to the product. Research and trial time are
+judged by their contribution to final quality and avoided rework.
 
 For targeted inspection, the installed optional helper works from any directory:
 
@@ -132,6 +138,13 @@ Discovery leads retain their source and review date. Demo inspection and actual
 project checks are recorded separately. Existing approved resources remain useful
 while their conditions fit; a new requirement can justify a fresh comparison.
 See [the resource workflow](RESOURCE-REUSE.md) for examples and maintenance.
+
+If an important source needs normal account access, an official client or an
+authorized export, the agent first uses available evidence and then requests the
+specific material needed: source, action, state or interval, and the decision it
+will support. You may supply a recording or permitted resource package; the agent
+continues the inspection, comparison and adaptation. Unresolved quality gaps stay
+explicit, with their impact and feasible choices.
 
 ## Confirm a consequential direction
 
@@ -168,8 +181,8 @@ When adding or revising a page, establish the audience's next question and the f
 
 [Product alignment and active exploration](PRODUCT-ALIGNMENT.md) are part of ordinary design work. The agent turns uncertain product relationships into research questions, then follows useful clues: play a demo, scroll a region, change a tab, open and close a panel, or compare a variant. Inspect composition, states and relationships at the depth each decision needs. Routine members of a researched component family can inherit the established rule.
 
-Attribute evidence to its actual subject: hosting page, player, demonstrated product or edited content. Separate design references from implementation resources, and use the observed relationship to find an appropriate reusable foundation. Important choices show what was viewed, what it suggests for the current task and which part the implementation inherits.
+Attribute evidence to its actual subject: hosting page, player, demonstrated product or edited content. Pair design-reference questions with implementation candidates and use each to improve the other. Important choices show what was viewed, what it means for the current task and which actual implementation carries the relationship.
 
 For changing UI, follow the trigger, first feedback, progression and settled outcome. Extend the window for return, interruption, repetition, waiting or loop boundaries when useful. Choose live interaction, video and ordered frames by the question and host capabilities; distinguish capture, actual viewing, supported conclusions and approval.
 
-Build a runnable slice once the important choices have evidence and an adaptation path. Revisit the same questions with the product's real content, matching interaction stages and useful viewing conditions. Review the assembled product across its related views and states. Carry unresolved evidence gaps into the next relevant check. The [visual observation method](VISUAL-INSPECTION.md) supplies the inspection details.
+Use the local trial to resolve consequential resource fit before broad integration. Revisit the same questions with real content, matching interaction stages and useful viewing conditions. When adaptations change type, material, space or state behavior, recheck the affected relationship. Review the assembled product across its related views and continuous use. A mismatch can reopen resource selection, adaptation, content structure or the experience target. Carry unresolved evidence gaps into the next relevant check. The [visual observation method](VISUAL-INSPECTION.md) supplies the inspection details.

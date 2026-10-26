@@ -1,0 +1,1877 @@
+{
+  "recorded_at_utc": "2026-10-25T22:17:44.152903+00:00",
+  "scope": "Two ordinary fresh-context local applications of frozen ui-spec methods, plus separately attributed maintainer research and independent image reviews. Not a controlled version comparison, all-host benchmark, production acceptance, or complete media/source archive.",
+  "skill_method_input_sha256": "51c8b046da6353c4f676c53cae450e44b1ba45ba7aeb8ce3533c24e9c684b042",
+  "method_input_files": {
+    "files": {
+      "SKILL.md": "0e7eaad102356b51e1dbd539252306ed116c395c02f2141bbd3a2b6bc209341a",
+      "references/analysis.md": "222d3cd9ca0c487f67bb461609b6a2f1cfbe8320097bfbc2c7729aab833901ad",
+      "references/component-sourcing.md": "2686ca7ce4caef35258e1fd7ad15ef453bd1125de795f4504d030c54cd77f476",
+      "references/content-design.md": "1e8739b9646e07e24fd558009da89272d0623c927306a5ff6868b9b5b893afec",
+      "references/integration.md": "3c390ca986a3655d991d8daa6cee5639591a661972a35efd813000931b7e15c9",
+      "references/interaction-and-variants.md": "ef63e5afe43a036887f9d30bae5a1f9ab41061daf4bfa54b4446ba0b4061f477",
+      "references/principles.md": "587502409c2ea079ecdef6489df99e85023a9a6c88ba84f156dfc49f82002af1",
+      "references/verification.md": "f38937a6013a4bdaa7308f078b4cc72ccbde1f50861f23eff20a51bd7bacab7a",
+      "references/visual-assets.md": "2cfaec93b1328b5a9e2bb770cd0e81493830099af53b650988c40a9c8c9f10c2",
+      "references/workflow.md": "bc3fa9a14afaf29fcd787d9679e5d809d0a87ae8511f28c3c1d94fd452618cc4"
+    },
+    "aggregate_sha256": "51c8b046da6353c4f676c53cae450e44b1ba45ba7aeb8ce3533c24e9c684b042"
+  },
+  "application_integrity": "Independent contexts received ordinary product tasks, frozen methods and neutral environment paths; no maintainer diagnoses, expected libraries, selection answers or sibling outputs. Maintainer follow-up observations are not attributed to first-pass research.",
+  "question_workspace": {
+    "task_summary": "Build a local research Q&A prototype for long Chinese/English questions, local material editing/removal and clearly marked example answers; desktop/mobile; no real AI, account or upload service.",
+    "actual_adoption": [
+      {
+        "resource": "Mantine Core/Hooks 9.7.4",
+        "roles": "AppShell offsets/breakpoints, Textarea autosize, Modal/Drawer portals/focus/dismissal, Menu/Tabs/Checkbox/Button states",
+        "locations": [
+          "src/App.tsx",
+          "src/components/Composer.tsx",
+          "src/components/Materials.tsx",
+          "src/theme.ts"
+        ],
+        "adaptation": "Public props, shared theme and composition; app owns research content, business states and region composition."
+      },
+      {
+        "resource": "Mantine Dropzone 9.7.4",
+        "roles": "File selection, drop/filter/loading and keyboard entry",
+        "locations": [
+          "src/components/Materials.tsx"
+        ],
+        "adaptation": "Local parsing and partial failure feedback; public inputProps prevent a duplicate inner interactive target."
+      },
+      {
+        "resource": "Tabler Icons React 3.49.0",
+        "roles": "Coordinated icon assets, sized/named within current controls"
+      },
+      {
+        "resource": "idb-keyval 6.3.0",
+        "roles": "Actual local IndexedDB key/value transactions; app queues changes and maps truthful feedback"
+      },
+      {
+        "resource": "pdfjs-dist 6.4.299",
+        "roles": "Actual local PDF text parsing/worker; app owns limits and errors"
+      },
+      {
+        "resource": "Radix Themes",
+        "status": "Documentation comparison only; not trialed or adopted"
+      }
+    ],
+    "source_hashes": {
+      "index.html": "d7fce8d10ed0ae2a93a6a27b81c7c55b080e3ef36562b4e04255fd8a9f5a55d0",
+      "package-lock.json": "d660b43bc70fb5e1186f7760350da2a641dcb55b30bc51630324be745de2a66b",
+      "package.json": "83343cb30c661d0a77a4aead4717fcbeb9fe8456321a3b8721ce4a7e9bb56dd9",
+      "playwright.config.ts": "243cc893a7ef9b33f050e44fb055f90ceaa7dd63758be047263cc7d2b5020281",
+      "public/favicon.svg": "dc46ed62433916a6ef9c710ea3d6467ef7144261e1aca814abf2cfe5679d4964",
+      "scripts/capture-initial.mjs": "78b141958c9a946daca0ddf34638d046d7efda6d812cec500d1283421000c04d",
+      "scripts/diagnose.mjs": "3f58ba9814050c74f13021a4863cebac21d8d2b65071a9af7e181434dfff177f",
+      "scripts/make-fixtures.mjs": "f06074b16c8c0e8b5b94309ec09aa967040ed4d8e0ade40c4564400198df90a2",
+      "scripts/research.mjs": "8dcabc350357f8df5c10c566e78d9a49df8c805d0c18c75b3b07b56dcb01a5ca",
+      "scripts/review-evidence.mjs": "dc8cbadbef2af11f5c144c002c0b7a5ebdd8256ab7a246b4dfeb977579043f94",
+      "scripts/smoke-production.mjs": "8c94e37d28f60e9d5970648186bb5befe693429ab420c9982d5a9e9683ef1e28",
+      "scripts/trial.mjs": "38c5c2f572baa1a3d7cea129118e1c04092b49125b3a9435991ab6221dfc4e06",
+      "src/App.tsx": "4d6156d6c5a4851e62176a47129ff09c46dc1d7f8e73a394d56fa1969cd20f8c",
+      "src/Trial.tsx": "3db3f39168f5c4dc6474d33879f9beb3f956b7cb6a22670aa8018d6d2da73593",
+      "src/components/Answer.tsx": "d350653662c7efee7f6c0bbe82004b61aff534f010c9d00ecd66fb21f981bbe9",
+      "src/components/Composer.tsx": "d4b85550d1b1afd9e1fee2ad95d9b43fc87148e3d4c6314e1cbcfa264a0395bc",
+      "src/components/Materials.tsx": "c37eaf68cbe947d66924530b60efdf99e7a90970cc920c95be34709dc5dc51de",
+      "src/import-material.ts": "14709da4e05aac7297d186fb58eda3d1cfdde7a40ce176048b08638151b8dd9e",
+      "src/main.tsx": "ced43c48857c4f32f9e3e4358cc03421339d1f4e2dae71280d7ed35831ed53c1",
+      "src/model.ts": "6ceac2077a21bd4c398df91fbb6ec2d70096847cefbbe8262b44e48c52167d18",
+      "src/storage.ts": "8f060344f734937e6d65906e518f0cdcbb64aaabd10c25d008e5b90dbe8ae16c",
+      "src/styles.css": "e3b5d9ced37bd61d3339a05a30e07aef8c1b86b23cb0a9d99d5a8986a7fe5198",
+      "src/theme.ts": "fed4bc6c0f505eac66090b3f4f1c62560b442c343ba00dd934902413eb2f4faa",
+      "tests/core.spec.ts": "53308ef372a909e9830155165b36151021147fe3d7b8cf7b2e5ad74981ad038c",
+      "tsconfig.json": "49c3322c9196cb5b5a487b5ef90c79a7ebddc775f149a847b484d29be478c831",
+      "vite.config.ts": "824b79b1f2ddb1ddc4684238701a871d25e38b6142f5f4677be3b382a7c35a03"
+    },
+    "source_excerpts": [
+      {
+        "file": "src/App.tsx",
+        "sha256": "4d6156d6c5a4851e62176a47129ff09c46dc1d7f8e73a394d56fa1969cd20f8c",
+        "scope": "Selected actual integration lines, not a complete source archive",
+        "lines": [
+          {
+            "line": 2,
+            "text": "import { ActionIcon, Alert, AppShell, Badge, Button, Drawer, Group, Modal, Text, Textarea, Tooltip } from '@mantine/core';"
+          },
+          {
+            "line": 3,
+            "text": "import { useMediaQuery, useReducedMotion } from '@mantine/hooks';"
+          },
+          {
+            "line": 129,
+            "text": "    <AppShell header={{ height: 64 }} navbar={{ width: 280, breakpoint: 'md', collapsed: { mobile: true } }} transitionDuration={reducedMotion ? 0 : 160} className=\"research-shell\">"
+          },
+          {
+            "line": 139,
+            "text": "      <AppShell.Navbar className=\"desktop-sidebar\" component=\"aside\" aria-label=\"本地资料侧栏\"><div ref={sidebarRef} className=\"sidebar-inner\"><MaterialsPanel {...panelProps} /><div className=\"sidebar-bottom-note\"><IconLeaf size={16} stroke={1.5} /><span>留一点空间，给新的想法。</span></div></div></AppShell.Navbar>"
+          },
+          {
+            "line": 156,
+            "text": "    <Drawer opened={drawerOpen} onClose={() => setDrawerOpen(false)} title={<span className=\"modal-title\">研究资料</span>} size={360} padding=\"lg\" closeButtonProps={{ 'aria-label': '关闭资料面板' }} transitionProps={{ duration: reducedMotion ? 0 : 180 }}><MaterialsPanel {...panelProps} /></Drawer>"
+          }
+        ]
+      },
+      {
+        "file": "src/components/Composer.tsx",
+        "sha256": "d4b85550d1b1afd9e1fee2ad95d9b43fc87148e3d4c6314e1cbcfa264a0395bc",
+        "scope": "Selected actual integration lines, not a complete source archive",
+        "lines": [
+          {
+            "line": 2,
+            "text": "import { ActionIcon, Button, Paper, Textarea, Tooltip } from '@mantine/core';"
+          },
+          {
+            "line": 23,
+            "text": "    <Paper component=\"form\" withBorder className=\"composer\" onSubmit={event => { event.preventDefault(); onSubmit(); }}>"
+          },
+          {
+            "line": 25,
+            "text": "      <Textarea id=\"question-draft\" ref={ref} name=\"question\" variant=\"unstyled\" className=\"question-input\" value={draft} onChange={event => onChange(event.currentTarget.value)} autosize minRows={hasTurns ? 2 : 4} maxRows={hasTurns ? 5 : 9} placeholder={hasTurns ? '接着问一个问题，或换一个角度继续探索……' : '写下想弄清楚的问题。可以补充背景、关注点，或希望比较的观点……'} aria-describedby={`composer-help${over ? ' question-error' : ''}`} aria-invalid={over || undefined} onKeyDown={event => {"
+          }
+        ]
+      },
+      {
+        "file": "src/components/Materials.tsx",
+        "sha256": "c37eaf68cbe947d66924530b60efdf99e7a90970cc920c95be34709dc5dc51de",
+        "scope": "Selected actual integration lines, not a complete source archive",
+        "lines": [
+          {
+            "line": 3,
+            "text": "import { Dropzone } from '@mantine/dropzone';"
+          },
+          {
+            "line": 108,
+            "text": "        <Dropzone onDrop={files => { void importFiles(files); }} onReject={files => setErrors(files.map(file => `${file.file.name}：${file.errors.some(error => error.code === 'file-too-large') ? '文件超过 5 MB。' : '文件格式不支持，或数量超出剩余位置。'}`))} accept={ACCEPTED_FILES} maxSize={MAX_FILE_BYTES} maxFiles={Math.max(remaining, 1)} disabled={remaining === 0} loading={!!progress} role=\"button\" aria-label=\"选择本地资料文件\" inputProps={{ style: { display: 'none' }, 'aria-label': '本地资料文件' }} className=\"file-dropzone\">"
+          }
+        ]
+      }
+    ],
+    "original_demo_gap": {
+      "first_pass": [
+        {
+          "name": "mantine-textarea",
+          "url": "https://mantine.dev/core/textarea/",
+          "status": "unavailable",
+          "error": "Error: page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://mantine.dev/core/textarea/\nCall log:\n\u001b[2m  - navigating to \"https://mantine.dev/core/textarea/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        },
+        {
+          "name": "mantine-modal",
+          "url": "https://mantine.dev/core/modal/",
+          "status": "unavailable",
+          "error": "Error: page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://mantine.dev/core/modal/\nCall log:\n\u001b[2m  - navigating to \"https://mantine.dev/core/modal/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        },
+        {
+          "name": "mantine-appshell",
+          "url": "https://mantine.dev/app-shell/",
+          "status": "unavailable",
+          "error": "Error: page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://mantine.dev/app-shell/\nCall log:\n\u001b[2m  - navigating to \"https://mantine.dev/app-shell/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        }
+      ],
+      "boundary": "Original demos not visually observed by independent executor after certificate error; no bypass. Maintainer normal-browser observations are separate."
+    },
+    "local_trial": {
+      "run": {
+        "at": "2026-10-25T21:52:00.872Z",
+        "browser": "143.0.7499.0",
+        "viewport": [
+          1440,
+          960,
+          390,
+          844
+        ],
+        "focusReturned": true,
+        "scope": "pre-integration Mantine shell, mixed-language textarea, modal, drawer; captures pending visual inspection"
+      },
+      "actually_viewed_by_executor": [
+        "desktop.png",
+        "mobile.png",
+        "editor.png",
+        "mobile-drawer.png"
+      ],
+      "note": "The run record was written at capture time with inspection pending; executor subsequently opened the four images, as recorded in DESIGN.md."
+    },
+    "browser_test_stats": {
+      "startTime": "2026-10-25T22:11:49.604Z",
+      "duration": 32251.214,
+      "expected": 7,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "browser_test_groups": [
+      {
+        "name": "local materials → edit → question → follow-up → reload → remove/undo → clear",
+        "ok": true,
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "invalid files, partial success, duplicates, empty notes, and capacity limits",
+        "ok": true,
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "long bilingual drafts, IME-safe shortcut, character limit, and English answer",
+        "ok": true,
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "mobile drawer, dirty editing recovery, narrow reflow, and short viewport reading",
+        "ok": true,
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "storage write failure is visible and retry persists the same draft",
+        "ok": true,
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "keyboard focus, automated accessibility, and reduced motion",
+        "ok": true,
+        "results": [
+          "passed"
+        ]
+      },
+      {
+        "name": "ordered natural-time interaction evidence with actual capture brackets",
+        "ok": true,
+        "results": [
+          "passed"
+        ]
+      }
+    ],
+    "local_runtime_boundary": {
+      "externalRequests": [],
+      "nonGetRequests": [],
+      "runtimeErrors": [],
+      "exercised": "text and PDF import, editing, two turns, clipboard, download, reload, undo, reset",
+      "at": "2026-10-25T22:12:01.754Z"
+    },
+    "production_runtime": {
+      "at": "2026-10-25T22:15:03.181Z",
+      "browser": "143.0.7499.0",
+      "base": "http://127.0.0.1:5178",
+      "extractedPdf": "—— 第 1 页 ——\nTest fixture: continuous paths, shade, and places to rest.",
+      "unexpectedExternalRequests": [],
+      "runtimeErrors": [],
+      "requests": [
+        {
+          "url": "http://127.0.0.1:5178/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:5178/assets/index-CBwXSGWA.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:5178/assets/index-BUriJoo6.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:5178/assets/pdf-BHx8b9rl.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:5178/assets/pdf.worker.min--Ao2iAXA.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:5178/assets/pdf.worker.min-CjEcRF4W.mjs",
+          "method": "GET"
+        }
+      ],
+      "result": "pass",
+      "scope": "Production build, local PDF lazy chunk/worker, preset answer, all external requests blocked by the test"
+    },
+    "accessibility": {
+      "states": {
+        "desktop-empty": {
+          "violation_count": 0,
+          "incomplete": []
+        },
+        "import-dialog": {
+          "violation_count": 0,
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "nodes": [
+                {
+                  "target": [
+                    "#mantine-af6m2ity1-body > .m_4081bf90.mantine-Group-root > .m_b6d8b162.mantine-Text-root[data-size=\"xs\"]"
+                  ],
+                  "html": "<p class=\"mantine-focus-auto m_b6d8b162 mantine-Text-root\" data-size=\"xs\" style=\"--text-fz: var(--mantine-font-size-xs); --text-lh: var(--mantine-line-height-xs); color: var(--mantine-color-dimmed);\">还可加入 10 份资料</p>",
+                  "summary": "Fix any of the following:\n  Element's background color could not be determined because it partially overlaps other elements"
+                }
+              ]
+            }
+          ]
+        },
+        "desktop-example": {
+          "violation_count": 0,
+          "incomplete": []
+        },
+        "mobile-drawer-reduced-motion": {
+          "violation_count": 0,
+          "incomplete": []
+        }
+      },
+      "manual_followup": {
+        "at": "2026-10-25T22:10:10.524Z",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "question": "Axe could not determine the remaining-capacity text background; examine settled state.",
+        "textBox": {
+          "x": 442,
+          "y": 532.6875,
+          "width": 102.734375,
+          "height": 16.796875
+        },
+        "buttonBox": {
+          "x": 932,
+          "y": 523.09375,
+          "width": 66,
+          "height": 36
+        },
+        "color": "rgb(101, 113, 100)",
+        "background": "rgb(255, 255, 255)",
+        "contrastRatio": 5.122686862848738,
+        "overlapArea": 0,
+        "note": "Geometry and computed color support the separately viewed screenshot. This resolves one automated incomplete result, not a WCAG certification."
+      },
+      "scope": "Selected automated rules and controls; not a complete WCAG or assistive-technology certification."
+    },
+    "repairs": [
+      "Shared secondary-text colors adjusted after actual contrast findings; settled states rechecked.",
+      "Duplicate file input interaction target addressed through public inputProps and a real Enter-to-filechooser check."
+    ],
+    "temporal": {
+      "timeline": {
+        "browser": "143.0.7499.0",
+        "viewport": {
+          "width": 1440,
+          "height": 960
+        },
+        "deviceScaleFactor": 1,
+        "zoom": 1,
+        "reducedMotion": false,
+        "actionStart": 1792966339736,
+        "clock": "Node Date.now capture-time brackets; browser natural-time animation; screenshot overhead included",
+        "note": "Ordered stills support observed progression, not a measured frame-rate or a video smoothness claim.",
+        "frames": [
+          {
+            "name": "01-before-import",
+            "captureStartMs": 1792966339669,
+            "captureEndMs": 1792966339729,
+            "activeElement": {
+              "tag": "BODY",
+              "name": null
+            }
+          },
+          {
+            "name": "02-modal-first-frame",
+            "captureStartMs": 1792966339847,
+            "captureEndMs": 1792966339919,
+            "activeElement": {
+              "tag": "BUTTON",
+              "name": "关闭添加资料"
+            }
+          },
+          {
+            "name": "03-modal-progress",
+            "captureStartMs": 1792966339998,
+            "captureEndMs": 1792966340151,
+            "activeElement": {
+              "tag": "BUTTON",
+              "name": "关闭添加资料"
+            }
+          },
+          {
+            "name": "04-modal-settled",
+            "captureStartMs": 1792966340340,
+            "captureEndMs": 1792966340475,
+            "activeElement": {
+              "tag": "BUTTON",
+              "name": "关闭添加资料"
+            }
+          },
+          {
+            "name": "05-modal-closing",
+            "captureStartMs": 1792966340533,
+            "captureEndMs": 1792966340709,
+            "activeElement": {
+              "tag": "BUTTON",
+              "name": null
+            }
+          },
+          {
+            "name": "06-focus-return",
+            "captureStartMs": 1792966340799,
+            "captureEndMs": 1792966340853,
+            "activeElement": {
+              "tag": "BUTTON",
+              "name": null
+            }
+          },
+          {
+            "name": "07-answer-entry",
+            "captureStartMs": 1792966341014,
+            "captureEndMs": 1792966341092,
+            "activeElement": {
+              "tag": "BODY",
+              "name": null
+            }
+          },
+          {
+            "name": "08-answer-settled",
+            "captureStartMs": 1792966341352,
+            "captureEndMs": 1792966341414,
+            "activeElement": {
+              "tag": "BODY",
+              "name": null
+            }
+          },
+          {
+            "name": "09-reading-bottom",
+            "captureStartMs": 1792966341455,
+            "captureEndMs": 1792966341517,
+            "activeElement": {
+              "tag": "BODY",
+              "name": null
+            }
+          },
+          {
+            "name": "10-followup-draft",
+            "captureStartMs": 1792966341672,
+            "captureEndMs": 1792966341727,
+            "activeElement": {
+              "tag": "TEXTAREA",
+              "name": null
+            }
+          }
+        ]
+      },
+      "viewed_by_executor": "Full reduced contact sheet plus original-size settled modal and reading-bottom captures",
+      "limit": "Ordered stills with acquisition overhead; no inspected video or smoothness/frame-rate claim."
+    },
+    "independent_visual_review": {
+      "reviewer": "/root/public_documents",
+      "completed_at_utc": "2026-10-25T22:16:47.037720+00:00",
+      "scope": "Limited read-only visual inspection of the requested application captures and one available English capture. No application/repository changes, live interactions, or author contact.",
+      "snapshot_reason": "Frozen byte copies preserve the exact image identities actually viewed. Original evidence was not changed.",
+      "viewed_files": [
+        {
+          "source": "desktop-empty.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "desktop-empty.png",
+          "sha256": "898c9c67f68211f00b408a9fbf591b3d9a69aaab934f1676960eb971170e8ade",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Initial composition, hierarchy, local-materials panel, primary question input, example labels and suggested starts.",
+          "source_sha256_at_report": "898c9c67f68211f00b408a9fbf591b3d9a69aaab934f1676960eb971170e8ade",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "desktop-answer.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "desktop-answer.png",
+          "sha256": "cecafa33787ab5adc83c399a0ce933350b8830fab613e1026512b784a36d4c32",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Question/response hierarchy, example disclosure, selected materials and persistent follow-up composer.",
+          "source_sha256_at_report": "cecafa33787ab5adc83c399a0ce933350b8830fab613e1026512b784a36d4c32",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "desktop-editor.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "desktop-editor.png",
+          "sha256": "e7990cda828692ed63391935be80e230048d484df42b99982c2b8104f6a2ad18",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Material editing dialog, text fields, sample badge, description, close and save controls.",
+          "source_sha256_at_report": "e7990cda828692ed63391935be80e230048d484df42b99982c2b8104f6a2ad18",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "mobile-empty.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "mobile-empty.png",
+          "sha256": "2a4b213cedf2ba02d4deb7f870e136f0305fcb67c1a3d134d708ca504050b6c5",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Narrow initial hierarchy, Chinese wrapping, question input, example actions and footer.",
+          "source_sha256_at_report": "2a4b213cedf2ba02d4deb7f870e136f0305fcb67c1a3d134d708ca504050b6c5",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "mobile-answer.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "mobile-answer.png",
+          "sha256": "45368b3a861c98b53b73e9ab0474d3c64005e4a51ce0ee2f5138e6d31b1f480c",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Narrow response hierarchy, example notice, readable content area and fixed follow-up composer.",
+          "source_sha256_at_report": "45368b3a861c98b53b73e9ab0474d3c64005e4a51ce0ee2f5138e6d31b1f480c",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "mobile-materials.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "mobile-materials.png",
+          "sha256": "cd42b3d63ae414640ce74f88483706eda13cba65cae909b02dc6e00a61061c5d",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Materials drawer, selected rows, titles, actions, close control and local-storage wording.",
+          "source_sha256_at_report": "cd42b3d63ae414640ce74f88483706eda13cba65cae909b02dc6e00a61061c5d",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "import-errors.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "import-errors.png",
+          "sha256": "856c2889c2057151d9058a95716709ec1801834befbcc6bf9c4c97f7d7a83ca5",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Partial-success and per-file error groups, recovery guidance, constraints, modal closing/completion actions.",
+          "source_sha256_at_report": "856c2889c2057151d9058a95716709ec1801834befbcc6bf9c4c97f7d7a83ca5",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "storage-failure.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "storage-failure.png",
+          "sha256": "ac2a4c17d1ed35918a1361485aa1b5aac691ae58b4450874abd447b50dbbbffe",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Unsaved status, warning, retry/export actions and retained visible input.",
+          "source_sha256_at_report": "ac2a4c17d1ed35918a1361485aa1b5aac691ae58b4450874abd447b50dbbbffe",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "reflow-320x740.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "reflow-320x740.png",
+          "sha256": "094455ca687e6c3ca96bc9d6ae5e3f4f558391fde541ae3ac958f8f0c832a3ec",
+          "dimensions": [
+            320,
+            740
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "320px bottom response state, attachment, copy/follow-up suggestions and composer fit.",
+          "source_sha256_at_report": "094455ca687e6c3ca96bc9d6ae5e3f4f558391fde541ae3ac958f8f0c832a3ec",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "reflow-844x390.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "reflow-844x390.png",
+          "sha256": "e29593a92c3d24a80dc5f7cfcd52a21cc09110030c53890832e56e5379ffa44a",
+          "dimensions": [
+            844,
+            390
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Short landscape composition, follow-up suggestions, input and visible actions.",
+          "source_sha256_at_report": "e29593a92c3d24a80dc5f7cfcd52a21cc09110030c53890832e56e5379ffa44a",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "mobile-text-spacing.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "mobile-text-spacing.png",
+          "sha256": "2658803a2040ad9bb6b33655d80ab6f7f14a22363b589dc4f255d4856eaa1d25",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Expanded text spacing: Chinese wrapping, hierarchy, content bounds and composer visibility.",
+          "source_sha256_at_report": "2658803a2040ad9bb6b33655d80ab6f7f14a22363b589dc4f255d4856eaa1d25",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "import-stable-manual-review.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "import-stable-manual-review.png",
+          "sha256": "d88a75d4d206beea7bc94e81571744b0d1012ebb647fba8b038da5a7fe4e5dc2",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Settled import dialog title, tabs, drop target, supported formats, constraints, help and completion.",
+          "source_sha256_at_report": "d88a75d4d206beea7bc94e81571744b0d1012ebb647fba8b038da5a7fe4e5dc2",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "contact-sheet.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "contact-sheet.png",
+          "sha256": "c5ed104a7bf2eccd421b116b92601939fcc8184b6a18b6e1e32e0fad98813318",
+          "dimensions": [
+            1280,
+            2275
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view; embedded contact-sheet panels remain thumbnails",
+          "scope": "Ordered miniature states only: before/open/progress/settled/closing/return and answer/reading/follow-up. No font-size or smoothness conclusion.",
+          "source_sha256_at_report": "c5ed104a7bf2eccd421b116b92601939fcc8184b6a18b6e1e32e0fad98813318",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "04-modal-settled.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "04-modal-settled.png",
+          "sha256": "d88a75d4d206beea7bc94e81571744b0d1012ebb647fba8b038da5a7fe4e5dc2",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Full-resolution settled import state corresponding to the contact-sheet miniature.",
+          "source_sha256_at_report": "d88a75d4d206beea7bc94e81571744b0d1012ebb647fba8b038da5a7fe4e5dc2",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "09-reading-bottom.png",
+          "requested": true,
+          "missing": false,
+          "viewed_snapshot": "09-reading-bottom.png",
+          "sha256": "9ef9c9963d5aa79bbdb8a20c2ae64ae933204dd2e48e38a1f84ac7a1384b2f30",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Full-resolution lower reading state: comparison table, next question, attachments, copy/suggestions and composer.",
+          "source_sha256_at_report": "9ef9c9963d5aa79bbdb8a20c2ae64ae933204dd2e48e38a1f84ac7a1384b2f30",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "english-answer.png",
+          "requested": false,
+          "missing": false,
+          "viewed_snapshot": "english-answer.png",
+          "sha256": "85a206c12866b2c59bf6f9c45487222209a5bb87d5f8e207cc5bc8348cdba5db",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Supplementary English question and fixed example response; Latin typography and truthful example explanation.",
+          "source_sha256_at_report": "85a206c12866b2c59bf6f9c45487222209a5bb87d5f8e207cc5bc8348cdba5db",
+          "source_unchanged_at_report": true
+        }
+      ],
+      "summary": {
+        "requested_files": 15,
+        "requested_missing": 0,
+        "requested_files_actually_viewed": 15,
+        "supplementary_files_actually_viewed": 1,
+        "total_files_actually_viewed": 16,
+        "unique_image_hashes": 15,
+        "blocking_findings": 0,
+        "nonblocking_findings": 1,
+        "source_images_changed_after_snapshot": 0,
+        "conclusion": "No blocking visual defect found in the inspected image identities and states."
+      },
+      "findings": [
+        {
+          "id": "QVR-01",
+          "severity": "nonblocking",
+          "evidence": [
+            "screens/mobile-text-spacing.png"
+          ],
+          "observation": "Under the displayed increased-text-spacing condition, the long Chinese question wraps its final 题。 onto a separate line. The complete question remains visible and readable; it does not collide with the answer or composer.",
+          "impact": "A minor typographic orphan in this stress condition, with no visible loss of content or blocked action.",
+          "recommendation": "No release block from this observation; preserve user-controlled text reflow and consider the wording/width if this wrapping appears in an intended default presentation."
+        }
+      ],
+      "observed_scope_summary": [
+        "Desktop and mobile captures retain distinct materials, question, response and follow-up regions. At the shown 320px and 844x390 conditions, key input and follow-up actions remain visible without a demonstrated horizontal overflow.",
+        "Chinese and the supplemental English content are visibly rendered. The long answer continues behind a bounded reading region above the fixed composer; full-resolution lower-reading evidence shows the table, attachments and follow-up options above it.",
+        "The materials drawer and import/edit dialogs provide visibly available close/completion controls in the recorded states. Partial import success is separate from file-specific failures; the storage warning retains visible input and recovery controls.",
+        "Example limitations are stated in the answer, badges and composer areas. The English response explicitly says it is a fixed example and not an analysis of the entered question or local files.",
+        "The contact sheet was used only to identify ordered visual states. Its 04 and 09 states were separately opened as full-resolution images; contact-sheet miniatures were not used as typography, smoothness or frame-delivery proof."
+      ],
+      "limits": [
+        "Static images establish the visible states only. No keyboard/touch/focus, actual scrolling, modal dismissal, file import, local storage, export or copy behavior was executed in this review.",
+        "No video was played and no dense continuous sequence was inspected. Contact-sheet order/timestamps do not establish motion smoothness, absence of flicker or actual frame delivery.",
+        "The settled modal image and import-stable-manual-review image have the same SHA256. Both requested files were opened but they represent one distinct captured pixel result.",
+        "Only an English content response was inspected; this is not a claim that the entire interface is localized into English.",
+        "Browser, DPR, zoom, font readiness and capture timing were not independently measured. Numerical contrast, accessible names and hidden/control states require separate engineering evidence.",
+        "Screenshot quality does not establish actual adoption of mature implementation or source provenance; those require implementation and research/trial evidence."
+      ]
+    },
+    "remaining_conditions": [
+      "Physical devices/OS soft keyboard and real IME",
+      "Safari/Firefox and screen readers",
+      "Complex/non-text PDF, OCR and maximum-page boundary",
+      "Multi-tab conflict handling",
+      "Low-end device performance; build retains >500kB entry warning",
+      "Real user comprehension/design acceptance"
+    ],
+    "author_reports_sha256": {
+      "README.md": "13b87f70955bb33926bca6af5ba389d6cdb1edb1532d8ffcb036a44c972f9c12",
+      "DESIGN.md": "5c128b65d9703f29d24bf1047b8ec977f22ea19032efff8ccc871226a0a9bea7",
+      "VERIFICATION.md": "54e455becd289f789fde599eb3d98fddea3177e96e461329545b80cef24760e0"
+    }
+  },
+  "notes_upgrade": {
+    "task_summary": "Improve a supplied local research-notes workspace for mature detail, long Chinese reading/editing, citations/tools and mobile region continuity while preserving data format and existing outcomes.",
+    "input_hashes": {
+      "index.html": "515baaf16aca9a3ff9f3f18c42aa398fc69a95ffb2923d75ecc5c7942c8e7825",
+      "licenses/Lucide-LICENSE.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "licenses/Tiptap-MIT.md": "c96e5ecb55ac593157ad1d21d1f44a611187f494a0f04c235a1ae692c88d6ba9",
+      "package-lock.json": "b6de524f83dc0d69f5170e80cb055364f0f8a95be5d99246f6e8226f420b923a",
+      "package.json": "5eac1c637abdc0896c92f708a64d6479623e111f3ca25edaa7671bcefe4d6bc7",
+      "scripts/make-standalone.mjs": "90ca709509918d5917e23569c07ec7010fa0993a6646a34868150070d9d88ec8",
+      "src/fixtures.js": "95dc7a125d1133cdeb89cc77ab6b294641d92547646c52aeed42988233e00643",
+      "src/main.js": "a19a9cd22f794de2e2fe7c46eebe49d18e8e782188c5d21f3646b4a689b4a663",
+      "src/store.js": "befb91ec4e67a9d7029e6b14cae37933a2eef8fca94746fe317818c3547d9563",
+      "src/store.test.js": "0749e7d1cc874cf9ce63383a50e4737f4bbb3036006a766d7e52f0a3a4ea875e",
+      "src/style.css": "6fa95bdfa9e9d2faf5a2ea0f39b5752503f11e238f34ce95df054d59034b3273"
+    },
+    "final_source_revision": {
+      "recordedAtUtc": "2026-10-25T22:12:17.875657+00:00",
+      "files": {
+        "src/main.js": "b5c76464fa735e66bc1f5eda8718832ecf4e22b409eaec3b23bf9452037ca81f",
+        "src/reading-tools.js": "f91f52db5313d467bd4007758c25081283f0ea4e73cfe2d7f1a68837991fd3cd",
+        "src/style.css": "a3992e598935e3b2b005e807416320607bb41fc9ffa6f5dbbacde78b31676e45",
+        "src/store.js": "befb91ec4e67a9d7029e6b14cae37933a2eef8fca94746fe317818c3547d9563",
+        "src/store.test.js": "0749e7d1cc874cf9ce63383a50e4737f4bbb3036006a766d7e52f0a3a4ea875e",
+        "src/fixtures.js": "95dc7a125d1133cdeb89cc77ab6b294641d92547646c52aeed42988233e00643",
+        "package.json": "5eac1c637abdc0896c92f708a64d6479623e111f3ca25edaa7671bcefe4d6bc7",
+        "package-lock.json": "b6de524f83dc0d69f5170e80cb055364f0f8a95be5d99246f6e8226f420b923a",
+        "index.html": "515baaf16aca9a3ff9f3f18c42aa398fc69a95ffb2923d75ecc5c7942c8e7825",
+        "scripts/make-standalone.mjs": "1488b6558f1e33bb0047abf25101092918da72d6a960264b5037a52fed0619dd",
+        "scripts/collect-notices.mjs": "1dc4b49d49f61c94f113397940d022ceae5ebd15ba600335bfc07a30fc202a1b",
+        "public/THIRD_PARTY_NOTICES.txt": "75e249ec9acef12bff4f0f8051db9b5b7b2d9d6b40a96853a527c7e32b89bb9a",
+        "standalone.html": "67fbaff0878035d4625280331849d39e347ab51f6bd0d8b53976db51a30058fa",
+        "dist/index.html": "3a7a69d8c1073408d2711ca298994e3b28ff495ed136df79f11b5ebda82249f9"
+      },
+      "evidenceBoundary": "The eight-group suite covers current functional UI. Its read toggle aria-pressed attribute was subsequently changed to a presentation data-reading attribute; final standalone smoke explicitly verifies this final read-mode state and behavior. No functional app code was changed after that final smoke.",
+      "upstreamAccessAddendum": "research/ACCESS-CONDITIONS.md"
+    },
+    "byte_identical_retained_files": [
+      "src/store.js",
+      "src/store.test.js",
+      "src/fixtures.js",
+      "package.json",
+      "package-lock.json"
+    ],
+    "actual_adoption": [
+      {
+        "resource": "Existing functional workspace",
+        "retained": "Discussion/material/note regions, source identity, local version/export/import contracts; inspected baseline before local changes"
+      },
+      {
+        "resource": "@tiptap/core, @tiptap/pm, @tiptap/starter-kit 3.32.0",
+        "retained": "Document/schema, selection, formatting commands, history, parsing and serialization"
+      },
+      {
+        "resource": "Lucide 1.61.0",
+        "retained": "Existing coordinated icon family"
+      },
+      {
+        "resource": "Native dialog/select/radio",
+        "retained": "Browser-provided modal and form-control behavior; current project owns styling and adapters"
+      },
+      {
+        "resource": "Tiptap Simple Editor / Toolbar React source",
+        "status": "Design/behavior reference only, not copied or adopted; vanilla workspace and v1 integration boundary retained"
+      }
+    ],
+    "custom_scope": "reading-tools.js supplies reading mode, size preferences, outline and current-toolbar focus/composition. Current visual layer and adapters own their corresponding quality checks; headless editing does not certify whole-page visual maturity.",
+    "source_excerpts": [
+      {
+        "file": "src/main.js",
+        "sha256": "b5c76464fa735e66bc1f5eda8718832ecf4e22b409eaec3b23bf9452037ca81f",
+        "scope": "Selected actual integration lines, not a complete source archive",
+        "lines": [
+          {
+            "line": 1,
+            "text": "import { Editor, Node, mergeAttributes } from '@tiptap/core';"
+          },
+          {
+            "line": 2,
+            "text": "import StarterKit from '@tiptap/starter-kit';"
+          },
+          {
+            "line": 108,
+            "text": "editor=new Editor({"
+          },
+          {
+            "line": 109,
+            "text": "  element:$('#editor'),extensions:[StarterKit.configure({heading:{levels:[2,3]},link:false}),Citation],content:state.doc,"
+          },
+          {
+            "line": 120,
+            "text": "readingTools=setupReadingTools({editor,storage,icons,onNavigate:()=>{state.mobileView='note';$('.workspace').dataset.view='note';}});"
+          },
+          {
+            "line": 187,
+            "text": "function autoTitleHeight(){const title=$('#note-title');if(!title.getClientRects().length||!title.clientWidth)return;title.style.height='auto';title.style.height=`${title.scrollHeight}px`;}"
+          }
+        ]
+      },
+      {
+        "file": "src/reading-tools.js",
+        "sha256": "f91f52db5313d467bd4007758c25081283f0ea4e73cfe2d7f1a68837991fd3cd",
+        "scope": "Selected actual integration lines, not a complete source archive",
+        "lines": [
+          {
+            "line": 89,
+            "text": "    editor.setEditable(!preferences.reading, false);"
+          },
+          {
+            "line": 126,
+            "text": "    editor.state.doc.descendants((node, position) => { if (node.type.name === 'heading') headings.push({position, text:node.textContent, level:node.attrs.level}); });"
+          },
+          {
+            "line": 138,
+            "text": "      const node = editor.view.nodeDOM(item.position);"
+          },
+          {
+            "line": 149,
+            "text": "    const node = editor.view.nodeDOM(Number(button.dataset.headingPosition));"
+          },
+          {
+            "line": 154,
+            "text": "    editor.commands.setTextSelection(Number(button.dataset.headingPosition) + 1);"
+          }
+        ]
+      }
+    ],
+    "local_trial": {
+      "viewed_by_executor": [
+        "trial-desktop.png",
+        "trial-mobile.png"
+      ],
+      "conditions": "Existing Chinese content, font fallback, source controls and actual storage; before completing integration."
+    },
+    "upstream_access_correction": {
+      "first_error": "ERR_CERT_AUTHORITY_INVALID",
+      "second_capture_condition": "Temporary isolated Playwright context ignored HTTPS certificate validation; actual cause not verified.",
+      "disposition": "Stopped and excluded from normal-access/verified-upstream-identity reference evidence. Original files preserved as diagnostics; maintainer normal-browser follow-up separately attributed.",
+      "excluded_files": [
+        {
+          "file": "research/reference-simple.png",
+          "bytes": 141983,
+          "mtimeUtc": "2026-10-25T21:51:34.323892+00:00",
+          "mtimeNs": 1792965094323892353,
+          "sha256": "e537a17c09aa6a729195427e0104eebc75d09bfc5aad01bb706f16d1ecee4791"
+        },
+        {
+          "file": "research/reference-simple-mobile.png",
+          "bytes": 117737,
+          "mtimeUtc": "2026-10-25T21:51:34.526171+00:00",
+          "mtimeNs": 1792965094526170994,
+          "sha256": "33851e549ca6b7413bc9a923cf368fdb524f449bc2b9ffc944eb6857e1e67d2f"
+        },
+        {
+          "file": "research/reference-toolbar.png",
+          "bytes": 17516,
+          "mtimeUtc": "2026-10-25T21:51:35.207468+00:00",
+          "mtimeNs": 1792965095207468179,
+          "sha256": "2f8ddbf5cd721574f5802eda281460c4444afa75a04e639396619f397dcf9e92"
+        },
+        {
+          "file": "research/reference-toolbar-focus.png",
+          "bytes": 17515,
+          "mtimeUtc": "2026-10-25T21:51:35.299861+00:00",
+          "mtimeNs": 1792965095299860624,
+          "sha256": "54d7b2ea2c127ccd96350ecf093e9f57ea3197d358e180012de1da8efdbfded9"
+        }
+      ],
+      "record_sha256": "2b7a66f2e540dc741fc396974b813b23f2c607bf9ad2637fe08b21678dc396da"
+    },
+    "browser_runtime": {
+      "browser": "143.0.7499.0",
+      "deviceScaleFactor": 1,
+      "locale": "zh-CN",
+      "theme": "light",
+      "baseURL": "http://127.0.0.1:4175",
+      "results": [
+        {
+          "name": "Desktop reading, citation return and optional preferences",
+          "status": "pass",
+          "seconds": 1.96,
+          "details": {
+            "outline": 4,
+            "readMode": "readonly",
+            "citationReturn": "same source trigger",
+            "sizePreference": "19px survives refresh"
+          }
+        },
+        {
+          "name": "Selection handoff, actual formatting undo and toolbar keyboard path",
+          "status": "pass",
+          "seconds": 1.94,
+          "details": {
+            "selection": "Chinese excerpt + existing draft retained",
+            "history": "original content/marks restored; existing StarterKit trailing paragraph allowed",
+            "toolbar": "ArrowRight, End, single Tab stop"
+          }
+        },
+        {
+          "name": "Autosave, version recovery, JSON download/import and import reversal",
+          "status": "pass",
+          "seconds": 2.5,
+          "details": {
+            "autosave": "Chinese title/body/draft survive refresh",
+            "versions": "prior working copy preserved on restore",
+            "backup": "real download + import + restore previous workspace",
+            "schema": "exact v1 top-level fields",
+            "IME": "synthetic composing Enter left unhandled"
+          }
+        },
+        {
+          "name": "Long Chinese mobile note → citation → material → exact return → outline",
+          "status": "pass",
+          "seconds": 2.24,
+          "details": {
+            "length": 20879,
+            "sections": 24,
+            "headings": 48,
+            "returnScrollBefore": 20711,
+            "returnScrollAfter": 20711,
+            "draft": "preserved",
+            "outline": "section 18, no editable focus",
+            "mobileTools": "more formats reachable"
+          }
+        },
+        {
+          "name": "Existing quote insertion, discussion and suggestion outcomes",
+          "status": "pass",
+          "seconds": 1.55,
+          "details": {
+            "quote": "appended and undo restored original content/marks",
+            "presetSuggestion": "added once; button disabled afterwards",
+            "shortViewport": "390×480 composer and send reachable"
+          }
+        },
+        {
+          "name": "Storage failure and corrupt-record recovery boundary",
+          "status": "pass",
+          "seconds": 1.86,
+          "details": {
+            "blockedStorage": "no false success; current input in real backup download",
+            "corruptRecord": "original raw value untouched"
+          }
+        },
+        {
+          "name": "Long-note rapid input debounce and immediate-reload flush",
+          "status": "pass",
+          "seconds": 2.7,
+          "details": {
+            "rapidInputEvents": 8,
+            "workspaceWritesBeforeReload": 1,
+            "pendingReload": "pagehide flushed the current document",
+            "scope": "local synthetic input; no field performance claim"
+          }
+        },
+        {
+          "name": "Responsive and narrow-screen control reachability",
+          "status": "pass",
+          "seconds": 4.97,
+          "details": {
+            "viewports": [
+              {
+                "viewport": [
+                  320,
+                  740
+                ],
+                "pageOverflow": false,
+                "toolbarOverflow": false
+              },
+              {
+                "viewport": [
+                  360,
+                  780
+                ],
+                "pageOverflow": false,
+                "toolbarOverflow": false
+              },
+              {
+                "viewport": [
+                  390,
+                  844
+                ],
+                "pageOverflow": false,
+                "toolbarOverflow": false
+              },
+              {
+                "viewport": [
+                  768,
+                  1024
+                ],
+                "pageOverflow": false,
+                "toolbarOverflow": false
+              },
+              {
+                "viewport": [
+                  820,
+                  650
+                ],
+                "pageOverflow": false,
+                "toolbarOverflow": false
+              },
+              {
+                "viewport": [
+                  1024,
+                  768
+                ],
+                "pageOverflow": false,
+                "toolbarOverflow": false
+              },
+              {
+                "viewport": [
+                  1440,
+                  960
+                ],
+                "pageOverflow": false,
+                "toolbarOverflow": false
+              }
+            ],
+            "reducedMotion": "320px context"
+          }
+        }
+      ],
+      "pageErrors": [],
+      "frames": [
+        {
+          "file": "after-desktop-edit.png",
+          "viewport": {
+            "width": 1440,
+            "height": 960
+          },
+          "captureStartMs": 543.6,
+          "captureEndMs": 627.1,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-desktop-read.png",
+          "viewport": {
+            "width": 1440,
+            "height": 960
+          },
+          "captureStartMs": 683.4,
+          "captureEndMs": 757.2,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-desktop-source.png",
+          "viewport": {
+            "width": 1440,
+            "height": 960
+          },
+          "captureStartMs": 841.4,
+          "captureEndMs": 923.5,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-desktop-selection.png",
+          "viewport": {
+            "width": 1440,
+            "height": 960
+          },
+          "captureStartMs": 713,
+          "captureEndMs": 774.7,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-version-review.png",
+          "viewport": {
+            "width": 1440,
+            "height": 960
+          },
+          "captureStartMs": 649.3,
+          "captureEndMs": 791.2,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "journey-01-long-note.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 687.3,
+          "captureEndMs": 742.3,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "journey-02-source-open.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 794.1,
+          "captureEndMs": 845.7,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "journey-03-source-read.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 852.9,
+          "captureEndMs": 880.1,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "journey-04-note-return.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 984.9,
+          "captureEndMs": 1023.5,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-mobile-outline.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 1059.6,
+          "captureEndMs": 1112.8,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-mobile-reading-settings.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 1255.9,
+          "captureEndMs": 1308.8,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-mobile-long-read.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 1340.1,
+          "captureEndMs": 1390,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-mobile-format-tools.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 1554.3,
+          "captureEndMs": 1601.1,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-mobile-discussion.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 1414.2,
+          "captureEndMs": 1465.9,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-mobile-short-height.png",
+          "viewport": {
+            "width": 390,
+            "height": 480
+          },
+          "captureStartMs": 1477.2,
+          "captureEndMs": 1515.3,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-mobile-save-failure.png",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "captureStartMs": 1121.2,
+          "captureEndMs": 1151.3,
+          "url": "http://127.0.0.1:4175/?storage=blocked"
+        },
+        {
+          "file": "after-width-320.png",
+          "viewport": {
+            "width": 320,
+            "height": 740
+          },
+          "captureStartMs": 700.5,
+          "captureEndMs": 731.9,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-width-768.png",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "captureStartMs": 666.5,
+          "captureEndMs": 712.3,
+          "url": "http://127.0.0.1:4175/"
+        },
+        {
+          "file": "after-width-820.png",
+          "viewport": {
+            "width": 820,
+            "height": 650
+          },
+          "captureStartMs": 656.1,
+          "captureEndMs": 697.6,
+          "url": "http://127.0.0.1:4175/"
+        }
+      ],
+      "limits": [
+        "Chromium automation, not physical mobile devices or assistive-technology testing.",
+        "390×480 is a short-viewport proxy, not a real OS software keyboard.",
+        "Synthetic composition Enter tests event handling; real IME composition remains unobserved.",
+        "Frame timestamps bracket screenshot acquisition; this is not video or a frame-smoothness measurement."
+      ]
+    },
+    "original_store_tests": {
+      "passed": 10,
+      "log_sha256": "6d00ca94db6ce04ae8e106ab14082a0ae90333129218d3dcc3dadd329a994ebb"
+    },
+    "repair": {
+      "issue": "Mobile citation return shifted by hidden title remeasurement",
+      "fixture": "long-workspace.json",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "observedBeforeFix": {
+        "noteScrollBefore": 20711,
+        "noteScrollAfter": 20797,
+        "differencePx": 86,
+        "evidenceType": "Executed browser assertion output; no failed-return screenshot captured"
+      },
+      "cause": "autoTitleHeight measured a hidden textarea; restoration and browser scroll anchoring added title height after scroll restoration",
+      "repair": {
+        "file": "src/main.js",
+        "functions": [
+          "autoTitleHeight",
+          "updateViews"
+        ],
+        "change": "Skip hidden/zero-width title measurement; calculate visible title height before restoring note scroll"
+      },
+      "verifiedAfterFix": {
+        "noteScrollBefore": 20711,
+        "noteScrollAfter": 20711,
+        "differencePx": 0,
+        "report": "browser-checks.json",
+        "orderedFrames": [
+          "journey-01-long-note.png",
+          "journey-02-source-open.png",
+          "journey-03-source-read.png",
+          "journey-04-note-return.png"
+        ]
+      }
+    },
+    "final_standalone_check": {
+      "status": "pass",
+      "entry": "standalone.html (file URL)",
+      "browser": "143.0.7499.0",
+      "externalRequests": [],
+      "pageErrors": [],
+      "checks": [
+        "four-heading outline",
+        "read mode uses readonly editor",
+        "read-mode action label and data state",
+        "1440×960 and 390×844 captures",
+        "immediate reload retains edited title",
+        "all runtime notices embedded in non-executable text"
+      ]
+    },
+    "executor_viewing": {
+      "status": "inspected",
+      "reviewedObjects": {
+        "baseline": [
+          "before-desktop.png",
+          "before-mobile.png"
+        ],
+        "localTrial": [
+          "trial-desktop.png",
+          "trial-mobile.png"
+        ],
+        "integrated": [
+          "after-desktop-edit.png",
+          "after-desktop-read.png",
+          "after-desktop-source.png",
+          "after-desktop-selection.png",
+          "after-version-review.png",
+          "after-mobile-long-read.png",
+          "after-mobile-format-tools.png",
+          "after-mobile-reading-settings.png",
+          "after-mobile-outline.png",
+          "after-mobile-discussion.png",
+          "after-mobile-short-height.png",
+          "after-mobile-save-failure.png",
+          "after-width-320.png",
+          "after-width-768.png",
+          "after-width-820.png"
+        ],
+        "orderedCitationJourney": [
+          "journey-01-long-note.png",
+          "journey-02-source-open.png",
+          "journey-03-source-read.png",
+          "journey-04-note-return.png"
+        ],
+        "finalStandalone": [
+          "standalone-desktop.png",
+          "standalone-mobile.png"
+        ]
+      },
+      "upstreamStatus": "Original externally captured demo images excluded from valid upstream-reference evidence: see research/ACCESS-CONDITIONS.md.",
+      "limitations": [
+        "No video playback or frame-smoothness claim",
+        "No actual user acceptance or longitudinal comfort study",
+        "No physical-device/OS-IME/screen-reader coverage"
+      ]
+    },
+    "independent_visual_review": {
+      "reviewer": "/root/public_documents",
+      "completed_at_utc": "2026-10-25T22:08:23.738876+00:00",
+      "scope": "Independent read-only visual inspection of the 16 requested captured states; no application or repository mutation and no contact with the implementation agent.",
+      "snapshot_reason": "Copied source PNG bytes before inspection so the reviewed identity remains exact while the author finishes. The original evidence files were not modified.",
+      "viewed_files": [
+        {
+          "source": "before-desktop.png",
+          "viewed_snapshot": "before-desktop.png",
+          "sha256": "7ab6d9f5f3eb651d57e89478eec6ad5bb19f0afb3ef765e553614f4eb7967b77",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Baseline desktop composition, discussion/note balance, type hierarchy and visible controls.",
+          "source_sha256_at_report": "7ab6d9f5f3eb651d57e89478eec6ad5bb19f0afb3ef765e553614f4eb7967b77",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "before-mobile.png",
+          "viewed_snapshot": "before-mobile.png",
+          "sha256": "d69eebe758a73071ded2bc750861517c4b3bc87aa4411312b71da94fffd8a251",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Baseline narrow note, title wrapping, edit toolbar, footer and bottom navigation.",
+          "source_sha256_at_report": "d69eebe758a73071ded2bc750861517c4b3bc87aa4411312b71da94fffd8a251",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-desktop-edit.png",
+          "viewed_snapshot": "after-desktop-edit.png",
+          "sha256": "eb749968bc368a96f32d8c577bbe3185979766b10f5bf55f740e80588a1ea31c",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Edit state: discussion, note, formatting tools, outline and content hierarchy.",
+          "source_sha256_at_report": "eb749968bc368a96f32d8c577bbe3185979766b10f5bf55f740e80588a1ea31c",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-desktop-read.png",
+          "viewed_snapshot": "after-desktop-read.png",
+          "sha256": "78c973a53a8f2b98ce851da7557e76e888ea44ad05ddb708a5d4cd88d0f6685f",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Read state: removed edit toolbar, note hierarchy, outline and edit return.",
+          "source_sha256_at_report": "78c973a53a8f2b98ce851da7557e76e888ea44ad05ddb708a5d4cd88d0f6685f",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-desktop-source.png",
+          "viewed_snapshot": "after-desktop-source.png",
+          "sha256": "daad535fb99a7416adb48952c5ecf1dadd0fb0a7dc2af675496c752315a8b517",
+          "dimensions": [
+            1440,
+            960
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Source context in left region, current citation, note retained at right and source actions.",
+          "source_sha256_at_report": "daad535fb99a7416adb48952c5ecf1dadd0fb0a7dc2af675496c752315a8b517",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-mobile-long-read.png",
+          "viewed_snapshot": "after-mobile-long-read.png",
+          "sha256": "5d9a8de9c29c3d4012df172cfab40aeb3501c5c1ad57bc5e5b3ff30724c97d18",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Long Chinese content, current heading, readable type/line spacing, progress and bottom navigation.",
+          "source_sha256_at_report": "5d9a8de9c29c3d4012df172cfab40aeb3501c5c1ad57bc5e5b3ff30724c97d18",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-mobile-format-tools.png",
+          "viewed_snapshot": "after-mobile-format-tools.png",
+          "sha256": "f9090584d6b5c0aa2332c81fb49626ec8884f69f96476c91639a8c6bb8e347ef",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Expanded editing tools, visible controls, reduced content viewport and current heading.",
+          "source_sha256_at_report": "f9090584d6b5c0aa2332c81fb49626ec8884f69f96476c91639a8c6bb8e347ef",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-mobile-outline.png",
+          "viewed_snapshot": "after-mobile-outline.png",
+          "sha256": "6a80998120d5295df3f78e6f0c2e2a8ae9c3ea184d8f898a81255442e4729473",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Outline dialog hierarchy, active section, nested headings, close control and bounded content.",
+          "source_sha256_at_report": "6a80998120d5295df3f78e6f0c2e2a8ae9c3ea184d8f898a81255442e4729473",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-mobile-reading-settings.png",
+          "viewed_snapshot": "after-mobile-reading-settings.png",
+          "sha256": "2cf93d0f6d7c0ab78e6d3c462b348df358b16ac418093d80df11aa5c2f4f274e",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Reading setting choices, selected size, actual preview, explanatory text, close and completion controls.",
+          "source_sha256_at_report": "2cf93d0f6d7c0ab78e6d3c462b348df358b16ac418093d80df11aa5c2f4f274e",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-width-320.png",
+          "viewed_snapshot": "after-width-320.png",
+          "sha256": "7e265dcbce5f58bdc9924484fb2a3971f90b2500ccd073b2dcec7b137821d515",
+          "dimensions": [
+            320,
+            740
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "320px wrapping, toolbar fit, title/body readability and bottom navigation.",
+          "source_sha256_at_report": "7e265dcbce5f58bdc9924484fb2a3971f90b2500ccd073b2dcec7b137821d515",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-mobile-short-height.png",
+          "viewed_snapshot": "after-mobile-short-height.png",
+          "sha256": "669482e7eec277e45b4bd7a8f9288114dad87d6d8e6494f7c3ed469519acd842",
+          "dimensions": [
+            390,
+            480
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "480px-tall discussion viewport, composer/send visibility, toast overlap and bottom navigation.",
+          "source_sha256_at_report": "669482e7eec277e45b4bd7a8f9288114dad87d6d8e6494f7c3ed469519acd842",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "after-mobile-save-failure.png",
+          "viewed_snapshot": "after-mobile-save-failure.png",
+          "sha256": "7d22b51c63114e608316c820613c0e38df16472dc68ae5f8c01bf9939e24f8d6",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Visible save failure, backup action, unsaved state, retained edited title, body and navigation.",
+          "source_sha256_at_report": "7d22b51c63114e608316c820613c0e38df16472dc68ae5f8c01bf9939e24f8d6",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "journey-01-long-note.png",
+          "viewed_snapshot": "journey-01-long-note.png",
+          "sha256": "84f3c529028281294c21e20fd726cc36af64db7e4e6086a187d4797a2ce1bfcc",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Ordered state 1: note at 48% with visible text anchor and citation 3.",
+          "source_sha256_at_report": "84f3c529028281294c21e20fd726cc36af64db7e4e6086a187d4797a2ce1bfcc",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "journey-02-source-open.png",
+          "viewed_snapshot": "journey-02-source-open.png",
+          "sha256": "a0a1d03a6e2d9de1026681ce166b854d4f49947a6273fbca75816c2ee8fb1739",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Ordered state 2: source title, contextual paragraph 3, current-citation highlight and return affordances.",
+          "source_sha256_at_report": "a0a1d03a6e2d9de1026681ce166b854d4f49947a6273fbca75816c2ee8fb1739",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "journey-03-source-read.png",
+          "viewed_snapshot": "journey-03-source-read.png",
+          "sha256": "d78280821d30e32cb16a87428b64145b26dfd88a0aa3ef976647f703755e062c",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Ordered state 3: source content at another scroll position, stable source actions and return affordances.",
+          "source_sha256_at_report": "d78280821d30e32cb16a87428b64145b26dfd88a0aa3ef976647f703755e062c",
+          "source_unchanged_at_report": true
+        },
+        {
+          "source": "journey-04-note-return.png",
+          "viewed_snapshot": "journey-04-note-return.png",
+          "sha256": "8c25ba63f356d5c5decb9fd89063acd6c500538fe63be214ec970e2267c73e53",
+          "dimensions": [
+            390,
+            844
+          ],
+          "actually_viewed": true,
+          "view_mode": "original-size image tool view",
+          "scope": "Ordered state 4: return to the same visible note anchor and 48% progress as state 1.",
+          "source_sha256_at_report": "8c25ba63f356d5c5decb9fd89063acd6c500538fe63be214ec970e2267c73e53",
+          "source_unchanged_at_report": true
+        }
+      ],
+      "summary": {
+        "actually_viewed_images": 16,
+        "blocking_findings": 0,
+        "nonblocking_observations": 1,
+        "source_images_changed_after_snapshot": 0,
+        "conclusion": "No blocking visual defect found within the inspected states and image identities."
+      },
+      "findings": [
+        {
+          "id": "NVR-01",
+          "severity": "pass",
+          "evidence": [
+            "before-desktop.png",
+            "after-desktop-edit.png",
+            "after-desktop-read.png"
+          ],
+          "observation": "The revised desktop arrangement gives the note a distinct central reading region and a clearly separated outline. The title, section headings, body, citations and secondary labels remain distinguishable. Read mode removes the editing toolbar while keeping an evident Edit action and the persistent discussion context.",
+          "boundary": "This supports these static compositions; it does not establish keyboard behavior, focus handling, transition rhythm or user preference."
+        },
+        {
+          "id": "NVR-02",
+          "severity": "pass",
+          "evidence": [
+            "after-desktop-source.png",
+            "journey-02-source-open.png",
+            "journey-03-source-read.png"
+          ],
+          "observation": "Source views visibly distinguish the source title, surrounding paragraphs and the currently cited paragraph. Citation and discussion actions plus return affordances remain visible in the provided source states. The desktop note remains present alongside its source context.",
+          "boundary": "Only the displayed scroll positions were inspected; source-end reachability and operation results require interaction evidence."
+        },
+        {
+          "id": "NVR-03",
+          "severity": "pass",
+          "evidence": [
+            "before-mobile.png",
+            "after-mobile-long-read.png",
+            "after-mobile-format-tools.png",
+            "after-width-320.png"
+          ],
+          "observation": "Chinese glyphs render clearly. Long content has discernible line and paragraph rhythm; title/body wrapping stays inside the inspected 320px and 390px widths. Reading/editing tools and bottom navigation remain visibly distinct. Expanding formatting tools reduces the available reading area without covering the displayed heading.",
+          "boundary": "The larger reading-size state is a supported presentation choice, not evidence of a universally superior density. A screenshot cannot establish all tools operable or keyboard-safe."
+        },
+        {
+          "id": "NVR-04",
+          "severity": "pass",
+          "evidence": [
+            "after-mobile-outline.png",
+            "after-mobile-reading-settings.png"
+          ],
+          "observation": "The outline and reading-settings overlays fit the depicted mobile viewport, maintain clear titles, and expose close controls. Outline hierarchy and the selected heading are visible. Reading settings show three differentiated choices, the selected larger size, a readable preview and an unobstructed completion action.",
+          "boundary": "Modal scrolling, trapping/restoring focus, touch target dimensions and other heights were not operated by this reviewer."
+        },
+        {
+          "id": "NVR-05",
+          "severity": "pass",
+          "evidence": [
+            "after-mobile-save-failure.png"
+          ],
+          "observation": "A differentiated warning banner, visible backup action and unsaved label accompany the retained edited Chinese title. The warning fits above the toolbar without hiding its controls; the note and navigation remain visible.",
+          "boundary": "The visible state supports truthful communication in the image, not a storage failure/recovery or backup correctness test."
+        },
+        {
+          "id": "NVR-06",
+          "severity": "pass",
+          "evidence": [
+            "journey-01-long-note.png",
+            "journey-02-source-open.png",
+            "journey-03-source-read.png",
+            "journey-04-note-return.png"
+          ],
+          "observation": "The ordered images show note -> source context -> another source position -> note. States 1 and 4 have the same first visible text, citation 3 placement and 48% progress, supporting restoration of that visible reading position in this recorded journey.",
+          "boundary": "There are no inspected intermediate frames or timing information. These images do not establish animation smoothness, absence of flicker, exact response time, DOM focus or every return path."
+        },
+        {
+          "id": "NVR-07",
+          "severity": "nonblocking-observation",
+          "evidence": [
+            "after-mobile-short-height.png"
+          ],
+          "observation": "At 390x480, the toast occupies the middle conversation area and covers part of the assistant role line. The composer, send control and bottom navigation remain visible and the active input text is readable.",
+          "impact": "Temporary reduction of visible conversation context in this captured short-height state; no core action is visibly blocked.",
+          "boundary": "Toast duration, motion and dismissal were not observed, so persistence or timing cannot be assessed."
+        }
+      ],
+      "limits": [
+        "This inspection is based on original PNG pixels and ordered captured states only; no live application operations, video replay or continuous-motion analysis were performed.",
+        "Readability and visible control placement were assessed in the provided images. Keyboard, touch, focus, screen-reader, persistence, backup and source-data correctness remain separate runtime checks.",
+        "Screenshots alone do not establish that selected mature resources are actually retained in code or that all four observation objects were inspected. Actual adoption and trial provenance require the application source and research records.",
+        "Images were inspected at their recorded pixel dimensions. Browser, DPR, font readiness, zoom and capture timestamps were not independently measured by this reviewer.",
+        "The review covers the 16 requested files. Other captures, viewports, themes, states and future source revisions are outside its conclusion."
+      ]
+    },
+    "remaining_conditions": [
+      "Physical mobile devices/OS keyboards",
+      "Real system Chinese IME",
+      "Safari/Firefox/screen readers/high-contrast and actual 200% browser zoom",
+      "Short-viewport toast partially covers an assistant role line; duration not observed by image reviewer",
+      "Long-term comfort and user design acceptance"
+    ],
+    "author_reports_sha256": {
+      "README.md": "1a236434417ade5596e100b57a72cb43672fef5be0efc043d93e5774926f39b4",
+      "DESIGN-REVIEW.md": "dced64b91ec807022c2aeabe62f4263230f78c863410ef3ba2dcdf7873473414"
+    }
+  },
+  "maintainer_original_demo_observations": [
+    {
+      "date_utc": "2026-10-25",
+      "date_asia_tokyo": "2026-10-26",
+      "observer": "root maintainer, separate from the independent application",
+      "purpose": "Supplement the original-demo evidence gap reported by the question-workspace application; no first-pass attribution.",
+      "access": "Public official pages in the connected Chrome browser. No login, submission, certificate bypass or security changes. Only synthetic textarea text and demo controls.",
+      "conditions": {
+        "mantine_version_visible": "9.7.4",
+        "viewport_width_css_px": 1278,
+        "viewport_height_css_px": "1352 earlier; 1296 in the final AppShell measurement",
+        "device_pixel_ratio": 1.5,
+        "theme": "light",
+        "capture_and_view": "Actual screenshots were returned and visually inspected in the browser session. No archival screenshots were exported for these original demos."
+      },
+      "observations": [
+        {
+          "url": "https://mantine.dev/core/textarea/",
+          "object": "Original component demos within documentation, distinct from the documentation shell",
+          "actions": [
+            "Fill the default textarea with synthetic Chinese/English multiline text",
+            "Follow the Autosize table-of-contents link",
+            "Fill the unbounded and max-4-row examples with the same six synthetic lines"
+          ],
+          "viewed": "Initial default demo, focused default field, empty autosize examples and both filled autosize examples",
+          "result": "The default fixed field scrolls internally. The unbounded autosize example grows to show all six lines; the capped example keeps a smaller field with internal overflow.",
+          "measured": {
+            "unbounded_height": 142.33334350585938,
+            "unbounded_client_height": 141,
+            "unbounded_scroll_height": 141,
+            "capped_height": 100.33333587646484,
+            "capped_client_height": 99,
+            "capped_scroll_height": 141
+          },
+          "design_value": "Use the existing autosize mechanism with an explicit reading/composer height limit, then verify the current language, font and container locally.",
+          "limit": "Endpoint and input-behavior evidence only; it does not establish frame-level continuity or motion pacing."
+        },
+        {
+          "url": "https://mantine.dev/core/modal/",
+          "object": "Usage modal demo, not a request to authenticate or submit the form",
+          "actions": [
+            "Open the first Usage modal",
+            "Inspect its rendered open state",
+            "Press Escape",
+            "Read returned focus"
+          ],
+          "viewed": "Open modal with dimmed backdrop, white separated surface, title/close control, grouped fields and initial focus in the first-name input",
+          "result": "Escape returned focus to the Open modal button. An immediate DOM read still contained an exiting dialog; a later earlier-cycle read showed zero dialogs. No form values were submitted.",
+          "design_value": "Adopt the existing modal surface, focus and dismissal machinery; local material editing must verify long content and stacked modal/drawer behavior.",
+          "limit": "No continuous video was inspected. No authentication, form validity or full keyboard-trap claim is made from this brief observation."
+        },
+        {
+          "url": "https://mantine.dev/app-shell/?e=BasicAppShell",
+          "object": "Separate live AppShell demo reached from the official documentation link",
+          "actions": [
+            "Follow Open AppShell examples page",
+            "View basic layout",
+            "Open Other examples",
+            "Choose Collapsible navbar",
+            "View expanded state",
+            "Collapse navbar",
+            "View collapsed state",
+            "Trigger reopen"
+          ],
+          "related_url": "https://mantine.dev/app-shell/?e=CollapseDesktop",
+          "viewed": "Basic header/navbar/main relationship, collapsible expanded state and collapsed state",
+          "result": "Expanded navigation occupies a 300px left region below the header. On collapse, main content uses the released space while the header burger remains in the same place.",
+          "design_value": "The existing shell provides coordinated region offsets and collapse state; the product remains responsible for content density and mobile region behavior.",
+          "limit": "Desktop state comparison only. Reopen was triggered but not separately visually reviewed. No mobile, frame-rate or smoothness conclusion."
+        }
+      ],
+      "research_cleanup": "Both root-created tabs closed after inspection.",
+      "remaining_boundary": "This supplemental review is not evidence that the independent agent accessed these demos before trial or integration. It does not certify all Mantine components, Drawer/Dropzone original demos, the complete product, or user acceptance."
+    },
+    {
+      "date_utc": "2026-10-25",
+      "date_asia_tokyo": "2026-10-26",
+      "observer": "root maintainer, after the independent notes application",
+      "purpose": "Replace an upstream access-evidence gap with separate normal-browser observations. This does not retroactively certify the independent agent's earlier capture route.",
+      "access": "Normal connected Chrome navigation to official public documentation and its visible full-screen demo link. No HTTPS error-ignore settings, security interstitial bypass, login, account changes or form submission.",
+      "urls": [
+        "https://tiptap.dev/docs/ui-components/templates/simple-editor",
+        "https://template.tiptap.dev/preview/templates/simple"
+      ],
+      "conditions": {
+        "width_css_px": 1278,
+        "height_css_px": 1352,
+        "device_pixel_ratio": 1.5,
+        "documentation_theme": "light",
+        "embedded_and_fullscreen_demo_theme": "dark",
+        "editor_rect_width_css_px": 648,
+        "editor_computed_font_size": "16px",
+        "editor_computed_line_height": "24px"
+      },
+      "actions_and_observations": [
+        "Viewed the documentation page with its embedded live editor. Kept the documentation carrier, dark editor UI and placeholder artwork conceptually separate.",
+        "Followed the observed full-screen demo URL and viewed the original editor: centered bounded content, a fixed top toolbar, heading/paragraph/list/quote/code hierarchy and source image content.",
+        "Entered one synthetic Chinese/English research-note sentence using the contenteditable control. The keyboard navigation sequence placed it in the initial heading rather than the intended document end; DOM readback identified its actual location.",
+        "Viewed the modified state, clicked the real Undo control, read back removal of the inserted sentence, scrolled upward and viewed the result. The input's temporary leading empty blocks were not claimed to be fully reverted.",
+        "Closed the root-created research tab."
+      ],
+      "design_value": "The reference supplies bounded reading width, persistent grouped tools and content hierarchy. The application's retained Tiptap packages carry editing/state/history; this observation does not turn an unported React template into adopted source.",
+      "evidence": "Screenshots actually returned and viewed in the session; no separate screenshot archive or continuous video exported.",
+      "limits": [
+        "Desktop dark demo only; no upstream mobile or standalone Toolbar page verification",
+        "Input and one undo action do not certify the entire editor, exact full-document restoration or version parity with the local pinned package",
+        "No actual system IME, screen reader, frame-rate or motion-smoothness claim",
+        "Normal-browser follow-up belongs to the maintainer; the earlier certificate-ignore capture remains excluded from normal-access/upstream-identity evidence"
+      ]
+    }
+  ],
+  "public_representative_images": [
+    {
+      "file": "notes-reading-desktop.png",
+      "sha256": "78c973a53a8f2b98ce851da7557e76e888ea44ad05ddb708a5d4cd88d0f6685f",
+      "bytes": 232197
+    },
+    {
+      "file": "notes-reading-mobile.png",
+      "sha256": "8c25ba63f356d5c5decb9fd89063acd6c500538fe63be214ec970e2267c73e53",
+      "bytes": 148323
+    },
+    {
+      "file": "question-answer-desktop.png",
+      "sha256": "cecafa33787ab5adc83c399a0ce933350b8830fab613e1026512b784a36d4c32",
+      "bytes": 171842
+    },
+    {
+      "file": "question-answer-mobile.png",
+      "sha256": "45368b3a861c98b53b73e9ab0474d3c64005e4a51ce0ee2f5138e6d31b1f480c",
+      "bytes": 85836
+    }
+  ],
+  "public_scope": "Representative final application images, source identities/selected integration lines and check/observation records are archived. Temporary application projects and the complete screenshot set are not shipped as new products or installed skill dependencies."
+}
