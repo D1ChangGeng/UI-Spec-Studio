@@ -124,3 +124,25 @@ through the relevant evidence rather than inferred from popularity.
 ## Content design primary-source research (1.6)
 
 The content-design method draws from documented GOV.UK content design and user needs, Microsoft's interface writing guidance, IBM Carbon's content foundations and W3C WCAG 2.2 guidance on visible input labels and error identification. These references inform content roles, scanning, tone, terminology, state writing and accessible feedback. The [dated source map](../skills/ui-spec/references/content-sources.md) lists exact links and scope. UI Spec Studio's workflow and scenario are its own synthesis, with current project facts and approvals providing authority.
+
+## Deep visual exploration and evidence calibration (1.12)
+
+The version 1.12 decision mechanism is a synthesis of the project owner’s brief on
+evidence-driven, potentially extensive visual exploration and the Skill's established
+active browsing, human-centered perceptual study, mature-resource adoption and
+local-trial methods. It scales research effort by **design influence, uncertainty
+and potential improvement**, compares materially distinct candidates, tracks
+what was actually observed, and uses remaining evidence value to choose the next
+action. The framework and its five evidence dimensions are guidance for design
+judgment, not a scientifically validated prediction model or required search count.
+
+Related external methodological sources checked 2026-10-26:
+
+- [Nielsen Norman Group, *Strength of User Research Evidence* (2013)](https://www.nngroup.com/articles/ux-evidence/) argues for diversified evidence rather than relying on quantity of repeated observations. It is a user-research context, not proof that any one visual design resource is superior.
+- [Nielsen Norman Group, *3 Design Processes for High Usability* (2024)](https://www.nngroup.com/articles/parallel-and-iterative-design/) discusses diverse parallel concepts, iterative changes and competitive comparison. The Skill's cross-domain visual candidate loop is a distinct adaptation, not a verbatim prescribed process.
+
+These are explanatory references. A runtime agent still has to view and compare
+the actual design objects, confirm licenses and integration fit, and test the
+rendered outcome. Source reading or method documentation alone cannot certify
+a model's exploration behavior or design quality.
+

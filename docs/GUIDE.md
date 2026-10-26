@@ -17,6 +17,8 @@ requirements alongside usability and truthful behavior. The product category
 informs tasks and conditions; visual form can be researched independently while
 preserving understandable objects, actions, results and continuation.
 
+For consequential choices, use [evidence-driven deep visual exploration](DEEP-VISUAL-EXPLORATION.md). Weigh impact, uncertainty and potential improvement. Search both target-experience references and adoptable resources; actually inspect distinguishing details and operation, and challenge an early favorite with a materially different candidate. High-leverage unknowns may justify many iterations; familiar, already-validated UI need not. State what was seen and what could still change the decision. Source counts do not establish design confidence.
+
 Mature implementations supply general UI by default, at the highest appropriate reuse level. The agent trials consequential choices with the project's content, fonts, theme and states before expanding integration. Optional shape resolves material open directions through a recommendation and focused choice or representative preview; clear direction supports direct progress. The following collection/detail examples assume that this direction has been selected for the actual task.
 
 Existing instructions, design documents and tests remain useful. The optional templates are a starting point when equivalent records are absent.

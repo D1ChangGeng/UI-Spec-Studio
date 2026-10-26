@@ -147,3 +147,19 @@ synthesize the user's requirements with the existing foundation. Source fidelity
 protects selected or approved work; perceived quality and real use require their own
 inspection. No cited system supplies blanket endorsement, aesthetic scores or
 comparative model evidence for this skill.
+
+## Evidence-driven deep visual exploration (1.12)
+
+The current method connects the owner's evidence-driven exploration brief with
+the existing product-alignment, active browsing, perceptual, sourcing and
+verification practices. It calls for decision-led, sometimes extensive study;
+diverse candidate challenges; reliable records of what was actually viewed; and
+local adoption/verification before output claims. It specifies no numerical
+exploration quota or objectively optimal aesthetic.
+
+Related research:
+- [NN/g: Strength of User Research Evidence (2013)](https://www.nngroup.com/articles/ux-evidence/) — diversified research evidence is more meaningful than one repeated stimulus; apply this carefully to visual candidates, without claiming user testing has occurred.
+- [NN/g: Parallel and Iterative Design (2024)](https://www.nngroup.com/articles/parallel-and-iterative-design/) — exploring diverse alternatives and testing them iteratively can improve design decisions; it does not independently validate this skill.
+
+These sources supply complementary research-method context. An actual design
+candidate still requires direct viewing, source/rights checking and current-product trials.

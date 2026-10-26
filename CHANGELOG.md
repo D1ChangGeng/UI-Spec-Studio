@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.12.0 — 2026-10-26
+
+- Introduce Evidence-Driven Deep Visual Exploration as a decision-calibration practice: effort scales with impact, uncertainty and potential improvement, not a fixed search quota.
+- Couple target-experience study to implementable mature resources and specialist production; let findings change both search direction and initial design assumptions.
+- Evaluate evidence breadth, detail, time, relevance and reliability; distinguish retrieval, actual viewing, operation, source inspection, local trials and adopted UI.
+- Actively challenge promising early solutions using substantive cross-domain alternatives at comparable fidelity, and converge by decision maturity rather than the amount of browsing.
+- Add focused authorized access contingencies and compact evidence-to-choice records, including strongest alternatives and gaps that might reverse adoption.
+- Introduce a Chinese method guide, bilingual README updates, and static regression contracts while preserving eight common references and existing workflow. Model behavior and outcome improvements require their own future application evidence.
+
 ## 1.11.0 — 2026-10-26
 
 - Connect art direction, role-based visual systems, asset engineering and semantic motion storytelling to mature-resource adoption and actual product use.

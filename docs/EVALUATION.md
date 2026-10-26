@@ -303,3 +303,18 @@ normal-speed playback and measured runtime performance have distinct scopes.
 Record sources, actual viewing, repairs and remaining conditions in the
 [version review](REVIEW-v1.11.0.md). Existing deterministic and publication gates
 continue without a new aesthetic score, mandatory style or installed dependency.
+
+## Deep visual exploration assurance (1.12)
+
+The [deep exploration guide](DEEP-VISUAL-EXPLORATION.md) adds decision-specific evidence calibration to the existing research → candidate → trial → integrated-result chain. Source review checks whether the Skill scales exploration by impact, uncertainty and plausible improvement value; follows observed clues into different source families; couples target experience to implementable resources; challenges initial favorites; and reports evidence limits before broad implementation.
+
+**Three distinct evidence levels must not be collapsed:**
+
+1. **Method/package mechanics.** Link integrity, current entry/reference/template wording, optional records, installation, cross-platform tests, existing browser scenarios and published-source rendering. They prove only their executed source or software contracts.
+2. **Agent behavior in a fresh task.** Run identical starting briefs with controlled skill versions and context, without providing a preselected solution or previous diagnostics. Inspect real search/browser operations, the visual material actually viewed, the change in research questions, a credible counter-candidate and the adoption decision. Sources discovered but not opened, unviewed screenshots and descriptions of expected behavior do not count as observed visual evidence.
+3. **Design result and user experience.** Check whether the newly discovered resource materially changes the rendered product, survives actual content, relevant states, viewports, motion and integration, and improves the targeted relationship. Track task cost and maintenance burden. Expert perception, objective runtime tests, user comprehension and user preference are separate outcomes.
+
+Include at least one **high-impact uncertain** target (a defining visual asset, unusual motion, artistic typography or major composition) and one **routine established** choice to detect both premature convergence and excessive compulsory research. Use substantive alternatives, not several versions of the same pattern. Record actual source/revision, viewed conditions, time intervals when applicable, selection reversal or retained rationale, concrete implementation paths, failure/repair and evidence gaps. Use a comparable baseline when making causal improvement claims.
+
+Research can involve extensive branching without prescribing a number of sources, steps or hours. Confidence should match the relevance and reliability of evidence, not an arbitrary score. A finding that meaningful alternatives were considered does not prove the optimum was found; a preferred screenshot does not prove long-term usability. The [version review](REVIEW-v1.12.0.md) identifies which of these checks were actually executed, and which await an independent model/application trial.
+
