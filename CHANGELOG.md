@@ -9,6 +9,7 @@
 - Judge evidence through breadth, depth, temporal coverage, relevance and reliability; distinguish continued research, local trials and broader implementation by decision maturity.
 - Carry research into actual mature-resource adoption, focused adaptation and real-use verification; maintain authorized alternative access and specific user-assisted acquisition.
 - Update bilingual product guidance and add a complete experience-research guide while retaining artistic goals, general screen-based media, eight common references and the existing workflow and release gates.
+- Route browser-job system dependencies through the official Ubuntu archive after repeated runner-specific mirror delays; preserve package verification and all release gates.
 
 ## 1.11.0 — 2026-10-26
 

@@ -285,6 +285,24 @@ local outputs are represented in the public bundle.
 
 ## Publication boundary
 
+The first remote run at `73add60f9754af67ed5b32c2fed72e964ae7e3e5` passed the
+four test matrices, both installation routes and publication rendering. Its
+scenario job was cancelled during dependency preparation: the Azure Ubuntu
+mirror transferred 25.9 MB in 9 min 47 sec, then the 61.2 MB CJK-font download
+was cancelled. No scenario assertion had run, so the missing scenario artifact
+was a consequence of setup not completing. A targeted retry was also cancelled
+before any scenario ran; its 25.4 MB dependency download took 9 min 44 sec.
+
+The browser jobs now replace only that existing Azure Ubuntu URI with the
+official Ubuntu archive before installing dependencies. The change preserves
+package names, suites, components, keyrings, signature verification, other
+repositories, timeouts and every test/release gate. It was separately reviewed
+and checked against both source formats and near-miss URI boundaries. The
+[recovery record](evidence/v1.12.0/ci-dependency-recovery.json) distinguishes
+observed download delays from the inferred time-budget cause and records the
+limited change. The final source must complete a new full workflow; earlier
+partial results are not presented as its completed release.
+
 The existing workflow requires the OS/Python tests, local and exact-commit
 installation, local and actual-GitHub README checks, and product/asset/content/
 temporal scenarios before release. Its publication tool verifies clean source,

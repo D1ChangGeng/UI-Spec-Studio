@@ -5,8 +5,8 @@
   "unit_tests": {
     "command": "python -m unittest discover -s tests -v",
     "passed": 153,
-    "log_sha256": "cd71bc557e3532796e1c87c6784fa29a2ae90504555cb74b0ed849107f55dcf4",
-    "source_boundary": "Final runtime, guides and retained application evidence; full suite rerun after final review records were assembled."
+    "log_sha256": "eb3e4897dfeb39cfd2252d9597aa6b4a5034e7cc9cbf18c65c85c8a54f40ff9b",
+    "source_boundary": "Final runtime, guides, retained application evidence and the CI mirror URI repair; full suite rerun after that repair."
   },
   "installer": {
     "command": "python tools/install_smoke.py --source <local checkout>",
@@ -107,5 +107,11 @@
     "independent_audited_source_files_matched": 18,
     "readme_source_hashes_matched": true,
     "git_diff_check": "pass"
+  },
+  "ci_dependency_recovery": {
+    "record": "ci-dependency-recovery.json",
+    "workflow_sha256": "193a25231c672a99bbd0046efb2ea178be7046578fb208e4ab9c8c5458b59bff",
+    "local_URI_boundaries": "pass",
+    "release_gates": "unchanged; final source requires a new full CI run"
   }
 }

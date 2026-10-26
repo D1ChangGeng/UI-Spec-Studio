@@ -1,0 +1,59 @@
+{
+  "date_utc": "2026-10-26",
+  "previous_source_commit": "73add60f9754af67ed5b32c2fed72e964ae7e3e5",
+  "run_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40359989786",
+  "observed_attempts": [
+    {
+      "attempt": 1,
+      "job_id": 121702650364,
+      "conclusion": "cancelled",
+      "apt_download": "25.9 MB in 9min 47s (44.2 kB/s)",
+      "location": "azure.archive.ubuntu.com/ubuntu",
+      "following_state": "Chromium downloaded; 61.2 MB fonts-noto-cjk download cancelled",
+      "scenario_assertions_executed": false,
+      "release": "skipped"
+    },
+    {
+      "attempt": 2,
+      "job_id": 121709626237,
+      "conclusion": "cancelled",
+      "apt_download": "25.4 MB in 9min 44s (43.4 kB/s)",
+      "location": "azure.archive.ubuntu.com/ubuntu",
+      "following_state": "System/browser dependency step cancelled after downloads; CJK and four scenarios never started",
+      "scenario_assertions_executed": false,
+      "release": "skipped"
+    }
+  ],
+  "control": "Same-source publication job: 25.9 MB system dependencies in 9s and 61.2 MB fonts in 6s; test, install and publication gates succeeded.",
+  "inference": "The observed slow runner-to-mirror transfer consumed the configured job time budget. Logs state operation canceled; they do not explicitly name timeout or establish a global mirror outage.",
+  "repair": "Precisely replace existing Azure Ubuntu /ubuntu URI with archive.ubuntu.com before Playwright dependencies in both browser jobs; support .list and .sources.",
+  "preserved": [
+    "HTTP/HTTPS scheme",
+    "suite and components",
+    "architecture and Signed-By",
+    "package names and APT signature checks",
+    "other sources and near-miss paths",
+    "job timeouts",
+    "all assertions, artifacts, permissions, action pins and release dependencies",
+    "frozen 29-file runtime skill"
+  ],
+  "local_check": {
+    "command": "Actual sed -E expression on mixed .list/DEB822 fixtures",
+    "result": "pass",
+    "expected_URI_replacements": 3,
+    "near_miss_paths_unchanged": true,
+    "other_hosts_and_keyrings_unchanged": true
+  },
+  "official_reference": "https://documentation.ubuntu.com/security/software-integrity/archive-verification/",
+  "workflow_sha256": "193a25231c672a99bbd0046efb2ea178be7046578fb208e4ab9c8c5458b59bff",
+  "publication_boundary": "A new full workflow on the repaired source is required. This record does not predeclare the later run or release result.",
+  "independent_review": {
+    "path": "ci-mirror-review.json",
+    "sha256": "0f7d94b6347c68c4bf0730e5872c6aed007925d480301000c6e3339206fc81ae",
+    "result": "pass; removing only the two added steps reproduces previous workflow bytes"
+  },
+  "original_log_sha256": {
+    "ui-spec-1_12-scenario-attempt1.log": "c84623b167a0d18aa2cdd34fa6b3e4615bd314d5d3cf26292d23120c8a84f6b8",
+    "ui-spec-1_12-scenario-attempt2.log": "2d0ab2dd9912a93daaa4ac77094bf7f51262774591460eb9ac0f5632db66b784"
+  }
+}

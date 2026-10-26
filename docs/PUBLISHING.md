@@ -26,6 +26,11 @@ consistent across platforms.
 
 A main-branch push changing VERSION runs validation, installation, publication-render
 and the product, asset, content and temporal scenario checks.
+Before browser dependency installation, the two Ubuntu browser jobs replace an
+existing Azure Ubuntu archive URI with `archive.ubuntu.com`. The precise replacement
+supports both `.list` and `.sources`, retaining suites, components, keyrings and
+other repositories. APT continues to download and verify packages normally; see
+[Ubuntu archive verification](https://documentation.ubuntu.com/security/software-integrity/archive-verification/).
 The release job has repository-content write permission; ordinary validation jobs
 have read-only permissions. External Actions are pinned to reviewed commit SHAs.
 

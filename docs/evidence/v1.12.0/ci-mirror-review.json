@@ -1,0 +1,34 @@
+{
+  "reviewed_at_utc": "2026-10-26T16:56:10.320093+00:00",
+  "reviewer": "ci_dependency_review",
+  "independent_review": "mirror_patch_check: passed read-only diff review",
+  "repository": "/workspace/scratch/80a5a322a00d/UI-Spec-Studio",
+  "base_commit": "73add60f9754af67ed5b32c2fed72e964ae7e3e5",
+  "path": ".github/workflows/validate.yml",
+  "workflow_sha256": "193a25231c672a99bbd0046efb2ea178be7046578fb208e4ab9c8c5458b59bff",
+  "base_workflow_sha256": "9caba13f38833970a2b6dfb2e8152561829de1abe5eb3b8a3a51d1be607589ba",
+  "decision": "pass",
+  "findings": [],
+  "checks": {
+    "exactly_two_identical_reviewed_steps": true,
+    "placement_before_playwright_with_deps": {
+      "publication": true,
+      "scenario": true
+    },
+    "all_other_workflow_bytes_equal_to_base": true,
+    "validation_gates_preserved": true,
+    "timeouts_preserved": true,
+    "permissions_preserved": true,
+    "action_pins_preserved": true,
+    "release_needs_preserved": true,
+    "fonts_and_evidence_steps_preserved": true,
+    "diff_whitespace_check_passed": true
+  },
+  "conclusion": "Only two matching Azure Ubuntu URI rewrite steps were inserted. Existing suites, components, architecture filters, signature/keyring configuration and other repository URIs are preserved by the reviewed transformation. All other workflow bytes are unchanged.",
+  "scope": "Read-only review of .github/workflows/validate.yml against HEAD. Other repository changes are outside this review.",
+  "limitations": [
+    "Did not execute sed against APT source files or run sudo.",
+    "Did not run repository gates or trigger, rerun, or cancel GitHub jobs.",
+    "Does not establish performance or availability of archive.ubuntu.com; new CI must verify the reviewed commit."
+  ]
+}
