@@ -114,3 +114,7 @@ Revisit the research question with actual words: can a reader identify the page,
 Test the promises made by copy against actual capabilities: a button named “Save” must reach a real save boundary or be clearly labeled as a demo; a success message follows a confirmed result; permission and price text reflect the authoritative system. Use representative scenarios and source-backed review for consequential text. When direct comprehension research is warranted and available, observe users attempting credible tasks without telling them the intended path. Report automated checks, editorial judgment and actual user observations as distinct evidence.
 
 The strongest content outcome makes the next meaningful decision understandable at the moment it is needed, while retaining coherent brand voice and a clear visual place in the product.
+
+## Put language relationships on the same evidence map
+
+Connect consequential copy to its journey question, owning surface/state, factual authority, locale/type treatment and actual checked conditions using [the shared map](evidence-map.md). A new product term can alter L2 navigation, L3 control roles and L4 wrapping; trace those dependents instead of duplicating decision records. Preserve actual source authority for promises and approvals. A translation entry establishes available text; rendered inspection and actual user comprehension require separate evidence. Routine supported wording edits can inherit the established system and retain a short scoped check.

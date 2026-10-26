@@ -152,3 +152,14 @@ service dashboard, editor, public decision flow or screen-based document. See
 ## Content carries design decisions
 
 For consequential user-visible language, the [content decision record](../skills/ui-spec/assets/templates/content-decisions.md) connects user question, role, placement, actual copy, locale variants, source authority and observed behavior. Use existing project records where possible. A revised label or state message can change the layout or journey; render the result together with the selected wording.
+
+## Multiscale evidence and action
+
+Use the same record for an Overview, a selected Design Detail and Execution &
+Assurance. Connect L0–L5 objects, transverse states/conditions/dependencies, the
+seven decision relations and concrete next work. Challenge the initial inventory
+against user tasks and external product evidence. Important traceability is
+required; this Markdown template or the optional JSON profile are replaceable
+representations. See [the guide](DESIGN-EVIDENCE.md) and the installed
+[map](../skills/ui-spec/references/evidence-map.md) and
+[action method](../skills/ui-spec/references/evidence-actions.md).

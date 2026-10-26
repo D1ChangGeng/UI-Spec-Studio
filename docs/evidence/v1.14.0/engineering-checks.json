@@ -1,0 +1,50 @@
+{
+  "version": "1.14.0",
+  "baseline_commit": "c096276527a47e20fa0cd0f4e1e81e9ac345abe2",
+  "scope": "Executed local checks; remote CI and comparative agents remain separate",
+  "unit_suite": {
+    "command": "python -m unittest discover -s tests -q",
+    "passed": 215,
+    "log_sha256": "c8c203708ff6d4bab782b2293ca70c9983c26689eeb27932fcd36bfd37d976be"
+  },
+  "python": "3.13.5",
+  "package_validation": "pass",
+  "catalog_check": "pass",
+  "artwork_check": "pass",
+  "new_helper_tests": 52,
+  "new_distribution_preparation_tests": 7,
+  "offline_installed_helper": {
+    "operation": "offline install into new temporary directory; invoke installed helper against its unfilled template",
+    "views": [
+      "overview",
+      "detail",
+      "execution"
+    ],
+    "result": "pass",
+    "scope": "local copy and actual installed helper; no model session",
+    "installed_files": 34
+  },
+  "experiment_preparation": {
+    "result": "pass",
+    "prepared_cells": 18,
+    "arms": 3,
+    "tasks": 6,
+    "real_agent_runs": 0,
+    "status": "prepared_not_run",
+    "input_identity": "../../experiments/design-evidence/baseline-identity.json"
+  },
+  "readme_local": {
+    "mechanical_conditions": 12,
+    "inspected_changed_section_crops": 12,
+    "inspection": "readme-local-review.json",
+    "browser": "144.0.7559.96",
+    "renderer": "offline GitHub-like approximation"
+  },
+  "preservation": "source-preservation.json",
+  "public_readback": "Not predeclared here; exact tag, CI and asset readback establish actual publication",
+  "limits": [
+    "No independent source review or controlled Agent experiment executed",
+    "Old browser fixture code remains unchanged; remote workflow reruns its mechanics",
+    "No assertion of general human-perceived quality gain"
+  ]
+}

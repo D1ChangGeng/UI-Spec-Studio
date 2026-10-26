@@ -336,3 +336,16 @@ applications, README self-application, source identities and limitations. Existi
 product, asset, content and temporal fixtures remain deterministic release gates.
 Their results do not measure general model improvement or human preference.
 Publication readback is tied to the actual committed source and release assets.
+
+## Multiscale design evidence: separate assurance tracks
+
+Version 1.14 adds a structural helper and a reproducible preparation kit for
+[three-arm behavior comparisons](experiments/design-evidence/PROTOCOL.md).
+The baseline already contains evidence-oriented methods; the experiment tests
+additional structure and action coupling, not the invention of research.
+Frozen inputs and pending cells are preparation, not executed model runs.
+No deterministic test, synthetic declaration or file hash establishes that an
+agent searched, viewed, adopted or improved the interface. Record the actual
+model/harness, tools, access, trace, implementation and blind visual review for
+each run. Keep content integrity, observed behavior and perceptual outcomes
+separate, including source-based hypotheses and untested dimensions.

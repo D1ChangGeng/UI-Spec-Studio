@@ -179,3 +179,9 @@ Use the [asset method](visual-assets.md) to compare mature assets, adaptation an
 ## Research mature language patterns with interface resources
 
 Inspect headline purpose, control names, condition placement and feedback at the relevant task step. Transfer patterns while preserving current product facts, identity and commitments. Template copy establishes a wording candidate. Apply the [content method](content-design.md) alongside visual research.
+
+## Bind the source chain to the design decision
+
+For a consequential DDU in the [map](evidence-map.md), keep **design reference → candidate resource → original demo → local trial → actual adoption → integrated result** identifiable. These are roles in one decision, not mandatory separate documents. Record exact item/variant, conditions, observed portions and what each role supports; one source may occupy several roles with explicit scope.
+
+Distinguish functional primitives from the mature visual implementation that carries layout, type, material and motion. Reading docs or adding a dependency does not establish rendered quality or actual use. A scope-discovery finding can change which resource level is appropriate. Inspect comparably resolved alternatives before consequential selection, and carry failed fit or unavailable evidence as a question rather than filling it with source familiarity.

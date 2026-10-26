@@ -249,3 +249,7 @@ and preserve meaning and identity in reduced-motion or static presentations.
 Use the local trial to resolve consequential resource fit before broad integration. Revisit the same questions with real content, matching interaction stages and useful viewing conditions. Begin with the normal-scale whole, examine composition, functional regions and consequential details, then return to the complete result. Choose perceptual dimensions that can change a decision and connect visible facts to likely effects, explanatory hypotheses and actual resource/adaptation choices.
 
 When adaptations change type, material, space or state behavior, recheck the affected relationship and its neighbors. Review the assembled product across related views and continuous use; detail crops and enlarged frames support their stated scope. A mismatch can reopen resource selection, adaptation, content structure or the experience target. Carry unresolved evidence gaps into the next relevant check. The [visual observation method](VISUAL-INSPECTION.md) supplies the inspection details.
+
+## 让证据缺口决定下一步
+
+重要设计选择可以在现有项目记录中按[多尺度设计证据地图](DESIGN-EVIDENCE.md)展开。先看整体目标和覆盖，再深查有影响的对象，最后检查实际采用、验证条件与行动。新发现可以修订范围；重大缺口限制依赖它的实现承诺，已证实的局部调整可以直接收敛。记录形式可选，证据关联与实际行动不能由文字上的完整度代替。

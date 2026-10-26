@@ -65,6 +65,22 @@ For **Expressive Contrast**, study functional experience, cross-domain expressio
 
 Review **experience validity** and **expressive completion** independently. Source fidelity protects selected or approved design details; perceptual inspection judges the rendered result. Authored timelines can support repeatable frame comparisons, while working products need actual interaction and runtime evidence. [Art direction and expressive design](docs/ART-DIRECTION.md)
 
+## Connect design decisions across scales
+
+A **multiscale design evidence map** links product goals, journeys, pages,
+functional regions, perceptual details and actual implementation. Challenge
+initial coverage against user tasks and real references; keep evidence,
+adoption, verification conditions and owner approval distinct.
+
+Important gaps determine the next research, comparison or local trial and limit
+only the implementation commitments that depend on them. Use the same records
+for **Overview · Design Detail · Execution & Assurance**. Existing Markdown
+records work; the optional read-only checker checks references and declarations,
+not visual quality.
+
+[Method and examples](docs/DESIGN-EVIDENCE.md) ·
+[Comparative experiment protocol](docs/experiments/design-evidence/PROTOCOL.md)
+
 ## Explore until the important choices have evidence
 
 **Evidence-driven exploration** connects a question to search, actual observation, comparison and the next useful question. Research effort follows design impact, uncertainty and potential improvement. A defining font, background or interaction can warrant sustained work across many independent sources; an established component can proceed with focused validation.
@@ -134,7 +150,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.13.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.14.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

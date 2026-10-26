@@ -79,3 +79,15 @@ Keep accepted direction, current outcome, key evidence/choices, shared rules, re
 ## Apply the practice to the actual medium
 
 Apply the same method to README, charts, slides and explanations through their reading task and host. A README can prioritize understanding, fit, installation and first use using native headings, links, code and artwork. Study relevant publications; inspect actual host, theme and narrow renders. Static work verifies content, links/assets and publication; live work also verifies state and services.
+
+## Use the evidence map inside each operation
+
+In init, form a revisable scope and task-derived coverage map. In shape, connect candidate decisions to real observed sources and competing directions. In iterate, update affected decision units after discoveries, trials and repairs. In audit, reconcile the inventory with real navigation, states, conditions and dependencies, including newly discovered omissions. In finish, trace accepted qualities through adopted code/assets to actual product-boundary evidence.
+
+Use [the map](evidence-map.md) and existing design records to expose the current Overview, selected Design Detail and Execution & Assurance. Required decision relations do not require a fixed schema or one document per level. A routine inherited correction can remain compact. Treat record completeness, actual execution and user-visible quality as different observations.
+
+## Make the evidence gap select the next work
+
+Before expanding a consequential choice or declaring its completion, read and apply [evidence-actions.md](evidence-actions.md). For every open high-impact question, identify the next actual search, view, comparison, trial or recheck and the result that would change the choice. Keep dependent broad implementation provisional while its critical evidence is missing. Continue supported independent work or a scoped reversible probe; do not turn one blocked source into a whole-project freeze.
+
+After the action, record the new observation and its effect on the decision, not just the intention to investigate. Reopen only the affected scope when a shared font, layout, asset, adapter or observation condition changes. Supported low-impact work should converge and proceed rather than repeat broad discovery.

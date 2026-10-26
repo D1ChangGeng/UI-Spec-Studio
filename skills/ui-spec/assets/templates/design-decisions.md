@@ -118,3 +118,71 @@ For consequential choices, connect the intended sequence to preparation, validit
 resource cost, authoritative completion and recovery. Link relevant content/template
 ownership, override behavior, role information and batch scope. Record measured
 conditions and observed outcomes where evaluated; routine implementation stays in code.
+
+## Multiscale map — use the current project record
+
+Keep **one authoritative record**. The rows below are an expandable guide, not a
+required inventory for every task. Important decisions must retain their evidence
+relationships; this file and the JSON profile are optional representations.
+
+### Overview
+
+Intended experience and scope; user tasks; relevant reference versions/platforms;
+important L0 goals, L1 journeys, L2 pages, L3 regions/components and L4 qualities;
+L5 realization/check links at every useful scale. Identify shared objects once.
+Link states/episodes, usage conditions, dependencies and evidence rather than
+copying the object into each page's record.
+
+### Coverage challenge
+
+| Discovery from user tasks or observed reference | Evidence and conditions | Include / exclude / open, with reason | Affected object/decision | Next evidence route |
+|---|---|---|---|---|
+
+Check what the initial inventory missed, including relevant return/recovery,
+content extremes and alternative device behavior. Exclude irrelevant reference
+features explicitly rather than importing an entire product. Keep uncertain
+scope open with a concrete question. Explain inheritance from verified families.
+
+### Design Detail — a consequential decision unit
+
+- **ID, linked objects and purpose:** which experience or perceptual quality matters?
+- **Question and falsifier:** what is unresolved, and what discovery could change the choice?
+- **Evidence and observation:** exact source/role, inspected portion or interval,
+  state/condition/revision, actual finding, source assertion, inference and missing evidence.
+- **Judgment and alternatives:** relationship creating quality, applicability,
+  materially different options, comparable completion, reasons and tradeoffs.
+- **Chosen/provisional implementation:** actual resource/variant/configuration,
+  original demo, local trial, retained mechanisms, adaptation and source/asset location.
+- **Claim-specific verification:** object, condition, method, observed result and
+  evidence; keep visual, temporal, task and engineering findings separate.
+- **Remaining gap and action:** dependent scope, concrete next operation and
+  outcome that would close or revise the question.
+
+For a routine inherited change, these relations can fit in a few sentences.
+For a defining asset or complete product, expand the necessary visual and temporal
+detail. Unknowns and pending trials remain explicit rather than invented.
+
+### Execution & Assurance — the same decisions
+
+| Decision/object | Research facts | Trial/adoption and actual locations | Scoped checks and current revision | Owner approval/exception | Open gap, dependency and next action |
+|---|---|---|---|---|---|
+
+Acquired, observed, compared, trialed, adopted and verified are scoped facts,
+not a single global completion score. A source can be rejected after observation;
+an adopted component can fail a state. Owner approval requires its own source
+and scope. Keep historic results and reopen affected claims after changes.
+
+Show the actual preview and representative inspected evidence alongside these
+views. Keep long search logs behind useful links. The optional JSON profile and
+checker provide structural feedback only; they do not establish that research
+occurred or that the interface has mature visual quality.
+
+### Action checkpoint
+
+Before a consequential expansion, name which critical gaps still affect that
+scope. Choose the next evidence-producing search, observation, comparison, local
+trial or repair and state what would change the decision. Continue unrelated
+supported work; a reversible probe stays explicitly provisional. After acting,
+link the resulting evidence and explain the actual change to the decision.
+Use [the action rules](../../references/evidence-actions.md) rather than treating
+this template's completed fields as permission to advance.

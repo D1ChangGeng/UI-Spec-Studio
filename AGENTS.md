@@ -152,3 +152,19 @@ cap after historical review found compressed operative guidance. Preserve the
 other valid professional knowledge. Structural tests protect known details;
 semantic comparison and consuming-agent behavior need independent review.
 Do not silently replace existing capability with new abstract wording.
+
+## Version 1.14: multiscale evidence and action
+
+Keep consequential goals, design objects, observed support, adoption and scoped
+verification connected. Coverage is revisable through both user tasks and external
+reference discovery. L0–L5 are design scales, not workflow phases; L5 crosscuts
+the others. Separate evidence, implementation, check and approval facts.
+The eight common references retain their full-reading contract and all prior
+knowledge. The map and action references provide conditional required depth.
+Important traceability and action rules are mandatory; file layout, JSON and
+helpers remain optional. Integrate the existing design decision record rather
+than proliferating parallel reports. A high-impact unresolved gap constrains
+its dependent commitment, not unrelated work or a bounded revealing trial.
+The optional checker only evaluates declarations and local references. Preserve
+separate content, actual-agent and real-UI evidence. Experiment preparation,
+authored scenarios and source checks must never be called comparative agent runs.

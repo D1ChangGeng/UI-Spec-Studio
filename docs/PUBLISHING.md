@@ -83,7 +83,7 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.13.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.14.0 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
@@ -126,3 +126,12 @@ gate checks its declared state and continuity contracts. Reviewers open the rele
 frames or clips and record visual findings separately. Preserve natural-time and
 controlled-time evidence labels; source presence, a completed capture or a successful
 assertion does not by itself establish motion quality.
+
+## Evidence-model release boundary
+
+Keep the content-preservation record, opt-in helper checks and experimental
+status with the release. A prepared three-arm comparison is not a completed
+trial; do not relabel older independent applications as tests of the new skill.
+Inspect changed README rendering from actual captures separately from browser
+assertions, and preserve scope of viewed frames. Package/installation assurance
+and empirical design effectiveness are distinct publication claims.

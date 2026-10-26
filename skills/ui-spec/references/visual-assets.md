@@ -106,3 +106,9 @@ Complete the current asset slice with an inspectable preview, chosen direction, 
 ## Source support
 
 The [asset source map](asset-sources.md) links primary material for icon provenance, brand usage, type production, scene exports, animation runtimes, image delivery and accessibility. Follow the exact source relevant to the selected route; its evidence scope remains separate from project validation.
+
+## Link high-impact assets across design scales
+
+Use the shared asset or decision ID in [the map](evidence-map.md) to connect intended character, affected regions, perceptual details, master/source, delivery variants and inspected placements. Do not infer research depth from asset area: a favicon or defining typeface can carry high product impact. If material changes, revisit dependent text contrast, reading space, component weight and relevant dynamic conditions as well as the isolated asset.
+
+Acquired rights, available files, viewed craft, actual integration and owner preference remain distinct. A blocked authorized asset route needs an explicit research gap; a replacement should retain the original quality question and identify any scoped change in direction.

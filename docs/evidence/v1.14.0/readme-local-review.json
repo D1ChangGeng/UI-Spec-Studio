@@ -1,0 +1,242 @@
+{
+  "source_files": {
+    "README.md": "8d8a27c5767bf855ff67c35bda70fd5692769ced50eb0e4580a6a5c76cdce06f",
+    "README.zh-CN.md": "6c66147462edef874803e5da5b5c8dd4744c34aae3b9a258903d0badfd25c912"
+  },
+  "browser": "144.0.7559.96",
+  "renderer": "Local Markdown-It / GitHub-like stylesheet; not actual GitHub pixels",
+  "conditions": 12,
+  "actually_viewed": "Four original-pixel sheets: en/zh × light/dark, each containing 390/768/1440px crops of the new section with neighboring heading. No resampling within these sheets.",
+  "observations": [
+    "Chinese heading, body grouping and guide links remain readable in all three observed widths.",
+    "English initial inline guide links produced a leading separator on a new line at 1440px; links moved to their own paragraph.",
+    "All final English/Chinese light/dark detail crops were inspected; no blocking clipping, hierarchy or contrast issue observed in that scope.",
+    "The 390px English guide link wraps within its own paragraph with no loss of text."
+  ],
+  "initial_capture_error": "The first detail-capture command attempted an off-viewport clip and failed before producing images; final capture uses document-coordinate clipping with full-page support.",
+  "inspection_records": [
+    {
+      "file": "en-light-390.png",
+      "source": "README.md",
+      "source_sha256": "8d8a27c5767bf855ff67c35bda70fd5692769ced50eb0e4580a6a5c76cdce06f",
+      "language": "en",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "clip": {
+        "x": 0,
+        "y": 3855.046875,
+        "width": 390,
+        "height": 654.421875
+      },
+      "sha256": "4155a015764a8e92977301ec99d544b8f9e57a7cc5d8faf78cddc9adb167c454"
+    },
+    {
+      "file": "en-light-768.png",
+      "source": "README.md",
+      "source_sha256": "8d8a27c5767bf855ff67c35bda70fd5692769ced50eb0e4580a6a5c76cdce06f",
+      "language": "en",
+      "theme": "light",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "clip": {
+        "x": 0,
+        "y": 2579.0625,
+        "width": 768,
+        "height": 409.546875
+      },
+      "sha256": "1e874b12736de73459f5ea19aed9c286d008d24d0b1d7252bf81954df2cd4998"
+    },
+    {
+      "file": "en-light-1440.png",
+      "source": "README.md",
+      "source_sha256": "8d8a27c5767bf855ff67c35bda70fd5692769ced50eb0e4580a6a5c76cdce06f",
+      "language": "en",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "clip": {
+        "x": 230,
+        "y": 2374.71875,
+        "width": 980,
+        "height": 359.953125
+      },
+      "sha256": "76b3304092d7f635b0f5c01565905bbddc9ba0dcce2916e7816cb0009316f5ce"
+    },
+    {
+      "file": "en-dark-390.png",
+      "source": "README.md",
+      "source_sha256": "8d8a27c5767bf855ff67c35bda70fd5692769ced50eb0e4580a6a5c76cdce06f",
+      "language": "en",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "clip": {
+        "x": 0,
+        "y": 3855.046875,
+        "width": 390,
+        "height": 654.421875
+      },
+      "sha256": "84bde4b9f2537c96323981e90d11e58b3f25ac1f759c81d3b1abd5b6e55aa372"
+    },
+    {
+      "file": "en-dark-768.png",
+      "source": "README.md",
+      "source_sha256": "8d8a27c5767bf855ff67c35bda70fd5692769ced50eb0e4580a6a5c76cdce06f",
+      "language": "en",
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "clip": {
+        "x": 0,
+        "y": 2579.0625,
+        "width": 768,
+        "height": 409.546875
+      },
+      "sha256": "3bb6ea974c9c637866c9bced552a96c1bfd4d7fb22d86acf683ab8900eaecd93"
+    },
+    {
+      "file": "en-dark-1440.png",
+      "source": "README.md",
+      "source_sha256": "8d8a27c5767bf855ff67c35bda70fd5692769ced50eb0e4580a6a5c76cdce06f",
+      "language": "en",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "clip": {
+        "x": 230,
+        "y": 2374.71875,
+        "width": 980,
+        "height": 359.953125
+      },
+      "sha256": "97e135084baa4c5ed2d3110c8119c894f7308d3a3e3c03227e258aca9960ceb4"
+    },
+    {
+      "file": "zh-light-390.png",
+      "source": "README.zh-CN.md",
+      "source_sha256": "6c66147462edef874803e5da5b5c8dd4744c34aae3b9a258903d0badfd25c912",
+      "language": "zh",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "clip": {
+        "x": 0,
+        "y": 2804.828125,
+        "width": 390,
+        "height": 426.875
+      },
+      "sha256": "ba9d03b88e0dfc72fb3f0e897624d7a1a0916e7364555f357f9b845f3e697038"
+    },
+    {
+      "file": "zh-light-768.png",
+      "source": "README.zh-CN.md",
+      "source_sha256": "6c66147462edef874803e5da5b5c8dd4744c34aae3b9a258903d0badfd25c912",
+      "language": "zh",
+      "theme": "light",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "clip": {
+        "x": 0,
+        "y": 2107.921875,
+        "width": 768,
+        "height": 335.15625
+      },
+      "sha256": "0654637dc2440d6446cad9f71773d494bfa72ff713f0c8f98dce7fda656760a2"
+    },
+    {
+      "file": "zh-light-1440.png",
+      "source": "README.zh-CN.md",
+      "source_sha256": "6c66147462edef874803e5da5b5c8dd4744c34aae3b9a258903d0badfd25c912",
+      "language": "zh",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "clip": {
+        "x": 230,
+        "y": 2052.359375,
+        "width": 980,
+        "height": 310.359375
+      },
+      "sha256": "9d8bb05a2677d338ab4b12b8cd8a79da2443862c1bc8cf03c7b515b57a38dfb0"
+    },
+    {
+      "file": "zh-dark-390.png",
+      "source": "README.zh-CN.md",
+      "source_sha256": "6c66147462edef874803e5da5b5c8dd4744c34aae3b9a258903d0badfd25c912",
+      "language": "zh",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "clip": {
+        "x": 0,
+        "y": 2804.828125,
+        "width": 390,
+        "height": 426.875
+      },
+      "sha256": "9b810e3638b3eb881c18a279b2baebd1a390cba29d17554a3f26be65ff7e4a1c"
+    },
+    {
+      "file": "zh-dark-768.png",
+      "source": "README.zh-CN.md",
+      "source_sha256": "6c66147462edef874803e5da5b5c8dd4744c34aae3b9a258903d0badfd25c912",
+      "language": "zh",
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "clip": {
+        "x": 0,
+        "y": 2107.921875,
+        "width": 768,
+        "height": 335.15625
+      },
+      "sha256": "b29f71ddec3ec480fc88a196fcf3d4d1fe7a2c975f7da994729d822dba82cdca"
+    },
+    {
+      "file": "zh-dark-1440.png",
+      "source": "README.zh-CN.md",
+      "source_sha256": "6c66147462edef874803e5da5b5c8dd4744c34aae3b9a258903d0badfd25c912",
+      "language": "zh",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "clip": {
+        "x": 230,
+        "y": 2052.359375,
+        "width": 980,
+        "height": 310.359375
+      },
+      "sha256": "a0601c0909ed0b4ef4a195eb2806661a23456946491ce1a8d0a7a385c6cd6d10"
+    }
+  ],
+  "limits": [
+    "This is maintainer self-application, not a fresh-context or independent three-arm experiment.",
+    "Viewing crops does not establish every page section or natural-time motion.",
+    "The full 12-condition local browser matrix passed mechanical assertions; only the declared changed-section pixels were visually reviewed.",
+    "Actual GitHub source/host rendering remains the release workflow boundary.",
+    "No user comprehension, clipboard, screen-reader or comparative-model outcome asserted."
+  ]
+}
