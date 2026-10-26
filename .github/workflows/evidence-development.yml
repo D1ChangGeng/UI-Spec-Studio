@@ -3,20 +3,72 @@ on:
   push:
     branches: [work/multiscale-evidence-v1.14]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  baseline:
+  apply:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
-          ref: c096276527a47e20fa0cd0f4e1e81e9ac345abe2
-          persist-credentials: false
-      - name: Archive the unchanged review baseline
-        run: git archive --format=zip --output=baseline.zip HEAD
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - name: Apply exact locally reviewed source
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, lzma, pathlib, shutil, subprocess
+          baseline='c096276527a47e20fa0cd0f4e1e81e9ac345abe2'
+          subprocess.run(['git','merge-base','--is-ancestor',baseline,'HEAD'],check=True)
+          assert not subprocess.check_output(['git','status','--porcelain'],text=True).strip()
+          parts=[pathlib.Path(f'.development/part-{i:02}') for i in range(1,8)]
+          data=b''.join(p.read_bytes() for p in parts)
+          assert len(data)==55368
+          assert hashlib.sha256(data).hexdigest()=='f697904111b9128a03bc1bd3a88cd5d3d08ef59644642b2c39a1e257aa7da36a'
+          patch=lzma.decompress(data)
+          assert len(patch)==204617
+          assert hashlib.sha256(patch).hexdigest()=='6659cc8a2472d7a663b29cb5da2bee2e1d42657de7a8a8c1ef26fd6fa6e774af'
+          target=pathlib.Path('/tmp/ui-spec-release.patch')
+          target.write_bytes(patch)
+          subprocess.run(['git','apply','--check',str(target)],check=True)
+          subprocess.run(['git','apply',str(target)],check=True)
+          pathlib.Path('.github/workflows/evidence-development.yml').unlink()
+          shutil.rmtree('.development')
+          print('Applied reviewed patch; temporary transport removed')
+          PY
+          python tools/validate_package.py
+          python tools/readme_art.py --check
+          python tools/catalog_docs.py --check
+          python -m unittest discover -s tests -v
+          git diff --check
+          python tools/package.py
+      - name: Verify byte-identical packages and commit only the development branch
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib,pathlib
+          expected={
+            'ui-spec-studio-1.14.0.zip':'b4565471660ff2546689ed16718023548493e8f07df59a4148c93572296c50fe',
+            'ui-spec-1.14.0.zip':'bd54f5326d0e0fde6785344f27aef74a7573a26d682226e020a407d75e4f2a01',
+            'contents.json':'87ccd14586e56e8034400093873f8421caa48734d9a52c839dd0ecef92eaef50'}
+          for name,digest in expected.items():
+            actual=hashlib.sha256((pathlib.Path('dist')/name).read_bytes()).hexdigest()
+            assert actual==digest,(name,actual,digest)
+            print(name,actual)
+          assert not pathlib.Path('.development').exists()
+          assert not pathlib.Path('.github/workflows/evidence-development.yml').exists()
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Prepare v1.14.0: multiscale design evidence and scoped action guidance'
+          git push origin HEAD:refs/heads/work/multiscale-evidence-v1.14
+          git rev-parse HEAD
+          git rev-parse HEAD^{tree}
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: ui-spec-1.13-baseline
-          path: baseline.zip
-          retention-days: 7
+          name: ui-spec-1.14-reviewed-candidate
+          path: dist/
+          retention-days: 14
