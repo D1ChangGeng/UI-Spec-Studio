@@ -49,9 +49,10 @@ Search complete pages and functional blocks when composition is the need; search
 python <skill-dir>/scripts/find_resources.py --form visual-component --stack vue --json
 python <skill-dir>/scripts/find_resources.py --form blocks --stack react --json
 python <skill-dir>/scripts/find_resources.py --id react-bits --json
+python <skill-dir>/scripts/find_resources.py --role visual-implementation --reuse-scope block --json
 ```
 
-The visual-component filter identifies documented delivery form, not inspected quality. Read the original demo, exact source/configuration and use-time terms; continue outside this catalog when worthwhile. The installed inspector does not score or approve any choice.
+Role/scope filters match the existing craft_profile labels literally. Unclassified leads remain available to other queries; missing profile labels do not establish unavailable resources or inferior quality. The visual-component filter identifies documented delivery form, not inspected quality. Read the original demo, exact source/configuration and use-time terms; continue outside this catalog when worthwhile. The installed inspector does not score or approve any choice.
 
 | Resource | Documented role | Potential reuse scope | Visual search forms |
 |---|---|---|---|

@@ -364,3 +364,12 @@ Do not count them or synthetic record tests as new model runs. A maintainer's re
 application can provide scoped workflow evidence; independent matched Agent runs,
 actual tool traces and blinded UI review are separate empirical work. Report
 unexecuted comparisons without substituting a pass from the structural inspector.
+
+
+## Additional scoped source applications
+
+The [v1.16.1 reconciliation review](REVIEW-v1.16.1.md) links three current-maintainer
+application families: a conversation block, an expressive reading workspace and
+an input-controlled drawer. Source identity, real operations and viewed frames
+support their stated observations. They are not independent Agent samples,
+complete product parity, a controlled model comparison or general aesthetic uplift.
