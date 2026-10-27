@@ -1,0 +1,85 @@
+name: Visual craft candidate reconstruction
+on:
+  push:
+    branches: [work/visual-craft-candidate-20261028]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - name: Restore exact reviewed source and frozen baseline
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64,hashlib,json,lzma,pathlib,shutil,subprocess,zlib
+          base='a89091dfa5754f98b79655c684f978f24fd92716'
+          subprocess.run(['git','merge-base','--is-ancestor',base,'HEAD'],check=True)
+          assert not subprocess.check_output(['git','status','--porcelain'],text=True).strip()
+          data=b''.join(pathlib.Path(f'.development/part-{i:02}').read_bytes() for i in range(1,9))
+          assert len(data)==63388
+          assert hashlib.sha256(data).hexdigest()=='ddf5451b95ccb7728c3963913725088559cb4c0ce2dbfa794e011e76c438fe8e'
+          patch=lzma.decompress(data)
+          assert len(patch)==329108
+          assert hashlib.sha256(patch).hexdigest()=='8bd428890c6676adcadf09367fc5fa3153822a76b9d31d711f0059f33b06635a'
+          target=pathlib.Path('/tmp/visual-craft.patch');target.write_bytes(patch)
+          subprocess.run(['git','apply','--check',str(target)],check=True)
+          subprocess.run(['git','apply',str(target)],check=True)
+          names=subprocess.check_output(['git','ls-tree','-r','--name-only',base,'--','skills/ui-spec/'],text=True).splitlines()
+          prior={name:subprocess.check_output(['git','show',base+':'+name]).decode('utf-8') for name in sorted(names)}
+          assert len(prior)==37
+          payload=json.dumps(prior,ensure_ascii=False,sort_keys=True).encode()
+          digest=hashlib.sha256(payload).hexdigest()
+          assert digest=='3006d7bce48bf3d820146daaf57b7ccac12753cd5222fa41fd4a82de92009c12'
+          frozen={'source_commit':base,'purpose':'Frozen v1.15 runtime for historical continuity, not active instructions','payload_sha256':digest,'payload':base64.b64encode(zlib.compress(payload,9)).decode()}
+          output=pathlib.Path('docs/evidence/v1.16.0/baseline-runtime.json')
+          output.write_text(json.dumps(frozen,indent=2)+'\n',encoding='utf-8')
+          assert hashlib.sha256(output.read_bytes()).hexdigest()=='7e3771355684c291bd4cebee727b0b0782cc37f82619b4ef53a2f424b80ff70b'
+          pathlib.Path('.github/workflows/visual-craft-development.yml').unlink()
+          shutil.rmtree('.development')
+          subprocess.run(['git','add','-A'],check=True)
+          tree=subprocess.check_output(['git','write-tree'],text=True).strip()
+          assert tree=='9a2da46972e2dfca3ab147daa17923b49b5abb83',tree
+          print('Exact reviewed tree:',tree)
+          PY
+          python tools/validate_package.py
+          python tools/catalog_docs.py --check
+          python tools/readme_art.py --check
+          python -m unittest discover -s tests -v
+          git diff --cached --check
+          python tools/package.py
+      - name: Verify exact release artifacts and commit candidate only
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib,pathlib
+          expected={
+           'ui-spec-studio-1.16.0.zip':'e4602942192c16137e2215ee9984e51558ed417f9e375dbc271be5a60c3d0bf9',
+           'ui-spec-1.16.0.zip':'4223eecf6256365a5d58222d3e8e015a55c9ea8d6718f4c4946dcedf3bf0395f',
+           'contents.json':'c34c8ed6b336ee41f061fd1f443098adc598b4325863a3eb7e3c690d90b50b43',
+           'SHA256SUMS.txt':'8d8e4f8cfdaa5dbe5cdd8b322afe05000286bf70eb6756a64792306023e3dd6d'}
+          for name,digest in expected.items():
+           got=hashlib.sha256((pathlib.Path('dist')/name).read_bytes()).hexdigest()
+           assert got==digest,(name,got,digest)
+           print(name,got)
+          assert not pathlib.Path('.development').exists()
+          assert not pathlib.Path('.github/workflows/visual-craft-development.yml').exists()
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Prepare v1.16.0: mature visual craft discovery and source adoption'
+          git push origin HEAD:refs/heads/work/visual-craft-candidate-20261028
+          git rev-parse HEAD
+          git rev-parse HEAD^{tree}
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ui-spec-1.16-reviewed-candidate
+          path: dist/
+          retention-days: 14
