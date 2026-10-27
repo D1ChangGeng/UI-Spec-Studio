@@ -1,0 +1,108 @@
+name: Structural inspection development
+on:
+  push:
+    branches: [work/structural-inspection-v1.15]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - name: Apply exact reviewed changes and preserve the historical runtime
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, lzma, pathlib, shutil, subprocess, zlib
+          baseline='fec7cde99be02c134481733e9f9bd3064ffa871a'
+          subprocess.run(['git','merge-base','--is-ancestor',baseline,'HEAD'],check=True)
+          assert not subprocess.check_output(['git','status','--porcelain'],text=True).strip()
+          changed=subprocess.check_output(['git','diff','--name-only',baseline,'HEAD'],text=True).splitlines()
+          assert all(p.startswith('.development/') or p=='.github/workflows/structure-development.yml' for p in changed)
+          data=b''.join(pathlib.Path(f'.development/part-{i:02}').read_bytes() for i in range(1,9))
+          assert len(data)==61112
+          assert hashlib.sha256(data).hexdigest()=='10183266bf79bc86ad8a7d16a09b7295e76fbbe1bfb92095e370ec16dda2fd1d'
+          decoded=lzma.decompress(data)
+          assert len(decoded)==296940
+          assert hashlib.sha256(decoded).hexdigest()=='40fda8261ae5c015dd673bed271e78d426271774bc4348c0ab4ffcad3a44fad6'
+          edits=json.loads(decoded)
+          assert edits['baseline']==baseline and len(edits['files'])==45
+          root=pathlib.Path.cwd()
+          for item in edits['files']:
+            relative=pathlib.PurePosixPath(item['path'])
+            assert not relative.is_absolute() and '..' not in relative.parts and '.git' not in relative.parts
+            target=root.joinpath(*relative.parts)
+            assert target.resolve().is_relative_to(root) and not target.is_symlink()
+            assert target.exists()==item['base_exists'],item['path']
+            old=target.read_bytes() if target.exists() else b''
+            assert hashlib.sha256(old).hexdigest()==item['base_sha256'],item['path']
+            lines=old.decode('utf-8').splitlines(keepends=True)
+            for operation in reversed(item['line_edits']):
+              assert 0<=operation['start']<=operation['stop']<=len(lines)
+              lines[operation['start']:operation['stop']]=operation['text'].splitlines(keepends=True)
+            result=''.join(lines).encode('utf-8')
+            assert hashlib.sha256(result).hexdigest()==item['current_sha256'],item['path']
+            target.parent.mkdir(parents=True,exist_ok=True)
+            target.write_bytes(result)
+          paths=subprocess.check_output(['git','ls-tree','-r','--name-only',baseline,'--','skills/ui-spec'],text=True).splitlines()
+          assert len(paths)==34
+          values={p:subprocess.check_output(['git','show',f'{baseline}:{p}']).decode('utf-8') for p in sorted(paths)}
+          payload=json.dumps(values,ensure_ascii=False,separators=(',',':'),sort_keys=True).encode('utf-8')
+          assert hashlib.sha256(payload).hexdigest()=='131f735fc0c0f5e9001dcb7accdadf563c39e544ba5571c12c7e3446a66e265a'
+          snapshot={
+            'source_commit':baseline,
+            'source_release':'v1.14.0',
+            'source_archive_sha256':'b4565471660ff2546689ed16718023548493e8f07df59a4148c93572296c50fe',
+            'purpose':'Frozen historic runtime for prior preservation tests and unchanged v1.13 experiment preparation; not installed instructions. Current changes are reviewed separately in continuity.json.',
+            'encoding':'zlib-base64-json',
+            'payload_sha256':'131f735fc0c0f5e9001dcb7accdadf563c39e544ba5571c12c7e3446a66e265a',
+            'payload':base64.b64encode(zlib.compress(payload,9)).decode('ascii')}
+          raw=(json.dumps(snapshot,ensure_ascii=False,indent=2)+'\n').encode('utf-8')
+          assert hashlib.sha256(raw).hexdigest()=='1df417f0d0892e1a1693302d7d1c47f479e1fadf93757bfffd8c21b45266b210'
+          pathlib.Path('docs/evidence/v1.15.0/baseline-runtime.json').write_bytes(raw)
+          pathlib.Path('.github/workflows/structure-development.yml').unlink()
+          shutil.rmtree('.development')
+          print('Exact source and historical snapshot reconstructed; transport removed')
+          PY
+          python tools/validate_package.py
+          python tools/readme_art.py --check
+          python tools/catalog_docs.py --check
+          python -m unittest discover -s tests -v
+          git diff --check
+          python tools/package.py
+      - name: Verify exact artifacts and commit the development branch
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib,pathlib
+          expected={
+            'ui-spec-studio-1.15.0.zip':'ac02b95c69c02e95dd2cd765f5b34e8f29fafb54ba57fbd9e0c0e76d0fb71408',
+            'ui-spec-1.15.0.zip':'976acf1e956a03358886e4ea9007c7b30480575c20c4c4803da02f462da19614',
+            'contents.json':'bd63139d972c810261ac6f8d8f28161949c468643227bcca1a090eaa21ddc731',
+            'SHA256SUMS.txt':'e00b7beb18b8bae619acfbeef07418d7e449ba730239790ddffff8d967954f65'}
+          for name,digest in expected.items():
+            observed=hashlib.sha256((pathlib.Path('dist')/name).read_bytes()).hexdigest()
+            assert observed==digest,(name,observed,digest)
+            print(name,observed)
+          assert not pathlib.Path('.development').exists()
+          assert not pathlib.Path('.github/workflows/structure-development.yml').exists()
+          PY
+          git add -A
+          test "$(git write-tree)" = '76818738bf24e029711769d0ccfba5ecacdb4687'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Prepare v1.15.0: neutral structural inspection and revisable design records'
+          git push origin HEAD:refs/heads/work/structural-inspection-v1.15
+          git rev-parse HEAD
+          git rev-parse HEAD^{tree}
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ui-spec-1.15-reviewed-candidate
+          path: dist/
+          retention-days: 14
