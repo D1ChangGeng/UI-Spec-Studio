@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.16.0 — 2026-10-28
+
+- Prefer mature visual craft at an appropriate reuse scope, not only functional dependencies; connect actual source use to retained perceptual relationships.
+- Add conditional typography, material, composition, assets and input-motion knowledge, informed by attributed Finesse readings without importing fixed style rules or its example corpus.
+- Add descriptive role/scope/form profiles to 15 of the existing 37 resource leads; keep alphabetical discovery, original dates and open external exploration.
+- Integrate source-first decisions into existing analysis, workflow, map, conditional patterns and verification; preserve all installed helper code and the v1.15 structural boundary.
+- Retain exact predecessor reconstruction and historical evidence; report a bounded maintainer card study separately from unexecuted independent behavior/quality comparisons.
+
 ## 1.15.0 — 2026-10-27
 
 - Reassign structural observation, professional judgment and independent verification to their appropriate owners; keep evidence-driven Agent methods intact.

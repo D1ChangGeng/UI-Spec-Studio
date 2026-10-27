@@ -273,3 +273,12 @@ and mature-source discovery → comparison → trial/adaptation → implementati
 verification remain two revisable lines of work. Either can correct the other:
 trial findings may revise the model, and new product evidence may change resource
 selection. No structural flag, stage label or past approval freezes those choices.
+
+
+## Connect visual-craft discovery to current decisions
+
+For an important resource choice, link the perceptual goal to the actual reference, the specific candidate and source variant, original-demo observation, local trial, adopted location/configuration and integrated-use finding. Record the resolved relationships that motivated selection and which survived adaptation. This extends the existing decision unit; it does not require a new record for every CSS property or a fixed number of candidates.
+
+Keep reuse scope, observed visual completeness, functional responsibility and final perceived fit distinct in professional reasoning. A background can connect L0 identity, L2 composition, L4 material/motion and L5 configuration/performance. A primitive may connect interaction semantics without claiming to carry that background or the page's visual craft. New sources can revise earlier targets, and local failures can reopen source selection.
+
+Use the current model for actual adopted choices, meaningful revisions for replacements and their reasons, and the archive for original observations. A catalog entry is a discovery lead, not a project adoption record. Structural inspectors describe only declared fields, IDs, references and relationships: they neither rate visual completeness nor judge reuse suitability, research sufficiency or the next action. All such judgments remain with the Agent and scoped actual verification.

@@ -1,0 +1,49 @@
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+import threading,http.server,functools,json,time,hashlib
+R=Path(__file__).parent;root=R/'dist';out=R/'inspected';out.mkdir(exist_ok=True)
+def load_local(page,query):
+ # Render already-authorized local bytes without requesting a blocked network origin.
+ # Only the study wrapper's query selector changes; vendor mechanisms remain intact.
+ script=(root/'app.js').read_text(encoding='utf-8')
+ assert script.count('new URLSearchParams(location.search)')==1
+ script=script.replace('new URLSearchParams(location.search)', 'new URLSearchParams('+json.dumps(query)+')')
+ page.set_content('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><body><div id="root"></div></body></html>')
+ page.add_style_tag(content=(root/'app.css').read_text(encoding='utf-8'))
+ page.add_style_tag(content=(root/'study.css').read_text(encoding='utf-8'))
+ page.add_script_tag(content=script)
+ page.locator('.notes').wait_for()
+
+results=[]
+with sync_playwright() as p:
+ browser=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox'])
+ for source,lang,theme,width in [('spotlight','en','dark',1440),('tilt','en','dark',1440),('plain','en','dark',1440),('spotlight','zh','light',390),('spotlight','en','light',768),('spotlight','zh','dark',1440)]:
+  context=browser.new_context(viewport={'width':width,'height':1000},device_scale_factor=1)
+  page=context.new_page();errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
+  path=f'{source}-{lang}-{theme}-{width}';row={'case':path,'source':source,'lang':lang,'theme':theme,'viewport':[width,1000],'assertions':[],'errors':errors}
+  load_local(page,f'surface={source}&lang={lang}&theme={theme}');page.wait_for_timeout(400)
+  row['assertions'].append({'name':'three note actions','observed':page.get_by_role('button',name='打开笔记' if lang=='zh' else 'Open note').count(),'expected':3})
+  row['assertions'].append({'name':'no document x overflow','observed':page.evaluate('document.documentElement.scrollWidth <= innerWidth'),'expected':True})
+  page.screenshot(path=str(out/f'{path}.png'))
+  target=page.locator('.notes > *').first;target.scroll_into_view_if_needed();box=target.bounding_box()
+  page.mouse.move(box['x']+box['width']*.6,box['y']+box['height']*.4);page.wait_for_timeout(300)
+  target.screenshot(path=str(out/f'{path}-hover.png'))
+  if source=='spotlight' and width==1440 and lang=='en':
+   row['episode']=[]
+   for i,frac in enumerate([.15,.35,.55,.75,.9,.55,.2]):
+    page.mouse.move(box['x']+box['width']*frac,box['y']+box['height']*.42);page.wait_for_timeout(100);a=time.time();name=f'{path}-motion-{i}.png';target.screenshot(path=str(out/name));row['episode'].append({'file':name,'start':a,'end':time.time()})
+   page.mouse.move(0,0);page.wait_for_timeout(650);target.screenshot(path=str(out/f'{path}-exit.png'))
+   page.get_by_role('button',name='Open note').first.focus();page.wait_for_timeout(250);target.screenshot(path=str(out/f'{path}-focus.png'))
+  action=page.get_by_role('button',name='打开笔记' if lang=='zh' else 'Open note').first
+  action.click();page.get_by_role('region',name='Selected note').wait_for();row['assertions'].append({'name':'selected note opens','observed':page.get_by_role('region',name='Selected note').is_visible(),'expected':True})
+  page.get_by_role('button',name='关闭阅读' if lang=='zh' else 'Close reading').click();row['assertions'].append({'name':'close retains list','observed':page.locator('.notes > *').count(),'expected':3})
+  page.get_by_role('textbox',name='Find a note').fill('no-such-query');row['assertions'].append({'name':'empty state','observed':page.get_by_role('status').is_visible(),'expected':True})
+  page.get_by_role('textbox',name='Find a note').fill('');page.get_by_role('button',name='Toggle theme').click();row['assertions'].append({'name':'theme toggled','observed':page.locator('.app').get_attribute('data-theme'),'expected':'light' if theme=='dark' else 'dark'})
+  row['passed']=all(x['observed']==x['expected'] for x in row['assertions']) and not errors;results.append(row);context.close()
+ context=browser.new_context(viewport={'width':390,'height':844},reduced_motion='reduce',is_mobile=True,has_touch=True)
+ page=context.new_page();load_local(page,'surface=spotlight&lang=zh&theme=light');page.locator('.notes').scroll_into_view_if_needed();page.locator('.notes > *').first.screenshot(path=str(out/'spotlight-reduced-touch.png'))
+ results.append({'case':'reduced-motion-touch','visible_buttons':page.get_by_role('button',name='打开笔记').count(),'claim':'emulated media/touch availability, not real device performance'})
+ context.close();browser.close()
+record={'study':'Current maintainer reinspection of previously prepared exact-source application; not an independent Agent or causal A/B test','browser':'system Chromium via Playwright; offline set_content with acquired local application bytes; no served-origin assertion','results':results,'files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in root.iterdir() if p.is_file()},'visual_review':'captures need explicit viewing; creation alone does not establish review'}
+(out/'execution.json').write_text(json.dumps(record,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+print(json.dumps({'cases':len(results),'assertions':sum(len(x.get('assertions',[])) for x in results),'passed':all(x.get('passed',True) for x in results)},indent=2))

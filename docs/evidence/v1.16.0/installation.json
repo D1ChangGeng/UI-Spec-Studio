@@ -1,0 +1,657 @@
+{
+  "scope": "Real copy installation plus five installed helper invocations; not Skills CLI or a model/host run. CI separately exercises the standard Skills CLI.",
+  "utc": "2026-10-27T17:46:48.035605+00:00",
+  "verified_files": 37,
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "69d52e423bb23bc2000926a029784ef742aa320cc327afb95d3810a27618cad4"
+    },
+    {
+      "path": "assets/design-coverage-categories.json",
+      "sha256": "c4a1bc4057cccf573dce57df39e4ec4d68f1af2c2186e3fcbcf92dfc8211c3e6"
+    },
+    {
+      "path": "assets/resource-catalog.json",
+      "sha256": "93e1e29e9012b96b86d708d4cf404223c4a24c969c75287d28d297120e99c0e8"
+    },
+    {
+      "path": "assets/templates/asset-record.md",
+      "sha256": "bd53e913b675d9a83c4211ca67e1cf608b636f31357d31a0a3b768e13acb31b6"
+    },
+    {
+      "path": "assets/templates/brief.md",
+      "sha256": "0cb7f216d8242ae9c04770b3d3d993e1bb08f7fac63f839c3a8dbcbcffc0d626"
+    },
+    {
+      "path": "assets/templates/content-decisions.md",
+      "sha256": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd"
+    },
+    {
+      "path": "assets/templates/design-decisions.md",
+      "sha256": "c854a2777f54a827480e489a832040a84f568345ae8a886f629d1aca83be0de0"
+    },
+    {
+      "path": "assets/templates/design-evidence.json",
+      "sha256": "8e46bc621e3c791293101f3c074dfee759c24f2a5fe1d690c33954a8a017aabe"
+    },
+    {
+      "path": "assets/templates/design-system.md",
+      "sha256": "328f3ce70079b2bfc2f2bbfaa4dd961c33f521d0bfd533db18450975a9d5d84d"
+    },
+    {
+      "path": "assets/templates/manifest.json",
+      "sha256": "882275fee230397d8491d65fbf3d7a69f39814583f4a7b7cc71a3e2b8b9e49ca"
+    },
+    {
+      "path": "assets/templates/resource-adoption.md",
+      "sha256": "b15b7d0a701c7f85cf429dec72b9b02c99ed8c98f56dd55ad5bbf0ed42fa6dd5"
+    },
+    {
+      "path": "assets/templates/review.md",
+      "sha256": "cf6b754a8ab5b6a195f5fcd65ce0fa3a849f6c34fbdc7af575b54c2006992241"
+    },
+    {
+      "path": "references/analysis.md",
+      "sha256": "66b84f98d3606f5fa6b9b038b20398027f24944acaae3c2249626301cdb8986a"
+    },
+    {
+      "path": "references/asset-sources.md",
+      "sha256": "423ff1aa51590d8b78d9f165853e145bc3b6398f123fa5ca8aac7586da173227"
+    },
+    {
+      "path": "references/component-sourcing.md",
+      "sha256": "e05dbed2ac2a08a41de1a05ed133c459a8b5c1dfec4e743d60b2cecdb5c7cfff"
+    },
+    {
+      "path": "references/content-design.md",
+      "sha256": "ec5c681f948cb26774ff266f6228f141af835d981166ff022eec2e92813124c9"
+    },
+    {
+      "path": "references/content-sources.md",
+      "sha256": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45"
+    },
+    {
+      "path": "references/evidence-actions.md",
+      "sha256": "00ba93ee732a8122405e0e8778f878213d0fee9bb8f483778292d5eb0c74c361"
+    },
+    {
+      "path": "references/evidence-map.md",
+      "sha256": "2b2099cfec47f19d55f220bb84b08dc1fe8c4713ea5f182771f8f55871f12427"
+    },
+    {
+      "path": "references/evidence-records.md",
+      "sha256": "e40b1cb3a43e3c18f430628c31c06ec052107ba70e51efb5f8df74581949b46a"
+    },
+    {
+      "path": "references/examples.md",
+      "sha256": "f8febc6fb3bf48b032961a9e01c820b7338d82c6422ed04d82c6d692101dc6c8"
+    },
+    {
+      "path": "references/integration.md",
+      "sha256": "6d9246e1c6a98e0027dd06daf84e08676ab0cc53e34f6013dc987c8811c27c26"
+    },
+    {
+      "path": "references/interaction-and-variants.md",
+      "sha256": "c939bda9a6b2ce3d2b29b544380f0b176bee2259937b694c9a3a9021c0fe6fbe"
+    },
+    {
+      "path": "references/patterns.md",
+      "sha256": "410f4990d0c886039fae392399ad280b1e4c5822f95f5f48b19302b7da90a02e"
+    },
+    {
+      "path": "references/principles.md",
+      "sha256": "c06151f5d6db35f4b0f6eeffe4e4dea37d71bdc85e4ca3a85be7bede9b0d6a90"
+    },
+    {
+      "path": "references/resource-catalog.md",
+      "sha256": "40a03baf4c9a96f11dfe4ccbb036e9959f424e0407ff01533b82540245c6f34e"
+    },
+    {
+      "path": "references/sources.md",
+      "sha256": "3e3748d22a2c27ae762fb8feec0c8b3600b8dc5fae7946d4d047329b7828789c"
+    },
+    {
+      "path": "references/verification.md",
+      "sha256": "bf91b858d056d2b71f20da70311d023bbc262cd8e6da42f64959aa5995f6077e"
+    },
+    {
+      "path": "references/visual-assets.md",
+      "sha256": "3ab11c75c5e50cf364bce9e2e1bdf805368e88fa68a40ca1bb999388242cdb74"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "83665d9251ce4bd4dca191c106c7a6994f9460c841f26c10697349d84a91adcf"
+    },
+    {
+      "path": "scripts/check_design_evidence.py",
+      "sha256": "4ac9a5f42f45ab1789c1661e3743c1beb13a9c3336d2f4b93b275bf239ab2338"
+    },
+    {
+      "path": "scripts/check_file_integrity.py",
+      "sha256": "c6ac2182a1a4ee4545bacc281bb2a483df1ee93f73cbec91aacbf1878bb79c3f"
+    },
+    {
+      "path": "scripts/check_manifest.py",
+      "sha256": "08d674858363368531f4168b1fd6e9aa746c0d6780adfc33bbad848d01be3497"
+    },
+    {
+      "path": "scripts/find_resources.py",
+      "sha256": "78a2eda35ec4d6bf0540fe5b02b829d6f81afdfa698105ef6d5c4d952fe7bf0b"
+    },
+    {
+      "path": "scripts/prepare.py",
+      "sha256": "35db530142cc044a697596075c8cd365761f4000d26cb48837dd0800840a7a85"
+    },
+    {
+      "path": "scripts/structural_records.py",
+      "sha256": "d8a7de77ce352b973c58d0063551a88247eaf9f5932524d80ff6e43feffccf4f"
+    }
+  ],
+  "helpers": [
+    {
+      "helper": "prepare.py",
+      "returncode": 0,
+      "output": {
+        "created": [
+          ".ui-spec/brief.md",
+          ".ui-spec/manifest.json",
+          ".ui-spec/.gitignore"
+        ],
+        "preserved": [],
+        "record_origin": "initialized_unconfirmed",
+        "limits": "Creates templates only; no viewport, locale, theme, research, design approval or project scope is inferred."
+      }
+    },
+    {
+      "helper": "check_manifest.py",
+      "returncode": 0,
+      "output": {
+        "report_format": "ui-spec-structure-report/1",
+        "inspector": "manifest",
+        "record_readability": "readable",
+        "record_source": {
+          "declared_format": 1,
+          "declared_revision": null,
+          "record_origin": "initialized_unconfirmed",
+          "scope": "supplied_record",
+          "path": ".ui-spec/manifest.json"
+        },
+        "structural_findings": [],
+        "field_observations": [
+          {
+            "path": "$.project",
+            "presence": "declared"
+          },
+          {
+            "path": "$.phase",
+            "presence": "declared"
+          },
+          {
+            "path": "$.revision",
+            "presence": "empty"
+          },
+          {
+            "path": "$.design_revision",
+            "presence": "empty"
+          },
+          {
+            "path": "$.viewports",
+            "presence": "empty"
+          },
+          {
+            "path": "$.variants",
+            "presence": "empty"
+          },
+          {
+            "path": "$.routes",
+            "presence": "empty"
+          },
+          {
+            "path": "$.journeys",
+            "presence": "empty"
+          },
+          {
+            "path": "$.checks",
+            "presence": "empty"
+          },
+          {
+            "path": "$.exceptions",
+            "presence": "empty"
+          },
+          {
+            "path": "$.approvals",
+            "presence": "empty"
+          },
+          {
+            "path": "$.connections",
+            "presence": "empty"
+          },
+          {
+            "path": "$.requirements",
+            "presence": "empty"
+          }
+        ],
+        "reference_observations": [],
+        "file_observations": [],
+        "revision_declarations": [
+          {
+            "field": "$.revision",
+            "declared_revision": null
+          },
+          {
+            "field": "$.design_revision",
+            "declared_revision": null
+          }
+        ],
+        "declared_actions": [],
+        "limits": [
+          "Describes the supplied record, not professional sufficiency, correctness, readiness or completion.",
+          "Declared statuses, actions, observations and approvals are not authenticated execution facts.",
+          "No browser, pixel, media, model, service or network inspection is performed.",
+          "Absent categories are vocabulary hints; task applicability and unknown scope are not assessed.",
+          "Relations are declared links, not proven causes, defects or mandatory rechecks.",
+          "Local file metadata does not prove observation, adoption or quality; digests are not compared here.",
+          "Reports are read-only. Agent judgment and scoped independent verification determine actual work."
+        ],
+        "query_view": "overview",
+        "query_compatibility": {
+          "legacy_mode": null,
+          "meaning": "Display alias only; no stage or completion decision"
+        },
+        "counts": {
+          "viewports": 0,
+          "variants": 0,
+          "routes": 0,
+          "journeys": 0,
+          "checks": 0
+        },
+        "declared_check_records": [],
+        "declared_waived_check_records": [],
+        "declared_exceptions": [],
+        "declared_approvals": [],
+        "declared_connections": [],
+        "declared_item_records": [],
+        "unlisted_declared_items": [],
+        "inventory_combinations": {
+          "basis": "Projection of declared primary/critical states, viewports, variants, journeys and routes; not task requirements.",
+          "task_applicability": "not_assessed",
+          "items": [],
+          "unlisted": []
+        },
+        "view": {
+          "viewports": [],
+          "variants": [],
+          "routes": [],
+          "journeys": []
+        }
+      }
+    },
+    {
+      "helper": "check_design_evidence.py",
+      "returncode": 0,
+      "output": {
+        "report_format": "ui-spec-structure-report/1",
+        "inspector": "design_evidence",
+        "record_readability": "readable",
+        "record_source": {
+          "declared_format": "ui-spec-evidence/1",
+          "declared_revision": null,
+          "record_origin": "unfilled_template",
+          "scope": "supplied_record",
+          "path": ".agents/skills/ui-spec/assets/templates/design-evidence.json"
+        },
+        "structural_findings": [],
+        "field_observations": [
+          {
+            "path": "$.format",
+            "presence": "declared"
+          },
+          {
+            "path": "$.revision",
+            "presence": "empty"
+          },
+          {
+            "path": "$.objects",
+            "presence": "empty"
+          },
+          {
+            "path": "$.conditions",
+            "presence": "empty"
+          },
+          {
+            "path": "$.evidence",
+            "presence": "empty"
+          },
+          {
+            "path": "$.decisions",
+            "presence": "empty"
+          },
+          {
+            "path": "$.relations",
+            "presence": "empty"
+          },
+          {
+            "path": "$.coverage_challenges",
+            "presence": "empty"
+          },
+          {
+            "path": "$.required_checks",
+            "presence": "empty"
+          },
+          {
+            "path": "$.revisions",
+            "presence": "empty"
+          },
+          {
+            "path": "$.archive",
+            "presence": "empty"
+          }
+        ],
+        "reference_observations": [],
+        "file_observations": [],
+        "revision_declarations": [
+          {
+            "field": "$.revision",
+            "declared_revision": null
+          }
+        ],
+        "declared_actions": [],
+        "limits": [
+          "Describes the supplied record, not professional sufficiency, correctness, readiness or completion.",
+          "Declared statuses, actions, observations and approvals are not authenticated execution facts.",
+          "No browser, pixel, media, model, service or network inspection is performed.",
+          "Absent categories are vocabulary hints; task applicability and unknown scope are not assessed.",
+          "Relations are declared links, not proven causes, defects or mandatory rechecks.",
+          "Local file metadata does not prove observation, adoption or quality; digests are not compared here.",
+          "Reports are read-only. Agent judgment and scoped independent verification determine actual work."
+        ],
+        "object_inventory": {
+          "by_level": {
+            "L0": [],
+            "L1": [],
+            "L2": [],
+            "L3": [],
+            "L4": [],
+            "L5": []
+          },
+          "declared_categories": [],
+          "unrepresented_levels": [
+            "L0",
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5"
+          ]
+        },
+        "counts": {
+          "objects": 0,
+          "conditions": 0,
+          "evidence": 0,
+          "decisions": 0
+        },
+        "declared_relations": [],
+        "declared_check_records": [],
+        "declared_exception_records": [],
+        "declared_item_records": [],
+        "unlisted_declared_items": [],
+        "candidate_unrepresented_categories": [
+          {
+            "category": "product-experience",
+            "description": "Product purpose, people, intended experience and quality goals",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "journeys",
+            "description": "Task entry, continuation, outcome, return and recovery",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "navigation-architecture",
+            "description": "Pages, navigation, workspaces, overlays and shared shell",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "components",
+            "description": "Functional regions, controls and business objects",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "typography-content",
+            "description": "Language, content hierarchy, typography and real text",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "visual-composition",
+            "description": "Spacing, proportion, hierarchy, color, material and optical balance",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "visual-assets",
+            "description": "Icons, marks, photography, 2D/3D assets and identity",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "state-feedback",
+            "description": "Declared component states and meaningful feedback",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "temporal-interaction",
+            "description": "Motion, interruption, reversal and continuous interaction",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "responsive-variants",
+            "description": "Viewport, input, theme, language and content variants",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "accessibility",
+            "description": "Semantic controls, focus and accessible interaction",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "failure-recovery",
+            "description": "Loading, unavailable results, errors and recovery",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "perceived-performance",
+            "description": "Readiness, response, stability and resource cost",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "resource-adoption",
+            "description": "Reference, candidate, demo, trial and actual integration",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "implementation-assurance",
+            "description": "Code/asset locations and independent scoped checks",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "operating-content",
+            "description": "Source authority, permissions, updates and content growth",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          }
+        ],
+        "coverage_vocabulary": "ui-spec-coverage-vocabulary/1",
+        "view": {
+          "decisions": [],
+          "record_layer": "current_model",
+          "meaningful_revisions": [],
+          "evidence_archive_references": [],
+          "declared_relation_review_candidates": {
+            "changed_ids": [],
+            "unresolved_changed_ids": [],
+            "object_ids": [],
+            "decision_ids": [],
+            "basis": "Declared containment, depends_on, affects, shares and appears_in only; temporal order is not traversed.",
+            "task_applicability": "not_assessed",
+            "limits": "Listed objects are possible relation-review candidates, not defects or required actions; unlisted effects may exist."
+          }
+        }
+      }
+    },
+    {
+      "helper": "find_resources.py",
+      "returncode": 0,
+      "output": {
+        "snapshot_date": "2026-10-24",
+        "results": [
+          {
+            "id": "inspira",
+            "name": "Inspira UI",
+            "needs": [
+              "visual-effects",
+              "motion",
+              "layout"
+            ],
+            "forms": [
+              "source",
+              "visual-component"
+            ],
+            "stacks": [
+              "vue"
+            ],
+            "use_for": "Copyable Vue/Nuxt backgrounds, text, interaction and display components.",
+            "access": "Category documentation, demos/source and installation guide.",
+            "adoption_notes": "Match Vue, Tailwind and motion-library versions with the selected component documentation.",
+            "aliases": [
+              "组件",
+              "文字动画",
+              "visual-component",
+              "视觉组件"
+            ],
+            "sources": [
+              "https://docs.inspira-ui.com/docs/en",
+              "https://docs.inspira-ui.com/docs/en/getting-started/installation"
+            ],
+            "reviewed_on": "2026-10-24",
+            "evidence_scope": "documentation_or_public_source",
+            "project_validation": "evaluate_in_project",
+            "craft_profile": {
+              "roles": [
+                "visual-implementation"
+              ],
+              "reuse_scopes": [
+                "visual-component",
+                "effect"
+              ],
+              "visual_forms": [
+                "background",
+                "text-motion",
+                "cards",
+                "visual-interaction"
+              ],
+              "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+              "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+              "reviewed_on": "2026-10-28",
+              "sources": [
+                "https://inspira-ui.com/docs",
+                "https://inspira-ui.com/docs/getting-started/installation"
+              ]
+            }
+          },
+          {
+            "id": "vue-bits",
+            "name": "Vue Bits",
+            "needs": [
+              "visual-effects",
+              "motion",
+              "layout"
+            ],
+            "forms": [
+              "source",
+              "demo",
+              "visual-component"
+            ],
+            "stacks": [
+              "vue"
+            ],
+            "use_for": "Animated backgrounds, text, cards and visual interactions.",
+            "access": "Category demos, configuration/source, Copy for AI, documented registry/MCP and a source-linked llms index.",
+            "adoption_notes": "The snapshot located llms.txt in official source; its direct fetch was unavailable. Check the exact MIT + Commons Clause terms and host tool availability for adoption.",
+            "aliases": [
+              "背景",
+              "动画",
+              "卡片",
+              "visual-component",
+              "视觉组件"
+            ],
+            "sources": [
+              "https://vue-bits.dev/get-started/mcp",
+              "https://vue-bits.dev/text-animations/fold-text",
+              "https://github.com/DavidHDev/vue-bits/blob/3766ebeeed37ec35bce29f001b6d101c7b17da35/src/utils/aiExport.ts",
+              "https://github.com/DavidHDev/vue-bits/blob/main/README.md"
+            ],
+            "reviewed_on": "2026-10-24",
+            "evidence_scope": "documentation_or_public_source",
+            "project_validation": "evaluate_in_project",
+            "craft_profile": {
+              "roles": [
+                "visual-implementation"
+              ],
+              "reuse_scopes": [
+                "visual-component",
+                "effect"
+              ],
+              "visual_forms": [
+                "background",
+                "text-motion",
+                "cards",
+                "interaction"
+              ],
+              "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+              "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+              "reviewed_on": "2026-10-28",
+              "sources": [
+                "https://vue-bits.dev/"
+              ]
+            }
+          }
+        ],
+        "count": 2,
+        "ordering": "alphabetical; no design-quality ranking",
+        "result_kind": "dated_catalog_matches",
+        "source_note_scope": "Catalog-authored guidance is source material, not a tool-selected next action.",
+        "limits": "Results are documented discovery leads, not installation instructions or project acceptance. Current source, exact-item fit and real integration are not assessed."
+      }
+    },
+    {
+      "helper": "check_file_integrity.py",
+      "returncode": 0,
+      "output": {
+        "verification_scope": "one local regular file byte digest",
+        "path": "digest-marker.txt",
+        "expected_sha256": "b2a74b66a49328109ac4136192a0ba81474b08051f27d211f8a5eca785cb8f36",
+        "observed_sha256": "b2a74b66a49328109ac4136192a0ba81474b08051f27d211f8a5eca785cb8f36",
+        "digest_result": "match",
+        "limits": "Digest equality does not prove source truth, observation, runtime use, authorization or UI quality."
+      }
+    }
+  ]
+}

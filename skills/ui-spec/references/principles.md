@@ -212,3 +212,36 @@ Use the [content method](content-design.md) for rendered glyphs, contrast, densi
 Locate a finding in the [design map](evidence-map.md): a local optical defect may arise from L4 contrast, L3 action hierarchy or L1 task order. Explain the observed relationship and inspect the relevant parent composition before choosing a repair. Keep facts, inferred effects and causes to test distinct. L5 checks identify the actual source, adaptation and viewed result rather than stand in for visual judgment.
 
 A changed font, image crop, material or motion envelope can affect multiple pages and states. Follow shared-use links and re-inspect actual neighbors, relevant themes/locales and temporal conditions. A parent design result does not automatically pass because its component records are filled. Use comparable original demos, current-project trials and assembled views to judge retained quality.
+
+
+## Use visual craft knowledge to discover better implementations
+
+Translate a quality word into a relationship that can be observed, explained, searched for and tested. These lenses help choose mature work; they do not prescribe a house style or replace looking at actual renders. Consult the [source-first method](component-sourcing.md#reuse-visual-craft-at-the-appropriate-scope) before recreating a technique.
+
+### Typography: tension comes from roles, not one font recipe
+
+A compact label beside a large heading can create contrast of scale and rhythm; the same treatment on every label removes that hierarchy. Examine the actual glyphs: x-height, cap height, stroke contrast, width, counters, punctuation, numeral alignment and apparent weight. Equal CSS sizes do not produce equal perceived size across families or scripts. Letter spacing that makes a short Latin display line cohesive can crowd Chinese text or break connected writing. A tightly set display face may be inappropriate for repeated reading or small controls.
+
+Search for mature editorial sections, working-input blocks, type specimens and text-motion components with the actual language and content role in mind. Compare line breaks and reading measure, not just a font name. Trial the intended font and its loading/fallback states with short, ordinary and long content. Preserve a source's type-to-space relationship when substituting a family: adjust measure, weight, leading and adjacent icon geometry together if the render warrants it. Keep comparable numeric values aligned where comparison matters. Font names, negative tracking, weight extremes and fixed display sizes are candidates, not universal prescriptions.
+
+For animated type, distinguish glyph segmentation from semantic reading. Combining marks, emoji sequences and connected scripts can break under naive character splitting; word boundaries are language-dependent. Prefer a mature component with a suitable segmentation and accessibility strategy, retain the readable full text, and inspect real mixed-language strings. A weight animation needs a compatible variable font and an acceptable reflow strategy; an image-like wordmark cannot substitute for readable body content.
+
+### Material: inspect a coherent model of light and depth
+
+A surface reads as material through coordinated foreground/background contrast, edge light, translucency, shadow, texture and neighboring layers. Blur alone does not establish glass; an opaque backdrop can make a blur effect visually absent. A thick bright outline can erase a subtle surface hierarchy, while an extremely faint boundary can disappear after a theme or background change. Shadows that disagree with the asset's lighting can make independently polished pieces look unrelated.
+
+Study actual surface demos and asset compositions under light, dark and changing background conditions. Identify whether the important mechanism is a softly decaying light field, an edge-only highlight, a diffuse elevation shadow, a sharp cast shadow, optical refraction or layered opacity. Search for that mechanism rather than the generic word “premium.” Compare it beside text and controls, not only on a decorative empty card. Retain defining falloff, masks, light direction and depth roles through public configuration where possible.
+
+Grain, vignettes, gradients, glass, tinted neutrals, white or pure black surfaces are optional artistic choices. They are neither quality requirements nor automatic signs of cheapness. Evaluate whether their frequency, contrast and placement serve the current content and identity. Texture can collapse into dirty-looking noise at a small size; moving illumination can temporarily defeat text contrast; multiple material systems can compete. Fix the actual relationship instead of enforcing a palette blacklist. Accessibility targets use their applicable standards and real rendered colors, not a borrowed style recipe's numeric floor.
+
+### Composition: preserve useful asymmetry and spatial relationships
+
+Compare visual mass and attention across the entire usable frame. The geometric center of a box differs from the perceived center of an image, a dense text region or an irregular symbol. A visually dominant asset can counterbalance a small task area without making every component larger. Negative space can separate responsibilities or isolate the main action; oversized gaps can instead sever a needed association. Judge the intended reading order and task, not symmetry alone.
+
+Research complete pages or blocks when their resolved composition is the value. A source's cropped subject, editorial margin, display line and action placement may be one connected system. Preserve those relationships when adapting content; copying only the corner radius or background abandons much of the reusable craft. Inspect extreme content, short heights and narrow views before reproducing a desktop composition at smaller scale. For moving subjects, include the complete motion envelope and brightest frame in the spatial budget.
+
+### Expression stays available in professional work
+
+Product categories explain tasks, information and operational constraints; they do not set an artistic-intensity ceiling. A professional tool may use photography, spatial imagery, distinctive type or expressive feedback throughout populated work. Build an understandable primary action and a readable task flow while developing the chosen identity. A strong empty hero followed by generic working screens does not fulfill that promise.
+
+When expression interferes, locate the specific contrast, timing, density, clearance or performance failure. Adjust placement, crop, local intensity, phase or delivery while retaining the accepted direction where feasible. Do not automatically “repair” all professional products into a restrained dashboard. Conversely, a quiet brief should not inherit a dramatic source demo merely because it was easy to find. Compare intended qualities through actual use and allow new resources to revise the art direction.

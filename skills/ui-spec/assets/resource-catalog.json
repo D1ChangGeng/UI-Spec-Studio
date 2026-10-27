@@ -30,7 +30,8 @@
       ],
       "forms": [
         "source",
-        "demo"
+        "demo",
+        "visual-component"
       ],
       "stacks": [
         "react"
@@ -40,14 +41,38 @@
       "adoption_notes": "Select exact JS/TS and CSS/Tailwind variants; inspect the actual animation/rendering dependencies and preserve demonstration parameters.",
       "aliases": [
         "背景",
-        "文字动画"
+        "文字动画",
+        "visual-component",
+        "视觉组件"
       ],
       "sources": [
         "https://reactbits.dev/llms.txt"
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "effect"
+        ],
+        "visual_forms": [
+          "background",
+          "text-motion",
+          "card-material",
+          "pointer-response"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://reactbits.dev/",
+          "https://reactbits.dev/components/spotlight-card"
+        ]
+      }
     },
     {
       "id": "vue-bits",
@@ -59,7 +84,8 @@
       ],
       "forms": [
         "source",
-        "demo"
+        "demo",
+        "visual-component"
       ],
       "stacks": [
         "vue"
@@ -70,7 +96,9 @@
       "aliases": [
         "背景",
         "动画",
-        "卡片"
+        "卡片",
+        "visual-component",
+        "视觉组件"
       ],
       "sources": [
         "https://vue-bits.dev/get-started/mcp",
@@ -80,7 +108,28 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "effect"
+        ],
+        "visual_forms": [
+          "background",
+          "text-motion",
+          "cards",
+          "interaction"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://vue-bits.dev/"
+        ]
+      }
     },
     {
       "id": "magic-ui",
@@ -92,7 +141,8 @@
       ],
       "forms": [
         "source",
-        "blocks"
+        "blocks",
+        "visual-component"
       ],
       "stacks": [
         "react"
@@ -102,14 +152,38 @@
       "adoption_notes": "Identify the particular free component or separately sold template; review behavior and effect intensity in the complete page.",
       "aliases": [
         "动效",
-        "背景"
+        "背景",
+        "visual-component",
+        "视觉组件",
+        "functional-block"
       ],
       "sources": [
         "https://magicui.design/docs/mcp"
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "block"
+        ],
+        "visual_forms": [
+          "border-light",
+          "text-motion",
+          "background",
+          "display-composition"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://magicui.design/docs/components/shine-border"
+        ]
+      }
     },
     {
       "id": "aceternity",
@@ -121,7 +195,8 @@
       ],
       "forms": [
         "source",
-        "blocks"
+        "blocks",
+        "visual-component"
       ],
       "stacks": [
         "react"
@@ -131,14 +206,39 @@
       "adoption_notes": "Review exact source, rights, dependencies and touch behavior; adapt strong effects to the accepted visual direction.",
       "aliases": [
         "卡片",
-        "背景"
+        "背景",
+        "visual-component",
+        "视觉组件",
+        "functional-block"
       ],
       "sources": [
         "https://ui.aceternity.com/components"
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "block"
+        ],
+        "visual_forms": [
+          "spotlight",
+          "cards",
+          "scroll-effects",
+          "typography"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://ui.aceternity.com/components/spotlight-new",
+          "https://ui.aceternity.com/components"
+        ]
+      }
     },
     {
       "id": "inspira",
@@ -149,7 +249,8 @@
         "layout"
       ],
       "forms": [
-        "source"
+        "source",
+        "visual-component"
       ],
       "stacks": [
         "vue"
@@ -159,7 +260,9 @@
       "adoption_notes": "Match Vue, Tailwind and motion-library versions with the selected component documentation.",
       "aliases": [
         "组件",
-        "文字动画"
+        "文字动画",
+        "visual-component",
+        "视觉组件"
       ],
       "sources": [
         "https://docs.inspira-ui.com/docs/en",
@@ -167,7 +270,29 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "effect"
+        ],
+        "visual_forms": [
+          "background",
+          "text-motion",
+          "cards",
+          "visual-interaction"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://inspira-ui.com/docs",
+          "https://inspira-ui.com/docs/getting-started/installation"
+        ]
+      }
     },
     {
       "id": "paper-shaders",
@@ -246,14 +371,34 @@
       "adoption_notes": "Resolve original author/source, access terms and source completeness before adoption.",
       "aliases": [
         "区块",
-        "模板"
+        "模板",
+        "functional-block"
       ],
       "sources": [
         "https://21st.dev/"
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "page",
+          "block",
+          "component"
+        ],
+        "visual_forms": [
+          "author-specific-compositions"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://21st.dev/"
+        ]
+      }
     },
     {
       "id": "base-ui",
@@ -281,7 +426,26 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation"
+        ],
+        "reuse_scopes": [
+          "primitive",
+          "component-family"
+        ],
+        "visual_forms": [
+          "visual-treatment-to-be-selected-in-context"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://base-ui.com/react/overview/quick-start",
+          "https://base-ui.com/llms.txt"
+        ]
+      }
     },
     {
       "id": "radix-primitives",
@@ -308,7 +472,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation"
+        ],
+        "reuse_scopes": [
+          "primitive",
+          "component-family"
+        ],
+        "visual_forms": [
+          "visual-treatment-to-be-selected-in-context"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://www.radix-ui.com/primitives/docs/overview/introduction"
+        ]
+      }
     },
     {
       "id": "react-aria",
@@ -336,7 +518,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation"
+        ],
+        "reuse_scopes": [
+          "primitive",
+          "component-family"
+        ],
+        "visual_forms": [
+          "visual-treatment-to-be-selected-in-context"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://react-aria.adobe.com/"
+        ]
+      }
     },
     {
       "id": "reka",
@@ -363,7 +563,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation"
+        ],
+        "reuse_scopes": [
+          "primitive",
+          "component-family"
+        ],
+        "visual_forms": [
+          "visual-treatment-to-be-selected-in-context"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://reka-ui.com/docs/overview/introduction"
+        ]
+      }
     },
     {
       "id": "shadcn",
@@ -385,7 +603,8 @@
       "adoption_notes": "Inspect files, dependencies and global CSS changes before installation; copied source has local maintenance ownership.",
       "aliases": [
         "组件",
-        "注册表"
+        "注册表",
+        "functional-block"
       ],
       "sources": [
         "https://ui.shadcn.com/llms.txt",
@@ -394,7 +613,29 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component",
+          "block"
+        ],
+        "visual_forms": [
+          "coordinated-controls",
+          "product-blocks"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://ui.shadcn.com/llms.txt",
+          "https://ui.shadcn.com/docs/cli",
+          "https://ui.shadcn.com/docs/registry/registry-item-json"
+        ]
+      }
     },
     {
       "id": "shadcn-vue",
@@ -416,14 +657,35 @@
       "adoption_notes": "Select the Vue source, CLI and dependencies explicitly; distribution schema and framework compatibility are separate facts.",
       "aliases": [
         "组件",
-        "注册表"
+        "注册表",
+        "functional-block"
       ],
       "sources": [
         "https://www.shadcn-vue.com/docs/mcp"
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component",
+          "block"
+        ],
+        "visual_forms": [
+          "coordinated-controls",
+          "product-blocks"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://www.shadcn-vue.com/docs/mcp"
+        ]
+      }
     },
     {
       "id": "nuxt-ui",
@@ -540,7 +802,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "effect",
+          "interaction-mechanism"
+        ],
+        "visual_forms": [
+          "animation-and-input-engine"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://motion.dev/docs/react-drag"
+        ]
+      }
     },
     {
       "id": "gsap",
@@ -569,7 +849,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "effect",
+          "timeline"
+        ],
+        "visual_forms": [
+          "sequencing-engine"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://gsap.com/llms.txt"
+        ]
+      }
     },
     {
       "id": "rive",
@@ -1016,7 +1314,26 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference"
+        ],
+        "reuse_scopes": [
+          "page",
+          "component-family"
+        ],
+        "visual_forms": [
+          "design-file-not-runtime-implementation"
+        ],
+        "quality_status": "Not rated: exact item, visual completeness and project fit require actual task-time observation.",
+        "basis": "Documentation role classification; not a visual audit or claim of adoption.",
+        "reviewed_on": "2026-10-28",
+        "sources": [
+          "https://finesseui.com/"
+        ],
+        "identity_boundary": "Finesse UI at finesseui.com is a design-kit entry, not mouse-lin/finesse-skill. The latter is a separately attributed method source, not an adopted UI component."
+      }
     },
     {
       "id": "undraw",
@@ -1177,6 +1494,34 @@
       "checked_on": "2026-10-25",
       "url": "https://www.mintlify.com/docs/ai/markdown-export",
       "scope": "Documented Markdown representations"
+    },
+    {
+      "release": "1.16.0",
+      "date": "2026-10-28",
+      "scope": "Role/scope/form discovery metadata for fifteen existing entries; original entry dates and claims retained. Five visual-component routes checked through current primary docs. No library-wide quality rating.",
+      "sources": [
+        "https://reactbits.dev/",
+        "https://vue-bits.dev/",
+        "https://magicui.design/docs/components/shine-border",
+        "https://ui.aceternity.com/components",
+        "https://inspira-ui.com/docs"
+      ],
+      "identity_note": "mouse-lin/finesse-skill was read as a method source; it is distinct from the finesseui.com catalog entry."
     }
-  ]
+  ],
+  "craft_discovery": {
+    "version": "visual-craft-discovery/1",
+    "reviewed_on": "2026-10-28",
+    "purpose": "Descriptive discovery routes, not a quality ranking, completeness score, closed supplier list or project adoption record.",
+    "axes": {
+      "reuse_scope": "The actual page/block/family/component/effect/primitive responsibility the exact resource can supply.",
+      "visual_completeness": "A task-time professional observation of resolved visual relationships; not inferred from a catalog entry."
+    },
+    "responsibilities": [
+      "functional foundation",
+      "visual implementation",
+      "integrated perceptual quality"
+    ],
+    "query_boundary": "Existing --form/--need/--stack and literal aliases find dated leads. Results stay alphabetical; profile metadata adds no policy or suggested next action."
+  }
 }

@@ -209,3 +209,15 @@ or further research choices where consequential. Declared pass, waiver, missing
 record and actual observed result remain distinct. Only the Agent selects the next
 action using the professional method; the inspector neither recommends it nor
 certifies research, readiness, correct design or task completion.
+
+
+## When adopting important visual craft
+
+Extend the relevant decision only as needed: intended perceptual relationship;
+useful reuse scope; actual original-demo observation; selected source/variant and
+rights; retained mechanism versus configuration or custom change; local fit with
+real content; integrated-use result and remaining uncertainty. Functional
+foundation, visual implementation and whole-product quality are different
+responsibilities. Keep actual adopted locations in the current model and source
+replacement reasons in meaningful revisions. No score, supplier list, candidate
+quota or inspector status determines the professional choice.

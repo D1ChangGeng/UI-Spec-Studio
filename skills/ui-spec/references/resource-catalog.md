@@ -37,6 +37,42 @@ Platform documentation, item inspection and project acceptance have different sc
 
 Source components, packages, primitives, tokens, assets, fonts, blocks, engines, generators, design files and references each have distinct ownership and update requirements. Resources can serve several needs.
 
+## Discover resolved visual work
+
+Descriptive discovery routes, not a quality ranking, completeness score, closed supplier list or project adoption record.
+
+**Reuse Scope** and **Visual Completeness** are independent. The former locates useful responsibility; the latter requires observing the exact item. A broad primitive library does not settle visual craft, and a resolved small effect does not settle a complete page.
+
+Search complete pages and functional blocks when composition is the need; search visual components and assets when their material or motion supplies the defining relationship. Functional foundations and lower-level engines can complement them. These are open routes, not a required search order.
+
+```bash
+python <skill-dir>/scripts/find_resources.py --form visual-component --stack vue --json
+python <skill-dir>/scripts/find_resources.py --form blocks --stack react --json
+python <skill-dir>/scripts/find_resources.py --id react-bits --json
+```
+
+The visual-component filter identifies documented delivery form, not inspected quality. Read the original demo, exact source/configuration and use-time terms; continue outside this catalog when worthwhile. The installed inspector does not score or approve any choice.
+
+| Resource | Documented role | Potential reuse scope | Visual search forms |
+|---|---|---|---|
+| 21st.dev | discovery-and-reference | page, block, component | author-specific-compositions |
+| Aceternity UI | visual-implementation | visual-component, block | spotlight, cards, scroll-effects, typography |
+| Base UI | functional-foundation | primitive, component-family | visual-treatment-to-be-selected-in-context |
+| Finesse UI | design-reference | page, component-family | design-file-not-runtime-implementation |
+| GSAP | implementation-route | effect, timeline | sequencing-engine |
+| Inspira UI | visual-implementation | visual-component, effect | background, text-motion, cards, visual-interaction |
+| Magic UI | visual-implementation | visual-component, block | border-light, text-motion, background, display-composition |
+| Motion | implementation-route | effect, interaction-mechanism | animation-and-input-engine |
+| Radix Primitives | functional-foundation | primitive, component-family | visual-treatment-to-be-selected-in-context |
+| React Aria | functional-foundation | primitive, component-family | visual-treatment-to-be-selected-in-context |
+| React Bits | visual-implementation | visual-component, effect | background, text-motion, card-material, pointer-response |
+| Reka UI | functional-foundation | primitive, component-family | visual-treatment-to-be-selected-in-context |
+| shadcn-vue | functional-foundation, visual-implementation | component, block | coordinated-controls, product-blocks |
+| shadcn/ui | functional-foundation, visual-implementation | component, block | coordinated-controls, product-blocks |
+| Vue Bits | visual-implementation | visual-component, effect | background, text-motion, cards, interaction |
+
+Finesse UI (finesseui.com) is a design-kit entry. The separately studied mouse-lin/finesse-skill is a method source, not that kit or a bundled runtime implementation.
+
 ## Resource cards
 
 ### 21st.dev (`21st`)
@@ -49,15 +85,23 @@ Community component, block, theme and template discovery.
 **Primary sources:** [Source 1](https://21st.dev/)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
 
+**Craft discovery:** roles: discovery-and-reference; potential scope: page, block, component; forms: author-specific-compositions.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://21st.dev/)
+
 ### Aceternity UI (`aceternity`)
 
 Backgrounds, cards, scroll effects, text and showcase compositions.
 
-**Find by:** visual-effects, motion, layout. **Form:** source, blocks. **Stack scope:** react.
+**Find by:** visual-effects, motion, layout. **Form:** source, blocks, visual-component. **Stack scope:** react.
 **Access:** Visual catalog, demos, usage code and component docs.
 **Adoption judgment:** Review exact source, rights, dependencies and touch behavior; adapt strong effects to the accepted visual direction.
 **Primary sources:** [Source 1](https://ui.aceternity.com/components)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
+
+**Craft discovery:** roles: visual-implementation; potential scope: visual-component, block; forms: spotlight, cards, scroll-effects, typography.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://ui.aceternity.com/components/spotlight-new) · [Source 2](https://ui.aceternity.com/components)
 
 ### Ant Design (`ant-design`)
 
@@ -89,6 +133,10 @@ Customizable menus, overlays and form interaction foundations.
 **Primary sources:** [Source 1](https://base-ui.com/react/overview/quick-start) · [Source 2](https://base-ui.com/llms.txt)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
 
+**Craft discovery:** roles: functional-foundation; potential scope: primitive, component-family; forms: visual-treatment-to-be-selected-in-context.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://base-ui.com/react/overview/quick-start) · [Source 2](https://base-ui.com/llms.txt)
+
 ### Codrops (`codrops`)
 
 Creative composition, graphics, interaction and implementation techniques.
@@ -118,6 +166,12 @@ Figma component, variant and page-composition reference.
 **Adoption judgment:** Treat it as a design file; verify purchase/access and any implementation or asset rights.
 **Primary sources:** [Source 1](https://finesseui.com/)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
+
+**Craft discovery:** roles: design-reference; potential scope: page, component-family; forms: design-file-not-runtime-implementation.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://finesseui.com/)
+
+Finesse UI at finesseui.com is a design-kit entry, not mouse-lin/finesse-skill. The latter is a separately attributed method source, not an adopted UI component.
 
 ### Floating UI (`floating-ui`)
 
@@ -149,6 +203,10 @@ Timelines, scroll, text and coordinated multi-element motion.
 **Primary sources:** [Source 1](https://gsap.com/llms.txt)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
 
+**Craft discovery:** roles: implementation-route; potential scope: effect, timeline; forms: sequencing-engine.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://gsap.com/llms.txt)
+
 ### Iconify (`iconify`)
 
 Search and distribute icons across multiple collections.
@@ -163,11 +221,15 @@ Search and distribute icons across multiple collections.
 
 Copyable Vue/Nuxt backgrounds, text, interaction and display components.
 
-**Find by:** visual-effects, motion, layout. **Form:** source. **Stack scope:** vue.
+**Find by:** visual-effects, motion, layout. **Form:** source, visual-component. **Stack scope:** vue.
 **Access:** Category documentation, demos/source and installation guide.
 **Adoption judgment:** Match Vue, Tailwind and motion-library versions with the selected component documentation.
 **Primary sources:** [Source 1](https://docs.inspira-ui.com/docs/en) · [Source 2](https://docs.inspira-ui.com/docs/en/getting-started/installation)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
+
+**Craft discovery:** roles: visual-implementation; potential scope: visual-component, effect; forms: background, text-motion, cards, visual-interaction.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://inspira-ui.com/docs) · [Source 2](https://inspira-ui.com/docs/getting-started/installation)
 
 ### LottieFiles (`lottiefiles`)
 
@@ -193,11 +255,15 @@ Consistent line icons with framework-specific delivery options.
 
 Expressive effects, text, backgrounds and display blocks.
 
-**Find by:** visual-effects, motion, layout. **Form:** source, blocks. **Stack scope:** react.
+**Find by:** visual-effects, motion, layout. **Form:** source, blocks, visual-component. **Stack scope:** react.
 **Access:** Component docs, Copy Page and documented MCP entry.
 **Adoption judgment:** Identify the particular free component or separately sold template; review behavior and effect intensity in the complete page.
 **Primary sources:** [Source 1](https://magicui.design/docs/mcp)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
+
+**Craft discovery:** roles: visual-implementation; potential scope: visual-component, block; forms: border-light, text-motion, background, display-composition.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://magicui.design/docs/components/shine-border)
 
 ### Mobbin (`mobbin`)
 
@@ -218,6 +284,10 @@ Transitions, gestures, layout changes and motion control.
 **Adoption judgment:** Select APIs by interaction purpose and runtime; distinguish base capabilities from tools requiring additional access.
 **Primary sources:** [Source 1](https://motion.dev/docs) · [Source 2](https://motion.dev/docs/ai-kit)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
+
+**Craft discovery:** roles: implementation-route; potential scope: effect, interaction-mechanism; forms: animation-and-input-engine.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://motion.dev/docs/react-drag)
 
 ### MUI (`mui`)
 
@@ -289,6 +359,10 @@ Composable menus, dialogs, selection and focus behavior.
 **Primary sources:** [Source 1](https://www.radix-ui.com/primitives/docs/overview/introduction)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
 
+**Craft discovery:** roles: functional-foundation; potential scope: primitive, component-family; forms: visual-treatment-to-be-selected-in-context.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://www.radix-ui.com/primitives/docs/overview/introduction)
+
 ### React Aria (`react-aria`)
 
 Input, collection, form and internationalized interaction capabilities.
@@ -299,15 +373,23 @@ Input, collection, form and internationalized interaction capabilities.
 **Primary sources:** [Source 1](https://react-aria.adobe.com/)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
 
+**Craft discovery:** roles: functional-foundation; potential scope: primitive, component-family; forms: visual-treatment-to-be-selected-in-context.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://react-aria.adobe.com/)
+
 ### React Bits (`react-bits`)
 
 Animated backgrounds, text, interactions and expressive display components.
 
-**Find by:** visual-effects, motion, typography. **Form:** source, demo. **Stack scope:** react.
+**Find by:** visual-effects, motion, typography. **Form:** source, demo, visual-component. **Stack scope:** react.
 **Access:** Index, category demos, source variants and documented component installation.
 **Adoption judgment:** Select exact JS/TS and CSS/Tailwind variants; inspect the actual animation/rendering dependencies and preserve demonstration parameters.
 **Primary sources:** [Source 1](https://reactbits.dev/llms.txt)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
+
+**Craft discovery:** roles: visual-implementation; potential scope: visual-component, effect; forms: background, text-motion, card-material, pointer-response.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://reactbits.dev/) · [Source 2](https://reactbits.dev/components/spotlight-card)
 
 ### Reka UI (`reka`)
 
@@ -318,6 +400,10 @@ Vue menus, overlays, inputs and focus behavior.
 **Adoption judgment:** Compose stable interaction with tailored appearance; confirm controlled state and event wiring.
 **Primary sources:** [Source 1](https://reka-ui.com/docs/overview/introduction)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
+
+**Craft discovery:** roles: functional-foundation; potential scope: primitive, component-family; forms: visual-treatment-to-be-selected-in-context.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://reka-ui.com/docs/overview/introduction)
 
 ### Rive (`rive`)
 
@@ -339,6 +425,10 @@ Editable Vue product components and blocks.
 **Primary sources:** [Source 1](https://www.shadcn-vue.com/docs/mcp)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
 
+**Craft discovery:** roles: functional-foundation, visual-implementation; potential scope: component, block; forms: coordinated-controls, product-blocks.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://www.shadcn-vue.com/docs/mcp)
+
 ### shadcn/ui (`shadcn`)
 
 Product components and blocks delivered as editable source.
@@ -348,6 +438,10 @@ Product components and blocks delivered as editable source.
 **Adoption judgment:** Inspect files, dependencies and global CSS changes before installation; copied source has local maintenance ownership.
 **Primary sources:** [Source 1](https://ui.shadcn.com/llms.txt) · [Source 2](https://ui.shadcn.com/docs/cli) · [Source 3](https://ui.shadcn.com/docs/registry/registry-item-json)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
+
+**Craft discovery:** roles: functional-foundation, visual-implementation; potential scope: component, block; forms: coordinated-controls, product-blocks.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://ui.shadcn.com/llms.txt) · [Source 2](https://ui.shadcn.com/docs/cli) · [Source 3](https://ui.shadcn.com/docs/registry/registry-item-json)
 
 ### TanStack Table (`tanstack-table`)
 
@@ -403,11 +497,15 @@ Fluid type, space and grid tools.
 
 Animated backgrounds, text, cards and visual interactions.
 
-**Find by:** visual-effects, motion, layout. **Form:** source, demo. **Stack scope:** vue.
+**Find by:** visual-effects, motion, layout. **Form:** source, demo, visual-component. **Stack scope:** vue.
 **Access:** Category demos, configuration/source, Copy for AI, documented registry/MCP and a source-linked llms index.
 **Adoption judgment:** The snapshot located llms.txt in official source; its direct fetch was unavailable. Check the exact MIT + Commons Clause terms and host tool availability for adoption.
 **Primary sources:** [Source 1](https://vue-bits.dev/get-started/mcp) · [Source 2](https://vue-bits.dev/text-animations/fold-text) · [Source 3](https://github.com/DavidHDev/vue-bits/blob/3766ebeeed37ec35bce29f001b6d101c7b17da35/src/utils/aiExport.ts) · [Source 4](https://github.com/DavidHDev/vue-bits/blob/main/README.md)
 **Evidence:** documentation_or_public_source; reviewed 2026-10-24; project use: evaluate_in_project.
+
+**Craft discovery:** roles: visual-implementation; potential scope: visual-component, effect; forms: background, text-motion, cards, interaction.
+**Profile basis:** Documentation role classification; not a visual audit or claim of adoption. Reviewed 2026-10-28. Not rated: exact item, visual completeness and project fit require actual task-time observation.
+**Profile sources:** [Source 1](https://vue-bits.dev/)
 
 ## Access mechanisms
 

@@ -85,3 +85,34 @@ Read these when a concrete technique helps the current design. They are original
 ## Preserve a useful technique
 
 When adapting one of these patterns, keep a short record only if it will improve future work: the task, the transferable relationship, local constraints, editable source, inspected evidence and limits. Separate the project's aesthetic choice from the general mechanism. Add new shared patterns through an authorized maintenance change, with provenance and a concrete counterexample that shows where the technique should change.
+
+
+## A material-rich card without moving the reading surface
+
+**Problem.** A research library needs distinct material and pointer response, while long titles and reading actions should remain spatially stable.
+
+**Look and search.** Compare an edge/fill light following input with a card whose entire plane tilts. Study the actual source demos and comparable content. Light falloff, rim treatment and stationary type may matter more than rotation amplitude. Search for resolved card implementations rather than beginning with a custom pointer handler.
+
+**Adopt and adapt.** Trial the chosen source with real titles, language variants, theme and neighboring cards. Adjust its supported intensity, light size, edge or motion controls first. Keep text/action hierarchy and keyboard focus owned by the product. Decorative illumination is not the only selected/focus cue. A tilt can instead suit an image object where manipulation is intentional; it is not intrinsically inferior.
+
+**Inspect.** Follow pointer entry, travel, exit and keyboard focus. Read long content during motion, inspect the entire card family, repeat actions and use reduced motion/touch. A dramatic isolated demo that displaces important text may lose to a quieter surface in this particular task. This is a conditional selection problem, not a global ban on tilting cards.
+
+## A mature input block with a product-specific identity
+
+**Problem.** A conversational tool needs a refined input, attachments and actions; functional textarea and menu dependencies alone do not supply their coordinated proportions.
+
+**Look and search.** Study working input blocks through multiline growth, attached files, pending work, submission and recovery. Search for complete composition/state implementations as well as semantic foundations. Compare their actual control hierarchy, reading space and continuity under the project's content; an empty rounded field is insufficient evidence.
+
+**Adopt and adapt.** Prefer a suitable source block, configure its slots and tokens, and connect protected actions to the application. Keep source geometry and state mechanisms where they serve the task. Patch an evidenced gap such as input-method composition handling or focus restoration at the responsible boundary, preserving the rest and owning the changed behavior.
+
+**Inspect.** Exercise keyboard and input-method composition, long localized strings, attachment addition/removal, quick repeated input and delayed outcomes. Check that adoption retained the source's spatial relationships as well as its function. A source with the wrong workflow may be a poor foundation even when its visual finish is strong.
+
+## Expressive work that retains readable motion-free states
+
+**Problem.** A professional workspace needs an independent artistic identity across working content, not just a marketing header.
+
+**Look and search.** Study cross-domain editorial, photographic or spatial references alongside mature product task flows. Find adoptable assets and visual components whose focal position, material and timing can coexist with that work. Keep candidate source and current-project evidence separate.
+
+**Adopt and adapt.** Compose a selected asset with an existing mature functional block. Adapt public controls, crop, layer order and type roles before rebuilding the asset mechanism. Keep one governing visual language while allowing different responsibilities to have different treatments. For reduced motion or limited rendering, design a still or simpler representation that retains the recognizable subject and usable task.
+
+**Inspect.** Use populated work, long reading, navigation and repeated input in both active and quiet states. If the background overwhelms a result, test its local placement/intensity and content layer rather than automatically removing all expression. The selected asset and mature function still require whole-page verification; source quality does not add together automatically.

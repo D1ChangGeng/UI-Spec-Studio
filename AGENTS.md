@@ -180,3 +180,12 @@ behavior and independent digest/browser/engineering assertions. Maintain current
 model, meaningful revisions and raw evidence distinctly, with object-scoped review.
 Track deliberate boundary corrections against v1.14 in the v1.15 continuity record;
 previous release evidence stays frozen and is not relabelled as current behavior.
+
+Version 1.16 strengthens reuse of resolved visual craft. Keep useful reuse scope,
+observed visual completeness, functional foundations and integrated perceptual
+quality distinct. Professional knowledge first guides source discovery, inspection,
+comparison, adaptation and actual-use checks. The Finesse research is scoped and
+attributed, not a mandatory aesthetic register or bundled showcase. Preserve the
+open catalog and historical source dates; its profiles are descriptive, not scores.
+All installed helpers retain v1.15 neutral behavior. Record source preservation,
+actual bounded applications and unexecuted independent experiments separately.
