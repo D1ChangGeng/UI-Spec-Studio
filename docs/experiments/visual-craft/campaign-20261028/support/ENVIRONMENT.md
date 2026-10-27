@@ -1,0 +1,17 @@
+# Project execution environment
+
+This project is an isolated implementation assignment. Use only your assigned project, its `skill/` snapshot, `references/` if supplied, and the shared dependency runtime below. Do not inspect another agent's workspace, the maintainer repository, campaign/private, previous outputs or conversation history. Do not delegate further agents. Design and implement autonomously within the task.
+
+The project is a Vite/React frontend. The supplied `node_modules` link points to a read-only-in-practice shared installed runtime. Do not run npm install into the shared link: if another package is needed, install it into a separate project-local folder and use it deliberately, or replace the symlink with a project-private installation. Do not change shared packages. Available modules are React19.2.0, Vite7.1.12, Motion12.23.24, Lucide React0.468.0, Tailwind4.1.16, Radix dialog/tabs/tooltip, Recharts3.3.0, clsx and tailwind-merge. These are environment capabilities, not required design choices or selected visual resources.
+
+Use `python tools/run.py -- <command> <args...>` from the project directory for source reads, build, public resource acquisition and verification commands. It saves actual argv/output/exit/timing under `evidence/commands/`. This supports maintenance handover; do not include secrets in commands or reports. Avoid printing huge output that truncates instruction reads. `run.py` is not an evaluator and does not judge your design.
+
+Build: `python tools/run.py -- npm run build`. A local preview can use `npm run dev -- --port <unused-port>`.
+
+Local rendering helper: `python tools/run.py -- node tools/capture.mjs dist evidence/desktop.png 1440 900`. It serves your built code, renders it in Chromium and saves screenshot plus runtime metadata. Review the image with the image-view tool. Browser sockets require `sandbox_permissions: require_escalated` for the containing exec_command; this has already been proven available. Public network requests also need that route when the ordinary proxy fails. This helper is a project test/render utility, not a connection to the user's signed-in browser.
+
+For interaction checks, write your own local test script using the installed Playwright at `/workspace/scratch/cb73faf0411c/ui-eval-runtime/node_modules/playwright` and executable `/workspace/scratch/cb73faf0411c/ui-eval-runtime/browsers/chromium-1161/chrome-linux/chrome`. Use headless true and `--no-sandbox`. All local browser tests require the same execution escalation. Do not automate a user's external browser/session. Public text/code/image resources can be acquired with approved tools; keep source identity and permission evidence. If a remote demo is inaccessible, keep the boundary explicit and use authorized alternative evidence.
+
+Keep a concise RUN-REPORT.md with implemented scope, adopted source identities and files, observed screenshots/intervals, actual checks and limitations. Image-view claims should name the file and viewing conditions in `evidence/viewed.md`; mark what was actually viewed versus only captured. No raw model tokens or total tool-call count is available from this harness, so do not invent them.
+
+The task budget is35minutes from your launch, including instructions, research, code and self-checks. It is a resource constraint for this assignment, not a design research quota. Finish with `npm run build` and leave a reviewable state. Do not change immutable task-domain inputs or publish externally. Provide the final implementation handover when finished.

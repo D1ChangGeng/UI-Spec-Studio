@@ -1,0 +1,125 @@
+{
+  "benchmark": "T2-ATELIER",
+  "version": 1,
+  "kind": "business_acceptance_only",
+  "immutable_file": "src/domain.js",
+  "reset": {
+    "localStorageKeys": ["atelier-workspace-t2-v1", "atelier-theme-t2-v1"],
+    "procedure": "Remove these keys and reload the application before each independent check. Run checks 7, 8, and 9 as one sequential chain starting from a fresh state."
+  },
+  "evaluation": {
+    "result": "Each check is pass only when every listed assertion is observed in the running application; otherwise fail. Record failed assertions and evidence separately.",
+    "dates": "Compare ISO datetime or data-date attributes; human-readable date formatting may vary.",
+    "budgets": "Compare numeric USD amounts; human-readable currency formatting may vary.",
+    "controls": "Use documented hooks and accessible behavior. Native select elements are not required.",
+    "visual_scoring": "None. This file specifies business behavior, not an aesthetic rubric."
+  },
+  "checks": [
+    {
+      "id": "T2-01",
+      "name": "Original Overview totals",
+      "setup": "Fresh state; open Overview.",
+      "actions": ["Read the full-workspace summary.", "Search Harbor Night Markets while staying on Overview."],
+      "assertions": ["Overview is the initial active view.", "Before and after filtering, total projects is 12 and total budget is USD 585000.", "Before and after filtering, status counts are Planned 4, In progress 5, Review 3."],
+      "expected": {"totalProjects": 12, "totalBudget": 585000, "statusCounts": {"Planned": 4, "In progress": 5, "Review": 3}},
+      "hooks": ["nav-overview", "overview-view", "summary-total-projects", "summary-total-budget", "summary-planned-count", "summary-in-progress-count", "summary-review-count", "search-input"]
+    },
+    {
+      "id": "T2-02",
+      "name": "Projects contains all twelve records",
+      "setup": "Fresh state; open Projects; clear filters.",
+      "actions": ["Inspect the twelve project entries in the active Projects view."],
+      "assertions": ["Exactly the twelve expected IDs are present once each in the active collection.", "Each entry exposes its exact seeded title and initial status.", "The result count is 12 of 12."],
+      "expectedIds": ["PRJ-001", "PRJ-002", "PRJ-003", "PRJ-004", "PRJ-005", "PRJ-006", "PRJ-007", "PRJ-008", "PRJ-009", "PRJ-010", "PRJ-011", "PRJ-012"],
+      "hooks": ["nav-projects", "projects-view", "clear-filters", "project-item-${id}", "project-title-${id}", "project-status-${id}", "results-count"]
+    },
+    {
+      "id": "T2-03",
+      "name": "Exact-title search and clear",
+      "setup": "Fresh state; open Projects; clear filters.",
+      "actions": ["Enter Harbor Night Markets into project search.", "Inspect matching entries.", "Clear search."],
+      "assertions": ["Search returns only PRJ-001 with title Harbor Night Markets.", "The matching result count is 1 of 12.", "Clearing search returns twelve entries and a 12 of 12 result count."],
+      "query": "Harbor Night Markets",
+      "expectedIds": ["PRJ-001"],
+      "hooks": ["search-input", "projects-view", "project-item-PRJ-001", "results-count"]
+    },
+    {
+      "id": "T2-04",
+      "name": "Planned status filter and clear",
+      "setup": "Fresh state; open Projects; clear filters.",
+      "actions": ["Choose Planned in the status filter.", "Inspect matching entries.", "Clear filters."],
+      "assertions": ["Exactly PRJ-003, PRJ-007, PRJ-009, and PRJ-012 are shown, with no other project entries in the active collection.", "Every matching entry is Planned and the result count is 4 of 12.", "Clearing filters restores all twelve entries."],
+      "status": "Planned",
+      "expectedIds": ["PRJ-003", "PRJ-007", "PRJ-009", "PRJ-012"],
+      "hooks": ["status-filter", "clear-filters", "projects-view", "results-count", "project-item-${id}"]
+    },
+    {
+      "id": "T2-05",
+      "name": "Schedule dates for every project",
+      "setup": "Fresh state; open Schedule; clear filters.",
+      "actions": ["Inspect the start and due date for each project in Schedule."],
+      "assertions": ["All twelve projects are accessible in Schedule.", "Every project's start and due date match expectedDates.", "Dates remain readable; the schedule may use any appropriate presentation."],
+      "expectedDates": {
+        "PRJ-001": {"start": "2026-10-05", "due": "2026-11-13"},
+        "PRJ-002": {"start": "2026-09-14", "due": "2026-10-30"},
+        "PRJ-003": {"start": "2026-11-02", "due": "2026-12-11"},
+        "PRJ-004": {"start": "2026-10-12", "due": "2026-11-20"},
+        "PRJ-005": {"start": "2026-09-21", "due": "2026-11-06"},
+        "PRJ-006": {"start": "2026-10-01", "due": "2026-11-27"},
+        "PRJ-007": {"start": "2026-11-09", "due": "2026-12-04"},
+        "PRJ-008": {"start": "2026-10-19", "due": "2026-12-18"},
+        "PRJ-009": {"start": "2026-11-16", "due": "2026-12-18"},
+        "PRJ-010": {"start": "2026-09-28", "due": "2026-11-09"},
+        "PRJ-011": {"start": "2026-10-26", "due": "2026-12-07"},
+        "PRJ-012": {"start": "2026-11-23", "due": "2026-12-21"}
+      },
+      "hooks": ["nav-schedule", "schedule-view", "schedule-start-${id}", "schedule-due-${id}"]
+    },
+    {
+      "id": "T2-06",
+      "name": "Correct project detail and keyboard dismissal",
+      "setup": "Fresh state; open Projects; clear filters.",
+      "actions": ["Focus and activate the Harbor Night Markets opener using the keyboard.", "Inspect the open dialog and tab through its controls.", "Press Escape."],
+      "assertions": ["Detail exposes the exact expected ID, title, owner, region, budget, and dates.", "The full seeded description, both methods, and original note are visible or reachable by scrolling.", "Focus enters the modal and keyboard Tab does not move into the background application.", "Escape closes the dialog and restores focus to the Harbor Night Markets opener."],
+      "expected": {"id": "PRJ-001", "title": "Harbor Night Markets", "owner": "Maya Chen", "region": "East Asia", "budget": 48000, "start": "2026-10-05", "due": "2026-11-13", "methods": ["Interviews", "Observation"], "originalNote": "Vendor interviews are scheduled for the first two evenings."},
+      "hooks": ["project-open-PRJ-001", "project-detail", "detail-title", "detail-id", "detail-owner", "detail-region", "detail-budget", "detail-start", "detail-due", "detail-summary", "detail-notes"]
+    },
+    {
+      "id": "T2-07",
+      "name": "Status update remains consistent across views",
+      "setup": "Start the checks 7–9 chain from fresh state; open PRJ-001 detail.",
+      "actions": ["Change PRJ-001 status from In progress to Review.", "Inspect the detail status.", "Close the dialog and inspect PRJ-001 in Projects and Schedule.", "Open Overview and inspect summary values."],
+      "assertions": ["PRJ-001 is Review in the dialog, Projects, and Schedule.", "Overview shows Planned 4, In progress 4, and Review 4.", "Total projects remains 12 and total budget remains USD 585000.", "No other project's status changes."],
+      "expected": {"projectId": "PRJ-001", "status": "Review", "statusCounts": {"Planned": 4, "In progress": 4, "Review": 4}, "totalProjects": 12, "totalBudget": 585000},
+      "hooks": ["detail-status", "detail-close", "nav-projects", "nav-schedule", "nav-overview", "project-status-PRJ-001", "summary-planned-count", "summary-in-progress-count", "summary-review-count", "summary-total-projects", "summary-total-budget"]
+    },
+    {
+      "id": "T2-08",
+      "name": "Append a note without losing the original",
+      "setup": "Continue after check 7; open PRJ-001 detail.",
+      "actions": ["Attempt to save an empty or whitespace-only note.", "Enter and save the exact acceptance note.", "Close and reopen PRJ-001 detail."],
+      "assertions": ["An empty or whitespace-only note is not appended.", "The exact acceptance note appears with author You.", "The original note remains unchanged, and PRJ-001 now has exactly two notes.", "Both notes are still present after the detail is reopened."],
+      "note": "Interview synthesis ready for partner review.",
+      "hooks": ["note-input", "note-save", "detail-notes", "project-note", "detail-message", "detail-close", "project-open-PRJ-001"]
+    },
+    {
+      "id": "T2-09",
+      "name": "Reload persists status and note",
+      "setup": "Continue after checks 7 and 8 in the same browser context.",
+      "actions": ["Reload the application.", "Inspect Overview, then open PRJ-001 detail.", "Inspect the other eleven project statuses."],
+      "assertions": ["PRJ-001 remains Review after reload.", "Both the original note and exact acceptance note remain, with their correct authors.", "Overview still shows 12 projects, USD 585000, and status counts 4 Planned / 4 In progress / 4 Review.", "The other eleven project statuses and all immutable fixture fields remain unchanged."],
+      "hooks": ["summary-total-projects", "summary-total-budget", "summary-planned-count", "summary-in-progress-count", "summary-review-count", "project-open-PRJ-001", "detail-status", "detail-notes", "project-status-${id}"]
+    },
+    {
+      "id": "T2-10",
+      "name": "Responsive operation and persistent themes",
+      "setup": "Fresh state. Test viewport widths 390, 900, and 1440 CSS pixels at a height of 900 pixels.",
+      "actions": ["At each width, visit Overview, Projects, and Schedule; search Harbor Night Markets; clear filters; open and close its detail.", "At each width, select dark and light themes and inspect both the workspace and open detail.", "Select dark, reload, then select light and reload.", "At width 390, emulate prefers-reduced-motion: reduce and repeat view navigation and dialog opening/closing."],
+      "assertions": ["At every tested width and theme, navigation, search, filters, and detail controls remain reachable and operable.", "Document scroll width does not exceed document client width by more than 1 CSS pixel.", "The selected theme visibly changes appropriate surfaces and text throughout the workspace and dialog, with readable content.", "The current theme is exposed as light or dark on app-shell and the document root, and persists through reload.", "Under reduced motion, required interactions remain usable and nonessential motion is reduced or removed."],
+      "widths": [390, 900, 1440],
+      "height": 900,
+      "themes": ["light", "dark"],
+      "hooks": ["app-shell", "theme-toggle", "nav-overview", "nav-projects", "nav-schedule", "search-input", "status-filter", "clear-filters", "project-open-PRJ-001", "project-detail", "detail-close"]
+    }
+  ]
+}

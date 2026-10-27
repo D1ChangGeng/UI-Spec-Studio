@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import http from 'node:http';
+import { createRequire } from 'node:module';
+const require=createRequire(import.meta.url);
+const {chromium}=require('/workspace/scratch/cb73faf0411c/ui-eval-runtime/node_modules/playwright');
+const root=path.resolve(process.argv[2]||'dist');
+const out=path.resolve(process.argv[3]||'evidence/screen.png');
+const w=Number(process.argv[4]||1440),h=Number(process.argv[5]||900);
+const mime={'.html':'text/html','.js':'text/javascript','.css':'text/css','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml','.woff2':'font/woff2','.json':'application/json'};
+const server=http.createServer((req,res)=>{let p=path.join(root,decodeURIComponent(new URL(req.url,'http://local').pathname));if(!p.startsWith(root)){res.writeHead(403);res.end();return;}if(!fs.existsSync(p)||fs.statSync(p).isDirectory())p=path.join(root,'index.html');try{res.setHeader('content-type',mime[path.extname(p)]||'application/octet-stream');res.end(fs.readFileSync(p))}catch{res.writeHead(404);res.end()}});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const b=await chromium.launch({executablePath:'/workspace/scratch/cb73faf0411c/ui-eval-runtime/browsers/chromium-1161/chrome-linux/chrome',headless:true,args:['--no-sandbox']});
+const page=await b.newPage({viewport:{width:w,height:h},deviceScaleFactor:1});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:'+server.address().port,{waitUntil:'networkidle'});await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(500);
+fs.mkdirSync(path.dirname(out),{recursive:true});await page.screenshot({path:out});
+const metadata={url:'local-dist',viewport:{width:w,height:h},browser:b.version(),pageErrors:errors,title:await page.title(),overflow:await page.evaluate(()=>({horizontal:document.documentElement.scrollWidth>innerWidth+1,vertical:document.documentElement.scrollHeight>innerHeight+1})),capturedAt:new Date().toISOString()};
+fs.writeFileSync(out+'.json',JSON.stringify(metadata,null,2));console.log(JSON.stringify({screenshot:out,...metadata}));await b.close();server.close();

@@ -1,0 +1,65 @@
+{
+  "at": "2026-10-27T19:46:48.912684+00:00",
+  "stage": "First participant wave running; no participant outputs inspected",
+  "changes": [
+    "Accept equivalent K/M monetary formatting",
+    "Verify all schedule dates exactly",
+    "Retain long conversation at all three widths",
+    "Use theme-neutral capture names for T1",
+    "Measure surrounding scroll after trigger is visible",
+    "Wait for legitimate closing/focus completion"
+  ],
+  "requirements_changed": false,
+  "health_check": {
+    "T1": {
+      "passes": 6,
+      "total": 10,
+      "failures": [
+        {
+          "id": "04",
+          "error": "Escape dismisses source"
+        },
+        {
+          "id": "08",
+          "error": "No page-level horizontal overflow {\"width\":390,\"scroll\":511}"
+        },
+        {
+          "id": "09",
+          "error": "No page-level horizontal overflow {\"width\":390,\"scroll\":511}"
+        },
+        {
+          "id": "10",
+          "error": "Keyboard source close"
+        }
+      ],
+      "scope": "Original neutral starter, not an experimental output"
+    },
+    "T2": {
+      "passes": 10,
+      "total": 10,
+      "failures": [],
+      "scope": "Original neutral starter, not an experimental output"
+    },
+    "T3": {
+      "passes": 7,
+      "total": 10,
+      "failures": [
+        {
+          "id": "05",
+          "error": "Close control returns focus"
+        },
+        {
+          "id": "06",
+          "error": "Sheet visibly follows drag {\"initialY\":234,\"movingY\":234}"
+        },
+        {
+          "id": "10",
+          "error": "Sidebar requested label {\"expected\":\"Library\",\"actual\":\"\u25c7Saved24\"}"
+        }
+      ],
+      "scope": "Original neutral starter, not an experimental output"
+    }
+  },
+  "evaluator_sha256": "44d434d76c0e4865403f521acad10be72f3e366a121a0de5a03a78a3ab881dff",
+  "temporal_sha256": "6f5aa2532b33d40d4d252abf304ddc64949604a501af32046a7726a4c880a359"
+}

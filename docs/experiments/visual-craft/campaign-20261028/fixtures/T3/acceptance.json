@@ -1,0 +1,62 @@
+{
+  "task": "T3",
+  "product": "Margin",
+  "requirements": [
+    {
+      "id": "R1",
+      "name": "Correct source details",
+      "requirement": "Each notebook citation opens the matching source with a clear identity, authors, publication, supporting metadata, summary, and complete readable source text. The sheet clearly identifies the selected source."
+    },
+    {
+      "id": "R2",
+      "name": "Keyboard entry",
+      "requirement": "Source chips work by pointer and keyboard. Opening focuses an accessible modal dialog. All sheet actions and note entry are reachable and operable by keyboard, with focus contained while open."
+    },
+    {
+      "id": "R3",
+      "name": "Source note save and persistence",
+      "requirement": "Per-source notes explicitly save and survive reopening and reload. Unsaved source-note drafts survive source switching, mode changes, and closing/reopening within the current page session without crossing source identities."
+    },
+    {
+      "id": "R4",
+      "name": "Compact and expanded continuity",
+      "requirement": "Useful compact and expanded modes preserve source reading position and draft state. Mode transitions support repeated input and reversal before completion, settling in the latest requested state without jumps, duplicated content, or stuck UI."
+    },
+    {
+      "id": "R5",
+      "name": "Close and focus return",
+      "requirement": "Visible close and Escape dismiss the sheet and restore focus to the original notebook trigger without scrolling the notebook. Notebook scroll position and its independent draft survive sheet opening, expanding, source switching, and closing."
+    },
+    {
+      "id": "R6",
+      "name": "Vertical drag and dismissal",
+      "requirement": "Pointer and touch dragging on the handle visibly moves the sheet. A committed downward gesture dismisses; short, cancelled, interrupted, or reversed gestures settle reliably. Source text remains scrollable and keyboard equivalents exist."
+    },
+    {
+      "id": "R7",
+      "name": "Latest selection authority",
+      "requirement": "Rapid A-to-B switching during loading leaves title, metadata, full text, note, and selected control associated only with B. Superseded responses cannot overwrite selection; repeated open, switch, close, and reopen remains reliable."
+    },
+    {
+      "id": "R8",
+      "name": "Loading, failure, and retry",
+      "requirement": "Normal and delayed requests have useful loading states that retain requested source identity. The supplied one-time failure has a useful error and retry. Retry recovers that source while preserving notes, without stale content or blocked controls."
+    },
+    {
+      "id": "R9",
+      "name": "Responsive, reduced motion, and accessibility",
+      "requirement": "The complete experience works at widths 390, 900, and 1440 CSS pixels, including long text, note entry, all actions, and touch use. There is no horizontal overflow or inaccessible clipping. Reduced-motion preferences, semantic controls, readable contrast, and practical touch targets are respected."
+    },
+    {
+      "id": "R10",
+      "name": "Library label and accepted shell integrity",
+      "requirement": "Saved is renamed Library while its saved identifier, count, position, and active-state behavior remain. Preserve the accepted header, sidebar, notebook content, chips, draft, and shell layout except narrowly necessary fit corrections. Do not change the immutable domain or Shell component."
+    }
+  ],
+  "fixedInputs": ["src/domain.js", "src/Shell.jsx"],
+  "acceptedShellStyles": "src/shell.css",
+  "primaryEditableFiles": ["src/SourceSheet.jsx", "src/sheet.css", "src/App.jsx", "src/navigation.js"],
+  "viewports": [390, 900, 1440],
+  "fixtureRoutes": ["/", "/?delay=1800", "/?fault=once", "/?fault=once&delay=1800"],
+  "buildCommand": "npm run build"
+}
