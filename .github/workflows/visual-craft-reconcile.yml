@@ -1,0 +1,25 @@
+name: Visual craft reconciliation
+on:
+  push:
+    branches: [work/visual-craft-reconcile-20261028]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Export exact concurrent source
+        run: |
+          mkdir -p /tmp/reconcile
+          git archive --format=zip --output=/tmp/reconcile/source.zip 1ba50b1e1c6dfbd5540d9b54514ef81ac6160eec
+          git rev-parse 1ba50b1e1c6dfbd5540d9b54514ef81ac6160eec^{tree} > /tmp/reconcile/tree.txt
+          sha256sum /tmp/reconcile/source.zip
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: concurrent-visual-craft-source
+          path: /tmp/reconcile/
+          retention-days: 7
