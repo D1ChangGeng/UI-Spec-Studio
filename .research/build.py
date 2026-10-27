@@ -19,6 +19,8 @@ def registry(url):
    path='/'+f['path']
    if '/assistant-ui/' in path:target='components/assistant-ui/'+path.split('/assistant-ui/',1)[1]
    elif '/ui/' in path:target='components/ui/'+path.split('/ui/',1)[1]
+   elif '/hooks/' in path:target='hooks/'+path.split('/hooks/',1)[1]
+   elif '/lib/' in path:target='lib/'+path.split('/lib/',1)[1]
    elif path.endswith('utils.ts'):target='lib/utils.ts'
    else:raise ValueError('Unmapped registry path '+path)
   target=target.replace('~/','')
@@ -36,7 +38,12 @@ try:
  for url in ['https://r.assistant-ui.com/thread.json','https://r.assistant-ui.com/thread-list.json','https://ui.shadcn.com/r/styles/new-york/drawer.json']:registry(url)
  (P/'lib').mkdir(exist_ok=True)
  (P/'lib/utils.ts').write_text('import {clsx} from "clsx";import {twMerge} from "tailwind-merge";export function cn(...inputs:any[]){return twMerge(clsx(inputs));}',encoding='utf-8')
- for name,target in [('app.tsx','App.tsx'),('style.css','style.css')]:shutil.copyfile(Path('.research')/name,P/target)
+ source=Path('.research/app.tsx').read_text(encoding='utf-8')
+ for name in ['thread','thread-list']:
+  files=list((P/'components/assistant-ui').rglob(name+'.tsx'))+list((P/'components/assistant-ui').rglob(name+'.aui.tsx'))
+  if len(files)!=1:raise ValueError('Ambiguous registry entry '+name+repr(files))
+  source=source.replace('./components/assistant-ui/'+name,'./'+files[0].relative_to(P).with_suffix('').as_posix())
+ (P/'App.tsx').write_text(source,encoding='utf-8');shutil.copyfile('.research/style.css',P/'style.css')
  (P/'tsconfig.json').write_text(json.dumps({'compilerOptions':{'jsx':'react-jsx','baseUrl':'.','paths':{'@/*':['./*']}}}),encoding='utf-8')
  subprocess.run(['npm','init','-y'],cwd=P,check=True)
  subprocess.run(['npm','install','--ignore-scripts','--save-exact',*sorted(deps)],cwd=P,check=True)
@@ -48,7 +55,8 @@ try:
  for source,dest in [('https://raw.githubusercontent.com/assistant-ui/assistant-ui/main/LICENSE','assistant-ui-LICENSE'),('https://raw.githubusercontent.com/shadcn-ui/ui/main/LICENSE.md','shadcn-LICENSE.md'),('https://raw.githubusercontent.com/emilkowalski/vaul/main/LICENSE.md','vaul-LICENSE.md')]:
   try:(R/dest).write_bytes(read(source))
   except Exception as e:records.append({'url':source,'license_fetch_error':str(e)})
- shutil.copytree(P/'components',R/'source/components',dirs_exist_ok=True)
+ for folder in ['components','hooks','lib']:
+  if (P/folder).exists():shutil.copytree(P/folder,R/'source'/folder,dirs_exist_ok=True)
  shutil.copyfile(P/'App.tsx',R/'source/App.tsx');shutil.copyfile(P/'style.css',R/'source/style.css')
 except Exception as e:
  (R/'build-error.txt').write_text(repr(e),encoding='utf-8');raise
