@@ -16,7 +16,7 @@ def registry(url):
  for f in data.get('files',[]):
   target=f.get('target')
   if not target:
-   path=f['path']
+   path='/'+f['path']
    if '/assistant-ui/' in path:target='components/assistant-ui/'+path.split('/assistant-ui/',1)[1]
    elif '/ui/' in path:target='components/ui/'+path.split('/ui/',1)[1]
    elif path.endswith('utils.ts'):target='lib/utils.ts'
