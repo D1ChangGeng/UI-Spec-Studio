@@ -55,6 +55,14 @@ Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付�
 
 [37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md)
 
+## 复用视觉工艺，不止基础功能
+
+功能组件库可以提供可靠操作，但不自动决定页面的排版、材质与动态品质。根据当前任务，研究适当范围的成熟页面、功能区块、视觉组件和素材；将**实际观察到的视觉完成度**与其功能覆盖范围分别判断。
+
+用专业知识发现和比较更好的资源，再通过配置、组合与针对性适配保留其设计价值。外部真实 Demo 承担主要正向实例职责；知名库只是开放入口，不是封闭名单或品质保证。专业软件同样可以在真实工作区中形成鲜明的艺术表达。
+
+[成熟视觉工艺复用](docs/VISUAL-CRAFT-REUSE.md) · [Finesse 研究与吸收边界](docs/FINESSE-ADAPTATION.md) · [限定范围的应用证据](docs/REVIEW-v1.16.0.md)
+
 ## 让熟悉的任务拥有独立的视觉语言
 
 **Art Direction**（艺术指导）围绕产品气质协调题材、字形、构图、材质与动态表达。专业工具同样可以拥有鲜明艺术性。明确提出的审美目标与任务清晰、状态准确、使用可靠共同构成交付要求。
@@ -142,7 +150,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.15.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.16.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

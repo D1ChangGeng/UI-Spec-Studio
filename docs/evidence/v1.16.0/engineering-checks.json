@@ -1,0 +1,101 @@
+{
+  "scope": "Executed maintenance engineering checks; not independent Agent behavior or aesthetic acceptance",
+  "initial_attempt": {
+    "command": "python -m unittest discover -s tests -v",
+    "tests": 245,
+    "failures": 4,
+    "errors": 0,
+    "log": "logs/first-unit-attempt.txt",
+    "cause": "Three package/link assertions observed not-yet-written review records; one new test expected a prose spelling instead of the actual source identity. Also an application-summary script initially mixed a capture-only row with assertion rows; corrected without changing browser results.",
+    "correction": "Write the actual observation records, select only assertion-bearing cases for counts, and assert the specific source slug in the identity regression."
+  },
+  "checks": [
+    {
+      "name": "package-structure",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "tools/validate_package.py"
+      ],
+      "started_utc": "2026-10-27T17:45:33.527204+00:00",
+      "finished_utc": "2026-10-27T17:45:34.345848+00:00",
+      "returncode": 0,
+      "log": "logs/package-structure.txt",
+      "log_sha256": "968923d425a965eb1a752fd07b70449ddd1165ddea2f7b22faa1af0715bddff4"
+    },
+    {
+      "name": "catalog",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "tools/catalog_docs.py",
+        "--check"
+      ],
+      "started_utc": "2026-10-27T17:45:34.346265+00:00",
+      "finished_utc": "2026-10-27T17:45:35.115659+00:00",
+      "returncode": 0,
+      "log": "logs/catalog.txt",
+      "log_sha256": "93666823b91742105db4cd8ff13bc001439faa964a575bd65bec9817ed282306"
+    },
+    {
+      "name": "artwork",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "tools/readme_art.py",
+        "--check"
+      ],
+      "started_utc": "2026-10-27T17:45:35.115888+00:00",
+      "finished_utc": "2026-10-27T17:45:35.813727+00:00",
+      "returncode": 0,
+      "log": "logs/artwork.txt",
+      "log_sha256": "c86d4cbd2e5fef6c2986796a3a0976b5bc2061e04ee6fbe4b841c210a866c75a"
+    },
+    {
+      "name": "unit-tests",
+      "argv": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "started_utc": "2026-10-27T17:45:35.813951+00:00",
+      "finished_utc": "2026-10-27T17:45:52.487848+00:00",
+      "returncode": 0,
+      "log": "logs/unit-tests.txt",
+      "log_sha256": "8c5b6fb2d6bd2c3e572bc2f4bd8bd9eca86781cc1a26187ab217f571187db9ce"
+    },
+    {
+      "name": "diff-whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_utc": "2026-10-27T17:45:52.488224+00:00",
+      "finished_utc": "2026-10-27T17:45:52.502753+00:00",
+      "returncode": 0,
+      "log": "logs/diff-whitespace.txt",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "installation": {
+    "record": "installation.json",
+    "verified_files": 37,
+    "executed_helpers": 5,
+    "scope": "Actual copy installer; standard Skills CLI is separately exercised in CI"
+  },
+  "readme": {
+    "record": "readme-review.json",
+    "capture_conditions": 12,
+    "actually_viewed_changed_sections": 12
+  },
+  "final_unit_check": {
+    "command": "python -m unittest discover -s tests -v",
+    "returncode": 0,
+    "tests": 245,
+    "log": "logs/final-unit-tests.txt",
+    "log_sha256": "08f39ef60f8edb71af1229bd35a97886a17a0617bce59e427a90eab40e8c0d65",
+    "scope": "Current source including the explicitly named v1.15 historical check; later documentation-only archive-location clarifications do not change runtime"
+  }
+}

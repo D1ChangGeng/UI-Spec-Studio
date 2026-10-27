@@ -258,3 +258,16 @@ object and actual shared dependencies, then decide which old observations remain
 applicable and which need new evidence. Keep failures, exceptions and unexamined
 conditions visible without merging them into satisfied coverage. A readable
 record or a completed inspector run cannot finish a project.
+
+
+## Verify that visual craft survived actual reuse
+
+For a consequential adopted surface, identify the specific relationship to preserve: type-to-space rhythm, optical weight, edge/light falloff, content grouping, object continuity or interaction response. Compare **target reference → original candidate demonstration → local trial → integrated task** at their own scopes. These are observations, not completion stages awarded by a helper.
+
+Inspect original source settings before changing them; then compare current fonts, content, density, theme, viewport and event phase. Keep retained mechanisms, configured expressions, focused patches and original work distinguishable. An imported dependency is not proof that it appears in the running interface. Establish actual call sites or asset placement, then exercise the user-visible result. Conversely, an attractive screenshot of newly authored code does not prove source implementation adoption.
+
+Record concrete losses and repair at the responsible level. A font substitution can change wrapping; an added wrapper can clip a glow; a new background can erase a surface boundary; a reset can break source proportions; a custom event handler can displace the original state owner. Inspect the corrected local object and its neighbors, shared pages and relevant episodes. Preserve the accepted expression unless a change is explicitly justified at the product/design level.
+
+Keep adoption benefit and implementation cost observable. For a practical comparison, retain the same task/content conditions and identify which design or behavior the mature resource actually supplied. Report setup, adaptation, discovered defects, repair and maintenance obligations separately; do not invent hours saved or infer productivity from fewer source lines. A suitable native implementation can be preferable in a supported low-impact task, while a high-impact small asset may warrant deeper research.
+
+Judge research behavior, actual adoption, perceptual result, efficiency and stylistic adaptability independently. Resource counts, famous library names, reuse percentages and structural-check success do not establish final design quality. A controlled Agent comparison requires real independent runs with comparable inputs and auditable traces; a maintainer trial or authored browser fixture supports only its declared application. View actual renders and relevant continuous episodes, preserving sampling and device limits, before claiming a visible improvement.

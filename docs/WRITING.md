@@ -207,3 +207,19 @@ what changed, why, affected objects/conditions and current judgment without
 repeating all intermediate work. Preserve professional knowledge by moving the
 judgment to its responsible Agent-facing method, not by removing it with the
 corresponding mechanical predicate.
+
+
+## Write craft knowledge as a source-selection capability
+
+Begin with a concrete perceptual problem and explain the relationships that produce
+it. Connect the mechanism to useful external reference/implementation searches,
+meaningful comparison, configuration/adaptation and actual-use checks. Keep
+technical routes and failure cases available for evidenced custom gaps, without
+turning the default into recreating mature work. Treat reusable visual craft as
+separate from functional infrastructure and from assembled product quality.
+
+Use conditional examples and concrete counterexamples, not style bans, universal
+font/palette recipes, spectacle scores or fixed resource counts. Explain the
+user-visible outcome before internal labels when presenting choices. Preserve
+source identity and evidence scope; a repository's demonstrations are study
+material, not automatic proof of every technique or a mandatory internal corpus.

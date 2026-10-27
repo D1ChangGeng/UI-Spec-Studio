@@ -57,6 +57,14 @@ Review the assembled interface and continuous task again. The adoption record sh
 
 [37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md)
 
+## Reuse visual craft, not only functionality
+
+A functional component library can supply reliable controls without resolving the page's typography, material or motion. Study mature pages, blocks, visual components and assets at the scope the task needs. Judge their **observed visual completeness** separately from how much functionality they cover.
+
+Use craft knowledge to find and compare better sources, then retain their useful relationships through configuration, composition and focused adaptation. External demos provide the main positive examples; named libraries are starting points, not a closed list or quality guarantee. Professional software can keep a distinctive artistic identity throughout real work.
+
+[Visual-craft reuse](docs/VISUAL-CRAFT-REUSE.md) · [Finesse research and boundaries](docs/FINESSE-ADAPTATION.md) · [Scoped application evidence](docs/REVIEW-v1.16.0.md)
+
 ## Give familiar work an independent visual language
 
 **Art Direction** coordinates subject, type, composition, material and motion around the product's intended character. Professional tools can carry strong artistic expression. Explicit aesthetic goals remain delivery requirements alongside clear tasks, accurate states and reliable use.
@@ -156,7 +164,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.15.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.16.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

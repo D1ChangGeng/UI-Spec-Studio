@@ -1,0 +1,322 @@
+{
+  "study": "Current maintainer reinspection of previously prepared exact-source application; not an independent Agent or causal A/B test",
+  "browser": "system Chromium via Playwright; offline set_content with acquired local application bytes; no served-origin assertion",
+  "results": [
+    {
+      "case": "spotlight-en-dark-1440",
+      "source": "spotlight",
+      "lang": "en",
+      "theme": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "assertions": [
+        {
+          "name": "three note actions",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "no document x overflow",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "selected note opens",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "close retains list",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "empty state",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "theme toggled",
+          "observed": "light",
+          "expected": "light"
+        }
+      ],
+      "errors": [],
+      "episode": [
+        {
+          "file": "spotlight-en-dark-1440-motion-0.png",
+          "start": 1793122282.6175537,
+          "end": 1793122282.7242208
+        },
+        {
+          "file": "spotlight-en-dark-1440-motion-1.png",
+          "start": 1793122282.8372824,
+          "end": 1793122282.957013
+        },
+        {
+          "file": "spotlight-en-dark-1440-motion-2.png",
+          "start": 1793122283.0679045,
+          "end": 1793122283.2020142
+        },
+        {
+          "file": "spotlight-en-dark-1440-motion-3.png",
+          "start": 1793122283.3203526,
+          "end": 1793122283.4651792
+        },
+        {
+          "file": "spotlight-en-dark-1440-motion-4.png",
+          "start": 1793122283.56956,
+          "end": 1793122283.6933937
+        },
+        {
+          "file": "spotlight-en-dark-1440-motion-5.png",
+          "start": 1793122283.8083572,
+          "end": 1793122284.125036
+        },
+        {
+          "file": "spotlight-en-dark-1440-motion-6.png",
+          "start": 1793122284.2354295,
+          "end": 1793122284.3570383
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case": "tilt-en-dark-1440",
+      "source": "tilt",
+      "lang": "en",
+      "theme": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "assertions": [
+        {
+          "name": "three note actions",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "no document x overflow",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "selected note opens",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "close retains list",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "empty state",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "theme toggled",
+          "observed": "light",
+          "expected": "light"
+        }
+      ],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "case": "plain-en-dark-1440",
+      "source": "plain",
+      "lang": "en",
+      "theme": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "assertions": [
+        {
+          "name": "three note actions",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "no document x overflow",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "selected note opens",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "close retains list",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "empty state",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "theme toggled",
+          "observed": "light",
+          "expected": "light"
+        }
+      ],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "case": "spotlight-zh-light-390",
+      "source": "spotlight",
+      "lang": "zh",
+      "theme": "light",
+      "viewport": [
+        390,
+        1000
+      ],
+      "assertions": [
+        {
+          "name": "three note actions",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "no document x overflow",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "selected note opens",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "close retains list",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "empty state",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "theme toggled",
+          "observed": "dark",
+          "expected": "dark"
+        }
+      ],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "case": "spotlight-en-light-768",
+      "source": "spotlight",
+      "lang": "en",
+      "theme": "light",
+      "viewport": [
+        768,
+        1000
+      ],
+      "assertions": [
+        {
+          "name": "three note actions",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "no document x overflow",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "selected note opens",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "close retains list",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "empty state",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "theme toggled",
+          "observed": "dark",
+          "expected": "dark"
+        }
+      ],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "case": "spotlight-zh-dark-1440",
+      "source": "spotlight",
+      "lang": "zh",
+      "theme": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "assertions": [
+        {
+          "name": "three note actions",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "no document x overflow",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "selected note opens",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "close retains list",
+          "observed": 3,
+          "expected": 3
+        },
+        {
+          "name": "empty state",
+          "observed": true,
+          "expected": true
+        },
+        {
+          "name": "theme toggled",
+          "observed": "light",
+          "expected": "light"
+        }
+      ],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "case": "reduced-motion-touch",
+      "visible_buttons": 3,
+      "claim": "emulated media/touch availability, not real device performance"
+    }
+  ],
+  "files": {
+    "source-identity.json": "e9d9c504f8f0d38b14356e6704f99782793f9bc0ddac6df50fded8b838934c83",
+    "study.css": "3cc8ce8a20e0ea9c9b17b3622c5f0e674011143f2a68f1754fa0825270b2cb37",
+    "app.js": "bf2617ebced915a510b7f525efb52fa58275198f15a74cc6c597d59347f1a7e1",
+    "app.css": "d743b6b27e568a5b65d97200f16a24b3c7bb28bc5cfc9800d07ffe447f854265",
+    "LICENSE.md": "4bdd1fa59a6b7d5954bc3b213dbc34e455c635a94bbcecf9293553797d0fad02",
+    "index.html": "286aec23031c401c47878763b3cb98033dff533cea1435e7606d8f423c4ee40c",
+    "build-lock.json": "c237c2cdd7ec37f293708c227cd147d021835f4f76ae5470c42b8747ba4a868b"
+  },
+  "visual_review": "captures need explicit viewing; creation alone does not establish review"
+}

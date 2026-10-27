@@ -1,0 +1,154 @@
+{
+  "schema_version": "visual-adoption-review/1",
+  "status": "scoped_maintainer_observation",
+  "task": "An editorial research-note library: retain a readable stable text plane while adding a subtle responsive surface to the note cards.",
+  "input_provenance": {
+    "branch_commit": "7d276ee220aa57442e43096a178964359ae65e13",
+    "workflow_run": 40536750577,
+    "artifact_id": 12747644228,
+    "artifact_sha256": "6d04193506622b4e7c4c2646559b04b5a6871bcc6c8bc4ecacd76c1170f0bb5a",
+    "scope": "Previously prepared bounded application acquired and reinspected in this maintenance work; not a fresh independent Agent output."
+  },
+  "source": {
+    "repository": "DavidHDev/react-bits",
+    "revision": "e12c22192ac7b4b452c5e2feb9b586d74765d696",
+    "candidate_components": [
+      "SpotlightCard",
+      "TiltedCard"
+    ],
+    "selected_for_this_task": "SpotlightCard",
+    "source_identity_record": "application-source-identity.json",
+    "license_scope": "Original acquired LICENSE.md is MIT + Commons Clause. No vendor component code or component showcase is installed or bundled into this Skill."
+  },
+  "observations": [
+    {
+      "subject": "public SpotlightCard",
+      "evidence": "Original context and ten recorded pointer-sample frames were actually viewed, including the original-pixel contact sheet.",
+      "finding": "Soft light and edge emphasis change location while the content remains on a stationary plane.",
+      "limit": "Sparse capture sequence supports the sampled appearance; not uninterrupted playback, frame delivery or all states."
+    },
+    {
+      "subject": "public Magic Card",
+      "evidence": "The acquired documentation context image was actually viewed.",
+      "finding": "A different card framing and material presentation is visible in the documentation.",
+      "limit": "Static context only; no claimed hover/interaction execution or adoption."
+    },
+    {
+      "subject": "public TiltedCard",
+      "evidence": "The acquired context image was actually viewed and its capture record has no matching target.",
+      "finding": "The page showed a loading placeholder, not a usable demonstration.",
+      "limit": "No live visual-quality claim is made for that blocked demonstration. Exact-source local rendering is separate evidence."
+    },
+    {
+      "subject": "local Spotlight / tilt / native card alternatives",
+      "evidence": "Same supplied task content and host layout; three candidate images plus focus state viewed at source-pixel scale.",
+      "finding": "Spotlight preserves the straight reading plane while moving the light. The tilted candidate changes the plane and text rendering under pointer input. The native card keeps reading stable without the responsive-light mechanism.",
+      "decision": "Select the responsive light for this stationary reading task; retain native controls, source falloff/layer mechanism and focus behavior. Tilt remains potentially appropriate for object/media tasks rather than being ranked globally inferior.",
+      "limit": "This is an authored, non-blind local selection, not measured user preference or a causal version comparison."
+    },
+    {
+      "subject": "host mobile adaptation",
+      "evidence": "Initial and final Chinese light 390px captures viewed.",
+      "finding": "The initial desktop minimum height left excess space between body and action. A narrow breakpoint reduced host card/content minimum heights while retaining the component effect.",
+      "verification": "Same 36 functional/layout assertions reran successfully; final narrow composition re-viewed."
+    },
+    {
+      "subject": "quiet/touch and light medium-width conditions",
+      "evidence": "Actual reduced-motion/touch-emulation card capture and English light 768px screen were viewed.",
+      "finding": "Content and the note action remain visible in those observed conditions.",
+      "limit": "Emulation and pixels do not establish real-device gesture comfort, accessibility conformance or performance."
+    }
+  ],
+  "execution": {
+    "assertions": 36,
+    "conditions": 6,
+    "all_assertions_passed": true,
+    "record": "application-execution.json",
+    "runtime": "Offline system Chromium with acquired application bytes inserted as a local fixture.",
+    "failed_attempt": "Local HTTP navigation returned ERR_BLOCKED_BY_ADMINISTRATOR; it is not reported as successful origin/network validation. No blocked-origin access was bypassed.",
+    "scope": "Search, selected-note open/close, sample empty state, theme toggle and document horizontal-overflow under named conditions. The 280ms delay is an authored fixture, not a measured service."
+  },
+  "adaptation": {
+    "upstream_mechanism": "Original component code in the acquired compiled application retained. Public props choose theme, light intensity, border emphasis and motion; host CSS controls page/card content geometry.",
+    "custom_scope": "Task shell, sample content, responsive host styles and local note actions; not a recreation of the selected gradient/edge/pointer engine.",
+    "experiment_loader": "An exact application-level query-expression substitution selects each offline case. No vendor mechanism was replaced."
+  },
+  "images": [
+    {
+      "source_local": "trial-variants.png",
+      "sha256": "d965b730f7fd2e3c611ffabc3ab6dc9895a9b21ae8216d63780b2b681bf6f08c",
+      "dimensions": [
+        1164,
+        734
+      ],
+      "actually_viewed": true,
+      "archive_member": "application-candidate-comparison.png"
+    },
+    {
+      "source_local": "trial-episode.png",
+      "sha256": "643a8ae41838ee0b02e1b306eefb74e5b7115735c10afbff5e8d37567f19d374",
+      "dimensions": [
+        1164,
+        1095
+      ],
+      "actually_viewed": true,
+      "archive_member": "application-sampled-episode.png"
+    },
+    {
+      "source_local": "inspected/spotlight-zh-light-390.png",
+      "sha256": "1e207a9196ed55e45c0b31bcb92238eacf3b22df3b0525bf970000f05f88aa56",
+      "dimensions": [
+        390,
+        1000
+      ],
+      "actually_viewed": true,
+      "archive_member": "application-mobile-final.png"
+    },
+    {
+      "source_local": "first-pass/spotlight-zh-light-390.png",
+      "sha256": "bb29391c1661c58d60c4eaae5018bdcb15a4272b3029d530b1240d5ffc422bfd",
+      "dimensions": [
+        390,
+        1000
+      ],
+      "actually_viewed": true,
+      "archive_member": "application-mobile-before.png"
+    },
+    {
+      "source_local": "inspected/spotlight-en-dark-1440.png",
+      "sha256": "292f8d4fd3fe54ee880164b39c6f9658d1a2fc25ec6478c425c235fd8d597b30",
+      "dimensions": [
+        1440,
+        1000
+      ],
+      "actually_viewed": true,
+      "archive_member": "application-desktop.png"
+    },
+    {
+      "source_local": "inspected/spotlight-reduced-touch.png",
+      "sha256": "39781ee2b41339b4325b2ed765ae46689f461082d05be2df4e6b7bcee310b2e6",
+      "dimensions": [
+        346,
+        282
+      ],
+      "actually_viewed": true,
+      "archive_member": "application-quiet-touch.png"
+    }
+  ],
+  "current_viewing_utc": "2026-10-27T17:41:35.585142+00:00",
+  "limits": [
+    "No independent Agent runs",
+    "No full AI product alignment implementation",
+    "No whole-workspace expressive redesign",
+    "No blind user study or general visual-quality score",
+    "No resource-count or code-reuse percentage used as success",
+    "No real network/service, screen-reader, physical touch device or frame-rate claim",
+    "The library source is not considered universally visually verified"
+  ],
+  "original_media_archive": "ui-spec-1.16-review-evidence.zip (conversation delivery; exact original-image hashes below)",
+  "repository_preview": {
+    "path": "application-comparison-preview.png",
+    "sha256": "7bbb99ff4a724b9416fd793f7ca6bc4a602b920ab839880c292d97741c2eeae9",
+    "derivation": "48-color display derivative of the actual candidate comparison. The observation used the original pixels, which are separately archived. Not a replacement measurement image."
+  }
+}

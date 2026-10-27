@@ -1,0 +1,1187 @@
+{
+  "schema_version": "runtime-continuity/1",
+  "baseline_tag": "v1.15.0",
+  "baseline_commit": "a89091dfa5754f98b79655c684f978f24fd92716",
+  "baseline_tree": "03e3c14508244551a18711aff28363452871e2ed",
+  "method": "Reconstruct exact prior runtime bytes by reversing minimal line edits; preserve earlier ledgers unchanged. Line indexes are zero-based and address current content. Current and prior digests are checked independently.",
+  "limits": "Byte preservation establishes content retention and specific edits, not semantic effectiveness, research execution or UI quality.",
+  "files": [
+    {
+      "path": "skills/ui-spec/LICENSE",
+      "prior_sha256": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db",
+      "current_sha256": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db",
+      "prior_bytes": 1068,
+      "current_bytes": 1068,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/SKILL.md",
+      "prior_sha256": "802aeea8aa82c94a35f78fdca2218d79f8f2cad3f11c537e3e80536f4cc85442",
+      "current_sha256": "69d52e423bb23bc2000926a029784ef742aa320cc327afb95d3810a27618cad4",
+      "prior_bytes": 31952,
+      "current_bytes": 33555,
+      "inverse_edits": [
+        {
+          "current_start_line": 7,
+          "current_end_line": 8,
+          "prior_text": "  version: \"1.15.0\"\n",
+          "current_fragment_sha256": "f0e61d1281d5807feab778c78e3a0ae97b01d05fcd3663261c94992a05121e73"
+        },
+        {
+          "current_start_line": 157,
+          "current_end_line": 165,
+          "prior_text": "",
+          "current_fragment_sha256": "800b8e623708ad50d0ec2f7690ecc08e3b4b8fa3a97f367b90a601665e8cb3a4"
+        }
+      ],
+      "disposition": "additive-guidance-and-metadata",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/assets/design-coverage-categories.json",
+      "prior_sha256": "c4a1bc4057cccf573dce57df39e4ec4d68f1af2c2186e3fcbcf92dfc8211c3e6",
+      "current_sha256": "c4a1bc4057cccf573dce57df39e4ec4d68f1af2c2186e3fcbcf92dfc8211c3e6",
+      "prior_bytes": 2281,
+      "current_bytes": 2281,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/assets/resource-catalog.json",
+      "prior_sha256": "5ba46251e7d44eef6214d158c19c51b3e7cbe5bb73bf31a82773a21fdc52bbd0",
+      "current_sha256": "93e1e29e9012b96b86d708d4cf404223c4a24c969c75287d28d297120e99c0e8",
+      "prior_bytes": 36517,
+      "current_bytes": 48532,
+      "inverse_edits": [
+        {
+          "current_start_line": 32,
+          "current_end_line": 34,
+          "prior_text": "        \"demo\"\n",
+          "current_fragment_sha256": "87ec2245a2dfd71839164da31f6d73a12ad70ac61fa1aadc57dce1567a793d55"
+        },
+        {
+          "current_start_line": 43,
+          "current_end_line": 46,
+          "prior_text": "        \"文字动画\"\n",
+          "current_fragment_sha256": "94b9d35757ef4085ad71dd00f7bad91b7480e6e5275d6380539dd4e59c7ea3bd"
+        },
+        {
+          "current_start_line": 52,
+          "current_end_line": 75,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "c62890b71fdf9f4f67a5b4cbd900141af3a4ed2dc7297419e33015b44b777233"
+        },
+        {
+          "current_start_line": 86,
+          "current_end_line": 88,
+          "prior_text": "        \"demo\"\n",
+          "current_fragment_sha256": "87ec2245a2dfd71839164da31f6d73a12ad70ac61fa1aadc57dce1567a793d55"
+        },
+        {
+          "current_start_line": 98,
+          "current_end_line": 101,
+          "prior_text": "        \"卡片\"\n",
+          "current_fragment_sha256": "fc5db0cb6ef41f534ef08844d33b44684e92377336ff2e5e5015e97a7099605d"
+        },
+        {
+          "current_start_line": 110,
+          "current_end_line": 132,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "4936fd631d533077406491f8adc370b0015544731963d2a658933076bed9a258"
+        },
+        {
+          "current_start_line": 143,
+          "current_end_line": 145,
+          "prior_text": "        \"blocks\"\n",
+          "current_fragment_sha256": "945fe0bc72ceec74386eee1086cdb1e1d1f8232966d6e4647c342e1b09804124"
+        },
+        {
+          "current_start_line": 154,
+          "current_end_line": 158,
+          "prior_text": "        \"背景\"\n",
+          "current_fragment_sha256": "0fe2f5995a9961b3aa2882b25ed6563f1ba0f498f8befb054f91539d8670d506"
+        },
+        {
+          "current_start_line": 164,
+          "current_end_line": 186,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "67e3b0637446bb38038a993a7cbebfd268a812dd61b81f82912be96cc58c5133"
+        },
+        {
+          "current_start_line": 197,
+          "current_end_line": 199,
+          "prior_text": "        \"blocks\"\n",
+          "current_fragment_sha256": "945fe0bc72ceec74386eee1086cdb1e1d1f8232966d6e4647c342e1b09804124"
+        },
+        {
+          "current_start_line": 208,
+          "current_end_line": 212,
+          "prior_text": "        \"背景\"\n",
+          "current_fragment_sha256": "0fe2f5995a9961b3aa2882b25ed6563f1ba0f498f8befb054f91539d8670d506"
+        },
+        {
+          "current_start_line": 218,
+          "current_end_line": 241,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "2a2158e5a7869f6ceff07bfaab1cffbb8805938a114f35f7cb3ab249b4ed35de"
+        },
+        {
+          "current_start_line": 251,
+          "current_end_line": 253,
+          "prior_text": "        \"source\"\n",
+          "current_fragment_sha256": "886e60cf748d24defd2562cb0c035d8d47b9fdef1c15d95fa38dace29a262c09"
+        },
+        {
+          "current_start_line": 262,
+          "current_end_line": 265,
+          "prior_text": "        \"文字动画\"\n",
+          "current_fragment_sha256": "94b9d35757ef4085ad71dd00f7bad91b7480e6e5275d6380539dd4e59c7ea3bd"
+        },
+        {
+          "current_start_line": 272,
+          "current_end_line": 295,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "003e2a6b084dab7d13901a20c871db8bcbdc80eadc1a6ff3031718c8fcbae3d3"
+        },
+        {
+          "current_start_line": 373,
+          "current_end_line": 375,
+          "prior_text": "        \"模板\"\n",
+          "current_fragment_sha256": "87481087cd0a2d0a297be419f991a48185d8b6bef2f7afa6a438f913d20d3e40"
+        },
+        {
+          "current_start_line": 381,
+          "current_end_line": 401,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "eabc31c56c0be5499408fd080d575125f7f4051f4cea0de9998f0c9c6a586398"
+        },
+        {
+          "current_start_line": 428,
+          "current_end_line": 448,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "e99c87684e1afa8162fe605d6d8e1dd3b3a11641444533b0ac69621036068b6d"
+        },
+        {
+          "current_start_line": 474,
+          "current_end_line": 493,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "acd1a14ff827e43794d00815ac1b185182f785d52292e6a6e315868a257e5b48"
+        },
+        {
+          "current_start_line": 520,
+          "current_end_line": 539,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "155fcf28a2121144f5e2d0dcb7f25727f0479e9790aafcd3b8a126a3bd65c234"
+        },
+        {
+          "current_start_line": 565,
+          "current_end_line": 584,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "091435df70760061603706871c29ca95e21e11b1cd59938ecf91a8514dd588d3"
+        },
+        {
+          "current_start_line": 605,
+          "current_end_line": 607,
+          "prior_text": "        \"注册表\"\n",
+          "current_fragment_sha256": "e34b122f1e1f4cafacadde8d06051a5244bf7a9b575a4af8f209e8aaebb7e6a0"
+        },
+        {
+          "current_start_line": 615,
+          "current_end_line": 638,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "7706892110bb3097cd0d4aca6054c22dec7b88eda1cc64039ea888f917c04901"
+        },
+        {
+          "current_start_line": 659,
+          "current_end_line": 661,
+          "prior_text": "        \"注册表\"\n",
+          "current_fragment_sha256": "e34b122f1e1f4cafacadde8d06051a5244bf7a9b575a4af8f209e8aaebb7e6a0"
+        },
+        {
+          "current_start_line": 667,
+          "current_end_line": 688,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "9aa172e817adfe5cadbf6c6bbb42bc2e6ba7873da64d3ba80ec3690df50bc06c"
+        },
+        {
+          "current_start_line": 804,
+          "current_end_line": 823,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "9488e69ee9abd583ab27ba69e789523f9088905175e80175ffd431c873f528a0"
+        },
+        {
+          "current_start_line": 851,
+          "current_end_line": 870,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "fd099ddd713e07d895a7ece571fa05d9923cbf58fae21978ebf0facea8955f21"
+        },
+        {
+          "current_start_line": 1316,
+          "current_end_line": 1336,
+          "prior_text": "      \"project_validation\": \"evaluate_in_project\"\n",
+          "current_fragment_sha256": "383f3ad6daa911cde05e80ece81f4d711f7f730bba1fe413d2979a997a11164a"
+        },
+        {
+          "current_start_line": 1496,
+          "current_end_line": 1509,
+          "prior_text": "",
+          "current_fragment_sha256": "51ebd4560e5f871cc2f814fe953f8546a5aaac7fb40ff03acb3c833e67fd7094"
+        },
+        {
+          "current_start_line": 1510,
+          "current_end_line": 1526,
+          "prior_text": "  ]\n",
+          "current_fragment_sha256": "3771c2b765a95cbbe30c9592053bd0241a45e7faee4f8339cf530b2a36b2eaf0"
+        }
+      ],
+      "disposition": "additive-guidance-and-metadata",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/asset-record.md",
+      "prior_sha256": "bd53e913b675d9a83c4211ca67e1cf608b636f31357d31a0a3b768e13acb31b6",
+      "current_sha256": "bd53e913b675d9a83c4211ca67e1cf608b636f31357d31a0a3b768e13acb31b6",
+      "prior_bytes": 2853,
+      "current_bytes": 2853,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/brief.md",
+      "prior_sha256": "0cb7f216d8242ae9c04770b3d3d993e1bb08f7fac63f839c3a8dbcbcffc0d626",
+      "current_sha256": "0cb7f216d8242ae9c04770b3d3d993e1bb08f7fac63f839c3a8dbcbcffc0d626",
+      "prior_bytes": 3376,
+      "current_bytes": 3376,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/content-decisions.md",
+      "prior_sha256": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd",
+      "current_sha256": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd",
+      "prior_bytes": 2057,
+      "current_bytes": 2057,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-decisions.md",
+      "prior_sha256": "47b86959eedee34cd6bbf4c02e7ac3d6ec06fd9891339b1b959d69782067dfb0",
+      "current_sha256": "c854a2777f54a827480e489a832040a84f568345ae8a886f629d1aca83be0de0",
+      "prior_bytes": 12399,
+      "current_bytes": 13054,
+      "inverse_edits": [
+        {
+          "current_start_line": 211,
+          "current_end_line": 223,
+          "prior_text": "",
+          "current_fragment_sha256": "bb62e49ca29115ac6408aad5701fbb2d02f189bd1035e7d4e8171d09918abeed"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-evidence.json",
+      "prior_sha256": "8e46bc621e3c791293101f3c074dfee759c24f2a5fe1d690c33954a8a017aabe",
+      "current_sha256": "8e46bc621e3c791293101f3c074dfee759c24f2a5fe1d690c33954a8a017aabe",
+      "prior_bytes": 280,
+      "current_bytes": 280,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-system.md",
+      "prior_sha256": "328f3ce70079b2bfc2f2bbfaa4dd961c33f521d0bfd533db18450975a9d5d84d",
+      "current_sha256": "328f3ce70079b2bfc2f2bbfaa4dd961c33f521d0bfd533db18450975a9d5d84d",
+      "prior_bytes": 1803,
+      "current_bytes": 1803,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/manifest.json",
+      "prior_sha256": "882275fee230397d8491d65fbf3d7a69f39814583f4a7b7cc71a3e2b8b9e49ca",
+      "current_sha256": "882275fee230397d8491d65fbf3d7a69f39814583f4a7b7cc71a3e2b8b9e49ca",
+      "prior_bytes": 360,
+      "current_bytes": 360,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/resource-adoption.md",
+      "prior_sha256": "b15b7d0a701c7f85cf429dec72b9b02c99ed8c98f56dd55ad5bbf0ed42fa6dd5",
+      "current_sha256": "b15b7d0a701c7f85cf429dec72b9b02c99ed8c98f56dd55ad5bbf0ed42fa6dd5",
+      "prior_bytes": 3375,
+      "current_bytes": 3375,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/review.md",
+      "prior_sha256": "cf6b754a8ab5b6a195f5fcd65ce0fa3a849f6c34fbdc7af575b54c2006992241",
+      "current_sha256": "cf6b754a8ab5b6a195f5fcd65ce0fa3a849f6c34fbdc7af575b54c2006992241",
+      "prior_bytes": 4941,
+      "current_bytes": 4941,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/references/analysis.md",
+      "prior_sha256": "7ff0c399f66480837348f793c14bb100e61bd29006ce264e094182b637c367a8",
+      "current_sha256": "66b84f98d3606f5fa6b9b038b20398027f24944acaae3c2249626301cdb8986a",
+      "prior_bytes": 24504,
+      "current_bytes": 25597,
+      "inverse_edits": [
+        {
+          "current_start_line": 189,
+          "current_end_line": 196,
+          "prior_text": "",
+          "current_fragment_sha256": "1e9e5723d44eaed21b6eeffafb6bce4cd832b1e1b7e8d8d31d18b33c42f31441"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/asset-sources.md",
+      "prior_sha256": "423ff1aa51590d8b78d9f165853e145bc3b6398f123fa5ca8aac7586da173227",
+      "current_sha256": "423ff1aa51590d8b78d9f165853e145bc3b6398f123fa5ca8aac7586da173227",
+      "prior_bytes": 6618,
+      "current_bytes": 6618,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/references/component-sourcing.md",
+      "prior_sha256": "08868d03f443186efe0bca0181e4e84fc20e1fc38fa3d944577ad92e53b2f1cb",
+      "current_sha256": "e05dbed2ac2a08a41de1a05ed133c459a8b5c1dfec4e743d60b2cecdb5c7cfff",
+      "prior_bytes": 22703,
+      "current_bytes": 30496,
+      "inverse_edits": [
+        {
+          "current_start_line": 187,
+          "current_end_line": 226,
+          "prior_text": "",
+          "current_fragment_sha256": "d200e4282339f7f8b57c7ebaf5c36378928dbe6e26809ef7ac27c7233ed405d5"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/content-design.md",
+      "prior_sha256": "8a5f116893def4537d286e2ed44199ecf9252f3cdc1d548facd10962c0967a84",
+      "current_sha256": "ec5c681f948cb26774ff266f6228f141af835d981166ff022eec2e92813124c9",
+      "prior_bytes": 17827,
+      "current_bytes": 19112,
+      "inverse_edits": [
+        {
+          "current_start_line": 120,
+          "current_end_line": 129,
+          "prior_text": "",
+          "current_fragment_sha256": "77547e34b274fca8ffe504e695d03638ce39587ac14ae472d677420b30af5746"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/content-sources.md",
+      "prior_sha256": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45",
+      "current_sha256": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45",
+      "prior_bytes": 5465,
+      "current_bytes": 5465,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/references/evidence-actions.md",
+      "prior_sha256": "00ba93ee732a8122405e0e8778f878213d0fee9bb8f483778292d5eb0c74c361",
+      "current_sha256": "00ba93ee732a8122405e0e8778f878213d0fee9bb8f483778292d5eb0c74c361",
+      "prior_bytes": 11390,
+      "current_bytes": 11390,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/references/evidence-map.md",
+      "prior_sha256": "a887ad903ba581299ac18897b864cad9134388d6f8afccdf608ae713431aa0e2",
+      "current_sha256": "2b2099cfec47f19d55f220bb84b08dc1fe8c4713ea5f182771f8f55871f12427",
+      "prior_bytes": 18787,
+      "current_bytes": 20225,
+      "inverse_edits": [
+        {
+          "current_start_line": 275,
+          "current_end_line": 284,
+          "prior_text": "",
+          "current_fragment_sha256": "01b6ec9fe85c310fb2d4f6eca76b4c6300d4a66119f68369882520217c4e1a15"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/evidence-records.md",
+      "prior_sha256": "e40b1cb3a43e3c18f430628c31c06ec052107ba70e51efb5f8df74581949b46a",
+      "current_sha256": "e40b1cb3a43e3c18f430628c31c06ec052107ba70e51efb5f8df74581949b46a",
+      "prior_bytes": 11073,
+      "current_bytes": 11073,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/references/examples.md",
+      "prior_sha256": "f8febc6fb3bf48b032961a9e01c820b7338d82c6422ed04d82c6d692101dc6c8",
+      "current_sha256": "f8febc6fb3bf48b032961a9e01c820b7338d82c6422ed04d82c6d692101dc6c8",
+      "prior_bytes": 8259,
+      "current_bytes": 8259,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/references/integration.md",
+      "prior_sha256": "6d9246e1c6a98e0027dd06daf84e08676ab0cc53e34f6013dc987c8811c27c26",
+      "current_sha256": "6d9246e1c6a98e0027dd06daf84e08676ab0cc53e34f6013dc987c8811c27c26",
+      "prior_bytes": 19348,
+      "current_bytes": 19348,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/references/interaction-and-variants.md",
+      "prior_sha256": "41f542af98bf3989afccbaf4f004ef908fefab1b500327a867b815c9ef8bb461",
+      "current_sha256": "c939bda9a6b2ce3d2b29b544380f0b176bee2259937b694c9a3a9021c0fe6fbe",
+      "prior_bytes": 17042,
+      "current_bytes": 21761,
+      "inverse_edits": [
+        {
+          "current_start_line": 152,
+          "current_end_line": 175,
+          "prior_text": "",
+          "current_fragment_sha256": "a9c302dae65d12bcc7cd6e14665af22eba4f9427b867ce3e527a372bc423e713"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/patterns.md",
+      "prior_sha256": "ea3fbd20c04058e7991c9b93e07ec172410fd5f5b078528eacfdf3ef27a59d9e",
+      "current_sha256": "410f4990d0c886039fae392399ad280b1e4c5822f95f5f48b19302b7da90a02e",
+      "prior_bytes": 9322,
+      "current_bytes": 13281,
+      "inverse_edits": [
+        {
+          "current_start_line": 87,
+          "current_end_line": 118,
+          "prior_text": "",
+          "current_fragment_sha256": "de7ecd11b3ee39cad94b30816d8a1b5f8bb98b4383ee928aa5acdb85371e0bfb"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/principles.md",
+      "prior_sha256": "ca962f01f3ab3f7ae33ca075aa64f8324651f846b8c153bb113115942fef3142",
+      "current_sha256": "c06151f5d6db35f4b0f6eeffe4e4dea37d71bdc85e4ca3a85be7bede9b0d6a90",
+      "prior_bytes": 24103,
+      "current_bytes": 30150,
+      "inverse_edits": [
+        {
+          "current_start_line": 214,
+          "current_end_line": 247,
+          "prior_text": "",
+          "current_fragment_sha256": "63ad889de44265cbf91d32f7150bc98c83efe7aab3617f2bb6832af1f07aa1a0"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/resource-catalog.md",
+      "prior_sha256": "72c11991b1e6f6fe82a27f5b138577cc288b707e4158124ba658379eaf27af7b",
+      "current_sha256": "40a03baf4c9a96f11dfe4ccbb036e9959f424e0407ff01533b82540245c6f34e",
+      "prior_bytes": 26653,
+      "current_bytes": 36815,
+      "inverse_edits": [
+        {
+          "current_start_line": 39,
+          "current_end_line": 75,
+          "prior_text": "",
+          "current_fragment_sha256": "ae0075b010d67c7178f0d481b9d44adf291f57cab33ba05a3864acabff1a5da6"
+        },
+        {
+          "current_start_line": 87,
+          "current_end_line": 91,
+          "prior_text": "",
+          "current_fragment_sha256": "52594ae71734abc37f9b0b01f731dff2c9bd3159be0fa05cbe9c48eac914f6b0"
+        },
+        {
+          "current_start_line": 95,
+          "current_end_line": 96,
+          "prior_text": "**Find by:** visual-effects, motion, layout. **Form:** source, blocks. **Stack scope:** react.\n",
+          "current_fragment_sha256": "2c3dcbf99ed889df4b9b0770b1e777a227491a2de1566fde1fd78182fd24666e"
+        },
+        {
+          "current_start_line": 100,
+          "current_end_line": 104,
+          "prior_text": "",
+          "current_fragment_sha256": "c0f42640e13abe082a80ec0959c0454807acdab0017f86c4381e5c848a5ee23e"
+        },
+        {
+          "current_start_line": 135,
+          "current_end_line": 139,
+          "prior_text": "",
+          "current_fragment_sha256": "994fd3f883ecdfd781e1915397d59c048b0986389fe2a6d76f510e65d8a942de"
+        },
+        {
+          "current_start_line": 168,
+          "current_end_line": 174,
+          "prior_text": "",
+          "current_fragment_sha256": "0529a1342b10ac811d5ddcdb12a04d27b5484259399e43fee50d6f535659831c"
+        },
+        {
+          "current_start_line": 205,
+          "current_end_line": 209,
+          "prior_text": "",
+          "current_fragment_sha256": "5bad46d5cf1ff7940190d604aba4188b7e97e836f41d6ca6df3048df34b4694e"
+        },
+        {
+          "current_start_line": 223,
+          "current_end_line": 224,
+          "prior_text": "**Find by:** visual-effects, motion, layout. **Form:** source. **Stack scope:** vue.\n",
+          "current_fragment_sha256": "3e8d957b3c5bb5c60c7fd73775e4c8a21496ee69a8bd031d9056632ed2b76be1"
+        },
+        {
+          "current_start_line": 228,
+          "current_end_line": 232,
+          "prior_text": "",
+          "current_fragment_sha256": "48911c027725bf563d6a0cfcbc24e084ba581ede4092adfe83ad03ce2be58e47"
+        },
+        {
+          "current_start_line": 257,
+          "current_end_line": 258,
+          "prior_text": "**Find by:** visual-effects, motion, layout. **Form:** source, blocks. **Stack scope:** react.\n",
+          "current_fragment_sha256": "2c3dcbf99ed889df4b9b0770b1e777a227491a2de1566fde1fd78182fd24666e"
+        },
+        {
+          "current_start_line": 262,
+          "current_end_line": 266,
+          "prior_text": "",
+          "current_fragment_sha256": "c5ba5bd94b0807c1a44982bfef86c9d47b191864ebae1a15bea73e39f7937f3a"
+        },
+        {
+          "current_start_line": 286,
+          "current_end_line": 290,
+          "prior_text": "",
+          "current_fragment_sha256": "67fcac669c9ed5fcc0d0504ae17f500eba8921365433602ccc430cdcbbe87225"
+        },
+        {
+          "current_start_line": 361,
+          "current_end_line": 365,
+          "prior_text": "",
+          "current_fragment_sha256": "b5eba431d03d9f6660f817241afc4e6dd3381cc67c89e3400d859bd9e8e78563"
+        },
+        {
+          "current_start_line": 375,
+          "current_end_line": 379,
+          "prior_text": "",
+          "current_fragment_sha256": "1f2497b99f6d9e30c3f93a7ebdce93cbe844fe6e76b9833a11be158b68bb9402"
+        },
+        {
+          "current_start_line": 383,
+          "current_end_line": 384,
+          "prior_text": "**Find by:** visual-effects, motion, typography. **Form:** source, demo. **Stack scope:** react.\n",
+          "current_fragment_sha256": "8d3d5779a821b30771c4508ea7d6990849236db260e9229e1c66233af71d5448"
+        },
+        {
+          "current_start_line": 388,
+          "current_end_line": 392,
+          "prior_text": "",
+          "current_fragment_sha256": "a6f1cd9bc3ca7b141898d5a4b6fda85a837e720d00cb6fa3763dad82a26195f5"
+        },
+        {
+          "current_start_line": 402,
+          "current_end_line": 406,
+          "prior_text": "",
+          "current_fragment_sha256": "f16b2d8e9a8186b434cafd786bde5ae492862f265fb717674992221ac145d54f"
+        },
+        {
+          "current_start_line": 427,
+          "current_end_line": 431,
+          "prior_text": "",
+          "current_fragment_sha256": "432292356202cb31213ce083930a58f3defe74aa2b785d05791d29a30425604c"
+        },
+        {
+          "current_start_line": 440,
+          "current_end_line": 444,
+          "prior_text": "",
+          "current_fragment_sha256": "5eabae311a5cd4d1d30c998640739cb843cd06d333cfc2534e64b1b9f2618ee2"
+        },
+        {
+          "current_start_line": 499,
+          "current_end_line": 500,
+          "prior_text": "**Find by:** visual-effects, motion, layout. **Form:** source, demo. **Stack scope:** vue.\n",
+          "current_fragment_sha256": "d496019f5d86e29a3e2d36a8f6bcc5967bac3f089fd3fb9ea5988c835e0b30e8"
+        },
+        {
+          "current_start_line": 504,
+          "current_end_line": 508,
+          "prior_text": "",
+          "current_fragment_sha256": "df2a2d1488ed7fc763d486acba2defc5dc33bbb2cde14bb13819179c537bd6c5"
+        }
+      ],
+      "disposition": "additive-guidance-and-metadata",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/sources.md",
+      "prior_sha256": "7f8fa7589c29438438c44c263256515232fab89059c502be2a119d8837793806",
+      "current_sha256": "3e3748d22a2c27ae762fb8feec0c8b3600b8dc5fae7946d4d047329b7828789c",
+      "prior_bytes": 13835,
+      "current_bytes": 15528,
+      "inverse_edits": [
+        {
+          "current_start_line": 149,
+          "current_end_line": 171,
+          "prior_text": "",
+          "current_fragment_sha256": "086cc04d51015661a6d5a090d190724c65ee2cfd80cf382a2ac523390dbde6ae"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/verification.md",
+      "prior_sha256": "27127170d08050a3a2e7d786f29164212f7811eea04ac4f229538f111c387767",
+      "current_sha256": "bf91b858d056d2b71f20da70311d023bbc262cd8e6da42f64959aa5995f6077e",
+      "prior_bytes": 29547,
+      "current_bytes": 32056,
+      "inverse_edits": [
+        {
+          "current_start_line": 260,
+          "current_end_line": 273,
+          "prior_text": "",
+          "current_fragment_sha256": "1ccf4baa833e4a968792b18fe13025baefc2b00778a514b44fbaa4739f364425"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/visual-assets.md",
+      "prior_sha256": "b467ea78f86e17c24a26ba29f056b3c422cb1823196ebc53bbbc5eb2609ab715",
+      "current_sha256": "3ab11c75c5e50cf364bce9e2e1bdf805368e88fa68a40ca1bb999388242cdb74",
+      "prior_bytes": 17956,
+      "current_bytes": 20706,
+      "inverse_edits": [
+        {
+          "current_start_line": 114,
+          "current_end_line": 127,
+          "prior_text": "",
+          "current_fragment_sha256": "e30f9f81673636c81dfddc688b60ec721b2abd5b1955b6b0ae5363c59e88b0c6"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/references/workflow.md",
+      "prior_sha256": "080bdb4b361f3de3be339f7fda222eff688cc2b5f3a484850bf785eca22c9575",
+      "current_sha256": "83665d9251ce4bd4dca191c106c7a6994f9460c841f26c10697349d84a91adcf",
+      "prior_bytes": 16595,
+      "current_bytes": 17857,
+      "inverse_edits": [
+        {
+          "current_start_line": 118,
+          "current_end_line": 125,
+          "prior_text": "",
+          "current_fragment_sha256": "92df91782d1824d9a3ab70befe3263b4331a48281d88c61b97760d7f18fdcad3"
+        }
+      ],
+      "disposition": "append-only",
+      "reason": "New craft guidance preserves existing professional text; catalog additions retain historical entries, dates and claims"
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_design_evidence.py",
+      "prior_sha256": "4ac9a5f42f45ab1789c1661e3743c1beb13a9c3336d2f4b93b275bf239ab2338",
+      "current_sha256": "4ac9a5f42f45ab1789c1661e3743c1beb13a9c3336d2f4b93b275bf239ab2338",
+      "prior_bytes": 15133,
+      "current_bytes": 15133,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_file_integrity.py",
+      "prior_sha256": "c6ac2182a1a4ee4545bacc281bb2a483df1ee93f73cbec91aacbf1878bb79c3f",
+      "current_sha256": "c6ac2182a1a4ee4545bacc281bb2a483df1ee93f73cbec91aacbf1878bb79c3f",
+      "prior_bytes": 1882,
+      "current_bytes": 1882,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_manifest.py",
+      "prior_sha256": "08d674858363368531f4168b1fd6e9aa746c0d6780adfc33bbad848d01be3497",
+      "current_sha256": "08d674858363368531f4168b1fd6e9aa746c0d6780adfc33bbad848d01be3497",
+      "prior_bytes": 12782,
+      "current_bytes": 12782,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/scripts/find_resources.py",
+      "prior_sha256": "78a2eda35ec4d6bf0540fe5b02b829d6f81afdfa698105ef6d5c4d952fe7bf0b",
+      "current_sha256": "78a2eda35ec4d6bf0540fe5b02b829d6f81afdfa698105ef6d5c4d952fe7bf0b",
+      "prior_bytes": 8899,
+      "current_bytes": 8899,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/scripts/prepare.py",
+      "prior_sha256": "35db530142cc044a697596075c8cd365761f4000d26cb48837dd0800840a7a85",
+      "current_sha256": "35db530142cc044a697596075c8cd365761f4000d26cb48837dd0800840a7a85",
+      "prior_bytes": 3595,
+      "current_bytes": 3595,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    },
+    {
+      "path": "skills/ui-spec/scripts/structural_records.py",
+      "prior_sha256": "d8a7de77ce352b973c58d0063551a88247eaf9f5932524d80ff6e43feffccf4f",
+      "current_sha256": "d8a7de77ce352b973c58d0063551a88247eaf9f5932524d80ff6e43feffccf4f",
+      "prior_bytes": 11689,
+      "current_bytes": 11689,
+      "inverse_edits": [],
+      "disposition": "unchanged",
+      "reason": "Exact helper/resource retention"
+    }
+  ],
+  "historical_evidence_unchanged": [
+    {
+      "path": "docs/evidence/v1.10.0/application-review.json",
+      "sha256": "366c909f959e525b870b814234640cf8b4395bd99370bbc1af0eab2b2fbd8b9a"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-after-desktop.png",
+      "sha256": "7398775372044184c2df22c5901a33551afed8de0df3f316a948e32ea5ac04c9"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-after-mobile.png",
+      "sha256": "ffedf3fd0c80e4ef7cd0bb0d9ea3a2bd8cb3dd4625b64297b42c18514b602f6f"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-before-mobile.png",
+      "sha256": "f64fc1986ea179f2d22aeb945879540fe136860eef61d3703b7fd3b5133e9ede"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-landscape-after.png",
+      "sha256": "a65a50b842bb4dab38ed36865a93242e6e44b203cd4f3f157e9b536f920d5165"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-landscape-before.png",
+      "sha256": "0041d10a15d2ebd83f73625fbc6b37101b76bc3de422aa24dfb12b8f7ce1878d"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-after-desktop.png",
+      "sha256": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-after-mobile.png",
+      "sha256": "ce61d04da250c956f83427dc2a16c1a8b2eb37ef491c841d1dd44000b5ce342b"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-before-mobile.png",
+      "sha256": "27112034c025a8e202f09b7df2643e2afb67447ef7dea7c7d7f30e76d403e478"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-brand-size-specimen.png",
+      "sha256": "7a7836ddc80f97ce49faf833c6105670dceff7d42865dbfda1b5afdf01dd688d"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-type-trial.png",
+      "sha256": "34e6a18dc37891e07e0f642d66ba85b58c7e1f2d30f5fa975bde987387ffbf71"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/application-review.json",
+      "sha256": "2c9da4edc602ccfb93742f917d547c3c3e4d0f96fdfcc43f6f63eb48751273bf"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-handoff-checks.json",
+      "sha256": "11035915cb8387c0f07b72ff7128bf3810d2b627ef9e3f29456a4c2aef5f4da0"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-identities-and-fidelity.json",
+      "sha256": "0edc4027e51d138f5da639c77f2a784ee152ea5850ae5292f02a0cc444e9bf56"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-independent-review.json",
+      "sha256": "9f277896741be97ab28252335152609c9649885b2654cf244fbe9888fae27395"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-initial-review.json",
+      "sha256": "b23c510a9da4e920e348ebb45b0b3a3e84311701a6d842ea6eb0183515f12226"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-poster.png",
+      "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-runtime-checks.json",
+      "sha256": "de5ade32b936a7b21a8617df576e5e0393af64276a762f219ed7386fba152465"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-source-render.png",
+      "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-storyboard.png",
+      "sha256": "26d153b2f29f95b5a6971b8dacfba5b1125783c1a51f32fab2e01919ec623356"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-transfer-after.png",
+      "sha256": "4b9275b3db7949a564b81bc8b694d8c51662fdfa482af6f47d1d55602b3cacb3"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-transfer-before.png",
+      "sha256": "7f4fb6a57af1d1808a9180341a0c318c58127660fe3d6c061208406a34456752"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/frozen-skill-identity.json",
+      "sha256": "69b58b442201d988e7e4553c455f21fceb57c6ca0628cf3a97d57254c464812a"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/method-source-audit.json",
+      "sha256": "49b6e69bddffdd39f029af99a49d48aac92aa9b7a36bf4bdd1b019dc3b003cc4"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/readme-art-direction-en.png",
+      "sha256": "eb97f5928c975f124665adc519a9d175b759d51745df0529dcde67881a2ba764"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/readme-art-direction-zh.png",
+      "sha256": "d67abe20fc1bf2b045f50878ff2d5d39363786cbfe60315822735963828a1f3a"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/readme-local-review.json",
+      "sha256": "ebeb9911164680591b95228e7bd674394868e8f0e27151dd9128d08901c62e57"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/release-evidence-audit.json",
+      "sha256": "1babdd8d3a56d703185afff38078f2a3fd3ce4c5fc275ac4da5362c3c545aca0"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/studio-film.mp4",
+      "sha256": "079e9f7c087bac85489c604de31ce533c2eda53ab229565bf2325cef2a72def9"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-collection.png",
+      "sha256": "af2d3b481513f7fb2f225fce1fe9a5077f82ec0bc03e71bb31ff1e8729d7395a"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-independent-review.json",
+      "sha256": "e80feb8ee53fe00140d70a555ec6e7979ea5977fc5bae5eb1d1c7e548fcc50e7"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-recovered-draft.png",
+      "sha256": "2e58d04190ad01415c6e3977ac6c1e61750e75bc9282612139d147246cf9905f"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-research-dark.png",
+      "sha256": "88f419eafbd0e1625d6d22c60c7bfacd5f3745d3d5b204a3accc67ba90fa35a4"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-research-narrow.png",
+      "sha256": "5de68254a1eb2feda78569dbbe845153d703f97a43e9d812ae0e72499196fd8e"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-research-wide.png",
+      "sha256": "b268b4c11a4b8bcddc8d25614dbc18eb796f431976305b9a281c54e65f088fbc"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-runtime-checks.json",
+      "sha256": "9c0752e427d6a2cfd560003201a2f0b332ea47eece6ac6eb662f4cba3f76f28e"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-source-identity.json",
+      "sha256": "7ca0c0dd3a7a3255ff72a3ecb97ed18395466e8ad0fdf7cca688c35fcef65707"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-storage-after.png",
+      "sha256": "ce9d634a3b85b80a26b10fded676525539572167d41dba0f82895f4d7d48038b"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-storage-before.png",
+      "sha256": "6c99f2f8872a8fb2ad11b953f288bb4541150b708ebebaa8a0a249f41a95146a"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-viewed-images.json",
+      "sha256": "d07870eed3975fbfc47bae6db15b9e5f98e8b1202d0166c693be04c217bde7bd"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/ci-dependency-recovery.json",
+      "sha256": "aae3745352461fcb2c0bb3d129f5dd7fc646fb35049d6e6a8536f01296e9b22a"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/ci-mirror-review.json",
+      "sha256": "0f7d94b6347c68c4bf0730e5872c6aed007925d480301000c6e3339206fc81ae"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application/README.md",
+      "sha256": "2bab89f7311ca700afff6ea642289ae5df216993120256b1dc9e94dfd1f75d67"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application/app.js",
+      "sha256": "5f4affc74156492c058387dea004c9e1459bb45fd911612108c8a9152256b9c3"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application/index.html",
+      "sha256": "e9822969c216e2d722a0c8c134eec2930468671e622471d00e6a37183a82b93b"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application/styles.css",
+      "sha256": "92058281491237f5da41ee6bfd306f6b8f389fded4f966d34d9997e6c0d13400"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application-review.json",
+      "sha256": "988b25faa77fbf22c713866ad00346e1a11386515b336e3ed0e575729cbffbce"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-author-visual-review.json",
+      "sha256": "43c39f09d7dbdb9667c58e456303faaef14efc83aaabe9afadfefebcab82a59c"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-excluded-zoom-probe.json",
+      "sha256": "a0fb4e79a484984854c7ff12a46578a412ac0bb56ae2b4882b12730500947c43"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-narrow-recovery.png",
+      "sha256": "343e679ade2625cb8570d0061a4517707e9da118b090ce24e2d6ce0f14d36d16"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-runtime-checks.json",
+      "sha256": "c21d5e5e02716b1885e650a573b124da00d5859c640b86f3570cdb2d9a30e0eb"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-saved-snapshot.png",
+      "sha256": "0eccd5a2e1867027392323110099b2952c5915d2877da1d58978dbbf783b26d1"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-source-changes.txt",
+      "sha256": "e168167fd7159035c810f9bc88918614c558d5363c57484997e8d807e88dc6c5"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-wide.png",
+      "sha256": "5478e52851270fe14c65deabccd1d078ce8a4a43ecf833937e702b7e1f3061fc"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/engineering-checks.json",
+      "sha256": "017977c2d1232c4f9502e06d7d3fee796df905d301cab397b34bececa010c30b"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-application-review.json",
+      "sha256": "a7388e2d9fd1200451db0c34a79b2c958a00fa3d79b53efa051f07cb6cbd4d2d"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-before-repair-captures.json",
+      "sha256": "2563425fbec62c38ba1023a4fe3516fd5746a25a176a267664d5ad094db5e1cd"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-before-repair-checks.json",
+      "sha256": "3b60f88e0c51bfa51843cf67b286518bc8ae86c2ac45ce9013b9139cb3750f53"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-capture-record.json",
+      "sha256": "9a45d833ff3f07a2861c6da67dbb7b81da6411221f210831fe3ebb66fc5ce82e"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-conversation.png",
+      "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-document-first.png",
+      "sha256": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-independent-review.json",
+      "sha256": "e2b2de36b839e5d2728fd6fd665b08f55271227bc09f5ef45a9861b8e4c440be"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-index-direction.png",
+      "sha256": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-narrow-before.png",
+      "sha256": "7ca2efd7ac3c5d1d25c61cf8db1a1a5e73b01b129be2f2d307aa309dfa4d55d8"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-narrow-citation.png",
+      "sha256": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-narrow.png",
+      "sha256": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-research-provenance.json",
+      "sha256": "50dd448395c9681b5965eccef8a13722dfa953c5de79c57b9cce303c15b815b9"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-runtime-checks.json",
+      "sha256": "d8e936845151242b5379d3f68de091f6ccc7ac2afe6a0ffd29847720a16b200f"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-three-columns.png",
+      "sha256": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/frozen-skill-identity.json",
+      "sha256": "26ab3bd6e37545032efc4244536db93c478ce15d2130adf88e38159e6ac8c546"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/method-source-audit.json",
+      "sha256": "787585006451f0201169f579e8d2db3f65b90c2f684278a61e406f9ee29ff149"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/readme-exploration-zh.png",
+      "sha256": "3b3ef4340620aaef8a94e2dcf3444b6e4c03c35ffc6a420f3592bc1b8d940e63"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/readme-intent-en.png",
+      "sha256": "61aef25c689ea491a81cd0772f3a2be37aca627be5d92eaa2b8d0e8fd9623b05"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/readme-local-review.json",
+      "sha256": "50fac573b556d4a165b753b4b8df92bf7f207234d789579decb9552a0d7d652f"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/ci-dependency-recovery.json",
+      "sha256": "72abe5828fbbda4da47c7b3fa6f41a5541ed921ea7a1584c9b5719d87f87b585"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/ci-mirror-review.json",
+      "sha256": "543429a2cd26494514327d63757e74c0746a509a0145dff537d67623600034b8"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/engineering-checks.json",
+      "sha256": "459a745f1557a4cbfd3809d99ff98f72caaaa689b67d002b37006c45d9a221b3"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/patch-source-identity.json",
+      "sha256": "03870fdf910e1fa1197c86ac0628fe479bcd4895a27a837712be72dcc85cf306"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/patch-source-review.json",
+      "sha256": "0a30d3cc3add4de71ea0abf72aee347eee1bbb43d00f17a5dc2d1c401282a174"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/prior-release-observation.json",
+      "sha256": "81186ae3825efccfb927776cca33fd5aa2cc34553a3063fddd9228a9fc93ae0e"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/readme-local-review.json",
+      "sha256": "0377120150c2f7b0d7f2b60f02238e8b5baa492603617ba7ce6477461e6308a9"
+    },
+    {
+      "path": "docs/evidence/v1.13.0/lineage.json",
+      "sha256": "3035a6cd459ce87beaedd4249258e3ff9046b3ee2493a64a2d3e554b28db2ae6"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/engineering-checks.json",
+      "sha256": "a858b8441813ef8983a88780adddd500dbd149f3f22d2953bc1f8a63f9b9b0f4"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/readme-decision.md",
+      "sha256": "1b0644070552a8979950f0ec409652622f7c87230b44464877f36fb7260b8c75"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/readme-local-review.json",
+      "sha256": "a69ea89f5b52b33f4216b1783d15019dfd077ed14cca4ab7c7d06620488973ad"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/source-preservation.json",
+      "sha256": "9d957d6161e285dc18db5cd1a06946d239ee6f7ec7bc68b3f4c7be090d0a10f7"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/baseline-runtime.json",
+      "sha256": "1df417f0d0892e1a1693302d7d1c47f479e1fadf93757bfffd8c21b45266b210"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/continuity.json",
+      "sha256": "027534488744cb8b8c69e424e6fb7ece9936989e2470a60e842a851de5cf2dc8"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/engineering-checks.json",
+      "sha256": "b1b631d6beb3a502393be72bc87253d07105e45577d9593f382f85cfa537f772"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/readme-decision.md",
+      "sha256": "e2ed173b52d4acc8531763a0aaa91b523fadea605d13bc65c936a10e420737be"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/readme-local-review.json",
+      "sha256": "ce66571436bf12c19add8a900ab0e110eed7ec444b86f01b896a246b69152c65"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/windows-source-read-fix.json",
+      "sha256": "5db7ec24875b48583a76dd0fc248e5d752b9d86548f8cb274ad52d8474af8b4c"
+    },
+    {
+      "path": "docs/evidence/v1.8.0/application-review.json",
+      "sha256": "684c9f7f77b683ba6f9d968522ec24934a7ce8a71288815c9e95048a7495fe7d"
+    },
+    {
+      "path": "docs/evidence/v1.8.0/named-reference-desktop.png",
+      "sha256": "d4cbdbdb234468a55ff75224d9bbf2221f66b4e44ab2853969fc3ee37d101d5e"
+    },
+    {
+      "path": "docs/evidence/v1.8.0/named-reference-mobile.png",
+      "sha256": "f4a57b02644d450532682a8de730cbca8c8c6f6f2d59b5c8f1a5be17408c991d"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/application-review.json",
+      "sha256": "22ee4525a24a2954ea7817390e097650149c3e5d40388b23c416e4e247b1722b"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/notes-reading-desktop.png",
+      "sha256": "78c973a53a8f2b98ce851da7557e76e888ea44ad05ddb708a5d4cd88d0f6685f"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/notes-reading-mobile.png",
+      "sha256": "8c25ba63f356d5c5decb9fd89063acd6c500538fe63be214ec970e2267c73e53"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/question-answer-desktop.png",
+      "sha256": "cecafa33787ab5adc83c399a0ce933350b8830fab613e1026512b784a36d4c32"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/question-answer-mobile.png",
+      "sha256": "45368b3a861c98b53b73e9ab0474d3c64005e4a51ce0ee2f5138e6d31b1f480c"
+    }
+  ]
+}

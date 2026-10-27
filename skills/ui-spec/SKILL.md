@@ -5,7 +5,7 @@ license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.15.0"
+  version: "1.16.0"
 ---
 
 # UI Spec Studio
@@ -154,6 +154,14 @@ Connect **product intent → experience hypothesis and evidence plan → observe
 Use **Art Direction** to coordinate character, focus, visual material and motion. Preserve explicit aesthetic goals alongside task requirements; professional software can have strong artistic expression. For **Expressive Contrast**, inherit understandable tasks and mature craft while researching cross-domain visual languages and actual implementation sources. Compare materially different, similarly resolved previews when direction is open. Carry the selected language into populated core work, not only first-entry imagery.
 
 Translate the direction into a **Visual System** of roles and controllable relationships, with purposeful differences across type, space, material, assets and motion. **Asset Engineering** and **Motion Storytelling** realize that expression through mature resources and bounded specialist production. Diagnose concrete failures while retaining confirmed direction. Verify experience validity and expressive completion independently; use **Source Fidelity** for preserving selected/approved designs and **Perceptual Quality** for judging actual results. The common references own these methods.
+
+## Prefer resolved visual implementations, not only functional dependencies
+
+**Reuse the visual craft, not merely the underlying functionality.** Use professional visual knowledge first to discover, observe, compare, select, adapt and verify mature UI work. Judge useful **Reuse Scope** separately from actually observed **Visual Completeness**. A functional primitive, icon set or renderer does not by itself resolve the page's composition, typography, surfaces and motion; a visually rich component still needs semantics and integrated-use checks.
+
+For important visual objects, prioritize suitable mature pages, functional blocks, visual components and assets that retain valuable design relationships through reasonable adaptation. React Bits, Vue Bits, Magic UI, Aceternity UI and Inspira UI are open discovery entries, not a closed supplier list or universal quality ranking. Continue beyond familiar sources when evidence suggests better possibilities. Prefer public configuration and coherent composition before internal rewriting; use bounded custom work for concrete gaps and verify it independently.
+
+Keep external actual demos and designs as the primary positive examples. The Skill supplies observation and adoption methods, not a large copied showcase or one fixed aesthetic. Product category does not cap expressive ambition. The [detailed sourcing method](references/component-sourcing.md#reuse-visual-craft-at-the-appropriate-scope) connects craft questions to actual source use and retained quality. These professional decisions do not add inspector gates or required output schemas.
 
 ## Work with the UI ecosystem
 

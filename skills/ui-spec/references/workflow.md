@@ -116,3 +116,10 @@ judges whether absent categories matter, whether evidence is adequate and what
 work follows. Continue low-impact supported changes without filling every category.
 Preparation templates establish no product facts. Query names and successful
 inspector exit codes are not stage permissions or acceptance decisions.
+
+
+## Carry mature visual work into the same design increment
+
+In **init**, identify important visual responsibilities not yet supplied by the current functional dependencies. In optional **shape**, use craft knowledge to direct real-reference and high-completeness resource discovery while the composition is still adjustable. In **iterate**, select the useful reuse scope, inspect original demos, trial genuine content and integrate retained mechanisms through configuration/composition before targeted internal changes. In **audit**, compare the original resolved relationships with the complete running task. In **finish**, retain exact source, variant, configuration, rights, adaptation ownership and actual outcome at the product's boundary.
+
+These are uses of the existing workflow, not five new gates. New resource discoveries can revise art direction, and integration failures can reopen selection. An adequately supported routine change can inherit a proven choice. State what the mature source actually supplied; do not finish research with an unexamined return to custom recreation. The [sourcing method](component-sourcing.md#reuse-visual-craft-at-the-appropriate-scope) guides these professional decisions; structural tools do not choose the route.

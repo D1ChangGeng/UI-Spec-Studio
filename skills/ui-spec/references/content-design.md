@@ -118,3 +118,12 @@ The strongest content outcome makes the next meaningful decision understandable 
 ## Put language relationships on the same evidence map
 
 Connect consequential copy to its journey question, owning surface/state, factual authority, locale/type treatment and actual checked conditions using [the shared map](evidence-map.md). A new product term can alter L2 navigation, L3 control roles and L4 wrapping; trace those dependents instead of duplicating decision records. Preserve actual source authority for promises and approvals. A translation entry establishes available text; rendered inspection and actual user comprehension require separate evidence. Routine supported wording edits can inherit the established system and retain a short scoped check.
+
+
+## Explain the visible result before naming its implementation
+
+When presenting a design choice to the user, describe the perceptible difference and its task value before its internal label. For example, explain that a soft light follows the pointer while the reading surface stays still, or that an input grows without moving its primary action. A library name, shader term or “premium material” adjective alone does not explain what the person will experience.
+
+Keep precise resource/version/configuration language in the supporting design record so engineering remains traceable. Distinguish an observed effect from an intended one and actual reuse from a proposed option. Show representative renders or episodes when the choice is visual. Do not expose internal implementation strategy as reassuring product copy, or imply that a known dependency guarantees quality.
+
+Adapt actual wording and type together with a reused block. Preserve factual meaning when sample text is replaced, inspect glyph coverage, CJK/Latin punctuation and line breaking, and verify action/error/pending language at the actual component states. A borrowed block's elegant demo copy may not survive long real labels. Keep ordinary low-impact wording changes proportional to their known design basis.

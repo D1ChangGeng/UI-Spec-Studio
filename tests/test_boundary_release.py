@@ -1,4 +1,4 @@
-"""Current source continuity checks, separate from historical snapshot evidence."""
+"""Historical v1.15 source continuity and current boundary guidance, checked separately."""
 from __future__ import annotations
 import ast
 import base64
@@ -8,10 +8,11 @@ from pathlib import Path
 import unittest
 import zlib
 from test_tools import ROOT
+from source_continuity import predecessor_runtime
 
 
 class BoundaryReleaseTests(unittest.TestCase):
-    def test_current_runtime_changes_have_explicit_dispositions(self):
+    def test_v115_runtime_changes_have_explicit_dispositions(self):
         record=json.loads((ROOT/'docs/evidence/v1.15.0/continuity.json').read_text(encoding='utf-8'))
         frozen=json.loads((ROOT/'docs/evidence/v1.15.0/baseline-runtime.json').read_text(encoding='utf-8'))
         payload=zlib.decompress(base64.b64decode(frozen['payload']))
@@ -19,7 +20,7 @@ class BoundaryReleaseTests(unittest.TestCase):
         prior=json.loads(payload)
         self.assertEqual(set(prior),{r['path'] for r in record['files']})
         for row in record['files']:
-            before=prior[row['path']].encode();current=(ROOT/row['path']).read_bytes()
+            before=prior[row['path']].encode();current=predecessor_runtime(ROOT, row['path'])
             self.assertEqual(hashlib.sha256(before).hexdigest(),row['before_sha256'])
             self.assertEqual(hashlib.sha256(current).hexdigest(),row['current_sha256'])
             if row['disposition']=='unchanged':self.assertEqual(current,before)

@@ -147,3 +147,25 @@ synthesize the user's requirements with the existing foundation. Source fidelity
 protects selected or approved work; perceived quality and real use require their own
 inspection. No cited system supplies blanket endorsement, aesthetic scores or
 comparative model evidence for this skill.
+
+
+## Visual craft as a source-selection method
+
+The conditional craft additions draw on scoped research into
+[mouse-lin/finesse-skill](https://github.com/mouse-lin/finesse-skill/tree/c7a91448baf6e98fecf542915cdb7e3155bddc45):
+[design relationships](https://github.com/mouse-lin/finesse-skill/blob/c7a91448baf6e98fecf542915cdb7e3155bddc45/skills/finesse-ui/references/design-dna.md),
+[motion effects and routes](https://github.com/mouse-lin/finesse-skill/blob/c7a91448baf6e98fecf542915cdb7e3155bddc45/skills/finesse-ui/references/motion.md),
+[input motion](https://github.com/mouse-lin/finesse-skill/blob/c7a91448baf6e98fecf542915cdb7e3155bddc45/skills/finesse-ui/references/interaction-motion.md),
+and [observable user-facing language](https://github.com/mouse-lin/finesse-skill/blob/c7a91448baf6e98fecf542915cdb7e3155bddc45/skills/finesse-ui/references/plain-words.md).
+These are research sources, not adopted style restrictions or executed validation
+of every example. No upstream example corpus is bundled. The principles in this
+Skill independently connect the useful mechanisms to mature implementation
+research and actual project inspection. The catalog's Finesse UI design-kit
+entry is a different source.
+
+Verify platform/accessibility claims against the responsible primary guidance:
+[W3C contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html),
+[MDN touch-action](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action),
+and [Motion drag](https://motion.dev/docs/react-drag). Resource documentation,
+actual demo observation, local adoption and whole-product acceptance remain
+separate evidence. Refer to the dated resource map for open discovery entries.
