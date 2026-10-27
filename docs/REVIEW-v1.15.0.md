@@ -104,7 +104,7 @@ verified without claiming that still-open empirical result.
 
 ## Final local checks and bounded self-application
 
-The final local suite ran **229 tests with all assertions passing** on Python
+The first locally frozen candidate ran **229 tests with all assertions passing** on Python
 3.13.5. Package/link, resource-catalog and README-artwork checks completed. A real
 copy installation contained **37 byte-matching runtime files** and exercised the
 installed preparation, manifest, evidence, resource-lookup and independent digest
@@ -117,3 +117,21 @@ from the Agent/view explanation; the original native design remained. See the
 [decision](evidence/v1.15.0/readme-decision.md) and
 [viewed evidence record](evidence/v1.15.0/readme-local-review.json). This scoped
 maintainer self-application does not replace an independent Agent comparison.
+
+## Remote Windows source-read correction
+
+The first main-branch candidate, `e9e90de9fe8e52b5cf719d83f0383b553909e49d`,
+passed the Linux and macOS unit jobs but the Windows job reported two Unicode
+read errors in the new continuity test. The test read UTF-8 reference text
+using the Windows cp1252 default; inspector boundary cases themselves ran
+successfully. The failed job is preserved as an actual result, not a transient
+success or an accepted waiver.
+
+The correction explicitly uses UTF-8 for every text read in
+`tests/test_boundary_release.py` and adds a regression assertion for that test
+and the relevant installed script readers. No runtime instruction, inspector,
+permission, workflow gate or existing assertion was weakened. The corrected
+local suite ran **230 tests, all passing**. A new complete remote workflow is
+required for publication; the [correction record](evidence/v1.15.0/windows-source-read-fix.json)
+identifies the failure, exact changes and executed local check. Earlier local
+logs remain evidence for the earlier candidate and are not rewritten.

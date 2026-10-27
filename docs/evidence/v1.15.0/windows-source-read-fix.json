@@ -1,0 +1,20 @@
+{
+  "baseline_candidate_commit": "e9e90de9fe8e52b5cf719d83f0383b553909e49d",
+  "failed_workflow_run": 40473008445,
+  "failed_job_id": 122084389706,
+  "failed_job": "test (windows-latest, 3.13)",
+  "source": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40473008445/job/122084389706",
+  "observed": "229 tests ran; two errors in test_boundary_release.py when the Windows cp1252 default decoded a UTF-8 method reference containing byte 0x9d.",
+  "correction": "Explicit UTF-8 for all five source reads; add an AST regression guard for new boundary-test and installed-helper text readers.",
+  "runtime_files_changed_by_fix": [],
+  "release_workflow_changed": false,
+  "executed_local": {
+    "command": "/usr/bin/python3 -m unittest discover -s tests -v",
+    "cwd": "ui-spec-studio",
+    "exit_code": 0,
+    "tests": 230,
+    "output_tail": "ject (test_tools.PrepareTests.test_requires_existing_project) ... ok\ntest_reuses_design_reference (test_tools.PrepareTests.test_reuses_design_reference) ... ok\n\n----------------------------------------------------------------------\nRan 230 tests in 3.454s\n\nOK\n",
+    "full_output_sha256": "f82684ce80254c641a6d3f7749bced6e8b79b1800b1127266eccf1bee734f65b"
+  },
+  "evidence_boundary": "Local success and encoding-explicit source do not predeclare remote Windows success. Inspect the final exact-commit workflow; no Agent model or final application quality trial is asserted."
+}
