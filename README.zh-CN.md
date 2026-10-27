@@ -61,6 +61,8 @@ Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付�
 
 用专业知识发现和比较更好的资源，再通过配置、组合与针对性适配保留其设计价值。外部真实 Demo 承担主要正向实例职责；知名库只是开放入口，不是封闭名单或品质保证。专业软件同样可以在真实工作区中形成鲜明的艺术表达。
 
+[职责与复用范围检索、三类限定应用验证](docs/REVIEW-v1.16.1.md)
+
 [成熟视觉工艺复用](docs/VISUAL-CRAFT-REUSE.md) · [Finesse 研究与吸收边界](docs/FINESSE-ADAPTATION.md) · [限定范围的应用证据](docs/REVIEW-v1.16.0.md)
 
 ## 让熟悉的任务拥有独立的视觉语言
@@ -150,7 +152,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.16.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.16.1 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

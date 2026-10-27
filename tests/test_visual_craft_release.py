@@ -12,7 +12,7 @@ import unittest
 import zipfile
 
 from test_tools import ROOT, load, package
-from source_continuity import predecessor_runtime
+from source_continuity import predecessor_runtime, runtime_v116
 
 lookup = load('visual_craft_lookup', 'skills/ui-spec/scripts/find_resources.py')
 
@@ -36,7 +36,7 @@ class VisualCraftReleaseTests(unittest.TestCase):
         self.assertEqual(paths, actual)
         self.assertEqual(len(paths), len(rows))
         for row in rows:
-            current = (ROOT / row['path']).read_bytes()
+            current = runtime_v116(ROOT, row['path'])
             prior = predecessor_runtime(ROOT, row['path'])
             self.assertEqual(hashlib.sha256(current).hexdigest(), row['current_sha256'])
             self.assertEqual(hashlib.sha256(prior).hexdigest(), row['prior_sha256'])
@@ -56,7 +56,7 @@ class VisualCraftReleaseTests(unittest.TestCase):
                   'skills/ui-spec/assets/templates/design-evidence.json',
                   'skills/ui-spec/assets/templates/manifest.json']
         for path in paths:
-            self.assertEqual((ROOT / path).read_bytes(), predecessor_runtime(ROOT, path), path)
+            self.assertEqual(runtime_v116(ROOT, path), predecessor_runtime(ROOT, path), path)
 
     def test_old_evidence_keeps_its_own_identity(self):
         for row in self.ledger['historical_evidence_unchanged']:
@@ -69,7 +69,7 @@ class VisualCraftReleaseTests(unittest.TestCase):
             root = Path(td)
             target = root / path
             target.parent.mkdir(parents=True)
-            target.write_bytes((ROOT / path).read_bytes() + b'\nChanged after review\n')
+            target.write_bytes(runtime_v116(ROOT, path) + b'\nChanged after review\n')
             ledger = root / 'docs/evidence/v1.16.0/continuity.json'
             ledger.parent.mkdir(parents=True)
             ledger.write_text(json.dumps(self.ledger), encoding='utf-8')
@@ -85,7 +85,7 @@ class VisualCraftReleaseTests(unittest.TestCase):
             root = Path(td)
             target = root / path
             target.parent.mkdir(parents=True)
-            target.write_bytes((ROOT / path).read_bytes())
+            target.write_bytes(runtime_v116(ROOT, path))
             ledger = root / 'docs/evidence/v1.16.0/continuity.json'
             ledger.parent.mkdir(parents=True)
             ledger.write_text(json.dumps(data), encoding='utf-8')

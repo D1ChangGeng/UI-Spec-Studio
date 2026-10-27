@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.16.1 — 2026-10-28
+
+- Reconcile concurrent v1.16 work without overwriting its methods, catalog or evidence.
+- Add literal role/scope queries over existing descriptive craft profiles, with neutral alphabetic results.
+- Retain three current-maintainer source-adoption applications and specific responsive/focus lessons, separately from unexecuted independent comparisons.
+- Preserve historical source checks through exact reversible reconstruction and keep all release gates.
+
 ## 1.16.0 — 2026-10-28
 
 - Prefer mature visual craft at an appropriate reuse scope, not only functional dependencies; connect actual source use to retained perceptual relationships.

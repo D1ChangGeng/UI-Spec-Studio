@@ -224,3 +224,19 @@ If fit fails, diagnose the cause before adding more effects: unsuitable source, 
 Actual products, creator work, runnable component demos, template previews and licensed assets are positive examples and potential implementation sources. Study and adopt the relevant original rather than copying a large demonstration into the Skill and asking future agents to recreate it. The installed Skill teaches how to find, inspect and retain craft; the consuming project owns adopted code, configuration and notices.
 
 Keep embedded examples only when a small mechanism explanation or deterministic engineering regression genuinely needs one. A bounded study can retain provenance, a replay recipe and relevant evidence outside the runtime Skill. Do not grow a showcase, copy font files or force a recurring example style. Acquired reference material, actually viewed behavior, selected source, installed dependency, imported/used implementation and verified project result remain separate facts.
+
+
+## Resolve the exact adoption item before evaluating its integration
+
+Registry items can include explicit target paths, framework-specific variants,
+relative UI paths, hooks, utility modules and transitive registry dependencies.
+Read the source's actual manifest and preserve the selected content's identity;
+do not derive every installed path from a component display name. Keep path and
+permission checks at the installation boundary. A failed adapter path resolution
+is not evidence that the original component lacks visual craft.
+
+After configuration succeeds, inspect the running task and the source mechanisms
+that survived. Keep build success, browser assertions, actually viewed results
+and user acceptance separate. The project's shell, navigation, data authority,
+content and focus adapters retain their own obligations even when component
+internals are unchanged.

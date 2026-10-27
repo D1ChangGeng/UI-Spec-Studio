@@ -189,3 +189,8 @@ attributed, not a mandatory aesthetic register or bundled showcase. Preserve the
 open catalog and historical source dates; its profiles are descriptive, not scores.
 All installed helpers retain v1.15 neutral behavior. Record source preservation,
 actual bounded applications and unexecuted independent experiments separately.
+
+Version 1.16.1 reconciles concurrent work without replacing v1.16 evidence.
+Role/scope queries are literal views over existing profiles, not design judgments.
+Retain the scoped application findings and their fixture/observation limits;
+current runtime identity and recovered historical identity are checked separately.

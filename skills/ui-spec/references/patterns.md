@@ -116,3 +116,38 @@ When adapting one of these patterns, keep a short record only if it will improve
 **Adopt and adapt.** Compose a selected asset with an existing mature functional block. Adapt public controls, crop, layer order and type roles before rebuilding the asset mechanism. Keep one governing visual language while allowing different responsibilities to have different treatments. For reduced motion or limited rendering, design a still or simpler representation that retains the recognizable subject and usable task.
 
 **Inspect.** Use populated work, long reading, navigation and repeated input in both active and quiet states. If the background overwhelms a result, test its local placement/intensity and content layer rather than automatically removing all expression. The selected asset and mature function still require whole-page verification; source quality does not add together automatically.
+
+
+## Preserve task entry when a mature block changes responsive placement
+
+**Observed failure.** A retained conversation block rendered correctly, but hiding
+its navigation column at a narrow width removed the user's path to history.
+Component maturity does not cover a surrounding shell's omitted entry.
+
+**Adapt at the owner.** Keep the original conversation and thread-list mechanisms.
+Provide a discoverable narrow navigation entry, associate the toggle with its
+region, and check opening, dismissal and task return with real populated content.
+A different task may use a different navigation pattern; the transferable rule
+is preservation of the journey, not this study's particular shell.
+
+**Inspect.** Compare wide and narrow initial, generating, long-result, error and
+cancelled states. Distinguish a fixture adapter's behavior from a live model,
+service persistence or full parity with a reference product. Reinspect the
+assembled task rather than counting an imported block as complete alignment.
+
+## Observe settled overlay behavior before changing a mature mechanism
+
+**Observed uncertainty.** A short-delay screenshot after closing a source drawer
+still contained an exiting dialog. A DOM object's presence did not by itself
+establish whether it was open, focusable or about to finish its exit.
+
+**Investigate and adapt.** Observe the relevant close and return sequence, inspect
+actual open state and active focus after settling, and identify ownership. Use
+supported controlled-state and close-autofocus hooks for a demonstrated gap
+before rewriting the mature drag/scroll mechanism. Preserve edited local content
+through reopen where the task needs it; do not imply server persistence.
+
+**Inspect.** Exercise close, reopen, Escape, scrolling, drag reversal and focus
+return at the actual conditions. A longer wait is an observation condition, not
+a universal animation duration or a way to conceal an actual interaction defect.
+Frame samples with screenshot overhead are not proof of smooth natural delivery.
