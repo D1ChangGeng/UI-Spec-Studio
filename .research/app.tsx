@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import {AssistantRuntimeProvider,useLocalRuntime} from '@assistant-ui/react';
-import {Thread} from './components/assistant-ui/thread';
-import {ThreadList} from './components/assistant-ui/thread-list';
+import {Thread} from './components/assistant-ui/elements/thread.aui';
+import {ThreadList} from './components/assistant-ui/elements/thread-list.aui';
 import {Drawer,DrawerTrigger,DrawerContent,DrawerHeader,DrawerTitle,DrawerDescription,DrawerFooter,DrawerClose} from './components/ui/drawer';
 const q=new URLSearchParams(location.search);
 const adapter={async *run({messages,abortSignal}:any){const input=messages[messages.length-1].content.map((p:any)=>p.text||'').join('');if(input.includes('/error'))throw new Error('Fixture: source is unavailable. Retry with another question.');const text='This is an explicitly simulated response for the interface trial.\n\n## Reading the evidence\n\nKeep the question and source together while preserving space to continue the conversation. This response tests long content, cancellation, copying and return to the composer.\n\n'+Array.from({length:8},(_,i)=>'**Observation '+(i+1)+'.** A declared source and an actually inspected result have different roles. Verify the condition before inheriting a conclusion.').join('\n\n');for(let i=1;i<=text.length;i+=28){if(abortSignal.aborted)return;await new Promise(r=>setTimeout(r,35));yield {content:[{type:'text',text:text.slice(0,i+27)}]};}}};
