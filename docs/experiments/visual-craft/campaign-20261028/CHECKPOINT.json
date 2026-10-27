@@ -1,6 +1,6 @@
 {
   "scope": "Ongoing execution checkpoint, not a completed comparison",
-  "completed_runs": 3,
+  "completed_runs": 6,
   "planned_runs": 12,
   "visual_reviews_completed": 0,
   "runs": [
@@ -43,6 +43,46 @@
         "src/domain.js": true
       },
       "archive_sha256": "3d2ae35cb81c8967794426d752d2f64ea9bd88e9e265b671ecd4c9cd4f56f01a"
+    },
+    {
+      "run_id": "pa45255c",
+      "task": "T2",
+      "replicate": 1,
+      "arm": "B",
+      "functional_passes": 10,
+      "functional_total": 10,
+      "frozen_at": "2026-10-27T20:34:22.222235+00:00",
+      "immutable_inputs": {
+        "src/domain.js": true
+      },
+      "archive_sha256": "2ed07eed2979cc078e0157f7227fee8c60cc39c82b11a7a9c3d33173f741f73c"
+    },
+    {
+      "run_id": "pb1788ae",
+      "task": "T1",
+      "replicate": 1,
+      "arm": "A",
+      "functional_passes": 10,
+      "functional_total": 10,
+      "frozen_at": "2026-10-27T20:37:11.662791+00:00",
+      "immutable_inputs": {
+        "src/domain.js": true
+      },
+      "archive_sha256": "4f2fe1922609fde8b237d1a52a251b2fd0c6992472ca1b61976d7ec742fbe120"
+    },
+    {
+      "run_id": "pcc62324",
+      "task": "T3",
+      "replicate": 1,
+      "arm": "B",
+      "functional_passes": 10,
+      "functional_total": 10,
+      "frozen_at": "2026-10-27T20:32:34.648015+00:00",
+      "immutable_inputs": {
+        "src/domain.js": true,
+        "src/Shell.jsx": true
+      },
+      "archive_sha256": "edbedb72d649b6192b44c2ff4e71beaae4bc15e9ffd682cd03f9cb1e954ed502"
     }
   ]
 }
