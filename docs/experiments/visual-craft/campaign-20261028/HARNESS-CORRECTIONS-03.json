@@ -1,0 +1,30 @@
+{
+  "scope": "Transparent evaluator and diagnostic changes; no participant-source repair",
+  "changes": [
+    {
+      "kind": "setup correction",
+      "detail": "T2 skips redundant Clear only after confirming already-empty query and All status; the first9/10 result and corrected10/10 result are both retained.",
+      "record": "results/p93abe90/HARNESS-ERRATUM.json"
+    },
+    {
+      "kind": "touch coverage",
+      "detail": "T3 final evaluation includes real CDP touchCancel and committed touch drag in addition to mouse movement, settle and dismissal. Every T3 output uses the same implementation."
+    },
+    {
+      "kind": "path portability",
+      "detail": "Runtime and Chromium paths may be overridden with UI_EVAL_RUNTIME and UI_EVAL_CHROMIUM. Defaults and all acceptance assertions are unchanged. First three evaluations used the identical default paths before this path-only change."
+    },
+    {
+      "kind": "secondary diagnostic",
+      "detail": "A separate non-scoring asset/network diagnostic compares ordinary loading with external requests blocked. This does not change functional acceptance or visual ratings."
+    }
+  ],
+  "acceptance_requirements_changed": false,
+  "application_source_changed": false,
+  "current_tool_sha256": {
+    "evaluate.mjs": "fc260754e237771b2c99019b228a574fb26f0bed62f7599de99edf463d94abed",
+    "temporal.mjs": "1e60ca85c4945b498782a671ebde304c7a2957735ad7797b03109d924fa3835d",
+    "diagnostics.mjs": "89b556aa6148e924a75d32762b1b7e51915ca921b96d5f3ee912e0f66eb650c7",
+    "prepare_review.py": "db5f6ec5838b59b9ff65b82d83c349339cd80aaf7d7aec47e07167640602829e"
+  }
+}

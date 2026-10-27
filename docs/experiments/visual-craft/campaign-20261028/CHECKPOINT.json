@@ -1,0 +1,48 @@
+{
+  "scope": "Ongoing execution checkpoint, not a completed comparison",
+  "completed_runs": 3,
+  "planned_runs": 12,
+  "visual_reviews_completed": 0,
+  "runs": [
+    {
+      "run_id": "p3017a82",
+      "task": "T3",
+      "replicate": 1,
+      "arm": "A",
+      "functional_passes": 10,
+      "functional_total": 10,
+      "frozen_at": "2026-10-27T20:07:12.916631+00:00",
+      "immutable_inputs": {
+        "src/domain.js": true,
+        "src/Shell.jsx": true
+      },
+      "archive_sha256": "95c18779a1f861f5abed3d2aa488a62db50b3fa58f2f0d45303c87a7af38777d"
+    },
+    {
+      "run_id": "p75a31fd",
+      "task": "T1",
+      "replicate": 1,
+      "arm": "B",
+      "functional_passes": 10,
+      "functional_total": 10,
+      "frozen_at": "2026-10-27T20:09:13.576937+00:00",
+      "immutable_inputs": {
+        "src/domain.js": true
+      },
+      "archive_sha256": "fcb53bd292ec14234d241bcaf990dc240849b1469f79e1ee0d4d53aec3d762c6"
+    },
+    {
+      "run_id": "p93abe90",
+      "task": "T2",
+      "replicate": 1,
+      "arm": "A",
+      "functional_passes": 10,
+      "functional_total": 10,
+      "frozen_at": "2026-10-27T20:03:50.090838+00:00",
+      "immutable_inputs": {
+        "src/domain.js": true
+      },
+      "archive_sha256": "3d2ae35cb81c8967794426d752d2f64ea9bd88e9e265b671ecd4c9cd4f56f01a"
+    }
+  ]
+}

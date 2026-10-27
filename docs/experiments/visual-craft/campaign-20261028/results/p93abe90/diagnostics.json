@@ -1,0 +1,221 @@
+{
+  "task": "T2",
+  "createdAt": "2026-10-27T20:18:22.348Z",
+  "scope": "Asset and external-network diagnostic; no speed, FPS or production device comparison. Locally served uncompressed HTTP.",
+  "conditions": [
+    {
+      "blockExternal": false,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/assets/index-B2G9C2HQ.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-CeKlBUrB.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "LOCAL/fonts/inter.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/fonts/newsreader.ttf",
+          "type": "font"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 2371,
+        "dialogCount": 1,
+        "fonts": [
+          {
+            "family": "Inter",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "100 900"
+          },
+          {
+            "family": "Newsreader",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "200 800"
+          }
+        ],
+        "resources": [
+          {
+            "url": "LOCAL/assets/index-B2G9C2HQ.js",
+            "type": "script",
+            "transferBytes": 262865,
+            "encodedBodyBytes": 262565,
+            "decodedBodyBytes": 262565
+          },
+          {
+            "url": "LOCAL/assets/index-CeKlBUrB.css",
+            "type": "link",
+            "transferBytes": 32490,
+            "encodedBodyBytes": 32190,
+            "decodedBodyBytes": 32190
+          },
+          {
+            "url": "LOCAL/fonts/inter.ttf",
+            "type": "css",
+            "transferBytes": 166164,
+            "encodedBodyBytes": 165864,
+            "decodedBodyBytes": 165864
+          },
+          {
+            "url": "LOCAL/fonts/newsreader.ttf",
+            "type": "css",
+            "transferBytes": 289200,
+            "encodedBodyBytes": 288900,
+            "decodedBodyBytes": 288900
+          },
+          {
+            "url": "LOCAL/favicon.ico",
+            "type": "other",
+            "transferBytes": 787,
+            "encodedBodyBytes": 487,
+            "decodedBodyBytes": 487
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/assets/index-B2G9C2HQ.js",
+          "bytes": 262565
+        },
+        {
+          "path": "/assets/index-CeKlBUrB.css",
+          "bytes": 32190
+        },
+        {
+          "path": "/fonts/inter.ttf",
+          "bytes": 165864
+        },
+        {
+          "path": "/fonts/newsreader.ttf",
+          "bytes": 288900
+        }
+      ],
+      "requestedLocalBytes": 749519,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    },
+    {
+      "blockExternal": true,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/assets/index-B2G9C2HQ.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-CeKlBUrB.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "LOCAL/fonts/inter.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/fonts/newsreader.ttf",
+          "type": "font"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 2371,
+        "dialogCount": 1,
+        "fonts": [
+          {
+            "family": "Inter",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "100 900"
+          },
+          {
+            "family": "Newsreader",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "200 800"
+          }
+        ],
+        "resources": [
+          {
+            "url": "LOCAL/assets/index-B2G9C2HQ.js",
+            "type": "script",
+            "transferBytes": 262865,
+            "encodedBodyBytes": 262565,
+            "decodedBodyBytes": 262565
+          },
+          {
+            "url": "LOCAL/assets/index-CeKlBUrB.css",
+            "type": "link",
+            "transferBytes": 32490,
+            "encodedBodyBytes": 32190,
+            "decodedBodyBytes": 32190
+          },
+          {
+            "url": "LOCAL/favicon.ico",
+            "type": "other",
+            "transferBytes": 0,
+            "encodedBodyBytes": 0,
+            "decodedBodyBytes": 0
+          },
+          {
+            "url": "LOCAL/fonts/inter.ttf",
+            "type": "css",
+            "transferBytes": 166164,
+            "encodedBodyBytes": 165864,
+            "decodedBodyBytes": 165864
+          },
+          {
+            "url": "LOCAL/fonts/newsreader.ttf",
+            "type": "css",
+            "transferBytes": 289200,
+            "encodedBodyBytes": 288900,
+            "decodedBodyBytes": 288900
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/assets/index-B2G9C2HQ.js",
+          "bytes": 262565
+        },
+        {
+          "path": "/assets/index-CeKlBUrB.css",
+          "bytes": 32190
+        },
+        {
+          "path": "/fonts/inter.ttf",
+          "bytes": 165864
+        },
+        {
+          "path": "/fonts/newsreader.ttf",
+          "bytes": 288900
+        }
+      ],
+      "requestedLocalBytes": 749519,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    }
+  ]
+}

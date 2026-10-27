@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-27T20:05:33.719921+00:00",
+  "reason": "First frozen T2 output correctly disables Clear when query and status are already clear. The harness clicked the disabled control unnecessarily during fresh-state setup.",
+  "affected_run": "p93abe90",
+  "application_changed": false,
+  "acceptance_requirements_changed": false,
+  "correction": "Skip redundant Clear action only after verifying empty search and All status; otherwise exercise enabled clear control. Apply uniformly to every T2 run.",
+  "original_result": "harness-v1/results.json",
+  "old_evaluator_sha256": "3c3997153e3c1cdac0926577c2ea93cb58f31f270c4bf46c9fd6dfd2ef0c572a",
+  "new_evaluator_sha256": "e46168fea466231c846c7c410e68c8fbfa9e88f66dadb2621bdcbe9bf43f58f3"
+}

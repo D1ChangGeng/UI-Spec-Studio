@@ -1,0 +1,237 @@
+{
+  "task": "T1",
+  "createdAt": "2026-10-27T20:18:23.471Z",
+  "scope": "Asset and external-network diagnostic; no speed, FPS or production device comparison. Locally served uncompressed HTTP.",
+  "conditions": [
+    {
+      "blockExternal": false,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/assets/index-Dn33ZOfT.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-CedxxqV5.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "LOCAL/fonts/DMSans.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/fonts/Lora.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/favicon.svg",
+          "type": "other"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 3119,
+        "dialogCount": 1,
+        "fonts": [
+          {
+            "family": "DM Sans",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "100 1000"
+          },
+          {
+            "family": "Lora",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "400 700"
+          }
+        ],
+        "resources": [
+          {
+            "url": "LOCAL/assets/index-Dn33ZOfT.js",
+            "type": "script",
+            "transferBytes": 263646,
+            "encodedBodyBytes": 263346,
+            "decodedBodyBytes": 263346
+          },
+          {
+            "url": "LOCAL/assets/index-CedxxqV5.css",
+            "type": "link",
+            "transferBytes": 25223,
+            "encodedBodyBytes": 24923,
+            "decodedBodyBytes": 24923
+          },
+          {
+            "url": "LOCAL/fonts/DMSans.ttf",
+            "type": "css",
+            "transferBytes": 240464,
+            "encodedBodyBytes": 240164,
+            "decodedBodyBytes": 240164
+          },
+          {
+            "url": "LOCAL/fonts/Lora.ttf",
+            "type": "css",
+            "transferBytes": 212496,
+            "encodedBodyBytes": 212196,
+            "decodedBodyBytes": 212196
+          },
+          {
+            "url": "LOCAL/favicon.svg",
+            "type": "other",
+            "transferBytes": 649,
+            "encodedBodyBytes": 349,
+            "decodedBodyBytes": 349
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/assets/index-Dn33ZOfT.js",
+          "bytes": 263346
+        },
+        {
+          "path": "/assets/index-CedxxqV5.css",
+          "bytes": 24923
+        },
+        {
+          "path": "/fonts/DMSans.ttf",
+          "bytes": 240164
+        },
+        {
+          "path": "/fonts/Lora.ttf",
+          "bytes": 212196
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 349
+        }
+      ],
+      "requestedLocalBytes": 740978,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    },
+    {
+      "blockExternal": true,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/assets/index-Dn33ZOfT.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-CedxxqV5.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "LOCAL/fonts/DMSans.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/fonts/Lora.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/favicon.svg",
+          "type": "other"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 3119,
+        "dialogCount": 1,
+        "fonts": [
+          {
+            "family": "DM Sans",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "100 1000"
+          },
+          {
+            "family": "Lora",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "400 700"
+          }
+        ],
+        "resources": [
+          {
+            "url": "LOCAL/assets/index-Dn33ZOfT.js",
+            "type": "script",
+            "transferBytes": 263646,
+            "encodedBodyBytes": 263346,
+            "decodedBodyBytes": 263346
+          },
+          {
+            "url": "LOCAL/assets/index-CedxxqV5.css",
+            "type": "link",
+            "transferBytes": 25223,
+            "encodedBodyBytes": 24923,
+            "decodedBodyBytes": 24923
+          },
+          {
+            "url": "LOCAL/fonts/DMSans.ttf",
+            "type": "css",
+            "transferBytes": 240464,
+            "encodedBodyBytes": 240164,
+            "decodedBodyBytes": 240164
+          },
+          {
+            "url": "LOCAL/fonts/Lora.ttf",
+            "type": "css",
+            "transferBytes": 212496,
+            "encodedBodyBytes": 212196,
+            "decodedBodyBytes": 212196
+          },
+          {
+            "url": "LOCAL/favicon.svg",
+            "type": "other",
+            "transferBytes": 649,
+            "encodedBodyBytes": 349,
+            "decodedBodyBytes": 349
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/assets/index-Dn33ZOfT.js",
+          "bytes": 263346
+        },
+        {
+          "path": "/assets/index-CedxxqV5.css",
+          "bytes": 24923
+        },
+        {
+          "path": "/fonts/DMSans.ttf",
+          "bytes": 240164
+        },
+        {
+          "path": "/fonts/Lora.ttf",
+          "bytes": 212196
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 349
+        }
+      ],
+      "requestedLocalBytes": 740978,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    }
+  ]
+}

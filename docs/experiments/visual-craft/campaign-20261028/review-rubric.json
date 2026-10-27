@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-10-27T19:58:53.598298+00:00",
+  "scope": "Independent version-blinded model visual review; final artifact evidence only",
+  "dimensions": [
+    {
+      "id": "coherence",
+      "name": "Task and whole-product coherence"
+    },
+    {
+      "id": "composition",
+      "name": "Composition and spatial stability"
+    },
+    {
+      "id": "typography",
+      "name": "Typography, reading rhythm and content hierarchy"
+    },
+    {
+      "id": "material",
+      "name": "Surface, material and asset integration"
+    },
+    {
+      "id": "states",
+      "name": "State and motion communication"
+    },
+    {
+      "id": "identity",
+      "name": "Brief-specific identity and target alignment"
+    }
+  ],
+  "anchors": {
+    "0": "Missing or too broken to assess",
+    "1": "Major recurring deficiencies",
+    "2": "Adequate with conspicuous weaknesses",
+    "3": "Coherent mature execution with minor weaknesses",
+    "4": "Exceptionally resolved across provided conditions; no material weakness observed"
+  },
+  "rules": [
+    "Each dimension requires exact image or interval evidence and a limitation",
+    "No summed or weighted aesthetic total",
+    "No implied human-user testing",
+    "Scores are ordinal, not ratio measurements",
+    "Motion claims follow actually viewed evidence; ordered samples do not prove normal playback or frame delivery",
+    "Do not inspect implementation, runtime logs, process reports, assignment files or skill versions",
+    "Preserve independent first scores; do not negotiate after version reveal"
+  ],
+  "task_specific_identity": {
+    "T1": "Complete populated research journey and visual maturity against the supplied author screenshots; independent brand, no pixel-copy requirement",
+    "T2": "Distinct editorial or spatial identity throughout populated work, not only a hero; legibility and reliable tasks coexist with expression",
+    "T3": "High-craft local source reading sheet and continuous relation to preserved notebook; avoid broad redesign"
+  },
+  "output_schema": {
+    "reviewer": "anonymous reviewer id",
+    "outputs": [
+      {
+        "anonymous_id": "provided label",
+        "scores": {
+          "coherence": 0,
+          "composition": 0,
+          "typography": 0,
+          "material": 0,
+          "states": 0,
+          "identity": 0
+        },
+        "evidence": {
+          "dimension": "specific observed file + rationale"
+        },
+        "limitations": [],
+        "material_defects": []
+      }
+    ],
+    "family_rankings": [
+      {
+        "task": "T1/T2/T3",
+        "ordered_tiers": [
+          [
+            "tie label",
+            "tie label"
+          ],
+          [
+            "lower label"
+          ]
+        ],
+        "reason": "observed comparative reasons, not numerical total"
+      }
+    ]
+  }
+}
