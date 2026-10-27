@@ -122,8 +122,8 @@ focused text/reflow check instead of repeating the entire product study.
 previously valid knowledge. **Agent behavior:** actual tool traces and outputs
 show that discovery, viewing, comparison and gap-directed action happened.
 **UI quality:** the real output shows mature perception, meaningful interaction,
-expressive completion and reliable operation. A structural checker can detect
-some inconsistent declarations but cannot certify the other two claims.
+expressive completion and reliable operation. A structural inspector describes record shapes and links. It cannot certify
+professional correctness, actual Agent behavior or resulting UI quality.
 
 For comparisons, use independently started sessions, frozen skill variants,
 matched tasks/tools/models/budgets and auditable outputs. Keep a structure-only
@@ -132,3 +132,27 @@ supported convergence as well as deeper exploration; do not reward needless
 work or fluent reports. A script replaying authored records is an engineering
 fixture, not a real agent experiment. Report unrun comparisons as pending and
 avoid claiming a measured design improvement from publication or unit tests.
+
+## The Agent interprets structural observations
+
+These action relationships are professional Agent-facing guidance, not executable
+inspector predicates. Evaluate the actual purpose, uncertainty, reversibility,
+existing evidence, materiality and scope before choosing an action. An inspector
+can say an action or high-impact issue was declared; it cannot judge the impact,
+source adequacy, comparison value or whether trial, expansion or finish is justified.
+Use the result as another input, not permission or a veto. A neutral tool boundary
+does not weaken the Agent's responsibility to investigate important gaps.
+
+When the inspector lists a possible missing category, decide whether it is relevant,
+already represented elsewhere, shared, excluded for a reason or worth researching.
+Do not manufacture a second candidate merely to change a count. A single inherited
+resource may be enough for a supported narrow change; a consequential open direction
+may need many genuinely different sources. That judgment remains grounded in actual
+viewing and the user goal.
+
+Interpret reported revision differences through actual object and dependency changes.
+An old observation stays historical fact; an unrelated snapshot change is not itself
+a reason for all-new research. Record important updated judgments in the current model,
+link their reasons in meaningful revisions and keep original evidence available.
+Reopen an approved or previously verified choice when relevant new evidence exposes
+a real problem, while preserving the user's authorization scope and unaffected work.

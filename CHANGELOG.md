@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.15.0 — 2026-10-27
+
+- Reassign structural observation, professional judgment and independent verification to their appropriate owners; keep evidence-driven Agent methods intact.
+- Remove inspector candidate-count, evidence-domain/revision and action/gap adjudication. Separate readable records, structural findings, declared checks, exceptions and theoretical category hints.
+- Make Manifest views queries rather than stage gates, with legacy aliases and explicit output migration. Record historical results without global invalidation.
+- Maintain current understanding, meaningful revisions and raw archives; preserve scope and both revisable design work lines.
+- Add independent file-digest verification, neutral resource lookup and unconfirmed initialization without inferred environment defaults.
+- Preserve earlier professional knowledge with a per-file continuity audit, old release evidence and expanded boundary regressions; do not claim independent Agent or UI-quality improvement from mechanical tests.
+
 ## 1.14.0 — 2026-10-27
 
 - Add the multiscale design evidence map, six scales, transverse relations and two-way coverage challenge.

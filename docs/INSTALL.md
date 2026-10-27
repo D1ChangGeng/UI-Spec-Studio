@@ -86,7 +86,7 @@ After installation, the agent may use its resolved skill directory:
 
 ```bash
 python <skill-dir>/scripts/prepare.py --project-root /path/to/project
-python <skill-dir>/scripts/check_manifest.py --project-root /path/to/project --mode draft
+python <skill-dir>/scripts/check_manifest.py --project-root /path/to/project --view overview
 ```
 
 `prepare.py` creates only missing `.ui-spec` records and leaves existing project files intact. Keep evidence containing private application data in the authorized project or evidence store. The default local evidence directory is Git-ignored.
@@ -106,7 +106,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.14.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.15.0 --skill ui-spec
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
@@ -160,3 +160,13 @@ python <skill-dir>/scripts/check_design_evidence.py --project-root <project> --v
 [Format and limits](../skills/ui-spec/references/evidence-records.md) explain
 all fields and paths. A successful exit means declaration consistency, not
 actual observation, approval, complete coverage or design quality.
+
+## Structural inspector output migration (1.15)
+
+Both inspectors now return `record_readability` and scoped structural observations,
+not `ok`, PASS, satisfied coverage or completion gates. Exit 0 means inspection ran,
+even with findings; exit 2 means input could not be read. Manifest `--mode` aliases
+remain presentation-only. See [the boundary and migration guide](STRUCTURAL-INSPECTION.md).
+Unfilled templates contain no inferred viewport/locale/theme or research action.
+`check_file_integrity.py` independently compares a requested local SHA-256; its
+match/mismatch applies only to those bytes.

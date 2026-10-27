@@ -37,7 +37,7 @@ def run(source: str) -> dict[str, object]:
                     raise ValueError(f"Installed content differs: {target.name}/{relative}")
         target = project / ".agents/skills/ui-spec"
         for arguments in (["scripts/prepare.py", "--project-root", str(project)],
-                          ["scripts/check_manifest.py", "--project-root", str(project), "--mode", "draft"],
+                          ["scripts/check_manifest.py", "--project-root", str(project), "--view", "overview", "--json"],
                           ["scripts/find_resources.py", "--id", "fontsource", "--json"],
                           ["scripts/check_design_evidence.py", "--project-root", str(project),
                            "--record", ".agents/skills/ui-spec/assets/templates/design-evidence.json",
@@ -46,9 +46,25 @@ def run(source: str) -> dict[str, object]:
                                       cwd=project, text=True, encoding="utf-8", capture_output=True, timeout=30)
             if executed.returncode:
                 raise RuntimeError(executed.stderr or executed.stdout)
+        # Assert installed inspector output semantics, not just zero exit status.
+        for script, arguments in (
+            ("check_manifest.py", ["--manifest", ".ui-spec/manifest.json", "--view", "checks", "--json"]),
+            ("check_design_evidence.py", ["--record", ".agents/skills/ui-spec/assets/templates/design-evidence.json"])):
+            observed = subprocess.run([sys.executable, str(target / "scripts" / script),
+                        "--project-root", str(project), *arguments], capture_output=True,
+                        text=True, encoding="utf-8", timeout=30, check=True)
+            report = json.loads(observed.stdout)
+            if report.get("record_readability") != "readable" or "ok" in report:
+                raise ValueError("Installed inspector returned the wrong boundary contract")
+        marker = project / "digest-marker.txt"
+        marker.write_bytes(b"installation byte identity fixture\n")
+        subprocess.run([sys.executable, str(target / "scripts/check_file_integrity.py"),
+                        "--project-root", str(project), "--path", marker.name,
+                        "--sha256", hashlib.sha256(marker.read_bytes()).hexdigest()],
+                       capture_output=True, text=True, encoding="utf-8", timeout=30, check=True)
         return {"source": source, "installer": CLI, "requested_agents": ["codex", "claude-code", "opencode"],
                 "installed_copies": len(installed), "verified_files_per_copy": len(expected),
-                "helpers": "prepare, coverage checker, resource lookup and design evidence views executed", "scope": "CLI installation and file integrity; host model execution is separate"}
+                "helpers": "prepare, two structural inspectors, resource lookup and independent file digest executed", "scope": "CLI installation and file integrity; host model execution is separate"}
 
 
 if __name__ == "__main__":

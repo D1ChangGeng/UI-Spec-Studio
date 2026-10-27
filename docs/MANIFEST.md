@@ -1,59 +1,92 @@
-# Optional coverage manifest
+# Optional declared coverage manifest
 
-Use the project's existing test matrix when it already records equivalent facts. This format is a lightweight alternative supported by the bundled checker.
+Use existing project test and design records where they already express these
+facts. The optional manifest groups named pages, variants, states, journeys,
+check records, approvals, connections and exceptions. The inspector reports
+**what is recorded**, not whether the product's scope or design is complete.
 
-## Run
+## Run and choose a query view
 
 ```bash
 python <skill-dir>/scripts/prepare.py --project-root /path/to/project
-python <skill-dir>/scripts/check_manifest.py --project-root /path/to/project --mode draft --json
-python <skill-dir>/scripts/check_manifest.py --project-root /path/to/project --mode review
-python <skill-dir>/scripts/check_manifest.py --project-root /path/to/project --mode finish
+python <skill-dir>/scripts/check_manifest.py --project-root /path/to/project --view overview --json
+python <skill-dir>/scripts/check_manifest.py --project-root /path/to/project --view checks --json
+python <skill-dir>/scripts/check_manifest.py --project-root /path/to/project --view connections --json
 ```
 
-The manifest defaults to `.ui-spec/manifest.json`. `--manifest path/from/project.json` selects another local file. `prepare.py` creates missing records and preserves existing ones.
+`--manifest path/from/project.json` selects another project-local record.
+`--view` changes presentation only. The earlier `--mode draft`, `review` and
+`finish` arguments remain compatibility aliases for overview, checks and
+connections, respectively. They impose no stage-completion requirements,
+authenticate no approvals and do not decide whether work can proceed.
 
-## Fields
+The report uses `record_readability` separately from `structural_findings`.
+It has no aggregate `ok`, `satisfied` or design pass/fail. Exit 0 means a readable
+record was inspected, **including one with structural findings**. Exit 2 means
+an invocation/read problem. Console output says `Structure inspection completed`,
+which describes the tool operation only. JSON integrations must inspect the
+specific observations they need, not use the exit status as a project gate.
 
-| Field | Purpose |
+## Fields and origins
+
+| Field | Recorded meaning |
 |---|---|
-| `schema_version` | `1` |
-| `project`, `phase` | Project label and current intent: init, shape, iterate, audit or finish |
-| `revision` | Exact current implementation/test reference, such as a Git commit or scoped digest |
-| `design_revision` | Accepted design reference used by finish; may differ from connected implementation revision |
-| `design_system_path` | Existing nonempty project-local design record, or null |
-| `viewports` | Unique IDs with actual CSS `width` and `height` |
-| `variants` | Unique IDs with supported `locale` and `theme`; use `default` when appropriate |
-| `routes` | Page families with ID, path, purpose, primary state, all declared states and critical states |
-| `journeys` | User-task IDs, participating route IDs and an observable outcome |
-| `requirements` | Additional exact route/state/viewport/variant combinations |
-| `checks` | One current result per check target, including actual evidence where executed |
-| `approvals` | Scope-specific design approvals with a source reference |
-| `connections` | Trusted behavior owners, real data modes and passing integration checks |
-| `exceptions` | Explicit, scoped waivers with reason and approver/reference |
+| `schema_version` | Integer `1`; the input profile remains readable across the output migration |
+| `record_origin`, `initialization` | Template or initialized/unconfirmed origin and detected local references |
+| `project`, `phase` | Project label and the Agent's current work intent, not tool-assigned state |
+| `revision` | Optional snapshot/source identifier; no global freshness policy |
+| `design_revision` | Identity of a design whose actual approval remains separate |
+| `design_system_path` | Local record reference; file existence says nothing about acceptance |
+| `viewports` | IDs and declared CSS dimensions, not inferred device requirements |
+| `variants` | IDs with declared locale/theme conditions |
+| `routes` | IDs, path, purpose, primary/state/critical labels chosen by the Agent |
+| `journeys` | IDs, route references and intended outcome |
+| `requirements` | Explicit target addresses the project author chose to list |
+| `checks` | Individual declared statuses, evidence locations, reviewer and observed findings |
+| `approvals` | Declared design decisions with their scope/source, not authenticated by this tool |
+| `connections` | Declared owners/contracts/data modes and references to check records |
+| `exceptions` | Declared scope changes with reason, approver/source; not successful verification |
 
-Identifiers use lowercase letters, digits, underscores and hyphens, up to 80 characters, beginning with a letter or digit. Route records represent page families; dynamic item IDs are sampled by content/permission characteristics, documented in the route or brief.
+The [planned example](../examples/manifest.json) illustrates data shape, not an
+executed project. Identifiers in this profile use lowercase letters, digits,
+underscores and hyphens, up to 80 characters. Record shape observations do not
+create UI design obligations.
 
-See the complete [planned example](../examples/manifest.json). It deliberately starts with planned work and contains no claim of executed visual or product verification.
+`prepare.py` creates missing ordinary records and preserves existing files.
+It leaves viewports, variants, routes, journeys, checks, approvals and connections
+empty; it does not silently assume English, light theme or a desktop viewport.
+A discovered DESIGN.md is labelled file-detected/content-and-approval-uninspected.
+The project label can come from an argument or directory name; that is not
+product research. The origin remains `initialized_unconfirmed` until the Agent
+establishes the real scope. Preparation never creates a design-evidence map.
 
-`phase` is the active operation. Approval, connection and individual check records
-carry scope maturity. Use existing project records when they express these facts
-adequately. Keep the complete route inventory in its authoritative location and
-state the selected matrix scope explicitly for round reviews. A full acceptance
-review reconciles all in-scope routes and their coverage.
+## Declared items versus inventory projections
 
-## Coverage rules
+`declared_item_records` matches **explicit requirements** to addressed check and
+exception records. `unlisted_declared_items` lists explicit targets with neither
+kind of record. Matching only asks whether the literal target is represented.
+A planned/failed/blocked check is a record; it is not a successful result.
 
-1. Each route's primary state requires a visual check for **every declared viewport × variant**.
-2. Each additional critical state requires a visual check in **every variant**, at one declared viewport minimum. Add exact viewport cases under `requirements` where risk warrants them.
-3. Each journey requires a completed journey check in **every declared variant**.
-4. `finish` additionally requires a recorded design approval covering every selected route and a passing real integration check for each route, linked from `connections`.
+`inventory_combinations` separately projects the declared route primary state
+across named viewports/variants, critical states across named variants, journeys
+across named variants, and integration addresses for named routes. These are
+**inventory combinations, not automatic coverage requirements**. Its `unlisted`
+list is a structural description; task applicability remains unassessed. The
+Agent chooses which additional combinations deserve explicit requirements.
 
-A source route, role or variant omitted from the manifest is outside what this checker can discover. Reconcile the inventory with the real project during audit. An empty route inventory can be a draft but cannot pass review or finish.
+Pages, user roles, devices or tasks omitted from the inventory cannot be discovered
+by these combinations. An empty list is readable in every view. Coverage discovery
+through actual user tasks and mature products remains Agent work; no completion
+percentage can prove that unknown scope is complete.
 
-## Check records
+## Results, exceptions and absence remain separate
 
-A visual check:
+`declared_check_records` contains non-waived records with their **declared**
+statuses. `declared_waived_check_records` lists waived checks.
+`declared_exceptions` retains their separate authorizations. No union of these
+collections is named satisfied or treated as verification success.
+
+For example, a visual record may contain:
 
 ```json
 {
@@ -67,33 +100,31 @@ A visual check:
 }
 ```
 
-After actual execution, set `status` to `pass`, record the current `revision`, the person/agent that inspected it under `reviewer`, `inspected: true`, and `evidence: [".ui-spec/evidence/collection-desktop.png"]`. The path must reference an existing nonempty file inside the project. Record environment and fixture details in the review record or additional fields.
+After actually running and viewing a scoped check, its author can record pass/fail,
+source identity, reviewer, inspected flag, evidence, content and environment.
+The inspector reports those fields and file metadata without inferring that the
+browser ran, pixels were viewed or the finding is professionally sound.
 
-A journey check uses `kind: "journey"`, `journey: "browse"` and `variant`. A passing result also needs current revision, evidence, reviewer and observed `outcome`.
+A journey record uses `kind: journey`, a journey ID and variant. Integration uses
+`kind: integration`, a route and the exercised service/local/static boundary.
+Actual successful persistence, truthful responses and appropriate recovery must
+be demonstrated by their independent tests. A filename or a connection record
+does not prove them. A `fail` result remains recorded even in the connections view.
 
-An integration check uses `kind: "integration"`, `route`, current revision, evidence, reviewer, observed `outcome` and a `data_mode` of `service`, `local` or `static`. This declares the architecture actually exercised. Fixture-only behavior is a design test rather than a completed integration.
+Several check records can address the same target across meaningful revisions.
+Unique check IDs distinguish them; no tool automatically selects the newest or
+rewrites old results. Keep the current model and concise revisions clear, and
+move full histories into linked evidence when they would obscure ongoing work.
 
-Each declared target has one current check record. Put retest history in Git or existing evidence logs; update the record to the current result.
-
-## Status and modes
-
-`planned` means awaiting execution. `pass` records an executed check. `fail` and `blocked` require a reason. `waived` requires a matching explicit exception.
-
-- **draft** validates record integrity and reports pending coverage. Existing pass claims still require valid evidence references.
-- **review** additionally requires completed declared coverage and resolves open failed/blocked checks.
-- **finish** additionally requires scoped approval, actual connection records and passing integration evidence.
-
-Waivers are recorded decisions, not successful tests. An exception has `target`, `reason`, `approved_by` and `reference`. Targets are `visual:route:state:viewport:variant` or `journey:journey:variant`; a waived check matches its target. Critical-state coverage derives from a completed exact visual case. Real integration remains a finish requirement even when a separate observation has an approved exception.
-
-## Approval and connection example
+## Approval and connection records
 
 ```json
 {
   "approvals": [{
     "routes": ["collection"],
-    "revision": "accepted-spec-reference",
+    "revision": "accepted-design-reference",
     "by": "product-owner",
-    "reference": "Review record identifying the accepted collection screen"
+    "reference": "Actual review identifying the accepted screen and scope"
   }],
   "connections": [{
     "route": "collection",
@@ -105,12 +136,22 @@ Waivers are recorded decisions, not successful tests. An exception has `target`,
 }
 ```
 
-The approval revision matches `design_revision`, while executed checks match `revision`. This distinguishes the approved design from the connected implementation. Store genuine approvals already supplied by the user; the checker cannot establish identity or consent.
+References are mechanically resolved. Whether the linked check supports the
+connection, the approval is genuine, or the actual behavior is sufficient is a
+separate review. `phase: finish` describes the author's intent, not permission
+to release or a tool-certified finish. Changing the global revision does not
+invalidate all visual history. The Agent reviews actual changed objects and
+conditions and either carries applicable results forward explicitly or rechecks.
 
-## Evidence handling and limits
+## Local files and independent assertions
 
-Evidence paths are project-relative and resolved within the project. External evidence stores can be represented by a local, sanitized review record containing the authorized reference. Evidence content remains the reviewer's responsibility.
+Local file paths remain inside the project and never traverse symlinks. A missing
+file, directory reference or unreadable path is a direct structural observation.
+An empty regular file is reported with zero bytes, without inventing its content.
+Remote material can be linked by a sanitized local source record; the inspector
+does not fetch external resources or authenticate any record's authority.
 
-The checker accepts file references, not pixels. It verifies existence and declared status; it does not parse screenshots, run browser operations, inspect service transactions, authenticate approvals or independently verify a Git claim. Its output explicitly carries this boundary.
-
-Exit codes: `0` for the selected record checks passing, `1` for invalid/pending requirements, `2` for an invocation or file-reading problem.
+Independent byte, package, browser and runtime checks keep scoped match/fail
+results for what they actually test. See [the structural boundary guide](STRUCTURAL-INSPECTION.md)
+for the four responsibilities and migration. Structural inspection, Agent
+behavior, engineering verification and final UI acceptance retain separate evidence.

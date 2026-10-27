@@ -12,7 +12,7 @@ from urllib.parse import urlsplit
 
 CATALOG = Path(__file__).resolve().parents[1] / 'assets/resource-catalog.json'
 LIMITS = ('Results are documented discovery leads, not installation instructions or '
-          'project acceptance. Check the exact item, current source and real integration.')
+          'project acceptance. Current source, exact-item fit and real integration are not assessed.')
 ID = re.compile(r'^[a-z0-9][a-z0-9-]*$')
 
 
@@ -140,9 +140,11 @@ def main() -> int:
         else:
             items = select(data, args.query, need=args.need, stack=args.stack, form=args.form, identifier=args.identifier, limit=args.limit)
             result = {'snapshot_date':data['snapshot_date'], 'results':items, 'count':len(items),
-                      'ordering':'alphabetical; no design-quality ranking', 'limits':LIMITS}
+                      'ordering':'alphabetical; no design-quality ranking',
+                      'result_kind':'dated_catalog_matches',
+                      'source_note_scope':'Catalog-authored guidance is source material, not a tool-selected next action.', 'limits':LIMITS}
             if not items:
-                result['next_action'] = 'Broaden the terms or use official ecosystem discovery; the bundled map has no matching lead.'
+                result['query_observation'] = 'No bundled catalog entry matches the supplied filters; external availability and task fit are not assessed.'
         if args.json or args.list_filters:
             print(json.dumps(result, ensure_ascii=True, indent=2))
         else:
@@ -150,9 +152,9 @@ def main() -> int:
             for item in result['results']:
                 print(f"\n{item['name']} ({item['id']}) — {item['use_for']}")
                 print(f"  Needs: {', '.join(item['needs'])}; forms: {', '.join(item['forms'])}")
-                print(f"  Access: {item['access']}\n  Inspect: {item['adoption_notes']}")
+                print(f"  Access: {item['access']}\n  Catalog adoption note (source guidance, not a tool-selected action): {item['adoption_notes']}")
                 for source in item['sources']: print(f'  {source}')
-            if 'next_action' in result: print(result['next_action'])
+            if 'query_observation' in result: print(result['query_observation'])
             print('\n'+LIMITS)
         return 0
     except (OSError, ValueError, TypeError) as exc:

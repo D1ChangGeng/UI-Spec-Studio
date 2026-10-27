@@ -5,7 +5,7 @@ license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.14.0"
+  version: "1.15.0"
 ---
 
 # UI Spec Studio
@@ -20,7 +20,7 @@ For consequential design work, maintain **Design Coverage**, **Evidence Traceabi
 
 For each important decision, preserve an inspectable purpose, research question, actual evidence/limits, professional judgment, alternatives/choice, adopted implementation and verification/next action. Unknowns stay explicit. Keep acquired, observed, compared, trialed, adopted, verified and owner-approved facts separate. Use existing records or the [extended decision template](assets/templates/design-decisions.md); a schema or new document is optional, the consequential evidence relationships are required. Overview, Design Detail and Execution & Assurance are views of the same facts. Routine low-impact changes can inherit current, matching-condition decisions and use a short scoped note.
 
-Read the map when establishing or revising consequential decisions, coverage or evidence claims. Read the optional [record profile](references/evidence-records.md) only when using its [read-only checker](scripts/check_design_evidence.py); structural success does not establish actual research or UI quality.
+Read the map when establishing or revising consequential decisions, coverage or evidence claims. Read the optional [record profile](references/evidence-records.md) only when using its [read-only checker](scripts/check_design_evidence.py); record readability, structural observations, actual research and UI quality are separate facts.
 
 ## Understand the experience and plan its evidence
 
@@ -175,4 +175,12 @@ Run the intended task through visible controls; inspect actual viewport captures
 
 Before handing over, include important copy, locale and state choices in the reviewed preview; state the working result, preview or entry path, inspected scope, consequential design choices, executed checks and the next useful action. Show the design decision record and the result together. Ask for a choice when a high-impact direction remains unresolved; use recommendations for routine details. Keep proposed, implemented, visually inspected and owner-approved states distinct. Report blockers and unverified dimensions accurately. Keep sensitive project data within its authorized destination.
 
-The optional [coverage checker](scripts/check_manifest.py) checks declared records and local evidence references. Browser inspection, user approval and real business outcomes remain distinct evidence sources. Its successful exit is a structural result, not a design-quality certificate.
+The optional [manifest inspector](scripts/check_manifest.py) describes declared records, target addresses and local file metadata. Its views are queries, not review/finish permissions. It separates declared results, exceptions and absent records; exit 0 means inspection ran, including reports with structural findings. Browser inspection, user approval, service behavior and scoped engineering assertions remain independent evidence sources.
+
+## Keep four responsibilities separate
+
+The **Design Evidence Map** maintains current product understanding and links to evidence. The **Structural Coverage Inspector** describes field, object, category and declared-reference facts. **Agent Design Judgment & Execution** determines applicability, evidence sufficiency, candidate value and next action. **Verification & Acceptance** independently examines real renders, continuous interaction, functionality, performance and user decisions within stated scope.
+
+**The structural inspector reports what is represented, not what is professionally sufficient, correct, ready, or complete.** An unlisted theoretical category invites consideration, not a requirement; a broken declared reference is a structural fact, not a design verdict. Never convert readable JSON, exit 0, a file's presence or a declared status into completed research, adopted runtime behavior or accepted UI quality. The Agent applies the professional action rules to the actual task; tools do not choose, veto or execute those actions.
+
+Keep **Current Design Model → Meaningful Revisions → Evidence Archive** as linked ordinary project records. Use the current model for continuation, concise revisions for what changed/why/affected scope, and archived original materials for traceability. Replace outdated current judgments deliberately while preserving historical evidence. Conditions and local dependencies determine relevance; a global version change alone does not invalidate unrelated observations. Both experience/research/judgment and source/trial/implementation/verification can revisit earlier decisions whenever evidence warrants it.

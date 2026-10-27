@@ -127,9 +127,9 @@ Present inspectable work with required checks complete, blockers resolved and un
 
 ## Lightweight checker
 
-`python <skill-dir>/scripts/check_manifest.py --project-root . --mode review`
+`python <skill-dir>/scripts/check_manifest.py --project-root . --view checks --json`
 
-This optional checker validates declared coverage/evidence; `--mode finish` also checks approval and integration records. It cannot launch browsers, view pixels, verify identity or certify quality. Reuse adequate project matrices.
+This optional inspector describes declared target/check references and local file facts. The connections view presents connection and approval declarations without judging their sufficiency. Legacy review/finish arguments are display aliases only. It cannot launch browsers, view pixels, verify identity, decide actions or certify completion. Reuse adequate project matrices and assess actual coverage independently.
 
 ## Choose methods for the evidence question
 
@@ -238,8 +238,23 @@ Use [the evidence map](evidence-map.md) to reconcile coverage, source roles, dec
 
 Check both directions: a decision should resolve to the evidence and actual adopted location that supports it; a changed source, condition or shared dependency should lead back to affected claims. Reference-product appearance, candidate-demo quality, local fit and integrated behavior have distinct subjects. Old evidence stays historical when applicability changes; establish a current recheck or a justified carry-forward scope.
 
-The optional [read-only record checker](../scripts/check_design_evidence.py) implements the [structured profile](evidence-records.md). It can flag missing local files, inconsistent IDs, stale claims, unsupported object/condition declarations and action/gap contradictions. It does not observe media, authenticate user approval or certify truthful research, behavior or aesthetics. A structurally valid record may describe incomplete work.
+The optional [read-only structural inspector](../scripts/check_design_evidence.py) describes the [record profile](evidence-records.md): field presence, ID lookup, local files, declared condition links and revision labels. It does not decide whether a claim is stale, evidence supports its domain, a gap blocks an action or a design is complete. The Agent examines those professional questions through actual evidence and changed conditions. Declared checks and exceptions remain separate; readable records can describe wholly unperformed work.
 
 ## Review action follow-through separately from declarations
 
 Use [the action rules](evidence-actions.md) to determine whether a consequential gap actually led to suitable research, comparison, trial or repair. Link the resulting artifact/tool trace and decision change, not just a planned next step. Keep three conclusions separate: Skill content integrity, Agent behavior effectiveness and actual UI quality. A deterministic fixture demonstrates its authored conditions; only fresh Agent runs with auditable outputs support behavior comparisons. Preserve pending experiments as pending.
+
+## Keep structural inspection and scoped assertions independent
+
+Inspectors describe supplied records and theoretical coverage hints. A pass/fail
+from a real browser, file-digest, package, performance or functional test retains
+its precise assertion and conditions. Neither implies a professionally sufficient
+experience model, adequate research, successful visual composition or overall
+acceptance. Compare real renders and continuous use for those claims, and keep
+owner decisions at their own scope.
+
+A global revision label is not a blanket invalidation rule. Inspect the changed
+object and actual shared dependencies, then decide which old observations remain
+applicable and which need new evidence. Keep failures, exceptions and unexamined
+conditions visible without merging them into satisfied coverage. A readable
+record or a completed inspector run cannot finish a project.

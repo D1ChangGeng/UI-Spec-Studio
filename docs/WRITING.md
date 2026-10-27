@@ -190,3 +190,20 @@ work can proceed. Keep states non-linear and source/condition-specific. Records
 are mandatory in meaning for important choices, optional in serialization and
 scaled in depth. Do not turn the model into another execution lifecycle or
 require arbitrary counts, scores, repeated approvals or exhaustive CSS records.
+
+## Write tool feedback as structural observation
+
+Name the supplied object/field, literal relation and actual read scope. Separate
+record readability from structural findings and theoretical unrepresented categories.
+Use descriptive phrases such as declared, not declared or reference unresolved.
+Keep source notes recognizable as source material rather than tool-issued strategy.
+Do not turn candidate counts, evidence labels, impact or action fields into
+mechanical professional judgments. Independent assertions can report match/fail
+only for the files, browser behavior or engineering property they actually checked.
+
+Keep active design understanding distinct from meaningful revisions and raw archives.
+A past result can remain true history while current applicability changes. Explain
+what changed, why, affected objects/conditions and current judgment without
+repeating all intermediate work. Preserve professional knowledge by moving the
+judgment to its responsible Agent-facing method, not by removing it with the
+corresponding mechanical predicate.

@@ -12,6 +12,7 @@ from unittest import mock
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "skills/ui-spec/scripts"))
 
 
 def load(name: str, path: str):
@@ -108,167 +109,183 @@ class PrepareTests(TempCase):
 
 
 class ManifestTests(TempCase):
+    """Declared record tests, deliberately not phase-completion or design tests."""
     def setUp(self):
         super().setUp()
         (self.root / "evidence").mkdir()
-        (self.root / "evidence/test-only.txt").write_text("Synthetic unit-test evidence; not a rendered UI.")
+        (self.root / "evidence/test-only.txt").write_text("Synthetic test marker, not visual evidence.")
         self.data = sample()
 
-    def check(self, mode="review"):
-        return checker.validate(self.data, self.root, mode)
+    def check(self, view="overview"):
+        return checker.inspect_record(self.data, self.root, view)
 
-    def test_complete_review(self):
-        result = self.check()
-        self.assertTrue(result["ok"], result)
-        self.assertEqual(result["coverage"]["required"], 2)
-        self.assertIn("does not run a browser", result["limits"])
+    def codes(self, result=None):
+        return [x["code"] for x in (result or self.check())["structural_findings"]]
 
-    def test_draft_reports_pending(self):
-        for check in self.data["checks"]:
-            check["status"] = "planned"
-        result = self.check("draft")
-        self.assertTrue(result["ok"])
-        self.assertEqual(len(result["coverage"]["pending"]), 2)
-        self.assertFalse(self.check()["ok"])
+    def test_record_readability_does_not_certify_quality(self):
+        result=self.check()
+        self.assertEqual(result["record_readability"], "readable")
+        self.assertNotIn("ok", result)
+        self.assertNotIn("coverage", result)
+        self.assertEqual(len(result["declared_check_records"]), 2)
 
-    def test_empty_inventory_only_draft(self):
-        data = json.loads((ROOT / "skills/ui-spec/assets/templates/manifest.json").read_text())
-        self.assertTrue(checker.validate(data, self.root, "draft")["ok"])
-        self.assertFalse(checker.validate(data, self.root, "review")["ok"])
+    def test_planned_is_recorded_not_completed(self):
+        for check in self.data["checks"]: check["status"]="planned"
+        self.assertEqual(len(self.check()["declared_check_records"]), 2)
+        for mode in ("draft", "review", "finish"):
+            self.assertEqual(checker.validate(self.data,self.root,mode)["record_readability"],"readable")
 
-    def test_secondary_viewport_required(self):
-        self.data["viewports"].append({"id": "wide", "width": 2560, "height": 1440})
-        self.assertIn("visual:home:ready:wide:default", self.check()["coverage"]["pending"])
+    def test_empty_inventory_readable_in_every_view(self):
+        data=json.loads((ROOT / "skills/ui-spec/assets/templates/manifest.json").read_text())
+        for view in ("overview", "checks", "connections"):
+            result=checker.inspect_record(data,self.root,view)
+            self.assertEqual(result["record_readability"],"readable")
+            self.assertFalse(result["structural_findings"])
 
-    def test_secondary_variant_required(self):
-        self.data["variants"].append({"id": "dark", "locale": "en", "theme": "dark"})
-        self.assertEqual(len(self.check()["coverage"]["pending"]), 2)
+    def test_secondary_viewport_is_inventory_projection_not_requirement(self):
+        self.data["viewports"].append({"id":"wide","width":2560,"height":1440})
+        result=self.check()
+        self.assertIn("visual:home:ready:wide:default",[x["target"] for x in result["inventory_combinations"]["unlisted"]])
+        self.assertFalse(result["unlisted_declared_items"])
+        self.assertEqual(result["inventory_combinations"]["task_applicability"],"not_assessed")
 
-    def test_critical_state_required(self):
-        self.data["routes"][0]["critical_states"] = ["error"]
-        self.assertIn("critical:home:error:default", self.check()["coverage"]["pending"])
+    def test_secondary_variant_is_projection_only(self):
+        self.data["variants"].append({"id":"dark","locale":"en","theme":"dark"})
+        self.assertFalse(self.check()["structural_findings"])
+        self.assertTrue(self.check()["inventory_combinations"]["unlisted"])
 
-    def test_critical_state_can_use_one_viewport(self):
-        self.data["routes"][0]["critical_states"] = ["error"]
-        c = copy.deepcopy(self.data["checks"][0]);c.update(id="error-visual", state="error")
+    def test_critical_state_does_not_create_completion_gate(self):
+        self.data["routes"][0]["critical_states"]=["error"]
+        result=self.check("connections")
+        self.assertIn("critical:home:error:default",[x["target"] for x in result["inventory_combinations"]["unlisted"]])
+        self.assertFalse(result["structural_findings"])
+
+    def test_critical_state_matching_is_status_independent(self):
+        self.data["routes"][0]["critical_states"]=["error"]
+        c=copy.deepcopy(self.data["checks"][0]);c.update(id="error-visual",state="error",status="fail")
         self.data["checks"].append(c)
-        self.assertTrue(self.check()["ok"])
+        row=next(x for x in self.check()["inventory_combinations"]["items"] if x["target"].startswith("critical:"))
+        self.assertEqual(row["check_record_fields"],["$.checks[2]"])
 
-    def test_explicit_requirement(self):
-        self.data["requirements"] = [{"route": "home", "state": "error", "viewport": "desktop", "variant": "default"}]
-        self.assertFalse(self.check()["ok"])
+    def test_explicit_unlisted_requirement(self):
+        self.data["requirements"]=[{"route":"home","state":"error","viewport":"desktop","variant":"default"}]
+        self.assertEqual(len(self.check()["unlisted_declared_items"]),1)
+        self.assertFalse(self.check()["structural_findings"])
 
     def test_unknown_reference(self):
-        self.data["checks"][0]["route"] = "missing"
-        self.assertFalse(self.check()["ok"])
+        self.data["checks"][0]["route"]="missing"
+        self.assertIn("unresolved_reference",self.codes())
 
     def test_duplicate_ids(self):
         self.data["routes"].append(copy.deepcopy(self.data["routes"][0]))
-        self.assertFalse(self.check()["ok"])
+        self.assertIn("duplicate_id",self.codes())
 
-    def test_duplicate_targets(self):
-        c = copy.deepcopy(self.data["checks"][0]);c["id"]="duplicate"
+    def test_multiple_results_per_target_remain_distinct_records(self):
+        c=copy.deepcopy(self.data["checks"][0]);c.update(id="retest",status="fail",revision="r2")
         self.data["checks"].append(c)
-        self.assertFalse(self.check()["ok"])
+        result=self.check()
+        self.assertEqual(len(result["declared_check_records"]),3)
+        self.assertFalse(result["structural_findings"])
 
-    def test_stale_evidence(self):
-        self.data["revision"] = "code-2"
-        self.assertFalse(self.check()["ok"])
+    def test_global_revision_change_does_not_invalidate_history(self):
+        self.data["revision"]="code-2"
+        result=self.check()
+        self.assertFalse(result["structural_findings"])
+        self.assertIn("code-1",[x["declared_revision"] for x in result["revision_declarations"]])
 
-    def test_missing_evidence(self):
-        self.data["checks"][0]["evidence"] = ["missing.png"]
-        self.assertFalse(self.check()["ok"])
+    def test_missing_file_is_reported_without_rewriting_status(self):
+        self.data["checks"][0]["evidence"]=["missing.png"]
+        result=self.check()
+        self.assertIn("local_file_reference",self.codes(result))
+        self.assertEqual(result["declared_check_records"][0]["declared_status"],"pass")
 
-    def test_empty_evidence(self):
-        (self.root / "empty.png").touch()
-        self.data["checks"][0]["evidence"] = ["empty.png"]
-        self.assertFalse(self.check()["ok"])
+    def test_empty_file_reported_as_zero_bytes(self):
+        (self.root / "empty.png").touch();self.data["checks"][0]["evidence"]=["empty.png"]
+        result=self.check()
+        self.assertEqual(result["file_observations"][0]["bytes"],0)
+        self.assertEqual(result["file_observations"][0]["content_inspection"],"not_performed")
 
-    def test_visual_requires_inspection(self):
-        self.data["checks"][0]["inspected"] = False
-        self.assertFalse(self.check()["ok"])
+    def test_uninspected_file_not_certified(self):
+        self.data["checks"][0]["inspected"]=False
+        self.assertFalse(self.check()["structural_findings"])
+        self.assertFalse(self.check()["declared_check_records"][0]["record"]["inspected"])
 
-    def test_reviewer_required(self):
+    def test_missing_reviewer_is_field_observation_only(self):
         del self.data["checks"][0]["reviewer"]
-        self.assertFalse(self.check()["ok"])
+        result=self.check()
+        self.assertIn({"path":"$.checks[0].reviewer","presence":"not_declared"},result["field_observations"])
+        self.assertFalse(result["structural_findings"])
 
-    def test_absolute_evidence_rejected(self):
-        self.data["checks"][0]["evidence"] = [str(self.root / "evidence/test-only.txt")]
-        self.assertFalse(self.check()["ok"])
+    def test_absolute_path_not_inspected(self):
+        self.data["checks"][0]["evidence"]=[str(self.root / "evidence/test-only.txt")]
+        self.assertIn("path_not_inspected",self.codes())
 
-    def test_escaping_symlink_evidence_rejected(self):
-        with tempfile.TemporaryDirectory() as ext:
-            p = Path(ext) / "secret";p.write_text("not evidence")
-            (self.root / "linked.txt").symlink_to(p)
-            self.data["checks"][0]["evidence"] = ["linked.txt"]
-            self.assertFalse(self.check()["ok"])
+    def test_symlink_path_not_inspected(self):
+        try: (self.root / "linked").symlink_to(self.root / "evidence/test-only.txt")
+        except (OSError,NotImplementedError): self.skipTest("Symlinks unavailable")
+        self.data["checks"][0]["evidence"]=["linked"]
+        self.assertIn("path_not_inspected",self.codes())
 
-    def test_blocked_is_pending(self):
-        self.data["checks"][0].update(status="blocked", reason="Browser unavailable")
-        self.assertFalse(self.check()["ok"])
+    def test_blocked_state_does_not_change_query_exit_semantics(self):
+        self.data["checks"][0].update(status="blocked",reason="No browser")
+        self.assertFalse(self.check("finish")["structural_findings"])
 
-    def test_waiver_needs_explicit_reference(self):
-        self.data["checks"][0]["status"] = "waived"
-        self.assertFalse(self.check()["ok"])
-        self.data["exceptions"] = [{"target": "visual:home:ready:desktop:default", "reason": "Synthetic exclusion",
-                                    "approved_by": "fixture", "reference": "Fixture decision"}]
-        self.assertTrue(self.check()["ok"])
+    def test_waiver_and_exception_are_separate_from_check_results(self):
+        self.data["checks"][0]["status"]="waived"
+        self.data["exceptions"]=[{"target":"visual:home:ready:desktop:default","reason":"Fixture scope","approved_by":"fixture","reference":"fixture"}]
+        result=self.check()
+        self.assertEqual(len(result["declared_check_records"]),1)
+        self.assertEqual(len(result["declared_waived_check_records"]),1)
+        self.assertEqual(len(result["declared_exceptions"]),1)
+        self.assertNotIn("satisfied",json.dumps(result))
 
-    def test_finish_requires_approval_and_connection(self):
-        self.assertFalse(self.check("finish")["ok"])
+    def test_finish_alias_does_not_require_approval_or_connection(self):
+        result=self.check("finish")
+        self.assertEqual(result["query_view"],"connections")
+        self.assertEqual(result["declared_approvals"],[])
+        self.assertEqual(result["structural_findings"],[])
 
-    def test_finish_static_service_local(self):
-        for mode in ("static", "service", "local"):
-            with self.subTest(mode=mode):
-                data = sample();finish(data, mode)
-                result = checker.validate(data, self.root, "finish")
-                self.assertTrue(result["ok"], result)
+    def test_connections_resolve_any_status_without_certifying(self):
+        for mode in ("static","service","local"):
+            data=sample();finish(data,mode);data["checks"][-1]["status"]="fail"
+            result=checker.inspect_record(data,self.root,"connections")
+            self.assertFalse(result["structural_findings"])
+            self.assertEqual(result["declared_check_records"][-1]["declared_status"],"fail")
 
-    def test_finish_fixture_is_not_integration(self):
-        finish(self.data, "fixture")
-        self.assertFalse(self.check("finish")["ok"])
+    def test_connection_unknown_check_is_unresolved_reference(self):
+        finish(self.data);self.data["connections"][0]["check_ids"]=["missing"]
+        self.assertIn("unresolved_reference",self.codes())
 
-    def test_approved_design_can_differ_from_code(self):
-        finish(self.data)
-        self.assertNotEqual(self.data["revision"], self.data["design_revision"])
-        self.assertTrue(self.check("finish")["ok"])
+    def test_approval_revision_is_not_globally_compared(self):
+        finish(self.data);self.data["approvals"][0]["revision"]="old-accepted-design"
+        self.assertFalse(self.check("connections")["structural_findings"])
 
-    def test_wrong_approval_revision(self):
-        finish(self.data);self.data["approvals"][0]["revision"]="other"
-        self.assertFalse(self.check("finish")["ok"])
+    def test_malformed_fields_are_reported_not_crashes(self):
+        for field in ("viewports","variants","routes","journeys","checks","exceptions"):
+            data=sample();data[field]={}
+            self.assertTrue(checker.inspect_record(data,self.root)["structural_findings"])
 
-    def test_wrong_connection_mode(self):
-        finish(self.data);self.data["connections"][0]["mode"]="service"
-        self.assertFalse(self.check("finish")["ok"])
+    def test_unknown_view_is_input_error(self):
+        with self.assertRaises(ValueError): self.check("launch")
 
-    def test_wrong_connection_check(self):
-        finish(self.data);self.data["connections"][0]["check_ids"]=["home-visual"]
-        self.assertFalse(self.check("finish")["ok"])
+    def test_cli_findings_exit_zero_without_pass(self):
+        self.data["checks"][0]["route"]="unknown"
+        (self.root / "record.json").write_text(json.dumps(self.data))
+        run=subprocess.run([sys.executable,str(ROOT / "skills/ui-spec/scripts/check_manifest.py"),"--project-root",str(self.root),"--manifest","record.json","--mode","finish"],capture_output=True,text=True,timeout=10)
+        self.assertEqual(run.returncode,0,run.stderr)
+        self.assertIn("Structure inspection completed",run.stdout)
+        self.assertNotIn("PASS",run.stdout)
 
-    def test_finish_requires_journey(self):
-        finish(self.data);self.data["journeys"]=[];self.data["checks"].pop(1)
-        self.assertFalse(self.check("finish")["ok"])
+    def test_cli_unreadable_returns_two(self):
+        (self.root / "bad.json").write_text("{bad")
+        run=subprocess.run([sys.executable,str(ROOT / "skills/ui-spec/scripts/check_manifest.py"),"--project-root",str(self.root),"--manifest","bad.json","--json"],capture_output=True,text=True,timeout=10)
+        self.assertEqual(run.returncode,2)
+        self.assertEqual(json.loads(run.stdout)["record_readability"],"unreadable")
 
-    def test_malformed_fields_report_errors(self):
-        for field, value in (("phase", []), ("routes", "wrong"), ("schema_version", True)):
-            with self.subTest(field=field):
-                data=copy.deepcopy(self.data);data[field]=value
-                self.assertFalse(checker.validate(data,self.root)["ok"])
-        self.data["routes"][0]["primary_state"] = []
-        self.assertFalse(self.check()["ok"])
-
-    def test_cli_json_and_exit_codes(self):
-        path=self.root / "manifest.json";path.write_text(json.dumps(self.data))
-        script=ROOT / "skills/ui-spec/scripts/check_manifest.py"
-        result=subprocess.run([sys.executable,str(script),"--project-root",str(self.root),"--manifest","manifest.json",
-                               "--mode","review","--json"],capture_output=True,text=True)
-        self.assertEqual(result.returncode,0,result.stderr)
-        self.assertTrue(json.loads(result.stdout)["ok"])
-        path.write_text("not JSON")
-        result=subprocess.run([sys.executable,str(script),"--project-root",str(self.root),"--manifest","manifest.json"],
-                               capture_output=True,text=True)
-        self.assertEqual(result.returncode,2)
-        self.assertNotIn("Traceback", result.stderr)
+    def test_no_mutation(self):
+        before=copy.deepcopy(self.data)
+        for view in ("overview","checks","connections"): self.check(view)
+        self.assertEqual(self.data,before)
 
 
 class DistributionTests(TempCase):
