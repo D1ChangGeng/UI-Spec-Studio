@@ -1,0 +1,41 @@
+name: Visual craft development
+on:
+  push:
+    branches: [work/visual-craft-v1.16]
+permissions:
+  contents: read
+jobs:
+  source-inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: a89091dfa5754f98b79655c684f978f24fd92716
+          path: baseline
+          persist-credentials: false
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          repository: mouse-lin/finesse-skill
+          ref: c7a91448baf6e98fecf542915cdb7e3155bddc45
+          path: finesse
+          persist-credentials: false
+      - name: Archive identified source without running upstream code
+        shell: bash
+        run: |
+          mkdir inputs
+          git -C baseline archive --format=tar HEAD > inputs/ui-spec-1.15-baseline.tar
+          git -C finesse archive --format=tar HEAD LICENSE README.md README.en.md USAGE.md USAGE.en.md skills/finesse-ui > inputs/finesse-pinned.tar
+          python - <<'PY'
+          import hashlib,json,pathlib,subprocess
+          manifest={'purpose':'Read-only source research; no upstream code executed','baseline':subprocess.check_output(['git','-C','baseline','rev-parse','HEAD'],text=True).strip(),'finesse':subprocess.check_output(['git','-C','finesse','rev-parse','HEAD'],text=True).strip(),'files':{}}
+          for p in sorted(pathlib.Path('inputs').glob('*.tar')):
+              manifest['files'][p.name]={'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+          pathlib.Path('inputs/identity.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(manifest,indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: visual-craft-source-inputs
+          path: inputs/
+          retention-days: 14
