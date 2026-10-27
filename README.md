@@ -72,12 +72,18 @@ functional regions, perceptual details and actual implementation. Challenge
 initial coverage against user tasks and real references; keep evidence,
 adoption, verification conditions and owner approval distinct.
 
-Important gaps determine the next research, comparison or local trial and limit
-only the implementation commitments that depend on them. Use the same records
-for **Overview · Design Detail · Execution & Assurance**. Existing Markdown
-records work; the optional read-only checker checks references and declarations,
-not visual quality.
+The Agent uses important gaps and actual evidence to choose research, comparison
+or local trials, and scopes implementation commitments accordingly. Use the same
+records for **Overview · Design Detail · Execution & Assurance**. Existing
+Markdown records work.
 
+The structural inspector describes what is represented; the Agent
+judges applicability and next steps, and actual use verifies the result. Declared
+results, exceptions and absent records remain separate. Current choices link to
+meaningful revisions and original evidence without turning history into a second
+current model.
+
+[Structural boundaries and migration](docs/STRUCTURAL-INSPECTION.md) ·
 [Method and examples](docs/DESIGN-EVIDENCE.md) ·
 [Comparative experiment protocol](docs/experiments/design-evidence/PROTOCOL.md)
 
@@ -150,7 +156,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.14.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.15.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

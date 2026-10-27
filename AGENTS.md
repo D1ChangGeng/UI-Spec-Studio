@@ -168,3 +168,15 @@ its dependent commitment, not unrelated work or a bounded revealing trial.
 The optional checker only evaluates declarations and local references. Preserve
 separate content, actual-agent and real-UI evidence. Experiment preparation,
 authored scenarios and source checks must never be called comparative agent runs.
+
+Version 1.15 distinguishes four responsibilities: the map records current design
+understanding, structural inspectors describe records, Agents judge and execute,
+and scoped independent verification supports results. Inspectors have no aggregate
+ok/PASS/satisfied or completion signal; readable input and structural findings are
+separate. Do not restore candidate-count, evidence-domain, global freshness or
+action/gap veto predicates. Keep these professional concerns in installed guidance.
+Manifest legacy modes are query aliases. Preserve local path safety, read-only
+behavior and independent digest/browser/engineering assertions. Maintain current
+model, meaningful revisions and raw evidence distinctly, with object-scoped review.
+Track deliberate boundary corrections against v1.14 in the v1.15 continuity record;
+previous release evidence stays frozen and is not relabelled as current behavior.

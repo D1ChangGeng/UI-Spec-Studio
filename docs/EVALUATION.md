@@ -349,3 +349,18 @@ agent searched, viewed, adopted or improved the interface. Record the actual
 model/harness, tools, access, trace, implementation and blind visual review for
 each run. Keep content integrity, observed behavior and perceptual outcomes
 separate, including source-based hypotheses and untested dimensions.
+
+## Structural boundary assurance (1.15)
+
+Boundary regression tests exercise the ten requested cases: empty-but-readable
+structure, theoretical missing categories, one candidate, high-impact gaps,
+unviewed files, scoped engineering results without aesthetic inference, separate
+waivers, reopened decisions, declared-relation candidates and bounded routine work.
+They establish tool behavior, not independent Agent effectiveness or UI quality.
+Read-only file safety and explicit digest comparison retain their own assertions.
+
+The earlier three-arm inputs stay identified as their original prepared experiment.
+Do not count them or synthetic record tests as new model runs. A maintainer's real
+application can provide scoped workflow evidence; independent matched Agent runs,
+actual tool traces and blinded UI review are separate empirical work. Report
+unexecuted comparisons without substituting a pass from the structural inspector.

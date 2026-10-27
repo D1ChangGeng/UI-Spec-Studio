@@ -1,0 +1,796 @@
+{
+  "python": "3.13.5 (main, Jun 25 2025, 18:55:22) [GCC 14.2.0]",
+  "empirical_limits": "No independent model task or blind UI comparison is executed by these commands.",
+  "earlier_attempts": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "tools/validate_package.py"
+      ],
+      "started_at": "2026-10-27T07:49:51.618964+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Broken local link: docs/REVIEW-v1.15.0.md -> evidence/v1.15.0/engineering-checks.json\n",
+      "scope": "mechanical/structural source and helper assertions, not Agent efficacy"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "tools/readme_art.py",
+        "--check"
+      ],
+      "started_at": "2026-10-27T07:49:51.720147+00:00",
+      "exit_code": 0,
+      "stdout": "README artwork: verified\n",
+      "stderr": "",
+      "scope": "mechanical/structural source and helper assertions, not Agent efficacy"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "tools/catalog_docs.py",
+        "--check"
+      ],
+      "started_at": "2026-10-27T07:49:51.765123+00:00",
+      "exit_code": 0,
+      "stdout": "Resource data and generated map: PASS\n",
+      "stderr": "",
+      "scope": "mechanical/structural source and helper assertions, not Agent efficacy"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "started_at": "2026-10-27T07:49:51.824495+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "test_asset_method_covers_distinct_routes_and_roles (test_assets.AssetTests.test_asset_method_covers_distinct_routes_and_roles) ... ok\ntest_asset_record_has_delivery_and_authority (test_assets.AssetTests.test_asset_record_has_delivery_and_authority) ... ok\ntest_asset_runtime_is_self_contained (test_assets.AssetTests.test_asset_runtime_is_self_contained) ... ok\ntest_copied_icon_has_applicable_notices (test_assets.AssetTests.test_copied_icon_has_applicable_notices) ... ok\ntest_http_asset_checks_are_in_release_gate (test_assets.AssetTests.test_http_asset_checks_are_in_release_gate) ... ok\ntest_icon_is_passive_and_uses_semantic_color (test_assets.AssetTests.test_icon_is_passive_and_uses_semantic_color) ... ok\ntest_inventory_matches_real_bytes (test_assets.AssetTests.test_inventory_matches_real_bytes) ... ok\ntest_inventory_rejects_missing_source (test_assets.AssetTests.test_inventory_rejects_missing_source) ... ok\ntest_offline_evidence_is_distinct (test_assets.AssetTests.test_offline_evidence_is_distinct) ... ok\ntest_original_icon_blob_is_unchanged (test_assets.AssetTests.test_original_icon_blob_is_unchanged) ... ok\ntest_review_semantics_and_unique_ids (test_assets.AssetTests.test_review_semantics_and_unique_ids) ... ok\ntest_seventh_reference_is_complete_and_direct (test_assets.AssetTests.test_seventh_reference_is_complete_and_direct) ... ok\ntest_shared_assets_reused_without_font_distribution (test_assets.AssetTests.test_shared_assets_reused_without_font_distribution) ... ok\ntest_sources_have_explicit_research_scope (test_assets.AssetTests.test_sources_have_explicit_research_scope) ... ok\ntest_current_runtime_changes_have_explicit_dispositions (test_boundary_release.BoundaryReleaseTests.test_current_runtime_changes_have_explicit_dispositions) ... ok\ntest_detailed_methods_remain_in_installed_guidance (test_boundary_release.BoundaryReleaseTests.test_detailed_methods_remain_in_installed_guidance) ... FAIL\ntest_existing_historical_evidence_is_not_relabelled (test_boundary_release.BoundaryReleaseTests.test_existing_historical_evidence_is_not_relabelled) ... ok\ntest_accessible_labels_and_error_association (test_content.ContentTests.test_accessible_labels_and_error_association) ... ok\ntest_bilingual_content_variants_and_true_status (test_content.ContentTests.test_bilingual_content_variants_and_true_status) ... ok\ntest_content_record_connects_authority_and_delivery (test_content.ContentTests.test_content_record_connects_authority_and_delivery) ... ok\ntest_content_reference_is_common_and_direct (test_content.ContentTests.test_content_reference_is_common_and_direct) ... ok\ntest_method_guides_entire_content_journey (test_content.ContentTests.test_method_guides_entire_content_journey) ... ok\ntest_package_and_local_references (test_content.ContentTests.test_package_and_local_references) ... FAIL\ntest_release_gate_includes_actual_browser (test_content.ContentTests.test_release_gate_includes_actual_browser) ... ok\ntest_research_links_are_primary_and_scoped (test_content.ContentTests.test_research_links_are_primary_and_scoped) ... ok\ntest_standalone_contains_content_method_and_sources (test_content.ContentTests.test_standalone_contains_content_method_and_sources) ... ok\ntest_byte_ceiling_is_not_a_release_gate (test_content_integrity.ContentIntegrityTests.test_byte_ceiling_is_not_a_release_gate) ... ok\ntest_historical_data_has_source_identity (test_content_integrity.ContentIntegrityTests.test_historical_data_has_source_identity) ... ok\ntest_restored_specificity_is_in_installed_sections (test_content_integrity.ContentIntegrityTests.test_restored_specificity_is_in_installed_sections) ... ok\ntest_all_python_sources_parse (test_contracts.ContractTests.test_all_python_sources_parse) ... ok\ntest_checksum_manifest_covers_release_artifacts (test_contracts.ContractTests.test_checksum_manifest_covers_release_artifacts) ... ok\ntest_common_references_are_direct_and_complete (test_contracts.ContractTests.test_common_references_are_direct_and_complete) ... ok\ntest_content_inventory_matches_archives (test_contracts.ContractTests.test_content_inventory_matches_archives) ... ok\ntest_external_design_reference_is_rejected (test_contracts.ContractTests.test_external_design_reference_is_rejected) ... ok\ntest_helper_phase_supports_shape (test_contracts.ContractTests.test_helper_phase_supports_shape) ... ok\ntest_invalid_frontmatter_returns_errors (test_contracts.ContractTests.test_invalid_frontmatter_returns_errors) ... ok\ntest_invalid_version_cannot_escape_output (test_contracts.ContractTests.test_invalid_version_cannot_escape_output) ... ok\ntest_optional_shape_and_integration_are_expressed (test_contracts.ContractTests.test_optional_shape_and_integration_are_expressed) ... ok\ntest_preparation_preflights_all_records (test_contracts.ContractTests.test_preparation_preflights_all_records) ... ok\ntest_standalone_bundle_has_all_reference_files (test_contracts.ContractTests.test_standalone_bundle_has_all_reference_files) ... ok\ntest_version_metadata_matches_release_notes (test_contracts.ContractTests.test_version_metadata_matches_release_notes) ... ok\ntest_acquired_does_not_generate_pass_or_block (test_design_evidence.DesignEvidenceTests.test_acquired_does_not_generate_pass_or_block) ... ok\ntest_adoption_without_path_is_not_implementation_veto (test_design_evidence.DesignEvidenceTests.test_adoption_without_path_is_not_implementation_veto) ... ok\ntest_cli_findings_readable_exit_zero (test_design_evidence.DesignEvidenceTests.test_cli_findings_readable_exit_zero) ... ok\ntest_cli_malformed_record_exit_two (test_design_evidence.DesignEvidenceTests.test_cli_malformed_record_exit_two) ... ok\ntest_containment_cycle_is_graph_fact (test_design_evidence.DesignEvidenceTests.test_containment_cycle_is_graph_fact) ... ok\ntest_credentials_and_non_http_not_fetched (test_design_evidence.DesignEvidenceTests.test_credentials_and_non_http_not_fetched) ... ok\ntest_declared_approval_not_authenticated (test_design_evidence.DesignEvidenceTests.test_declared_approval_not_authenticated) ... ok\ntest_demo_and_integration_roles_remain_visible (test_design_evidence.DesignEvidenceTests.test_demo_and_integration_roles_remain_visible) ... ok\ntest_dependency_cycle_has_finite_candidates (test_design_evidence.DesignEvidenceTests.test_dependency_cycle_has_finite_candidates) ... ok\ntest_digest_not_compared_by_inspector (test_design_evidence.DesignEvidenceTests.test_digest_not_compared_by_inspector) ... ok\ntest_directory_is_metadata_not_file_evidence (test_design_evidence.DesignEvidenceTests.test_directory_is_metadata_not_file_evidence) ... ok\ntest_duplicate_ids (test_design_evidence.DesignEvidenceTests.test_duplicate_ids) ... ok\ntest_empty_template_has_no_fabricated_decisions (test_design_evidence.DesignEvidenceTests.test_empty_template_has_no_fabricated_decisions) ... ok\ntest_existing_file_does_not_establish_adoption (test_design_evidence.DesignEvidenceTests.test_existing_file_does_not_establish_adoption) ... ok\ntest_explicit_category_tag_not_prose_inference (test_design_evidence.DesignEvidenceTests.test_explicit_category_tag_not_prose_inference) ... ok\ntest_global_snapshot_does_not_invalidate_scoped_history (test_design_evidence.DesignEvidenceTests.test_global_snapshot_does_not_invalidate_scoped_history) ... ok\ntest_high_impact_gap_does_not_veto_actions (test_design_evidence.DesignEvidenceTests.test_high_impact_gap_does_not_veto_actions) ... ok\ntest_known_different_conditions_not_rejected (test_design_evidence.DesignEvidenceTests.test_known_different_conditions_not_rejected) ... ok\ntest_low_impact_evidence_does_not_require_extra_research (test_design_evidence.DesignEvidenceTests.test_low_impact_evidence_does_not_require_extra_research) ... ok\ntest_malformed_shapes_do_not_crash (test_design_evidence.DesignEvidenceTests.test_malformed_shapes_do_not_crash) ... ok\ntest_missing_file (test_design_evidence.DesignEvidenceTests.test_missing_file) ... ok\ntest_missing_observation_is_description_not_design_failure (test_design_evidence.DesignEvidenceTests.test_missing_observation_is_description_not_design_failure) ... ok\ntest_no_next_action_is_not_tool_generated (test_design_evidence.DesignEvidenceTests.test_no_next_action_is_not_tool_generated) ... ok\ntest_one_candidate_not_rejected (test_design_evidence.DesignEvidenceTests.test_one_candidate_not_rejected) ... ok\ntest_open_discovery_without_action_does_not_generate_one (test_design_evidence.DesignEvidenceTests.test_open_discovery_without_action_does_not_generate_one) ... ok\ntest_parent_and_child_no_certification (test_design_evidence.DesignEvidenceTests.test_parent_and_child_no_certification) ... ok\ntest_parsed_wrong_root_still_readable_with_shape_finding (test_design_evidence.DesignEvidenceTests.test_parsed_wrong_root_still_readable_with_shape_finding) ... ok\ntest_planned_check_counts_as_record_without_being_pass (test_design_evidence.DesignEvidenceTests.test_planned_check_counts_as_record_without_being_pass) ... ok\ntest_remote_reference_not_fetched (test_design_evidence.DesignEvidenceTests.test_remote_reference_not_fetched) ... ok\ntest_reopening_resolved_gap_does_not_alter_prior_record (test_design_evidence.DesignEvidenceTests.test_reopening_resolved_gap_does_not_alter_prior_record) ... ok\ntest_resolved_gap_does_not_certify_or_require_evidence_type (test_design_evidence.DesignEvidenceTests.test_resolved_gap_does_not_certify_or_require_evidence_type) ... ok\ntest_revision_and_archive_do_not_override_current_model (test_design_evidence.DesignEvidenceTests.test_revision_and_archive_do_not_override_current_model) ... ok\ntest_runtime_pass_cannot_certify_visual_quality (test_design_evidence.DesignEvidenceTests.test_runtime_pass_cannot_certify_visual_quality) ... ok\ntest_same_candidate_name_not_professionally_classified (test_design_evidence.DesignEvidenceTests.test_same_candidate_name_not_professionally_classified) ... ok\ntest_structure_without_research_no_completion_signal (test_design_evidence.DesignEvidenceTests.test_structure_without_research_no_completion_signal) ... ok\ntest_symlink_not_followed (test_design_evidence.DesignEvidenceTests.test_symlink_not_followed) ... ok\ntest_temporal_window_missing_is_field_observation (test_design_evidence.DesignEvidenceTests.test_temporal_window_missing_is_field_observation) ... ok\ntest_text_visual_mismatch_is_left_to_professional_judgment (test_design_evidence.DesignEvidenceTests.test_text_visual_mismatch_is_left_to_professional_judgment) ... ok\ntest_theoretical_absence_not_declared_absence (test_design_evidence.DesignEvidenceTests.test_theoretical_absence_not_declared_absence) ... ok\ntest_three_views_read_only (test_design_evidence.DesignEvidenceTests.test_three_views_read_only) ... ok\ntest_unknown_changed_id_is_only_unresolved_lookup (test_design_evidence.DesignEvidenceTests.test_unknown_changed_id_is_only_unresolved_lookup) ... ok\ntest_unknown_level (test_design_evidence.DesignEvidenceTests.test_unknown_level) ... ok\ntest_unknown_parent (test_design_evidence.DesignEvidenceTests.test_unknown_parent) ... ok\ntest_unknown_reference (test_design_evidence.DesignEvidenceTests.test_unknown_reference) ... ok\ntest_unlisted_declared_item_never_blocks_finish (test_design_evidence.DesignEvidenceTests.test_unlisted_declared_item_never_blocks_finish) ... ok\ntest_unsafe_paths (test_design_evidence.DesignEvidenceTests.test_unsafe_paths) ... ok\ntest_waiver_not_counted_as_check (test_design_evidence.DesignEvidenceTests.test_waiver_not_counted_as_check) ... ok\ntest_entry_establishes_the_default_before_execution (test_foundations.FoundationTests.test_entry_establishes_the_default_before_execution) ... ok\ntest_example_identifies_inherited_relationships (test_foundations.FoundationTests.test_example_identifies_inherited_relationships) ... ok\ntest_foundation_identity_and_scope (test_foundations.FoundationTests.test_foundation_identity_and_scope) ... ok\ntest_method_has_distinct_granularity_and_adoption (test_foundations.FoundationTests.test_method_has_distinct_granularity_and_adoption) ... ok\ntest_all_record_views_are_read_only_even_with_invalid_references (test_inspector_boundaries.InspectorBoundaryTests.test_all_record_views_are_read_only_even_with_invalid_references) ... ok\ntest_digest_invalid_hex_and_outside_path (test_inspector_boundaries.InspectorBoundaryTests.test_digest_invalid_hex_and_outside_path) ... ok\ntest_duplicate_id_reference_is_ambiguous_not_resolved (test_inspector_boundaries.InspectorBoundaryTests.test_duplicate_id_reference_is_ambiguous_not_resolved) ... ok\ntest_file_safety_internal_directory_symlink (test_inspector_boundaries.InspectorBoundaryTests.test_file_safety_internal_directory_symlink) ... ok\ntest_historical_archive_not_read_as_current (test_inspector_boundaries.InspectorBoundaryTests.test_historical_archive_not_read_as_current) ... ok\ntest_independent_digest_exit_codes (test_inspector_boundaries.InspectorBoundaryTests.test_independent_digest_exit_codes) ... ok\ntest_independent_digest_match_and_mismatch (test_inspector_boundaries.InspectorBoundaryTests.test_independent_digest_match_and_mismatch) ... ok\ntest_inspector_does_not_read_referenced_file_contents (test_inspector_boundaries.InspectorBoundaryTests.test_inspector_does_not_read_referenced_file_contents) ... ok\ntest_invalid_row_does_not_shift_finding_location (test_inspector_boundaries.InspectorBoundaryTests.test_invalid_row_does_not_shift_finding_location) ... ok\ntest_lookup_zero_match_has_no_next_action (test_inspector_boundaries.InspectorBoundaryTests.test_lookup_zero_match_has_no_next_action) ... ok\ntest_malformed_nested_values_are_local_findings (test_inspector_boundaries.InspectorBoundaryTests.test_malformed_nested_values_are_local_findings) ... ok\ntest_scope_change_does_not_rewrite_original_evidence (test_inspector_boundaries.InspectorBoundaryTests.test_scope_change_does_not_rewrite_original_evidence) ... ok\ntest_status_permutations_do_not_generate_policy_findings (test_inspector_boundaries.InspectorBoundaryTests.test_status_permutations_do_not_generate_policy_findings) ... ok\ntest_theoretical_hints_do_not_produce_nonzero_exit (test_inspector_boundaries.InspectorBoundaryTests.test_theoretical_hints_do_not_produce_nonzero_exit) ... ok\ntest_unfilled_prepare_has_no_assumed_environment_or_acceptance (test_inspector_boundaries.InspectorBoundaryTests.test_unfilled_prepare_has_no_assumed_environment_or_acceptance) ... ok\ntest_baseline_identity_mismatch_rejected (test_multiscale_release.MultiscaleReleaseTests.test_baseline_identity_mismatch_rejected) ... ok\ntest_eight_references_and_existing_records_not_replaced (test_multiscale_release.MultiscaleReleaseTests.test_eight_references_and_existing_records_not_replaced) ... ok\ntest_experiment_files_remain_outside_installed_skill (test_multiscale_release.MultiscaleReleaseTests.test_experiment_files_remain_outside_installed_skill) ... ok\ntest_experiment_preparation_is_matched_and_not_execution (test_multiscale_release.MultiscaleReleaseTests.test_experiment_preparation_is_matched_and_not_execution) ... ok\ntest_frozen_v114_preservation_and_experiment_baseline_retained (test_multiscale_release.MultiscaleReleaseTests.test_frozen_v114_preservation_and_experiment_baseline_retained) ... ok\ntest_new_method_and_helper_are_in_standalone_bundle (test_multiscale_release.MultiscaleReleaseTests.test_new_method_and_helper_are_in_standalone_bundle) ... ok\ntest_symlink_baseline_rejected (test_multiscale_release.MultiscaleReleaseTests.test_symlink_baseline_rejected) ... ok\ntest_catalog_identity_is_retained (test_product_intent.ProductIntentTests.test_catalog_identity_is_retained) ... ok\ntest_ci_requires_actual_browser_scenario_for_release (test_product_intent.ProductIntentTests.test_ci_requires_actual_browser_scenario_for_release) ... ok\ntest_common_contract_retains_required_references (test_product_intent.ProductIntentTests.test_common_contract_retains_required_references) ... ok\ntest_contrast_calculation_known_limits (test_product_intent.ProductIntentTests.test_contrast_calculation_known_limits) ... ok\ntest_decision_template_is_self_contained (test_product_intent.ProductIntentTests.test_decision_template_is_self_contained) ... FAIL\ntest_live_decision_panel_links_product_and_engineering_sources (test_product_intent.ProductIntentTests.test_live_decision_panel_links_product_and_engineering_sources) ... ok\ntest_new_text_readers_declare_utf8 (test_product_intent.ProductIntentTests.test_new_text_readers_declare_utf8) ... ok\ntest_no_remote_runtime_is_required (test_product_intent.ProductIntentTests.test_no_remote_runtime_is_required) ... ok\ntest_scenario_has_distinct_model_controls_and_unique_ids (test_product_intent.ProductIntentTests.test_scenario_has_distinct_model_controls_and_unique_ids) ... ok\ntest_scene_tests_keep_approval_and_storage_scope_explicit (test_product_intent.ProductIntentTests.test_scene_tests_keep_approval_and_storage_scope_explicit) ... ok\ntest_selected_color_pairs_reach_target (test_product_intent.ProductIntentTests.test_selected_color_pairs_reach_target) ... ok\ntest_source_distribution_contains_runnable_scenario (test_product_intent.ProductIntentTests.test_source_distribution_contains_runnable_scenario) ... ok\ntest_source_uses_text_for_untrusted_user_content (test_product_intent.ProductIntentTests.test_source_uses_text_for_untrusted_user_content) ... ok\ntest_source_values_and_license_are_preserved (test_product_intent.ProductIntentTests.test_source_values_and_license_are_preserved) ... ok\ntest_standalone_distribution_contains_decision_template (test_product_intent.ProductIntentTests.test_standalone_distribution_contains_decision_template) ... ok\ntest_alt_text_required (test_publication.PublicationTests.test_alt_text_required) ... ok\ntest_art_is_in_source_archive (test_publication.PublicationTests.test_art_is_in_source_archive) ... ok\ntest_assets_are_passive_and_accessible (test_publication.PublicationTests.test_assets_are_passive_and_accessible) ... ok\ntest_entity_declaration_is_rejected (test_publication.PublicationTests.test_entity_declaration_is_rejected) ... ok\ntest_external_svg_reference_is_rejected (test_publication.PublicationTests.test_external_svg_reference_is_rejected) ... ok\ntest_four_distinct_asset_variants (test_publication.PublicationTests.test_four_distinct_asset_variants) ... ok\ntest_generated_art_is_current (test_publication.PublicationTests.test_generated_art_is_current) ... ok\ntest_html_image_sources_are_validated (test_publication.PublicationTests.test_html_image_sources_are_validated) ... ok\ntest_patterns_stay_self_contained (test_publication.PublicationTests.test_patterns_stay_self_contained) ... ok\ntest_preview_source_parses_without_optional_imports (test_publication.PublicationTests.test_preview_source_parses_without_optional_imports) ... ok\ntest_professional_foundation_is_complete_not_size_capped (test_publication.PublicationTests.test_professional_foundation_is_complete_not_size_capped) ... ok\ntest_readme_contains_native_command_and_all_variants (test_publication.PublicationTests.test_readme_contains_native_command_and_all_variants) ... ok\ntest_runtime_covers_design_and_medium (test_publication.PublicationTests.test_runtime_covers_design_and_medium) ... ok\ntest_svg_active_content_is_rejected (test_publication.PublicationTests.test_svg_active_content_is_rejected) ... ok\ntest_clean_draft_is_read_back_before_publication (test_release.ReleaseTests.test_clean_draft_is_read_back_before_publication) ... ok\ntest_conflicting_tag_is_preserved_before_release_write (test_release.ReleaseTests.test_conflicting_tag_is_preserved_before_release_write) ... ok\ntest_corrupt_asset_keeps_draft (test_release.ReleaseTests.test_corrupt_asset_keeps_draft) ... ok\ntest_dirty_checkout_is_preserved (test_release.ReleaseTests.test_dirty_checkout_is_preserved) ... ok\ntest_exact_head_required (test_release.ReleaseTests.test_exact_head_required) ... ok\ntest_existing_draft_is_verified_and_published (test_release.ReleaseTests.test_existing_draft_is_verified_and_published) ... ok\ntest_missing_tool_is_reported (test_release.ReleaseTests.test_missing_tool_is_reported) ... ok\ntest_new_tag_is_created_before_draft (test_release.ReleaseTests.test_new_tag_is_created_before_draft) ... ok\ntest_published_matching_release_is_idempotent (test_release.ReleaseTests.test_published_matching_release_is_idempotent) ... ok\ntest_release_notes_are_required (test_release.ReleaseTests.test_release_notes_are_required) ... ok\ntest_remote_commit_is_checked (test_release.ReleaseTests.test_remote_commit_is_checked) ... ok\ntest_repository_identity_is_checked (test_release.ReleaseTests.test_repository_identity_is_checked) ... ok\ntest_version_paths_are_validated (test_release.ReleaseTests.test_version_paths_are_validated) ... ok\ntest_all_resource_ids_and_sources_are_in_map (test_resources.ResourceTests.test_all_resource_ids_and_sources_are_in_map) ... ok\ntest_bad_shapes_return_errors (test_resources.ResourceTests.test_bad_shapes_return_errors) ... ok\ntest_catalog_is_self_contained_in_skill_archive (test_resources.ResourceTests.test_catalog_is_self_contained_in_skill_archive) ... ok\ntest_catalog_schema (test_resources.ResourceTests.test_catalog_schema) ... ok\ntest_chinese_aliases (test_resources.ResourceTests.test_chinese_aliases) ... ok\ntest_cli_empty_and_invalid_results (test_resources.ResourceTests.test_cli_empty_and_invalid_results) ... ok\ntest_cli_lists_actual_filters (test_resources.ResourceTests.test_cli_lists_actual_filters) ... ok\ntest_common_method_and_stage_links (test_resources.ResourceTests.test_common_method_and_stage_links) ... ok\ntest_duplicate_resource_ids_rejected (test_resources.ResourceTests.test_duplicate_resource_ids_rejected) ... ok\ntest_empty_match_is_honest (test_resources.ResourceTests.test_empty_match_is_honest) ... ok\ntest_exact_identity_retains_sources_and_boundaries (test_resources.ResourceTests.test_exact_identity_retains_sources_and_boundaries) ... ok\ntest_form_filter (test_resources.ResourceTests.test_form_filter) ... ok\ntest_free_terms_require_all_matches (test_resources.ResourceTests.test_free_terms_require_all_matches) ... ok\ntest_generated_map_matches_data (test_resources.ResourceTests.test_generated_map_matches_data) ... ok\ntest_installed_lookup_runs_read_only_from_other_directory (test_resources.ResourceTests.test_installed_lookup_runs_read_only_from_other_directory) ... ok\ntest_invalid_filter_is_explicit (test_resources.ResourceTests.test_invalid_filter_is_explicit) ... ok\ntest_limit_and_order_are_deterministic (test_resources.ResourceTests.test_limit_and_order_are_deterministic) ... ok\ntest_readmes_explain_resources_and_current_version (test_resources.ResourceTests.test_readmes_explain_resources_and_current_version) ... ok\ntest_schema_rejects_invalid_roots (test_resources.ResourceTests.test_schema_rejects_invalid_roots) ... ok\ntest_snapshot_and_entry_dates_are_preserved (test_resources.ResourceTests.test_snapshot_and_entry_dates_are_preserved) ... ok\ntest_source_urls_require_safe_identity (test_resources.ResourceTests.test_source_urls_require_safe_identity) ... ok\ntest_unknown_needs_rejected (test_resources.ResourceTests.test_unknown_needs_rejected) ... ok\ntest_vue_controls (test_resources.ResourceTests.test_vue_controls) ... ok\ntest_vue_motion_preserves_stack_identity (test_resources.ResourceTests.test_vue_motion_preserves_stack_identity) ... ok\ntest_one_frame_cannot_establish_an_episode (test_temporal.CaptureIntervalTests.test_one_frame_cannot_establish_an_episode) ... ok\ntest_out_of_order_or_overlapping_intervals_are_rejected (test_temporal.CaptureIntervalTests.test_out_of_order_or_overlapping_intervals_are_rejected) ... ok\ntest_reports_measured_cadence_and_gaps_between_capture_brackets (test_temporal.CaptureIntervalTests.test_reports_measured_cadence_and_gaps_between_capture_brackets) ... ok\ntest_reversed_interval_is_rejected (test_temporal.CaptureIntervalTests.test_reversed_interval_is_rejected) ... ok\ntest_install_preserves_existing (test_tools.DistributionTests.test_install_preserves_existing) ... ok\ntest_install_rejects_nested_target (test_tools.DistributionTests.test_install_rejects_nested_target) ... ok\ntest_installed_scripts_work_from_other_project (test_tools.DistributionTests.test_installed_scripts_work_from_other_project) ... ok\ntest_package_excludes_secrets_and_symlinks (test_tools.DistributionTests.test_package_excludes_secrets_and_symlinks) ... ok\ntest_package_structure (test_tools.DistributionTests.test_package_structure) ... FAIL\ntest_publish_plan_is_nonmutating (test_tools.DistributionTests.test_publish_plan_is_nonmutating) ... ok\ntest_publish_rejects_bad_destination (test_tools.DistributionTests.test_publish_rejects_bad_destination) ... ok\ntest_reproducible_archives (test_tools.DistributionTests.test_reproducible_archives) ... ok\ntest_absolute_path_not_inspected (test_tools.ManifestTests.test_absolute_path_not_inspected) ... ok\ntest_approval_revision_is_not_globally_compared (test_tools.ManifestTests.test_approval_revision_is_not_globally_compared) ... ok\ntest_blocked_state_does_not_change_query_exit_semantics (test_tools.ManifestTests.test_blocked_state_does_not_change_query_exit_semantics) ... ok\ntest_cli_findings_exit_zero_without_pass (test_tools.ManifestTests.test_cli_findings_exit_zero_without_pass) ... ok\ntest_cli_unreadable_returns_two (test_tools.ManifestTests.test_cli_unreadable_returns_two) ... ok\ntest_connection_unknown_check_is_unresolved_reference (test_tools.ManifestTests.test_connection_unknown_check_is_unresolved_reference) ... ok\ntest_connections_resolve_any_status_without_certifying (test_tools.ManifestTests.test_connections_resolve_any_status_without_certifying) ... ok\ntest_critical_state_does_not_create_completion_gate (test_tools.ManifestTests.test_critical_state_does_not_create_completion_gate) ... ok\ntest_critical_state_matching_is_status_independent (test_tools.ManifestTests.test_critical_state_matching_is_status_independent) ... ok\ntest_duplicate_ids (test_tools.ManifestTests.test_duplicate_ids) ... ok\ntest_empty_file_reported_as_zero_bytes (test_tools.ManifestTests.test_empty_file_reported_as_zero_bytes) ... ok\ntest_empty_inventory_readable_in_every_view (test_tools.ManifestTests.test_empty_inventory_readable_in_every_view) ... ok\ntest_explicit_unlisted_requirement (test_tools.ManifestTests.test_explicit_unlisted_requirement) ... ok\ntest_finish_alias_does_not_require_approval_or_connection (test_tools.ManifestTests.test_finish_alias_does_not_require_approval_or_connection) ... ok\ntest_global_revision_change_does_not_invalidate_history (test_tools.ManifestTests.test_global_revision_change_does_not_invalidate_history) ... ok\ntest_malformed_fields_are_reported_not_crashes (test_tools.ManifestTests.test_malformed_fields_are_reported_not_crashes) ... ok\ntest_missing_file_is_reported_without_rewriting_status (test_tools.ManifestTests.test_missing_file_is_reported_without_rewriting_status) ... ok\ntest_missing_reviewer_is_field_observation_only (test_tools.ManifestTests.test_missing_reviewer_is_field_observation_only) ... ok\ntest_multiple_results_per_target_remain_distinct_records (test_tools.ManifestTests.test_multiple_results_per_target_remain_distinct_records) ... ok\ntest_no_mutation (test_tools.ManifestTests.test_no_mutation) ... ok\ntest_planned_is_recorded_not_completed (test_tools.ManifestTests.test_planned_is_recorded_not_completed) ... ok\ntest_record_readability_does_not_certify_quality (test_tools.ManifestTests.test_record_readability_does_not_certify_quality) ... ok\ntest_secondary_variant_is_projection_only (test_tools.ManifestTests.test_secondary_variant_is_projection_only) ... ok\ntest_secondary_viewport_is_inventory_projection_not_requirement (test_tools.ManifestTests.test_secondary_viewport_is_inventory_projection_not_requirement) ... ok\ntest_symlink_path_not_inspected (test_tools.ManifestTests.test_symlink_path_not_inspected) ... ok\ntest_uninspected_file_not_certified (test_tools.ManifestTests.test_uninspected_file_not_certified) ... ok\ntest_unknown_reference (test_tools.ManifestTests.test_unknown_reference) ... ok\ntest_unknown_view_is_input_error (test_tools.ManifestTests.test_unknown_view_is_input_error) ... ok\ntest_waiver_and_exception_are_separate_from_check_results (test_tools.ManifestTests.test_waiver_and_exception_are_separate_from_check_results) ... ok\ntest_creates_only_small_records (test_tools.PrepareTests.test_creates_only_small_records) ... ok\ntest_preserves_existing_records (test_tools.PrepareTests.test_preserves_existing_records) ... ok\ntest_rejects_symlink_record (test_tools.PrepareTests.test_rejects_symlink_record) ... ok\ntest_rejects_symlink_state_dir (test_tools.PrepareTests.test_rejects_symlink_state_dir) ... ok\ntest_requires_existing_project (test_tools.PrepareTests.test_requires_existing_project) ... ok\ntest_reuses_design_reference (test_tools.PrepareTests.test_reuses_design_reference) ... ok\n\n======================================================================\nFAIL: test_detailed_methods_remain_in_installed_guidance (test_boundary_release.BoundaryReleaseTests.test_detailed_methods_remain_in_installed_guidance)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/uispec-v115/ui-spec-studio/tests/test_boundary_release.py\", line 42, in test_detailed_methods_remain_in_installed_guidance\n    for fragment in fragments:self.assertIn(fragment.lower(),text)\n                              ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'no global freshness' not found in '# optional local evidence-record profile\\n\\nuse this profile when a project benefits from machine-readable **structural\\nobservations**. existing markdown and project records can carry the same design\\nrelationships. the [map](evidence-map.md) organizes them; the\\n[action method](evidence-actions.md) guides the agent\\'s professional decisions.\\njson is optional. neither a schema nor a tool return decides research sufficiency,\\nimplementation readiness, design correctness or task completion.\\n\\n## read-only use and report semantics\\n\\n```bash\\npython <skill-dir>/scripts/check_design_evidence.py --project-root . \\\\\\n  --record .ui-spec/design-evidence.json --view overview\\npython <skill-dir>/scripts/check_design_evidence.py --project-root . \\\\\\n  --record .ui-spec/design-evidence.json --view detail\\npython <skill-dir>/scripts/check_design_evidence.py --project-root . \\\\\\n  --record .ui-spec/design-evidence.json --view execution --changed typography\\n```\\n\\nthe report describes the supplied file and declared snapshot. `record_readability:\\nreadable` means json was read, not that its shape, professional content or quality\\nis sound. `structural_findings` separately identifies wrong shapes, ambiguous ids,\\nunresolved references, graph cycles and local-path facts. missing optional fields\\nare `field_observations`, not instructions to fill every field. a readable empty\\nmap can have no structural findings while no design work has happened.\\n\\nexit `0` means inspection ran, including reports with findings; exit `2` means an\\ninput/read problem prevented it. neither exit value rates design work. there is\\nno aggregate `ok`, pass, readiness or satisfied result. integrations should read\\nspecific facts for their own purposes rather than use an inspector as a launch\\nor finish gate. the older python function name `validate` remains an alias to\\nthis report, not to its former acceptance behavior.\\n\\n| report relation | precisely what it represents |\\n|---|---|\\n| `record_source` | input path, declared format/revision and origin, not authenticated source truth |\\n| `object_inventory`, `counts` | explicit object ids, l0–l5 labels, category tags and record counts |\\n| `field_observations`, `structural_findings` | field presence/shape and directly inspectable structural problems |\\n| `reference_observations` | id lookup within the declared current record scope |\\n| `file_observations` | local path type/size or remote url syntax; remote urls are never fetched |\\n| `declared_check_records` | checks and their author-declared statuses; the inspector did not execute them |\\n| `declared_exception_records` | waiver declarations, kept separate from non-waived checks |\\n| `declared_item_records` | literal links between explicitly listed check targets and check/exception records |\\n| `unlisted_declared_items` | explicitly listed targets for which neither type of record was found |\\n| `candidate_unrepresented_categories` | theoretical categories with no explicit current-object tag; applicability is unassessed |\\n| `revision_declarations` | declared snapshot, source, object and check identities without global invalidation |\\n| `declared_actions` | agent-written action text, returned without selection, validation or execution |\\n| `declared_relation_review_candidates` in the view | objects reachable through listed relations, not proven impacts or required rechecks |\\n\\na planned or failed check is still a check record. a waived target can have only\\nan exception record; it is not converted to a successful observation. a missing\\nrecord is not automatically missing research: equivalent work may be recorded\\nelsewhere. the agent establishes relevance and examines the actual material.\\n\\n## small core and optional detail\\n\\nthe profile uses `format: \"ui-spec-evidence/1\"`. `revision` labels the current\\nrecord snapshot when known; null or omission preserves an unrecorded identity.\\nuse `record_origin` to distinguish an unfilled template, an initialized working\\nrecord and an authored project model. the [empty template](../assets/templates/design-evidence.json)\\ncontains no invented objects, candidate or next action and is not created by\\n`prepare.py` automatically.\\n\\ncollections are added according to need. their id and reference shapes support\\nlookup; they are not a demand for every theoretical design dimension.\\n\\n| entry | fields and intended professional meaning |\\n|---|---|\\n| object | `id`, l0–l5 `level`, `title`; optional `parent`, `revision`, `categories` and project-specific detail |\\n| condition | `id`, `description`; distinguish relevant state, viewport, theme, locale, content, role, platform and version |\\n| evidence | `id`, `kind`, `role`, `location`, `status`, linked `objects` and `conditions`; actual inspected portion belongs in `observation` |\\n| decision | `id`, `objects`, `purpose`, `question`; add judgment, evidence, candidates, choice, implementation, gaps, checks, approval and agent-authored action as work occurs |\\n| revision | meaningful change: `id`, `summary`, `reason`, affected current `objects`, evidence, `current_judgment`, optional prior snapshot location and `historical_objects` |\\n| archive | `id`, `location`, `revision`, `description` linking an earlier record or raw evidence; content is not loaded into current decisions |\\n\\nthe root `objects`/`decisions` collections express the **current model**.\\n`revisions` explains important changes. `archive` points to original evidence and\\nprior snapshots. these are optional ordinary records, not transactions or a new\\nlifecycle. store large media and full histories in authorized project locations;\\nlinks avoid duplicating them. historical object identifiers need not still be\\npresent in the current model, so use `historical_objects` for that purpose.\\n\\n## source and file facts\\n\\nevidence kinds commonly include text, visual, temporal, implementation and\\nruntime. source roles commonly include reference, candidate, demo, trial and\\nintegrated result. they remain separate from acquired/observed status. the\\ninspector presents declared values; professional meaning and matching a claim\\nto evidence belong to the agent. custom descriptive states are not progression\\ncommands. a single candidate, a text/visual pairing or a high-impact open issue\\nnever produces a mechanical recommendation or veto.\\n\\nuse `{\"path\":\"relative/file\"}` or `{\"url\":\"https://…\"}` for locations.\\npaths are project-relative posix paths with no parent traversal or symlinks.\\nfile metadata is observed; the file\\'s pixels, source use or factual content are\\nnot. remote references remain unfetched. source rights and real authorization\\nare separate facts. optional declared `sha256` text is not compared here.\\n\\nfor a separately needed byte-identity assertion, use the independent tool:\\n\\n```bash\\npython <skill-dir>/scripts/check_file_integrity.py --project-root . \\\\\\n  --path .ui-spec/evidence/capture.png --sha256 <expected-sha256>\\n```\\n\\nthis command returns match/mismatch for those bytes only; exit 0/1 corresponds\\nto that explicit assertion and exit 2 to inability to check. it cannot establish\\nthat the image was viewed, its contents are truthful or a ui is well designed.\\n\\n## records are not independent verification\\n\\nthe agent describes actual temporal observation with its window, method and\\nsampling limitations. a still cannot establish an unseen transition. evidence\\nused to judge visual quality needs an actually viewed subject; an original demo\\nand an integrated page are different subjects. these are professional duties,\\nnot predicates the structural inspector evaluates.\\n\\na `comparison` may record state, named alternatives, evidence and rationale.\\nthere is no mechanical two-name minimum: names alone cannot establish real\\nvisual differences. the agent decides when meaningful alternatives are needed,\\nwhen existing verified work suffices, and what observation would change a choice.\\nan `implementation` can record proposed/trialed/adopted state, paths and evidence.\\na located source file does not establish that the app uses it or retains its craft.\\n\\nchecks commonly declare domain, objects, conditions, role, status, revision,\\nfinding and evidence. a record\\'s `pass`, `fail` or `blocked` remains the author\\'s\\nstatement about a scoped external check; it is not the inspector\\'s verdict.\\n`required_checks` can explicitly list object/condition/domain/role targets.\\nmatching uses literal addresses, not sufficiency, evidence-type or version rules.\\nthe default role `integrated` is a documented matching convention, not an\\nassertion that an unlabelled observation was actually integrated. inspectors\\nnever aggregate declared passes into design completion.\\n\\napproval has its own source and scope; exceptions have their own decision,\\nreason and authority. missing provenance can be visible as an undeclared field;\\nits authenticity and consequence require independent judgment. a waiver can\\nchange an authorized scope without making missing observation real. normal host\\npermissions, security and resource-use obligations remain in force.\\n\\n## theory is not applicability\\n\\nthe [bundled category vocabulary](../assets/design-coverage-categories.json)\\nprovides theoretical prompts, including content, assets, responsive variants,\\nrecovery, performance and operational use. matching only counts explicit\\n`objects[].categories` tags. no tag does not prove no corresponding design work:\\nprose, shared components and archived material may contain it. unknown project\\ncategories remain visible; not every project needs all catalog categories.\\n\\na broken id reference is **within-declaration missing information**. a catalog\\ncategory with no tag is **candidate unrepresented coverage**. do not convert the\\nsecond into the first. the agent chooses include, exclude, combine, split or\\nfurther research using the actual task and observed mature products.\\n\\n## relations, revision and current applicability\\n\\nrelations name `from`, `to` and a type. change lookup follows child-to-parent\\ncontainment, affects/appears_in, reverse depends_on, and bidirectional shares.\\nit does not traverse precedes/transitions_to as proof of causal impact. cycles\\nterminate safely; a containment cycle is reported as a graph fact. unresolved\\n`--changed` ids are listed rather than causing a work blockade.\\n\\na global snapshot change does not mechanically invalidate prior observations.\\nkeep local source/asset/condition identity with the actual checked subject.\\nold results remain historical facts. the agent decides which observations still\\napply, which need a scoped carry-forward explanation and which need new viewing\\nor testing. changing an unrelated backend implementation need not erase all\\nvisual findings; changing a font can affect several dependent layouts.\\n\\noverview, detail and execution are projections of the same **current** records.\\nrevision summaries and archive references stay recognizable as history; the\\ninspector does not load them as competing current choices or rewrite any status.\\nupdate the current judgment after meaningful new evidence and link why it changed.\\na record listing a future action does not prove that action was performed.\\n'\n\n======================================================================\nFAIL: test_package_and_local_references (test_content.ContentTests.test_package_and_local_references)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/uispec-v115/ui-spec-studio/tests/test_content.py\", line 60, in test_package_and_local_references\n    self.assertEqual(validator.validate(ROOT),[])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Lists differ: ['Broken local link: docs/REVIEW-v1.15.0.m[42 chars]son'] != []\n\nFirst list contains 1 additional elements.\nFirst extra element 0:\n'Broken local link: docs/REVIEW-v1.15.0.md -> evidence/v1.15.0/engineering-checks.json'\n\n+ []\n- ['Broken local link: docs/REVIEW-v1.15.0.md -> '\n-  'evidence/v1.15.0/engineering-checks.json']\n\n======================================================================\nFAIL: test_decision_template_is_self_contained (test_product_intent.ProductIntentTests.test_decision_template_is_self_contained)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/uispec-v115/ui-spec-studio/tests/test_product_intent.py\", line 72, in test_decision_template_is_self_contained\n    self.assertEqual(validator.validate(ROOT),[])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Lists differ: ['Broken local link: docs/REVIEW-v1.15.0.m[42 chars]son'] != []\n\nFirst list contains 1 additional elements.\nFirst extra element 0:\n'Broken local link: docs/REVIEW-v1.15.0.md -> evidence/v1.15.0/engineering-checks.json'\n\n+ []\n- ['Broken local link: docs/REVIEW-v1.15.0.md -> '\n-  'evidence/v1.15.0/engineering-checks.json']\n\n======================================================================\nFAIL: test_package_structure (test_tools.DistributionTests.test_package_structure)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/uispec-v115/ui-spec-studio/tests/test_tools.py\", line 293, in test_package_structure\n    self.assertEqual(validator.validate(ROOT), [])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Lists differ: ['Broken local link: docs/REVIEW-v1.15.0.m[42 chars]son'] != []\n\nFirst list contains 1 additional elements.\nFirst extra element 0:\n'Broken local link: docs/REVIEW-v1.15.0.md -> evidence/v1.15.0/engineering-checks.json'\n\n+ []\n- ['Broken local link: docs/REVIEW-v1.15.0.md -> '\n-  'evidence/v1.15.0/engineering-checks.json']\n\n----------------------------------------------------------------------\nRan 227 tests in 3.352s\n\nFAILED (failures=4)\n",
+      "scope": "mechanical/structural source and helper assertions, not Agent efficacy"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-27T07:49:55.343588+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "scope": "mechanical/structural source and helper assertions, not Agent efficacy"
+    }
+  ],
+  "runs": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "tools/validate_package.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Package structure, metadata, common-reference links and local paths: PASS\n",
+      "stderr": "",
+      "scope": "Source, structure and helper regression assertions; no independent Agent or visual-quality certification"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "tools/readme_art.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "README artwork: verified\n",
+      "stderr": "",
+      "scope": "Source, structure and helper regression assertions; no independent Agent or visual-quality certification"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "tools/catalog_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "Resource data and generated map: PASS\n",
+      "stderr": "",
+      "scope": "Source, structure and helper regression assertions; no independent Agent or visual-quality certification"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "_design_reference (test_tools.PrepareTests.test_reuses_design_reference) ... ok\n\n----------------------------------------------------------------------\nRan 229 tests in 3.476s\n\nOK\n",
+      "scope": "Source, structure and helper regression assertions; no independent Agent or visual-quality certification",
+      "stderr_sha256": "347c20f2abda7a5f24815fc3a8cb65defa3f64b0e2eac7b9da27645a6423b69c"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "scope": "Diff whitespace only"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "tools/install_local.py",
+        "--target",
+        "/tmp/v115-install-m0276udd/installed/ui-spec"
+      ],
+      "exit_code": 0,
+      "stdout": "/tmp/v115-install-m0276udd/installed/ui-spec\n",
+      "stderr": "",
+      "scope": "Actual standalone file-copy installation, not a host-agent invocation"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/v115-install-m0276udd/installed/ui-spec/scripts/prepare.py",
+        "--project-root",
+        "/tmp/v115-install-m0276udd/project"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"created\": [\n    \".ui-spec/brief.md\",\n    \".ui-spec/manifest.json\",\n    \".ui-spec/.gitignore\"\n  ],\n  \"preserved\": [],\n  \"record_origin\": \"initialized_unconfirmed\",\n  \"limits\": \"Creates templates only; no viewport, locale, theme, research, design approval or project scope is inferred.\"\n}\n",
+      "stderr": "",
+      "scope": "Initialize deliberately unconfirmed empty project record"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/v115-install-m0276udd/installed/ui-spec/scripts/check_manifest.py",
+        "--project-root",
+        "/tmp/v115-install-m0276udd/project",
+        "--view",
+        "overview",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"report_format\": \"ui-spec-structure-report/1\",\n  \"inspector\": \"manifest\",\n  \"record_readability\": \"readable\",\n  \"record_source\": {\n    \"declared_format\": 1,\n    \"declared_revision\": null,\n    \"record_origin\": \"initialized_unconfirmed\",\n    \"scope\": \"supplied_record\",\n    \"path\": \".ui-spec/manifest.json\"\n  },\n  \"structural_findings\": [],\n  \"field_observations\": [\n    {\n      \"path\": \"$.project\",\n      \"presence\": \"declared\"\n    },\n    {\n      \"path\": \"$.phase\",\n      \"presence\": \"declared\"\n    },\n    {\n      \"path\": \"$.revision\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.design_revision\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.viewports\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.variants\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.routes\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.journeys\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.checks\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.exceptions\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.approvals\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.connections\",\n      \"presence\": \"empty\"\n    },\n    {\n      \"path\": \"$.requirements\",\n      \"presence\": \"empty\"\n    }\n  ],\n  \"reference_observations\": [],\n  \"file_observations\": [],\n  \"revision_declarations\": [\n    {\n      \"field\": \"$.revision\",\n      \"declared_revision\": null\n    },\n    {\n      \"field\": \"$.design_revision\",\n      \"declared_revision\": null\n    }\n  ],\n  \"declared_actions\": [],\n  \"limits\": [\n    \"Describes the supplied record, not professional sufficiency, correctness, readiness or completion.\",\n    \"Declared statuses, actions, observations and approvals are not authenticated execution facts.\",\n    \"No browser, pixel, media, model, service or network inspection is performed.\",\n    \"Absent categories are vocabulary hints; task applicability and unknown scope are not assessed.\",\n    \"Relations are declared links, not proven causes, defects or mandatory rechecks.\",\n    \"Local file metadata does not prove observation, adoption or quality; digests are not compared here.\",\n    \"Reports are read-only. Agent judgment and scoped independent verification determine actual work.\"\n  ],\n  \"query_view\": \"overview\",\n  \"query_compatibility\": {\n    \"legacy_mode\": null,\n    \"meaning\": \"Display alias only; no stage or completion decision\"\n  },\n  \"counts\": {\n    \"viewports\": 0,\n    \"variants\": 0,\n    \"routes\": 0,\n    \"journeys\": 0,\n    \"checks\": 0\n  },\n  \"declared_check_records\": [],\n  \"declared_waived_check_records\": [],\n  \"declared_exceptions\": [],\n  \"declared_approvals\": [],\n  \"declared_connections\": [],\n  \"declared_item_records\": [],\n  \"unlisted_declared_items\": [],\n  \"inventory_combinations\": {\n    \"basis\": \"Projection of declared primary/critical states, viewports, variants, journeys and routes; not task requirements.\",\n    \"task_applicability\": \"not_assessed\",\n    \"items\": [],\n    \"unlisted\": []\n  },\n  \"view\": {\n    \"viewports\": [],\n    \"variants\": [],\n    \"routes\": [],\n    \"journeys\": []\n  }\n}\n",
+      "stderr": "",
+      "scope": "Read unfilled declared scope, no completion assertion"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/v115-install-m0276udd/installed/ui-spec/scripts/check_design_evidence.py",
+        "--project-root",
+        "/tmp/v115-install-m0276udd/installed/ui-spec",
+        "--record",
+        "assets/templates/design-evidence.json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "scope": "Read unfilled optional template from installed copy",
+      "stdout_sha256": "61ccbd67ff8640c865b82e1404811ffa8c3c3bf6f677f799128b69603c243d84",
+      "stdout_summary": {
+        "report_format": "ui-spec-structure-report/1",
+        "inspector": "design_evidence",
+        "record_readability": "readable",
+        "record_source": {
+          "declared_format": "ui-spec-evidence/1",
+          "declared_revision": null,
+          "record_origin": "unfilled_template",
+          "scope": "supplied_record",
+          "path": "assets/templates/design-evidence.json"
+        },
+        "structural_findings": [],
+        "field_observations": [
+          {
+            "path": "$.format",
+            "presence": "declared"
+          },
+          {
+            "path": "$.revision",
+            "presence": "empty"
+          },
+          {
+            "path": "$.objects",
+            "presence": "empty"
+          },
+          {
+            "path": "$.conditions",
+            "presence": "empty"
+          },
+          {
+            "path": "$.evidence",
+            "presence": "empty"
+          },
+          {
+            "path": "$.decisions",
+            "presence": "empty"
+          },
+          {
+            "path": "$.relations",
+            "presence": "empty"
+          },
+          {
+            "path": "$.coverage_challenges",
+            "presence": "empty"
+          },
+          {
+            "path": "$.required_checks",
+            "presence": "empty"
+          },
+          {
+            "path": "$.revisions",
+            "presence": "empty"
+          },
+          {
+            "path": "$.archive",
+            "presence": "empty"
+          }
+        ],
+        "reference_observations": [],
+        "file_observations": [],
+        "revision_declarations": [
+          {
+            "field": "$.revision",
+            "declared_revision": null
+          }
+        ],
+        "declared_actions": [],
+        "limits": [
+          "Describes the supplied record, not professional sufficiency, correctness, readiness or completion.",
+          "Declared statuses, actions, observations and approvals are not authenticated execution facts.",
+          "No browser, pixel, media, model, service or network inspection is performed.",
+          "Absent categories are vocabulary hints; task applicability and unknown scope are not assessed.",
+          "Relations are declared links, not proven causes, defects or mandatory rechecks.",
+          "Local file metadata does not prove observation, adoption or quality; digests are not compared here.",
+          "Reports are read-only. Agent judgment and scoped independent verification determine actual work."
+        ],
+        "object_inventory": {
+          "by_level": {
+            "L0": [],
+            "L1": [],
+            "L2": [],
+            "L3": [],
+            "L4": [],
+            "L5": []
+          },
+          "declared_categories": [],
+          "unrepresented_levels": [
+            "L0",
+            "L1",
+            "L2",
+            "L3",
+            "L4",
+            "L5"
+          ]
+        },
+        "counts": {
+          "objects": 0,
+          "conditions": 0,
+          "evidence": 0,
+          "decisions": 0
+        },
+        "declared_relations": [],
+        "declared_check_records": [],
+        "declared_exception_records": [],
+        "declared_item_records": [],
+        "unlisted_declared_items": [],
+        "candidate_unrepresented_categories": [
+          {
+            "category": "product-experience",
+            "description": "Product purpose, people, intended experience and quality goals",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "journeys",
+            "description": "Task entry, continuation, outcome, return and recovery",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "navigation-architecture",
+            "description": "Pages, navigation, workspaces, overlays and shared shell",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "components",
+            "description": "Functional regions, controls and business objects",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "typography-content",
+            "description": "Language, content hierarchy, typography and real text",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "visual-composition",
+            "description": "Spacing, proportion, hierarchy, color, material and optical balance",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "visual-assets",
+            "description": "Icons, marks, photography, 2D/3D assets and identity",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "state-feedback",
+            "description": "Declared component states and meaningful feedback",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "temporal-interaction",
+            "description": "Motion, interruption, reversal and continuous interaction",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "responsive-variants",
+            "description": "Viewport, input, theme, language and content variants",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "accessibility",
+            "description": "Semantic controls, focus and accessible interaction",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "failure-recovery",
+            "description": "Loading, unavailable results, errors and recovery",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "perceived-performance",
+            "description": "Readiness, response, stability and resource cost",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "resource-adoption",
+            "description": "Reference, candidate, demo, trial and actual integration",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "implementation-assurance",
+            "description": "Code/asset locations and independent scoped checks",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          },
+          {
+            "category": "operating-content",
+            "description": "Source authority, permissions, updates and content growth",
+            "basis": "No explicit matching category tag on current objects; prose and archived material were not classified.",
+            "task_applicability": "not_assessed"
+          }
+        ],
+        "coverage_vocabulary": "ui-spec-coverage-vocabulary/1",
+        "view": {
+          "decisions": [],
+          "objects": [],
+          "coverage_challenges": [],
+          "record_layer": "current_model",
+          "meaningful_revisions": [],
+          "evidence_archive_references": [],
+          "declared_relation_review_candidates": {
+            "changed_ids": [],
+            "unresolved_changed_ids": [],
+            "object_ids": [],
+            "decision_ids": [],
+            "basis": "Declared containment, depends_on, affects, shares and appears_in only; temporal order is not traversed.",
+            "task_applicability": "not_assessed",
+            "limits": "Listed objects are possible relation-review candidates, not defects or required actions; unlisted effects may exist."
+          }
+        }
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/v115-install-m0276udd/installed/ui-spec/scripts/find_resources.py",
+        "--need",
+        "motion",
+        "--stack",
+        "vue",
+        "--limit",
+        "1",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"snapshot_date\": \"2026-10-24\",\n  \"results\": [\n    {\n      \"id\": \"gsap\",\n      \"name\": \"GSAP\",\n      \"needs\": [\n        \"motion\",\n        \"typography\"\n      ],\n      \"forms\": [\n        \"package\",\n        \"engine\"\n      ],\n      \"stacks\": [\n        \"javascript\",\n        \"framework-neutral\"\n      ],\n      \"use_for\": \"Timelines, scroll, text and coordinated multi-element motion.\",\n      \"access\": \"llms index, core/plugin APIs and examples.\",\n      \"adoption_notes\": \"Check scope, teardown, reduced motion, repeated interaction and applicable license.\",\n      \"aliases\": [\n        \"\\u65f6\\u95f4\\u7ebf\",\n        \"\\u52a8\\u753b\"\n      ],\n      \"sources\": [\n        \"https://gsap.com/llms.txt\"\n      ],\n      \"reviewed_on\": \"2026-10-24\",\n      \"evidence_scope\": \"documentation_or_public_source\",\n      \"project_validation\": \"evaluate_in_project\"\n    }\n  ],\n  \"count\": 1,\n  \"ordering\": \"alphabetical; no design-quality ranking\",\n  \"result_kind\": \"dated_catalog_matches\",\n  \"source_note_scope\": \"Catalog-authored guidance is source material, not a tool-selected next action.\",\n  \"limits\": \"Results are documented discovery leads, not installation instructions or project acceptance. Current source, exact-item fit and real integration are not assessed.\"\n}\n",
+      "stderr": "",
+      "scope": "Offline dated catalog lookup, no source demo viewed or resource adopted"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "/tmp/v115-install-m0276udd/installed/ui-spec/scripts/check_file_integrity.py",
+        "--project-root",
+        "/tmp/v115-install-m0276udd/project",
+        "--path",
+        "digest-fixture.txt",
+        "--sha256",
+        "5ddeb5f1b8aacea4f6c6cc8c511abb122454adcfea21bba2dbd4987cd0872b9e"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"verification_scope\": \"one local regular file byte digest\",\n  \"path\": \"digest-fixture.txt\",\n  \"expected_sha256\": \"5ddeb5f1b8aacea4f6c6cc8c511abb122454adcfea21bba2dbd4987cd0872b9e\",\n  \"observed_sha256\": \"5ddeb5f1b8aacea4f6c6cc8c511abb122454adcfea21bba2dbd4987cd0872b9e\",\n  \"digest_result\": \"match\",\n  \"limits\": \"Digest equality does not prove source truth, observation, runtime use, authorization or UI quality.\"\n}\n",
+      "stderr": "",
+      "scope": "Independent exact named file byte match only"
+    }
+  ],
+  "installed_file_identity": {
+    "count": 37,
+    "all_hashes_equal": true,
+    "scope": "The actual copied standalone file set"
+  },
+  "final_suite": {
+    "count": 229,
+    "result": "all assertions passed",
+    "scope": "Synthetic boundary and independent engineering regressions, not actual Agent research behavior"
+  },
+  "local_publication": {
+    "command": [
+      "python",
+      "tools/preview_readme.py",
+      "--output-dir",
+      "<evidence>/local-final",
+      "--browser-path",
+      "/usr/bin/chromium"
+    ],
+    "observed_exit_code": 0,
+    "report": {
+      "source_files": {
+        "README.md": "9d5ee8973e9a7e01207214971f394f80e207721ad719852259cf7779bc3d88f1",
+        "README.zh-CN.md": "4006340fe15d2407b855e365b5b8eb91a59e8ee61497c6e934f4d1fa05cdd963"
+      },
+      "captures": [
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "en",
+          "theme": "light",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "article": {
+            "x": 0,
+            "y": 54.1875,
+            "width": 390,
+            "height": 10522.0625
+          },
+          "artwork": {
+            "currentSrc": "studio-compact-light.svg",
+            "width": 358,
+            "height": 280,
+            "naturalWidth": 191
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-en-light-390.png",
+          "full_screenshot": "local-en-light-390-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "en",
+          "theme": "light",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "article": {
+            "x": 0,
+            "y": 67.59375,
+            "width": 768,
+            "height": 6417.34375
+          },
+          "artwork": {
+            "currentSrc": "studio-light.svg",
+            "width": 702,
+            "height": 227,
+            "naturalWidth": 300
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-en-light-768.png",
+          "full_screenshot": "local-en-light-768-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "en",
+          "theme": "light",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "article": {
+            "x": 230,
+            "y": 67.59375,
+            "width": 980,
+            "height": 5692.265625
+          },
+          "artwork": {
+            "currentSrc": "studio-light.svg",
+            "width": 914,
+            "height": 295,
+            "naturalWidth": 300
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-en-light-1440.png",
+          "full_screenshot": "local-en-light-1440-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "en",
+          "theme": "dark",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "article": {
+            "x": 0,
+            "y": 54.1875,
+            "width": 390,
+            "height": 10522.0625
+          },
+          "artwork": {
+            "currentSrc": "studio-compact-dark.svg",
+            "width": 358,
+            "height": 280,
+            "naturalWidth": 191
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-en-dark-390.png",
+          "full_screenshot": "local-en-dark-390-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "en",
+          "theme": "dark",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "article": {
+            "x": 0,
+            "y": 67.59375,
+            "width": 768,
+            "height": 6417.34375
+          },
+          "artwork": {
+            "currentSrc": "studio-dark.svg",
+            "width": 702,
+            "height": 227,
+            "naturalWidth": 300
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-en-dark-768.png",
+          "full_screenshot": "local-en-dark-768-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "en",
+          "theme": "dark",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "article": {
+            "x": 230,
+            "y": 67.59375,
+            "width": 980,
+            "height": 5692.265625
+          },
+          "artwork": {
+            "currentSrc": "studio-dark.svg",
+            "width": 914,
+            "height": 295,
+            "naturalWidth": 300
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-en-dark-1440.png",
+          "full_screenshot": "local-en-dark-1440-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "zh",
+          "theme": "light",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "article": {
+            "x": 0,
+            "y": 54.1875,
+            "width": 390,
+            "height": 7235.75
+          },
+          "artwork": {
+            "currentSrc": "studio-compact-light.svg",
+            "width": 358,
+            "height": 280,
+            "naturalWidth": 191
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-zh-light-390.png",
+          "full_screenshot": "local-zh-light-390-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "zh",
+          "theme": "light",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "article": {
+            "x": 0,
+            "y": 67.59375,
+            "width": 768,
+            "height": 5227.09375
+          },
+          "artwork": {
+            "currentSrc": "studio-light.svg",
+            "width": 702,
+            "height": 227,
+            "naturalWidth": 300
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-zh-light-768.png",
+          "full_screenshot": "local-zh-light-768-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "zh",
+          "theme": "light",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "article": {
+            "x": 230,
+            "y": 67.59375,
+            "width": 980,
+            "height": 4774.78125
+          },
+          "artwork": {
+            "currentSrc": "studio-light.svg",
+            "width": 914,
+            "height": 295,
+            "naturalWidth": 300
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-zh-light-1440.png",
+          "full_screenshot": "local-zh-light-1440-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "zh",
+          "theme": "dark",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "article": {
+            "x": 0,
+            "y": 54.1875,
+            "width": 390,
+            "height": 7235.75
+          },
+          "artwork": {
+            "currentSrc": "studio-compact-dark.svg",
+            "width": 358,
+            "height": 280,
+            "naturalWidth": 191
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-zh-dark-390.png",
+          "full_screenshot": "local-zh-dark-390-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "zh",
+          "theme": "dark",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "article": {
+            "x": 0,
+            "y": 67.59375,
+            "width": 768,
+            "height": 5227.09375
+          },
+          "artwork": {
+            "currentSrc": "studio-dark.svg",
+            "width": 702,
+            "height": 227,
+            "naturalWidth": 300
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-zh-dark-768.png",
+          "full_screenshot": "local-zh-dark-768-full.png"
+        },
+        {
+          "renderer": "local-markdown-approximation",
+          "language": "zh",
+          "theme": "dark",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "article": {
+            "x": 230,
+            "y": 67.59375,
+            "width": 980,
+            "height": 4774.78125
+          },
+          "artwork": {
+            "currentSrc": "studio-dark.svg",
+            "width": 914,
+            "height": 295,
+            "naturalWidth": 300
+          },
+          "document_overflow": false,
+          "native_install_command": true,
+          "disclosure": "exercised",
+          "image_alt": true,
+          "screenshot": "local-zh-dark-1440.png",
+          "full_screenshot": "local-zh-dark-1440-full.png"
+        }
+      ],
+      "scope": "DOM, asset selection, native installation text, disclosure and overflow checks; clipboard operation is not exercised; inspect screenshots separately for visual judgment",
+      "local_renderer": "Markdown-It with a GitHub-like stylesheet; not pixel-identical to GitHub",
+      "live_commit": null
+    },
+    "scope": "12 DOM/asset/overflow/native-text render checks; screenshot observations in separate local review"
+  }
+}

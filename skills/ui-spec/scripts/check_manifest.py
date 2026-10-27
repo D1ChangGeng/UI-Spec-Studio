@@ -1,308 +1,231 @@
 #!/usr/bin/env python3
-"""Check declared UI coverage and evidence references; does not judge rendered UI."""
+"""Describe declared UI coverage records; query views are not project completion gates."""
 from __future__ import annotations
+
 import argparse
+import copy
 import json
 from pathlib import Path
 import re
-import sys
 from typing import Any
 
-LIMITS = (
-    "This checks recorded structure and local evidence references only. "
-    "It does not run a browser, inspect pixels, authenticate approvals, "
-    "or independently verify behavior or source revision claims."
-)
-ID = re.compile(r"^[a-z0-9][a-z0-9_-]{0,79}$")
-STATUSES = {"planned", "pass", "fail", "blocked", "waived"}
-MODES = {"service", "local", "static"}
+from structural_records import LIMITS, Observation, local_file, read_record, text, unreadable
 
-
-def _text(value: Any) -> bool:
-    return isinstance(value, str) and bool(value.strip())
+ID = re.compile(r'^[a-z0-9][a-z0-9_-]{0,79}$')
+LEGACY_VIEWS = {'draft': 'overview', 'review': 'checks', 'finish': 'connections'}
+VIEWS = ('overview', 'checks', 'connections')
 
 
 def _safe_file(root: Path, value: Any) -> bool:
-    if not _text(value) or Path(value).is_absolute():
-        return False
+    """Compatibility utility for safe local file existence, with no content approval."""
     try:
-        path = (root / value).resolve(strict=True)
-        path.relative_to(root)
-        return path.is_file() and path.stat().st_size > 0
+        local_file(root, value)
+        return True
     except (OSError, ValueError, RuntimeError):
         return False
 
 
-def validate(data: Any, root: Path, mode: str = "draft") -> dict[str, Any]:
-    errors: list[str] = []
-    warnings: list[str] = []
-    required: set[str] = set()
-    satisfied: set[str] = set()
-    if mode not in {"draft", "review", "finish"}:
-        raise ValueError("Mode must be draft, review, or finish")
-    root = root.resolve()
-
-    def report() -> dict[str, Any]:
-        return {"ok": not errors, "mode": mode, "errors": errors, "warnings": warnings,
-                "coverage": {"required": len(required), "satisfied": len(required & satisfied),
-                             "pending": sorted(required - satisfied)}, "limits": LIMITS}
-
+def inspect_record(data: Any, root: Path, view: str = 'overview') -> dict:
+    legacy = view if view in LEGACY_VIEWS else None
+    view = LEGACY_VIEWS.get(view, view)
+    if view not in VIEWS:
+        raise ValueError('Unknown manifest query view')
+    obs = Observation(data, root)
     if not isinstance(data, dict):
-        errors.append("Manifest must be a JSON object")
-        return report()
-    if type(data.get("schema_version")) is not int or data.get("schema_version") != 1:
-        errors.append("schema_version must be 1")
-    for field in ("project", "revision"):
-        if not _text(data.get(field)):
-            errors.append(f"{field} must be a nonempty string")
-    if not isinstance(data.get("phase"), str) or data.get("phase") not in {"init", "shape", "iterate", "audit", "finish"}:
-        errors.append("phase must be init, shape, iterate, audit, or finish")
-    if data.get("design_system_path") is not None and not _safe_file(root, data["design_system_path"]):
-        errors.append("design_system_path must reference a nonempty local file")
+        obs.note('$', 'record_shape', 'Parsed JSON root is not an object')
+        return obs.report('manifest')
+    if type(data.get('schema_version')) is not int or data['schema_version'] != 1:
+        obs.note('$.schema_version', 'profile_identifier', 'Declared schema_version is not the supported integer 1')
+    for key in ('project', 'phase'):
+        obs.field(data, key, '$')
+    obs.revision(data, '$')
+    if data.get('design_system_path') is not None:
+        obs.file(data['design_system_path'], '$.design_system_path')
+    tables = {key: obs.table(key) for key in ('viewports', 'variants', 'routes', 'journeys', 'checks')}
+    views, variants, routes, journeys, checks = (tables[k][1] for k in ('viewports', 'variants', 'routes', 'journeys', 'checks'))
+    for name, (rows, _) in tables.items():
+        for i, row in enumerate(rows):
+            if text(row.get('id')) and not ID.fullmatch(row['id']):
+                obs.note(obs.row_path(row, f'$.{name}[{i}]') + '.id', 'identifier_vocabulary', 'ID does not match this manifest profile\'s lowercase identifier form')
+    for i, v in enumerate(tables['viewports'][0]):
+        p = obs.row_path(v, f'$.viewports[{i}]')
+        for key in ('width', 'height'):
+            n = obs.field(v, key, p, int)
+            if type(n) is int and n < 1:
+                obs.note(p + '.' + key, 'dimension_value', 'Declared CSS dimension is not positive')
+    for i, v in enumerate(tables['variants'][0]):
+        p = obs.row_path(v, f'$.variants[{i}]')
+        for key in ('locale', 'theme'): obs.field(v, key, p)
+    states: dict[str, dict] = {}
+    for i, route in enumerate(tables['routes'][0]):
+        p = obs.row_path(route, f'$.routes[{i}]')
+        for key in ('path', 'purpose'): obs.field(route, key, p)
+        declared = obs.strings(route, 'states', p)
+        state_index = {x: {} for x in declared if text(x)}
+        if text(route.get('id')): states[route['id']] = state_index
+        if 'primary_state' in route and route['primary_state'] is not None:
+            obs.ref(route['primary_state'], state_index, p + '.primary_state')
+        for j, s in obs.string_items(route, 'critical_states', p):
+            obs.ref(s, state_index, p + f'.critical_states[{j}]')
+        obs.revision(route, p)
+    for i, j in enumerate(tables['journeys'][0]):
+        p = obs.row_path(j, f'$.journeys[{i}]')
+        obs.refs(j, 'routes', routes, p); obs.field(j, 'outcome', p)
 
-    tables: dict[str, list[dict[str, Any]]] = {}
-    for field in ("viewports", "variants", "routes", "journeys", "requirements", "checks", "approvals", "connections", "exceptions"):
-        value = data.get(field)
-        if not isinstance(value, list) or any(not isinstance(item, dict) for item in value):
-            errors.append(f"{field} must be a list of objects")
-            tables[field] = []
+    def target(item: dict, p: str, kind: str | None = None) -> str | None:
+        kind = kind or item.get('kind')
+        if kind == 'visual':
+            for key, known in (('route', routes), ('viewport', views), ('variant', variants)):
+                if key in item: obs.ref(item[key], known, p + '.' + key)
+                else: obs.field(item, key, p)
+            r = item.get('route')
+            st = states.get(r, {}) if isinstance(r, str) else {}
+            if 'state' in item: obs.ref(item['state'], st, p + '.state')
+            else: obs.field(item, 'state', p)
+            vals = [item.get(k) for k in ('route', 'state', 'viewport', 'variant')]
+            if all(isinstance(x, str) for x in vals) and vals[0] in routes and vals[1] in st and vals[2] in views and vals[3] in variants:
+                return 'visual:' + ':'.join(vals)
+        elif kind == 'journey':
+            for key, known in (('journey', journeys), ('variant', variants)):
+                if key in item: obs.ref(item[key], known, p + '.' + key)
+                else: obs.field(item, key, p)
+            j, v = item.get('journey'), item.get('variant')
+            if isinstance(j, str) and j in journeys and isinstance(v, str) and v in variants:
+                return f'journey:{j}:{v}'
+        elif kind == 'integration':
+            r = item.get('route')
+            if r is not None: obs.ref(r, routes, p + '.route')
+            else: obs.field(item, 'route', p)
+            if isinstance(r, str) and r in routes: return 'integration:' + r
         else:
-            tables[field] = value
+            obs.note(p + '.kind', 'unlisted_kind', 'No target-matching rule is defined for this declared kind')
+        return None
 
-    def index(field: str) -> dict[str, dict[str, Any]]:
-        result: dict[str, dict[str, Any]] = {}
-        for item in tables[field]:
-            key = item.get("id")
-            if not isinstance(key, str) or not ID.fullmatch(key):
-                errors.append(f"{field}: id must be a short lowercase identifier")
-            elif key in result:
-                errors.append(f"{field}: duplicate id {key}")
-            else:
-                result[key] = item
-        return result
+    check_rows = []; waiver_rows = []; by_target: dict[str, list[dict]] = {}
+    for i, check in enumerate(tables['checks'][0]):
+        p = obs.row_path(check, f'$.checks[{i}]')
+        for key in ('kind', 'status', 'reviewer', 'reason', 'outcome', 'data_mode'):
+            obs.field(check, key, p)
+        if 'inspected' in check: obs.field(check, 'inspected', p, bool)
+        obs.revision(check, p)
+        for j, file in obs.string_items(check, 'evidence', p):
+            obs.file(file, p + f'.evidence[{j}]')
+        t = target(check, p)
+        row = {'field': p, 'id': check.get('id'), 'target': t, 'declared_status': check.get('status'), 'record': check}
+        (waiver_rows if check.get('status') == 'waived' else check_rows).append(row)
+        if t: by_target.setdefault(t, []).append(row)
+    exceptions = obs.rows(data, 'exceptions')
+    for i, exc in enumerate(exceptions):
+        p = obs.row_path(exc, f'$.exceptions[{i}]')
+        for key in ('target', 'reason', 'approved_by', 'reference'):
+            obs.field(exc, key, p)
+    approvals = obs.rows(data, 'approvals')
+    for i, approval in enumerate(approvals):
+        p = obs.row_path(approval, f'$.approvals[{i}]')
+        obs.refs(approval, 'routes', routes, p); obs.revision(approval, p)
+        for key in ('by', 'reference'): obs.field(approval, key, p)
+    connections = obs.rows(data, 'connections')
+    for i, connection in enumerate(connections):
+        p = obs.row_path(connection, f'$.connections[{i}]')
+        if 'route' in connection: obs.ref(connection['route'], routes, p + '.route')
+        else: obs.field(connection, 'route', p)
+        obs.refs(connection, 'check_ids', checks, p)
+        for key in ('mode', 'owner', 'contract'): obs.field(connection, key, p)
 
-    views, variants, routes, journeys, checks = (index(k) for k in ("viewports", "variants", "routes", "journeys", "checks"))
-    for key, view in views.items():
-        for dimension in ("width", "height"):
-            n = view.get(dimension)
-            if type(n) is not int or n < 1 or n > 20000:
-                errors.append(f"viewports.{key}.{dimension}: expected a positive CSS pixel integer <= 20000")
-    for key, variant in variants.items():
-        for field in ("locale", "theme"):
-            if not _text(variant.get(field)):
-                errors.append(f"variants.{key}.{field}: specify the supported value (or default)")
-    if not views or not variants:
-        errors.append("Declare at least one viewport and one variant")
+    critical_targets: dict[str, tuple[str, str, str]] = {}
 
-    states: dict[str, set[str]] = {}
-    critical: dict[str, set[str]] = {}
-    for key, route in routes.items():
-        for field in ("path", "purpose"):
-            if not _text(route.get(field)):
-                errors.append(f"routes.{key}.{field}: provide a nonempty value")
-        raw = route.get("states", [])
-        if not isinstance(raw, list) or any(not isinstance(x, str) or not ID.fullmatch(x) for x in raw):
-            errors.append(f"routes.{key}.states: expected state identifiers")
-            raw = []
-        states[key] = set(raw)
-        if not raw or len(raw) != len(states[key]):
-            errors.append(f"routes.{key}: provide distinct states")
-        if not isinstance(route.get("primary_state"), str) or route.get("primary_state") not in states[key]:
-            errors.append(f"routes.{key}: primary_state must belong to states")
-        raw_critical = route.get("critical_states", [])
-        if not isinstance(raw_critical, list) or any(not isinstance(x, str) for x in raw_critical):
-            errors.append(f"routes.{key}.critical_states: expected a list of state identifiers")
-            raw_critical = []
-        critical[key] = set(raw_critical)
-        if not critical[key] <= states[key]:
-            errors.append(f"routes.{key}: critical_states must belong to states")
-        if isinstance(route.get("primary_state"), str) and route.get("primary_state") in states[key]:
-            for view in views:
-                for variant in variants:
-                    required.add(f"visual:{key}:{route['primary_state']}:{view}:{variant}")
-        for state in critical[key]:
-            for variant in variants:
-                required.add(f"critical:{key}:{state}:{variant}")
-    for key, journey in journeys.items():
-        linked = journey.get("routes")
-        if not isinstance(linked, list) or not linked or any(not isinstance(x, str) or x not in routes for x in linked):
-            errors.append(f"journeys.{key}: routes must reference existing route IDs")
-        if not _text(journey.get("outcome")):
-            errors.append(f"journeys.{key}: describe the observable outcome")
-        for variant in variants:
-            required.add(f"journey:{key}:{variant}")
+    def matching(t: str) -> dict:
+        # Match addresses only; do not examine pass/fail, evidence, reviewer, or revision.
+        candidates = by_target.get(t, [])
+        if t in critical_targets:
+            r, state, variant = critical_targets[t]
+            candidates = [row for rows in by_target.values() for row in rows
+                          if row['record'].get('kind') == 'visual'
+                          and row['record'].get('route') == r and row['record'].get('state') == state
+                          and row['record'].get('variant') == variant]
+        ex = [obs.row_path(e, f'$.exceptions[{i}]') for i, e in enumerate(exceptions) if e.get('target') == t]
+        return {'target': t, 'check_record_fields': [c['field'] for c in candidates if c['declared_status'] != 'waived'],
+                'waived_check_record_fields': [c['field'] for c in candidates if c['declared_status'] == 'waived'],
+                'exception_record_fields': ex}
 
-    def visual_key(item: dict[str, Any]) -> str | None:
-        r, state, view, variant = (item.get(f) for f in ("route", "state", "viewport", "variant"))
-        if any(not isinstance(x, str) for x in (r, state, view, variant)):
-            return None
-        if r not in routes or state not in states.get(r, set()) or view not in views or variant not in variants:
-            return None
-        return f"visual:{r}:{state}:{view}:{variant}"
+    declared = []
+    for i, requirement in enumerate(obs.rows(data, 'requirements')):
+        p = obs.row_path(requirement, f'$.requirements[{i}]')
+        t = target(requirement, p, requirement.get('kind', 'visual'))
+        declared.append({'field': p, 'declared_target': requirement,
+                         **(matching(t) if t else {'target': None, 'check_record_fields': [],
+                                                   'waived_check_record_fields': [], 'exception_record_fields': []})})
+    # A projection of named inventory, never mandatory completion rules.
+    combinations = set()
+    for r, route in routes.items():
+        st = route.get('primary_state')
+        if isinstance(st, str) and st in states.get(r, {}):
+            combinations.update(f'visual:{r}:{st}:{v}:{a}' for v in views for a in variants)
+        for st in route.get('critical_states', []) if isinstance(route.get('critical_states'), list) else []:
+            if isinstance(st, str) and st in states.get(r, {}):
+                for a in variants:
+                    address = f'critical:{r}:{st}:{a}'
+                    combinations.add(address)
+                    critical_targets[address] = (r, st, a)
+        combinations.add(f'integration:{r}')
+    combinations.update(f'journey:{j}:{v}' for j in journeys for v in variants)
+    inventory = [matching(t) for t in sorted(combinations)]
+    def unlisted(row: dict) -> bool:
+        return not (row['check_record_fields'] or row['waived_check_record_fields'] or row['exception_record_fields'])
+    projection = {
+        'overview': {k: tables[k][0] for k in ('viewports', 'variants', 'routes', 'journeys')},
+        'checks': {'declared_checks': tables['checks'][0], 'declared_exceptions': exceptions},
+        'connections': {'declared_connections': connections, 'declared_approvals': approvals},
+    }[view]
+    result = obs.report('manifest')
+    result.update(query_view=view,
+                  query_compatibility={'legacy_mode': legacy, 'meaning': 'Display alias only; no stage or completion decision'},
+                  counts={k: len(rows) for k, (rows, _) in tables.items()},
+                  declared_check_records=check_rows, declared_waived_check_records=waiver_rows,
+                  declared_exceptions=exceptions, declared_approvals=approvals,
+                  declared_connections=connections, declared_item_records=declared,
+                  unlisted_declared_items=[r for r in declared if r['target'] and unlisted(r)],
+                  inventory_combinations={'basis': 'Projection of declared primary/critical states, viewports, variants, journeys and routes; not task requirements.',
+                                          'task_applicability': 'not_assessed', 'items': inventory,
+                                          'unlisted': [r for r in inventory if unlisted(r)]},
+                  view=copy.deepcopy(projection))
+    return result
 
-    for requirement in tables["requirements"]:
-        key = visual_key(requirement)
-        if key is None:
-            errors.append("requirements: unknown or incomplete route/state/viewport/variant")
-        else:
-            required.add(key)
-    if mode == "finish":
-        required.update(f"integration:{key}" for key in routes)
-    if mode in {"review", "finish"} and not routes:
-        errors.append("Review/finish requires an explicit nonempty route inventory")
-    if mode == "finish" and not journeys:
-        errors.append("Finish requires at least one actual user journey")
 
-    exceptions: dict[str, dict[str, Any]] = {}
-    for exc in tables["exceptions"]:
-        target = exc.get("target")
-        if not _text(target) or any(not _text(exc.get(f)) for f in ("reason", "approved_by", "reference")):
-            errors.append("exceptions: target, reason, approved_by, reference are required")
-        elif target in exceptions:
-            errors.append(f"exceptions: duplicate target {target}")
-        else:
-            exceptions[target] = exc
-    used_exceptions: set[str] = set()
-    check_targets: dict[str, str] = {}
-    successful: dict[str, dict[str, Any]] = {}
-    for key, check in checks.items():
-        kind = check.get("kind")
-        target: str | None = None
-        if kind == "visual":
-            target = visual_key(check)
-        elif kind == "journey":
-            j, variant = check.get("journey"), check.get("variant")
-            if isinstance(j, str) and isinstance(variant, str) and j in journeys and variant in variants:
-                target = f"journey:{j}:{variant}"
-        elif kind == "integration":
-            r = check.get("route")
-            if isinstance(r, str) and r in routes:
-                target = f"integration:{r}"
-        if target is None:
-            errors.append(f"checks.{key}: unknown kind or invalid target references")
-            continue
-        if target in check_targets:
-            errors.append(f"checks.{key}: duplicate target {target}; retain one current result")
-        check_targets[target] = key
-        status = check.get("status")
-        if not isinstance(status, str) or status not in STATUSES:
-            errors.append(f"checks.{key}: invalid status")
-            continue
-        accepted = False
-        if status == "pass":
-            before = len(errors)
-            if check.get("revision") != data.get("revision"):
-                errors.append(f"checks.{key}: evidence revision is stale")
-            evidence = check.get("evidence")
-            if not isinstance(evidence, list) or not evidence or any(not _safe_file(root, e) for e in evidence):
-                errors.append(f"checks.{key}: pass requires nonempty evidence files inside the project")
-            if not _text(check.get("reviewer")):
-                errors.append(f"checks.{key}: record who performed the check")
-            if kind == "visual" and check.get("inspected") is not True:
-                errors.append(f"checks.{key}: visual pass requires recorded image inspection")
-            if kind in {"journey", "integration"} and not _text(check.get("outcome")):
-                errors.append(f"checks.{key}: record the observed result")
-            if kind == "integration" and (not isinstance(check.get("data_mode"), str) or check.get("data_mode") not in MODES):
-                errors.append(f"checks.{key}: integration requires service, local, or static behavior")
-            accepted = before == len(errors)
-            if accepted:
-                successful[key] = check
-        elif status == "waived":
-            if target not in exceptions:
-                errors.append(f"checks.{key}: waiver requires a matching approved exception")
-            else:
-                used_exceptions.add(target)
-                accepted = True
-        elif status in {"fail", "blocked"}:
-            if not _text(check.get("reason")):
-                errors.append(f"checks.{key}: {status} needs a reason")
-            if mode in {"review", "finish"}:
-                errors.append(f"checks.{key}: {status} remains open")
-        if accepted:
-            satisfied.add(target)
-            if kind == "visual":
-                satisfied.add(f"critical:{check['route']}:{check['state']}:{check['variant']}")
-    for target in exceptions:
-        if target not in used_exceptions:
-            warnings.append(f"Unused exception: {target}")
-
-    if mode == "finish":
-        design_revision = data.get("design_revision")
-        if not _text(design_revision):
-            errors.append("Finish requires design_revision identifying the accepted SPEC")
-        approved: set[str] = set()
-        for approval in tables["approvals"]:
-            scope = approval.get("routes")
-            if not isinstance(scope, list) or not scope or any(not isinstance(x, str) or x not in routes for x in scope):
-                errors.append("approvals: routes must reference the selected scope")
-                continue
-            if approval.get("revision") != design_revision:
-                errors.append("approvals: reference the accepted design_revision")
-            elif not _text(approval.get("by")) or not _text(approval.get("reference")):
-                errors.append("approvals: record approver and source of approval")
-            else:
-                approved.update(scope)
-        for route in routes:
-            if route not in approved:
-                errors.append(f"routes.{route}: missing scoped design approval")
-        connected: set[str] = set()
-        for connection in tables["connections"]:
-            route = connection.get("route")
-            if not isinstance(route, str) or route not in routes:
-                errors.append("connections: unknown route")
-                continue
-            if route in connected:
-                errors.append(f"connections.{route}: duplicate connection")
-            ids = connection.get("check_ids")
-            if not isinstance(connection.get("mode"), str) or connection.get("mode") not in MODES or not all(_text(connection.get(f)) for f in ("owner", "contract")):
-                errors.append(f"connections.{route}: document mode, trusted owner and contract")
-                continue
-            if not isinstance(ids, list) or not ids or any(not isinstance(x, str) or x not in successful for x in ids):
-                errors.append(f"connections.{route}: reference actual passing integration checks")
-                continue
-            if any(successful[x].get("kind") != "integration" or successful[x].get("route") != route
-                   or successful[x].get("data_mode") != connection["mode"] for x in ids):
-                errors.append(f"connections.{route}: integration check must match route and mode")
-                continue
-            connected.add(route)
-        for route in routes:
-            if route not in connected:
-                errors.append(f"routes.{route}: actual connection verification pending")
-    if mode in {"review", "finish"}:
-        errors.extend(f"Missing completed case: {key}" for key in sorted(required - satisfied))
-    if not routes:
-        warnings.append("No routes inventoried yet; this is an initialization record")
-    return report()
+def validate(data: Any, root: Path, mode: str = 'draft') -> dict:
+    """Legacy import name; mode is a display alias and no approval/gating result is returned."""
+    return inspect_record(data, root, mode)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--project-root", required=True, type=Path)
-    parser.add_argument("--manifest", default=".ui-spec/manifest.json")
-    parser.add_argument("--mode", choices=("draft", "review", "finish"), default="draft")
-    parser.add_argument("--json", action="store_true")
+    parser.add_argument('--project-root', required=True, type=Path)
+    parser.add_argument('--manifest', default='.ui-spec/manifest.json')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--view', choices=VIEWS)
+    group.add_argument('--mode', choices=tuple(LEGACY_VIEWS), help='Legacy alias for a query view, not a completion stage')
+    parser.add_argument('--json', action='store_true')
     args = parser.parse_args()
     try:
         root = args.project_root.resolve(strict=True)
-        if not root.is_dir() or not _safe_file(root, args.manifest):
-            raise ValueError("Manifest must be a nonempty file inside the project")
-        data = json.loads((root / args.manifest).read_text(encoding="utf-8"))
-        result = validate(data, root, args.mode)
+        data = read_record(root, args.manifest)
+        result = inspect_record(data, root, args.view or args.mode or 'overview')
+        result['record_source']['path'] = args.manifest
         if args.json:
             print(json.dumps(result, ensure_ascii=False, indent=2))
         else:
-            print(f"Recorded coverage check: {'PASS' if result['ok'] else 'PENDING / INVALID'} ({args.mode})")
-            for entry in result["errors"]:
-                print(f"ERROR: {entry}")
-            for entry in result["warnings"]:
-                print(f"NOTE: {entry}")
-            print(json.dumps(result["coverage"], ensure_ascii=False))
-            print(LIMITS)
-        return 0 if result["ok"] else 1
-    except (OSError, ValueError, TypeError, json.JSONDecodeError) as exc:
-        print(f"check_manifest: {exc}", file=sys.stderr)
+            print('Structure inspection completed')
+            print('record_readability: readable')
+            print(f"query_view: {result.get('query_view', args.view or args.mode or 'overview')}")
+            for entry in result['structural_findings']:
+                print(f"{entry['path']}: {entry['code']} — {entry['message']}")
+            print(json.dumps({k: result.get(k, []) for k in ('declared_item_records', 'unlisted_declared_items')}, ensure_ascii=False))
+            print('\n'.join(LIMITS))
+        return 0
+    except (OSError, ValueError, TypeError, RuntimeError, RecursionError) as exc:
+        print(json.dumps(unreadable(args.manifest, exc), ensure_ascii=False, indent=2))
         return 2
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     raise SystemExit(main())

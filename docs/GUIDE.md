@@ -99,7 +99,7 @@ shared causes, and return the remaining coverage with evidence.
 
 The agent records coverage against the actual route and state inventory. Dynamic records use representative short, typical, long, empty and permission-related shapes. A full-page screenshot supplements, rather than replaces, a true viewport capture; internal scroll areas need real-scroll checkpoints.
 
-The optional [manifest checker](MANIFEST.md) can find missing declared cases and incomplete evidence records. It does not perform the visual review itself.
+The optional [manifest inspector](MANIFEST.md) describes declared items, matching records and file references. Missing categories are prompts, not task requirements; applicability, actual execution and visual judgment remain separate.
 
 ## 6. Finish by connecting
 

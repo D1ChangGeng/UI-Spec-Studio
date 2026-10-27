@@ -69,7 +69,7 @@ python <skill-dir>/scripts/check_design_evidence.py --project-root <project> --v
 python <skill-dir>/scripts/check_design_evidence.py --project-root <project> --view execution --changed type-body
 ```
 
-它可以发现未获取的文件、不同对象/条件混用、陈旧版本、将原始 Demo 说成项目验证、缺乏行动的关键问题，以及缺口仍在却宣告完成等记录矛盾。返回成功仅说明记录结构一致，不能认证观察真的发生、所有范围完整、授权真实或 UI 优秀。
+它只呈现字段、ID、引用、本地文件元数据、已声明关系和理论上尚无显式标记的类别。不再根据候选数量、证据种类、全局版本或缺口/动作组合裁定工作。`record_readability` 与结构问题分开；退出码 0 表示读取检查已运行，即使存在结构问题也不代表任务可以完成。专业证据适用性、研究真实性与实际 UI 品质仍由 Agent 和独立验证判断。详见[职责边界与升级说明](STRUCTURAL-INSPECTION.md)。
 
 ## 实际效果怎样判断
 
@@ -78,3 +78,9 @@ python <skill-dir>/scripts/check_design_evidence.py --project-root <project> --v
 基准版已经包含证据研究原则，所以要比较的是结构连接和行动约束的增量效果。真实试验需相同任务、模型、可用工具、访问条件及明确资源限制，保留工具轨迹和成品，由未看过分组的评审检查结果。低风险任务还要检验是否及时收敛。
 
 完整执行规则在已安装的[地图方法](../skills/ui-spec/references/evidence-map.md)和[行动方法](../skills/ui-spec/references/evidence-actions.md)，这一说明只承担用户阅读入口。
+
+## 当前模型、重要修订与原始证据
+
+当前模型优先保存有效体验目标、实际采用、当前条件和未解决问题；重要修订解释什么认识变化、为什么变化、影响什么、现在采用什么判断；原始证据保留截图、媒体、资料、源码和运行记录。新证据可以重开任何相关决定，历史观察不因全局版本变化自动失效。两条主线——体验研究与判断、资源实现与验证——都保持双向修订。
+
+理论类别未出现只能作为候选提示，不能自动成为项目缺陷。已声明目标缺少匹配记录与理论维度未标记分别报告。Agent 决定纳入、排除、合并、拆分或继续研究；检查器不生成执行指令，也不自动修改状态。

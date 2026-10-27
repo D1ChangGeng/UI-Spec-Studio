@@ -39,6 +39,11 @@ REQUIRED += ["docs/DESIGN-EVIDENCE.md", "docs/REVIEW-v1.14.0.md",
              "tests/test_multiscale_release.py", "tools/prepare_design_experiment.py",
              "docs/experiments/design-evidence/PROTOCOL.md", "docs/experiments/design-evidence/baseline-identity.json",
              "docs/evidence/v1.14.0/source-preservation.json", "docs/evidence/v1.14.0/engineering-checks.json"]
+REQUIRED += ["docs/STRUCTURAL-INSPECTION.md", "docs/REVIEW-v1.15.0.md",
+             "docs/evidence/v1.15.0/continuity.json",
+             "skills/ui-spec/scripts/structural_records.py",
+             "skills/ui-spec/scripts/check_file_integrity.py",
+             "skills/ui-spec/assets/design-coverage-categories.json"]
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 
 

@@ -67,9 +67,11 @@ Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付�
 
 **多尺度设计证据地图**连接产品目标、用户旅程、页面、功能区域、感知细节和实际实现。研究范围由用户任务与真实参照共同校验；证据、资源采用、验证条件与用户确认分别保留实际含义。
 
-关键缺口决定下一步研究、比较或局部试装，只限制直接依赖它的实现承诺。同一份记录支持**整体总览、局部深查和执行验证**。已有 Markdown 记录即可使用；可选的只读检查器检查引用和声明，不为视觉品质打分。
+Agent 根据实际证据判断下一步研究、比较、试装或实现。同一份记录支持**整体总览、局部深查和执行验证**。已有 Markdown 记录即可使用。
 
-[方法与示例](docs/DESIGN-EVIDENCE.md) · [三组对比实验方案](docs/experiments/design-evidence/PROTOCOL.md)
+结构检查器只描述记录表达了什么，不裁定适用性、研究充分性或任务完成。声明结果、例外与未记录项分别呈现；当前判断链接重要修订和原始证据，避免旧结论混入当前模型。
+
+[职责边界与升级说明](docs/STRUCTURAL-INSPECTION.md) · [方法与示例](docs/DESIGN-EVIDENCE.md) · [三组对比实验方案](docs/experiments/design-evidence/PROTOCOL.md)
 
 ## 持续探索，让重要选择有据可依
 
@@ -140,7 +142,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.14.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.15.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

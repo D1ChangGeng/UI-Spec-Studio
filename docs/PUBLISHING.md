@@ -83,7 +83,7 @@ existing release before retrying.
 
 ```bash
 npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.14.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.15.0 --skill ui-spec
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep

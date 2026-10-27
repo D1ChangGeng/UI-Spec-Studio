@@ -36,7 +36,7 @@ class ContractTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             data = json.loads((ROOT / "skills/ui-spec/assets/templates/manifest.json").read_text())
             data["phase"] = "shape"
-            self.assertTrue(checker.validate(data, Path(td))["ok"])
+            self.assertEqual(checker.validate(data, Path(td))["record_readability"], "readable")
 
     def test_preparation_preflights_all_records(self):
         with tempfile.TemporaryDirectory() as td:
@@ -49,7 +49,7 @@ class ContractTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td, tempfile.TemporaryDirectory() as other:
             root = Path(td); design = Path(other) / "DESIGN.md"; design.write_text("private")
             (root / "DESIGN.md").symlink_to(design)
-            with self.assertRaisesRegex(ValueError, "inside the project"):
+            with self.assertRaisesRegex(ValueError, "symlink|inside the project"):
                 prepare.prepare(root)
             self.assertFalse((root / ".ui-spec/manifest.json").exists())
 

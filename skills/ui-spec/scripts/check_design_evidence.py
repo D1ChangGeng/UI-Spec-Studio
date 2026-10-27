@@ -1,422 +1,263 @@
 #!/usr/bin/env python3
-"""Read-only checks and three views of an optional design-evidence record."""
+"""Inspect represented design structure; leave applicability, evidence and action judgments to the Agent."""
 from __future__ import annotations
 
 import argparse
-import hashlib
+import copy
 import json
-from pathlib import Path, PurePosixPath
-import re
+from pathlib import Path
 import sys
-from urllib.parse import urlsplit
+from typing import Any
+
+from structural_records import LIMITS, Observation, local_file, read_record, text, unreadable
 
 FORMAT = "ui-spec-evidence/1"
-LEVELS = {f"L{i}" for i in range(6)}
-KINDS = {"text", "visual", "temporal", "implementation", "runtime"}
-ROLES = {"reference", "candidate", "demo", "trial", "integrated"}
-DOMAINS = {
-    "visual": {"visual"}, "temporal": {"temporal"},
-    "engineering": {"implementation", "runtime"}, "task": {"runtime"},
-}
-ACTIONS = {"research", "inspect", "compare", "trial", "implement", "expand",
-           "verify", "revise", "ask", "finish"}
-LIMITS = [
-    "Checks declarations and local file consistency, not truth or completeness of research.",
-    "Does not fetch URLs, view pixels, play media, run an agent or judge visual quality.",
-    "Cannot authenticate approval or establish actual use from a path or dependency entry.",
-    "Open or blocked records may be structurally valid; success is not design acceptance.",
-    "Change impact lists review candidates; it does not mutate evidence or approval.",
-]
+LEVELS = tuple(f"L{i}" for i in range(6))
+VOCABULARY = Path(__file__).resolve().parents[1] / "assets/design-coverage-categories.json"
 
 
-def nonempty(value: object) -> bool:
-    return isinstance(value, str) and bool(value.strip())
+def _rows(data: Any, key: str) -> list[dict]:
+    value = data.get(key, []) if isinstance(data, dict) else []
+    return [x for x in value if isinstance(x, dict)] if isinstance(value, list) else []
 
 
-def local_file(root: Path, value: object) -> Path:
-    if not nonempty(value) or "\\" in value or ":" in value or "\x00" in value:
-        raise ValueError("Use a project-relative POSIX file path")
-    path = PurePosixPath(value)
-    if path.is_absolute() or any(p in {"..", "~"} for p in path.parts):
-        raise ValueError("Path must stay inside the project")
-    target = root.joinpath(*path.parts)
-    # Reject even internal symlinks: recorded file identity must be unambiguous.
-    for candidate in [target, *target.parents]:
-        if candidate == root:
-            break
-        if candidate.is_symlink():
-            raise ValueError("Evidence paths must not traverse symlinks")
-    resolved = target.resolve(strict=True)
-    if not resolved.is_relative_to(root) or not resolved.is_file():
-        raise ValueError("Expected an existing regular project file")
-    return resolved
+def _ids(value: Any) -> set[str]:
+    return {x for x in value if text(x)} if isinstance(value, list) else set()
 
 
-def affected_objects(data: dict, changed: list[str]) -> set[str]:
-    """Return declared dependency and containing-scope review targets, not a state transition."""
-    objects = {o["id"]: o for o in data.get("objects", [])}
-    affected = set(changed)
-    unknown = affected - objects.keys()
-    if unknown:
-        raise ValueError(f"Unknown changed objects: {', '.join(sorted(unknown))}")
-    edges = [(oid, obj["parent"]) for oid, obj in objects.items() if obj.get("parent")]
-    for row in data.get("relations", []):
-        a, b, kind = row["from"], row["to"], row["type"]
-        if kind in {"affects", "appears_in"}:
+def relation_candidates(data: Any, changed: list[str]) -> dict:
+    """Traverse only the declared links, cycle-safely; make no applicability decision."""
+    objects = {o['id']: o for o in _rows(data, 'objects') if text(o.get('id'))}
+    known_changed = {x for x in changed if x in objects}
+    related = set(known_changed)
+    edges = [(oid, o['parent']) for oid, o in objects.items()
+             if isinstance(o.get('parent'), str) and o['parent'] in objects]
+    for r in _rows(data, 'relations'):
+        a, b, kind = r.get('from'), r.get('to'), r.get('type')
+        if not isinstance(a, str) or not isinstance(b, str) or a not in objects or b not in objects:
+            continue
+        if kind in ('affects', 'appears_in'):
             edges.append((a, b))
-        elif kind == "depends_on":
+        elif kind == 'depends_on':
             edges.append((b, a))
-        elif kind == "shares":
-            edges.extend([(a, b), (b, a)])
+        elif kind == 'shares':
+            edges.extend(((a, b), (b, a)))
     while True:
-        expanded = affected | {b for a, b in edges if a in affected}
-        if expanded == affected:
-            return affected
-        affected = expanded
+        expanded = related | {b for a, b in edges if a in related}
+        if expanded == related:
+            break
+        related = expanded
+    return {'changed_ids': list(changed), 'unresolved_changed_ids': sorted(set(changed) - objects.keys()),
+            'object_ids': sorted(related),
+            'decision_ids': [d.get('id') for d in _rows(data, 'decisions') if _ids(d.get('objects')) & related],
+            'basis': 'Declared containment, depends_on, affects, shares and appears_in only; temporal order is not traversed.',
+            'task_applicability': 'not_assessed',
+            'limits': 'Listed objects are possible relation-review candidates, not defects or required actions; unlisted effects may exist.'}
 
 
-def _validate(data: object, project_root: Path) -> dict:
-    root = project_root.resolve(strict=True)
-    if not root.is_dir():
-        raise ValueError("Project root must be a directory")
-    errors: list[str] = []
-    warnings: list[str] = []
-    if not isinstance(data, dict):
-        return {"ok": False, "errors": ["Record must be an object"], "warnings": [], "limits": LIMITS}
-    if data.get("format") != FORMAT:
-        errors.append(f"format must be {FORMAT}")
-    if not nonempty(data.get("revision")):
-        errors.append("Record needs an explicit current product/source revision")
-
-    def fail(where: str, message: str) -> None:
-        errors.append(f"{where}: {message}")
-
-    def table(key: str, required: bool = False) -> dict[str, dict]:
-        rows = data.get(key, [])
-        out: dict[str, dict] = {}
-        if not isinstance(rows, list):
-            fail(key, "Expected a list"); return out
-        if required and not rows:
-            fail(key, "At least one entry is needed for this opt-in profile")
-        for i, item in enumerate(rows):
-            where = f"{key}[{i}]"
-            if not isinstance(item, dict) or not nonempty(item.get("id")):
-                fail(where, "Expected an object with a nonempty id"); continue
-            name = item["id"]
-            if name in out:
-                fail(where, f"Duplicate id {name}")
-            else:
-                out[name] = item
-        return out
-
-    objects = table("objects", True)
-    conditions = table("conditions")
-    evidence = table("evidence")
-    decisions = table("decisions", True)
-
-    def refs(value: object, known: dict, where: str, required: bool = False) -> list[str]:
-        if not isinstance(value, list) or any(not nonempty(x) for x in value):
-            fail(where, "Expected a list of reference IDs"); return []
-        if required and not value:
-            fail(where, "Reference list is empty")
-        if len(value) != len(set(value)):
-            fail(where, "Duplicate references")
-        for x in value:
-            if x not in known:
-                fail(where, f"Unknown reference {x}")
-        return [x for x in value if x in known]
-
-    def location(value: object, where: str) -> Path | None:
-        if not isinstance(value, dict) or len(value) != 1 or not ({"path", "url"} & value.keys()):
-            fail(where, "Use exactly one path or url"); return None
-        if "path" in value:
-            try:
-                return local_file(root, value["path"])
-            except (ValueError, OSError, RuntimeError) as exc:
-                fail(where, str(exc)); return None
-        raw = value["url"]
-        try:
-            u = urlsplit(raw) if isinstance(raw, str) else None
-            if not u or u.scheme not in {"https", "http"} or not u.hostname or u.username or u.password:
-                raise ValueError("Expected an HTTP(S) source URL without credentials")
-            _ = u.port
-        except (ValueError, TypeError):
-            fail(where, "Invalid remote source URL"); return None
-        warnings.append(f"{where}: remote availability and content not checked")
-        return None
-
-    def exception(value: object, where: str) -> None:
-        if not isinstance(value, dict):
-            fail(where, "An explicit exception record is required"); return
-        for key in ("by", "source", "reason", "scope"):
-            if not nonempty(value.get(key)):
-                fail(where, f"Exception needs {key}")
-        warnings.append(f"{where}: authority and approval authenticity require independent review")
-
-    for oid, obj in objects.items():
-        if obj.get("level") not in LEVELS or not nonempty(obj.get("title")):
-            fail(oid, "Object needs level L0–L5 and a title")
-        parent = obj.get("parent")
-        if parent is not None and (not isinstance(parent, str) or parent not in objects):
-            fail(oid, "Unknown parent")
-        seen = {oid}; current = parent
-        while isinstance(current, str) and current in objects:
-            if current in seen:
-                fail(oid, "Containment cycle"); break
-            seen.add(current); current = objects[current].get("parent")
-    for cid, condition in conditions.items():
-        if not nonempty(condition.get("description")):
-            fail(cid, "Condition needs its actual viewing/use description")
-
-    relations = data.get("relations", [])
-    if not isinstance(relations, list):
-        fail("relations", "Expected a list"); relations = []
-    for i, rel in enumerate(relations):
-        if not isinstance(rel, dict):
-            fail(f"relations[{i}]", "Expected an object"); continue
-        if rel.get("type") not in {"affects", "depends_on", "appears_in", "precedes", "transitions_to", "shares"}:
-            fail(f"relations[{i}]", "Unknown relationship type")
-        refs([rel.get("from"), rel.get("to")], objects, f"relations[{i}]")
-
-    for eid, item in evidence.items():
-        if item.get("kind") not in KINDS or item.get("role") not in ROLES:
-            fail(eid, "Unknown evidence kind or source role")
-        if item.get("status") not in {"acquired", "observed"}:
-            fail(eid, "Evidence status must be acquired or observed")
-        refs(item.get("objects", []), objects, eid + ".objects", True)
-        refs(item.get("conditions", []), conditions, eid + ".conditions")
-        path = location(item.get("location"), eid)
-        if item.get("status") == "observed" and not nonempty(item.get("observation")):
-            fail(eid, "Observed evidence needs the actual inspected portion and observation")
-        if item.get("kind") == "temporal" and item.get("status") == "observed":
-            if not nonempty(item.get("window")) or not nonempty(item.get("method")):
-                fail(eid, "Temporal observation needs its actual window and viewing method")
-        if "sha256" in item:
-            digest = item["sha256"]
-            if not isinstance(digest, str) or not re.fullmatch(r"[a-f0-9]{64}", digest):
-                fail(eid, "Invalid SHA-256")
-            elif path and hashlib.sha256(path.read_bytes()).hexdigest() != digest:
-                fail(eid, "Local evidence digest differs")
-
-    for did, decision in decisions.items():
-        d_objects = refs(decision.get("objects", []), objects, did + ".objects", True)
-        for key in ("purpose", "question"):
-            if not nonempty(decision.get(key)):
-                fail(did, f"Decision needs {key}")
-        refs(decision.get("evidence", []), evidence, did + ".evidence")
-        comparison = decision.get("comparison")
-        if comparison is not None:
-            if not isinstance(comparison, dict) or comparison.get("state") not in {"planned", "compared"}:
-                fail(did, "Unknown comparison state")
-            elif comparison["state"] == "compared":
-                alternatives = comparison.get("alternatives", [])
-                if not isinstance(alternatives, list) or any(not nonempty(x) for x in alternatives):
-                    fail(did, "Compared alternatives must be named"); alternatives = []
-                if len(set(alternatives)) < 2:
-                    fail(did, "A declared comparison needs distinct named alternatives")
-                compared = refs(comparison.get("evidence", []), evidence, did + ".comparison.evidence", True)
-                if not any(evidence[e].get("status") == "observed" for e in compared):
-                    fail(did, "Comparison needs observed support, not only acquired sources")
-                if not nonempty(comparison.get("rationale")):
-                    fail(did, "Comparison needs observed differences and conditions")
-        adoption = decision.get("implementation")
-        if adoption is not None:
-            if not isinstance(adoption, dict) or adoption.get("state") not in {"proposed", "trialed", "adopted"}:
-                fail(did, "Unknown implementation state")
-            else:
-                paths = adoption.get("paths", [])
-                if not isinstance(paths, list):
-                    fail(did, "Implementation paths must be a list"); paths = []
-                if adoption["state"] in {"trialed", "adopted"}:
-                    if not paths:
-                        fail(did, "Trialed/adopted implementation needs actual local paths")
-                    adopted = refs(adoption.get("evidence", []), evidence, did + ".implementation.evidence", True)
-                    if adoption["state"] == "trialed" and not any(
-                        evidence[e].get("status") == "observed" and evidence[e].get("role") == "trial"
-                        and evidence[e].get("product_revision") == data.get("revision")
-                        for e in adopted
-                    ):
-                        fail(did, "Trial needs observed current-project trial evidence")
-                for p in paths:
-                    location({"path": p}, did + ".implementation")
-        approval = decision.get("approval")
-        if approval is not None:
-            if not isinstance(approval, dict) or approval.get("status") not in {"pending", "provisional", "approved"}:
-                fail(did, "Unknown approval state")
-            elif approval["status"] == "approved":
-                if not nonempty(approval.get("source")) or not nonempty(approval.get("scope")):
-                    fail(did, "Approval needs actual source and scope")
-                warnings.append(f"{did}: owner approval is declared, not authenticated")
-
-        checks = decision.get("checks", [])
-        if not isinstance(checks, list):
-            fail(did, "Checks must be a list"); checks = []
-        for i, check in enumerate(checks):
-            where = f"{did}.checks[{i}]"
-            if not isinstance(check, dict):
-                fail(where, "Expected an object"); continue
-            if check.get("status") not in {"planned", "pass", "fail", "blocked", "waived"}:
-                fail(where, "Unknown check status")
-            if check.get("domain") not in DOMAINS:
-                fail(where, "Unknown verification domain")
-            es = refs(check.get("evidence", []), evidence, where + ".evidence")
-            os = refs(check.get("objects", d_objects), objects, where + ".objects", True)
-            cs = refs(check.get("conditions", []), conditions, where + ".conditions", check.get("status") == "pass")
-            if any(x not in d_objects for x in os):
-                fail(where, "Check broadens beyond this decision's declared objects")
-            if check.get("status") == "waived":
-                exception(check.get("exception"), where)
-            if check.get("status") == "pass":
-                if check.get("revision") != data.get("revision"):
-                    fail(where, "Passing check is stale or lacks the current revision")
-                if not nonempty(check.get("finding")):
-                    fail(where, "Passing check needs its scoped observed finding")
-                role = check.get("role", "integrated")
-                if role not in {"trial", "integrated"}:
-                    fail(where, "Current-project check must identify trial or integrated scope")
-                suitable = [evidence[e] for e in es if evidence[e].get("status") == "observed"
-                            and evidence[e].get("kind") in DOMAINS.get(check.get("domain"), set())
-                            and evidence[e].get("role") == role
-                            and evidence[e].get("product_revision") == data.get("revision")]
-                # Every declared object-condition pair must have a matching observation.
-                if not suitable or any(not any(o in e.get("objects", []) and c in e.get("conditions", [])
-                                               for e in suitable) for o in os for c in cs):
-                    fail(where, "Pass lacks observed, matching-domain/object/condition/revision evidence")
-
-        gaps = decision.get("gaps", [])
-        if not isinstance(gaps, list):
-            fail(did, "Gaps must be a list"); gaps = []
-        gap_ids: set[str] = set(); unresolved: list[dict] = []
-        for i, gap in enumerate(gaps):
-            where = f"{did}.gaps[{i}]"
-            if not isinstance(gap, dict) or not nonempty(gap.get("id")):
-                fail(where, "Expected a gap with id"); continue
-            if gap["id"] in gap_ids:
-                fail(where, "Duplicate gap id")
-            gap_ids.add(gap["id"])
-            if gap.get("status") not in {"open", "blocked", "resolved", "waived"} or gap.get("impact") not in {"low", "standard", "high"}:
-                fail(where, "Unknown gap status or impact")
-            refs(gap.get("objects", d_objects), objects, where + ".objects", True)
-            if not nonempty(gap.get("question")):
-                fail(where, "Gap needs a question")
-            if gap.get("status") in {"open", "blocked"}:
-                unresolved.append(gap)
-                if gap.get("impact") == "high" and not nonempty(gap.get("next_action")):
-                    fail(where, "Important gap needs a concrete next evidence-producing action")
-            if gap.get("status") == "resolved":
-                refs(gap.get("resolution_evidence", []), evidence, where + ".resolution_evidence", True)
-            if gap.get("status") == "waived":
-                exception(gap.get("exception"), where)
-        action = decision.get("next_action")
-        if not isinstance(action, dict) or action.get("kind") not in ACTIONS or not nonempty(action.get("reason")):
-            fail(did, "Decision needs a supported next action and reason")
-        else:
-            scope = refs(action.get("objects", d_objects), objects, did + ".next_action.objects", True)
-            if action["kind"] in {"expand", "finish"}:
-                for key in ("judgment", "choice"):
-                    if not nonempty(decision.get(key)):
-                        fail(did, f"Expansion/finish needs an explicit {key}")
-                for gap in unresolved:
-                    if gap.get("impact") == "high" and set(scope) & affected_objects(data, gap.get("objects", d_objects)):
-                        fail(did, "Dependent expansion/finish contradicts an unresolved high-impact gap")
-                if unresolved and not any(set(scope) & affected_objects(data, g.get("objects", d_objects)) for g in unresolved):
-                    if not nonempty(action.get("independent_reason")):
-                        fail(did, "Independent progress needs its dependency explanation")
-
-    challenges = data.get("coverage_challenges", [])
-    if not isinstance(challenges, list):
-        fail("coverage_challenges", "Expected a list"); challenges = []
-    for i, row in enumerate(challenges):
-        where = f"coverage_challenges[{i}]"
-        if not isinstance(row, dict):
-            fail(where, "Expected an object"); continue
-        if row.get("disposition") not in {"include", "exclude", "open"}:
-            fail(where, "Expected include, exclude or open")
-        for key in ("discovery", "reason"):
-            if not nonempty(row.get(key)):
-                fail(where, f"Coverage challenge needs {key}")
-        refs(row.get("evidence", []), evidence, where + ".evidence")
-        refs(row.get("objects", []), objects, where + ".objects")
-        if row.get("disposition") == "open" and not nonempty(row.get("next_action")):
-            fail(where, "Open coverage discovery needs its next action")
-
-    requirements = data.get("required_checks", [])
-    pending_coverage = []
-    if not isinstance(requirements, list):
-        fail("required_checks", "Expected a list"); requirements = []
-    for i, requirement in enumerate(requirements):
-        where = f"required_checks[{i}]"
-        if not isinstance(requirement, dict):
-            fail(where, "Expected an object"); continue
-        oid, cid, domain = (requirement.get(k) for k in ("object", "condition", "domain"))
-        if not isinstance(oid, str) or oid not in objects or not isinstance(cid, str) or cid not in conditions or not isinstance(domain, str) or domain not in DOMAINS:
-            fail(where, "Unknown required object, condition or domain"); continue
-        required_role = requirement.get("role", "integrated")
-        if required_role not in {"trial", "integrated"}:
-            fail(where, "Required check role must be trial or integrated"); continue
-        matching = [c for d in decisions.values() for c in d.get("checks", [])
-                    if isinstance(c, dict) and oid in c.get("objects", d.get("objects", []))
-                    and cid in c.get("conditions", []) and c.get("domain") == domain
-                    and c.get("role", "integrated") == required_role]
-        if not any(c.get("status") in {"pass", "waived"} for c in matching):
-            pending_coverage.append(requirement)
-            for did, decision in decisions.items():
-                action = decision.get("next_action", {})
-                if isinstance(action, dict) and action.get("kind") == "finish" and set(action.get("objects", decision.get("objects", []))) & affected_objects(data, [oid]):
-                    fail(did, "Finish includes a required condition whose check is missing or unresolved")
-
-    return {"ok": not errors, "errors": errors, "warnings": warnings, "limits": LIMITS,
-            "pending_coverage": pending_coverage,
-            "counts": {"objects": len(objects), "evidence": len(evidence), "decisions": len(decisions)}}
-
-
-def validate(data: object, project_root: Path) -> dict:
-    """Return a diagnostic for malformed declarations; root/read failures remain input errors."""
-    try:
-        return _validate(data, project_root)
-    except (TypeError, AttributeError, KeyError) as exc:
-        return {"ok": False, "errors": [f"Malformed field type or required field: {exc}"],
-                "warnings": [], "limits": LIMITS}
-
-
-def project_view(data: dict, view: str, changed: list[str] | None = None) -> dict:
-    """Filter the same records; never rewrite status or manufacture a quality score."""
-    objects = {o["id"]: o for o in data.get("objects", [])}
-    affected = affected_objects(data, changed or [])
-    decisions = data.get("decisions", [])
-    if view == "overview":
-        result = {"objects": list(objects.values()), "coverage_challenges": data.get("coverage_challenges", []),
-                  "decisions": [{k: d.get(k) for k in ("id", "objects", "purpose", "question", "gaps", "next_action")} for d in decisions]}
-    elif view == "execution":
-        result = {"decisions": [{k: d.get(k) for k in ("id", "objects", "implementation", "checks", "approval", "gaps", "next_action")} for d in decisions]}
-    elif view == "detail":
-        result = {"decisions": decisions, "evidence": data.get("evidence", []), "conditions": data.get("conditions", []), "relations": data.get("relations", [])}
+def project_view(data: Any, view: str, changed: list[str] | None = None) -> dict:
+    """Project current records; historical archives do not silently become current decisions."""
+    if view not in {'overview', 'detail', 'execution'}:
+        raise ValueError('Unknown view')
+    decisions = _rows(data, 'decisions')
+    keys = {'overview': ('id', 'objects', 'purpose', 'question', 'gaps', 'next_action'),
+            'execution': ('id', 'objects', 'implementation', 'checks', 'approval', 'gaps', 'next_action')}
+    if view == 'detail':
+        result = {key: _rows(data, key) for key in ('objects', 'decisions', 'evidence', 'conditions', 'relations')}
     else:
-        raise ValueError("Unknown view")
-    result["review_candidates_after_change"] = sorted(affected)
-    result["affected_decisions"] = [d["id"] for d in decisions if affected.intersection(d["objects"])]
+        result = {'decisions': [{k: d[k] for k in keys[view] if k in d} for d in decisions]}
+        if view == 'overview':
+            result.update(objects=_rows(data, 'objects'), coverage_challenges=_rows(data, 'coverage_challenges'))
+    result['record_layer'] = 'current_model'
+    result['meaningful_revisions'] = _rows(data, 'revisions')
+    result['evidence_archive_references'] = _rows(data, 'archive')
+    result['declared_relation_review_candidates'] = relation_candidates(data, changed or [])
+    return copy.deepcopy(result)
+
+
+def inspect_record(data: Any, project_root: Path, *, view: str = 'overview',
+                   changed: list[str] | None = None) -> dict:
+    obs = Observation(data, project_root)
+    if not isinstance(data, dict):
+        obs.note('$', 'record_shape', 'Parsed JSON root is not an object')
+        return obs.report('design_evidence')
+    obs.field(data, 'format', '$')
+    if data.get('format') != FORMAT:
+        obs.note('$.format', 'profile_identifier', f'Declared format is not the supported {FORMAT!r} profile')
+    obs.revision(data, '$')
+    tables = {key: obs.table(key) for key in ('objects', 'conditions', 'evidence', 'decisions')}
+    objects, conditions, evidence, decisions = (tables[k][1] for k in ('objects', 'conditions', 'evidence', 'decisions'))
+    for i, obj in enumerate(tables['objects'][0]):
+        path = obs.row_path(obj, f'$.objects[{i}]')
+        for key in ('level', 'title'):
+            obs.field(obj, key, path)
+        if 'level' in obj and obj['level'] not in LEVELS:
+            obs.note(path + '.level', 'unlisted_level', 'Declared level is outside the L0–L5 vocabulary')
+        if 'parent' in obj and obj['parent'] is not None:
+            obs.ref(obj['parent'], objects, path + '.parent')
+        obs.strings(obj, 'categories', path)
+        obs.revision(obj, path)
+    # A cycle is a graph fact, not a workflow blockade.
+    for oid, obj in objects.items():
+        seen = {oid}; parent = obj.get('parent')
+        while isinstance(parent, str) and parent in objects:
+            if parent in seen:
+                obs.note(obs.row_path(obj, f'objects[{oid}]') + '.parent', 'containment_cycle', 'Declared containment returns to a previously visited object')
+                break
+            seen.add(parent); parent = objects[parent].get('parent')
+    for i, item in enumerate(tables['conditions'][0]):
+        p = obs.row_path(item, f'$.conditions[{i}]')
+        obs.field(item, 'description', p)
+        obs.revision(item, p)
+    relations = obs.rows(data, 'relations')
+    for i, row in enumerate(relations):
+        p = obs.row_path(row, f'$.relations[{i}]')
+        obs.field(row, 'type', p)
+        for key in ('from', 'to'):
+            if key in row: obs.ref(row[key], objects, p + '.' + key)
+            else: obs.field(row, key, p)
+    for i, item in enumerate(tables['evidence'][0]):
+        p = obs.row_path(item, f'$.evidence[{i}]')
+        for key in ('kind', 'role', 'status', 'observation', 'window', 'method'):
+            obs.field(item, key, p)
+        obs.refs(item, 'objects', objects, p); obs.refs(item, 'conditions', conditions, p)
+        obs.field(item, 'location', p, dict); obs.location(item.get('location'), p + '.location')
+        if 'sha256' in item: obs.field(item, 'sha256', p)  # Declaration only; independent tool compares bytes.
+        obs.revision(item, p)
+
+    check_records: list[dict] = []; exception_records: list[dict] = []
+    for i, decision in enumerate(tables['decisions'][0]):
+        p = obs.row_path(decision, f'$.decisions[{i}]')
+        d_objects = obs.refs(decision, 'objects', objects, p)
+        obs.refs(decision, 'evidence', evidence, p)
+        for key in ('purpose', 'question', 'judgment', 'choice'):
+            obs.field(decision, key, p)
+        obs.revision(decision, p); obs.action(decision, p)
+        action = decision.get('next_action')
+        if isinstance(action, dict):
+            obs.field(action, 'kind', p + '.next_action')
+            obs.field(action, 'reason', p + '.next_action')
+            obs.refs(action, 'objects', objects, p + '.next_action')
+        for key in ('comparison', 'implementation', 'approval'):
+            value = obs.field(decision, key, p, dict)
+            if not isinstance(value, dict): continue
+            at = p + '.' + key
+            obs.revision(value, at)
+            if key == 'comparison':
+                obs.field(value, 'state', at); obs.strings(value, 'alternatives', at)
+                obs.refs(value, 'evidence', evidence, at); obs.field(value, 'rationale', at)
+            elif key == 'implementation':
+                obs.field(value, 'state', at); obs.refs(value, 'evidence', evidence, at)
+                for n, path in obs.string_items(value, 'paths', at):
+                    obs.file(path, at + f'.paths[{n}]')
+            else:
+                for field in ('status', 'source', 'scope'): obs.field(value, field, at)
+        for j, check in enumerate(obs.rows(decision, 'checks', p)):
+            cp = obs.row_path(check, p + f'.checks[{j}]')
+            for key in ('domain', 'status', 'finding', 'role'): obs.field(check, key, cp)
+            os = obs.refs(check, 'objects', objects, cp) if 'objects' in check else d_objects
+            cs = obs.refs(check, 'conditions', conditions, cp)
+            obs.refs(check, 'evidence', evidence, cp); obs.revision(check, cp)
+            row = {'field': cp, 'decision_id': decision.get('id'), 'objects': os, 'conditions': cs,
+                   'domain': check.get('domain'), 'declared_status': check.get('status'),
+                   'declared_role': check.get('role'), 'matching_role': check.get('role', 'integrated'),
+                   'record': check}
+            if check.get('status') == 'waived': exception_records.append(row)
+            else: check_records.append(row)
+            if 'exception' in check:
+                ex = obs.field(check, 'exception', cp, dict)
+                if isinstance(ex, dict):
+                    for key in ('by', 'source', 'reason', 'scope'): obs.field(ex, key, cp + '.exception')
+        seen_gaps = set()
+        for j, gap in enumerate(obs.rows(decision, 'gaps', p)):
+            gp = obs.row_path(gap, p + f'.gaps[{j}]')
+            gid = obs.field(gap, 'id', gp, identity=True)
+            if text(gid):
+                if gid in seen_gaps: obs.note(gp + '.id', 'duplicate_id', 'Gap identifier is repeated within this decision')
+                seen_gaps.add(gid)
+            for key in ('status', 'impact', 'question'): obs.field(gap, key, gp)
+            obs.refs(gap, 'objects', objects, gp); obs.refs(gap, 'resolution_evidence', evidence, gp)
+            obs.action(gap, gp)
+            if 'exception' in gap:
+                obs.field(gap, 'exception', gp, dict)
+    for i, row in enumerate(obs.rows(data, 'coverage_challenges')):
+        p = obs.row_path(row, f'$.coverage_challenges[{i}]')
+        for key in ('discovery', 'disposition', 'reason'): obs.field(row, key, p)
+        obs.refs(row, 'objects', objects, p); obs.refs(row, 'evidence', evidence, p); obs.action(row, p)
+
+    declared_items = []
+    for i, req in enumerate(obs.rows(data, 'required_checks')):
+        p = obs.row_path(req, f'$.required_checks[{i}]')
+        for key, known in (('object', objects), ('condition', conditions)):
+            if key in req: obs.ref(req[key], known, p + '.' + key)
+            else: obs.field(req, key, p)
+        for key in ('domain', 'role'): obs.field(req, key, p)
+        def matches(c: dict) -> bool:
+            return (isinstance(req.get('object'), str) and req['object'] in c['objects']
+                    and isinstance(req.get('condition'), str) and req['condition'] in c['conditions']
+                    and c['domain'] == req.get('domain') and c['matching_role'] == req.get('role', 'integrated'))
+        declared_items.append({'field': p, 'declared_target': req,
+                               'check_record_fields': [c['field'] for c in check_records if matches(c)],
+                               'exception_record_fields': [c['field'] for c in exception_records if matches(c)],
+                               'basis': 'Literal object/condition/domain/role match only; status and revision do not determine sufficiency.'})
+    for i, rev in enumerate(obs.rows(data, 'revisions')):
+        p = obs.row_path(rev, f'$.revisions[{i}]')
+        for key in ('id', 'summary', 'reason', 'current_judgment'): obs.field(rev, key, p)
+        obs.refs(rev, 'objects', objects, p); obs.refs(rev, 'evidence', evidence, p)
+        obs.strings(rev, 'historical_objects', p)  # Historical IDs are not current reference claims.
+        obs.location(rev.get('previous'), p + '.previous'); obs.revision(rev, p)
+    for i, archive in enumerate(obs.rows(data, 'archive')):
+        p = obs.row_path(archive, f'$.archive[{i}]')
+        for key in ('id', 'description'): obs.field(archive, key, p)
+        obs.location(archive.get('location'), p + '.location'); obs.revision(archive, p)
+
+    by_level = {level: [o.get('id') for o in tables['objects'][0] if o.get('level') == level] for level in LEVELS}
+    tagged = {tag for obj in tables['objects'][0] for tag in _ids(obj.get('categories'))}
+    try:
+        vocab = json.loads(VOCABULARY.read_text(encoding='utf-8'))
+        categories = vocab['categories']
+        vocabulary_source = vocab['version']
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        categories = []; vocabulary_source = None
+        obs.note('bundled_vocabulary', 'vocabulary_read_problem', str(exc))
+    hints = [{'category': row['id'], 'description': row['description'],
+              'basis': 'No explicit matching category tag on current objects; prose and archived material were not classified.',
+              'task_applicability': 'not_assessed'} for row in categories if row['id'] not in tagged]
+    result = obs.report('design_evidence')
+    result.update(object_inventory={'by_level': by_level, 'declared_categories': sorted(tagged),
+                                    'unrepresented_levels': [x for x, rows in by_level.items() if not rows]},
+                  counts={k: len(tables[k][0]) for k in tables},
+                  declared_relations=relations, declared_check_records=check_records,
+                  declared_exception_records=exception_records, declared_item_records=declared_items,
+                  unlisted_declared_items=[r for r in declared_items if not r['check_record_fields'] and not r['exception_record_fields']],
+                  candidate_unrepresented_categories=hints, coverage_vocabulary=vocabulary_source,
+                  view=project_view(data, view, changed))
     return result
+
+
+def validate(data: Any, project_root: Path) -> dict:
+    """Import-compatible name; returns the neutral inspection report, never a pass flag."""
+    return inspect_record(data, project_root)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--project-root", type=Path, required=True)
-    parser.add_argument("--record", default=".ui-spec/design-evidence.json", help="Project-relative JSON file")
-    parser.add_argument("--view", choices=("overview", "detail", "execution"), default="overview")
-    parser.add_argument("--changed", action="append", default=[], help="Changed object ID; repeat as needed")
+    parser.add_argument('--project-root', type=Path, required=True)
+    parser.add_argument('--record', default='.ui-spec/design-evidence.json')
+    parser.add_argument('--view', choices=('overview', 'detail', 'execution'), default='overview')
+    parser.add_argument('--changed', action='append', default=[], help='Object ID used only for declared-relation lookup')
     args = parser.parse_args()
     try:
         root = args.project_root.resolve(strict=True)
-        data = json.loads(local_file(root, args.record).read_text(encoding="utf-8"))
-        result = validate(data, root)
-        if result["ok"]:
-            result["view"] = project_view(data, args.view, args.changed)
+        data = read_record(root, args.record)
+        result = inspect_record(data, root, view=args.view, changed=args.changed)
+        result['record_source']['path'] = args.record
         print(json.dumps(result, ensure_ascii=False, indent=2))
-        return 0 if result["ok"] else 1
+        return 0  # Inspection ran, even with findings; never a design/phase gate.
     except (OSError, ValueError, TypeError, RuntimeError, RecursionError) as exc:
-        print(f"check_design_evidence: {exc}", file=sys.stderr)
+        print(json.dumps(unreadable(args.record, exc), ensure_ascii=False, indent=2))
         return 2
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     raise SystemExit(main())

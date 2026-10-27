@@ -124,7 +124,7 @@ class ResourceTests(unittest.TestCase):
         script=ROOT/'skills/ui-spec/scripts/find_resources.py'
         result=subprocess.run([sys.executable,str(script),'no-such-resource-xyz','--json'],capture_output=True,text=True)
         self.assertEqual(result.returncode,0)
-        data=json.loads(result.stdout);self.assertEqual(data['count'],0);self.assertIn('next_action',data)
+        data=json.loads(result.stdout);self.assertEqual(data['count'],0);self.assertIn('query_observation',data)
         result=subprocess.run([sys.executable,str(script),'--need','missing'],capture_output=True,text=True)
         self.assertEqual(result.returncode,2);self.assertNotIn('Traceback',result.stderr)
 

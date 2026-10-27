@@ -1,14 +1,13 @@
 # Optional local evidence-record profile
 
-Use this profile only when a project benefits from machine-readable checks and
-views. The [design map](evidence-map.md) defines the professional relationships;
-existing Markdown, design notes or project records can satisfy them without JSON.
-Do not duplicate the authoritative facts in several formats. The
-[template](../assets/templates/design-evidence.json) is a valid **unfilled draft**,
-not a completed design map or evidence of research. `prepare.py` does not create
-it automatically.
+Use this profile when a project benefits from machine-readable **structural
+observations**. Existing Markdown and project records can carry the same design
+relationships. The [map](evidence-map.md) organizes them; the
+[action method](evidence-actions.md) guides the Agent's professional decisions.
+JSON is optional. Neither a schema nor a tool return decides research sufficiency,
+implementation readiness, design correctness or task completion.
 
-## Run the read-only helper
+## Read-only use and report semantics
 
 ```bash
 python <skill-dir>/scripts/check_design_evidence.py --project-root . \
@@ -19,116 +18,157 @@ python <skill-dir>/scripts/check_design_evidence.py --project-root . \
   --record .ui-spec/design-evidence.json --view execution --changed typography
 ```
 
-The helper prints JSON to stdout, reads local files only and makes no network
-requests or writes. Exit 0 means the declared record is structurally consistent;
-1 reports inconsistencies; 2 reports input/read problems. All record reports include
-the evidence limits. It neither calls tools for the agent nor schedules work,
-advances statuses, creates approvals or rates visual quality.
+The report describes the supplied file and declared snapshot. `record_readability:
+readable` means JSON was read, not that its shape, professional content or quality
+is sound. `structural_findings` separately identifies wrong shapes, ambiguous IDs,
+unresolved references, graph cycles and local-path facts. Missing optional fields
+are `field_observations`, not instructions to fill every field. A readable empty
+map can have no structural findings while no design work has happened.
 
-## Small core, richer facts when available
+Exit `0` means inspection ran, including reports with findings; exit `2` means an
+input/read problem prevented it. Neither exit value rates design work. There is
+no aggregate `ok`, pass, readiness or satisfied result. Integrations should read
+specific facts for their own purposes rather than use an inspector as a launch
+or finish gate. The older Python function name `validate` remains an alias to
+this report, not to its former acceptance behavior.
 
-The root has `format: "ui-spec-evidence/1"`, an explicit current source/product
-`revision`, and `objects`/`decisions` lists. Add `conditions`, `evidence`,
-`relations`, `coverage_challenges` and `required_checks` as needed. A new record
-can be structurally valid while all research is pending. For a light correction,
-prefer the existing short prose decision over adopting JSON merely to run a tool.
-
-| Entry | Core fields and meaning |
+| Report relation | Precisely what it represents |
 |---|---|
-| Object | `id`, `level` L0–L5, `title`; optional `parent` for containment only. L5 may describe a realization linked to several higher-scale decisions. |
-| Condition | `id`, `description` naming the relevant state/view/locale/theme/content/input/version combination. Separate conditions where claims differ. |
-| Evidence | `id`, `kind`, `role`, `location`, `status`, `objects`, `conditions`; an observed item also has `observation` identifying what was actually inspected. |
-| Decision | `id`, `objects`, `purpose`, `question`, evidence references and `next_action`; progressively add judgment, alternatives, choice, implementation, gaps, checks and approval. |
+| `record_source` | Input path, declared format/revision and origin, not authenticated source truth |
+| `object_inventory`, `counts` | Explicit object IDs, L0–L5 labels, category tags and record counts |
+| `field_observations`, `structural_findings` | Field presence/shape and directly inspectable structural problems |
+| `reference_observations` | ID lookup within the declared current record scope |
+| `file_observations` | Local path type/size or remote URL syntax; remote URLs are never fetched |
+| `declared_check_records` | Checks and their author-declared statuses; the inspector did not execute them |
+| `declared_exception_records` | Waiver declarations, kept separate from non-waived checks |
+| `declared_item_records` | Literal links between explicitly listed check targets and check/exception records |
+| `unlisted_declared_items` | Explicitly listed targets for which neither type of record was found |
+| `candidate_unrepresented_categories` | Theoretical categories with no explicit current-object tag; applicability is unassessed |
+| `revision_declarations` | Declared snapshot, source, object and check identities without global invalidation |
+| `declared_actions` | Agent-written action text, returned without selection, validation or execution |
+| `declared_relation_review_candidates` in the view | Objects reachable through listed relations, not proven impacts or required rechecks |
 
-Evidence `kind` is `text`, `visual`, `temporal`, `implementation` or `runtime`.
-Its `role` is `reference`, `candidate`, `demo`, `trial` or `integrated`; status
-is `acquired` or `observed`. A local location is `{"path":"relative/file"}`;
-a remote location is `{"url":"https://…"}`. Only local files are checked.
-Use project-relative POSIX paths with no parent traversal or symlinks. A local
-`sha256`, when supplied, is compared with actual bytes. Source rights and factual
-truth still require their own review.
+A planned or failed check is still a check record. A waived target can have only
+an exception record; it is not converted to a successful observation. A missing
+record is not automatically missing research: equivalent work may be recorded
+elsewhere. The Agent establishes relevance and examines the actual material.
 
-Observed temporal evidence additionally describes the actual `window` and
-`method`, including playback, live operation or ordered sampling limits.
-Current-project evidence has `product_revision` matching the subject checked;
-external references retain their own revision as source information. A still
-must not be relabeled temporal to evade the method's observation requirement.
-The helper cannot detect dishonest declarations or judge whether sampling was
-adequate for the claimed motion.
+## Small core and optional detail
 
-Optional `relations` identify `from`, `to`, and `type`: `affects`, `depends_on`,
-`appears_in`, `precedes`, `transitions_to` or `shares`. The `--changed` report
-follows declared dependency/shared-use and ancestor relationships. It reports
-candidate review scope only; time ordering by itself is not a causal invalidation
-edge. Cyclic dependencies can be legitimate; containment cycles are rejected.
+The profile uses `format: "ui-spec-evidence/1"`. `revision` labels the current
+record snapshot when known; null or omission preserves an unrecorded identity.
+Use `record_origin` to distinguish an unfilled template, an initialized working
+record and an authored project model. The [empty template](../assets/templates/design-evidence.json)
+contains no invented objects, candidate or next action and is not created by
+`prepare.py` automatically.
 
-## Decisions and actual progress
+Collections are added according to need. Their ID and reference shapes support
+lookup; they are not a demand for every theoretical design dimension.
 
-A `comparison` can be planned or compared. A compared record identifies distinct
-named `alternatives`, observed supporting `evidence` and a `rationale` describing differences
-and conditions. The helper cannot assess whether two named options actually
-have meaningful visual differences. An inherited supported choice need not claim
-a new comparison.
+| Entry | Fields and intended professional meaning |
+|---|---|
+| Object | `id`, L0–L5 `level`, `title`; optional `parent`, `revision`, `categories` and project-specific detail |
+| Condition | `id`, `description`; distinguish relevant state, viewport, theme, locale, content, role, platform and version |
+| Evidence | `id`, `kind`, `role`, `location`, `status`, linked `objects` and `conditions`; actual inspected portion belongs in `observation` |
+| Decision | `id`, `objects`, `purpose`, `question`; add judgment, evidence, candidates, choice, implementation, gaps, checks, approval and Agent-authored action as work occurs |
+| Revision | Meaningful change: `id`, `summary`, `reason`, affected current `objects`, evidence, `current_judgment`, optional prior snapshot location and `historical_objects` |
+| Archive | `id`, `location`, `revision`, `description` linking an earlier record or raw evidence; content is not loaded into current decisions |
 
-`implementation` has state `proposed`, `trialed` or `adopted`, actual `paths`
-and relevant `evidence`. Trialed/adopted declarations need existing paths and
-source references. A trial also needs observed evidence with the current project revision and trial role. Their existence cannot prove that an import was used, the
-application ran, or the candidate's visible quality survived adaptation.
+The root `objects`/`decisions` collections express the **current model**.
+`revisions` explains important changes. `archive` points to original evidence and
+prior snapshots. These are optional ordinary records, not transactions or a new
+lifecycle. Store large media and full histories in authorized project locations;
+links avoid duplicating them. Historical object identifiers need not still be
+present in the current model, so use `historical_objects` for that purpose.
 
-A `check` has a domain (`visual`, `temporal`, `engineering`, `task`), objects,
-conditions, status (`planned`, `pass`, `fail`, `blocked`, `waived`) and evidence.
-Passing current-project claims additionally identify `revision`, a `finding`
-and `role` (`trial` or `integrated`, default integrated). For every declared
-object-condition pair, the helper requires an observed item in the matching
-role, current revision and evidence domain. Visual claims need visual evidence;
-temporal claims need temporal evidence; engineering claims accept implementation
-or runtime evidence; task claims require runtime evidence. This is a declaration
-consistency check, not authentication of that evidence.
+## Source and file facts
 
-`required_checks` optionally names object/condition/domain triples that the
-project has explicitly committed to, with an optional `role` (default integrated). A trial pass cannot satisfy an integrated requirement. Unchecked requirements are reported in
-`pending_coverage`; claiming `finish` for a dependent object while those checks
-remain unresolved is inconsistent. Only declared requirements are checked:
-Coverage Discovery & Challenge must still discover missing obligations.
-A waived check remains an exception, never a passing observation.
+Evidence kinds commonly include text, visual, temporal, implementation and
+runtime. Source roles commonly include reference, candidate, demo, trial and
+integrated result. They remain separate from acquired/observed status. The
+inspector presents declared values; professional meaning and matching a claim
+to evidence belong to the Agent. Custom descriptive states are not progression
+commands. A single candidate, a text/visual pairing or a high-impact open issue
+never produces a mechanical recommendation or veto.
 
-Owner `approval` is separate: pending, provisional or approved. Approved records
-need source and scope. Exceptions on checks or gaps need `by`, `source`, `reason`
-and `scope`; these fields identify a claim of authority but cannot verify it.
-Normal security, permissions and legitimate resource-use obligations still apply.
+Use `{"path":"relative/file"}` or `{"url":"https://…"}` for locations.
+Paths are project-relative POSIX paths with no parent traversal or symlinks.
+File metadata is observed; the file's pixels, source use or factual content are
+not. Remote references remain unfetched. Source rights and real authorization
+are separate facts. Optional declared `sha256` text is not compared here.
 
-## Gaps and the next action
+For a separately needed byte-identity assertion, use the independent tool:
 
-A gap has `id`, `question`, `impact` (low/standard/high), `status`
-(open/blocked/resolved/waived) and optionally its affected `objects` (otherwise
-the decision's objects). Open or blocked high-impact gaps have a concrete
-`next_action` explanation. Resolved gaps refer to `resolution_evidence`.
-Exceptions use the scoped authorization record above.
+```bash
+python <skill-dir>/scripts/check_file_integrity.py --project-root . \
+  --path .ui-spec/evidence/capture.png --sha256 <expected-sha256>
+```
 
-The decision's `next_action` names a `kind`, `reason` and optional affected
-`objects`. Kinds are research, inspect, compare, trial, implement, expand,
-verify, revise, ask or finish. Expansion/finish need explicit judgment and
-choice and cannot overlap an unresolved high-impact gap or its declared dependency/containing-scope impacts. Supported independent
-progress names its separate objects and `independent_reason`. Use `trial` for a
-reversible investigation rather than labeling unsupported broad work an
-implementation to evade the action rule. The helper cannot infer the actual
-size or effects of work from its declared label.
+This command returns match/mismatch for those bytes only; exit 0/1 corresponds
+to that explicit assertion and exit 2 to inability to check. It cannot establish
+that the image was viewed, its contents are truthful or a UI is well designed.
 
-A coverage discovery records `discovery`, `reason`, disposition include/exclude/open,
-related evidence/objects and an action for an open question. It can document a
-relevant reference feature or a task-derived omission; it does not force adopting
-all reference-product features.
+## Records are not independent verification
 
-## Three views and their limits
+The Agent describes actual temporal observation with its window, method and
+sampling limitations. A still cannot establish an unseen transition. Evidence
+used to judge visual quality needs an actually viewed subject; an original demo
+and an integrated page are different subjects. These are professional duties,
+not predicates the structural inspector evaluates.
 
-Overview projects objects, discoveries and decision questions. Detail projects
-full decisions, evidence, conditions and relations. Execution projects source
-locations, scoped checks, approvals, gaps and next action. All use the same
-record without writing derived reports back into the source. Inspection counts
-are structural counts, not a coverage percentage or aesthetic score.
+A `comparison` may record state, named alternatives, evidence and rationale.
+There is no mechanical two-name minimum: names alone cannot establish real
+visual differences. The Agent decides when meaningful alternatives are needed,
+when existing verified work suffices, and what observation would change a choice.
+An `implementation` can record proposed/trialed/adopted state, paths and evidence.
+A located source file does not establish that the app uses it or retains its craft.
 
-After a change, retain old observations and approval scope but update current
-revision/check applicability. Passing stale evidence is rejected by this profile;
-manual carry-forward needs a new scoped explanation and the appropriate evidence,
-not merely replacing a revision string. Actual execution traces, image viewing,
-semantic comparison and real product judgment remain outside this helper.
+Checks commonly declare domain, objects, conditions, role, status, revision,
+finding and evidence. A record's `pass`, `fail` or `blocked` remains the author's
+statement about a scoped external check; it is not the inspector's verdict.
+`required_checks` can explicitly list object/condition/domain/role targets.
+Matching uses literal addresses, not sufficiency, evidence-type or version rules.
+The default role `integrated` is a documented matching convention, not an
+assertion that an unlabelled observation was actually integrated. Inspectors
+never aggregate declared passes into design completion.
+
+Approval has its own source and scope; exceptions have their own decision,
+reason and authority. Missing provenance can be visible as an undeclared field;
+its authenticity and consequence require independent judgment. A waiver can
+change an authorized scope without making missing observation real. Normal host
+permissions, security and resource-use obligations remain in force.
+
+## Theory is not applicability
+
+The [bundled category vocabulary](../assets/design-coverage-categories.json)
+provides theoretical prompts, including content, assets, responsive variants,
+recovery, performance and operational use. Matching only counts explicit
+`objects[].categories` tags. No tag does not prove no corresponding design work:
+prose, shared components and archived material may contain it. Unknown project
+categories remain visible; not every project needs all catalog categories.
+
+A broken ID reference is **within-declaration missing information**. A catalog
+category with no tag is **candidate unrepresented coverage**. Do not convert the
+second into the first. The Agent chooses include, exclude, combine, split or
+further research using the actual task and observed mature products.
+
+## Relations, revision and current applicability
+
+Relations name `from`, `to` and a type. Change lookup follows child-to-parent
+containment, affects/appears_in, reverse depends_on, and bidirectional shares.
+It does not traverse precedes/transitions_to as proof of causal impact. Cycles
+terminate safely; a containment cycle is reported as a graph fact. Unresolved
+`--changed` IDs are listed rather than causing a work blockade.
+
+A global snapshot change does not mechanically invalidate prior observations.
+Keep local source/asset/condition identity with the actual checked subject.
+Old results remain historical facts. The Agent decides which observations still
+apply, which need a scoped carry-forward explanation and which need new viewing
+or testing. Changing an unrelated backend implementation need not erase all
+visual findings; changing a font can affect several dependent layouts.
+
+Overview, Detail and Execution are projections of the same **current** records.
+Revision summaries and archive references stay recognizable as history; the
+inspector does not load them as competing current choices or rewrite any status.
+Update the current judgment after meaningful new evidence and link why it changed.
+A record listing a future action does not prove that action was performed.

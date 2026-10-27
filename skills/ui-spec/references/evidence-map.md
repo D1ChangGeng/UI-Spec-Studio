@@ -183,9 +183,93 @@ reasoning or manually select routine components.
 ## Tool boundary
 
 The optional [structured profile](evidence-records.md) and
-[checker](../scripts/check_design_evidence.py) can inspect IDs, declared states,
-local references, condition coverage, revision consistency and action/gap links.
-They do not fetch remote sources, read pixels, run an agent, establish source
-truth, authenticate approvers or judge aesthetic maturity. A valid record of
-blocked work is still blocked work. Existing project records remain sufficient
-when they express the same decision relationships.
+[structural inspector](../scripts/check_design_evidence.py) describes IDs, field
+shapes, declared state labels, reference resolution, local file metadata and
+explicit target-to-record links. It reports theoretical categories not explicitly
+tagged and paths reachable through declared relations. It does not evaluate
+evidence adequacy, candidate differences, source/check compatibility, version
+applicability or whether an action is justified. Readability and structural
+observations stay separate; neither authorizes progress or certifies completion.
+The Agent interprets these facts using the actual task, professional knowledge
+and real evidence. Existing project records remain sufficient when they express
+the same design relationships.
+
+## Theory, declarations and task-specific applicability
+
+The theoretical design vocabulary is a set of professional observation lenses,
+not a universal inventory every product must implement. It includes all six
+scales and relevant typography, assets, states, motion, accessibility, responsive
+conditions, recovery, performance and operating content. A reading tool may have
+no form flow; a conversational application may need deep attachment and long-text
+work; a brand page may need photography or spatial composition instead.
+
+Distinguish **within-declaration absence** from **candidate unrepresented coverage**.
+A component ID referenced by L5 but not present is mechanically unresolved. An L3
+region with no listed state link or an L4 asset with no listed source is a record
+observation. A theoretical category with no explicit tag is only a prompt: the
+same subject may be addressed in prose, by a shared decision or outside this record.
+The inspector cannot determine necessity, representation equivalence or completeness.
+
+Use real tasks, actual references and professional judgment to include, exclude,
+combine, split or investigate the candidate. Keep the reason for consequential
+scope choices; do not add fictitious objects or busywork to silence hints. A single
+source can adequately support a narrow inherited change; a two-name comparison
+can remain superficial. Counts cannot decide either case.
+
+## Four independent responsibilities
+
+The **map** is the current design understanding, not the product itself. The
+**inspector** observes representations, not the professional truth of their links.
+The **Agent** owns evidence interpretation, source choice and actual execution.
+**Independent verification and acceptance** support specific outcomes through
+actual visual viewing, continuous use, browser/function tests, timing measurements,
+engineering checks and authorized user decisions. A passed browser assertion
+proves its own condition; a reviewed image supplies scoped visual evidence; owner
+approval supplies preference or authorization. Keep these results separate.
+
+## Current model, meaningful revisions and evidence archive
+
+Prioritize a **Current Design Model** with intended experience, active choices,
+actual adoption, implementation relationships, current constraints and open
+questions. One canonical current choice should be easy to identify. Do not leave
+several incompatible conclusions looking simultaneously authoritative.
+
+Preserve **Meaningful Revisions** when new observations change understanding or
+implementation. Record what changed, why, the affected objects/conditions and the
+judgment now in use. Ordinary Git history, a short linked revision note or optional
+`revisions` entries suffice. Routine tool calls do not each require a revision.
+
+An **Evidence Archive** retains source snapshots, original captures, media,
+code identities, execution traces and prior design records in authorized storage.
+Link rather than re-copy them. Keep archived judgments identifiable as historical;
+current views need not load every old candidate or superseded assumption.
+
+For example, a single-line composer may have passed its former layout check.
+Adding several attachments can expose wrapping and focus problems. Keep the old
+observation intact, update the current object's conditions and open questions,
+explain the revision, and inspect the changed layout. The new issue does not erase
+the historical test, and the old pass does not certify the expanded use case.
+
+## Local change and revisable state
+
+Research facts (acquired/observed/compared), implementation facts
+(proposed/trialed/adopted), verification records (planned/executed/issues/results),
+issue disposition (open/blocked/resolved/exception) and owner decisions
+(pending/provisional/approved) can coexist. They are neither one irreversible
+maturity ladder nor a mechanical instruction to enter another stage. A statement
+is conditioned on its object, source identity, use and observer; its recorded
+label does not authenticate the event.
+
+A project snapshot identifies a whole record. Applicability follows the actual
+changed component, font, asset, content, service adapter and conditions. Do not
+invalidate all visual history because unrelated backend code changed. Conversely,
+do not relabel an old capture with a new version to imply renewed observation.
+The Agent assesses whether a prior result remains applicable, needs a scoped
+carry-forward explanation, or requires a new check. `--changed` offers only
+relation-derived review candidates; omitted links can hide other impacts.
+
+Experience understanding → product research → evidence → professional judgment
+and mature-source discovery → comparison → trial/adaptation → implementation →
+verification remain two revisable lines of work. Either can correct the other:
+trial findings may revise the model, and new product evidence may change resource
+selection. No structural flag, stage label or past approval freezes those choices.

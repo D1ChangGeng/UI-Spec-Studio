@@ -91,3 +91,28 @@ Use [the map](evidence-map.md) and existing design records to expose the current
 Before expanding a consequential choice or declaring its completion, read and apply [evidence-actions.md](evidence-actions.md). For every open high-impact question, identify the next actual search, view, comparison, trial or recheck and the result that would change the choice. Keep dependent broad implementation provisional while its critical evidence is missing. Continue supported independent work or a scoped reversible probe; do not turn one blocked source into a whole-project freeze.
 
 After the action, record the new observation and its effect on the decision, not just the intention to investigate. Reopen only the affected scope when a shared font, layout, asset, adapter or observation condition changes. Supported low-impact work should converge and proceed rather than repeat broad discovery.
+
+## Two revisable lines of work and maintained current understanding
+
+Follow experience intent → task model → mature-product research → actual evidence →
+professional judgment alongside resource discovery → meaningful comparison →
+trial/adaptation → implementation → real verification. These lines inform each
+other in every operation. A runtime layout failure can reopen an experience or
+source choice; new product research can change the page model while implementation
+continues in independent supported regions. No record status makes progress
+irreversible.
+
+At init, read the Current Design Model first and recover relevant original evidence
+only as needed. During shape and iterate, update active choices after meaningful
+findings; explain the change, its reason and affected objects in a concise revision.
+During audit and finish, compare current claims with real outputs and scoped tests,
+not with a mechanical inventory-success flag. Archive superseded candidates and
+past conclusions with their source identities instead of leaving contradictory
+choices in the current view. Keep original evidence, material approval decisions
+and informative failures traceable.
+
+The structural inspector reports fields, IDs and declared relations; the Agent
+judges whether absent categories matter, whether evidence is adequate and what
+work follows. Continue low-impact supported changes without filling every category.
+Preparation templates establish no product facts. Query names and successful
+inspector exit codes are not stage permissions or acceptance decisions.

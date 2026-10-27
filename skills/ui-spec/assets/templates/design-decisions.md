@@ -186,3 +186,26 @@ supported work; a reversible probe stays explicitly provisional. After acting,
 link the resulting evidence and explain the actual change to the decision.
 Use [the action rules](../../references/evidence-actions.md) rather than treating
 this template's completed fields as permission to advance.
+
+## Current model and meaningful revisions
+
+Keep the current goal, active choice, actual adopted resource, implementation link,
+conditions and remaining question identifiable. Update the current judgment when
+new observations justify it. Do not present a replaced resource as still adopted.
+
+| Meaningful change | Why / actual new evidence | Objects and conditions affected | Current judgment | Prior record / original evidence |
+|---|---|---|---|---|
+
+Keep raw media, detailed traces and old records in the Evidence Archive; link them
+rather than duplicating them in every view. A previous successful single-line check
+can remain valid historical evidence while a new attachment condition needs review.
+No global revision string automatically invalidates unaffected findings.
+
+### Reading a structural report
+
+Identify the supplied record and distinguish field/reference problems from theory
+categories merely lacking a tag. Explain task-specific include/exclude/combine/split
+or further research choices where consequential. Declared pass, waiver, missing
+record and actual observed result remain distinct. Only the Agent selects the next
+action using the professional method; the inspector neither recommends it nor
+certifies research, readiness, correct design or task completion.
