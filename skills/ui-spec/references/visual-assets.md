@@ -112,3 +112,34 @@ The [asset source map](asset-sources.md) links primary material for icon provena
 Use the shared asset or decision ID in [the map](evidence-map.md) to connect intended character, affected regions, perceptual details, master/source, delivery variants and inspected placements. Do not infer research depth from asset area: a favicon or defining typeface can carry high product impact. If material changes, revisit dependent text contrast, reading space, component weight and relevant dynamic conditions as well as the isolated asset.
 
 Acquired rights, available files, viewed craft, actual integration and owner preference remain distinct. A blocked authorized asset route needs an explicit research gap; a replacement should retain the original quality question and identify any scoped change in direction.
+
+## Discover mature visual material before choosing a production technique
+
+Translate the intended perception into source criteria: subject, silhouette,
+lighting, palette relationships, texture scale, focal space, motion range and use
+size. Research existing licensed photography, illustration families, spatial assets,
+procedural components and authored media before commissioning or generating a
+replacement. A technically impressive asset with the wrong subject or crop does
+not carry the intended identity. Keep factual product representation distinct from
+expressive material; do not present a synthetic screen as the real product.
+
+Photographic craft depends on subject separation, crop, light direction, color and
+space for adjacent content. Compare candidate masters at the *actual* narrow and wide
+placements. A text scrim is a local adaptation to measured readability, not proof
+that every frame of a moving image is readable. Preserve photographic intent rather
+than blurring or darkening away all useful character. A coordinated family can
+retain identity across avatars, covers, empty states and populated result surfaces.
+
+For 3D or dynamic backgrounds, inspect camera, scale, depth cues, reflections,
+alpha/edge treatment and the foreground's stability. Search suitable existing models,
+materials or high-completeness components; separate what the asset resolves from
+what its viewing environment supplies. Decide whether a still export, short authored
+loop or live renderer best serves the task. Check poster quality, loading/failure,
+reduced motion, resizing, device capability, pause/cleanup and combined rendering
+cost. A local sample cannot establish low-end-device performance without measurement.
+
+Keep editable provenance, delivery derivatives, source notices and configuration.
+Permission to use a visual asset in a product does not automatically permit bundling
+it as a reusable stock asset in this Skill. The source's exact terms and this product's
+use remain separate facts; absent rights call for another authorized source or a
+properly scoped original asset, not an unattributed imitation.

@@ -85,3 +85,64 @@ Read these when a concrete technique helps the current design. They are original
 ## Preserve a useful technique
 
 When adapting one of these patterns, keep a short record only if it will improve future work: the task, the transferable relationship, local constraints, editable source, inspected evidence and limits. Separate the project's aesthetic choice from the general mechanism. Add new shared patterns through an authorized maintenance change, with provenance and a concrete counterexample that shows where the technique should change.
+
+## A reading card whose surface follows attention
+
+**Problem.** A professional reading library needs character without making text
+or the opening action difficult to follow.
+
+**Mechanism.** Compare a light moving across a stable plane with a card rotating
+in space. Both can be well-crafted, but only the second moves the text plane and
+may shift action targets. The useful distinction is the intended reading relation,
+not whether either component is labelled premium.
+
+**Mature implementation route.** Inspect actual surface-light and tilt demos in
+visual-component ecosystems such as React Bits, Vue Bits or Magic UI, plus a quiet
+incumbent where it is already credible. These are discovery leads, not endorsed
+winners. Trial matched long content, action placement, themes and pointer input.
+Retain source/configuration when adopting; use a behavior primitive only for a
+separate semantic need, not as proof that the visual effect was reused.
+
+**Failure and inspection.** An opaque child surface can hide the adopted light;
+fixed card height can clip translated copy; pointer-only feedback can disappear
+on touch. Compare original source, local trial and full page, inspect keyboard
+focus and quiet motion, then decide which relation actually supports reading.
+Do not recreate the source's light equation simply to claim original code.
+
+## A composer that inherits a whole working relationship
+
+**Problem.** An input is keyboard-operable but still lacks a mature conversation
+experience when files, multiline text, pending results or errors appear.
+
+**Mechanism.** The composer, attachment previews, primary/secondary actions and
+message continuation belong to one task relationship. Isolated textboxes and icons
+are useful foundations, not that resolved region.
+
+**Mature implementation route.** Search complete composer/thread blocks and real
+product references. Inspect their populated and interrupted states before committing
+the shell; distinguish a styled block from its unstyled primitive API. Adopt the
+highest useful coherent scope, retaining layout and state mechanisms where suitable,
+then connect the product's actual request and attachment owners.
+
+**Failure and inspection.** Check long localized text, attachment failures, keyboard
+entry, cancellation, repeated requests, focus and narrow keyboard conditions. A
+beautiful send animation cannot establish message delivery. Existing validated
+composers can support a narrow copy edit without restarting broad source discovery.
+
+## A sheet that retains its hand-controlled movement
+
+**Problem.** A panel looks polished in a still, but drags lag, short flicks are
+ignored or closing also scrolls the background unexpectedly.
+
+**Mechanism.** Ongoing input, axis ownership, edge resistance and release interpretation
+are different from an authored entrance. Inspect a mature sheet's direct manipulation
+and state contract before choosing a motion route.
+
+**Mature implementation route.** Compare candidate operation with realistic scrolling
+content and focus, then adapt tokens and surfaces rather than replacing its gesture
+engine. Use the [interaction method](interaction-and-variants.md) to identify the
+actual unresolved behavior. Only a demonstrated unmet condition warrants new physics.
+
+**Failure and inspection.** Test pause-then-release, slow movement, a late flick,
+rapid reversal, cancellation and reduced motion. No fixed velocity or spring value
+is a universal craft requirement; the intended task and measured use determine fit.

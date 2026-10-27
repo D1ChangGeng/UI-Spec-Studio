@@ -44,6 +44,8 @@ REQUIRED += ["docs/STRUCTURAL-INSPECTION.md", "docs/REVIEW-v1.15.0.md",
              "skills/ui-spec/scripts/structural_records.py",
              "skills/ui-spec/scripts/check_file_integrity.py",
              "skills/ui-spec/assets/design-coverage-categories.json"]
+REQUIRED += ['docs/VISUAL-CRAFT.md', 'docs/REVIEW-v1.16.0.md',
+             'docs/evidence/v1.16.0/continuity.json', 'tests/test_visual_craft.py']
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 
 

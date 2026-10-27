@@ -273,3 +273,20 @@ and mature-source discovery → comparison → trial/adaptation → implementati
 verification remain two revisable lines of work. Either can correct the other:
 trial findings may revise the model, and new product evidence may change resource
 selection. No structural flag, stage label or past approval freezes those choices.
+
+## Connect reuse scope to retained visual relationships
+
+For a significant visual choice, connect the L0 experience/identity purpose and
+L2/L3 composition or region to its L4 type/material/motion relationships and L5
+actual source, configuration, adaptation and observed outcome. Describe reuse scope
+and visual completeness independently in the existing decision/adoption note.
+Neither is a numeric score or a new mandatory schema. A source can serve several
+roles, while its functional foundation, visual implementation and integrated quality
+retain separate evidence obligations.
+
+Keep current adopted sources and the quality they carry visible. When a newly found
+block or asset improves the direction, update the current choice, record the meaningful
+reason and preserve the old observations as history. The structure inspector can
+report declared links; it cannot judge visual completeness, candidate value, source
+adequacy, retained craft or when research should end. Do not turn catalogue roles,
+number of alternatives or code-reuse ratios into completion states.

@@ -13,6 +13,7 @@ from urllib.parse import urlsplit
 CATALOG = Path(__file__).resolve().parents[1] / 'assets/resource-catalog.json'
 LIMITS = ('Results are documented discovery leads, not installation instructions or '
           'project acceptance. Current source, exact-item fit and real integration are not assessed.')
+FACETS = ('roles', 'reuse_scopes')
 ID = re.compile(r'^[a-z0-9][a-z0-9-]*$')
 
 
@@ -42,6 +43,13 @@ def validate_catalog(data: Any) -> list[str]:
     if not isinstance(needs, dict) or not needs or any(not _text(k) or not _text(v) for k, v in needs.items()):
         errors.append('needs must be a nonempty label map')
         needs = {}
+    facets = data.get('discovery_facets', {})
+    if not isinstance(facets, dict):
+        errors.append('discovery_facets must be an object'); facets = {}
+    for key in FACETS:
+        values = facets.get(key, {})
+        if not isinstance(values, dict) or any(not _text(k) or not _text(v) for k, v in values.items()):
+            errors.append(f'discovery_facets.{key} must be a label map')
     provenance = data.get('provenance')
     if not isinstance(provenance, dict) or not _text(provenance.get('source_name')) or not isinstance(provenance.get('sha256'), str) or not re.fullmatch(r'[0-9a-f]{64}', provenance.get('sha256', '')):
         errors.append('provenance needs a source name and SHA-256')
@@ -82,6 +90,33 @@ def validate_catalog(data: Any) -> list[str]:
                     errors.append(f'{label}: unknown need')
                 for key in ('use_for', 'access', 'adoption_notes', 'evidence_scope', 'project_validation'):
                     if not _text(item.get(key)): errors.append(f'{label}: missing {key}')
+                profile = item.get('discovery_profile')
+                if 'discovery_profile' in item:
+                    if not isinstance(profile, dict):
+                        errors.append(f'{label}: discovery_profile must be an object')
+                    else:
+                        for key in (*FACETS, 'visual_forms'):
+                            values = profile.get(key, [])
+                            if not isinstance(values, list) or any(not _text(v) for v in values):
+                                errors.append(f'{label}: {key} must be strings')
+                            elif key in FACETS:
+                                known = facets.get(key, {})
+                                if isinstance(known, dict) and any(v not in known for v in values):
+                                    errors.append(f'{label}: unknown {key} label')
+                        if not _text(profile.get('basis')):
+                            errors.append(f'{label}: discovery_profile needs its evidence basis')
+                        try: date.fromisoformat(profile.get('classified_on', ''))
+                        except (TypeError, ValueError): errors.append(f'{label}: invalid classified_on')
+                        sources = profile.get('sources')
+                        if not _strings(sources):
+                            errors.append(f'{label}: discovery_profile needs source identity')
+                        else:
+                            for url in sources:
+                                try:
+                                    parsed = urlsplit(url)
+                                    valid = parsed.scheme == 'https' and bool(parsed.hostname) and not parsed.username and not parsed.password
+                                except ValueError: valid = False
+                                if not valid: errors.append(f'{label}: unsafe discovery source')
             else:
                 for key in ('use', 'boundary'):
                     if not _text(item.get(key)): errors.append(f'{label}: missing {key}')
@@ -97,6 +132,7 @@ def load_catalog(path: Path = CATALOG) -> dict[str, Any]:
 
 def select(data: dict[str, Any], query: str = '', *, need: str | None = None,
            stack: str | None = None, form: str | None = None, identifier: str | None = None,
+           role: str | None = None, reuse_scope: str | None = None,
            limit: int = 10) -> list[dict[str, Any]]:
     if type(limit) is not int or not 1 <= limit <= 100:
         raise ValueError('limit must be between 1 and 100')
@@ -108,6 +144,9 @@ def select(data: dict[str, Any], query: str = '', *, need: str | None = None,
         raise ValueError(f'Unknown stack: {stack}; use --list-filters')
     if form and form not in known_forms:
         raise ValueError(f'Unknown form: {form}; use --list-filters')
+    for label, key in ((role, 'roles'), (reuse_scope, 'reuse_scopes')):
+        if label and label not in data.get('discovery_facets', {}).get(key, {}):
+            raise ValueError(f'Unknown {key}: {label}; use --list-filters')
     terms = query.casefold().split()
     matches = []
     for item in data['resources']:
@@ -119,8 +158,12 @@ def select(data: dict[str, Any], query: str = '', *, need: str | None = None,
             if stack in {'reference', 'design-tool', 'multi-runtime', 'multi-framework'} or 'framework-neutral' not in item['stacks']:
                 continue
         if form and form not in item['forms']: continue
+        profile = item.get('discovery_profile', {})
+        if role and role not in profile.get('roles', []): continue
+        if reuse_scope and reuse_scope not in profile.get('reuse_scopes', []): continue
+        labels = [v for key in (*FACETS, 'visual_forms') for v in profile.get(key, [])]
         searchable = ' '.join([item['id'],item['name'],item['use_for'],item['access'],
-                               *item['needs'],*item['forms'],*item['stacks'],*item['aliases']]).casefold()
+                               *item['needs'],*item['forms'],*item['stacks'],*item['aliases'],*labels]).casefold()
         if not all(term in searchable for term in terms): continue
         matches.append(item)
     return sorted(matches, key=lambda x: (x['name'].casefold(), x['id']))[:limit]
@@ -130,18 +173,22 @@ def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('query', nargs='?', default='', help='Whitespace-separated terms, all matched literally')
     p.add_argument('--need'); p.add_argument('--stack'); p.add_argument('--form'); p.add_argument('--id', dest='identifier')
+    p.add_argument('--role'); p.add_argument('--reuse-scope')
     p.add_argument('--limit', type=int, default=10); p.add_argument('--json', action='store_true'); p.add_argument('--list-filters', action='store_true')
     args = p.parse_args()
     try:
         data = load_catalog()
         if args.list_filters:
             result = {'needs':data['needs'], 'stacks':sorted({s for r in data['resources'] for s in r['stacks']}),
-                      'forms':sorted({s for r in data['resources'] for s in r['forms']}), 'limits':LIMITS}
+                      'forms':sorted({s for r in data['resources'] for s in r['forms']}),
+                      'discovery_facets':data.get('discovery_facets', {}), 'limits':LIMITS}
         else:
-            items = select(data, args.query, need=args.need, stack=args.stack, form=args.form, identifier=args.identifier, limit=args.limit)
+            items = select(data, args.query, need=args.need, stack=args.stack, form=args.form, identifier=args.identifier, role=args.role, reuse_scope=args.reuse_scope, limit=args.limit)
             result = {'snapshot_date':data['snapshot_date'], 'results':items, 'count':len(items),
                       'ordering':'alphabetical; no design-quality ranking',
                       'result_kind':'dated_catalog_matches',
+                      'facet_scope':'Optional source-role labels only; missing labels mean unclassified, not unavailable. No visual-quality judgment.',
+                      'unclassified_resource_ids':[r['id'] for r in data['resources'] if not r.get('discovery_profile')],
                       'source_note_scope':'Catalog-authored guidance is source material, not a tool-selected next action.', 'limits':LIMITS}
             if not items:
                 result['query_observation'] = 'No bundled catalog entry matches the supplied filters; external availability and task fit are not assessed.'
@@ -152,6 +199,9 @@ def main() -> int:
             for item in result['results']:
                 print(f"\n{item['name']} ({item['id']}) — {item['use_for']}")
                 print(f"  Needs: {', '.join(item['needs'])}; forms: {', '.join(item['forms'])}")
+                if item.get('discovery_profile'):
+                    profile = item['discovery_profile']
+                    print(f"  Documented roles: {', '.join(profile.get('roles', []))}; reuse scopes: {', '.join(profile.get('reuse_scopes', []))}")
                 print(f"  Access: {item['access']}\n  Catalog adoption note (source guidance, not a tool-selected action): {item['adoption_notes']}")
                 for source in item['sources']: print(f'  {source}')
             if 'query_observation' in result: print(result['query_observation'])

@@ -55,3 +55,17 @@ integrated journey at their own boundaries. Return from component detail to neig
 hierarchy and the connected task to judge the adaptation's actual contribution.
 Re-answer the selection question in the runnable combination with current content
 and corresponding states. Keep collected, actually examined and sufficient evidence distinct.
+
+## Visual craft carried by this choice — expand only where useful
+
+- Relevant design object and intended visible/user outcome:
+- Reuse scope; visual relationships already resolved by the candidate:
+- Functional foundation versus visual implementation; each source's responsibility:
+- Exact original demo inspected, its conditions and unobserved states:
+- Useful alternative or inherited-family basis; why this selection fits:
+- Source/variant/settings actually adopted; retained mechanism versus custom gap:
+- Trial and integrated result; which qualities survived, changed or remain unverified:
+
+Use these prompts within the existing decision rather than duplicating facts. An
+entry is a declaration; no helper certifies its professional correctness. A low-risk
+supported change can inherit prior findings with a short applicability note.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.16.0 — 2026-10-28
+
+- Strengthen mature visual implementation discovery with independent reuse-scope and visual-completeness judgments; separate functional foundations from actual visual and integrated quality.
+- Translate selected Finesse craft mechanisms into source discovery, comparison, adaptation and verification without importing style mandates or its example corpus.
+- Add optional role/scope discovery filters to the existing dated catalogue; preserve original observations and alphabetical, non-judgmental output.
+- Add concrete typography, material, composition, gesture and resource-preservation guidance to existing references, keeping structural inspectors unchanged.
+- Track content continuity and distinguish real maintainer applications from mechanical checks and still-unexecuted independent model comparisons.
+
 ## 1.15.0 — 2026-10-27
 
 - Reassign structural observation, professional judgment and independent verification to their appropriate owners; keep evidence-driven Agent methods intact.

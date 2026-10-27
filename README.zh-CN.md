@@ -55,6 +55,14 @@ Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付�
 
 [37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md)
 
+## 复用成熟的视觉工艺，而不只是功能代码
+
+成熟的交互原语不自动提供完整视觉语言。分别判断**复用范围**与**视觉完成度**：完整工作关系优先寻找合适页面或区块，特定材质与运动优先研究已经实现该品质的视觉组件。字体、光影与交互运动知识，首先帮助 Agent 发现、选择和适配这些成果。
+
+资源目录新增可选的**职责**与**复用范围**检索。它们是发现入口，不是品质评分或封闭名单。观察原始演示，使用实际内容试装，再检查完整界面保留了哪些成熟关系。
+
+[视觉工艺与资源选型](docs/VISUAL-CRAFT.md) · [本轮验证范围](docs/REVIEW-v1.16.0.md)
+
 ## 让熟悉的任务拥有独立的视觉语言
 
 **Art Direction**（艺术指导）围绕产品气质协调题材、字形、构图、材质与动态表达。专业工具同样可以拥有鲜明艺术性。明确提出的审美目标与任务清晰、状态准确、使用可靠共同构成交付要求。
@@ -142,7 +150,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.15.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.16.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

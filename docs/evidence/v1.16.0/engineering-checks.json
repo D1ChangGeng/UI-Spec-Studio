@@ -1,0 +1,60 @@
+{
+  "scope": "Current local engineering execution, not visual or model-quality certification",
+  "commands": [
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/validate_package.py"
+      ],
+      "exit": 0,
+      "stdout": "Package structure, metadata, common-reference links and local paths: PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/catalog_docs.py",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "Resource data and generated map: PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/readme_art.py",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "README artwork: verified\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "unit_suite": {
+    "command": "python -m unittest discover -s tests -v",
+    "tests": 249,
+    "exit": 0,
+    "log_sha256": "ce556565392399ccbbe8e95ff83e0c0d0bdd5efb9670d721a5a1c42b1a6bef6c"
+  },
+  "installed_copy": {
+    "runtime_files_byte_equal": 37,
+    "path": "isolated temporary target",
+    "role_scope_query_executed": true
+  },
+  "corrections": [
+    "Explicit null discovery_profile now produces a schema observation; absence remains allowed.",
+    "One unit invocation outside the repository failed to import tests; the recorded successful run executed from the repository."
+  ],
+  "publication": "Remote platform, installation, browser, tag and public-asset checks still have their own execution results."
+}

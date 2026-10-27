@@ -207,3 +207,18 @@ what changed, why, affected objects/conditions and current judgment without
 repeating all intermediate work. Preserve professional knowledge by moving the
 judgment to its responsible Agent-facing method, not by removing it with the
 corresponding mechanical predicate.
+
+## Write craft knowledge toward mature implementation discovery
+
+Explain the perceived problem, observable relationships, useful causal mechanism,
+external reference/implementation route and actual-use observation. These are writing
+lenses, not a five-form requirement. A rule should change what the Agent searches,
+compares or trials before teaching it to reproduce an already available effect.
+Preserve meaningful failure conditions and alternatives; avoid empty exhortations
+such as premium or smooth without an observable object and consequence.
+
+External recipes can teach typography, light, motion and input mechanics without
+becoming universal font, palette, timing or product-category restrictions. Attribute
+the actual source/revision and distinguish mechanism from its chosen style. Do not
+copy a substantial example corpus merely to provide positive examples; retain narrow
+teaching/regression fixtures with appropriate rights and explicit proof scope.

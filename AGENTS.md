@@ -180,3 +180,12 @@ behavior and independent digest/browser/engineering assertions. Maintain current
 model, meaningful revisions and raw evidence distinctly, with object-scoped review.
 Track deliberate boundary corrections against v1.14 in the v1.15 continuity record;
 previous release evidence stays frozen and is not relabelled as current behavior.
+
+Version 1.16 prioritizes mature visual implementations, not only functional code.
+Keep reuse scope and visual completeness independent; use concrete craft mechanisms
+to improve source discovery, comparison, adaptation and real-use inspection. Retain
+open discovery, expressive professional products and neutral structural inspectors.
+Catalogue facets are descriptive, dated discovery metadata, not quality rankings.
+Absorb external mechanisms with provenance, not fixed styles or a copied example
+corpus. Track runtime continuity against v1.15, and distinguish source research,
+maintainer application, mechanical tests and independent model comparisons.

@@ -57,6 +57,20 @@ Review the assembled interface and continuous task again. The adoption record sh
 
 [37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md)
 
+## Reuse visual craft, not only functionality
+
+A mature interaction primitive does not supply a whole visual language. Judge
+**reuse scope** and **visual completeness** separately: seek a fitting page or
+block for coordinated work, and an already resolved visual component for a
+specific material or motion. Typography, lighting and input-motion knowledge
+help the agent find and adapt those implementations before recreating them.
+
+The resource map now has optional **role** and **reuse-scope** filters. They are
+discovery labels, not quality scores or a closed supplier list. Inspect original
+demos, trial actual content and verify what survives in the complete interface.
+
+[Visual craft and resource selection](docs/VISUAL-CRAFT.md) · [Scoped evidence](docs/REVIEW-v1.16.0.md)
+
 ## Give familiar work an independent visual language
 
 **Art Direction** coordinates subject, type, composition, material and motion around the product's intended character. Professional tools can carry strong artistic expression. Explicit aesthetic goals remain delivery requirements alongside clear tasks, accurate states and reliable use.
@@ -156,7 +170,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.15.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.16.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

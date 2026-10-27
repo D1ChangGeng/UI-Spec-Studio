@@ -258,3 +258,36 @@ object and actual shared dependencies, then decide which old observations remain
 applicable and which need new evidence. Keep failures, exceptions and unexamined
 conditions visible without merging them into satisfied coverage. A readable
 record or a completed inspector run cannot finish a project.
+
+## Verify retained visual value rather than dependency presence
+
+For a consequential resource, state the quality expected to survive: perhaps stable
+reading measure, a layered edge, coherent flip identity or a reliable drag return.
+Compare the **original demonstration**, **current-project trial** and **assembled
+page/journey** using corresponding content density, actual size, theme and event
+phase. The reference product establishes the target, not proof that the candidate
+or integration already meets it. Mark unavailable source states explicitly.
+
+Inspect both visible preservation and task correctness. Identify retained source
+mechanisms, public configuration, focused adaptations and genuinely new code. An
+import, a copied stylesheet or a dependency lock does not establish that a source's
+visual relationships are visible in the runtime. Conversely, visual resemblance
+alone does not prove implementation adoption. A screenshot of a skeleton is loading
+evidence, not an observed finished candidate. Read the rendered view before accepting
+an automated capture as the evidence the decision actually needed.
+
+Use adverse content to reveal integration loss: long titles, multiple attachments,
+empty/error results, actual translations, late fonts and different neighboring
+surfaces. Reinspect glow/blur/depth after CSS overrides, object continuity after key
+or layout changes, and focus/scroll ownership after state adapters. Independent
+components may compete for attention or multiply rendering loops when combined.
+Check the complete episode and user task; a successful mousemove handler does not
+by itself establish pleasing rhythm or real-device frame delivery.
+
+Record research behavior, actual source adoption, perceptual result and execution
+cost separately. Counts of resources, imports, reused lines or tests are useful
+engineering observations, not aesthetic scores. A controlled improvement claim
+requires matched tasks and conditions, identifiable model/tool execution, and actual
+output review; maintainer application and authored browser fixtures retain their
+own narrower scope. Keep unsuccessful candidates and unresolved tradeoffs visible
+where they explain the final selection, without keeping all rejected code in delivery.

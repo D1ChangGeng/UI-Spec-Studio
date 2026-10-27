@@ -118,3 +118,18 @@ The strongest content outcome makes the next meaningful decision understandable 
 ## Put language relationships on the same evidence map
 
 Connect consequential copy to its journey question, owning surface/state, factual authority, locale/type treatment and actual checked conditions using [the shared map](evidence-map.md). A new product term can alter L2 navigation, L3 control roles and L4 wrapping; trace those dependents instead of duplicating decision records. Preserve actual source authority for promises and approvals. A translation entry establishes available text; rendered inspection and actual user comprehension require separate evidence. Routine supported wording edits can inherit the established system and retain a short scoped check.
+
+## Explain the visible outcome rather than a library category
+
+When proposing a material direction, describe what the user will see and do: a
+steady reading plane with a light following the pointer; an input that grows while
+its actions remain anchored; a panel that follows a drag and returns without losing
+selection. Name the reason and practical tradeoff, with a real reference or preview.
+Technical terms such as shader, FLIP, spring or component registry help precise
+research, but do not replace this visible explanation or a product-level promise.
+
+A library name is provenance, not the benefit. Separate “this source provides a
+configurable surface effect” from “this adopted effect keeps your content readable
+in the inspected conditions.” Explain provisional choices and unobserved states in
+ordinary language. A user's preference selects a consequential direction; routine
+research and detailed implementation remain the Agent's work within authorization.

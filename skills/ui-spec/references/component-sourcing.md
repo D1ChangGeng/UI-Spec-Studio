@@ -185,3 +185,131 @@ Inspect headline purpose, control names, condition placement and feedback at the
 For a consequential DDU in the [map](evidence-map.md), keep **design reference → candidate resource → original demo → local trial → actual adoption → integrated result** identifiable. These are roles in one decision, not mandatory separate documents. Record exact item/variant, conditions, observed portions and what each role supports; one source may occupy several roles with explicit scope.
 
 Distinguish functional primitives from the mature visual implementation that carries layout, type, material and motion. Reading docs or adding a dependency does not establish rendered quality or actual use. A scope-discovery finding can change which resource level is appropriate. Inspect comparably resolved alternatives before consequential selection, and carry failed fit or unavailable evidence as a question rather than filling it with source familiarity.
+
+## Select inherited visual craft at an appropriate reuse scope
+
+**Reuse the visual craft, not merely the underlying functionality.** First identify
+which valuable design relationships already exist in mature work and could survive
+adoption. Research them while the composition is still adjustable, not after a
+complete report has been followed by a default, model-invented implementation.
+Keep product-reference discovery and implementation discovery interleaved: a
+strong composition suggests sources to trial, and a newly found component can
+reveal a better composition or a more appropriate experience hypothesis.
+
+Evaluate two independent properties of each serious candidate:
+
+| Property | Question | Consequence for selection |
+|---|---|---|
+| Reuse Scope | Which page, region, component, effect, asset or interaction responsibility can it actually carry? | Select a coherent useful boundary, rather than the biggest package or most dependencies. |
+| Visual Completeness | Which composition, typography, material, state and movement relationships are already visibly resolved? | Inspect the exact item and original demonstration; a library's reputation or role label is only a discovery lead. |
+
+A headless control system may serve an entire application while leaving its visible
+language undecided. A small animated surface may resolve a rich optical mechanism
+but provide no navigation, semantics or business behavior. A page template may
+preserve reading rhythm and shared proportions yet contain only a happy-path demo.
+Choose the resource that retains the most relevant resolved relationships within
+this task's appropriate scope, subject to real rights, accessibility, cost and fit.
+The hierarchy below is a search aid, not a mandatory sequence or quality ranking.
+
+| Search object | Potential inherited value | What still needs its own evidence |
+|---|---|---|
+| Page or application foundation | Composition, navigation, region proportions, type system, shared states | Actual task model, populated views, responsive behavior and product boundaries |
+| Functional block | Coordinated composer/attachments/actions, search/results, reading/tools, product/price | Real content, concurrency, errors, focus, localization and authority |
+| Visual component or asset | Material, geometry, typography treatment, photography, lighting and temporal craft | Item-specific states, semantic control, actual context and runtime cost |
+| Functional foundation | Focus, keyboard behavior, selection, data/view contracts and reliable state | A visual foundation and its implemented perceptual relationships |
+| Authoring technique or engine | Control over a demonstrated gap in timing, geometry or rendering | New implementation quality and its complete verification responsibility |
+
+For whole-product work, look for mature foundations and connected blocks, not only
+isolated controls. For a distinctive local effect, begin with sources that already
+realize that effect. React Bits, Vue Bits, Magic UI, Aceternity UI and Inspira UI are
+useful leads for selected visual components or blocks; they are neither a closed
+supplier list nor evidence that every item is mature or suitable. Radix, Base UI,
+Reka and React Aria can contribute behavior; Motion, GSAP and native graphics APIs
+can contribute implementation control. Each source's *specific item* may occupy
+several roles. Inspect current variants, terms and actual demos before adopting.
+
+## Keep three proof obligations separate
+
+**Functional Foundation** establishes behavior and implementation capabilities.
+**Visual Implementation** establishes the visible form already supplied by a
+source. **Integrated Perceptual Quality** concerns the actual product made from
+those sources. Do not advance one claim using evidence for another.
+
+For a conversation composer, accessible primitives and an icon package do not
+establish the expanded attachment arrangement, reading proportions, action hierarchy
+or material. Search a resolved composer block or other relevant visual work for the
+remaining relationships. Conversely, a polished input animation does not establish
+file upload, keyboard semantics or truthful pending results. Give each responsibility
+an actual owner and inspect the combination. A dependency manifest only proves a
+declared dependency; it does not prove that its distinctive rendering is in use.
+
+## Turn craft knowledge into discovery questions
+
+Use **perceptual intent → observable relationships → design mechanism → mature
+references/implementations → actual-use verification** as reasoning lenses, not
+five mandatory forms. Translate an adjective into something that can change a
+search, comparison or trial. For example:
+
+- A substantial flip is not merely `rotateY`: examine coherent front/back faces,
+  perspective, shared pivot, occlusion, changing light, reversible control and
+  data readiness. Search for an implemented flip with those properties, then
+  inspect the whole event and a return rather than its poster.
+- A refined reading card may depend on a stable text plane, restrained edge light
+  and clear action placement. Compare a surface-light treatment with a spatial
+  tilt: they express different relationships even if both are called premium.
+- An expressive professional workspace can inherit familiar tasks while using
+  editorial type, photographic structure, spatial assets or dynamic material.
+  Search cross-domain expression and functioning work areas together; a product
+  category does not set a ceiling on artistic intensity.
+- A satisfying draggable sheet requires observation of direct tracking, boundary
+  resistance, release behavior, scroll arbitration and cancellation. Search
+  mature sheets/drawers before deciding that a new gesture engine is necessary.
+
+Search using the target object, visible relation, mechanism, state and stack where
+useful, then follow surprising findings to other sources. The catalogue's optional
+role/scope/form facets organize documented leads; they neither score visual
+completeness nor guarantee current availability. A missing tag is unclassified
+metadata, not proof that a source lacks the capability. Familiar libraries failing
+the brief is a reason to revisit the question and broaden discovery, not automatic
+permission to recreate the effect from memory. Stop additional exploration when
+supported choices meet the actual goal and new searches add no meaningful decision
+value; preserve the efficient path for routine, already-supported work.
+
+## Adopt the mechanism, not a screenshot imitation
+
+For a consequential choice, explain what is being inherited: perhaps its border
+illumination, wrapping logic, focus behavior, reversible motion or coordinated
+block proportions. Retain the exact source/variant, settings and relevant license.
+Trial the mechanism with current fonts, real or identified fixture content, themes,
+containers and representative states before broad integration.
+
+Start adaptation through documented props, tokens, content slots and composition.
+Inspect style overrides for accidental loss of the selected mechanism: a new opaque
+layer can cover surface light; a transform can create a competing coordinate space;
+a reset can flatten depth or remove focus; changing keys can restart motion on every
+update. Keep the project's state owner responsible for business results. If internals
+must change, isolate the smallest evidenced gap and recheck the changed responsibility.
+Technique transfer and custom work remain valid when rights, compatibility, safety,
+performance or a distinctive need defeat available candidates; identify the reason
+and verify the newly authored result instead of claiming upstream maturity for it.
+
+**Finish selection through retained quality in use**, not installation counts.
+Compare original demo, current trial and assembled task at corresponding scale,
+content density and event phase. Preserve justified differences and remaining gaps.
+If a composition fails, reconsider source choice or adaptation before layering more
+effects onto it. Remove unused candidates and their runtime costs from delivery.
+
+## Use external implementations as the main positive examples
+
+Live products, original demos, mature blocks and reusable assets are the primary
+positive example space. Skill prose teaches what to observe and why it matters;
+it should not turn a reusable component into a copied internal recipe that the
+Agent recreates yet again. Keep a small local example only for a specific mechanism,
+portable-runtime teaching or deterministic regression. Such a fixture is not a
+survey of best visual work or proof of model improvement.
+
+Check research access and integration/redistribution rights separately. Permission
+to use a component inside an application need not permit republishing its component
+collection. Preserve required notices in actual application use; retain source
+identities and bounded evidence in maintenance reports rather than importing a
+large external example corpus, fonts or stock assets into the Skill.

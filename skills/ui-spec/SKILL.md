@@ -5,7 +5,7 @@ license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.15.0"
+  version: "1.16.0"
 ---
 
 # UI Spec Studio
@@ -184,3 +184,23 @@ The **Design Evidence Map** maintains current product understanding and links to
 **The structural inspector reports what is represented, not what is professionally sufficient, correct, ready, or complete.** An unlisted theoretical category invites consideration, not a requirement; a broken declared reference is a structural fact, not a design verdict. Never convert readable JSON, exit 0, a file's presence or a declared status into completed research, adopted runtime behavior or accepted UI quality. The Agent applies the professional action rules to the actual task; tools do not choose, veto or execute those actions.
 
 Keep **Current Design Model → Meaningful Revisions → Evidence Archive** as linked ordinary project records. Use the current model for continuation, concise revisions for what changed/why/affected scope, and archived original materials for traceability. Replace outdated current judgments deliberately while preserving historical evidence. Conditions and local dependencies determine relevance; a global version change alone does not invalidate unrelated observations. Both experience/research/judgment and source/trial/implementation/verification can revisit earlier decisions whenever evidence warrants it.
+
+## Reuse visual craft, not only functional dependencies
+
+For important visual work, first discover implementations that already resolve the
+needed composition, typography, material, state or motion at a useful scope. Judge
+**Reuse Scope** and **Visual Completeness** separately: a headless system can serve
+many pages without supplying their visual language, while a small visual component
+can embody substantial craft. Use [sourcing](references/component-sourcing.md) to
+connect real references, distinct candidates, original demos, project trials and
+actual integration. Prefer configuration, composition and focused adaptation before
+custom recreation. React Bits, Vue Bits, Magic UI, Aceternity UI and Inspira UI are
+open-ended discovery leads, not a fixed shortlist or quality certificate.
+
+Use professional type/material/composition and input-motion knowledge to ask better
+questions and preserve resolved relationships. Product categories do not cap artistic
+expression; specific styles and numeric recipes remain contextual. External mature
+work is the main positive example space, not a large copied internal corpus. Inspect
+retained qualities in real use; neither imports, catalogue facets nor structural
+success establish visual maturity. Structural inspectors retain the neutral boundary
+above; Agent judgment selects research depth, reuse and next action.

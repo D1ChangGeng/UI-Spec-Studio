@@ -364,3 +364,25 @@ Do not count them or synthetic record tests as new model runs. A maintainer's re
 application can provide scoped workflow evidence; independent matched Agent runs,
 actual tool traces and blinded UI review are separate empirical work. Report
 unexecuted comparisons without substituting a pass from the structural inspector.
+
+## Visual craft and mature implementation adoption (1.16)
+
+Evaluate three task families: complete-product experience alignment; expressive
+professional working surfaces; and important local components or direct-input motion.
+Use ordinary briefs and actual source/rendered outputs. Record original-demo access,
+what was really viewed, alternatives that could change the choice, installed source
+identity, public configuration, actual local adaptation, and the resulting task.
+A captured loading shell is not a viewed mature component. A primitive import is not
+a visual-block adoption. Existing old captures retain their original execution date.
+
+Separate research behavior, actual adoption, perceptual quality, elapsed/operation
+cost and adaptation to different briefs. Keep matched content and condition records
+where comparing candidates. Record integration failures and repair, not only the
+final selected still. Scope-relevant positive and negative results both matter.
+
+Maintainer Agent self-application is real work but is not a fresh independent model
+comparison. A stronger gain claim needs equal tasks/tools/access and controlled
+model inputs, isolated outputs and blind review; independent user feedback has its
+own evidential role. Existing v1.14 prepared cells remain unexecuted until actually
+run. Structural inspector and catalogue tests continue to check their mechanics,
+not source completeness, visual taste, research effort or action permissions.

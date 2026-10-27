@@ -150,3 +150,60 @@ Pair consequential controls with accurate action and outcome language. Distingui
 Associate a meaningful transition with the journey, affected page/regions and shared controls in [the evidence map](evidence-map.md). Name pre-trigger state, action, first feedback, changing objects, anchors, result and return. Connect focus, selection, draft, scroll and reading-width effects across the same episode. Preserve the actual observation window and relevant interruption/reversal states.
 
 Conditions belong to the observed episode: viewport, theme, language, content growth, motion preference, device/input and service timing may change its behavior. Viewed endpoints or a downloaded clip leave intervening claims open. When a dependency changes, preserve historical observations and identify affected conditions for recheck; do not promote every related state from one successful run.
+
+## Select motion by effect, control and implementation separately
+
+**Effect** describes what is perceived: reveal, regroup, flip, settle, expand,
+material change or spatial transition. **Interaction ownership** identifies who
+controls progress: an authored timeline, the user's ongoing input, or application
+state. **Implementation route** identifies the adopted component, CSS/native API,
+Motion, GSAP, Canvas/WebGL or other appropriate runtime. A route is not a visual
+idea, and a heavyweight engine is not evidence of superior craft.
+
+First identify the effect and who owns its progress. Search mature components or
+blocks that already resolve the required relationship. Observe the original event,
+try interruption and return, then trial the selected implementation in the current
+product. Use a lower-level route for a demonstrated gap; compare total adaptation,
+maintenance and runtime cost rather than assuming fewer dependency bytes always
+wins. Preserve an operable and intentionally composed still/quiet form, not merely
+zero animation duration while important content remains hidden.
+
+### Observe the input, not just the arrival animation
+
+For a directly manipulated sheet, card or slider, examine tracking while held,
+resistance at its bounds, release interpretation and settling. Smoothing appropriate
+for decorative light following a pointer can feel delayed when applied to an object
+that should remain attached to the user's hand. A leftover CSS transition on a
+dragged transform can turn direct tracking into repeated eased pursuit.
+
+Inspect a mature candidate's treatment of recent velocity as well as distance and
+direction. A whole-gesture average can conceal a late flick; an extremely short
+sample can amplify event noise. Window size, thresholds, damping and detents depend
+on travel, input device and intended task, not copied constants. Test slow deliberate
+movement, short flicks, reversal near a threshold, pauses before release and a new
+gesture during settling. Prefer a proven mechanism with adjustable parameters over
+rewriting gesture physics merely to match a different visual treatment.
+
+Verify ownership where scrolling and dragging meet. Can the list still scroll when
+a gesture does not belong to the sheet? Are handle and content interactions distinct?
+Does cancellation restore or reconcile state without pretending a user confirmed the
+action? Pointer capture, `pointercancel`, lost capture and unmount cleanup need the
+candidate's real behavior or a focused engineering test. Coalesced input samples can
+matter for drawing a path; they are not a mandatory complexity for every button.
+Keyboard, touch and alternative operation must retain essential meaning when an
+optional hover effect is absent.
+
+### Preserve identity while adapting spatial motion
+
+A flip needs one recognizable object, aligned faces, an intentional pivot, consistent
+perspective and correct hit regions through the intermediate state. Data readiness
+and animation completion are independent. A drag threshold must not silently commit
+a financial or destructive action; the application's authority still decides that
+outcome. Measure and prepare permitted read-only state early where it improves use.
+
+For reparenting or a FLIP-style transition, first seek a mature layout-transition
+implementation. If custom work is justified, distinguish pre-change measurement,
+post-layout geometry and the animated transform; verify the actual frame sequence
+and interruptibility rather than mandating a universal number of animation-frame
+callbacks. Font arrival, container resizing, scroll and new results can change those
+measurements. Recheck the original effect after adapters and themes change it.

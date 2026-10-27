@@ -212,3 +212,72 @@ Use the [content method](content-design.md) for rendered glyphs, contrast, densi
 Locate a finding in the [design map](evidence-map.md): a local optical defect may arise from L4 contrast, L3 action hierarchy or L1 task order. Explain the observed relationship and inspect the relevant parent composition before choosing a repair. Keep facts, inferred effects and causes to test distinct. L5 checks identify the actual source, adaptation and viewed result rather than stand in for visual judgment.
 
 A changed font, image crop, material or motion envelope can affect multiple pages and states. Follow shared-use links and re-inspect actual neighbors, relevant themes/locales and temporal conditions. A parent design result does not automatically pass because its component records are filled. Use comparable original demos, current-project trials and assembled views to judge retained quality.
+
+## Visual craft is a tool for finding and preserving resolved design
+
+Read these lenses while inspecting actual references and candidates. Their value
+is a more accurate search or adaptation choice, not a universal style prescription.
+A pleasing label such as refined is incomplete until its visible relationships
+and current-use conditions can be explained. Use the sourcing method to connect
+these explanations to mature implementations before defaulting to custom code.
+
+### Typography tension without a fixed type recipe
+
+Type can separate action, reading, identity and metadata through shape, weight,
+measure, rhythm and contrast. Inspect actual glyphs and optical size: equal CSS
+font sizes can have different cap heights, x-heights, stroke density and apparent
+centers. A large display heading can coexist with calm reading text, but its tight
+tracking or leading may collide when it wraps, uses diacritics or becomes CJK.
+A compact control may need different spacing from a wordmark in the same family.
+
+Search mature editorial layouts, font specimens and resolved text components for
+the intended relation. Trial actual language coverage, fallback/loading behavior,
+long labels, real numbers and zoom. Tabular figures can stabilize comparison;
+proportional figures may better suit prose. Neither is a global requirement.
+Preserve meaningful emphasis and readable holds in animated text. Splitting a
+heading into glyphs must not scramble selection, reading order or its accessible
+name. A font swap changes composition, so compare the complete region again.
+
+### Material coherence before adding decoration
+
+A material is a relationship among surface, edge, illumination, background,
+content and movement. Distinguish diffuse shading, a specular highlight and a
+cast shadow; their apparent light direction and depth should form a deliberate
+system. A stronger hover highlight can clarify a selected plane, or wash out
+text when composited over the wrong background. Transparent surfaces need a
+real backdrop; blur alone cannot make a flat opaque fill appear transmissive.
+
+Inspect a candidate under bright/dark neighbors, actual image crops, active and
+focus states, and across its moving light. Search for a mature implementation
+that exposes meaningful controls, not only an impressive still. Tune the original
+parameters before replacing its mechanism. Keep grain, vignette, glass, tinted
+neutrals, gradients, pure black/white and shadow recipes as *available expressions*,
+never automatic requirements or bans. Use the project's actual accessibility
+requirements and measurements rather than treating a source's palette preference
+or sample contrast number as a universal standard.
+
+### Compose visual mass through populated use
+
+Negative space separates and relates masses; asymmetry can guide attention when
+its hierarchy remains legible. Inspect text blocks, imagery, controls and moving
+highlights together. The resting rectangle of an animated object omits its shadows,
+excursions and changing luminous weight. An attractive empty shell can lose its
+balance when results, long labels, errors or a companion panel appear.
+
+Compare mature pages or blocks that solve similar reading and task relationships,
+and cross-domain references for art direction. Trial the relevant crop, text and
+state before committing the surrounding geometry. Quieting an obstruction need
+not erase an accepted expressive idea: revise local contrast, position, amplitude,
+media delivery or timing, then inspect again. Professional tools can be visually
+bold in their real work areas; navigation conventions protect understanding, not
+a predetermined level of decorative restraint.
+
+### Diagnose generic or weak results causally
+
+Repeated cards, default gradients, familiar type or glass are not inherently poor.
+Ask whether the choice came from unexamined habit, whether it fits the intended
+experience, and whether a better observed alternative solves the actual relation.
+Distinguish unresolved hierarchy from deliberate repetition, muddy boundaries
+from intentional softness, uncontrolled motion from expressive choreography.
+Repair the cause, compare the rendered result and retain the product's identity;
+a blacklist of styles cannot substitute for professional judgment.

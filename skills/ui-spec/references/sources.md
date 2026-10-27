@@ -147,3 +147,20 @@ synthesize the user's requirements with the existing foundation. Source fidelity
 protects selected or approved work; perceived quality and real use require their own
 inspection. No cited system supplies blanket endorsement, aesthetic scores or
 comparative model evidence for this skill.
+
+## Visual craft used for source discovery and adaptation (1.16)
+
+Source-method research on 2026-10-28 used the pinned
+[Finesse Skill](https://github.com/mouse-lin/finesse-skill/tree/c7a91448baf6e98fecf542915cdb7e3155bddc45)
+entry and the opening sections of design-dna.md, motion.md and
+interaction-motion.md. These source-text observations informed typography,
+material, effect/route and input-motion questions. They do not establish that
+its example corpus was executed or its reported measurements replicated.
+The installed methods are original synthesis oriented toward discovering and
+adapting mature implementations; no complete recipe corpus is copied.
+
+Fixed aesthetics, category-based expression limits and universal numerical
+recipes were not adopted. The unrelated finesseui.com design-kit entry retains
+its own identity. Official Magic UI and Aceternity category documentation supplies
+current discovery leads, not universal quality rankings. Exact-item demonstrations,
+current-project trials, rights and integrated perception require their own evidence.

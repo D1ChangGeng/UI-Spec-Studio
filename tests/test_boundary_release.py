@@ -18,8 +18,12 @@ class BoundaryReleaseTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(payload).hexdigest(),frozen['payload_sha256'])
         prior=json.loads(payload)
         self.assertEqual(set(prior),{r['path'] for r in record['files']})
+        current_frozen=json.loads((ROOT/'docs/evidence/v1.16.0/baseline-runtime.json').read_text(encoding='utf-8'))
+        current_payload=zlib.decompress(base64.b64decode(current_frozen['payload']))
+        self.assertEqual(hashlib.sha256(current_payload).hexdigest(),current_frozen['payload_sha256'])
+        historical_current=json.loads(current_payload)
         for row in record['files']:
-            before=prior[row['path']].encode();current=(ROOT/row['path']).read_bytes()
+            before=prior[row['path']].encode();current=historical_current[row['path']].encode('utf-8')
             self.assertEqual(hashlib.sha256(before).hexdigest(),row['before_sha256'])
             self.assertEqual(hashlib.sha256(current).hexdigest(),row['current_sha256'])
             if row['disposition']=='unchanged':self.assertEqual(current,before)
