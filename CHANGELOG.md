@@ -31,6 +31,7 @@
 - Preserve separate research, implementation, check and owner-approval facts; use three views of one record with optional serialization.
 - Add a portable read-only declaration checker and matched experiment preparation, keeping real Agent comparisons explicitly unexecuted.
 - Preserve every prior runtime file's substantive bytes, all historical evidence and the no-content-cap policy; extend bilingual guidance and inspect the README change.
+- **2026-10-28 post-release evidence:** 18 real Agent executions and 12 locked blind Agent judgments completed. Anonymous results remain mixed; the product owner separately confirms a consistent personal visual preference for the structure + action design direction. The integrated production v1.14.0 Skill includes both map and action methods; the original tag/assets remain immutable. See [post-release experiment findings](docs/experiments/design-evidence/RESULTS-v1.14.0.md).
 
 ## 1.13.0 — 2026-10-27
 

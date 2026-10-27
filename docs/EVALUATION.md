@@ -373,3 +373,10 @@ application families: a conversation block, an expressive reading workspace and
 an input-controlled drawer. Source identity, real operations and viewed frames
 support their stated observations. They are not independent Agent samples,
 complete product parity, a controlled model comparison or general aesthetic uplift.
+
+
+## v1.14 post-release empirical acceptance — owner and blind Agent review
+
+The original `v1.14.0` preregistration remains frozen as a before-run record. The later [18-run evidence report](experiments/design-evidence/RESULTS-v1.14.0.md) and [structured trace summary](evidence/v1.14.0/empirical-findings.json) preserve the separate anonymous Agent preferences and the 2026-10-28 human product-owner preference.
+
+The owner explicitly accepts the **structure + action** direction for improved personal visual impression, perceived spatial smoothness and color harmony. The 12 locked Agent judgments are mixed (T02 favors structure + action, T01 does not) and remain unchanged. T06's eight recorded pixel conditions are identical between arms. Hence report **positive owner acceptance in this sample**, rather than either “empirical work unexecuted” or “universal objective visual superiority.” The tagged production skill contains both map and action rules; the ablation arm is not an identical production artifact.

@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "record_kind": "post_release_empirical_addendum",
+  "recorded_date": "2026-10-28",
+  "time_zone": "Asia/Tokyo",
+  "release": {
+    "tag": "v1.14.0",
+    "commit": "fec7cde99be02c134481733e9f9bd3064ffa871a",
+    "original_tag_immutable": true,
+    "assets_unchanged_expected": true,
+    "production_method": "structure-and-action",
+    "experimental_arm_correspondence": "structure-action",
+    "byte_identical_to_ablation": false,
+    "reason": "Production SKILL.md links evidence-map and evidence-actions, integrates eight common references and optional checker; study uses isolated instruction-only addition over v1.13.0.",
+    "experimental_arm_file_count": 31,
+    "production_skill_file_count": 34
+  },
+  "origin": {
+    "results": {
+      "name": "ui-spec-agent-experiments-results.json",
+      "size_bytes": 627329,
+      "sha256": "e294dc191cc1080c2bb4276911698617023ada0518852faa3f5d4e47935e0658"
+    },
+    "readable_report": {
+      "name": "ui-spec-agent-experiments-report.html",
+      "size_bytes": 1015663,
+      "sha256": "1d5edfa70bf587d12cfe356b83c88fe7bb14a665de1863765357b8d9ee6bc2d1"
+    },
+    "completed_at_utc": "2026-10-27T19:28:17.912299+00:00",
+    "raw_distribution": "Original artifact and runnable audit retained in the owner's conversation file library, not copied into this public repository."
+  },
+  "study": {
+    "task_count": 6,
+    "arm_count": 3,
+    "real_agent_runs": 18,
+    "replicates_per_cell": 1,
+    "blind_agent_reviewers": 3,
+    "locked_task_judgments": 12,
+    "matched_fixed_materials": true,
+    "open_web_discovery_tested": false
+  },
+  "locked_review_hashes": [
+    {
+      "reviewer": "reviewer_1",
+      "sha256": "55bc3ea0481851e044af421e46d7e29dc105025bf5886db706990fb10ca1f075",
+      "tasks": [
+        "T01",
+        "T02",
+        "T03",
+        "T06"
+      ]
+    },
+    {
+      "reviewer": "reviewer_2",
+      "sha256": "c664dc729bf2ec8ba0c1fdc50f977fa057906339e126384502883f959774e965",
+      "tasks": [
+        "T01",
+        "T04",
+        "T05",
+        "T06"
+      ]
+    },
+    {
+      "reviewer": "reviewer_3",
+      "sha256": "c2d581a65330c932d70d3c427867d8bcae72d92f369eddd1a7660a670c2e7ce0",
+      "tasks": [
+        "T02",
+        "T03",
+        "T04",
+        "T05"
+      ]
+    }
+  ],
+  "tasks": {
+    "T01": {
+      "core_checks_per_arm": "31/31",
+      "blind": [
+        {
+          "r": "reviewer_1",
+          "tiers": [
+            [
+              "baseline",
+              "structure"
+            ],
+            [
+              "structure-action"
+            ]
+          ],
+          "strength": "moderate"
+        },
+        {
+          "r": "reviewer_2",
+          "tiers": [
+            [
+              "baseline",
+              "structure"
+            ],
+            [
+              "structure-action"
+            ]
+          ],
+          "strength": "weak"
+        }
+      ]
+    },
+    "T02": {
+      "core_checks_per_arm": "30/30",
+      "blind": [
+        {
+          "r": "reviewer_1",
+          "tiers": [
+            [
+              "structure-action"
+            ],
+            [
+              "baseline",
+              "structure"
+            ]
+          ],
+          "strength": "moderate"
+        },
+        {
+          "r": "reviewer_3",
+          "tiers": [
+            [
+              "structure-action"
+            ],
+            [
+              "baseline",
+              "structure"
+            ]
+          ],
+          "strength": "moderate"
+        }
+      ]
+    },
+    "T03": {
+      "core_checks_per_arm": "30/30",
+      "blind": [
+        {
+          "r": "reviewer_1",
+          "tiers": [
+            [
+              "baseline",
+              "structure",
+              "structure-action"
+            ]
+          ],
+          "strength": "none"
+        },
+        {
+          "r": "reviewer_3",
+          "tiers": [
+            [
+              "structure"
+            ],
+            [
+              "baseline",
+              "structure-action"
+            ]
+          ],
+          "strength": "weak"
+        }
+      ]
+    },
+    "T04": {
+      "core_checks_per_arm": "30/30",
+      "extras_per_arm": [
+        "68/68 temporal",
+        "4/4 delay"
+      ],
+      "blind": [
+        {
+          "r": "reviewer_2",
+          "tiers": [
+            [
+              "baseline",
+              "structure-action"
+            ],
+            [
+              "structure"
+            ]
+          ],
+          "strength": "weak"
+        },
+        {
+          "r": "reviewer_3",
+          "tiers": [
+            [
+              "baseline",
+              "structure",
+              "structure-action"
+            ]
+          ],
+          "strength": "none"
+        }
+      ]
+    },
+    "T05": {
+      "core_checks_per_arm": "30/30",
+      "extras_per_arm": [
+        "18/18 source/motion"
+      ],
+      "blind": [
+        {
+          "r": "reviewer_2",
+          "tiers": [
+            [
+              "baseline"
+            ],
+            [
+              "structure",
+              "structure-action"
+            ]
+          ],
+          "strength": "weak"
+        },
+        {
+          "r": "reviewer_3",
+          "tiers": [
+            [
+              "baseline",
+              "structure"
+            ],
+            [
+              "structure-action"
+            ]
+          ],
+          "strength": "weak"
+        }
+      ]
+    },
+    "T06": {
+      "core_checks_per_arm": "37/37",
+      "pixel_identical_across_3_arms_for_8_conditions": true,
+      "blind": [
+        {
+          "r": "reviewer_1",
+          "tiers": [
+            [
+              "baseline",
+              "structure",
+              "structure-action"
+            ]
+          ],
+          "strength": "none"
+        },
+        {
+          "r": "reviewer_2",
+          "tiers": [
+            [
+              "baseline",
+              "structure",
+              "structure-action"
+            ]
+          ],
+          "strength": "none"
+        }
+      ]
+    }
+  },
+  "owner_assessment": {
+    "source": "User's direct post-experiment feedback in this conversation",
+    "reviewer_role": "product owner",
+    "date": "2026-10-28",
+    "type": "single-human-unblinded-qualitative-visual-acceptance",
+    "verbatim": "从我的视角(人类视觉)来看:结构+行动组总是好于其他两组(表现为UI视觉观感更好,空间会更加平滑,配色会更加符合我的审美),因此目前我判定为结构+行动(v1.14)的改进:新增的约束提高了真正改变 Agent 的选择，并使最终界面获得可感知的改善。",
+    "preferred_arm": "structure-action",
+    "reported_visual_attributes": [
+      "overall UI visual impression",
+      "smoother perceived spatial experience",
+      "color palette matches owner's aesthetics"
+    ],
+    "positive_acceptance_for_version": true,
+    "per_task_scores_supplied": false,
+    "blind": false,
+    "do_not_modify_original_anonymous_review": true
+  },
+  "boundary": {
+    "owner_and_blind_evaluations_are_distinct": true,
+    "notable_disagreement": "T01 blind Agent reviewers favored baseline=structure above structure-action; the owner's overall qualitative preference favored structure-action.",
+    "pixel_limit": "T06 screenshots were pixel-identical under eight checked conditions; these frames do not show a visual gain.",
+    "causal_limit": "One run per task/arm, single Folio product family, no full production-version A/B or open-web cohort; does not prove model-general or consistent causal average impact.",
+    "historical_protocol": "prepared_not_run was correct at original release time; later runs are an addendum."
+  }
+}

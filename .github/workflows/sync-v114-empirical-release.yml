@@ -1,0 +1,73 @@
+name: Synchronize v1.14.0 post-release empirical notes
+on:
+  push:
+    branches: [main]
+    paths:
+      - docs/releases/v1.14.0.md
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reconcile:
+    if: github.repository == 'D1ChangGeng/UI-Spec-Studio'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Check the original immutable tag and update only release notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          import subprocess
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          assert repo == 'D1ChangGeng/UI-Spec-Studio'
+          tag_sha = 'fec7cde99be02c134481733e9f9bd3064ffa871a'
+          def gh(*args):
+              return subprocess.check_output(('gh', *args), text=True)
+          def release():
+              return json.loads(gh('api', f'repos/{repo}/releases/tags/v1.14.0'))
+          def tag():
+              return json.loads(gh('api', f'repos/{repo}/git/ref/tags/v1.14.0'))
+
+          observed_tag = tag()
+          assert observed_tag['object']['type'] == 'commit'
+          assert observed_tag['object']['sha'] == tag_sha, 'Never move the released v1.14.0 tag'
+          evidence = json.loads(Path('docs/evidence/v1.14.0/empirical-findings.json').read_text(encoding='utf-8'))
+          assert evidence['release']['commit'] == tag_sha
+          assert evidence['study']['real_agent_runs'] == 18
+          assert evidence['study']['locked_task_judgments'] == 12
+          assert evidence['owner_assessment']['positive_acceptance_for_version']
+          notes = Path('docs/releases/v1.14.0.md').read_text(encoding='utf-8')
+          assert '## Post-release empirical findings (2026-10-28)' in notes
+          assert 'Anonymous Agent preference remains mixed' in notes
+
+          before = release()
+          assert before['tag_name'] == 'v1.14.0' and not before['draft'] and not before['prerelease']
+          expected_assets = {
+            'contents.json': 'sha256:87ccd14586e56e8034400093873f8421caa48734d9a52c839dd0ecef92eaef50',
+            'SHA256SUMS.txt': 'sha256:a999357e0017a82d277e490a4cea537e366f36896c1685bdabdd06137c58c758',
+            'ui-spec-1.14.0.zip': 'sha256:bd54f5326d0e0fde6785344f27aef74a7573a26d682226e020a407d75e4f2a01',
+            'ui-spec-studio-1.14.0.zip': 'sha256:b4565471660ff2546689ed16718023548493e8f07df59a4148c93572296c50fe',
+          }
+          def assets(r):
+              return {a['name']:a.get('digest') for a in r['assets']}
+          assert assets(before) == expected_assets, 'Unknown release asset change; refuse to edit notes'
+          existing_body = before.get('body') or ''
+          if existing_body.strip() != notes.strip():
+              assert 'remain unexecuted' in existing_body, 'Release body was edited independently; refuse to overwrite'
+              subprocess.run(['gh', 'release', 'edit', 'v1.14.0', '--repo', repo, '--notes-file', 'docs/releases/v1.14.0.md'], check=True)
+          after = release()
+          assert after['body'].strip() == notes.strip(), 'Release body readback did not match source'
+          assert assets(after) == expected_assets, 'Release assets changed during note update'
+          assert tag()['object']['sha'] == tag_sha, 'The release tag changed unexpectedly'
+          print(json.dumps({'release':after['html_url'],'tag_commit':tag_sha,'notes':'verified','assets':'unchanged'}, indent=2))
+          PY

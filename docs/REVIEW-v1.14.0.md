@@ -134,3 +134,21 @@ Source documentation does not predeclare a future CI or release result. The
 actual workflow, tag commit, public release status and asset checksums establish
 publication. Prior tags and evidence remain intact. Method delivery and package
 reliability can be verified while the comparative empirical claim remains open.
+
+
+---
+
+## Post-release empirical addendum — 2026-10-28 (Asia/Tokyo)
+
+**At the original v1.14.0 publication, the three-arm inputs were prepared but not executed; that historical statement remains valid for the tag timestamp.** Subsequently 18 genuine Agent runs, twelve locked blind Agent judgments, common functional checks and process review were completed. Their verified source identities, task comparisons and human product-owner acceptance are now recorded in [the post-release evidence report](experiments/design-evidence/RESULTS-v1.14.0.md) and [machine-readable summary](evidence/v1.14.0/empirical-findings.json).
+
+**Production version identity:** the tagged v1.14.0 runtime integrates both the multiscale map and the evidence-to-action reference in `SKILL.md`, plus existing professional references and optional checker. It is methodologically the **structure + action** option, not baseline or structure-only. The isolated experimental treatment is not byte-identical to the integrated production Skill.
+
+**Two explicitly separate judgments:**
+
+1. **Locked anonymous Agent reviews:** T02 consistently favors structure + action; T01 consistently favors baseline=structure; T03–T05 show weak differences or ties; T06 ties with pixel-identical tested frames. These original judgments and locks are unchanged.
+2. **Human product-owner acceptance (2026-10-28):** the owner reports consistently preferring the structure + action results for the overall UI impression, smoother spatial experience and a color palette better suited to personal taste, and accepts the new constraints as having changed Agent choices and produced personally perceptible improvement. This is owner-level qualitative evidence, not a blind third Agent vote or measured average causal effect.
+
+The experiment is single-sample-per-cell, fixed-material and from one Folio product family. It does not establish generalization to every product, model or live-web research condition. T06's equal frames and T01's contrary Agent ranking remain visible rather than being reinterpreted to fit the user preference.
+
+**Post-release publication policy:** original tag `v1.14.0`, released archives and SHA-256 values stay immutable; this is an addendum on the current main branch and a synchronized update to the Release description. Newer released runtime versions are not renamed or replaced.
