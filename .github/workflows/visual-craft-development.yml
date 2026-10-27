@@ -5,37 +5,86 @@ on:
 permissions:
   contents: read
 jobs:
-  source-inputs:
+  craft-study:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
-          ref: a89091dfa5754f98b79655c684f978f24fd92716
-          path: baseline
           persist-credentials: false
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
-          repository: mouse-lin/finesse-skill
-          ref: c7a91448baf6e98fecf542915cdb7e3155bddc45
-          path: finesse
-          persist-credentials: false
-      - name: Archive identified source without running upstream code
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - name: Acquire exact application dependencies and source
         shell: bash
         run: |
-          mkdir inputs
-          git -C baseline archive --format=tar HEAD > inputs/ui-spec-1.15-baseline.tar
-          git -C finesse archive --format=tar HEAD LICENSE README.md README.en.md USAGE.md USAGE.en.md skills/finesse-ui > inputs/finesse-pinned.tar
+          mkdir -p /tmp/craft-study/src /tmp/craft-study/dist
+          cp .development/craft-study.jsx /tmp/craft-study/src/App.jsx
           python - <<'PY'
-          import hashlib,json,pathlib,subprocess
-          manifest={'purpose':'Read-only source research; no upstream code executed','baseline':subprocess.check_output(['git','-C','baseline','rev-parse','HEAD'],text=True).strip(),'finesse':subprocess.check_output(['git','-C','finesse','rev-parse','HEAD'],text=True).strip(),'files':{}}
-          for p in sorted(pathlib.Path('inputs').glob('*.tar')):
-              manifest['files'][p.name]={'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
-          pathlib.Path('inputs/identity.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
-          print(json.dumps(manifest,indent=2))
+          import pathlib,urllib.request,hashlib,json
+          root=pathlib.Path('/tmp/craft-study')
+          base='https://raw.githubusercontent.com/DavidHDev/react-bits/e12c22192ac7b4b452c5e2feb9b586d74765d696/'
+          records=[]
+          for name in ['SpotlightCard','TiltedCard']:
+            for ext in ['jsx','css']:
+              path=f'src/content/Components/{name}/{name}.{ext}'
+              data=urllib.request.urlopen(base+path,timeout=45).read()
+              target=root/'src'/name/f'{name}.{ext}';target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
+              records.append({'source':base+path,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'role':'exact component source used in the bounded application'})
+          (root/'dist/LICENSE.md').write_bytes(urllib.request.urlopen(base+'LICENSE.md',timeout=45).read())
+          (root/'dist/source-identity.json').write_text(json.dumps({'scope':'A specific research-library application study. Not a component distribution or independent Agent experiment.','sources':records},indent=2)+'\n',encoding='utf-8')
+          (root/'dist/index.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atlas research-library adoption study</title><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="study.css"><body><div id="root"></div><script src="app.js"></script></body></html>',encoding='utf-8')
+          PY
+          cd /tmp/craft-study
+          npm init -y
+          npm install --ignore-scripts --save-exact react@19.2.0 react-dom@19.2.0 esbuild@0.25.10
+          node -e "require('esbuild').buildSync({entryPoints:['src/App.jsx'],bundle:true,outfile:'dist/app.js',jsx:'automatic',minify:false,define:{'process.env.NODE_ENV':'\"production\"'}})"
+          cp package-lock.json dist/build-lock.json
+      - name: Capture public demo and documentation context
+        shell: bash
+        run: |
+          python -m pip install -r tools/requirements-preview.txt
+          python -m playwright install --with-deps chromium
+          mkdir -p /tmp/craft-study/public-captures
+          python - <<'PY'
+          from playwright.sync_api import sync_playwright
+          import pathlib,json,time
+          out=pathlib.Path('/tmp/craft-study/public-captures');records=[]
+          with sync_playwright() as p:
+            browser=p.chromium.launch(headless=True)
+            page=browser.new_page(viewport={'width':1440,'height':1000},device_scale_factor=1)
+            for name,url,selector in [('spotlight','https://reactbits.dev/components/spotlight-card','.spotlight-card'),('tilt','https://reactbits.dev/components/tilted-card','.tilted-card'),('magic','https://magicui.design/docs/components/magic-card','h1')]:
+              row={'name':name,'url':url,'captured_not_yet_viewed':True}
+              try:
+                response=page.goto(url,wait_until='domcontentloaded',timeout=45000);row['http_status']=response.status if response else None
+                page.wait_for_timeout(2500)
+                target=page.locator(selector).first
+                if target.count(): target.scroll_into_view_if_needed(timeout=10000)
+                page.screenshot(path=str(out/f'{name}-context.png'))
+                row['capture']=f'{name}-context.png';row['selector_matches']=page.locator(selector).count()
+                (out/f'{name}-text.txt').write_text(page.locator('body').inner_text(),encoding='utf-8')
+                if name!='magic' and target.count():
+                  box=target.bounding_box();frames=[]
+                  for index,frac in enumerate([.15,.25,.4,.55,.7,.85,.7,.5,.3,.15]):
+                    page.mouse.move(box['x']+box['width']*frac,box['y']+box['height']*.45)
+                    page.wait_for_timeout(100)
+                    filename=f'{name}-frame-{index:02}.png';start=time.time();target.screenshot(path=str(out/filename));frames.append({'file':filename,'capture_started':start,'capture_finished':time.time()})
+                  row['sampled_pointer_episode']=frames
+              except Exception as exc:row['error']=str(exc)
+              records.append(row)
+            browser.close()
+          (out/'capture-record.json').write_text(json.dumps(records,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(records,indent=2))
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
         with:
-          name: visual-craft-source-inputs
-          path: inputs/
-          retention-days: 14
+          name: visual-craft-application-study
+          path: |
+            /tmp/craft-study/dist/
+            /tmp/craft-study/public-captures/
+          retention-days: 7
