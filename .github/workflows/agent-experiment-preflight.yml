@@ -1,0 +1,48 @@
+name: Cloud agent experiment preflight
+on:
+  push:
+    branches: [experiment/cloud-agent-preflight-20261027]
+    paths: [.github/workflows/agent-experiment-preflight.yml]
+permissions:
+  contents: read
+jobs:
+  model-prerequisites:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verify named inference credentials are available without exposing them
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RUN_ID: ${{ github.run_id }}
+          COMMIT: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import datetime, json, os, pathlib, sys
+          present = {name: bool(os.environ.get(name, '').strip()) for name in ('OPENAI_API_KEY', 'ANTHROPIC_API_KEY')}
+          ready = any(present.values())
+          result = {
+            'kind': 'cloud_agent_experiment_prerequisite_check',
+            'status': 'credential_present_auth_unverified' if ready else 'blocked_no_named_inference_credential',
+            'observed_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            'run_id': os.environ['RUN_ID'],
+            'commit': os.environ['COMMIT'],
+            'named_credentials_present': present,
+            'model_requests': 0,
+            'independent_participant_runs': 0,
+            'scope': 'Presence only in this GitHub-hosted job; not authentication, model access, Agent execution or UI quality. Does not enumerate all secrets or print any credential value.',
+            'next_requirement': 'A supported authorized independent Agent runtime or a valid model credential for an isolated runner.'
+          }
+          out = pathlib.Path('experiment-preflight'); out.mkdir()
+          (out/'result.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
+          print(json.dumps(result, indent=2))
+          sys.exit(0 if ready else 2)
+          PY
+      - name: Preserve exact prerequisite observation
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: cloud-agent-experiment-preflight
+          path: experiment-preflight/result.json
+          if-no-files-found: error
+          retention-days: 14
