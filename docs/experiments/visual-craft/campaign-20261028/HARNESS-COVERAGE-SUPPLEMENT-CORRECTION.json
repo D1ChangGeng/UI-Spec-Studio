@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-27T21:09:25.579215+00:00",
+  "finding": "The first supplemental R4 probe equated reading continuity with unchanged raw scrollTop. pa04824d changed180 to185 pixels while its implementation actively anchors the same visible content; compact/expanded content top padding changes from27 to32 pixels.",
+  "correction": "Accept either retained valid scrollTop (within2px, with scroll-range clamping) OR a retained visible content landmark (within2px relative to the reading viewport). Record both measurements. This covers the two legitimate continuity mechanisms without editing any app.",
+  "applied_to": "Every T3 output. The three already observed outputs are rerun uniformly with the corrected probe; the fourth will use the corrected probe.",
+  "original_observations": "contract-supplement-history/raw-offset-v1/<run>/ preserves all three original complete probe runs, including the180→185 false failure.",
+  "original_script_sha256": "26f59772959949dfeb2964b67d979d3e6825c7cab1c8adedc9402cf53d27bed7",
+  "corrected_script_sha256": "7cffd0939aaade407e92dc267dd1bdf1b7378f5f30576b99a4a0199052e61bb3",
+  "scope": "Functional continuity equivalence, not an aesthetic score or precise semantic reading-comprehension measurement; the measured content landmarks and limitations stay visible."
+}

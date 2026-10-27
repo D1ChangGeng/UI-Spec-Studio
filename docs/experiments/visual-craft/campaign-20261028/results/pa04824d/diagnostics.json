@@ -1,0 +1,135 @@
+{
+  "task": "T3",
+  "createdAt": "2026-10-27T21:06:22.295Z",
+  "scope": "Asset and external-network diagnostic; no speed, FPS or production device comparison. Locally served uncompressed HTTP.",
+  "conditions": [
+    {
+      "blockExternal": false,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/assets/index-T2R0LRha.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-D3NKza0Q.css",
+          "type": "stylesheet"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 9159,
+        "dialogCount": 1,
+        "fonts": [],
+        "resources": [
+          {
+            "url": "LOCAL/assets/index-T2R0LRha.js",
+            "type": "script",
+            "transferBytes": 299422,
+            "encodedBodyBytes": 299122,
+            "decodedBodyBytes": 299122
+          },
+          {
+            "url": "LOCAL/assets/index-D3NKza0Q.css",
+            "type": "link",
+            "transferBytes": 30925,
+            "encodedBodyBytes": 30625,
+            "decodedBodyBytes": 30625
+          },
+          {
+            "url": "LOCAL/favicon.ico",
+            "type": "other",
+            "transferBytes": 764,
+            "encodedBodyBytes": 464,
+            "decodedBodyBytes": 464
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/assets/index-T2R0LRha.js",
+          "bytes": 299122
+        },
+        {
+          "path": "/assets/index-D3NKza0Q.css",
+          "bytes": 30625
+        }
+      ],
+      "requestedLocalBytes": 329747,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    },
+    {
+      "blockExternal": true,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/assets/index-T2R0LRha.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-D3NKza0Q.css",
+          "type": "stylesheet"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 9159,
+        "dialogCount": 1,
+        "fonts": [],
+        "resources": [
+          {
+            "url": "LOCAL/assets/index-T2R0LRha.js",
+            "type": "script",
+            "transferBytes": 299422,
+            "encodedBodyBytes": 299122,
+            "decodedBodyBytes": 299122
+          },
+          {
+            "url": "LOCAL/assets/index-D3NKza0Q.css",
+            "type": "link",
+            "transferBytes": 30925,
+            "encodedBodyBytes": 30625,
+            "decodedBodyBytes": 30625
+          },
+          {
+            "url": "LOCAL/favicon.ico",
+            "type": "other",
+            "transferBytes": 0,
+            "encodedBodyBytes": 0,
+            "decodedBodyBytes": 0
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/assets/index-T2R0LRha.js",
+          "bytes": 299122
+        },
+        {
+          "path": "/assets/index-D3NKza0Q.css",
+          "bytes": 30625
+        }
+      ],
+      "requestedLocalBytes": 329747,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    }
+  ]
+}

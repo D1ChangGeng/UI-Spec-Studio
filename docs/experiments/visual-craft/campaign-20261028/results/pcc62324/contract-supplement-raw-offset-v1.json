@@ -1,0 +1,425 @@
+{
+  "task": "T3",
+  "root": "/workspace/scratch/cb73faf0411c/campaign/frozen/pcc62324/app",
+  "startedAt": "2026-10-27T20:57:26.950Z",
+  "browser": "134.0.6998.35",
+  "viewportConditions": [
+    [
+      1440,
+      900
+    ],
+    [
+      900,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "groups": [
+    {
+      "id": "01",
+      "name": "All three source identities and full texts",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Correct title heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Correct author heat-mapping Ama Osei"
+        },
+        {
+          "pass": true,
+          "message": "Correct author heat-mapping Milan Shah"
+        },
+        {
+          "pass": true,
+          "message": "Correct publication heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Complete summary heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Section retained heat-mapping A city measured in short walks"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Section retained heat-mapping The limits of a neighborhood average"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Section retained heat-mapping From observations to decisions"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained heat-mapping"
+        },
+        {
+          "pass": true,
+          "message": "Correct title shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Correct author shade-access Hana Park"
+        },
+        {
+          "pass": true,
+          "message": "Correct publication shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Complete summary shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Section retained shade-access Near is not the same as accessible"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Section retained shade-access Small places within ordinary routines"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Section retained shade-access A more useful public inventory"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained shade-access"
+        },
+        {
+          "pass": true,
+          "message": "Correct title night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Correct author night-cooling Elena Rivera"
+        },
+        {
+          "pass": true,
+          "message": "Correct author night-cooling Noah Bell"
+        },
+        {
+          "pass": true,
+          "message": "Correct publication night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Complete summary night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Section retained night-cooling The hours after sunset"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Section retained night-cooling Heat moves through a household routine"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Section retained night-cooling Connecting the home and the neighborhood"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained night-cooling"
+        },
+        {
+          "pass": true,
+          "message": "Complete paragraph retained night-cooling"
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 6358
+    },
+    {
+      "id": "04",
+      "name": "Reading position remains at its valid offset across modes",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Reading offset preserved, allowing only valid scroll-range clamping",
+          "details": {
+            "before": 180,
+            "after": {
+              "top": 180,
+              "max": 2147
+            }
+          }
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 2378
+    },
+    {
+      "id": "06",
+      "name": "Reversed drag returns to the existing reading sheet",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Reversed drag settles at original position",
+          "details": {
+            "initialY": 196,
+            "finalY": 196
+          }
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 3871
+    },
+    {
+      "id": "10",
+      "name": "Low-impact navigation count remains intact",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Requested label retained",
+          "details": {
+            "expected": "Library",
+            "actual": "◇Library24"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Original count retained",
+          "details": {
+            "expected": "24",
+            "actual": "◇Library24"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Count remains after activation",
+          "details": {
+            "expected": "24",
+            "actual": "◇Library24"
+          }
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 824
+    }
+  ],
+  "captures": [
+    {
+      "file": "01-complete-heat-mapping.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:28.821Z"
+    },
+    {
+      "file": "01-complete-shade-access.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:30.717Z"
+    },
+    {
+      "file": "01-complete-night-cooling.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:32.480Z"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "requests": [],
+  "diagnostics": {
+    "buildFiles": [
+      {
+        "file": "assets/index-B-Pd0MYK.js",
+        "bytes": 297175,
+        "sha256": "d2fd5ab85d0c05b24fc7810b17e3cdcf44b7fcba6707bd64d8548ca276a74d92"
+      },
+      {
+        "file": "assets/index-BJtOq0Vp.css",
+        "bytes": 20920,
+        "sha256": "0ca34c4556bf62f3a9cd2af2ffd4d72b684d5aa90a12530ea11a372892dec091"
+      },
+      {
+        "file": "assets/index-BbO98oq8.css",
+        "bytes": 20627,
+        "sha256": "99bbeee2f50253ac57eb0c4ef5f73f9b1d07983fe769e8bc566b3723d4213636"
+      },
+      {
+        "file": "assets/index-Bv29_x0Q.js",
+        "bytes": 297287,
+        "sha256": "d4fff553255b5c745e582b07f3b53a6f3773d76c0089582b3cbc12013d8475d4"
+      },
+      {
+        "file": "assets/index-C4BTc6z7.css",
+        "bytes": 20729,
+        "sha256": "e6418ed2c8806afac72cfdc67b1eca5e31d9df2fd834cb3fef40d7332b3bb476"
+      },
+      {
+        "file": "assets/index-CBW9tffz.js",
+        "bytes": 297287,
+        "sha256": "d4fff553255b5c745e582b07f3b53a6f3773d76c0089582b3cbc12013d8475d4"
+      },
+      {
+        "file": "assets/index-CmToBxUw.js",
+        "bytes": 296404,
+        "sha256": "68d23825bcdd82a26330f38ebfbf9e723e139a5ed06fa94e76e2e5550bdac5c9"
+      },
+      {
+        "file": "assets/index-CwGgx7e_.css",
+        "bytes": 20858,
+        "sha256": "e7ef793fa1634b78313fe020d6af6edb5a08065fbe281a7e38c66e39e21c4630"
+      },
+      {
+        "file": "assets/index-DC0p9QCk.js",
+        "bytes": 296726,
+        "sha256": "14629e01036789f1fbdc0831b80249bf2a43a3568c77aad42fd659d7aca29f08"
+      },
+      {
+        "file": "assets/index-DIGzwGPe.css",
+        "bytes": 21809,
+        "sha256": "26f32d7b9058b18a2feff6e4d51cedcf979359c2acf3307a074f4effc45b6178"
+      },
+      {
+        "file": "assets/index-DS9iHByi.js",
+        "bytes": 296388,
+        "sha256": "c5ac21e01d52dbd24e7a404634780c0e7a9a96130438c76fe19dd774fc3ccfc9"
+      },
+      {
+        "file": "assets/index-Dkf0s748.js",
+        "bytes": 221938,
+        "sha256": "8d8f042ce06a6962353e8443527afeb33e466b180f8ab2287832fbdfa8a941f9"
+      },
+      {
+        "file": "assets/index-DlUh0rRg.css",
+        "bytes": 11759,
+        "sha256": "d97bc56ecb926b54a321e62524c5b5d821f4d6d82f98bc652c21f28e33190807"
+      },
+      {
+        "file": "assets/index-DxDcrF5R.js",
+        "bytes": 296726,
+        "sha256": "14629e01036789f1fbdc0831b80249bf2a43a3568c77aad42fd659d7aca29f08"
+      },
+      {
+        "file": "assets/index-F13dDHPG.js",
+        "bytes": 297287,
+        "sha256": "d4fff553255b5c745e582b07f3b53a6f3773d76c0089582b3cbc12013d8475d4"
+      },
+      {
+        "file": "assets/index-HXjJbGao.css",
+        "bytes": 21807,
+        "sha256": "d4eefab5346eaa7740af445af28d59b4b4c55faef9b1febe7b1e5923b9a61b9c"
+      },
+      {
+        "file": "assets/index-Hyip5cl3.css",
+        "bytes": 21737,
+        "sha256": "f395a87e47ec5a991c690c2f176f5af61da1800938b59e90ffd298c2ec9f7dfd"
+      },
+      {
+        "file": "assets/index-VS9xH_-_.css",
+        "bytes": 20970,
+        "sha256": "2a2a47b484bebd7f07535841a465f2a77d3e86caf818a7d179807aa2173c83ab"
+      },
+      {
+        "file": "assets/index-zmAKVOOF.js",
+        "bytes": 295536,
+        "sha256": "b75b90cfe8334306695f6ee2b2fbd487155073e564da9aaeb18c8050be4f6085"
+      },
+      {
+        "file": "index.html",
+        "bytes": 464,
+        "sha256": "35c2a15804769c693ffe33a96c97eb387965a87806d2235cb47dd6856a97dabd"
+      }
+    ]
+  },
+  "selectorAdaptations": [],
+  "scope": "Uniform supplement for published contract conditions omitted from the initial runner. Original observations and frozen applications are unchanged. Group IDs join the original ten acceptance groups; these are not additional independent task samples.",
+  "finishedAt": "2026-10-27T20:57:40.387Z",
+  "functionalPasses": 4,
+  "functionalTotal": 4,
+  "rawPageErrorCount": 0,
+  "uniquePageErrors": []
+}

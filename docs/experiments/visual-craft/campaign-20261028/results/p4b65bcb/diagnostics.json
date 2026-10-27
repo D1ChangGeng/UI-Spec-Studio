@@ -1,0 +1,237 @@
+{
+  "task": "T1",
+  "createdAt": "2026-10-27T21:04:07.859Z",
+  "scope": "Asset and external-network diagnostic; no speed, FPS or production device comparison. Locally served uncompressed HTTP.",
+  "conditions": [
+    {
+      "blockExternal": false,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/fonts/Manrope.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/fonts/Lora.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/assets/index-Cs1aHDOI.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-BXrsF0pw.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "LOCAL/favicon.svg",
+          "type": "other"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 2791,
+        "dialogCount": 1,
+        "fonts": [
+          {
+            "family": "Manrope",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "200 800"
+          },
+          {
+            "family": "Lora",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "400 700"
+          }
+        ],
+        "resources": [
+          {
+            "url": "LOCAL/fonts/Manrope.ttf",
+            "type": "link",
+            "transferBytes": 165000,
+            "encodedBodyBytes": 164700,
+            "decodedBodyBytes": 164700
+          },
+          {
+            "url": "LOCAL/fonts/Lora.ttf",
+            "type": "link",
+            "transferBytes": 212496,
+            "encodedBodyBytes": 212196,
+            "decodedBodyBytes": 212196
+          },
+          {
+            "url": "LOCAL/assets/index-Cs1aHDOI.js",
+            "type": "script",
+            "transferBytes": 262388,
+            "encodedBodyBytes": 262088,
+            "decodedBodyBytes": 262088
+          },
+          {
+            "url": "LOCAL/assets/index-BXrsF0pw.css",
+            "type": "link",
+            "transferBytes": 26417,
+            "encodedBodyBytes": 26117,
+            "decodedBodyBytes": 26117
+          },
+          {
+            "url": "LOCAL/favicon.svg",
+            "type": "other",
+            "transferBytes": 638,
+            "encodedBodyBytes": 338,
+            "decodedBodyBytes": 338
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/fonts/Manrope.ttf",
+          "bytes": 164700
+        },
+        {
+          "path": "/fonts/Lora.ttf",
+          "bytes": 212196
+        },
+        {
+          "path": "/assets/index-Cs1aHDOI.js",
+          "bytes": 262088
+        },
+        {
+          "path": "/assets/index-BXrsF0pw.css",
+          "bytes": 26117
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 338
+        }
+      ],
+      "requestedLocalBytes": 665439,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    },
+    {
+      "blockExternal": true,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/fonts/Manrope.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/fonts/Lora.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/assets/index-Cs1aHDOI.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-BXrsF0pw.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "LOCAL/favicon.svg",
+          "type": "other"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 2791,
+        "dialogCount": 1,
+        "fonts": [
+          {
+            "family": "Manrope",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "200 800"
+          },
+          {
+            "family": "Lora",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "400 700"
+          }
+        ],
+        "resources": [
+          {
+            "url": "LOCAL/fonts/Manrope.ttf",
+            "type": "link",
+            "transferBytes": 165000,
+            "encodedBodyBytes": 164700,
+            "decodedBodyBytes": 164700
+          },
+          {
+            "url": "LOCAL/fonts/Lora.ttf",
+            "type": "link",
+            "transferBytes": 212496,
+            "encodedBodyBytes": 212196,
+            "decodedBodyBytes": 212196
+          },
+          {
+            "url": "LOCAL/assets/index-Cs1aHDOI.js",
+            "type": "script",
+            "transferBytes": 262388,
+            "encodedBodyBytes": 262088,
+            "decodedBodyBytes": 262088
+          },
+          {
+            "url": "LOCAL/assets/index-BXrsF0pw.css",
+            "type": "link",
+            "transferBytes": 26417,
+            "encodedBodyBytes": 26117,
+            "decodedBodyBytes": 26117
+          },
+          {
+            "url": "LOCAL/favicon.svg",
+            "type": "other",
+            "transferBytes": 638,
+            "encodedBodyBytes": 338,
+            "decodedBodyBytes": 338
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/fonts/Manrope.ttf",
+          "bytes": 164700
+        },
+        {
+          "path": "/fonts/Lora.ttf",
+          "bytes": 212196
+        },
+        {
+          "path": "/assets/index-Cs1aHDOI.js",
+          "bytes": 262088
+        },
+        {
+          "path": "/assets/index-BXrsF0pw.css",
+          "bytes": 26117
+        },
+        {
+          "path": "/favicon.svg",
+          "bytes": 338
+        }
+      ],
+      "requestedLocalBytes": 665439,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    }
+  ]
+}

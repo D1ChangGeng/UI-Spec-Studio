@@ -1,0 +1,221 @@
+{
+  "task": "T2",
+  "createdAt": "2026-10-27T21:07:29.145Z",
+  "scope": "Asset and external-network diagnostic; no speed, FPS or production device comparison. Locally served uncompressed HTTP.",
+  "conditions": [
+    {
+      "blockExternal": false,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/assets/index-Bp0vXkYM.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-u57PFutW.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "LOCAL/fonts/manrope.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/fonts/instrument-serif.ttf",
+          "type": "font"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 2316,
+        "dialogCount": 1,
+        "fonts": [
+          {
+            "family": "Manrope",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "200 800"
+          },
+          {
+            "family": "Instrument Serif",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "400"
+          }
+        ],
+        "resources": [
+          {
+            "url": "LOCAL/assets/index-Bp0vXkYM.js",
+            "type": "script",
+            "transferBytes": 266435,
+            "encodedBodyBytes": 266135,
+            "decodedBodyBytes": 266135
+          },
+          {
+            "url": "LOCAL/assets/index-u57PFutW.css",
+            "type": "link",
+            "transferBytes": 34797,
+            "encodedBodyBytes": 34497,
+            "decodedBodyBytes": 34497
+          },
+          {
+            "url": "LOCAL/fonts/manrope.ttf",
+            "type": "css",
+            "transferBytes": 165000,
+            "encodedBodyBytes": 164700,
+            "decodedBodyBytes": 164700
+          },
+          {
+            "url": "LOCAL/fonts/instrument-serif.ttf",
+            "type": "css",
+            "transferBytes": 70312,
+            "encodedBodyBytes": 70012,
+            "decodedBodyBytes": 70012
+          },
+          {
+            "url": "LOCAL/favicon.ico",
+            "type": "other",
+            "transferBytes": 787,
+            "encodedBodyBytes": 487,
+            "decodedBodyBytes": 487
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/assets/index-Bp0vXkYM.js",
+          "bytes": 266135
+        },
+        {
+          "path": "/assets/index-u57PFutW.css",
+          "bytes": 34497
+        },
+        {
+          "path": "/fonts/manrope.ttf",
+          "bytes": 164700
+        },
+        {
+          "path": "/fonts/instrument-serif.ttf",
+          "bytes": 70012
+        }
+      ],
+      "requestedLocalBytes": 535344,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    },
+    {
+      "blockExternal": true,
+      "requests": [
+        {
+          "url": "LOCAL/",
+          "type": "document"
+        },
+        {
+          "url": "LOCAL/assets/index-Bp0vXkYM.js",
+          "type": "script"
+        },
+        {
+          "url": "LOCAL/assets/index-u57PFutW.css",
+          "type": "stylesheet"
+        },
+        {
+          "url": "LOCAL/fonts/manrope.ttf",
+          "type": "font"
+        },
+        {
+          "url": "LOCAL/fonts/instrument-serif.ttf",
+          "type": "font"
+        }
+      ],
+      "blocked": [],
+      "pageErrors": [],
+      "consoleErrors": [],
+      "render": {
+        "textLength": 2316,
+        "dialogCount": 1,
+        "fonts": [
+          {
+            "family": "Manrope",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "200 800"
+          },
+          {
+            "family": "Instrument Serif",
+            "status": "loaded",
+            "style": "normal",
+            "weight": "400"
+          }
+        ],
+        "resources": [
+          {
+            "url": "LOCAL/assets/index-Bp0vXkYM.js",
+            "type": "script",
+            "transferBytes": 266435,
+            "encodedBodyBytes": 266135,
+            "decodedBodyBytes": 266135
+          },
+          {
+            "url": "LOCAL/assets/index-u57PFutW.css",
+            "type": "link",
+            "transferBytes": 34797,
+            "encodedBodyBytes": 34497,
+            "decodedBodyBytes": 34497
+          },
+          {
+            "url": "LOCAL/fonts/manrope.ttf",
+            "type": "css",
+            "transferBytes": 165000,
+            "encodedBodyBytes": 164700,
+            "decodedBodyBytes": 164700
+          },
+          {
+            "url": "LOCAL/fonts/instrument-serif.ttf",
+            "type": "css",
+            "transferBytes": 70312,
+            "encodedBodyBytes": 70012,
+            "decodedBodyBytes": 70012
+          },
+          {
+            "url": "LOCAL/favicon.ico",
+            "type": "other",
+            "transferBytes": 0,
+            "encodedBodyBytes": 0,
+            "decodedBodyBytes": 0
+          }
+        ]
+      },
+      "requestedLocalFiles": [
+        {
+          "path": "/",
+          "bytes": null
+        },
+        {
+          "path": "/assets/index-Bp0vXkYM.js",
+          "bytes": 266135
+        },
+        {
+          "path": "/assets/index-u57PFutW.css",
+          "bytes": 34497
+        },
+        {
+          "path": "/fonts/manrope.ttf",
+          "bytes": 164700
+        },
+        {
+          "path": "/fonts/instrument-serif.ttf",
+          "bytes": 70012
+        }
+      ],
+      "requestedLocalBytes": 535344,
+      "localFileByteScope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+    }
+  ]
+}

@@ -1,0 +1,2179 @@
+{
+  "task": "T2",
+  "root": "/workspace/scratch/cb73faf0411c/campaign/frozen/pa45255c/app",
+  "startedAt": "2026-10-27T20:57:24.681Z",
+  "browser": "134.0.6998.35",
+  "viewportConditions": [
+    [
+      1440,
+      900
+    ],
+    [
+      900,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "groups": [
+    {
+      "id": "02",
+      "name": "Exact complete result count",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 1089
+    },
+    {
+      "id": "03",
+      "name": "Search result counts",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 1094
+    },
+    {
+      "id": "04",
+      "name": "Filtered result counts and statuses",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Visible matching status PRJ-003",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Visible matching status PRJ-007",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Visible matching status PRJ-009",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Visible matching status PRJ-012",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 1164
+    },
+    {
+      "id": "06",
+      "name": "Full project metadata and focus containment",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Complete seeded description"
+        },
+        {
+          "pass": true,
+          "message": "Project method Interviews"
+        },
+        {
+          "pass": true,
+          "message": "Project method Observation"
+        },
+        {
+          "pass": true,
+          "message": "Exact detail date detail-start",
+          "details": {
+            "actual": "2026-10-05",
+            "expected": "2026-10-05"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Exact detail date detail-due",
+          "details": {
+            "actual": "2026-11-13",
+            "expected": "2026-11-13"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Complete original note"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Keyboard focus stays within open dialog"
+        },
+        {
+          "pass": true,
+          "message": "Focus return after full keyboard traversal"
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 1847
+    },
+    {
+      "id": "07",
+      "name": "Status change preserves other project states",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Detail status updated"
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-002",
+          "details": {
+            "expected": "Review",
+            "actual": "Review"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-003",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-004",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-005",
+          "details": {
+            "expected": "Review",
+            "actual": "Review"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-006",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-007",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-008",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-009",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-010",
+          "details": {
+            "expected": "Review",
+            "actual": "Review"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-011",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-012",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-002",
+          "details": {
+            "expected": "Review",
+            "actual": "Review"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-003",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-004",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-005",
+          "details": {
+            "expected": "Review",
+            "actual": "Review"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-006",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-007",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-008",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-009",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-010",
+          "details": {
+            "expected": "Review",
+            "actual": "Review"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-011",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-012",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 1908
+    },
+    {
+      "id": "08",
+      "name": "Original note remains after status and append chain",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Exactly two notes",
+          "details": {
+            "expected": 2,
+            "actual": 2
+          }
+        },
+        {
+          "pass": true,
+          "message": "Original note unchanged after append"
+        },
+        {
+          "pass": true,
+          "message": "Original note unchanged after reopen"
+        },
+        {
+          "pass": true,
+          "message": "Acceptance note retained after reopen"
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 1947
+    },
+    {
+      "id": "09",
+      "name": "Complete reload state preservation",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-002",
+          "details": {
+            "expected": "Review",
+            "actual": "Review"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-003",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-004",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-005",
+          "details": {
+            "expected": "Review",
+            "actual": "Review"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-006",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-007",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-008",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-009",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-010",
+          "details": {
+            "expected": "Review",
+            "actual": "Review"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-011",
+          "details": {
+            "expected": "In progress",
+            "actual": "In progress"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Unrelated status preserved PRJ-012",
+          "details": {
+            "expected": "Planned",
+            "actual": "Planned"
+          }
+        },
+        {
+          "pass": true,
+          "message": "Original note persists"
+        },
+        {
+          "pass": true,
+          "message": "Original author persists"
+        },
+        {
+          "pass": true,
+          "message": "New note persists"
+        },
+        {
+          "pass": true,
+          "message": "New note author persists"
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 2263
+    },
+    {
+      "id": "10",
+      "name": "Three complete views across widths and both themes",
+      "assertions": [
+        {
+          "pass": true,
+          "message": "Document root theme light"
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Selected theme persists after reload light 1440"
+        },
+        {
+          "pass": true,
+          "message": "Root theme persists light 1440"
+        },
+        {
+          "pass": true,
+          "message": "Theme changes visible surface/text styles",
+          "details": {
+            "changedElements": 97
+          }
+        },
+        {
+          "pass": true,
+          "message": "Document root theme dark"
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "pass": true,
+          "message": "Selected theme persists after reload dark 1440"
+        },
+        {
+          "pass": true,
+          "message": "Root theme persists dark 1440"
+        },
+        {
+          "pass": true,
+          "message": "Theme changes visible surface/text styles",
+          "details": {
+            "changedElements": 97
+          }
+        },
+        {
+          "pass": true,
+          "message": "Document root theme light"
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Selected theme persists after reload light 900"
+        },
+        {
+          "pass": true,
+          "message": "Root theme persists light 900"
+        },
+        {
+          "pass": true,
+          "message": "Theme changes visible surface/text styles",
+          "details": {
+            "changedElements": 97
+          }
+        },
+        {
+          "pass": true,
+          "message": "Document root theme dark"
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 900,
+            "scroll": 900
+          }
+        },
+        {
+          "pass": true,
+          "message": "Selected theme persists after reload dark 900"
+        },
+        {
+          "pass": true,
+          "message": "Root theme persists dark 900"
+        },
+        {
+          "pass": true,
+          "message": "Theme changes visible surface/text styles",
+          "details": {
+            "changedElements": 96
+          }
+        },
+        {
+          "pass": true,
+          "message": "Document root theme light"
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Selected theme persists after reload light 390"
+        },
+        {
+          "pass": true,
+          "message": "Root theme persists light 390"
+        },
+        {
+          "pass": true,
+          "message": "Theme changes visible surface/text styles",
+          "details": {
+            "changedElements": 96
+          }
+        },
+        {
+          "pass": true,
+          "message": "Document root theme dark"
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Already clear search"
+        },
+        {
+          "pass": true,
+          "message": "Already All status"
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "1 of 12 projects",
+            "expected": [
+              1,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "4 of 12 projects",
+            "expected": [
+              4,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "Correct result count",
+          "details": {
+            "text": "12 of 12 projects",
+            "expected": [
+              12,
+              12
+            ]
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "Selected theme persists after reload dark 390"
+        },
+        {
+          "pass": true,
+          "message": "Root theme persists dark 390"
+        },
+        {
+          "pass": true,
+          "message": "No long-running nonessential motion under reduced-motion idle condition",
+          "details": {
+            "animations": []
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "No long-running nonessential motion under reduced-motion idle condition",
+          "details": {
+            "animations": []
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        },
+        {
+          "pass": true,
+          "message": "No long-running nonessential motion under reduced-motion idle condition",
+          "details": {
+            "animations": []
+          }
+        },
+        {
+          "pass": true,
+          "message": "No page-level horizontal overflow",
+          "details": {
+            "width": 390,
+            "scroll": 390
+          }
+        }
+      ],
+      "status": "pass",
+      "elapsedMs": 24627
+    }
+  ],
+  "captures": [
+    {
+      "file": "10-1440-light-overview-detail.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:37.296Z"
+    },
+    {
+      "file": "10-1440-light-projects-detail.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:38.033Z"
+    },
+    {
+      "file": "10-1440-light-schedule-detail.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:39.069Z"
+    },
+    {
+      "file": "10-1440-light-overview.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:39.750Z"
+    },
+    {
+      "file": "10-1440-dark-overview-detail.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:41.129Z"
+    },
+    {
+      "file": "10-1440-dark-projects-detail.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:41.916Z"
+    },
+    {
+      "file": "10-1440-dark-schedule-detail.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:42.768Z"
+    },
+    {
+      "file": "10-1440-dark-overview.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:43.515Z"
+    },
+    {
+      "file": "10-900-light-overview-detail.png",
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:44.775Z"
+    },
+    {
+      "file": "10-900-light-projects-detail.png",
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:45.497Z"
+    },
+    {
+      "file": "10-900-light-schedule-detail.png",
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:46.378Z"
+    },
+    {
+      "file": "10-900-light-overview.png",
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:47.208Z"
+    },
+    {
+      "file": "10-900-dark-overview-detail.png",
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:48.482Z"
+    },
+    {
+      "file": "10-900-dark-projects-detail.png",
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:49.266Z"
+    },
+    {
+      "file": "10-900-dark-schedule-detail.png",
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:50.275Z"
+    },
+    {
+      "file": "10-900-dark-overview.png",
+      "viewport": {
+        "width": 900,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:50.960Z"
+    },
+    {
+      "file": "10-390-light-overview-detail.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:52.177Z"
+    },
+    {
+      "file": "10-390-light-projects-detail.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:52.955Z"
+    },
+    {
+      "file": "10-390-light-schedule-detail.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:53.764Z"
+    },
+    {
+      "file": "10-390-light-overview.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:54.574Z"
+    },
+    {
+      "file": "10-390-dark-overview-detail.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:55.805Z"
+    },
+    {
+      "file": "10-390-dark-projects-detail.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:56.532Z"
+    },
+    {
+      "file": "10-390-dark-schedule-detail.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:57.381Z"
+    },
+    {
+      "file": "10-390-dark-overview.png",
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "time": "2026-10-27T20:57:58.109Z"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "requests": [],
+  "diagnostics": {
+    "buildFiles": [
+      {
+        "file": "assets/index-BS6cIJV9.js",
+        "bytes": 528115,
+        "sha256": "e38567d6ed9f2823708d17f07a22bcb43371a2f3520bc5713b27ed0eb18e6354"
+      },
+      {
+        "file": "assets/index-CRt2VwoR.css",
+        "bytes": 38869,
+        "sha256": "f3665ba659467688efdf4c6f18d592d1d709d825fe8efd677b091b94edf85fe7"
+      },
+      {
+        "file": "fonts/DMSans-OFL.txt",
+        "bytes": 4482,
+        "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+      },
+      {
+        "file": "fonts/DMSans.ttf",
+        "bytes": 240164,
+        "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+      },
+      {
+        "file": "fonts/InstrumentSerif-Italic.ttf",
+        "bytes": 71592,
+        "sha256": "08939b8bdf534afec24ae0ef5e03f948940cd9a8fe08e7fecbad040e62327385"
+      },
+      {
+        "file": "fonts/InstrumentSerif-OFL.txt",
+        "bytes": 4405,
+        "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521"
+      },
+      {
+        "file": "fonts/InstrumentSerif-Regular.ttf",
+        "bytes": 70012,
+        "sha256": "498efd461f6ddfcb7a111bf9a565709d2085d48201d501ead960d93e84ffbb88"
+      },
+      {
+        "file": "index.html",
+        "bytes": 487,
+        "sha256": "7f324df5b0c2a01cd0e7fe172ac3933f3c95a8ca53f78cb38f6527bf83b518c1"
+      }
+    ]
+  },
+  "selectorAdaptations": [],
+  "scope": "Uniform supplement for published contract conditions omitted from the initial runner. Original observations and frozen applications are unchanged. Group IDs join the original ten acceptance groups; these are not additional independent task samples.",
+  "finishedAt": "2026-10-27T20:58:00.627Z",
+  "functionalPasses": 8,
+  "functionalTotal": 8,
+  "rawPageErrorCount": 0,
+  "uniquePageErrors": []
+}
