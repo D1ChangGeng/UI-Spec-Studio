@@ -1,0 +1,76 @@
+name: Observe frozen workspace settled states
+on:
+  push:
+    branches: [eval/settled-cb73faf-20261028]
+permissions:
+  contents: read
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        run: [p93abe90, pa45255c, p649c5ff]
+    env:
+      CAMPAIGN: docs/experiments/visual-craft/campaign-20261028
+      RUN_ID: ${{ matrix.run }}
+      UI_EVAL_RUNTIME: /tmp/ui-eval-runtime
+      PLAYWRIGHT_BROWSERS_PATH: /tmp/ui-eval-playwright
+      UI_EVAL_CHROMIUM: /tmp/ui-eval-playwright/chromium-1161/chrome-linux/chrome
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22.16.0
+      - name: Restore original immutable output and pinned runtime
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,hashlib,tarfile,os
+          b=Path(os.environ['CAMPAIGN']);rid=os.environ['RUN_ID'];m=json.loads((b/'archives'/f'{rid}.manifest.json').read_text())
+          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+          archive=Path('/tmp')/(rid+'.tar.gz')
+          with archive.open('wb') as out:
+              for part in m['parts']:
+                  p=b/'archives/parts'/part['file'];assert sha(p)==part['sha256'];out.write(p.read_bytes())
+          assert sha(archive)==m['archive']['sha256']
+          target=Path('restored').resolve();target.mkdir()
+          with tarfile.open(archive) as t:
+              for x in t.getmembers():
+                  (target/x.name).resolve().relative_to(target)
+                  assert not x.issym() and not x.islnk()
+              t.extractall(target,filter='data')
+          for f in m['files']:
+              if f.get('archived',True):assert sha(target/f['path'])==f['sha256'],f['path']
+          rt=Path(os.environ['UI_EVAL_RUNTIME']);rt.mkdir();lock=json.loads((b/'runtime-package-lock.json').read_text())
+          (rt/'package-lock.json').write_text(json.dumps(lock));(rt/'package.json').write_text(json.dumps({'private':True,**lock['packages']['']}))
+          Path('observations').mkdir()
+          Path('observations/source.json').write_text(json.dumps({'run_id':rid,'archive_sha256':m['archive']['sha256'],'source_checkpoint':'647946ff83512469bd5adca61afd7d5fa7dd7de4','scope':'Additional stable-state observation of frozen T2 output, not a new model experiment.'},indent=2))
+          PY
+          cd "$UI_EVAL_RUNTIME"
+          npm ci --ignore-scripts --no-audit --no-fund
+          ./node_modules/.bin/playwright install --with-deps chromium
+      - name: Observe after actual panel geometry settles
+        run: node tools/recovery_settled_probe.mjs "$PWD/restored/frozen/app" "$PWD/observations"
+      - name: Verify no frozen file changed
+        if: always()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,hashlib,os
+          b=Path(os.environ['CAMPAIGN']);m=json.loads((b/'archives'/(os.environ['RUN_ID']+'.manifest.json')).read_text())
+          changed=[f['path'] for f in m['files'] if f.get('archived',True) and (not (Path('restored')/f['path']).is_file() or hashlib.sha256((Path('restored')/f['path']).read_bytes()).hexdigest()!=f['sha256'])]
+          Path('observations').mkdir(exist_ok=True)
+          Path('observations/immutability.json').write_text(json.dumps({'source_mutations':changed,'scope':'Frozen output byte check only'}))
+          assert not changed
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: settled-${{ matrix.run }}
+          path: observations/
+          if-no-files-found: error
+          retention-days: 30
