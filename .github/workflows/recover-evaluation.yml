@@ -1,0 +1,32 @@
+name: Recover frozen evaluation evidence
+on:
+  push:
+    branches: [eval/recover-cb73faf-20261028]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: 647946ff83512469bd5adca61afd7d5fa7dd7de4
+          persist-credentials: false
+      - name: Export exact historical tree without modifying any participant
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = 647946ff83512469bd5adca61afd7d5fa7dd7de4
+          mkdir export
+          git archive --format=tar.gz --output=export/campaign-source.tar.gz HEAD
+          git rev-parse HEAD HEAD^{tree} > export/source-identity.txt
+          sha256sum export/campaign-source.tar.gz > export/SHA256SUMS.txt
+          printf '%s\n' 'Recovery export only. No model run, source repair, scoring or quality conclusion.' > export/SCOPE.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: frozen-campaign-recovery
+          path: export/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
