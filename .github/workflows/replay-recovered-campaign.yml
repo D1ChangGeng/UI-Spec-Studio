@@ -1,0 +1,127 @@
+name: Recheck recovered frozen applications
+on:
+  push:
+    branches: [eval/replay-cb73faf-20261028]
+    paths: [.github/workflows/replay-recovered-campaign.yml]
+permissions:
+  contents: read
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 9
+      matrix:
+        include:
+          - {run: pb1788ae, task: T1}
+          - {run: p75a31fd, task: T1}
+          - {run: p4b65bcb, task: T1}
+          - {run: p93abe90, task: T2}
+          - {run: pa45255c, task: T2}
+          - {run: p649c5ff, task: T2}
+          - {run: p3017a82, task: T3}
+          - {run: pcc62324, task: T3}
+          - {run: pa04824d, task: T3}
+    env:
+      CAMPAIGN: docs/experiments/visual-craft/campaign-20261028
+      RUN_ID: ${{ matrix.run }}
+      TASK_ID: ${{ matrix.task }}
+      UI_EVAL_RUNTIME: ${{ runner.temp }}/ui-eval-runtime
+      PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/playwright
+      UI_EVAL_CHROMIUM: ${{ runner.temp }}/playwright/chromium-1161/chrome-linux/chrome
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: 647946ff83512469bd5adca61afd7d5fa7dd7de4
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22.16.0
+      - name: Verify and restore exact original artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = 647946ff83512469bd5adca61afd7d5fa7dd7de4
+          python3 - <<'PY'
+          from pathlib import Path
+          import os,json,hashlib,tarfile
+          b=Path(os.environ['CAMPAIGN']); rid=os.environ['RUN_ID']
+          m=json.loads((b/'archives'/f'{rid}.manifest.json').read_text())
+          sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+          packed=Path(os.environ['RUNNER_TEMP'])/(rid+'.tar.gz')
+          with packed.open('wb') as out:
+              for part in m['parts']:
+                  p=b/'archives/parts'/part['file']
+                  assert sha(p)==part['sha256'],part['file']
+                  out.write(p.read_bytes())
+          assert sha(packed)==m['archive']['sha256']
+          restore=Path('restored').resolve();restore.mkdir()
+          with tarfile.open(packed) as archive:
+              for member in archive.getmembers():
+                  (restore/member.name).resolve().relative_to(restore)
+                  assert not member.issym() and not member.islnk(),member.name
+              archive.extractall(restore,filter='data')
+          count=0
+          for item in m['files']:
+              if item.get('archived',True):
+                  assert sha(restore/item['path'])==item['sha256'],item['path']
+                  count+=1
+          rt=Path(os.environ['UI_EVAL_RUNTIME']);rt.mkdir()
+          lock=json.loads((b/'runtime-package-lock.json').read_text())
+          (rt/'package-lock.json').write_text(json.dumps(lock))
+          (rt/'package.json').write_text(json.dumps({'private':True,**lock['packages']['']}))
+          Path('recheck').mkdir()
+          Path('recheck/identity.json').write_text(json.dumps({'run_id':rid,'task':os.environ['TASK_ID'],'checkpoint':'647946ff83512469bd5adca61afd7d5fa7dd7de4','archive_sha256':m['archive']['sha256'],'verified_original_files':count,'workflow_run':os.environ['GITHUB_RUN_ID'],'workflow_sha':os.environ['GITHUB_SHA'],'scope':'Independent runtime replay only. No participant source repair or new model invocation.'},indent=2))
+          PY
+      - name: Install pinned original runtime and browser
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$UI_EVAL_RUNTIME"
+          npm ci --ignore-scripts --no-audit --no-fund
+          for file in /etc/apt/sources.list /etc/apt/sources.list.d/*.list /etc/apt/sources.list.d/*.sources /etc/apt/apt-mirrors.txt; do
+            if [ -f "$file" ]; then
+              sudo sed -i -E 's@(https?://)azure\.archive\.ubuntu\.com/ubuntu([/[:space:]]|$)@\1archive.ubuntu.com/ubuntu\2@g' "$file"
+            fi
+          done
+          ./node_modules/.bin/playwright install --with-deps chromium
+          "$UI_EVAL_CHROMIUM" --version
+          node --version
+      - name: Replay original tests and uniform contract supplements
+        shell: bash
+        run: |
+          set -euo pipefail
+          node "$CAMPAIGN/evaluate.mjs" "$PWD/restored/frozen/app" "$TASK_ID" "$PWD/recheck/original" > recheck/original-command.log 2>&1
+          node "$CAMPAIGN/contract-supplement.mjs" "$PWD/restored/frozen/app" "$TASK_ID" "$PWD/recheck/supplement" > recheck/supplement-command.log 2>&1
+          node "$CAMPAIGN/diagnostics.mjs" "$PWD/restored/frozen/app" "$TASK_ID" "$PWD/recheck/diagnostics" > recheck/diagnostic-command.log 2>&1
+      - name: Verify unchanged participant and retain scoped result
+        if: always()
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,os,hashlib,sys
+          b=Path(os.environ['CAMPAIGN']);rid=os.environ['RUN_ID'];out=Path('recheck');out.mkdir(exist_ok=True)
+          m=json.loads((b/'archives'/f'{rid}.manifest.json').read_text())
+          changed=[]
+          for f in m['files']:
+              if f.get('archived',True):
+                  p=Path('restored')/f['path']
+                  if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256']:changed.append(f['path'])
+          records={}
+          for key in ('original','supplement'):
+              p=out/key/'results.json'
+              records[key]=json.loads(p.read_text()) if p.exists() else None
+          good=all(r and r.get('finishedAt') and r['browser']=='134.0.6998.35' and all(g['status']=='pass' for g in r['groups']) for r in records.values()) and not changed
+          result={'run_id':rid,'task':os.environ['TASK_ID'],'workflow_run':os.environ['GITHUB_RUN_ID'],'source_mutations':changed,'groups':{k:({'passed':r['functionalPasses'],'total':r['functionalTotal'],'browser':r['browser']} if r else None) for k,r in records.items()},'scoped_assertion_result':'pass' if good else 'failure_or_incomplete','independent_agent_runs':0,'blind_visual_reviews':0,'scope':'Same frozen applications and evaluator bytes, pinned browser/library; different host and time. Actual runtime reproduction, not new model generation or visual-quality scoring.'}
+          (out/'summary.json').write_text(json.dumps(result,indent=2)+'\n')
+          print(json.dumps(result,indent=2));sys.exit(0 if good else 1)
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: recheck-${{ matrix.run }}
+          path: recheck/
+          if-no-files-found: error
+          retention-days: 30
