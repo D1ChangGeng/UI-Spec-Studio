@@ -1,0 +1,37 @@
+{
+  "id": "T1-mobile-theme-route-20261028",
+  "recorded_before_adapted_execution": "2026-10-28T08:24:51.389319+00:00",
+  "trigger": "Raw n7c9d9ca8 primary/supplement group 09 time out at 390px because theme-toggle is inside the existing history dialog. Frozen source retains both history-toggle and theme-toggle; the original runner already opens the same history route for history selections.",
+  "predeclared_permission": "PROTOCOL.md permits selector adaptation only for demonstrably equivalent public behavior, without application repair.",
+  "scope": "Route-only conditional setup: open existing history if theme-toggle is not visible, click the unchanged theme control, close history with Escape. All original assertions, thresholds and source builds are unchanged.",
+  "runs": [
+    "nb8be8a13",
+    "n08f925c8",
+    "nc5f68f67",
+    "n7c9d9ca8"
+  ],
+  "instruments": [
+    {
+      "instrument": "evaluate.mjs",
+      "original_sha256": "fc260754e237771b2c99019b228a574fb26f0bed62f7599de99edf463d94abed",
+      "adapted_sha256": "afb6a217b51996a1e123ca154362ce39365eda77f8940758b2575aad0963d66a",
+      "changed_calls": 1
+    },
+    {
+      "instrument": "contract-supplement.mjs",
+      "original_sha256": "7cffd0939aaade407e92dc267dd1bdf1b7378f5f30576b99a4a0199052e61bb3",
+      "adapted_sha256": "226dda8afd916ce00bbfa5561762abe25362c660bf027408c996e43cb2b980c3",
+      "changed_calls": 1
+    },
+    {
+      "instrument": "settled.mjs",
+      "original_sha256": "83f299a74ff3b8f945123aa269db04e912cfb5977d70d2409a189150eec52cb3",
+      "adapted_sha256": "4f32f3543ba195edd50e2457040a19cfba89a5713f16d1147eed11f6c897f419",
+      "changed_calls": 2
+    }
+  ],
+  "original_results_preserved": true,
+  "comparison_policy": "Use adapted group 09 only after all four T1 outputs complete the same route-aware checks; retain every raw and adapted result. Use common adapted stable captures for all four T1 review packets. Other groups retain original primary/supplement outcomes.",
+  "application_repairs": false,
+  "outcomes_at_record_creation": "unknown"
+}

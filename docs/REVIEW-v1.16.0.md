@@ -194,3 +194,76 @@ the changed sections actually viewed. A narrow Chinese heading's isolated final
 character was repaired, followed by a complete recapture and reinspection.
 The actual GitHub host, standard CLI remote install and published asset readback
 remain separate release-workflow facts.
+
+## Post-release empirical findings (2026-10-28)
+
+The statements above describe evidence available at the original publication.
+A new, separately registered local cohort now completes **12 independent
+fresh-context implementations**: three task families, both full production
+versions, and two repetitions per cell. Each output received all 37 unchanged
+runtime files from its assigned v1.15.0 or v1.16.0 tag. This is not a weakened
+baseline or a replacement for the earlier incomplete cohort.
+
+The tasks exercise a complete populated research frontend against a fixed Vane
+author reference (T1), an expressive twelve-project professional workspace (T2),
+and a bounded source-reading sheet inside an accepted notebook (T3). They use
+local authoritative service fixtures; commercial backend parity is not measured.
+
+Independent browser checks found **59/60**
+acceptance groups passed for v1.15.0 and
+**58/60** for v1.16.0. Failed groups
+remain in the record, with the same criteria and no evaluator repair of outputs.
+Supplemental assertions remain inside their original ten groups.
+
+One raw mobile theme lookup timed out because the existing theme button lived
+inside the public history drawer. A separately retained route-only adaptation
+was applied to all four T1 outputs with unchanged builds and pass criteria.
+Only group 09 uses that later observation; all other groups keep their original
+results. The raw timeout and both sets of evidence remain available. All four T1
+anonymous packets use the same adapted stable-capture procedure.
+
+| Task | Repetition | v1.15.0 groups | v1.16.0 groups | B minus A |
+|---|---:|---:|---:|---:|
+| T1 | 1 | 10/10 | 10/10 | 0 |
+| T1 | 2 | 10/10 | 10/10 | 0 |
+| T2 | 1 | 10/10 | 10/10 | 0 |
+| T2 | 2 | 10/10 | 10/10 | 0 |
+| T3 | 1 | 9/10 | 9/10 | 0 |
+| T3 | 2 | 10/10 | 9/10 | -1 |
+
+Three fresh-context, version-blinded model reviewers locked six separate ordinal
+dimensions and all six paired preferences before joining the version map. Their
+18 paired judgments favor v1.15.0 **11** times and v1.16.0
+**4** times, with **3** ties and
+**0** undecidable judgments. Exact scores,
+within-reviewer paired differences, disagreements, reasons and observation limits
+are preserved. These are correlated model judgments, not 18 independent users;
+no aesthetic total, percentage quality uplift or statistical significance claim
+is made. Ordered frames do not establish natural continuous-motion quality.
+
+The separate nonblind source audit follows actual integrated code, preserved
+visual or temporal mechanisms, custom remainder and source/trial/result evidence.
+Dependency names and source counts are not used as quality scores. Both versions
+already contain substantial sourcing guidance; retained adoption alone is not
+proof of a causal improvement or complete mature-product parity.
+
+The earlier campaign remains **9 recovered outputs out of 12**, with three missing
+outputs, three complete functional pairs and no recovered blind ratings. It is
+reported separately; the new cohort does not fill its missing cells. Approximate
+wall time, the shared-service interruption, incomplete command records and
+unobserved token/cost/active-compute measures retain their stated limitations.
+
+**Owner feedback remains pending.** A portable offline comparison interface
+provides actual retained builds, common viewports, original captures and videos,
+the shared product reference, nullable ratings, version-exposure records,
+timestamped score locks, preserved revisions and feedback export. No synthetic
+QA input is counted as owner acceptance. Later actual feedback will be appended
+without replacing these locked model observations.
+
+The original v1.16.0 tag and four assets remain the release identity. This dated
+addendum changes the empirical record, preserves the original publication status,
+and leaves the later v1.16.1 release and v1.14.0 addendum intact.
+
+[Detailed findings](https://github.com/D1ChangGeng/UI-Spec-Studio/blob/main/docs/experiments/visual-craft/RESULTS-v1.16.0.md) ·
+[Machine-readable record](https://github.com/D1ChangGeng/UI-Spec-Studio/blob/main/docs/evidence/v1.16.0/empirical-findings.json) ·
+[Protocol, locks and source audit](https://github.com/D1ChangGeng/UI-Spec-Studio/tree/main/docs/evidence/v1.16.0/empirical-20261028)

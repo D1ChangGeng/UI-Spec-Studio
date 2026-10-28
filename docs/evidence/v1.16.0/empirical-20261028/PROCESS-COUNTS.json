@@ -1,0 +1,111 @@
+{
+  "source": "process-audit.json",
+  "source_sha256": "18eb7c6f9faa2c2730c9bae5a4ba2ae8e1b46cbea157f2a9c53f1cd6581c0267",
+  "scope": "Presence of an auditor-supported actual-adoption class in each of six outputs per arm. Classes overlap; multiple libraries within one class count once per output. No maturity total, quality ranking or causal gain is derived.",
+  "arms": {
+    "A": {
+      "version": "v1.15.0",
+      "runs": 6,
+      "classifications": {
+        "font_or_icon": {
+          "count": 6,
+          "run_ids": [
+            "nb8be8a13",
+            "nc5f68f67",
+            "nb3bf2299",
+            "n6c114121",
+            "n7ce58cfb",
+            "ne64e4884"
+          ]
+        },
+        "behavior_foundation": {
+          "count": 6,
+          "run_ids": [
+            "nb8be8a13",
+            "nc5f68f67",
+            "nb3bf2299",
+            "n6c114121",
+            "n7ce58cfb",
+            "ne64e4884"
+          ]
+        },
+        "static_visual_implementation": {
+          "count": 2,
+          "run_ids": [
+            "nb3bf2299",
+            "n6c114121"
+          ]
+        },
+        "temporal_visual_implementation": {
+          "count": 0,
+          "run_ids": []
+        },
+        "composed_region": {
+          "count": 2,
+          "run_ids": [
+            "nb8be8a13",
+            "nc5f68f67"
+          ]
+        },
+        "product_system": {
+          "count": 0,
+          "run_ids": []
+        }
+      }
+    },
+    "B": {
+      "version": "v1.16.0",
+      "runs": 6,
+      "classifications": {
+        "font_or_icon": {
+          "count": 6,
+          "run_ids": [
+            "n08f925c8",
+            "n7c9d9ca8",
+            "n957b09e9",
+            "n91d1fa87",
+            "nfdae1319",
+            "n0080b6ac"
+          ]
+        },
+        "behavior_foundation": {
+          "count": 6,
+          "run_ids": [
+            "n08f925c8",
+            "n7c9d9ca8",
+            "n957b09e9",
+            "n91d1fa87",
+            "nfdae1319",
+            "n0080b6ac"
+          ]
+        },
+        "static_visual_implementation": {
+          "count": 3,
+          "run_ids": [
+            "n957b09e9",
+            "n91d1fa87",
+            "n0080b6ac"
+          ]
+        },
+        "temporal_visual_implementation": {
+          "count": 2,
+          "run_ids": [
+            "nfdae1319",
+            "n0080b6ac"
+          ]
+        },
+        "composed_region": {
+          "count": 2,
+          "run_ids": [
+            "n08f925c8",
+            "n7c9d9ca8"
+          ]
+        },
+        "product_system": {
+          "count": 0,
+          "run_ids": []
+        }
+      }
+    }
+  }
+}

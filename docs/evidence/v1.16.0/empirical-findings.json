@@ -1,0 +1,5102 @@
+{
+  "schema_version": 1,
+  "record_kind": "post_release_empirical_addendum",
+  "recorded_date": "2026-10-28",
+  "release": {
+    "tag": "v1.16.0",
+    "commit": "1ba50b1e1c6dfbd5540d9b54514ef81ac6160eec",
+    "original_tag_immutable": true,
+    "assets_unchanged_expected": true,
+    "production_skill_file_count": 37,
+    "full_production_versions_tested": true,
+    "original_not_executed_at_publication_record_preserved": true,
+    "later_v1_16_1_preserved": true
+  },
+  "origin": {
+    "raw_results": {
+      "name": "RESULTS.json",
+      "size_bytes": 705757,
+      "sha256": "17772982d75babcdfe24880f8075a98300778f3ed7a813518c5bc6fc542c96ce"
+    },
+    "authored_report": {
+      "name": "REPORT.md",
+      "size_bytes": 34096,
+      "sha256": "e1e3d989b3e9473730320a900166a71787a812ec5353bf6c036c14e2ce3221d8"
+    },
+    "raw_distribution": "Complete immutable implementations, logs, original captures, videos and portable replay are delivered to the owner as UI-Spec-Studio-v1.16.0-study.zip. This public addendum contains the protocol, aggregate data, exact locked model judgments and descriptive source audit; it does not pretend that private artifact distribution is a public dataset."
+  },
+  "study": {
+    "cohort_id": "replication-20261028-20e56",
+    "task_count": 3,
+    "arm_count": 2,
+    "replicates_per_cell": 2,
+    "real_agent_runs": 12,
+    "complete_matched_pairs": 6,
+    "locked_visual_reviewers": 3,
+    "locked_paired_preferences": 18,
+    "ordinal_dimensions": 6,
+    "summed_aesthetic_score": false,
+    "versions": {
+      "A": {
+        "version": "v1.15.0",
+        "commit": "a89091dfa5754f98b79655c684f978f24fd92716"
+      },
+      "B": {
+        "version": "v1.16.0",
+        "commit": "1ba50b1e1c6dfbd5540d9b54514ef81ac6160eec"
+      }
+    },
+    "full_skill_files_per_output": 37,
+    "same_inherited_model_no_override": true,
+    "fresh_context_per_implementation": true,
+    "maximum_participant_concurrency": 3,
+    "budget_minutes_per_implementation": 35,
+    "open_primary_source_discovery_allowed": true,
+    "local_fixture_not_production_service": true
+  },
+  "registration": {
+    "sha256": "4c8c4349fa3561ed7ca49001b14456ff3ffade044465a27ab6cb69759b4ead40",
+    "registered_at": "2026-10-28T06:36:00.008463+00:00",
+    "verified_registered_files": 51,
+    "scope": "Local prelaunch hash registration; no independent external timestamp service."
+  },
+  "runtime_lock": {
+    "file": "runtime-package-lock.json",
+    "sha256": "d8d9b6b0cad32f71382fce345ad324f93cd28424cfeeb089b40bcc6bcbaffedd",
+    "matches_prelaunch_assignment": true,
+    "scope": "Dependency lock identity; individual executed Chromium versions are retained per instrument. The host Node executable version differs from the earlier historical cohort."
+  },
+  "harness_adaptations": [
+    {
+      "id": "T1-mobile-theme-route-20261028",
+      "recorded_before_adapted_execution": "2026-10-28T08:24:51.389319+00:00",
+      "trigger": "Raw n7c9d9ca8 primary/supplement group 09 time out at 390px because theme-toggle is inside the existing history dialog. Frozen source retains both history-toggle and theme-toggle; the original runner already opens the same history route for history selections.",
+      "predeclared_permission": "PROTOCOL.md permits selector adaptation only for demonstrably equivalent public behavior, without application repair.",
+      "scope": "Route-only conditional setup: open existing history if theme-toggle is not visible, click the unchanged theme control, close history with Escape. All original assertions, thresholds and source builds are unchanged.",
+      "runs": [
+        "nb8be8a13",
+        "n08f925c8",
+        "nc5f68f67",
+        "n7c9d9ca8"
+      ],
+      "instruments": [
+        {
+          "instrument": "evaluate.mjs",
+          "original_sha256": "fc260754e237771b2c99019b228a574fb26f0bed62f7599de99edf463d94abed",
+          "adapted_sha256": "afb6a217b51996a1e123ca154362ce39365eda77f8940758b2575aad0963d66a",
+          "changed_calls": 1
+        },
+        {
+          "instrument": "contract-supplement.mjs",
+          "original_sha256": "7cffd0939aaade407e92dc267dd1bdf1b7378f5f30576b99a4a0199052e61bb3",
+          "adapted_sha256": "226dda8afd916ce00bbfa5561762abe25362c660bf027408c996e43cb2b980c3",
+          "changed_calls": 1
+        },
+        {
+          "instrument": "settled.mjs",
+          "original_sha256": "83f299a74ff3b8f945123aa269db04e912cfb5977d70d2409a189150eec52cb3",
+          "adapted_sha256": "4f32f3543ba195edd50e2457040a19cfba89a5713f16d1147eed11f6c897f419",
+          "changed_calls": 2
+        }
+      ],
+      "original_results_preserved": true,
+      "comparison_policy": "Use adapted group 09 only after all four T1 outputs complete the same route-aware checks; retain every raw and adapted result. Use common adapted stable captures for all four T1 review packets. Other groups retain original primary/supplement outcomes.",
+      "application_repairs": false,
+      "outcomes_at_record_creation": "unknown"
+    }
+  ],
+  "functional": {
+    "arms": {
+      "A": {
+        "version": "v1.15.0",
+        "planned_runs": 6,
+        "frozen_runs": 6,
+        "fully_assessed_runs": 6,
+        "all_ten_groups_passed_runs": 5,
+        "groups_passed_in_fully_assessed_runs": 59,
+        "groups_in_fully_assessed_runs": 60,
+        "wall_minutes": {
+          "n": 6,
+          "median": 25.338,
+          "min": 21.994,
+          "max": 32.701
+        }
+      },
+      "B": {
+        "version": "v1.16.0",
+        "planned_runs": 6,
+        "frozen_runs": 6,
+        "fully_assessed_runs": 6,
+        "all_ten_groups_passed_runs": 4,
+        "groups_passed_in_fully_assessed_runs": 58,
+        "groups_in_fully_assessed_runs": 60,
+        "wall_minutes": {
+          "n": 6,
+          "median": 25.8615,
+          "min": 21.177,
+          "max": 32.14
+        }
+      }
+    },
+    "matched_pairs": [
+      {
+        "pair_id": "replication-T1-1",
+        "task": "T1",
+        "replicate": 1,
+        "A": "nb8be8a13",
+        "B": "n08f925c8",
+        "functional_complete": true,
+        "functional_delta_B_minus_A": 0,
+        "wall_minutes_delta_B_minus_A": -0.561
+      },
+      {
+        "pair_id": "replication-T1-2",
+        "task": "T1",
+        "replicate": 2,
+        "A": "nc5f68f67",
+        "B": "n7c9d9ca8",
+        "functional_complete": true,
+        "functional_delta_B_minus_A": 0,
+        "wall_minutes_delta_B_minus_A": -0.126
+      },
+      {
+        "pair_id": "replication-T2-1",
+        "task": "T2",
+        "replicate": 1,
+        "A": "nb3bf2299",
+        "B": "n957b09e9",
+        "functional_complete": true,
+        "functional_delta_B_minus_A": 0,
+        "wall_minutes_delta_B_minus_A": 1.972
+      },
+      {
+        "pair_id": "replication-T2-2",
+        "task": "T2",
+        "replicate": 2,
+        "A": "n6c114121",
+        "B": "n91d1fa87",
+        "functional_complete": true,
+        "functional_delta_B_minus_A": 0,
+        "wall_minutes_delta_B_minus_A": 4.127
+      },
+      {
+        "pair_id": "replication-T3-1",
+        "task": "T3",
+        "replicate": 1,
+        "A": "n7ce58cfb",
+        "B": "nfdae1319",
+        "functional_complete": true,
+        "functional_delta_B_minus_A": 0,
+        "wall_minutes_delta_B_minus_A": -2.264
+      },
+      {
+        "pair_id": "replication-T3-2",
+        "task": "T3",
+        "replicate": 2,
+        "A": "ne64e4884",
+        "B": "n0080b6ac",
+        "functional_complete": true,
+        "functional_delta_B_minus_A": -1,
+        "wall_minutes_delta_B_minus_A": -0.806
+      }
+    ],
+    "runs": [
+      {
+        "run_id": "nb8be8a13",
+        "task": "T1",
+        "replicate": 1,
+        "arm": "A",
+        "version": "v1.15.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 10,
+        "functional_failures": 0,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Populated product and history",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "New question and composer controls",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Local attachments and removal",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Source reading and modal focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 6,
+            "supplement_assertions": 84,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "History continuation and persistence",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Pending, stop, stale protection and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Failure and retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Long reading and responsive reachability",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Theme and narrow visual states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 21,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Keyboard journey and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 5,
+            "supplement_assertions": null,
+            "errors": []
+          }
+        ],
+        "raw_acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Populated product and history",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "New question and composer controls",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Local attachments and removal",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Source reading and modal focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 6,
+            "supplement_assertions": 84,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "History continuation and persistence",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Pending, stop, stale protection and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Failure and retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Long reading and responsive reachability",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Theme and narrow visual states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 21,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Keyboard journey and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 5,
+            "supplement_assertions": null,
+            "errors": []
+          }
+        ],
+        "raw_functional_passes": 10,
+        "functional_adjudication": {
+          "id": "T1-mobile-theme-route-20261028",
+          "selected_group_ids": [
+            "09"
+          ],
+          "reason": "Route-only conditional setup: open existing history if theme-toggle is not visible, click the unchanged theme control, close history with Escape. All original assertions, thresholds and source builds are unchanged.",
+          "common_run_ids": [
+            "nb8be8a13",
+            "n08f925c8",
+            "nc5f68f67",
+            "n7c9d9ca8"
+          ],
+          "original_results_preserved": true,
+          "application_repairs": false,
+          "plan": {
+            "path": "routing-adaptation/PLAN.json",
+            "sha256": "43277403cdfb1c9de94b74d11fac3640510e22246b6b5f175c911633c7a234db"
+          }
+        },
+        "wall_minutes_observed_launch_to_completion": 32.701,
+        "verified_frozen_files": 324,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/nb8be8a13/FROZEN.json",
+            "sha256": "3e63bd4df954ab4f10b0e23383078e9db425e99e82a7b91fd003d808a7a65998"
+          },
+          "primary": {
+            "path": "results/nb8be8a13/primary/results.json",
+            "sha256": "81fd10c44c447d9e4d5ca9d058bb16559e4aa6cac81b2014ea81b570c1686427"
+          },
+          "supplement": {
+            "path": "results/nb8be8a13/supplement/results.json",
+            "sha256": "388bc9699337595cbae0d81c4ab587b9949db91fc49c7bc7ba29d9b863cd4820"
+          },
+          "adapted_primary": {
+            "path": "results/nb8be8a13/routing-adapted/primary/results.json",
+            "sha256": "b4c0f2ff7eaacc5439521f48a85509d4f49f661def047eeeda2b0e9de1ffa29b"
+          },
+          "adapted_supplement": {
+            "path": "results/nb8be8a13/routing-adapted/supplement/results.json",
+            "sha256": "22a1beb81151bf129f2aa359b225d281f5fca64eba0df24c6aa7c58267bbbd85"
+          },
+          "adapted_completion": {
+            "path": "results/nb8be8a13/routing-adapted/evaluation-complete.json",
+            "sha256": "9ebcf616b2cf3c7ca865c8a5f639440a8b5812d90db3df610343664a6933a73d"
+          }
+        }
+      },
+      {
+        "run_id": "n08f925c8",
+        "task": "T1",
+        "replicate": 1,
+        "arm": "B",
+        "version": "v1.16.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 10,
+        "functional_failures": 0,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Populated product and history",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "New question and composer controls",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Local attachments and removal",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Source reading and modal focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 6,
+            "supplement_assertions": 84,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "History continuation and persistence",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Pending, stop, stale protection and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Failure and retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Long reading and responsive reachability",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Theme and narrow visual states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 21,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Keyboard journey and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 5,
+            "supplement_assertions": null,
+            "errors": []
+          }
+        ],
+        "raw_acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Populated product and history",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "New question and composer controls",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Local attachments and removal",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Source reading and modal focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 6,
+            "supplement_assertions": 84,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "History continuation and persistence",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Pending, stop, stale protection and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Failure and retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Long reading and responsive reachability",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Theme and narrow visual states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 21,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Keyboard journey and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 5,
+            "supplement_assertions": null,
+            "errors": []
+          }
+        ],
+        "raw_functional_passes": 10,
+        "functional_adjudication": {
+          "id": "T1-mobile-theme-route-20261028",
+          "selected_group_ids": [
+            "09"
+          ],
+          "reason": "Route-only conditional setup: open existing history if theme-toggle is not visible, click the unchanged theme control, close history with Escape. All original assertions, thresholds and source builds are unchanged.",
+          "common_run_ids": [
+            "nb8be8a13",
+            "n08f925c8",
+            "nc5f68f67",
+            "n7c9d9ca8"
+          ],
+          "original_results_preserved": true,
+          "application_repairs": false,
+          "plan": {
+            "path": "routing-adaptation/PLAN.json",
+            "sha256": "43277403cdfb1c9de94b74d11fac3640510e22246b6b5f175c911633c7a234db"
+          }
+        },
+        "wall_minutes_observed_launch_to_completion": 32.14,
+        "verified_frozen_files": 255,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/n08f925c8/FROZEN.json",
+            "sha256": "fc9f4b3cd92e5c46676758afb143d6773924af2ac6fbc2ebf3e0633095a6cbb5"
+          },
+          "primary": {
+            "path": "results/n08f925c8/primary/results.json",
+            "sha256": "28166d87ee5ea8a389fe02e4b6a2a41a4bd2ba6cb21a08ea33fd9d2d627b6512"
+          },
+          "supplement": {
+            "path": "results/n08f925c8/supplement/results.json",
+            "sha256": "28acdd8a3d7db1ea6d139f4e799caef726c29c4de148e5e8dbd5b8da6cede7d1"
+          },
+          "adapted_primary": {
+            "path": "results/n08f925c8/routing-adapted/primary/results.json",
+            "sha256": "3f908973ee71b441a3da1ec97db693487addaf3bbdeea7c0265d3fb0429de4ce"
+          },
+          "adapted_supplement": {
+            "path": "results/n08f925c8/routing-adapted/supplement/results.json",
+            "sha256": "ba82ca1e2028e8769d648675ab3e16ef17e0ee963b773403963dc9915053127e"
+          },
+          "adapted_completion": {
+            "path": "results/n08f925c8/routing-adapted/evaluation-complete.json",
+            "sha256": "6fc587dc75f4232a0e2936d90bd7fcec1d76cc36d3f304a2450f51c3359255e6"
+          }
+        }
+      },
+      {
+        "run_id": "nc5f68f67",
+        "task": "T1",
+        "replicate": 2,
+        "arm": "A",
+        "version": "v1.15.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 10,
+        "functional_failures": 0,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Populated product and history",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "New question and composer controls",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Local attachments and removal",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Source reading and modal focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 6,
+            "supplement_assertions": 84,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "History continuation and persistence",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Pending, stop, stale protection and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Failure and retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Long reading and responsive reachability",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Theme and narrow visual states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 21,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Keyboard journey and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 5,
+            "supplement_assertions": null,
+            "errors": []
+          }
+        ],
+        "raw_acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Populated product and history",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "New question and composer controls",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Local attachments and removal",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Source reading and modal focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 6,
+            "supplement_assertions": 84,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "History continuation and persistence",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Pending, stop, stale protection and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Failure and retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Long reading and responsive reachability",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Theme and narrow visual states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 21,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Keyboard journey and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 5,
+            "supplement_assertions": null,
+            "errors": []
+          }
+        ],
+        "raw_functional_passes": 10,
+        "functional_adjudication": {
+          "id": "T1-mobile-theme-route-20261028",
+          "selected_group_ids": [
+            "09"
+          ],
+          "reason": "Route-only conditional setup: open existing history if theme-toggle is not visible, click the unchanged theme control, close history with Escape. All original assertions, thresholds and source builds are unchanged.",
+          "common_run_ids": [
+            "nb8be8a13",
+            "n08f925c8",
+            "nc5f68f67",
+            "n7c9d9ca8"
+          ],
+          "original_results_preserved": true,
+          "application_repairs": false,
+          "plan": {
+            "path": "routing-adaptation/PLAN.json",
+            "sha256": "43277403cdfb1c9de94b74d11fac3640510e22246b6b5f175c911633c7a234db"
+          }
+        },
+        "wall_minutes_observed_launch_to_completion": 26.176,
+        "verified_frozen_files": 271,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/nc5f68f67/FROZEN.json",
+            "sha256": "3b288d714e47e536281c2f523ebd925ffa461c87a841e7d8b43c4160c7a33f58"
+          },
+          "primary": {
+            "path": "results/nc5f68f67/primary/results.json",
+            "sha256": "32ff3aa6c1fcb34c646b57a36a7642b71b6d0cbf8a081b7e36e1d326856a2e9c"
+          },
+          "supplement": {
+            "path": "results/nc5f68f67/supplement/results.json",
+            "sha256": "994e78b0e5715a497009884669a861cfdf40e5c413c0492f2d4f0f64736ae727"
+          },
+          "adapted_primary": {
+            "path": "results/nc5f68f67/routing-adapted/primary/results.json",
+            "sha256": "44721b7e82f3b4e2d3b17eb6d890221cb97c70170cdbb4e923258b2f8e35ae2c"
+          },
+          "adapted_supplement": {
+            "path": "results/nc5f68f67/routing-adapted/supplement/results.json",
+            "sha256": "5632c31dceb818a6eed3c924faba48711cd3e39bedea2129b0ae3d8c17aba194"
+          },
+          "adapted_completion": {
+            "path": "results/nc5f68f67/routing-adapted/evaluation-complete.json",
+            "sha256": "e52fcda152c6a39718295eaa5c75d8ae0f8d04f8dbd42a0a642c80e03ddb12a8"
+          }
+        }
+      },
+      {
+        "run_id": "n7c9d9ca8",
+        "task": "T1",
+        "replicate": 2,
+        "arm": "B",
+        "version": "v1.16.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 10,
+        "functional_failures": 0,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Populated product and history",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "New question and composer controls",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Local attachments and removal",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Source reading and modal focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 6,
+            "supplement_assertions": 84,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "History continuation and persistence",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Pending, stop, stale protection and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Failure and retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Long reading and responsive reachability",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Theme and narrow visual states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 21,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Keyboard journey and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 5,
+            "supplement_assertions": null,
+            "errors": []
+          }
+        ],
+        "raw_acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Populated product and history",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "New question and composer controls",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Local attachments and removal",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Source reading and modal focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 6,
+            "supplement_assertions": 84,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "History continuation and persistence",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Pending, stop, stale protection and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Failure and retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 2,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Long reading and responsive reachability",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Theme and narrow visual states",
+            "status": "fail",
+            "primary_status": "fail",
+            "supplement_status": "fail",
+            "supplement_required": true,
+            "primary_assertions": 1,
+            "supplement_assertions": 16,
+            "errors": [
+              "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('theme-toggle')\u001b[22m\n",
+              "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByTestId('theme-toggle')\u001b[22m\n"
+            ]
+          },
+          {
+            "id": "10",
+            "name": "Keyboard journey and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 5,
+            "supplement_assertions": null,
+            "errors": []
+          }
+        ],
+        "raw_functional_passes": 9,
+        "functional_adjudication": {
+          "id": "T1-mobile-theme-route-20261028",
+          "selected_group_ids": [
+            "09"
+          ],
+          "reason": "Route-only conditional setup: open existing history if theme-toggle is not visible, click the unchanged theme control, close history with Escape. All original assertions, thresholds and source builds are unchanged.",
+          "common_run_ids": [
+            "nb8be8a13",
+            "n08f925c8",
+            "nc5f68f67",
+            "n7c9d9ca8"
+          ],
+          "original_results_preserved": true,
+          "application_repairs": false,
+          "plan": {
+            "path": "routing-adaptation/PLAN.json",
+            "sha256": "43277403cdfb1c9de94b74d11fac3640510e22246b6b5f175c911633c7a234db"
+          }
+        },
+        "wall_minutes_observed_launch_to_completion": 26.05,
+        "verified_frozen_files": 267,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "selector_adaptations": [
+          {
+            "id": "T1-mobile-theme-route-20261028",
+            "group_id": "09",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "route": [
+              "history-toggle",
+              "theme-toggle",
+              "Escape"
+            ],
+            "scope": "Open the existing public navigation before using its unchanged theme hook; no application or assertion change."
+          },
+          {
+            "id": "T1-mobile-theme-route-20261028",
+            "group_id": "09",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "route": [
+              "history-toggle",
+              "theme-toggle",
+              "Escape"
+            ],
+            "scope": "Open the existing public navigation before using its unchanged theme hook; no application or assertion change."
+          },
+          {
+            "id": "T1-mobile-theme-route-20261028",
+            "group_id": "09",
+            "viewport": {
+              "width": 390,
+              "height": 844
+            },
+            "route": [
+              "history-toggle",
+              "theme-toggle",
+              "Escape"
+            ],
+            "scope": "Open the existing public navigation before using its unchanged theme hook; no application or assertion change."
+          }
+        ],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/n7c9d9ca8/FROZEN.json",
+            "sha256": "1ec4ebbb7babac0071c60a42ee4e26351c227866ccd6d1af543e6286fe9235f9"
+          },
+          "primary": {
+            "path": "results/n7c9d9ca8/primary/results.json",
+            "sha256": "28f5893ef03100d6fb2c32416ca0814b6bbc7cf58677536a78a8851a2c240a1d"
+          },
+          "supplement": {
+            "path": "results/n7c9d9ca8/supplement/results.json",
+            "sha256": "4216c4c4d2d05a4324f19f8798f8b6c0eec376dfd22010e10d4cb31e9d3647fd"
+          },
+          "adapted_primary": {
+            "path": "results/n7c9d9ca8/routing-adapted/primary/results.json",
+            "sha256": "6c41ed231ab6e10d30b357df699b45b510f9425c9badc3d889f73e1891ca9bd4"
+          },
+          "adapted_supplement": {
+            "path": "results/n7c9d9ca8/routing-adapted/supplement/results.json",
+            "sha256": "d8ec0429efd07453530d93635eb4e0a54b79fcf6de6e31becd4ac763614a704d"
+          },
+          "adapted_completion": {
+            "path": "results/n7c9d9ca8/routing-adapted/evaluation-complete.json",
+            "sha256": "42a3f005e27d249fc0cc8d96e659810ff79d3a13db9bec1dcb8260f602b49568"
+          }
+        }
+      },
+      {
+        "run_id": "nb3bf2299",
+        "task": "T2",
+        "replicate": 1,
+        "arm": "A",
+        "version": "v1.15.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 10,
+        "functional_failures": 0,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Overview and authoritative totals",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 10,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "All project identities",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 25,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Search and clear",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 2,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Status filtering",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 2,
+            "supplement_assertions": 6,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "Populated schedule",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 12,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Correct detail and keyboard focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 8,
+            "supplement_assertions": 31,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Status synchronization",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 7,
+            "supplement_assertions": 23,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Note editing and empty guard",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 4,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Reload persistence and intact totals",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 8,
+            "supplement_assertions": 15,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Responsive themes and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 10,
+            "supplement_assertions": 137,
+            "errors": []
+          }
+        ],
+        "wall_minutes_observed_launch_to_completion": 21.994,
+        "verified_frozen_files": 233,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/nb3bf2299/FROZEN.json",
+            "sha256": "df9ae92fcc7025f51e82f2db6cd73b22a4406bfc0cdad78f719d4e66b9c1d9ee"
+          },
+          "primary": {
+            "path": "results/nb3bf2299/primary/results.json",
+            "sha256": "9f5ce893ff8f1d080bbf5cad8bf37465a608572ec5101bee476d12eaab821c55"
+          },
+          "supplement": {
+            "path": "results/nb3bf2299/supplement/results.json",
+            "sha256": "d5cdd7d547bdc70236b1fe1d03e3c9501e243c17d3afc8453975bede22014229"
+          }
+        }
+      },
+      {
+        "run_id": "n957b09e9",
+        "task": "T2",
+        "replicate": 1,
+        "arm": "B",
+        "version": "v1.16.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 10,
+        "functional_failures": 0,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Overview and authoritative totals",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 10,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "All project identities",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 27,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Search and clear",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 2,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Status filtering",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 2,
+            "supplement_assertions": 6,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "Populated schedule",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 12,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Correct detail and keyboard focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 8,
+            "supplement_assertions": 31,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Status synchronization",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 7,
+            "supplement_assertions": 23,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Note editing and empty guard",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 4,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Reload persistence and intact totals",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 8,
+            "supplement_assertions": 15,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Responsive themes and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 10,
+            "supplement_assertions": 173,
+            "errors": []
+          }
+        ],
+        "wall_minutes_observed_launch_to_completion": 23.966,
+        "verified_frozen_files": 259,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/n957b09e9/FROZEN.json",
+            "sha256": "944a857d0f0e155679a788a02966240f1d9071f6ecab1516d6b6f44270614a8e"
+          },
+          "primary": {
+            "path": "results/n957b09e9/primary/results.json",
+            "sha256": "2c6d50f5a6d81477ebb81819cd9b7e2d921f0c24f7adae05dae0370f34b6e2af"
+          },
+          "supplement": {
+            "path": "results/n957b09e9/supplement/results.json",
+            "sha256": "c0430dcf033f7808abb7bda2d7bd75587455c15b9c83e598b018177b5eae4377"
+          }
+        }
+      },
+      {
+        "run_id": "n6c114121",
+        "task": "T2",
+        "replicate": 2,
+        "arm": "A",
+        "version": "v1.15.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 10,
+        "functional_failures": 0,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Overview and authoritative totals",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 10,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "All project identities",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 25,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Search and clear",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 2,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Status filtering",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 2,
+            "supplement_assertions": 6,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "Populated schedule",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 12,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Correct detail and keyboard focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 8,
+            "supplement_assertions": 31,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Status synchronization",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 7,
+            "supplement_assertions": 23,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Note editing and empty guard",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 4,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Reload persistence and intact totals",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 8,
+            "supplement_assertions": 15,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Responsive themes and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 10,
+            "supplement_assertions": 137,
+            "errors": []
+          }
+        ],
+        "wall_minutes_observed_launch_to_completion": 24.5,
+        "verified_frozen_files": 277,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/n6c114121/FROZEN.json",
+            "sha256": "a1a24110694a5cb928ccef09b5db6c08fc4dfd64f4f2d1f9e2ce079e0c227ca3"
+          },
+          "primary": {
+            "path": "results/n6c114121/primary/results.json",
+            "sha256": "902ab73803eb62e316cf7031f98eec99823fdf1923792d709b0972d28d4ddf5e"
+          },
+          "supplement": {
+            "path": "results/n6c114121/supplement/results.json",
+            "sha256": "8a686f87d98cc2dcba0385f18f92c1668c245b14ac5c5ae63232748b9974c034"
+          }
+        }
+      },
+      {
+        "run_id": "n91d1fa87",
+        "task": "T2",
+        "replicate": 2,
+        "arm": "B",
+        "version": "v1.16.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 10,
+        "functional_failures": 0,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Overview and authoritative totals",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 10,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "All project identities",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 25,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Search and clear",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 3,
+            "supplement_assertions": 2,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Status filtering",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 2,
+            "supplement_assertions": 6,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "Populated schedule",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 12,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Correct detail and keyboard focus",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 8,
+            "supplement_assertions": 31,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Status synchronization",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 7,
+            "supplement_assertions": 23,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Note editing and empty guard",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 4,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Reload persistence and intact totals",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 8,
+            "supplement_assertions": 15,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Responsive themes and reduced motion",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 10,
+            "supplement_assertions": 137,
+            "errors": []
+          }
+        ],
+        "wall_minutes_observed_launch_to_completion": 28.627,
+        "verified_frozen_files": 252,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/n91d1fa87/FROZEN.json",
+            "sha256": "131c852a5d4fbf0fe00dabec19e9adc743021cdd4de78953b247a2bffe71b7db"
+          },
+          "primary": {
+            "path": "results/n91d1fa87/primary/results.json",
+            "sha256": "2db9b33166027d200064041cc105c48c065fffe75bf82a8f47742682bd393798"
+          },
+          "supplement": {
+            "path": "results/n91d1fa87/supplement/results.json",
+            "sha256": "1617095b93c8d73400033b64ac4c00deb21bed1a37ef4d266b24712cf22e5e49"
+          }
+        }
+      },
+      {
+        "run_id": "n7ce58cfb",
+        "task": "T3",
+        "replicate": 1,
+        "arm": "A",
+        "version": "v1.15.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 9,
+        "functional_failures": 1,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Correct complete source details",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 4,
+            "supplement_assertions": 47,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "Keyboard entry and dialog containment",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 26,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Per-source notes and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Expansion, reversal and reading continuity",
+            "status": "fail",
+            "primary_status": "pass",
+            "supplement_status": "fail",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 1,
+            "errors": [
+              "Reading position retained by scroll offset or the same visible content landmark {\"before\":{\"scrollTop\":180,\"anchors\":[{\"text\":\"Field report2024What block-by-block observations reveal about an uneven summerAma Osei & Milan ShahUrban Field NotesJune\",\"offset\":-153},{\"text\":\"AT A GLANCERepeated walks through six contrasting neighborhoods show why a citywide temperature cannot describe the heat\",\"offset\":41.59375},{\"text\":\"AT A GLANCE\",\"offset\":64.59375},{\"text\":\"Repeated walks through six contrasting neighborhoods show why a citywide temperature cannot describe the heat a person a\",\"offset\":85.59375}]},\"after\":{\"top\":199,\"max\":2197,\"anchors\":[{\"text\":\"Field report2024What block-by-block observations reveal about an uneven summerAma Osei & Milan ShahUrban Field NotesJune\",\"connected\":true,\"previousOffset\":-153,\"offset\":-167,\"drift\":-14},{\"text\":\"AT A GLANCERepeated walks through six contrasting neighborhoods show why a citywide temperature cannot describe the heat\",\"connected\":true,\"previousOffset\":41.59375,\"offset\":51.59375,\"drift\":10},{\"text\":\"AT A GLANCE\",\"connected\":true,\"previousOffset\":64.59375,\"offset\":74.59375,\"drift\":10},{\"text\":\"Repeated walks through six contrasting neighborhoods show why a citywide temperature cannot describe the heat a person a\",\"connected\":true,\"previousOffset\":85.59375,\"offset\":95.59375,\"drift\":10}]},\"scrollStable\":false,\"anchorStable\":false}"
+            ]
+          },
+          {
+            "id": "05",
+            "name": "Dismissal, focus, notebook scroll and draft",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Direct drag, settle, cancel and dismiss",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Latest selection wins under slow requests",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Failure and same-source retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Responsive readable and reduced-motion states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Low-impact label and preserved shell",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 3,
+            "errors": []
+          }
+        ],
+        "wall_minutes_observed_launch_to_completion": 23.441,
+        "verified_frozen_files": 307,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true,
+          "src/Shell.jsx": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "scope_control": {
+          "shell_css_unchanged": true,
+          "navigation_source": "// Editable only for the small navigation-label change in TASK.md.\nexport const NAVIGATION = [\n  { id: 'notebooks', label: 'Notebooks', icon: '▤', count: '6' },\n  { id: 'saved', label: 'Library', icon: '◇', count: '24' },\n];\n"
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/n7ce58cfb/FROZEN.json",
+            "sha256": "0c34b0a6f823e0f9cf9960cc5fef498e73a512398bca294824106316d8848946"
+          },
+          "primary": {
+            "path": "results/n7ce58cfb/primary/results.json",
+            "sha256": "f152dc900624538e2311a1806cf49f4ae9a3d621f39006272acefe6644ad87e7"
+          },
+          "supplement": {
+            "path": "results/n7ce58cfb/supplement/results.json",
+            "sha256": "e1893a8bdeb78e7f401cad05751f2799af1772f6a6766e70e4a1ac85fe4c8248"
+          }
+        }
+      },
+      {
+        "run_id": "nfdae1319",
+        "task": "T3",
+        "replicate": 1,
+        "arm": "B",
+        "version": "v1.16.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 9,
+        "functional_failures": 1,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Correct complete source details",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 4,
+            "supplement_assertions": 47,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "Keyboard entry and dialog containment",
+            "status": "fail",
+            "primary_status": "fail",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": [
+              "Modal semantics"
+            ]
+          },
+          {
+            "id": "03",
+            "name": "Per-source notes and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Expansion, reversal and reading continuity",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "Dismissal, focus, notebook scroll and draft",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Direct drag, settle, cancel and dismiss",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Latest selection wins under slow requests",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Failure and same-source retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Responsive readable and reduced-motion states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Low-impact label and preserved shell",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 3,
+            "errors": []
+          }
+        ],
+        "wall_minutes_observed_launch_to_completion": 21.177,
+        "verified_frozen_files": 226,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true,
+          "src/Shell.jsx": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "scope_control": {
+          "shell_css_unchanged": true,
+          "navigation_source": "// Editable only for the small navigation-label change in TASK.md.\nexport const NAVIGATION = [\n  { id: 'notebooks', label: 'Notebooks', icon: '▤', count: '6' },\n  { id: 'saved', label: 'Library', icon: '◇', count: '24' },\n];\n"
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/nfdae1319/FROZEN.json",
+            "sha256": "a6afc9b18f484caabaa91396551086f7953939bebfe2b8e4f4832d2d68da306b"
+          },
+          "primary": {
+            "path": "results/nfdae1319/primary/results.json",
+            "sha256": "4f8c86077c569fe4a2c546ab3b234a7c88abf0e303d911ff8008546a90a2da2d"
+          },
+          "supplement": {
+            "path": "results/nfdae1319/supplement/results.json",
+            "sha256": "973994957ea9ca1b60e02f61cf3e6592cb0cb83b27f83d7936fbe3e6aec0e216"
+          }
+        }
+      },
+      {
+        "run_id": "ne64e4884",
+        "task": "T3",
+        "replicate": 2,
+        "arm": "A",
+        "version": "v1.15.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 10,
+        "functional_failures": 0,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Correct complete source details",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 4,
+            "supplement_assertions": 47,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "Keyboard entry and dialog containment",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 26,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "03",
+            "name": "Per-source notes and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Expansion, reversal and reading continuity",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "Dismissal, focus, notebook scroll and draft",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Direct drag, settle, cancel and dismiss",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Latest selection wins under slow requests",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Failure and same-source retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Responsive readable and reduced-motion states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Low-impact label and preserved shell",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 3,
+            "errors": []
+          }
+        ],
+        "wall_minutes_observed_launch_to_completion": 26.479,
+        "verified_frozen_files": 230,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true,
+          "src/Shell.jsx": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "scope_control": {
+          "shell_css_unchanged": true,
+          "navigation_source": "// Editable only for the small navigation-label change in TASK.md.\nexport const NAVIGATION = [\n  { id: 'notebooks', label: 'Notebooks', icon: '▤', count: '6' },\n  { id: 'saved', label: 'Library', icon: '◇', count: '24' },\n];\n"
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/ne64e4884/FROZEN.json",
+            "sha256": "2fe520830929bd8f09a670be3dcb847318c5dbfe1bf3c284ba2d9ef3ab0432c4"
+          },
+          "primary": {
+            "path": "results/ne64e4884/primary/results.json",
+            "sha256": "37ced217abcd6d3d5421f53b54c466d885504626bf2036cddeac133c914e94b8"
+          },
+          "supplement": {
+            "path": "results/ne64e4884/supplement/results.json",
+            "sha256": "982e52cf50fd294eb57a8263bb1e9dc88e2633cf46af0992c8e8da41a14a66d1"
+          }
+        }
+      },
+      {
+        "run_id": "n0080b6ac",
+        "task": "T3",
+        "replicate": 2,
+        "arm": "B",
+        "version": "v1.16.0",
+        "status": "frozen_evaluated",
+        "functional_passes": 9,
+        "functional_failures": 1,
+        "functional_unassessed": 0,
+        "acceptance_groups": [
+          {
+            "id": "01",
+            "name": "Correct complete source details",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 4,
+            "supplement_assertions": 47,
+            "errors": []
+          },
+          {
+            "id": "02",
+            "name": "Keyboard entry and dialog containment",
+            "status": "fail",
+            "primary_status": "fail",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 3,
+            "supplement_assertions": null,
+            "errors": [
+              "Modal semantics"
+            ]
+          },
+          {
+            "id": "03",
+            "name": "Per-source notes and drafts",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "04",
+            "name": "Expansion, reversal and reading continuity",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "05",
+            "name": "Dismissal, focus, notebook scroll and draft",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "06",
+            "name": "Direct drag, settle, cancel and dismiss",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 1,
+            "errors": []
+          },
+          {
+            "id": "07",
+            "name": "Latest selection wins under slow requests",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 6,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "08",
+            "name": "Failure and same-source retry",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "09",
+            "name": "Responsive readable and reduced-motion states",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": null,
+            "supplement_required": false,
+            "primary_assertions": 4,
+            "supplement_assertions": null,
+            "errors": []
+          },
+          {
+            "id": "10",
+            "name": "Low-impact label and preserved shell",
+            "status": "pass",
+            "primary_status": "pass",
+            "supplement_status": "pass",
+            "supplement_required": true,
+            "primary_assertions": 5,
+            "supplement_assertions": 3,
+            "errors": []
+          }
+        ],
+        "wall_minutes_observed_launch_to_completion": 25.673,
+        "verified_frozen_files": 248,
+        "full_skill_files_verified": 37,
+        "immutable_inputs": {
+          "src/domain.js": true,
+          "src/Shell.jsx": true
+        },
+        "initial_instruction_and_recorder_identity": {
+          "TASK.md": true,
+          "CONTRACT.md": true,
+          "ENVIRONMENT.md": true,
+          "acceptance.json": true,
+          "tools/run.py": true,
+          "tools/capture.mjs": true
+        },
+        "scope_control": {
+          "shell_css_unchanged": true,
+          "navigation_source": "// Editable only for the small navigation-label change in TASK.md.\nexport const NAVIGATION = [\n  { id: 'notebooks', label: 'Notebooks', icon: '▤', count: '6' },\n  { id: 'saved', label: 'Library', icon: '◇', count: '24' },\n];\n"
+        },
+        "selector_adaptations": [],
+        "page_errors": [],
+        "supplement_page_errors": [],
+        "evidence": {
+          "freeze": {
+            "path": "frozen/n0080b6ac/FROZEN.json",
+            "sha256": "56a4a69d8b32c46141cc158409c5ae2411bd2ff207c2f5e49db0e5dd358a10d8"
+          },
+          "primary": {
+            "path": "results/n0080b6ac/primary/results.json",
+            "sha256": "bdaeff3dafbbb0c2697f805a1c0ff0e9c39a4a0766f9803072bbcc1db6f69380"
+          },
+          "supplement": {
+            "path": "results/n0080b6ac/supplement/results.json",
+            "sha256": "96af0e9fcd8ae550b7cad7c1c97f85bc8acf9b906a827bd27b847c7c2462e2e6"
+          }
+        }
+      }
+    ],
+    "unit": "Ten published acceptance groups per independent output. Supplemental assertions join the same groups; assertions and screenshots do not increase generation sample size."
+  },
+  "visual_review": {
+    "status": "locked",
+    "independent_model_reviewers": 3,
+    "locks": [
+      {
+        "file": "reviews/locked/R1.lock.json",
+        "sha256": "c39892b6da51650c1e3cf077a2213bbd9d2b0aa73c340a8acd543d44fbd09f70",
+        "review_sha256": "263e1e92920f66c5416450d28be99483b7062fef4e7878425323da90dc4c90e2",
+        "locked_at": "2026-10-28T09:08:26.678265+00:00"
+      },
+      {
+        "file": "reviews/locked/R2.lock.json",
+        "sha256": "d80e11b4ae5d8481e191e5cc5d58628f4adb521793f18cb6f34e14857b1aa561",
+        "review_sha256": "4c4e1c227b67f47dbf7fd718a1130268efc40fff608227f76254148a6df29877",
+        "locked_at": "2026-10-28T09:01:38.144295+00:00"
+      },
+      {
+        "file": "reviews/locked/R3.lock.json",
+        "sha256": "c84743628189b8d53523cabf095c2236ee293cf9284221b9543cf4fcf7dde713",
+        "review_sha256": "5bebbb5907416acd21e711eda6debe4e08de24603564192a8a5ffa92f4a77e1b",
+        "locked_at": "2026-10-28T09:18:10.565712+00:00"
+      }
+    ],
+    "dimensions": {
+      "coherence": {
+        "pairs": [
+          {
+            "pair_id": "replication-T1-1",
+            "task": "T1",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T1-2",
+            "task": "T1",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-1",
+            "task": "T2",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-2",
+            "task": "T2",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-1",
+            "task": "T3",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-2",
+            "task": "T3",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          }
+        ],
+        "pair_median_direction_counts": {
+          "positive": 0,
+          "zero": 6,
+          "negative": 0,
+          "unassessed": 0
+        },
+        "scope": "Six paired ordinal differences; no summed aesthetic total or ratio-scale uplift."
+      },
+      "composition": {
+        "pairs": [
+          {
+            "pair_id": "replication-T1-1",
+            "task": "T1",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T1-2",
+            "task": "T1",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-1",
+            "task": "T2",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-2",
+            "task": "T2",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-1",
+            "task": "T3",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-2",
+            "task": "T3",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          }
+        ],
+        "pair_median_direction_counts": {
+          "positive": 0,
+          "zero": 6,
+          "negative": 0,
+          "unassessed": 0
+        },
+        "scope": "Six paired ordinal differences; no summed aesthetic total or ratio-scale uplift."
+      },
+      "typography": {
+        "pairs": [
+          {
+            "pair_id": "replication-T1-1",
+            "task": "T1",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T1-2",
+            "task": "T1",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-1",
+            "task": "T2",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-2",
+            "task": "T2",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-1",
+            "task": "T3",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-2",
+            "task": "T3",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          }
+        ],
+        "pair_median_direction_counts": {
+          "positive": 0,
+          "zero": 6,
+          "negative": 0,
+          "unassessed": 0
+        },
+        "scope": "Six paired ordinal differences; no summed aesthetic total or ratio-scale uplift."
+      },
+      "material": {
+        "pairs": [
+          {
+            "pair_id": "replication-T1-1",
+            "task": "T1",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 4,
+                "B": 3,
+                "delta_B_minus_A": -1
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": -1,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 4
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T1-2",
+            "task": "T1",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-1",
+            "task": "T2",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-2",
+            "task": "T2",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-1",
+            "task": "T3",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 4,
+                "B": 4,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 4
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 4
+            }
+          },
+          {
+            "pair_id": "replication-T3-2",
+            "task": "T3",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          }
+        ],
+        "pair_median_direction_counts": {
+          "positive": 0,
+          "zero": 6,
+          "negative": 0,
+          "unassessed": 0
+        },
+        "scope": "Six paired ordinal differences; no summed aesthetic total or ratio-scale uplift."
+      },
+      "states": {
+        "pairs": [
+          {
+            "pair_id": "replication-T1-1",
+            "task": "T1",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T1-2",
+            "task": "T1",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-1",
+            "task": "T2",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-2",
+            "task": "T2",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-1",
+            "task": "T3",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-2",
+            "task": "T3",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          }
+        ],
+        "pair_median_direction_counts": {
+          "positive": 0,
+          "zero": 6,
+          "negative": 0,
+          "unassessed": 0
+        },
+        "scope": "Six paired ordinal differences; no summed aesthetic total or ratio-scale uplift."
+      },
+      "identity": {
+        "pairs": [
+          {
+            "pair_id": "replication-T1-1",
+            "task": "T1",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 4,
+                "B": 3,
+                "delta_B_minus_A": -1
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": -1,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 4
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T1-2",
+            "task": "T1",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 4,
+                "B": 3,
+                "delta_B_minus_A": -1
+              },
+              {
+                "reviewer": "R2",
+                "A": 4,
+                "B": 3,
+                "delta_B_minus_A": -1
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": -1,
+              "min": -1,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 4,
+              "min": 3,
+              "max": 4
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-1",
+            "task": "T2",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 4,
+                "B": 3,
+                "delta_B_minus_A": -1
+              },
+              {
+                "reviewer": "R2",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 4,
+                "B": 3,
+                "delta_B_minus_A": -1
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": -1,
+              "min": -1,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 4,
+              "min": 3,
+              "max": 4
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T2-2",
+            "task": "T2",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 4,
+                "B": 3,
+                "delta_B_minus_A": -1
+              },
+              {
+                "reviewer": "R2",
+                "A": 4,
+                "B": 3,
+                "delta_B_minus_A": -1
+              },
+              {
+                "reviewer": "R3",
+                "A": 4,
+                "B": 3,
+                "delta_B_minus_A": -1
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": -1,
+              "min": -1,
+              "max": -1
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 4,
+              "min": 4,
+              "max": 4
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 3
+            }
+          },
+          {
+            "pair_id": "replication-T3-1",
+            "task": "T3",
+            "replicate": 1,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 4,
+                "B": 4,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 4
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 4
+            }
+          },
+          {
+            "pair_id": "replication-T3-2",
+            "task": "T3",
+            "replicate": 2,
+            "raters": [
+              {
+                "reviewer": "R1",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R2",
+                "A": 4,
+                "B": 4,
+                "delta_B_minus_A": 0
+              },
+              {
+                "reviewer": "R3",
+                "A": 3,
+                "B": 3,
+                "delta_B_minus_A": 0
+              }
+            ],
+            "paired_delta_summary": {
+              "n": 3,
+              "median": 0,
+              "min": 0,
+              "max": 0
+            },
+            "A_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 4
+            },
+            "B_summary": {
+              "n": 3,
+              "median": 3,
+              "min": 3,
+              "max": 4
+            }
+          }
+        ],
+        "pair_median_direction_counts": {
+          "positive": 0,
+          "zero": 3,
+          "negative": 3,
+          "unassessed": 0
+        },
+        "scope": "Six paired ordinal differences; no summed aesthetic total or ratio-scale uplift."
+      }
+    },
+    "preferences": [
+      {
+        "reviewer": "R1",
+        "pair_id": "replication-T1-1",
+        "outcome": "A",
+        "strength": "weak",
+        "reason": "S06's aligned reading column/composer, publisher-led cards, numbered contents, and evidence framing in outputs/S06/stable/1440-initial-conversation.png make the populated workspace slightly more integrated than the wider composer beneath S01's contents rail in outputs/S01/stable/1440-initial-conversation.png. S06 also gives the full reader a particularly clear editorial hierarchy. S01 has a real narrow-screen advantage: outputs/S01/stable/390-initial-conversation.png shows all three source cards at once, whereas S06 initially shows a cropped rail. Both communicate pending/error states clearly; the preference is modest and does not imply a functional advantage."
+      },
+      {
+        "reviewer": "R1",
+        "pair_id": "replication-T3-1",
+        "outcome": "B",
+        "strength": "weak",
+        "reason": "The simpler single-column sheet in outputs/S07/stable/390-expanded.png makes more of the source summary visible above its note dock than outputs/S02/stable/390-expanded.png, whose fixed source/control stack is taller. The inspected S07 expansion/reversal originals also retain readable content without the sideways rail cropping seen in outputs/S02/temporal/007-expand-0.png and outputs/S02/temporal/012-reverse-0.png. S02's expanded desktop contents and note rail is a useful counterstrength in outputs/S02/stable/1440-expanded.png. The preference is for the supplied cross-width reading balance, not a claim about natural motion quality."
+      },
+      {
+        "reviewer": "R1",
+        "pair_id": "replication-T2-1",
+        "outcome": "A",
+        "strength": "weak",
+        "reason": "outputs/S10/stable/1440-initial-schedule.png and outputs/S10/stable/900-initial-schedule.png provide a shared calendar scale for comparing project intervals, while S09's date-led agenda in outputs/S09/stable/1440-initial-schedule.png gives less comparative spatial context and shows fewer rows. S10's responsive project cards retain budget, methods, owner, and dates through outputs/S10/stable/390-initial-projects.png; S09's narrow register omits budget. S09 counters with a denser desktop project table and comfortable detail typography. Both lose considerable mobile first-screen space to framing, so the overall preference is weak."
+      },
+      {
+        "reviewer": "R1",
+        "pair_id": "replication-T2-2",
+        "outcome": "A",
+        "strength": "moderate",
+        "reason": "outputs/S03/stable/1440-initial-detail.png and outputs/S03/stable/900-initial-detail.png fit the inquiry, existing note, note editor, and Save action together with the metadata rail. In outputs/S05/stable/1440-initial-detail.png and outputs/S05/stable/900-initial-detail.png the note field only starts near the bottom, with its continuation beyond the visible footer boundary. S03's compact mobile register shows more working records in outputs/S03/stable/390-initial-projects.png and its compass/ring/dossier language is consistently carried through populated work. S05 retains the owner in its mobile project records, a meaningful counterstrength; no claim is made that its off-screen editor is inaccessible."
+      },
+      {
+        "reviewer": "R1",
+        "pair_id": "replication-T1-2",
+        "outcome": "A",
+        "strength": "weak",
+        "reason": "outputs/S04/stable/390-initial-conversation.png exposes all three source titles and publishers in full-width rows, while outputs/S08/stable/390-initial-conversation.png initially shows one complete card and a clipped second card in its horizontal rail. S04's reader in outputs/S04/stable/390-initial-source.png also keeps labeled Previous and Next source actions visible, and its repeated condensed research-note typography gives the populated journey a stronger individual character. S08 has the more generous answer-body typography in outputs/S08/additional/08-long-900.png and explicit keep-writing feedback. Both show readable source bodies and local Latest-control overlap in long captures, so this remains a weak preference."
+      },
+      {
+        "reviewer": "R1",
+        "pair_id": "replication-T3-2",
+        "outcome": "B",
+        "strength": "weak",
+        "reason": "outputs/S11/stable/1440-expanded.png preserves the compact reading width and fits the complete summary and quotation above its note dock, whereas outputs/S12/stable/1440-expanded.png enlarges the sheet but cuts the quotation at the dock. S11 also keeps the notebook name in its header and its Read full text affordance visible in both outputs/S11/stable/390-compact.png and outputs/S11/stable/390-expanded.png; the first-source continuation row lies below S12's narrow expanded first view. S12's compact desktop width preserves more background context and its filled source tabs give stronger selection emphasis. Both have clear saved/error presentations; the difference is modest."
+      },
+      {
+        "reviewer": "R2",
+        "pair_id": "replication-T2-2",
+        "outcome": "A",
+        "strength": "moderate",
+        "reason": "Both are coherent professional studios across themes and widths. S03 carries its distinctive condensed serif, compass motif and numbered dossier sections more deeply into the working product, exposes the complete desktop note form within the captured dialog, and gives mobile project rows more immediate space. S05 has an excellent explicit-date timeline and attractive broader serif, but its repeated mobile header/breadcrumb/intro stack delays core work and its desktop note save action is below the captured fold. This preference concerns visible craft and task presentation, not untested functionality."
+      },
+      {
+        "reviewer": "R2",
+        "pair_id": "replication-T3-1",
+        "outcome": "tie",
+        "strength": "none",
+        "reason": "Both preserve the notebook relationship, readable source hierarchy, clear selection, retry and source-specific note feedback. S02's expanded desktop view adds a useful contents rail, taller note field and explicit Expand/Compact labels, but the captured expansion briefly crops that rail and its phone compact state exposes little prose. S07 keeps a simpler, consistent note placement and exposes more summary on the phone, but its permanent bottom form reduces desktop reading space and its top mode action is icon-only. These visible tradeoffs do not support a clear overall preference; continuous motion and behavioral correctness were not evaluated."
+      },
+      {
+        "reviewer": "R2",
+        "pair_id": "replication-T2-1",
+        "outcome": "A",
+        "strength": "weak",
+        "reason": "Both are mature and consistent across themes, with readable records and well-integrated detail surfaces. S10 has a more immediately useful workload overview with upcoming deadlines, richer project cards, and a desktop/tablet timeline that makes overlapping fieldwork visible; its mobile schedule also reaches more records within the initial screen. S09's comparative project register is more efficient for scanning many project attributes, and its monthly agenda is clear, so the preference is weak. The decision concerns visible work presentation and identity, not untested business behavior."
+      },
+      {
+        "reviewer": "R2",
+        "pair_id": "replication-T1-2",
+        "outcome": "A",
+        "strength": "weak",
+        "reason": "Both support a mature populated research journey with clear source reading, cited answers, follow-up writing and recoverable error presentation. S04 has a more distinctive editorial identity, exposes all three source titles in the phone conversation and supplies visible previous/next controls inside the reader. S08 has especially comfortable larger body text and a clear retained-draft waiting message, so the preference is weak. It rests on visible reading/navigation presentation, not untested functionality or continuous animation."
+      },
+      {
+        "reviewer": "R2",
+        "pair_id": "replication-T3-2",
+        "outcome": "B",
+        "strength": "weak",
+        "reason": "Both closely preserve the notebook identity, provide explicit mode/source controls, and communicate loading, retained drafts, retry and saved notes clearly. S11 uses its desktop/tablet reading space more effectively: the compact capture exposes the complete summary, the expanded capture shows the full quotation, and Read full text stays beside the summary heading at every reviewed width. S12 has a stronger boxed summary and more emphatic selected-source treatment, so the preference is weak. Motion smoothness and actual persistence were not assessed."
+      },
+      {
+        "reviewer": "R2",
+        "pair_id": "replication-T1-1",
+        "outcome": "tie",
+        "strength": "none",
+        "reason": "Both are coherent, mature research frontends with clear source-before-answer hierarchy, useful desktop outlines, readable full source notes, persistent writing and explicit waiting/failure states. S01 exposes all three source titles on the phone and clearly separates conversation name from the user question, but its compact cards lose publisher context and its long outline repeats indistinguishable labels. S06 gives primary actions and reader navigation stronger labels, retains publisher context and numbers outline entries, but puts phone sources offscreen and keeps an empty outline heading during waiting/failure. These visible tradeoffs do not justify a clear overall preference; functionality and continuous motion remain untested."
+      },
+      {
+        "reviewer": "R3",
+        "pair_id": "replication-T1-1",
+        "outcome": "A",
+        "strength": "weak",
+        "reason": "S06 gives the actual research question clearer prominence and keeps richer source/publisher context, with an explicitly labelled next-source action in outputs/S06/stable/1440-initial-conversation.png and outputs/S06/stable/390-initial-source.png. Its light/dark reader surfaces and quotation hierarchy are especially cohesive. S01 has useful countervailing strengths: explicit user/answer roles and all three mobile source cards visible in outputs/S01/stable/390-initial-conversation.png, whereas S06 exposes a partial horizontal rail. S01's narrow card titles and repeated request/title treatment make its phone reading sequence denser. Both are mature; the preference is small and based on visible reading hierarchy and reader clarity, not an inferred difference in functionality or motion."
+      },
+      {
+        "reviewer": "R3",
+        "pair_id": "replication-T2-2",
+        "outcome": "A",
+        "strength": "moderate",
+        "reason": "S03 carries its condensed/italic editorial identity into the populated register, schedule, and dossier, and outputs/S03/stable/1440-initial-detail.png and outputs/S03/stable/900-initial-detail.png keep the note editor and explicit Save in view alongside inquiry and facts. outputs/S03/stable/390-initial-projects.png begins working records appreciably earlier than outputs/S05/stable/390-initial-projects.png. S05 offers roomier body typography and retains owner/region context in its 900-pixel register, where S03 removes those fields. S03 nevertheless provides the more distinctive and efficiently composed studio across the supplied work views; this preference does not assume that either save workflow actually succeeds."
+      },
+      {
+        "reviewer": "R3",
+        "pair_id": "replication-T2-1",
+        "outcome": "A",
+        "strength": "moderate",
+        "reason": "S10's archival field-record character extends through substantive project cards and the detail drawer, rather than relying mainly on large page titles. outputs/S10/stable/1440-initial-projects.png and outputs/S10/stable/390-initial-projects.png keep owner, budget, methods, and both dates in the work itself, while S09 omits budget from its narrower register. S10 also provides an upcoming-work column and a comparative timeline in outputs/S10/stable/1440-initial-overview.png and outputs/S10/stable/1440-initial-schedule.png. S09's full desktop table is better for compact row scanning, and its large date agenda is clear. Across widths and work views, S10's sustained identity and richer immediately visible project context outweigh those advantages without needing a numerical score total."
+      },
+      {
+        "reviewer": "R3",
+        "pair_id": "replication-T3-1",
+        "outcome": "tie",
+        "strength": "none",
+        "reason": "Both sheets fit the accepted notebook, maintain coherent source identity, keep note work available, and communicate loading, retry, unsaved, and saved states clearly in the supplied images. S02 provides semantic source-tab context, explicit top mode labels, and a useful expanded contents/notes rail in outputs/S02/stable/1440-expanded.png. S07 offers a simpler consistent reading-column/bottom-note arrangement and more visible phone summary in outputs/S07/stable/390-compact.png and outputs/S07/stable/390-expanded.png. S02's intermediate rail crop is visible, but its perceptual significance cannot be determined from sampled frames. These task-relevant tradeoffs do not establish an overall preference from the evidence viewed."
+      },
+      {
+        "reviewer": "R3",
+        "pair_id": "replication-T1-2",
+        "outcome": "A",
+        "strength": "weak",
+        "reason": "outputs/S04/stable/390-initial-conversation.png exposes all three sources with publisher context as concise rows, and outputs/S04/stable/390-initial-source.png keeps labelled Previous/Next source controls and position count visible. S08 instead uses a partial phone source rail and has no visible source-switching controls inside its reader. These differences give S04 the clearer visible research-to-source journey. S08 counters with more open source typography and a generous readable note in outputs/S08/stable/1440-initial-source.png, while S04's condensed quotation and muted metadata need closer reading. Both share small Latest/composer overlap issues in long phone captures. The preference is weak because the chief advantage is navigation visibility rather than demonstrated operational correctness."
+      },
+      {
+        "reviewer": "R3",
+        "pair_id": "replication-T3-2",
+        "outcome": "B",
+        "strength": "weak",
+        "reason": "S11's notebook-specific header, outlined mode action, and Read full text link beside the summary heading remain explicit even in outputs/S11/stable/390-compact.png. Its expanded layout in outputs/S11/stable/900-expanded.png exposes the quotation more completely above the note dock, and the constant sheet width preserves a stable reading column between modes. S12 has stronger selected-source tabs and gains useful horizontal room on expansion, as seen in outputs/S12/stable/1440-expanded.png, but its quotation is largely below the initial dock boundary and its first phone source hides the full-text affordance at that capture position. Both communicate note and failure states well and preserve the visible notebook. The small preference concerns immediate reading and orientation, not a claim about continuous motion or inaccessible offscreen content."
+      }
+    ],
+    "preference_counts": {
+      "A": 11,
+      "B": 4,
+      "tie": 3
+    },
+    "sampling_scope": "Raters are correlated model judgments, not independent generation replicates or human participants.",
+    "natural_motion_scope": "Use each original reviewer limitation; ordered samples cannot establish continuous natural playback quality."
+  },
+  "process_audit": {
+    "identity": {
+      "name": "process-audit.json",
+      "size_bytes": 156269,
+      "sha256": "18eb7c6f9faa2c2730c9bae5a4ba2ae8e1b46cbea157f2a9c53f1cd6581c0267"
+    },
+    "path": "empirical-20261028/process-audit.json",
+    "arm_summary": {
+      "A": {
+        "version": "v1.15.0",
+        "tasks": {
+          "T1": {
+            "runs": [
+              "nb8be8a13",
+              "nc5f68f67"
+            ],
+            "finding": "Both adapt localized Vane source-card composition, with composer arrangement also attributed in repetition2, alongside actual Radix modal behavior, Lucide icons and self-hosted fonts. Whole Folio skins, shells and service ownership are custom."
+          },
+          "T2": {
+            "runs": [
+              "nb3bf2299",
+              "n6c114121"
+            ],
+            "finding": "Repetition1 actually imports pinned Tabler CSS and uses its card/table/form/button families under a custom skin. Repetition2 translates shadcn Table relationships and mostly structural Card wrappers; Button source is unused. These are different scopes of mature static reuse within the same arm."
+          },
+          "T3": {
+            "runs": [
+              "n7ce58cfb",
+              "ne64e4884"
+            ],
+            "finding": "Both use Radix plus Motion as behavior/animation foundations and implement gesture ownership, resistance, thresholds, mode sizing and reading continuity locally. Vaul/shadcn examples are studied, but no Vaul drawer implementation is adopted. The second run attributes shadcn Sheet anatomy without a separately established source-specific visual recipe."
+          }
+        },
+        "interpretation": "A already contains and demonstrates mature-sourcing work; it is not a primitives-only or source-free control."
+      },
+      "B": {
+        "version": "v1.16.0",
+        "tasks": {
+          "T1": {
+            "runs": [
+              "n08f925c8",
+              "n7c9d9ca8"
+            ],
+            "finding": "Both adapt the same pinned Vane source-card/composer relationships; Radix/Lucide are actual foundations. Repetition1 embeds fonts; repetition2 uses system families. No larger external Folio product system is adopted."
+          },
+          "T2": {
+            "runs": [
+              "n957b09e9",
+              "n91d1fa87"
+            ],
+            "finding": "Repetition1 translates shadcn Card/Table static layout relationships; repetition2 adopts a narrower Button/Badge family and modal anatomy, with the project register/card/timeline composed locally. B does not uniformly adopt the broadest available page system."
+          },
+          "T3": {
+            "runs": [
+              "nfdae1319",
+              "n0080b6ac"
+            ],
+            "finding": "Both vendor and substantially retain pinned Vaul1.1.2 drawer movement/release/settling code with targeted local patches. This supports temporal_visual_implementation in addition to Radix behavior foundations. Reading composition, notes, source ownership and compact/expanded sizing remain custom."
+          }
+        },
+        "interpretation": "The repeated T3 temporal-mechanism adoption is the clearest observed between-arm source distinction. It does not establish that B produced better motion or a superior whole product."
+      },
+      "comparison_limits": "Two repetitions per task are a small descriptive cohort. Both versions include substantial mature sourcing, original-demo/local-trial and verification guidance; B strengthens resolved visual-implementation language. Source choices cannot establish causal quality improvement, reduced effort/cost, human preference, or complete mature-product parity."
+    },
+    "cross_task_findings": [
+      {
+        "finding": "Actual adoption is layered; dependency names and resource retrieval overstate scope when treated as equivalent.",
+        "evidence": [
+          "All12 actual_adoptions records",
+          "frozen/n6c114121/app/src/components/ui.jsx",
+          "frozen/n6c114121/app/evidence/sources/shadcn-button.json"
+        ],
+        "interpretation": "Fonts/icons, modality foundations, static controls/tables, localized Vane regions and Vaul temporal mechanics differ. The unused shadcn Button and studied-only assistant-ui/Vaul alternatives are explicit counterexamples to counting retrieved sources as adoption."
+      },
+      {
+        "finding": "Mature visual implementation can be temporal without an imported styled page.",
+        "evidence": [
+          "frozen/nfdae1319/app/src/vendor/vaul/index.mjs",
+          "frozen/n0080b6ac/app/src/vendor/vaul/dist/index.mjs",
+          "frozen/n7ce58cfb/app/src/SourceSheet.jsx",
+          "frozen/ne64e4884/app/src/SourceSheet.jsx"
+        ],
+        "interpretation": "Vaul preserves resolved drag/overlay/release/settle relationships; Motion supplies interpolation to locally authored gesture policies. Both contribute behavior, but their source scopes differ. No product_system adoption is established."
+      },
+      {
+        "finding": "A is a substantive sourcing comparison, with static reuse counterexamples to a one-direction B narrative.",
+        "evidence": [
+          "frozen/nb8be8a13/skill/references/component-sourcing.md",
+          "frozen/n08f925c8/skill/references/component-sourcing.md",
+          "frozen/nb3bf2299/app/public/vendor/tabler.min.css",
+          "frozen/n957b09e9/app/src/ui.jsx",
+          "frozen/n91d1fa87/app/src/ui.jsx"
+        ],
+        "interpretation": "Tabler actual CSS in A1 T2 is broader component-family reuse than B2 Button/Badge adaptation; A2 and B1 T2 share shadcn Table/Card families with different retained styling. These are scope facts, not a ranking of result quality."
+      },
+      {
+        "finding": "Source/demo/trial/result chains are partial and mechanism-specific.",
+        "evidence": [
+          "All12 consequential_chain records",
+          "frozen/nfdae1319/app/tools/research.mjs",
+          "frozen/n0080b6ac/app/evidence/shadcn-drawer.tsx",
+          "frozen/ne64e4884/app/evidence/sheet-source.tsx"
+        ],
+        "interpretation": "Pinned Vane author screenshots are static references; current shadcn Base UI demo differs from retained Vaul source; Vaul snap-points demo differs from local custom sizing; current Radix docs differ from installed1.1.15. These gaps should not erase actual adoption or be presented as exact same-variant validation."
+      },
+      {
+        "finding": "Capture, viewing, evidence-driven revision and owner acceptance remain distinct.",
+        "evidence": [
+          "frozen/nb8be8a13/app/evidence/commands/1793170175241383645-8e08676b7d.txt",
+          "frozen/n91d1fa87/app/evidence/commands/1793172765053846764-42b8a06fca.txt",
+          "frozen/ne64e4884/app/evidence/commands/1793175078613454093-bc66ad25bc.txt",
+          "frozen/ne64e4884/app/evidence/commands/1793175256357930218-0db04c339a.txt"
+        ],
+        "interpretation": "Exact failures plus final code and subsequent checks support Stop/focus/click/contrast repairs. Claims that a visual inspection caused a taste or composition choice remain participant attestations without exported view traces. Test-timing repairs are labeled separately."
+      },
+      {
+        "finding": "Mature source adoption does not guarantee the local contract.",
+        "evidence": [
+          "results/nfdae1319/adjudication.json",
+          "results/n0080b6ac/adjudication.json",
+          "results/n7ce58cfb/adjudication.json"
+        ],
+        "interpretation": "Both Vaul integrations omit contracted aria-modal=true; one Motion-based sheet retains measured reading drift. Those failures remain. Functional results are not aesthetic judgments or general library verdicts."
+      },
+      {
+        "finding": "A routing failure is distinct from a missing feature or application repair.",
+        "evidence": [
+          "routing-adaptation/PLAN.json",
+          "routing-adaptation/COMPLETED.json",
+          "routing-adaptation/METHOD-REVIEW.md",
+          "results/n7c9d9ca8/primary/results.json",
+          "results/n7c9d9ca8/routing-adapted/primary/results.json"
+        ],
+        "interpretation": "The common visibility-conditioned history/theme/Escape route passes group09 for all four T1 outputs; raw n7c9d9ca8 remains9/10 while adopted result is10/10. Same exact control, app bytes and assertions are retained."
+      },
+      {
+        "finding": "All four T3 outputs preserve the protected notebook boundary.",
+        "evidence": [
+          "frozen/n7ce58cfb/app/src/domain.js",
+          "frozen/n7ce58cfb/app/src/Shell.jsx",
+          "frozen/n7ce58cfb/app/src/shell.css",
+          "frozen/n7ce58cfb/app/src/navigation.js",
+          "frozen/nfdae1319/app/src/domain.js",
+          "frozen/nfdae1319/app/src/Shell.jsx",
+          "frozen/nfdae1319/app/src/shell.css",
+          "frozen/nfdae1319/app/src/navigation.js",
+          "frozen/ne64e4884/app/src/domain.js",
+          "frozen/ne64e4884/app/src/Shell.jsx",
+          "frozen/ne64e4884/app/src/shell.css",
+          "frozen/ne64e4884/app/src/navigation.js",
+          "frozen/n0080b6ac/app/src/domain.js",
+          "frozen/n0080b6ac/app/src/Shell.jsx",
+          "frozen/n0080b6ac/app/src/shell.css",
+          "frozen/n0080b6ac/app/src/navigation.js"
+        ],
+        "interpretation": "Independently computed hashes match the supplied protected files exactly; navigation changes only Saved to Library while preserving id/icon/count. Sheet-local additions are documented per run."
+      }
+    ],
+    "classification_run_counts": {
+      "source": "process-audit.json",
+      "source_sha256": "18eb7c6f9faa2c2730c9bae5a4ba2ae8e1b46cbea157f2a9c53f1cd6581c0267",
+      "scope": "Presence of an auditor-supported actual-adoption class in each of six outputs per arm. Classes overlap; multiple libraries within one class count once per output. No maturity total, quality ranking or causal gain is derived.",
+      "arms": {
+        "A": {
+          "version": "v1.15.0",
+          "runs": 6,
+          "classifications": {
+            "font_or_icon": {
+              "count": 6,
+              "run_ids": [
+                "nb8be8a13",
+                "nc5f68f67",
+                "nb3bf2299",
+                "n6c114121",
+                "n7ce58cfb",
+                "ne64e4884"
+              ]
+            },
+            "behavior_foundation": {
+              "count": 6,
+              "run_ids": [
+                "nb8be8a13",
+                "nc5f68f67",
+                "nb3bf2299",
+                "n6c114121",
+                "n7ce58cfb",
+                "ne64e4884"
+              ]
+            },
+            "static_visual_implementation": {
+              "count": 2,
+              "run_ids": [
+                "nb3bf2299",
+                "n6c114121"
+              ]
+            },
+            "temporal_visual_implementation": {
+              "count": 0,
+              "run_ids": []
+            },
+            "composed_region": {
+              "count": 2,
+              "run_ids": [
+                "nb8be8a13",
+                "nc5f68f67"
+              ]
+            },
+            "product_system": {
+              "count": 0,
+              "run_ids": []
+            }
+          }
+        },
+        "B": {
+          "version": "v1.16.0",
+          "runs": 6,
+          "classifications": {
+            "font_or_icon": {
+              "count": 6,
+              "run_ids": [
+                "n08f925c8",
+                "n7c9d9ca8",
+                "n957b09e9",
+                "n91d1fa87",
+                "nfdae1319",
+                "n0080b6ac"
+              ]
+            },
+            "behavior_foundation": {
+              "count": 6,
+              "run_ids": [
+                "n08f925c8",
+                "n7c9d9ca8",
+                "n957b09e9",
+                "n91d1fa87",
+                "nfdae1319",
+                "n0080b6ac"
+              ]
+            },
+            "static_visual_implementation": {
+              "count": 3,
+              "run_ids": [
+                "n957b09e9",
+                "n91d1fa87",
+                "n0080b6ac"
+              ]
+            },
+            "temporal_visual_implementation": {
+              "count": 2,
+              "run_ids": [
+                "nfdae1319",
+                "n0080b6ac"
+              ]
+            },
+            "composed_region": {
+              "count": 2,
+              "run_ids": [
+                "n08f925c8",
+                "n7c9d9ca8"
+              ]
+            },
+            "product_system": {
+              "count": 0,
+              "run_ids": []
+            }
+          }
+        }
+      }
+    },
+    "scope": "Nonblind source/process inspection; adoption mechanisms and observed visual quality are separate facts."
+  },
+  "runtime_diagnostics": [
+    {
+      "run_id": "nb8be8a13",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 698012,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 698012,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "n08f925c8",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 743997,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 743997,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "nc5f68f67",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 597115,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 597115,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "n7c9d9ca8",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 288848,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 288848,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "nb3bf2299",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 896516,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 896516,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "n957b09e9",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 664946,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 664946,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "n6c114121",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 714205,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 714205,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "n91d1fa87",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 987907,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 987907,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "n7ce58cfb",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 426726,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 426726,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "nfdae1319",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 321301,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 321301,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "ne64e4884",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 424076,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [
+            "`DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.\n\nIf you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.\n\nFor more information, see https://radix-ui.com/primitives/docs/components/dialog"
+          ],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 424076,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [
+            "`DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.\n\nIf you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.\n\nFor more information, see https://radix-ui.com/primitives/docs/components/dialog"
+          ],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    },
+    {
+      "run_id": "n0080b6ac",
+      "conditions": [
+        {
+          "external_blocked": false,
+          "requested_local_static_bytes": 317635,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [
+            "`DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.\n\nIf you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.\n\nFor more information, see https://radix-ui.com/primitives/docs/components/dialog"
+          ],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        },
+        {
+          "external_blocked": true,
+          "requested_local_static_bytes": 317635,
+          "external_requests": 0,
+          "page_errors": [],
+          "console_errors": [
+            "`DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.\n\nIf you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.\n\nFor more information, see https://radix-ui.com/primitives/docs/components/dialog"
+          ],
+          "scope": "Requested static resources in the initial and one primary detail state; root HTML served at / is omitted from this sum."
+        }
+      ]
+    }
+  ],
+  "historical_cohort": {
+    "planned_runs": 12,
+    "recovered_runs": 9,
+    "unrecovered_runs": 3,
+    "complete_matched_pairs": 3,
+    "locked_reviews_recovered": 0,
+    "verified_archived_files": 2739,
+    "matched_pairs": [
+      {
+        "task": "T1",
+        "replicate": 1,
+        "A": "pb1788ae",
+        "B": "p75a31fd",
+        "complete": true,
+        "functional_delta_B_minus_A": 0,
+        "wall_minutes_difference_B_minus_A": -0.968,
+        "visual_delta": null
+      },
+      {
+        "task": "T1",
+        "replicate": 2,
+        "A": "p4b65bcb",
+        "B": "p0119a3e",
+        "complete": false,
+        "functional_delta_B_minus_A": null,
+        "wall_minutes_difference_B_minus_A": null,
+        "visual_delta": null
+      },
+      {
+        "task": "T2",
+        "replicate": 1,
+        "A": "p93abe90",
+        "B": "pa45255c",
+        "complete": true,
+        "functional_delta_B_minus_A": 0,
+        "wall_minutes_difference_B_minus_A": 5.535,
+        "visual_delta": null
+      },
+      {
+        "task": "T2",
+        "replicate": 2,
+        "A": "pabc6f92",
+        "B": "p649c5ff",
+        "complete": false,
+        "functional_delta_B_minus_A": null,
+        "wall_minutes_difference_B_minus_A": null,
+        "visual_delta": null
+      },
+      {
+        "task": "T3",
+        "replicate": 1,
+        "A": "p3017a82",
+        "B": "pcc62324",
+        "complete": true,
+        "functional_delta_B_minus_A": 0,
+        "wall_minutes_difference_B_minus_A": 3.362,
+        "visual_delta": null
+      },
+      {
+        "task": "T3",
+        "replicate": 2,
+        "A": "p0ceb740",
+        "B": "pa04824d",
+        "complete": false,
+        "functional_delta_B_minus_A": null,
+        "wall_minutes_difference_B_minus_A": null,
+        "visual_delta": null
+      }
+    ],
+    "pooled_with_new_cohort": false,
+    "missing_outcomes": null
+  },
+  "owner_assessment": {
+    "status": "pending",
+    "positive_acceptance_for_version": null,
+    "observations": [],
+    "workflow": "Owner operates the actual outputs in the local viewer, records observation scope and version exposure, locks ratings, and returns the exported feedback JSON. Later feedback is appended with its own provenance; original model judgments remain unchanged."
+  },
+  "limits": [
+    "New cohort only; old missing outcomes remain null and are not replaced.",
+    "Twelve generations, three task families, two repetitions per arm: descriptive conditional evidence only.",
+    "No summed aesthetic score, percentage quality uplift, significance claim, production-service parity, or inferred human preference.",
+    "Retained command records and wall intervals do not measure total tokens, cost, or active model time.",
+    "Implementers can read their own skill version metadata; visual reviewers receive anonymous packets.",
+    "Model reviewers are correlated judgments, not independent human users.",
+    "Image samples do not establish continuous natural-motion quality; original review limitations are retained.",
+    "Process viewing inventories are attestations unless independently corroborated. A captured image does not prove it was viewed.",
+    "The local prelaunch registry has no independent external timestamp witness.",
+    "A brief shared execution-service interruption and the approximate notice timing are retained in instrument-notes.md.",
+    "Source identity and actual adoption do not by themselves establish complete mature-product parity or a causal quality gain."
+  ]
+}

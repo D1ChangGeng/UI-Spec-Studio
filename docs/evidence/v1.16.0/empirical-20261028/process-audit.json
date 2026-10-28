@@ -1,0 +1,2336 @@
+{
+  "scope": {
+    "cohort_id": "replication-20261028-20e56",
+    "audit_date_utc": "2026-10-28T08:24:40.502144+00:00",
+    "kind": "Independent nonblind source/process assessment of this new twelve-run cohort; separate from blind visual review.",
+    "assignment_map_known": true,
+    "allowed_evidence": "Frozen apps and skill snapshots, recorded command outputs, retained acquisitions and handovers, independent functional/capture results. Supplemental runtime notice inventory inspected at coordinator request.",
+    "excluded_evidence": "No live participant directories, blind reviews, anonymous maps, later visual scores, participant/reviewer contact, or earlier-cohort output substitutes were used.",
+    "classification_policy": {
+      "font_or_icon": "Actual imported icon or embedded font material; does not resolve surrounding composition.",
+      "behavior_foundation": "Modal/animation or semantic component foundation whose product-level composition or gesture policy is locally authored.",
+      "static_visual_implementation": "Retained or translated component styling/layout relationships, with exact retained and replaced parts stated.",
+      "temporal_visual_implementation": "Retained movement/release/settling relationships from a concrete implementation, including its visible time and spatial response.",
+      "composed_region": "Localized multi-element arrangement whose source lineage and relationships survive; not automatically a whole product.",
+      "product_system": "Coherent externally implemented product/page system actually adopted. None established in any of the twelve runs."
+    },
+    "viewing_rule": "Recorded images prove capture. Participant viewed.md and handover claims are attestations because exported image-view traces are unavailable. This auditor inspected two ne64e4884 original-demo captures only to verify their open state; no independent application aesthetic rating was performed.",
+    "version_boundary": "A is full production v1.15.0 at a89091dfa5754f98b79655c684f978f24fd92716; B is full production v1.16.0 at 1ba50b1e1c6dfbd5540d9b54514ef81ac6160eec. Both contain mature sourcing, highest-useful-reuse, original-demo/local-trial and integrated verification guidance.",
+    "guide_evidence": [
+      "frozen/nb8be8a13/skill/SKILL.md",
+      "frozen/n08f925c8/skill/SKILL.md",
+      "frozen/nb8be8a13/skill/references/component-sourcing.md",
+      "frozen/n08f925c8/skill/references/component-sourcing.md"
+    ],
+    "progress": "Complete: all twelve assigned frozen outputs audited; no unavailable placeholders remain.",
+    "completed_at_utc": "2026-10-28T08:38:03.862958+00:00",
+    "supplemental_notice_scope": [
+      "../v116-study/third-party/runtime/INDEX.json",
+      "../v116-study/third-party/research/assistant-ui/PROVENANCE.json"
+    ],
+    "audit_method": "Read actual imports/call sites, source snapshots and CSS; compare consequential vendor mechanics to retained tarballs; inspect exact failure/repair command outputs; verify protected T3 files and frozen source/public/skill hashes; read independent results and route-only method records. No blind review artifacts or scores were accessed.",
+    "functional_scope": "Independent functional results are attached to explain integration limits. This source audit does not reproduce or replace the separate functional analysis and does not turn pass groups into a source-maturity or visual-quality score."
+  },
+  "runs": [
+    {
+      "run_id": "nb8be8a13",
+      "task": "T1",
+      "replicate": 1,
+      "arm": "A",
+      "version": "v1.15.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Pinned Vane author screenshots, README, tree, MessageSources/MessageInput/ChatWindow/Sidebar and MIT license are retained under evidence/research. Recorded research.py/research-detail.py commands acquired the files and a subsequent cat command emitted the actual component code. Radix official dialog HTML/text and an opened-demo capture, Google Fonts CSS/font bytes/OFL notices, and runtime license material are also retained. Sidebar/README acquisition and MessageInput/ChatWindow reference reads do not establish their full implementation adoption.",
+      "actual_adoptions": [
+        {
+          "source": "Vane commit 348feca3e378fb4157b217724ed508dc707f853f, src/components/MessageSources.tsx and, where stated, MessageInput.tsx",
+          "layer": "composed-region",
+          "classification": "composed_region",
+          "implementation_paths": [
+            "frozen/nb8be8a13/app/src/ResearchSources.jsx",
+            "frozen/nb8be8a13/app/src/App.jsx",
+            "frozen/nb8be8a13/app/src/styles.css"
+          ],
+          "retained_mechanism": "ResearchSources is actually imported into AssistantMessage. The repeated source-card region retains source-to-card mapping, enclosed title plus publisher and citation index, flex grouping, and a grid of source choices ahead of the answer. The upstream source is directly retained, read, and attributed in the adapted module.",
+          "custom_remainder": "The local card is a button, not an external anchor. Its top icon/arrow row, source colors, title wrapping, three-column desktop grid, horizontally scrolling mobile row, local full-text dialog, all typography and exact spacing are rewritten. Vane favicons, first-three/overflow modal, Headless UI, Next.js imports and its full app are not adopted. Composer/service ownership and the wider reading/history/outline shell are custom.",
+          "license_evidence": [
+            "frozen/nb8be8a13/app/public/licenses/vane-LICENSE.txt",
+            "frozen/nb8be8a13/app/evidence/research/vane-LICENSE"
+          ],
+          "visual_mechanisms_retained": "Localized static card grouping is retained; the surface skin and page-level composition are custom. This is a small composed region, not a Vane product-system import.",
+          "uncertainty": ""
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 (supplied runtime; current retrieved documentation sometimes states 1.2.0)",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/nb8be8a13/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Actual controlled Root/Portal/Overlay/Content/Title/Description/Close trees implement source-reader and mobile-history modality; explicit close-focus callbacks restore repeated citation or history triggers. Independent source-dialog assertions exercise text identity, dismissal and focus.",
+          "custom_remainder": "All reader/history surfaces, dimensions, typography, entry/exit CSS, fixture data, selection and return-target policy are authored locally. Radix does not supply the notebook visual composition.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Visible modal layering and focus behavior rely on the foundation; no upstream styled dialog skin is retained.",
+          "uncertainty": "Installed version is distinct from the current documentation version; observed original docs/demo cannot certify local 1.1.15 behavior without local checks."
+        },
+        {
+          "source": "lucide-react 0.468.0, supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/nb8be8a13/app/src/App.jsx",
+            "frozen/nb8be8a13/app/src/ResearchSources.jsx"
+          ],
+          "retained_mechanism": "Actual named icon imports render repeated navigation, source, attachment, theme, close and status symbols.",
+          "custom_remainder": "Sizing, role placement, color, labels and original Folio identity mark are local.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent outline icon geometry; no page layout or content typography is imported.",
+          "uncertainty": ""
+        },
+        {
+          "source": "DM Sans 400/500/600/700 and Lora 400/500, official Google Fonts delivery",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/nb8be8a13/app/src/styles.css",
+            "frozen/nb8be8a13/app/public/fonts"
+          ],
+          "retained_mechanism": "Local font assets are referenced by @font-face and used in the rendered family assignments; this is actual font integration, not just retrieval.",
+          "custom_remainder": "Font role assignment, optical scale, line height, color, composition and responsive type adjustments are local.",
+          "license_evidence": [
+            "frozen/nb8be8a13/app/public/licenses/dmsans-OFL.txt",
+            "frozen/nb8be8a13/app/public/licenses/lora-OFL.txt"
+          ],
+          "visual_mechanisms_retained": "DM Sans supplies reading/control text; Lora supplies editorial titles/headings. Lora 600 was moved to unadopted research evidence, although stale earlier build assets remain retained.",
+          "uncertainty": "Google Fonts main-branch/CSS delivery files are retained; no immutable upstream commit is recorded for all font acquisitions."
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/nb8be8a13/app/evidence/research/vane.png and vane-answer.png/vane-answer-2.png: exact pinned author static product images, not a live Vane session.",
+          "frozen/nb8be8a13/app/evidence/research/radix-dialog-demo.png: opened original Radix demo capture; operation is supported by retained research script/output, viewing is attested."
+        ],
+        "local_trial": [
+          "frozen/nb8be8a13/app/evidence/trial-1440.png, trial-900.png and trial-390.png plus capture metadata: initial local integrated source-card/font trial.",
+          "frozen/nb8be8a13/app/evidence/comparison-all-sans.png and comparison-editorial.png: matched local typography alternatives, with participant explanation in RUN-REPORT.md."
+        ],
+        "integrated_result": [
+          "frozen/nb8be8a13/app/evidence/verification.json",
+          "frozen/nb8be8a13/app/evidence/growth-verification.json",
+          "results/nb8be8a13/primary/results.json",
+          "results/nb8be8a13/supplement/results.json",
+          "results/nb8be8a13/routing-adapted/primary/results.json",
+          "results/nb8be8a13/routing-adapted/supplement/results.json"
+        ],
+        "chain_supported": "partial — Pinned Vane static source lineage → adapted card region → local captures → integrated browser assertions is supported. No operated original Vane product or exported participant image-view trace is retained; the Radix original demo is a separate behavior chain."
+      },
+      "evidence_changed_decision": "Command 1793170175241383645-8e08676b7d.txt records lost pending draft and incorrect composer focus. Command 1793170281454747638-0cd77c9214.json records distinct Stop/Send keys and prevented Stop submission; final App.jsx retains them. Commands 1793170413324974328-f66e61f5a3.txt and 1793170864983876236-cec746cbe9.txt give before/after contrast values, and styles.css changes light --muted from #797d72 to #62695e. These support actual evidence-led repair. The serif choice, enlarged labels and visual judgments remain participant explanations associated with retained captures.",
+      "low_impact_scope": "Not applicable; T1 is a complete new frontend.",
+      "limitations": [
+        "All screenshot-viewing claims are participant attestations; capture files and recorded execution do not prove actual viewing.",
+        "No complete Vane application, live search service, model backend, account system or production integration was adopted.",
+        "Temporal screenshots/sample sequences do not establish continuous playback or natural-motion quality."
+      ],
+      "source_evidence_paths": [
+        "frozen/nb8be8a13/app/evidence/research/MessageSources.tsx",
+        "frozen/nb8be8a13/app/evidence/research/MessageInput.tsx",
+        "frozen/nb8be8a13/app/evidence/commands/1793169465843593489-cbb7c7aac1.txt",
+        "frozen/nb8be8a13/app/evidence/commands/1793169547249817872-ca5703f862.txt",
+        "frozen/nb8be8a13/app/tools/research.py",
+        "frozen/nb8be8a13/app/tools/research-detail.py"
+      ],
+      "notice_scope": "Vane, font, Radix and Lucide notices are copied to public/licenses and dist/licenses. The Lucide notice fetched from current upstream differs from the installed-version notice; the complete-delivery runtime supplement retains the exact 0.468.0 ISC notice, including Feather attribution. React/runtime notice coverage is supplied centrally.",
+      "independent_integration_result": {
+        "primary_path": "results/nb8be8a13/primary/results.json",
+        "supplement_path": "results/nb8be8a13/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "04": "pass",
+          "09": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 10,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "routing_adaptation": {
+          "plan": "routing-adaptation/PLAN.json",
+          "completion": "routing-adaptation/COMPLETED.json",
+          "method_review": "routing-adaptation/METHOD-REVIEW.md",
+          "primary_path": "results/nb8be8a13/routing-adapted/primary/results.json",
+          "supplement_path": "results/nb8be8a13/routing-adapted/supplement/results.json",
+          "adapted_primary_group_09": "pass",
+          "adapted_supplement_group_09": "pass",
+          "policy": "Same conditional public history→theme→Escape route applied to all four T1 outputs. Only group09 uses adapted results; all other registered outcomes remain authoritative. Frozen app bytes and assertions/thresholds unchanged; raw failures preserved."
+        },
+        "retained_failure": null
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/nb8be8a13/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 55,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "n08f925c8",
+      "task": "T1",
+      "replicate": 1,
+      "arm": "B",
+      "version": "v1.16.0",
+      "status": "audited_frozen",
+      "source_retrieval": "A pinned Vane tarball, extracted component snapshots/license and three author images are retained. The source-read command emits MessageInput and MessageSources. assistant-ui README and WebP material were acquired as an alternative; selected frames were exported but no assistant-ui implementation is imported. Radix HTML was fetched; the initial BeautifulSoup text extraction failed and a standard-library parser supplied the text. DM Sans/Lora files and OFL notices were acquired from Google Fonts.",
+      "actual_adoptions": [
+        {
+          "source": "Vane commit 348feca3e378fb4157b217724ed508dc707f853f, src/components/MessageSources.tsx and, where stated, MessageInput.tsx",
+          "layer": "composed-region",
+          "classification": "composed_region",
+          "implementation_paths": [
+            "frozen/n08f925c8/app/src/components/ResearchUI.jsx",
+            "frozen/n08f925c8/app/src/App.jsx",
+            "frozen/n08f925c8/app/src/styles.css"
+          ],
+          "retained_mechanism": "SourceShelf and Composer are actual imported components. Source choices retain the repeated bounded-card/source-identity/citation relationship; Composer retains a controlled expanding text field above a utility/attachment and send-action row inside one form. This is focused source-arrangement adaptation supported by retained original code, its recorded read and the local attribution.",
+          "custom_remainder": "The card now orders publisher/icon above title and the index below, uses local buttons and modal reading, and has entirely local CSS. File state, labels, IME guard, request ownership, Stop behavior, two-row dimensions and theme are local. The Vane Next/chat hooks, external links/favicons, overflow source dialog and product system are omitted. History, answer outline, leaf/book mark and notebook composition are authored here.",
+          "license_evidence": [
+            "frozen/n08f925c8/app/THIRD-PARTY-NOTICES.md",
+            "frozen/n08f925c8/app/evidence/research/vane/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Static composition of two localized regions survives; source typography/surface tokens, original card ordering and page shell are not reproduced.",
+          "uncertainty": "These are relationship-level JSX/CSS adaptations, not byte-identical blocks. The source grouping is generic enough that its cited lineage should not be mistaken for a broad visual-system import."
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 (supplied runtime; current retrieved documentation sometimes states 1.2.0)",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/n08f925c8/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Actual controlled Root/Portal/Overlay/Content/Title/Description/Close trees implement source-reader and mobile-history modality; explicit close-focus callbacks restore repeated citation or history triggers. Independent source-dialog assertions exercise text identity, dismissal and focus.",
+          "custom_remainder": "All reader/history surfaces, dimensions, typography, entry/exit CSS, fixture data, selection and return-target policy are authored locally. Radix does not supply the notebook visual composition.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Visible modal layering and focus behavior rely on the foundation; no upstream styled dialog skin is retained.",
+          "uncertainty": "Installed version is distinct from the current documentation version; observed original docs/demo cannot certify local 1.1.15 behavior without local checks."
+        },
+        {
+          "source": "lucide-react 0.468.0, supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n08f925c8/app/src/App.jsx",
+            "frozen/n08f925c8/app/src/components/ResearchUI.jsx"
+          ],
+          "retained_mechanism": "Actual named icon imports render repeated navigation, source, attachment, theme, close and status symbols.",
+          "custom_remainder": "Sizing, role placement, color, labels and original Folio identity mark are local.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent outline icon geometry; no page layout or content typography is imported.",
+          "uncertainty": ""
+        },
+        {
+          "source": "DM Sans variable and Lora variable, Google Fonts repository",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n08f925c8/app/src/styles.css",
+            "frozen/n08f925c8/app/public/fonts"
+          ],
+          "retained_mechanism": "Local font assets are referenced by @font-face and used in the rendered family assignments; this is actual font integration, not just retrieval.",
+          "custom_remainder": "Font role assignment, optical scale, line height, color, composition and responsive type adjustments are local.",
+          "license_evidence": [
+            "frozen/n08f925c8/app/public/fonts/DM-Sans-OFL.txt",
+            "frozen/n08f925c8/app/public/fonts/Lora-OFL.txt"
+          ],
+          "visual_mechanisms_retained": "DM Sans reading/UI and Lora editorial question/title roles are applied locally.",
+          "uncertainty": "Google Fonts main-branch/CSS delivery files are retained; no immutable upstream commit is recorded for all font acquisitions."
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/n08f925c8/app/evidence/research/vane: pinned author images are retained static views.",
+          "frozen/n08f925c8/app/evidence/research/assistant-demo-light.webp: frame samples support alternative-image acquisition; participant viewing is attested.",
+          "frozen/n08f925c8/app/evidence/research/radix-dialog.html: documentation retrieval/read, not a retained operated original dialog-demo episode."
+        ],
+        "local_trial": [
+          "frozen/n08f925c8/app/evidence/trial-desktop.png and trial-mobile.png with capture metadata; handover states this preceded the complete request adapter. The trial source revision itself is not separately frozen."
+        ],
+        "integrated_result": [
+          "frozen/n08f925c8/app/evidence/archive-first-integration/verification.json",
+          "frozen/n08f925c8/app/evidence/verification-before-focus-scroll-repair.json",
+          "frozen/n08f925c8/app/evidence/verification.json",
+          "results/n08f925c8/primary/results.json",
+          "results/n08f925c8/supplement/results.json",
+          "results/n08f925c8/routing-adapted/primary/results.json",
+          "results/n08f925c8/routing-adapted/supplement/results.json"
+        ],
+        "chain_supported": "partial — Same retained Vane source arrangements connect to initial local captures and final integrated source/composer checks. assistant-ui is comparison-only; Radix original-operation continuity is not demonstrated here, and actual viewing is attested."
+      },
+      "evidence_changed_decision": "1793172099102546729-a9d0ddb8e4.txt records the immediate attachment-removal focus assertion failing and a long-scroll timeout. ResearchUI.jsx now focuses the textarea synchronously before removal; later verification passes. 1793172248569985646-b4bc0e4936.txt records scroll offsets 276→557 during a failed wheel test; the final verification script waits for the keyboard scroll episode before a separate wheel episode. This latter repair is an instrument timing correction, not evidence that the app scroll implementation changed. The opaque dialog transition, theme-transition removal and card/type refinements are supported as final CSS plus archived captures and participant explanation, without exported viewing traces.",
+      "low_impact_scope": "Not applicable; T1 is a complete new frontend.",
+      "limitations": [
+        "All screenshot-viewing claims are participant attestations; capture files and recorded execution do not prove actual viewing.",
+        "No complete Vane application, live search service, model backend, account system or production integration was adopted.",
+        "Temporal screenshots/sample sequences do not establish continuous playback or natural-motion quality.",
+        "The assistant-ui post-hoc byte match locates the retained research material at an official commit; it does not retroactively pin the participant original main-branch acquisition or prove it informed the implementation."
+      ],
+      "source_evidence_paths": [
+        "frozen/n08f925c8/app/evidence/research/vane.tar.gz",
+        "frozen/n08f925c8/app/evidence/research/vane/src/components/MessageSources.tsx",
+        "frozen/n08f925c8/app/evidence/research/vane/src/components/MessageInput.tsx",
+        "frozen/n08f925c8/app/evidence/commands/1793170910338644529-cc84d37398.txt",
+        "frozen/n08f925c8/app/evidence/research/assistant-ui-README.md",
+        "frozen/n08f925c8/app/evidence/research/radix-dialog.html",
+        "../v116-study/third-party/research/assistant-ui/PROVENANCE.json",
+        "../v116-study/third-party/research/assistant-ui/LICENSE.txt"
+      ],
+      "notice_scope": "Full Vane notice is retained at app root and in source evidence; font OFLs accompany delivered fonts. Frozen app lacks node_modules and its Radix/Lucide note initially defers to installed dependencies. Standalone dist lacks these full notices, but the inspected complete-delivery runtime supplement includes exact Radix 1.1.15 and Lucide 0.468.0 notices. Comparison-only assistant-ui README/WebPs and extracted frames originally lacked a full notice in the frozen app. The coordinator added a separate official MIT license plus post-hoc provenance at ../v116-study/third-party/research/assistant-ui; the three retained originals are byte-identical to the files at b6b10672ef896e2deaf1603e7414ef0142943e9e. Original acquisition remains unpinned; no application adoption is inferred.",
+      "independent_integration_result": {
+        "primary_path": "results/n08f925c8/primary/results.json",
+        "supplement_path": "results/n08f925c8/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "04": "pass",
+          "09": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 10,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "routing_adaptation": {
+          "plan": "routing-adaptation/PLAN.json",
+          "completion": "routing-adaptation/COMPLETED.json",
+          "method_review": "routing-adaptation/METHOD-REVIEW.md",
+          "primary_path": "results/n08f925c8/routing-adapted/primary/results.json",
+          "supplement_path": "results/n08f925c8/routing-adapted/supplement/results.json",
+          "adapted_primary_group_09": "pass",
+          "adapted_supplement_group_09": "pass",
+          "policy": "Same conditional public history→theme→Escape route applied to all four T1 outputs. Only group09 uses adapted results; all other registered outcomes remain authoritative. Frozen app bytes and assertions/thresholds unchanged; raw failures preserved."
+        },
+        "retained_failure": null
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/n08f925c8/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 48,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "nc5f68f67",
+      "task": "T1",
+      "replicate": 2,
+      "arm": "A",
+      "version": "v1.15.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Pinned Vane images, tree, README, MIT license and MessageSources/MessageInput/ChatWindow/Sidebar source are retained and emitted by source reads. shadcn new-york sidebar registry JSON is retained as a studied alternative, with no wholesale sidebar component import. Official Radix docs/demo were acquired and operated after a recorded certificate failure. DM Sans and Instrument Serif font bytes and OFL notices are self-hosted.",
+      "actual_adoptions": [
+        {
+          "source": "Vane commit 348feca3e378fb4157b217724ed508dc707f853f, src/components/MessageSources.tsx and, where stated, MessageInput.tsx",
+          "layer": "composed-region",
+          "classification": "composed_region",
+          "implementation_paths": [
+            "frozen/nc5f68f67/app/src/App.jsx",
+            "frozen/nc5f68f67/app/src/styles.css",
+            "frozen/nc5f68f67/app/src/useResearch.js"
+          ],
+          "retained_mechanism": "SourceCards repeats source-specific cards associated with publisher, title and reference number; the composer preserves the text-field/attachment/send grouping described in the source adaptation record. The upstream source is retained/read and the local SourceCards is explicitly attributed.",
+          "custom_remainder": "Publisher moves above the title; source cards become local reading buttons and mobile full-width rows. Card CSS, all type/color, bottom composer geometry, source reading dialog and copy are custom. useResearch.js supplies per-thread draft/file state, abort/request ownership and fixture persistence. shadcn sidebar contributes studied desktop/mobile organization, not imported sidebar implementation.",
+          "license_evidence": [
+            "frozen/nc5f68f67/app/public/licenses/Vane-MIT.txt",
+            "frozen/nc5f68f67/app/evidence/research/vane-LICENSE"
+          ],
+          "visual_mechanisms_retained": "Localized source-card and composer arrangements are adapted; no Vane shell, backend, overflow dialog, favicon mechanism or complete visual skin is integrated.",
+          "uncertainty": "The exact composer code is largely local; credit is confined to arrangement adaptation, not imported Vane state logic."
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 (supplied runtime; current retrieved documentation sometimes states 1.2.0)",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/nc5f68f67/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Actual controlled Root/Portal/Overlay/Content/Title/Description/Close trees implement source-reader and mobile-history modality; explicit close-focus callbacks restore repeated citation or history triggers. Independent source-dialog assertions exercise text identity, dismissal and focus.",
+          "custom_remainder": "All reader/history surfaces, dimensions, typography, entry/exit CSS, fixture data, selection and return-target policy are authored locally. Radix does not supply the notebook visual composition.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Visible modal layering and focus behavior rely on the foundation; no upstream styled dialog skin is retained.",
+          "uncertainty": "Installed version is distinct from the current documentation version; observed original docs/demo cannot certify local 1.1.15 behavior without local checks."
+        },
+        {
+          "source": "lucide-react 0.468.0, supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/nc5f68f67/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Actual named icon imports render repeated navigation, source, attachment, theme, close and status symbols.",
+          "custom_remainder": "Sizing, role placement, color, labels and original Folio identity mark are local.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent outline icon geometry; no page layout or content typography is imported.",
+          "uncertainty": ""
+        },
+        {
+          "source": "DM Sans and Instrument Serif, Google Fonts repository",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/nc5f68f67/app/src/styles.css",
+            "frozen/nc5f68f67/app/public/fonts"
+          ],
+          "retained_mechanism": "Local font assets are referenced by @font-face and used in the rendered family assignments; this is actual font integration, not just retrieval.",
+          "custom_remainder": "Font role assignment, optical scale, line height, color, composition and responsive type adjustments are local.",
+          "license_evidence": [
+            "frozen/nc5f68f67/app/public/fonts/DM-Sans-OFL.txt",
+            "frozen/nc5f68f67/app/public/fonts/Instrument-Serif-OFL.txt"
+          ],
+          "visual_mechanisms_retained": "DM Sans body/control text, Instrument Serif question and title roles; source typography is not inherited from Vane.",
+          "uncertainty": "Google Fonts main-branch/CSS delivery files are retained; no immutable upstream commit is recorded for all font acquisitions."
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/nc5f68f67/app/evidence/research/vane.png and vane-p1.png/vane-p2.png: exact pinned author static views.",
+          "frozen/nc5f68f67/app/evidence/commands/1793172995491367252-d619fefe31.txt: logs original Radix opening, Escape closure and Edit profile focus restoration; shadcn capture is a separate studied sidebar carrier view."
+        ],
+        "local_trial": [
+          "frozen/nc5f68f67/app/evidence/desktop.png.json: local capture; initial responsive source-card captures in evidence/checks are followed by the documented mobile-row revision. A separate polished alternative full app is not retained."
+        ],
+        "integrated_result": [
+          "frozen/nc5f68f67/app/evidence/checks/results-before-visual-refinement.json",
+          "frozen/nc5f68f67/app/evidence/checks/results.json",
+          "frozen/nc5f68f67/app/evidence/episodes/results.json",
+          "results/nc5f68f67/primary/results.json",
+          "results/nc5f68f67/supplement/results.json",
+          "results/nc5f68f67/routing-adapted/primary/results.json",
+          "results/nc5f68f67/routing-adapted/supplement/results.json"
+        ],
+        "chain_supported": "partial — Source-region lineage and local/integrated captures are supported. Original Vane behavior is not operated; the actual original Radix operation applies to modal foundation only. Sidebar source reading and a partial carrier-page capture do not establish full sidebar/mobile-demo adoption."
+      },
+      "evidence_changed_decision": "1793173428265149920-8cba2adfcc.txt records a slow/Stop assertion receiving two user messages where one was expected. Final App.jsx has distinct keyed Stop/Send controls and prevents the Stop default submit; later verification logs pass. The retained episodes failure/result pair and final FileList snapshot code support a separate pending-attachment repair. contrast.json records token measurements. The mobile full-width source rows and opaque sheet entrance are final source changes linked to earlier captures by DESIGN.md, while claims that viewing caused those choices remain attested.",
+      "low_impact_scope": "Not applicable; T1 is a complete new frontend.",
+      "limitations": [
+        "All screenshot-viewing claims are participant attestations; capture files and recorded execution do not prove actual viewing.",
+        "No complete Vane application, live search service, model backend, account system or production integration was adopted.",
+        "Temporal screenshots/sample sequences do not establish continuous playback or natural-motion quality."
+      ],
+      "source_evidence_paths": [
+        "frozen/nc5f68f67/app/evidence/research/MessageSources.tsx",
+        "frozen/nc5f68f67/app/evidence/research/MessageInput.tsx",
+        "frozen/nc5f68f67/app/evidence/research/shadcn-sidebar.json",
+        "frozen/nc5f68f67/app/evidence/commands/1793172938152997192-ff32b520be.txt",
+        "frozen/nc5f68f67/app/evidence/commands/1793172995491367252-d619fefe31.txt",
+        "frozen/nc5f68f67/app/evidence/asset-hashes.json"
+      ],
+      "notice_scope": "Vane, Radix and installed Lucide full notices are copied into public/licenses and dist/licenses; OFLs accompany font assets. shadcn sidebar is retained as reference-source evidence with a MIT identification; the complete cohort also retains the full shadcn notice in adopted shadcn runs. Central runtime notices cover the shared runtime.",
+      "independent_integration_result": {
+        "primary_path": "results/nc5f68f67/primary/results.json",
+        "supplement_path": "results/nc5f68f67/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "04": "pass",
+          "09": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 10,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "routing_adaptation": {
+          "plan": "routing-adaptation/PLAN.json",
+          "completion": "routing-adaptation/COMPLETED.json",
+          "method_review": "routing-adaptation/METHOD-REVIEW.md",
+          "primary_path": "results/nc5f68f67/routing-adapted/primary/results.json",
+          "supplement_path": "results/nc5f68f67/routing-adapted/supplement/results.json",
+          "adapted_primary_group_09": "pass",
+          "adapted_supplement_group_09": "pass",
+          "policy": "Same conditional public history→theme→Escape route applied to all four T1 outputs. Only group09 uses adapted results; all other registered outcomes remain authoritative. Frozen app bytes and assertions/thresholds unchanged; raw failures preserved."
+        },
+        "retained_failure": null
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/nc5f68f67/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 51,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "n7c9d9ca8",
+      "task": "T1",
+      "replicate": 2,
+      "arm": "B",
+      "version": "v1.16.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Pinned Vane source/card/input/empty-input/message/sidebar files, README, tree, license and three author images are retained. Official Radix documentation was browser-captured/read. assistant-ui research reached a Not Found page, and llms.txt returned 403; neither establishes a usable independent alternative nor adoption. No downloaded font files are present.",
+      "actual_adoptions": [
+        {
+          "source": "Vane commit 348feca3e378fb4157b217724ed508dc707f853f, src/components/MessageSources.tsx and, where stated, MessageInput.tsx",
+          "layer": "composed-region",
+          "classification": "composed_region",
+          "implementation_paths": [
+            "frozen/n7c9d9ca8/app/src/App.jsx",
+            "frozen/n7c9d9ca8/app/src/styles.css"
+          ],
+          "retained_mechanism": "SourceCards and the composer are integrated in the working answer/form path. The source relationship is repeated bounded source identity/title/reference cards; composer relationship is expandable textarea plus attachment utilities and circular send action. Source read, focused adaptation comment and MIT notice establish the claimed localized lineage.",
+          "custom_remainder": "The publisher/title/index ordering, theme, 174 px mobile card strip, local-source buttons/dialog, attachments, request tokens, drafts and persistent history are locally authored. Georgia and Arial/Helvetica are system font choices; the book mark, shell, source-reading content and CSS transitions are local. Vane Next.js state/backend/favicons/overflow dialog are omitted.",
+          "license_evidence": [
+            "frozen/n7c9d9ca8/app/THIRD-PARTY.md",
+            "frozen/n7c9d9ca8/app/evidence/research/LICENSE"
+          ],
+          "visual_mechanisms_retained": "A localized static source shelf and composer arrangement; source skin is rewritten and the notebook page is custom.",
+          "uncertainty": "No complete Vane product system is integrated; generic arrangement similarity should not be reported as imported service behavior."
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 (supplied runtime; current retrieved documentation sometimes states 1.2.0)",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/n7c9d9ca8/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Actual controlled Root/Portal/Overlay/Content/Title/Description/Close trees implement source-reader and mobile-history modality; explicit close-focus callbacks restore repeated citation or history triggers. Independent source-dialog assertions exercise text identity, dismissal and focus.",
+          "custom_remainder": "All reader/history surfaces, dimensions, typography, entry/exit CSS, fixture data, selection and return-target policy are authored locally. Radix does not supply the notebook visual composition.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Visible modal layering and focus behavior rely on the foundation; no upstream styled dialog skin is retained.",
+          "uncertainty": "Installed version is distinct from the current documentation version; observed original docs/demo cannot certify local 1.1.15 behavior without local checks."
+        },
+        {
+          "source": "lucide-react 0.468.0, supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n7c9d9ca8/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Actual named icon imports render repeated navigation, source, attachment, theme, close and status symbols.",
+          "custom_remainder": "Sizing, role placement, color, labels and original Folio identity mark are local.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent outline icon geometry; no page layout or content typography is imported.",
+          "uncertainty": ""
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/n7c9d9ca8/app/evidence/research/vane-screenshot.png and p1.png/p2.png: pinned static product images.",
+          "frozen/n7c9d9ca8/app/evidence/commands/1793174072476115790-67539b695d.txt: Radix page rendered; retained research.mjs captures the page without opening Edit profile. assistant-ui page is explicitly Not Found."
+        ],
+        "local_trial": [
+          "frozen/n7c9d9ca8/app/evidence/desktop-initial.png.json",
+          "frozen/n7c9d9ca8/app/evidence/tablet-initial.png.json",
+          "frozen/n7c9d9ca8/app/evidence/mobile-initial.png.json"
+        ],
+        "integrated_result": [
+          "frozen/n7c9d9ca8/app/evidence/checks-before-transition-fix/report.json",
+          "frozen/n7c9d9ca8/app/evidence/checks/report.json",
+          "frozen/n7c9d9ca8/app/evidence/final/report.json",
+          "frozen/n7c9d9ca8/app/evidence/final/finish-check.json",
+          "results/n7c9d9ca8/primary/results.json",
+          "results/n7c9d9ca8/supplement/results.json",
+          "results/n7c9d9ca8/routing-adapted/primary/results.json",
+          "results/n7c9d9ca8/routing-adapted/supplement/results.json"
+        ],
+        "chain_supported": "partial — Source arrangement → local viewport captures → final checks is supported; original Vane is static evidence, Radix is rendered documentation rather than an operated demo, and the failed assistant-ui route is no positive comparison."
+      },
+      "evidence_changed_decision": "Initial mobile/source/theme captures are retained before the documented transition repair; final CSS replaces three narrow mobile grid columns with a 174 px card strip, removes dialog opacity fading and theme background transitions, and strengthens muted tokens. These changes are traceable in the retained source and DESIGN.md, but their perceptual motivation is a participant attestation. The core recorded local journey run already passed before these visual changes, so a later passing run alone does not prove an evidence-driven design improvement.",
+      "low_impact_scope": "Not applicable; T1 is a complete new frontend.",
+      "limitations": [
+        "All screenshot-viewing claims are participant attestations; capture files and recorded execution do not prove actual viewing.",
+        "No complete Vane application, live search service, model backend, account system or production integration was adopted.",
+        "Temporal screenshots/sample sequences do not establish continuous playback or natural-motion quality.",
+        "Original group09 locator failures remain in the raw evidence; the uniform, completed route-only adaptation supplies the adopted group09 result. This changes access setup, not the implementation or pass criterion."
+      ],
+      "source_evidence_paths": [
+        "frozen/n7c9d9ca8/app/evidence/research/MessageSources.tsx",
+        "frozen/n7c9d9ca8/app/evidence/research/MessageInput.tsx",
+        "frozen/n7c9d9ca8/app/evidence/research/LICENSE",
+        "frozen/n7c9d9ca8/app/evidence/commands/1793174008480609673-4b5847b30e.txt",
+        "frozen/n7c9d9ca8/app/evidence/commands/1793174072476115790-67539b695d.txt",
+        "frozen/n7c9d9ca8/app/evidence/commands/1793174123865967681-ff1b910909.txt"
+      ],
+      "notice_scope": "Vane full MIT notice is retained at app root/evidence. No font redistribution occurs. Standalone dist has abbreviated package license comments only; exact Radix/Lucide/React notices exist in the separate runtime supplement for the complete delivery.",
+      "independent_integration_result": {
+        "primary_path": "results/n7c9d9ca8/primary/results.json",
+        "supplement_path": "results/n7c9d9ca8/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "fail",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "04": "pass",
+          "09": "fail"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "fail",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 10,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "routing_adaptation": {
+          "plan": "routing-adaptation/PLAN.json",
+          "completion": "routing-adaptation/COMPLETED.json",
+          "method_review": "routing-adaptation/METHOD-REVIEW.md",
+          "primary_path": "results/n7c9d9ca8/routing-adapted/primary/results.json",
+          "supplement_path": "results/n7c9d9ca8/routing-adapted/supplement/results.json",
+          "adapted_primary_group_09": "pass",
+          "adapted_supplement_group_09": "pass",
+          "policy": "Same conditional public history→theme→Escape route applied to all four T1 outputs. Only group09 uses adapted results; all other registered outcomes remain authoritative. Frozen app bytes and assertions/thresholds unchanged; raw failures preserved."
+        },
+        "raw_failure_and_resolution": "Raw primary/supplement group09 fails at narrow theme-toggle lookup. The same control is inside mobile history. The common route-aware primary/supplement group09 passes, giving adopted10/10 versus raw9/10; no application repair."
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/n7c9d9ca8/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 42,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "nb3bf2299",
+      "task": "T2",
+      "replicate": 1,
+      "arm": "A",
+      "version": "v1.15.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Pinned Tabler 1.4.0 distribution CSS was acquired from jsDelivr and the official repository license endpoint; retained CSS header confirms the version and copyright. Tabler dashboard, shadcn dashboard and Radix dialog pages were browser-acquired after an initial certificate failure. Instrument Serif font bytes/OFL and exact runtime Radix/Lucide notices were retained. shadcn is studied only; no shadcn source component is imported.",
+      "actual_adoptions": [
+        {
+          "source": "Tabler CSS 1.4.0, pinned distribution from @tabler/core",
+          "layer": "styled-component",
+          "classification": "static_visual_implementation",
+          "implementation_paths": [
+            "frozen/nb3bf2299/app/src/styles.css",
+            "frozen/nb3bf2299/app/src/App.jsx",
+            "frozen/nb3bf2299/app/public/vendor/tabler.min.css"
+          ],
+          "retained_mechanism": "styles.css actually imports /vendor/tabler.min.css; rendered JSX uses card/card-header, table/table-vcenter, badge, btn/btn-primary, form-control/form-select/form-label. Retained rules provide card flex-column/min-width/wrapping, table middle alignment, form appearance/width/padding and select-arrow background, plus button and disabled-state relationships.",
+          "custom_remainder": "Most color tokens, typography, border radius, density, card contents and responsive composition are overridden. The shell, project summary, schedule timeline, domain filtering/status updates, triangular studio mark and contour graphic are custom. Tabler's full dashboard, JS components and product system are not imported.",
+          "license_evidence": [
+            "frozen/nb3bf2299/app/public/vendor/TABLER-LICENSE",
+            "frozen/nb3bf2299/app/dist/vendor/TABLER-LICENSE"
+          ],
+          "visual_mechanisms_retained": "Actual component-family CSS survives alongside the custom skin: grouped cards, aligned table cells, coordinated forms and button states. This is broader retained styled-component CSS than a dependency-name-only adoption, but it is not an externally resolved complete dashboard.",
+          "uncertainty": ""
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 from supplied runtime",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/nb3bf2299/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Actual controlled Radix Root/Portal/Overlay/Content trees provide the project detail sheet, focus containment, Escape/outside dismissal and close-focus integration.",
+          "custom_remainder": "The modal dimensions, skin, content, entrance/exit treatment, selection and return-target policy are local. The installed primitive does not supply a complete styled product region.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Overlay/modal layering and focus containment are supported by a mature behavior foundation; no upstream styled demo skin is retained.",
+          "uncertainty": "Retrieved current docs sometimes state 1.2.0, while actual installed dependency is 1.1.15. Local checks are needed to establish behavior of the adopted version."
+        },
+        {
+          "source": "lucide-react 0.468.0, supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/nb3bf2299/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Named Lucide icons are imported and rendered for real navigation, status, mode, source or modal actions.",
+          "custom_remainder": "Icon size, stroke adjustments, roles, labels, color and placement are local; product marks are custom.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent outline glyph geometry, with no source page composition.",
+          "uncertainty": ""
+        },
+        {
+          "source": "Instrument Serif regular and italic, Google Fonts",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/nb3bf2299/app/src/styles.css",
+            "frozen/nb3bf2299/app/public/vendor"
+          ],
+          "retained_mechanism": "Self-hosted font files are referenced by @font-face and used in actual family assignments.",
+          "custom_remainder": "Type roles, scale, line-height, hierarchy, measure and responsive treatment are local.",
+          "license_evidence": [
+            "frozen/nb3bf2299/app/public/vendor/InstrumentSerif-OFL.txt"
+          ],
+          "visual_mechanisms_retained": "Serif display/project headings with system sans controls; this typography is locally assigned rather than inherited from Tabler.",
+          "uncertainty": "The retained font delivery/repository snapshots are not all pinned to an immutable upstream commit."
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/nb3bf2299/app/evidence/commands/1793169633407503966-baa38e20fb.txt: original Tabler/dashboard and shadcn carrier pages captured, original Radix dialog opened and dismissed with Escape. Current public dashboard version is not proven identical to pinned CSS 1.4.0."
+        ],
+        "local_trial": [
+          "frozen/nb3bf2299/app/evidence/trial.html and trial.png: actual standalone trial imports the same Tabler CSS and compares warm serif versus white sans treatment of the same Harbor project controls.",
+          "frozen/nb3bf2299/app/evidence/commands/1793169697018877673-2b2cff9e0a.txt: executes the local comparison capture."
+        ],
+        "integrated_result": [
+          "frozen/nb3bf2299/app/evidence/verification.json",
+          "results/nb3bf2299/primary/results.json",
+          "results/nb3bf2299/supplement/results.json"
+        ],
+        "chain_supported": "partial — Pinned Tabler CSS → actual side-by-side local component trial → same imported component classes in integrated app is supported. The public upstream dashboard is an unpinned carrier example, not the final composition, and capture does not establish participant viewing. Radix operation is a separate foundation chain."
+      },
+      "evidence_changed_decision": "1793170172218348386-4db6a43fbe.txt records the first successful local functional pass. 1793170315410759364-1dbc45d23b records the numeric summary-count hook repair. Final styles remove the navigation background transition and adjust control sizing; the participant attributes those revisions to highlight overlap/target review in RUN-REPORT.md and retained first-pass captures. This visual causation is attested, whereas the CSS change and browser outcomes are inspectable.",
+      "low_impact_scope": "Not applicable; T2 is a complete new frontend around the supplied domain adapter.",
+      "limitations": [
+        "Retained captures establish capture, not participant viewing; viewed.md and handover viewing claims remain attestations.",
+        "The independent functional results are contract observations, not visual quality ratings, complete accessibility certification or user acceptance.",
+        "No complete upstream dashboard, project-management product, backend or production account/service integration is adopted."
+      ],
+      "source_evidence_paths": [
+        "frozen/nb3bf2299/app/public/vendor/tabler.min.css",
+        "frozen/nb3bf2299/app/public/vendor/TABLER-LICENSE",
+        "frozen/nb3bf2299/app/evidence/research/tabler-license.json",
+        "frozen/nb3bf2299/app/tools/research.mjs",
+        "frozen/nb3bf2299/app/evidence/commands/1793169633407503966-baa38e20fb.txt",
+        "frozen/nb3bf2299/app/evidence/trial.html",
+        "frozen/nb3bf2299/app/tools/trial.mjs"
+      ],
+      "notice_scope": "Full Tabler, Radix and Lucide notices and the Instrument Serif OFL are included under public/vendor and copied into dist/vendor. React/runtime notices are also retained in the complete-delivery runtime supplement. Tabler notice copyright matches the pinned CSS header.",
+      "independent_integration_result": {
+        "primary_path": "results/nb3bf2299/primary/results.json",
+        "supplement_path": "results/nb3bf2299/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 10,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "retained_failure": null
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/nb3bf2299/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 48,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "n957b09e9",
+      "task": "T2",
+      "replicate": 1,
+      "arm": "B",
+      "version": "v1.16.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Current unpinned shadcn new-york-v4 Card/Table/Dialog registry JSON and full MIT notice are retained. A recorded read emits the component source. Official Tasks/Dashboard and Radix pages were captured; Radix Edit profile was opened and escaped. Newsreader and DM Sans font files/OFLs are retained. These references are component sources and carrier examples, not imported complete dashboards.",
+      "actual_adoptions": [
+        {
+          "source": "shadcn/ui new-york-v4 Card and Table, current registry snapshots retained 2026-10-28",
+          "layer": "styled-component",
+          "classification": "static_visual_implementation",
+          "implementation_paths": [
+            "frozen/n957b09e9/app/src/ui.jsx",
+            "frozen/n957b09e9/app/src/App.jsx",
+            "frozen/n957b09e9/app/src/styles.css"
+          ],
+          "retained_mechanism": "Imported Card/Header/Content/Footer and Table wrappers retain the data-slot/semantic composition. Card CSS preserves a flex-column grouping with gaps, bounded surface/border/shadow, header grid with action column and shared horizontal paddings. Table CSS retains full width, caption-bottom, row separators/last-row treatment, hover relationship and middle-aligned nowrap cells. App uses them for overview/project cards and the Projects table.",
+          "custom_remainder": "Colors, fonts, radii, exact gaps, paddings and project content are locally authored. The mobile table becomes custom stacked records. App shell, work timeline/schedule, overview graphics, domain/filter/update adapter and visual hierarchy are local. No shadcn Tasks/Dashboard page is imported.",
+          "license_evidence": [
+            "frozen/n957b09e9/app/public/shadcn-license.txt",
+            "frozen/n957b09e9/app/dist/shadcn-license.txt"
+          ],
+          "visual_mechanisms_retained": "Retained static component relationships remain consequential despite translation from Tailwind/TypeScript into semantic JSX/CSS. The inherited scope is the Card/Table family, not a whole dashboard.",
+          "uncertainty": ""
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 from supplied runtime",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/n957b09e9/app/src/ui.jsx",
+            "frozen/n957b09e9/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Actual Radix Dialog aliases and portal/content/overlay composition supply the project detail modal, dismissal and focus. The retained shadcn Dialog wrapper informed anatomy; its centered grid/fade/zoom styling is substantially replaced.",
+          "custom_remainder": "The modal dimensions, skin, content, entrance/exit treatment, selection and return-target policy are local. The installed primitive does not supply a complete styled product region.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Overlay/modal layering and focus containment are supported by a mature behavior foundation; no upstream styled demo skin is retained.",
+          "uncertainty": "Retrieved current docs sometimes state 1.2.0, while actual installed dependency is 1.1.15. Local checks are needed to establish behavior of the adopted version."
+        },
+        {
+          "source": "lucide-react 0.468.0, supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n957b09e9/app/src/App.jsx",
+            "frozen/n957b09e9/app/src/ui.jsx"
+          ],
+          "retained_mechanism": "Named Lucide icons are imported and rendered for real navigation, status, mode, source or modal actions.",
+          "custom_remainder": "Icon size, stroke adjustments, roles, labels, color and placement are local; product marks are custom.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent outline glyph geometry, with no source page composition.",
+          "uncertainty": ""
+        },
+        {
+          "source": "Newsreader and DM Sans, Google Fonts",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n957b09e9/app/src/styles.css",
+            "frozen/n957b09e9/app/public/fonts"
+          ],
+          "retained_mechanism": "Self-hosted font files are referenced by @font-face and used in actual family assignments.",
+          "custom_remainder": "Type roles, scale, line-height, hierarchy, measure and responsive treatment are local.",
+          "license_evidence": [
+            "frozen/n957b09e9/app/public/fonts/newsreader-license.txt",
+            "frozen/n957b09e9/app/public/fonts/dmsans-license.txt"
+          ],
+          "visual_mechanisms_retained": "Newsreader display headings with DM Sans content/control text.",
+          "uncertainty": "The retained font delivery/repository snapshots are not all pinned to an immutable upstream commit."
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/n957b09e9/app/evidence/commands/1793170847319991090-06efb50cfc.txt: Tasks/Dashboard carrier captures and opened/Escape Radix operation. No exact upstream Card/Table variant was isolated with the final fixture data."
+        ],
+        "local_trial": [
+          "frozen/n957b09e9/app/evidence/commands/1793171279890435721-cf24f2bdc8.txt: first integrated desktop trial capture; subsequent retained checks exercise responsive table and detail behavior."
+        ],
+        "integrated_result": [
+          "frozen/n957b09e9/app/evidence/verification.json",
+          "results/n957b09e9/primary/results.json",
+          "results/n957b09e9/supplement/results.json"
+        ],
+        "chain_supported": "partial — Exact retained Card/Table snapshots → code/CSS translation → local integrated captures and final browser checks. Public carrier views and Radix modal operation are relevant but not a controlled original/local comparison of the same full project region. Participant viewing remains attested."
+      },
+      "evidence_changed_decision": "1793171401081635914-0b12613e58.txt records mobile theme-click interception by the brand/aside; final stacking CSS and subsequent passes support an actual reachability repair. A later reduced-motion focus assertion was corrected by adding a 60 ms post-Escape wait in 1793171631164907732-c5ef4ed921.json; that is a test-timing correction, not proof of changed modal semantics. Final verification in 1793171646018634454-699fb1a4e4.txt and 1793171926248455181-303e1fd3b3.txt passes. Font/contrast and layout choices are documented by the participant, with source and captures retained but no exported view trace.",
+      "low_impact_scope": "Not applicable; T2 is a complete new frontend around the supplied domain adapter.",
+      "limitations": [
+        "Retained captures establish capture, not participant viewing; viewed.md and handover viewing claims remain attestations.",
+        "The independent functional results are contract observations, not visual quality ratings, complete accessibility certification or user acceptance.",
+        "No complete upstream dashboard, project-management product, backend or production account/service integration is adopted."
+      ],
+      "source_evidence_paths": [
+        "frozen/n957b09e9/app/evidence/research/card.json",
+        "frozen/n957b09e9/app/evidence/research/table.json",
+        "frozen/n957b09e9/app/evidence/research/dialog.json",
+        "frozen/n957b09e9/app/evidence/research/shadcn-license.txt",
+        "frozen/n957b09e9/app/evidence/commands/1793170835590741402-fe950aca6b.txt",
+        "frozen/n957b09e9/app/evidence/commands/1793170847319991090-06efb50cfc.txt",
+        "frozen/n957b09e9/app/src/ui.jsx"
+      ],
+      "notice_scope": "Full shadcn MIT notice is copied into public/dist; Newsreader and DM Sans OFLs accompany the font files. Full installed Radix/Lucide/React notices are present in the complete-delivery runtime supplement rather than all being embedded in bare dist.",
+      "independent_integration_result": {
+        "primary_path": "results/n957b09e9/primary/results.json",
+        "supplement_path": "results/n957b09e9/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 10,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "retained_failure": null
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/n957b09e9/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 59,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "n6c114121",
+      "task": "T2",
+      "replicate": 2,
+      "arm": "A",
+      "version": "v1.15.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Current shadcn new-york-v4 Card/Table/Button JSON, full MIT notice, dashboard/sidebar/Radix HTML and font acquisition ledger are retained. A recorded read emits the component code. The attempted full dashboard source returned 404; Button source was downloaded/read but is not adopted. The browser references script captures dashboard and opens then Escapes Radix Edit profile; successful log follows an initial certificate failure.",
+      "actual_adoptions": [
+        {
+          "source": "shadcn/ui new-york-v4 Table and Card snapshots, current registry",
+          "layer": "styled-component",
+          "classification": "static_visual_implementation",
+          "implementation_paths": [
+            "frozen/n6c114121/app/src/components/ui.jsx",
+            "frozen/n6c114121/app/src/App.jsx",
+            "frozen/n6c114121/app/src/styles.css"
+          ],
+          "retained_mechanism": "Actual imported Table/Head/Body/Row/Cell wrappers preserve semantic/data-slot composition, relative full-width overflow container, row/last-row separator relationships, hover treatment and middle-aligned nowrap cells. They render project/overview tables. Imported Card/Header/Content wrappers preserve grouping and data slots.",
+          "custom_remainder": "The Card skin is almost wholly local: original flex-column/gap/shadow and grid-header rules are not retained, with a custom flex header and padding. Table typography, spacing and mobile records are local. All buttons are native/local despite acquired Button source. Shell, compass mark, status-orbit SVG, timeline, project contents and data adapter are custom.",
+          "license_evidence": [
+            "frozen/n6c114121/app/public/licenses/shadcn-LICENSE.txt",
+            "frozen/n6c114121/app/dist/licenses/shadcn-LICENSE.txt"
+          ],
+          "visual_mechanisms_retained": "Modest retained static table relationships, plus structural Card grouping. The Card wrapper name/data slots alone are not credited as inherited visual craft.",
+          "uncertainty": "No full dashboard source was acquired successfully or imported; broad dashboard design-system adoption is unsupported."
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 from supplied runtime",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/n6c114121/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Direct Radix Root/Portal/Overlay/Content with explicit aria-modal=true provides the project detail dialog, custom focus callbacks and Escape/outside dismissal.",
+          "custom_remainder": "The modal dimensions, skin, content, entrance/exit treatment, selection and return-target policy are local. The installed primitive does not supply a complete styled product region.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Overlay/modal layering and focus containment are supported by a mature behavior foundation; no upstream styled demo skin is retained.",
+          "uncertainty": "Retrieved current docs sometimes state 1.2.0, while actual installed dependency is 1.1.15. Local checks are needed to establish behavior of the adopted version."
+        },
+        {
+          "source": "lucide-react 0.468.0, supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n6c114121/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Named Lucide icons are imported and rendered for real navigation, status, mode, source or modal actions.",
+          "custom_remainder": "Icon size, stroke adjustments, roles, labels, color and placement are local; product marks are custom.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent outline glyph geometry, with no source page composition.",
+          "uncertainty": ""
+        },
+        {
+          "source": "Instrument Serif regular/italic and Manrope 400/500/600/700, Google Fonts",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n6c114121/app/src/styles.css",
+            "frozen/n6c114121/app/public/fonts"
+          ],
+          "retained_mechanism": "Self-hosted font files are referenced by @font-face and used in actual family assignments.",
+          "custom_remainder": "Type roles, scale, line-height, hierarchy, measure and responsive treatment are local.",
+          "license_evidence": [
+            "frozen/n6c114121/app/public/fonts/instrument-serif-OFL.txt",
+            "frozen/n6c114121/app/public/fonts/manrope-OFL.txt"
+          ],
+          "visual_mechanisms_retained": "Serif project/display hierarchy paired with Manrope control/record text.",
+          "uncertainty": "The retained font delivery/repository snapshots are not all pinned to an immutable upstream commit."
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/n6c114121/app/evidence/commands/1793174456787008087-27833cc703.txt and tools/references.mjs: dashboard carrier page captured; Radix Edit profile opened, captured, then Escape. Exact installed Radix version differs from current docs."
+        ],
+        "local_trial": [
+          "frozen/n6c114121/app/evidence/commands/1793174963062936074-821b30b102.txt and 1793174963356766846-0ba8595f5a.txt: first desktop/mobile local captures."
+        ],
+        "integrated_result": [
+          "frozen/n6c114121/app/evidence/verification.json",
+          "frozen/n6c114121/app/evidence/contrast-refinement.json",
+          "results/n6c114121/primary/results.json",
+          "results/n6c114121/supplement/results.json"
+        ],
+        "chain_supported": "partial — Same retained Table/Card code connects to the actual adapter and initial/final local app. Original carrier screenshot is not a controlled comparison of the exact adapted table or Card skin; Radix demonstration is a separate behavior chain. Viewing remains attested."
+      },
+      "evidence_changed_decision": "1793175054894706799-08826c33ac.txt records the named-and-modal check failing; final App.jsx adds explicit aria-modal, and 1793175093029048493-e155bdecc1.txt/1793175314364250976-83f463dd31.txt pass. contrast-refinement.json supplies before/after token evidence. The participant describes replacing a faded entry with opaque 8 px translation; final CSS supports that choice, but the causal viewing claim is attested.",
+      "low_impact_scope": "Not applicable; T2 is a complete new frontend around the supplied domain adapter.",
+      "limitations": [
+        "Retained captures establish capture, not participant viewing; viewed.md and handover viewing claims remain attestations.",
+        "The independent functional results are contract observations, not visual quality ratings, complete accessibility certification or user acceptance.",
+        "No complete upstream dashboard, project-management product, backend or production account/service integration is adopted."
+      ],
+      "source_evidence_paths": [
+        "frozen/n6c114121/app/evidence/sources/shadcn-card.json",
+        "frozen/n6c114121/app/evidence/sources/shadcn-table.json",
+        "frozen/n6c114121/app/evidence/sources/shadcn-button.json",
+        "frozen/n6c114121/app/evidence/sources/acquisition.json",
+        "frozen/n6c114121/app/evidence/commands/1793174531952546802-564e06be17.txt",
+        "frozen/n6c114121/app/evidence/commands/1793174456787008087-27833cc703.txt",
+        "frozen/n6c114121/app/src/components/ui.jsx"
+      ],
+      "notice_scope": "Full shadcn, Radix and installed Lucide notices are copied under public/licenses and dist/licenses. Instrument Serif/Manrope OFLs accompany the fonts; complete runtime supplement covers React and transitive runtime notices.",
+      "independent_integration_result": {
+        "primary_path": "results/n6c114121/primary/results.json",
+        "supplement_path": "results/n6c114121/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 10,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "retained_failure": null
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/n6c114121/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 54,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "n91d1fa87",
+      "task": "T2",
+      "replicate": 2,
+      "arm": "B",
+      "version": "v1.16.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Current-main shadcn Button/Badge/Dialog source files, exact source URLs and full MIT license are retained. Public shadcn dashboard/tasks and opened Radix demo captures are retained. The attempted Linear project page is Not Found and is not an adoption or successful original-product observation. Google Fonts DM Sans/Newsreader material is retained and used.",
+      "actual_adoptions": [
+        {
+          "source": "shadcn/ui Button and Badge, current-main source snapshots retained 2026-10-28",
+          "layer": "styled-component",
+          "classification": "static_visual_implementation",
+          "implementation_paths": [
+            "frozen/n91d1fa87/app/src/ui.jsx",
+            "frozen/n91d1fa87/app/src/styles.css",
+            "frozen/n91d1fa87/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Actually imported Button and Badge wrappers retain button variant/size attributes, inline-flex alignment/gaps, disabled opacity/pointer inhibition, default/outline/ghost hierarchy and icon sizing. Badge retains fit/nowrap/inline gap/border containment. These wrappers are used by real toolbar/filter/detail controls and status labels.",
+          "custom_remainder": "Slot/cva/TypeScript and unused variants are omitted. Colors, dimensions, focus styling, statuses and badge semantics are local; detail-sheet geometry replaces the centered shadcn dialog skin. Project cards, register, schedule, shell and data adapter are custom.",
+          "license_evidence": [
+            "frozen/n91d1fa87/app/THIRD-PARTY-NOTICES.md",
+            "frozen/n91d1fa87/app/evidence/research/shadcn-LICENSE"
+          ],
+          "visual_mechanisms_retained": "Small static button/badge family relationships survive. Their contribution is materially narrower than an imported project table/card/page system.",
+          "uncertainty": "These common control relationships are translated rather than byte-identical; attribution and retained original reads support provenance, without implying complete design-system parity."
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 from supplied runtime",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/n91d1fa87/app/src/ui.jsx",
+            "frozen/n91d1fa87/app/src/App.jsx"
+          ],
+          "retained_mechanism": "Radix under the local Dialog wrapper provides controlled project detail overlay, focus and dismissal. The upstream Dialog portal/overlay/content anatomy survives while the styled center-grid treatment is replaced by a custom right-edge full-height sheet.",
+          "custom_remainder": "The modal dimensions, skin, content, entrance/exit treatment, selection and return-target policy are local. The installed primitive does not supply a complete styled product region.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Overlay/modal layering and focus containment are supported by a mature behavior foundation; no upstream styled demo skin is retained.",
+          "uncertainty": "Retrieved current docs sometimes state 1.2.0, while actual installed dependency is 1.1.15. Local checks are needed to establish behavior of the adopted version."
+        },
+        {
+          "source": "lucide-react 0.468.0, supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n91d1fa87/app/src/App.jsx",
+            "frozen/n91d1fa87/app/src/ui.jsx"
+          ],
+          "retained_mechanism": "Named Lucide icons are imported and rendered for real navigation, status, mode, source or modal actions.",
+          "custom_remainder": "Icon size, stroke adjustments, roles, labels, color and placement are local; product marks are custom.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent outline glyph geometry, with no source page composition.",
+          "uncertainty": ""
+        },
+        {
+          "source": "DM Sans and Newsreader, Google Fonts",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n91d1fa87/app/src/styles.css",
+            "frozen/n91d1fa87/app/public/fonts"
+          ],
+          "retained_mechanism": "Self-hosted font files are referenced by @font-face and used in actual family assignments.",
+          "custom_remainder": "Type roles, scale, line-height, hierarchy, measure and responsive treatment are local.",
+          "license_evidence": [
+            "frozen/n91d1fa87/app/public/fonts/DMSans-OFL.txt",
+            "frozen/n91d1fa87/app/public/fonts/Newsreader-OFL.txt"
+          ],
+          "visual_mechanisms_retained": "Newsreader editorial display with DM Sans controls/records.",
+          "uncertainty": "The retained font delivery/repository snapshots are not all pinned to an immutable upstream commit."
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/n91d1fa87/app/evidence/commands/1793172346380676999-ce8493d51d.txt: shadcn carrier views and opened Radix profile dialog; final research script clicks Edit profile but does not demonstrate its Escape closure. The later inspect-original.mjs adds a settled capture. Linear page was Not Found."
+        ],
+        "local_trial": [
+          "frozen/n91d1fa87/app/evidence: initial application captures and local verification before final schedule/control repairs; not a retained standalone import trial of a complete shadcn dashboard."
+        ],
+        "integrated_result": [
+          "frozen/n91d1fa87/app/evidence/verification.json",
+          "results/n91d1fa87/primary/results.json",
+          "results/n91d1fa87/supplement/results.json"
+        ],
+        "chain_supported": "partial — Retained Button/Badge sources → actual wrapper/CSS translation → local/final app checks. Original carrier views do not isolate the exact same custom controls/composition, and the modal demo validates a foundation distinct from the sheet skin."
+      },
+      "evidence_changed_decision": "1793172765053846764-42b8a06fca.txt records schedule due-date <time> intercepting project-open clicks; final markup moves dates into the identity group. 1793172797922670250-ba8586ebb5.json records the button-icon to button-size-icon class correction, retained in ui.jsx. Focus-return failures were later polled/waited for in the verification script (including 1793173345891957021-b17ed59aa1); those timing fixes are not app behavior repairs. Final 1793173429027977623-6777067e8e.txt passes. Visual-choice motivations are participant explanations.",
+      "low_impact_scope": "Not applicable; T2 is a complete new frontend around the supplied domain adapter.",
+      "limitations": [
+        "Retained captures establish capture, not participant viewing; viewed.md and handover viewing claims remain attestations.",
+        "The independent functional results are contract observations, not visual quality ratings, complete accessibility certification or user acceptance.",
+        "No complete upstream dashboard, project-management product, backend or production account/service integration is adopted."
+      ],
+      "source_evidence_paths": [
+        "frozen/n91d1fa87/app/evidence/research/shadcn-button.tsx",
+        "frozen/n91d1fa87/app/evidence/research/shadcn-badge.tsx",
+        "frozen/n91d1fa87/app/evidence/research/shadcn-dialog.tsx",
+        "frozen/n91d1fa87/app/evidence/research/sources.json",
+        "frozen/n91d1fa87/app/evidence/commands/1793172346380676999-ce8493d51d.txt",
+        "frozen/n91d1fa87/app/src/ui.jsx",
+        "frozen/n91d1fa87/app/tools/research.mjs"
+      ],
+      "notice_scope": "Frozen app root contains full shadcn, React/React DOM, Radix and Lucide notices; font OFLs are public/dist. Bare dist omits the root notice document, so standalone extraction should carry it. Complete delivery includes these and the exact-version runtime supplement.",
+      "independent_integration_result": {
+        "primary_path": "results/n91d1fa87/primary/results.json",
+        "supplement_path": "results/n91d1fa87/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 10,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "retained_failure": null
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/n91d1fa87/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 47,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "n7ce58cfb",
+      "task": "T3",
+      "replicate": 1,
+      "arm": "A",
+      "version": "v1.15.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Official Radix, Vaul and Motion pages were acquired as references. Direct Motion fetch initially returned 403, while later browser text/capture was retained. tools/research.mjs opens original Radix and Vaul demos and captures their states; no exact Motion spring example is operated. Vaul is studied, not imported or vendored. Installed Motion/Radix package metadata and licenses are retained.",
+      "actual_adoptions": [
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 from supplied runtime",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/n7ce58cfb/app/src/SourceSheet.jsx"
+          ],
+          "retained_mechanism": "Actual Root/Portal/Overlay/Content/Title/Description integration provides focus scope, outside/Escape dismissal and modal layering; explicit local focus callbacks choose the citation return target and title entry focus.",
+          "custom_remainder": "Reading/content composition, data/notes ownership, geometry, modes, gesture adaptation and focus-return timing policy are local. For Vaul runs the missing explicit aria-modal is retained as a contract failure; focus containment is a separate observation.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Modal layering and focus handling rely on the mature behavior foundation; no Radix Edit profile visual skin is imported.",
+          "uncertainty": "Current online docs/demos are not an exact-version proof of the supplied 1.1.15 integration."
+        },
+        {
+          "source": "motion 12.23.24 (motion/react); supplied runtime resolves framer-motion 12.43.0",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/n7ce58cfb/app/src/SourceSheet.jsx",
+            "frozen/n7ce58cfb/app/src/sheet.css"
+          ],
+          "retained_mechanism": "Actual motion elements, useMotionValue/useReducedMotion and animate spring calls interpolate the presented transform and cancellation settle. The local settle calls animate(y,0,{type:spring,stiffness:440,damping:38}); motion.section uses the same y value. Local policy applies 0.42 upward resistance, dismisses at >145 px or >55 px plus velocity>.65, expands above -55 px, compacts an expanded sheet beyond 65 px, and springs back after cancellation.",
+          "custom_remainder": "Pointer capture/ownership, resistance multiplier, travel/velocity thresholds, mode-switch policy, reading anchoring, entrance/exit values/easing and all sheet visuals are locally authored; no external resolved drawer gesture/release recipe is imported.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/motion-12.23.24/LICENSE.md",
+            "../v116-study/third-party/runtime/framer-motion-12.43.0/LICENSE.md"
+          ],
+          "visual_mechanisms_retained": "The library supplies visually consequential spring/interpolation machinery. Classification is an animation foundation because the product-specific movement/release relationships are locally designed, rather than retained from a source drawer implementation.",
+          "uncertainty": "This classification does not mean motion contributes no visual behavior; it distinguishes a generic animation engine from the concrete Vaul drawer/release implementation."
+        },
+        {
+          "source": "lucide-react 0.468.0 from supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n7ce58cfb/app/src/SourceSheet.jsx"
+          ],
+          "retained_mechanism": "Named outline icons are actually rendered for sheet mode, close, notes, sources and supporting actions.",
+          "custom_remainder": "Size, labels, stroke, color and placement are local; accepted shell typography is retained.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent functional glyph geometry only; no source page composition or external font family is imported.",
+          "uncertainty": ""
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/n7ce58cfb/app/tools/research.mjs and 1793171536922516808-ece629dfe3.txt: Radix Edit profile and Vaul Open Drawer operation/captures; Motion documentation is a reference, not a retained operated sample of the adopted local spring policy."
+        ],
+        "local_trial": [
+          "frozen/n7ce58cfb/app/evidence/before.png.json: accepted fixture baseline; first integrated verification exposes paragraph continuity and explicit modality gaps."
+        ],
+        "integrated_result": [
+          "frozen/n7ce58cfb/app/evidence/verification.json",
+          "frozen/n7ce58cfb/app/evidence/verification-extra.json",
+          "frozen/n7ce58cfb/app/evidence/motion/frames.json",
+          "frozen/n7ce58cfb/app/evidence/final/metadata.json",
+          "results/n7ce58cfb/primary/results.json",
+          "results/n7ce58cfb/supplement/results.json"
+        ],
+        "chain_supported": "partial — Original Radix behavior demo → local Radix integration/checks is supported. Motion source/package → actual animation engine use → local gesture/motion samples is supported, but no exact original drawer movement implementation was imported; the custom gesture policy has only local evidence. Vaul original observation must not be relabeled Vaul adoption."
+      },
+      "evidence_changed_decision": "1793171925559712405-8d3098a1f2.txt records missing aria-modal and expansion changing the reading paragraph from “The field team followed twelve…” to “Conditions changed…”. Final code adds explicit aria-modal and proportional paragraph anchoring with ResizeObserver; 1793172052695624296-2bba89bccd.txt passes local checks. Independent primary all groups pass, but supplement 04 still measures settled scroll 180→199 and paragraph offsets beyond its 2 px tolerance, so the continuity repair is incomplete under the registered stricter check. This is a concrete failure chain, not a visual preference judgment.",
+      "low_impact_scope": {
+        "protected_files": [
+          {
+            "path": "frozen/n7ce58cfb/app/src/domain.js",
+            "expected_sha256": "4fb534745cb95c1f9c5d4bce7122079e235e729dd96c45e262f9156435f8a031",
+            "actual_sha256": "4fb534745cb95c1f9c5d4bce7122079e235e729dd96c45e262f9156435f8a031",
+            "matches": true
+          },
+          {
+            "path": "frozen/n7ce58cfb/app/src/Shell.jsx",
+            "expected_sha256": "0fdeab3e7da109969016f4cb24022b2f9d364275abf57c5a8b4a5beb86a3eb49",
+            "actual_sha256": "0fdeab3e7da109969016f4cb24022b2f9d364275abf57c5a8b4a5beb86a3eb49",
+            "matches": true
+          },
+          {
+            "path": "frozen/n7ce58cfb/app/src/shell.css",
+            "expected_sha256": "fb282b2544e2dc98a210c87a22c5e89855b51e7ae07e308f7ae6c168fed5e7c8",
+            "actual_sha256": "fb282b2544e2dc98a210c87a22c5e89855b51e7ae07e308f7ae6c168fed5e7c8",
+            "matches": true
+          }
+        ],
+        "navigation": "Only Saved → Library changes in src/navigation.js; id=saved, icon=◇, count=24 and the other Notebooks entry remain unchanged. Final navigation SHA-256 bc3750e671650aa850a986fb92b02dcbff8d698b3bec14f7b51345935b7f82da.",
+        "support_changes": "App.jsx keeps the accepted Shell mounted and owns source selection/open state, trigger reference and draft reference needed by the replacement sheet. sheet.css is scoped to sheet/content classes; accepted notebook layout/type CSS is byte-identical. Modal code temporarily makes the shell inert while open.",
+        "extra_scope": "Sheet-local copy citation, contents navigation, reading progress, slow-loading message, and a side companion note panel in expanded wide mode. All substantive notebook/domain files remain untouched.",
+        "assessment": "Protected notebook/domain boundary preserved exactly. Extra features are confined to the new sheet; the accepted notebook and navigation behavior are not redesigned."
+      },
+      "limitations": [
+        "Image files establish capture, while participant viewing claims remain attestations because exported view-tool traces are unavailable.",
+        "Local and independent browser results exercise fictional fixtures and Chromium desktop/mobile/touch emulation; no physical iOS/Android keyboard, Safari/Firefox, screen-reader speech or owner acceptance evidence is established.",
+        "Ordered motion captures and geometry samples support sampled relationships, not continuous natural playback, frame delivery or perceptual motion quality."
+      ],
+      "source_evidence_paths": [
+        "frozen/n7ce58cfb/app/src/SourceSheet.jsx",
+        "frozen/n7ce58cfb/app/src/sheet.css",
+        "frozen/n7ce58cfb/app/tools/research.mjs",
+        "frozen/n7ce58cfb/app/evidence/commands/1793171536922516808-ece629dfe3.txt",
+        "frozen/n7ce58cfb/app/THIRD-PARTY-NOTICES.md",
+        "frozen/n7ce58cfb/app/evidence/before.png.json"
+      ],
+      "notice_scope": "Frozen app root retains Motion, Radix and Lucide notices; the exact-version runtime supplement also covers Motion wrapper, resolved framer-motion/motion-dom/motion-utils and React. Bare dist lacks the root notice document. No new external fonts are embedded.",
+      "independent_integration_result": {
+        "primary_path": "results/n7ce58cfb/primary/results.json",
+        "supplement_path": "results/n7ce58cfb/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "01": "pass",
+          "04": "fail",
+          "06": "pass",
+          "10": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "fail",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "fail",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 9,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "retained_failure": "Group04 supplemental settled expansion: scrollTop180→199; retained landmarks drift10 or14 CSS px after600 ms, beyond2 px tolerance. Primary group04 passes its looser non-reset criterion. Retained as a registered continuity failure, not a claim of a large perceptual defect.",
+        "adjudication_path": "results/n7ce58cfb/adjudication.json"
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/n7ce58cfb/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 46,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "nfdae1319",
+      "task": "T3",
+      "replicate": 1,
+      "arm": "B",
+      "version": "v1.16.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Official npm Vaul 1.1.2 tarball, extracted ESM/types/license, original Vaul snap-points and Radix demo captures and browser log are retained. Recorded source reads emit Vaul types and press/release/reset functions. The adopted vendored module is independently compared to the retained tarball: changes are focused rather than a rewritten drawer.",
+      "actual_adoptions": [
+        {
+          "source": "Vaul 1.1.2 official npm tarball; vendored ESM with marked local adaptations",
+          "layer": "movement/release-implementation",
+          "classification": "temporal_visual_implementation",
+          "implementation_paths": [
+            "frozen/nfdae1319/app/src/vendor/vaul/index.mjs",
+            "frozen/nfdae1319/app/src/vendor/vaul/ADAPTATION.md",
+            "frozen/nfdae1319/app/src/SourceSheet.jsx",
+            "frozen/nfdae1319/app/src/sheet.css"
+          ],
+          "retained_mechanism": "SourceSheet imports the actual vendored Drawer. Retained code couples pointer displacement to drawer translation and overlay opacity, resists upward overdrag, computes distance/velocity release and applies reset/settle transforms. Injected CSS retains the 0.5 s cubic-bezier(.32,.72,0,1) entry/exit/settling character. handleOnly and closeThreshold .24 are configured; underlying Root/Content/Handle machinery is active.",
+          "custom_remainder": "Local patches continue interrupted settle from presented offset, let the dedicated handle bypass content/open-delay restrictions, require >64 px before velocity-only dismissal, and add cancellation/window-blur reset. Compact/expanded width/height are controlled by a custom inner sheet surface (.44 s resize), not Vaul snap points; snap code remains unused. Reading UI, note/footer, anchor preservation, requests and viewport policy are custom.",
+          "license_evidence": [
+            "frozen/nfdae1319/app/src/vendor/vaul/LICENSE.md"
+          ],
+          "visual_mechanisms_retained": "A concrete spatial/temporal drawer response survives upstream reuse. This goes beyond unstyled focus primitives even though the article/note visual composition is custom.",
+          "uncertainty": "The original operated demo uses snap points, but the local sheet does not. Original snap-mode behavior cannot be credited to the custom compact/expanded resizing."
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 from supplied runtime through vendored Vaul",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/nfdae1319/app/src/SourceSheet.jsx",
+            "frozen/nfdae1319/app/src/vendor/vaul/index.mjs"
+          ],
+          "retained_mechanism": "Actual Root/Portal/Overlay/Content/Title/Description integration provides focus scope, outside/Escape dismissal and modal layering; explicit local focus callbacks choose the citation return target and title entry focus.",
+          "custom_remainder": "Reading/content composition, data/notes ownership, geometry, modes, gesture adaptation and focus-return timing policy are local. For Vaul runs the missing explicit aria-modal is retained as a contract failure; focus containment is a separate observation.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Modal layering and focus handling rely on the mature behavior foundation; no Radix Edit profile visual skin is imported.",
+          "uncertainty": "Current online docs/demos are not an exact-version proof of the supplied 1.1.15 integration."
+        },
+        {
+          "source": "lucide-react 0.468.0 from supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/nfdae1319/app/src/SourceSheet.jsx"
+          ],
+          "retained_mechanism": "Named outline icons are actually rendered for sheet mode, close, notes, sources and supporting actions.",
+          "custom_remainder": "Size, labels, stroke, color and placement are local; accepted shell typography is retained.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent functional glyph geometry only; no source page composition or external font family is imported.",
+          "uncertainty": ""
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/nfdae1319/app/tools/research.mjs and evidence/research/browser-log.json: script opens original Vaul snap-points drawer, drags its handle, captures held/expanded states and Escapes; Radix Edit profile also opened/captured.",
+          "frozen/nfdae1319/app/evidence/commands/1793169552418555112-fca10fb41d.txt: successful browser research execution."
+        ],
+        "local_trial": [
+          "frozen/nfdae1319/app/evidence/checks.json and 1793169996719762758-5aee0f0e72.txt: first local integrated modal/gesture checks. Original and modified vendor code permit exact patch review; no isolated pre-patch failing cancellation trial is required to infer the patch exists."
+        ],
+        "integrated_result": [
+          "frozen/nfdae1319/app/evidence/final-checks.json",
+          "frozen/nfdae1319/app/evidence/additional-checks.json",
+          "results/nfdae1319/primary/results.json",
+          "results/nfdae1319/supplement/results.json"
+        ],
+        "chain_supported": "partial — Exact pinned Vaul source → substantially retained press/drag/release/CSS mechanism → operated related original demo → local integrated gestures and final results is supported. The original snap-point variant and unpinned hosted build differ from local custom modes; no exported participant view trace or exact hosted-version match exists."
+      },
+      "evidence_changed_decision": "Tarball-to-vendored-code comparison directly verifies the four documented gesture/cancellation adaptations; retained local checks exercise follow, short release, cancellation/reversal and dismissal. Their motivation is described in ADAPTATION.md, but no preserved exact pre-patch failure establishes that each patch was demanded by an observed defect. Contrast, control-size and title refinements appear in final source/captures and participant commentary. The independent group 02 missing-aria-modal failure remains despite passing local checks.",
+      "low_impact_scope": {
+        "protected_files": [
+          {
+            "path": "frozen/nfdae1319/app/src/domain.js",
+            "expected_sha256": "4fb534745cb95c1f9c5d4bce7122079e235e729dd96c45e262f9156435f8a031",
+            "actual_sha256": "4fb534745cb95c1f9c5d4bce7122079e235e729dd96c45e262f9156435f8a031",
+            "matches": true
+          },
+          {
+            "path": "frozen/nfdae1319/app/src/Shell.jsx",
+            "expected_sha256": "0fdeab3e7da109969016f4cb24022b2f9d364275abf57c5a8b4a5beb86a3eb49",
+            "actual_sha256": "0fdeab3e7da109969016f4cb24022b2f9d364275abf57c5a8b4a5beb86a3eb49",
+            "matches": true
+          },
+          {
+            "path": "frozen/nfdae1319/app/src/shell.css",
+            "expected_sha256": "fb282b2544e2dc98a210c87a22c5e89855b51e7ae07e308f7ae6c168fed5e7c8",
+            "actual_sha256": "fb282b2544e2dc98a210c87a22c5e89855b51e7ae07e308f7ae6c168fed5e7c8",
+            "matches": true
+          }
+        ],
+        "navigation": "Only Saved → Library changes in src/navigation.js; id=saved, icon=◇, count=24 and the other Notebooks entry remain unchanged. Final navigation SHA-256 bc3750e671650aa850a986fb92b02dcbff8d698b3bec14f7b51345935b7f82da.",
+        "support_changes": "App.jsx keeps the accepted Shell mounted and owns source selection/open state, trigger reference and draft reference needed by the replacement sheet. sheet.css is scoped to sheet/content classes; accepted notebook layout/type CSS is byte-identical. Modal code temporarily makes the shell inert while open.",
+        "extra_scope": "Sheet-local additions include reading progress, full-source jump, larger-text toggle, per-source reading anchors, visualViewport sizing and pinned note footer. No shell/domain change.",
+        "assessment": "Protected notebook/domain boundary preserved exactly. Extra features are confined to the new sheet; the accepted notebook and navigation behavior are not redesigned."
+      },
+      "limitations": [
+        "Image files establish capture, while participant viewing claims remain attestations because exported view-tool traces are unavailable.",
+        "Local and independent browser results exercise fictional fixtures and Chromium desktop/mobile/touch emulation; no physical iOS/Android keyboard, Safari/Firefox, screen-reader speech or owner acceptance evidence is established.",
+        "Ordered motion captures and geometry samples support sampled relationships, not continuous natural playback, frame delivery or perceptual motion quality."
+      ],
+      "source_evidence_paths": [
+        "frozen/nfdae1319/app/evidence/research/vaul-1.1.2.tgz",
+        "frozen/nfdae1319/app/src/vendor/vaul/index.mjs",
+        "frozen/nfdae1319/app/src/vendor/vaul/ADAPTATION.md",
+        "frozen/nfdae1319/app/evidence/research/browser-log.json",
+        "frozen/nfdae1319/app/tools/research.mjs",
+        "frozen/nfdae1319/app/evidence/commands/1793169529260648769-64c4fa1559.txt",
+        "frozen/nfdae1319/app/evidence/commands/1793169547313467277-d27e7297cf.txt",
+        "frozen/nfdae1319/app/evidence/commands/1793169569950123944-64a5d42668.txt"
+      ],
+      "notice_scope": "Vaul full MIT copyright/permission notice is retained beside vendored code. Bare dist does not carry that vendor/root notice; complete frozen app does. Radix/Lucide/React exact runtime notices are provided by the central complete-delivery supplement. No new external font material is shipped.",
+      "independent_integration_result": {
+        "primary_path": "results/nfdae1319/primary/results.json",
+        "supplement_path": "results/nfdae1319/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "fail",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "01": "pass",
+          "04": "pass",
+          "06": "pass",
+          "10": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "fail",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "fail",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 9,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "retained_failure": "Group02: role=dialog observed, explicit contracted aria-modal=true absent on Drawer.Content. This is distinct from focus trapping and not a blanket conclusion that all modality failed.",
+        "adjudication_path": "results/nfdae1319/adjudication.json"
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/nfdae1319/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 50,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "ne64e4884",
+      "task": "T3",
+      "replicate": 2,
+      "arm": "A",
+      "version": "v1.15.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Current-main shadcn Sheet and Vaul-based Drawer source files plus shadcn MIT notice are retained; a recorded cat emits both source files and installed Radix/Motion metadata. Original public shadcn Drawer redirects to a Base UI variant; the Radix current page reports 1.2.0. research.mjs opens both original demos after an initial certificate failure. This auditor inspected those two retained research images and confirmed open modal states; that confirms capture content, not participant viewing. No Vaul code is adopted.",
+      "actual_adoptions": [
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 from supplied runtime",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/ne64e4884/app/src/SourceSheet.jsx"
+          ],
+          "retained_mechanism": "Actual Root/Portal/Overlay/Content/Title/Description integration provides focus scope, outside/Escape dismissal and modal layering; explicit local focus callbacks choose the citation return target and title entry focus.",
+          "custom_remainder": "Reading/content composition, data/notes ownership, geometry, modes, gesture adaptation and focus-return timing policy are local. For Vaul runs the missing explicit aria-modal is retained as a contract failure; focus containment is a separate observation.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Modal layering and focus handling rely on the mature behavior foundation; no Radix Edit profile visual skin is imported.",
+          "uncertainty": "Current online docs/demos are not an exact-version proof of the supplied 1.1.15 integration."
+        },
+        {
+          "source": "motion 12.23.24 (motion/react); supplied runtime resolves framer-motion 12.43.0",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/ne64e4884/app/src/SourceSheet.jsx",
+            "frozen/ne64e4884/app/src/sheet.css"
+          ],
+          "retained_mechanism": "Actual motion elements, useMotionValue/useReducedMotion and animate spring calls interpolate the presented transform and cancellation settle. Actual AnimatePresence/useIsPresent preserve an exiting surface and mark it inert/aria-hidden after presence ends. The local spring uses stiffness470/damping38; entry/exit values and .24 s easing are explicit local parameters. Handle policy applies 0.4 upward resistance capped at -90 px, dismisses >145 px or >60 px with velocity>.85, expands above -65 px and compacts above70 px.",
+          "custom_remainder": "Pointer capture/ownership, resistance multiplier, travel/velocity thresholds, mode-switch policy, reading anchoring, entrance/exit values/easing and all sheet visuals are locally authored; no external resolved drawer gesture/release recipe is imported.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/motion-12.23.24/LICENSE.md",
+            "../v116-study/third-party/runtime/framer-motion-12.43.0/LICENSE.md"
+          ],
+          "visual_mechanisms_retained": "The library supplies visually consequential spring/interpolation machinery. Classification is an animation foundation because the product-specific movement/release relationships are locally designed, rather than retained from a source drawer implementation.",
+          "uncertainty": "This classification does not mean motion contributes no visual behavior; it distinguishes a generic animation engine from the concrete Vaul drawer/release implementation."
+        },
+        {
+          "source": "lucide-react 0.468.0 from supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/ne64e4884/app/src/SourceSheet.jsx"
+          ],
+          "retained_mechanism": "Named outline icons are actually rendered for sheet mode, close, notes, sources and supporting actions.",
+          "custom_remainder": "Size, labels, stroke, color and placement are local; accepted shell typography is retained.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent functional glyph geometry only; no source page composition or external font family is imported.",
+          "uncertainty": ""
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/ne64e4884/app/evidence/commands/1793174533078889308-8c428871da.txt plus tools/research.mjs and retained research images: original shadcn Base UI drawer and Radix dialog were opened and captured. The printed post-open “demo button 0” reflects hidden background trigger lookup; the retained captures show the open dialogs. No original transition interval is captured."
+        ],
+        "local_trial": [
+          "frozen/ne64e4884/app/evidence/baseline.png.json: accepted notebook baseline; first local verification and episodes followed the source reads."
+        ],
+        "integrated_result": [
+          "frozen/ne64e4884/app/evidence/verification/results.json",
+          "frozen/ne64e4884/app/evidence/verification/deep-results.json",
+          "frozen/ne64e4884/app/evidence/episodes-final/episode.json",
+          "results/ne64e4884/primary/results.json",
+          "results/ne64e4884/supplement/results.json"
+        ],
+        "chain_supported": "partial — Radix original open-state capture → actual local primitive → integrated checks is supported. Motion engine use and custom gesture policy have local integration/episode evidence but no retained original Motion example. shadcn Sheet is credited as anatomical influence; its source-specific visual implementation is not established because portal/flex/header/footer grouping is generic and much of the header/body/footer anatomy already exists in the supplied fixture. The public Base UI drawer is not the retained Vaul source and neither is imported."
+      },
+      "evidence_changed_decision": "1793175017365255397-cb122962e0.txt records a runtime setPointerCapture error from a synthetic inactive pointer ID despite individual scenario passes. Final verify.mjs uses real pointer interaction/cancellation and SourceSheet guards the capture race. 1793175078613454093-bc66ad25bc.txt records low supporting-text contrast (including 2.78 for /03 and 3.78 for source labels); 1793175256357930218-0db04c339a.txt and final deep-results retain only the decorative aria-hidden quote glyph below4.5 after CSS overrides. This supports the contrast repair. Final episode geometry explicitly records reversal at759.39 px between compact580 and expanded870; a prior slower episode did not prove that interruption. The claimed removal of mode-dependent type/padding is supported by final constant source rules and retained before/final episodes, while its viewing motivation remains attested.",
+      "low_impact_scope": {
+        "protected_files": [
+          {
+            "path": "frozen/ne64e4884/app/src/domain.js",
+            "expected_sha256": "4fb534745cb95c1f9c5d4bce7122079e235e729dd96c45e262f9156435f8a031",
+            "actual_sha256": "4fb534745cb95c1f9c5d4bce7122079e235e729dd96c45e262f9156435f8a031",
+            "matches": true
+          },
+          {
+            "path": "frozen/ne64e4884/app/src/Shell.jsx",
+            "expected_sha256": "0fdeab3e7da109969016f4cb24022b2f9d364275abf57c5a8b4a5beb86a3eb49",
+            "actual_sha256": "0fdeab3e7da109969016f4cb24022b2f9d364275abf57c5a8b4a5beb86a3eb49",
+            "matches": true
+          },
+          {
+            "path": "frozen/ne64e4884/app/src/shell.css",
+            "expected_sha256": "fb282b2544e2dc98a210c87a22c5e89855b51e7ae07e308f7ae6c168fed5e7c8",
+            "actual_sha256": "fb282b2544e2dc98a210c87a22c5e89855b51e7ae07e308f7ae6c168fed5e7c8",
+            "matches": true
+          }
+        ],
+        "navigation": "Only Saved → Library changes in src/navigation.js; id=saved, icon=◇, count=24 and the other Notebooks entry remain unchanged. Final navigation SHA-256 bc3750e671650aa850a986fb92b02dcbff8d698b3bec14f7b51345935b7f82da.",
+        "support_changes": "App.jsx keeps the accepted Shell mounted and owns source selection/open state, trigger reference and draft reference needed by the replacement sheet. sheet.css is scoped to sheet/content classes; accepted notebook layout/type CSS is byte-identical. Modal code temporarily makes the shell inert while open.",
+        "extra_scope": "Sheet-local reading progress, contents/full-text/back-to-overview navigation, per-source offsets and anchored note form. App support adds persistent source/open/trigger/draft references; protected notebook/domain/layout bytes remain unchanged.",
+        "assessment": "Protected notebook/domain boundary preserved exactly. Extra features are confined to the new sheet; the accepted notebook and navigation behavior are not redesigned."
+      },
+      "limitations": [
+        "Image files establish capture, while participant viewing claims remain attestations because exported view-tool traces are unavailable.",
+        "Local and independent browser results exercise fictional fixtures and Chromium desktop/mobile/touch emulation; no physical iOS/Android keyboard, Safari/Firefox, screen-reader speech or owner acceptance evidence is established.",
+        "Ordered motion captures and geometry samples support sampled relationships, not continuous natural playback, frame delivery or perceptual motion quality."
+      ],
+      "source_evidence_paths": [
+        "frozen/ne64e4884/app/evidence/sheet-source.tsx",
+        "frozen/ne64e4884/app/evidence/drawer-source.tsx",
+        "frozen/ne64e4884/app/evidence/shadcn-LICENSE.md",
+        "frozen/ne64e4884/app/tools/research.mjs",
+        "frozen/ne64e4884/app/evidence/commands/1793174538484996283-6bad6eebd1.txt",
+        "frozen/ne64e4884/app/evidence/commands/1793174533078889308-8c428871da.txt",
+        "frozen/ne64e4884/app/evidence/research/shadcn-drawer.png",
+        "frozen/ne64e4884/app/evidence/research/radix-dialog.png"
+      ],
+      "notice_scope": "shadcn MIT license is retained in evidence alongside copied source. Exact Radix/Motion/Lucide/React runtime notices are in the complete-delivery supplement; this frozen app and bare dist do not themselves include full dependency notices. No new external fonts are embedded.",
+      "independent_integration_result": {
+        "primary_path": "results/ne64e4884/primary/results.json",
+        "supplement_path": "results/ne64e4884/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "01": "pass",
+          "04": "pass",
+          "06": "pass",
+          "10": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "pass",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 10,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "retained_failure": null
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/ne64e4884/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 46,
+        "all_match": true,
+        "mismatches": []
+      }
+    },
+    {
+      "run_id": "n0080b6ac",
+      "task": "T3",
+      "replicate": 2,
+      "arm": "B",
+      "version": "v1.16.0",
+      "status": "audited_frozen",
+      "source_retrieval": "Official npm vaul@1.1.2 tarball and full extracted package are retained, with actual ESM import. Recorded source reads emit press/drag/release/Handle functions. Current-main shadcn Vaul-based Drawer source and MIT license are retained; the public shadcn page captured at the same time is the newer Base UI variant. Vaul README itself says the project is unmaintained, so the source is pinned mature code rather than evidence of active maintenance.",
+      "actual_adoptions": [
+        {
+          "source": "Vaul 1.1.2 official npm package; locally patched dist/index.mjs",
+          "layer": "movement/release-implementation",
+          "classification": "temporal_visual_implementation",
+          "implementation_paths": [
+            "frozen/n0080b6ac/app/src/vendor/vaul/dist/index.mjs",
+            "frozen/n0080b6ac/app/src/SourceSheet.jsx",
+            "frozen/n0080b6ac/app/src/sheet.css"
+          ],
+          "retained_mechanism": "SourceSheet imports Drawer from the vendored ESM. Upstream pointer/drag state, damped upward resistance, drag-linked translation/overlay feedback, distance/velocity release and reset machinery remain active with handleOnly and closeThreshold .24. The visible transform transition keeps Vaul 500 ms cubic-bezier(.32,.72,0,1); during vaul-dragging transitions are disabled for direct following.",
+          "custom_remainder": "Local patches allow explicit upward handle drag after the opening guard independently of content-scroll arbitration, and make pointercancel/lost-capture settle instead of committing dismissal. Compact/expanded is custom height-only sizing at stable content width, with a 360 ms local resize easing; snap points are unused. Full article, picker, pinned note form, requests, drafts and viewport/offset state are custom.",
+          "license_evidence": [
+            "frozen/n0080b6ac/app/src/vendor/vaul/LICENSE.md",
+            "frozen/n0080b6ac/app/THIRD-PARTY-NOTICES.md"
+          ],
+          "visual_mechanisms_retained": "Retained concrete drawer movement, release and settle relationships are visible temporal implementation reuse, even though most surface styling/content is newly authored.",
+          "uncertainty": "The exact hosted original demo version is not pinned, and the shadcn Base UI demo is a different implementation."
+        },
+        {
+          "source": "shadcn/ui Vaul-based new-york-v4 Drawer snapshot, current main",
+          "layer": "structural/style-adaptation",
+          "classification": "static_visual_implementation",
+          "implementation_paths": [
+            "frozen/n0080b6ac/app/src/SourceSheet.jsx",
+            "frozen/n0080b6ac/app/src/sheet.css"
+          ],
+          "retained_mechanism": "Local attribution and source read support a limited adaptation of separate overlay plus fixed flex-column surface, bounded/rounded edge, handle/header and bottom footer grouping. These relationships are present in the final Drawer composition.",
+          "custom_remainder": "Exact shadcn dimensions, token colors, typography, conditional direction classes, centered header, footer classes and source components are replaced. The content body/notes already resemble the supplied fixture anatomy; no complete source skin or composed reading region is imported.",
+          "license_evidence": [
+            "frozen/n0080b6ac/app/evidence/shadcn-LICENSE.md",
+            "frozen/n0080b6ac/app/THIRD-PARTY-NOTICES.md"
+          ],
+          "visual_mechanisms_retained": "Only generic static surface anatomy is supported; its incremental visual contribution cannot be separated cleanly from the supplied fixture and Vaul. It is not counted as a whole composed region.",
+          "uncertainty": "This is the weakest, most bounded static attribution in the cohort: shared generic anatomy and explicit provenance, not byte-level retention or a unique source visual recipe."
+        },
+        {
+          "source": "@radix-ui/react-dialog 1.1.15 from supplied runtime through vendored Vaul",
+          "layer": "behavior-foundation",
+          "classification": "behavior_foundation",
+          "implementation_paths": [
+            "frozen/n0080b6ac/app/src/SourceSheet.jsx",
+            "frozen/n0080b6ac/app/src/vendor/vaul/dist/index.mjs"
+          ],
+          "retained_mechanism": "Actual Root/Portal/Overlay/Content/Title/Description integration provides focus scope, outside/Escape dismissal and modal layering; explicit local focus callbacks choose the citation return target and title entry focus.",
+          "custom_remainder": "Reading/content composition, data/notes ownership, geometry, modes, gesture adaptation and focus-return timing policy are local. For Vaul runs the missing explicit aria-modal is retained as a contract failure; focus containment is a separate observation.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Modal layering and focus handling rely on the mature behavior foundation; no Radix Edit profile visual skin is imported.",
+          "uncertainty": "Current online docs/demos are not an exact-version proof of the supplied 1.1.15 integration."
+        },
+        {
+          "source": "lucide-react 0.468.0 from supplied runtime",
+          "layer": "font-or-icon",
+          "classification": "font_or_icon",
+          "implementation_paths": [
+            "frozen/n0080b6ac/app/src/SourceSheet.jsx"
+          ],
+          "retained_mechanism": "Named outline icons are actually rendered for sheet mode, close, notes, sources and supporting actions.",
+          "custom_remainder": "Size, labels, stroke, color and placement are local; accepted shell typography is retained.",
+          "license_evidence": [
+            "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE"
+          ],
+          "visual_mechanisms_retained": "Consistent functional glyph geometry only; no source page composition or external font family is imported.",
+          "uncertainty": ""
+        }
+      ],
+      "consequential_chain": {
+        "original_demo": [
+          "frozen/n0080b6ac/app/tools/research.mjs and evidence/research.json: official Vaul and shadcn pages captured, Open Drawer clicked where present, open state captured and Escape used. Retained vaul-open.png and shadcn-open.png establish open-state capture.",
+          "frozen/n0080b6ac/app/evidence/commands/1793172929186409242-09054ad25c.txt: successful research execution."
+        ],
+        "local_trial": [
+          "frozen/n0080b6ac/app/evidence/first-build.png.json: initial local sheet capture; first verification and mode episode document local integration."
+        ],
+        "integrated_result": [
+          "frozen/n0080b6ac/app/evidence/verification.json",
+          "frozen/n0080b6ac/app/evidence/mode-episode.json",
+          "frozen/n0080b6ac/app/evidence/viewport-check.json",
+          "results/n0080b6ac/primary/results.json",
+          "results/n0080b6ac/supplement/results.json"
+        ],
+        "chain_supported": "partial — Pinned actual Vaul code → retained/adapted drag-release mechanism → local tests/captures is supported, with a related operated upstream Vaul demo. The shadcn hosted Base UI example is not an original demo of the retained Vaul-based source; no exact original/local natural-motion comparison or exported view trace is available."
+      },
+      "evidence_changed_decision": "Independent tarball comparison confirms the dedicated-handle and cancellation/lost-capture patches. Final code keeps sheet width/DOM stable across modes and guards late close focus with openRef. Mode-episode and viewport-check records exercise custom sizing/reversal and a simulated short visual viewport; they do not establish real-device keyboard behavior. Claimed visual refinements remain linked to captures by participant explanation. The independent group 02 missing-aria-modal failure remains.",
+      "low_impact_scope": {
+        "protected_files": [
+          {
+            "path": "frozen/n0080b6ac/app/src/domain.js",
+            "expected_sha256": "4fb534745cb95c1f9c5d4bce7122079e235e729dd96c45e262f9156435f8a031",
+            "actual_sha256": "4fb534745cb95c1f9c5d4bce7122079e235e729dd96c45e262f9156435f8a031",
+            "matches": true
+          },
+          {
+            "path": "frozen/n0080b6ac/app/src/Shell.jsx",
+            "expected_sha256": "0fdeab3e7da109969016f4cb24022b2f9d364275abf57c5a8b4a5beb86a3eb49",
+            "actual_sha256": "0fdeab3e7da109969016f4cb24022b2f9d364275abf57c5a8b4a5beb86a3eb49",
+            "matches": true
+          },
+          {
+            "path": "frozen/n0080b6ac/app/src/shell.css",
+            "expected_sha256": "fb282b2544e2dc98a210c87a22c5e89855b51e7ae07e308f7ae6c168fed5e7c8",
+            "actual_sha256": "fb282b2544e2dc98a210c87a22c5e89855b51e7ae07e308f7ae6c168fed5e7c8",
+            "matches": true
+          }
+        ],
+        "navigation": "Only Saved → Library changes in src/navigation.js; id=saved, icon=◇, count=24 and the other Notebooks entry remain unchanged. Final navigation SHA-256 bc3750e671650aa850a986fb92b02dcbff8d698b3bec14f7b51345935b7f82da.",
+        "support_changes": "App.jsx keeps the accepted Shell mounted and owns source selection/open state, trigger reference and draft reference needed by the replacement sheet. sheet.css is scoped to sheet/content classes; accepted notebook layout/type CSS is byte-identical. Modal code temporarily makes the shell inert while open.",
+        "extra_scope": "Sheet-local reading progress, full-text jump, slow-loading copy, source-specific offsets and visualViewport keyboard accommodation. Fixed content width across compact/expanded modes is a local continuity decision; no shell/domain change.",
+        "assessment": "Protected notebook/domain boundary preserved exactly. Extra features are confined to the new sheet; the accepted notebook and navigation behavior are not redesigned."
+      },
+      "limitations": [
+        "Image files establish capture, while participant viewing claims remain attestations because exported view-tool traces are unavailable.",
+        "Local and independent browser results exercise fictional fixtures and Chromium desktop/mobile/touch emulation; no physical iOS/Android keyboard, Safari/Firefox, screen-reader speech or owner acceptance evidence is established.",
+        "Ordered motion captures and geometry samples support sampled relationships, not continuous natural playback, frame delivery or perceptual motion quality."
+      ],
+      "source_evidence_paths": [
+        "frozen/n0080b6ac/app/evidence/vaul-1.1.2.tgz",
+        "frozen/n0080b6ac/app/src/vendor/vaul/dist/index.mjs",
+        "frozen/n0080b6ac/app/src/vendor/vaul/README.md",
+        "frozen/n0080b6ac/app/evidence/shadcn-drawer.tsx",
+        "frozen/n0080b6ac/app/evidence/research.json",
+        "frozen/n0080b6ac/app/tools/research.mjs",
+        "frozen/n0080b6ac/app/evidence/commands/1793172935726220687-992a42139e.txt",
+        "frozen/n0080b6ac/app/evidence/commands/1793172936171126596-7b32b73a60.txt",
+        "frozen/n0080b6ac/app/evidence/commands/1793172936603145908-62f53969d2.txt"
+      ],
+      "notice_scope": "Full Vaul MIT notice is retained in vendor; root THIRD-PARTY-NOTICES.md includes shadcn/Radix MIT and installed Lucide ISC. Bare dist excludes these root/vendor notices, whereas the frozen app and complete delivery retain them. Shared React/transitive notices are in the runtime supplement.",
+      "independent_integration_result": {
+        "primary_path": "results/n0080b6ac/primary/results.json",
+        "supplement_path": "results/n0080b6ac/supplement/results.json",
+        "raw_primary_groups": {
+          "01": "pass",
+          "02": "fail",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "raw_supplement_groups": {
+          "01": "pass",
+          "04": "pass",
+          "06": "pass",
+          "10": "pass"
+        },
+        "raw_combined_groups": {
+          "01": "pass",
+          "02": "fail",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_groups": {
+          "01": "pass",
+          "02": "fail",
+          "03": "pass",
+          "04": "pass",
+          "05": "pass",
+          "06": "pass",
+          "07": "pass",
+          "08": "pass",
+          "09": "pass",
+          "10": "pass"
+        },
+        "adopted_passes": 9,
+        "total_groups": 10,
+        "interpretation": "Functional contract observations only; no visual-quality or maturity score.",
+        "retained_failure": "Group02: role=dialog observed, explicit contracted aria-modal=true absent on Drawer.Content. This is distinct from focus trapping and not a blanket conclusion that all modality failed.",
+        "adjudication_path": "results/n0080b6ac/adjudication.json"
+      },
+      "frozen_integrity": {
+        "manifest": "frozen/n0080b6ac/FROZEN.json",
+        "checked_scope": "Every manifest-listed app/src, app/public, skill file and app/package.json; evidence/source paths read separately. File count is a reproducibility check, not a quality measure.",
+        "files_checked": 54,
+        "all_match": true,
+        "mismatches": []
+      }
+    }
+  ],
+  "arm_summary": {
+    "A": {
+      "version": "v1.15.0",
+      "tasks": {
+        "T1": {
+          "runs": [
+            "nb8be8a13",
+            "nc5f68f67"
+          ],
+          "finding": "Both adapt localized Vane source-card composition, with composer arrangement also attributed in repetition2, alongside actual Radix modal behavior, Lucide icons and self-hosted fonts. Whole Folio skins, shells and service ownership are custom."
+        },
+        "T2": {
+          "runs": [
+            "nb3bf2299",
+            "n6c114121"
+          ],
+          "finding": "Repetition1 actually imports pinned Tabler CSS and uses its card/table/form/button families under a custom skin. Repetition2 translates shadcn Table relationships and mostly structural Card wrappers; Button source is unused. These are different scopes of mature static reuse within the same arm."
+        },
+        "T3": {
+          "runs": [
+            "n7ce58cfb",
+            "ne64e4884"
+          ],
+          "finding": "Both use Radix plus Motion as behavior/animation foundations and implement gesture ownership, resistance, thresholds, mode sizing and reading continuity locally. Vaul/shadcn examples are studied, but no Vaul drawer implementation is adopted. The second run attributes shadcn Sheet anatomy without a separately established source-specific visual recipe."
+        }
+      },
+      "interpretation": "A already contains and demonstrates mature-sourcing work; it is not a primitives-only or source-free control."
+    },
+    "B": {
+      "version": "v1.16.0",
+      "tasks": {
+        "T1": {
+          "runs": [
+            "n08f925c8",
+            "n7c9d9ca8"
+          ],
+          "finding": "Both adapt the same pinned Vane source-card/composer relationships; Radix/Lucide are actual foundations. Repetition1 embeds fonts; repetition2 uses system families. No larger external Folio product system is adopted."
+        },
+        "T2": {
+          "runs": [
+            "n957b09e9",
+            "n91d1fa87"
+          ],
+          "finding": "Repetition1 translates shadcn Card/Table static layout relationships; repetition2 adopts a narrower Button/Badge family and modal anatomy, with the project register/card/timeline composed locally. B does not uniformly adopt the broadest available page system."
+        },
+        "T3": {
+          "runs": [
+            "nfdae1319",
+            "n0080b6ac"
+          ],
+          "finding": "Both vendor and substantially retain pinned Vaul1.1.2 drawer movement/release/settling code with targeted local patches. This supports temporal_visual_implementation in addition to Radix behavior foundations. Reading composition, notes, source ownership and compact/expanded sizing remain custom."
+        }
+      },
+      "interpretation": "The repeated T3 temporal-mechanism adoption is the clearest observed between-arm source distinction. It does not establish that B produced better motion or a superior whole product."
+    },
+    "comparison_limits": "Two repetitions per task are a small descriptive cohort. Both versions include substantial mature sourcing, original-demo/local-trial and verification guidance; B strengthens resolved visual-implementation language. Source choices cannot establish causal quality improvement, reduced effort/cost, human preference, or complete mature-product parity."
+  },
+  "cross_task_findings": [
+    {
+      "finding": "Actual adoption is layered; dependency names and resource retrieval overstate scope when treated as equivalent.",
+      "evidence": [
+        "All12 actual_adoptions records",
+        "frozen/n6c114121/app/src/components/ui.jsx",
+        "frozen/n6c114121/app/evidence/sources/shadcn-button.json"
+      ],
+      "interpretation": "Fonts/icons, modality foundations, static controls/tables, localized Vane regions and Vaul temporal mechanics differ. The unused shadcn Button and studied-only assistant-ui/Vaul alternatives are explicit counterexamples to counting retrieved sources as adoption."
+    },
+    {
+      "finding": "Mature visual implementation can be temporal without an imported styled page.",
+      "evidence": [
+        "frozen/nfdae1319/app/src/vendor/vaul/index.mjs",
+        "frozen/n0080b6ac/app/src/vendor/vaul/dist/index.mjs",
+        "frozen/n7ce58cfb/app/src/SourceSheet.jsx",
+        "frozen/ne64e4884/app/src/SourceSheet.jsx"
+      ],
+      "interpretation": "Vaul preserves resolved drag/overlay/release/settle relationships; Motion supplies interpolation to locally authored gesture policies. Both contribute behavior, but their source scopes differ. No product_system adoption is established."
+    },
+    {
+      "finding": "A is a substantive sourcing comparison, with static reuse counterexamples to a one-direction B narrative.",
+      "evidence": [
+        "frozen/nb8be8a13/skill/references/component-sourcing.md",
+        "frozen/n08f925c8/skill/references/component-sourcing.md",
+        "frozen/nb3bf2299/app/public/vendor/tabler.min.css",
+        "frozen/n957b09e9/app/src/ui.jsx",
+        "frozen/n91d1fa87/app/src/ui.jsx"
+      ],
+      "interpretation": "Tabler actual CSS in A1 T2 is broader component-family reuse than B2 Button/Badge adaptation; A2 and B1 T2 share shadcn Table/Card families with different retained styling. These are scope facts, not a ranking of result quality."
+    },
+    {
+      "finding": "Source/demo/trial/result chains are partial and mechanism-specific.",
+      "evidence": [
+        "All12 consequential_chain records",
+        "frozen/nfdae1319/app/tools/research.mjs",
+        "frozen/n0080b6ac/app/evidence/shadcn-drawer.tsx",
+        "frozen/ne64e4884/app/evidence/sheet-source.tsx"
+      ],
+      "interpretation": "Pinned Vane author screenshots are static references; current shadcn Base UI demo differs from retained Vaul source; Vaul snap-points demo differs from local custom sizing; current Radix docs differ from installed1.1.15. These gaps should not erase actual adoption or be presented as exact same-variant validation."
+    },
+    {
+      "finding": "Capture, viewing, evidence-driven revision and owner acceptance remain distinct.",
+      "evidence": [
+        "frozen/nb8be8a13/app/evidence/commands/1793170175241383645-8e08676b7d.txt",
+        "frozen/n91d1fa87/app/evidence/commands/1793172765053846764-42b8a06fca.txt",
+        "frozen/ne64e4884/app/evidence/commands/1793175078613454093-bc66ad25bc.txt",
+        "frozen/ne64e4884/app/evidence/commands/1793175256357930218-0db04c339a.txt"
+      ],
+      "interpretation": "Exact failures plus final code and subsequent checks support Stop/focus/click/contrast repairs. Claims that a visual inspection caused a taste or composition choice remain participant attestations without exported view traces. Test-timing repairs are labeled separately."
+    },
+    {
+      "finding": "Mature source adoption does not guarantee the local contract.",
+      "evidence": [
+        "results/nfdae1319/adjudication.json",
+        "results/n0080b6ac/adjudication.json",
+        "results/n7ce58cfb/adjudication.json"
+      ],
+      "interpretation": "Both Vaul integrations omit contracted aria-modal=true; one Motion-based sheet retains measured reading drift. Those failures remain. Functional results are not aesthetic judgments or general library verdicts."
+    },
+    {
+      "finding": "A routing failure is distinct from a missing feature or application repair.",
+      "evidence": [
+        "routing-adaptation/PLAN.json",
+        "routing-adaptation/COMPLETED.json",
+        "routing-adaptation/METHOD-REVIEW.md",
+        "results/n7c9d9ca8/primary/results.json",
+        "results/n7c9d9ca8/routing-adapted/primary/results.json"
+      ],
+      "interpretation": "The common visibility-conditioned history/theme/Escape route passes group09 for all four T1 outputs; raw n7c9d9ca8 remains9/10 while adopted result is10/10. Same exact control, app bytes and assertions are retained."
+    },
+    {
+      "finding": "All four T3 outputs preserve the protected notebook boundary.",
+      "evidence": [
+        "frozen/n7ce58cfb/app/src/domain.js",
+        "frozen/n7ce58cfb/app/src/Shell.jsx",
+        "frozen/n7ce58cfb/app/src/shell.css",
+        "frozen/n7ce58cfb/app/src/navigation.js",
+        "frozen/nfdae1319/app/src/domain.js",
+        "frozen/nfdae1319/app/src/Shell.jsx",
+        "frozen/nfdae1319/app/src/shell.css",
+        "frozen/nfdae1319/app/src/navigation.js",
+        "frozen/ne64e4884/app/src/domain.js",
+        "frozen/ne64e4884/app/src/Shell.jsx",
+        "frozen/ne64e4884/app/src/shell.css",
+        "frozen/ne64e4884/app/src/navigation.js",
+        "frozen/n0080b6ac/app/src/domain.js",
+        "frozen/n0080b6ac/app/src/Shell.jsx",
+        "frozen/n0080b6ac/app/src/shell.css",
+        "frozen/n0080b6ac/app/src/navigation.js"
+      ],
+      "interpretation": "Independently computed hashes match the supplied protected files exactly; navigation changes only Saved to Library while preserving id/icon/count. Sheet-local additions are documented per run."
+    }
+  ],
+  "redistribution_issues": [
+    {
+      "id": "notice-scope-runtime-and-vendor",
+      "status": "covered_in_complete_delivery; bare-dist extraction remains a scope limitation",
+      "affected_runs": [
+        "n08f925c8",
+        "n7c9d9ca8",
+        "n957b09e9",
+        "n91d1fa87",
+        "nfdae1319",
+        "n0080b6ac",
+        "n7ce58cfb",
+        "ne64e4884"
+      ],
+      "finding": "Several bare dist folders omit full notices retained only at app root, evidence, vendor or the supplied runtime. n08f925c8 originally deferred Radix/Lucide notices to node_modules, which is absent from the frozen app. Vaul/Motion/shadcn root/vendor notices are not automatically copied by Vite. Abbreviated @license pointers do not contain the full permission text.",
+      "complete_delivery_resolution": "The separate runtime bundle retains exact installed Radix1.1.15, Lucide0.468.0 including Feather attribution, React/ReactDOM19.2.0, scheduler0.27.0, Motion12.23.24 and resolved framer-motion12.43.0/motion-dom12.43.0/motion-utils12.39.0 notices, plus inspected focus/scroll support-package notices. Participant source notices cover Vane/shadcn/Tabler/Vaul and embedded fonts. Actual files were read and index hashes verified.",
+      "evidence": [
+        "../v116-study/third-party/runtime/INDEX.json",
+        "../v116-study/third-party/runtime/@radix-ui__react-dialog-1.1.15/LICENSE",
+        "../v116-study/third-party/runtime/lucide-react-0.468.0/LICENSE",
+        "../v116-study/third-party/runtime/framer-motion-12.43.0/LICENSE.md",
+        "frozen/nfdae1319/app/src/vendor/vaul/LICENSE.md",
+        "frozen/n0080b6ac/app/THIRD-PARTY-NOTICES.md"
+      ],
+      "coordinator_action": "Preserve the supplemental notices with complete delivery. If publishing an individual dist separately, assemble its relevant full notices as an external companion without altering the preserved frozen evidence. This audit does not treat the overinclusive inventory as adoption."
+    },
+    {
+      "id": "assistant-ui-comparison-material",
+      "status": "initial frozen-evidence gap resolved in complete delivery",
+      "affected_runs": [
+        "n08f925c8"
+      ],
+      "finding": "Retained assistant-ui README, two original WebPs and extracted frames had an MIT identification but no full assistant-ui copyright/permission notice in the frozen app or runtime supplement. They are research comparison material and are not integrated runtime assets.",
+      "complete_delivery_resolution": "Coordinator added official MIT license (copyright2026 AgentbaseAI Inc.) and PROVENANCE.json outside frozen artifacts. The license is sourced at b6b10672ef896e2deaf1603e7414ef0142943e9e. Coordinator post-hoc downloads of README and both WebPs match the three retained hashes; auditor independently recomputed the retained hashes and verified the license hash. Original acquisitions remain unpinned main URLs.",
+      "evidence": [
+        "frozen/n08f925c8/app/evidence/commands/1793170946447728080-b414ddc345.json",
+        "frozen/n08f925c8/app/evidence/commands/1793170968070145247-a0a094cdd0.json",
+        "../v116-study/third-party/research/assistant-ui/PROVENANCE.json",
+        "../v116-study/third-party/research/assistant-ui/LICENSE.txt"
+      ],
+      "coordinator_action": "Keep supplemental license/provenance in complete evidence delivery. No remaining concrete notice gap is established for this material in that scope; frozen app bytes remain unchanged."
+    }
+  ],
+  "limitations": [
+    "This audit establishes source lineage and exercised process facts, not aesthetic superiority, human preference, production readiness or a causal treatment effect.",
+    "Reference image capture, participant attestation of viewing, original demo operation, local trial and independent integrated assertions are different evidence scopes.",
+    "Command records are retained lower bounds on activity. They cannot supply total tokens, cost, exact active-model time, complete tool traces or proof of cognitive use.",
+    "Resources obtained from current main branches or live documentation have retained bytes but not necessarily an exact version matching the installed implementation.",
+    "Source-count, dependency-count, command-count and custom-style ratios are not quality measurements. No additive maturity score is constructed.",
+    "The supplemental runtime notice inventory is deliberately broader than actual adoption and is used only for notice coverage.",
+    "An empty outstanding-issue finding is limited to the inspected package scope and is not legal certification.",
+    "The known package/source notice checks are scoped to retained adopted code and specifically identified comparison material. No claim is made to comprehensive legal clearance of every third-party webpage screenshot or trademark.",
+    "No new browser or app functionality tests were run by this auditor; functional observations are read from the preserved independent instruments. Two original-source demo images were inspected to resolve whether a trigger-hidden post-open log meant an unopened demo.",
+    "The complete evidence bundle and an isolated dist folder have different notice coverage. All frozen source/public/skill files checked here match their manifests; separate supplemental notices are later packaging work, not participant behavior."
+  ]
+}

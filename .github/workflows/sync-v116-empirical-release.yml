@@ -1,0 +1,78 @@
+name: Synchronize v1.16.0 post-release empirical notes
+on:
+  push:
+    branches: [main]
+    paths:
+      - docs/releases/v1.16.0.md
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reconcile:
+    if: github.repository == 'D1ChangGeng/UI-Spec-Studio'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Preserve the released tag and assets while adding empirical notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import subprocess
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          assert repo == 'D1ChangGeng/UI-Spec-Studio'
+          tag_sha = '1ba50b1e1c6dfbd5540d9b54514ef81ac6160eec'
+          original_body_sha256 = '092eebed6fd1fdca02b3555fe77a79df93c87d5108b0c009afd6a5cee2c2cef5'
+          def gh(*args):
+              return subprocess.check_output(('gh', *args), text=True)
+          def release():
+              return json.loads(gh('api', f'repos/{repo}/releases/tags/v1.16.0'))
+          def tag():
+              return json.loads(gh('api', f'repos/{repo}/git/ref/tags/v1.16.0'))
+          def assets(record):
+              return {item['name']: item.get('digest') for item in record['assets']}
+
+          observed_tag = tag()
+          assert observed_tag['object']['type'] == 'commit'
+          assert observed_tag['object']['sha'] == tag_sha, 'Never move the released v1.16.0 tag'
+          evidence = json.loads(Path('docs/evidence/v1.16.0/empirical-findings.json').read_text(encoding='utf-8'))
+          assert evidence['release']['commit'] == tag_sha
+          assert evidence['study']['real_agent_runs'] == 12
+          assert evidence['study']['complete_matched_pairs'] == 6
+          assert evidence['study']['locked_visual_reviewers'] == 3
+          assert evidence['owner_assessment']['status'] == 'pending', 'This addendum does not invent owner acceptance'
+          assert evidence['historical_cohort']['recovered_runs'] == 9
+          notes_file = Path('docs/releases/v1.16.0.md')
+          notes = notes_file.read_text(encoding='utf-8')
+          assert '## Post-release empirical findings (2026-10-28)' in notes
+          assert 'Owner feedback remains pending' in notes
+
+          expected_assets = {
+              'contents.json': 'sha256:817d21884b598ffb4ebaea978623057427dd1515f529068e0d75d36e31474426',
+              'SHA256SUMS.txt': 'sha256:1451b2c90ed5507fc169f3e254828f406b0c08c43fd45ff2293646d00e0af75c',
+              'ui-spec-1.16.0.zip': 'sha256:d2c3a56c8ec3e6031a98d4faee58d4bd36b6e1ed38054eedfc566aab226939cc',
+              'ui-spec-studio-1.16.0.zip': 'sha256:ae3f94662b3ba1ef761c13acbf8d66d04ad7fad7c892534cddfa4820ab45f1ca',
+          }
+          before = release()
+          assert before['tag_name'] == 'v1.16.0' and not before['draft'] and not before['prerelease']
+          assert assets(before) == expected_assets, 'Unknown release asset change; refuse to edit notes'
+          body = before.get('body') or ''
+          if body != notes:
+              assert hashlib.sha256(body.encode()).hexdigest() == original_body_sha256, 'Release body changed independently; refuse to overwrite'
+              subprocess.run(['gh', 'release', 'edit', 'v1.16.0', '--repo', repo, '--notes-file', str(notes_file)], check=True)
+          after = release()
+          assert after['body'] == notes, 'Release body readback did not match the exact source text'
+          assert assets(after) == expected_assets, 'Release assets changed during note update'
+          assert tag()['object']['sha'] == tag_sha, 'The release tag changed unexpectedly'
+          print(json.dumps({'release': after['html_url'], 'tag_commit': tag_sha, 'notes': 'verified', 'assets': 'unchanged', 'owner_feedback': 'pending'}, indent=2))
+          PY
