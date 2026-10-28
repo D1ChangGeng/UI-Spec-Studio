@@ -1,0 +1,81 @@
+{
+  "status": "RECOVERED_PARTIAL_DESCRIPTIVE_NOT_COMPLETED_CAMPAIGN",
+  "checkpoint": "647946ff83512469bd5adca61afd7d5fa7dd7de4",
+  "versions": {
+    "A": {"version": "v1.15.0", "commit": "a89091dfa5754f98b79655c684f978f24fd92716"},
+    "B": {"version": "v1.16.0", "commit": "1ba50b1e1c6dfbd5540d9b54514ef81ac6160eec"}
+  },
+  "counts": {"planned_runs": 12, "recovered_runs": 9, "unrecovered_runs": 3, "complete_matched_pairs": 3, "independent_blind_reviews_recovered": 0, "verified_archived_files": 2739, "new_model_runs_this_recovery": 0},
+  "per_run_columns": ["run_id", "task", "replicate", "arm", "recovered", "functional_passes", "functional_total", "launch_window_to_evaluator_freeze_minutes"],
+  "per_run": [
+    ["pb1788ae", "T1", 1, "A", true, 10, 10, 28.194],
+    ["p75a31fd", "T1", 1, "B", true, 10, 10, 27.226],
+    ["p4b65bcb", "T1", 2, "A", true, 10, 10, 29.774],
+    ["p0119a3e", "T1", 2, "B", false, null, 10, null],
+    ["p93abe90", "T2", 1, "A", true, 10, 10, 21.835],
+    ["pa45255c", "T2", 1, "B", true, 10, 10, 27.370],
+    ["pabc6f92", "T2", 2, "A", false, null, 10, null],
+    ["p649c5ff", "T2", 2, "B", true, 10, 10, 29.840],
+    ["p3017a82", "T3", 1, "A", true, 10, 10, 25.215],
+    ["pcc62324", "T3", 1, "B", true, 10, 10, 28.577],
+    ["p0ceb740", "T3", 2, "A", false, null, 10, null],
+    ["pa04824d", "T3", 2, "B", true, 10, 10, 33.130]
+  ],
+  "complete_pairs": [
+    {"task": "T1", "replicate": 1, "A": "pb1788ae", "B": "p75a31fd", "functional_delta_B_minus_A": 0, "wall_minutes_difference_B_minus_A": -0.968, "visual_delta": null},
+    {"task": "T2", "replicate": 1, "A": "p93abe90", "B": "pa45255c", "functional_delta_B_minus_A": 0, "wall_minutes_difference_B_minus_A": 5.535, "visual_delta": null},
+    {"task": "T3", "replicate": 1, "A": "p3017a82", "B": "pcc62324", "functional_delta_B_minus_A": 0, "wall_minutes_difference_B_minus_A": 3.362, "visual_delta": null}
+  ],
+  "runtime_replay": {
+    "workflow": 40634759293,
+    "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40634759293",
+    "commit": "bb5dc78d7ea13569f85ba0fa59e03572dd834b68",
+    "applications": 9,
+    "browser": "134.0.6998.35",
+    "playwright": "1.51.1",
+    "original_group_instances": {"pass": 90, "total": 90},
+    "supplement_group_instances": {"pass": 42, "total": 42},
+    "source_mutations": 0,
+    "new_model_runs": 0,
+    "scope": "Actual repeated execution of the nine same frozen outputs. Not 132 independent samples and not additional independent model generations."
+  },
+  "settled_diagnostic": {
+    "workflow": 40635501728,
+    "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/40635501728",
+    "commit": "1576085cb3643bdf3419ebc1f312605b1d6a84c1",
+    "applications": 3, "conditions": 6, "contained_panels": 6,
+    "geometry": {"x": 0, "y": 0, "width": 390, "height": 844},
+    "source_mutations": 0,
+    "primary_score_change": false,
+    "scope": "Post-outcome diagnostic distinguishes in-flight screenshot clipping from settled geometry. Not a blind rating or natural motion-quality measure."
+  },
+  "source_adoption": {"observed_A": "4/4 available", "observed_B": "5/5 available", "scope": "Concrete source and integration audit; both versions adopt mature implementations. No aesthetic gain inferred from adoption counts."},
+  "visual_observation": {"images_actually_viewed": 39, "reviewer": "one version-aware recovery analyst", "independent_blind_reviews": 0, "visual_scores": null},
+  "record_problems": {
+    "command_stdout_hash_mismatch": ["pb1788ae/evidence/commands/0008.json", "pa04824d/evidence/commands/0007.json"],
+    "malformed_command_json": ["p649c5ff/evidence/commands/0007.json"],
+    "scope": "Retain original records. Logged command counts are lower bounds; affected entries do not prove the claimed reading. No model misconduct inferred from logger collisions."
+  },
+  "conclusions": {
+    "functionality": "Zero acceptance-group difference in each of three complete pairs; no observed regression in tested scope. Not an equivalence or non-inferiority result.",
+    "visual_uplift": "not estimated",
+    "general_design_capability_uplift": "not established",
+    "efficiency_uplift": "not established; wall-time differences mixed, active time and token costs unobserved",
+    "missing_outcomes": "null, neither success nor failure; do not pool replacement generations",
+    "scheduled_success_rate_difference_extreme_bounds_percentage_points": [-16.666666666666668, 33.333333333333336],
+    "bounds_scope": "Arithmetic extreme missing-outcome bounds only, not a confidence interval or effect estimate.",
+    "cohort_scope": "T1 complete local research frontend, T2 populated expressive workspace, T3 bounded source reader. No live production service or real-user quality inference."
+  },
+  "analysis_tests": {"count": 8, "result": "pass", "scope": "Recovery arithmetic, file identity, missingness, expected browser and log-corruption detection only"},
+  "delivered_analysis_artifact_sha256": {
+    "RESULTS.json": "bb8e0f519f470441fbde2d5c1ee338b5252331c556955d97af0194808ddff2ab",
+    "RUNS.csv": "bb63d253951f1cf1e3d53d1d8f17f16f92728f3ea1b52207b9d42a8580ee7c84",
+    "REPLAY.json": "6ba6d99cce5b4392674d15b44f8592d257dcbcdc18228266b7af23e212aa6a7e",
+    "SETTLED.json": "cf20731f6c4e6688207c1ba9d346179a73367d031ee4fc2fbf267ca071c7834f",
+    "SOURCE-AUDIT.json": "4f4cb66b498c0074035bd10fad4f31a05cec5b6ef715c10d1ea7a9d7e99a9b7d",
+    "VISUAL-OBSERVATIONS.json": "0b237fc26e058cfbb0005c64e26d19233ba72e417e052f8f65519462d92fba2e",
+    "analyze.py": "78375a02cdc25284c7e5fc15967ba4a9577bab36b342d0b31d8a49ac346ed789",
+    "test_analysis.py": "917c26c152a8f9a541fa0bcab634b812f4d2f37ba0b57cf33d0ea31aa2018e6b"
+  },
+  "distribution_scope": "Recovery delivery includes reports, analysis scripts and actual screenshots only. No fonts, raw participant source bundles or copied third-party component distributions. Original frozen evidence remains in checkpoint 647946ff."
+}
