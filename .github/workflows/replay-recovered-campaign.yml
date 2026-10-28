@@ -27,9 +27,9 @@ jobs:
       CAMPAIGN: docs/experiments/visual-craft/campaign-20261028
       RUN_ID: ${{ matrix.run }}
       TASK_ID: ${{ matrix.task }}
-      UI_EVAL_RUNTIME: ${{ runner.temp }}/ui-eval-runtime
-      PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/playwright
-      UI_EVAL_CHROMIUM: ${{ runner.temp }}/playwright/chromium-1161/chrome-linux/chrome
+      UI_EVAL_RUNTIME: /tmp/ui-eval-runtime
+      PLAYWRIGHT_BROWSERS_PATH: /tmp/ui-eval-playwright
+      UI_EVAL_CHROMIUM: /tmp/ui-eval-playwright/chromium-1161/chrome-linux/chrome
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
