@@ -1,0 +1,36 @@
+# T1 review commands and environment
+
+Working directory for every shell command:
+
+`/workspace/scratch/43b440780c87/granularity-review-packets/T1`
+
+Read only the assigned packet instructions, task briefs, tooling, and supplied variant source. `input-identities.json` was not opened. Source exploration used `rg --files`, `cat`, `sed`, and `rg -n` within this packet.
+
+Runtime:
+
+```text
+Python: /workspace/scratch/43b440780c87/test-env/bin/python
+Chromium: /workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell
+FONTCONFIG_FILE=/workspace/scratch/43b440780c87/preview-fontconfig.xml
+PLAYWRIGHT_BROWSERS_PATH=/workspace/scratch/43b440780c87/playwright-cache
+```
+
+The HTTP/browser calls used the supplied tooling's required socket permission. No external host or authenticated browser session was used.
+
+Executed application-review scripts:
+
+```bash
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/serve_review.py > review-output/server.log 2>&1
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/review_checks.py > review-output/check-run.log 2>&1
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/review_checks_followup.py > review-output/followup-run.log 2>&1
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/supplemental_checks.py > review-output/supplemental-run.log 2>&1
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/final_probes.py > review-output/final-probe-run.log 2>&1
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/failure_preferences_probe.py > review-output/failure-preference-run.log 2>&1
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/build_review_index.py
+```
+
+The three servers expose each variant root on `127.0.0.1:8211`, `127.0.0.1:8212`, and `127.0.0.1:8213`, respectively. `/initial/` and `/final/` are separately navigated application versions. Fresh contexts separate variants; an initial-to-final compatibility check intentionally retains that variant's local data while navigating between its versions.
+
+`view_image` was used to inspect original screenshot PNGs. Its exact viewed-image inventory is recorded in `viewed-images.json`. No screenshots were edited or used as substitutes for operating the application. The original native-function restoration error, logs, and captures are preserved, with the corrected run in a separate directory.
+
+The evidence index was checked against the PNG header dimensions, all referenced local paths, the check-result files, and the unchanged application source hashes before delivery.

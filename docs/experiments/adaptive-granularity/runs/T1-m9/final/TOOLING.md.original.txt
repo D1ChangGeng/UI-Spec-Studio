@@ -1,0 +1,11 @@
+# Local application tooling
+
+Use the assigned Skill and TASK.md. Work only in this cell. Do not inspect sibling cells or the parent repository. Public research and the included reference sources are available. This is a local deliverable; do not deploy, publish or install a personal Skill.
+
+Python with Playwright and Markdown dependencies: /workspace/scratch/43b440780c87/test-env/bin/python
+Chromium executable: /workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell
+Environment: FONTCONFIG_FILE=/workspace/scratch/43b440780c87/preview-fontconfig.xml and PLAYWRIGHT_BROWSERS_PATH=/workspace/scratch/43b440780c87/playwright-cache
+
+Start local HTTP and run headless application tests with exec_command sandbox_permissions=require_escalated; default sandbox disallows sockets. This is the local project's test browser, not a connection to a user's existing browser session. Use the actual app over HTTP to check browser persistence. View captured pixels separately using view_image. The host has no universal visual pass signal. Save your test commands/results, captures, adoption sources and final user-facing delivery with the cell.
+
+The shared modern guidance was searched and retrieved before implementation; read common-guidance.md and relevant full sections of common-guidance-raw.md here. Further current API research can use official sources. Do not treat downloaded files or tests as evidence of actually viewing a UI.

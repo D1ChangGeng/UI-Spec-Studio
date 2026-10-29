@@ -1,0 +1,39 @@
+# Leafnote is now a working daily notebook
+
+The one-note editor has become a searchable collection with a focused writing surface. You can create a note, add its project context, save it, find it by title or text, and reopen it to continue working. On a phone-sized screen, the collection and editor have separate views with an explicit **All notes** return action.
+
+**Open the local preview:** [Leafnote](http://localhost:8777/). The application source is in `app/`; restart it with `python -m http.server 8777 --directory app` from this folder if needed. Nothing has been deployed or published.
+
+![Leafnote desktop notebook](evidence/final/1440-en-light-editor.png)
+
+## What changed
+
+- A collection with note titles, project context, excerpts, saved dates and clear selection.
+- Search across titles, context and body text, with a useful no-results state.
+- Separate drafts for each saved note and the new-note slot. Switching notes, language or theme preserves your writing; explicit Save updates the saved version.
+- A named deletion dialog with Cancel, Escape dismissal, and failure feedback that preserves the saved note.
+- Chinese and English interfaces, light and dark themes, visible keyboard focus, Ctrl/Cmd+S to save and Ctrl/Cmd+K to search.
+- An exportable JSON backup, including drafts and the original single-note record. Existing content is recovered without deleting that original record.
+- Clear storage-error states and recovery controls, including in the mobile collection. Save feedback stays near the action while reading long notes.
+
+The initial empty notebook offers three clearly labeled fictional research examples. They cover a short interview guide, an English field observation, and a longer Chinese research note. Notes remain local to this browser; no account, backend or cloud synchronization has been added.
+
+## Design choices
+
+The collection sits on a subdued surface beside a paper-like writing area. The note's title is the visual focus, with quieter context and metadata supporting it. A green selection edge helps you keep your place; the serif title and restrained spacing give the workspace an editorial character.
+
+I reviewed the public Simplenote product imagery, compared the three-pane shadcn mail example, and inspected Pico's form and dialog demonstrations. The notebook uses a locally vendored, MIT-licensed Pico 2.1.1 form foundation, adapted through product tokens and a native confirmation dialog. The additional account/folder rail in the mail example did not earn its space for this local notebook. The full decisions, actual source adoption and limitations are in `DESIGN.md`.
+
+![Leafnote phone collection](evidence/final/390-en-light-list.png)
+
+## Checked on the running application
+
+The core browser run passed 36 assertions covering the main journeys, persistence, draft recovery, deletion, search, delayed saves, quota failures, legacy recovery and the eight combinations of requested viewport, language and theme. I separately viewed the actual desktop and mobile captures, including the long Chinese note and deletion dialogs.
+
+A follow-up check caught a read-error retry defect after typing. It was repaired, and a focused recheck confirms that the draft is retained, stored after recovery, and ready to save. Additional checks passed for mobile error recovery, required-title focus and reduced-motion styling. Original failures and the corresponding rechecks remain in `evidence/`; `evidence/REVIEW.md` separates assertions from visual observations.
+
+## Remaining limits
+
+This is a browser-local demonstration. Export is implemented; a backup import screen is not. Other-tab collection changes are detected, but simultaneous draft editing is not a merge system. Physical mobile keyboards, screen-reader playback and browsers other than the supplied Chromium were not tested. Pico's upstream now identifies itself as unmaintained, so the pinned CSS should be reassessed before a longer-term production rollout.
+
+The result is ready for review as a local notebook, with editable source, reference captures, test logs and the design record included.

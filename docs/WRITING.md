@@ -223,3 +223,37 @@ font/palette recipes, spectacle scores or fixed resource counts. Explain the
 user-visible outcome before internal labels when presenting choices. Preserve
 source identity and evidence scope; a repository's demonstrations are study
 material, not automatic proof of every technique or a mandatory internal corpus.
+
+## Write formal increments as design responsibilities
+
+State the complete product goal and the experience this formal SPEC undertakes to
+improve. Explain the necessary objects and relationships, the quality responsibility
+and the conditions under which its result can be judged. Keep the current product,
+formal increment and internal research/implementation activities distinguishable.
+An execution turn, new search or repair does not by itself define another SPEC.
+
+Explain scope choices through actual complexity, dependencies, uncertainty, mature
+resource fit and verification needs. Give a conditional example that shows why the
+relationship belongs together or why independent goals deserve separate depth.
+Keep, split, merge and redraw are professional choices, not a preference for ever
+smaller units. Preserve the complete goal and explain material implications without
+turning routine planning into repeated approval requests.
+
+Keep research, primary implementation and affected-product regression scopes
+understandable without prescribing a new report for each. When the boundary changes,
+retain the original goal, evidence, unresolved finding and its current responsibility.
+Use the same current model for Overview, Design Detail and Execution & Assurance;
+candidate plans remain revisable and internal work remains proportionate.
+
+Describe inherited, extended, adapted or reconsidered work from the actual product
+state. Present important scope judgments, resource choices and observed results
+in the conversation with the working entry and remaining gaps. Product content
+serves the end user's tasks; internal evidence classifications serve design work.
+Express intended material, hierarchy and motion through the actual result rather
+than through labels claiming that quality exists.
+
+Keep evidence claims precise in release writing. A content revision or a neutral
+structural report establishes different facts from a fresh Agent experiment,
+actually viewed UI, measured efficiency or user acceptance. Attribute comparative
+findings to their actual tasks and comparable execution conditions. SPEC counts
+and completed fields do not establish a visual improvement.

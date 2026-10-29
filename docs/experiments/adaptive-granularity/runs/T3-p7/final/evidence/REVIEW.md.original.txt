@@ -1,0 +1,40 @@
+# Evidence index and factual review
+
+## Current result
+
+The final application is in `../app/`. `final/report.json` identifies its final source hashes. `run3/report.json` has 63 passing browser assertions; `extra/report.json` has eight further passing assertions; `final/report.json` has seven passing scoped assertions. Total: 78 exercised checks across the three suites. Only the final suite ran after the last failure-copy/retry-focus and empty-note wording change; the earlier checks apply to unchanged mechanisms.
+
+## Test commands
+
+The local server was started from the cell using:
+
+```
+/workspace/scratch/43b440780c87/test-env/bin/python -m http.server 8737 --bind 127.0.0.1 --directory app
+```
+
+Browser scripts were run with:
+
+```
+FONTCONFIG_FILE=/workspace/scratch/43b440780c87/preview-fontconfig.xml /workspace/scratch/43b440780c87/test-env/bin/python evidence/test_app.py
+FONTCONFIG_FILE=/workspace/scratch/43b440780c87/preview-fontconfig.xml /workspace/scratch/43b440780c87/test-env/bin/python evidence/extra_checks.py
+FONTCONFIG_FILE=/workspace/scratch/43b440780c87/preview-fontconfig.xml /workspace/scratch/43b440780c87/test-env/bin/python evidence/first_failure.py
+```
+
+All application tests used actual HTTP and native browser localStorage. The failure branches deliberately monkey-patched Storage methods; retries restored native methods. No remote service was involved. Scripts record actual outcomes; screenshots were captured with animations allowed.
+
+## Preserve failures
+
+- `test-run-1.log`: test instrumentation failure (`Illegal invocation`), not an application failure.
+- `test-run-2.log`: actual reduced-motion Save click timeout. Outer perspective caused the front section to intercept a descendant button.
+- `reduced-probe.log`: flattening the card alone did not fix it.
+- `reduced-diagnosis.log`: `elementsFromPoint` before/after removing outer perspective, then successful click.
+- `test-run-3.log`: repaired full run; 63 passing checks, no recorded page errors.
+- `extra-checks.log`, `final-check.log`: passing focused runs.
+- The initial external reference capture failed with `net::ERR_CERT_AUTHORITY_INVALID`; a later public read-only research context used `ignore_https_errors=True`. `references/acquisition.log` records the successful original-demo inventory. Browser TLS handling was restricted to public reference acquisition.
+- The test virtualenv lacked Pillow during contact-sheet generation; the system Python successfully ran `make_sheets.py`. This was an evidence-processing dependency issue, not a UI test.
+
+## Visual observation is separate
+
+Viewed actual PNGs using the image viewer: desktop and mobile in light/dark, saved/draft, reduced motion, Chinese, long text and failures; also ordered reference and integrated motion captures. See `../DESIGN.md` for specific observations and repairs. The sheet condenses full screenshots and supports ordering/composition; full-size files support typography/detail judgment. No video playback or target-device frame-rate claim is made.
+
+Raw filenames in the evidence root and `run2/` are historical. Current normal/variant snapshots are in `run3/`; the mobile turn, interruption and narrow extremes are in `extra/`; the final first-save failure is in `final/`.

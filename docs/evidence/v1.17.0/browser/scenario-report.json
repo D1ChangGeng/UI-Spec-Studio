@@ -1,0 +1,350 @@
+{
+  "scope": "Authored native design port; original product approval and upstream React runtime integration remain separate",
+  "renderer": "local-http",
+  "owner_approval": "pending",
+  "storage_verified": true,
+  "foundation": {
+    "id": "assistant-ui-chatgpt",
+    "scope": "conversation page composition",
+    "granularity": "page",
+    "method": "cross-stack design transfer",
+    "source_commit": "1fbf00dd0388fee912af95401876a6cc3c232b2c",
+    "source_path": "apps/docs/components/pages/examples/chatgpt.tsx",
+    "source_blob": "0f22e7855a954269ecdee0fd9963240c966e1bc1",
+    "demo": "https://www.assistant-ui.com/examples/chatgpt",
+    "source": "https://github.com/assistant-ui/assistant-ui/blob/1fbf00dd0388fee912af95401876a6cc3c232b2c/apps/docs/components/pages/examples/chatgpt.tsx",
+    "reviewed_on": "2026-10-25",
+    "approval": "pending",
+    "preserved": [
+      "welcome composition and primary action",
+      "48rem reading measure",
+      "shared composer across empty and active states",
+      "28px composer and 22px user-message radii",
+      "right-aligned bounded user messages",
+      "independently growing reading area with reachable composer",
+      "theme roles and state-prioritized actions"
+    ],
+    "adapted": [
+      "Chinese research content",
+      "source-inspection action",
+      "native fixture state and one local note",
+      "44px phone action targets",
+      "85% narrow user bubble",
+      "legible placeholder color"
+    ],
+    "scope_limits": [
+      "The React runtime is not installed in this native fixture.",
+      "Voice, attachments, hosted history and real research services are outside the fixture.",
+      "The document model remains a comparison probe, not the selected production foundation."
+    ],
+    "alternatives": [
+      {
+        "item": "shadcn dashboard-01",
+        "source": "https://ui.shadcn.com/blocks",
+        "decision": "Its dashboard cards/charts address a different primary task; useful for an operational surface."
+      },
+      {
+        "item": "shadcn sidebar-07",
+        "source": "https://ui.shadcn.com/blocks/sidebar",
+        "decision": "Useful shell block; it leaves the conversation page decisions open."
+      }
+    ],
+    "verification": "report.json from tools/validate_scenario.py; image inspection and actual project acceptance remain scoped"
+  },
+  "captures": [
+    {
+      "name": "conversation-light-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light",
+      "model": "conversation",
+      "body_contrast": 19.435548355403956
+    },
+    {
+      "name": "decisions-light-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light"
+    },
+    {
+      "name": "conversation-light-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "theme": "light",
+      "model": "conversation",
+      "body_contrast": 19.435548355403956
+    },
+    {
+      "name": "conversation-light-1280",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "light",
+      "model": "conversation",
+      "body_contrast": 19.435548355403956
+    },
+    {
+      "name": "decisions-light-1280",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "light"
+    },
+    {
+      "name": "conversation-light-1920",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "theme": "light",
+      "model": "conversation",
+      "body_contrast": 19.435548355403956
+    },
+    {
+      "name": "documents-light-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "light",
+      "model": "documents",
+      "body_contrast": 19.435548355403956
+    },
+    {
+      "name": "documents-light-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "theme": "light",
+      "model": "documents",
+      "body_contrast": 19.435548355403956
+    },
+    {
+      "name": "documents-light-1280",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "light",
+      "model": "documents",
+      "body_contrast": 19.435548355403956
+    },
+    {
+      "name": "documents-light-1920",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "theme": "light",
+      "model": "documents",
+      "body_contrast": 19.435548355403956
+    },
+    {
+      "name": "conversation-dark-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "model": "conversation",
+      "body_contrast": 17.7759802348148
+    },
+    {
+      "name": "decisions-dark-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark"
+    },
+    {
+      "name": "conversation-dark-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "theme": "dark",
+      "model": "conversation",
+      "body_contrast": 17.7759802348148
+    },
+    {
+      "name": "conversation-dark-1280",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "dark",
+      "model": "conversation",
+      "body_contrast": 17.7759802348148
+    },
+    {
+      "name": "decisions-dark-1280",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "dark"
+    },
+    {
+      "name": "conversation-dark-1920",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "theme": "dark",
+      "model": "conversation",
+      "body_contrast": 17.7759802348148
+    },
+    {
+      "name": "documents-dark-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "theme": "dark",
+      "model": "documents",
+      "body_contrast": 17.7759802348148
+    },
+    {
+      "name": "documents-dark-768",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "theme": "dark",
+      "model": "documents",
+      "body_contrast": 17.7759802348148
+    },
+    {
+      "name": "documents-dark-1280",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "dark",
+      "model": "documents",
+      "body_contrast": 17.7759802348148
+    },
+    {
+      "name": "documents-dark-1920",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "theme": "dark",
+      "model": "documents",
+      "body_contrast": 17.7759802348148
+    },
+    {
+      "name": "answer-light",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "light"
+    },
+    {
+      "name": "error-light",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "light"
+    },
+    {
+      "name": "edited-light",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "light"
+    },
+    {
+      "name": "long-light",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "light"
+    },
+    {
+      "name": "answer-dark",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "dark"
+    },
+    {
+      "name": "error-dark",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "dark"
+    },
+    {
+      "name": "edited-dark",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "dark"
+    },
+    {
+      "name": "long-dark",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "theme": "dark"
+    }
+  ],
+  "checks": [
+    "conversation/light/390: viewport, authority, foundation geometry, contrast, record and focus",
+    "conversation/light/768: viewport, authority, foundation geometry, contrast, record and focus",
+    "conversation/light/1280: viewport, authority, foundation geometry, contrast, record and focus",
+    "conversation/light/1920: viewport, authority, foundation geometry, contrast, record and focus",
+    "documents/light/390: viewport, authority, foundation geometry, contrast, record and focus",
+    "documents/light/768: viewport, authority, foundation geometry, contrast, record and focus",
+    "documents/light/1280: viewport, authority, foundation geometry, contrast, record and focus",
+    "documents/light/1920: viewport, authority, foundation geometry, contrast, record and focus",
+    "conversation/dark/390: viewport, authority, foundation geometry, contrast, record and focus",
+    "conversation/dark/768: viewport, authority, foundation geometry, contrast, record and focus",
+    "conversation/dark/1280: viewport, authority, foundation geometry, contrast, record and focus",
+    "conversation/dark/1920: viewport, authority, foundation geometry, contrast, record and focus",
+    "documents/dark/390: viewport, authority, foundation geometry, contrast, record and focus",
+    "documents/dark/768: viewport, authority, foundation geometry, contrast, record and focus",
+    "documents/dark/1280: viewport, authority, foundation geometry, contrast, record and focus",
+    "documents/dark/1920: viewport, authority, foundation geometry, contrast, record and focus",
+    "light: keyboard send, source/focus, new draft, cancel, failure/retry, stale result, local note, long reading, reduced motion",
+    "dark: keyboard send, source/focus, new draft, cancel, failure/retry, stale result, local note, long reading, reduced motion"
+  ],
+  "errors": [],
+  "files": {
+    "styles.css": "1c02b220d52d21aa7ad87bdff42a811e4dedf4016cf98029e04dbf55fb440ccb",
+    "THIRD-PARTY.md": "29e6f18f1291a8992a6f59eab511490d7e20c5339176c7780836bd898d615393",
+    "FOUNDATION.md": "15b2cb87c8d11c1ad4d8383bdeea32c0a03df5c673340724f55a723761b788ab",
+    "README.md": "05cb67cfb1366932cdeb2b54f522c5082e61f34333f568adeb629f7cfcffb1dd",
+    "app.js": "fd4921a47211f683a4efa34bf1c983dcad23cafa2572a551745ed5511b12d916",
+    "index.html": "2bdb4fa92cc12e1c07f1c3d2a2001d385d4b642505e49c3497e133df75a3ea5e",
+    "tokens.css": "02f86bb6ca43363b47f88dff7bbe5e339304ffbd263ed8eac0fe84df7a6a16de",
+    "foundation.json": "bf1815be5fcea17df4676158b6ac10879ae149e02547da33b8a678f7d45f47f2"
+  },
+  "browser": "143.0.7499.4",
+  "input_to_next_frame_ms": {
+    "light": 4.600000000093132,
+    "dark": 11.199999999720603
+  },
+  "external_requests": [],
+  "result": "pass"
+}

@@ -1,0 +1,187 @@
+{
+  "checks": [
+    {
+      "name": "history returns to stored reading position",
+      "pass": true,
+      "detail": {
+        "expected": 260,
+        "actual": 260
+      }
+    },
+    {
+      "name": "history preserves per-thread draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reading stays fixed while an overflowing answer grows",
+      "pass": true,
+      "detail": {
+        "before": {
+          "top": 180,
+          "height": 1406,
+          "client": 660
+        },
+        "after": {
+          "top": 180,
+          "height": 1762,
+          "client": 660
+        }
+      }
+    },
+    {
+      "name": "back-to-latest offered",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "continue preserves already-written opening",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "new thread starts at reader top",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Shift+Enter inserts a newline",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reload interrupts unfinished generation safely",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile source native focus return",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "short-height send stays inside viewport",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "frames": [
+    {
+      "file": "final-desktop-home.png",
+      "capture_started_unix": 1793308406.281664,
+      "capture_finished_unix": 1793308406.3633966,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "continuity-01-reading-older.png",
+      "capture_started_unix": 1793308407.8047864,
+      "capture_finished_unix": 1793308407.8798928,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "continuity-02-new-content-below.png",
+      "capture_started_unix": 1793308410.0902534,
+      "capture_finished_unix": 1793308410.153299,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "continuity-03-stopped.png",
+      "capture_started_unix": 1793308410.234757,
+      "capture_finished_unix": 1793308410.2834384,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "continuity-04-resumed.png",
+      "capture_started_unix": 1793308410.3866885,
+      "capture_finished_unix": 1793308410.4484208,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "final-desktop-complete.png",
+      "capture_started_unix": 1793308412.4910674,
+      "capture_finished_unix": 1793308412.5507035,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "final-desktop-source.png",
+      "capture_started_unix": 1793308412.5861878,
+      "capture_finished_unix": 1793308412.6620386,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "final-desktop-dark.png",
+      "capture_started_unix": 1793308412.7325964,
+      "capture_finished_unix": 1793308412.7899687,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "final-mobile-home.png",
+      "capture_started_unix": 1793308413.0201519,
+      "capture_finished_unix": 1793308413.056458,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "final-mobile-answer.png",
+      "capture_started_unix": 1793308417.3044844,
+      "capture_finished_unix": 1793308417.3423557,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "final-mobile-source.png",
+      "capture_started_unix": 1793308417.3946526,
+      "capture_finished_unix": 1793308417.4308786,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "final-mobile-dark.png",
+      "capture_started_unix": 1793308417.49231,
+      "capture_finished_unix": 1793308417.5472724,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "short-height.png",
+      "capture_started_unix": 1793308417.5913143,
+      "capture_finished_unix": 1793308417.6282,
+      "viewport": {
+        "width": 390,
+        "height": 500
+      }
+    }
+  ]
+}

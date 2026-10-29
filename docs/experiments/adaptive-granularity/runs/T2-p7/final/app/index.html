@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Meridian · A clearer perspective</title>
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#question">Skip to question</a>
+<div class="shell">
+<aside class="sidebar" aria-label="Research navigation">
+ <a class="brand" href="./" aria-label="Meridian home"><span class="mark" aria-hidden="true">✳</span><span>meridian</span></a>
+ <button class="new-button" data-new><span aria-hidden="true">＋</span> New research <kbd>⌘ O</kbd></button>
+ <label class="search-label"><span aria-hidden="true">⌕</span><input id="history-search" type="search" placeholder="Find a thread" aria-label="Find a thread"></label>
+ <div class="nav-section"><span class="eyebrow">YOUR THREADS</span><nav id="history" aria-label="Your threads"></nav></div>
+ <div class="example-section"><span class="eyebrow">A LITTLE INSPIRATION</span><button data-example="urban">Cooling our cities <span>↗</span></button><button data-example="research">Asking better questions <span>↗</span></button></div>
+ <div class="sidebar-bottom"><div class="local-note"><span class="local-dot"></span><span>Made for your curiosity<small>Saved on this device</small></span></div><div class="utilities"><button data-theme-toggle aria-label="Appearance: switch to dark theme">◐ <span>Appearance</span></button><button data-demo aria-label="Demo controls">ⓘ</button></div></div>
+</aside>
+<main id="main">
+ <header class="workspace-head"><button id="mobile-history" class="icon-button mobile-only" aria-label="Open research history">☰</button><div class="breadcrumb"><span class="workspace-label">Personal workspace</span><span class="crumb-separator">/</span><span id="thread-title">New research</span></div><button class="demo-badge" data-demo><span class="local-dot"></span>Local demo</button><button class="icon-button mobile-only" data-new aria-label="New research">＋</button></header>
+ <div class="work-area">
+  <section id="conversation" aria-label="Research conversation">
+   <div id="reader" tabindex="0" aria-label="Conversation reading area">
+    <div class="welcome" id="welcome"><div class="intro-tag"><span class="small-mark" aria-hidden="true">✳</span> ROOM FOR A GOOD QUESTION</div><h1>A little curiosity.<br><em>A clearer perspective.</em></h1><p>Explore an idea, follow the evidence,<br class="mobile-break"> and find your next question.</p></div>
+    <div id="thread"></div>
+   </div>
+   <div class="composer-area" id="composer-area">
+    <button id="jump-latest" hidden>↓ Back to latest</button>
+    <form id="composer">
+     <label for="question" class="sr-only">Your research question</label>
+     <textarea id="question" rows="2" maxlength="8000" placeholder="What would you like to understand?"></textarea>
+     <div id="attachments" class="attachments"></div>
+     <div class="composer-actions"><div class="composer-tools"><button id="attach" type="button" class="icon-button" aria-label="Attach local filenames" title="Attach local filenames">＋</button><span class="research-mode"><span aria-hidden="true">⌘</span> Research</span></div><div class="send-tools"><span class="keyboard-hint">Enter to send</span><button id="send" type="submit" aria-label="Send question" disabled>↑</button><button id="stop" type="button" aria-label="Stop response" hidden>■</button></div></div>
+    </form>
+    <p class="composer-note" id="composer-note">Illustrative answers. Your questions and files stay in this browser.</p>
+    <div id="suggestions" class="suggestions"><button data-prompt="How do urban trees help cities stay cool?"><span class="suggestion-icon">↟</span><strong>Explore an idea</strong><span>How do trees cool a city?</span><span class="arrow">↗</span></button><button data-prompt="Compare batteries and thermal storage for a neighborhood."><span class="suggestion-icon">⇄</span><strong>See both sides</strong><span>Batteries or thermal storage?</span><span class="arrow">↗</span></button><button data-prompt="Help me turn a broad topic into a useful research question."><span class="suggestion-icon">◎</span><strong>Find a starting point</strong><span>Ask a more useful question</span><span class="arrow">↗</span></button></div>
+   </div>
+  </section>
+  <aside id="source-panel" aria-label="Source reader" hidden><div class="panel-head"><span class="eyebrow">SOURCE READER</span><button id="source-close" class="icon-button" aria-label="Close source reader">×</button></div><div id="source-content"></div><div class="source-transport"><span data-source-status></span><button type="button" class="source-run-control" data-source-action>Stop answer</button></div></aside>
+ </div>
+ <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+</main>
+</div>
+<input type="file" id="file-input" multiple hidden>
+<dialog id="history-dialog" aria-labelledby="history-dialog-title"><div class="dialog-head"><h2 id="history-dialog-title">Your research</h2><button class="icon-button" data-close="history-dialog" autofocus aria-label="Close research history">×</button></div><button class="new-button" data-new>＋ New research</button><nav id="mobile-threads" aria-label="Saved threads"></nav><div class="mobile-utilities"><button data-theme-toggle>◐ Appearance</button><button data-demo>Demo controls</button></div></dialog>
+<dialog id="source-dialog" aria-labelledby="mobile-source-title"><div class="dialog-head"><h2 id="mobile-source-title">Source reader</h2><button class="source-back" data-close="source-dialog" autofocus aria-label="Back to answer">← Answer</button></div><div id="mobile-source-content"></div><div class="source-transport"><span data-source-status></span><button type="button" class="source-run-control" data-source-action>Stop answer</button></div></dialog>
+<dialog id="demo-dialog" aria-labelledby="demo-title"><div class="dialog-head"><h2 id="demo-title">A space to explore</h2><button class="icon-button" data-close="demo-dialog" autofocus aria-label="Close demo controls">×</button></div><p>Meridian is a local product demo. Answers and source notes are synthetic examples, not live research. Attached files are represented by their names only.</p><label class="field-label" for="response-mode">For your next question</label><select id="response-mode"><option value="normal">Standard response</option><option value="long">Long response</option><option value="fail">Simulate one failed response</option></select><p class="dialog-caption">Try stopping a response, reading an earlier paragraph, or recovering with Retry. No content is sent to a service.</p></dialog>
+</body></html>

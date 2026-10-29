@@ -1,0 +1,25 @@
+# Leafnote: clearer reading, with a density choice
+
+The existing notebook now has a labeled **Reading density** preference: **Comfortable** or **Compact**, also available as 舒适 / 紧凑. It applies across the collection and editor and survives reload.
+
+![Comfortable long-note layout](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/continuation/long-1440-en-comfortable-light.png)
+
+## What improved
+
+- **Clearer text roles.** Serif titles have deliberate scaling and wrapping. Body text is 16 px in both modes; metadata and section labels are larger and easier to distinguish.
+- **More comfortable long-note reading.** The desktop reading width is bounded. Chinese text gets natural tracking and additional line spacing, independently of the interface language.
+- **A useful compact mode.** It reduces title scale, list padding, document spacing and body leading while retaining readable body text and note metadata.
+- **A clear control on phones.** Reading density has its own labeled header row, so both options remain understandable and available from the collection and editor.
+- **Continuity while changing preferences.** The selected note and unsaved draft survive density, theme and language changes. A failed preference write explains that the setting may not survive the next visit.
+
+![Compact long-note layout](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/continuation/long-1440-en-compact-light.png)
+
+## Checked in the actual app
+
+**All 43 executed assertions passed:** 21 density and long-content checks, 20 existing notebook regression checks, and two focused scrolling/preference-failure checks. The long-content checks cover 1440×900 and 390×844, Chinese/English, both densities and both themes.
+
+I also viewed the paired long-note layouts, both mobile collection densities, a long-title deletion dialog and the bottom of a compact note. Create, save, search, reopen, delete cancellation and confirmed deletion were exercised with long content. Density persistence and draft retention were checked through reload.
+
+[Open the local app](http://127.0.0.1:8619/) · [Density results](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/continuation/density-results.json) · [Design and visual review](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/continuation/DECISIONS.md)
+
+The original delivery and evidence are unchanged. This continuation was resumed after a host interruption; the interruption and original failed attempts are recorded, rather than presented as an uninterrupted timed run. Real-device keyboards, screen readers, Safari and Firefox remain unverified. The notebook continues to store data only in this browser.

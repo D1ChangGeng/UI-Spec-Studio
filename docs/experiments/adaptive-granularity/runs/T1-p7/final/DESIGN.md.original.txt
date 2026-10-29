@@ -1,0 +1,48 @@
+# Leafnote design model
+
+## Intended experience and provisional direction
+A small team's browser-local research notebook. The durable object is a titled note with project context and plain-text leads. The main journey is capture → save → find → reopen → continue. No accounts, sharing, cloud synchronization, or invented collaboration status.
+
+## Decisions and evidence
+
+### Collection and editor relationship (L0–L3)
+Question: should a conventional notebook gain a grid, three-pane shell, or list/editor relationship? The initial app's actual render is `evidence/research-before.png`: the recently saved region cannot open a collection. The two-pane hypothesis retains a compact scanning region next to a wider writing region; mobile separates list and editor with an explicit return control. Existing content is migrated in memory from `ui-spec-content-note-v1`; that original key is retained unchanged.
+
+References: Simplenote public homepage/help describes note finding and shows a desktop product illustration; public shadcn mail example was attempted, returned 404 on current URL, then its v3 URL was investigated. Captures and original failures are preserved. These sources are visual references, not a claim of operation inside authenticated products. See evidence/research-followup.log for results.
+
+### Form foundation and material (L3–L5)
+Actual adopted source: Pico CSS 2.1.1, locally vendored in `app/vendor/pico.min.css`, MIT notice alongside. Official forms demo viewed at 1440×900: coordinated input/button sizing, quiet boundaries, visible labels, generous field spacing. Retained semantic form styling, focus and theme mechanisms; adapted density, colors and editorial title role through CSS tokens. Native modal is opened with `showModal()` per the supplied current browser guidance rather than the older open-attribute demo. Pico now declares itself unmaintained; this pinned pure-CSS dependency is project-owned and should be reassessed for longer-term production use.
+
+Alternative: a complete mail shell would include sidebar accounts, inbox folders and mail actions outside this notebook's model and add a framework migration. We retain the notebook's own collection model; the composition, card content and data adapters are original, not represented as imported template code. The selected reuse scope is a coherent semantic form/control system, not merely icons.
+
+### Perception and language (L4)
+Warm paper editor, slightly darker collection surface, green selection marker, one serif display role, compact sans-serif metadata. The writer's note is the main heading; generic instructions no longer dominate the page. Actual Chinese and English UI copy is centralized. Research examples are labeled fictional. Local-storage limitations appear in the collection footer; method notes stay outside the application.
+
+### Safety and outcomes (L1/L5)
+Each note retains a draft keyed by note ID; draft writes are separate from explicit saves. Draft persistence failure remains visible with export advice and leave-page warning. Saves use captured snapshots so typing during a delayed save retains newer edits. Collection writes compare the last raw snapshot with current storage to detect a changed tab. Deletion names the saved note, initially focuses Cancel, and mutates the collection only after a successful storage write. Export includes notes, drafts and raw original keys for recovery, including malformed storage. No destructive reset control exists in the normal interface.
+
+## Verification plan
+Inspect actual 1440×900 and 390×844 renders in Chinese/English and both themes. Exercise creation, update, search, selection, draft resume, legacy recovery, named deletion/cancellation, actual reload persistence, native storage exceptions and a delayed save. Capture and view pixels separately from assertions; preserve failed test runs. Owner acceptance is pending.
+
+## Viewed comparison and decisions after implementation
+
+- Viewed `research-simplenote-workspace.png`: the promotional product image shows a phone list with search and title/snippet rows, alongside a wide desktop reading surface. This supports separate mobile list/detail views and a text-led collection; it does not establish authenticated product behavior or saving latency.
+- Viewed `research-mail-v3.png`: the actual public example shows an additional folder/account rail, a dense message list with metadata, and a message pane. That rail would add unused categories here. The notebook keeps the list/detail relationship while excluding account and mail operations. This is reference comparison, not imported shadcn source.
+- Viewed Pico's actual form and modal documentation renders (`research-pico.png`, `research-pico-modal.png`). Their control consistency and modal content/footer grouping carry through the pinned CSS. Project layout, identity, bilingual copy, draft model and adapters are original responsibilities.
+- Local trial and assembled use: `run-1`/`run-2` demonstrate the selected foundation with actual note text, including long Chinese titles. Initial inspection found inherited blue and an unreadable briefly transitioning dark wordmark. The corrected explicit root token scope and settled captures in `final/` show the intended green roles and readable wordmark. The original captures remain archived.
+- Save feedback moved to the sticky area directly beneath the editor toolbar because long notes placed bottom feedback outside the viewing area. The current mobile list has its own read-error explanation and recovery control, avoiding an error hidden inside the unopened editor.
+- A real read-recovery defect was found by the follow-up test: typing after a failed read changed the retry action to draft persistence. The input handler now preserves the read recovery action; the focused recheck verifies both retained and durably stored text.
+
+## Current quality judgment and remaining scope
+
+The viewed final 1440×900 and 390×844 surfaces support a calm, editorial notebook with purposeful collection/editor hierarchy. The serif title, subdued metadata, inset reading width and contrasting selected row carry the chosen direction through populated work. Long body text uses native textarea scrolling; sticky save and feedback remain available. The sampled phone delete dialog identifies the full Chinese note title and places cancellation first.
+
+Actual assertion coverage and viewing records are in `evidence/REVIEW.md`. No owner acceptance or production-readiness claim is made. A backup import flow, atomic multi-tab draft merging, real mobile keyboard testing and screen-reader playback remain outside the inspected increment.
+
+## Sources
+
+- https://simplenote.com/ and https://simplenote.com/help/ — task and visual research; captured public marketing depiction, not authenticated operation.
+- https://v3.shadcn.com/examples/mail — materially different public three-pane comparison. The current `/examples/mail` URL returned 404; retained separately.
+- https://picocss.com/docs/forms and https://picocss.com/docs/modal — actual form/modal render and API documentation.
+- https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.min.css and https://raw.githubusercontent.com/picocss/pico/v2.1.1/LICENSE.md — adopted CSS and permission notice.
+- Supplied `common-guidance.md` / `common-guidance-raw.md` — native modal semantics, progressive field sizing, pinned browser compatibility and reduced-motion guidance.

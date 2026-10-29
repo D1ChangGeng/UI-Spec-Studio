@@ -1,0 +1,35 @@
+# Read a source while the answer is still arriving
+
+Meridian now supports inline citations during streaming. A completed paragraph exposes its citation while the rest of the answer continues. Opening it highlights the cited paragraph and shows the corresponding excerpt in the source note.
+
+**Try the updated workspace:** http://127.0.0.1:8739/app/
+
+![A source beside an unfolding answer](evidence/continuation/02-source-during-stream.png)
+
+## What changed
+
+- **Citations arrive with the answer.** You can inspect evidence before the response finishes. The citation control remains stable while later text arrives.
+- **The relationship is visible.** The selected paragraph is highlighted, its citation is selected, and a short excerpt appears in the source panel.
+- **Reading stays under your control.** Opening a source holds your reading position. Back to latest explicitly resumes following, even with the desktop panel open; scrolling upward stops following again.
+- **The conversation remains usable beside a source.** You can expand a multiline draft, stop and continue a response, or recover from a simulated failure while the desktop source stays open.
+- **Returning preserves context.** Closing the panel restores the citation focus and reading anchor without losing the draft. On a phone, a focused source view has a sticky Back control and native Escape dismissal.
+
+The existing editorial typography, quiet green palette and shared reading/composer proportions are retained. The source experience adds a clear relationship to the answer without changing the workspace's visual direction.
+
+## Checked in the actual app
+
+The continuation was exercised over local HTTP at 1440×900 and 390×844, with an additional 1280×900 anchor/reflow check. Automated checks cover citation availability during streaming, stable paragraph/control identity, source opening and return, draft growth, stop/continue, failure/retry, explicit following and interruption, keyboard activation, native focus return and overflow. The original conversation/persistence regression was rerun separately.
+
+Actual screenshots were opened and visually inspected, including the live source/paragraph pairing, expanded composer, interruption and failure with the panel present, light/dark appearance, phone return, and the source scrolled beneath its sticky Back control. A partly clipped recovery button found in review was corrected and its original capture preserved.
+
+**Results: 31/31 focused source-reading checks, 6/6 keyboard/following/reflow checks, and 29/29 inherited regression assertions passed.** The focused run reported no JavaScript errors or external desktop requests. The selected paragraph stayed at the same 285.25px viewport position during the sampled arrival interval; a separate 1280px check preserved that anchor through panel close. These are scoped local-browser measurements.
+
+Current results and reproduction records are in `evidence/continuation/results.json`, `follow-results.json`, and `regression/test-results.json`. The new evidence is separate from the first delivery's logs and captures.
+
+## Boundaries
+
+Answers, source notes and citation mappings remain clearly identified synthetic examples. No questions or files are sent to an external service, and no live retrieval or file parsing is involved. Nothing was published or deployed.
+
+The remaining validation gap is physical-device keyboard/touch behavior, screen-reader use and additional browsers. On narrow screens, the source view intentionally focuses reading; Back returns to the conversation for composing or stopping. The current browser assertions and viewed captures do not establish formal accessibility conformance or real-world usability acceptance.
+
+The detailed continuation design and repair record is in `CONTINUATION-DESIGN.md`. The original `DELIVERY.md` is unchanged.

@@ -1,0 +1,27 @@
+# Leafnote: typography and density update
+
+Leafnote now has a visible **Density** preference in the shared header, with **Comfortable** and **Compact** modes. The preference applies to both the collection and editor and survives reload.
+
+[Open the local preview](http://localhost:8844/)
+
+![Comfortable Chinese reading layout](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/continuation/1440-zh-comfortable-editor.png)
+
+![Compact mobile editor](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/continuation/390-en-compact-editor.png)
+
+## What changed
+
+- **Clearer reading roles:** a stronger title, explicit context label, more readable metadata and a bounded prose measure.
+- **Better long-note rhythm:** Comfortable uses larger body text and more generous spacing; Compact fits more notes and prose while retaining the same hierarchy.
+- **Chinese and English treatments:** natural-case English labels, untracked Chinese labels, and increased Chinese title leading.
+- **Narrow-screen controls:** Density has its own mobile header row, keeping its label and current value visible.
+- **State preservation:** the selected note and unsaved draft remain intact through density, language and theme changes. The stored draft and density also survive reload.
+
+## Checked in the running app
+
+The continuation browser run passed **30 scoped checks**, covering long-content creation, saving, search, reopening, delete/cancel, deletion persistence, density persistence, draft/selection retention, and layout at **1440×900 and 390×844**. I separately viewed representative desktop and mobile captures, including comfortable/compact Chinese text and a dark mobile state.
+
+The host interrupted this session after roughly a minute of initial work. The first resumed check could not connect because the preview server had stopped; that original failure is preserved. After restoring the server, the browser checks completed. This is not presented as an uninterrupted timed run.
+
+Details are in [REVIEW.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/continuation/REVIEW.md) and [results.json](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/continuation/results.json).
+
+Remaining verification includes physical mobile keyboards, screen readers, Safari/Firefox and the complete density/theme/language combination matrix. The notebook retains its browser-local storage boundary; backup import and automatic conflict merging remain unimplemented. Nothing was deployed or published.

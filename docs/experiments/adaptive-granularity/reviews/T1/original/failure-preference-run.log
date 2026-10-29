@@ -1,0 +1,108 @@
+{
+  "started_utc": "2026-10-29T21:57:17Z",
+  "variants": {
+    "variant-01": {
+      "before_preference": [
+        {
+          "text": "Could not save. Your text is still here. Export a backup or try again.",
+          "error": "true"
+        }
+      ],
+      "retry_before": true,
+      "after_density": [
+        {
+          "text": "View changed for this session. The preference could not be saved.",
+          "error": "false"
+        }
+      ],
+      "retry_after": false,
+      "draft_retained": true,
+      "capture": "review-output/failure-preference-captures/variant-01-failure-then-density.png",
+      "after_theme_and_locale": [
+        {
+          "text": "显示已更改，但无法保存此偏好，刷新后可能恢复。",
+          "error": "false"
+        }
+      ],
+      "after_recovery_save": [
+        {
+          "text": "已保存在当前浏览器。",
+          "error": "false"
+        }
+      ]
+    },
+    "variant-02": {
+      "before_preference": [
+        {
+          "text": "Could not save. Your text is still here. Try again or export a backup.",
+          "error": "true"
+        }
+      ],
+      "retry_before": true,
+      "after_density": [
+        {
+          "text": "Settings changed for this visit, but the browser could not store your preference.",
+          "error": "false"
+        }
+      ],
+      "retry_after": false,
+      "draft_retained": true,
+      "capture": "review-output/failure-preference-captures/variant-02-failure-then-density.png",
+      "after_theme_and_locale": [
+        {
+          "text": "设置已应用于当前页面，但浏览器未能保存此偏好。",
+          "error": "false"
+        }
+      ],
+      "after_recovery_save": [
+        {
+          "text": "已保存到此浏览器。",
+          "error": "false"
+        }
+      ]
+    },
+    "variant-03": {
+      "before_preference": [
+        {
+          "text": "Could not save the note. Your current text is still here. Export a copy or try again.Try again",
+          "error": "true"
+        },
+        {
+          "text": "Unsaved changes",
+          "error": null
+        }
+      ],
+      "retry_before": true,
+      "after_density": [
+        {
+          "text": "Could not save the note. Your current text is still here. Export a copy or try again.Try again",
+          "error": "true"
+        },
+        {
+          "text": "Unsaved changes",
+          "error": null
+        }
+      ],
+      "retry_after": true,
+      "draft_retained": true,
+      "capture": "review-output/failure-preference-captures/variant-03-failure-then-density.png",
+      "after_theme_and_locale": [
+        {
+          "text": "未能保存笔记。当前内容仍在页面中，请导出副本或重试。重试",
+          "error": "true"
+        },
+        {
+          "text": "尚未保存的修改",
+          "error": null
+        }
+      ],
+      "after_recovery_save": [
+        {
+          "text": "已保存到本地",
+          "error": null
+        }
+      ]
+    }
+  },
+  "finished_utc": "2026-10-29T21:57:22Z"
+}

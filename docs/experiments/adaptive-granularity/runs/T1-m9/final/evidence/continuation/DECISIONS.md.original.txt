@@ -1,0 +1,31 @@
+# Continuation decision record
+
+This increment improves the shared reading system and adds a persisted density preference on the existing notebook. It inherits the previously viewed Bootstrap list and shadcn collection/reading relationship. It does not introduce another shell or duplicate the app.
+
+The original inspection identified very small metadata and a long Chinese title ending in a one-character line. The new trial uses larger metadata, sentence-case English section labels, a bounded 650 px comfortable reading measure, stable 16 px body text in both modes, and more generous CJK leading. Titles retain serif identity but now grow from content, with balanced wrapping as a progressive typographic enhancement. Content language is inferred separately for title/body, so switching interface language does not impose Latin tracking on Chinese prose.
+
+Density changes shared variables for list padding, header rhythm, note title scale, reading leading, document padding and editor toolbar height. Compact reduces spacing without shrinking prose below 16 px. Comfortable remains the default. A labeled native select uses the already bundled Bootstrap 5.3.8 `.form-select` family (https://getbootstrap.com/docs/5.3/forms/select/). On narrow screens it occupies a second header row, preserving understandable labels and separate language/theme controls. This costs vertical space but keeps the preference reachable in collection and editor.
+
+The density handler updates a root attribute and preferences only. It does not call select(), rebuild the editor or mutate note content. The existing language and theme handlers retain their state ownership. Density is serialized with the prior locale/theme preference key. Preference-write failure now reports that the setting could not be retained for the next visit.
+
+MDN text-wrap documentation was read (https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap). Balance affects wrapping without changing stored text; normal wrapping remains the fallback. Native select semantics/keyboard behavior remain browser-owned. No new UI dependency was installed.
+
+A host interruption was explicitly reported by the parent and the continuation window was restarted. `session.json` records this; elapsed work must not be represented as one uninterrupted timed run. Existing DELIVERY.md and prior evidence are preserved. New captures and checks live in this directory.
+
+## Actual trial and final review
+
+Viewed real captures: English long notes in Comfortable and Compact at 1440×900 and 390×844 (light); Chinese long notes in both modes at 1440×900 (light) and 390×844 (dark); the mobile collection in both modes; a narrow delete dialog identifying a long Chinese title; and the reachable bottom of a long compact note. These are actual pixel observations, separate from the browser checks.
+
+The Comfortable English trial has a 650 px desktop body measure, 16 px text, 30.4 px leading and a 40 px title. Compact has a 680 px measure, the same 16 px body, 26.4 px leading and a 34 px title. At 390 px the body still stays 16 px; the title uses 31 px or 28 px. CJK title sizing is 90% of the role size with 1.5 leading, and CJK body leading gains 0.15. These are implemented and browser-measured settings, not a user-study result. The paired views show more text in Compact while maintaining the selected-note treatment and visible return/save controls. Collection captures show the density effect without changing the order or removing metadata.
+
+The narrow preference uses a separate labeled header row. It takes some vertical space from the collection, a deliberate tradeoff for an understandable, keyboard-operable preference that is available while editing. Lists and long note bodies still scroll; the focused bottom-of-note capture shows the final paragraph and character count reachable with Ctrl+End.
+
+Final executed checks: 21 density/long-content assertions, 20 existing notebook regression assertions and two focused checks for compact scrolling and preference-write failure/recovery, all passing. The 16 long-note combinations cover two viewports, two languages, two densities and two themes. Saved notes and a distinct unsaved suffix survive density/theme/language changes; the persisted density, selected draft and input survive reload. The long Chinese note is saved, searched by body content, reopened, retained after delete cancellation, and removed only after confirmation. No JavaScript page errors were recorded.
+
+### Preserved failures and limits
+
+`density-run-1.log` records connection refusal because the local server had not survived the host interruption. The server was restarted. `density-run-2.log`, `density-results-first.json` and `check_density-first.py` preserve a harness mistake: the assertion read textarea textContent instead of its current value. The corrected value assertion passes in `density-run-3.log`. No product behavior was changed to satisfy that mistaken assertion.
+
+The preference failure check injected a failure only for `leafnote-preferences`: the chosen density still applies, a visible message explains the failed persistence, and a later successful preference change clears the message. The note draft and selection remain intact. Original tests and DELIVERY.md were not overwritten.
+
+Visual inspection is sampled as listed above. Other theme combinations have executed reflow/content checks and captures, not a separate exhaustive pixel-review claim. No real-device keyboard, screen-reader, Firefox or Safari session was added. Content-language classification is a small script heuristic, not linguistic analysis; mixed-script notes retain their original text. There is no collaborative draft merge or cloud behavior added.

@@ -1,0 +1,60 @@
+# Fieldnote — current design and evidence
+
+## Experience and decision model
+
+The object is one research note: write → save to browser Storage → read the saved face → turn back and continue. The supplied task authorizes an implemented, provisional visual direction, not publication or owner acceptance.
+
+- **L0–L1:** Keep one tangible object through editing, confirmation and return. Preserve the existing `ui-spec-temporal-note-v1` record, 600-character bound, pending snapshot, newer edits and real failure/retry behavior.
+- **L2–L3:** A stable contextual question sits beside a single two-sided card. The editor and saved record share size and position; the previous separate collection is folded into the card. Navigation remains outside the moving object so repeated reversals are possible.
+- **L4:** A warm, matte field-paper direction with editorial serif display and note text, restrained sans-serif controls, hairline rules, thin edge light and a diffuse stationary cast shadow. This is authored identity work, not a copied page template.
+- **L5:** Source in `app/`; baseline source and captures in `evidence/original/`; source research in `evidence/references/`; runnable browser checks and resulting captures in `evidence/`.
+
+## Consequential decisions and their evidence
+
+### D1 — Center pivot and truthful state
+
+Question: can editing become the saved note while maintaining position, understandable reversal and data truth?
+
+Observed initial full desktop: the decorative card and editor were separate; saved-note navigation replaced both with a different layout. The orbit did not describe a save. Source inspection confirmed the independent flip and save handlers.
+
+Compared David DeSandro's centered flip and edge-pivot slide-flip in the original public demonstration. Ordered reference frames were acquired through the real controls; center-1 and slide-1 were viewed. The slide carries a larger sideways sweep; the centered geometry stays attached to the same container. Selected the centered construction. The source supplies scene → object → opposing faces, perspective, preserve-3d, backface visibility and interruptible CSS target changes. Material, composition, lifecycle, focus and persistence integration are project-owned adaptations.
+
+Adoption source: https://3dtransforms.desandro.com/card-flip (example code MIT, written content CC-BY; accessed 2026-10-29). The page links the MIT license at https://desandro.mit-license.org/. First browser attempt failed with `ERR_CERT_AUTHORITY_INVALID`; the original failure is retained in the work log. Retried a public read-only research context with certificate verification disabled. No protected data was sent.
+
+The alternate Magic UI catalog was researched but offered text flips and pointer-driven lighting rather than a note editing/saving lifecycle. No Magic UI code was adopted. A broader template would replace the required compact single-note model; the existing native textarea/buttons and stored-record contract were retained.
+
+The completed save, never the beginning of the delay, selects the back. New text typed during a save remains on the front. The backend is real localStorage; the 650 ms delay is explicitly identified as demo timing in Local demo. Failure leaves the stored version and draft intact. CSS reversals start from the interpolated transform. Both faces are inert while turning, with a stable outside control carrying focus; focus moves into the destination only if the user has stayed on that control.
+
+### D2 — Stable working size and long notes
+
+Question: should typing change the physical card size? The field-sizing guidance was read; its automatic growth would alter the identity-bearing geometry here. Choose a bounded textarea with real internal scrolling and a fixed matching saved-text region. No truncation or `maxlength` discards pasted text; over-limit drafts remain editable and disable save with explicit feedback.
+
+### D3 — Theme, locale and reduced motion
+
+Retain English/Chinese controls and the original note domain. Use theme-specific paper, text, edge, accent and shadow roles; preserve drafts when toggling. Reduced motion swaps face visibility in the same stationary card, with identical data and focus semantics, avoiding rotation altogether. No perpetual decoration remains.
+
+## Evidence scope and remaining uncertainty
+
+The implementation must be checked over HTTP at 1440×900 and 390×844 in both themes, with save/reload, edited pending snapshot, storage write/read/remove errors, retry, rapid reversal, long text and keyboard focus. Browser assertions establish exercised semantics; captures require separate viewing. Ordered frames support sampled temporal states, not presented frame rate or perceived smoothness on real mobile hardware. Safari, Firefox, screen readers and real mobile keyboards remain outside this local Chromium check. No production service, cloud sync, multi-tab conflict resolution or cross-device persistence is claimed.
+
+## Review outcome — current increment
+
+Implemented and reviewed, pending user acceptance. The original baseline remains in `evidence/original/`. Reference centered/slide sequences were subsequently viewed together in `evidence/reference-sequences.jpg`, with original full-size frames available alongside their acquired HTML. The MIT source license was opened at its linked official URL and the 2026 notice retained.
+
+The provisional visual direction survived the integrated task: a large serif question context counterbalances the paper card; writing and reading occupy the same rectangle. In the sampled turn frames the faces retain their opposing geometry and surrounding controls remain fixed. On mobile, the original revised heading accidentally joined two words when its line break was hidden; the final heading explicitly breaks between phrases. A highlight layer initially lightened small labels; moving it beneath content restored their intended contrast. These were perceptual findings from viewed captures, not inferred from tests.
+
+The first complete browser run aborted on an instrumentation error: a monkey-patch assignment returned a function that Playwright invoked without a Storage receiver (`Illegal invocation`). Corrected the fixture and preserved `evidence/test-run-1.log`. The second run exposed a real reduced-motion hit-test defect: the front section intercepted its descendant Save button while outer perspective remained. Flattening only the card was insufficient (`evidence/reduced-probe.log`); element hit-testing proved that removing outer perspective restored the button (`evidence/reduced-diagnosis.log`). The final equivalent removes both rotation and perspective. Original failures remain preserved; they have not been relabelled as passes.
+
+### Executed assurance
+
+- `evidence/run3/report.json`: 63 checks passed in the pinned Chromium browser, including 1440×900 and 390×844, light/dark, save pending/confirmation, real localStorage and reload, draft retention while saving, write failure/retry, rapid reversals, over-limit preservation, remove failure/retry, malformed read recovery, reduced motion and Chinese narrow layouts. No page errors were recorded in the monitored viewport/theme runs.
+- `evidence/extra/report.json`: eight additional checks passed for keyboard save, selection restoration, rapid duplicate-save guards, narrow long-text scrolling, narrow failure draft retention, keyboard escape from retry, and actual injected `getItem` exceptions. Its frame/action records include browser-clock timestamps and capture brackets.
+- `evidence/final/report.json`: seven targeted checks passed after the final wording/focus and empty-note refinement, proving that a first failed save makes no previous-saved-note claim, stays on the editor with empty storage, preserves focus during keyboard retry and reaches saved content/focus on success. This record contains final source hashes. The prior 71 checks remain relevant to unchanged mechanisms; the final changes were scoped to failure wording, retry-focus restoration and truthful empty-saved-note wording. An intentionally empty note was also saved through the actual control and its distinct saved-empty message checked.
+
+### Viewed evidence and interpretation
+
+Viewed baseline desktop; final normal light/dark desktop and mobile samples; light/dark reduced-motion mobile; Chinese dark; long saved text and mobile over-limit editing; existing-save and first-save failures. Viewed the reference comparison sheet, save progression sheet, full-size mobile turn frames 0–3, reversal middle/settled, and desktop reversal settled. In those samples the task remains legible, saved text and draft remain distinguishable, card dimensions and page anchors stay constant, and error actions are reachable. The short status region remains directly below the mobile card; the page permits normal vertical scrolling for lower footer/settings content.
+
+### Evidence limits and next useful work
+
+No video playback, presented-frame trace, physical phone, onscreen keyboard or assistive-technology session was inspected. Ordered frames establish their visible states and ordering, with sampling gaps. They do not prove all intervening frames or subjective smoothness. Cross-browser Safari/Firefox, physical touch/keyboard behavior, browser zoom/text-spacing and multi-tab conflict behavior remain unverified. The next useful assurance is an actual mobile Safari/Chrome and screen-reader pass through save, reversal, long content and recovery. No production deployment or owner approval is claimed.

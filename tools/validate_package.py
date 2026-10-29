@@ -47,6 +47,13 @@ REQUIRED += ["docs/STRUCTURAL-INSPECTION.md", "docs/REVIEW-v1.15.0.md",
 REQUIRED += ["docs/VISUAL-CRAFT-REUSE.md", "docs/FINESSE-ADAPTATION.md",
              "docs/REVIEW-v1.16.0.md", "docs/evidence/v1.16.0/continuity.json",
              "tests/test_visual_craft_release.py", "tests/source_continuity.py"]
+REQUIRED += ["docs/REVIEW-v1.17.0.md", "docs/evidence/v1.17.0/continuity.json",
+             "tests/test_adaptive_specs.py", "tools/prepare_granularity_experiment.py",
+             "tools/replay_granularity_run.py",
+             "docs/experiments/adaptive-granularity/PROTOCOL.md",
+             "docs/experiments/adaptive-granularity/baseline-identity.json",
+             "docs/experiments/adaptive-granularity/judgment-module.md",
+             "docs/experiments/adaptive-granularity/tasks.json"]
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 
 

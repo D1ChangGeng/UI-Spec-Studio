@@ -1,0 +1,401 @@
+{
+  "checks": [
+    {
+      "name": "1440-light-no-preference honest empty",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference note 1 saved face",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference return 1 focus",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference note 2 saved face",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference return 2 focus",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference note 3 saved face",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference return 3 focus",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference three persisted",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference no overflow",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference long draft prepared",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference back prepared before turn",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference background save belongs to second",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference first draft unchanged",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference completion did not flip other",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference switched draft retained",
+      "pass": true
+    },
+    {
+      "name": "1440-light-no-preference reload three saved",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference honest empty",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference note 1 saved face",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference return 1 focus",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference note 2 saved face",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference return 2 focus",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference note 3 saved face",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference return 3 focus",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference three persisted",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference no overflow",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference long draft prepared",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference back prepared before turn",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference background save belongs to second",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference first draft unchanged",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference completion did not flip other",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference switched draft retained",
+      "pass": true
+    },
+    {
+      "name": "390-dark-no-preference reload three saved",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce honest empty",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce note 1 saved face",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce return 1 focus",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce note 2 saved face",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce return 2 focus",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce note 3 saved face",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce return 3 focus",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce three persisted",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce no overflow",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce long draft prepared",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce back prepared before turn",
+      "pass": false
+    },
+    {
+      "name": "390-light-reduce background save belongs to second",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce first draft unchanged",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce completion did not flip other",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce switched draft retained",
+      "pass": true
+    },
+    {
+      "name": "390-light-reduce reload three saved",
+      "pass": true
+    },
+    {
+      "name": "legacy appears without write",
+      "pass": true
+    },
+    {
+      "name": "failure leaves front",
+      "pass": true
+    },
+    {
+      "name": "failure keeps legacy",
+      "pass": true
+    },
+    {
+      "name": "failure draft badge",
+      "pass": true
+    },
+    {
+      "name": "recovery opens retained draft",
+      "pass": true
+    },
+    {
+      "name": "retry persisted collection",
+      "pass": true
+    },
+    {
+      "name": "bad data blocks new writes",
+      "pass": true
+    },
+    {
+      "name": "read retry recovers",
+      "pass": true
+    },
+    {
+      "name": "clear honest empty",
+      "pass": true
+    },
+    {
+      "name": "clear does not resurrect legacy",
+      "pass": true
+    }
+  ],
+  "frames": [
+    {
+      "file": "1440-light-no-preference-empty.png",
+      "bracket_ms": [
+        44.89999999944121,
+        116.5
+      ]
+    },
+    {
+      "file": "1440-light-no-preference-collection.png",
+      "bracket_ms": [
+        7823.0999999996275,
+        7869
+      ]
+    },
+    {
+      "file": "1440-light-no-preference-detail.png",
+      "bracket_ms": [
+        10113.5,
+        10179.299999999814
+      ]
+    },
+    {
+      "file": "390-dark-no-preference-empty.png",
+      "bracket_ms": [
+        37.40000000037253,
+        85.80000000074506
+      ]
+    },
+    {
+      "file": "390-dark-no-preference-collection.png",
+      "bracket_ms": [
+        7892.9000000003725,
+        7932.600000000559
+      ]
+    },
+    {
+      "file": "390-dark-no-preference-detail.png",
+      "bracket_ms": [
+        10231.200000000186,
+        10274.5
+      ]
+    },
+    {
+      "file": "390-light-reduce-empty.png",
+      "bracket_ms": [
+        38.59999999962747,
+        78.79999999981374
+      ]
+    },
+    {
+      "file": "390-light-reduce-collection.png",
+      "bracket_ms": [
+        7792.5,
+        7814.699999999255
+      ]
+    },
+    {
+      "file": "390-light-reduce-detail.png",
+      "bracket_ms": [
+        10063.299999999814,
+        10103
+      ]
+    },
+    {
+      "file": "failure-collection.png",
+      "bracket_ms": [
+        1962.2999999998137,
+        2002.199999999255
+      ]
+    },
+    {
+      "file": "open-before.png",
+      "bracket_ms": [
+        4562.5999999996275,
+        4608.299999999814
+      ]
+    },
+    {
+      "file": "open-0.png",
+      "bracket_ms": [
+        4703.5999999996275,
+        4792.399999999441
+      ]
+    },
+    {
+      "file": "open-1.png",
+      "bracket_ms": [
+        4850.299999999814,
+        4952.699999999255
+      ]
+    },
+    {
+      "file": "open-2.png",
+      "bracket_ms": [
+        5012,
+        5148.0999999996275
+      ]
+    },
+    {
+      "file": "open-3.png",
+      "bracket_ms": [
+        5207.399999999441,
+        5269.5
+      ]
+    },
+    {
+      "file": "open-4.png",
+      "bracket_ms": [
+        5327.899999999441,
+        5383.0999999996275
+      ]
+    },
+    {
+      "file": "close-0.png",
+      "bracket_ms": [
+        5481.899999999441,
+        5548.299999999814
+      ]
+    },
+    {
+      "file": "close-1.png",
+      "bracket_ms": [
+        5606.5,
+        5698.699999999255
+      ]
+    },
+    {
+      "file": "close-2.png",
+      "bracket_ms": [
+        5756.799999999814,
+        5841.5
+      ]
+    },
+    {
+      "file": "close-3.png",
+      "bracket_ms": [
+        5900.5,
+        5936.199999999255
+      ]
+    },
+    {
+      "file": "close-4.png",
+      "bracket_ms": [
+        5994.699999999255,
+        6033.5
+      ]
+    },
+    {
+      "file": "unreadable.png",
+      "bracket_ms": [
+        15.299999999813735,
+        61.10000000055879
+      ]
+    }
+  ],
+  "errors": [],
+  "browser": "143.0.7499.4",
+  "hashes": {
+    "styles.css": "0e7543921bc305ee6d2d2c57bd89aa4877b64090ab736f7bdffc5d7198e56554",
+    "README.md": "d3703c9d0bb47e9928ed15036abb865b8f559e4d0f062f528250922c8f5029a4",
+    "app.js": "90e53dad566e9767c9591b149c28006c7ab293368e95ee4aeaec93f79504a52b",
+    "index.html": "55d77ac0d40967fb5f5eb6b2ab915320c14adc7b307310fbe4535b0ba23b4d36",
+    "THIRD_PARTY_NOTICES.md": "45e7740fa6eae42dd51afcb3b83a75d28cdd245cba426f605365357aa6450d7f"
+  }
+}

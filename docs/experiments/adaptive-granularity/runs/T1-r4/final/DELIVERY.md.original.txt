@@ -1,0 +1,37 @@
+# Leafnote is ready to try
+
+The one-note editor is now a complete browser-local notebook: create several notes, save them, search their titles and context, reopen a result, and continue writing. The interface keeps the note collection beside the editor on desktop and provides a clear collection → editor → return path on a phone.
+
+Open the running local preview at **http://localhost:8844/**. A fresh browser starts empty; **Explore example notes** adds four clearly identified synthetic notes, including bilingual and long-form examples. Source and run instructions are in [app/README.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/app/README.md).
+
+## The implemented result
+
+![Leafnote desktop notebook](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/final-1440-en-light-editor.png)
+
+![Leafnote mobile editor, Chinese dark theme](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/final-390-zh-dark-editor.png)
+
+The collection uses a quiet stone surface, compact title/context previews and a persistent selection rule. The writing area uses a serif title, restrained labels and a comfortable reading measure. A locally bundled Inter font keeps the controls and body text consistent. The light and dark themes retain the same hierarchy.
+
+The design was informed by actual visual comparison of Bootstrap’s sidebar/list-group example and shadcn’s Mail workspace. Bootstrap 5.3.8 supplies the adopted list, button and form CSS; the shadcn example informed the collection/detail relationship. Its extra folder column was unnecessary for this notebook. The underlying source choices, licenses, comparison and review findings are documented in [DESIGN.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/DESIGN.md).
+
+## What works
+
+- **Create, save and reopen:** notes have a title and context, a visible selected state and a saved date. Search matches both title and context, including Chinese text.
+- **Draft safety:** typing keeps a separate local draft. Switching notes, changing language/theme and reloading preserve it. Save commits that draft to the saved collection.
+- **Clear storage feedback:** a failed write retains the current text and offers retry. Unreadable stored content remains untouched and exportable. Concurrent changes from another tab block stale writes and explain how to preserve the current draft.
+- **Safe deletion:** the confirmation names the note, starts on Cancel, supports Escape, and keeps the note if the write fails. Keyboard shortcuts cannot change the target behind the confirmation.
+- **Existing content:** the original one-note storage key is imported when appropriate and remains unchanged as a recovery copy.
+- **Backup:** Export notebook downloads JSON containing saved notes, drafts and the relevant raw stored data.
+- **Keyboard access:** native controls support Tab and Shift+Tab; Ctrl/Command+S saves, `/` focuses search, and `N` opens a new note when focus is outside an input.
+
+## What was checked
+
+The app was served over HTTP and exercised in Chromium 143 using actual browser localStorage. The main run passed **27 assertions**, covering creation, save/reload, body search, draft recovery, language/theme preservation, named deletion/cancellation, keyboard save, storage failures/retry, legacy preservation and export.
+
+A final focused run passed **30 checks**, including deletion failure/retry, real shared-context tab conflicts, title visibility, long-text scrolling and horizontal overflow in English/Chinese and light/dark at **1440×900 and 390×844**, plus 320px reflow. A separate final check confirmed that long titles fit in **all eight combinations**.
+
+I viewed the rendered captures independently of those assertions. That review found and fixed inherited scroll positions between notes, a cropped long title, weak list previews, and a brief dark-theme contrast transition. Original failed and incomplete test attempts and the earlier visual captures remain in `evidence/`; they have not been relabeled as passes. See [evidence/final-checks.json](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/final-checks.json), [evidence/test-results-run2.json](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/test-results-run2.json), and [evidence/long-title-check.json](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/long-title-check.json).
+
+## Remaining boundaries
+
+This remains a local demonstration. Notes stay in this browser; there is no server, account or cloud synchronization. JSON export is implemented, but a backup-import screen and automatic conflict merging are not. Corrupted data can be exported for manual recovery. Physical phone keyboards, screen-reader use, Safari/Firefox and very large collections have not been verified. No deployment or publication was performed.

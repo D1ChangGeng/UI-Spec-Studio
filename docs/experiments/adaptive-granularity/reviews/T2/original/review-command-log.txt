@@ -1,0 +1,15 @@
+2026-10-29 about 21:46 UTC. Read REVIEW-INSTRUCTIONS.md, TASK-initial.md, TASK-continuation.md, TOOLING.md and listed assigned packet files. Did not open input-identities.json or parent/sibling records.
+Reviewed final index.html/app.js controls for all variants.
+One functions.exec orchestration call failed before executing tools: SyntaxError: Unexpected identifier 'text'. Corrected the orchestration only; no product code changed.
+Servers: test-env/bin/python review-output/serve.py (requires local socket permission).
+Screenshots: FONTCONFIG_FILE=.../preview-fontconfig.xml PLAYWRIGHT_BROWSERS_PATH=.../playwright-cache test-env/bin/python review-output/snapshot.py.
+
+Original exercise.py retained. Variant-02 wait_for_function string eval was blocked by its CSP; this is a harness error, not a product defect. Rerun uses locator wait for hidden Stop. Variant-03 initial failure-retry locator matched the previous completed answer before the new failure appeared; rerun scopes Retry to the last answer. Original screenshots and events retained.
+
+Additional commands executed with the supplied environment variables and local browser permission: supplementary.py, targeted.py, small-scroll.py. These are review-only scenarios; source files were not edited.
+Metadata assembled from preserved event logs and explicit view_image inventory. Hash snapshot taken only for source identification; no independent pre-review hash comparison claimed.
+
+Additional commands executed with the supplied environment variables and local browser permission: supplementary.py, targeted.py, small-scroll.py. These are review-only scenarios; source files were not edited.
+Metadata assembled from preserved event logs and explicit view_image inventory. Hash snapshot taken only for source identification; no independent pre-review hash comparison claimed.
+
+2026-10-29T22:02:47.270746+00:00 — Final report-link and evidence-inventory validation passed; source hashes unchanged since review snapshot. Review server session stopped with Ctrl+C (exit 130); this is deliberate teardown. REVIEW.md, review.json and evidence frozen. No additional product testing requested or performed after freeze.

@@ -1,0 +1,48 @@
+
+│
+●   codex  Agent detected — installing non-interactively
+[?25l│
+◇  Source: /workspace/scratch/43b440780c87/ui-spec-studio
+[?25h[?25l│
+◇  Local path validated
+[?25h[?25l│
+◇  Found 1 skill
+[?25h│
+●  Selected 1 skill: ui-spec
+
+│
+◇  Installation Summary ──────────────────╮
+│                                         │
+│  ./.agents/skills/ui-spec               │
+│    copy → Codex, Claude Code, OpenCode  │
+│                                         │
+├─────────────────────────────────────────╯
+[?25l│
+◇  Installation complete
+[?25h
+│
+◇  Installed 1 skill ────────────╮
+│                                │
+│  ✓ ui-spec (copied)            │
+│    → ./.agents/skills/ui-spec  │
+│    → ./.claude/skills/ui-spec  │
+│                                │
+├────────────────────────────────╯
+
+│
+└  Done!  Review skills before use; they run with full agent permissions.
+
+
+{
+  "source": "/workspace/scratch/43b440780c87/ui-spec-studio",
+  "installer": "skills@1.7.4",
+  "requested_agents": [
+    "codex",
+    "claude-code",
+    "opencode"
+  ],
+  "installed_copies": 2,
+  "verified_files_per_copy": 37,
+  "helpers": "prepare, two structural inspectors, resource lookup and independent file digest executed",
+  "scope": "CLI installation and file integrity; host model execution is separate"
+}

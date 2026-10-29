@@ -1,0 +1,30 @@
+# Source and adoption record
+
+## Actual adoption
+
+The provided `../reference-project/` is a public native demonstration, not an approved product design. Its source was read, run, operated through question → answer → source, captured and visually inspected. `evidence/references/supplied*.png` preserves those views.
+
+Selected CSS relationships were transferred into `foundation.css`: the 48rem reading/composer measure, input/action flex grouping, full-width composer, bounded right-aligned user bubble, 22px bubble radius and narrow-width adaptation. Meridian retains the shared composer across empty and active states, then adapts its surface, action row and typography. The composer radius is deliberately reduced to 23px for the two-row control group. `app.js` extends the reference's timer/request-token cancellation technique; thread storage, incremental text-node streaming and the source panel are new project-owned behavior.
+
+The supplied foundation identifies its upstream as [assistant-ui's ChatGPT page](https://www.assistant-ui.com/examples/chatgpt), [source at commit 1fbf00dd0388fee912af95401876a6cc3c232b2c](https://github.com/assistant-ui/assistant-ui/blob/1fbf00dd0388fee912af95401876a6cc3c232b2c/apps/docs/components/pages/examples/chatgpt.tsx), blob `0f22e7855a954269ecdee0fd9963240c966e1bc1`. That identity is preserved from the supplied source record. The current public documentation and live demonstration were additionally retrieved and viewed on 2026-10-29. The deployed demo's revision is unknown; it is not claimed to be the exact pinned revision.
+
+This is a **native design transfer and focused CSS adaptation**. The assistant-ui React runtime is not installed or represented as adopted. Its MIT notice is retained in `THIRD-PARTY.md`. No Radix color values or font assets were copied into Meridian; the supplied sample's unused color notice is identified below.
+
+## Compared reference
+
+[shadcn sidebar-01](https://ui.shadcn.com/view/new-york-v4/sidebar-01), reached through the [official sidebar blocks page](https://ui.shadcn.com/blocks/sidebar), was captured at 1440×900 and visually inspected. Its distinct advantage is persistent grouped navigation with a content header. The displayed placeholder-card arrangement does not establish a conversational reading/composer system. Meridian uses the navigation relationship as inspiration and retains the assistant-ui-derived conversation foundation for the primary task. No shadcn source or runtime is copied.
+
+## Independent design and bounded custom scope
+
+Meridian's parchment/olive/rust theme, serif display and answer headings, wordmark, orbit motif, inline SVG symbols, content and source reading treatment are project-authored. System fonts avoid external downloads. The supplied reference lacked growing streamed content, real thread/draft history, filename attachments and an adjacent source reader; those concrete gaps define the new state and layout responsibilities. They are verified independently of the adopted CSS.
+
+## Platform guidance
+
+The supplied `common-guidance.md` and relevant complete sections of `common-guidance-raw.md` were read: native dialogs, modal scroll containment and content-sized fields. [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) is the upstream reference. Native `showModal()` supplies modal focus/inertness/Escape semantics. Desktop source reading uses non-modal `show()`. `field-sizing: content` has a feature-detected height fallback. Optional pulse motion respects `prefers-reduced-motion`. No element-scoped view transitions or unsupported advanced animation features are required.
+
+## Evidence limits
+
+- Public demos were not sent questions or files; their captured first states support composition judgments only.
+- The local supplied demonstration was operated; this establishes only its synthetic behavior.
+- The first public browser capture failed certificate validation. Original errors remain in `evidence/references/acquisition.json`; a test-browser HTTPS exception allowed public, read-only capture, recorded in `acquisition-retry.json`.
+- Source retrieval, actual adoption, browser assertions, viewed pixels and owner acceptance remain separate facts. No owner design approval is claimed.

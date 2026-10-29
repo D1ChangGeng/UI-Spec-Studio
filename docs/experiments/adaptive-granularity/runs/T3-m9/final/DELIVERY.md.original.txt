@@ -1,0 +1,53 @@
+# Fieldnote is implemented and reviewed
+
+The note now stays on one paper card as it moves between editing and a saved result. The research question remains in place, the card turns around its center, and its front and back share the same outline, reading origin and material.
+
+## What changed
+
+- **One working object.** The editor is on the front; the confirmed saved version is on the reverse. The former separate saved screen and decorative orbit are gone.
+- **A quieter, more tactile composition.** Warm paper, green ink, a thin lit edge, serif writing, small index labels and a soft cast shadow establish the card's weight. Light and dark themes have separately tuned colors.
+- **A truthful save sequence.** Saving is acknowledged immediately. The card turns only after browser Storage confirms the write. Failure keeps the draft visible and offers a retry. If you continue typing during the delay, the submitted snapshot saves and your newer draft stays in the editor.
+- **A reversible turn.** The control below the card stays available during motion and follows the latest action. Returning to editing restores the textarea's selection and scroll position.
+- **Long-note and keyboard continuity.** Long content scrolls within the card; the save action remains reachable. The existing 600-character save bound is explained without truncating input. Ctrl/Command + Enter saves, and Escape returns to editing.
+- **A static reduced-motion equivalent.** The same paper outline and content order remain, with an immediate face change and no rotation. Inactive faces cannot intercept interaction.
+- **Honest local-demo wording.** The About disclosure explains browser-only storage, the 0.9 second demo delay and the lifetime of unsaved edits. Internal design explanations are kept outside the task.
+
+## Try it
+
+The local preview is available at **http://127.0.0.1:8939** while the development server is running.
+
+To restart it, run this from `app/`:
+
+```sh
+python -m http.server 8939 --bind 127.0.0.1
+```
+
+Then open http://127.0.0.1:8939 . No build or installation is needed.
+
+## What was verified
+
+The final run passed **43 browser assertions**, followed by **five focused narrow-screen checks**. These exercised real HTTP browser storage, reload persistence, first and subsequent save failures, native retry recovery, unreadable records, clear failure and recovery, newer drafts during saving, rapid reversal, long-note scroll and selection restoration, exact/over-limit input, keyboard saving and focus return, and reduced-motion behavior.
+
+Primary draft and saved states were captured and visually inspected in **light and dark at 1440×900 and 390×844**. Additional viewed captures cover narrow Chinese states, long notes, failure/retry and reduced motion. The normal turn was inspected through ordered natural-time frames, including intermediate and settling states; rapid reversal was exercised and captured. The monitored primary-state contexts reported no page errors.
+
+Inspection found and repaired a mobile heading spacing error, an overly oval shadow visible during the turn, and an actual reduced-motion hit-target problem. The original failed logs and earlier captures remain available; the final passing run does not replace that history.
+
+## Evidence and source
+
+- `app/` — complete source, run instructions and third-party notice.
+- `evidence/report.json` and `evidence/run-04.log` — final browser assertions, source hashes and capture-time brackets.
+- `evidence/narrow-report.json` — five additional narrow-screen checks.
+- `evidence/1440-light-saved.png` and `evidence/390-dark-saved.png` — representative final states.
+- `evidence/episode-*.png` — natural-time save/turn/settle samples.
+- `evidence/reverse-*.png` — rapid-reversal samples.
+- `evidence/failed-save.png`, `evidence/390-dark-first-failure.png`, and `evidence/390-dark-long-note.png` — recovery and long-content examples.
+- `VISUAL_REVIEW.md` — viewed evidence, interpretations and limits.
+- `DESIGN.md` — design decisions, alternatives and adoption rationale.
+
+The centered scene/object/two-face mechanism is adapted from David DeSandro's [Card Flip](https://3dtransforms.desandro.com/card-flip) example. Its centered and slide-flip demonstrations were operated and compared. The centered version better supports the note's stationary relationship to its question and controls. The paper treatment, composition and application behavior are maintained in this project.
+
+## Remaining limits
+
+This is a local application, with no server sync or account. Unsaved edits survive navigation within the page but not a reload. Testing used the supplied Chromium headless environment; Safari, Firefox, physical mobile keyboards, screen readers and real-user comprehension have not been verified. Ordered captures support the inspected moments and transitions, not a continuous playback or measured frame-rate claim. Cross-tab conflict handling is not implemented. No deployment or live-service changes were made.
+
+One visual detail remains for a follow-up pass: during a steep rapid reversal, the projecting upper edge can briefly overlap the small FIELDNOTE index label (`evidence/reverse-01.png`). The note, question and controls stay usable. A shallower perspective or a little more clearance should be trialed and re-inspected before calling the motion composition fully resolved.

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark"><title>Meridian — A space for questions</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('meridian-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch{}</script>
+  <link rel="stylesheet" href="foundation.css"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#question">Skip to question</a>
+<svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 12 6-6 6 6M12 6v14"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 12 6 6 6-6M12 18V4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></symbol>
+  <symbol id="i-paper" viewBox="0 0 24 24"><path d="m21 11-8.5 8.5a6 6 0 0 1-8.5-8.5l9-9a4 4 0 0 1 5.7 5.7l-9 9a2 2 0 0 1-2.8-2.8L15 6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6v15M3 3h5a4 4 0 0 1 4 3 4 4 0 0 1 4-3h5v16h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3Z"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.9 13A9 9 0 1 1 11 3.1 7 7 0 0 0 20.9 13Z"/></symbol>
+  <symbol id="i-retry" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 9M3 4v6h6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4"/></symbol>
+</defs></svg>
+<div class="app" id="app">
+  <aside class="sidebar" id="desktop-nav" aria-label="Research navigation">
+    <div id="nav-content">
+      <div class="brand"><span class="mark" aria-hidden="true">m</span><span>Meridian</span><button class="icon-button mobile-only" id="nav-close" aria-label="Close navigation"><svg><use href="#i-x"/></svg></button></div>
+      <button class="new-thread" id="new-thread"><svg><use href="#i-plus"/></svg>New thread</button>
+      <label class="search"><svg><use href="#i-search"/></svg><input id="thread-search" type="search" placeholder="Find a thread" aria-label="Find a thread"></label>
+      <nav class="history"><div class="nav-label">YOUR THREADS</div><div id="history-list"></div><div id="history-empty">A place to return to your questions.</div><div class="nav-label samples-label">EXPLORE A THREAD</div><button class="sample-thread" data-example="heat"><span class="sample-dot"></span>A cooler city<small>Sample thread</small></button><button class="sample-thread" data-example="energy"><span class="sample-dot sage"></span>Storing tomorrow’s energy<small>Sample thread</small></button></nav>
+      <div class="nav-bottom"><button id="demo-open" class="demo-link"><span class="status-dot"></span>Local demo<span aria-hidden="true">↗</span></button><p>Just your browser.<br>A little room to explore.</p><button id="theme" class="theme-button"><svg><use href="#i-moon"/></svg><span id="theme-label">Dark appearance</span></button></div>
+    </div>
+  </aside>
+  <main id="workspace" class="empty">
+    <header class="workspace-head"><button class="icon-button mobile-only" id="nav-open" aria-label="Open navigation"><svg><use href="#i-menu"/></svg></button><div class="breadcrumb"><span class="desktop-only">Your workspace</span><span class="desktop-only slash">/</span><span id="thread-title">New thread</span></div><button id="demo-open-top" class="demo-badge"><span class="status-dot"></span>Demo</button><button class="icon-button mobile-only" id="new-mobile" aria-label="New thread"><svg><use href="#i-plus"/></svg></button></header>
+    <div class="workspace-body">
+      <section id="reader" class="reader" aria-label="Conversation" tabindex="0">
+        <div id="welcome" class="welcome"><div class="welcome-emblem" aria-hidden="true"><span></span><span></span><span></span></div><div class="eyebrow">MAKE ROOM FOR A QUESTION</div><h1>A little curiosity.<br>A clearer perspective.</h1><p>Explore an idea, follow the evidence, keep going.</p></div>
+        <div id="messages" class="messages"></div>
+      </section>
+      <div class="latest-wrap"><button id="latest" hidden><svg><use href="#i-down"/></svg>Latest response</button></div>
+      <div class="composer-dock">
+        <form id="composer"><div id="attachment-chips" class="attachment-chips" hidden></div><label for="question" class="sr-only">Your research question</label><div class="composer-row"><textarea id="question" rows="1" maxlength="4000" placeholder="What would you like to understand?" aria-describedby="composer-hint"></textarea></div><div class="composer-tools"><button type="button" class="attach-button" id="attach" aria-label="Attach filenames"><svg><use href="#i-paper"/></svg><span>Attach</span></button><span class="input-mode">Research</span><span class="send-hint" aria-hidden="true">↵</span><button type="submit" id="send" aria-label="Send question" disabled><svg><use href="#i-up"/></svg></button><button type="button" id="stop" aria-label="Stop response" hidden><span class="stop-square"></span></button></div></form>
+        <input type="file" id="file-picker" multiple hidden>
+        <div id="composer-hint" class="composer-hint">Local demo · Illustrative answers, no web search.<span class="desktop-only"> Shift + Enter for a new line</span></div>
+      </div>
+      <div class="suggestions" id="suggestions"><button data-prompt="How can cities cool down without using more energy?"><span class="suggestion-tag">CITIES & CLIMATE</span>How can a city keep its cool?<span class="suggestion-arrow" aria-hidden="true">↗</span></button><button data-prompt="Where does long-duration energy storage fit?"><span class="suggestion-tag">ENERGY & IDEAS</span>What happens when the sun sets?<span class="suggestion-arrow" aria-hidden="true">↗</span></button><button data-prompt="What makes a neighborhood worth walking through?"><span class="suggestion-tag">EVERYDAY SYSTEMS</span>What makes a place walkable?<span class="suggestion-arrow" aria-hidden="true">↗</span></button></div>
+      <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+    </div>
+  </main>
+</div>
+<dialog id="nav-dialog" aria-label="Research navigation"></dialog>
+<dialog id="source-dialog" aria-labelledby="source-heading"><div class="source-head"><div><span class="eyebrow">THE READING ROOM</span><h2 id="source-heading">Behind the answer</h2></div><button class="icon-button" id="source-close" aria-label="Close source"><svg><use href="#i-x"/></svg></button></div><div class="source-tabs" id="source-tabs"></div><div id="source-body"></div></dialog>
+<dialog id="demo-dialog" aria-labelledby="demo-title"><div class="dialog-head"><h2 id="demo-title">A space to try things</h2><button class="icon-button" id="demo-close" aria-label="Close demo controls"><svg><use href="#i-x"/></svg></button></div><p>Meridian is a local product demo. Answers and sources are written examples, revealed over time. Nothing you type or attach is sent to a service.</p><label for="next-response">Try the next answer with</label><select id="next-response"><option value="normal">A normal response</option><option value="long">A longer answer</option><option value="slow">A slower response</option><option value="failure">A simulated failure</option></select><p class="small">Attachments keep filenames only; file contents are never read. Threads and drafts are saved in this browser when storage is available.</p><p class="small">Enter sends. Shift + Enter adds a line. You can keep drafting while an answer unfolds.</p><button class="primary-button" id="demo-done">Back to exploring</button></dialog>
+<script src="app.js"></script>
+</body></html>

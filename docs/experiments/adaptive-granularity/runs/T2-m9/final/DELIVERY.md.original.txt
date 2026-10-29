@@ -1,0 +1,38 @@
+# Meridian is ready to try
+
+Built a working local research workspace in `app/`, with an editorial visual direction: warm paper-like surfaces, evergreen accents, serif headings and a quiet, persistent composer.
+
+**Open the local preview:** http://127.0.0.1:8739/app/
+
+If the server is no longer running, start it from this cell with `python -m http.server 8739 --bind 127.0.0.1`, then open `/app/`. No build step or API key is needed.
+
+![Meridian desktop](evidence/final-desktop-home.png)
+
+## What you can do
+
+- Ask repeated questions in the same thread and watch a synthetic answer unfold.
+- Stop an answer, retain its partial text, and continue from that point.
+- Keep reading earlier content while new text arrives; return with **Back to latest**.
+- Open **Local demo**, enable a simulated failure, then recover with **Retry response**.
+- Add local filename chips and remove them. File contents are never read or uploaded.
+- Open sample source notes beside the conversation on desktop, or in a native dialog on a phone.
+- Create and revisit threads. Content, per-thread drafts, filenames, reading position and appearance are stored in the current browser.
+- Use light or dark appearance, Enter to send, Shift+Enter for a newline, Escape to dismiss dialogs, and Ctrl/Cmd+K for a new thread.
+
+The reference's shared reading/composer proportions and conversation relationships were carried into this implementation. The visible identity, local state, incremental answer rendering, history and source experience are adaptations for Meridian. Source identities, exact reuse claims and notices are preserved in `DESIGN.md` and `app/THIRD-PARTY.md`.
+
+## Verification and review
+
+The app was operated over HTTP in the supplied Chromium test environment at **1440×900** and **390×844**, with an additional short-height check. The functional suite covers asynchronous progress, stop/resume, failure/retry, repeated questions, persistence, attachments, themes, native dialogs, reduced motion, overflow and external requests. A separate continuity suite checks reading-position retention while content grows, thread return and recovery after reloading an unfinished answer.
+
+Desktop, phone, light/dark, populated-thread and source-panel captures were opened and visually reviewed. Ordered frames were also inspected for the sampled reading episode. The initial startup failure and subsequent scrolling investigations are retained with their original logs; the design record explains each correction and test refinement.
+
+**Final results: 29/29 functional assertions and 10/10 continuity assertions passed.** The browser recorded no JavaScript errors and no external requests; only the four local app resources were requested. In the overflow continuity check, reading stayed at 180px while content height grew from 1,406px to 1,762px. These are controlled local measurements, not field-performance results.
+
+Latest machine-readable results: `evidence/test-results.json` and `evidence/continuity-results.json`. Reproduction commands and evidence boundaries are in `evidence/README.md`.
+
+## Current boundaries and the next useful work
+
+This is a browser-local demonstration. Answers and source notes are clearly identified authored examples. There is no external model, research retrieval, real source validation, file parsing, account system or cloud synchronization. No content is sent to a service, and nothing was deployed or published.
+
+The next useful increment is real-device keyboard and screen-reader review, followed by history search/rename/delete and richer source-reading formats. The current captures and browser assertions do not establish cross-browser certification, real-mobile keyboard behavior or formal accessibility conformance. The visual direction is ready for your review; it has not been represented as owner-approved.

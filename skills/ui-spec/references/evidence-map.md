@@ -10,6 +10,10 @@ Read the [action rules](evidence-actions.md) when choosing what to do with a
 consequential gap. Plain language, linked notes and existing task records can
 express the same relationships as an optional structured record.
 
+## Contents
+
+[Minimum contract](#the-minimum-contract-and-its-scale) · [Design scales](#six-design-scales-with-cross-scale-navigation) · [Formal increments](#connect-formal-increments-to-the-current-product) · [Transverse relationships](#four-transverse-relationships) · [Coverage](#coverage-discovery--challenge) · [Decision units](#design-decision-unit) · [Three views](#one-record-three-useful-views) · [Tool boundary](#tool-boundary) · [Current model and history](#current-model-meaningful-revisions-and-evidence-archive)
+
 ## The minimum contract and its scale
 
 For an important choice, another reviewer should be able to follow **purpose →
@@ -51,6 +55,47 @@ or L1 task ordering. Trace the issue upward to its purpose before changing
 local values. Conversely, an L0 identity choice can require a new L4 font and
 then L5 checks of wrapping, loading and every dependent core region. The map
 helps select the right repair scale; professional analysis determines the cause.
+
+## Connect formal increments to the current product
+
+Keep the complete **Overall Product Goal**, the actual **Current Product UI**,
+the **Formal UI SPEC** undertaking a cohesive design increment, and its
+**Internal Research & Implementation Work** distinguishable in existing records.
+These working objects are different from the map/inspector/Agent/verification
+responsibilities described below. The goal preserves the intended whole; the
+current UI carries accumulated results; a formal SPEC owns a quality objective;
+internal activity develops and verifies it.
+
+Connect each formal SPEC to the relevant L0–L5 objects and transverse
+relationships. One SPEC can address several scales and objects; several SPECs
+can progressively act on the same page, component family or shared system.
+The page tree describes the interface's organization, not a compulsory hierarchy
+of formal iterations. A shared typography SPEC can connect a product identity,
+several reading regions, type details and their implementation checks. A
+continuous interaction SPEC can connect a composer, messages, scroll state and
+their temporal relationship. Preserve shared object identity across both.
+
+Record the substance needed to understand the current increment: its experience
+objective and quality responsibility, necessary objects/relations, research,
+primary implementation and regression scopes, applicable inherited decisions,
+actual result, remaining gaps and relationship to later work. Plain prose or
+links in established records are sufficient. Keep candidate SPECs provisional
+and distinct from formal work actually undertaken; an idea in the candidate
+structure is not an implementation, approval or completed result.
+
+Use **Inherit, Extend, Adapt and Revisit** to explain how work relates to the
+same current product when useful. A component, artistic background or motion
+increment has the same formal standing as a page increment; their actual
+dependencies and inherited design choices still differ. Research and resources
+can change those relationships. When boundaries change, link the prior goal and
+open quality gaps to their current responsibility and explain the reason and
+affected scope. Preserve the original evidence; avoid leaving displaced issues
+only in a historical SPEC that appears complete.
+
+The map supports the Agent's [experience-closure judgment](analysis.md#choose-a-bounded-increment).
+Its relationships do not calculate scope, create formal increments or determine
+when work is sufficiently mature. Internal searches, trials, fixes and commits
+can remain within one SPEC without each acquiring a new lifecycle.
 
 ## Four transverse relationships
 
@@ -118,6 +163,12 @@ component. Group related details when they support one decision; split choices
 when they have different evidence, owners, constraints or reversal costs. Keep
 a stable name or ID where several pages or records refer to the same choice.
 
+A decision unit is not automatically a formal SPEC. A SPEC can draw on several
+decisions and shared objects, and a supported decision can be inherited by
+several increments. Grouping the work answers which experience goal can be
+properly realized and reviewed together; grouping decisions answers which
+choice and supporting evidence need to remain understandable.
+
 | Relation | Record the useful substance |
 |---|---|
 | Purpose | User outcome, intended perceptual quality and parent experience goal |
@@ -173,6 +224,16 @@ analysis, materially different candidates, temporal evidence and adaptation.
 remaining dependencies and next action. Reuse the same IDs and underlying facts;
 views filter information rather than keep three separately edited reports.
 
+For formal increments, Overview also shows the complete goal, current product
+foundation, active SPEC, provisional later candidates and important dependencies.
+Design Detail exposes the active increment's quality responsibility, scope
+rationale, actual references and realization. Execution & Assurance connects
+its implementation and associated regression evidence to remaining goals and
+gaps. Show the decision-useful portions in the conversation at init, a formal
+SPEC's start or material adjustment, significant findings and delivery. A saved
+record supports traceability; it does not substitute for presenting the actual
+design result to the user.
+
 For a large task, show a concise overview with representative visuals and
 clickable evidence locations; expand important details when they are needed.
 For a focused correction, a short decision entry and the actual preview may
@@ -193,6 +254,13 @@ observations stay separate; neither authorizes progress or certifies completion.
 The Agent interprets these facts using the actual task, professional knowledge
 and real evidence. Existing project records remain sufficient when they express
 the same design relationships.
+
+Where formal SPEC declarations are present, the inspector may describe their
+literal object and decision references, candidate/formal distinction and supplied
+scope relationships. It does not select a partition, infer inheritance, rank
+increment importance, require a new SPEC or certify closure and visual quality.
+Formal identity, structural record completeness, actual implementation and
+observed product quality remain separate observations.
 
 ## Theory, declarations and task-specific applicability
 
@@ -243,6 +311,13 @@ An **Evidence Archive** retains source snapshots, original captures, media,
 code identities, execution traces and prior design records in authorized storage.
 Link rather than re-copy them. Keep archived judgments identifiable as historical;
 current views need not load every old candidate or superseded assumption.
+
+A formal boundary change belongs in meaningful revisions when it alters a
+commitment or responsibility. Keep its prior and current purpose, reason,
+affected objects and open issues traceable without logging every search. Update
+the current product view and revisable candidate structure together. Scope
+reorganization can be complete while the associated design work remains open;
+record both facts accurately.
 
 For example, a single-line composer may have passed its former layout check.
 Adding several attachments can expose wrapping and focus problems. Keep the old

@@ -1,2 +1,6 @@
 * text=auto eol=lf
 *.zip binary
+# Preserve recorded study bytes across checkout platforms.
+docs/experiments/adaptive-granularity/runs/** -text -whitespace
+docs/experiments/adaptive-granularity/shared-inputs/** -text -whitespace
+docs/experiments/adaptive-granularity/reviews/** -text -whitespace

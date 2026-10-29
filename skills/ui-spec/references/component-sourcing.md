@@ -24,6 +24,14 @@ Choose the largest coherent set of useful mature decisions. For a new page, inve
 
 Scope does not rank importance: one asset can define the composition. Prefer a coordinated foundation with useful specialist additions. Headless behavior still needs a mature visible surface. Compare meaningful states/sizes and matching-stack alternatives to a port. Bound custom work to observed gaps in behavior, rights, runtime, source value or distinctive requirements; extend suitable foundations first.
 
+### Let source fit refine the formal increment
+
+Connect the reuse decision to the current formal SPEC's experience goal and quality responsibility in the evolving product. Research scope, primary implementation scope and integration/regression scope can differ: studying a complete conversation workspace may explain a composer-and-scroll relationship without committing this increment to all of the workspace's features. Keep the complete product goal and later increments visible in the existing record.
+
+Judge the source's useful relationships before fixing implementation boundaries. A mature block may already coordinate composer growth, pending feedback and reading-space stability; trial that relationship together before dividing its internal components into separate SPECs. Conversely, a template may provide an adequate shell while leaving a defining background and a complex interaction to different research and implementation methods. Use those findings to retain, split, combine or redraw the affected scope through the [scope judgment](analysis.md). The number of imported components does not decide the formal boundary.
+
+Carry current applicable fonts, materials, interaction conventions and accepted source decisions into the next increment. Extend or adapt them for the new experience, and revisit them when actual evidence shows a mismatch. Reuse the existing implementation and relevant observations under matching conditions; investigate changed conditions rather than rebuilding a parallel page or design system. Scope adjustments need a reason and traceable remaining goals, including any unresolved quality already promised by the active SPEC.
+
 ## Research product conventions and implementation resources in parallel
 
 Pair the **target experience** with **adoptable resources** throughout discovery. Functional references explain objects, tasks and feedback; artistic references explain subject, type, material, composition and rhythm; implementation sources carry these into code or assets. A source can serve several roles, with its observed and adopted scope identified.
@@ -35,6 +43,8 @@ Explore beyond peer products when expression warrants it: publishing, photograph
 Use existing records or the optional [design decision template](../assets/templates/design-decisions.md) to connect the user goal, research question, observed reference, meaningful alternatives, selected resource, adaptations and inspected result. Retain representative frames/intervals, source conditions and consequential unknowns; summarize choices instead of search logs.
 
 Distinguish researched, visually compared, trialled, adopted and inspected resources. Identify actual code, package or asset use and the important responsibilities it carries; dependency counts and code percentages describe different properties. Owner approval requires an actual user decision with its scope. Use optional [adoption notes](../assets/templates/resource-adoption.md) for rights, versions and maintenance, and revise the mapping when evidence changes the choice.
+
+For each consequential quality owned by the formal SPEC, expose **target quality → actually observed reference → adopted mature resource or identified custom implementation → current product presentation → remaining gap**. The current call site, asset placement and viewed result establish where the design value resides. Research volume, an installed primitive or a resource name cannot supply a missing link. Present the decisive comparison and actual result in the conversation as well as retaining the full record; use the user's observable task and visual relationships to explain the choice.
 
 ## Describe the need in two dimensions
 
@@ -155,6 +165,8 @@ Use a bounded trial when candidate evidence is credible and the remaining questi
 Use revealing content/states: long labels, multiline input, missing material, loading/errors and required languages/views. Compare at corresponding scale, density and event phase. Inspect detail and process, then return to actual neighbors. Record what survived and why adaptation or replacement is needed. A trial can reopen selection or the experience hypothesis.
 
 Expand when consequential qualities demonstrate fit and the adaptation path is clear. Routine instances can inherit a verified family rule under matching conditions. If a target remains unmet, use the [maturity judgment](analysis.md#reason-about-uncertainty) to choose further research, assistance, another trial or bounded custom work. Retain actual shortcomings; time spent is not completion evidence.
+
+A trial can also reveal that the formal SPEC needs different boundaries. Include necessary neighbors when a card's motion depends on data readiness, surrounding layout or interruption recovery; retain a wider mature implementation when its connected mechanism fits the goal. Independent demanding qualities can become subsequent increments while their original commitment and open gaps remain traceable. Repeated search, candidate replacement and fit repairs that still serve the current goal remain internal work of the same SPEC. For a new product, establish a representative, sufficiently resolved experience with inheritable visual relationships before expanding coverage; deferred features remain accurately identified.
 
 ## Adapt into one product
 

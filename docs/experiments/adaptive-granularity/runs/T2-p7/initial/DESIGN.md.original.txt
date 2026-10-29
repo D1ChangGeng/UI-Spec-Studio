@@ -1,0 +1,45 @@
+# Meridian — current design model
+
+## Intended experience and scope
+L0: A browser-local conversational research demonstration. Ask, read an unfolding answer, inspect its illustrative sources, continue, and revisit a thread. All responses and source material are deterministic synthetic fixtures. Nothing in the application sends questions or files to an external service.
+
+L1: The priority journey is repeated questions → immediate pending feedback → incremental answer → stop or failure/retry → read older content without forced scrolling → inspect source and return. History, drafts, theme, and attachment filenames are browser-local objects. No live retrieval, accounts, or document processing.
+
+## D1 — conversation foundation (L1–L4)
+Question: Does a conversation or a durable-document collection better serve the requested first and repeated action?
+Evidence: Supplied `reference-project/` README, FOUNDATION, source and its two runnable directions. The task explicitly prioritizes asking and continuing a thread. Original assistant-ui example documentation was retrieved on 2026-10-29. Source identity: assistant-ui `1fbf00dd0388fee912af95401876a6cc3c232b2c`, `apps/docs/components/pages/examples/chatgpt.tsx`; the supplied reference ports its composition.
+Candidates: conversation page with common composer and bounded reading measure versus document-first collection/editor. The document model gives durable editing greater prominence but adds a detour before the requested question loop. Selected direction is provisional conversation, authorized by the task rather than owner visual approval.
+Adoption: Adapt supplied native page foundation, preserving the 48rem reading/composer relationship, bounded user messages, reachable composer, and theme roles. Preserve original notices. This is actual source/style adaptation plus page-level design transfer; it does not adopt assistant-ui's React runtime.
+Next evidence: inspect both local reference directions and active state before expanding; then inspect Meridian with a long answer and expanding composer.
+
+## D2 — reading continuity and source ownership (L1–L3)
+Question: Can supporting material open without losing the answer's reading point or draft?
+Selected provisional mechanism: stable scrolling conversation and bottom composer; source reader in a desktop adjacent rail, native modal reader on compact widths; explicit return to latest when the reader scrolls up. Source text never claims real retrieval.
+Custom scope: The supplied fixture has a short modal source and one-shot answer, no streaming/history persistence. These gaps require an authored local state adapter and expanded reader, retaining the original conversation composition.
+Next evidence: inspect source open/close, focus, draft and scroll through long content; test active stream while scrolled up.
+
+## D3 — identity and material (L4)
+Purpose: Quiet but expressive: editorial serif headings, ink-colored actions, green source cues, paper-tinted chrome, and generous but bounded reading space. Compared with the reference's stark monochrome/system-type appearance, the warm surfaces and serif heading create a research-notebook character without adding a decorative hero competing with results.
+Assets: Original Meridian lockup using a native eight-spoke glyph; platform serif/sans type, no remotely loaded fonts. Semantic colors adapt Radix Slate values for neutral roles; green identity roles are authored. Native dialog, textarea and form semantics carry accessibility behavior.
+Next evidence: actual 1440×900 and 390×844 captures in both themes, whole frame then reading/composer details.
+
+## Evidence and approval boundaries
+The captures in `evidence/` are available evidence, not automatically viewed evidence. Observations and executed browser checks will be recorded separately after review. No owner aesthetic approval has been claimed. The supplied reference's historical checks are not Meridian test results.
+
+## Reference observations before implementation
+Viewed `reference-conversation.png`, `reference-documents.png`, and `reference-active.png` at 1440×900. The conversation view keeps a bounded centered reading column and moves the same composer to a stable lower position after a question. The document candidate foregrounds a collection/table and editor entry instead. The latter is a materially different model but does not suit the requested first action. The reference's study controls and explanation rail are excluded from Meridian's product UI. The original external demo browser request failed with `ERR_CERT_AUTHORITY_INVALID`; the original failure is preserved in `evidence/research-browser.json`. Retrieved official documentation establishes the original's stated composition, not its unobserved runtime. The supplied runnable port was the locally observed adoption candidate.
+
+## Meaningful revisions and inspected outcome
+- The first Meridian trial was viewed at 1440×900 and 390×844, with initial, active, streaming, source-reading, and theme states. The paper/ink direction keeps the reading column prominent and carries its serif identity into populated answers. The desktop source reader fits beside the 48rem measure at the required desktop viewport; the phone reader uses its own native modal.
+- The first dark capture exposed a brief mixture of old button surfaces and newly changed text colors. This was an actual transitional appearance, not a settled-theme failure. Removed button color/background transitions so theme roles change atomically. Re-viewed settled desktop/phone dark captures with coherent text/surface roles. Original v1 captures remain.
+- Increased compact citation and action targets and kept source-dialog headers sticky so close controls remain reachable during reading.
+- The official original example was subsequently retrieved in the test browser after its environment certificate failure, with certificate verification disabled only for that public reference read. Viewed `assistant-ui-original-retry.png`: the carrier page contains the original centered empty heading/composer with circular actions. No question was submitted to that public demo. This supports original empty-composition observation, not original response performance or failure behavior.
+- Final keyboard refinement: when Retry/Continue replaces its trigger, focus moves to the stable Stop control; if that focused control disappears on completion, focus returns to the composer. Theme accessible names retain the visible word “Appearance.”
+- Completion labels say “3 demo sources,” avoiding an unconditional per-message persistence claim. Storage failures retain in-tab data and explain that saving is unavailable.
+
+## Current assurance boundary
+The main HTTP-browser run passed 32 assertions at the two requested viewports. It exercised actual UI controls for pending/streaming, stop and continued completion, draft retention, failure/retry, repeated questions, source open/close focus and reading position, scroll hold during streaming, history switching/search, reload persistence, attachments, themes, mobile navigation, native dialog dismissal, multiline growth, reduced motion, console errors, and request destinations. The first runner failed because its string-based polling used eval blocked by the application's CSP; that harness failure and original captures are preserved under `evidence/run-1/` and `verification-run-1.log`. The application CSP was retained; the runner was changed to locator-based waiting.
+
+Pixel viewing remains separate from these assertions. Ordered stills sample the asynchronous episode; no continuous-video, assistive-technology, physical-device keyboard, Safari, or Firefox claim is made. Owner acceptance remains pending. Real retrieval, real citations, file parsing, synchronization, and service integration are outside this local synthetic demonstration.
+- Phone history was refined from a centered tall dialog to a 320px side drawer after visual review. This carries the desktop navigation's spatial relationship onto compact screens. Three focused checks verify bounds, Escape/focus/draft retention, and theme switching; both drawer themes were viewed.
+- Empty but nonblank drafts are included in history as “Draft · …”, so starting a different thread does not strand unsent work. This is a final continuity refinement; empty untouched threads remain absent.

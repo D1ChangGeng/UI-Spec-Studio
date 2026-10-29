@@ -1,0 +1,32 @@
+# Fieldnote — implemented and reviewed
+
+Fieldnote now keeps editing and the saved note on **two faces of the same card**. The card holds its position through saving, reading and returning to a draft, with a centered turn, a matte paper surface, a restrained edge light and a softer cast shadow. The surrounding question and controls stay in place.
+
+Open the local preview at [http://127.0.0.1:8737](http://127.0.0.1:8737). The source is in [app/index.html](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/app/index.html), with run instructions in [app/README.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/app/README.md).
+
+## What changed
+
+- **Saving controls the turn.** The writing face remains visible while saving; the saved face appears only after browser storage succeeds. A failure leaves the draft in place with a retry action.
+- **Drafts and saved versions stay distinct.** If you keep writing during a save, the submitted snapshot is stored and the newer draft stays on the front. Viewing the saved side shows the stored version.
+- **Quick actions remain reversible.** The outside card control stays available during a turn. Repeated reversal follows the latest request from the current visual position; duplicate saves are guarded.
+- **Long notes remain editable.** The editor and reading face scroll within a consistent card. Text beyond the existing 600-character save limit remains intact, with a visible explanation and disabled saving.
+- **Keyboard continuity is deliberate.** Returning to the editor restores selection and scroll. Hidden faces are inert; a stationary control holds focus during motion, and retry retains a usable focus target. `Ctrl+Enter` or `Cmd+Enter` saves from the editor.
+- **Reduced motion has an equivalent composition.** It switches faces without rotation or perspective, using the same object, content and controls. Light/dark and English/Chinese controls retain current work.
+
+The main surface uses task language. The browser-only boundary and short demonstration delay are explained under **Local demo**. Saved notes survive reload; unsaved drafts remain in the open page only.
+
+## Reviewed result
+
+[Desktop, light](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/run3/1440-light-draft.png) · [Mobile, dark](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/run3/390-dark-saved.png) · [Reduced motion](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/run3/reduced-light.png) · [First-save failure](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/final/first-failure.png)
+
+The local browser regression run passed **63 checks**, with **15 additional focused checks** for keyboard use, rapid saving, long drafts, read errors and first-save retry. The checks exercised real HTTP/browser storage, reload persistence, injected write/read/remove failures and recovery. They covered the requested 1440×900 and 390×844 viewports in light and dark. Original failed runs are retained alongside their fixes. [Evidence and commands](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/REVIEW.md)
+
+I separately inspected the captured interface and ordered motion frames. That review led to repairs for mobile heading spacing, small-text lighting and a genuine reduced-motion hit-testing problem. The final snapshots show the same card dimensions and page anchors across the draft and saved states, and usable error feedback beneath the card.
+
+The centered scene/card/face construction adapts David DeSandro’s MIT-licensed example after comparison with its sliding-hinge alternative. The page composition, paper treatment, persistence choreography and focus handling are tailored to this note task. [Design decisions and provenance](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/DESIGN.md)
+
+## Remaining limits
+
+The browser work used pinned headless Chromium, with viewport emulation. I did not verify physical mobile keyboards, Safari/Firefox, screen readers, zoom/text-spacing settings or multi-tab conflicts. Ordered captures show sampled stages of the turn and reversal; they do not establish every intervening frame or smoothness on real hardware. The most useful next review is the complete save–return–retry path on a physical phone and with a screen reader.
+
+Nothing was deployed or published.

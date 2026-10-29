@@ -1,0 +1,27 @@
+# Fieldnote — current design model
+
+## Intent and bounded scope
+One research note, one place in the composition, two faces. Preserve browser-local saving, 600-character bound, editable in-flight drafts, failure/retry, unreadable-data recovery, English/Chinese, light/dark. This is a local demo; no service or deployment is implied.
+
+## Consequential decisions
+
+- **Journey / authority:** the original UI exposed a flip unrelated to saving and replaced the workspace for reading. The new front contains the editor; the back contains only the confirmed record (or an explicit empty/unknown state). Save acknowledges immediately, waits the existing 900 ms demo delay, writes Storage, and turns only on success. A changed in-flight draft remains on the front. Latest navigation intent wins.
+- **Composition / identity:** an editorial notebook with a stationary subject column and a broad ivory or forest card. The original orbit motif becomes a small static field-study symbol, retaining the subject without prolonged competing motion. Card dimensions and surrounding controls stay fixed across faces and long text; text scrolls within its own reading/editing region.
+- **Motion / mature source:** David DeSandro, https://3dtransforms.desandro.com/card-flip. Read the official scene/object/face code and MIT terms. The original app already used this family; retain and refine its center-pivot object. Compare the documented edge slide-flip against center pivot: the center pivot is preferred because the user explicitly asks the object to keep its place; an edge-travel motion adds lateral excursion. The common modern-web guidance informed progressive behavior and reduced-motion semantics. No external runtime package is needed. Source mechanism is technique transfer/refinement; page composition and state/focus adapters remain project-owned.
+- **Material:** matched face geometry, thin illuminated upper edge, quiet paper tint, stationary diffuse cast shadow and a shade over the turning-away face. Two physical faces share one DOM card. CSS transition reversal carries intermediate presentation rather than restarting a keyframe sequence.
+- **Reduced motion:** same geometry and actions, 100 ms opacity exchange, no rotation or moving light. W3C interaction-animation guidance: https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html.
+- **Focus:** outgoing face becomes inert; a stationary external turn control receives focus while the object is moving. After settling, return restores textarea selection/scroll; reading focuses the scrollable saved text. Utility navigation during motion should not have focus stolen. No screen-reader or actual touch-device testing is implied.
+
+## Evidence and provisional status
+Original source files and baseline pixels are retained in `evidence/`. The first public-reference browser fetch failed certificate validation; the original error is retained in baseline-log.txt. A second isolated browser run allowed that public site's certificate error to inspect its demonstration. Initial source-turn captures clicked the static explanatory object, so they establish no motion observation. Corrected source samples and integrated tests are recorded separately.
+
+This is an agent-selected, reviewable direction, not owner approval. Browser assertion results, actually viewed captures and remaining device/playback limitations are separate in DELIVERY.md.
+
+## Implemented revisions and review
+
+1. The first browser pass found lost focus after the pending Save button was natively disabled. Pending now uses `aria-disabled` with an application guard; actual invalid/unavailable states keep native disabling. The stationary control owns focus during movement, then the incoming reading/editor region receives it. Both faces are inert during motion so Tab cannot enter a visually edge-on face.
+2. Unknown storage was originally paired with a misleading “not saved yet” footer. The final unknown state says “Saved note unavailable.” First-write failure also avoids implying that a previous saved record exists.
+3. Viewed narrow dark motion frames showed the projected upper edge approaching the notebook label. Mobile perspective increased from 1400 to 2400 px and the label clearance increased by 8 px. Repaired ordered frames show separation through the sampled turn. Historical frames are preserved as prior-mobile-motion-overlap.png.
+4. Automatic CJK balancing split 高峰 across lines. Explicit presentation-only phrase wrapping now separates 城市如何降低 / 高峰供热需求？, without changing the persisted title. Both themes were recaptured and viewed.
+
+Execution: the final focus/state implementation passed the 45-check regression suite and 27-check focused suite. The final presentation changes and mid-turn preference handling passed eight additional checks. Source hashes in each report define the scope; the latest hashes are in evidence/final-visual-recheck.json. These are scoped assertions, not a visual-quality score or user approval.

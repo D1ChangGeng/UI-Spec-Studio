@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "name": "Initial page has no horizontal overflow",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 0.429
+    },
+    {
+      "name": "Shift+Enter inserts a new line",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 0.574
+    },
+    {
+      "name": "Filename appears as an attachment",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 0.585
+    },
+    {
+      "name": "Enter starts an asynchronous response",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 0.609
+    },
+    {
+      "name": "Progressive content is visible",
+      "pass": true,
+      "detail": {
+        "words": 63
+      },
+      "elapsed_s": 1.759
+    },
+    {
+      "name": "Stop retains partial text and prevents stale completion",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 2.771
+    },
+    {
+      "name": "Draft survives stopping",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 2.774
+    },
+    {
+      "name": "Runner completed",
+      "pass": false,
+      "detail": "Page.wait_for_function: EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'self'\".\n\n    at eval (<anonymous>)\n    at predicate (eval at evaluate (:290:30), <anonymous>:4:56)\n    at next (eval at evaluate (:290:30), <anonymous>:29:29)"
+    }
+  ],
+  "frames": [
+    {
+      "file": "final-desktop-empty.png",
+      "capture_interval_s": [
+        0.429,
+        0.498
+      ]
+    },
+    {
+      "file": "episode-01-pending.png",
+      "capture_interval_s": [
+        0.609,
+        0.655
+      ]
+    },
+    {
+      "file": "episode-02-streaming.png",
+      "capture_interval_s": [
+        1.759,
+        1.81
+      ]
+    },
+    {
+      "file": "episode-03-stopped.png",
+      "capture_interval_s": [
+        2.774,
+        2.826
+      ]
+    }
+  ],
+  "page_errors": [],
+  "request_urls": [
+    "http://127.0.0.1:8767/app/",
+    "http://127.0.0.1:8767/app/styles.css",
+    "http://127.0.0.1:8767/app/app.js",
+    "http://127.0.0.1:8767/app/tokens.css"
+  ],
+  "browser": "Chromium 143 headless via Playwright",
+  "viewports": [
+    [
+      1440,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "capture_note": "Ordered stills with monotonic capture-time brackets; not continuous video playback."
+}

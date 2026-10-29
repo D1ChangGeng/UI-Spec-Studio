@@ -1,0 +1,49 @@
+"""Prepare condition-anonymous product-output packets from frozen study sources."""
+from pathlib import Path
+import argparse, hashlib, json, random, shutil
+
+ROOT = Path('/workspace/scratch/43b440780c87')
+STUDY = ROOT/'ui-spec-studio/docs/experiments/adaptive-granularity'
+parser = argparse.ArgumentParser()
+parser.add_argument('task', choices=('T1','T2','T3'))
+args = parser.parse_args()
+out = ROOT/'granularity-review-packets'/args.task
+out.mkdir(parents=True)
+codes = ['p7','r4','m9']
+random.Random(20261029 + int(args.task[1])).shuffle(codes)
+mapping, identities = {}, {}
+for i, code in enumerate(codes, 1):
+    label = f'variant-{i:02d}'
+    cell = f'{args.task}-{code}'
+    mapping[label] = cell
+    identities[label] = {}
+    for stage in ('initial','final'):
+        source = ROOT/'granularity-archives'/cell/stage/'app'
+        snapshot = json.loads((source.parent/'snapshot-identity.json').read_text())
+        files = {}
+        for path in sorted(source.rglob('*')):
+            if not path.is_file():
+                continue
+            relative = path.relative_to(source)
+            # Descriptive participant records are reviewed separately after product review.
+            if path.suffix == '.md' and 'license' not in path.name.lower():
+                continue
+            raw = path.read_bytes()
+            digest = hashlib.sha256(raw).hexdigest()
+            assert snapshot['files']['app/'+str(relative)] == digest
+            target = out/label/stage/relative
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(raw)
+            files[str(relative)] = digest
+        identities[label][stage] = files
+for name in ('initial','continuation'):
+    shutil.copy2(STUDY/f'{args.task}-{name}.md', out/f'TASK-{name}.md')
+tooling = (ROOT/'granularity-cells'/f'{args.task}-p7'/'TOOLING.md').read_text()
+tooling = tooling[tooling.index('Python with Playwright'):tooling.index('The shared modern guidance')]
+tooling = tooling.replace('Save your test commands/results, captures, adoption sources and final user-facing delivery with the cell.',
+                          'Save review commands, outputs, captures and findings under review-output/ in this packet. The product source is read-only during review.')
+(out/'TOOLING.md').write_text('# Review tooling\n\n'+tooling)
+shutil.copy2(STUDY/'REVIEW-INSTRUCTIONS.md',out/'REVIEW-INSTRUCTIONS.md')
+(out/'input-identities.json').write_text(json.dumps(identities,indent=2)+'\n')
+(ROOT/f'review-map-{args.task}.json').write_text(json.dumps(mapping,indent=2)+'\n')
+print(json.dumps({'packet':str(out),'variants':list(mapping),'source_files':sum(len(s) for v in identities.values() for s in v.values())}))

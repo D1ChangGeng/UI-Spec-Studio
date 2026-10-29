@@ -1,0 +1,164 @@
+{
+  "checks": [
+    {
+      "name": "desktop no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "immediate asynchronous state",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "incremental content appears",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stop preserves partial output",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stop preserves in-progress draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stream does not force reader down",
+      "pass": true,
+      "detail": {
+        "start": 0,
+        "end": 0
+      }
+    },
+    {
+      "name": "retry does not duplicate question",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "desktop source sits beside thread",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "draft survives source open",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source returns focus",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "repeated questions retain thread",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "simulated failure appears",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "retry recovers",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "failure retry no duplicate question",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "attachment filename chip",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "messages survive reload",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "draft survives reload",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "filenames survive reload",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "theme survives reload",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "composer height capped",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "send remains reachable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "native history modal",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "history focus returns",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "narrow source is native modal",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "multiline composer grows",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "reduced motion disables pulse",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no runtime JavaScript errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "no external requests",
+      "pass": true,
+      "detail": [
+        "http://127.0.0.1:8739/app/styles.css",
+        "http://127.0.0.1:8739/app/",
+        "http://127.0.0.1:8739/app/tokens.css",
+        "http://127.0.0.1:8739/app/app.js"
+      ]
+    }
+  ],
+  "errors": [],
+  "requests": [
+    "http://127.0.0.1:8739/app/",
+    "http://127.0.0.1:8739/app/app.js",
+    "http://127.0.0.1:8739/app/styles.css",
+    "http://127.0.0.1:8739/app/tokens.css"
+  ]
+}

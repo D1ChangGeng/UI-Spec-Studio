@@ -1,0 +1,404 @@
+{
+  "checks": [
+    {
+      "check": "honest initial empty state",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "save 0 persisted",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "save 0 nonempty correct back",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "return 0 focuses identity",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "save 1 persisted",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "save 1 nonempty correct back",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "return 1 focuses identity",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "save 2 persisted",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "save 2 nonempty correct back",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "return 2 focuses identity",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "three distinct identities",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "collection persists after reload",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "late save does not switch active identity",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "late save does not flip another note",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "correct second note draft",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "prepared back frame 0",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "prepared back frame 1",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "prepared back frame 2",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "prepared back frame 3",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "prepared back frame 4",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "prepared back frame 5",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "failure stays editor",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "failure preserves persisted collection",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "failed draft identified in collection",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "failed draft recovered by identity",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "retry saves correct record",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "retry restores saved reading focus",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "long draft retained and blocked",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "unsaved note remains visible",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "unsaved draft restored",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "only confirmed notes survive reload",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light prepared title before animation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light restored collection scroll",
+      "pass": true,
+      "details": {
+        "before": 150,
+        "after": 150
+      }
+    },
+    {
+      "check": "light returned focus not stolen by stale animation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light no horizontal overflow",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light rapid open correct 0",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light rapid open correct 2",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light rapid open correct 1",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light rapid open correct 0",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light reduced no rotation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light reduced keyboard focus",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark prepared title before animation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark restored collection scroll",
+      "pass": true,
+      "details": {
+        "before": 150,
+        "after": 150
+      }
+    },
+    {
+      "check": "dark returned focus not stolen by stale animation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark no horizontal overflow",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark rapid open correct 0",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark rapid open correct 2",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark rapid open correct 1",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark rapid open correct 0",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark reduced no rotation",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark reduced keyboard focus",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "legacy record visible",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "legacy migrates on successful save",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "unknown collection not called empty",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "unknown collection blocks new writes",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "read retry restores empty state",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "read retry restores useful focus",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "no runtime errors",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "frames": [
+    {
+      "file": "empty-desktop.png",
+      "start": 41.799999999813735,
+      "end": 115.90000000037253
+    },
+    {
+      "file": "collection-desktop-light.png",
+      "start": 5624.100000000559,
+      "end": 5695.700000000186
+    },
+    {
+      "file": "open-prepared-0.png",
+      "start": 1322.1000000005588,
+      "end": 1380.6000000005588
+    },
+    {
+      "file": "open-prepared-1.png",
+      "start": 1456.2000000001863,
+      "end": 1598.6000000005588
+    },
+    {
+      "file": "open-prepared-2.png",
+      "start": 1675.4000000003725,
+      "end": 1788.7000000001863
+    },
+    {
+      "file": "open-prepared-3.png",
+      "start": 1864.800000000745,
+      "end": 1945.2000000001863
+    },
+    {
+      "file": "open-prepared-4.png",
+      "start": 2019.6000000005588,
+      "end": 2071.4000000003725
+    },
+    {
+      "file": "open-prepared-5.png",
+      "start": 2146.100000000559,
+      "end": 2208.800000000745
+    },
+    {
+      "file": "collection-save-failure.png",
+      "start": 3418.4000000003725,
+      "end": 3467.7000000001863
+    },
+    {
+      "file": "collection-desktop-dark.png",
+      "start": 5437.300000000745,
+      "end": 5489
+    },
+    {
+      "file": "collection-mobile-light.png",
+      "start": 14.600000000558794,
+      "end": 55
+    },
+    {
+      "file": "mobile-light-turn.png",
+      "start": 322.1000000005588,
+      "end": 386.90000000037253
+    },
+    {
+      "file": "mobile-light-reduced-saved.png",
+      "start": 1732.7000000001863,
+      "end": 1773.5
+    },
+    {
+      "file": "collection-mobile-light-chinese.png",
+      "start": 2068.300000000745,
+      "end": 2107.600000000559
+    },
+    {
+      "file": "collection-mobile-dark.png",
+      "start": 87.3999999994412,
+      "end": 130.29999999981374
+    },
+    {
+      "file": "mobile-dark-turn.png",
+      "start": 404.3999999994412,
+      "end": 475.5
+    },
+    {
+      "file": "mobile-dark-reduced-saved.png",
+      "start": 1819.7000000001863,
+      "end": 1857.2999999998137
+    },
+    {
+      "file": "collection-mobile-dark-chinese.png",
+      "start": 2134.899999999441,
+      "end": 2163
+    },
+    {
+      "file": "unknown-mobile.png",
+      "start": 36.200000000186265,
+      "end": 62.700000000186265
+    }
+  ],
+  "errors": [],
+  "source_hashes": {
+    "index.html": "33d21473103987a9d5a50010b377466bb645e24725bde59744a641d2924a8fa3",
+    "styles.css": "12d7f0543b22aee63619b01e5e3aff9d79bf443746b0b2645b3b39a6c407bc28",
+    "app.js": "7a8d4df30ce21d9b8f546c2938b33fdf202db69f07bfdd8640d20bf6f553a884"
+  },
+  "conditions": "Chromium 143, DPR1, actual local HTTP. Desktop and mobile light/dark. Collection entries created through visible UI, then reused as layout fixtures."
+}

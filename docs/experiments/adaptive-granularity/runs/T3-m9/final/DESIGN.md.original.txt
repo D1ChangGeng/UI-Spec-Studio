@@ -1,0 +1,43 @@
+# Fieldnote — one note through time
+
+## Goal and current increment
+
+The complete goal is a browser-local research note that retains its identity as the user writes, saves, reads, returns and retries. This increment owns the entire card episode, with its neighboring research question, status, focus, scroll and long-content conditions. The original app's single note, 600-character bound, browser Storage key and bilingual task are retained. The save delay remains an explicitly disclosed local-demo condition.
+
+The former presentation put an animated illustration beside a separate editor and moved saved content into another view. The baseline capture shows two competing objects. The new front contains the editable draft; the reverse contains only the persisted version. Both faces share one container, outline, reading origin and physical footprint. The question stays beside it on desktop and above it on narrow screens. The card is the task, not an illustration of the task.
+
+## Decisions and evidence
+
+### Continuous object and motion
+
+Question: which pivot preserves position and weight without moving the card into the neighboring question?
+
+Studied David DeSandro's original Card Flip tutorial and operated both the centered and slide-flip demos in the test browser. Source: https://3dtransforms.desandro.com/card-flip . The source states that example code is MIT licensed. Actual source screenshots are `evidence/source-1-*` and `evidence/source-2-*`; the full source page is also captured. The first request failed certificate verification; `baseline.log` preserves that failure. A read-only retry with the browser's certificate compatibility option reached the public page.
+
+The centered demo narrows around its midpoint; the slide-flip makes the object's lateral travel more noticeable. The centered mechanism better fits a note whose left-side question and below-card controls should remain anchored. The adopted scene/object/two-face structure, inherited perspective, hidden reverse faces and reversible CSS transform are identified in `app/THIRD_PARTY.md`. The scene is 1800px perspective on desktop, 1500px narrow; a 720ms eased turn supports an identifiable object without an additional resting loop. The existing orbit was removed because its repeated movement competed with writing and had no task responsibility.
+
+This is a focused adaptation of the mature CSS 3D pattern. The paper material, typography, composition and application state machine are original project work, not claims of an imported finished visual system. The source demos establish their visible mechanism, not native persistence, accessibility or Fieldnote's integrated quality. These have separate tests and captures.
+
+### Material, proportion and text
+
+The provisional art direction is a warm research card: restrained green ink, cream paper, small index labels, serif writing/reading text and a quieter outer surface. The dark theme uses a green charcoal surface and a light sage action. Material is expressed by a small radius, a lit upper edge, a slight surface gradient and a soft cast shadow. The source has plain red/blue faces; Fieldnote's paper treatment is independently inspected in the local application.
+
+The desktop card is 570 × 466px at the requested 1440 × 900 viewport. A broad but quiet left column supports the card rather than adding a second editor. Narrow screens retain the same note and question with a bounded internal scroll area. Intentional internal scrolling preserves the save action and card shape for long notes. No character truncation occurs; over-limit text remains editable and saving is disabled with an explanation.
+
+Inspection found a missing space when the mobile title's line break was suppressed. This was repaired in the copy. Further review found that the initial oval shadow looked like a separate platform when the card became edge-on; it was replaced with a blurred, filled cast shadow. The narrow heading/card sizing was adjusted so task feedback is visible in the requested frame. A reduced-motion browser test exposed intercepted return/save hit areas; the static mode now flattens both faces, removes inactive faces from layout and disables button transforms/filters. The original failing run is preserved.
+
+### Truthful save, drafts and return
+
+Storage owns success. Input immediately produces a saving state; only a successful native `localStorage.setItem` permits the completed face. A throwing write keeps the editor facing the user and exposes a retry. Existing persisted content is not overwritten by a failed attempt. The saved face always uses `saved`, never the pending record.
+
+The submission takes a snapshot. If typing continues during the delay, that submitted snapshot can save, while the newer text remains a draft and the card does not turn away. A navigation epoch prevents a later response from overriding a more recent navigation intent. Duplicate save submissions are guarded. Read corruption blocks overwrite until reading or explicit clearing recovers. Clear failures retain data and expose their own retry. Unsaved drafts remain in the open page; they do not survive reload, and the About copy states that boundary.
+
+### Access and reduced motion
+
+Native buttons and textarea carry control semantics. Only the intended card face is interactive and exposed; the other face is inert and aria-hidden. A stable control below the card permits reversal during motion. Completing a save focuses the saved heading after settling. Keep editing restores textarea selection and internal scroll. Ctrl/Command + Enter saves; Escape returns to editing.
+
+Reduced motion retains the identical spatial composition and face semantics without any rotation. The face changes immediately within the same paper outline. It does not hide information or wait for a missing transform event before restoring focus. No continuous decoration runs in either mode.
+
+## Assurance boundary
+
+Read `evidence/report.json`, test logs and `DELIVERY.md` for the final executed scope. Browser assertions, viewed pixels and user acceptance are distinct. Natural-time screenshot sequences provide ordered samples with actual capture-time brackets; they do not establish continuous playback, dropped-frame performance or device-wide smoothness. There is no screen-reader, Safari, Firefox, physical touch-device or mobile software-keyboard validation in this session.

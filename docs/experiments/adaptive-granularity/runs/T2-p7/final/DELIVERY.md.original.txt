@@ -1,0 +1,38 @@
+# Meridian is ready to explore
+
+Built a working browser-local research workspace with a warm paper palette, green accents, editorial headings, and a reading area that stays connected to the composer as a thread grows.
+
+**Local preview:** [Open Meridian](http://127.0.0.1:8767/app/) while the review server is running.
+
+**Source entry:** [index.html](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/app/index.html) · **Run instructions:** [README.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/app/README.md)
+
+## What works
+
+- Ask repeated questions in the same thread and watch an answer appear progressively.
+- Stop a response while keeping the partial answer, then continue it. Reloading during a response also leaves a recoverable partial result.
+- Select **Local demo → Simulate one failed response**, then recover with **Retry response** without duplicating the question.
+- Read an earlier paragraph while new text arrives. The page preserves that position and offers **Back to latest**.
+- Open a source beside the conversation on desktop. On a phone, it opens in a native modal with keyboard dismissal and focus return.
+- Use an expanding multiline composer. **Enter** sends; **Shift+Enter** adds a line. Drafts, threads, filenames, and the appearance preference persist in this browser.
+- Find and revisit threads in the sidebar. Unsent drafts remain available in history after starting a different thread. Compact screens use a side drawer.
+- Add and remove local filename chips, copy a completed answer, and switch between light and dark themes.
+
+Answers and source notes are clearly labeled synthetic examples. They do not perform live research. File contents are not read or uploaded. The application makes no external content requests; its Content Security Policy blocks connections to services.
+
+## Reviewed result
+
+[Desktop workspace with its source reader](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/review-desktop-source.png) · [Phone conversation](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/final-mobile-answer.png) · [Dark phone failure and recovery](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/review-mobile-dark-failure.png)
+
+I inspected actual renders at **1440×900** and **390×844**, including the initial view, growing answer, stopped result, recovery, source reading, multiline input, navigation, and both themes. The main browser run passed **32 checks**. Follow-up runs passed **12 focus/recovery checks**, **3 navigation checks**, and **1 unsent-draft check**. Those are separate scoped checks, with source hashes and original failures retained in the evidence records.
+
+Two findings changed the implementation: theme switching briefly mixed light button surfaces with dark text roles, so button color transitions were removed; phone history initially had an unnecessarily tall centered dialog, so it became a side drawer that preserves the navigation relationship. Retry and Continue now move keyboard focus to Stop, and completion returns that focus to the composer.
+
+The visual foundation adapts the supplied reference's shared reading/composer measure, user-message proportions, and stable reading region. That reference transfers the assistant-ui conversation page composition. Meridian's identity, local state adapter, streaming, persistence, and expanded reader are project-owned additions. This does **not** install the assistant-ui React runtime. Attribution and source notices are retained in [THIRD-PARTY.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/app/THIRD-PARTY.md), with decisions and evidence boundaries in [DESIGN.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/DESIGN.md).
+
+## Remaining scope
+
+The requested local demonstration is usable now. Live retrieval, real citations, file parsing, accounts, and synchronization are intentionally outside its boundary. History currently supports creation, search, and reopening; rename, delete, and export controls would be useful subsequent refinements.
+
+Verification used Chromium and phone viewport emulation. Physical mobile keyboard behavior, Safari/Firefox, assistive technology, and a full accessibility audit remain unverified. The temporal review used ordered timestamped stills, not continuous-video playback. The next useful validation step is to run the same long-answer and source-return journey on a physical phone and a second browser before connecting real services.
+
+Full factual test and viewing records: [evidence/README.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/README.md). Nothing has been deployed or published.

@@ -1,0 +1,61 @@
+# Meridian: current design model
+
+## Goal and current scope
+
+Meridian is a browser-local demonstration of asking a question, watching an answer unfold, reading it, inspecting its illustrative sources and continuing a thread. The entire research loop stays local. This round will implement the linked composer/reading/streaming/recovery journey, local thread history, filename attachments, responsive navigation and themes. It does not connect a model, parse files or claim factual research.
+
+## Consequential decisions, before the trial
+
+**D1 — conversation foundation (L0–L3, L5).** The task makes the enduring object a thread. The supplied reference transfers assistant-ui's ChatGPT page relationships: bounded reading measure, shared input, right-aligned user message and state-prioritized send/stop. Its source and upstream documentation have been read. The sample has no real thread history, streaming or filename attachments. The next action is to view its actual empty, populated and source-open states and compare the original assistant-ui demo with shadcn's sidebar-01. A document/dashboard hierarchy would be selected only if retrieval and organization proved to be the main task; the brief explicitly prioritizes question/answer continuation.
+
+**D2 — visual direction (L2–L4).** Provisional warm editorial direction: pale parchment canvas, quiet ink, restrained rust accent, serif headlines and readable sans-serif body. Compact navigation and a small orbit mark supply identity. The alternative is the supplied stark monochrome, centered composition. Current rationale is a research reader should feel composed and reflective while controls remain clear. It is a proposed product direction, not owner-approved. The first populated desktop/mobile capture will decide whether the additional texture of serif titles weakens scanning or if the composer feels disconnected.
+
+**D3 — growth and continuity (L1–L5).** One scrolling reading pane and a fixed composer footer. Follow the latest text only while the reader is near the bottom; otherwise expose a “Latest” control. Source reading should not replace the conversation or its draft. Desktop uses an adjacent panel; compact widths use a native modal. The source-open/close episode will check width, focus and scroll together. If desktop reflow loses the reader's place, use an overlay or anchor restoration.
+
+**D4 — truthful simulation (L1, L3, L5).** A visible Local demo label and plain description identify deterministic replies. A small Demo controls dialog allows long, slow and failure-once responses. Retry succeeds without duplicating the question. Attachments are filename chips only; no file bytes are read. Browser storage owns history/drafts and state reports persistence failure accurately.
+
+## Evidence boundaries
+
+Reading source is code evidence; downloaded captures are not yet visual review. Original public demos will be viewed without sending questions to their services. Source attribution, actual adoption and inspiration will be reconciled after implementation. Current visual acceptance remains pending. Original failures will stay in evidence even after repair.
+
+## Next evidence actions
+
+1. View source and competing shell captures; record the relationships retained.
+2. Build the bounded thread/composer trial; inspect 1440×900 and 390×844.
+3. Exercise repeated input, streamed growth, user scroll-away, stop, failure/retry, source return, navigation, draft/history reload, keyboard and themes.
+4. Reconcile actual results and remaining gaps in DELIVERY.md.
+
+## Source observation and selection
+
+The supplied empty and active conversations, and its source modal, were visually inspected at 1440×900. The active page keeps a common measure and reachable composer, but its modal replaces reading with a blocking layer. The original assistant-ui demo shows the welcome/input as one central group; the shadcn sidebar alternative offers useful navigation but an unrelated main content hierarchy. Captures and source identity are linked in `app/SOURCES.md`.
+
+The selected transfer keeps the reading/input relationship, bounded user messages and shared composer. The adopted mechanisms are in `app/foundation.css`; actual custom responsibilities remain in `app/app.js` and `app/styles.css`. The product-specific difference is the adjacent desktop reading room, quieter message bubble, warm material and editorial title/body contrast. This is a provisional design chosen under the implementation authorization, not an owner-approved direction.
+
+## Actual inspection and meaningful revisions
+
+**R1 — initial integrated trial.** Thirty browser assertions passed, but viewing `evidence/01-desktop-empty.png` and `10-mobile-empty.png` exposed a welcome/composer overlap. The reader's `flex: 0` gave it a zero flex basis while its visible content overflowed. Changed the empty reader to `flex: 0 0 auto`. Also restored the root rem basis to 16px so the 48rem foundation actually resolves to 768px. The original captures remain unchanged. This is a visual failure despite the earlier behavioral passes.
+
+**R2 — repaired layout.** The 32 checks in `evidence/run2/test-run-2.json` passed, including explicit empty-state geometry checks. Actual viewed captures show the welcome above the composer at both required sizes; populated reading retains calm type rhythm and a reachable footer. Desktop source reading gives the citation, reading panel and draft a coherent shared surface. Mobile source reading becomes a bounded scrollable native modal.
+
+**R3 — theme transition.** Viewed dark captures in the first two runs caught light button fills briefly remaining under newly light text. This was an intermediate contrast defect caused by background-color transitions during a theme switch. Removed that transition so text and fill change together. `evidence/final2/desktop-dark-immediate.png` and the later final desktop view show the coherent dark surfaces. This correction is independent of reduced-motion support.
+
+**R4 — extended review.** Returning to a thread restored scrollTop 300 to 300 and retained its draft. Unsent drafts are now discoverable in history. An authored long response completed with 512 words and a 1,885px reading document in a 673px viewport. The first extended-run test incorrectly assumed a >550-word fixture and failed, even though completion occurred. Its original log and JSON remain in `evidence/final/`. The corrected assertion asks the task-relevant question—whether the completed answer extends beyond two reading viewports—and passes in `evidence/final2/`.
+
+**R5 — new-thread state.** Viewing `evidence/final2/mobile-welcome.png` after a populated thread exposed a stale Latest response control and old completion message. `renderThread` now clears both when the active object changes. The original evidence is preserved. `evidence/final3/` captures and checks are the recheck for the affected navigation state and cancellation ownership.
+
+## Current coverage and open work
+
+| Scale | Implemented and inspected scope | Remaining boundary |
+|---|---|---|
+| L0 | Local research conversation with explicit synthetic status | No live research quality or user acceptance claim |
+| L1 | Ask, stream, stop, retry, continue, source return, history/draft return | Topic synthesis is fixed; no production service |
+| L2 | Desktop navigation + conversation + source panel; compact modal navigation/source | Physical mobile keyboard and cross-browser behavior untested |
+| L3 | Growing composer, filename chips, source controls, local history/search, state controls | No file parsing, history deletion/rename or synchronization |
+| L4 | Warm light and coherent dark surfaces, editorial headings, stable reading measure | Human usability study, forced colors and text zoom not performed |
+| L5 | Static source, local HTTP browser runs, actual capture viewing, source/notice records | Pinned Chromium 143 evidence, not a broad compatibility guarantee |
+
+The defining relationship is now supported by actual use: the composer remains available while content grows, readers can scroll away without being pulled back, and sources remain connected to the same thread. Ordered pending/early/middle/completed frames were viewed; this supports sampled temporal states, not continuous video playback or a measured frame-rate claim.
+
+**R6 — long-answer content review.** The long fixture's repeated paragraph described UI testing inside the answer. That wording weakened the requested research experience. Replaced it with four distinct paragraphs about research decisions and practical next steps; synthetic status remains in the answer byline, footer and source labels. `evidence/final4/` is the focused completion, reading-length and visual recheck for this editorial change. Core state transitions are unchanged.
+
+The R6 run completed at 530 words with 1,885px of content in a 673px reading viewport. Both middle and completed captures were viewed: the later sections now read as a continuous research discussion, and the composer remains a separate stable surface. Final3 desktop welcome/source/dark and mobile welcome/reading pixels were also viewed after the new-thread repair. Final2 mobile source/dark/composer/short-height captures were viewed under the unchanged affected styles. No continuous playback claim is made.

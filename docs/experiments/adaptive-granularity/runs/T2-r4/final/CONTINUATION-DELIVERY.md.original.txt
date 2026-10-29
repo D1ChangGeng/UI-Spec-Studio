@@ -1,0 +1,62 @@
+# Sources are now available while the answer arrives
+
+Meridian now connects citations to individual answer paragraphs before the long response finishes. Open an inline citation to read its source while later paragraphs continue arriving. The cited paragraph is highlighted in the conversation and repeated in the reading room, so the connection remains visible.
+
+**[Open Meridian locally](http://127.0.0.1:8844/app/)**
+
+## Try the connected experience
+
+1. Open **Demo**, select **A longer answer**, and ask one of the starter questions.
+2. Open the first numbered citation when it appears beside its paragraph. You do not need to wait for the answer to finish.
+3. Read the source while the answer continues. On desktop, the composer remains available; grow a follow-up draft or scroll back in the conversation.
+4. Use **Stop response** in the source reader. The same control becomes **Try again**, which restarts the answer while preserving the source context and draft. A long response stays long on retry.
+5. Choose **Back to answer**, close the panel, or press Escape. Return resolves the relevant citation even after retry has replaced the answer. **Latest response** remains the explicit route to the unfolding end.
+
+At 390×844, the source opens as a focused native dialog. Stop/retry controls are included inside it, and Back to answer stays visible when the source is scrolled. The full answer remains behind the dialog and resumes as the same thread when it closes.
+
+## What changed and why
+
+The earlier footer sources appeared only after completion. Three inline citation controls now arrive with their associated paragraphs. Each carries stable answer/paragraph identity into the existing source reader. This lets the source context survive an answer being stopped or regenerated, rather than depending on a button that may have been replaced.
+
+Opening a source suspends automatic following of new output. The conversation keeps its reading point while the source is open, including when the desktop composer grows. The source panel reports the answer's actual local state—arriving, stopped or ready—and its controls operate on that answer. This is still a synthetic local demonstration; the sources are not retrieved publications.
+
+The warm surfaces, editorial typography and quiet action hierarchy continue through the connected state. The cited paragraph and its source context use the same restrained tint. The return control becomes a persistent bar when reading farther down a source.
+
+## Actual review and checks
+
+The affected journey was exercised over local HTTP in Chromium 143 at **1440×900** and **390×844**. The integrated continuation run passed **42 scoped assertions** covering:
+
+- A citation appearing before answer completion, matching paragraph text and visible paragraph highlighting.
+- Desktop non-modal and compact native-modal behavior.
+- Source-panel stop, frozen output, retry, retained source context and no duplicate question.
+- Regenerated citation focus on explicit return and Escape.
+- Desktop draft growth and draft retention through source stop/retry/return.
+- User-controlled scroll-back, the Latest action, completed long retries and no horizontal page overflow.
+- No unhandled JavaScript errors and no external application requests during the exercised journey.
+
+A focused run added six assertions for a nonzero reading point, source close, a persistent return control and draft preservation after scrolling the source. The held conversation position was **140px before and after further output**, and closing the desktop reader retained that position. The six checks were rerun after the return-bar refinement and passed.
+
+These are browser assertions, separate from visual judgment. I opened the actual captures for source-during-streaming, expanded composer, stopped/retrying source, completed dark desktop, focused mobile source, and deeply scrolled source states. The captured sequence includes meaningful arriving → stopped → retrying → completed states; no continuous-video or frame-rate claim is made.
+
+### Representative evidence
+
+| State | Capture |
+|---|---|
+| Desktop source with held reading position | [desktop-source-held-position.png](evidence/continuation/focused2/desktop-source-held-position.png) |
+| Expanded composer beside a live source | [1440-03-expanded-composer.png](evidence/continuation/1440-03-expanded-composer.png) |
+| Source retained during retry | [1440-05-source-retrying.png](evidence/continuation/1440-05-source-retrying.png) |
+| Dark completed source | [1440-06-completed-source.png](evidence/continuation/1440-06-completed-source.png) |
+| Mobile source while the answer arrives | [390-02-source-while-streaming.png](evidence/continuation/390-02-source-while-streaming.png) |
+| Scrolled mobile source with persistent return | [390-source-scrolled.png](evidence/continuation/focused2/390-source-scrolled.png) |
+
+The first focused capture showed a strip of scrolling content above the sticky return button despite the reachability assertion passing. I extended the return surface to the source panel's edges and rechecked it. The original `focused/` images and results remain preserved alongside `focused2/`; earlier delivery evidence and `DELIVERY.md` are untouched.
+
+Replay scripts, timestamped capture metadata, check results and source digests are in `evidence/continuation/`. The first integrated run is `run-1.json`; the final focused results are `focused2/checks.json`.
+
+## Remaining boundaries
+
+The paragraph/source associations are authored for the deterministic fixture. There is no live retrieval, factual verification or arbitrary citation parsing. A retry temporarily retains the cited text in the source view while the corresponding answer paragraph is regenerated; if that paragraph is not yet available on return, the composer is the safe focus target.
+
+Physical mobile keyboard behavior, Safari/Firefox, screen-reader operation and very large research threads remain unverified. Compact mode deliberately focuses on the source; composing resumes when the dialog closes. The current evidence supports the requested local journey, not a production research service or owner design approval.
+
+No deployment or publication occurred. The same static app remains in `app/`, and the local server remains on port 8844.

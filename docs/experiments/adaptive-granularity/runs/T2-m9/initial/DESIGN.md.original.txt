@@ -1,0 +1,52 @@
+# Meridian — current design model
+
+## Overall goal and first increment
+The complete target is a local conversational research workspace with persistent history, a growing composer and filename attachments, long asynchronous answers, interruption/recovery, adjacent source reading, themes and compact navigation. SPEC-01 owns the continuous ask → read → inspect → continue episode: composer geometry, stream ownership, reading position, recovery, source return and neighboring navigation must be judged together. This is a working local demonstration; no external answer service or file parsing is implied.
+
+## Evidence and provisional direction
+The supplied reference was read and rendered over local HTTP. Two actual 1440×900 captures are in evidence/reference-conversation.png and evidence/reference-documents.png and were viewed. The conversational alternative provides an immediately identifiable primary input, restrained shared 48rem measure, rounded composer and bounded right-aligned user messages. The document alternative exposes durable collection objects first; its table and New note action subordinate asking. The user explicitly requests conversation, so we select the conversation relationships. The reference's study controls and document branch have no role in Meridian.
+
+The page's implementation lineage is assistant-ui's ChatGPT example, pinned in reference-project/FOUNDATION.md. This run inspected the supplied native projection, not the live upstream React demo. Actual design transfer preserves its shared measure, composer contour, state-prioritized send/stop, message proportions and independent reading region. The source's native implementation is adapted; its real React runtime is not installed. Radix Slate tokens are copied with their notice. New local state, content, attachments, persistence, source dock and mobile navigation are authored responsibilities. The source's timer gives only a settled response and cannot supply incremental stream semantics; that observed code gap justifies a bounded state extension.
+
+## Decisions across scales
+- L0/L1: questions create threads; answers are clearly synthetic. Continued questions remain in the thread. Sources are illustrative reading material, never represented as retrieved research.
+- L2/L3: persistent left history; reading and composer share a measure; desktop sources sit in a companion dock. Narrow screens use native modal dialogs for history and sources. Draft, focus and scroll belong to the active thread.
+- L4: a warm editorial direction pairs Georgia headings with system sans controls/body, ivory canvas, dark evergreen action and restrained lines. Unlike the source's monochrome study, this marks the research space as a quiet notebook. This identity is provisional agent judgment, not owner approval.
+- L5: local HTML/CSS/JS; browser storage is the only persistence; no fetch, upload or external runtime resources. Deterministic response templates and timers. All source/HTML insertion treats user strings as text.
+
+## Questions before expansion
+Does the shared composer stay reachable under growth? Does scrolling upward stop following the stream? Do source open/close and history return preserve the reading position? Can a failed response be retried without duplicating the question? These require actual browser tasks, ordered captures and viewed pixels. The initial alternatives establish product-model fit, not approval of the new visual direction.
+
+## Later work
+A later increment should deepen real-mobile keyboard/assistive-technology testing, extended history organization and source search/selection. Actual retrieval and file reading are outside the authorized local-demo boundary.
+
+## Meaningful revisions and evidence
+
+1. The first runtime run found an `answerFor` object/array syntax error. The broken script and original failed runner results are archived as `evidence/app-initial-syntax-failure.js` and `test-results-01-initial-failure.json`. This was a real startup failure, not a visual-only defect.
+2. The first complete functional run passed 29 assertions. Inspection of the phone home showed an isolated “you?” line. The heading now breaks into three intentional phrases on narrow screens.
+3. “Continue response” initially restarted the answer. It now retains the visible character count and resumes the partial answer. A separate assertion compares the already-written opening immediately after resume.
+4. Thread restoration now snapshots the intended scroll offset before rendering. Otherwise a queued layout scroll could overwrite the destination before its animation-frame restore.
+5. Repeated streaming checks exposed the need to distinguish user scrolling from a non-overflowing region. The diagnostic in `scroll-diagnostic.log` showed that one original setup tried to set scrollTop=0 while scrollHeight equaled clientHeight; that alone cannot express upward reading intent. Original failing results and the original test setup are preserved. The final test explicitly waits for more than 150px of overflow before moving to the top.
+6. The active answer now retains paragraph DOM nodes and updates only changed text. Explicit scroll following and `overflow-anchor:none` give one owner to the reading position. Following resumes at the actual bottom instead of a broad near-bottom zone. The final scripts recheck current-answer and older-answer reading independently.
+7. Source notes now vary with the sample topic. Labels identify every answer and note as illustrative. The sample metadata uses “Local note” rather than an invented reading-time estimate.
+
+## Actual adoption and current claim boundaries
+
+- `app/styles.css` retains the reference's 48rem measure, rounded composer/message relationships, state-oriented controls and independent reading region. This is an identified design/technique transfer. It is not the upstream React implementation.
+- `app/tokens.css` directly retains the attributed Radix values. `--quiet` uses Slate 11 in each theme; other copied scale values are available but not counted as active contributions.
+- Native dialog semantics and bounded textarea `field-sizing` follow the supplied retrieved modern guidance. The pinned Chromium engine is 143; no claim is made about newer element-scoped transition support or full non-scrollable backdrop containment.
+- The original mature upstream live demo was not operated in this session. The supplied native reference was rendered, compared and viewed. Current Meridian captures were separately viewed; neither constitutes owner acceptance or user research.
+
+## Visual review
+
+Viewed source comparison: the conversational example immediately foregrounded the primary input; the document example foregrounded collection rows and note creation. The former fits the requested action loop.
+
+Viewed current desktop: the serif question/answer headings, compact sans-serif controls and muted navigation create an editorial hierarchy. The shared reading/composer alignment remains clear after answers grow. The source dock has a distinct white surface, its own reading rhythm and an explicit close action; it does not cover the composer at 1440×900.
+
+Viewed current phone: prompt cards stack without horizontal overflow, the title has deliberate phrase breaks, the composer stays reachable, and source notes occupy a native modal with a visible close control. Dark appearance preserves the same visual roles using a deep green canvas and lighter secondary text.
+
+Ordered frame pairs support sampled-state observations, not uninterrupted video or a frame-rate claim. The final image inventory and capture-time brackets are in `evidence/continuity-results.json`. Automated measurements, viewed pixels and owner acceptance remain separate.
+
+## Remaining work
+
+The local-demo goal is implemented. Further work should prioritize real-device keyboard/viewport behavior and assistive-technology review, then thread search/rename/delete and more varied source-document types. No account, cloud synchronization, real retrieval, factual research validation, file parsing, collaborative editing or publication is present. These are explicit boundaries, not hidden unavailable controls.

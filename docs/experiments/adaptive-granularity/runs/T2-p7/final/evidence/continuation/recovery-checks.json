@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "name": "Close during streaming preserves a nonzero reading offset",
+      "pass": true,
+      "detail": {
+        "before": 169,
+        "after": 169
+      }
+    },
+    {
+      "name": "Live citation receives focus on close",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Simulated failure exposes Retry in the existing source panel",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Panel Retry recovers failure without duplicating the follow-up",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Closing after rerender returns focus to the current cited paragraph",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Closing immediately after Retry has a reachable focus fallback",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No errors in affected desktop run",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "source_sha256": {
+    "app/styles.css": "43f26705831d76675e5597ce789c7602d361fb22d869615499ee859f4c0cea07",
+    "app/THIRD-PARTY.md": "29e6f18f1291a8992a6f59eab511490d7e20c5339176c7780836bd898d615393",
+    "app/FOUNDATION.md": "2ce056e1318c24582fb20a0e002083b85694aef332dceaf2e1cf166f4fe8df08",
+    "app/README.md": "a32239b7b1486e28fe0e29e5d787da92ee7d035a61a01ef42e373de283bff948",
+    "app/app.js": "e13f738e910904185282edafd933ad57b07e237d5f0f27fd8aa36afb620c3951",
+    "app/index.html": "71673e04adcf02380f353b6d39ce2f72dbff0fd470aaa95ae6e0ce36d8849488",
+    "app/tokens.css": "02f86bb6ca43363b47f88dff7bbe5e339304ffbd263ed8eac0fe84df7a6a16de"
+  }
+}

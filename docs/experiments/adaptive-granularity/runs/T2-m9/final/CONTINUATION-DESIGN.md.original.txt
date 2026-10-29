@@ -1,0 +1,31 @@
+# SPEC-02 — Read a cited source during an unfolding answer
+
+The current product and its warm editorial direction are inherited from SPEC-01. This increment owns citation availability during streaming, identification of the cited paragraph, source/answer spatial continuity, preserved draft and control of following, plus interruption/retry while the source remains present. Prior DELIVERY.md and evidence remain unchanged.
+
+The previous implementation exposes source cards only after completion. Its active answer now retains paragraph nodes, providing a useful base for stable inline citation controls. The existing desktop dock and native narrow dialog were actually viewed in the prior round and are retained. This is an extension of the inspected local foundation; no new external component adoption is claimed.
+
+Decision: reveal an inline citation when its paragraph is complete, while later paragraphs continue streaming. The selected paragraph receives a soft highlight and the source view shows a short cited-paragraph excerpt. Opening a source suspends scroll following; returning to latest is an explicit action. Desktop keeps composer and source usable together; narrow screens use a focused native modal with a visible Back action. Native modal focus behavior remains the browser's responsibility.
+
+Alternatives: waiting for the complete answer fails the requested concurrent-reading task. A desktop modal blocks composing and stopping, so the existing dock is retained. A narrow side-by-side layout would leave insufficient reading width; the focused dialog remains the better current fit. These choices inherit the viewed spatial evidence rather than treating a fresh layout as already verified.
+
+Evidence questions: does the citation remain the same DOM control while text arrives? Does opening/closing retain a semantic reading anchor and draft? Does manual upward scrolling remain authoritative? Can stop, continue and failure/retry run while the desktop dock stays open? Do narrow native-dialog close and focus return preserve context? New scripts and actual viewed captures will answer these within the supplied browser environment.
+
+## Implemented result and inspected refinements
+
+`paintAnswer` gives each answer a stable identity, retains its paragraph text span and citation button, and reveals citations when a paragraph is complete. Later paragraphs continue to stream. `activeSource` associates source identity, answer and paragraph with the open view. A soft paragraph highlight and a cited-paragraph excerpt expose that relationship. Existing source-card access remains available after completion.
+
+Opening a source records a semantic reading anchor before the desktop width changes, suspends following, and preserves the draft. Closing restores the corresponding anchor and current citation focus. On narrow screens the existing native dialog supplies modality and focus return; a sticky Back control remains visible while its content scrolls. No second focus trap or manual mobile Escape handling was added.
+
+An explicit Back to latest can resume following with the desktop dock open. An upward wheel scroll interrupts that following. Continuing a stopped partial answer with a source open preserves the reading position. An explicit new send or failure retry follows the new response, reflecting the person's renewed intent.
+
+Actual first captures showed the new paragraph/source relationship clearly at 1440×900, including a seven-line composer. The source note remains independently scrollable. At 390×844, the focused note has readable type and a persistent Back action; returning reveals the retained draft and still-active answer.
+
+A recovery capture showed the Retry response control partly below the reader after an explicit new send. The old capture (`07-failure-before-visibility-fix.png`), pre-fix source and results were preserved. The source-open state had suppressed following even for the newly sent question. The focused repair distinguishes source inspection from a new send/retry, and scrolls a newly arrived failure into view only while following remains requested. A specific final assertion checks the whole recovery control is inside the reading region.
+
+## Evidence and limits
+
+New evidence is isolated under `evidence/continuation/`: the focused journey, explicit-follow/keyboard/reflow checks, an inherited regression run, timestamped captures, pre-change sources, intermediate results and a final source digest. Prior DELIVERY.md and original evidence are unchanged.
+
+Viewed captures include live citations, selected paragraph/source pairing, expanded composer, stopped and failed states with a source present, dark appearance, phone source opening and return, and a scrolled phone source with its Back control visible. Still captures and ordered samples establish those observed states; no continuous playback, field-performance or user-study claim is made.
+
+The implementation remains a local synthetic demonstration. Citation-to-note mappings are authored fixtures. Physical-mobile keyboard/touch behavior, screen-reader announcements and cross-browser certification remain unverified. Narrow source reading intentionally focuses the note; composing and stopping are available after returning to the conversation.

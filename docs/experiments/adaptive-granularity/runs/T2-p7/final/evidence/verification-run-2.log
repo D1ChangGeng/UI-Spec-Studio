@@ -1,0 +1,33 @@
+{"name": "Initial page has no horizontal overflow", "pass": true, "detail": null, "elapsed_s": 0.445}
+{"name": "Shift+Enter inserts a new line", "pass": true, "detail": null, "elapsed_s": 0.627}
+{"name": "Filename appears as an attachment", "pass": true, "detail": null, "elapsed_s": 0.642}
+{"name": "Enter starts an asynchronous response", "pass": true, "detail": null, "elapsed_s": 0.674}
+{"name": "Progressive content is visible", "pass": true, "detail": {"words": 63}, "elapsed_s": 1.829}
+{"name": "Stop retains partial text and prevents stale completion", "pass": true, "detail": null, "elapsed_s": 2.898}
+{"name": "Draft survives stopping", "pass": true, "detail": null, "elapsed_s": 2.901}
+{"name": "Continue completes the same answer without duplicate question", "pass": true, "detail": null, "elapsed_s": 5.909}
+{"name": "Desktop source reader opens beside conversation", "pass": true, "detail": null, "elapsed_s": 6.274}
+{"name": "Draft survives source opening", "pass": true, "detail": null, "elapsed_s": 6.275}
+{"name": "Source return retains reading position", "pass": true, "detail": {"before": 180, "after": 180}, "elapsed_s": 6.534}
+{"name": "Source close returns keyboard focus", "pass": true, "detail": null, "elapsed_s": 6.54}
+{"name": "Simulated failure keeps question and exposes recovery", "pass": true, "detail": null, "elapsed_s": 8.073}
+{"name": "Retry recovers without duplicating the question", "pass": true, "detail": null, "elapsed_s": 11.032}
+{"name": "Reading earlier content is not pulled down by streaming", "pass": true, "detail": {"before": 120, "after": 120}, "elapsed_s": 14.328}
+{"name": "Back to latest is available while reading earlier content", "pass": true, "detail": null, "elapsed_s": 14.33}
+{"name": "Repeated questions append to the same thread", "pass": true, "detail": null, "elapsed_s": 16.3}
+{"name": "HTTP reload restores thread, draft, theme and filenames", "pass": true, "detail": null, "elapsed_s": 16.697}
+{"name": "Switching threads preserves prior draft and attachments", "pass": true, "detail": null, "elapsed_s": 18.119}
+{"name": "Switching away cancels the departed stream", "pass": true, "detail": null, "elapsed_s": 18.126}
+{"name": "History search has a truthful empty result", "pass": true, "detail": null, "elapsed_s": 18.137}
+{"name": "No external application requests", "pass": true, "detail": ["http://127.0.0.1:8767/app/", "http://127.0.0.1:8767/app/styles.css", "http://127.0.0.1:8767/app/app.js", "http://127.0.0.1:8767/app/tokens.css", "http://127.0.0.1:8767/app/", "http://127.0.0.1:8767/app/styles.css", "http://127.0.0.1:8767/app/app.js", "http://127.0.0.1:8767/app/tokens.css"], "elapsed_s": 18.145}
+{"name": "No uncaught browser errors", "pass": true, "detail": [], "elapsed_s": 18.145}
+{"name": "Mobile initial content fits viewport width", "pass": true, "detail": null, "elapsed_s": 18.292}
+{"name": "Mobile source opens as a native modal", "pass": true, "detail": null, "elapsed_s": 22.344}
+{"name": "Escape dismisses source and restores trigger focus", "pass": true, "detail": null, "elapsed_s": 22.395}
+{"name": "Compact navigation exposes saved thread", "pass": true, "detail": null, "elapsed_s": 22.458}
+{"name": "Growing mobile composer is bounded and send remains visible", "pass": true, "detail": {"textarea_height": 138, "send_box": {"x": 316, "y": 753.609375, "width": 44, "height": 44}}, "elapsed_s": 22.595}
+{"name": "Reduced motion removes the progress pulse animation", "pass": true, "detail": null, "elapsed_s": 23.67}
+{"name": "Mobile stop is operable", "pass": true, "detail": null, "elapsed_s": 23.7}
+{"name": "Final mobile layout has no horizontal overflow", "pass": true, "detail": null, "elapsed_s": 23.705}
+{"name": "No browser errors across both viewports", "pass": true, "detail": [], "elapsed_s": 23.705}
+RESULT 32 / 32

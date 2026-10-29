@@ -1,0 +1,66 @@
+# Leafnote — current design and evidence
+
+## Goal and scope
+
+The product is a browser-local notebook for a small research team. The cohesive increment covers the complete daily loop: find a note, reopen it, continue a draft, save, create another note, and safely delete or recover. The existing one-note local-storage contract was retained as a migration source. This is a local product demonstration, not a shared team service.
+
+This increment couples the collection and editor because selection, search, draft identity, save feedback and return navigation must be judged together. Research scope included mature collection and mail-workspace examples. Implementation scope is one responsive workspace and its states. Regression scope includes the prior Chinese/English and light/dark variants, storage failure, legacy recovery and keyboard use.
+
+## Research, comparison and adoption
+
+### D1 — a collection beside a writing surface
+
+Question: how much structure helps someone resume a research note without competing with the writing task?
+
+Observed public renders:
+
+- Bootstrap 5.3 Sidebars, https://getbootstrap.com/docs/5.3/examples/sidebars/ — screenshot `evidence/bootstrap-sidebars.png`. The custom-content list uses a clear title, a brief context line, date metadata, and a broad selected surface. Borders establish row continuity. The demonstrated sidebar variants also show that navigation can consume a large fixed column.
+- shadcn/ui v3 Mail, https://v3.shadcn.com/examples/mail — screenshot `evidence/shadcn-mail.png`. The actual rendered example has a category rail, searchable message collection and reading pane. That gives richer organization but adds a third responsibility and greater horizontal density.
+
+These were viewed at 1440×900 in the local Chromium runner. The shadcn carrier page is visible in the capture; no claim is made that its whole application or hidden states were operated. Its current unversioned URL returned 404 via the search tool. Initial direct-browser captures failed because the test browser did not trust the environment certificate chain; the preserved retry used an isolated public-page context with certificate checks ignored. Both original failures and successful capture logs remain in `evidence/`.
+
+Decision: inherit the title/context/date/selection hierarchy of Bootstrap's custom list and the list-to-reading relationship visible in the mail example. A separate category rail is unnecessary for a small flat collection. On narrow screens, let collection and editor take turns occupying the screen. The explicit All notes return retains the search query and current object.
+
+Actual source adoption: Bootstrap **5.3.8**, locally bundled in `app/vendor/bootstrap.min.css`, carries `.list-group`, `.list-group-item-action`, active state variables, `.form-control`, `.btn`, accessible hidden text and base normalization. The list markup follows the documented actionable custom-content pattern. The application configures its semantic colors and proportions; custom CSS owns the two-region composition, note typography and responsive page switch. This is a focused block/family adoption, not a claim of importing a complete notebook template. License: `app/vendor/BOOTSTRAP-LICENSE.txt`.
+
+Documentation read: https://getbootstrap.com/docs/5.3/components/list-group/ . Original source: https://github.com/twbs/bootstrap/tree/v5.3.8 .
+
+### D2 — calm editorial typography and surface hierarchy
+
+The initial integrated trial used system fallbacks. Its actual pixels showed inconsistent utility text and undersized metadata. Inter Variable was then obtained from the official rsms/inter repository and bundled with its OFL notice. `@font-face` now supplies the UI and note body. Georgia/Noto Serif CJK SC supply the more expressive title and wordmark role; CJK text keeps a system Noto fallback. The serif title establishes a page to write on, while the sans collection supports quick comparison.
+
+Color roles separate a pale collection, quiet paper editor and light header. Selection is a soft green block with a narrow leading rule, rather than another full-strength action. Dark mode uses the same relationships at darker values. The static flourish is an original typographic identity treatment, not a sourced trademark.
+
+Inter source: https://github.com/rsms/inter ; downloaded official `docs/font-files/InterVariable.woff2` and `LICENSE.txt`. Font file and license are in `app/vendor/`. Exact delivered hashes are recorded in `evidence/source-hashes.txt`.
+
+The first and final integrated trials were both captured and viewed. Adding the actual font changed note-list wrapping; the final selected row remains readable in two lines, and long titles remain available in full in the editor. No ornamental imagery or animation is needed for this brief.
+
+### D3 — local draft safety and honest feedback
+
+Saved notes and working drafts have different local keys. Every input attempts to preserve the draft; explicit Save note commits a snapshot to the collection. Editing during the short pending state preserves the later draft. Failed writes leave the prior saved collection and current input intact. A failure to read valid data blocks writes to that data; raw recovery export remains available.
+
+The legacy `ui-spec-content-note-v1` record is copied into the collection and left intact. It is never removed by the new application. Deletion writes the collection before changing the visible result and records a tombstone so an old draft left by a failed cleanup does not resurrect a locally deleted note. A saved-notebook change in another tab blocks saving until the latest collection is read; local in-memory drafts remain. Simultaneous draft editing across tabs is not a collaborative merge system.
+
+A native `<dialog>` owns destructive confirmation. It includes the actual note title, explicit consequence, Keep note as safe initial focus, Escape dismissal and Delete note. No second focus trap or duplicated modal ARIA is added.
+
+Shared modern web guidance was already retrieved for the cell; the relevant full dialog, modal-scroll and field-sizing sections were read. Native `showModal()` is used. Textarea sizing is an enhancement with fixed-size, scrollable fallbacks. Reduced-motion CSS removes transitions. The pinned Chromium predates some newer non-scrollable backdrop containment behavior; no universal cross-browser claim is made.
+
+## Inspection findings and revisions
+
+1. First integrated capture: the editor and list formed a clear hierarchy. Real browser checks found the read-recovery notice inaccessible from the mobile collection because it lived inside the hidden editor. It was moved into the shared workspace header. This was a product defect, now covered by a passing malformed-data recovery check.
+2. First fault-injection run: a Playwright expression returned the patched function, leading to an illegal invocation in the test harness and leaving the injected failure installed for dependent tests. The original log is preserved. Wrapping installation/restoration in explicit functions corrected the harness; later runs passed the actual storage failure and retry checks.
+3. Dark/light captures initially caught button color interpolation. The final controls use immediate color changes, and settled captures were regenerated. Inter was bundled for predictable font metrics.
+4. Mobile save status was initially hidden with a desktop-only toolbar label. A visible footer status now exposes saved, pending and draft outcomes on narrow screens.
+5. A code review identified that reading a newer record must not discard a different local draft merely because its timestamp is older. Cleanup now applies to matching saved content, and the live read path preserves local drafts. A two-tab browser check confirms this scenario.
+
+## Observed result and evidence limits
+
+Final screenshots were inspected at the actual 1440×900 and 390×844 CSS viewports, at device-pixel ratio 1, in both languages and both themes. The desktop keeps the collection visible while the note grows; the mobile editor gives long text a full reading width. The body and title remain editable textareas. Explicit example labels identify fictional content. The list and editor each own their scrolling.
+
+The browser checks establish their named actions and local-storage results. Screenshots establish the viewed composition, type and state. They are not usability research or a universal accessibility certificate. Ordered recovery captures show the sampled draft failure and conflict states; no high-frame-rate transition or performance claim is made.
+
+Remaining scope: no cloud sync, accounts, rich-text formatting, collaborative draft merging or in-app backup import. Exported JSON is a recovery artifact; importing it requires a later feature or a developer-assisted restore. No Safari/Firefox, real mobile keyboard or screen-reader session was run. Native browser storage can be cleared by the browser or user; exporting a copy is the available backup route. No deployment or live service changes were performed.
+
+## Current continuation: shared reading system and density
+
+The application now has a consistent Comfortable/Compact preference, larger supporting text and a bounded long-form measure. The current decision and verification record is `evidence/continuation/DECISIONS.md`; the concise delivery is `CONTINUATION-DELIVERY.md`. The original delivery remains an unchanged historical record. New source hashes identify this revision. A parent-reported host interruption split the continuation session; `evidence/continuation/session.json` records the restart and no uninterrupted timing claim is made.

@@ -81,6 +81,43 @@ lifecycle. Store large media and full histories in authorized project locations;
 links avoid duplicating them. Historical object identifiers need not still be
 present in the current model, so use `historical_objects` for that purpose.
 
+## Optional formal-increment declarations
+
+Keep the complete product goal, current product UI, formal design increments and
+their internal research/implementation work distinguishable in the same current
+model. Existing prose or project records can express these relationships without
+adopting additional JSON fields. The optional declarations below extend
+`ui-spec-evidence/1` compatibly; older records remain readable.
+
+| Optional entry | Declared meaning and structural lookup |
+|---|---|
+| `product_context` | `overall_goal` and `current_ui` describe the complete goal and current implementation; these are author-supplied text, not verified product facts |
+| `candidate_specs` | Revisable possible increments, each identified by `id`; their presence does not begin formal work or fix an implementation order |
+| `formal_specs` | Actual formal increments, each identified by `id`; `purpose`, `quality_goals` and other narrative detail describe the author's intended responsibility |
+| Object references within a SPEC | `objects`, `research_objects`, `implementation_objects` and `regression_objects` refer to existing object IDs; the three scopes can differ |
+| Decision references within a SPEC | `decisions` refers to existing decision IDs, keeping actual evidence, implementation and remaining gaps at their current responsible records |
+| Related increment references | `related_specs` refers to candidate/formal SPEC IDs; the links describe declared association without deciding order, dependency or scope suitability |
+
+A formal SPEC can link several L0–L5 objects and cross-component relationships;
+several SPECs can link the same page, component family or shared system. Keep the
+design-object map and formal work boundaries distinct. Search, trial, repair and
+reinspection inside a SPEC do not require additional SPEC records. New formal
+increments have a distinct design purpose and review boundary; the Agent judges
+that distinction from the actual work.
+
+After a consequential boundary change, update the current scope and explain the
+reason, affected goals, inheritance and unresolved responsibility in meaningful
+revisions. Keep original findings and evidence traceable through existing decisions
+and archives. Moving a goal to another increment does not establish its completion.
+Candidate plans can change as research and resource trials reveal better boundaries.
+
+Overview, Detail and Execution present these same declarations with candidate and
+formal increments distinguishable. The inspector describes supplied fields and
+resolves declared references; it neither creates a plan nor certifies a minimum
+sufficient experience closure, research depth, visual quality or completion.
+Missing optional fields are not a request to fill them. There are no automatic
+SPEC status transitions, count targets or new approval stages.
+
 ## Source and file facts
 
 Evidence kinds commonly include text, visual, temporal, implementation and

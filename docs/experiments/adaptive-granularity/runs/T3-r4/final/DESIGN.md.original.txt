@@ -1,0 +1,13 @@
+# Fieldnote — current design model
+
+Fieldnote now holds a collection of research notes, each with a stable record ID, title, editable draft and confirmed saved face. The prior inspected paper/forest material, center-pivot scene and reduced-motion alternative are retained.
+
+The collection uses the same card typography and surfaces. Stable order and numbering, a selected border, restored page scroll and focus on the corresponding tile carry identity through return navigation. Editor entry uses a brief opacity reveal; the existing front/back turn retains its physical relationship. Both faces are populated synchronously before the editor is visible. Navigation cancels stale motion/focus work.
+
+Saving is owned by browser Storage. Per-note pending snapshots prevent late results from affecting another open note. Each successful write merges its record into the latest collection; failed writes preserve previous records and in-memory drafts. Unsaved changes are labeled and counted, including edits to existing notes. Empty and unreadable collections are distinct. Clear-all requires confirmation and has a retry path.
+
+Persistence: `fieldnote-collection-v2`, with a read fallback to the previous `ui-spec-temporal-note-v1` record. The first successful save writes the collection; the legacy record is not eagerly deleted. Drafts, selection and editor scroll are retained in memory per note, not across reloads. Notes have a 120-character title and 600-character body.
+
+The mature scene/object/faces mechanism and source attribution are unchanged; see app/THIRD_PARTY.md. The new collection and persistence adapter are project-owned. The earlier design model is preserved in evidence/continuation/before-DESIGN.md. Current decisions, checks and viewed scope are in evidence/continuation/DECISIONS.md and CONTINUATION-DELIVERY.md.
+
+This is an implemented, inspected local increment. User acceptance, physical-device behavior, cross-browser results and full-speed media playback remain separate from the reported local checks.

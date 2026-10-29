@@ -1,0 +1,150 @@
+{
+  "checks": [
+    {
+      "name": "Unsent drafts can be reopened from history",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 0.668
+    },
+    {
+      "name": "Switching threads restores reading position",
+      "pass": true,
+      "detail": {
+        "before": 300,
+        "after": 300
+      },
+      "elapsed_s": 1.225
+    },
+    {
+      "name": "Switching threads restores draft",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 1.228
+    },
+    {
+      "name": "Dark button background switches with text",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 2.058
+    },
+    {
+      "name": "Extended answer completes beyond two reading viewports",
+      "pass": true,
+      "detail": {
+        "words": 512
+      },
+      "elapsed_s": 10.013
+    },
+    {
+      "name": "Long-answer composer remains in viewport",
+      "pass": true,
+      "detail": {
+        "scroll": 1885,
+        "viewport": 673,
+        "top": 1212
+      },
+      "elapsed_s": 10.026
+    },
+    {
+      "name": "Latest control returns to answer end",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 10.07
+    },
+    {
+      "name": "Short viewport keeps composer reachable",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 10.72
+    }
+  ],
+  "captures": [
+    {
+      "name": "desktop-welcome.png",
+      "start_s": 0.45,
+      "end_s": 0.561
+    },
+    {
+      "name": "desktop-reading.png",
+      "start_s": 1.237,
+      "end_s": 1.318
+    },
+    {
+      "name": "desktop-source.png",
+      "start_s": 1.53,
+      "end_s": 1.62
+    },
+    {
+      "name": "desktop-dark-immediate.png",
+      "start_s": 1.723,
+      "end_s": 1.792
+    },
+    {
+      "name": "desktop-dark.png",
+      "start_s": 2.058,
+      "end_s": 2.118
+    },
+    {
+      "name": "episode-pending.png",
+      "start_s": 2.291,
+      "end_s": 2.35
+    },
+    {
+      "name": "episode-early.png",
+      "start_s": 3.252,
+      "end_s": 3.295
+    },
+    {
+      "name": "episode-middle.png",
+      "start_s": 4.396,
+      "end_s": 4.448
+    },
+    {
+      "name": "episode-complete.png",
+      "start_s": 9.943,
+      "end_s": 10.002
+    },
+    {
+      "name": "mobile-welcome.png",
+      "start_s": 10.117,
+      "end_s": 10.142
+    },
+    {
+      "name": "mobile-reading.png",
+      "start_s": 10.216,
+      "end_s": 10.244
+    },
+    {
+      "name": "mobile-source.png",
+      "start_s": 10.282,
+      "end_s": 10.311
+    },
+    {
+      "name": "mobile-navigation.png",
+      "start_s": 10.348,
+      "end_s": 10.373
+    },
+    {
+      "name": "mobile-dark.png",
+      "start_s": 10.65,
+      "end_s": 10.674
+    },
+    {
+      "name": "mobile-composer.png",
+      "start_s": 10.681,
+      "end_s": 10.711
+    },
+    {
+      "name": "mobile-short-height.png",
+      "start_s": 10.72,
+      "end_s": 10.756
+    }
+  ],
+  "source_sha256": {
+    "styles.css": "199d20ce42dc0b8aa5fa5619c26819dc50421f656e6fe5b6f8009da022da1686",
+    "foundation.css": "8a5d4959519c67e5d70ac5e7867f28487381906dec8c234dbc482532a8ac44c3",
+    "THIRD-PARTY.md": "29e6f18f1291a8992a6f59eab511490d7e20c5339176c7780836bd898d615393",
+    "app.js": "3739d299ae5d56dac19acf26ba1d953fd932cba87b4a4860ca1987747994645e",
+    "index.html": "23a2445e4a0361529049b55c0244c668dea5b4537ab54defde2e571d784136a5"
+  }
+}

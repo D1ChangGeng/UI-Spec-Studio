@@ -1,0 +1,31 @@
+# Fieldnote now has a collection
+
+Fieldnote now holds several saved note cards and opens each one in the existing two-sided editor. **Each note keeps its own identity, draft and pending save.** Returning to the collection restores its scroll position, highlights the card you just edited and returns keyboard focus to that card.
+
+Open the local app at [http://127.0.0.1:8737](http://127.0.0.1:8737). [Run instructions](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/app/README.md)
+
+## What works
+
+- **A real collection:** create multiple notes, distinguish them by stable note numbers and content, and reopen any card. New installations start with an honest empty state. Existing single-note data carries forward.
+- **Prepared navigation:** the draft and saved face are filled before opening. Rapid navigation follows the latest requested note, and returning takes the card back to its collection position.
+- **Independent drafts and saves:** writing, switching cards and returning preserves in-tab drafts. A save that finishes after navigation updates its own note and does not turn or replace the newly opened card.
+- **Truthful persistence and recovery:** successful saves reach native browser storage. Failed writes retain the prior saved collection and the editable draft; the collection marks that card and provides a route back to retry. Read failures do not masquerade as an empty collection.
+- **Continuity:** the paper surface, original save-confirmed flip, long-note scrolling, keyboard selection/focus behavior, light/dark styling and reduced-motion equivalent remain part of the integrated task.
+
+Saved notes survive reload. Unsaved drafts are explicitly marked as belonging to the current tab and remain available while that page stays open. There is no cloud sync.
+
+## Reviewed result
+
+[Desktop collection](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/continuation/refined/1440-light-no-preference-collection.png) · [Mobile collection](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/continuation/refined/390-dark-no-preference-collection.png) · [Failure recovery](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/continuation/failure-collection.png)
+
+The integrated browser run exercised creating and saving three notes, reopening long and short notes, retaining drafts across switches, saving while navigating, returning to the same card, reloading, migrating the original note, and storage failure/retry. It recorded 57 passing checks and one hidden-content measurement mismatch. That mismatch is preserved: reduced motion intentionally hides the back face, so rendered `innerText` is empty even when its content is ready. The follow-up checks verified the prepared text and then the actual visible face. All **21 refined navigation and reduced-motion checks passed**. Six further checks passed for the remaining theme layouts, first-save recovery, the no-transition fallback and failed-clear preservation.
+
+I separately viewed the actual interface captures and ordered opening/return frames. The first transition visibly doubled the two text layouts during its fade. The revised transition moves one opaque paper surface and changes its content at the midpoint; the inspected frames show one layout at a time. The collection’s repeated excerpt was also replaced with a useful character count.
+
+[Decisions, diagnosis and evidence limits](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/continuation/DECISIONS.md) · [Refined check report](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T3-p7/evidence/continuation/refined/report.json)
+
+## Remaining limits
+
+The checks ran in the pinned Chromium browser at desktop/mobile viewport sizes. The motion review used ordered screenshots with capture-time brackets, not video playback or frame-delivery measurements. Physical mobile keyboards, Safari/Firefox, screen readers, zoom/text-spacing and multi-tab write conflicts remain unverified. The next useful review is the complete collection → edit → save → return path on a physical phone and with a screen reader.
+
+The earlier delivery and evidence are preserved. Nothing was deployed or published.

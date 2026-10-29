@@ -194,3 +194,32 @@ Version 1.16.1 reconciles concurrent work without replacing v1.16 evidence.
 Role/scope queries are literal views over existing profiles, not design judgments.
 Retain the scoped application findings and their fixture/observation limits;
 current runtime identity and recovered historical identity are checked separately.
+
+## Version 1.17: adaptive formal design increments
+
+Preserve the complete product goal while each formal UI SPEC owns a coherent
+experience increment in the current product. Keep formal iterations distinct from
+internal research, trials, repairs and execution turns. Choose minimum sufficient
+experience closure from actual complexity, dependencies, evidence, mature-resource
+fit and review needs; page area and component count do not determine formal standing.
+
+Init presents revisable candidate increments and a justified first scope. Iterate
+can keep, split, merge or redraw that scope as evidence develops. Preserve the
+original goal, unresolved quality, change reason and current responsibility through
+repartitioning. Continue applicable work in the same product through inheritance,
+extension, adaptation or reconsideration. Keep the existing operations and ordinary
+authorization model, without new state machines, quotas or approval gates.
+
+Distinguish research, primary implementation and affected-product regression.
+Trace owned quality through observed reference, actual implementation and current
+result; verify the increment and its product relationships separately. Present
+important scope judgments, resource choices and actual results in the conversation,
+using the same current information as the existing three design views. Product UI
+continues to serve its users' tasks.
+
+Optional product/SPEC declarations remain backward-compatible structural records.
+Inspectors resolve declared IDs and describe supplied facts without choosing a
+plan or certifying research, scope suitability or quality. Preserve all historical
+release evidence. Report method changes, engineering checks, actual independent
+Agent runs and viewed UI outcomes separately; comparable experiment conditions
+and honest limitations are required for comparative claims.

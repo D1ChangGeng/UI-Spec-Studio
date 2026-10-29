@@ -1,0 +1,39 @@
+# Collection continuity — current increment
+
+## Scope
+
+Extend the existing Fieldnote task into a browser-local collection. The cohesive responsibility includes collection cards, opening prepared content, per-note editing/saving, failure recovery, returning to the same numbered card and switching among different content lengths. The existing paper material, typography, front/back save turn, failure truthfulness and reduced-motion behavior are inherited. No search, accounts, tags or synchronization is introduced.
+
+## Identity and orientation
+
+Each note has a stable ID and serial number. Saved records retain collection order when edited. Existing tile DOM nodes are reused and updated rather than rebuilt; the selected tile receives a visible outline. Returning restores the prior collection scroll offset and focuses that same tile without scrolling it to an unrelated origin. A new unsaved note has a real session identity and remains available as an explicitly marked session draft.
+
+The collection uses the same paper surface and serif text as the editor. Three columns at the requested desktop size become one column at 390px. Preview text is intentionally clamped; opening exposes the full note in the existing bounded reading/editing area. Empty means there are no saved or session-draft objects. Unreadable storage is shown as unavailable and never presented as an empty collection.
+
+## Content and persistence
+
+A map holds independent draft text, selection and scroll state per ID. Loading resolves both the draft and persisted snapshot synchronously before showing the editor. Rapid navigation skips an active view transition and guards older callbacks with a route generation; the latest action determines the opened note. The inactive saved face is prepared even while the editable face is shown.
+
+A save snapshots one note, replaces only its matching record in a new collection array and makes one native storage write. The in-memory saved collection changes only after that write succeeds. A failure leaves all persisted records unchanged, retains the draft and marks that card for recovery. If the user navigates away during a save, the result updates the responsible card without returning them to the editor. One save runs at a time; another note remains editable while the save control says that another note is saving.
+
+The original single-note key is read only when the collection key is absent. Its ID is retained and migration commits on a normal successful save. Original data is not deleted. Unsaved drafts do not survive reload; this is visible in the collection boundary text. The count distinguishes saved records and dirty session drafts. An unknown collection does not claim a zero count.
+
+## Motion source and choice
+
+The existing centered card-flip mechanism retains the DeSandro source and paper treatment documented in the first increment. Its perspective was made shallower (3600px desktop, 2600px narrow) to reduce the upper-edge projection that previously crossed the small card index.
+
+For whole-view collection/editor navigation, the implementation uses the browser's document View Transition API. The API contract and immediate fallback were read from https://developer.mozilla.org/en-US/docs/Web/API/Document/startViewTransition and the supplied modern guidance. This is a whole-view change, not an isolated component substituted for the unavailable element-scoped API. Reduced motion and a missing API use the synchronous prepared state.
+
+A direct cut with selected-card focus was the fallback alternative; the enhanced path additionally connects the card's old/new geometry. Stable matching names pair only the selected tile with the editor scene. The header remains stationary, and pointer interaction is not blocked by the transition overlay. The first local trial showed doubled copy and competing snapshot outlines; final CSS suppresses the departing snapshot and uses the prepared destination surface while the shared geometry moves. The existing save flip remains a separate state transition gated by confirmed storage.
+
+## Actual evidence and repairs
+
+`report.json` / `run-01.log`: 61 executed assertions across the four requested viewport/theme combinations, plus recovery, migration, rapid selection and reduced motion. `orientation-report.json`: 13 follow-up checks of a seven-note collection, saved/draft counts, exact scroll return, focus identity, absent-API fallback and reduced motion. `motion-final-report.json` records the final geometry refinement's captures and focused rechecks.
+
+All evidence is new under `evidence/continuation/`; the previous delivery and original failures remain intact. The continuation folder also contains pre-extension source copies. The first continuation browser suite had no failed assertions or page errors. The initial navigation blend was a visual finding, not an assertion failure. Its original `open-*` and `return-*` captures remain alongside the refined `final-*` captures.
+
+Viewed pixels include desktop empty/populated states, narrow dark collection and scrolled return, failed collection recovery, the longer-note saved turn, and opening/return intermediate frames. The visible current collection retains the original paper language. The returning sixth card in the seven-note narrow fixture is outlined and focused at the original scroll location. The shallower turn samples keep the projecting card edge below the index label in the sampled moments.
+
+## Limits
+
+Ordered screenshots were inspected; continuous playback and frame-delivery performance were not measured. Chromium is the executed browser; no Safari, Firefox, physical keyboard/viewport resizing, screen reader, or real-user comprehension study was performed. The tested scope covers representative short/long content, not unlimited collection performance. Cross-tab writes remain last-writer-wins. The bilingual inherited controls remain, but this continuation's new Chinese collection wording has not received a separate language review.

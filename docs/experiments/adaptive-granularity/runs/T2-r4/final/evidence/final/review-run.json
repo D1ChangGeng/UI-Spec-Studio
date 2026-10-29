@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "name": "Switching threads restores reading position",
+      "pass": true,
+      "detail": {
+        "before": 300,
+        "after": 300
+      },
+      "elapsed_s": 1.036
+    },
+    {
+      "name": "Switching threads restores draft",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 1.039
+    },
+    {
+      "name": "Dark button background switches with text",
+      "pass": true,
+      "detail": null,
+      "elapsed_s": 1.741
+    },
+    {
+      "name": "Extended answer reaches a complete state",
+      "pass": false,
+      "detail": {
+        "words": 512
+      },
+      "elapsed_s": 9.684
+    }
+  ],
+  "captures": [
+    {
+      "name": "desktop-welcome.png",
+      "start_s": 0.382,
+      "end_s": 0.455
+    },
+    {
+      "name": "desktop-reading.png",
+      "start_s": 1.044,
+      "end_s": 1.095
+    },
+    {
+      "name": "desktop-source.png",
+      "start_s": 1.284,
+      "end_s": 1.354
+    },
+    {
+      "name": "desktop-dark-immediate.png",
+      "start_s": 1.425,
+      "end_s": 1.481
+    },
+    {
+      "name": "desktop-dark.png",
+      "start_s": 1.741,
+      "end_s": 1.795
+    },
+    {
+      "name": "episode-pending.png",
+      "start_s": 1.973,
+      "end_s": 2.021
+    },
+    {
+      "name": "episode-early.png",
+      "start_s": 2.922,
+      "end_s": 2.97
+    },
+    {
+      "name": "episode-middle.png",
+      "start_s": 4.072,
+      "end_s": 4.125
+    },
+    {
+      "name": "episode-complete.png",
+      "start_s": 9.621,
+      "end_s": 9.68
+    }
+  ],
+  "failure": "Extended answer reaches a complete state",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T2-r4/evidence/review_final.py\", line 78, in <module>\n    try:asyncio.run(main())\n        ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py\", line 195, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py\", line 691, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T2-r4/evidence/review_final.py\", line 57, in main\n    check('Extended answer reaches a complete state',words>550,{'words':words})\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T2-r4/evidence/review_final.py\", line 11, in check\n    assert value,name\n           ^^^^^\nAssertionError: Extended answer reaches a complete state\n",
+  "source_sha256": {
+    "styles.css": "199d20ce42dc0b8aa5fa5619c26819dc50421f656e6fe5b6f8009da022da1686",
+    "foundation.css": "8a5d4959519c67e5d70ac5e7867f28487381906dec8c234dbc482532a8ac44c3",
+    "THIRD-PARTY.md": "29e6f18f1291a8992a6f59eab511490d7e20c5339176c7780836bd898d615393",
+    "app.js": "2a24e2a8b2d266b6956adfd99fbb230b6de81d87e8e44bde2d16ac1906d39516",
+    "index.html": "23a2445e4a0361529049b55c0244c668dea5b4537ab54defde2e571d784136a5"
+  }
+}

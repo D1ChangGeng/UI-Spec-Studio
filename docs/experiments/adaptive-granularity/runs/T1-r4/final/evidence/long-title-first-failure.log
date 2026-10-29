@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/43b440780c87/granularity-cells/T1-r4/evidence/long_title_check.py", line 15, in <module>
+    p.locator('.note-row').last.click();p.wait_for_timeout(200);fit=p.locator('#note-title').evaluate('(e)=>e.scrollHeight <= e.clientHeight + 1');assert fit,(width,lang,mode);p.screenshot(path=str(root/f'long-{width}-{lang}-{mode}.png'));results.append({'viewport':[width,height],'locale':lang,'theme':mode,'title_fits':fit})
+                                                                                                                                                          ^^^
+AssertionError: (1440, 'en', 'light')

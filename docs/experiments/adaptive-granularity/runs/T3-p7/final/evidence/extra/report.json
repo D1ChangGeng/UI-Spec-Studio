@@ -1,0 +1,190 @@
+{
+  "checks": [
+    {
+      "name": "keyboard shortcut saved",
+      "pass": true
+    },
+    {
+      "name": "keyboard selection restored",
+      "pass": true
+    },
+    {
+      "name": "rapid save deduplicates",
+      "pass": true
+    },
+    {
+      "name": "mobile long draft scrollable",
+      "pass": true
+    },
+    {
+      "name": "mobile failure draft intact",
+      "pass": true
+    },
+    {
+      "name": "keyboard can leave retry",
+      "pass": true
+    },
+    {
+      "name": "getItem exception blocks save",
+      "pass": true
+    },
+    {
+      "name": "getItem exception keeps draft",
+      "pass": true
+    }
+  ],
+  "actions": [
+    {
+      "name": "view saved",
+      "start_ms": 2478.9000000003725,
+      "end_ms": 2509.7000000001863
+    },
+    {
+      "name": "return",
+      "start_ms": 3173.9000000003725,
+      "end_ms": 3210.2000000001863
+    },
+    {
+      "name": "interrupt return",
+      "start_ms": 3374.0999999996275,
+      "end_ms": 3409.5999999996275
+    },
+    {
+      "name": "return again",
+      "start_ms": 3580.2999999998137,
+      "end_ms": 3626.5
+    }
+  ],
+  "frames": [
+    {
+      "file": "mobile-before.png",
+      "before": {
+        "now": 2435.2000000001863,
+        "face": "front",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "focus": "note-text"
+      },
+      "after_ms": 2476.5
+    },
+    {
+      "file": "mobile-turn-0.png",
+      "before": {
+        "now": 2562.7999999998137,
+        "face": "back",
+        "transform": "matrix3d(0.870183, 0, -0.492728, 0, 0, 1, 0, 0, 0.492728, 0, 0.870183, 0, 0, 0, 0, 1)",
+        "focus": "flip"
+      },
+      "after_ms": 2608.2000000001863
+    },
+    {
+      "file": "mobile-turn-1.png",
+      "before": {
+        "now": 2661.7000000001863,
+        "face": "back",
+        "transform": "matrix3d(-0.410445, 0, -0.911885, 0, 0, 1, 0, 0, 0.911885, 0, -0.410445, 0, 0, 0, 0, 1)",
+        "focus": "flip"
+      },
+      "after_ms": 2690
+    },
+    {
+      "file": "mobile-turn-2.png",
+      "before": {
+        "now": 2743.2000000001863,
+        "face": "back",
+        "transform": "matrix3d(-0.848684, 0, -0.528901, 0, 0, 1, 0, 0, 0.528901, 0, -0.848684, 0, 0, 0, 0, 1)",
+        "focus": "flip"
+      },
+      "after_ms": 2777.9000000003725
+    },
+    {
+      "file": "mobile-turn-3.png",
+      "before": {
+        "now": 2831.5,
+        "face": "back",
+        "transform": "matrix3d(-0.959956, 0, -0.280151, 0, 0, 1, 0, 0, 0.280151, 0, -0.959956, 0, 0, 0, 0, 1)",
+        "focus": "flip"
+      },
+      "after_ms": 2879.7999999998137
+    },
+    {
+      "file": "mobile-turn-4.png",
+      "before": {
+        "now": 2933.0999999996275,
+        "face": "back",
+        "transform": "matrix3d(-0.992774, 0, -0.119996, 0, 0, 1, 0, 0, 0.119996, 0, -0.992774, 0, 0, 0, 0, 1)",
+        "focus": "flip"
+      },
+      "after_ms": 2975
+    },
+    {
+      "file": "mobile-turn-5.png",
+      "before": {
+        "now": 3028.2000000001863,
+        "face": "back",
+        "transform": "matrix3d(-0.999163, 0, -0.0409091, 0, 0, 1, 0, 0, 0.0409091, 0, -0.999163, 0, 0, 0, 0, 1)",
+        "focus": "flip"
+      },
+      "after_ms": 3076.7000000001863
+    },
+    {
+      "file": "mobile-turn-6.png",
+      "before": {
+        "now": 3130.5,
+        "face": "back",
+        "transform": "matrix3d(-0.999976, 0, -0.00687657, 0, 0, 1, 0, 0, 0.00687657, 0, -0.999976, 0, 0, 0, 0, 1)",
+        "focus": "flip"
+      },
+      "after_ms": 3172.7999999998137
+    },
+    {
+      "file": "mobile-reverse-before.png",
+      "before": {
+        "now": 3342.4000000003725,
+        "face": "front",
+        "transform": "matrix3d(0.229113, 0, -0.9734, 0, 0, 1, 0, 0, 0.9734, 0, 0.229113, 0, 0, 0, 0, 1)",
+        "focus": "flip"
+      },
+      "after_ms": 3372.7000000001863
+    },
+    {
+      "file": "mobile-reverse-middle.png",
+      "before": {
+        "now": 3531.7999999998137,
+        "face": "back",
+        "transform": "matrix3d(-0.738757, 0, -0.673972, 0, 0, 1, 0, 0, 0.673972, 0, -0.738757, 0, 0, 0, 0, 1)",
+        "focus": "flip"
+      },
+      "after_ms": 3578.2999999998137
+    },
+    {
+      "file": "mobile-reverse-settled.png",
+      "before": {
+        "now": 4429.200000000186,
+        "face": "front",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "focus": "note-text"
+      },
+      "after_ms": 4457.9000000003725
+    },
+    {
+      "file": "mobile-long-over-limit.png",
+      "before": {
+        "now": 6874.5999999996275,
+        "face": "front",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "focus": "note-text"
+      },
+      "after_ms": 6907.5
+    },
+    {
+      "file": "mobile-failure.png",
+      "before": {
+        "now": 7710.0999999996275,
+        "face": "front",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "focus": ""
+      },
+      "after_ms": 7737.0999999996275
+    }
+  ]
+}

@@ -14,6 +14,13 @@ state and relationship. Separate observations, inferred model and open intent.
 Keep current-user intent, audience conventions and actual product practice distinct.
 Identify the version, platform, role and conditions relevant to the target experience.
 
+Keep the complete product goal and current product UI identifiable. For the active
+formal SPEC, state the coherent experience objective, qualities it owns, necessary
+connected objects and why this scope can be researched, implemented and reviewed
+well. Distinguish research/observation, primary implementation and integration/regression
+scope. Link revisable candidate increments and inherited decisions where useful;
+one page can receive several formal increments and one increment can span objects.
+
 ## Research question and evidence plan
 
 Link the experience hypothesis to important parts, states, journeys and relationships.
@@ -55,6 +62,11 @@ work; retain edited-demo or actual-operation context where it changes the claim.
 Compare alternatives under corresponding content, scale, theme and state. Explain
 the competing strengths, the evidence behind the current preference and unresolved
 tradeoffs. Preserve a promising unexamined direction when it could close a quality gap.
+
+Record a source or trial finding that changes the proposed SPEC boundary, when
+consequential: a mature mechanism worth adapting together, a newly necessary
+cross-component relationship, or independent demanding goals worth separating.
+Retain the complete target and original open findings through that revision.
 
 ## Reuse assessment
 
@@ -133,6 +145,12 @@ L5 realization/check links at every useful scale. Identify shared objects once.
 Link states/episodes, usage conditions, dependencies and evidence rather than
 copying the object into each page's record.
 
+Show the current product, active formal SPEC and useful candidate increments beside
+the complete goal. Link each formal increment to its relevant objects, quality
+responsibilities, inherited work and important dependencies; the page hierarchy
+does not define its boundary. Keep research, implementation and regression scopes
+identifiable without duplicating the underlying object/decision records.
+
 ### Coverage challenge
 
 | Discovery from user tasks or observed reference | Evidence and conditions | Include / exclude / open, with reason | Affected object/decision | Next evidence route |
@@ -177,6 +195,13 @@ views. Keep long search logs behind useful links. The optional JSON profile and
 checker provide structural feedback only; they do not establish that research
 occurred or that the interface has mature visual quality.
 
+In the conversation, present the important scope decision, resource comparison,
+actual product result and remaining gap with proportionate depth. Use the same
+current information as these views. Keep internal evidence classifications in the
+design record; product copy and layout serve the end user's task. State whether
+the deliverable is a working product, representative demonstration or authored
+visual work, and identify unfinished behavior honestly.
+
 ### Action checkpoint
 
 Before a consequential expansion, name which critical gaps still affect that
@@ -200,6 +225,12 @@ Keep raw media, detailed traces and old records in the Evidence Archive; link th
 rather than duplicating them in every view. A previous successful single-line check
 can remain valid historical evidence while a new attachment condition needs review.
 No global revision string automatically invalidates unaffected findings.
+
+For a changed formal boundary, retain the original goal and finding, the new
+evidence/reason, affected increment relationships and where unresolved responsibility
+continues. Refinements serving the same goal remain within the same SPEC. A new
+SPEC identifies a distinct design purpose and review boundary; it does not reset
+the current product or turn an open quality gap into a completed result.
 
 ### Reading a structural report
 

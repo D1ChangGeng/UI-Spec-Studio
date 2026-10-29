@@ -1,0 +1,127 @@
+{
+  "browser": "143.0.7499.4",
+  "url": "http://127.0.0.1:8844/",
+  "viewports": [
+    [
+      1440,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "deviceScaleFactor": 1,
+  "tests": [
+    {
+      "test": "Fresh notebook is empty",
+      "result": "PASS"
+    },
+    {
+      "test": "Explicit sample loading stores four records",
+      "result": "PASS"
+    },
+    {
+      "test": "Saving creates a collection record",
+      "result": "PASS"
+    },
+    {
+      "test": "Saved content survives actual HTTP reload",
+      "result": "PASS"
+    },
+    {
+      "test": "Search includes note context",
+      "result": "PASS"
+    },
+    {
+      "test": "No-results state",
+      "result": "PASS"
+    },
+    {
+      "test": "Switching notes preserves drafts",
+      "result": "PASS"
+    },
+    {
+      "test": "Draft survives reload",
+      "result": "PASS"
+    },
+    {
+      "test": "Locale and theme preserve draft",
+      "result": "PASS"
+    },
+    {
+      "test": "Delete dialog identifies note",
+      "result": "PASS"
+    },
+    {
+      "test": "Delete dialog initially focuses cancellation",
+      "result": "PASS"
+    },
+    {
+      "test": "Escape leaves note intact",
+      "result": "PASS"
+    },
+    {
+      "test": "Confirmed deletion removes selected record",
+      "result": "PASS"
+    },
+    {
+      "test": "Mobile fits viewport",
+      "result": "PASS"
+    },
+    {
+      "test": "Empty title validation focuses field",
+      "result": "PASS"
+    },
+    {
+      "test": "Keyboard save is durable",
+      "result": "PASS"
+    },
+    {
+      "test": "Draft write failure is visible",
+      "result": "PASS"
+    },
+    {
+      "test": "Failed save retains input",
+      "result": "PASS"
+    },
+    {
+      "test": "Storage recovery retry succeeds",
+      "result": "PASS"
+    },
+    {
+      "test": "Export contains actual records",
+      "result": "PASS"
+    },
+    {
+      "test": "No JavaScript page errors",
+      "result": "PASS"
+    },
+    {
+      "test": "Legacy note recovered",
+      "result": "PASS"
+    },
+    {
+      "test": "Original legacy bytes preserved",
+      "result": "PASS"
+    },
+    {
+      "test": "Malformed storage blocks saving",
+      "result": "PASS"
+    },
+    {
+      "test": "Malformed bytes remain intact",
+      "result": "PASS"
+    },
+    {
+      "test": "Read fault reports uncertainty",
+      "result": "PASS"
+    },
+    {
+      "test": "Read retry re-enables saving",
+      "result": "PASS"
+    }
+  ],
+  "consoleErrors": [],
+  "scope": "Native HTTP localStorage plus explicitly injected Storage faults; screenshots require independent visual viewing."
+}

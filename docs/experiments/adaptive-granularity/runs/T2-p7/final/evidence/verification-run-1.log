@@ -1,0 +1,36 @@
+{"name": "Initial page has no horizontal overflow", "pass": true, "detail": null, "elapsed_s": 0.429}
+{"name": "Shift+Enter inserts a new line", "pass": true, "detail": null, "elapsed_s": 0.574}
+{"name": "Filename appears as an attachment", "pass": true, "detail": null, "elapsed_s": 0.585}
+{"name": "Enter starts an asynchronous response", "pass": true, "detail": null, "elapsed_s": 0.609}
+{"name": "Progressive content is visible", "pass": true, "detail": {"words": 63}, "elapsed_s": 1.759}
+{"name": "Stop retains partial text and prevents stale completion", "pass": true, "detail": null, "elapsed_s": 2.771}
+{"name": "Draft survives stopping", "pass": true, "detail": null, "elapsed_s": 2.774}
+Traceback (most recent call last):
+  File "/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/verify.py", line 38, in <module>
+    page.get_by_role('button',name='Continue response',exact=True).click();wait_complete(page)
+                                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/verify.py", line 14, in wait_complete
+    def wait_complete(page):page.wait_for_function("JSON.parse(localStorage.getItem('meridian-demo-v1')).threads[0].messages.at(-1).status==='complete'",timeout=18000)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 11595, in wait_for_function
+    self._sync(
+  File "/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_page.py", line 1110, in wait_for_function
+    return await self._main_frame.wait_for_function(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 878, in wait_for_function
+    await self._channel.send("waitForFunction", self._timeout, params)
+  File "/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.wait_for_function: EvalError: Evaluating a string as JavaScript violates the following Content Security Policy directive because 'unsafe-eval' is not an allowed source of script: script-src 'self'".
+
+    at eval (<anonymous>)
+    at predicate (eval at evaluate (:290:30), <anonymous>:4:56)
+    at next (eval at evaluate (:290:30), <anonymous>:29:29)
+
+RESULT 7 / 8

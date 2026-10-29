@@ -1,0 +1,19 @@
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+import json,time
+D=Path(__file__).parent/'extra';D.mkdir(exist_ok=True);r={'checks':[],'actions':[],'frames':[]}
+def check(n,v):r['checks'].append({'name':n,'pass':bool(v)});(D/'report.json').write_text(json.dumps(r,indent=2))
+def act(page,n,fn):r['actions'].append({'name':n,'start_ms':page.evaluate('performance.now()')});fn();r['actions'][-1]['end_ms']=page.evaluate('performance.now()')
+def snap(page,n):
+ before=page.evaluate("({now:performance.now(),face:document.querySelector('#note-card').dataset.face,transform:getComputedStyle(document.querySelector('#note-card')).transform,focus:document.activeElement.id})");page.screenshot(path=str(D/(n+'.png')),animations='allow');r['frames'].append({'file':n+'.png','before':before,'after_ms':page.evaluate('performance.now()')});(D/'report.json').write_text(json.dumps(r,indent=2))
+with sync_playwright() as p:
+ b=p.chromium.launch(executable_path='/workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell',args=['--no-sandbox'])
+ page=b.new_page(viewport={'width':390,'height':844},color_scheme='dark');page.goto('http://127.0.0.1:8737');page.locator('#note-text').focus();page.keyboard.press('Control+Enter');page.wait_for_timeout(1500);check('keyboard shortcut saved',page.locator('#note-card').get_attribute('data-face')=='back');page.locator('#return').click();page.wait_for_timeout(800)
+ page.locator('#note-text').evaluate('(e)=>{e.setSelectionRange(5,17);e.scrollTop=20}');snap(page,'mobile-before');act(page,'view saved',lambda:page.locator('#flip').click())
+ for i in range(7):page.wait_for_timeout(50);snap(page,f'mobile-turn-{i}')
+ act(page,'return',lambda:page.locator('#flip').click());page.wait_for_timeout(130);snap(page,'mobile-reverse-before');act(page,'interrupt return',lambda:page.locator('#flip').click());page.wait_for_timeout(120);snap(page,'mobile-reverse-middle');act(page,'return again',lambda:page.locator('#flip').click());page.wait_for_timeout(800);snap(page,'mobile-reverse-settled');check('keyboard selection restored',page.locator('#note-text').evaluate('(e)=>e.selectionStart===5&&e.selectionEnd===17'))
+ page.evaluate("() => {window.originalSet=Storage.prototype.setItem;window.writes=0;Storage.prototype.setItem=function(k,v){window.writes++;return window.originalSet.call(this,k,v)}}");page.locator('#save').click();page.locator('#save').dispatch_event('click');page.locator('#save').dispatch_event('click');page.wait_for_timeout(1500);check('rapid save deduplicates',page.evaluate('window.writes===1'))
+ page.locator('#return').click();page.wait_for_timeout(800);page.locator('#note-text').fill('Long note. '*59);page.locator('#note-text').evaluate('(e)=>e.scrollTop=e.scrollHeight');snap(page,'mobile-long-over-limit');check('mobile long draft scrollable',page.locator('#note-text').evaluate('(e)=>e.scrollTop>0'))
+ page.locator('#note-text').fill('Retain me after failure');page.evaluate("() => {Storage.prototype.setItem=function(){throw Error('Injected write failure')}}");page.locator('#save').click();page.wait_for_timeout(750);snap(page,'mobile-failure');check('mobile failure draft intact',page.locator('#note-text').input_value()=='Retain me after failure');page.locator('#retry').focus();page.keyboard.press('Tab');check('keyboard can leave retry',page.evaluate("document.activeElement.id!=='retry'"));
+ page.close();ctx=b.new_context(viewport={'width':1440,'height':900});ctx.add_init_script("Storage.prototype.getItem=function(){throw Error('Injected read failure')}");page=ctx.new_page();page.goto('http://127.0.0.1:8737');check('getItem exception blocks save',page.locator('#save').is_disabled());check('getItem exception keeps draft',bool(page.locator('#note-text').input_value()));ctx.close();b.close()
+(D/'report.json').write_text(json.dumps(r,indent=2));print(json.dumps(r['checks'],indent=2))

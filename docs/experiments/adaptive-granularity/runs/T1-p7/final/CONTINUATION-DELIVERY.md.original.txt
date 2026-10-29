@@ -1,0 +1,23 @@
+# Leafnote now has a persistent reading-density preference
+
+[Open Leafnote locally](http://localhost:8777/) and use **Reading density** to choose **Comfortable** or **Compact**. The preference applies to the collection and editor together and survives reload.
+
+The typography now gives long notes a clearer hierarchy: prominent titles, a narrower writing measure, more readable supporting text, and consistent body rhythm. On phone-sized screens, project/context labels sit above their field. Very long titles expand completely instead of hiding their final lines inside the old height cap.
+
+![Compact notebook with a long Chinese note](evidence/continuation/run-2/1440-compact-zh-light-editor.png)
+
+## Preserved working behavior
+
+The selected note and unsaved draft survive density, language and theme changes. The selected note is also restored after reload. Creating, saving, searching, reopening and deleting long notes were rechecked in both densities, including named deletion and cancellation. A failed preference write reports that the setting applies only to the current visit while preserving the draft.
+
+## What was checked
+
+- **51 passing continuation assertions**, including the 16 combinations of density, language, theme and requested viewport.
+- **7 focused passing rechecks** for complete long-title visibility, narrow layout, native keyboard selection, reload persistence and preference-write failure.
+- Actual pixel review of desktop and mobile layouts, long Chinese/English content, both density choices and light/dark examples. The title-cap issue found during that review was repaired and viewed again.
+
+The original failed harness attempts and earlier title captures remain under `evidence/continuation/`. [The review record](evidence/continuation/REVIEW.md) separates assertions from visual observations.
+
+**Remaining limits:** testing used the supplied Chromium at 1440×900 and 390×844, without physical mobile keyboards, screen-reader playback or other browsers. Existing browser-local storage and backup limitations remain. Nothing was deployed.
+
+The host interrupted this continuation; the work resumed on the existing source. Remaining active time was estimated approximately, so this was not an uninterrupted timed run. The previous `DELIVERY.md` remains unchanged.

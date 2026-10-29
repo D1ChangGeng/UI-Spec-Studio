@@ -1,0 +1,42 @@
+{
+  "suspected_issue": "Missing header/introduction in reduced-motion image comparison",
+  "classification": "Rejected as product defect; saved source pixels are identical and fresh stable captures are visible.",
+  "checks": [
+    {
+      "image": "variant-01-reduced/01-long-editor-top.png",
+      "region": [
+        0,
+        0,
+        390,
+        220
+      ],
+      "reference": "variant-01-mobile/01-long-editor-top.png",
+      "pixels_exactly_equal": true,
+      "unique_colors": 1666
+    },
+    {
+      "image": "variant-01-reduced-repro-390/01-editor-stable.png",
+      "region": [
+        0,
+        0,
+        390,
+        220
+      ],
+      "reference": "variant-01-mobile/01-long-editor-top.png",
+      "pixels_exactly_equal": true,
+      "unique_colors": 1666
+    },
+    {
+      "image": "variant-01-reduced-repro-390/02-editor-second-capture.png",
+      "region": [
+        0,
+        0,
+        390,
+        220
+      ],
+      "reference": "variant-01-mobile/01-long-editor-top.png",
+      "pixels_exactly_equal": true,
+      "unique_colors": 1666
+    }
+  ]
+}

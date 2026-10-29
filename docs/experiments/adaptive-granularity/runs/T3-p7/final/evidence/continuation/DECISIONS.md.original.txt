@@ -1,0 +1,27 @@
+# Collection increment
+
+The new request extends the same working object from one note to a collection. Preserve the accepted paper, centered flip, native editing, bounded text and reduced-motion relationships. Reuse the verified card family as the collection foundation rather than introduce a different template or framework.
+
+## Decisions before verification
+
+- Prepare the selected note's draft and stored text synchronously before exposing the detail surface. All collection records are already read into memory. Keep drafts, selection and pending attempts keyed by stable note ID; save completions update their own records even after navigation.
+- Collection cards and the detail surface share the note number and material. A native same-document View Transition links their rectangles; static root snapshots avoid an unrelated page fade. Guard concurrent callbacks with a generation token and skip an obsolete transition. Reduced motion and unsupported APIs commit immediately.
+- Preserve the original scene/object/opposing-face CSS for edit/save. Existing records migrate in memory from the original storage key; the collection is saved atomically as one versioned localStorage value. No automatic write is needed on read.
+- The collection restores scroll and focus to the edited card. In-tab drafts are marked clearly and remain reopenable; unsaved text is not promised to survive reload.
+- No seed records create false saved content. The fresh collection has a real empty state. Read errors block writes and offer retry. Write errors preserve both drafts and previous stored versions.
+
+Primary API reference read: https://developer.mozilla.org/en-US/docs/Web/API/Document/startViewTransition (2026-10-29). The documented callback/snapshot/finished sequence informed the enhancement. This is a platform technique transfer combined with the existing inspected card family, not adoption of an external collection template. Original card-source attribution remains in app/THIRD_PARTY_NOTICES.md.
+
+Scope: desktop/mobile light/dark, ordinary/reduced motion, short/long notes, legacy migration, repeated open/save/back/switch, pending writes across navigation, storage failure/retry, honest empty/unreadable states. Actual browser observations to be appended after execution; timing and screenshots do not by themselves establish perception.
+
+## Executed review and revisions
+
+The first integrated run executed 58 checks: 57 passed; one reduced-motion preparation assertion failed because it used rendered `innerText` on a deliberately invisible back face. The unmodified original result remains in `run-1.log` and `report.json`. The follow-up diagnosis found `textContent.length=525`, `innerText.length=0`, expected length 525 under reduced motion. The source content was present. The refined suite checks prepared `textContent`, then operates the flip and separately checks the visible saved text; both passed. This was a measurement correction, not an application-data repair.
+
+The refined suite passed 21 checks for stable identity, scroll/focus return to a lower card, prepared/visible long text, latest-request rapid switching and immediate reduced-motion focus. Original viewport/theme runs also exercised creating three notes through real controls, repeated opening, edits, background save ownership, return, reload, migration, storage failure/retry and clearing without legacy resurrection. Exact reports remain at their stated revisions.
+
+Visual observation: viewed the initial and refined desktop collection, mobile dark collection, working editor, failure collection, unknown-read state and chronological open/return frames. The first native transition cross-faded both text layouts, visibly doubling labels. The revised transition keeps an opaque paper surface and exchanges snapshots at the midpoint. Viewed refined frames show one content layout at a time and a clear spatial path back into the collection. Collection cards originally repeated the same text in heading and excerpt; character counts now communicate relative note length without duplication.
+
+Prepared content and save correctness are engineering assertions. The viewed ordered frames establish their sampled spatial/material states and ordering, with recorded capture brackets. No video playback or presented-frame performance trace was inspected. Hardware pacing, physical mobile keyboards, Safari/Firefox, screen readers, zoom/text-spacing and multi-tab conflicts remain unverified. User acceptance remains pending.
+
+Final focused run: all six checks passed for the remaining desktop-dark/mobile-light layouts, first-write failure retaining its draft card, an unavailable View Transition API, successful retry, and failed clear preserving the collection. The corresponding captures were viewed, along with refined mobile opening/return samples and the reduced-motion long saved note. Source checks used the same HTTP server and native Storage boundary as before; injected errors were explicitly scoped fixtures. Test commands were the tooling Python with `FONTCONFIG_FILE` running `test_collection.py`, `refinement_checks.py`, and `final_checks.py` in this directory. Each raw log is retained.

@@ -3,6 +3,7 @@
 ## Contents
 
 - [Coverage and assurance](#build-the-coverage-inventory-from-reality)
+- [Formal increment and related-product verification](#verify-the-increment-and-its-product-relationships)
 - [Evidence sufficiency](#judge-evidence-for-the-decision)
 - [Viewing conditions and actual interaction](#capture-the-actual-viewing-condition)
 - [Temporal visual inspection](#inspect-a-time-bounded-visual-episode)
@@ -22,6 +23,19 @@ Report scope: a round checks changes and affected dependants; final acceptance r
 Declare supported viewports and theme/locale combinations from target use. Inspect every route's primary state at every declared viewport and variant. Exercise each additional critical state in every declared variant, extending viewport coverage where layout or risk differs. Preserve user-requested exhaustive coverage and record approved exclusions with their reasons. Include short heights and actual narrow-input conditions where supported; fixed dimensions are project choices.
 
 Include temporal relationships: trigger, meaningful progression, stopping condition and return/recovery. State inventories locate scenes; episodes connect them.
+
+## Verify the increment and its product relationships
+
+Treat the formal SPEC as a design increment in the current product. Identify its experience goal, consequential visual responsibilities and actual review entry, then distinguish two verification responsibilities:
+
+- **Current SPEC quality:** inspect the concrete relationships this increment promises, through the relevant detail, whole context and complete behavior. A page-level overview can leave an input's typography, material or changing geometry unexamined. A local screenshot can leave continuous motion and shared state unexamined.
+- **Related-product integrity:** inspect existing regions, shared systems, states and journeys affected by the change. A strong isolated component cannot establish that reading width, focus, scrolling, foreground legibility or the product's visual language still work together.
+
+Keep research/observation scope, primary design/implementation scope and integration/regression scope separately understandable in existing records. Broad research does not automatically broaden the promised implementation. A small implementation can require wider regression. Choose checks from actual dependencies and changed conditions, preserving explicit user coverage requirements; this does not require repeating every previous product study.
+
+For a composer-height change, observe text growth, send, response growth and user-controlled scrolling with the neighboring reading space. If these jointly carry the goal, keep the relationship in the current SPEC's review scope. For a shared font change, inspect dependent pages' wrapping, hierarchy, control geometry and relevant locales rather than judging only the specimen. For motion, observe trigger, preparation, progression, settling, reversal and interruption where applicable, including other components that must remain spatially or semantically continuous. For a dynamic background, examine moving emphasis and foreground reading/input conditions in the assembled task. A static frame, component-area estimate or passing geometry assertion supports only its actual observation.
+
+Trace each important quality through its observed reference, actual adopted or authored implementation, current rendered result and remaining difference. Judge scope suitability, research depth and visual maturity from that evidence. Formal SPEC identity, record structure, actual implementation and perceived quality require separate conclusions; neither a smaller scope nor a completed structural report establishes them.
 
 ## Match assurance to impact
 
@@ -103,6 +117,8 @@ Locate the gap: unsuitable source, damaged adaptation, content/structure mismatc
 
 New evidence can improve the SPEC. If the target remains unattainable, state the gap, effect and viable options for the consequential user decision. Integration progress does not establish quality acceptance; preserve the agreed standard until its scope or direction is explicitly revised.
 
+Keep research, correction and reinspection directed at an existing SPEC's promised experience within that SPEC. A new formal increment requires a distinct design purpose and review boundary. When evidence warrants splitting or redrawing an active SPEC, record the reason, retained target, transferred responsibility and unresolved findings in the current model. Carry the original finding and its actual condition into the receiving scope; creating a later SPEC does not resolve it. Inspect the remaining increment against its stated responsibility and report the complete product's still-open goals accurately.
+
 ## Comparing SPEC and connected product
 
 Distinguish **Source Fidelity** from **Perceptual Quality**. Fidelity protects an identified approved design or adopted source: structure, assets, type, proportion, material and behavior. Perceptual review judges the actual composition, craft and continuous experience. Reference-informed original work can inherit maturity with an independent appearance.
@@ -124,6 +140,8 @@ Distinguish capture, visual inspection and interaction verification. Without a u
 ## Decide when to present the round
 
 Present inspectable work with required checks complete, blockers resolved and uncertainty scoped. Design review can precede integration. Show consequential candidates, episodes or before/after views; keep agent judgment and user approval separate.
+
+Present the formal increment's actual working or renderable result in its product context. Explain what it inherited or changed, the important resource choice, observed local quality, related-product checks, remaining gaps and the next useful increment. Keep Overview, Design Detail and Execution & Assurance consistent with the same current design information. Writing the record is not the user-facing delivery: the conversation should provide the evidence and choices needed to judge this result without reading every internal note. Earlier work can be presented provisionally when that helps a decision, with its unfinished scope explicit.
 
 ## Lightweight checker
 
@@ -172,6 +190,8 @@ Assess **experience validity** and **expressive completion** independently: can 
 For documentation, inspect hierarchy, selectable text, copyable commands, links, alt text, image width, narrow code/table handling and declared variants in supported markup. Check hidden content through the actual scroll/disclosure mechanism. A local approximation identifies its renderer; the publishing host needs its own readback and visible inspection.
 
 A working product needs semantic controls, actual content/state and boundary checks. A product demonstration needs an accurate representative flow and disclosed staging. Authored visual work can use fixed layers/stage/timing; inspect fidelity, holds, transitions, resets/seams and final encoded playback. A video of a UI does not establish its operability. Verify diagram semantics and generated assets' delivered bytes alongside editable sources; match claims to the observed medium.
+
+Keep design research and the product interface at their respective audiences. Check that the product's content, controls, hierarchy and dynamic feedback serve the user's actual task. Internal SPEC identifiers, evidence tables and explanations of implementation principles belong in design records unless the product's own task calls for them. Demonstrate promised depth, material or motion in the actual interface; a label describing a quality cannot establish its presence. Assess the initial increment for a sufficiently resolved representative experience and honest unavailable features, so later SPECs inherit a useful foundation.
 
 ## Retain lessons with boundaries
 

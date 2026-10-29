@@ -2,7 +2,7 @@
 
 ## Contents
 
-[Alignment target](#establish-the-products-target-experience) · [Experience dimensions](#nine-dimensions-one-coherent-experience) · [Evidence planning](#plan-evidence-around-the-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Product model](#recognize-the-product-through-its-use) · [Direction and scope](#confirm-consequential-direction-with-useful-options) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)
+[Alignment target](#establish-the-products-target-experience) · [Experience dimensions](#nine-dimensions-one-coherent-experience) · [Evidence planning](#plan-evidence-around-the-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Product model](#recognize-the-product-through-its-use) · [Direction](#confirm-consequential-direction-with-useful-options) · [Formal SPEC scope](#choose-a-bounded-increment) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)
 
 ## Establish the product's target experience
 
@@ -122,6 +122,56 @@ A state graph or brief transition account can expose control, precondition, dest
 ## Choose a bounded increment
 
 Choose an outcome that can run, be inspected and be revised coherently: a page, journey, family or systemic repair. Weigh task/accessibility blockers, shared defects, missing paths and design-affecting integration against explicit goals, reach, dependencies and learning value. “Continue” resumes from accepted scope, incomplete journeys and observed defects; state the useful next outcome briefly.
+
+### Find the minimum sufficient experience closure
+
+Use **Minimum Sufficient Experience Closure** to define a formal SPEC: include the design objects and relationships needed to understand, realize and actually judge one important experience or visual-quality goal, with sufficient focus to perform the required professional work. “Minimum” concerns unnecessary independent responsibility, not the smallest visible area or code change. “Sufficient” concerns this goal's necessary experience relationships, not completion of the entire product or business lifecycle.
+
+Distinguish the **Visible Surface** from its **Visual Quality-Bearing Objects** and the **Experience-Cohesive SPEC** that develops their relationships. A visually stable conversation workspace can contain a growing composer, changing message height, streamed content and user-controlled scroll following. The important quality may lie in their continuous coordination. Separate component trials can inform the work, but a SPEC responsible for that continuity includes the participating state, space and time relationships. Conversely, an independent background art study can have its own formal purpose while returning to this same workspace for foreground readability and motion review.
+
+A suitable boundary has a cohesive purpose, retains necessary dependencies, permits adequate research and implementation depth, produces an actually reviewable result in its product context, and can integrate with current work. Reconsider it when evidence changes any of these conditions. It need not run separately from the product.
+
+| Factor | Consequence for the boundary |
+|---|---|
+| Visual complexity | Concentrated work on composition, typography, material, lighting or asset craft may merit its own increment even in a small object. A large conventional region may inherit a proven system. |
+| State and time complexity | Include the meaningful trigger, changing states, asynchronous feedback, interruption, reversal and recovery needed to judge the quality. Several static endpoints cannot define the complete episode. |
+| Cross-component dependency | Keep coupled size, position, focus, scroll and state relationships together when they produce the target experience. Implementation ownership does not divide that experience automatically. |
+| Research uncertainty | Focus investigation where a consequential choice is unresolved; sometimes a broader product-level direction must be settled before useful local boundaries can be chosen. |
+| Actual mature-resource scope | A well-fitting page, block or interaction implementation can preserve several related mechanisms together. Different objects requiring unrelated sources or methods may benefit from separate increments. |
+| Quality impact and verification | Give high-impact qualities a scope in which their actual result can be observed. Choose contextual views or continuous use by the claim rather than relying on a page-wide screenshot. |
+
+Weigh these factors together as professional judgment. Page count, component count, feature count, search steps, code budget or a weighted complexity score cannot determine the right boundary.
+
+### Keep, split, merge or redraw with evidence
+
+| Choice | When it helps | What to preserve and explain |
+|---|---|---|
+| **Keep** | The goal is cohesive, necessary relations are understood, available mature work fits and important qualities can receive adequate depth. | Explain the current closure and observation conditions; a larger well-supported scope can be appropriate. |
+| **Split** | Several relatively independent goals each need substantial research, craft or verification that the combined scope would dilute. | Retain the complete product goal, explain each increment's experience value and dependencies, and keep deferred commitments visible. |
+| **Merge** | Separately planned objects share the state, spatial or temporal mechanism that produces the intended experience. | Own and inspect that complete relation together; preserve useful internal trials without treating every component as a separate formal unit. |
+| **Redraw** | Research, source discovery, a local trial or integration reveals that the current grouping misses a necessary relation or mixes unrelated responsibilities. | Record what changed, why, the affected goals and quality gaps, their current responsibility and the effect on later candidates. |
+
+For example, a conventional settings page using an already inspected system can remain one SPEC. “SaaS” alone does not justify that decision: a special permission interaction or dense typography problem may change it. A composer-to-streaming episode can merge several components because their continuity is the objective. A fine-grained card flip may need data preparation and neighboring layout included after an actual trial exposes their coupling. An entire mature workspace implementation can make a formerly split plan coherent, provided its real adaptation and verification needs are understood.
+
+Explain the concrete quality risk when declining an unsuitable single-iteration scope, then organize an achievable path through the full goal. Routine evidence-supported adjustments use existing authorization. Present the consequences and recommendation for material changes to accepted direction, commitments or delivery scope; continue independent authorized work. An unfinished goal remains unfinished after repartitioning. Preserve its origin and current responsibility instead of treating a new SPEC label as a successful handover.
+
+### Separate research, implementation and regression scopes
+
+| Scope | Purpose |
+|---|---|
+| **Research & Observation Scope** | Study the wider products, tasks, states and relationships needed to understand the intended quality. |
+| **Primary Design & Implementation Scope** | Define the actual design increment and the relationships whose quality this SPEC undertakes to realize. |
+| **Integration & Regression Scope** | Inspect the neighboring regions, shared systems and journeys affected by that change. |
+
+These scopes may overlap without being identical. A composer refinement can study a complete conversation, change the input's typography and growth behavior, and recheck the message area, bottom space, focus and scrolling. Studying the whole page does not add all its features to this SPEC; narrowing implementation does not remove necessary contextual research or regression. A shared font change may implement one system choice while checking many pages for wrapping and hierarchy.
+
+### Give the increment visual quality ownership
+
+State the important visual and interaction qualities the SPEC is responsible for, with a review condition that can reveal each one. For an input region this can include contour, material, type, internal spacing, action hierarchy and growth within adjacent space; for streaming it can include content growth, feedback, scroll continuity and user control. A background can own subject, lighting, material, compositional contribution, motion rhythm and foreground reading. Select the qualities that actually matter to the goal.
+
+Trace **target quality → real visual reference → mature resource or concrete implementation → actual presentation in the current product → remaining quality gap**. Research volume, dependency installation and a functioning prototype each establish their own facts. Verify the consequential relationship in actual use before claiming the design value was delivered. This is professional accountability, not a requirement to fill a fixed schema.
+
+For a new product, choose an initial closure that can demonstrate the core experience and visual direction at a quality worth inheriting. A representative conversation entrance and reading space can establish composition, type and mature interaction before advanced tools are added. Keep undeveloped capabilities visibly truthful. An exploratory scaffold can answer a question, but its provisional roughness should not silently become the shared visual foundation. Subsequent evidence can still revise an accepted foundation. Progress can remove, merge, replace or reorganize content as well as add it.
 
 ## Preserve the right facts
 

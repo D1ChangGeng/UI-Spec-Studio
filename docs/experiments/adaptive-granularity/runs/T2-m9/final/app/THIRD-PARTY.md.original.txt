@@ -1,0 +1,74 @@
+# Third-party material
+
+`tokens.css` adapts the sRGB Slate/Slate Dark values from Radix Colors at
+commit `dbdb85470547c7d34b9001f48fddb08ded335979`, `src/light.ts` and `src/dark.ts`.
+The Slate role mappings and fixture behavior are project-authored. The page-level
+layout adaptation is separately identified below.
+
+Source: https://github.com/radix-ui/colors/tree/dbdb85470547c7d34b9001f48fddb08ded335979
+
+MIT License
+
+Copyright (c) 2021-2022 Modulz
+Copyright (c) 2022-Present WorkOS
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## assistant-ui page composition
+
+The page-level relationships and corresponding style values identified in
+FOUNDATION.md are adapted from `assistant-ui/assistant-ui` at commit
+`1fbf00dd0388fee912af95401876a6cc3c232b2c`,
+`apps/docs/components/pages/examples/chatgpt.tsx`.
+
+MIT License
+
+Copyright (c) 2026 AgentbaseAI Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Meridian adaptation
+
+The supplied native reference's coordinated conversation relationships are retained
+in Meridian: the 48rem shared measure, independent reading region and persistent
+composer, 28px composer contour, 22px bounded right-aligned user messages, and
+state-prioritized send/stop controls. The empty-state composition is adapted to an
+editorial title and prompt cards; warm colors, local history, source dock,
+streaming state, persistence and filename chips are project-authored. This is a
+cross-stack design/technique transfer, not integration of assistant-ui React.
+
+`tokens.css` is copied from the supplied reference. Meridian uses the retained
+Slate 11 values for secondary text in both themes; the other Slate scale values
+remain available but are not claimed as active design contributions.

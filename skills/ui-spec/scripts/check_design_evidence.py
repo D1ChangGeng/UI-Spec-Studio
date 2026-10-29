@@ -25,6 +25,52 @@ def _ids(value: Any) -> set[str]:
     return {x for x in value if text(x)} if isinstance(value, list) else set()
 
 
+def inspect_spec_records(obs: Observation, data: dict, objects: dict, decisions: dict) -> dict:
+    """Describe optional increment declarations without assigning or judging work."""
+    if 'product_context' in data:
+        context = obs.field(data, 'product_context', '$', dict)
+        if isinstance(context, dict):
+            for key in ('overall_goal', 'current_ui'):
+                if key in context:
+                    obs.field(context, key, '$.product_context')
+    tables = {key: obs.table(key) for key in ('candidate_specs', 'formal_specs') if key in data}
+    # One reference namespace; a repeated ID remains ambiguous across the two lists.
+    all_specs: dict[str, dict] = {}
+    ambiguous: set[str] = set()
+    for key, (rows, index) in tables.items():
+        ambiguous.update(obs.ambiguous.get(id(index), set()))
+        for sid, row in index.items():
+            if sid in all_specs:
+                ambiguous.add(sid)
+                obs.note(obs.row_path(row, '$.' + key) + '.id', 'duplicate_id',
+                         f'ID {sid!r} is declared in both candidate and formal records; lookup is ambiguous')
+            else:
+                all_specs[sid] = row
+    obs.ambiguous[id(all_specs)] = ambiguous
+    for key, (rows, _index) in tables.items():
+        for i, row in enumerate(rows):
+            p = obs.row_path(row, f'$.{key}[{i}]')
+            for name in ('purpose', 'boundary_reason', 'relationship'):
+                if name in row:
+                    obs.field(row, name, p)
+            if 'quality_goals' in row:
+                obs.strings(row, 'quality_goals', p)
+            for name in ('objects', 'research_objects', 'implementation_objects', 'regression_objects'):
+                if name in row:
+                    obs.refs(row, name, objects, p)
+            if 'decisions' in row:
+                obs.refs(row, 'decisions', decisions, p)
+            if 'related_specs' in row:
+                obs.refs(row, 'related_specs', all_specs, p)
+            obs.revision(row, p)
+    return {'candidate_specs': _rows(data, 'candidate_specs'),
+            'formal_specs': _rows(data, 'formal_specs'),
+            'product_context': data.get('product_context'),
+            'basis': 'Supplied declarations and literal references only; candidates are not formal increments.',
+            'scope_judgment': 'not_assessed',
+            'limits': 'No splitting, merging, sequencing, quality assessment or completion decision is performed.'}
+
+
 def relation_candidates(data: Any, changed: list[str]) -> dict:
     """Traverse only the declared links, cycle-safely; make no applicability decision."""
     objects = {o['id']: o for o in _rows(data, 'objects') if text(o.get('id'))}
@@ -71,6 +117,10 @@ def project_view(data: Any, view: str, changed: list[str] | None = None) -> dict
     result['record_layer'] = 'current_model'
     result['meaningful_revisions'] = _rows(data, 'revisions')
     result['evidence_archive_references'] = _rows(data, 'archive')
+    # The three views share identities and declarations, not separately maintained plans.
+    for key in ('product_context', 'candidate_specs', 'formal_specs'):
+        if isinstance(data, dict) and key in data:
+            result[key] = data[key]
     result['declared_relation_review_candidates'] = relation_candidates(data, changed or [])
     return copy.deepcopy(result)
 
@@ -87,6 +137,7 @@ def inspect_record(data: Any, project_root: Path, *, view: str = 'overview',
     obs.revision(data, '$')
     tables = {key: obs.table(key) for key in ('objects', 'conditions', 'evidence', 'decisions')}
     objects, conditions, evidence, decisions = (tables[k][1] for k in ('objects', 'conditions', 'evidence', 'decisions'))
+    spec_records = inspect_spec_records(obs, data, objects, decisions)
     for i, obj in enumerate(tables['objects'][0]):
         path = obs.row_path(obj, f'$.objects[{i}]')
         for key in ('level', 'title'):
@@ -231,6 +282,7 @@ def inspect_record(data: Any, project_root: Path, *, view: str = 'overview',
                   declared_exception_records=exception_records, declared_item_records=declared_items,
                   unlisted_declared_items=[r for r in declared_items if not r['check_record_fields'] and not r['exception_record_fields']],
                   candidate_unrepresented_categories=hints, coverage_vocabulary=vocabulary_source,
+                  declared_spec_records=spec_records,
                   view=project_view(data, view, changed))
     return result
 

@@ -1,0 +1,157 @@
+# T1 — independent Leafnote product-output review
+
+## Findings
+
+All three final applications supported the main notebook workflow in the exercised conditions. Each passed the same 28 behavior assertions covering creation, saving, reload, finding and reopening, deletion cancellation and confirmation, draft retention, preferences, keyboard actions, recovery from an injected write failure, earlier-content recovery, and initial-to-final compatibility. No loss of the tested note text was reproduced during appearance changes. These assertions describe this test set, not general acceptance or reliability rates.
+
+Two consequential feedback gaps were reproduced:
+
+1. **Variants 01 and 02 can hide a note-save failure after an appearance change.** With storage writes failing, changing density replaced the note-save error with a preference-only message, removed error styling, and hid Retry. The draft remained on the page. Variant 03 retained the note-save warning and Retry through density, theme, and language changes. This is a failure-message priority problem; this review did not reproduce immediate text loss from it.
+2. **Variant 01 has no visible keyboard-focus cue on its new density select.** The select received focus and worked with Arrow Down and Enter, but its computed outline was `none 0px`, its shadow was `none`, and the viewed frame showed no focus ring. Variants 02 and 03 showed a 3 px focus outline in the same exercise.
+
+The main design differences are sustained differences in reading and workspace structure. Variant 01 uses a fixed editor with a bottom save/status bar. Variant 02 emphasizes a separate project/context field and keeps the note body in a bounded scrolling textarea. Variant 03 uses a fixed editor with a small persistent status footer and keeps body text at 16 px in both densities. Each arrangement has observable benefits and costs; this review does not assign an aesthetic score or a universal winner.
+
+Primary evidence: `run-02/check-results.json`, `supplemental-results.json`, `final-probe-results.json`, `failure-preference-results.json`, and the exact viewed-frame inventory in `viewed-images.json`.
+
+## Scope and method
+
+Only the assigned T1 packet, its supplied tooling paths, and its initial/final application files were used. No sibling packets, parent project records, condition mappings, or participant accounts were inspected. Application files were preserved. The top-level HTML, CSS, and JavaScript files from all six supplied versions were hashed before and after the main run; their hashes matched. A final integrity check is recorded in `review.json`.
+
+The supplied headless Chromium executable operated the actual applications over HTTP on three distinct origins: ports 8211, 8212, and 8213. Each variant received a fresh browser context. Additional checks used fresh contexts or an explicitly saved synthetic state from that variant. No live user browser session was used.
+
+The common collection contained four notes created through the UI: a short English bench reminder, a short Chinese observation, an English source checklist, and a 65-character bilingual title with a 3,199-character body. The long body contains seven English/Chinese observation pairs, an explicit synthetic-data statement, and the search token `microclimate-53`. The draft version adds a bilingual unsaved addition and is 3,235 characters long. Variant 02's additional context field was populated with `Urban fieldwork / 城市观察`. Variant 03's five automatic example notes were removed through its deletion UI before the comparable four-note scenario. Exact content is retained in `run-02/check-results.json`.
+
+Actual pixels were viewed at **1440 × 900** and **390 × 844**. The review viewed 17 product frames per variant, plus one diagnostic frame of the original variant-01 harness failure. Frames include initial-version comparisons, both final densities, collection/editor states, settled dark Chinese UI, cancellation dialogs, manual scrolling, keyboard focus, and failure feedback. The image inventory distinguishes captured files from files actually viewed. No video or continuous motion interval was watched; screenshots and behavior assertions are separate evidence.
+
+Attention was distributed through the same scripted workflows, supplemental probes, and frame sets for each anonymous variant. The session timing and actual completion time are in `review.json`.
+
+### Original test failure preserved
+
+The first run failed in all three variants at the harness expression used to restore `Storage.prototype.setItem`. Returning the restored function caused Playwright to invoke it without a valid receiver, producing `TypeError: Illegal invocation`. This was a test-harness failure, not an application defect. The original script, log, results, and failure screenshots remain in `review-output/`. The corrected script uses a function block that performs the assignment without returning the native function and writes to the separate `run-02/` directory. No original failed result was replaced.
+
+## Executed behavior coverage
+
+The following groups summarize the 28 successful comparable assertions per variant. Full assertion names and observations are retained in the JSON evidence.
+
+| Area | Executed result in all three variants |
+|---|---|
+| Collection and save | Created the four comparable notes; Ctrl+S saved; saved long content survived reload. |
+| Appearance continuity | Exact title/body and selected note survived density, theme, and language changes. Density, theme, and language preferences survived reload. |
+| Draft continuity | Existing-note draft survived reload and a switch to another note and back. A new unsaved draft survived all appearance changes and reload. A selected body-text range also survived the appearance changes. |
+| Find and reopen | Body-token search reduced the collection to one result; reopening restored the saved long note. Chinese search, narrow return/search/reopen, keyboard search focus, and keyboard activation of the result were exercised. |
+| Deletion | The confirmation identified the note. Escape canceled without removing the note or current text at both viewports. Confirmed deletion of the short English note remained deleted after reload. |
+| Storage failure and recovery | Injected `QuotaExceededError` on writes retained current text and produced save-failure feedback. Restoring writes and retrying saved content that survived reload. Narrow Chinese failure feedback was also viewed. |
+| Earlier content | Notes saved through each initial version were readable in its final version. A legacy one-note record was recovered while its original storage record remained unchanged. A downloaded export contained the recovered note. |
+| Narrow layout and keyboard | No horizontal document overflow was measured in the main 390 px editor state. Density changed by keyboard. Search shortcuts and Enter activation worked. |
+
+The extra failure-plus-preference probe is **not** included in the all-passed summary: its differing results are the consequential feedback finding above. Likewise, keyboard operability does not imply a visible focus indicator; variant 01's missing indicator was separately inspected.
+
+## Comparable reading measurements
+
+These are computed values for the common bilingual note in the supplied Chromium environment, not claims about every document or device. The comfortable frame uses the saved long body; the compact frame adds the short draft suffix without changing its title.
+
+| Observed property | Variant 01 | Variant 02 | Variant 03 |
+|---|---:|---:|---:|
+| Desktop collection width | 350 px | 330 px | 338 px |
+| Desktop body width, comfortable → compact | 645 → 579 px | 680 → 680 px | 650 → 680 px |
+| Body font size, comfortable → compact | 16 → 15 px | 16 → 15 px | 16 → 16 px |
+| Body line height for this bilingual content | 30.4 → 25.5 px | 30.4 → 25.5 px | 32.8 → 28.8 px |
+| Selected long-note collection row, desktop | about 158 → 141 px | about 194 → 141 px | about 125 → 113 px |
+| Body top at 390 px, comfortable, English UI | about 480 px | about 701 px | about 494 px |
+| Body scrolling model | Growing body inside editor scroll area | 405 px mobile textarea with internal scrolling | Growing body inside editor scroll area |
+
+Sources: the `metrics` objects in `run-02/check-results.json`, geometry in `final-probe-results.json`, and the comfortable/compact frames listed in `viewed-images.json`.
+
+## Variant 01
+
+### Composition, hierarchy, and material
+
+The cream editor and pale green-gray collection are separated by a thin rule. A filled selected row and a dark edge mark the current note. Large serif titles, smaller sans-serif body text, and subdued date/status text establish distinct roles. The bottom save/status bar stays visible while the note scrolls. The collection footer also keeps the browser-local boundary and export affordance visible, although it reduces the list's vertical space.
+
+The continuation visibly strengthens smaller labels and collection text relative to the initial version. Several small uppercase labels become ordinary title-case labels. The collection/editor relationship, growing-body scroll model, bottom save bar, and general surface treatment were already present in the initial implementation. The new density preference changes both row spacing/type and editor spacing/type. Compact mode also narrows the physical desktop reading measure; its smaller type does not simply produce wider lines.
+
+At 390 px the two-row header keeps theme, language, and density understandable. The title and body remain readable without horizontal document overflow in the tested note. Comfortable mode shows less of the collection and body at once; compact mode exposes more while retaining the same hierarchy. The viewed interior-scroll frame keeps navigation and Save available around the reading area.
+
+### Continuity and gaps
+
+Normal draft retention and recovery checks passed. Failure feedback initially occupied the existing bottom status area and kept the current text visible. Its later replacement by a preference message is the reproduced gap described below.
+
+The density control's missing keyboard-focus cue is new-control-specific: focus was actually on the select, and keyboard changes worked, but there was no visible ring. This was inspected at 1440 × 900 in light mode. Evidence: `supplemental-captures/variant-01-desktop-density-keyboard-focus.png` and `supplemental-results.json`.
+
+Changing only the UI language also changes the typography of this existing bilingual title. At 390 × 844, comfortable density, switching English UI to Chinese increased title height from about 167 to 239 px and moved the body top from about 480 to 552 px. Text and selection were retained. This is a spatial-stability tradeoff, not a loss of the draft. Variants 02 and 03 kept those tested title/body coordinates unchanged during the same language switch. Evidence: `final-probe-results.json` and the settled Chinese frames.
+
+## Variant 02
+
+### Composition, hierarchy, and material
+
+The separate project/context field is a substantial part of this variant's organization. The collection displays title, project context, preview, and date as distinct layers. The current note sits on a white card with a subtle border/shadow and a green edge. The editor's title, project/context row, and body have explicit labels, with fine rules separating sections. The feedback strip is adjacent to the top save toolbar and occupies an existing horizontal band.
+
+Compared with the initial version, the continuation increases body and metadata sizing, tightens the reading measure, adds density, and stacks the narrow project/context label and value more clearly. In the tested 390 px comfortable view, these readable roles plus the long title place the body at approximately y=701. Compact density moves it upward to approximately y=649. The extra context is readily visible, at the cost of showing fewer body lines before scrolling.
+
+The body remains a bounded textarea with its own scrollbar. With the pointer over the body, two 650 px wheel inputs moved the textarea to `scrollTop=1300` while the outer page stayed at zero; the long title and project field still occupied most of the viewport. Moving the pointer outside the field and scrolling the outer page exposed the full body field, while the sticky save toolbar and feedback strip remained visible and the global appearance header moved out of view. This two-region reading behavior was inherited from the initial application; the continuation changes its typography and spacing. Evidence: `supplemental-results.json`, `variant-02-mobile-manual-scroll-interior.png`, and `final-probe-captures/variant-02-mobile-outer-scroll.png`.
+
+### Continuity and gaps
+
+The same normal continuity and recovery checks passed, including its separate context data. The density control has a visible keyboard-focus outline. The save-failure warning is initially specific and actionable, but density/theme/language preference failures can replace it and remove Retry, as reproduced below.
+
+An immediate dark-theme capture had intermediate-looking colors in the brand and controls. A settled capture after 300 ms showed coherent light text and pale green controls on dark surfaces; the computed colors also matched that appearance. The initial frame is retained as a transition-state capture and is not counted as a persistent theme defect. No claim about transition smoothness follows from these stills.
+
+## Variant 03
+
+### Composition, hierarchy, and material
+
+The pale collection and lightly tinted editor share thin borders and restrained green accents. The active row is filled and edge-marked, with a short preview and date under a stronger title. The editor uses a serif title, a small note-type badge, a date, and a stronger body label. The top toolbar and compact bottom status/local-storage footer remain visible around a scrolling document.
+
+The continuation keeps body text at 16 px in both densities and changes leading, spacing, title scale, and row height instead. For this bilingual content, comfortable/compact body leading is 32.8/28.8 px. The desktop reading measure expands from 650 to 680 px in compact mode. The viewed 390 px compact collection exposes more note titles while retaining the browser-local footer. The initial version already had this collection/editor arrangement and document scroll model; final labels and metadata are larger and the density control is explicit.
+
+On an untouched browser context, five examples are created and a banner explicitly identifies them as fictional. Variants 01 and 02 instead begin empty and offer example buttons. That is a concrete onboarding difference rather than evidence about research process or user preference.
+
+### Continuity and tradeoffs
+
+All comparable behavior checks passed. The tested bilingual title/body geometry stayed stable when the UI language changed, while the labels translated. Keyboard focus on density was visible. The long body grows with content, so wheel input scrolls the document region instead of a separate bounded textarea.
+
+This variant preserves the note-save error and Retry when appearance preferences also fail. Its global error banner is conspicuous at narrow width; it also adds about 74 px above the editor in the captured Chinese error state, moving the toolbar/document downward and reducing the visible reading area. Variants 01 and 02 use existing status bands, with less comparable structural movement. This is a visibility-versus-space tradeoff. Evidence: `supplemental-captures/variant-03-mobile-dark-chinese-storage-failure.png`, the no-error settled frame, and the recorded banner bounds in `supplemental-results.json`.
+
+## Reproduction of the failure-message gap
+
+This was run with the same saved long note at **390 × 844**, English UI, light theme, comfortable density. The exact added text ends with `UNSTORED FAILURE PROBE / 未能存储的测试修改`.
+
+1. Open the common long note from the collection.
+2. In this isolated test context, replace `Storage.prototype.setItem` with a function that throws `QuotaExceededError`. Application source is not edited.
+3. Add the probe text and press Ctrl+S. All three show a note-save failure and Retry.
+4. Change density to Compact while writes still fail.
+5. Observe the status and Retry. Then change theme and language while the write fault remains active.
+
+| Variant | After density change | Current text | Retry |
+|---|---|---|---|
+| 01 | “View changed for this session. The preference could not be saved.” Error styling removed. | Retained | Hidden |
+| 02 | “Settings changed for this visit, but the browser could not store your preference.” Error styling removed. | Retained | Hidden |
+| 03 | The original note-save error remains, with an unsaved-changes status. | Retained | Visible |
+
+Theme and language changes continued the same distinction. Restoring the original storage method and pressing Ctrl+S recovered saving in every variant. The warning-priority problem was reproduced in the final applications; the equivalent fault combination was not operated in the initial versions, so this report does not attribute its origin to the continuation.
+
+Evidence: `failure_preferences_probe.py`, `failure-preference-results.json`, and `failure-preference-captures/variant-0N-failure-then-density.png`. These are actual viewed frames and recorded status states.
+
+## Limits and unobserved dimensions
+
+The applications were exercised in one supplied Chromium environment at the two requested viewport sizes. Real phone hardware, virtual keyboards, touch gestures, Chinese IME composition, browser zoom, screen readers, and other browser engines were not tested. No target-device smoothness, human-user acceptance, statistical significance, or universal preference is inferred.
+
+The collection comparison uses four comparable notes, plus observation of variant 03's five-note fresh-start state. Very large collections, near-limit titles/bodies, long unbroken URLs, concurrent-tab conflicts, corrupted or unreadable storage, partial-write behavior, and actual quota exhaustion were not exercised. The write fault deterministically threw on all `setItem` calls; it establishes the observed error/recovery behavior but does not simulate every storage failure mode.
+
+Text values, current-note identity during appearance changes, and a selected text range were checked. Exact reading-position preservation across every density change was not comprehensively measured. The generic persistence of an arbitrarily selected older saved note across reload was not separately tested; reload checks concerned the exercised saved/draft note and saved preferences.
+
+Exports were downloaded and inspected for the expected recovered content. No import/restore workflow was claimed. Appearance comparisons use actual frames and computed dimensions; they do not establish research depth, resource-selection quality, or compliance beyond the operated checks.
+
+## Deliverables and evidence map
+
+- `REVIEW.md` — this review.
+- `review.json` — concise per-variant observations, check coverage, differences, integrity results, and limits.
+- `viewed-images.json` — exact actually viewed image paths and all captured image paths, kept separate.
+- `commands.md` — tooling and executed review commands.
+- `check-results.json`, `check-run.log`, `review_checks.py`, `captures/` — original failed harness run, preserved.
+- `run-02/check-results.json`, `followup-run.log`, `review_checks_followup.py`, `run-02/captures/` — corrected common run.
+- `supplemental-results.json`, `supplemental_checks.py`, `supplemental-captures/` — initial comparison, focus, scroll, legacy recovery/export, and narrow failure evidence.
+- `final-probe-results.json`, `final_probes.py`, `final-probe-captures/` — confirmed deletion, keyboard paths, new-draft reload, settled theme, and language geometry.
+- `failure-preference-results.json`, `failure_preferences_probe.py`, `failure-preference-captures/` — combined storage/preference-failure evidence.
+
+No application publication or implementation change was performed.

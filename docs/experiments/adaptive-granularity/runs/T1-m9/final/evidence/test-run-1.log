@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Fresh collection has five fictional examples",
+    "result": "PASS"
+  },
+  {
+    "name": "Horizontal reflow (1440, 900) en light",
+    "result": "PASS"
+  },
+  {
+    "name": "Horizontal reflow (1440, 900) en dark",
+    "result": "PASS"
+  },
+  {
+    "name": "Horizontal reflow (1440, 900) zh light",
+    "result": "PASS"
+  },
+  {
+    "name": "Horizontal reflow (1440, 900) zh dark",
+    "result": "PASS"
+  },
+  {
+    "name": "Horizontal reflow (390, 844) en light",
+    "result": "PASS"
+  },
+  {
+    "name": "Horizontal reflow (390, 844) en dark",
+    "result": "PASS"
+  },
+  {
+    "name": "Horizontal reflow (390, 844) zh light",
+    "result": "PASS"
+  },
+  {
+    "name": "Horizontal reflow (390, 844) zh dark",
+    "result": "PASS"
+  },
+  {
+    "name": "Create, validate, and persist a sixth note",
+    "result": "PASS"
+  },
+  {
+    "name": "Draft restoration, note switching, and full-text search",
+    "result": "PASS"
+  },
+  {
+    "name": "Identified delete confirmation, cancel, and Escape",
+    "result": "PASS"
+  },
+  {
+    "name": "Injected real Storage write failure and successful retry",
+    "result": "FAIL",
+    "error": "Page.evaluate: TypeError: Illegal invocation\n    at Storage.setItem (eval at evaluate (:290:30), <anonymous>:1:200)\n    at UtilityScript.evaluate (<anonymous>:297:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+    "trace": "Traceback (most recent call last):\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 8, in check\n    try:fn();checks.append({'name':name,'result':'PASS'})\n        ^^^^\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 41, in failure\n    page.evaluate(\"window.originalSet=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k==='leafnote-notebook-v2')throw new DOMException('Quota full','QuotaExceededError');return window.originalSet.call(this,k,v)}\")\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/sync_api/_generated.py\", line 8562, in evaluate\n    self._sync(\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_page.py\", line 464, in evaluate\n    return await self._main_frame.evaluate(expression, arg)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_frame.py\", line 320, in evaluate\n    await self._channel.send(\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_connection.py\", line 69, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.Error: Page.evaluate: TypeError: Illegal invocation\n    at Storage.setItem (eval at evaluate (:290:30), <anonymous>:1:200)\n    at UtilityScript.evaluate (<anonymous>:297:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n"
+  },
+  {
+    "name": "Edits during pending save retain newer draft",
+    "result": "FAIL",
+    "error": "Locator expected to have text 'The submitted version was saved. Your newer edits remain a draft.'\nActual value: Could not save the note. Your current text is still here. Export a copy or try again. \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#notice-text\")\n    4 × locator resolved to <span id=\"notice-text\">Recovered your local draft. Save the note when yo…</span>\n      - unexpected value \"Recovered your local draft. Save the note when you are ready.\"\n    5 × locator resolved to <span id=\"notice-text\">Could not save the note. Your current text is sti…</span>\n      - unexpected value \"Could not save the note. Your current text is still here. Export a copy or try again.\"\n",
+    "trace": "Traceback (most recent call last):\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 8, in check\n    try:fn();checks.append({'name':name,'result':'PASS'})\n        ^^^^\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 45, in pending\n    page.evaluate('window.__leafnoteTestDelay=700');page.locator('#note-body').fill('Submitted snapshot');page.locator('#save').click();page.locator('#note-body').fill('Newer draft during save');expect(page.locator('#notice-text')).to_have_text('The submitted version was saved. Your newer edits remain a draft.');data=json.loads(page.evaluate(\"localStorage.getItem('leafnote-notebook-v2')\"));assert data['notes'][0]['body']=='Submitted snapshot';page.reload();expect(page.locator('#note-body')).to_have_value('Newer draft during save')\n                                                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/sync_api/_generated.py\", line 20086, in to_have_text\n    self._sync(\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 561, in to_have_text\n    await self._expect_impl(\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 85, in _expect_impl\n    raise AssertionError(\nAssertionError: Locator expected to have text 'The submitted version was saved. Your newer edits remain a draft.'\nActual value: Could not save the note. Your current text is still here. Export a copy or try again. \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#notice-text\")\n    4 × locator resolved to <span id=\"notice-text\">Recovered your local draft. Save the note when yo…</span>\n      - unexpected value \"Recovered your local draft. Save the note when you are ready.\"\n    5 × locator resolved to <span id=\"notice-text\">Could not save the note. Your current text is sti…</span>\n      - unexpected value \"Could not save the note. Your current text is still here. Export a copy or try again.\"\n\n"
+  },
+  {
+    "name": "Keyboard search, empty recovery, new note, save",
+    "result": "FAIL",
+    "error": "Locator expected to have text 'Saved locally'\nActual value: Draft kept locally \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#save-status\")\n    4 × locator resolved to <span role=\"status\" id=\"save-status\" aria-live=\"polite\" class=\"save-status\">Saving…</span>\n      - unexpected value \"Saving…\"\n    5 × locator resolved to <span role=\"status\" id=\"save-status\" aria-live=\"polite\" class=\"save-status\">Draft kept locally</span>\n      - unexpected value \"Draft kept locally\"\n",
+    "trace": "Traceback (most recent call last):\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 8, in check\n    try:fn();checks.append({'name':name,'result':'PASS'})\n        ^^^^\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 48, in keyboard\n    page.keyboard.press('Control+k');expect(page.locator('#search')).to_be_focused();page.locator('#search').fill('nothing will match this');expect(page.locator('#empty-search')).to_be_visible();page.screenshot(path=str(OUT/'search-empty.png'));page.locator('#clear-search').click();page.keyboard.press('Control+Shift+n');expect(page.locator('#note-title')).to_be_focused();page.locator('#note-title').fill('Keyboard note');page.keyboard.press('Control+s');expect(page.locator('#save-status')).to_have_text('Saved locally')\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/sync_api/_generated.py\", line 20086, in to_have_text\n    self._sync(\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 561, in to_have_text\n    await self._expect_impl(\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 85, in _expect_impl\n    raise AssertionError(\nAssertionError: Locator expected to have text 'Saved locally'\nActual value: Draft kept locally \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#save-status\")\n    4 × locator resolved to <span role=\"status\" id=\"save-status\" aria-live=\"polite\" class=\"save-status\">Saving…</span>\n      - unexpected value \"Saving…\"\n    5 × locator resolved to <span role=\"status\" id=\"save-status\" aria-live=\"polite\" class=\"save-status\">Draft kept locally</span>\n      - unexpected value \"Draft kept locally\"\n\n"
+  },
+  {
+    "name": "Confirmed deletion persists only after successful write",
+    "result": "FAIL",
+    "error": "Locator expected to have text 'Note deleted from this browser.'\nActual value: Could not delete this note. It is still in your notebook. Try again. \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#notice-text\")\n    9 × locator resolved to <span id=\"notice-text\">Could not delete this note. It is still in your n…</span>\n      - unexpected value \"Could not delete this note. It is still in your notebook. Try again.\"\n",
+    "trace": "Traceback (most recent call last):\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 8, in check\n    try:fn();checks.append({'name':name,'result':'PASS'})\n        ^^^^\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 51, in delete_confirm\n    page.locator('#delete-note').click();page.locator('#confirm-delete').click();expect(page.locator('#notice-text')).to_have_text('Note deleted from this browser.');assert not any(n['title']=='Keyboard note' for n in json.loads(page.evaluate(\"localStorage.getItem('leafnote-notebook-v2')\"))['notes'])\n                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/sync_api/_generated.py\", line 20086, in to_have_text\n    self._sync(\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 561, in to_have_text\n    await self._expect_impl(\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 85, in _expect_impl\n    raise AssertionError(\nAssertionError: Locator expected to have text 'Note deleted from this browser.'\nActual value: Could not delete this note. It is still in your notebook. Try again. \nCall log:\n  - Expect \"to_have_text\" with timeout 5000ms\n  - waiting for locator(\"#notice-text\")\n    9 × locator resolved to <span id=\"notice-text\">Could not delete this note. It is still in your n…</span>\n      - unexpected value \"Could not delete this note. It is still in your notebook. Try again.\"\n\n"
+  },
+  {
+    "name": "Notebook backup download contains persisted collection",
+    "result": "PASS"
+  },
+  {
+    "name": "Legacy single note migrates and original stays recoverable",
+    "result": "PASS"
+  },
+  {
+    "name": "Malformed data blocks destructive writes and remains untouched",
+    "result": "FAIL",
+    "error": "Locator expected to be visible\nActual value: hidden \nCall log:\n  - Expect \"to_be_visible\" with timeout 5000ms\n  - waiting for locator(\"#backup-raw\")\n    9 × locator resolved to <button id=\"backup-raw\" class=\"text-button\" data-i18n=\"rawBackup\">Export recovery data</button>\n      - unexpected value \"hidden\"\n",
+    "trace": "Traceback (most recent call last):\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 8, in check\n    try:fn();checks.append({'name':name,'result':'PASS'})\n        ^^^^\n  File \"/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test_app.py\", line 64, in <lambda>\n    check('Malformed data blocks destructive writes and remains untouched',lambda:(expect(q.locator('#save')).to_be_disabled(),expect(q.locator('#backup-raw')).to_be_visible()))\n                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/sync_api/_generated.py\", line 20529, in to_be_visible\n    self._sync(self._impl_obj.to_be_visible(visible=visible, timeout=timeout))\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 765, in to_be_visible\n    await self._expect_impl(\n  File \"/workspace/scratch/43b440780c87/test-env/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 85, in _expect_impl\n    raise AssertionError(\nAssertionError: Locator expected to be visible\nActual value: hidden \nCall log:\n  - Expect \"to_be_visible\" with timeout 5000ms\n  - waiting for locator(\"#backup-raw\")\n    9 × locator resolved to <button id=\"backup-raw\" class=\"text-button\" data-i18n=\"rawBackup\">Export recovery data</button>\n      - unexpected value \"hidden\"\n\n"
+  },
+  {
+    "name": "No JavaScript page errors",
+    "result": "PASS",
+    "errors": []
+  }
+]

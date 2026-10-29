@@ -1,0 +1,8 @@
+# Review tooling
+
+Python with Playwright and Markdown dependencies: /workspace/scratch/43b440780c87/test-env/bin/python
+Chromium executable: /workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell
+Environment: FONTCONFIG_FILE=/workspace/scratch/43b440780c87/preview-fontconfig.xml and PLAYWRIGHT_BROWSERS_PATH=/workspace/scratch/43b440780c87/playwright-cache
+
+Start local HTTP and run headless application tests with exec_command sandbox_permissions=require_escalated; default sandbox disallows sockets. This is the local project's test browser, not a connection to a user's existing browser session. Use the actual app over HTTP to check browser persistence. View captured pixels separately using view_image. The host has no universal visual pass signal. Save review commands, outputs, captures and findings under review-output/ in this packet. The product source is read-only during review.
+

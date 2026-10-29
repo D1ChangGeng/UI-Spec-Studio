@@ -1,0 +1,9 @@
+# Source-reading continuation
+
+Retain the reviewed paper/green palette, serif reading headings, 48rem shared reading/composer measure, desktop source rail, and native focused phone dialog. The prior reference and local trial observations remain applicable to these unchanged relationships.
+
+Current gap: a source panel identifies a source but not its linked answer paragraph or exact synthetic source passage. Opening a panel while following the stream can also leave automatic following enabled. Phone modal inertness correctly blocks the composer, but it needs its own explicit response control to stop/recover without abandoning the source.
+
+Bounded implementation: bind the source session to message/block identity; highlight both the linked answer paragraph and the first authored source-note paragraph; freeze automatic following while the source view is open; preserve the current reading anchor and draft on close; expose latest-answer Stop/Continue/Retry in the reader. Native dialog continues to own modal focus/dismissal. On narrow screens make the return action say “Answer.”
+
+Required checks: open/close during a long stream, visible paragraph association, draft/composer growth, reading hold, latest control, stop and retry while the panel remains present, desktop and phone focus/return, both themes. Capture ordered states and inspect actual pixels. Preserve failures and state limits separately from assertions.

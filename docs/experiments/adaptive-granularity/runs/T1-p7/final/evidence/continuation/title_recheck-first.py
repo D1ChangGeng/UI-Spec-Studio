@@ -1,0 +1,17 @@
+import asyncio,json,os
+from pathlib import Path
+from playwright.async_api import async_playwright
+os.environ['FONTCONFIG_FILE']='/workspace/scratch/43b440780c87/preview-fontconfig.xml'
+OUT=Path('evidence/continuation/final');OUT.mkdir(exist_ok=True);checks=[]
+async def main():
+ async with async_playwright() as p:
+  b=await p.chromium.launch(executable_path='/workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell',args=['--no-sandbox']);page=await b.new_page(viewport={'width':390,'height':844});page.on('dialog',lambda d:d.accept());await page.goto('http://localhost:8777');await page.locator('#locale-toggle').click();await page.locator('#examples').click();await page.locator('#new-note').click();title='Investigating how shade, street materials, and afternoon wind affect perceived comfort along a neighbourhood walking route';await page.locator('#note-title').fill(title);await page.locator('#note-body').fill(('Compare shade, surface temperature, and wind before drawing a conclusion.\n\n记录测量条件和待核查问题，不将初步观察表述为研究结论。\n\n'*20));await page.locator('#note-context').fill('Urban climate · Long-form comparison');await page.locator('#save').click();await page.wait_for_timeout(200)
+  for density in ['comfortable','compact']:
+   await page.locator('#density').select_option(density);await page.mouse.click(205,278);await page.evaluate('window.scrollTo(0,0)');await page.locator('#note-title').evaluate('(e)=>e.scrollTop=0');await page.wait_for_timeout(350);await page.screenshot(path=str(OUT/f'390-{density}-long-title.png'))
+   checks.append({'check':f'full title fits without internal scrolling {density}','pass':await page.locator('#note-title').evaluate('(e)=>e.scrollHeight<=e.clientHeight+2')})
+   checks.append({'check':f'narrow no horizontal overflow {density}','pass':await page.evaluate('document.documentElement.scrollWidth<=innerWidth')})
+   await page.set_viewport_size({'width':1440,'height':900});await page.wait_for_timeout(250);await page.screenshot(path=str(OUT/f'1440-{density}-long-title.png'));await page.set_viewport_size({'width':390,'height':844})
+  # Native keyboard preference and selection persistence, then visible error on preference write denial.
+  await page.locator('#density').focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Enter');checks.append({'check':'density usable with native keyboard','pass':await page.locator('#density').input_value()=='comfortable'});await page.reload();checks.append({'check':'keyboard density selection persists','pass':await page.locator('#density').input_value()=='comfortable'})
+  await page.locator('.note-card').nth(0).click();await page.locator('#note-body').fill('Unsaved settings-safety draft');await page.evaluate("() => {window.setBefore=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k==='leafnote-preferences-v1')throw new DOMException('blocked','QuotaExceededError');return window.setBefore.call(this,k,v)}}");await page.locator('#density').select_option('compact');checks.append({'check':'preference failure truthfully reported with draft retained','pass':'could not store' in await page.locator('#state-message').inner_text() and await page.locator('#note-body').input_value()=='Unsaved settings-safety draft'});await b.close()
+asyncio.run(main());(OUT/'checks.json').write_text(json.dumps(checks,indent=2));print(json.dumps(checks,indent=2))

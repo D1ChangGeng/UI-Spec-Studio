@@ -1,0 +1,17 @@
+# Collection increment
+
+The accepted card scene/material/center-pivot and reduced-motion treatment are retained. New collection responsibility: stable record IDs, unchanged order, remembered page scroll, selected-card border, and focus restored to the matching tile. Editor entry is a short opacity reveal; no unverified spatial-morph claim is made.
+
+Content is prepared synchronously before editor reveal: title, draft, confirmed back, identity label and active-face semantics. Active motion is cancelled on navigation and guarded against late focus. A pending save carries its own note ID and snapshot, so switching notes does not save the wrong draft or turn the wrong card.
+
+Collection persistence uses versioned `fieldnote-collection-v2` JSON. The legacy single-note key is read when the collection key is absent; migration is written on the next successful save, with no destructive eager migration. Each save re-reads the current collection before atomically replacing its one entry. Unsaved drafts stay in memory per ID and are clearly labeled in the grid. Errors preserve previous confirmed records and drafts. Unknown storage blocks new writes until a read succeeds. Clearing requires a native confirmation.
+
+No new external runtime dependency. The studied DeSandro mechanism still carries card motion; the new collection/state adapter is project-owned and needs its own tests. This bounded continuation extends the prior component family rather than choosing a new visual foundation.
+
+## Review and refinements
+
+The first suite passed 56 assertions. Inspection showed that collection count and content authority needed precise language: unknown storage now says unavailable, and unsaved changes to an existing note count as a draft. Routine UI review also identified two focus/order risks: re-appending every tile could drop focus on a background update, and saving drafts out of order could move their positions. Keyed in-place updates and a stable order list address these; eight targeted assertions passed, including native clear failure/retry. The final journey suite passed 58 assertions, adding retry focus checks. A final draft-count assertion covers the last isolated copy/state refinement.
+
+Viewed whole desktop light/dark collection and empty state; mobile light/dark collection and Chinese UI; prepared-turn frames 0, 2 and 4; reduced-motion saved state; write failure and unknown storage. The source/type/material family survives the collection. Long excerpts are intentionally clipped in tiles and remain fully available in the editor/reading region.
+
+Ordered frames were captured with natural browser timing and viewed. They establish their sampled phases, not uninterrupted playback or target-device smoothness. No new video playback was performed. Collection entry uses a short fade; its data preparation, identity, focus and scroll were asserted, while the detailed fade interval was not separately visually sampled. Physical mobile keyboard, touch hardware, screen readers, Safari/Firefox and simultaneous multi-tab editing remain unverified.

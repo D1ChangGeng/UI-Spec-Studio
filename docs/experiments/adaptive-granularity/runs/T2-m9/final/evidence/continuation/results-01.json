@@ -1,0 +1,283 @@
+{
+  "checks": [
+    {
+      "name": "citation available during active stream",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "dock open while response active",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cited paragraph identified",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source contains cited paragraph excerpt",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cited paragraph stays stable during arrival",
+      "pass": true,
+      "detail": {
+        "before": {
+          "text": "A useful starting point is the everyday route: the walk to a bus stop, the school gate, or the nearest shop. This example looks at comfort through those small, repeated journeys.",
+          "top": 285.25
+        },
+        "after": {
+          "text": "A useful starting point is the everyday route: the walk to a bus stop, the school gate, or the nearest shop. This example looks at comfort through those small, repeated journeys.",
+          "top": 285.25
+        }
+      }
+    },
+    {
+      "name": "composer grows with source dock present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "send or stop stays reachable with expanded composer",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stopping keeps source open",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "stopping preserves cited paragraph",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "continuing keeps source open",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source reading does not follow new output",
+      "pass": true,
+      "detail": {
+        "before": {
+          "top": 0,
+          "height": 627
+        },
+        "after": {
+          "top": 0,
+          "height": 804
+        }
+      }
+    },
+    {
+      "name": "close returns focus to inline citation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "close preserves multiline draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "close clears selected paragraph",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "close holds conversation reading position",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "explicit back-to-latest reaches end",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "simulated failure retains open source",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "retry retains open source",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "retry succeeds without duplicate question",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "desktop no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile focused source is native modal",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile source opened before completion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile background reading held",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile return preserves draft",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile return restores citation focus",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "native Escape dismissal works",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no runtime errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "no external desktop requests",
+      "pass": true,
+      "detail": [
+        "http://127.0.0.1:8739/app/",
+        "http://127.0.0.1:8739/app/app.js",
+        "http://127.0.0.1:8739/app/styles.css",
+        "http://127.0.0.1:8739/app/tokens.css"
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "file": "01-citation-during-stream.png",
+      "start_unix": 1793308723.5733585,
+      "end_unix": 1793308723.6338155,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "02-source-during-stream.png",
+      "start_unix": 1793308723.707386,
+      "end_unix": 1793308723.7757297,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "03-source-expanded-composer.png",
+      "start_unix": 1793308724.524909,
+      "end_unix": 1793308724.6061437,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "04-stopped-with-source.png",
+      "start_unix": 1793308724.6565669,
+      "end_unix": 1793308724.7191086,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "05-reading-held-with-source.png",
+      "start_unix": 1793308726.512544,
+      "end_unix": 1793308726.590744,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "06-return-to-conversation.png",
+      "start_unix": 1793308726.6533492,
+      "end_unix": 1793308726.7129662,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "07-failure-with-source.png",
+      "start_unix": 1793308728.973925,
+      "end_unix": 1793308729.0468988,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "08-recovered-with-source.png",
+      "start_unix": 1793308733.4196777,
+      "end_unix": 1793308733.4820316,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "09-dark-source.png",
+      "start_unix": 1793308733.5172913,
+      "end_unix": 1793308733.5936267,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "10-mobile-source-during-stream.png",
+      "start_unix": 1793308735.068457,
+      "end_unix": 1793308735.0976274,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "11-mobile-return.png",
+      "start_unix": 1793308736.6544175,
+      "end_unix": 1793308736.6795082,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "12-mobile-dark-source.png",
+      "start_unix": 1793308736.8336923,
+      "end_unix": 1793308736.8644083,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "errors": []
+}

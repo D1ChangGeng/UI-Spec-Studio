@@ -1,5 +1,9 @@
 # Workflow: lead the work, preserve the design
 
+## Contents
+
+[Current scope](#operate-on-the-current-scope) · [Init](#init--establish-a-useful-working-understanding) · [Shape](#shape--resolve-just-enough-direction-to-build-well) · [Iterate](#iterate--deliver-one-meaningful-increment) · [Audit](#audit--inspect-an-identified-scope) · [Finish](#finish--complete-real-connection-work) · [Continuity](#continuity-with-lightweight-records) · [Evidence map](#use-the-evidence-map-inside-each-operation)
+
 ## Operate on the current scope
 
 The main path is `init → iterate → finish`; `audit` runs throughout and optional `shape` resolves consequential uncertainty wherever it appears. Resume or combine operations from current evidence. A local refinement can finish in one round; an approved product can enter integration directly.
@@ -15,6 +19,10 @@ Expand a named reference into the relevant working experience, structure, visual
 Record established facts, assumptions and high-impact questions compactly. Preserve functional contracts and assess current presentation against the target. Init is sufficient when the agent can explain the task, preserve constraints and choose a justified next action. Continue an implementation request into shape or iterate; a planning request ends with its requested decision support.
 
 The initial inventory includes the existing project, accepted screens and decisions, working code and tests, source-owned content, languages, relevant user/operator roles, current devices and network conditions, and rights or production constraints for defining assets. Distinguish what must remain functionally true from what is still a visual candidate. Establish the first meaningful action, durable working object, result location and continuation path before treating a named technical workbench as an interface type. Link significant open assumptions to the evidence that could resolve them.
+
+Preserve the complete product goal separately from the first formal SPEC. Identify the current implementation and applicable mature foundations, then find the consequential visual objects, state/time relationships and shared dependencies that may need concentrated work. Use the [minimum sufficient experience closure](analysis.md#choose-a-bounded-increment) to form a provisional structure of meaningful candidate SPECs, their important dependencies and a justified first priority. A candidate is planning context, not an already started formal increment or a promise of a permanently fixed sequence. Keep important goals with uncertain boundaries visible as open planning questions.
+
+Present that understanding in the conversation: the intended overall result, the current foundation, the proposed increments and why the first scope can be completed and reviewed well. State what could change the grouping. A complete mature implementation may support a larger first increment; uncertain interaction relationships may need further study before later boundaries become useful. For a new product, select a representative core experience with visual quality worth carrying forward. Continue authorized research and implementation without requiring approval for ordinary planning refinements.
 
 ## shape — resolve just enough direction to build well
 
@@ -34,23 +42,29 @@ Choose research, trial or expansion by what the evidence supports. Similar new r
 
 ## iterate — deliver one meaningful increment
 
-**Orient and choose.** Reconcile feedback, accepted decisions, current code, incomplete journeys and findings. A continuation request is sufficient: choose and state the next useful outcome.
+**Orient and choose.** Reconcile feedback, accepted decisions, current code, incomplete journeys and findings. A continuation request is sufficient: choose and state the next useful outcome. Continue the active SPEC when fulfilling its established objective or resolving its quality gaps. Begin a new formal SPEC when undertaking a new cohesive design objective with its own meaningful review boundary; an additional search, repair or execution pass remains internal work.
 
-**Define the slice.** Identify affected pages/states, dependencies, intended user outcome and observation conditions. Keep connected tasks and shared families coherent.
+**Define the slice.** Identify affected pages/states, dependencies, intended user outcome and observation conditions. Keep connected tasks and shared families coherent. State the formal SPEC's quality responsibility, the objects and relationships that must be handled together, and the applicable current-product decisions it inherits. Distinguish research/observation, primary design/implementation and integration/regression scopes. Apply the analysis method to keep, split, merge or redraw the proposed boundary; explain important scope choices and their product implications to the user before broad work depends on them.
 
 **Research and select.** Reuse supported direction or resolve material uncertainty through shape. Pair target qualities with concrete implementation candidates and inspect their actual demos. Let discoveries refine content, assets and layout. Use the [sourcing loop](component-sourcing.md#follow-visual-clues-to-answer-design-questions) to turn unresolved questions into further search, comparison or trial. Seek alternative evidence when access fails and consolidate necessary user assistance after feasible research. Bound custom work to demonstrated gaps.
 
 **Trial and adapt.** Work in the existing project. Trial high-impact choices with real or identified fixture content, fonts, themes, extremes and states before expansion. Preserve valuable source relationships through configuration, composition and focused changes. Connect business actions at their owner. Recheck affected mechanisms and replace candidates whose fit fails.
 
+Use research and trial findings to reconsider the boundary while the work is active. A mature block can unify previously separate responsibilities; an animation can expose preparation, focus or neighboring-layout dependencies that need inclusion. Update the active scope and later candidates when that improves the experience closure. Preserve the prior goal, affected unresolved issues, change reason and current responsibility in the same design records. Distinguish a justified repartition from completion, and continue repairing deficiencies still covered by the active goal. Routine candidate replacement and local refinement do not require new formal SPECs.
+
 **Carry the concrete implementation conditions.** Keep the selected item's exact variant, revision, public configuration, dependencies, source, editable assets and delivery derivatives with the implementation. Choose the appropriate static, authored-time or live delivery boundary. Test short, typical and long real or explicitly identified fixture strings, realistic content density, locale differences and meaningful pending/empty/error states. Compose copy, type scale and spacing together. Preserve business-fact authority, source permissions and the distinction between illustrative fixture values and real product claims. A representative integration should resolve the most consequential unknown before broad reuse.
 
 **Integrate and inspect.** Compare whole → region → detail → whole, related views and continuous use under relevant conditions. Check populated core tasks, long content, repeated operation, failure and reduced motion for usability and expression. Locate gaps in experience understanding, reference, resource, adaptation or combination; return to that level and recheck. Make necessary changes to accepted direction explicit.
+
+Verify both the current SPEC's claimed qualities and the actual effects on existing product relationships. A local pass supports that local claim; a page-wide overview may miss the component or temporal detail this increment owns. Select the necessary related checks from actual dependencies and changed conditions, without automatically repeating unrelated product research.
 
 For performance or operating work, observe the sequence through input, usable result, authoritative completion and recovery. Compare under named conditions. Separate feedback speed, actual task time and resource consumption; inspect position under content growth and effective content after shared/individual updates.
 
 **Inspect the assembled responsibility boundary.** In addition to the whole composition, examine cross-page anchors, actual-size assets and crops, shared focus and scrolling, listener or motion-engine conflicts, overlapping layers, cumulative runtime cost, cleanup and quiet/loading/failure states. Verify keyboard, touch and reduced-motion behavior as relevant. A pass for an isolated component does not establish coherence after multiple resources, real services and content are combined. Repair the responsible source, adapter, composition or state owner, then revisit the affected states and pages.
 
 **Present and continue.** Supply the working entry, important choices and inspected outcome. Connect goals, evidence, actual adoption, retained mechanisms and adaptations. Distinguish studied, compared, trialled and adopted resources; use representative frames/intervals where useful. State consequential gaps, observed conditions, approval scope and next useful work. The user need not restate the method.
+
+Make the delivery useful in the conversation, not only in saved records. Show the actual operable or renderable increment, significant visual references/comparisons, adopted resources and observed results at a depth proportional to their design impact. Explain the contribution to the complete product and the current candidate for subsequent work. During research, surface a finding or local result when it materially changes a design choice. Link detailed records for traceability while keeping the user-facing account focused on what can be seen, used or decided.
 
 ### Turn subjective feedback into a useful repair
 
@@ -76,9 +90,15 @@ A material change to accepted appearance, task meaning or user commitment return
 
 Keep accepted direction, current outcome, key evidence/choices, shared rules, reviewed conditions and next priority in existing project records. The optional `.ui-spec` manifest records declared coverage, scoped approval and connection evidence; individual scopes retain their own maturity. Keep one current implementation with Git history. Records support continuation; the host owns session persistence and context management.
 
+Let formally equal increments act on that same current product through four relationships: **Inherit** applicable tasks, visual systems and mechanisms with their supporting conditions; **Extend** them with a coherent new experience; **Adapt** existing layout, shared styles or state behavior to accommodate the increment; **Revisit** earlier decisions when new evidence changes their fit. These are descriptions of design work, not additional phases or record states. Prior approval keeps its actual scope and history while a changed decision receives the appropriate review.
+
+Reuse supported research and implementation instead of restarting for every SPEC. A new increment may remove redundant copy, replace a coarse component or merge fragmented controls. Progress is the improvement in the product's intended experience, not a growing count of pages, components or SPECs. Keep deferred goals and unresolved quality visible across scope changes; the formal record's status cannot settle the actual design result.
+
 ## Apply the practice to the actual medium
 
 Apply the same method to README, charts, slides and explanations through their reading task and host. A README can prioritize understanding, fit, installation and first use using native headings, links, code and artwork. Study relevant publications; inspect actual host, theme and narrow renders. Static work verifies content, links/assets and publication; live work also verifies state and services.
+
+Keep design documentation and the product interface distinct. Evidence tables, internal classifications and engineering explanations belong in research records unless they serve the product user's real task. Express the intended hierarchy, material or interaction through the actual composition and behavior. A working product, representative demonstration and authored visual result each retain their truthful delivery boundary.
 
 ## Use the evidence map inside each operation
 

@@ -1,0 +1,179 @@
+{
+  "checks": [
+    {
+      "name": "Source opens while the long answer is still streaming",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Answer paragraph and synthetic source passage are identified",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "New output leaves the reader-held position unchanged",
+      "pass": true,
+      "detail": {
+        "before": 220,
+        "after": 220
+      }
+    },
+    {
+      "name": "Composer growth retains reading position and reachable controls",
+      "pass": true,
+      "detail": {
+        "before": 220,
+        "after": 220
+      }
+    },
+    {
+      "name": "Stop works while keeping the source open",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Continue works inside the open reader",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Retry restarts the answer without closing the source",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Closing returns to same draft and reading offset",
+      "pass": true,
+      "detail": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "name": "The last inspected paragraph remains identifiable",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Back to latest opts back into following with panel open",
+      "pass": true,
+      "detail": {
+        "bottom_gap": 0
+      }
+    },
+    {
+      "name": "Phone source is a focused native modal during streaming",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Phone Stop stays in source view",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Phone Retry preserves modal and source passage",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Phone explicit return retains draft and reading position",
+      "pass": true,
+      "detail": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "name": "Escape closes phone source and returns focus",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No horizontal overflow at either target viewport",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No uncaught browser errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "frames": [
+    {
+      "file": "desktop-01-open-stream.png",
+      "seconds": [
+        2.568,
+        2.649
+      ]
+    },
+    {
+      "file": "desktop-02-grown-composer.png",
+      "seconds": [
+        3.816,
+        3.884
+      ]
+    },
+    {
+      "file": "desktop-03-stopped.png",
+      "seconds": [
+        3.92,
+        3.998
+      ]
+    },
+    {
+      "file": "desktop-04-retry-stopped.png",
+      "seconds": [
+        7.962,
+        8.021
+      ]
+    },
+    {
+      "file": "desktop-05-dark-panel.png",
+      "seconds": [
+        10.612,
+        10.701
+      ]
+    },
+    {
+      "file": "phone-01-open-stream.png",
+      "seconds": [
+        12.875,
+        12.906
+      ]
+    },
+    {
+      "file": "phone-02-stopped.png",
+      "seconds": [
+        12.952,
+        12.99
+      ]
+    },
+    {
+      "file": "phone-03-return.png",
+      "seconds": [
+        18.14,
+        18.173
+      ]
+    },
+    {
+      "file": "phone-04-dark-source.png",
+      "seconds": [
+        20.213,
+        20.243
+      ]
+    }
+  ],
+  "errors": [],
+  "source_sha256": {
+    "app/styles.css": "43f26705831d76675e5597ce789c7602d361fb22d869615499ee859f4c0cea07",
+    "app/THIRD-PARTY.md": "29e6f18f1291a8992a6f59eab511490d7e20c5339176c7780836bd898d615393",
+    "app/FOUNDATION.md": "2ce056e1318c24582fb20a0e002083b85694aef332dceaf2e1cf166f4fe8df08",
+    "app/README.md": "a32239b7b1486e28fe0e29e5d787da92ee7d035a61a01ef42e373de283bff948",
+    "app/app.js": "da12e8cba481ac4174f9536d52f392828cb1a5d15dec4ff9389aae42ac066ece",
+    "app/index.html": "71673e04adcf02380f353b6d39ce2f72dbff0fd470aaa95ae6e0ce36d8849488",
+    "app/tokens.css": "02f86bb6ca43363b47f88dff7bbe5e339304ffbd263ed8eac0fe84df7a6a16de"
+  },
+  "conditions": "Chromium 143, 1440x900 desktop and 390x844 phone emulation, scale 1. Ordered captures with monotonic time brackets; not continuous playback."
+}

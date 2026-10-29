@@ -1,0 +1,48 @@
+# Fieldnote now has a notebook collection
+
+You can create several titled notes, open any card for editing, save it, and return to the same place in your notebook. The original paper/forest materials and reversible editor/saved-card motion remain part of the experience.
+
+## Open the result
+
+Local preview: **http://localhost:8314** while the local server is running. Restart it from this cell with:
+
+```bash
+python -m http.server 8314 --directory app
+```
+
+The complete source is in `app/`. No build step or external runtime package is needed.
+
+## What the collection does
+
+- **Create and reopen notes.** Each has its own title, body and stable identity. The collection shows useful excerpts and distinguishes saved content from draft changes.
+- **Keep your place.** Returning restores the corresponding card’s focus, selected border and collection scroll position. Saving notes in a different order does not rearrange them.
+- **Prepare both faces.** The selected note’s draft, saved text, title and identity are populated before the editor appears. Rapid navigation cancels stale motion/focus work.
+- **Keep saves attached to the right note.** You can navigate while saving. Completion updates its original record and does not turn or replace another open note. Newer edits remain a draft.
+- **Recover safely.** Failed writes retain the previous confirmed collection and the editable draft. The failed card is marked and opens to retry. Unreadable storage has its own recovery state and is never presented as an empty notebook. Clear-all requires confirmation and supports retry on failure.
+- **Carry existing work forward.** A note saved by the previous version is read automatically and included in the collection on the next successful save.
+
+The familiar front/back interaction is retained for each note. Collection entry uses a brief fade; stable ordering, numbering, focus and scroll carry orientation between the collection and editor. Reduced-motion mode keeps the same content and controls without rotation.
+
+## Reviewed result
+
+The final collection journey suite passed **58 checks**. A separate suite passed **eight orientation and clear-recovery checks**, including focus preservation during background updates and saving drafts out of order. The final isolated draft-count refinement has its own check and report.
+
+Tests used the actual local HTTP application in Chromium 143 at a device-pixel ratio of 1. Notes were created through visible controls, persisted, reopened after reload, edited, saved, returned to and switched repeatedly. Layout samples cover **1440 × 900** and **390 × 844**, light/dark, Chinese UI, long/short notes and reduced motion.
+
+I viewed the actual collection, empty, error and reading captures, plus ordered card-turn frames showing prepared content. Representative files are:
+
+- `evidence/continuation/collection-desktop-light.png`
+- `evidence/continuation/collection-desktop-dark.png`
+- `evidence/continuation/collection-mobile-light.png`
+- `evidence/continuation/collection-mobile-dark.png`
+- `evidence/continuation/open-prepared-0.png` through `open-prepared-5.png`
+- `evidence/continuation/collection-save-failure.png`
+- `evidence/continuation/unknown-mobile.png`
+
+Results, source hashes and capture timing are in `report.json`, `orientation-report.json` and `draft-count-report.json` under `evidence/continuation/`. Earlier evidence and the original DELIVERY.md are preserved.
+
+## Boundaries
+
+Saved notes persist only in the current browser origin. Unsaved drafts survive navigation during the session but are lost on reload. Titles allow 120 characters and note bodies retain the existing 600-character bound. Theme and language preferences remain session-only.
+
+This increment does not add cloud sync, search, manual sorting or per-note deletion. Simultaneous multi-tab conflicts, physical mobile keyboards, touch hardware, screen readers and Safari/Firefox remain unverified. Ordered screenshots support the sampled motion phases; no full-speed video playback or device-wide smoothness claim is made. No deployment or live service changes were made.

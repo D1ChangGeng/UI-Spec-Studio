@@ -1,0 +1,36 @@
+# Review record
+
+## Environment and boundary
+
+Local HTTP application at `http://localhost:8777`, Playwright Python, supplied Chromium headless shell 143.0.7499.4, device scale factor 1, viewports 1440×900 and 390×844. Real browser `localStorage` was exercised. Native exceptions and authored delays were injected explicitly. This was a desktop browser with resized viewports, not a physical phone. No deployment or external account actions occurred.
+
+## Executed checks
+
+`run-2/results.json` records **36 passing assertions** covering creation, update, title/context/body data, body search, selection/reopening, empty search, draft switching/reload, actual collection persistence, keyboard saving, named deletion, safe initial focus, Escape cancellation, failed deletion, successful deletion, failed save and retry, a delayed snapshot with newer edits, JSON export, eight viewport/locale/theme overflow checks, console errors, legacy migration, malformed-data protection, native quota errors and recovery.
+
+The final follow-up (`final/checks.json`) records four passes and one failed read-retry case. **The failed case is not relabeled.** Its repair is independently checked in `final/read-recheck.json`: editing after a read error, retrying, preserving the draft, writing it durably, and re-enabling Save all pass.
+
+`final/safety-checks.json` records four further passes: blank-title error/focus, reduced-motion control styling, a visible mobile malformed-data explanation with retry, and successful collection-side recovery. Other-tab mutation detection and draft-preserving recovery passed in the follow-up. This is not atomic multi-tab merge testing.
+
+## Original failures and repairs
+
+- `research-initial-failures.json`: public pages initially failed the test browser certificate check. Retried with HTTPS verification disabled only for public reference capture. The original failures remain.
+- `research-shadcn-mail.png`: current URL returned 404. The v3 public example succeeded and was viewed.
+- `run-1/results.json`: core checks passed through malformed-data preservation, then the test harness's assigned fault function was evaluated as a returned callable. The script was corrected to use a block body with no return. `test_app-run-1.py` preserves the original harness. The corrected native quota tests pass in run 2.
+- Early image inspection found a CSS specificity conflict in light-mode primary colors and transient dark brand contrast. Product root tokens now have explicit scope; final captures waited 300–400 ms for settled transitions.
+- Bottom-positioned feedback was outside the viewport for long notes. Feedback now stays directly below the editor actions.
+- The read-retry failure described above was an application defect, repaired and rechecked. No failing result was overwritten.
+
+## Actual pixel viewing
+
+The agent opened and visually inspected the baseline; Simplenote public product image; current shadcn 404 and successful v3 mail example; Pico form/modal renders; initial local trial views; and the final editor in both languages, both themes and both requested sizes. All four mobile list variants were also viewed. Additional viewed states: empty desktop notebook, long Chinese note, body scroll endpoint, desktop and phone named-deletion dialogs, and mobile malformed-data state.
+
+Final visual sources are `final/1440-*-editor.png`, `final/390-*-editor.png`, `final/390-*-list.png`, `final/empty-desktop.png`, `final/mobile-long-*.png`, `final/mobile-delete.png`, and `final/mobile-read-error.png`. The `run-2` error/modal captures show earlier scoped states; they are not silently promoted to the final color revision.
+
+Viewed quality judgment: title and writing region dominate; the selected note remains identifiable by a colored edge and distinct surface; long localized titles wrap; the phone view preserves explicit return/save actions; both themes retain legibility. This is professional visual observation, not measured end-user comprehension.
+
+## Limits
+
+No actual screen-reader playback, real mobile keyboard, Safari/Firefox run, large-collection performance study, or user acceptance session was conducted. The capture sequence is sampled static evidence; it does not establish continuous frame-rate or animation performance. Long-note body content scrolls inside the native textarea. The pinned browser predates the newest non-scrollable modal-backdrop containment behavior, so full backdrop scroll isolation is a progressive enhancement.
+
+Export is available; import is not. Cross-tab collection changes are detected, but read/compare/write is not a transaction and concurrent draft maps are not merged. Local storage is not a durable cloud backup. Pico 2.1.1 is pinned and locally vendored; its upstream now reports it is unmaintained.

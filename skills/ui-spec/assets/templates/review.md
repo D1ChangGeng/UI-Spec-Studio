@@ -8,6 +8,12 @@ actual entry path. Retain the conditions needed to interpret and repeat this rev
 For external study, identify the carrier page, player, depicted application or
 displayed work; source/date and edited demonstration or operation record.
 
+For formal SPEC review, identify the increment, its experience goal and visual
+responsibilities in the current product. Distinguish the broader research scope,
+primary implementation and affected-product regression. Identify inherited
+decisions and shared dependencies relevant to this review; references to existing
+records are sufficient.
+
 ## Observation
 
 Start with the whole visible interface at its intended scale, then examine consequential
@@ -50,6 +56,11 @@ Compare equivalent conditions and meaningful event phases. Attribute a gap to re
 adaptation, real content, conflicting composition or target/task mismatch. Recheck the affected
 interval and connected path after changes; keep residual gaps and target changes explicit.
 
+Keep repairs and reinspection serving the promised goal within the current SPEC.
+If new evidence changes its boundary, record the reason, original finding,
+preserved product goal and the scope now responsible for unresolved work. A new
+increment does not establish that the earlier finding was resolved.
+
 ## Result
 
 State experience-validity and expressive-completion findings independently. Inspect
@@ -65,6 +76,14 @@ important choice. State which research question the runnable result answers and
 which conclusion remains unsupported. For adoption, identify the source and mechanisms
 actually retained in the current implementation, local trial scope and expanded verification.
 Existing notes can carry this optional record.
+
+State current-SPEC quality findings and related-product integrity findings
+separately. Show how the target quality reaches an observed reference, actual
+implementation location, current presentation and remaining gap. Present the
+working/renderable entry and decisive evidence in the conversation, with important
+choices and the next useful increment; writing this record alone is not delivery.
+For a product UI, inspect whether real tasks and visual/interaction results carry
+the design, with internal method explanations kept in their appropriate record.
 
 For a research or selection decision, assess coverage breadth, inspection depth,
 temporal completeness, relevance and reliability together. Identify evidence that

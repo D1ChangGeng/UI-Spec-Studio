@@ -1,0 +1,21 @@
+# Continuation: typography and density
+
+## Session boundary
+The parent reported a host execution interruption after approximately one minute of continuation work, then allowed up to seven additional minutes. This is not an uninterrupted timed run. The work resumed from the existing before-captures and implementation. The initial continuation test failed with ERR_CONNECTION_REFUSED because the local preview server was no longer running; run-1.log is preserved. The restored-server run is run-2.log.
+
+## Decision and reuse
+Preserve the accepted collection/editor relationship and its adopted Bootstrap 5.3.8 list/form/button foundation. Use its native select styling for a visible Density preference, available on both collection and editor views. Keep the existing local Inter and serif/CJK fallback families. No new font or framework is required.
+
+Comfortable uses larger body type and more generous line/section spacing; Compact reduces repeated spacing and type slightly while preserving metadata at 11–12px and readable labels. The editor's width follows a 66ch measure plus padding. English labels use natural case; Chinese labels avoid artificial tracking. Chinese title line-height is increased for mixed punctuation and longer titles. On mobile the preference receives its own header row so the label and selected value remain explicit.
+
+Density is a shared data-density value and a field in leafnote-preferences. It does not select a different note or write note content. Preference write failures are reported. Keyboard shortcuts ignore focused selects.
+
+## Executed evidence
+results.json: 30/30 scoped browser assertions passed in Chromium 143, HTTP/native localStorage. Covers create/save with long Chinese content, full-context search, reopening, cancellation and confirmed deletion/reload, density reload persistence, draft and selection preservation across density/theme/language changes, no horizontal overflow, applied density, and no page errors.
+
+Captures cover both densities, both interface languages and 1440×900 / 390×844, with a further compact Chinese dark-state capture. Before Chinese desktop/mobile, after Chinese desktop comfortable/compact, English mobile compact, and Chinese mobile dark compact were actually viewed. These support the observed roles, reading measure and header fit; assertions are separate from this visual judgment. No claim is made that every captured frame was individually reviewed or that all theme × density × locale combinations were tested.
+
+## Observed result and remaining scope
+The two densities retain the same hierarchy: title, labeled prose, then smaller metadata. Compact visibly exposes more collection rows and more prose without hiding labels. The mobile density row fits at 390px and the save area remains reachable. Existing safe deletion and draft behavior were re-exercised using long content.
+
+Physical phone keyboards, screen-reader interaction, Safari/Firefox, very large collections and the complete density/theme/locale Cartesian matrix remain unverified. Backup import and automatic conflict merging remain outside this continuation. No publication or deployment occurred.

@@ -1,0 +1,51 @@
+# Fieldnote now has a working collection
+
+You can keep several saved note cards, open any one for editing, and return to its numbered place in the collection. The paper treatment and save-to-reverse interaction carry through the expanded app.
+
+## What is working
+
+- **A collection with honest states.** Start with an empty notebook, create notes, and distinguish saved cards, unsaved session drafts, saving attempts and failures. Saved and draft counts are separate; unreadable storage is shown as unavailable.
+- **A stable place to return to.** Editing preserves the note's ID, number, collection order and tile DOM identity. Returning restores the collection's scroll position, outlines the selected card and returns keyboard focus to it.
+- **Prepared content before movement.** The draft and saved face are populated before the editor appears. Rapid opening, returning and switching follow the latest selected note without showing another note's content or an empty saved face.
+- **Independent drafts.** Long and short notes keep their own text, selection and editor scroll. Unsaved changes remain available while switching among cards and are labelled as lasting until reload.
+- **Safe local persistence recovery.** A save updates only its matching record. A throwing write leaves the previously persisted collection unchanged. The failed draft stays available, its card is marked, and reopening it offers retry. Saving while returning to the collection updates the responsible card without taking you back to the editor.
+- **Existing notes retained.** A valid note from the original application appears in the collection with its original identity. A normal successful save writes the new collection format; the old key is left intact.
+- **Motion and keyboard continuity.** The original saved-card turn remains gated by a confirmed write. The collection transition carries the selected card between its two sizes. Reduced motion and browsers without View Transitions use an immediate prepared update. Save shortcuts, Escape, focus return and inactive-face protection remain.
+
+The prior turn's perspective was also made shallower to reduce its projection into the small index label. The collection transition was refined after viewed intermediate frames exposed doubled snapshot text; the final transition presents one prepared surface while its geometry moves.
+
+## Try it
+
+The existing local preview remains at **http://127.0.0.1:8939** while the server is running. To restart, run this from `app/`:
+
+```sh
+python -m http.server 8939 --bind 127.0.0.1
+```
+
+No build or dependency installation is required.
+
+## Actual verification
+
+**78 checks passed across three focused runs:** 61 integration assertions, 13 orientation/fallback checks, and four checks after the final motion refinement. The main integration run covered light/dark at 1440×900 and 390×844, multiple-note creation, editing, saving, reload persistence, switching, session drafts, save failure and retry, unreadable data, migration, rapid navigation and reduced motion. It reported no page errors.
+
+A seven-note narrow collection verified that returning restores the previous scroll offset and focuses the same sixth card. Follow-up checks verified the immediate no-API fallback, reduced-motion state, and truthful saved/draft counts.
+
+I viewed the empty and populated collection, narrow scrolled return, failure recovery, longer-note turn, and intermediate opening/return frames. The original blended frames and final refined frames are both retained. These are **ordered natural-time screenshot observations**, with capture brackets; they are not a claim of continuous playback or measured frame-rate performance.
+
+## Review the result
+
+- `app/` — current implementation, run instructions and source notices.
+- `evidence/continuation/1440-populated-final.png` — the integrated desktop collection, with explicitly authored test notes.
+- `evidence/continuation/390-return-orientation.png` — the selected sixth card at its retained collection scroll position.
+- `evidence/continuation/failed-collection.png` — failure marking and recovery wording.
+- `evidence/continuation/final-*-open-*.png` and `final-*-return-*.png` — final transition samples.
+- `evidence/continuation/report.json`, `orientation-report.json`, `motion-final-report.json` — assertions, conditions, capture timestamps and source identities.
+- `CONTINUATION-DESIGN.md` — decisions, source responsibilities, viewed findings and limitations.
+
+## Remaining limits
+
+Notes remain browser-local, with no account or synchronization. Unsaved drafts do not survive reload. Saves are serialized during the existing 0.9 second demo delay, although other cards remain openable and editable. Cross-tab conflict handling is not implemented.
+
+This session exercised the supplied Chromium environment. Safari, Firefox, physical mobile keyboards, screen readers, large-collection performance and real-user comprehension remain unverified. The new Chinese collection wording has not had a separate language review. The shallow flip's improved clearance is supported by sampled frames rather than exhaustive continuous motion measurement.
+
+The prior delivery and original evidence were preserved. No deployment or live-service changes were made.

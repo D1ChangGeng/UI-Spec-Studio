@@ -1,0 +1,22 @@
+# Adopted foundation and Meridian adaptations
+
+Meridian adapts the supplied `reference-project/` native conversation implementation. That implementation transfers the page composition of the assistant-ui ChatGPT example at commit `1fbf00dd0388fee912af95401876a6cc3c232b2c`, path `apps/docs/components/pages/examples/chatgpt.tsx`.
+
+Original source: https://github.com/assistant-ui/assistant-ui/blob/1fbf00dd0388fee912af95401876a6cc3c232b2c/apps/docs/components/pages/examples/chatgpt.tsx
+
+Original demonstration: https://www.assistant-ui.com/examples/chatgpt
+
+| Retained relationship or mechanism | Meridian realization |
+|---|---|
+| Shared 48rem reading and composer measure | `--chat-width`, `#thread`, `.composer-area` |
+| Bounded, right-aligned user messages with 22px radius | `.message.user` |
+| Reading region grows independently of reachable composer | `#reader`, `#conversation`, `.composer-area` |
+| The same composer serves initial and active states | `#composer`, `.has-result` |
+| Current request owns asynchronous completion | `epoch`, `run`, `start()`, `cancel()` extend the reference's cancellation-token pattern |
+| Light/dark neutral scale | Attributed Radix Slate values in `tokens.css`; `--muted` uses `--slate11` |
+
+The page foundation is an adaptation/design transfer, not an installation of the assistant-ui React runtime. The supplied reference's short source modal and one-shot response did not provide streaming, durable thread history, filename chips, or a companion reader. Those mechanisms, their state adapters, and their verification are authored for Meridian. The paper/green roles, serif hierarchy, native glyph lockup, and compact navigation adaptation are project-owned design choices.
+
+The local reference's conversation, document, and active states were rendered and viewed. The official original example's empty composition was subsequently viewed on its public carrier page; no prompt was sent. Broader original-runtime behavior remains unobserved. Current project evidence is recorded in `../DESIGN.md` and `../evidence/README.md`.
+
+The original assistant-ui and Radix notices are preserved in `THIRD-PARTY.md`.

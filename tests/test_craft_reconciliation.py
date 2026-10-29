@@ -2,7 +2,7 @@
 from __future__ import annotations
 import copy, hashlib, json, subprocess, sys, unittest
 from test_tools import ROOT, load
-from source_continuity import runtime_v116
+from source_continuity import runtime_v116, runtime_v1161
 lookup=load('reconciled_craft_lookup','skills/ui-spec/scripts/find_resources.py')
 class CraftReconciliationTests(unittest.TestCase):
     def setUp(self):self.data=lookup.load_catalog()
@@ -52,17 +52,17 @@ class CraftReconciliationTests(unittest.TestCase):
         ledger=json.loads((ROOT/'docs/evidence/v1.16.1/continuity.json').read_text(encoding='utf-8'))
         self.assertEqual(ledger['baseline_commit'],'1ba50b1e1c6dfbd5540d9b54514ef81ac6160eec')
         for row in ledger['files']:
-            current=(ROOT/row['path']).read_bytes();prior=runtime_v116(ROOT,row['path'])
+            current=runtime_v1161(ROOT,row['path']);prior=runtime_v116(ROOT,row['path'])
             self.assertEqual(hashlib.sha256(current).hexdigest(),row['current_sha256'])
             self.assertEqual(hashlib.sha256(prior).hexdigest(),row['prior_sha256'])
             if row['disposition']=='unchanged':self.assertEqual(current,prior)
             if row['disposition']=='append-only':self.assertTrue(current.startswith(prior))
         for row in ledger['historical_evidence_unchanged']:
             self.assertEqual(hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest(),row['sha256'])
-    def test_neutral_inspectors_remain_identical(self):
+    def test_reconciled_v1161_inspectors_remain_identical_to_v116(self):
         for name in ('check_design_evidence','check_manifest','structural_records','check_file_integrity','prepare'):
             path='skills/ui-spec/scripts/'+name+'.py'
-            self.assertEqual((ROOT/path).read_bytes(),runtime_v116(ROOT,path))
+            self.assertEqual(runtime_v1161(ROOT,path),runtime_v116(ROOT,path))
     def test_current_lessons_remain_in_installed_skill(self):
         p=(ROOT/'skills/ui-spec/references/patterns.md').read_text(encoding='utf-8')
         self.assertIn('Preserve task entry',p);self.assertIn('Observe settled overlay',p)

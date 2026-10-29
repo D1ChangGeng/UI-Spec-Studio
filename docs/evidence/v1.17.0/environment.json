@@ -1,0 +1,61 @@
+{
+  "python": "3.12.14",
+  "venv_python": "/workspace/scratch/43b440780c87/test-env/bin/python",
+  "requirements": {
+    "markdown-it-py": "4.0.0",
+    "playwright": "1.57.0"
+  },
+  "browser": {
+    "name": "Google Chrome for Testing headless shell",
+    "version": "143.0.7499.4",
+    "executable": "/workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell",
+    "source": "https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.4/linux64/chrome-headless-shell-linux64.zip",
+    "archive_sha256": "f634a0b44ec170e20e1f8b292bc2b87cdfa5de7a8eee0e98110909141087cf5b",
+    "executable_sha256": "20ffc88be1c6f7dc8351bebfaca965ff9a07617bddf696f0b67ef85e5868b29a"
+  },
+  "scenario": {
+    "command": "PLAYWRIGHT_BROWSERS_PATH=/workspace/scratch/43b440780c87/playwright-cache /workspace/scratch/43b440780c87/test-env/bin/python tools/validate_scenario.py --output-dir /workspace/scratch/43b440780c87/preflight-scenario --browser-path /workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell",
+    "working_directory": "/workspace/scratch/43b440780c87/ui-spec-studio",
+    "requires_escalated": true,
+    "result": "pass",
+    "captures": 28,
+    "checks": 18,
+    "storage_verified": true
+  },
+  "failures_preserved": [
+    "Playwright CDN returned Site Unavailable HTML instead of archive; Microsoft CDN returned GatewayExceptionResponse 400",
+    "Default sandbox cannot create localhost sockets; the exact smoke was rerun with require_escalated using actual HTTP and storage"
+  ],
+  "not_claimed": [
+    "Existing asset/content/temporal suites were not run in this environment smoke",
+    "No new-agent output was rendered or evaluated",
+    "No owner acceptance or visual-quality uplift was inferred from test passes"
+  ],
+  "fonts": {
+    "configuration": "/workspace/scratch/43b440780c87/preview-fontconfig.xml",
+    "files": [
+      {
+        "file": "/workspace/scratch/43b440780c87/preview-fonts/NotoSansCJKsc-Regular.otf",
+        "source": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+        "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+        "bytes": 16437364
+      },
+      {
+        "file": "/workspace/scratch/43b440780c87/preview-fonts/NotoSerifCJKsc-Regular.otf",
+        "source": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Serif/OTF/SimplifiedChinese/NotoSerifCJKsc-Regular.otf",
+        "sha256": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+        "bytes": 24543080
+      }
+    ]
+  },
+  "ffmpeg": {
+    "path": "/workspace/scratch/43b440780c87/playwright-cache/ffmpeg-1011/ffmpeg-linux",
+    "version": "n7.0.1-playwright-build-1011"
+  },
+  "fixture_dependency_imports": [
+    "validate_scenario",
+    "validate_assets",
+    "validate_content",
+    "validate_temporal"
+  ]
+}

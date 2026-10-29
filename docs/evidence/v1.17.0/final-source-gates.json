@@ -1,0 +1,40 @@
+{
+  "version": "1.17.0",
+  "observed_at_utc": "2026-10-29T22:08:06.234882+00:00",
+  "scope": "Local pre-publication source gates. Remote CI, tag, asset download and published-install evidence belongs to the subsequent GitHub Actions run and release readback.",
+  "baseline_commit": "9cc2470e21b626c56dd293274277d9809c13defb",
+  "unit_tests": {
+    "count": 283,
+    "result": "pass",
+    "log": "logs/unit-release.txt"
+  },
+  "package_structure": "pass",
+  "catalog_consistency": "pass",
+  "readme_artwork": "pass",
+  "runtime": {
+    "files": 37,
+    "matches_registered_condition_C": true,
+    "source_manifest": "../../experiments/adaptive-granularity/registration.json"
+  },
+  "archive_integrity": {
+    "directories": 12,
+    "indexed_file_observations": 3133,
+    "unique_payload_locations": 2210,
+    "all_original_sha256_match": true,
+    "all_payloads_in_full_source_policy": true,
+    "all_capture_bundle_sha256_match": true
+  },
+  "independent_audit": "final-audit.md",
+  "prior_engineering_checks": "engineering-checks.json",
+  "installation_scope": "Local installation previously passed for the unchanged frozen runtime; committed and published-tag installation are separate CI gates.",
+  "claim_boundary": "No structural, test or archive result certifies visual maturity, scope appropriateness or owner acceptance.",
+  "whitespace_check": {
+    "result": "pass",
+    "scope": "Authored source; raw experiment/review/shared-input archives preserve original whitespace via -whitespace attribute.",
+    "original_raw_findings": "logs/raw-whitespace-scan.txt"
+  },
+  "release_source_tracking": {
+    "all_packaged_files_tracked": true,
+    "source_file_count": 1164
+  }
+}

@@ -1,0 +1,519 @@
+{
+  "tests": [
+    {
+      "name": "1440-light honest empty",
+      "pass": true
+    },
+    {
+      "name": "1440-light note 0 confirmed",
+      "pass": true
+    },
+    {
+      "name": "1440-light note 1 confirmed",
+      "pass": true
+    },
+    {
+      "name": "1440-light two cards",
+      "pass": true
+    },
+    {
+      "name": "1440-light focus returns to selected card",
+      "pass": true
+    },
+    {
+      "name": "1440-light prepared correct short content",
+      "pass": true
+    },
+    {
+      "name": "1440-light draft tile honest and stable",
+      "pass": true
+    },
+    {
+      "name": "1440-light switching restores long text",
+      "pass": true
+    },
+    {
+      "name": "1440-light per-note draft retained",
+      "pass": true
+    },
+    {
+      "name": "1440-light background save does not leave collection",
+      "pass": true
+    },
+    {
+      "name": "1440-light collection reload persistence",
+      "pass": true
+    },
+    {
+      "name": "1440-light no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "390-dark honest empty",
+      "pass": true
+    },
+    {
+      "name": "390-dark note 0 confirmed",
+      "pass": true
+    },
+    {
+      "name": "390-dark note 1 confirmed",
+      "pass": true
+    },
+    {
+      "name": "390-dark two cards",
+      "pass": true
+    },
+    {
+      "name": "390-dark focus returns to selected card",
+      "pass": true
+    },
+    {
+      "name": "390-dark prepared correct short content",
+      "pass": true
+    },
+    {
+      "name": "390-dark draft tile honest and stable",
+      "pass": true
+    },
+    {
+      "name": "390-dark switching restores long text",
+      "pass": true
+    },
+    {
+      "name": "390-dark per-note draft retained",
+      "pass": true
+    },
+    {
+      "name": "390-dark background save does not leave collection",
+      "pass": true
+    },
+    {
+      "name": "390-dark collection reload persistence",
+      "pass": true
+    },
+    {
+      "name": "390-dark no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "1440-dark honest empty",
+      "pass": true
+    },
+    {
+      "name": "1440-dark note 0 confirmed",
+      "pass": true
+    },
+    {
+      "name": "1440-dark note 1 confirmed",
+      "pass": true
+    },
+    {
+      "name": "1440-dark two cards",
+      "pass": true
+    },
+    {
+      "name": "1440-dark focus returns to selected card",
+      "pass": true
+    },
+    {
+      "name": "1440-dark prepared correct short content",
+      "pass": true
+    },
+    {
+      "name": "1440-dark draft tile honest and stable",
+      "pass": true
+    },
+    {
+      "name": "1440-dark switching restores long text",
+      "pass": true
+    },
+    {
+      "name": "1440-dark per-note draft retained",
+      "pass": true
+    },
+    {
+      "name": "1440-dark background save does not leave collection",
+      "pass": true
+    },
+    {
+      "name": "1440-dark collection reload persistence",
+      "pass": true
+    },
+    {
+      "name": "1440-dark no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "390-light honest empty",
+      "pass": true
+    },
+    {
+      "name": "390-light note 0 confirmed",
+      "pass": true
+    },
+    {
+      "name": "390-light note 1 confirmed",
+      "pass": true
+    },
+    {
+      "name": "390-light two cards",
+      "pass": true
+    },
+    {
+      "name": "390-light focus returns to selected card",
+      "pass": true
+    },
+    {
+      "name": "390-light prepared correct short content",
+      "pass": true
+    },
+    {
+      "name": "390-light draft tile honest and stable",
+      "pass": true
+    },
+    {
+      "name": "390-light switching restores long text",
+      "pass": true
+    },
+    {
+      "name": "390-light per-note draft retained",
+      "pass": true
+    },
+    {
+      "name": "390-light background save does not leave collection",
+      "pass": true
+    },
+    {
+      "name": "390-light collection reload persistence",
+      "pass": true
+    },
+    {
+      "name": "390-light no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "failed collection write retains all saved records",
+      "pass": true
+    },
+    {
+      "name": "collection exposes failed note and draft",
+      "pass": true
+    },
+    {
+      "name": "reopening failed note offers retry",
+      "pass": true
+    },
+    {
+      "name": "retry updates only selected record",
+      "pass": true
+    },
+    {
+      "name": "rapid opening resolves latest note with prepared faces",
+      "pass": true
+    },
+    {
+      "name": "legacy read True",
+      "pass": true
+    },
+    {
+      "name": "migration keeps identity True",
+      "pass": true
+    },
+    {
+      "name": "return focus True",
+      "pass": true
+    },
+    {
+      "name": "legacy read False",
+      "pass": true
+    },
+    {
+      "name": "migration keeps identity False",
+      "pass": true
+    },
+    {
+      "name": "return focus False",
+      "pass": true
+    },
+    {
+      "name": "corrupt collection is not an empty state or overwritten",
+      "pass": true
+    },
+    {
+      "name": "read retry recovers real collection",
+      "pass": true
+    }
+  ],
+  "captures": [
+    {
+      "file": "1440-light-empty",
+      "start": 67.40000000037253,
+      "end": 126.5,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "1440-light-saved",
+      "start": 2452.7000000001863,
+      "end": 2514.4000000003725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "1440-light-collection",
+      "start": 5798.5,
+      "end": 5883.4000000003725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "390-dark-empty",
+      "start": 61.89999999944121,
+      "end": 100.19999999925494,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "390-dark-saved",
+      "start": 2419.699999999255,
+      "end": 2455.5,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "390-dark-collection",
+      "start": 5740.5,
+      "end": 5788.5,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "1440-dark-empty",
+      "start": 49.5,
+      "end": 113.6000000005588,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "1440-dark-saved",
+      "start": 2425.7000000001863,
+      "end": 2486.4000000003725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "1440-dark-collection",
+      "start": 5763.600000000559,
+      "end": 5835.4000000003725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "390-light-empty",
+      "start": 59.59999999962747,
+      "end": 95.59999999962747,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "390-light-saved",
+      "start": 2425.0999999996275,
+      "end": 2466.4000000003725,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "390-light-collection",
+      "start": 5735.700000000186,
+      "end": 5795.5999999996275,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "open-00",
+      "start": 70.6000000005588,
+      "end": 182.20000000018626,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "open-01",
+      "start": 240,
+      "end": 329.79999999981374,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "open-02",
+      "start": 387.5,
+      "end": 479.1000000005588,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "open-03",
+      "start": 538,
+      "end": 599.4000000003725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "open-04",
+      "start": 657.7999999998137,
+      "end": 733.5,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "failed-collection",
+      "start": 2723.4000000003725,
+      "end": 2806.100000000559,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "return-00",
+      "start": 5118.600000000559,
+      "end": 5209.9000000003725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "return-01",
+      "start": 5267.4000000003725,
+      "end": 5371.100000000559,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "return-02",
+      "start": 5428.799999999814,
+      "end": 5540.4000000003725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "return-03",
+      "start": 5598.9000000003725,
+      "end": 5672.100000000559,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "return-04",
+      "start": 5729.600000000559,
+      "end": 5803,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "rapid-latest",
+      "start": 7644.299999999814,
+      "end": 7713.799999999814,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "file": "reduced-saved",
+      "start": 2363.600000000559,
+      "end": 2414.600000000559,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "reduced-collection",
+      "start": 2897.7000000001863,
+      "end": 2952.9000000003725,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "migrated-saved",
+      "start": 2352.2000000001863,
+      "end": 2382.9000000003725,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "migrated-collection",
+      "start": 2867,
+      "end": 2903.9000000003725,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "unreadable-collection",
+      "start": 53,
+      "end": 88.90000000037253,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    }
+  ],
+  "errors": [],
+  "hashes": {
+    "styles.css": "88c8cdf4c25a0cbe067533ae582930db59d0862d6687b914ac182c76d6401eea",
+    "README.md": "b66d264f727ccee15dbc56e10f53a40260c7360edc685d47dc7311f24af23a26",
+    "app.js": "630951445bdf89a6292312ac006173cd0583862b017acb5bcceb3ab962a28c15",
+    "THIRD_PARTY.md": "038a00769118525dc7ea14831f868f034c8d58ad09d05617c2d236b061ef0ad7",
+    "index.html": "33dd859a9146237c29486c9bebb1ed2152867d9386fbd109c4899aa25f7a4bb2"
+  }
+}

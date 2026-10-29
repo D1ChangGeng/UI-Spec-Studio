@@ -1,0 +1,80 @@
+"""Freeze an independent product review after its author completes the report."""
+from pathlib import Path
+from datetime import datetime, timezone
+import argparse, hashlib, json, shutil, zipfile
+
+ROOT = Path('/workspace/scratch/43b440780c87')
+STUDY = ROOT/'ui-spec-studio/docs/experiments/adaptive-granularity'
+parser = argparse.ArgumentParser()
+parser.add_argument('task', choices=('T1', 'T2', 'T3'))
+args = parser.parse_args()
+packet = ROOT/'granularity-review-packets'/args.task
+source = packet/'review-output'
+assert (source/'REVIEW.md').is_file() and (source/'review.json').is_file()
+identities = json.loads((packet/'input-identities.json').read_text())
+for variant, stages in identities.items():
+    for stage, files in stages.items():
+        base = packet/variant/stage
+        actual = {p.relative_to(base).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+                  for p in base.rglob('*') if p.is_file()}
+        assert actual == files, f'Review source changed: {variant}/{stage}'
+
+out = STUDY/'reviews'/args.task
+out.mkdir(parents=True)
+rows, media = {}, []
+for path in sorted(source.rglob('*')):
+    if not path.is_file() or '__pycache__' in path.parts:
+        continue
+    assert not path.is_symlink()
+    name = path.relative_to(source).as_posix()
+    data = path.read_bytes()
+    stored = Path('original')/name
+    if path.suffix == '.md':
+        stored = stored.with_suffix('.md.original.txt')
+    target = out/stored
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(data)
+    rows[name] = {'path': stored.as_posix(), 'sha256': hashlib.sha256(data).hexdigest()}
+    if path.suffix in ('.png', '.jpg', '.jpeg', '.webm', '.mp4'):
+        media.append(target)
+
+batches, batch, size = [], [], 0
+for path in media:
+    n = path.stat().st_size
+    if batch and size+n > 4*1024*1024:
+        batches.append(batch); batch, size = [], 0
+    batch.append(path); size += n
+if batch:
+    batches.append(batch)
+bundles, remap = [], {}
+for i, paths in enumerate(batches, 1):
+    name = f'captures-{i:02d}.zip'
+    with zipfile.ZipFile(out/name, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+        for path in paths:
+            member = path.relative_to(out).as_posix()
+            info = zipfile.ZipInfo(member, (1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            z.writestr(info, path.read_bytes())
+            remap[member] = name
+    bundles.append({'path': name, 'members': len(paths), 'sha256': hashlib.sha256((out/name).read_bytes()).hexdigest()})
+for item in rows.values():
+    if item['path'] in remap:
+        item['member'] = item['path']; item['path'] = remap[item['path']]
+for path in media:
+    path.unlink()
+observed = datetime.now(timezone.utc).isoformat()
+index = {'cell': 'review-'+args.task, 'scope': 'Original independent Agent review outputs, exact bytes',
+         'snapshots': {'final': {'observed_at_utc': observed, 'files': rows}}, 'capture_bundles': bundles}
+(out/'archive-index.json').write_text(json.dumps(index, ensure_ascii=False, indent=2)+'\n')
+for name in ('input-identities.json', 'TOOLING.md', 'REVIEW-INSTRUCTIONS.md', 'TASK-initial.md', 'TASK-continuation.md'):
+    target = name if Path(name).suffix != '.md' else name+'.original.txt'
+    shutil.copy2(packet/name, out/target)
+# The map is published only after the original report is saved and frozen.
+mapping = json.loads((ROOT/f'review-map-{args.task}.json').read_text())
+(out/'unblinding.json').write_text(json.dumps({'observed_at_utc': observed,
+    'report_sha256': hashlib.sha256((source/'REVIEW.md').read_bytes()).hexdigest(),
+    'review_json_sha256': hashlib.sha256((source/'review.json').read_bytes()).hexdigest(),
+    'all_product_source_unchanged': True, 'mapping': mapping}, indent=2)+'\n')
+print(json.dumps({'task': args.task, 'files': len(rows), 'capture_bundles': len(bundles),
+                  'source_unchanged': True, 'mapping': mapping}))

@@ -1,0 +1,28 @@
+{
+  "reviewed_utc": "2026-10-29T21:23:38.737583+00:00",
+  "method": "Opened actual viewport captures with image viewer; ordered samples, no video playback",
+  "viewed": [
+    "02-source-during-stream.png",
+    "03-source-expanded-composer.png",
+    "04-stopped-with-source.png",
+    "07-failure-before-visibility-fix.png",
+    "07-failure-with-source.png",
+    "09-dark-source.png",
+    "10-mobile-source-during-stream.png",
+    "11-mobile-return.png",
+    "12-mobile-dark-source.png",
+    "14-mobile-source-scrolled.png"
+  ],
+  "observations": [
+    "Paragraph highlight, selected citation and source excerpt form a visible association.",
+    "The desktop source remains readable beside an expanded composer.",
+    "The prior recovery button clipping is corrected in the final failure capture.",
+    "Phone Back remains at the top after source scrolling.",
+    "Phone return retains the draft and reading position; dark source roles remain coherent."
+  ],
+  "limits": [
+    "No physical-device virtual keyboard or touch test.",
+    "No screen-reader or cross-browser conformance claim.",
+    "No continuous video playback or frame-rate measurement."
+  ]
+}

@@ -1,0 +1,85 @@
+# Shared modern web implementation guidance
+
+Retrieved on 2026-10-30 (Asia/Tokyo) using `modern-web-guidance@latest`.
+The installed skill named snapshot `2026_09_04-7de96777`; the CLI reported
+`2026_10_16-6654652b` as current. The follow-up searches used that reported snapshot.
+This is common implementation reference material, not a UI design direction,
+resource-selection verdict, acceptance checklist or experiment treatment.
+
+Source: [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance).
+The complete retrieved guides are in `common-guidance-raw.md` next to this file.
+Guide IDs: `dialog`, `prevent-page-scroll-under-modal-dialog`,
+`form-fields-automatically-fit-contents`, `animate-element-entry-exit`,
+`scoped-component-transitions`.
+
+## Conversation form controls
+
+`field-sizing: content` lets a textarea grow with its contents. Keep an explicit
+inline width to avoid horizontal collapse when a long placeholder is replaced
+by a short value. Set meaningful minimum and maximum block sizes, and remove
+inherited fixed heights. The maximum needs to leave the surrounding task usable.
+Inspect Grid/Flex stretching if intrinsic sizing seems ineffective.
+
+The guide treats `field-sizing` as progressive enhancement. Without support,
+standard fixed-size textareas with internal scrolling remain usable. If growing
+fields are essential for the supported browsers, feature-detect
+`CSS.supports('field-sizing', 'content')` before activating an alternative.
+The full guide includes a mirrored Grid fallback, with the relevant style and
+state synchronization costs. Do not install the fallback unconditionally.
+
+## Dialogs and related overlays
+
+Choose the overlay's semantics from the actual task. A blocking modal uses native
+`<dialog>` opened with `showModal()` or supported declarative invoker commands.
+Give it an accessible name and an appropriate initial focused control. A native
+modal already supplies its dialog semantics, focus containment, background
+inertness, Escape handling and focus restoration. Avoid layering a second focus
+trap or duplicate ARIA modal role on it. Include a visible native button to close.
+
+For a panel that keeps the page usable, the guide describes `<dialog popover>`
+or a non-modal `show()` dialog according to top-layer needs. Menus and tooltips
+have their own semantics; a visual overlay is not automatically a dialog.
+
+`closedby` and invoker commands require the guide's compatibility conditions.
+For dirty forms, guard cancellation in the `cancel` handler rather than relying
+on `closedby="none"` alone. Reset `returnValue` after handling close so a later
+Escape dismissal does not reuse an earlier choice. Scope display styles to the
+open dialog so CSS does not override the closed state.
+
+The guide uses `overscroll-behavior: contain` on the modal, plus `overflow: hidden`
+and `overscroll-behavior: contain` on its backdrop, for scroll containment. It
+explicitly distinguishes ordinary overflowing-container support from newer
+non-scrollable-container support. A syntax feature check cannot establish the
+latter. Treat that part as progressive enhancement and inspect actual scrolling
+under the chosen browser. Avoid root overflow hacks that can shift the layout.
+
+## Motion and dynamic content
+
+Use `prefers-reduced-motion` to remove unnecessary movement while preserving
+the underlying state change. Transitions are an enhancement of state semantics.
+Native CSS entry/exit transitions can use `@starting-style` and a separate
+`transition-behavior: allow-discrete` declaration where supported. DOM removal
+must wait for the intended exit animation; it does not automatically animate.
+Handle cancellation or retriggering so the latest user action remains authoritative.
+
+The full entry/exit guide supplies a behavioral fallback for browsers that parse
+discrete transition syntax but do not animate `display`. A property syntax test
+alone does not establish rendered behavior. Keep a functional immediate update
+or an appropriate guarded fallback when the target browser lacks the feature.
+
+Element-scoped View Transitions are limited-availability enhancements. If used,
+feature-detect `startViewTransition` on `Element.prototype`; perform the DOM
+update immediately when absent. Preserve DOM identity for `match-element`, keep
+focus meaningful when a focused item disappears, and handle `ready` rejection
+on retrigger. Avoid substituting a document-wide transition for an isolated update
+without checking its effect on concurrent actions and overlays.
+
+## Environment condition
+
+The shared local runner uses Chrome for Testing headless shell **143.0.7499.4**,
+Playwright **1.57.0**, and Python **3.12.14**. This browser supports textarea
+`field-sizing`, but predates the guide's stated Chrome 144 non-scrollable scroll
+containment behavior and Chrome 147 element-scoped View Transitions. Preserve
+the documented fallbacks; do not infer latest-browser support from a successful
+run in this pinned environment. Runtime browser checks are separate from visual
+review and from real-user acceptance.

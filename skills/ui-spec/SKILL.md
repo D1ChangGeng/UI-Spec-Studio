@@ -5,14 +5,31 @@ license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.16.1"
+  version: "1.17.0"
 ---
 
 # UI Spec Studio
 
 Use **Intent-Grounded Experience Research & Evidence-Driven UI Design** to organize **Product UI Experience Alignment**: understand the intended experience, plan and explore evidence, challenge design choices, adopt mature work and verify actual use. Do this with or without a user-named reference. Own understanding, research, selection, implementation and verification through reviewable increments. The user supplies intent and evaluates results; observed products and resources calibrate professional judgment under this product's conditions.
 
-A **UI SPEC** is a runnable or renderable design reference with representative content, a meaningful reader/user path and identifiable review scope. Establish whether the deliverable is a working product, representative product demonstration or authored visual work; select realization and evidence for that boundary. Documents can complete reading tasks without an application shell. Use the project's framework, format and preview mechanism; one implementation can support fixtures and real adapters. A fixed-stage demonstration does not establish an interactive product.
+A **formal UI SPEC** is a coherent, quality-assessable design increment on the evolving product: it establishes an experience goal, the research, implementation and verification boundaries needed to realize it, and a runnable, renderable or otherwise actually reviewable result. Its design reference uses representative content, a meaningful reader/user path and identifiable review scope. Establish whether the deliverable is a working product, representative product demonstration or authored visual work; select realization and evidence for that boundary. Documents can complete reading tasks without an application shell. Use the project's framework, format and preview mechanism; one implementation can support fixtures and real adapters. A fixed-stage demonstration does not establish an interactive product.
+
+## Organize formal increments around the complete product goal
+
+Keep four working objects distinct:
+
+| Object | Responsibility |
+|---|---|
+| **Overall Product Goal** | Preserve the complete intended experience, capabilities, quality, art direction and confirmed constraints across iterations. A scope adjustment keeps the remaining goals visible. |
+| **Current Product UI** | Maintain the actual accumulated pages, components, assets, shared systems and behavior that new work inherits, extends, adapts or revisits. |
+| **Formal UI SPEC** | Own one cohesive design objective, its necessary experience relationships, an actual result and corresponding quality verification. |
+| **Internal Research & Implementation Work** | Search, observe, compare, trial, implement, repair and recheck as often as needed to fulfill that SPEC. These activities do not each create a formal iteration. |
+
+Treat each new formal iteration as a new SPEC. Continue research, correction and refinement for an existing SPEC under that same identity while fulfilling its original goal. Start another formal SPEC when taking on a new cohesive design objective with a meaningful review boundary. A new turn, tool call, implementation pass or invocation of `iterate` alone does not establish that distinction. When evidence requires repartitioning an active SPEC, retain its original commitments, unresolved quality gaps, reason for change and their current responsibility; creating a new record cannot make unfinished quality disappear.
+
+Choose scope through the [minimum sufficient experience closure](references/analysis.md#choose-a-bounded-increment): preserve the relationships needed to understand, implement and judge the intended quality, while leaving enough focus for deep work. A page, component, background, shared type system or continuous interaction can each be a formal SPEC with equal standing. Area, file count and component boundaries do not determine that standing. Explicitly recommend keeping, splitting, merging or redrawing an unsuitable single-iteration scope while preserving the complete product goal. Explain the actual quality risk and proceed with supported authorized work; use existing authority for routine adjustments and surface material changes to user commitments.
+
+Apply each increment to the current product rather than defaulting to a duplicate page or design system. In `init`, offer a useful, revisable candidate structure and explain the first priority; let research, source discovery, trials and verification refine it. The [workflow](references/workflow.md) owns this organization. The [evidence map](references/evidence-map.md) connects formal increments to shared design objects and current decisions without adding another task lifecycle.
 
 ## Keep a multiscale design evidence map
 
@@ -111,9 +128,9 @@ The skill defines a reading and working contract. The host controls activation, 
 
 | User intent | Operation | Working outcome |
 |---|---|---|
-| Begin or adopt a UI effort | `init` | Accurate project understanding, relevant constraints and a next useful slice |
+| Begin or adopt a UI effort | `init` | Complete goal, current foundation, revisable candidate SPECs and a justified first increment |
 | Explore or resolve an important direction | optional `shape` | A reasoned experience/design direction and, where useful, a small rendered probe |
-| Continue, add, refine, consolidate or correct | `iterate` | One meaningful implemented increment, inspected and ready for review |
+| Continue, add, refine, consolidate or correct | `iterate` | Progress or complete the active formal increment; begin a new SPEC when its distinct design objective warrants one |
 | Inspect existing quality or coverage | `audit` | Evidence-linked findings; repair and recheck within the authorized scope |
 | Connect approved experience to actual behavior | `finish` | Real integration, design/product regression and accurate handover |
 
@@ -137,7 +154,7 @@ Resolve a conflict at its responsible layer and explain material implications. P
 
 Choose the next increment from user value, task continuity, shared impact, dependencies, uncertainty and effort. Take responsibility for routine design and engineering choices. Use reversible assumptions for low-impact gaps. For an unresolved high-impact product model, primary navigation or visual direction with credible alternatives, present a compact recommendation and materially different options for user confirmation before broad implementation. Existing approval or explicit delegation supports direct progress; one-shot work carries a labeled provisional direction. Advance independent work while a consequential decision is pending.
 
-A round can develop a page, a connected journey, a component family or a shared-system repair. Keep it large enough to judge the intended outcome and small enough to revise coherently. Translate subjective feedback into hypotheses about the actual composition or behavior, inspect evidence, then fix the responsible layer.
+A formal SPEC can develop a page, a connected journey, a component family or a shared-system repair. Keep it large enough to judge the intended outcome and focused enough to research, realize and revise its consequential qualities coherently. Translate subjective feedback into hypotheses about the actual composition or behavior, inspect evidence, then fix the responsible layer within the applicable SPEC.
 
 Keep the common quality floor active: clear hierarchy, accurate user-facing language, readable content, accessible interaction, meaningful task paths, stable shared structure, appropriate scale/occupancy, purposeful motion, responsive operation and truthful state. Select palette, typography, imagery, density and expressiveness for this product. Review the rendered result and its evolving content at actual viewing and operating conditions.
 
@@ -182,6 +199,8 @@ Track maturity by scope: implemented, inspected, approved, connected and verifie
 Run the intended task through visible controls; inspect actual viewport captures and the relevant continuous episodes. Connect frames or video intervals to their trigger, state, source revision and viewing conditions. Check related surfaces when shared components change. Repair and recheck observed issues. Use fixture evidence for design review and real boundary evidence for integration claims.
 
 Before handing over, include important copy, locale and state choices in the reviewed preview; state the working result, preview or entry path, inspected scope, consequential design choices, executed checks and the next useful action. Show the design decision record and the result together. Ask for a choice when a high-impact direction remains unresolved; use recommendations for routine details. Keep proposed, implemented, visually inspected and owner-approved states distinct. Report blockers and unverified dimensions accurately. Keep sensitive project data within its authorized destination.
+
+Present decision-useful findings in the conversation as well as preserving the complete project record: the goal and provisional sequence at init; the quality objective, necessary relationships and scope rationale when a SPEC begins or materially changes; and the actual result, important visual comparisons, adopted resources, observed quality and remaining gaps at delivery. Use Overview, Design Detail and Execution & Assurance as views of the same current facts. Saving a file does not complete this user-facing delivery. Keep research classifications and implementation commentary in the design record; organize the product interface around its users' actual tasks, expressing quality through the rendered objects and behavior.
 
 The optional [manifest inspector](scripts/check_manifest.py) describes declared records, target addresses and local file metadata. Its views are queries, not review/finish permissions. It separates declared results, exceptions and absent records; exit 0 means inspection ran, including reports with structural findings. Browser inspection, user approval, service behavior and scoped engineering assertions remain independent evidence sources.
 

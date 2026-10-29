@@ -1,0 +1,35 @@
+# Actual visual review
+
+## Conditions and methods
+
+Chromium 143 headless shell from the supplied environment, Playwright Python, device scale factor 1, HTTP at localhost port 8939. Four primary conditions: 1440×900 and 390×844, each light and dark. English is the primary set; Chinese narrow variants were also inspected. The supplied font configuration was active. Screenshots were viewed using the image viewer separately from browser assertions.
+
+## Viewed evidence
+
+- Baseline: `baseline-desktop.png`. A card preview and a separate text editor competed for attention; the saved destination did not preserve that visual object.
+- Source: `source-1-before/during/after.png`, `source-2-before/during/after.png` and `source-comparison.png`. The source centered flip narrows about its center; the slide-flip introduces lateral travel. The original demo was operated, with three sampled moments per candidate. No continuous playback claim is made.
+- Final draft and saved stills: all eight `1440-light`, `1440-dark`, `390-light`, and `390-dark` draft/saved images. The research question stays legible beside/above the card. Both faces share proportions, outline and typography roles. Narrow confirmation and failure retry are visible within the 844px viewport. The footer may require a small scroll in English narrow views.
+- Temporal: ordered `episode-00-pending.png` through `episode-11.png`, including full-size intermediate frames and the derived contact sheet. Pending content holds in the editor; after the real write, the object narrows, reveals its saved face and settles. The source revision for the final samples is in `report.json`. Capture brackets retain timing uncertainty and overhead.
+- Reversal: `reverse-00.png` through `reverse-03-settled.png` are captured in action order. Browser assertions establish the latest intended face and inactive-face semantics; sampled frames support their visible positions, not every intervening frame.
+- Failure: `failed-save.png` and `390-dark-first-failure.png`. The draft remains on the front, prior success is not implied, and recovery language is adjacent below the card. Native storage state and retry were separately asserted.
+- Long content: `long-draft.png`, `390-dark-long-note.png`, `390-light-zh-long-saved.png`. Visible focus, clipped viewport edges and additional content belong to the local scroll area. Save/return remain available. Selection and scroll restoration were separately asserted.
+- Quiet mode: `reduced-390-light.png` and `reduced-1440-dark.png`. The face changes within the same silhouette without projection/rotation. Browser pointer and focus checks caught issues invisible in the static images, which were repaired before the final run.
+- Chinese: `390-dark-zh-draft.png`, `390-dark-zh-saved.png`. Labels and headings fit; user-authored English content is preserved.
+
+## Repairs with preserved history
+
+1. `baseline.log`: public reference browser navigation initially failed certificate verification. A read-only compatibility retry succeeded; no source appearance was inferred from the failure.
+2. `run-01.log`: fault-injection harness returned a function expression that Playwright invoked. The harness was fixed; this was not an application save failure. Earlier captures are in `run01/`.
+3. `run-02.log`: an actual reduced-motion return button was intercepted by an inactive layer. Flattened reduced-mode faces and explicit inactive hit-area removal repaired that part. Earlier captures are in `run02/`.
+4. `run-03.log`, `report-run03.json`, `reduced-probe.log`: the reduced desktop save click landed on card chrome when button translate/filter layers changed. Reduced mode now removes those button effects. `reduced-probe-02.log` records the successful pointer path and committed record. The final full suite in `run-04.log` passed all 43 assertions.
+5. Visual repairs: corrected the missing mobile title space; adjusted the narrow heading and card height; replaced a visibly hollow oval shadow with a filled, blurred cast shadow.
+
+## Judgment and open scope
+
+The current result presents one stable note and a readable research question, with a coherent paper treatment in both themes. Its center pivot supports that relationship more directly than the examined lateral alternative. These are agent visual judgments, not owner acceptance or user-study findings.
+
+The natural-time sequence is sampled rather than continuously played back. Frame delivery, real touch hardware, mobile software keyboard behavior, Safari, Firefox, screen-reader announcements, forced colors and zoom/reflow beyond the two requested viewports remain unverified. Functional tests do not promote those dimensions to passes.
+
+## Remaining observed motion detail
+
+Final full-size inspection of `reverse-01.png` shows the projecting upper edge briefly crossing the small FIELDNOTE index line during a steep rapid reversal. The main question, note and controls remain usable, but this is a real composition gap. A next motion pass should trial a shallower perspective or more clearance above the card, then repeat intermediate-frame inspection at both viewports. This is not treated as a visual pass merely because the state and identity assertions passed.

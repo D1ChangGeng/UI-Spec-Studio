@@ -1,0 +1,13 @@
+/* Selected, adapted relationships from reference-project/styles.css.
+ * Its upstream page foundation is assistant-ui ChatGPT, pinned in SOURCES.md.
+ * This is a native CSS design transfer, not adoption of the React runtime. */
+:root{--chat-width:48rem}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+button,input,textarea,select{font:inherit}
+.composer-row{display:flex;align-items:flex-end;gap:4px}
+#composer{width:100%;border:1px solid var(--chat-border);background:var(--chat-surface);border-radius:28px;padding:8px;flex:none}
+.composer-row textarea{display:block;flex:1;min-width:0;width:100%;min-height:36px;max-height:208px;resize:vertical;line-height:24px;background:transparent;border:0;color:var(--ink);padding:6px 12px;font-size:16px}
+.message{width:100%;font-size:16px;line-height:24px;margin:0 auto 32px;overflow-wrap:anywhere}
+.message.user{width:fit-content;max-width:70%;margin-left:auto;margin-right:0;border-radius:22px;background:var(--bubble);color:var(--bubble-ink);padding:10px 16px}
+@media(max-width:650px){.message.user{max-width:85%}}

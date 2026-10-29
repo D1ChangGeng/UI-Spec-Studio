@@ -1,0 +1,840 @@
+
+--- Guide for dialog ---
+# Dialog
+
+## Overview
+
+Use the native `<dialog>` element for modal and non-modal dialogs. It provides the accessibility semantics, focus handling, top-layer rendering and `Esc` handling that custom overlays have to rebuild by hand.
+
+## Choose the overlay type
+
+Pick the first rule that matches. If unsure, use Rule 1.
+
+### Rule 1: The overlay interrupts the user and blocks the page (default)
+
+Use for confirmations, forms, sign-in, destructive actions, and any "modal", "dialog", "lightbox" or "popup" request that does not say otherwise.
+
+Use `<dialog>` opened as a modal, declaratively with `command="show-modal"` (see `declarative-dialog-popover-control` (via `npx -y modern-web-guidance@latest retrieve "declarative-dialog-popover-control"`)) or from script with `showModal()`.
+
+```html
+<button type="button" command="show-modal" commandfor="confirm">Delete</button>
+
+<!-- MANDATORY: no role="dialog" or aria-modal; the native modal already provides them -->
+<dialog id="confirm" aria-labelledby="confirm-title">
+  <h2 id="confirm-title">Delete this item?</h2>
+  <form method="dialog">
+    <button value="cancel" autofocus>Cancel</button>
+    <button value="delete">Delete</button>
+  </form>
+</dialog>
+```
+
+The browser provides: inert page, focus containment, top layer, `::backdrop`, `Esc` and back-gesture dismissal, and focus return to the invoker.
+
+- **DON'T** add `role="dialog"`, `aria-modal`, a focus trap, `inert` toggling or an `Esc` handler.
+- **DON'T** open it with `show()` or the `open` attribute.
+- **DO** stop the page scrolling behind it with the CSS below. See `prevent-page-scroll-under-modal-dialog` (via `npx -y modern-web-guidance@latest retrieve "prevent-page-scroll-under-modal-dialog"`) for the details.
+- **DON'T** lock scrolling with `overflow: hidden` or `position: fixed` on `html` or `body`.
+
+```css
+/* MANDATORY (both rules): without them, scrolling over the backdrop or inside the dialog scrolls the page behind it */
+dialog:modal {
+  overscroll-behavior: contain; /* stops scroll gestures in the dialog chaining to the page */
+}
+dialog::backdrop {
+  overflow: hidden; /* ::backdrop is not a scroll container by default, so it would ignore overscroll-behavior */
+  overscroll-behavior: contain;
+}
+```
+
+Not for menus or tooltips: see Rule 3.
+
+### Rule 2: The user keeps working in the page while the panel is open
+
+Use for find bars, inspectors, palettes and compose panes that are still dialogs semantically.
+
+Use `<dialog popover>` for a top-layer panel with popover dismissal (`auto` light-dismisses, `manual` does not). Use `dialog.show()` only when the panel must not be in the top layer.
+
+```html
+<button type="button" popovertarget="find">Find</button>
+<dialog id="find" popover="manual" aria-labelledby="find-title">
+  <h2 id="find-title">Find</h2>
+  <input type="search" aria-label="Search">
+  <button type="button" popovertarget="find" popovertargetaction="hide">Close</button>
+</dialog>
+```
+
+The page stays interactive and is not made inert.
+
+- **DO** include a visible close button.
+- **DON'T** use `showModal()`, which blocks the page.
+
+Not for blocking confirmations: see Rule 1.
+
+### Rule 3: The overlay is not a dialog
+
+Use for menus, dropdowns, tooltips, hovercards and toasts.
+
+Use a semantic element with the `popover` attribute, not `<dialog>`.
+
+```html
+<button type="button" popovertarget="menu">Actions</button>
+<ul id="menu" popover>
+  <li><a href="/rename">Rename</a></li>
+</ul>
+```
+
+## Choose how it can be dismissed
+
+The default depends on how the dialog is opened. If `closedby` is absent or invalid, `showModal()` behaves as `closerequest` and any other way of opening behaves as `none`.
+
+- **Esc and back gesture only (modal default):** set nothing, or `closedby="closerequest"`.
+- **Also click outside to close:** use `closedby="any"`.
+- **Only the developer closes it (for example a form with unsaved changes):** use `closedby="none"` and add a confirmation path. See Closing below.
+
+## Guidelines
+
+### Accessible name and initial focus
+
+- **DO** name every dialog with `aria-labelledby` pointing at its heading, or `aria-label` when there is no visible title.
+- **DO** put `autofocus` on the primary control or first field.
+- **DO** put `autofocus` on the safe action (such as Cancel or Keep) in a destructive confirmation.
+- **DON'T** write code to return focus on close. The browser returns it to the invoker.
+
+### Opening
+
+- **DO** open declaratively with `command="show-modal"` and `commandfor` on a `<button>`. See `declarative-dialog-popover-control` (via `npx -y modern-web-guidance@latest retrieve "declarative-dialog-popover-control"`).
+- **DO** use `dialog.showModal()` when opening from script.
+
+### Closing
+
+- **DO** close with `<form method="dialog">` buttons or `command="close"`.
+- **DO** choose `closedby` deliberately: `any` (light dismiss and `Esc`), `closerequest` (`Esc` only, the modal default) or `none` (developer-controlled close only).
+- **DO** use `command="request-close"` or `requestClose()` for Cancel buttons that must honor unsaved-changes logic. They fire `cancel` first and ignore `closedby`.
+- **DO** treat `closedby` as progressive enhancement. `Esc` and the mobile back gesture already close modals without it.
+
+### Hooking into close
+
+- **DO** read `dialog.returnValue` in a `close` listener to learn which button was used, then reset it with `dialog.returnValue = ''`. `Esc` and other close requests set no value, and browsers differ on whether they clear the previous one, so without the reset a stale value can leak. Treat `''` as "dismissed without choosing".
+- **DO** use `cancel` to intercept `Esc` and `request-close`, but do not rely on `preventDefault()` for repeated `Esc` presses without user activation.
+- **DO** use `closedby="none"` with an explicit confirmation step for dirty forms.
+- **DO** tell the user why the dialog stayed open when `cancel` is prevented: show a visible message and reference it with `aria-describedby` from the control that receives focus (such as Discard), so a screen reader reads it when focus moves. Without it, focus moving to a new button announces only that button's name.
+- **DON'T** let the confirmation move controls under the pointer. Reserve the message's space (hide it with `visibility`, not `display` or `hidden`) and add the destructive button where existing buttons do not move (for example first in a right-aligned row), so a second click at the same spot cannot discard the user's changes.
+
+### Non-modal dialogs
+
+- **DO** use `<dialog popover>` (`auto` or `manual`) for a top-layer panel, and `dialog.show()` when you do not want the top layer.
+- **DO** include a visible close button in every non-modal dialog.
+
+### Backdrop and styling
+
+- **DO** style `::backdrop` and use `dialog:modal` to target modal-only styles.
+- **DO** leave animation to `animate-to-from-top-layer` (via `npx -y modern-web-guidance@latest retrieve "animate-to-from-top-layer"`), dragging to `drag` (via `npx -y modern-web-guidance@latest retrieve "drag"`), and reparenting to `persistent-top-layer-ui` (via `npx -y modern-web-guidance@latest retrieve "persistent-top-layer-ui"`).
+- **DON'T** set `display` on `dialog` unconditionally. It overrides the closed state. Scope it with `dialog[open]`.
+
+### Accessibility
+
+- **DON'T** add `role="dialog"`, `aria-modal`, a manual focus trap or `inert` toggling to a native modal.
+- **DO** use a native `<button>` with an accessible name for close controls.
+- **DO** use one consistent heading level for dialog titles.
+
+## Fallback strategies
+
+### `closedby` (`dialog-closedby`)
+
+Browser support for <dialog closedby>: Limited availability.
+Supported by: Chrome 134 (Mar 2025), Edge 134 (Mar 2025), and Firefox 141 (Jul 2025).
+Unsupported in: Safari.
+
+Without `closedby`, a modal still closes with `Esc` and the back gesture; only click-outside is lost, so this is graceful degradation. `closedby="none"` is ignored the same way: `Esc` fires `cancel` and then closes the dialog. Keep the unsaved-changes guard in a `cancel` handler, not in `closedby="none"` alone, so it also protects where `closedby` is missing. If your Baseline target requires light dismiss, add this where `closedby` is missing:
+
+```js
+if (!('closedBy' in HTMLDialogElement.prototype)) {
+  // Test the pointer position, not event.target: the <dialog> is also the target for its own
+  // padding and the gaps between its children, so a target check would close on those clicks
+  const outside = (e, dialog) => {
+    const r = dialog.getBoundingClientRect();
+    return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+  };
+  for (const dialog of document.querySelectorAll('dialog[closedby="any"]')) {
+    let pressedOutside = false;
+    dialog.addEventListener('pointerdown', (e) => { pressedOutside = outside(e, dialog); });
+    // Require the press and the release outside, so a text-selection drag that ends on the backdrop does not dismiss
+    dialog.addEventListener('pointerup', (e) => { if (pressedOutside && outside(e, dialog)) dialog.close(); });
+  }
+}
+```
+
+### `overscroll-behavior`
+
+Browser support for overscroll-behavior: Limited availability.
+Supported by: Chrome 144 (Jan 2026), Edge 144 (Jan 2026), and Firefox 150 (Apr 2026).
+Unsupported in: Safari.
+
+Treat scroll containment as progressive enhancement. Do not feature-detect it: `@supports` reports the property as supported even where non-scrollable containers ignore it. Where it is not enforced, the dialog still contains scroll whenever its own content overflows, and `showModal()` still makes the page inert. Do not fall back to `overflow: hidden` or `position: fixed` on `html` or `body`, which removes the root scrollbar and shifts the layout.
+
+### Invoker Commands (`command` / `commandfor`)
+
+Baseline status for Invoker commands: Newly available. It's been Baseline since 2025-12-12.
+Supported by: Chrome 135 (Apr 2025), Edge 135 (Apr 2025), Firefox 144 (Oct 2025), and Safari 26.2 (Dec 2025).
+
+If your Baseline target does not include Invoker Commands, keep the same markup and conditionally load the polyfill (the same experience, as progressive enhancement). Detect on the interface and never load it unconditionally:
+
+```js
+// MANDATORY: feature detect on HTMLButtonElement.prototype and load only when native support is missing
+if (!('commandForElement' in HTMLButtonElement.prototype)) {
+  import('invokers-polyfill'); // npm install invokers-polyfill
+}
+```
+
+Only Rules 2 and 3 use Popover.
+
+### Fallbacks & browser support for Popover
+
+Baseline status for Popover: Newly available. It's been Baseline since 2025-01-27.
+Supported by: Chrome 116 (Aug 2023), Edge 116 (Aug 2023), Firefox 125 (Apr 2024), Safari 17 (Sep 2023), and Safari iOS 18.3 (Jan 2025).
+
+The Popover API is mostly **progressive enhancement**, but its defining behaviors — top-layer promotion, light-dismiss, and `popovertarget` invocation — have no CSS-only equivalent. Older browsers need a polyfill, or a manual fallback if you would rather not ship one.
+
+**Polyfill:** To support the `popover` attribute in older browsers, conditionally load [`@oddbird/popover-polyfill`](https://github.com/oddbird/popover-polyfill). **MANDATORY:** Feature detect by checking for the `popover` property on `HTMLElement.prototype`, and load the polyfill **only** when native support is missing — do NOT load it unconditionally.
+
+With a bundler or import map:
+
+```js
+// MANDATORY: Feature detect 'popover' on HTMLElement.prototype.
+if (!("popover" in HTMLElement.prototype)) {
+  import("@oddbird/popover-polyfill");
+}
+```
+
+Without a bundler, import from a CDN inside a `<script type="module">`:
+
+```html
+<script type="module">
+  if (!("popover" in HTMLElement.prototype)) {
+    import("https://unpkg.com/@oddbird/popover-polyfill@latest/dist/popover.min.js");
+  }
+</script>
+```
+
+**Styling caveat:** The polyfill cannot define the real `:popover-open` pseudo-class, so it applies a `.\:popover-open` class instead. **MANDATORY:** Combine the two with `:is()` or `:where()`, otherwise browsers that lack `:popover-open` discard the entire rule:
+
+```css
+[popover]:is(:popover-open, .\:popover-open) {
+  display: block;
+}
+```
+
+Alternatively, for a legacy fallback without a polyfill, use `position: fixed` and manually calculate coordinates via `getBoundingClientRect()` or rely on default positioning with `inset: auto` if that's acceptable for the use case.
+
+
+--- Guide for prevent-page-scroll-under-modal-dialog ---
+# Prevent the Page Underneath a Modal Dialog from Scrolling
+
+When a `<dialog>` element is opened as a modal using `showModal()`, the browser promotes it to the top layer and marks the rest of the document inert. While that blocks pointer clicks and keyboard focus on the underlying page, it does not prevent scrolling:
+
+1. Scrolling while the pointer or touch gesture is over the `::backdrop` scrolls the page underneath.
+2. Scrolling inside the `<dialog>` chains to the underlying page once the dialog reaches its scroll boundary—or immediately if the dialog's content does not overflow.
+
+Per the CSS Overscroll Behavior specification, `overscroll-behavior` applies to **all scroll container elements**, including non-scrollable scroll containers (elements with `overflow: hidden`, or `overflow: auto` whose content does not currently overflow). By combining `overscroll-behavior: contain` on the `<dialog>` with `overflow: hidden` and `overscroll-behavior: contain` on `dialog::backdrop`, you can prevent the underlying page from scrolling using pure CSS.
+
+## Implementation
+
+### 1. Contain scroll chaining on the `<dialog>`
+
+The user-agent stylesheet sets `overflow: auto` on `<dialog>`, making it a scroll container by default. Apply `overscroll-behavior: contain` (or `none`) to `dialog:modal` (or `dialog`).
+
+### 2. Turn `::backdrop` into a scroll container and contain its scroll
+
+By default, `dialog::backdrop` has `overflow: visible`, which means it is **not** a scroll container and ignores `overscroll-behavior`. You must set `overflow: hidden` on `dialog::backdrop` to make it a non-scrollable scroll container, and pair it with `overscroll-behavior: contain` so scroll gestures performed over the backdrop are trapped and do not reach the document underneath.
+
+## Example Code
+
+```css
+dialog:modal {
+  /* MANDATORY: Prevent scroll gestures inside the modal (even when its content
+     does not overflow) from chaining to the underlying page. */
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  /* MANDATORY: ::backdrop defaults to overflow: visible (not a scroll container).
+     Set overflow: hidden so it becomes a non-scrollable scroll container that
+     honors overscroll-behavior. */
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+```
+
+## Best Practices & Constraints
+
+- **MANDATORY**: Set `overscroll-behavior: contain` on the `<dialog>` element itself (using the `dialog:modal` selector) and the `dialog::backdrop`. Without this declaration, scroll gestures over the backdrop or inside the dialog will still chain to the page.
+- **MANDATORY**: Set `overflow: hidden` (or `overflow: auto`) on `dialog::backdrop` so that it becomes a scroll container. Without this declaration `::backdrop` defaults to `overflow: visible` and `overscroll-behavior` will have no effect.
+- **DO NOT** use `overflow: clip` or `overflow: visible` on `dialog::backdrop` or `dialog`. Neither value establishes a scroll container, so `overscroll-behavior` will not apply.
+- **DO NOT** apply `overflow: hidden` or `position: fixed` to `<html>` or `<body>` to lock background scrolling when a dialog opens. Mutating root overflow removes the page scrollbar (causing horizontal layout shift), can reset or jump the page scroll position, and can break `position: sticky` elements on the underlying page.
+
+## Fallback Strategies
+
+Browser support for overscroll-behavior: Limited availability.
+Supported by: Chrome 144 (Jan 2026), Edge 144 (Jan 2026), and Firefox 150 (Apr 2026).
+Unsupported in: Safari.
+
+While the `overscroll-behavior` CSS property is supported across all major browsers for scroll containers that have overflowing content, respecting `overscroll-behavior` on **non-scrollable** scroll containers is a newer specification that cannot be feature detected.
+
+**DO NOT** attempt to feature-detect non-scrollable container support with `@supports (overscroll-behavior: contain)` or `CSS.supports('overscroll-behavior', 'contain')`. All modern browsers support the `overscroll-behavior: contain` property syntax and return `true`, even if they only enforce it when content overflows.
+
+Instead, treat scroll containment on non-scrollable scroll containers as a **progressive enhancement**:
+
+- In browsers that support `overscroll-behavior` on non-scrollable scroll containers, background page scrolling is completely prevented both over `dialog::backdrop` and inside the `<dialog>` (whether or not its content overflows).
+- In browsers that do not yet support `overscroll-behavior` on non-scrollable scroll containers, `overscroll-behavior: contain` on `dialog` still prevents scroll chaining whenever the dialog's own content overflows and is scrollable. Meanwhile, `showModal()` still traps keyboard focus and marks the background document `inert`.
+- Relying on progressive enhancement is recommended over legacy workarounds that apply `overflow: hidden` or `position: fixed` to `<html>` or `<body>`, because it does not remove the root scrollbar, cause horizontal layout shifts, jump the page scroll position, or break `position: sticky` elements on the underlying page.
+
+--- Guide for form-fields-automatically-fit-contents ---
+# Form Fields Automatically Fit Contents
+
+By default, form controls like `<input>`, `<textarea>`, and `<select>` have fixed dimensions. Their sizes remain constant, regardless of the amount of content the user enters or selects.
+
+To allow these controls to automatically shrink or grow to fit their content (including placeholders), use the `field-sizing: content` CSS property.
+
+### Auto-sizing form controls
+
+Setting `field-sizing: content` on inputs, selects, or textareas allows them to resize dynamically as the user types or selects options. However, you must account for inherited styling, layout defaults, and minimum/maximum constraints to ensure a robust user experience.
+
+To prevent layout issues, it is recommended to set both `min-inline-size` (or `min-width`) and `max-inline-size` (or `max-width`) alongside `field-sizing: content` on text inputs. A minimum size prevents the input from collapsing to a width of zero when empty (making it unclickable), and a maximum size ensures it doesn't expand indefinitely and break the page layout.
+
+For textareas, allowing horizontal auto-sizing can cause a jarring UX (e.g., a textarea with a long placeholder will abruptly shrink horizontally when the user types a single character). To prevent this, apply an explicit width (like `width: 100%`) to the textarea. This forces the textarea to maintain a stable horizontal width while still auto-sizing vertically as content wraps.
+
+It is recommended to set a `max-inline-size` (or `max-width`) on `<select>` elements using `field-sizing: content` to ensure that extremely long selected options do not break the page layout.
+
+```css
+/* Applies horizontal auto-sizing to inputs */
+input {
+  /* Instructs the element to size itself to fit its content */
+  field-sizing: content;
+
+  /* Reset explicit width if inherited from global styles */
+  width: auto;
+
+  /* Prevents the input from collapsing and disappearing when empty */
+  min-inline-size: 15ch;
+
+  /* Prevents infinite horizontal growth */
+  max-inline-size: 50ch;
+}
+
+textarea {
+  /* Instructs the element to size itself to fit its content */
+  field-sizing: content;
+
+  /* Reset explicit height if inherited from global styles */
+  height: auto;
+
+  /* Use a fixed width to prevent jarring horizontal shifts when replacing a long placeholder */
+  width: 50ch; /* or 100% depending on your layout */
+
+  /* Sets a reasonable minimum height (e.g., 3 lines) for empty textareas */
+  min-block-size: 3lh;
+
+  /* Prevents infinite vertical growth. Once a textarea hits this */
+  /* height, it will stop growing and show a vertical scrollbar. */
+  max-block-size: 10lh;
+}
+
+select {
+  /* Sizes the select element to fit the active option only */
+  field-sizing: content;
+
+  /* Prevents the dropdown from expanding infinitely and breaking the layout */
+  max-inline-size: 50ch;
+}
+```
+
+IMPORTANT: Explicit `width` and `height` properties override `field-sizing: content` on all form controls. If your project's global CSS sets inputs, selects, or textareas to `width: 100%`, you must explicitly reset them to `width: auto` (or `width: fit-content`) on the elements using `field-sizing: content` for auto-sizing to work. Conversely, you should explicitly set `height: auto` on textareas if a fixed height was previously set globally.
+
+IMPORTANT: Grid and Flexbox layouts often implicitly stretch their children to fill available space. If any form control using `field-sizing: content` refuses to shrink, check its container's alignment properties and apply `align-self: start` or `justify-self: start` to the form control to override the stretching.
+
+### Fallback strategies
+
+Baseline status for field-sizing: Newly available. It's been Baseline since 2026-06-16.
+Supported by: Chrome 123 (Mar 2024), Edge 123 (Mar 2024), Firefox 152 (Jun 2026), and Safari 26.2 (Dec 2025).
+
+`field-sizing` should be treated as a progressive enhancement. In browsers that do not support the property, form controls gracefully degrade back to their default, fixed sizing behavior. Users will simply experience standard scrolling for overflowing content inside fixed-size inputs and textareas.
+
+If dynamically growing fields are absolutely required for older browsers, you must use feature detection and a complex workaround. The most robust fallback for textareas uses a CSS Grid trick where a hidden pseudo-element mirrors the user's input in real-time, forcing the grid container (and the textarea inside it) to expand.
+
+```html
+<!-- The textarea is wrapped in a container that will mirror its value -->
+<div class="growable-textarea" data-replicated-value="">
+  <textarea></textarea>
+</div>
+```
+
+```javascript
+// Only attach the fallback event listeners if field-sizing is unsupported
+if (!CSS.supports('field-sizing', 'content')) {
+  document.querySelectorAll('.growable-textarea > textarea').forEach(textarea => {
+    textarea.addEventListener('input', () => {
+      textarea.parentNode.dataset.replicatedValue = textarea.value;
+    });
+  });
+}
+```
+
+```css
+/* Only apply the fallback if field-sizing is NOT supported */
+@supports not (field-sizing: content) {
+  .growable-textarea {
+    display: grid;
+  }
+
+  /* The pseudo-element and textarea must share the exact same cell, font, and padding */
+  .growable-textarea::after,
+  .growable-textarea > textarea {
+    grid-area: 1 / 1 / 2 / 2;
+    font: inherit;
+    padding: 0.5rem;
+    border: 1px solid #999;
+  }
+
+  /* The pseudo-element renders the copied text invisibly to stretch the grid */
+  .growable-textarea::after {
+    /* The space is necessary for trailing empty lines to be rendered */
+    content: attr(data-replicated-value) " ";
+    white-space: pre-wrap;
+    visibility: hidden;
+  }
+
+  .growable-textarea > textarea {
+    resize: none;
+    overflow: hidden;
+  }
+}
+```
+
+Given the complexity of duplicating styles and synchronizing state across DOM nodes for every form control, relying on the default fallback behavior of fixed inputs is the recommended approach for most applications unless dynamic sizing is critical to the user experience.
+
+--- Guide for animate-element-entry-exit ---
+# Animate Element Entry and Exit
+
+In the past, CSS transitions could not animate elements when they were first added to the DOM or when their `display` property changed from `none`. The `@starting-style` at-rule and `transition-behavior: allow-discrete` provide a declarative way to create smooth entry and exit animations.
+
+## Implementation
+
+### 1. Animating `display: none` Toggles
+
+To animate an element when toggling its visibility via an attribute (e.g., `hidden` with `display: none`):
+
+1. **Define the visible state**: Set the final property values (e.g., `opacity: 1`) on the base class.
+2. **Define the entry starting state**: Use `@starting-style` to specify the values to transition *from* when the element becomes visible.
+3. **Enable discrete transitions**: Include `display` in the `transition` property and use `transition-behavior: allow-discrete`.
+4. **Define the exit state**: Set the target values in the `hidden` attribute.
+
+```css
+.card {
+  display: block;
+  opacity: 1;
+  translate: 0;
+  /* MANDATORY: Use transition-behavior: allow-discrete for display transition */
+  transition:
+    display 0.4s,
+    opacity 0.4s ease-out,
+    translate 0.4s ease-out;
+  transition-behavior: allow-discrete;
+}
+
+/* Entry animation: transition FROM these values when first rendered */
+@starting-style {
+  .card {
+    opacity: 0;
+    translate: 0 -20px;
+  }
+}
+
+/* Exit animation: transition TO these values when hidden */
+.card[hidden] {
+  display: none;
+  opacity: 0;
+  translate: 0 -20px;
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    /* Disable movement and shorten duration for a simple fade */
+    translate: none;
+    transition-duration: 0.1s;
+  }
+
+  @starting-style {
+    .card {
+      translate: none;
+    }
+  }
+
+  .card[hidden] {
+    translate: none;
+  }
+}
+```
+
+### 2. Animating DOM Insertion and Removal
+
+For elements added via `appendChild()` or removed via `remove()`:
+
+- **Entry**: Use `@starting-style` as shown above. The browser will automatically detect the style change from "nothing" to the element's initial styles and trigger the transition from the `@starting-style` values.
+- **Removal**: Since `element.remove()` is instantaneous and doesn't trigger a CSS transition on its own, you must trigger the exit transition first and wait for it to finish before removing the node from the DOM.
+
+```javascript
+// 1. Trigger exit transition
+element.hidden = true;
+
+// 2. Wait for all active transitions/animations to finish,
+//    with a failsafe timeout in case an animation never ends (e.g. for looping animations)
+const animations = element.getAnimations();
+if (animations.length > 0) {
+  await Promise.race([
+    // Promise.allSettled ensures we wait even if some animations fail
+    Promise.allSettled(animations.map(a => a.finished)),
+    new Promise(r => setTimeout(r, 2000))
+  ]);
+}
+
+// 3. Finally remove the node from the DOM
+element.remove();
+```
+
+## Constraints & Accessibility
+
+- **MANDATORY**: Use `transition-behavior: allow-discrete` when transitioning `display`. Without it, the element will instantly disappear during exit.
+- **DO NOT** use `allow-discrete` in the `transition` shorthand — it will make older browsers ignore the entire `transition` declaration. Except in use cases where that is desirable, use a separate `transition-behavior: allow-discrete` declaration.
+- **MANDATORY**: Use `@starting-style` for entry animations. Browsers skip transitions on an element's first style update (initial render or `display: none` change) unless this is provided.
+- **DO**: Include `overlay` in the `transition` list if animating top-layer elements like `<dialog>` or `popover` to ensure they stay in the top layer during the exit animation.
+- **DO**: Respect user preferences for reduced motion using the `prefers-reduced-motion` media query.
+- **DO NOT**: Rely on `@starting-style` for exit animations; it only defines the *starting* point for an entry transition. Exit animations are defined by the transition to the hidden state.
+
+## Fallback strategies
+
+Baseline status for @starting-style: Newly available. It's been Baseline since 2024-08-06.
+Supported by: Chrome 117 (Sep 2023), Edge 117 (Sep 2023), Firefox 129 (Aug 2024), and Safari 17.5 (May 2024).
+
+### Fallbacks & browser support for transition-behavior
+
+Baseline status for transition-behavior: Newly available. It's been Baseline since 2024-08-06.
+Supported by: Chrome 117 (Sep 2023), Edge 117 (Sep 2023), Firefox 129 (Aug 2024), and Safari 17.4 (Mar 2024).
+
+Browser support for the css.properties.transition-behavior.transitionable_display capability: Limited availability.
+Supported by: Chrome 117 (Sep 2023), Edge 117 (Sep 2023), and Safari 18 (Sep 2024).
+Unsupported in: Firefox.
+
+Firefox 129+ parses `transition-behavior: allow-discrete` (`CSS.supports('transition-behavior', 'allow-discrete')` returns `true`) without actually transitioning the `display` property (Firefox bug 1882408), causing elements to disappear immediately on exit.
+
+To reliably detect discrete `display` transition support, probe whether a temporary element's computed `display` remains visible when transitioned to `none` rather than relying solely on `CSS.supports('transition-behavior', 'allow-discrete')`:
+
+```javascript
+let supportsDisplayTransition;
+function canTransitionDisplay() {
+  if (supportsDisplayTransition !== undefined) return supportsDisplayTransition;
+  if (!window.CSS?.supports?.('transition-behavior', 'allow-discrete') || !document.body) {
+    return false;
+  }
+  const probe = document.createElement('div');
+  // The shorthand is intentional here: browsers that don't parse allow-discrete
+  // drop the whole declaration, so display: none applies instantly and the probe
+  // correctly returns false. !important guards against global reduced-motion
+  // resets like `* { transition: none !important }`.
+  probe.style.cssText = 'transition: display 1s allow-discrete !important; display: block;';
+  document.body.appendChild(probe);
+  getComputedStyle(probe).display;
+  probe.style.display = 'none';
+  supportsDisplayTransition = getComputedStyle(probe).display === 'block';
+  probe.remove();
+  return supportsDisplayTransition;
+}
+```
+
+### Exit fallback when discrete `display` transitions are unsupported
+
+Entry animations using `@starting-style` work across all modern browsers without JavaScript. When discrete `display` transitions are unsupported (`!canTransitionDisplay()`), setting `hidden` applies `display: none` immediately and skips the exit animation (both when hiding and before `element.remove()`). Separate the visual exit state (`[data-closing]`) from `display: none` (`[hidden]`) so `opacity` and `translate` finish animating before hiding or removing the element. Replace the `.card[hidden]` rules from step 1 (including the `prefers-reduced-motion` override) with:
+
+```css
+.card:where([hidden], [data-closing]) {
+  opacity: 0;
+  translate: 0 -20px;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:where([hidden], [data-closing]) {
+    translate: none;
+  }
+}
+```
+
+```javascript
+async function hideElement(el) {
+  if (canTransitionDisplay()) {
+    el.hidden = true;
+  } else {
+    el.setAttribute('data-closing', '');
+  }
+
+  const animations = el.getAnimations();
+  if (animations.length > 0) {
+    await Promise.race([
+      Promise.allSettled(animations.map((a) => a.finished)),
+      new Promise((r) => setTimeout(r, 2000)),
+    ]);
+  }
+
+  // Skipped if showElement() cancelled the close mid-animation.
+  if (el.hasAttribute('data-closing')) {
+    el.removeAttribute('data-closing');
+    el.hidden = true;
+  }
+}
+
+function showElement(el) {
+  el.removeAttribute('data-closing');
+  el.hidden = false;
+}
+
+async function removeElement(el) {
+  await hideElement(el);
+  el.remove();
+}
+```
+
+
+--- Guide for scoped-component-transitions ---
+# Scoped Component Transitions
+
+Starting a view transition with `document.startViewTransition()` attaches the `::view-transition` overlay to the `:root` element, which blocks pointer events on the rest of the page, prevents concurrent transitions, and obscures `position: fixed` headers or open `[popover]` elements (even when nested view transition groups are used to prevent overflow bleeding).
+
+Calling `element.startViewTransition()` on a component root addresses this by scoping the transition to that DOM subtree: the `::view-transition` pseudo-element tree is injected directly onto the element, preserving external stacking contexts and page interactivity while allowing multiple components to transition concurrently.
+
+## Implementation
+
+### 1. Trigger a Scoped Transition
+
+Call `element.startViewTransition()` on the component's root container element instead of `document.startViewTransition()`. The element you call `startViewTransition()` on becomes the transition's scope (the scope element): only elements within its subtree are captured, only rendering of the scope halts during the update callback, and the resulting `::view-transition` overlay matches the scope element's size, shape, and stacking context.
+
+### 2. Name Participating Elements
+
+Assign a `view-transition-name` to child elements inside the scope that should animate. You can use `view-transition-name: match-element` on dynamic list items to automatically derive each element's transition name from its DOM node identity, or assign explicit names (which only need to be unique within that scope).
+
+Names are isolated within each scope, preventing collisions across components in different parts of the DOM. However, `view-transition-name`s can collide with names in nested scoped view transitions. To prevent this, add `view-transition-scope: all` to the child scope element.
+
+### 3. Self-Participation and Overflow Clipping
+
+The scope element automatically participates in its own view transition because the user-agent stylesheet applies `view-transition-name: root` and `view-transition-group: contain` to it. This way, when the scope’s geometry is affected by the change you make in the DOM, it smoothly animates its own geometry alongside its children, as part of the View Transition.
+
+When the scope clips its overflow (`overflow: hidden`, `scroll`, or `clip`), `::view-transition-group-children(root)` automatically applies `overflow: clip`, preventing transitioning children from bleeding outside the component bounds.
+
+> **Note:** Automatic overflow clipping only applies to the scope element itself (`root`). If a captured element inside the scope clips its own overflow and contains other nested captured elements (for example, a scrollable or clipped `<ul>` inside a `.card`), use Nested View Transition Groups so those nested elements stay clipped to their outer captured container:
+>
+> ```css
+> .card ul {
+>   height: 200px;
+>   overflow-y: auto;
+>   view-transition-name: match-element;
+>   view-transition-group: contain;
+>   view-transition-class: list;
+> }
+>
+> ::view-transition-group-children(.list) {
+>   overflow: clip;
+> }
+> ```
+
+### 4. Concurrent and Nested Transitions
+
+Separate component subtrees can run `element.startViewTransition()` concurrently without skipping each other. Active scopes automatically receive `view-transition-scope: all` in the UA stylesheet so internal `view-transition-name` values do not leak into outer transitions. Apply `view-transition-scope: all` in CSS on repeated component containers to prevent outer transitions from capturing internal names even when the component is idle.
+
+If an outer transition needs to move a component while its inner transition is active, assign a `view-transition-name` to an element wrapping the inner scope. The outer transition then captures and animates only the wrapper instead of the inner scope element, allowing the inner transition to run to completion.
+
+## Example
+
+No CSS is needed on the scope element itself (`.card` or `.card ul`) to establish the scope—the scope is determined by calling `startViewTransition()` on the element instead of `document` (if the component will be nested inside an outer view transition, see [Running an outer transition](#running-an-outer-transition) for `view-transition-scope: all`).
+
+```css
+/* 1. Name participating child items */
+.card ul li {
+  view-transition-name: match-element;
+}
+
+/* 2. OPTIONAL: Customize transition timing (300ms is an example duration) */
+::view-transition-group(*) {
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+
+/* 3. MANDATORY: Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+```
+
+```javascript
+// 1. Trigger a transition scoped to a single component subtree
+function runScopedTransition(scopeEl, updateDOM) {
+  // MANDATORY: Call startViewTransition on the component element, not document
+  const transition = scopeEl.startViewTransition(() => {
+    updateDOM();
+  });
+
+  // Re-triggering startViewTransition() on the same element skips the active transition
+  // and rejects `ready`. Catch the rejection to avoid unhandled promise rejection errors.
+  transition.ready.catch(() => {});
+}
+
+// 2. Reorder items by moving existing DOM nodes (required for `match-element`)
+// Scope to `listEl` since only the list order changes, keeping controls outside `listEl` interactive
+function reorderItems(listEl, orderedIds) {
+  const existing = new Map(
+    Array.from(listEl.children, (li) => [li.dataset.id, li]),
+  );
+
+  runScopedTransition(listEl, () => {
+    for (const id of orderedIds) {
+      const li = existing.get(id);
+      if (li) listEl.appendChild(li);
+    }
+  });
+}
+
+// 3. Remove an item while preserving exit animation and keyboard focus
+// Scope to the outer `cardEl` so the card itself also transitions its height change
+function removeItem(cardEl, itemEl) {
+  const hadFocus = itemEl.contains(document.activeElement);
+  const nextFocusTarget =
+    itemEl.nextElementSibling?.querySelector('button') ??
+    itemEl.previousElementSibling?.querySelector('button') ??
+    cardEl.querySelector('button');
+
+  runScopedTransition(cardEl, () => {
+    itemEl.remove();
+    if (hadFocus) {
+      nextFocusTarget?.focus();
+    }
+  });
+}
+```
+
+## Running an outer transition
+
+When starting a view transition outside of the intended scope (e.g. from a parent component, or from the document for a page-level transition), the outer transition will capture and animate the scope element and everything inside it.
+
+To prevent this from happening, wrap the scope element in a separate wrapper element with its own `view-transition-name`, and apply `view-transition-scope: all` to the inner scope element. This allows the wrapper itself to be captured and animated by the outer transition while preventing the inner scope's contents from being captured.
+
+```html
+<div class="page" id="page">
+  <div class="card-wrapper">
+    <section class="card" id="left">
+      <h2>Card A</h2>
+      <ul id="left-list">
+        <li>…</li>
+      </ul>
+    </section>
+  </div>
+  <div class="card-wrapper">
+    <section class="card" id="right">
+      <h2>Card B</h2>
+      <ul id="right-list">
+        <li>…</li>
+      </ul>
+    </section>
+  </div>
+</div>
+```
+
+```javascript
+document.querySelector('#page').startViewTransition(() => {
+  // do your DOM updates here...
+});
+```
+
+```css
+/* Apply a view-transition-name on the wrapper */
+.card-wrapper {
+  view-transition-name: match-element;
+}
+
+/* Prevent the contents of the card being captured by an outer transition */
+.card {
+  view-transition-scope: all;
+}
+
+.card ul li {
+  view-transition-name: match-element;
+}
+```
+
+Alternatively, you can allow the outer transition to capture the children. In order to retain clipping effects, resort to using Nested View Transition Groups to clip the captured children at the boundaries of their wrapper. In that case, though, you need to manually apply the `clip` onto the resulting `::view-transition-group-children()` pseudo.
+
+```css
+.card-wrapper {
+  overflow: clip;
+  view-transition-name: match-element; /* Capture me as part of the outer VT */
+  view-transition-group: contain; /* Nest children that also have a view-transition-name */
+  view-transition-class: card; /* For targeting purposes */
+}
+
+/* Manually copy back the clip onto the ::view-transition-group-children pseudo */
+::view-transition-group-children(.card) {
+  overflow: clip;
+}
+
+.card ul li {
+  view-transition-name: match-element;
+}
+```
+
+## Constraints & Accessibility
+
+- **MANDATORY**: Call `startViewTransition()` on the component root element rather than `document` so external `position: fixed` elements and `[popover]` overlays remain layered on top and the rest of the page stays interactive.
+- **MANDATORY**: Preserve and move existing DOM nodes (rather than recreating them with `innerHTML`) when using `view-transition-name: match-element`, as `match-element` tracks DOM node identity.
+- **MANDATORY**: Respect user preferences for reduced motion using `@media (prefers-reduced-motion: reduce)` by setting `animation: none !important` on `::view-transition-group(*)`, `::view-transition-old(*)`, and `::view-transition-new(*)`.
+- **MANDATORY**: Preserve keyboard focus when removing a focused element during a transition by shifting focus to an adjacent item or control inside the update callback.
+- **DO**: Use Nested View Transition Groups (`view-transition-group: contain` and `overflow: clip` on `::view-transition-group-children()`) when a captured element inside the scope clips its own overflow and contains nested captured elements.
+- **DO**: Attach `transition.ready.catch(() => {})` when rapid interactions can re-trigger `element.startViewTransition()` on the same scope element.
+- **DO**: Wrap an inner scope element in a separate named wrapper element if an outer transition needs to animate the component's position while an inner transition is running.
+- **DO NOT**: Set `view-transition-name: none` on a scope element that clips its overflow (`overflow: hidden`, `scroll`, or `clip`) or changes its own geometry, as opting out of self-participation disables automatic overflow clipping.
+
+## Fallback strategies
+
+Browser support for Element-scoped view transitions: Limited availability.
+Supported by: Chrome 147 (Apr 2026) and Edge 147 (Apr 2026).
+Unsupported in: Firefox and Safari.
+
+Baseline status for View transitions: Newly available. It's been Baseline since 2025-10-14.
+Supported by: Chrome 111 (Mar 2023), Edge 111 (Mar 2023), Firefox 144 (Oct 2025), and Safari 18 (Sep 2024).
+
+If your Baseline target does not support element-scoped view transitions, degrade gracefully by running the DOM update callback immediately without animation. While you could fall back to `document.startViewTransition()` this is not recommended for isolated component updates, as a document-scoped transition blocks concurrent component transitions and obscures `position: fixed` and `[popover]` elements in the top layer.
+
+```javascript
+// Feature detect specifically on Element.prototype (not document.startViewTransition)
+const supportsScopedTransition = 'startViewTransition' in Element.prototype;
+
+function runWithTransition(scopeEl, updateDOM) {
+  if (!supportsScopedTransition) {
+    // Fallback: apply the DOM update immediately without animation
+    updateDOM();
+    return;
+  }
+
+  const transition = scopeEl.startViewTransition(() => {
+    updateDOM();
+  });
+
+  transition.ready.catch(() => {});
+}
+```
+
+If you really need to have a fallback using `document.startViewTransition()`, you’ll need to make sure that clipping effects of containers are preserved, as detailed in the [Running an outer transition](#running-an-outer-transition) section. Note that this fallback approach breaks the ability to run multiple view transitions concurrently and will obscure `position: fixed` and `[popover]` elements in the top layer.

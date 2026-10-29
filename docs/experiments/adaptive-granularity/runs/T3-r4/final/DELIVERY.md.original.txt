@@ -1,0 +1,54 @@
+# Fieldnote is implemented and ready to review
+
+The research note now lives on **one anchored card**. Its front is the editor; its back is the confirmed saved note. Saving turns that same object only after the browser accepts the write, and returning restores the draft’s selection and scroll position.
+
+## Open it
+
+The local preview is available at **http://localhost:8314** while the test server is running. To start it again from this cell:
+
+```bash
+python -m http.server 8314 --directory app
+```
+
+No build step or external runtime package is required. Source is in `app/`; usage and storage boundaries are in `app/README.md`.
+
+## What changed
+
+The composition now pairs a quiet field-study column with a broad notebook card. Paper and forest themes share the same proportions, serif headings, small utility labels, thin illuminated edge and diffuse shadow. The original orbit motif survives as a static subject marker, so the card’s turn is the meaningful movement.
+
+The card uses a center pivot, coordinated faces, restrained shading and a 680 ms reversible transition. Its surrounding label and turn control stay in place. The mobile perspective was adjusted after inspecting the actual intermediate frames so the projected edge clears the notebook label. Reduced motion uses the same geometry and content with a brief opacity change and no rotation.
+
+The main experience contains ordinary task language. The local-demo disclosure and the existing 900 ms demonstration delay remain available in the footer and settings.
+
+## Behavior preserved and improved
+
+- **Real browser persistence:** the previous Storage key and record shape remain compatible; a saved note survives reload.
+- **Honest failure:** a failed write keeps the editor and draft, preserves the previous saved record, and offers retry. A first failure never presents a saved badge or success turn.
+- **Draft continuity:** editing during a pending save retains the newer draft. The submitted snapshot is saved, and the card stays on the editor so that the newer work is not replaced.
+- **Latest intent:** quick turns can reverse from the current position; a deliberate return to editing wins over a late save completion. Repeated save activation produces one write.
+- **Long notes:** all pasted text remains editable. The 600-character limit is explicit; over-limit saving is blocked. Long saved content scrolls inside the card while its actions stay in place.
+- **Keyboard continuity:** both faces are inert during the turn. Focus uses the stationary turn control, then moves to the reading region or restores the textarea selection and scroll. Header navigation and Tab/Enter paths were exercised.
+- **Recovery and variants:** malformed stored data and failed clearing have recovery paths. English/Chinese and light/dark changes preserve current text. The Chinese question uses a natural phrase break.
+
+## Verified result
+
+The final focus/state implementation passed the **45-check regression suite**, followed by **27 focused checks** for normal-motion mobile use, duplicates, keyboard paths, saved snapshots and navigation during saving. The final presentation and preference-switch repairs passed **eight additional checks**. These counts describe executed assertions, not a design score.
+
+The browser tests used Chromium 143, a device-pixel ratio of 1, and the actual app over local HTTP. Light and dark designs were captured and visually reviewed at **1440 × 900** and **390 × 844**. Reduced-motion behavior was tested at both sizes and in both themes. Natural-time ordered frames were inspected for save, reverse and mobile turn episodes.
+
+Representative evidence:
+
+- `evidence/after-desktop-light-draft.png` and `after-desktop-light-saved.png`
+- `evidence/after-desktop-dark-draft.png` and `after-desktop-dark-saved.png`
+- `evidence/repaired-dark-turn-0.png` through `repaired-dark-turn-4.png`
+- `evidence/repaired-light-chinese.png` and `repaired-dark-chinese.png`
+- `evidence/failure-desktop.png` and `final-unknown-mobile.png`
+- Results: `evidence/test-report-run3.json`, `final-test-report.json`, and `final-visual-recheck.json`
+
+The original failed test run is retained. It found a real focus loss after disabling Save; that was repaired and rechecked. Separate harness failures—an injected exception escaping the test setup and Playwright waiting for an intentionally aria-disabled control—are also preserved rather than relabeled as product failures. `evidence/VISUAL_REVIEW.md` distinguishes viewed images from assertions and unviewed recordings.
+
+## Source and limits
+
+The scene/object/faces technique was studied against David DeSandro’s original [Card Flip examples](https://3dtransforms.desandro.com/card-flip), including the alternative slide-flip. The center pivot fits the requirement to keep the note in place. The existing implementation already used this family; the new composition, materials and state/focus adapters are owned by this project. Attribution and the linked MIT notice are in `app/THIRD_PARTY.md`; decisions and revisions are in `DESIGN.md`.
+
+This remains a **single-note local demo**. It has no cloud sync or autosave; unsaved drafts are lost on reload, and theme/language choices are session-only. The recorded video was not played back, so full-speed smoothness is not claimed. Physical mobile keyboards, touch hardware, screen readers, Safari and Firefox remain unverified. No deployment or live service changes were made.

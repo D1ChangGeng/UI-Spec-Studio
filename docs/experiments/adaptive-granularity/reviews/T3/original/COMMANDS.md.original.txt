@@ -1,0 +1,47 @@
+# Review commands and evidence ownership
+
+All commands ran with working directory `/workspace/scratch/43b440780c87/granularity-review-packets/T3`. The application files were treated as read-only. Test scripts, logs, captures, and reports were written only below `review-output/`.
+
+## Browser runs
+
+The supplied local browser requires loopback sockets, so these commands used the provided `require_escalated` local-test execution mode:
+
+```sh
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/review_runner.py > review-output/runner-original.log 2>&1
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/followup_runner.py > review-output/followup-original.log 2>&1
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/keyboard_probe.py > review-output/keyboard-original.log 2>&1
+```
+
+Each script starts and shuts down its own HTTP servers. The original application source is served directly. The supplied Chromium and font configuration paths are explicit inside `review_runner.py` and inherited by the follow-up scripts. Each scenario uses fresh browser contexts; distinct per-variant ports prevent shared origins. No user's browser profile or signed-in session was used.
+
+The main run records 192 PNG states in `observations.json`; follow-up records 96 in `followup-observations.json`; keyboard probe records 30 in `keyboard-observations.json`. Their error lists preserve any original scenario exception. All completed scenario error lists are empty.
+
+The main run also compares initial/final source hashes. `source-hashes-final.json` was generated after all follow-up work and still matches `source-hashes-before.json`.
+
+## Fault injection
+
+Failure tests override the active page's `Storage.prototype.setItem` or `getItem` to throw a `DOMException`, then restore permission to call the original method. They do not edit application source. The test scripts retain the exact injections. The saved data comparison is taken before and after the expected failed update; retry uses the application's visible recovery control.
+
+## Image preparation and visual inspection
+
+The original attempt below failed because Pillow was absent from the test virtual environment:
+
+```sh
+/workspace/scratch/43b440780c87/test-env/bin/python review-output/make_sheets.py
+```
+
+Its original traceback is retained in `make-sheets-original-failure.txt`. The available environment Python includes Pillow, so contact sheets were generated with:
+
+```sh
+python review-output/make_sheets.py
+```
+
+Keyboard comparison sheets were composed from the original 390 × 844 PNG captures without altering the source captures. Original PNGs remain separate from derived sheets. `viewed-evidence.json` distinguishes actual image inspection from capture and behavior assertions.
+
+## Final validation
+
+```sh
+python review-output/finalize_review.py > review-output/final-validation.json
+```
+
+This validates artifact references, records exact header pixel comparisons for a rejected visual suspicion, hashes all initial/final source files again, and writes the concise `review.json`. It does not run or modify the applications. `final-validation.json` records 318 captures, 176 inspected original frames, no missing referenced evidence, no scenario errors, and unchanged source.

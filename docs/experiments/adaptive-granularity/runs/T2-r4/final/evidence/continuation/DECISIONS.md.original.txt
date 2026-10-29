@@ -1,0 +1,26 @@
+# Source reading during arrival — continuation
+
+## Current hypothesis and scope
+
+The current app has a working companion source panel, but source buttons arrive only at completion. The requested connected episode is paragraph arrives → open its citation while later text streams → inspect the source → stop/retry or grow a draft → return to the same conversation. This is one coupled reading/composer/source responsibility, not a new application shell.
+
+Retain the inspected native conversation foundation, Meridian's type/surfaces and the existing non-modal desktop/native modal compact reader. The supplied modern dialog guidance and earlier source-open observations remain applicable. No new component family is needed: this increment extends the real data/state connection of the currently inspected source reader.
+
+## Decisions before implementation
+
+- **C1, paragraph/source identity:** add source buttons to completed paragraphs while the rest of the answer is still streaming. Carry message and block identity into the reader, highlight the paragraph in place and show its text in the source panel. Footer sources remain available.
+- **C2, scroll intent:** opening a source suspends automatic following. Closing returns to the reading anchor. The explicit Latest action remains the route back to unfolding output. Composer growth must preserve the visible reading anchor.
+- **C3, interruption:** source-panel status follows the same answer state as the conversation. Expose Stop/Try again inside the source view so compact modal users can control generation without leaving their reading. Retry must preserve the draft and source view, and avoid duplicating the question.
+- **C4, focus and replacement:** retries replace answer DOM, so return must resolve the citation by stable message/block identity instead of relying only on a stale button object. If its paragraph has not yet reappeared, return to the composer safely.
+
+## Evidence plan
+
+Run a long fixture at 1440×900 and 390×844. Open its first inline citation before completion; capture cited paragraph, source context and live controls. Exercise source close/open, growing draft, scroll-away, stop, retry, latest return and narrow Escape/explicit return. Inspect actual captures separately from assertions. Preserve every first-run failure and use separate recheck outputs after repairs.
+
+## Implemented and observed result
+
+C1 is realized by `addInlineCitation`, stable message/block keys, the cited-paragraph treatment and a matching source-context excerpt. C2 gates following while the source is open; the focused browser run measured a nonzero 140px reading point before and after new output and again after close. C3 adds source-local live state and Stop/Try again, and retains the selected response mode on retry. C4 resolves a regenerated citation by its stable identity, with a composer fallback when it has not reappeared.
+
+The 42-check integrated run passed at both sizes. Its captures were viewed for the live source, expanded composer, stopped and retrying states, mobile modal and completed dark desktop. The initial six-check focused run passed, but actual scrolled captures revealed content peeking above the sticky return bar. The return bar was extended through the dialog's padding to the outer edge. `focused2/` retains the recheck separately; the original `focused/` evidence is unchanged.
+
+The addition preserves the existing native/assistant-ui-derived foundation and uses project-owned paragraph association and state adapters. No new third-party runtime or source package was introduced. The additional source context adds vertical content, so the source remains independently scrollable and the return action stays reachable. Physical keyboard/browser/accessibility conditions outside the pinned Chromium environment remain open.

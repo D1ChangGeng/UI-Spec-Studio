@@ -1,0 +1,1472 @@
+{
+  "baseline_commit": "9cc2470e21b626c56dd293274277d9809c13defb",
+  "baseline_runtime_release": "v1.16.1",
+  "candidate_version": "1.17.0",
+  "files": [
+    {
+      "path": "skills/ui-spec/LICENSE",
+      "prior_sha256": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db",
+      "current_sha256": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db",
+      "prior_bytes": 1068,
+      "current_bytes": 1068,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/SKILL.md",
+      "prior_sha256": "280b6a3eeda8f39e6ae6855c7b4f4552b4f2d8caf520f06fc1918543b4e1ad1e",
+      "current_sha256": "007f0981138f4f4bac3709eb24f717e06573444c2ed96adcea05215cc6e8acb9",
+      "prior_bytes": 33555,
+      "current_bytes": 37436,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 7,
+          "current_end_line": 8,
+          "current_fragment_sha256": "6fd1ec2d0dc36c5fafe69678cc0e4b421ee32a43c96ebe1b0b8396555d2d10de",
+          "prior_text": "  version: \"1.16.1\"\n"
+        },
+        {
+          "current_start_line": 14,
+          "current_end_line": 32,
+          "current_fragment_sha256": "897545be0f54fb709478a8c71c917b55ca1d0602562dd4e71539d5577d1451a5",
+          "prior_text": "A **UI SPEC** is a runnable or renderable design reference with representative content, a meaningful reader/user path and identifiable review scope. Establish whether the deliverable is a working product, representative product demonstration or authored visual work; select realization and evidence for that boundary. Documents can complete reading tasks without an application shell. Use the project's framework, format and preview mechanism; one implementation can support fixtures and real adapters. A fixed-stage demonstration does not establish an interactive product.\n"
+        },
+        {
+          "current_start_line": 130,
+          "current_end_line": 131,
+          "current_fragment_sha256": "648aefc064802f7406dd8084663c8b3d8dff6d4a0bed15e6ec772fb979e61f00",
+          "prior_text": "| Begin or adopt a UI effort | `init` | Accurate project understanding, relevant constraints and a next useful slice |\n"
+        },
+        {
+          "current_start_line": 132,
+          "current_end_line": 133,
+          "current_fragment_sha256": "8c55b27bd8e1fe57281cf5dc469a63a1160921316ee78b8aed6caa771dc6b05e",
+          "prior_text": "| Continue, add, refine, consolidate or correct | `iterate` | One meaningful implemented increment, inspected and ready for review |\n"
+        },
+        {
+          "current_start_line": 156,
+          "current_end_line": 157,
+          "current_fragment_sha256": "134a55f2452d4d70684d8f0b0bc052b4bc3d9f4b276e943fba3d442fc6c7b637",
+          "prior_text": "A round can develop a page, a connected journey, a component family or a shared-system repair. Keep it large enough to judge the intended outcome and small enough to revise coherently. Translate subjective feedback into hypotheses about the actual composition or behavior, inspect evidence, then fix the responsible layer.\n"
+        },
+        {
+          "current_start_line": 202,
+          "current_end_line": 204,
+          "current_fragment_sha256": "9e1f157e0494a8e48b7df088a880bd6d25321659bb2445631a379120775b58d4",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/assets/design-coverage-categories.json",
+      "prior_sha256": "c4a1bc4057cccf573dce57df39e4ec4d68f1af2c2186e3fcbcf92dfc8211c3e6",
+      "current_sha256": "c4a1bc4057cccf573dce57df39e4ec4d68f1af2c2186e3fcbcf92dfc8211c3e6",
+      "prior_bytes": 2281,
+      "current_bytes": 2281,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/resource-catalog.json",
+      "prior_sha256": "93e1e29e9012b96b86d708d4cf404223c4a24c969c75287d28d297120e99c0e8",
+      "current_sha256": "93e1e29e9012b96b86d708d4cf404223c4a24c969c75287d28d297120e99c0e8",
+      "prior_bytes": 48532,
+      "current_bytes": 48532,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/asset-record.md",
+      "prior_sha256": "bd53e913b675d9a83c4211ca67e1cf608b636f31357d31a0a3b768e13acb31b6",
+      "current_sha256": "bd53e913b675d9a83c4211ca67e1cf608b636f31357d31a0a3b768e13acb31b6",
+      "prior_bytes": 2853,
+      "current_bytes": 2853,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/brief.md",
+      "prior_sha256": "0cb7f216d8242ae9c04770b3d3d993e1bb08f7fac63f839c3a8dbcbcffc0d626",
+      "current_sha256": "b3b66a8cc52058f5e50fe14e2159d1c64fd73cd48143dbcc131b1a7509f5234b",
+      "prior_bytes": 3376,
+      "current_bytes": 4664,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 25,
+          "current_end_line": 34,
+          "current_fragment_sha256": "dcaca16b7cbbbf85d9f057bcca402d85daefe40aab951f934b45d7a7f25aebea",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 64,
+          "current_end_line": 70,
+          "current_fragment_sha256": "c899a4df5ac6d06b87eb5ce80142b2348b106947b2b311fc45a333c616dfc614",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 75,
+          "current_end_line": 81,
+          "current_fragment_sha256": "6c015e3bbd60c0a33d123cf93c35bcde5db50b2126b6c472dc897ce7e0153b42",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/content-decisions.md",
+      "prior_sha256": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd",
+      "current_sha256": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd",
+      "prior_bytes": 2057,
+      "current_bytes": 2057,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-decisions.md",
+      "prior_sha256": "c854a2777f54a827480e489a832040a84f568345ae8a886f629d1aca83be0de0",
+      "current_sha256": "75591a52f667c89ccf9bbc6bf5bfc45f139c80c833b3acd09ca93f2c8427e6c2",
+      "prior_bytes": 13054,
+      "current_bytes": 15123,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 15,
+          "current_end_line": 22,
+          "current_fragment_sha256": "9360fa674a70ad9ab609035c19d8c0853dff63ece7ad19ecfed45765969e1004",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 64,
+          "current_end_line": 69,
+          "current_fragment_sha256": "6b951fe28d3a2f8880c22d1ce7eea8d01e5a174dafcb9d95f596e6c80616e2f3",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 147,
+          "current_end_line": 153,
+          "current_fragment_sha256": "a1d9cb955f8ec9cfa157964286bd4e72b3b9dbef34c51ca83beffe5cec033733",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 197,
+          "current_end_line": 204,
+          "current_fragment_sha256": "521ed4c89297895e3569f0691887b5c880c18da5c483f7aade03343c126eedc1",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 228,
+          "current_end_line": 234,
+          "current_fragment_sha256": "82114b2f2fa637aed7a9288037b3ff9de833e676879b9d072197675cfad9c730",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-evidence.json",
+      "prior_sha256": "8e46bc621e3c791293101f3c074dfee759c24f2a5fe1d690c33954a8a017aabe",
+      "current_sha256": "a47fa907d4d3ff4851748c9ec8585510aceaf232c14b39e45212dbece72a303f",
+      "prior_bytes": 280,
+      "current_bytes": 352,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 4,
+          "current_end_line": 7,
+          "current_fragment_sha256": "3b9ed37ef0115166abbb7752f9cc6b2322dfe78645589fed7dbbac06310fbce9",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-system.md",
+      "prior_sha256": "328f3ce70079b2bfc2f2bbfaa4dd961c33f521d0bfd533db18450975a9d5d84d",
+      "current_sha256": "328f3ce70079b2bfc2f2bbfaa4dd961c33f521d0bfd533db18450975a9d5d84d",
+      "prior_bytes": 1803,
+      "current_bytes": 1803,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/manifest.json",
+      "prior_sha256": "882275fee230397d8491d65fbf3d7a69f39814583f4a7b7cc71a3e2b8b9e49ca",
+      "current_sha256": "882275fee230397d8491d65fbf3d7a69f39814583f4a7b7cc71a3e2b8b9e49ca",
+      "prior_bytes": 360,
+      "current_bytes": 360,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/resource-adoption.md",
+      "prior_sha256": "b15b7d0a701c7f85cf429dec72b9b02c99ed8c98f56dd55ad5bbf0ed42fa6dd5",
+      "current_sha256": "b15b7d0a701c7f85cf429dec72b9b02c99ed8c98f56dd55ad5bbf0ed42fa6dd5",
+      "prior_bytes": 3375,
+      "current_bytes": 3375,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/review.md",
+      "prior_sha256": "cf6b754a8ab5b6a195f5fcd65ce0fa3a849f6c34fbdc7af575b54c2006992241",
+      "current_sha256": "84a2c5183eab93839d45740511ac4869f5755498146a7a26208d05a270a64df8",
+      "prior_bytes": 4941,
+      "current_bytes": 6146,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 9,
+          "current_end_line": 15,
+          "current_fragment_sha256": "b9f5be70c0e2643f853d6e772f9f7e659c51159652e604ce9e2b3c452945d5a9",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 58,
+          "current_end_line": 63,
+          "current_fragment_sha256": "41a9a56a020bc33b5b3f044c88fd8cd671da1d2f8c58ef941cbb46b3daf6f83e",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 78,
+          "current_end_line": 86,
+          "current_fragment_sha256": "e02be838f9ae70736e92e0c03c983e2ed4568e4ec606a3ad9a79a20f1fcab57c",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/analysis.md",
+      "prior_sha256": "66b84f98d3606f5fa6b9b038b20398027f24944acaae3c2249626301cdb8986a",
+      "current_sha256": "fb0789c11307bf27cca9b5c4e92e50252bccce82bc87db14e0f602588147474a",
+      "prior_bytes": 25597,
+      "current_bytes": 33814,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 4,
+          "current_end_line": 5,
+          "current_fragment_sha256": "4b38ad835d53594241ea2af68276f640c537f6d2dc7b8553ad02a0d97bbc675a",
+          "prior_text": "[Alignment target](#establish-the-products-target-experience) · [Experience dimensions](#nine-dimensions-one-coherent-experience) · [Evidence planning](#plan-evidence-around-the-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Product model](#recognize-the-product-through-its-use) · [Direction and scope](#confirm-consequential-direction-with-useful-options) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)\n"
+        },
+        {
+          "current_start_line": 125,
+          "current_end_line": 175,
+          "current_fragment_sha256": "8f08621291a47e247a96a7925f2c5c0f00e26678bfc1547b53d8edf5acac308d",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/asset-sources.md",
+      "prior_sha256": "423ff1aa51590d8b78d9f165853e145bc3b6398f123fa5ca8aac7586da173227",
+      "current_sha256": "423ff1aa51590d8b78d9f165853e145bc3b6398f123fa5ca8aac7586da173227",
+      "prior_bytes": 6618,
+      "current_bytes": 6618,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/component-sourcing.md",
+      "prior_sha256": "9e2a3bc42c0b16bb7c72d8afaf67012fbaf24f99c00fcd1cd6d112bab2cf6e8c",
+      "current_sha256": "e11513ea764101fb7adb3576615a413363472a939d042729c2448c5cf85fa541",
+      "prior_bytes": 31373,
+      "current_bytes": 34375,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 26,
+          "current_end_line": 34,
+          "current_fragment_sha256": "2cff3ab2292c30d8000be2a12b0994ea8c5dac07971c8b9d394a3fc24adcb9ce",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 45,
+          "current_end_line": 47,
+          "current_fragment_sha256": "dd3b850b92de176c0cd8662c86f44ba00f65f9f5c50be6e07d1e78d9c9526f97",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 168,
+          "current_end_line": 170,
+          "current_fragment_sha256": "df18666911b9ce6844602aa7b47ddc8c6a1e4eba36ce1b28f494e06dc0c5de4d",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/content-design.md",
+      "prior_sha256": "ec5c681f948cb26774ff266f6228f141af835d981166ff022eec2e92813124c9",
+      "current_sha256": "ec5c681f948cb26774ff266f6228f141af835d981166ff022eec2e92813124c9",
+      "prior_bytes": 19112,
+      "current_bytes": 19112,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/content-sources.md",
+      "prior_sha256": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45",
+      "current_sha256": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45",
+      "prior_bytes": 5465,
+      "current_bytes": 5465,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/evidence-actions.md",
+      "prior_sha256": "00ba93ee732a8122405e0e8778f878213d0fee9bb8f483778292d5eb0c74c361",
+      "current_sha256": "00ba93ee732a8122405e0e8778f878213d0fee9bb8f483778292d5eb0c74c361",
+      "prior_bytes": 11390,
+      "current_bytes": 11390,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/evidence-map.md",
+      "prior_sha256": "2b2099cfec47f19d55f220bb84b08dc1fe8c4713ea5f182771f8f55871f12427",
+      "current_sha256": "49b732e797b143066f2e0c57b655fca048177e3f1c8ef8cba86dd8f045855dc0",
+      "prior_bytes": 20225,
+      "current_bytes": 25269,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 11,
+          "current_end_line": 15,
+          "current_fragment_sha256": "3d6eaa09a6296dbc3532e1692bff0b27d5d3f7e8b2ec0d453e2907c07543ac50",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 57,
+          "current_end_line": 98,
+          "current_fragment_sha256": "e1dee7a7b217e65ff9a95bcb4cad5857757133c012b2bbf4b659d1c7b98800e8",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 165,
+          "current_end_line": 171,
+          "current_fragment_sha256": "3bbe0bfcf714018966893078471bf820964ca14013b71f8757fe91ac5cd8e2ca",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 226,
+          "current_end_line": 236,
+          "current_fragment_sha256": "19d8bf1b17a804b8cac9940421087e6f03689c137b80c9ed31c041b8b4d696e1",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 256,
+          "current_end_line": 263,
+          "current_fragment_sha256": "63a7653db5a0d37664b6806af2375b46c51dda1234b3bb660f717ed930fe898c",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 314,
+          "current_end_line": 321,
+          "current_fragment_sha256": "86ae65c956655aa300b858652f331c941727ae7d01bfba489d8c07338968265c",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/evidence-records.md",
+      "prior_sha256": "e40b1cb3a43e3c18f430628c31c06ec052107ba70e51efb5f8df74581949b46a",
+      "current_sha256": "7d24e0bfe6f41b4c2adbde4700560bda96934acaf700b7e9e0c5403e5291ec0c",
+      "prior_bytes": 11073,
+      "current_bytes": 13921,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 82,
+          "current_end_line": 119,
+          "current_fragment_sha256": "744838dda148f07812d9169de1babef68535621e3702b4cf55754a03383d089d",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/examples.md",
+      "prior_sha256": "f8febc6fb3bf48b032961a9e01c820b7338d82c6422ed04d82c6d692101dc6c8",
+      "current_sha256": "f8febc6fb3bf48b032961a9e01c820b7338d82c6422ed04d82c6d692101dc6c8",
+      "prior_bytes": 8259,
+      "current_bytes": 8259,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/integration.md",
+      "prior_sha256": "6d9246e1c6a98e0027dd06daf84e08676ab0cc53e34f6013dc987c8811c27c26",
+      "current_sha256": "6d9246e1c6a98e0027dd06daf84e08676ab0cc53e34f6013dc987c8811c27c26",
+      "prior_bytes": 19348,
+      "current_bytes": 19348,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/interaction-and-variants.md",
+      "prior_sha256": "c939bda9a6b2ce3d2b29b544380f0b176bee2259937b694c9a3a9021c0fe6fbe",
+      "current_sha256": "c939bda9a6b2ce3d2b29b544380f0b176bee2259937b694c9a3a9021c0fe6fbe",
+      "prior_bytes": 21761,
+      "current_bytes": 21761,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/patterns.md",
+      "prior_sha256": "f2e44fe67f23225d7ceac61c5a07f5544c67857faca9aa5039f0ed92e2a285cc",
+      "current_sha256": "f2e44fe67f23225d7ceac61c5a07f5544c67857faca9aa5039f0ed92e2a285cc",
+      "prior_bytes": 15305,
+      "current_bytes": 15305,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/principles.md",
+      "prior_sha256": "c06151f5d6db35f4b0f6eeffe4e4dea37d71bdc85e4ca3a85be7bede9b0d6a90",
+      "current_sha256": "c06151f5d6db35f4b0f6eeffe4e4dea37d71bdc85e4ca3a85be7bede9b0d6a90",
+      "prior_bytes": 30150,
+      "current_bytes": 30150,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/resource-catalog.md",
+      "prior_sha256": "ac9a0236147edc9dbf2ab31280088d1b767e66b4ba2ebb1c68e14ae6478f0e2d",
+      "current_sha256": "ac9a0236147edc9dbf2ab31280088d1b767e66b4ba2ebb1c68e14ae6478f0e2d",
+      "prior_bytes": 37123,
+      "current_bytes": 37123,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/sources.md",
+      "prior_sha256": "3e3748d22a2c27ae762fb8feec0c8b3600b8dc5fae7946d4d047329b7828789c",
+      "current_sha256": "3e3748d22a2c27ae762fb8feec0c8b3600b8dc5fae7946d4d047329b7828789c",
+      "prior_bytes": 15528,
+      "current_bytes": 15528,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/verification.md",
+      "prior_sha256": "bf91b858d056d2b71f20da70311d023bbc262cd8e6da42f64959aa5995f6077e",
+      "current_sha256": "b057e0233e8ce43130982ad28023ee5496aeff8471db8801553c96f2e519cf89",
+      "prior_bytes": 32056,
+      "current_bytes": 36600,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 5,
+          "current_end_line": 6,
+          "current_fragment_sha256": "3ba867d6af913a752c1923810cd2d7e8dec36c8e94146f0de4f689ad398a5652",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 25,
+          "current_end_line": 38,
+          "current_fragment_sha256": "fb2187d888efb37bf9a09819e1d90be1632529287986afb8eda3bca7630b085e",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 119,
+          "current_end_line": 121,
+          "current_fragment_sha256": "d460611ec856a1bc26ce2eccc63da030da7f0f5ba27cfd0b4db74e21223faa83",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 142,
+          "current_end_line": 144,
+          "current_fragment_sha256": "2dcf7a48375d738f987c131b46d83f8bf2ab62cbb4e0d88eacf8e485adc4f64c",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 192,
+          "current_end_line": 194,
+          "current_fragment_sha256": "6af4bf0fe19ce58c269978d5d7e6999c73bf28d46501b7682c095e61429e0168",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/visual-assets.md",
+      "prior_sha256": "3ab11c75c5e50cf364bce9e2e1bdf805368e88fa68a40ca1bb999388242cdb74",
+      "current_sha256": "3ab11c75c5e50cf364bce9e2e1bdf805368e88fa68a40ca1bb999388242cdb74",
+      "prior_bytes": 20706,
+      "current_bytes": 20706,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/workflow.md",
+      "prior_sha256": "83665d9251ce4bd4dca191c106c7a6994f9460c841f26c10697349d84a91adcf",
+      "current_sha256": "ae080bd4e77791ae8810caac70bb2d4899ace045db0098319167ecffdbb92605",
+      "prior_bytes": 17857,
+      "current_bytes": 23404,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 1,
+          "current_end_line": 5,
+          "current_fragment_sha256": "12e48f75ce3cadf275f6b703649ac8b6853dd5fff19e13c47613a4c412003620",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 21,
+          "current_end_line": 25,
+          "current_fragment_sha256": "a3f165c09cc2aae5f3140396870c3859cbdde1fe0892ca792a2af8c29937c060",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 44,
+          "current_end_line": 45,
+          "current_fragment_sha256": "ccf2dde47399f9838dedba26560cd692f62b52c1d6ecf07581d364f41c038353",
+          "prior_text": "**Orient and choose.** Reconcile feedback, accepted decisions, current code, incomplete journeys and findings. A continuation request is sufficient: choose and state the next useful outcome.\n"
+        },
+        {
+          "current_start_line": 46,
+          "current_end_line": 47,
+          "current_fragment_sha256": "a94043d9ef88f7f27a83a05490aabe0db2aa5272061d11193783e3aa732003ca",
+          "prior_text": "**Define the slice.** Identify affected pages/states, dependencies, intended user outcome and observation conditions. Keep connected tasks and shared families coherent.\n"
+        },
+        {
+          "current_start_line": 52,
+          "current_end_line": 54,
+          "current_fragment_sha256": "6b5af94b5394f9fad2b03cc95491b53fbc5a911ab4f3092191b39af0a354643b",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 57,
+          "current_end_line": 59,
+          "current_fragment_sha256": "03ca304741e1195fb6ece6d58f1bfffd68ad5629d126c43192de61774faec8cb",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 65,
+          "current_end_line": 67,
+          "current_fragment_sha256": "a11dcc0e95b431fe05a0025a41072b4bd85d29e0dc33914406ca725870eac2ec",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 92,
+          "current_end_line": 96,
+          "current_fragment_sha256": "4a8ce7ea082367c90a0a447953e951275bfb36a63564f530587bd075a6e669e9",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 99,
+          "current_end_line": 101,
+          "current_fragment_sha256": "25c6a222cd0258df854cad2779f268bfe29b12b69c3bd11200d17c60c0eeec1a",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_design_evidence.py",
+      "prior_sha256": "4ac9a5f42f45ab1789c1661e3743c1beb13a9c3336d2f4b93b275bf239ab2338",
+      "current_sha256": "e3cd9e614616dadd1fa8118843ec51e536bfccd4e5241b99be033c3db40496c8",
+      "prior_bytes": 15133,
+      "current_bytes": 17982,
+      "disposition": "scoped-revision",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": [
+        {
+          "current_start_line": 25,
+          "current_end_line": 71,
+          "current_fragment_sha256": "e707deccacc889362a552c5538168e3504910c6cff04eb167e4336af1f0b9077",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 119,
+          "current_end_line": 123,
+          "current_fragment_sha256": "bf29c98f60911131e4c6e91472d343b5b886866e27bd495f372b9141224e8801",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 139,
+          "current_end_line": 140,
+          "current_fragment_sha256": "ae9987e880cc602510302bd80ce8392ec7024a621bba053588a661a4da81c8af",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 284,
+          "current_end_line": 285,
+          "current_fragment_sha256": "2e066bb6cc722827e365f5f530cf95a31c88f57197bda9603ec1d27ef5d27347",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_file_integrity.py",
+      "prior_sha256": "c6ac2182a1a4ee4545bacc281bb2a483df1ee93f73cbec91aacbf1878bb79c3f",
+      "current_sha256": "c6ac2182a1a4ee4545bacc281bb2a483df1ee93f73cbec91aacbf1878bb79c3f",
+      "prior_bytes": 1882,
+      "current_bytes": 1882,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_manifest.py",
+      "prior_sha256": "08d674858363368531f4168b1fd6e9aa746c0d6780adfc33bbad848d01be3497",
+      "current_sha256": "08d674858363368531f4168b1fd6e9aa746c0d6780adfc33bbad848d01be3497",
+      "prior_bytes": 12782,
+      "current_bytes": 12782,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/scripts/find_resources.py",
+      "prior_sha256": "058882c6ab2c9a4ed45dbe47bd24362bb8fd5644bcb21e8cc492360582a543ae",
+      "current_sha256": "058882c6ab2c9a4ed45dbe47bd24362bb8fd5644bcb21e8cc492360582a543ae",
+      "prior_bytes": 10806,
+      "current_bytes": 10806,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/scripts/prepare.py",
+      "prior_sha256": "35db530142cc044a697596075c8cd365761f4000d26cb48837dd0800840a7a85",
+      "current_sha256": "35db530142cc044a697596075c8cd365761f4000d26cb48837dd0800840a7a85",
+      "prior_bytes": 3595,
+      "current_bytes": 3595,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/scripts/structural_records.py",
+      "prior_sha256": "d8a7de77ce352b973c58d0063551a88247eaf9f5932524d80ff6e43feffccf4f",
+      "current_sha256": "d8a7de77ce352b973c58d0063551a88247eaf9f5932524d80ff6e43feffccf4f",
+      "prior_bytes": 11689,
+      "current_bytes": 11689,
+      "disposition": "unchanged",
+      "reason": "Preserve published professional guidance; integrate formal increment scope at its responsible source. See semantic-review.md for changed meanings.",
+      "inverse_edits": []
+    }
+  ],
+  "historical_evidence_unchanged": [
+    {
+      "path": "docs/evidence/v1.10.0/application-review.json",
+      "sha256": "366c909f959e525b870b814234640cf8b4395bd99370bbc1af0eab2b2fbd8b9a"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-after-desktop.png",
+      "sha256": "7398775372044184c2df22c5901a33551afed8de0df3f316a948e32ea5ac04c9"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-after-mobile.png",
+      "sha256": "ffedf3fd0c80e4ef7cd0bb0d9ea3a2bd8cb3dd4625b64297b42c18514b602f6f"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-before-mobile.png",
+      "sha256": "f64fc1986ea179f2d22aeb945879540fe136860eef61d3703b7fd3b5133e9ede"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-landscape-after.png",
+      "sha256": "a65a50b842bb4dab38ed36865a93242e6e44b203cd4f3f157e9b536f920d5165"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/question-landscape-before.png",
+      "sha256": "0041d10a15d2ebd83f73625fbc6b37101b76bc3de422aa24dfb12b8f7ce1878d"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-after-desktop.png",
+      "sha256": "c34b14626303dfd50c30a0ce01ffe949aee8e06b936762c3a744133cefbf19e1"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-after-mobile.png",
+      "sha256": "ce61d04da250c956f83427dc2a16c1a8b2eb37ef491c841d1dd44000b5ce342b"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-before-mobile.png",
+      "sha256": "27112034c025a8e202f09b7df2643e2afb67447ef7dea7c7d7f30e76d403e478"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-brand-size-specimen.png",
+      "sha256": "7a7836ddc80f97ce49faf833c6105670dceff7d42865dbfda1b5afdf01dd688d"
+    },
+    {
+      "path": "docs/evidence/v1.10.0/reading-type-trial.png",
+      "sha256": "34e6a18dc37891e07e0f642d66ba85b58c7e1f2d30f5fa975bde987387ffbf71"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/application-review.json",
+      "sha256": "2c9da4edc602ccfb93742f917d547c3c3e4d0f96fdfcc43f6f63eb48751273bf"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-handoff-checks.json",
+      "sha256": "11035915cb8387c0f07b72ff7128bf3810d2b627ef9e3f29456a4c2aef5f4da0"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-identities-and-fidelity.json",
+      "sha256": "0edc4027e51d138f5da639c77f2a784ee152ea5850ae5292f02a0cc444e9bf56"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-independent-review.json",
+      "sha256": "9f277896741be97ab28252335152609c9649885b2654cf244fbe9888fae27395"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-initial-review.json",
+      "sha256": "b23c510a9da4e920e348ebb45b0b3a3e84311701a6d842ea6eb0183515f12226"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-poster.png",
+      "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-runtime-checks.json",
+      "sha256": "de5ade32b936a7b21a8617df576e5e0393af64276a762f219ed7386fba152465"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-source-render.png",
+      "sha256": "63fa3c8a1b2424ee9e31596ade29a616ef170e67c29cc7c8505591e322cd5110"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-storyboard.png",
+      "sha256": "26d153b2f29f95b5a6971b8dacfba5b1125783c1a51f32fab2e01919ec623356"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-transfer-after.png",
+      "sha256": "4b9275b3db7949a564b81bc8b694d8c51662fdfa482af6f47d1d55602b3cacb3"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/film-transfer-before.png",
+      "sha256": "7f4fb6a57af1d1808a9180341a0c318c58127660fe3d6c061208406a34456752"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/frozen-skill-identity.json",
+      "sha256": "69b58b442201d988e7e4553c455f21fceb57c6ca0628cf3a97d57254c464812a"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/method-source-audit.json",
+      "sha256": "49b6e69bddffdd39f029af99a49d48aac92aa9b7a36bf4bdd1b019dc3b003cc4"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/readme-art-direction-en.png",
+      "sha256": "eb97f5928c975f124665adc519a9d175b759d51745df0529dcde67881a2ba764"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/readme-art-direction-zh.png",
+      "sha256": "d67abe20fc1bf2b045f50878ff2d5d39363786cbfe60315822735963828a1f3a"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/readme-local-review.json",
+      "sha256": "ebeb9911164680591b95228e7bd674394868e8f0e27151dd9128d08901c62e57"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/release-evidence-audit.json",
+      "sha256": "1babdd8d3a56d703185afff38078f2a3fd3ce4c5fc275ac4da5362c3c545aca0"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/studio-film.mp4",
+      "sha256": "079e9f7c087bac85489c604de31ce533c2eda53ab229565bf2325cef2a72def9"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-collection.png",
+      "sha256": "af2d3b481513f7fb2f225fce1fe9a5077f82ec0bc03e71bb31ff1e8729d7395a"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-independent-review.json",
+      "sha256": "e80feb8ee53fe00140d70a555ec6e7979ea5977fc5bae5eb1d1c7e548fcc50e7"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-recovered-draft.png",
+      "sha256": "2e58d04190ad01415c6e3977ac6c1e61750e75bc9282612139d147246cf9905f"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-research-dark.png",
+      "sha256": "88f419eafbd0e1625d6d22c60c7bfacd5f3745d3d5b204a3accc67ba90fa35a4"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-research-narrow.png",
+      "sha256": "5de68254a1eb2feda78569dbbe845153d703f97a43e9d812ae0e72499196fd8e"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-research-wide.png",
+      "sha256": "b268b4c11a4b8bcddc8d25614dbc18eb796f431976305b9a281c54e65f088fbc"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-runtime-checks.json",
+      "sha256": "9c0752e427d6a2cfd560003201a2f0b332ea47eece6ac6eb662f4cba3f76f28e"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-source-identity.json",
+      "sha256": "7ca0c0dd3a7a3255ff72a3ecb97ed18395466e8ad0fdf7cca688c35fcef65707"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-storage-after.png",
+      "sha256": "ce9d634a3b85b80a26b10fded676525539572167d41dba0f82895f4d7d48038b"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-storage-before.png",
+      "sha256": "6c99f2f8872a8fb2ad11b953f288bb4541150b708ebebaa8a0a249f41a95146a"
+    },
+    {
+      "path": "docs/evidence/v1.11.0/workspace-viewed-images.json",
+      "sha256": "d07870eed3975fbfc47bae6db15b9e5f98e8b1202d0166c693be04c217bde7bd"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/ci-dependency-recovery.json",
+      "sha256": "aae3745352461fcb2c0bb3d129f5dd7fc646fb35049d6e6a8536f01296e9b22a"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/ci-mirror-review.json",
+      "sha256": "0f7d94b6347c68c4bf0730e5872c6aed007925d480301000c6e3339206fc81ae"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application-review.json",
+      "sha256": "988b25faa77fbf22c713866ad00346e1a11386515b336e3ed0e575729cbffbce"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application/README.md",
+      "sha256": "2bab89f7311ca700afff6ea642289ae5df216993120256b1dc9e94dfd1f75d67"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application/app.js",
+      "sha256": "5f4affc74156492c058387dea004c9e1459bb45fd911612108c8a9152256b9c3"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application/index.html",
+      "sha256": "e9822969c216e2d722a0c8c134eec2930468671e622471d00e6a37183a82b93b"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-application/styles.css",
+      "sha256": "92058281491237f5da41ee6bfd306f6b8f389fded4f966d34d9997e6c0d13400"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-author-visual-review.json",
+      "sha256": "43c39f09d7dbdb9667c58e456303faaef14efc83aaabe9afadfefebcab82a59c"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-excluded-zoom-probe.json",
+      "sha256": "a0fb4e79a484984854c7ff12a46578a412ac0bb56ae2b4882b12730500947c43"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-narrow-recovery.png",
+      "sha256": "343e679ade2625cb8570d0061a4517707e9da118b090ce24e2d6ce0f14d36d16"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-runtime-checks.json",
+      "sha256": "c21d5e5e02716b1885e650a573b124da00d5859c640b86f3570cdb2d9a30e0eb"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-saved-snapshot.png",
+      "sha256": "0eccd5a2e1867027392323110099b2952c5915d2877da1d58978dbbf783b26d1"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-source-changes.txt",
+      "sha256": "e168167fd7159035c810f9bc88918614c558d5363c57484997e8d807e88dc6c5"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/content-wide.png",
+      "sha256": "5478e52851270fe14c65deabccd1d078ce8a4a43ecf833937e702b7e1f3061fc"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/engineering-checks.json",
+      "sha256": "017977c2d1232c4f9502e06d7d3fee796df905d301cab397b34bececa010c30b"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-application-review.json",
+      "sha256": "a7388e2d9fd1200451db0c34a79b2c958a00fa3d79b53efa051f07cb6cbd4d2d"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-before-repair-captures.json",
+      "sha256": "2563425fbec62c38ba1023a4fe3516fd5746a25a176a267664d5ad094db5e1cd"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-before-repair-checks.json",
+      "sha256": "3b60f88e0c51bfa51843cf67b286518bc8ae86c2ac45ce9013b9139cb3750f53"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-capture-record.json",
+      "sha256": "9a45d833ff3f07a2861c6da67dbb7b81da6411221f210831fe3ebb66fc5ce82e"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-conversation.png",
+      "sha256": "7b5b74ed0136ca9549ae7609676430d1bcf47c8ec1bd709e4aff8111f5d7806a"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-document-first.png",
+      "sha256": "0ae6b4466cf75e390681e377090f1fb22936cf9de8635c67194f217d65628118"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-independent-review.json",
+      "sha256": "e2b2de36b839e5d2728fd6fd665b08f55271227bc09f5ef45a9861b8e4c440be"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-index-direction.png",
+      "sha256": "b8e8682cd9404bd171e6e08a834b8aa9f5cb340707c1cb2fcddefd5a99df6f0d"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-narrow-before.png",
+      "sha256": "7ca2efd7ac3c5d1d25c61cf8db1a1a5e73b01b129be2f2d307aa309dfa4d55d8"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-narrow-citation.png",
+      "sha256": "4b43e655b472b2df3cac307c28cd8aa9263ddfb7a368cab27be6eecd13e8bf3d"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-narrow.png",
+      "sha256": "d8174cce7096d2db428ff598524e0be9725ee78f6005c1f2014e1e02ba177595"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-research-provenance.json",
+      "sha256": "50dd448395c9681b5965eccef8a13722dfa953c5de79c57b9cce303c15b815b9"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-runtime-checks.json",
+      "sha256": "d8e936845151242b5379d3f68de091f6ccc7ac2afe6a0ffd29847720a16b200f"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/experience-three-columns.png",
+      "sha256": "b9e79c489528ec00be0a0062b8f0384b561865ac33a1091c43f41dfa9e801bbc"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/frozen-skill-identity.json",
+      "sha256": "26ab3bd6e37545032efc4244536db93c478ce15d2130adf88e38159e6ac8c546"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/method-source-audit.json",
+      "sha256": "787585006451f0201169f579e8d2db3f65b90c2f684278a61e406f9ee29ff149"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/readme-exploration-zh.png",
+      "sha256": "3b3ef4340620aaef8a94e2dcf3444b6e4c03c35ffc6a420f3592bc1b8d940e63"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/readme-intent-en.png",
+      "sha256": "61aef25c689ea491a81cd0772f3a2be37aca627be5d92eaa2b8d0e8fd9623b05"
+    },
+    {
+      "path": "docs/evidence/v1.12.0/readme-local-review.json",
+      "sha256": "50fac573b556d4a165b753b4b8df92bf7f207234d789579decb9552a0d7d652f"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/ci-dependency-recovery.json",
+      "sha256": "72abe5828fbbda4da47c7b3fa6f41a5541ed921ea7a1584c9b5719d87f87b585"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/ci-mirror-review.json",
+      "sha256": "543429a2cd26494514327d63757e74c0746a509a0145dff537d67623600034b8"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/engineering-checks.json",
+      "sha256": "459a745f1557a4cbfd3809d99ff98f72caaaa689b67d002b37006c45d9a221b3"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/patch-source-identity.json",
+      "sha256": "03870fdf910e1fa1197c86ac0628fe479bcd4895a27a837712be72dcc85cf306"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/patch-source-review.json",
+      "sha256": "0a30d3cc3add4de71ea0abf72aee347eee1bbb43d00f17a5dc2d1c401282a174"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/prior-release-observation.json",
+      "sha256": "81186ae3825efccfb927776cca33fd5aa2cc34553a3063fddd9228a9fc93ae0e"
+    },
+    {
+      "path": "docs/evidence/v1.12.1/readme-local-review.json",
+      "sha256": "0377120150c2f7b0d7f2b60f02238e8b5baa492603617ba7ce6477461e6308a9"
+    },
+    {
+      "path": "docs/evidence/v1.13.0/lineage.json",
+      "sha256": "3035a6cd459ce87beaedd4249258e3ff9046b3ee2493a64a2d3e554b28db2ae6"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/empirical-findings.json",
+      "sha256": "037dbd335154375f14d3287f9efe3c68ccbb3744fb31242b021f90560b634fb3"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/engineering-checks.json",
+      "sha256": "a858b8441813ef8983a88780adddd500dbd149f3f22d2953bc1f8a63f9b9b0f4"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/readme-decision.md",
+      "sha256": "1b0644070552a8979950f0ec409652622f7c87230b44464877f36fb7260b8c75"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/readme-local-review.json",
+      "sha256": "a69ea89f5b52b33f4216b1783d15019dfd077ed14cca4ab7c7d06620488973ad"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/source-preservation.json",
+      "sha256": "9d957d6161e285dc18db5cd1a06946d239ee6f7ec7bc68b3f4c7be090d0a10f7"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/baseline-runtime.json",
+      "sha256": "1df417f0d0892e1a1693302d7d1c47f479e1fadf93757bfffd8c21b45266b210"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/continuity.json",
+      "sha256": "027534488744cb8b8c69e424e6fb7ece9936989e2470a60e842a851de5cf2dc8"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/engineering-checks.json",
+      "sha256": "b1b631d6beb3a502393be72bc87253d07105e45577d9593f382f85cfa537f772"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/readme-decision.md",
+      "sha256": "e2ed173b52d4acc8531763a0aaa91b523fadea605d13bc65c936a10e420737be"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/readme-local-review.json",
+      "sha256": "ce66571436bf12c19add8a900ab0e110eed7ec444b86f01b896a246b69152c65"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/windows-source-read-fix.json",
+      "sha256": "5db7ec24875b48583a76dd0fc248e5d752b9d86548f8cb274ad52d8474af8b4c"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/application-capture-driver.txt",
+      "sha256": "a965655abf2025fce89e1f9a5b34b6117848cfc52b1d23c5d9680af210dba4b5"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/application-comparison-preview.png",
+      "sha256": "7bbb99ff4a724b9416fd793f7ca6bc4a602b920ab839880c292d97741c2eeae9"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/application-execution.json",
+      "sha256": "d68ee942e85836a5aedbcb2025e82d67ee7527a6b5171bd3226d2b60b6100de8"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/application-host.css",
+      "sha256": "3cc8ce8a20e0ea9c9b17b3622c5f0e674011143f2a68f1754fa0825270b2cb37"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/application-replay.md",
+      "sha256": "40f005373019eee1ed19522e1207db477eb1978720e722b3b102dc00ff85c0be"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/application-review.json",
+      "sha256": "588d59c7b148a95763fa73c844c84996a0e9a6af0626d01fc9fa9b9e9d77db99"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/application-source-identity.json",
+      "sha256": "e9d9c504f8f0d38b14356e6704f99782793f9bc0ddac6df50fded8b838934c83"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/continuity.json",
+      "sha256": "06dc1de98c6f036c74f3b6cdaf9817b6b68cade14eed9558a22044de49d6d033"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/PAIRED-RATINGS.csv",
+      "sha256": "08a63b30e88bc6f56a074ab5d66900d10415a9e4c9c4fa8562e1410b6ae8c679"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/PROCESS-AUDIT-PRESENTATION.json",
+      "sha256": "c45d88609a566f7e7f01615ba2c004dcb74d363e467964c03086d4c369a53cd5"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/PROCESS-AUDIT.md",
+      "sha256": "d547aeab6062236bbf5111d411f69096bc320bd1a4a9f70af1218958a3c9032b"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/PROCESS-AUDIT.original.txt",
+      "sha256": "7feda9e08550f46a3e486478bba2736af94722ff3bd29112ffd1b83593a78f81"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/PROCESS-COUNTS.json",
+      "sha256": "d18d81d266b094c58e1756a30b2a971abb0f012d77eb7e42b109e75f5750c74b"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/PROTOCOL.md",
+      "sha256": "d9b4019ef28276248525194f39df7c4e3abce394e6e1ceed4735c9cce96c827a"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/RUNS.csv",
+      "sha256": "1dd03f07a588150525d5c543ce6459d1be3bdcabbea50a82d8bb63d190bfa14d"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/TABLES.zh-CN.md",
+      "sha256": "bdc25df6766ceba13d25b5663a07a6c2b7edea09b4ca52ec3b63bda3eafe77bb"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/anonymous-map.json",
+      "sha256": "bdf4c20411e2f423e7bdc99580e065a51fcb8e53a7dd81ff65503f831882beb4"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/assignment.json",
+      "sha256": "dfba3d8af4b2511414d65757ef86bda9b8f04e57224f25872a822f6b3952f049"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/historical-missing-run-search.json",
+      "sha256": "8e1e2692ef039b72023d1f9b3f514c3ebad2389123bd2ae0f85d1d399f6c7d97"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/infrastructure-events.jsonl",
+      "sha256": "775989429d96a6fb272e330558ce6881300c65d29f2a09c264f3e1eed239e110"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/instrument-notes.md",
+      "sha256": "3681d961501aee7bac68ae725cac5d7b12a33c033710fe802c619aa41746a590"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/original-release-assets-verified.json",
+      "sha256": "180472b6413877e71c8d0f3cbf5cf890162781b2f63afd295563f10d4034bece"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/packet-lock.json",
+      "sha256": "9ef64cf2528bf531bcbcc1dbd5bbe1cf22ff855cbb5c2b45ca2a4e19578b34a9"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/process-audit.json",
+      "sha256": "18eb7c6f9faa2c2730c9bae5a4ba2ae8e1b46cbea157f2a9c53f1cd6581c0267"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/registration.json",
+      "sha256": "4c8c4349fa3561ed7ca49001b14456ff3ffade044465a27ab6cb69759b4ead40"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviewer-1/HANDOVER.json",
+      "sha256": "609e93a9475ed4843605f5104ac7e12f73b15cf346fe8d742d18771a608abeec"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviewer-1/REVIEW-ORDER.json",
+      "sha256": "2ff6056cbcb9c960a8827318b179866094dc64115479380c959e4dd45c82bb83"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviewer-2/HANDOVER.json",
+      "sha256": "06afefd48403d79c05e971fee9eb919043013d709283df73152be20ea59ed8e8"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviewer-2/REVIEW-ORDER.json",
+      "sha256": "6332c17895733d9cf51b13671a665edcd6afd8e78e6489c1be09153349958354"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviewer-3/HANDOVER.json",
+      "sha256": "519fef886ccf75846a9c4001f0dd8102bba67d9eff0571dba0cdae6ab5af76b3"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviewer-3/REVIEW-ORDER.json",
+      "sha256": "54ddce5b094a3a7bcf3033c219b20048a7a2dbc847a36b823a70464b73118880"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviews/R1.json",
+      "sha256": "263e1e92920f66c5416450d28be99483b7062fef4e7878425323da90dc4c90e2"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviews/R1.lock.json",
+      "sha256": "c39892b6da51650c1e3cf077a2213bbd9d2b0aa73c340a8acd543d44fbd09f70"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviews/R2.json",
+      "sha256": "4c4e1c227b67f47dbf7fd718a1130268efc40fff608227f76254148a6df29877"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviews/R2.lock.json",
+      "sha256": "d80e11b4ae5d8481e191e5cc5d58628f4adb521793f18cb6f34e14857b1aa561"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviews/R3.json",
+      "sha256": "5bebbb5907416acd21e711eda6debe4e08de24603564192a8a5ffa92f4a77e1b"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/reviews/R3.lock.json",
+      "sha256": "c84743628189b8d53523cabf095c2236ee293cf9284221b9543cf4fcf7dde713"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/routing-adaptation/COMPLETED.json",
+      "sha256": "8d3339eed58946cba4d629da0b65a7a3d4c6cf3673469d66c89a64c535a5a929"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/routing-adaptation/METHOD-REVIEW.md",
+      "sha256": "767489da50d532bd44d8d5fbef8c4a357393a38fd886c62448dbe802e2d5321f"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/routing-adaptation/PLAN.json",
+      "sha256": "43277403cdfb1c9de94b74d11fac3640510e22246b6b5f175c911633c7a234db"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/routing-adaptation/contract-supplement.mjs",
+      "sha256": "226dda8afd916ce00bbfa5561762abe25362c660bf027408c996e43cb2b980c3"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/routing-adaptation/evaluate.mjs",
+      "sha256": "afb6a217b51996a1e123ca154362ce39365eda77f8940758b2575aad0963d66a"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/routing-adaptation/settled.mjs",
+      "sha256": "4f32f3543ba195edd50e2457040a19cfba89a5713f16d1147eed11f6c897f419"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-20261028/run-events.jsonl",
+      "sha256": "5f95107fe464227e32f712ccffb85b8b97574fa62617a0b16117f6a1c45c98b1"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/empirical-findings.json",
+      "sha256": "3945ecd82ef43eda875b5100bc693de826b78a242600b524775cbdd533d686f7"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/engineering-checks.json",
+      "sha256": "9feed4ed6c886319389dd84acef686f148e7d9e272522e9bbac5ce6c77f825ad"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/experiment-status.json",
+      "sha256": "3263881f656bd678d395f7735e8bab0488cc7587c7db61c0eed8fb159dadb214"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/installation.json",
+      "sha256": "44ca0749522a0906683d2cabd212f802928adcac5600f6b52bade526936aa4c1"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/logs/artwork.txt",
+      "sha256": "c86d4cbd2e5fef6c2986796a3a0976b5bc2061e04ee6fbe4b841c210a866c75a"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/logs/catalog.txt",
+      "sha256": "93666823b91742105db4cd8ff13bc001439faa964a575bd65bec9817ed282306"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/logs/diff-whitespace.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/logs/final-unit-tests.txt",
+      "sha256": "08f39ef60f8edb71af1229bd35a97886a17a0617bce59e427a90eab40e8c0d65"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/logs/first-unit-attempt.txt",
+      "sha256": "c37e114851602e449274cea33cc38036083e1475fff97bdd28d78006e938339a"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/logs/package-structure.txt",
+      "sha256": "968923d425a965eb1a752fd07b70449ddd1165ddea2f7b22faa1af0715bddff4"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/logs/unit-tests.txt",
+      "sha256": "8c5b6fb2d6bd2c3e572bc2f4bd8bd9eca86781cc1a26187ab217f571187db9ce"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/public-capture-record.json",
+      "sha256": "519703bb9248a2fd4ee278d140e967613d4662b5cbd729ffbc7fab6ea3767cf9"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/readme-review.json",
+      "sha256": "f013abd07ea90fb935ea252f9d29783d5c2470f2c9f2401668e77693d2a69a7c"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/application-cards-raw.json",
+      "sha256": "610149d0527a4a5a1ac430a93959e8f53bd6283572951f1c0b8cdb55598e145e"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/application-initial-raw.json",
+      "sha256": "e523ed7f6cd8cbdcd86efa1a298c068748c48144349ef2b6fb88751ab856bef5"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/application-initial-sources.json",
+      "sha256": "93df153faee049675d9bffc873e00e128d2029241160fbda35d0593b1e4697a3"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/application-refined-raw.json",
+      "sha256": "b2ca84ca73b6a893e52a2fed8e104fdf006da08bc6e5c7a61320f067a24eeedf"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/application-refined-sources.json",
+      "sha256": "93df153faee049675d9bffc873e00e128d2029241160fbda35d0593b1e4697a3"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/application-study.json",
+      "sha256": "a662e78eb250d5e2c767b15b63b0bd99c3f46fe7658c2f2116a894b54b3d84fe"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/application-visual-review.json",
+      "sha256": "1986d261f0cdb49400689f2bc7a39e8941a8c23d4abcf347cbd89c41686f8b99"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/continuity.json",
+      "sha256": "ce9e516fc533170b7ca7fa886ddad31182a5cc5788891205cd764377c03f41f4"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/engineering-checks.json",
+      "sha256": "4e5798e4e034d5ea1ad303d2c512d48a8e1d7140c381abeda8d0d0c78006b367"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/readme-local-review.json",
+      "sha256": "e380cc809137e70815cc319133f7431bbfca5ea69be23559fdf849b425b31085"
+    },
+    {
+      "path": "docs/evidence/v1.8.0/application-review.json",
+      "sha256": "684c9f7f77b683ba6f9d968522ec24934a7ce8a71288815c9e95048a7495fe7d"
+    },
+    {
+      "path": "docs/evidence/v1.8.0/named-reference-desktop.png",
+      "sha256": "d4cbdbdb234468a55ff75224d9bbf2221f66b4e44ab2853969fc3ee37d101d5e"
+    },
+    {
+      "path": "docs/evidence/v1.8.0/named-reference-mobile.png",
+      "sha256": "f4a57b02644d450532682a8de730cbca8c8c6f6f2d59b5c8f1a5be17408c991d"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/application-review.json",
+      "sha256": "22ee4525a24a2954ea7817390e097650149c3e5d40388b23c416e4e247b1722b"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/notes-reading-desktop.png",
+      "sha256": "78c973a53a8f2b98ce851da7557e76e888ea44ad05ddb708a5d4cd88d0f6685f"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/notes-reading-mobile.png",
+      "sha256": "8c25ba63f356d5c5decb9fd89063acd6c500538fe63be214ec970e2267c73e53"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/question-answer-desktop.png",
+      "sha256": "cecafa33787ab5adc83c399a0ce933350b8830fab613e1026512b784a36d4c32"
+    },
+    {
+      "path": "docs/evidence/v1.9.0/question-answer-mobile.png",
+      "sha256": "45368b3a861c98b53b73e9ab0474d3c64005e4a51ce0ee2f5138e6d31b1f480c"
+    },
+    {
+      "path": "docs/experiments/design-evidence/PROTOCOL.md",
+      "sha256": "d2d66da22c30cb94ca8d6834c63e8ec69a24a6e3bf698a8b0b2f90f0d64e6032"
+    },
+    {
+      "path": "docs/experiments/design-evidence/RESULTS-v1.14.0.md",
+      "sha256": "0ac1ca22a62168002bc58b0b5220365f47366fb351c2f3c01df99da75f8bd62e"
+    },
+    {
+      "path": "docs/experiments/design-evidence/T01.md",
+      "sha256": "fad9ffc3208aefedaf2a34f13f898f7e28e92a480e0feb5f41203ccee839d0fd"
+    },
+    {
+      "path": "docs/experiments/design-evidence/T02.md",
+      "sha256": "434849756b80f4ee674ea3b851fb9e20ff2e19a176fa756a30078e8368197f81"
+    },
+    {
+      "path": "docs/experiments/design-evidence/T03.md",
+      "sha256": "a2645707f28ed2e1f84bd0aa1a2a8b5a28a5b2cbebfa97b2a0818b3bee1195ba"
+    },
+    {
+      "path": "docs/experiments/design-evidence/T04.md",
+      "sha256": "516bd5eec1788ee3a043f38c559acab6132f01a46fe9f830afa9d6ce940606b0"
+    },
+    {
+      "path": "docs/experiments/design-evidence/T05.md",
+      "sha256": "192e78f03c8feb8722750d52c98ba5a270fcadf1dd652ba21f9f41078ebb9f76"
+    },
+    {
+      "path": "docs/experiments/design-evidence/T06.md",
+      "sha256": "14244c6059264f3969ce424c660509019167ac8a30659a9f9c33199b99da388e"
+    },
+    {
+      "path": "docs/experiments/design-evidence/baseline-identity.json",
+      "sha256": "a583815e328991ddd6ddc8f2b07bf8d61011802fad75b95fc7e46eb0756ec9a0"
+    },
+    {
+      "path": "docs/experiments/design-evidence/tasks.json",
+      "sha256": "770c2db5d8ef1bc32c727d3cd1117b16d18570c65ea109d0abbc9bcc42e1a4d2"
+    },
+    {
+      "path": "docs/experiments/visual-craft/PROTOCOL.md",
+      "sha256": "4d3d748a2fdeac3859bc0e3f6d0a9031de061c9db957dad1b64b81cb1cd9c302"
+    },
+    {
+      "path": "docs/experiments/visual-craft/RESULTS-v1.16.0.md",
+      "sha256": "e1e3d989b3e9473730320a900166a71787a812ec5353bf6c036c14e2ce3221d8"
+    },
+    {
+      "path": "docs/releases/v1.1.0.md",
+      "sha256": "59c55f7f7c25a0f69f0b8d70e457180919bf5af542dfaed9d79c2e6a191450a0"
+    },
+    {
+      "path": "docs/releases/v1.10.0.md",
+      "sha256": "8270b213500d994ef4dea937161f088bcc10d22281694245ad6fcc6830231d1e"
+    },
+    {
+      "path": "docs/releases/v1.11.0.md",
+      "sha256": "8f44008ff39cba826293c3e5622ff17708056218ca23e988bab17c32d8e31c93"
+    },
+    {
+      "path": "docs/releases/v1.12.0.md",
+      "sha256": "4b6c310fb5640f6aca79290e37d11875c764eab6d595e62f75de6197ce5e0a89"
+    },
+    {
+      "path": "docs/releases/v1.12.1.md",
+      "sha256": "7193bbf26a31a36ada23bf2cc6a06633f10f66709cf69759ce78bbf874e5a1f0"
+    },
+    {
+      "path": "docs/releases/v1.13.0.md",
+      "sha256": "d5fe27fcadf30c01921253d8ba86ac2ffcee829a1eadbfafb8a95b30d9f936cb"
+    },
+    {
+      "path": "docs/releases/v1.14.0.md",
+      "sha256": "5e25b91816e08717365b342b65020e929cb3616a37482ee63ed9057b351230b6"
+    },
+    {
+      "path": "docs/releases/v1.15.0.md",
+      "sha256": "f60de3423078213cb2f9913729c86208d2f0abb70c62c13e415fea587b00a969"
+    },
+    {
+      "path": "docs/releases/v1.16.0.md",
+      "sha256": "d87f1a5e024532d3decc9b65e59ea3748c8c2cfb3891f04192d7af8a33782ad9"
+    },
+    {
+      "path": "docs/releases/v1.16.1.md",
+      "sha256": "871035b8fbcdf6dc05192d27327be3ff263484ac0e851e942ebf21c0611a96b9"
+    },
+    {
+      "path": "docs/releases/v1.2.0.md",
+      "sha256": "70ac6c693a2887399283c5af6bb784ec07acdc3b87c71092f3353c6706d7d8f6"
+    },
+    {
+      "path": "docs/releases/v1.3.0.md",
+      "sha256": "039584fa09b7e1a6160162f7a22880371e669c367af8818aa5e267c8a6d6bf16"
+    },
+    {
+      "path": "docs/releases/v1.4.0.md",
+      "sha256": "baded30580f3a9cefd0889a991b71f2cb79b0ba377ae9c84268539038634b42c"
+    },
+    {
+      "path": "docs/releases/v1.5.0.md",
+      "sha256": "92565d27cdaa76bb9b50bd0bb2c6934731c27881d180c7a78c2a81444c2b369a"
+    },
+    {
+      "path": "docs/releases/v1.6.0.md",
+      "sha256": "ecb5286a126ad357c30d129b6558260ea172393e1d6b80d9e227849a3775e60c"
+    },
+    {
+      "path": "docs/releases/v1.7.0.md",
+      "sha256": "768a5ade1ad70d96c3eb129de7a693e7048468d516b7c439da083a03891452cf"
+    },
+    {
+      "path": "docs/releases/v1.8.0.md",
+      "sha256": "53588be44ca8796b9453df9543d96ea0165afbb7bc2a76086548001d652021c1"
+    },
+    {
+      "path": "docs/releases/v1.9.0.md",
+      "sha256": "c65b8c17505c0250bebb4f1f1107f7725afb4e5dd5aaa13e02547547adf09c2b"
+    }
+  ],
+  "limits": "Byte restoration verifies source identity, not semantic equivalence, Agent behavior or visual quality."
+}

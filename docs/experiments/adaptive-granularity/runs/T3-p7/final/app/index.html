@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fieldnote · A place for an idea</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<a class="skip" href="#note-text" data-i18n="skip">Skip to note</a>
+<header class="site-header"><a href="#main" class="brand" aria-label="Fieldnote"><span class="mark" aria-hidden="true">f.</span>fieldnote</a><div class="utilities"><button id="saved-link" class="text-button" data-i18n="savedNotes">Saved note</button><button id="locale-toggle" class="utility" aria-label="中文 · 切换中文">中文</button><button id="theme-toggle" class="utility" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span></button></div></header>
+<main id="main" class="page-shell">
+ <section id="collection" aria-labelledby="collection-title"><div class="collection-heading"><div><p class="tiny-label" data-i18n="collectionEyebrow">YOUR FIELDNOTES</p><h1 id="collection-title" tabindex="-1" data-i18n="collectionTitle">Room for another idea.</h1><p class="collection-description" data-i18n="collectionDescription">A collection of things worth coming back to.</p></div><button id="new-note" class="primary" data-i18n="newNote">New note +</button></div><div id="collection-empty" class="collection-empty"><span class="empty-mark" aria-hidden="true">＋</span><h2 data-i18n="emptyTitle">Your first note starts here.</h2><p data-i18n="emptyDescription">Nothing saved yet. Make a little room for an idea.</p><button id="first-note" class="secondary" data-i18n="firstNote">Write your first note ↗</button></div><div id="note-grid" class="note-grid"></div><div class="collection-feedback"><p id="collection-status" role="status" aria-live="polite"></p><button id="collection-retry" class="retry" hidden></button></div></section><div id="detail-topline" class="section-line" hidden><button id="back-collection" class="text-button" data-i18n="backCollection">← All notes</button><span data-i18n="eyebrow">A SMALL SPACE FOR BIG QUESTIONS</span><span id="detail-index" class="index">NOTE / 001</span></div>
+ <div id="detail" class="workspace" hidden>
+  <section class="intro" aria-labelledby="page-title"><p class="topic" data-i18n="subject">Energy & cities</p><h1 id="page-title" data-i18n="pageTitle">Keep an idea<br>in view.</h1><p class="intro-copy" data-i18n="intro">A thought worth keeping. A question worth coming back to.</p><div class="research-question"><span class="tiny-label" data-i18n="questionLabel">YOUR QUESTION</span><h2 data-i18n="question">How can cities reduce peak heating demand?</h2></div><p class="local-label"><span aria-hidden="true">◌</span><span data-i18n="localOnly">Stored only in this browser</span></p></section>
+  <section class="note-workspace" aria-label="Research note">
+   <div class="card-topline"><span id="face-label" data-i18n="draft">YOUR DRAFT</span><span class="folio">001 — ENERGY / CITIES</span></div>
+   <div id="card-space" class="card-space">
+    <article id="note-card" data-face="front" data-record-id="heating-study">
+     <section id="card-front" class="card-face card-front" aria-label="Edit your note">
+      <div class="face-heading"><label for="note-text" data-i18n="noteLabel">An idea in progress</label><span class="corner-mark" aria-hidden="true">↗</span></div>
+      <p id="note-hint" class="hint" data-i18n="noteHint">Keep evidence and open questions together.</p>
+      <textarea id="note-text" rows="6" aria-describedby="note-hint note-limit" spellcheck="true"></textarea>
+      <div class="editor-meta"><span id="draft-state" data-i18n="unsaved">Not saved yet</span><span id="note-limit"></span></div>
+      <div class="card-bottom"><span class="signature" aria-hidden="true">fieldnote / 01</span><button id="save" class="primary" data-i18n="save">Save note <span aria-hidden="true">↗</span></button></div>
+     </section>
+     <section id="card-back" class="card-face card-back" inert aria-hidden="true" aria-label="Saved note">
+      <div class="face-heading"><h2 id="saved-title" tabindex="-1" data-i18n="savedTitle">An idea, kept.</h2><span class="saved-seal" aria-hidden="true">✓</span></div>
+      <p class="hint" id="saved-kicker" data-i18n="savedKicker">Saved in this browser</p>
+      <div id="saved-text" tabindex="0" class="saved-text"></div>
+      <div class="card-bottom"><span class="signature" aria-hidden="true">fieldnote / 01</span><button id="return" class="secondary" data-i18n="edit">Edit note ↶</button></div>
+     </section>
+    </article>
+   </div>
+   <div class="card-navigation"><span class="face-dots" aria-hidden="true"><i class="active"></i><i></i></span><button id="flip" class="text-button" aria-controls="note-card" aria-pressed="false" data-i18n="viewSaved">View saved note ↗</button></div>
+   <div id="status-area" class="status-area"><p id="status" role="status" aria-live="polite" aria-atomic="true"></p><button id="retry" class="retry" hidden></button></div>
+  </section>
+ </div>
+</main>
+<footer><span data-i18n="footer">A little room to think.</span><details><summary data-i18n="settings">Local demo</summary><div class="settings-panel"><p data-i18n="disclosure">Notes stay in this browser. Saving includes a short demo delay.</p><button id="clear" class="text-button" data-i18n="clear">Clear saved note and draft</button></div></details></footer>
+<script src="app.js"></script>
+</body></html>

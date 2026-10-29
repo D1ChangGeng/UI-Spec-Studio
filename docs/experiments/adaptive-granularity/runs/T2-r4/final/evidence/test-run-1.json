@@ -1,0 +1,261 @@
+{
+  "viewport_desktop": [
+    1440,
+    900
+  ],
+  "viewport_mobile": [
+    390,
+    844
+  ],
+  "checks": [
+    {
+      "check": "Empty composer disabled until text",
+      "pass": true,
+      "elapsed_s": 0.479
+    },
+    {
+      "check": "Immediate stop action visible",
+      "pass": true,
+      "elapsed_s": 0.576
+    },
+    {
+      "check": "Answer unfolds asynchronously",
+      "pass": true,
+      "elapsed_s": 1.884,
+      "detail": {
+        "visible_characters": 323
+      }
+    },
+    {
+      "check": "First question completes with three source controls",
+      "pass": true,
+      "elapsed_s": 3.945
+    },
+    {
+      "check": "Desktop source is non-modal and composer remains usable",
+      "pass": true,
+      "elapsed_s": 4.237
+    },
+    {
+      "check": "Source returns focus to citation",
+      "pass": true,
+      "elapsed_s": 4.351
+    },
+    {
+      "check": "Source preserves follow-up draft",
+      "pass": true,
+      "elapsed_s": 4.354
+    },
+    {
+      "check": "Streaming preserves earlier reading position",
+      "pass": true,
+      "elapsed_s": 8.114,
+      "detail": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "check": "Latest response affordance appears while reading earlier text",
+      "pass": true,
+      "elapsed_s": 8.115
+    },
+    {
+      "check": "Stop freezes partial answer",
+      "pass": true,
+      "elapsed_s": 8.976
+    },
+    {
+      "check": "Stop retains newly typed draft",
+      "pass": true,
+      "elapsed_s": 8.978
+    },
+    {
+      "check": "Retry replaces stopped answer without duplicate question",
+      "pass": true,
+      "elapsed_s": 12.395
+    },
+    {
+      "check": "Simulated failure recovers without duplicate question",
+      "pass": true,
+      "elapsed_s": 16.68
+    },
+    {
+      "check": "Filename chip displayed",
+      "pass": true,
+      "elapsed_s": 16.958
+    },
+    {
+      "check": "Threads persist over HTTP reload",
+      "pass": true,
+      "elapsed_s": 17.034
+    },
+    {
+      "check": "Multiline draft persists over reload",
+      "pass": true,
+      "elapsed_s": 17.041
+    },
+    {
+      "check": "Filename persists over reload",
+      "pass": true,
+      "elapsed_s": 17.044
+    },
+    {
+      "check": "Desktop has no horizontal page overflow",
+      "pass": true,
+      "elapsed_s": 17.213
+    },
+    {
+      "check": "Mobile has no horizontal page overflow",
+      "pass": true,
+      "elapsed_s": 17.396
+    },
+    {
+      "check": "Mobile history uses native modal",
+      "pass": true,
+      "elapsed_s": 17.536
+    },
+    {
+      "check": "Opening a sample closes navigation",
+      "pass": true,
+      "elapsed_s": 17.613
+    },
+    {
+      "check": "Mobile source uses modal semantics",
+      "pass": true,
+      "elapsed_s": 17.751
+    },
+    {
+      "check": "Escape closes source and restores citation focus",
+      "pass": true,
+      "elapsed_s": 17.771
+    },
+    {
+      "check": "Composer grows and is bounded on mobile",
+      "pass": true,
+      "elapsed_s": 17.797,
+      "detail": {
+        "height": 125
+      }
+    },
+    {
+      "check": "Appearance persists",
+      "pass": true,
+      "elapsed_s": 18.026
+    },
+    {
+      "check": "Keyboard Enter submits on mobile viewport",
+      "pass": true,
+      "elapsed_s": 18.149
+    },
+    {
+      "check": "Reduced motion removes decorative pulse",
+      "pass": true,
+      "elapsed_s": 18.168
+    },
+    {
+      "check": "Shift Enter inserts a newline",
+      "pass": true,
+      "elapsed_s": 18.218
+    },
+    {
+      "check": "No unhandled JavaScript errors",
+      "pass": true,
+      "elapsed_s": 18.218,
+      "detail": []
+    },
+    {
+      "check": "Application makes no external requests",
+      "pass": true,
+      "elapsed_s": 18.218,
+      "detail": []
+    }
+  ],
+  "captures": [
+    {
+      "file": "01-desktop-empty.png",
+      "capture_start_s": 0.39,
+      "capture_end_s": 0.458
+    },
+    {
+      "file": "02-pending.png",
+      "capture_start_s": 0.523,
+      "capture_end_s": 0.573
+    },
+    {
+      "file": "03-streaming.png",
+      "capture_start_s": 1.828,
+      "capture_end_s": 1.878
+    },
+    {
+      "file": "04-desktop-answer-top.png",
+      "capture_start_s": 3.954,
+      "capture_end_s": 4.02
+    },
+    {
+      "file": "05-desktop-source.png",
+      "capture_start_s": 4.245,
+      "capture_end_s": 4.313
+    },
+    {
+      "file": "06-reading-while-streaming.png",
+      "capture_start_s": 8.116,
+      "capture_end_s": 8.173
+    },
+    {
+      "file": "07-stopped.png",
+      "capture_start_s": 8.997,
+      "capture_end_s": 9.052
+    },
+    {
+      "file": "08-failure.png",
+      "capture_start_s": 13.302,
+      "capture_end_s": 13.346
+    },
+    {
+      "file": "09-desktop-dark.png",
+      "capture_start_s": 17.12,
+      "capture_end_s": 17.208
+    },
+    {
+      "file": "10-mobile-empty.png",
+      "capture_start_s": 17.303,
+      "capture_end_s": 17.391
+    },
+    {
+      "file": "11-mobile-navigation.png",
+      "capture_start_s": 17.468,
+      "capture_end_s": 17.505
+    },
+    {
+      "file": "12-mobile-answer.png",
+      "capture_start_s": 17.613,
+      "capture_end_s": 17.651
+    },
+    {
+      "file": "13-mobile-source.png",
+      "capture_start_s": 17.706,
+      "capture_end_s": 17.742
+    },
+    {
+      "file": "14-mobile-multiline.png",
+      "capture_start_s": 17.797,
+      "capture_end_s": 17.827
+    },
+    {
+      "file": "15-mobile-dark.png",
+      "capture_start_s": 17.936,
+      "capture_end_s": 17.992
+    }
+  ],
+  "console_errors": [],
+  "external_requests": [],
+  "browser": "143.0.7499.4",
+  "source_sha256": {
+    "styles.css": "eaf5b274db17b4ebe7b6ef2e305804266404a8099860e0d5dc20b25a3714e3d4",
+    "foundation.css": "8a5d4959519c67e5d70ac5e7867f28487381906dec8c234dbc482532a8ac44c3",
+    "THIRD-PARTY.md": "29e6f18f1291a8992a6f59eab511490d7e20c5339176c7780836bd898d615393",
+    "app.js": "11f30c6cfcc88b18be4efb6386f6634cf6977e7bedbf2c6c1491412f3c4d201d",
+    "index.html": "23a2445e4a0361529049b55c0244c668dea5b4537ab54defde2e571d784136a5"
+  }
+}

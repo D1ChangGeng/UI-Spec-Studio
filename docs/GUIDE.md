@@ -21,6 +21,35 @@ Mature implementations supply general UI by default, at the highest appropriate 
 
 Existing instructions, design documents and tests remain useful. The optional templates are a starting point when equivalent records are absent.
 
+### Keep the complete goal while choosing the first increment
+
+The agent distinguishes four working objects:
+
+| Object | What it contributes |
+|---|---|
+| **Overall Product Goal** | The complete experience, functions, quality and artistic commitments you want to reach |
+| **Current Product UI** | The actual accumulated interface, shared systems, assets and behavior that further work changes |
+| **Formal UI SPEC** | One coherent design objective with an implemented or renderable result and a meaningful quality-review boundary |
+| **Internal work** | The research, comparison, trials, implementation, repair and reinspection needed to fulfill that SPEC |
+
+At `init`, you receive the full goal, current foundation, important design difficulties,
+a useful candidate grouping and the reason for the first priority. This is a current
+judgment: later discoveries can change the grouping or sequence. The complete goal
+remains visible while the agent chooses a scope that can receive sufficient care.
+
+The **minimum sufficient experience closure** includes the relationships needed to
+understand, realize and review the selected experience, with enough focus for its
+important qualities. A conventional settings page may fit one SPEC if a mature
+system already handles its relationships. A growing composer, streamed answer and
+scroll-following behavior may need one joint increment. A defining background or
+shared typography system can have its own formal purpose and review boundary.
+Their standing comes from the experience they improve, not their visible area.
+
+For a new product, the first scope should establish a representative experience
+with visual relationships worth inheriting. Unimplemented features remain clearly
+identified. Existing products continue from their actual source and applicable
+decisions; a new SPEC does not require a duplicate page or design system.
+
 ### Let the experience determine the research
 
 The agent plans evidence around important tasks, pages, states and their
@@ -69,9 +98,39 @@ The next round checks where the user starts, what the action means, which condit
 
 New components are selected by actual role and local trial. A coherent layout or functional block can carry several related decisions; supplementary components and assets fill specific needs. Configuration, composition and focused extension preserve the selected implementation's useful visual and interaction relationships. Custom work addresses demonstrated gaps.
 
+Continue the same formal SPEC while fulfilling its experience goal or repairing its
+quality gaps. Start a new SPEC for a distinct coherent design objective with its own
+review boundary. A search, trial, code change or another invocation of `iterate`
+does not create a new formal increment by itself.
+
+The agent can keep, split, merge or redraw a proposed scope using evidence about
+visual complexity, time and state, shared dependencies, uncertainty, mature-resource
+fit and verification needs. A mature block can make a larger scope practical; a
+motion trial can reveal preparation or neighboring-layout relationships that belong
+together. The explanation identifies the actual quality risk and how the complete
+goal remains covered. Ordinary authorized adjustments continue directly; material
+changes to accepted direction or commitments receive an explicit recommendation.
+
+When boundaries change, original goals and unresolved findings remain traceable to
+the work now responsible for them. A new SPEC cannot make an uncorrected problem
+complete. Applicable research and implementation can be inherited, extended,
+adapted or reconsidered as the same product develops.
+
 ## 4. Inspect rendered evidence
 
 A useful round report contains the working preview entry, scope, actual resources adopted, relevant adaptations, observed checks and remaining conditions. The agent opens the captures and uses the interface. Reference qualities, the original resource demo, the local trial and the assembled result each receive the observation needed for their role. A source may have been researched without being adopted; a successful local trial still needs review in the full composition.
+
+The agent distinguishes the research/observation scope, primary implementation
+scope and integration/regression scope. Studying a complete workspace can inform a
+composer refinement without committing the current SPEC to every workspace feature.
+Changing a shared font can require several pages to be checked even if the source
+change is small.
+
+Review both the current SPEC's promised qualities and its effects on the existing
+product. The former may need component detail or a complete interaction; the latter
+may need neighboring regions, shared controls or connected journeys. Trace the
+target quality through an observed reference and actual adopted or authored work
+to the current presentation and remaining gap.
 
 Three independent comparisons matter:
 
@@ -88,6 +147,13 @@ promised visual direction after the first action, with populated results, long
 content and repeated use. When implementing selected or approved design work,
 inspect source fidelity as well: comparable-image differences can diagnose a
 specific reproduction target, while actual viewing establishes perceptual quality.
+
+The conversation presents the working result, important scope and resource choices,
+decisive evidence, observed limits and the next useful increment. Overview, Design
+Detail and Execution & Assurance are views of the same current information. Full
+records support traceability; writing them does not replace showing you the result.
+The product interface itself serves its user's task, while internal design methods
+and evidence classifications remain in their appropriate supporting records.
 
 ## 5. Run a broader audit
 
@@ -118,6 +184,11 @@ The agent verifies real data and equivalent visual states, then reports approval
 ## 7. Continue after a new requirement
 
 A new language, theme, product capability or user role may reopen a bounded slice. Update the relevant brief, shared tokens and matrix, then iterate. The project keeps one current source direction and recoverable Git history.
+
+Progress may remove redundant explanation, replace a coarse component, combine
+fragmented controls or reconsider a shared layout. The result is judged by the
+intended experience and product consistency, not by an increasing SPEC, page or
+component count. Candidate plans and inherited judgments remain revisable.
 
 ## Working with other skills
 

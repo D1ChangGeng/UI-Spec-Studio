@@ -24,6 +24,15 @@ the evolving experience model in the existing design record.
 Repository/frontend, existing components, run/test commands, actual product maturity,
 source of product facts and authorized change scope.
 
+## Complete goal and candidate increments
+
+Retain the complete intended product experience, important functions, visual quality
+and artistic commitments. Identify the current product UI and reusable foundations.
+Outline candidate formal SPECs only as far as current evidence supports: coherent
+experience goals, necessary relationships, likely dependencies and the first useful
+scope. Keep this plan revisable as research, resource discovery and trials change
+understanding. Explain the initial scope and its reason to the user.
+
 ## Accepted direction
 
 Visual identity, typography/language coverage, palette roles, density, composition,
@@ -53,11 +62,23 @@ facts and the smallest next observation that could change the design.
 Selected outcome, why now, accepted assumptions, implemented result, review status,
 approval reference and next meaningful action.
 
+For formal design work, identify the active SPEC's experience goal, quality
+responsibility and necessary connected objects. Distinguish research/observation,
+primary implementation and integration/regression scopes. Note what is inherited,
+extended, adapted or reconsidered in the current product. Keep internal research,
+repairs and refinement under this SPEC while they serve its promised goal.
+
 ## Scope continuity
 
 Identify implemented, inspected, approved, connected and verified scopes separately.
 Record the source of approval and what the next round should inherit. The active
 operation describes current work; individual scopes can have different maturity.
+
+When a boundary changes, preserve the complete goal, why the change is justified,
+where the responsibility now sits and the original unresolved findings. A new
+SPEC or a narrower current scope does not itself resolve a quality gap. Keep
+the actual preview, important choices and observed results visible in the
+conversation alongside the full project record.
 
 ## User-level product model
 

@@ -1,0 +1,71 @@
+# Meridian is ready to explore locally
+
+Meridian now works as a browser-local research conversation: ask a question, watch an illustrative answer unfold, inspect its sources and continue the thread. The interface uses warm paper-like surfaces, quiet olive neutrals, a restrained rust accent and editorial headings. The same composer and reading measure carry through the empty, working and completed states.
+
+**Open the running local preview:** [Meridian](http://127.0.0.1:8844/app/)
+
+The editable source is in `app/`. To restart the preview, run this command from the cell directory, then open the address above:
+
+```bash
+python3 -m http.server 8844 --bind 127.0.0.1
+```
+
+There is no build step or package installation. Nothing was deployed or published.
+
+## What works
+
+- **Repeated questions and local threads.** Questions, answers, unsent drafts, filenames and the selected appearance are retained in browser storage. Search the history list, start another thread and return to your earlier work. Draft-only threads can also be reopened.
+- **Visible asynchronous progress.** Answers move from a pending state into incremental text. The normal, slow and extended fixtures have deterministic content and timing.
+- **Stop and recovery.** Stop keeps the partial answer and your next draft. Try again replaces that answer without duplicating the question. Starting a new thread cancels the old pending response and leaves it recoverable in its original thread.
+- **A useful failure path.** Open Demo in the header, choose a simulated failure for the next answer, then use Try again. The question remains intact and recovery succeeds locally.
+- **Reading continuity.** The composer stays reachable while answers grow. Scrolling upward pauses automatic following; Latest response returns to the end. Returning to a thread restores its reading position and draft.
+- **Sources beside the answer.** A citation opens the reading room alongside the desktop conversation. On compact widths, a native source dialog provides focused reading with Escape and focus return. Every source is visibly identified as synthetic.
+- **Growing input and attachments.** The composer grows to a bounded height and supports multiline text. Enter sends; Shift + Enter adds a line. Attachment chips contain local filenames only, with individual removal controls. File contents are never read.
+- **Light, dark and compact navigation.** The appearance control is in the sidebar; on mobile it is available through the navigation menu. Reduced motion removes the decorative progress pulse.
+
+## Reviewed views
+
+The final desktop welcome, populated reading, adjacent source panel and dark theme were opened and visually inspected. The 390×844 welcome, reading, source dialog, dark theme and expanded composer were also viewed. A 390×500 capture checks that the composer remains reachable in a shorter viewport.
+
+| View | Capture |
+|---|---|
+| Desktop welcome | [desktop-welcome.png](evidence/final3/desktop-welcome.png) |
+| Desktop reading | [desktop-reading.png](evidence/final3/desktop-reading.png) |
+| Desktop source reader | [desktop-source.png](evidence/final3/desktop-source.png) |
+| Dark desktop | [desktop-dark.png](evidence/final3/desktop-dark.png) |
+| Mobile welcome | [mobile-welcome.png](evidence/final3/mobile-welcome.png) |
+| Mobile reading | [mobile-reading.png](evidence/final3/mobile-reading.png) |
+| Mobile source | [mobile-source.png](evidence/final2/mobile-source.png) |
+| Mobile dark composer | [mobile-composer.png](evidence/final2/mobile-composer.png) |
+
+The final3 images reflect the repaired new-thread state. The final2 source and composer views remain applicable: the later change clears stale state when changing threads and does not alter those surfaces.
+
+## What the checks establish
+
+The local HTTP browser run used Chromium 143 at 1440×900 and 390×844. The repaired integrated run passed **32 scoped assertions**, including streaming, stopping, failure recovery, persistence, source focus return, bounded multiline input, no horizontal page overflow, keyboard input and reduced motion. Its request log contained no external application requests, and no unhandled JavaScript errors were recorded.
+
+Eight later assertions covered thread-return continuity, reopening unsent drafts, theme switching, a completed extended answer, the Latest control and short-viewport composer reachability. Four final assertions verified that a new thread clears stale controls, cancels old pending completion, preserves the old thread for recovery and retries it without duplicating its question. These counts describe executed checks; they are not an overall quality score or a compatibility guarantee.
+
+Evidence is retained in `evidence/run2/test-run-2.json`, `evidence/final2/review-run.json` and `evidence/final3/checks.json`, with replay scripts and logs alongside them. Source digests identify the checked revisions. The later long-answer editorial change is separately noted in the design record.
+
+The final long-answer editorial recheck completed with **530 words**, a 1,885px reading area in a 673px viewport and the composer still reachable. Its middle and completed captures were visually inspected; results and final application digests are in `evidence/final4/checks.json`.
+
+### Repairs and original failures
+
+The initial 30 behavioral checks passed, but pixel inspection revealed a welcome/composer overlap. I corrected the empty-state flex sizing and checked it again at both required sizes. The dark-theme review then caught a brief light-fill/light-text mismatch during background interpolation; theme surfaces now update together. A later mobile capture exposed a stale Latest control after New thread, which was also repaired and rechecked.
+
+All those earlier captures remain available. The first extended-answer test also failed an incorrect assumption that the fixture would exceed 550 words; it actually completed at 512 words. The replacement check verifies the relevant reading condition: completed content extending beyond two reading viewports. The original failure and corrected run remain separate.
+
+## Adoption and design decisions
+
+The supplied reference was treated as an implementation candidate. Meridian adopts selected native CSS and conversation relationships from its assistant-ui-derived foundation: the shared reading/composer measure, bounded user messages and input/action arrangement. It extends the reference's request-token cancellation approach. The assistant-ui React runtime is not installed.
+
+The official assistant-ui demo and shadcn sidebar-01 were viewed as different starting points. The conversation foundation fits the primary ask/read/continue loop; the sidebar example informs navigation only. Meridian's palette, typography, mark, source reader, history and streaming behavior are project-owned adaptations. [SOURCES.md](app/SOURCES.md) distinguishes actual adoption from inspiration and preserves the precise upstream source identity and notices. [DESIGN.md](DESIGN.md) connects these choices to observations, repairs and remaining questions.
+
+## Remaining boundaries and next work
+
+This is an authored product demonstration. It does not search the web, call a model, parse attachments or verify source claims. Three topic families and a general framework supply deterministic responses; follow-ups use fixed continuation text. Browser storage is local to the browser and can be cleared. History deletion, renaming, export and synchronization are not implemented.
+
+The required sizes were inspected in the local Chromium environment. Physical mobile keyboards, Safari and Firefox, screen-reader operation, forced colors, text zoom and very large histories remain unverified. Ordered pending, streaming and completed frames were viewed; continuous video playback and frame-rate measurement were not performed. No owner design approval or usability-study result is claimed.
+
+The next useful increment is a focused accessibility and device pass—real mobile keyboard behavior, screen readers and browser differences—followed by history management. A future live research adapter would need explicit source provenance, retrieval/error contracts and attachment handling while preserving the current thread, composer and reading behavior.

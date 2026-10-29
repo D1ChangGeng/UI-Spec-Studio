@@ -1,0 +1,27 @@
+{
+  "checks": [
+    {
+      "check": "New thread clears prior latest action and status",
+      "pass": true
+    },
+    {
+      "check": "New thread cancels stale pending completion",
+      "pass": true
+    },
+    {
+      "check": "Interrupted old thread remains recoverable",
+      "pass": true
+    },
+    {
+      "check": "Interrupted thread retry retains single question",
+      "pass": true
+    }
+  ],
+  "source_sha256": {
+    "styles.css": "199d20ce42dc0b8aa5fa5619c26819dc50421f656e6fe5b6f8009da022da1686",
+    "foundation.css": "8a5d4959519c67e5d70ac5e7867f28487381906dec8c234dbc482532a8ac44c3",
+    "THIRD-PARTY.md": "29e6f18f1291a8992a6f59eab511490d7e20c5339176c7780836bd898d615393",
+    "app.js": "f915c1acb458e5b01130905d79ce16703fae123e226ed314b89768c2dd656f29",
+    "index.html": "23a2445e4a0361529049b55c0244c668dea5b4537ab54defde2e571d784136a5"
+  }
+}

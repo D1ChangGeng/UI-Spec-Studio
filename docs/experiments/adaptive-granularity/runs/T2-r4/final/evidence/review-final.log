@@ -1,0 +1,24 @@
+{"name": "Switching threads restores reading position", "pass": true, "detail": {"before": 300, "after": 300}, "elapsed_s": 1.036}
+{"name": "Switching threads restores draft", "pass": true, "detail": null, "elapsed_s": 1.039}
+{"name": "Dark button background switches with text", "pass": true, "detail": null, "elapsed_s": 1.741}
+{"name": "Extended answer reaches a complete state", "pass": false, "detail": {"words": 512}, "elapsed_s": 9.684}
+Traceback (most recent call last):
+  File "/workspace/scratch/43b440780c87/granularity-cells/T2-r4/evidence/review_final.py", line 78, in <module>
+    try:asyncio.run(main())
+        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/43b440780c87/granularity-cells/T2-r4/evidence/review_final.py", line 57, in main
+    check('Extended answer reaches a complete state',words>550,{'words':words})
+  File "/workspace/scratch/43b440780c87/granularity-cells/T2-r4/evidence/review_final.py", line 11, in check
+    assert value,name
+           ^^^^^
+AssertionError: Extended answer reaches a complete state
+

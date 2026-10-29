@@ -1,0 +1,29 @@
+# Continuation review
+
+## Completed checks
+
+`run-2/checks.json` records **51 passing assertions**. These cover selected-note and exact draft retention through density/theme/language changes; density, selection and draft recovery on reload; a measured reduction in card height in Compact; overflow and draft-retention checks across the 16 density × language × theme × requested-viewport combinations; and create/save/context-search/reopen/named-delete/cancel tasks using a long English title and long mixed Chinese/English body in each density. No runtime page errors were observed in that run.
+
+`final/checks.json` records **7 further passing assertions**: complete title visibility without inner title scrolling in both densities, no narrow horizontal overflow in both densities, native keyboard selection, preference persistence after keyboard use, and truthful preference-storage failure with the draft intact.
+
+Environment: same local HTTP app, supplied Playwright and Chromium 143 headless shell, 1440×900 and 390×844 CSS viewports. The preference error was explicitly injected at the real Storage boundary. Notes and preferences otherwise used actual browser localStorage.
+
+## Visual observations
+
+Actually viewed: Comfortable/Compact desktop Chinese content in English and Chinese UI examples; comfortable and compact phone editor/list examples; dark Chinese/English variants; long English titles and mixed-script bodies at desktop and phone sizes; and the repaired full-title phone views in both densities. Captures cover the full 16-condition matrix, but captured files are not asserted to be a complete end-user visual study.
+
+The bounded writing area, larger supporting text and clearer title/body contrast improve the long-note reading hierarchy. Compact visibly fits more collection and body content. Narrow context labels remain on one line above their input. The final long title is completely visible and pushes following content down naturally; Save and status remain in the sticky toolbar region during document scrolling.
+
+`run-2/*long-english.png` preserves the original capped-title appearance. `final/*long-title.png` shows the repaired version. Other run-2 samples precede the last title-cap/selector-width adjustment; their typography and draft checks retain that scope.
+
+## Preserved failures and corrections
+
+- `checks.json` / `check.log` and `check-first.py`: the first responsive harness assumed the mobile editor would be visible after reload. Leafnote correctly starts with its collection at that width, so the hidden Back button timed out. The revised harness explicitly opens the selected note before the editor capture. The first file labeled `390-comfortable-en-light-editor.png` therefore depicts the collection; it is historical harness evidence, not a valid editor capture.
+- `title-recheck.log` and `title_recheck-first.py`: the first title harness tried to invoke New while in the mobile editor. It was corrected to use the actual Back-to-collection path. `title-recheck-run-2.log` contains the completed recheck.
+- The title height cap was a real application design defect found through pixel viewing and repaired in source. Original captures remain.
+
+## Limits and interruption
+
+The host interrupted the continuation and work resumed on the saved task. The allowance of roughly three remaining active minutes was an approximate estimate; do not treat this as an uninterrupted timed run.
+
+No physical mobile keyboard, screen-reader playback, alternate-browser run, or user-comprehension study was added. The existing local-storage, backup-import and multi-tab-merge limitations remain. No deployment occurred. No prior delivery or evidence was overwritten.

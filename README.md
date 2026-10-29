@@ -27,7 +27,21 @@ Research the important questions, compare mature references and implementations,
 and build the first reviewable SPEC. Show the result and the evidence behind it.
 ```
 
-After reviewing, **“Approved, continue”** advances the next useful increment. **“Use ui-spec: finish”** connects an accepted design to its actual content, behavior and delivery boundary. [Installation and agent options](docs/INSTALL.md) · [Multi-round guide](docs/GUIDE.md)
+After reviewing, **“Approved, continue”** carries the accepted direction into the next useful work. **“Use ui-spec: finish”** connects an accepted design to its actual content, behavior and delivery boundary. [Installation and agent options](docs/INSTALL.md) · [Multi-round guide](docs/GUIDE.md)
+
+## Give each increment enough room for quality
+
+A **formal UI SPEC** is a coherent design increment in the evolving product, with a clear experience goal and an actual result to review. Keep the complete product goal, then choose the scope that allows its important qualities to receive sufficient research, implementation and verification.
+
+- A conventional settings page can fit one SPEC when a mature system already supports its relationships.
+- Composer growth, streamed answers and reading-position control can belong together when their continuous coordination is the goal.
+- A shared typography change can be one SPEC spanning several pages, with their wrapping and hierarchy checked together.
+
+The agent explains a revisable candidate plan at `init`, then keeps, splits, merges or redraws boundaries as evidence develops. Each increment builds on the current product. Research, candidate replacement and repairs serving its existing goal remain within that SPEC; unresolved quality stays visible when scope changes.
+
+You receive the working result, important design choices, actual adopted resources and observed gaps. The first increment should establish a representative experience worth inheriting; later work can add, replace, simplify or reconsider it.
+
+[Multi-round use](docs/GUIDE.md) · [v1.17 review](docs/REVIEW-v1.17.0.md) · [Experiment record](docs/experiments/adaptive-granularity/RESULTS.md)
 
 ## Understand the experience before choosing the design
 
@@ -136,7 +150,7 @@ The principles transfer; the **medium determines the realization and verificatio
 
 The [professional model](docs/PROFESSIONAL-MODEL.md) and [conditional techniques](skills/ui-spec/references/patterns.md) connect these decisions to typography, composition, color, imagery, interaction and timing.
 
-## This README is a UI SPEC
+## This README evolves through UI SPECs
 
 This repository's own front page is a **reading and publishing surface**, rather than an application screen. Its first task is helping a new reader judge fit and try the skill. Its visual treatment carries that purpose without replacing native Markdown content.
 
@@ -155,7 +169,7 @@ A separate [research-product example](examples/product-intent/README.md) shows p
 
 `init → iterate → finish` is the main path. Optional **shape** resolves a consequential open direction; **audit** examines quality or coverage at any point. These describe work intentions rather than shell commands.
 
-Each round gives the agent a useful scope to implement and inspect. An accepted design can continue into working product behavior, or into a document's actual publishing boundary. The agent carries forward decisions, evaluates the affected views and states, and keeps source evidence distinct from owner approval.
+Each formal SPEC gives the agent a coherent experience scope to implement and inspect. Research and repairs can continue inside it across several execution rounds. An accepted design can continue into working product behavior, or into a document's actual publishing boundary. The agent carries forward applicable decisions, evaluates the increment and affected product relationships, and keeps source evidence distinct from owner approval.
 
 Before substantive work, the agent reads **eight common references in full**: [workflow](skills/ui-spec/references/workflow.md), [analysis](skills/ui-spec/references/analysis.md), [visual principles](skills/ui-spec/references/principles.md), [resource discovery](skills/ui-spec/references/component-sourcing.md), [interaction](skills/ui-spec/references/interaction-and-variants.md), [verification](skills/ui-spec/references/verification.md), [visual assets](skills/ui-spec/references/visual-assets.md), and [content & UX writing](skills/ui-spec/references/content-design.md). [Integration](skills/ui-spec/references/integration.md) applies when connecting real behavior. The host remains responsible for tool access, execution and context management.
 
@@ -166,7 +180,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.16.1 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.17.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

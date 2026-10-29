@@ -27,7 +27,21 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 完成第一份可审阅的 SPEC，展示实际结果和关键证据。
 ```
 
-审阅通过后，只需说 **「本轮通过，继续」**，Agent 就会推进下一项有价值的工作；使用 **「ui-spec: finish」**，则会将已确认的设计接入真实内容、功能或作品的发布环境。[安装与宿主选项](docs/INSTALL.md) · [多轮使用指南](docs/GUIDE.md)
+审阅通过后，只需说 **「本轮通过，继续」**，Agent 就会沿已确认的方向推进下一项有价值的工作；使用 **「ui-spec: finish」**，则会将已确认的设计接入真实内容、功能或作品的发布环境。[安装与宿主选项](docs/INSTALL.md) · [多轮使用指南](docs/GUIDE.md)
+
+## 让每项设计增量充分兑现品质
+
+**正式 UI SPEC** 是持续演进产品中的一项内聚设计增量，拥有明确的体验目标和可实际审阅的成果。完整产品目标持续保留；单次范围则根据重要品质所需的研究、实现与验证深度确定。
+
+- 常规设置页面已有成熟设计系统承接相关关系时，可以作为一个 SPEC。
+- 输入区增长、流式回答与阅读位置控制共同形成连续体验时，可以纳入同一个 SPEC。
+- 共享字体体系调整可以跨越多个页面，同时检查文字换行与视觉层级。
+
+Agent 在 `init` 中说明可修订的候选规划，再根据实际证据保持、拆分、合并或重新划定范围。每项增量作用于当前产品；服务于原目标的研究、候选替换和修复继续归属原 SPEC，范围调整后仍保留未解决的品质问题。
+
+你会看到实际成果、重要设计选择、真正采用的资源与已观察的差距。首个增量应建立值得继承的代表性体验；后续工作可以新增、替换、简化，也可以重新判断已有设计。
+
+[多轮使用方式](docs/GUIDE.md) · [v1.17 版本评审](docs/REVIEW-v1.17.0.md) · [实验记录](docs/experiments/adaptive-granularity/RESULTS.md)
 
 ## 先理解体验，再选择设计
 
@@ -122,7 +136,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 
 [专业能力模型](docs/PROFESSIONAL-MODEL.md)与[条件明确的设计技法](skills/ui-spec/references/patterns.md)进一步连接排版、构图、色彩、素材、交互与时间表达。
 
-## 这份 README 本身就是一份 UI SPEC
+## 这份 README 也通过 UI SPEC 持续演进
 
 仓库首页首先是一种**阅读与发布界面**。新读者需要快速理解 Skill 的作用、判断是否符合自己的任务，然后完成第一次使用。视觉表达服务于这条阅读路径，核心信息依然由 GitHub 原生 Markdown 承载。
 
@@ -141,7 +155,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 
 主线是 `init → iterate → finish`。可选 **shape** 用于收敛重要设计方向，**audit** 可在任何阶段检查质量与覆盖范围。这些是工作意图，使用自然语言即可启动。
 
-每轮由 Agent 选择有价值、便于审阅的范围，完成实现与实际检查。确认后的设计可以进入真实产品接线，也可以完成文档、图表或演示内容本身的发布。既有决策持续继承，来源证据、渲染观察与用户批准分别记录。
+每项正式 SPEC 由 Agent 选择体验内聚、便于审阅的范围，完成实现与实际检查；内部研究和修复可以持续多个执行轮次。确认后的设计可以进入真实产品接线，也可以完成文档、图表或演示内容本身的发布。仍然适用的既有决策持续继承，当前增量与受影响的产品关系分别检验，来源证据、渲染观察与用户批准分别记录。
 
 进入实质工作前，Agent 会**完整读取八份通用参考**：[工作流](skills/ui-spec/references/workflow.md)、[分析视角](skills/ui-spec/references/analysis.md)、[视觉原则](skills/ui-spec/references/principles.md)、[资源发现](skills/ui-spec/references/component-sourcing.md)、[交互与变体](skills/ui-spec/references/interaction-and-variants.md)、[验证方法](skills/ui-spec/references/verification.md)、[视觉素材与资产工程](skills/ui-spec/references/visual-assets.md)、[内容设计与 UX Writing](skills/ui-spec/references/content-design.md)。真实业务接线另需[集成参考](skills/ui-spec/references/integration.md)。Skill 负责专业方法与读取契约，宿主负责工具、执行和上下文管理。
 
@@ -152,7 +166,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.16.1 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.17.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

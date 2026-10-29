@@ -1,0 +1,55 @@
+# Leafnote is ready to use locally
+
+The one-note editor is now a working notebook: a searchable collection sits beside a spacious editor, with draft recovery, explicit saving and a safe deletion flow. The mobile layout gives the collection and the open note their own full-width view. Chinese/English and light/dark preferences are preserved.
+
+![Leafnote desktop workspace](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/editor-1440-en-light.png)
+
+## What you can do
+
+- **Create and save multiple notes.** Each note has a title, context, an updated date and a clear selected state.
+- **Find and reopen work.** Search matches titles and note bodies, including drafts. Returning from the mobile editor preserves the search.
+- **Keep working safely.** Drafts are stored separately from saved notes. Switching notes, changing language/theme and reloading retain the draft. If you edit during a save, the submitted version is saved and the newer text remains a draft.
+- **Recover from storage trouble.** Read, write and draft failures explain the problem and retain the current text. Unreadable existing data is left untouched, with a recovery export available. The earlier one-note format is migrated while keeping its original record.
+- **Delete deliberately.** The confirmation identifies the note, describes the consequence and initially focuses Keep note. Cancel and Escape preserve the note; a failed deletion leaves it in the collection.
+- **Export a backup.** The JSON download contains saved notes and drafts. Everything remains in this browser unless you choose to export it.
+
+Five clearly labeled fictional research notes provide short, long and Chinese examples. The application loads its font and stylesheet locally and does not contact a backend.
+
+## The design choices
+
+The left-hand list uses a title, short context and date so a note can be recognized before opening it. The right-hand surface gives writing more space and a quieter visual hierarchy. Serif titles and Inter body text distinguish the note itself from the surrounding controls. Soft green selection, restrained rules and separate surface values carry that hierarchy into dark mode.
+
+I inspected the actual Bootstrap sidebar/list examples and shadcn's mail workspace. The mail example demonstrated a useful collection/reading relationship, while its additional category rail was unnecessary for this small notebook. The implemented interface adopts Bootstrap 5.3.8's list and control foundation, with custom notebook state and an editorial layout. The exact source and license records are included in [DESIGN.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/DESIGN.md).
+
+![Chinese note in the mobile editor](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/chinese-note-mobile.png)
+
+## Verification
+
+The application was exercised over local HTTP in Chromium 143, using actual browser storage. **All 20 main checks and four focused recovery checks passed.** An additional malformed-draft preservation check also passed.
+
+Those checks cover creation and title validation, saving and reload, draft restoration, full-text search, keyboard shortcuts, cancellation, confirmed deletion, backup export, legacy migration, malformed-data protection, native Storage write failure and retry, editing during a pending save, a draft-write failure, saved changes in another tab, and long-note keyboard scrolling. The 1440×900 and 390×844 layouts passed horizontal-reflow assertions in both languages and both themes.
+
+I separately viewed the rendered desktop and phone-sized editor variants, the deletion and failure states, Chinese content and the bottom of a long note. The reviewed save episode shows the pending state, a newer edit and the final retained draft. It uses a disclosed injected delay; it is not a performance measurement.
+
+The first run is preserved. It exposed a real issue with recovery feedback being hidden from the mobile collection, which is fixed, plus an error in the test fault injector, which was corrected before rerunning the storage checks. Results and observed pixels are recorded separately:
+
+- [Browser test results](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test-results.json)
+- [Focused recovery results](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/recovery-results.json)
+- [Visual review](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/VISUAL_REVIEW.md)
+- [Original first-run log](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/evidence/test-run-1.log)
+
+## Open it
+
+The local preview is served at [http://127.0.0.1:8619/](http://127.0.0.1:8619/) for this workspace. To start it again from this cell:
+
+```bash
+python -m http.server 8619 --bind 127.0.0.1 --directory app
+```
+
+Use the same browser profile and origin to return to your saved notebook. The editable source is in `app/`; [app/README.md](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T1-m9/app/README.md) includes the persistence contract, shortcuts and test commands.
+
+## Remaining limits
+
+This remains a browser-local demonstration. There are no accounts, cloud synchronization or shared editing. It detects saved changes from another tab, but does not merge simultaneous drafts; use one editing tab for reliable draft persistence. Backup export is available, while in-app import and rich-text editing are not implemented.
+
+The real-device keyboard, screen-reader, Safari and Firefox paths still need review. Browser storage can be cleared by the browser or user, so exported copies are the current backup route. No deployment or live service changes were made.

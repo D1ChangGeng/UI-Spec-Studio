@@ -1,0 +1,271 @@
+{
+  "viewport_desktop": [
+    1440,
+    900
+  ],
+  "viewport_mobile": [
+    390,
+    844
+  ],
+  "checks": [
+    {
+      "check": "Welcome stays above composer",
+      "pass": true,
+      "elapsed_s": 0.448
+    },
+    {
+      "check": "Empty composer disabled until text",
+      "pass": true,
+      "elapsed_s": 0.47
+    },
+    {
+      "check": "Immediate stop action visible",
+      "pass": true,
+      "elapsed_s": 0.562
+    },
+    {
+      "check": "Answer unfolds asynchronously",
+      "pass": true,
+      "elapsed_s": 1.87,
+      "detail": {
+        "visible_characters": 323
+      }
+    },
+    {
+      "check": "First question completes with three source controls",
+      "pass": true,
+      "elapsed_s": 3.932
+    },
+    {
+      "check": "Desktop source is non-modal and composer remains usable",
+      "pass": true,
+      "elapsed_s": 4.245
+    },
+    {
+      "check": "Source returns focus to citation",
+      "pass": true,
+      "elapsed_s": 4.368
+    },
+    {
+      "check": "Source preserves follow-up draft",
+      "pass": true,
+      "elapsed_s": 4.372
+    },
+    {
+      "check": "Streaming preserves earlier reading position",
+      "pass": true,
+      "elapsed_s": 8.124,
+      "detail": {
+        "before": 0,
+        "after": 0
+      }
+    },
+    {
+      "check": "Latest response affordance appears while reading earlier text",
+      "pass": true,
+      "elapsed_s": 8.126
+    },
+    {
+      "check": "Stop freezes partial answer",
+      "pass": true,
+      "elapsed_s": 8.996
+    },
+    {
+      "check": "Stop retains newly typed draft",
+      "pass": true,
+      "elapsed_s": 8.999
+    },
+    {
+      "check": "Retry replaces stopped answer without duplicate question",
+      "pass": true,
+      "elapsed_s": 12.417
+    },
+    {
+      "check": "Simulated failure recovers without duplicate question",
+      "pass": true,
+      "elapsed_s": 16.765
+    },
+    {
+      "check": "Filename chip displayed",
+      "pass": true,
+      "elapsed_s": 17.036
+    },
+    {
+      "check": "Threads persist over HTTP reload",
+      "pass": true,
+      "elapsed_s": 17.077
+    },
+    {
+      "check": "Multiline draft persists over reload",
+      "pass": true,
+      "elapsed_s": 17.08
+    },
+    {
+      "check": "Filename persists over reload",
+      "pass": true,
+      "elapsed_s": 17.084
+    },
+    {
+      "check": "Desktop has no horizontal page overflow",
+      "pass": true,
+      "elapsed_s": 17.234
+    },
+    {
+      "check": "Mobile welcome stays above composer",
+      "pass": true,
+      "elapsed_s": 17.37
+    },
+    {
+      "check": "Mobile has no horizontal page overflow",
+      "pass": true,
+      "elapsed_s": 17.372
+    },
+    {
+      "check": "Mobile history uses native modal",
+      "pass": true,
+      "elapsed_s": 17.504
+    },
+    {
+      "check": "Opening a sample closes navigation",
+      "pass": true,
+      "elapsed_s": 17.552
+    },
+    {
+      "check": "Mobile source uses modal semantics",
+      "pass": true,
+      "elapsed_s": 17.671
+    },
+    {
+      "check": "Escape closes source and restores citation focus",
+      "pass": true,
+      "elapsed_s": 17.689
+    },
+    {
+      "check": "Composer grows and is bounded on mobile",
+      "pass": true,
+      "elapsed_s": 17.705,
+      "detail": {
+        "height": 125
+      }
+    },
+    {
+      "check": "Appearance persists",
+      "pass": true,
+      "elapsed_s": 17.91
+    },
+    {
+      "check": "Keyboard Enter submits on mobile viewport",
+      "pass": true,
+      "elapsed_s": 18.024
+    },
+    {
+      "check": "Reduced motion removes decorative pulse",
+      "pass": true,
+      "elapsed_s": 18.043
+    },
+    {
+      "check": "Shift Enter inserts a newline",
+      "pass": true,
+      "elapsed_s": 18.085
+    },
+    {
+      "check": "No unhandled JavaScript errors",
+      "pass": true,
+      "elapsed_s": 18.085,
+      "detail": []
+    },
+    {
+      "check": "Application makes no external requests",
+      "pass": true,
+      "elapsed_s": 18.085,
+      "detail": []
+    }
+  ],
+  "captures": [
+    {
+      "file": "01-desktop-empty.png",
+      "capture_start_s": 0.356,
+      "capture_end_s": 0.445
+    },
+    {
+      "file": "02-pending.png",
+      "capture_start_s": 0.512,
+      "capture_end_s": 0.558
+    },
+    {
+      "file": "03-streaming.png",
+      "capture_start_s": 1.814,
+      "capture_end_s": 1.863
+    },
+    {
+      "file": "04-desktop-answer-top.png",
+      "capture_start_s": 3.94,
+      "capture_end_s": 4.01
+    },
+    {
+      "file": "05-desktop-source.png",
+      "capture_start_s": 4.254,
+      "capture_end_s": 4.335
+    },
+    {
+      "file": "06-reading-while-streaming.png",
+      "capture_start_s": 8.126,
+      "capture_end_s": 8.194
+    },
+    {
+      "file": "07-stopped.png",
+      "capture_start_s": 9.016,
+      "capture_end_s": 9.076
+    },
+    {
+      "file": "08-failure.png",
+      "capture_start_s": 13.369,
+      "capture_end_s": 13.413
+    },
+    {
+      "file": "09-desktop-dark.png",
+      "capture_start_s": 17.14,
+      "capture_end_s": 17.231
+    },
+    {
+      "file": "10-mobile-empty.png",
+      "capture_start_s": 17.322,
+      "capture_end_s": 17.364
+    },
+    {
+      "file": "11-mobile-navigation.png",
+      "capture_start_s": 17.441,
+      "capture_end_s": 17.479
+    },
+    {
+      "file": "12-mobile-answer.png",
+      "capture_start_s": 17.552,
+      "capture_end_s": 17.578
+    },
+    {
+      "file": "13-mobile-source.png",
+      "capture_start_s": 17.623,
+      "capture_end_s": 17.662
+    },
+    {
+      "file": "14-mobile-multiline.png",
+      "capture_start_s": 17.705,
+      "capture_end_s": 17.731
+    },
+    {
+      "file": "15-mobile-dark.png",
+      "capture_start_s": 17.833,
+      "capture_end_s": 17.875
+    }
+  ],
+  "console_errors": [],
+  "external_requests": [],
+  "browser": "143.0.7499.4",
+  "source_sha256": {
+    "styles.css": "6c2e35d32a9f8a9314b2360ad84a3fa0bb2d70152191f61c4da42952589c1fa5",
+    "foundation.css": "8a5d4959519c67e5d70ac5e7867f28487381906dec8c234dbc482532a8ac44c3",
+    "THIRD-PARTY.md": "29e6f18f1291a8992a6f59eab511490d7e20c5339176c7780836bd898d615393",
+    "app.js": "11f30c6cfcc88b18be4efb6386f6634cf6977e7bedbf2c6c1491412f3c4d201d",
+    "index.html": "23a2445e4a0361529049b55c0244c668dea5b4537ab54defde2e571d784136a5"
+  }
+}

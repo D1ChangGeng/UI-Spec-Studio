@@ -1,0 +1,71 @@
+from playwright.sync_api import sync_playwright
+from pathlib import Path
+import json, time, hashlib, traceback
+OUT=Path('evidence');KEY='ui-spec-temporal-note-v1';BASE='http://127.0.0.1:8939'
+report={'browser':'Chromium 143 headless shell','tests':[],'captures':[],'errors':[],'source_hashes':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in Path('app').glob('*') if p.is_file()}}
+def test(name,fn):
+ try: fn();report['tests'].append({'name':name,'result':'pass'})
+ except Exception as e: report['tests'].append({'name':name,'result':'FAIL','error':str(e)});print(name,traceback.format_exc())
+ (OUT/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False))
+def check(v,msg):
+ if not v: raise AssertionError(msg)
+def snap(pg,name):
+ a=pg.evaluate('performance.now()');pg.screenshot(path=str(OUT/(name+'.png')),animations='allow');b=pg.evaluate('performance.now()');report['captures'].append({'name':name,'start_ms':a,'end_ms':b,'viewport':pg.viewport_size})
+def face(pg):return pg.locator('#note-card').get_attribute('data-face')
+def storage(pg):return pg.evaluate('(k)=>localStorage.getItem(k)',KEY)
+with sync_playwright() as p:
+ b=p.chromium.launch(executable_path='/workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell',args=['--no-sandbox'])
+ for size in [(1440,900),(390,844)]:
+  for theme in ['light','dark']:
+   ctx=b.new_context(viewport={'width':size[0],'height':size[1]},color_scheme=theme)
+   pg=ctx.new_page();pg.on('pageerror',lambda e:report['errors'].append(str(e)));pg.goto(BASE);pg.wait_for_timeout(100)
+   name=f'{size[0]}-{theme}';snap(pg,name+'-draft')
+   test(name+' no horizontal overflow',lambda:check(pg.evaluate('document.documentElement.scrollWidth <= innerWidth'),'horizontal overflow'))
+   pg.evaluate('window.cardIdentity=document.getElementById("note-card")');bounds=pg.locator('#card-space').bounding_box()
+   pg.locator('#save').click();pg.wait_for_timeout(200)
+   test(name+' pending stays draft and uncommitted',lambda:check(face(pg)=='front' and storage(pg) is None and pg.locator('#save').is_disabled(),'false pending success'))
+   if size[0]==1440 and theme=='light':
+    snap(pg,'episode-00-pending');pg.wait_for_timeout(480)
+    for n in range(11):snap(pg,f'episode-{n+1:02d}');pg.wait_for_timeout(58)
+   pg.wait_for_timeout(1600)
+   snap(pg,name+'-saved')
+   test(name+' confirmed save and identity',lambda:check(face(pg)=='back' and storage(pg) is not None and pg.evaluate('window.cardIdentity===document.getElementById("note-card")'),'save or identity'))
+   test(name+' stationary frame',lambda:check(pg.locator('#card-space').bounding_box()==bounds,'layout moved'))
+   test(name+' focus reaches saved heading',lambda:check(pg.evaluate('document.activeElement.id')=='saved-title','focus not heading'))
+   pg.locator('#return').click();pg.wait_for_timeout(800)
+   test(name+' editor focus returns',lambda:check(pg.evaluate('document.activeElement.id')=='note-text','focus not editor'))
+   pg.reload();test(name+' browser persistence',lambda:check(pg.locator('#note-text').input_value()==json.loads(storage(pg))['text'],'reload lost saved note'))
+   ctx.close()
+ ctx=b.new_context(viewport={'width':1440,'height':900});pg=ctx.new_page();pg.goto(BASE)
+ pg.locator('#note-text').fill('Original submitted version.');pg.locator('#save').click();pg.wait_for_timeout(100);pg.locator('#note-text').fill('A newer draft stays editable.');pg.wait_for_timeout(1700)
+ test('editing during save keeps newer draft and front',lambda:check(face(pg)=='front' and pg.locator('#note-text').input_value()=='A newer draft stays editable.' and json.loads(storage(pg))['text']=='Original submitted version.','pending editing overwritten'))
+ snap(pg,'newer-draft');pg.locator('#flip').click();pg.wait_for_timeout(120);snap(pg,'reverse-00');pg.locator('#flip').click();pg.wait_for_timeout(90);snap(pg,'reverse-01');pg.locator('#flip').click();pg.wait_for_timeout(90);snap(pg,'reverse-02');pg.locator('#flip').click();pg.wait_for_timeout(800);snap(pg,'reverse-03-settled')
+ test('rapid reversal obeys latest intent',lambda:check(face(pg)=='front' and pg.locator('#card-back').evaluate('(e)=>e.inert') and not pg.locator('#card-front').evaluate('(e)=>e.inert'),'face/inert mismatch'))
+ pg.evaluate('() => {window.originalSet=Storage.prototype.setItem;Storage.prototype.setItem=function(){throw new DOMException("injected quota failure","QuotaExceededError")}}')
+ old=storage(pg);pg.locator('#save').click();pg.wait_for_timeout(1100);snap(pg,'failed-save')
+ test('failed save retains existing data and draft',lambda:check(face(pg)=='front' and storage(pg)==old and pg.locator('#retry').is_visible() and pg.locator('#note-text').input_value()=='A newer draft stays editable.','failure state lost'))
+ pg.evaluate('() => {Storage.prototype.setItem=window.originalSet}');pg.locator('#retry').click();pg.wait_for_timeout(1800)
+ test('visible retry commits through native storage',lambda:check(json.loads(storage(pg))['text']=='A newer draft stays editable.' and face(pg)=='back','retry unsuccessful'))
+ pg.locator('#return').click();pg.wait_for_timeout(800)
+ long=('Evidence line: compare demand and insulation.\n'*12)[:580];pg.locator('#note-text').fill(long);pg.locator('#note-text').evaluate('(e)=>{e.scrollTop=e.scrollHeight;e.setSelectionRange(510,525)}');scroll=pg.locator('#note-text').evaluate('(e)=>e.scrollTop')
+ snap(pg,'long-draft');pg.locator('#note-text').press('Control+Enter');pg.wait_for_timeout(1800);snap(pg,'long-saved');pg.locator('#return').click();pg.wait_for_timeout(800)
+ test('long note restores selection and scroll',lambda:check(pg.locator('#note-text').evaluate('(e)=>[e.selectionStart,e.selectionEnd,e.scrollTop]')==[510,525,scroll],'selection/scroll lost'))
+ pg.locator('#note-text').fill('a'*601)
+ test('over-limit stays intact and cannot save',lambda:check(len(pg.locator('#note-text').input_value())==601 and pg.locator('#save').is_disabled() and pg.locator('#note-text').get_attribute('aria-invalid')=='true','bound failed'))
+ snap(pg,'over-limit');pg.locator('#note-text').fill('b'*600);test('exact limit remains savable',lambda:check(not pg.locator('#save').is_disabled(),'600 blocked'))
+ pg.evaluate('(k)=>localStorage.setItem(k,"{broken")',KEY);pg.reload()
+ test('malformed stored data blocks overwrite',lambda:check(pg.locator('#save').is_disabled() and pg.locator('#retry').is_visible(),'unknown data overwritten'))
+ snap(pg,'unreadable');pg.evaluate('(k)=>localStorage.removeItem(k)',KEY);pg.locator('#retry').click();test('read retry recovers',lambda:check(not pg.locator('#save').is_disabled(),'read retry failed'))
+ pg.locator('#save').click();pg.wait_for_timeout(1800);pg.locator('summary').click()
+ pg.evaluate('() => {window.originalRemove=Storage.prototype.removeItem;Storage.prototype.removeItem=function(){throw Error("injected clear failure")}}');pg.locator('#clear').click();pg.wait_for_timeout(800)
+ test('clear failure exposes recovery and retains data',lambda:check(storage(pg) is not None and pg.locator('#retry').is_visible() and face(pg)=='front','clear failure lost data'))
+ snap(pg,'clear-failed');pg.evaluate('() => {Storage.prototype.removeItem=window.originalRemove}');pg.locator('#retry').click();test('clear retry reaches native removal',lambda:check(storage(pg) is None,'clear retry failed'))
+ ctx.close()
+ for size,theme in [((390,844),'light'),((1440,900),'dark')]:
+  ctx=b.new_context(viewport={'width':size[0],'height':size[1]},color_scheme=theme,reduced_motion='reduce');pg=ctx.new_page();pg.goto(BASE);pg.locator('#save').click();pg.wait_for_timeout(1100)
+  test(f'reduced {size[0]} uses no rotation',lambda:check(pg.locator('#note-card').evaluate('(e)=>getComputedStyle(e).transform')=='none' and face(pg)=='back','motion not reduced'))
+  snap(pg,f'reduced-{size[0]}-{theme}');pg.locator('#return').click();test(f'reduced {size[0]} returns immediate focus',lambda:check(pg.evaluate('document.activeElement.id')=='note-text','reduced focus failed'));ctx.close()
+ ctx=b.new_context(viewport={'width':390,'height':844},color_scheme='dark');pg=ctx.new_page();pg.goto(BASE);pg.locator('#locale-toggle').click();snap(pg,'390-dark-zh-draft');pg.locator('#save').click();pg.wait_for_timeout(1800);snap(pg,'390-dark-zh-saved');ctx.close()
+ b.close()
+(OUT/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False))
+print(json.dumps(report,indent=2,ensure_ascii=False))

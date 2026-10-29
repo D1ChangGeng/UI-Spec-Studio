@@ -1,0 +1,18 @@
+from pathlib import Path
+root=Path(__file__).parent.parent
+p=root/'app/index.html';s=p.read_text().replace('<span class="brand-dot">®</span>','');p.write_text(s)
+p=root/'app/app.js';s=p.read_text().replace("pageTitle:'Keep an idea<br>in view.'","pageTitle:'Keep an idea <br>in view.'").replace("disclosure:'Notes stay in this browser. Saving includes a short demo delay.'","disclosure:'Saved notes stay in this browser. Unsaved drafts last until this page closes. Saving includes a short demo delay.'").replace("disclosure:'笔记仅存于此浏览器。保存过程包含短暂的演示延迟。'","disclosure:'已存笔记仅保存在此浏览器。未保存的草稿会在关闭页面后丢失。保存过程含短暂的演示延迟。'")
+s=s.replace("$('flip').disabled=face==='front'&&(!saved||!ready);","$('flip').disabled=face==='front'&&(!saved||!ready)&&!$('card-space').classList.contains('turning');")
+s=s.replace("else $('saved-title').focus({preventScroll:true});}}","else $('saved-title').focus({preventScroll:true});}render();}")
+s=s.replace("saved=null;ready=true;touched=false;", "saved=null;ready=true;touched=false;document.querySelector('details').open=false;")
+s=s.replace("$('theme-toggle').setAttribute('aria-label',t(root.dataset.theme==='light'?'dark':'light'));","$('theme-toggle').setAttribute('aria-label',t(root.dataset.theme==='light'?'dark':'light'));$('card-front').setAttribute('aria-label',t('noteLabel'));$('card-back').setAttribute('aria-label',t('savedNotes'));document.querySelector('.note-workspace').setAttribute('aria-label',t('noteLabel'));")
+s=s.replace("read(true);", "document.querySelector('.skip').addEventListener('click',e=>{if(face==='back'){e.preventDefault();setFace('front')}});\nread(true);")
+p.write_text(s)
+p=root/'app/styles.css';s=p.read_text().replace('opacity:.45;border-radius:inherit;z-index:1','opacity:.45;border-radius:inherit;z-index:0').replace('.card-front{transform:', '.card-face>*{position:relative;z-index:2}.card-front{transform:');s+='\n@media(max-width:660px){.site-header{height:68px}.page-shell{padding-top:18px}.section-line{margin-bottom:17px}.intro h1{font-size:38px;line-height:1.03;text-wrap:initial}.intro h1 br{display:initial}.research-question{margin:16px 0 18px}.card-space{height:364px}textarea{height:155px;margin-top:18px}.status-area{min-height:44px}.card-bottom{padding-top:13px}footer{min-height:48px}}\n';p.write_text(s)
+p=root/'app/THIRD_PARTY_NOTICES.md';p.write_text(p.read_text().replace('Copyright (c) David DeSandro','Copyright (c) 2026 David DeSandro'))
+p=root/'evidence/test_app.py';s=p.read_text().replace("D=Path(__file__).parent; report=", "ROOT=Path(__file__).parent;D=ROOT/'run2';D.mkdir(exist_ok=True); report=")
+s=s.replace("(D.parent/'app')", "(ROOT.parent/'app')")
+s=s.replace('page.evaluate("window.originalSet=', 'page.evaluate("() => {window.originalSet=').replace('return originalSet.call(this,k,v)}")','return window.originalSet.call(this,k,v)}}")')
+s=s.replace('page.evaluate("window.originalRemove=', 'page.evaluate("() => {window.originalRemove=').replace("throw Error('Injected remove failure')}\")", "throw Error('Injected remove failure')}}\")")
+s=s.replace("page.evaluate('Storage.prototype.setItem=window.originalSet')","page.evaluate('() => {Storage.prototype.setItem=window.originalSet}')").replace("page.evaluate('Storage.prototype.removeItem=window.originalRemove')","page.evaluate('() => {Storage.prototype.removeItem=window.originalRemove}')")
+p.write_text(s)

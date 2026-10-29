@@ -1,0 +1,47 @@
+# Leafnote — current design and evidence
+
+## Intended experience and scope
+A browser-local research notebook: create, save, find, select, revise, reopen. English and Chinese, light and dark, desktop 1440×900 and mobile 390×844. No backend, synchronization, sharing or team identity. The design direction is provisional under the implementation brief; no owner preference approval has been inferred.
+
+## Research and choice (2026-10-29)
+Viewed the original application's `evidence/baseline.png`, Bootstrap 5.3 sidebar/list-group demo (`bootstrap-reference.png`), and shadcn v3 Mail (`shadcn-reference.png`). The first remote screenshot attempt failed on the test browser's certificate trust; the failure remains in research-log.txt. Retried with a test-only HTTPS compatibility setting. These are real viewport captures, viewed separately; source pages were also read. Public remote behavior beyond the captured state is not claimed.
+
+- **Collection/editor relationship (L0–L3):** shadcn's mail example supplies the useful relationship between search, selected item and persistent detail. Its three-column folder/mail/detail model would spend too much width on categories the product does not have. Choose two columns and a mobile collection-to-editor path. The list retains query and selected state; switching keeps drafts.
+- **Mature implementation (L3–L5):** directly adopt Bootstrap 5.3.8 CSS (MIT) for list-group item behavior/structure, forms, buttons, visible utilities and reset. Adapt the official sidebars example's flush list grouping and title/context hierarchy. Keep its state mechanisms, change accent, typography and spacing. The complete CSS remains local in app/vendor with its license. No runtime CDN or framework migration. shadcn remains a visual/organization reference, not an imported implementation.
+- **Editorial expression (L4):** distinguish the light stone collection surface from a quiet warm writing surface, with a serif writing title and compact sans-serif controls. A stronger Bootstrap blue active row was visually much louder than neighboring content; use a subdued sage row with a dark left rule. A card-grid alternative would separate title/context from the selected writing task and waste short research-note space.
+- **Safety (L1/L5):** explicit Save commits the collection. Per-note draft snapshots protect navigation and reload, with truthful failure feedback. Preserve the legacy key and import its valid title/body without replacing it. A malformed store blocks writes and remains exportable. Native dialog names the note and focuses Cancel. These are project-owned behaviors, independently tested.
+
+## Sources and actual adoption
+- https://getbootstrap.com/docs/5.3/examples/sidebars/ — visually observed full demo; flush list-group pattern adapted.
+- https://getbootstrap.com/docs/5.3/components/list-group/ — selected/button state contract read.
+- https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css — exact adopted runtime CSS; MIT notice in app/vendor/BOOTSTRAP-LICENSE.txt.
+- https://v3.shadcn.com/examples/mail — visually observed desktop mail composition; organizational reference only.
+- common-guidance.md and dialog/form-sizing sections in common-guidance-raw.md — native dialog, local scrolling, fallback and reduced-motion implementation guidance.
+
+## Remaining evidence action before delivery
+Run actual HTTP paths for sample loading, search, save/reload, migration, draft retention, failure/retry, deletion/cancel, keyboard, locale/theme and mobile return. View resulting captures at both target sizes. Keep test assertions separate from visual interpretation. No claim of end-user study or multi-browser certification.
+
+## Implemented review and revisions
+
+The local trial was viewed at 1440×900 and 390×844. The working result adopts the actual Bootstrap list-group/form/button CSS, not only a naming convention. Inter Variable 5.3.0 (SIL OFL, local WOFF2) now carries Latin UI/body type; a Bootstrap Icons 1.13.1 leaf (MIT) replaces an ambiguous ornament. Exact acquisition URLs and byte sizes are in evidence/assets-log.txt; both licenses are vendored.
+
+Observed changes that affected implementation:
+1. List previews originally preserved blank lines and showed little useful context. They now collapse whitespace for scanning while the editor preserves the original text.
+2. Bootstrap color transitions briefly left dark-theme controls with their former text color. Immediate theme colors now keep label/surface changes together. No motion quality claim is inferred from static screenshots.
+3. Selected and hovered rows initially appeared too similar. A persistent left selection rule now distinguishes the active note.
+4. Scrolling a long note could carry its scroll offset into a different note. Selection now reveals the editor first, then resets its scroll to the title. The earlier frames remain in pre-scroll-fix and pre-mobile-scroll-fix. Eight explicit final checks verify title visibility.
+5. The long-title cap cropped the last title lines on mobile. The title now grows inside the scrollable editor. Intrinsic text metrics additionally needed 6px bottom padding; eight final fit assertions pass. The first failure and diagnostic measurements remain archived. The diagnostic log's concluding 8/8 sentence was an erroneous unconditional print, not a passing result; only long-title-check.log/json from the final asserted run establishes fit.
+6. Global shortcuts are disabled while the native confirmation is open, and deletion captures its target ID. This prevents background navigation from changing a pending delete target.
+
+## Assurance and visual interpretation
+
+- test-results-run2.json / test-run-2.log: 27 passing assertions for the main HTTP/native-storage task and injected read/write faults, legacy preservation, actual export, keyboard save, and cancellation.
+- final-checks.json / final-checks.log: 30 passing focused checks after review, including failed deletion recovery, actual shared-context tab conflicts, target visibility, long-content scroll and overflow across all eight target viewport/language/theme combinations, plus 320px reflow.
+- long-title-check.json / .log: eight asserted title-fit checks after the padding repair.
+- The first harness run failed on an evaluation helper; a later helper failed because multi-tab testing requires an explicit Playwright context. Those original logs/scripts are retained. test-run-3.log is an incomplete run, not counted as a pass.
+- Actual pixels were viewed independently for both reference products, the baseline, trial, final English/Chinese and light/dark editor combinations, mobile collection, long mobile title, dark deletion dialog and failed-save state. Final representative desktop/mobile/long-title frames were viewed again after the last padding change. Other unchanged relationships inherit the prior same-condition viewing, not a new approval.
+
+Professional interpretation: the pale collection, stable selected rule, stronger title and bounded reading measure create the intended quiet collection/editor hierarchy. Mobile uses a full-width editor with a persistent save area; long text scrolls within that region. Screenshots and assertions establish these observed conditions; no audience study, screen-reader session, physical-phone keyboard session or cross-browser certification was performed.
+
+## Remaining limitations
+JSON backup import and automatic conflict merging are not implemented. A conflict preserves memory text and asks for export/reload. A malformed store remains intact and exportable but requires manual repair. Large-library performance, Safari/Firefox and physical mobile keyboards remain unverified. The title/body are plain text, with 150/30,000 character limits. Local browser storage is the only persistence boundary.

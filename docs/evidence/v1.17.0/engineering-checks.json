@@ -1,0 +1,50 @@
+{
+  "version": "1.17.0",
+  "source_stage": "Candidate runtime frozen before Agent applications; final source gate will be recorded separately.",
+  "unit_tests": {
+    "count": 277,
+    "result": "pass",
+    "log": "logs/unit-second.txt"
+  },
+  "package_structure": "pass",
+  "catalog_consistency": "pass",
+  "readme_artwork": "pass",
+  "local_installation": {
+    "result": "pass",
+    "source": "local repository",
+    "file_count_per_copy": 37,
+    "log": "logs/install-local.txt"
+  },
+  "readme_conditions": 12,
+  "browser_suites": [
+    {
+      "suite": "assets",
+      "result": "pass",
+      "storage_verified": null,
+      "report": "browser/assets-report.json",
+      "scope": "Existing authored fixture; actual local HTTP/browser execution, not an Agent-treatment effect."
+    },
+    {
+      "suite": "scenario",
+      "result": "pass",
+      "storage_verified": true,
+      "report": "browser/scenario-report.json",
+      "scope": "Existing authored fixture; actual local HTTP/browser execution, not an Agent-treatment effect."
+    },
+    {
+      "suite": "content",
+      "result": "pass",
+      "storage_verified": true,
+      "report": "browser/content-report.json",
+      "scope": "Existing authored fixture; actual local HTTP/browser execution, not an Agent-treatment effect."
+    },
+    {
+      "suite": "temporal",
+      "result": "pass",
+      "storage_verified": true,
+      "report": "browser/temporal-report.json",
+      "scope": "Existing authored fixture; actual local HTTP/browser execution, not an Agent-treatment effect."
+    }
+  ],
+  "limits": "Engineering, fixture behavior, viewed pixels, Agent outcomes and owner acceptance are distinct."
+}

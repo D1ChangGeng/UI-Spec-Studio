@@ -62,9 +62,21 @@ class AssetTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 assets.source_inventory(Path(td))
 
-    def test_shared_assets_reused_without_font_distribution(self):
+    def test_shared_assets_reused_without_installable_font_distribution(self):
         files = package.source_files(ROOT)
-        self.assertFalse(any(p.suffix.lower() in {'.ttf', '.otf', '.woff', '.woff2'} for p in files))
+        # Archived Agent applications retain their licensed font bytes for replay.
+        # The portable Skill and the shared publication/example assets still do
+        # not distribute fonts. Keep this exception tied to the actual study.
+        fonts = [p for p in files if p.suffix.lower() in {'.ttf', '.otf', '.woff', '.woff2'}]
+        self.assertEqual({p.relative_to(ROOT).as_posix() for p in fonts}, {
+            'docs/experiments/adaptive-granularity/runs/T1-r4/final/app/vendor/inter-latin.woff2',
+            'docs/experiments/adaptive-granularity/runs/T1-m9/final/app/vendor/InterVariable.woff2',
+        })
+        for path in fonts:
+            self.assertTrue(path.is_relative_to(ROOT / 'docs/experiments/adaptive-granularity/runs'))
+            self.assertEqual(path.suffix, '.woff2')
+            license_text = (path.parent / 'INTER-LICENSE.txt').read_text(encoding='utf-8')
+            self.assertIn('SIL OPEN FONT LICENSE', license_text)
         html = (ROOT / 'examples/asset-review/index.html').read_text(encoding='utf-8')
         for name in assets.SVG_NAMES:
             self.assertIn('../../docs/assets/' + name, html)

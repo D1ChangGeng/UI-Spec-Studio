@@ -1,0 +1,259 @@
+{
+  "started_utc": "2026-10-29T21:51:18Z",
+  "variants": {
+    "variant-01": {
+      "captures": [
+        "review-output/supplemental-captures/variant-01-initial-desktop-long.png",
+        "review-output/supplemental-captures/variant-01-initial-mobile-long.png",
+        "review-output/supplemental-captures/variant-01-desktop-density-keyboard-focus.png",
+        "review-output/supplemental-captures/variant-01-mobile-manual-scroll-interior.png",
+        "review-output/supplemental-captures/variant-01-mobile-dark-chinese-storage-failure.png"
+      ],
+      "checks": [
+        {
+          "name": "initial_to_final_saved_content_compatibility",
+          "pass": true
+        },
+        {
+          "name": "body_selection_range_survives_preferences",
+          "pass": true,
+          "before": {
+            "start": 275,
+            "end": 305
+          },
+          "after": {
+            "start": 275,
+            "end": 305
+          }
+        },
+        {
+          "name": "draft_survives_note_switch",
+          "pass": true
+        },
+        {
+          "name": "legacy_note_recovered_and_original_preserved",
+          "pass": true
+        },
+        {
+          "name": "export_download_contains_legacy_note",
+          "pass": true
+        }
+      ],
+      "density_keyboard_focus": {
+        "active": true,
+        "outline": "rgb(38, 60, 53) none 0px",
+        "boxShadow": "none",
+        "borderColor": "rgb(220, 225, 215)"
+      },
+      "scroll_before": {
+        "window": 0,
+        "areas": {
+          ".writing-area": {
+            "scrollTop": 0,
+            "scrollHeight": 3559,
+            "clientHeight": 606
+          },
+          ".editor-scroll": null,
+          "#note-body": {
+            "scrollTop": 0,
+            "scrollHeight": 3213,
+            "clientHeight": 3213
+          }
+        }
+      },
+      "scroll_after": {
+        "window": 0,
+        "areas": {
+          ".writing-area": {
+            "scrollTop": 1300,
+            "scrollHeight": 3559,
+            "clientHeight": 606
+          },
+          ".editor-scroll": null,
+          "#note-body": {
+            "scrollTop": 0,
+            "scrollHeight": 3213,
+            "clientHeight": 3213
+          }
+        }
+      },
+      "mobile_failure_feedback": [
+        {
+          "text": "无法保存，文字仍在页面中。请导出备份或重试。",
+          "top": 775.703125,
+          "bottom": 793.296875,
+          "inViewport": true
+        }
+      ]
+    },
+    "variant-02": {
+      "captures": [
+        "review-output/supplemental-captures/variant-02-initial-desktop-long.png",
+        "review-output/supplemental-captures/variant-02-initial-mobile-long.png",
+        "review-output/supplemental-captures/variant-02-desktop-density-keyboard-focus.png",
+        "review-output/supplemental-captures/variant-02-mobile-manual-scroll-interior.png",
+        "review-output/supplemental-captures/variant-02-mobile-dark-chinese-storage-failure.png"
+      ],
+      "checks": [
+        {
+          "name": "initial_to_final_saved_content_compatibility",
+          "pass": true
+        },
+        {
+          "name": "body_selection_range_survives_preferences",
+          "pass": true,
+          "before": {
+            "start": 275,
+            "end": 305
+          },
+          "after": {
+            "start": 275,
+            "end": 305
+          }
+        },
+        {
+          "name": "draft_survives_note_switch",
+          "pass": true
+        },
+        {
+          "name": "legacy_note_recovered_and_original_preserved",
+          "pass": true
+        },
+        {
+          "name": "export_download_contains_legacy_note",
+          "pass": true
+        }
+      ],
+      "density_keyboard_focus": {
+        "active": true,
+        "outline": "rgb(54, 93, 69) solid 3px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "borderColor": "rgb(217, 222, 212)"
+      },
+      "scroll_before": {
+        "window": 0,
+        "areas": {
+          ".writing-area": null,
+          ".editor-scroll": null,
+          "#note-body": {
+            "scrollTop": 0,
+            "scrollHeight": 3213,
+            "clientHeight": 405
+          }
+        }
+      },
+      "scroll_after": {
+        "window": 0,
+        "areas": {
+          ".writing-area": null,
+          ".editor-scroll": null,
+          "#note-body": {
+            "scrollTop": 1300,
+            "scrollHeight": 3213,
+            "clientHeight": 405
+          }
+        }
+      },
+      "mobile_failure_feedback": [
+        {
+          "text": "保存失败，输入内容仍在此页。请重试或导出备份。",
+          "top": 204.09375,
+          "bottom": 223.890625,
+          "inViewport": true
+        }
+      ]
+    },
+    "variant-03": {
+      "captures": [
+        "review-output/supplemental-captures/variant-03-initial-desktop-long.png",
+        "review-output/supplemental-captures/variant-03-initial-mobile-long.png",
+        "review-output/supplemental-captures/variant-03-desktop-density-keyboard-focus.png",
+        "review-output/supplemental-captures/variant-03-mobile-manual-scroll-interior.png",
+        "review-output/supplemental-captures/variant-03-mobile-dark-chinese-storage-failure.png"
+      ],
+      "checks": [
+        {
+          "name": "initial_to_final_saved_content_compatibility",
+          "pass": true
+        },
+        {
+          "name": "body_selection_range_survives_preferences",
+          "pass": true,
+          "before": {
+            "start": 275,
+            "end": 305
+          },
+          "after": {
+            "start": 275,
+            "end": 305
+          }
+        },
+        {
+          "name": "draft_survives_note_switch",
+          "pass": true
+        },
+        {
+          "name": "legacy_note_recovered_and_original_preserved",
+          "pass": true
+        },
+        {
+          "name": "export_download_contains_legacy_note",
+          "pass": true
+        }
+      ],
+      "density_keyboard_focus": {
+        "active": true,
+        "outline": "rgb(54, 93, 68) solid 3px",
+        "boxShadow": "none",
+        "borderColor": "rgb(223, 229, 219)"
+      },
+      "scroll_before": {
+        "window": 0,
+        "areas": {
+          ".writing-area": null,
+          ".editor-scroll": {
+            "scrollTop": 0,
+            "scrollHeight": 4037,
+            "clientHeight": 632
+          },
+          "#note-body": {
+            "scrollTop": 0,
+            "scrollHeight": 3657,
+            "clientHeight": 3657
+          }
+        }
+      },
+      "scroll_after": {
+        "window": 0,
+        "areas": {
+          ".writing-area": null,
+          ".editor-scroll": {
+            "scrollTop": 1300,
+            "scrollHeight": 4037,
+            "clientHeight": 632
+          },
+          "#note-body": {
+            "scrollTop": 0,
+            "scrollHeight": 3657,
+            "clientHeight": 3657
+          }
+        }
+      },
+      "mobile_failure_feedback": [
+        {
+          "text": "未能保存笔记。当前内容仍在页面中，请导出副本或重试。重试",
+          "top": 115,
+          "bottom": 189,
+          "inViewport": true
+        },
+        {
+          "text": "尚未保存的修改",
+          "top": 814.40625,
+          "bottom": 832,
+          "inViewport": true
+        }
+      ]
+    }
+  },
+  "finished_utc": "2026-10-29T21:51:32Z"
+}

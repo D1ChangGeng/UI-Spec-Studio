@@ -1,0 +1,164 @@
+# T3 independent product review — Fieldnote cards and collection
+
+## Findings
+
+All three final variants completed the tested create, save, edit, return, switch, retry, and reload tasks. The tested long draft survived appearance changes, switching among three notes, and injected storage failures. None turned a failed first save into a visibly saved card. The consequential differences are in how the collection relates to the editor, how much note content is available for scanning, and where keyboard focus goes after failure.
+
+Variant 01 retains the introductory column beside both the collection and editor, gives notes independent editable titles, and uses a brief fade when opening a note. Variants 02 and 03 use a wider collection and a visible movement from the selected tile to the editor. Variant 02 presents a first-line title and character count; variant 03 presents a larger text excerpt. The failed-save keyboard probe reproduced a small continuity gap in 02 and 03: the focused Save control loses focus to the page body, although retry remains reachable by Tab. Variant 01 retains focus on Save.
+
+These are observations from the supplied samples, not an aesthetic ranking, a universal winner, a human acceptance result, or a performance conclusion. The focus findings describe the final outputs; the initial failure paths were not operated, so this review does not attribute those gaps to the continuation.
+
+## Scope and method
+
+Reviewed only the assigned T3 packet, its supplied tooling, and the initial/final source of its three anonymous variants. No condition mapping, sibling packet, participant account, or parent project record was inspected. Application source was not edited. Source hashes before and after the main run match; a final preservation check is recorded alongside this report.
+
+The actual final applications were served over loopback HTTP on separate origins, using the supplied Chromium executable and font configuration. Each scenario received a fresh browser context. The main pass used ports 8431–8433, the focused follow-up 8531–8533, and the keyboard probe 8631–8633. These are local test origins, not published applications.
+
+Each variant received the same core scenarios at **1440 × 900** and **390 × 844**. Reduced motion was checked at both sizes. Initial implementations were opened and saved at 1440 × 900 to compare inherited composition and card relationships with the continuation. The initial implementations were not given the full regression sequence.
+
+Representative content is preserved verbatim in `observations.json` and `review_runner.py`:
+
+- A **479-character English/Chinese note**, with a heading, paragraphs, blank lines, and Chinese observations about district heating.
+- A **52-character short English note** about an archive visit.
+- A **27-character short Chinese note** about a street after rain.
+- A **779-character over-limit input** to inspect the shared 600-character boundary.
+
+Variant 01 also received the independent titles “District heating fieldnote,” “Archive visit,” and “雨后的街道,” because it exposes a title field. The other two derive collection identity from note text and number.
+
+The scripted browser pass produced **318 captured states, 106 per variant**: 192 in the main pass, 96 in the follow-up, and 30 in the keyboard probe. Their JSON state records include focus, selection, scroll position, card bounds, face state, content, storage, and capture paths. This count is a capture count; it is not a claim that every capture was visually inspected. `viewed-evidence.json` identifies the actual viewed images and contact-sheet members.
+
+Normal-motion views include light/dark and English/Chinese UI at both sizes. Reduced-motion views include light/dark at 390 × 844 and light at 1440 × 900. Storage failure/recovery was exercised in normal-motion light mode; it was not repeated across the entire theme/locale/motion combination matrix.
+
+## Common task results
+
+| Executed check | Observed result across all three |
+|---|---|
+| Fresh collection | Honest empty state with an action to create a note; no invented saved content. |
+| Long and short content | All three notes could be saved and reopened; long body text scrolled inside the card. The card footprint stayed fixed during the tested front/back change. |
+| Over-limit input | The 779-character draft remained present and Save was disabled. Feedback explained the 600-character limit. |
+| Appearance changes | Switching light/dark and English/Chinese UI retained the note body. English and Chinese glyphs rendered in the supplied font environment. |
+| Repeated Save | Three quick Ctrl+Enter requests produced one saved note, not duplicate collection entries. |
+| Edit while saving | An earlier submitted version was saved; the newer text remained an unsaved draft on the front. Each variant explicitly distinguished these two versions. |
+| Collection switching | A modified draft survived a visit to another card and reopening. Repeated opening/returning and rapid switching during a turn ended with the requested record and correct saved text. |
+| Failed first save | A thrown `QuotaExceededError` from the actual Storage API call left the editor and draft available, storage empty, and the card on its front. |
+| Failed update | Existing stored JSON remained unchanged; the modified draft remained available. The collection marked the failed note. Restoring writes and activating retry saved the draft. |
+| Read failure | A thrown Storage read error produced an unavailable state and recovery action. Retry restored the three stored records. |
+| Reload | The saved first note reopened with the tested revision after reload. |
+| Front/back keyboard return | The selected range `[26,45]` and textarea scroll position returned on desktop; range `[20,30]` returned on narrow screens. |
+| Narrow collection orientation | The third card regained focus and the collection returned to its previous scroll position: 119 px in 01, 178 px in 02, and 315 px in 03 for this content. |
+| Reduced motion | The tested saved and editor faces remained usable without the 3D rotation. The sampled Tab sequence did not enter an inert face. Both viewports were inspected. |
+
+Storage failures were **fault injections**, not a naturally exhausted quota or physical disk fault. The tests exercise the application's real exception path around browser storage; they do not establish behavior under every storage failure mode. Supporting records: `observations.json`, `followup-observations.json`, and `keyboard-observations.json`.
+
+## Variant 01
+
+### Composition, typography, and material
+
+The final editor preserves the initial implementation's two-part composition: a large serif introductory headline and research motif on the left, with a lighter card on the right. The collection uses that same right-hand area, so three notes occupy two rows at desktop width. This retains the surrounding scene while giving the collection less horizontal room than 02 or 03.
+
+The independent note title becomes the main card heading and the collection tile heading. A smaller excerpt gives a second way to identify each card. The editable title uses prominent serif type; the body editor uses sans-serif text, while the saved reading face changes to a larger serif. This creates a clear edit/read distinction, but the title allocation makes the desktop body editor relatively shallow: its measured client height was 130 px for the long note. The saved text region is independently scrollable.
+
+At 1440 × 900, the card space measured 714 × 474 px at x=566, y=218. At 390 × 844 it measured 354 × 456 px at x=18, y≈261.5. Those bounds stayed stable through the tested save and reverse. The mobile Save control, face control, and feedback were present without horizontal overflow. The footer required page scrolling in this state.
+
+The off-white card, fine outline, pale badge, rounded corners, and green action retain the initial material treatment. The dark version keeps the same separations with a darker green surface and a pale action button. During a sampled turn, the broad stationary rounded shadow/footprint remains visible behind the rotating sheet. That anchors the location but makes the ground shape unusually conspicuous at the edge-on part of the turn.
+
+Evidence: `variant-01-desktop/01-long-editor.png`, `03-dark-chinese-editor.png`, `04-save-0950ms.png`; `variant-01-mobile-sheet.jpg`; `initial-final-saved.jpg`.
+
+### Motion and task continuity
+
+The sampled forward sequence shows the draft during the save delay, then a populated saved face as the same card rotates. The reverse returns to the previous editing selection and scroll. The card does not change its outer footprint. Successful save focuses the saved text region, allowing keyboard access to the reading content.
+
+Opening a collection card uses an opacity change into the full editor. At the earliest sampled opening frame the editor area is nearly blank while opacity is low; subsequent frames show the prepared title and body. This is a brief fade of a prepared editor, not evidence of an empty back face. Return to the collection is immediate in the inspected samples, with the originating tile outlined and focused. The surrounding introduction remains fixed.
+
+On a failed keyboard save, Save retained focus at both sizes. Tab then reached the external face control and, next, retry. Read recovery moved focus to New note after its retry control disappeared. The collection's clear-all action displayed a native confirmation; dismissing it preserved all three saved test notes.
+
+Evidence: `variant-01-motion-sheet.jpg`, `variant-01-route-sheet.jpg`, `variant-01-desktop/10-save-failure.png`, `variant-01-followup/07-read-recovered.png`, and the variant-01 entries in `keyboard-observations.json`.
+
+### Tradeoff and limit
+
+The continuation makes distinct note identity explicit through editable titles and excerpts while preserving the initial surrounding scene. It gives up a visible spatial journey between tile and editor, and the title area reduces the body editor's visible height. No blocking defect was reproduced in the tested path. Very long titles, many more than three cards, and exhaustive focus traversal were not covered.
+
+## Variant 02
+
+### Composition, typography, and material
+
+The collection occupies the full main width and displays all three cards in one desktop row. Each tile emphasizes the first line of the note as a serif title, then shows a character count and save state. The short archive note therefore reads as a complete tile title; the longer note has little body context beyond its first line. This is economical for first-line recognition but offers less excerpt context than 01 or 03.
+
+The editor retains the initial large left-hand headline, the fixed heating research question, and a lighter card on the right. Its generic card headings—“An idea in progress” and “An idea, kept.”—describe the state rather than the specific note. Note number and body text carry the individual identity. The fixed heating question remains visible when the archive and rain notes are open, reflecting the inherited research framing.
+
+The desktop card space measured 662 × 462 px at x=608, y≈216.4. The body editor's measured client height was 222 px, noticeably taller than 01's. Serif body type continues between edit and read, with a larger saved reading size. Rounded corners, a circular mark, a softly differentiated back surface, and a low diffuse shadow keep the material gentle and consistent.
+
+On narrow screens, the retained research question and two-line headline place the 350 × 364 px card at y≈377.3. The outer dimensions remain stable while flipping. Save and the normal status are reachable in the 844 px viewport; the smaller card body requires internal scrolling for the long note. No horizontal overflow was measured.
+
+Evidence: `variant-02-desktop/01-long-editor.png`, `03-dark-chinese-editor.png`, `variant-02-mobile-sheet.jpg`, `comparison-09-three-card-collection.jpg`, and `initial-final-saved.jpg`.
+
+### Motion and task continuity
+
+The inspected collection transition enlarges the selected preview toward the editor position. Intermediate frames preserve the old tile content before the editor content appears; the reverse shows the saved card shrinking back into its collection slot. This supplies a spatial relationship that 01's fade does not. Text changes during the size change, so the transition is an orientation cue rather than a stable reading interval.
+
+The save turn shows populated content on the emerging back, and reverse restores the tested selection and scroll. The rapid route test—open one card, start a turn, return, then open the third—ended on the third note's front with the correct saved content prepared. Reduced motion removed the rotation and collection movement while keeping the same usable task states.
+
+The failure path retained the draft and previous saved JSON. However, disabling the focused Save button removed focus from it. After the failed keyboard save, `document.activeElement` was BODY at both sizes. One Tab reached retry, so the path remained recoverable, but no task control retained a visible focus indicator until that Tab. Read recovery also left focus on BODY when the collection retry disappeared.
+
+The explicit clear-all control inside Local demo immediately removed all three test notes. No confirmation dialog or undo action appeared in this test.
+
+Evidence: `variant-02-motion-sheet.jpg`, `variant-02-route-sheet.jpg`, `variant-02-followup/00-first-save-failure.png`, `keyboard-01-keyboard-failure.jpg`, `keyboard-02-next-tab.jpg`, and `keyboard-observations.json`.
+
+### Tradeoff and limit
+
+The wide grid and preview-to-editor movement emphasize collection navigation. The first-line/count tiles are compact to scan but expose less note context, and the narrow editor starts lower on the page because the inherited question remains above it. Focus loss after failure is a reproduced continuity gap, not a data-loss defect. The clear-all action's broad scope and immediate effect are an observable recovery/cancellation difference; it is clearly located inside demo settings rather than the primary save flow.
+
+## Variant 03
+
+### Composition, typography, and material
+
+The collection also uses a full-width desktop row, with larger serif excerpts and a separate count/local-draft boundary above the grid. The long note is visibly truncated after several lines; the short English and Chinese notes remain recognizable from their body text. Line breaks collapse in the collection preview, so the rain note reads as continuous text there. Each card retains its number and save-state footer.
+
+The editor preserves the initial broad left headline, the fixed heating question, and a narrower right-hand card. The generic heading “Follow the thought.” gives the front a writing surface character. Fine rules above and below the textarea, restrained corners, the star motif, and a relatively prominent lower shadow distinguish it from the more boxed editor in 02. The saved face replaces the star with a check and adds a saved date. The Ctrl/Command+Enter hint remains visible outside the card.
+
+The measured desktop card space was 570 × 466 px at x=730, y≈201.0, with a 205 px textarea client height for the long note. At narrow width it was 350 × 390 px at x=20, y≈322.3. Those bounds stayed fixed through the tested flip. The normal Save action and status were visible. In the narrow failure screenshot, retry is at the lower viewport edge; keyboard focus can scroll to it, but the initial failure state does not place it as comfortably as the normal save action.
+
+Evidence: `variant-03-desktop/01-long-editor.png`, `03-dark-chinese-editor.png`, `09-three-card-collection.png`, `variant-03-mobile-sheet.jpg`, `keyboard-01-keyboard-failure.jpg`, and `initial-final-saved.jpg`.
+
+### Motion and task continuity
+
+The collection transition visibly scales the destination editor from the source tile's region. The prepared editor text and controls are already present in early miniature frames and grow toward their settled size. On return, the collection tile appears at a larger size and contracts into its slot. This keeps a spatial path, with temporary scaling of letters and controls as a visible tradeoff. The sampled frames did not show a blank back face or the wrong note.
+
+The forward/reverse card motion retains the initial surface proportions and uses the same fixed footprint. The save delay has an animated activity mark; the reduced-motion state suppresses that activity and the 3D turn while leaving readable state feedback. The tested selection, draft, local persistence, retries, and narrow return position all survived the same operations as 01 and 02.
+
+The keyboard failure probe reproduced the same BODY focus loss as 02. The next Tab reached All notes, and the second reached retry. Successful retry moved focus to the saved heading. Read recovery also left BODY focused after the retry disappeared. No hidden face received focus in the sampled reduced-motion Tab sequence.
+
+The About this demo clear action deleted only the current note, reducing the three-note collection to two. It did so without a confirmation dialog. This has a narrower deletion scope than 02's clear-all action, but the tested control still has no cancellation step.
+
+Evidence: `variant-03-motion-sheet.jpg`, `variant-03-route-sheet.jpg`, `reduced-repro-390.jpg`, `reduced-repro-1440.jpg`, and the variant-03 entries in all three observation JSON files.
+
+### Tradeoff and limit
+
+Large excerpts and a visible collection-level persistence boundary help identify notes and understand local storage. The inherited fixed research question remains on every editor, including unrelated test notes. The spatial transition uses destination content immediately, which avoids a blank destination but temporarily scales its text. Failed-save focus loss is a reproduced continuity gap, and narrow retry placement deserves device-level follow-up with a real software keyboard.
+
+## Reproducing the consequential continuity gap
+
+This was reproduced in variants 02 and 03 at both requested sizes, using a fresh context and the 52-character archive note:
+
+1. Create a note and enter `Library visit — ask about the archive opening hours.`
+2. Make `Storage.prototype.setItem` throw `new DOMException('Keyboard probe forced quota failure', 'QuotaExceededError')`. The exact reversible test injection is in `keyboard_probe.py`.
+3. Focus Save and press Enter.
+4. After 1.2 seconds, inspect focus and the visible error. The card is still on its front and the draft is intact, but active focus is BODY.
+5. Press Tab. Variant 02 reaches retry immediately. Variant 03 reaches All notes, then retry on the next Tab.
+6. Restore writes and activate retry. Save succeeds and the saved face appears.
+
+Variant 01, under the same conditions, keeps Save focused. This comparison concerns continuity and focus visibility; it is not a claim that 02 or 03 traps the keyboard user or loses data.
+
+## Evidence, interpretation, and remaining uncertainty
+
+The browser assertions, captured frames, and viewed pixels are separate evidence:
+
+- `observations.json`, `followup-observations.json`, and `keyboard-observations.json` record executed behavior and state. Every captured state points to its original PNG. No application exception was recorded by the main page-error listener, and no test locator/action exception occurred in the completed scenario runs.
+- `viewed-evidence.json` lists **176 unique original frames** inspected individually or through contact sheets, and separately lists captured frames that were not visually inspected. The principal sheets include `variant-01-motion-sheet.jpg`, `variant-02-motion-sheet.jpg`, `variant-03-motion-sheet.jpg`, their corresponding `route-sheet` files, the mobile/reduced sheets, `initial-final-saved.jpg`, and the keyboard comparison sheets.
+- Motion was inspected as **sampled frame sequences**, not as continuous playback on a target device. Requested sample intervals and actual elapsed capture times differ because capture has overhead; the JSON preserves actual elapsed values. These frames support statements about prepared content, direction, bounds, and intermediate composition, not target-device smoothness.
+- The first contact-sheet command failed because the test virtual environment lacked Pillow. The original failure is retained in `make-sheets-original-failure.txt`; sheets were subsequently generated with the environment's available Python/Pillow. This is a tooling failure, not an application defect.
+- A suspected missing-header issue during reduced-motion image comparison was rejected: the saved PNG header regions have the same pixel distribution as normal mode, and fresh-context stable captures show them. `pixel-verification.json` preserves the check. It is not counted as a product defect.
+
+Not observed: physical phone/touch use, software-keyboard viewport resizing, real screen-reader announcements, formal contrast/translation audits, Firefox/Safari rendering, high-refresh motion, hundreds of notes, simultaneous tabs or external storage mutation, genuine full-disk/quota exhaustion, exhaustive keyboard traversal, every instant between sampled frames, and a full initial-version regression. Initial-version motion itself was not sampled; the initial/final comparison concerns visible endpoint composition and proportions. Reduced motion was set in the browser context; changing that preference during an active turn was not exercised. No claim is made about research depth or implementation process from visual appearance.
+
+The review leaves the source unchanged. The findings support a working local-demo task across these tested cases, with distinct collection/motion tradeoffs and the bounded focus/retry differences described above.

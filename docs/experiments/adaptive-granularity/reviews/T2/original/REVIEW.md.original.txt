@@ -1,0 +1,153 @@
+# T2 — independent Meridian product-output review
+
+## Scope and main findings
+
+Reviewed the three anonymous **final** applications as browser-local conversational workspaces, using their initial applications only to distinguish inherited structure from the source-reading continuation. Product source was not edited. Only this packet, its stated infrastructure paths, and its review/tooling instructions were consulted. `input-identities.json`, sibling packets, parent records, condition mappings, and participant accounts were not consulted.
+
+All three finals support an unfolding synthetic answer, an identifiable citation relationship, a source view at both required sizes, and preservation of a multiline draft across source visits. Ordinary simulated failure recovery, a second question, reload, and a thread-history round trip worked in the corrected scenarios. The consequential differences concern **control during reading and recovery**, not the presence of a polished opening screen:
+
+| Observed condition | variant-01 | variant-02 | variant-03 |
+| --- | --- | --- | --- |
+| Source open while answer arrives | Inline citation and matching paragraph/context treatment | Inline citation, highlighted answer passage, source excerpt and return link | Inline citation, highlighted paragraph, full cited-context block and source tabs |
+| Stop/recover from narrow source view | Must return to conversation to stop; no transport action in modal | Stop and Continue remain available in fixed source footer | Stop and Try again available near top; they scroll out of view, while Back remains sticky |
+| Large upward wheel gesture during output | Reading position held | Reading position held | Reading position held |
+| Small upward wheel gesture, 40 px | Reading position held | Next output tick restores bottom following | Next output tick restores bottom following |
+| Special return/recovery gap | Desktop source close X scrolls out of view | Narrow Show paragraph returns to original citation after briefly setting the requested position | Source Try again can return to an empty reader; Latest response also targets reserved blank space |
+| Draft, filename chip, reload | Retained in tested sequence | Retained in tested sequence | Retained in tested sequence |
+
+These are bounded observations from the supplied synthetic fixtures. There is no aesthetic score, universal winner, statistical inference, human-user acceptance result, research-depth inference, or target-device smoothness claim.
+
+## Method and evidence boundaries
+
+The review began at approximately **2026-10-29 21:46 UTC**. The precise completion timestamp and elapsed window are in `review.json`. Comparable scripted passes and visual inspections were applied to every variant; targeted follow-ups reproduced the distinct gaps. Six independent origins served final variants on ports 8081–8083 and initial variants on 8084–8086. Each case used a fresh browser context; reload checks reused the same context to exercise actual HTTP-origin persistence.
+
+The supplied Python Playwright runtime, Chromium headless shell, and font configuration were used. Viewports were **1440×900** and **390×844**, with light appearance at entry. Desktop dark appearance was also operated and visually inspected. These are desktop-browser viewport emulations, not physical-device or virtual-keyboard tests. Concurrent independent contexts were used for efficiency; execution timing is evidence of the tested transition, not a performance benchmark.
+
+The shared question was:
+
+> How can cities make streets cooler in summer? Give a long comparison of shade, routes, maintenance, and practical tradeoffs.
+
+The seven-line, 206-character follow-up draft included English and Chinese, beginning “Follow-up draft — keep this while I read.” and ending “What evidence would change the decision?” Its complete literal content is in `exercise.py` and the event JSON files. A local `field-notes.txt` filename chip was also added in the main scenarios. Variants 02 and 03 were set to their visible **Long response / longer answer** modes. Variant 01 exposes no equivalent long-mode selector; its supplied city response was used and overflowed the reader at both sizes. The authored answers differ, so their content lengths are not treated as equal workloads.
+
+Executed families:
+
+- Initial and final opening screens at both sizes; initial source behavior at both sizes.
+- Final pending/streaming/complete states, citation opening and closing during output, source scroll, stop and resume/retry, and return to conversation.
+- Draft growth, filename-chip continuity, desktop appearance change, reload, new thread and return through history; desktop thread filtering where offered.
+- Focused-citation Enter activation, Escape return, Shift+Enter newline, and further draft typing.
+- A large upward wheel gesture during output, Latest control, and a separate 40 px upward wheel gesture.
+- A deliberately simulated failure on a second question, followed by recovery scoped to that question's answer.
+- Desktop-to-narrow resizing with a source open.
+
+The corrected main and supplementary cases logged no page errors or horizontal document overflow. No external requests were observed in the main interaction cases. That is a statement about these executions, not an exhaustive network/security audit. See `snapshot-results.json`, `v*-rerun-*-events.json`, and `v*-supplement-*.json`.
+
+### Product behavior versus harness failures
+
+Original scripts, failed results, logs, and captures were preserved. Two original test issues were corrected only in a separately named harness:
+
+1. **Variant-02 CSP / polling:** `Page.wait_for_function` with a JavaScript string was blocked by the application's CSP after the initial scroll scenario. The error is recorded in `v2-desktop-events.json` and `v2-mobile-events.json`, with `*-original-failure.png`. It was not an application exception. `exercise-rerun.py` instead waits on the Stop locator becoming hidden. Both reruns completed.
+2. **Variant-03 retry locator:** the first test used a broad “Try again” locator that could match the previous completed answer before the new simulated failure had appeared. Those original “simulated-failure” and “failure-recovered” labels are not accepted as evidence of successful recovery of the new question. The rerun scopes Retry to the last answer and waits for that actual button. Its error card and subsequent completion were observed at both sizes.
+
+An early tool-orchestration syntax error occurred before any browser command executed; it is recorded in `review-command-log.txt`. No product change was made in response to any failure.
+
+Geometry snapshots and screenshots are separate evidence. A screenshot takes time after a DOM measurement. In particular, the “immediate” variant-02 paragraph-return measurement records the target-centered position, while its corresponding screenshot already shows the restored old position. The report does not claim that the transient centered frame was visually viewed. The exact inventory of **actually viewed** images and endpoint intervals is `viewed-evidence.json`; other captured images are explicitly listed there as not viewed.
+
+## Variant-01
+
+### Composition, type, material, and hierarchy
+
+The opening uses a left-aligned large serif question, an italic green phrase, a muted navigation column, white bordered suggestion cards, and a rounded white composer at the bottom of the workspace. The persistent composer location gives the empty and populated states a consistent entry point, with a substantial quiet gap above it on the desktop opening. At narrow width the suggestions become a vertical stack and the heading breaks across three lines. The viewed initial and final openings retain this composition. [Opening evidence](v1-final-desktop-welcome.png), [narrow opening](v1-final-mobile-welcome.png), [initial opening](v1-initial-desktop-welcome.png).
+
+In the conversation, serif answer titles and bold sans-serif subheads separate the hierarchy without many container boundaries. The selected answer paragraph gains a soft green fill; its citation becomes a stronger green button. The source panel repeats a “Cited paragraph” excerpt above a larger serif quotation, keeping the claim/source relationship visible. At 1440×900 the panel rebalances the conversation and narrows the sidebar; it does not overlay the draft. At 390×844 the source is a focused modal with a named Back control. [Desktop source](v1-desktop-source-open-650ms.png), [narrow source](v1-mobile-source-open-650ms.png).
+
+The continuation adds a useful relationship to the inherited source shell. In the operated initial version, sources became available after the answer completed, with a title/quotation/note but no inline highlighted answer paragraph. In the final, the first completed paragraph already has an active citation while further text is arriving. The narrow Back label and sticky dialog header also make the return path more explicit. [Initial desktop source](v1-initial-source-desktop.png), [initial narrow source](v1-initial-source-mobile.png), `v1-initial-source-*.json`.
+
+### Continuity and feedback
+
+The short pending cue, streaming cue, Stop button, partial-answer notice, Continue response action, and synthetic-demo wording were visible. Stop retains the partial text, and Continue adds to it. The draft and filename chip survived opening/closing, stop/continue, theme change, and reload. The seven-line draft grew to 174 px on desktop and was capped at 128 px in the main narrow case; the reader remained usable above it. Increasing the draft while the desktop source was already present held the observed reading anchor. History return restored all 206 draft characters; Shift+Enter added an actual newline. Escape from the source returned focus to its citation. See `v1-rerun-*-events.json` and `v1-supplement-*.json`.
+
+Both the large and small upward-wheel checks held the reader against new output. In the small desktop case, a 40 px upward gesture changed scrollTop from 369 to 329; it remained 329 as the answer grew and completed. In the narrow case it changed 454 to 414 and remained 414 during further output. The Latest control restored following when explicitly selected. See `v1-small-scroll-*.json` and the viewed desktop early/later frames.
+
+### Reproduced gaps
+
+**V1-A — Stop is unavailable inside the narrow source modal.** At **390×844**, submit the shared question, keep the multiline draft, and open its first citation while the answer is still streaming. The modal contains only the Back button; there is no Stop or Continue action in it. The background composer is modal-inert. Returning with Back and then stopping works and preserves the draft, but it requires leaving the source. This is a missing operation in the combined continuation flow, not a failed locator. `v1-mobile-events.json` records the modal's button inventory, and `v1-targeted-mobile.json` repeats it. [Viewed evidence](v1-mobile-source-open-650ms.png).
+
+**V1-B — Desktop close affordance scrolls away.** At **1440×900**, open the first citation, then wheel down within the source until its disclosure is visible. The panel scrolls its header and X away along with the content; in the reproduced state the X's top is **−22 px**, outside the source viewport. Escape still closes the panel and returns focus correctly, and scrolling back up restores the mouse close control. The added cited-context section makes this source longer than the visible panel. This is pointer-navigation friction rather than a blocked task. `v1-targeted-desktop.json`; [viewed scrolled source](v1-supplement-desktop-source-scrolled.png).
+
+Unobserved for this variant: an answer longer than its fixed supplied fixture, a long-response mode, and transport inside the narrow source view because the operation is absent.
+
+## Variant-02
+
+### Composition, type, material, and hierarchy
+
+The opening also uses a warm light ground, green accent, serif title with an italic second line, and a muted history sidebar. Its composer sits immediately under the welcome copy, with three suggestions below; after a question the reader/composer relationship becomes a conventional bottom composer. This makes the opening question field part of the central hierarchy. In the answer, three source chips precede the main title and body, so source choices are available early but consume reading height. [Opening](v2-final-desktop-welcome.png), [narrow opening](v2-final-mobile-welcome.png).
+
+The final source reader uses a fixed header, independently scrolling content, and a fixed transport footer. The synthetic-source disclosure is prominent before the highlighted cited passage. A “Linked answer passage / Show paragraph” control connects back to the answer, while the selected paragraph has a green fill and left border. On narrow screens the fixed Back header and Stop/Continue footer remain visible even after scrolling the note. This separation of reading content and controls is observable in the bottom-of-source captures. [Desktop source](v2-desktop-source-open-650ms.png), [narrow source bottom](v2-supplement-mobile-source-scrolled.png).
+
+The initial application already allowed an inline citation to open a source during streaming. The continuation materially adds the explicit paragraph relationship, highlighted source excerpt, named narrow return, and transport footer; the basic panel/modal, typography, palette, and source navigation are inherited. [Initial source](v2-initial-source-desktop.png), [initial narrow source](v2-initial-source-mobile.png), `v2-initial-source-*.json`.
+
+### Continuity and feedback
+
+Stop and Continue operate without closing the source at both sizes, retaining partial text and draft. The footer describes the **latest answer** as preparing/writing/stopped/complete, which clarifies what its action controls. The draft, filename chip, desktop appearance, and reload survived the corrected main scenario; history search/reopen and further keyboard drafting also worked. The seven-line main draft measured 168 px high on desktop and 138 px on narrow. Escape returned focus to the citation. See `v2-rerun-*-events.json` and `v2-supplement-*.json`.
+
+There is a brief spatial shift on Continue: the source-chip row disappears during the pending phase, moving conversation content upward, then returns when streaming resumes. In the original desktop sequence the same scrollTop of 448 changed from a section-heading anchor to the middle of its paragraph during recovery. The source panel itself and draft remained stable. [Viewed recovery state](v2-desktop-recovery-source.png), `v2-desktop-events.json`. This is a transition cost alongside the benefit of retained partial text.
+
+### Reproduced gaps
+
+**V2-A — Narrow Show paragraph loses its target.** Reproduced at **390×844** in both streaming and completed-answer situations. A stable completed-answer reproduction is:
+
+1. Select Long response, submit the shared question, and leave the seven-line draft in the composer.
+2. When the response completes, open citation 1.
+3. Within the source, select source **3** using its numbered navigation.
+4. Activate **Show paragraph**.
+
+The immediate DOM measurement places source 3's linked paragraph near the reader center: scrollTop **1182**, target top **220 px**. After the subsequent **200 ms wait** and intervening capture, the application has returned to scrollTop **502**, focus is on **citation 1**, and the requested source-3 paragraph begins at **900 px**, below the reading viewport. Both captured images already show the wrong settled position; the transient target-centered state is established by DOM measurements, not a viewed frame. The desktop equivalent stays correctly centered at scrollTop 713. This reproduces a product return-order interaction rather than a selector error. See `v2-targeted-mobile.json`, `v2-targeted-desktop.json`, [narrow settled evidence](v2-targeted-mobile-show-paragraph-settled.png), [desktop comparison](v2-targeted-desktop-show-paragraph-settled.png).
+
+**V2-B — A small deliberate upward scroll is overridden.** At **1440×900 and 390×844**, while a long response is overflowing and following its newest output, wheel upward **40 px** once. The event log first records a 40 px distance from bottom, then the next output tick restores distance zero and continues following. In desktop sampling, that restoration happened approximately **17 ms after the wheel event**; narrow sampling restored it about **68 ms later**. A large 900 px upward wheel gesture was held in the separate main case. The issue is therefore specifically near-bottom manual scrolling, not all manual reading. See `v2-small-scroll-*.json`, [early desktop](v2-small-scroll-desktop-early.png), [later desktop](v2-small-scroll-desktop-later.png). Gesture timing is from this run and is not a latency benchmark.
+
+Unobserved for this variant: a comprehensive keyboard focus audit across every source-navigation change. Narrow source-number activation briefly left body focus in a settled measurement, although the next Tab reached Show paragraph; this was not expanded into a separate blocking defect.
+
+## Variant-03
+
+### Composition, type, material, and hierarchy
+
+The centered serif welcome, thin outlined emblem, rust accent, and warm matching surfaces produce a different hierarchy from the green variants. The answer uses a serif title, compact sans-serif body, bold subheads, and a serif pull quotation. The draft area has a restrained border and small attachment/research controls. The final retains the opening's initial layout and source-panel material. [Opening](v3-final-desktop-welcome.png), [narrow opening](v3-final-mobile-welcome.png), [initial opening](v3-initial-desktop-welcome.png).
+
+The source puts “Behind the answer,” Back, generation status, a full cited-paragraph block, numbered source tabs, and the source title in sequence. This gives the claim/source relationship a large, clear presence, at the cost of pushing much of the actual note below the first narrow screen. The warm highlight is also used on the answer paragraph. Back remains sticky when the source is scrolled; the generation control and context do not, so stopping from the bottom requires scrolling up. [Desktop source](v3-desktop-source-open-650ms.png), [narrow source](v3-mobile-source-open-650ms.png), [narrow source bottom](v3-supplement-mobile-source-scrolled.png).
+
+The operated initial source buttons appeared after answer completion. The continuation adds inline citations during output, full cited context, source transport, and a named sticky return. In a desktop-to-narrow resize with the source open, this variant retained the source as a focused modal; variants 01 and 02 closed their desktop source instead. Drafts survived the resize in all three. See `v3-initial-source-*.json`, `v3-supplement-desktop.json`, and the corresponding initial source images.
+
+### Continuity and feedback
+
+Ordinary draft retention, filename retention, reload, history round trip, desktop theme change, Escape return, and keyboard drafting passed. The main seven-line draft was capped at 170 px on desktop and 125 px on narrow; the source and composer remained separate. A focused source-tab change retained focus on the newly selected tab. The visible source status distinguishes arriving, stopped, and ready. See `v3-rerun-*-events.json` and `v3-supplement-*.json`.
+
+Its stopped-answer action is labeled **Try again**, and restarts the answer rather than continuing the partial text. This is a visible workflow difference from Continue in variants 01 and 02. The source retains its quoted context while the answer is regenerated. That preserves the source's meaning, but the implementation's reserved answer height causes the gap below.
+
+### Reproduced gaps
+
+**V3-A — Retry return and Latest can show reserved blank space.** Reproduced at **both required sizes**, most consequential at **390×844**:
+
+1. Choose a longer answer, submit the shared city question, and keep the seven-line draft.
+2. Open the first citation while output continues; wait roughly 1.2 seconds in the source.
+3. Use the source's Stop response, then Try again.
+4. After about 250 ms, use Back to answer. Then select Latest response.
+
+At narrow width, the stopped state had scrollHeight **1513 px**. Restart cleared the rendered answer text but retained that height. Back returned to scrollTop **304** with no answer blocks visible. Latest moved to **961**, the reserved bottom, hid itself, and still left no visible answer blocks after a **700 ms wait and a further 1200 ms wait**, with capture overhead in addition. The filenames call these the +700 ms and +1900 ms checkpoints; they are not synchronized video timestamps. The draft remained intact and the generation continued. At desktop width the equivalent Latest state was still blank at the first checkpoint; text had entered view at the later checkpoint. This is a temporary reading/recovery defect, not permanent draft or response loss. It was present in the main case, its corrected rerun, and the isolated reproduction. See `v3-targeted-mobile.json`, `v3-targeted-desktop.json`, [return](v3-targeted-mobile-retry-return-0.png), [first checkpoint](v3-targeted-mobile-retry-latest-700ms.png), [later checkpoint](v3-targeted-mobile-retry-latest-1900ms.png), [desktop first checkpoint](v3-targeted-desktop-retry-latest-700ms.png).
+
+**V3-B — A small deliberate upward scroll is overridden.** In the same 40 px wheel test used for the other variants, this application resumed following at both sizes on the next output tick. Desktop distance from bottom returned from 40 to zero approximately **16 ms after the recorded wheel event**; narrow returned about **100 ms later**. The large upward-scroll case was held correctly. See `v3-small-scroll-*.json` and the viewed desktop early/later frames. The observation applies to these wheel gestures near the newest output; physical touch behavior was not tested.
+
+Unobserved for this variant: the full slower-response mode, repeated interruption stress beyond the operated restart sequence, and whether a different retention strategy would avoid the reserved-space problem without other tradeoffs. No proposed implementation was tested.
+
+## Remaining uncertainties and limits
+
+No physical mobile keyboard, touch scrolling, screen reader, browser zoom, contrast measurement, other browser engine, low-powered device, slow machine, offline transition, storage-denial condition, corrupt stored data, clipboard permission failure, or extended multi-hour thread was exercised. Reduced-motion mode was not operated. The conversation family's required checks were selected; notebook density and card-motion checks do not apply.
+
+Keyboard evidence is limited to the named operations and measured focus returns. It does not establish complete accessibility. Dark appearance was viewed on desktop with drafts and a completed answer; the full dark source experience and narrow theme controls were not separately exercised. Reload preserves conversation/draft in the tested cases; retaining an open source across reload was not assessed. Simulated failure recovery was tested on a second question with the panel closed; stop/recovery while the panel remained present was tested separately.
+
+The initial versions were inspected at entry and through one source visit at each size, not subjected to every final regression scenario. The supplied font/runtime setup was used as-is. Screenshots establish composition at the captured states; paired stills and DOM samples establish selected changes, not animation smoothness. Process quality and research depth cannot be inferred from these product outputs.
+
+## Deliverables and reproduction
+
+`review.json` provides a concise structured account. `viewed-evidence.json` identifies every actually viewed PNG and the viewed endpoint intervals, and separates the other captures. `review-command-log.txt` records review commands and harness corrections. `snapshot.py`, `exercise.py`, `exercise-rerun.py`, `supplementary.py`, `targeted.py`, and `small-scroll.py` are review-only scripts. Per-case JSON files retain the measurements, exact fixture, focus states, and original errors. The original app files remain unchanged.
+
+To reproduce, start `serve.py` with the supplied Python runtime and run the chosen script with the `FONTCONFIG_FILE` and `PLAYWRIGHT_BROWSERS_PATH` values in `TOOLING.md`. These scripts require the same local-socket/browser permission documented in that file. They operate actual HTTP-served applications; they do not patch source or seed application state directly.

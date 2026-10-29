@@ -1,0 +1,23 @@
+# Typography and density continuation
+
+The accepted notebook relationship remains. This increment extends the already adopted Pico form foundation and the existing paper/green theme; it does not introduce a new shell or third-party resource. The prior actual reference captures and local inspections remain applicable to controls and list/detail organization.
+
+Question: how can the same notebook accommodate longer Chinese/English notes without making narrow labels or metadata difficult to read?
+
+Decision: shared Comfortable/Compact tokens change card padding, preview density, title/body size, line height, editor spacing and metadata together. Comfortable uses a 16px body with 1.9 line height; Compact uses 15px with 1.7. The desktop writing measure is bounded at approximately 680px. Metadata rises from the prior 10px baseline to 12px comfortable / 11px compact. Action targets remain stable. Narrow context labels move above their field rather than breaking the phrase into two lines.
+
+The explicit Reading density select is a global preference. At narrow widths it occupies a second header row so all option labels remain readable. The option and selected note are persisted alongside language/theme. Changing any appearance setting only re-renders labels/styles, never input values or active note identity. A preference storage error explains that the current page changed without claiming it will survive reload.
+
+Evidence plan: compare the populated long-content interface at both densities in Chinese/English and both themes at 1440×900 and 390×844. Inspect resulting pixels and measure density differences. Recheck create/save/search/reopen/delete, note identity and draft preservation through all appearance controls, preference reload, and long title/body scrolling.
+
+## Inspected outcome and repairs
+
+The rendered Comfortable and Compact layouts show a consequential density difference: the measured selected card is shorter in Compact, previews reduce to one line, and editing line height and section spacing tighten together. Comfortable retains the larger body/metadata treatment. Actual Chinese and English long-content captures were viewed at desktop and phone widths, in light/dark examples. On narrow screens the context label is now a single understandable phrase above the field.
+
+The first long-English-title inspection exposed the inherited 220px title cap. The final source removes it so the entire bounded title grows into document flow. `final/checks.json` verifies the title fits without internal scrolling in both densities, and both resulting phone captures were actually viewed. The density selector has a stable 140px width and visible keyboard focus.
+
+No new third-party dependency was introduced. This is a token/layout extension of the same inspected Pico-based system. Existing reference evidence remains applicable to the unchanged collection/editor model and controls; new source, tests and observations support the changed typography/density.
+
+## Session condition
+
+The host interrupted the continuation. Work resumed on the existing source and evidence with an approximate estimate of up to three additional minutes for necessary review and delivery. This was not an uninterrupted timed run; active-time estimates are approximate.

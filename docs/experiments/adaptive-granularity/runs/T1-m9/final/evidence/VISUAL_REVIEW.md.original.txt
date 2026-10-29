@@ -1,0 +1,32 @@
+# Visual review — Leafnote
+
+Browser: Chromium 143.0.7499.4, headless, DPR 1. Viewports: 1440×900 and 390×844. Inter was fully loaded for final captures. These are visual observations, separate from the assertions in the JSON reports.
+
+## Actually viewed
+
+- Public references: `bootstrap-sidebars.png`, `shadcn-mail.png`.
+- Editor, 1440: English and Chinese, each in light and dark mode. The English desktop appearance was carried forward from run 2 to run 3; the subsequent changes affected recovery logic and the mobile-only status.
+- Editor, 390: English and Chinese, each in light and dark mode, including the final visible local-save status.
+- Collection, 390: English light and Chinese dark.
+- `delete-confirmation.png`, `storage-failure.png`, `malformed-recovery-mobile.png`.
+- `long-content-bottom-mobile.png`, following actual keyboard movement to the end of the note.
+- `chinese-note-mobile.png`, a Chinese-authored note with Chinese interface copy.
+- Ordered `episode-1-pending.png`, `episode-2-editing.png`, `episode-3-result.png`.
+
+Other captured views exist but are not a separate claim of visual inspection.
+
+## Observations
+
+The pale collection, selected note and wider writing surface have distinct roles without a heavy card around the document. The serif heading is the strongest reading anchor; compact Inter titles make the collection scannable. A selected note has a leading rule and soft fill, so selection does not rely on hue alone. The darker theme preserves the same hierarchy. The actual Chinese glyphs render and the title grows; long titles may wrap within a phrase, as ordinary editable text does.
+
+At 390 pixels, the full-width editor preserves a readable measure and fixed access to Back, Delete and Save. The footer now shows the local save/draft state. A long body can be scrolled to its final paragraph with the toolbar and local boundary still visible. The collection scrolls independently, so the fifth example is below the initial fold rather than compressed into short rows.
+
+The delete dialog clearly names the affected note. It centers at desktop width and separates the destructive action from Keep note. Storage-failure copy remains visible above both desktop panes and the narrow collection/editor. Malformed data is identified as unreadable rather than shown as an empty collection.
+
+The pending-save episode used an explicitly injected 1200 ms delay, with screenshot completion offsets of 57 ms, 90 ms and 1972 ms. The first two inspected frames show Saving, while later input is retained. The final frame distinguishes the saved submission from the newer draft. These sparse images establish sampled states and anchors, not a continuous playback or latency measurement.
+
+## Repairs and limits
+
+The first run's mobile recovery banner was hidden inside the editor. It was moved above the workspace, then rechecked. The first test harness fault injector threw an illegal-invocation error; the original log remains, and the corrected run tests the actual failing Storage boundary. The font and utility-button transitions were adjusted after viewing real pixels.
+
+No user-comprehension study, screen-reader session, real phone keyboard, browser zoom matrix, Safari or Firefox run was performed. Contrast was assessed visually; no complete automated contrast audit is claimed. Native dialog and keyboard checks provide scoped semantics and focus evidence, not universal accessibility certification.

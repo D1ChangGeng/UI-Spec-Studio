@@ -1,0 +1,280 @@
+{
+  "checks": [
+    {
+      "check": "light pending remains draft",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light duplicate attempts one write",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light saved text correct",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light anchor stable",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light saved focus",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light saved region overflow",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light selection and scroll restored",
+      "pass": true,
+      "details": {
+        "before": {
+          "start": 300,
+          "end": 310,
+          "scroll": 75
+        },
+        "after": {
+          "start": 300,
+          "end": 310,
+          "scroll": 75
+        }
+      }
+    },
+    {
+      "check": "light header keyboard focuses reading",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light keyboard skips inert editor",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light keyboard return editor",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "light Chinese preserves note",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark pending remains draft",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark duplicate attempts one write",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark saved text correct",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark anchor stable",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark saved focus",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark saved region overflow",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark selection and scroll restored",
+      "pass": true,
+      "details": {
+        "before": {
+          "start": 300,
+          "end": 310,
+          "scroll": 75
+        },
+        "after": {
+          "start": 300,
+          "end": 310,
+          "scroll": 75
+        }
+      }
+    },
+    {
+      "check": "dark header keyboard focuses reading",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark keyboard skips inert editor",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark keyboard return editor",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "dark Chinese preserves note",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "pending saved face uses prior record",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "explicit return wins late success",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "first failure no flip",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "first failure no saved badge",
+      "pass": true,
+      "details": null
+    },
+    {
+      "check": "unknown footer honest",
+      "pass": true,
+      "details": null
+    }
+  ],
+  "captures": [
+    {
+      "file": "final-mobile-light-pending.png",
+      "start_ms": 156.90000000037253,
+      "end_ms": 203.80000000074506
+    },
+    {
+      "file": "final-mobile-light-turn-0.png",
+      "start_ms": 886.7000000001863,
+      "end_ms": 931.3000000007451
+    },
+    {
+      "file": "final-mobile-light-turn-1.png",
+      "start_ms": 985.1000000005588,
+      "end_ms": 1030.9000000003725
+    },
+    {
+      "file": "final-mobile-light-turn-2.png",
+      "start_ms": 1084.7000000001863,
+      "end_ms": 1140.800000000745
+    },
+    {
+      "file": "final-mobile-light-turn-3.png",
+      "start_ms": 1198.2000000001863,
+      "end_ms": 1284.6000000005588
+    },
+    {
+      "file": "final-mobile-light-turn-4.png",
+      "start_ms": 1337.9000000003725,
+      "end_ms": 1403
+    },
+    {
+      "file": "final-mobile-light-turn-5.png",
+      "start_ms": 1455.300000000745,
+      "end_ms": 1519.6000000005588
+    },
+    {
+      "file": "final-mobile-light-turn-6.png",
+      "start_ms": 1575,
+      "end_ms": 1636.4000000003725
+    },
+    {
+      "file": "final-mobile-light-long-bottom.png",
+      "start_ms": 2017.300000000745,
+      "end_ms": 2054.7000000001863
+    },
+    {
+      "file": "final-mobile-light-chinese.png",
+      "start_ms": 4596,
+      "end_ms": 4637.300000000745
+    },
+    {
+      "file": "final-mobile-dark-pending.png",
+      "start_ms": 197.8999999994412,
+      "end_ms": 245.09999999962747
+    },
+    {
+      "file": "final-mobile-dark-turn-0.png",
+      "start_ms": 927.5,
+      "end_ms": 964.0999999996275
+    },
+    {
+      "file": "final-mobile-dark-turn-1.png",
+      "start_ms": 1017,
+      "end_ms": 1060.2999999998137
+    },
+    {
+      "file": "final-mobile-dark-turn-2.png",
+      "start_ms": 1115.7000000001863,
+      "end_ms": 1191.5
+    },
+    {
+      "file": "final-mobile-dark-turn-3.png",
+      "start_ms": 1250.2000000001863,
+      "end_ms": 1334.3999999994412
+    },
+    {
+      "file": "final-mobile-dark-turn-4.png",
+      "start_ms": 1386.3999999994412,
+      "end_ms": 1453.3999999994412
+    },
+    {
+      "file": "final-mobile-dark-turn-5.png",
+      "start_ms": 1509.0999999996275,
+      "end_ms": 1575.0999999996275
+    },
+    {
+      "file": "final-mobile-dark-turn-6.png",
+      "start_ms": 1629.0999999996275,
+      "end_ms": 1678.2000000001863
+    },
+    {
+      "file": "final-mobile-dark-long-bottom.png",
+      "start_ms": 2057.0999999996275,
+      "end_ms": 2107.5999999996275
+    },
+    {
+      "file": "final-mobile-dark-chinese.png",
+      "start_ms": 4613.299999999814,
+      "end_ms": 4651
+    },
+    {
+      "file": "final-first-save-failure.png",
+      "start_ms": 1089.2000000001863,
+      "end_ms": 1156.2000000001863
+    },
+    {
+      "file": "final-unknown-mobile.png",
+      "start_ms": 891.7000000001863,
+      "end_ms": 925.3000000007451
+    }
+  ],
+  "hashes": {
+    "index.html": "4e5c631872aa465fb33e6f35550cc002df12b6eb67224c479fbca4da9b853d23",
+    "styles.css": "2a90188399c8bbe663a1045e39a203eaf5529bd39c2da9f511962748e5d25c0f",
+    "app.js": "5f89c28afce4abd045d4a5e2a42f6bfaf0b1855f3e5e297a1c476d18c92be760"
+  },
+  "viewport": "390x844 normal motion light and dark; desktop pending-navigation and first failure",
+  "dpr": 1
+}

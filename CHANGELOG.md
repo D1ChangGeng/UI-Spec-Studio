@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.17.0 — 2026-10-29
+
+- Treat a formal UI SPEC as a coherent, quality-assessable increment in the current product, preserving the complete goal across revisable boundaries.
+- Integrate minimum sufficient experience closure and evidence-based keep/split/merge/redraw judgment into the existing init and iterate operations.
+- Distinguish candidate planning, formal increments and internal research/repair; retain unresolved quality responsibility through scope changes.
+- Connect actual resource adoption, visual quality ownership and the separate research, implementation and related-product regression scopes.
+- Present important findings and working results in conversation; keep product interfaces focused on their users' tasks.
+- Extend optional evidence records with neutral candidate/formal declarations and shared-object links while retaining legacy records and read-only inspector boundaries.
+- Preserve exact prior runtime reconstruction and historical evidence; publish the registered three-condition application study and its observed limits separately from release mechanics.
+
 ## 1.16.1 — 2026-10-28
 
 - Reconcile concurrent v1.16 work without overwriting its methods, catalog or evidence.

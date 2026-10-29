@@ -1,0 +1,36 @@
+from playwright.sync_api import sync_playwright
+from pathlib import Path
+import json,time
+OUT=Path(__file__).parent
+with sync_playwright() as p:
+ b=p.chromium.launch(executable_path='/workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell',args=['--no-sandbox'])
+ page=b.new_page(viewport={'width':1440,'height':900},device_scale_factor=1)
+ errors=[]
+ page.on('pageerror',lambda e:errors.append(str(e)))
+ page.goto('http://127.0.0.1:8767/app/')
+ page.screenshot(path=str(OUT/'v1-desktop-empty.png'))
+ page.get_by_role('button',name='Explore an idea').click()
+ page.locator('#send').click()
+ page.wait_for_timeout(1100)
+ page.screenshot(path=str(OUT/'v1-desktop-streaming.png'))
+ page.wait_for_timeout(5000)
+ page.locator('#reader').evaluate('(e)=>e.scrollTop=0')
+ page.screenshot(path=str(OUT/'v1-desktop-answer.png'))
+ page.locator('.source-chip').first.click()
+ page.screenshot(path=str(OUT/'v1-desktop-source.png'))
+ page.locator('#source-close').click()
+ page.locator('[data-theme-toggle]').first.click()
+ page.screenshot(path=str(OUT/'v1-desktop-dark.png'))
+ mobile=b.new_page(viewport={'width':390,'height':844},device_scale_factor=1)
+ mobile.on('pageerror',lambda e:errors.append(str(e)))
+ mobile.goto('http://127.0.0.1:8767/app/')
+ mobile.screenshot(path=str(OUT/'v1-mobile-empty.png'))
+ mobile.locator('#question').fill('How do urban trees help cities stay cool?')
+ mobile.locator('#send').click()
+ mobile.wait_for_timeout(5000)
+ mobile.locator('#reader').evaluate('(e)=>e.scrollTop=0')
+ mobile.screenshot(path=str(OUT/'v1-mobile-answer.png'))
+ mobile.locator('.source-chip').first.click()
+ mobile.screenshot(path=str(OUT/'v1-mobile-source.png'))
+ (OUT/'initial-review.json').write_text(json.dumps({'page_errors':errors,'date':time.time(),'captures':'v1-*','viewports':[[1440,900],[390,844]]},indent=2))
+ b.close()

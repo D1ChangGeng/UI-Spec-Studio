@@ -1,0 +1,29 @@
+# Source reading now stays connected to the arriving answer
+
+Meridian now makes the citation relationship explicit while a long answer is still arriving. Opening a citation marks its answer paragraph and the referenced passage in the source reader. The existing paper palette, green accents, serif headings, and shared reading/composer proportions are retained.
+
+[Open Meridian locally](http://127.0.0.1:8767/app/) · [Source entry](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/app/index.html)
+
+## What changed
+
+- **A visible connection:** the answer paragraph and source passage share a green highlight. **Show paragraph** takes you to the linked passage; the last inspected paragraph stays identifiable after closing.
+- **Reading stays under your control:** opening a source pauses automatic following. Scrolling back remains stable while output arrives. **Back to latest** explicitly resumes following, including with the desktop panel open.
+- **Controls remain available:** the source reader has a persistent latest-answer control for **Stop**, **Continue**, or **Retry**. You can keep reading the source while stopping or recovering the response.
+- **A focused phone view:** the source opens in a native modal with an explicit **← Answer** return. Source text scrolls between the fixed return and response controls. The conversation and draft remain in place underneath.
+- **Reliable return:** closing restores focus to the citation. If retry has replaced that citation, focus returns to its current replacement or the composer. A growing desktop draft stays reachable beside the source reader.
+
+## Actual result
+
+[Desktop: source beside a growing draft](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/continuation/desktop-02-grown-composer.png) · [Phone: source reading during streaming](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/continuation/phone-01-open-stream.png) · [Dark phone source view](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/continuation/phone-04-dark-source.png)
+
+The combined browser run passed **17 checks**. Another **7 recovery checks** covered a simulated failure while the source remained open, successful retry without duplicating the follow-up, and focus when the original citation had been replaced. **2 passage-navigation checks** covered Show paragraph at both widths.
+
+Measured reading position remained **220px** while new text arrived and the composer expanded. In a separate close-during-streaming check, the position remained **169px before and after closing**. I separately viewed actual captures at **1440×900** and **390×844**, including light/dark source reading, stopped and recovering states, expanded input, and return.
+
+Full records: [continuation evidence](sandbox:/workspace/scratch/43b440780c87/granularity-cells/T2-p7/evidence/continuation/README.md). The prior delivery, original failures, and earlier captures are preserved.
+
+## Limits
+
+The source passages remain deterministic synthetic notes. Real citation ranges, retrieval, and file parsing are outside this local demo. Retry restarts the latest answer; a linked paragraph that has not yet reappeared cannot be jumped to until it arrives. On phones, the modal deliberately focuses source reading; editing resumes after returning to the answer.
+
+Physical mobile keyboard behavior, assistive technology, Safari/Firefox, and continuous-video timing remain unverified. Nothing was published or deployed.

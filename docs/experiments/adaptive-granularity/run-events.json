@@ -1,0 +1,228 @@
+{
+  "scope": "Orchestration observations; not complete host tool transcripts",
+  "events": [
+    {
+      "cell": "T1-p7",
+      "event": "initial_dispatched",
+      "observed_at_utc": "2026-10-29T20:36:18.534257+00:00"
+    },
+    {
+      "cell": "T1-r4",
+      "event": "initial_dispatched",
+      "observed_at_utc": "2026-10-29T20:36:18.534268+00:00"
+    },
+    {
+      "cell": "T1-m9",
+      "event": "initial_dispatched",
+      "observed_at_utc": "2026-10-29T20:38:49.725589+00:00",
+      "note": "Started after documentation worker released its slot; same per-cell ceiling, not a synchronized start."
+    },
+    {
+      "cell": "T1-p7",
+      "event": "initial_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T20:48:17.766556+00:00",
+      "files": 93
+    },
+    {
+      "cell": "T1-r4",
+      "event": "initial_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T20:49:49.455158+00:00",
+      "files": 118
+    },
+    {
+      "cell": "T1-m9",
+      "event": "initial_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T20:52:14.916100+00:00",
+      "files": 76
+    },
+    {
+      "cell": "T1-r4",
+      "event": "continuation_dispatched",
+      "observed_at_utc": "2026-10-29T20:52:23.839388+00:00",
+      "note": "Dispatch observation recorded shortly after dispatch, not exact host turn timing."
+    },
+    {
+      "cell": "T1-m9",
+      "event": "continuation_dispatched",
+      "observed_at_utc": "2026-10-29T20:52:23.839388+00:00",
+      "note": "Dispatch observation recorded shortly after dispatch, not exact host turn timing."
+    },
+    {
+      "cell": "T1-p7",
+      "event": "continuation_dispatch_observation",
+      "observed_at_utc": "2026-10-29T20:52:23.839388+00:00",
+      "note": "Continuation was dispatched after the 20:48 initial snapshot and before 20:52; exact dispatch timestamp was not recorded."
+    },
+    {
+      "cell": "T1-p7",
+      "event": "host_interruption_detected_and_resumed",
+      "observed_at_utc": "2026-10-29T20:57:24.379906+00:00",
+      "resumed_ceiling_minutes": 3,
+      "note": "Last visible output 20:53:01 after approximately five minutes; initial allowance roughly three minutes remains. Agent status was interrupted. Exact active host runtime is unavailable; these estimates prevent treating interruption as method efficiency."
+    },
+    {
+      "cell": "T1-r4",
+      "event": "host_interruption_detected_and_resumed",
+      "observed_at_utc": "2026-10-29T20:57:24.379906+00:00",
+      "resumed_ceiling_minutes": 7,
+      "note": "Last visible output 20:53:21 after approximately one minute; initial allowance roughly seven minutes remains. Agent status was interrupted. Exact active host runtime is unavailable; these estimates prevent treating interruption as method efficiency."
+    },
+    {
+      "cell": "T1-m9",
+      "event": "host_interruption_detected_and_resumed",
+      "observed_at_utc": "2026-10-29T20:57:24.379906+00:00",
+      "resumed_ceiling_minutes": 8,
+      "note": "No continuation output was visible; full continuation allowance resumed. Agent status was interrupted. Exact active host runtime is unavailable; these estimates prevent treating interruption as method efficiency."
+    },
+    {
+      "cell": "T1-p7",
+      "event": "final_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T20:58:35.528439+00:00",
+      "files": 143
+    },
+    {
+      "cell": "T2-p7",
+      "event": "initial_dispatched",
+      "observed_at_utc": "2026-10-29T20:58:46.381229+00:00"
+    },
+    {
+      "cell": "T1-r4",
+      "event": "final_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:00:32.712838+00:00",
+      "files": 148
+    },
+    {
+      "cell": "T2-r4",
+      "event": "initial_dispatched",
+      "observed_at_utc": "2026-10-29T21:00:45.523752+00:00"
+    },
+    {
+      "cell": "T1-m9",
+      "event": "final_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:02:31.164278+00:00",
+      "files": 140
+    },
+    {
+      "cell": "T2-m9",
+      "event": "initial_dispatched",
+      "observed_at_utc": "2026-10-29T21:02:54.551670+00:00"
+    },
+    {
+      "cell": "T2-m9",
+      "event": "initial_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:15:55.404943+00:00",
+      "files": 80
+    },
+    {
+      "cell": "T2-m9",
+      "event": "continuation_dispatched",
+      "observed_at_utc": "2026-10-29T21:16:26.121397+00:00"
+    },
+    {
+      "cell": "T2-p7",
+      "event": "initial_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:16:26.585163+00:00",
+      "files": 79
+    },
+    {
+      "cell": "T2-p7",
+      "event": "continuation_dispatched",
+      "observed_at_utc": "2026-10-29T21:16:36.702285+00:00"
+    },
+    {
+      "cell": "T2-r4",
+      "event": "initial_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:18:19.529320+00:00",
+      "files": 109
+    },
+    {
+      "cell": "T2-r4",
+      "event": "continuation_dispatched",
+      "observed_at_utc": "2026-10-29T21:18:26.719192+00:00"
+    },
+    {
+      "cell": "T2-m9",
+      "event": "final_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:24:00.527637+00:00",
+      "files": 135
+    },
+    {
+      "cell": "T3-m9",
+      "event": "initial_dispatched",
+      "observed_at_utc": "2026-10-29T21:24:38.223081+00:00"
+    },
+    {
+      "cell": "T2-p7",
+      "event": "final_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:24:38.724821+00:00",
+      "files": 109
+    },
+    {
+      "cell": "T3-p7",
+      "event": "initial_dispatched",
+      "observed_at_utc": "2026-10-29T21:24:49.435449+00:00"
+    },
+    {
+      "cell": "T2-r4",
+      "event": "final_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:26:20.829079+00:00",
+      "files": 138
+    },
+    {
+      "cell": "T3-r4",
+      "event": "initial_dispatched",
+      "observed_at_utc": "2026-10-29T21:26:33.724344+00:00"
+    },
+    {
+      "cell": "T3-p7",
+      "event": "initial_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:37:00.716399+00:00",
+      "files": 126
+    },
+    {
+      "cell": "T3-p7",
+      "event": "continuation_dispatched",
+      "observed_at_utc": "2026-10-29T21:37:29.725480+00:00"
+    },
+    {
+      "cell": "T3-m9",
+      "event": "initial_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:37:30.230278+00:00",
+      "files": 136
+    },
+    {
+      "cell": "T3-m9",
+      "event": "continuation_dispatched",
+      "observed_at_utc": "2026-10-29T21:37:36.209883+00:00"
+    },
+    {
+      "cell": "T3-r4",
+      "event": "initial_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:38:46.821897+00:00",
+      "files": 126
+    },
+    {
+      "cell": "T3-r4",
+      "event": "continuation_dispatched",
+      "observed_at_utc": "2026-10-29T21:39:16.080759+00:00"
+    },
+    {
+      "cell": "T3-p7",
+      "event": "final_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:46:03.268350+00:00",
+      "files": 198
+    },
+    {
+      "cell": "T3-m9",
+      "event": "final_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:46:04.622699+00:00",
+      "files": 216
+    },
+    {
+      "cell": "T3-r4",
+      "event": "final_completed_and_frozen",
+      "observed_at_utc": "2026-10-29T21:47:05.513235+00:00",
+      "files": 169
+    }
+  ]
+}

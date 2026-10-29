@@ -1,0 +1,502 @@
+{
+  "browser": "Chromium 143 headless shell",
+  "tests": [
+    {
+      "name": "1440-light no horizontal overflow",
+      "result": "pass"
+    },
+    {
+      "name": "1440-light pending stays draft and uncommitted",
+      "result": "pass"
+    },
+    {
+      "name": "1440-light confirmed save and identity",
+      "result": "pass"
+    },
+    {
+      "name": "1440-light stationary frame",
+      "result": "pass"
+    },
+    {
+      "name": "1440-light focus reaches saved heading",
+      "result": "pass"
+    },
+    {
+      "name": "1440-light editor focus returns",
+      "result": "pass"
+    },
+    {
+      "name": "1440-light browser persistence",
+      "result": "pass"
+    },
+    {
+      "name": "1440-dark no horizontal overflow",
+      "result": "pass"
+    },
+    {
+      "name": "1440-dark pending stays draft and uncommitted",
+      "result": "pass"
+    },
+    {
+      "name": "1440-dark confirmed save and identity",
+      "result": "pass"
+    },
+    {
+      "name": "1440-dark stationary frame",
+      "result": "pass"
+    },
+    {
+      "name": "1440-dark focus reaches saved heading",
+      "result": "pass"
+    },
+    {
+      "name": "1440-dark editor focus returns",
+      "result": "pass"
+    },
+    {
+      "name": "1440-dark browser persistence",
+      "result": "pass"
+    },
+    {
+      "name": "390-light no horizontal overflow",
+      "result": "pass"
+    },
+    {
+      "name": "390-light pending stays draft and uncommitted",
+      "result": "pass"
+    },
+    {
+      "name": "390-light confirmed save and identity",
+      "result": "pass"
+    },
+    {
+      "name": "390-light stationary frame",
+      "result": "pass"
+    },
+    {
+      "name": "390-light focus reaches saved heading",
+      "result": "pass"
+    },
+    {
+      "name": "390-light editor focus returns",
+      "result": "pass"
+    },
+    {
+      "name": "390-light browser persistence",
+      "result": "pass"
+    },
+    {
+      "name": "390-dark no horizontal overflow",
+      "result": "pass"
+    },
+    {
+      "name": "390-dark pending stays draft and uncommitted",
+      "result": "pass"
+    },
+    {
+      "name": "390-dark confirmed save and identity",
+      "result": "pass"
+    },
+    {
+      "name": "390-dark stationary frame",
+      "result": "pass"
+    },
+    {
+      "name": "390-dark focus reaches saved heading",
+      "result": "pass"
+    },
+    {
+      "name": "390-dark editor focus returns",
+      "result": "pass"
+    },
+    {
+      "name": "390-dark browser persistence",
+      "result": "pass"
+    },
+    {
+      "name": "editing during save keeps newer draft and front",
+      "result": "pass"
+    },
+    {
+      "name": "rapid reversal obeys latest intent",
+      "result": "pass"
+    },
+    {
+      "name": "failed save retains existing data and draft",
+      "result": "pass"
+    },
+    {
+      "name": "visible retry commits through native storage",
+      "result": "pass"
+    },
+    {
+      "name": "long note restores selection and scroll",
+      "result": "pass"
+    },
+    {
+      "name": "over-limit stays intact and cannot save",
+      "result": "pass"
+    },
+    {
+      "name": "exact limit remains savable",
+      "result": "pass"
+    },
+    {
+      "name": "malformed stored data blocks overwrite",
+      "result": "pass"
+    },
+    {
+      "name": "read retry recovers",
+      "result": "pass"
+    },
+    {
+      "name": "clear failure exposes recovery and retains data",
+      "result": "pass"
+    },
+    {
+      "name": "clear retry reaches native removal",
+      "result": "pass"
+    },
+    {
+      "name": "reduced 390 uses no rotation",
+      "result": "pass"
+    },
+    {
+      "name": "reduced 390 returns immediate focus",
+      "result": "pass"
+    },
+    {
+      "name": "reduced 1440 uses no rotation",
+      "result": "pass"
+    },
+    {
+      "name": "reduced 1440 returns immediate focus",
+      "result": "pass"
+    }
+  ],
+  "captures": [
+    {
+      "name": "1440-light-draft",
+      "start_ms": 120.40000000037253,
+      "end_ms": 197.79999999981374,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-00-pending",
+      "start_ms": 468.6000000005588,
+      "end_ms": 526.7000000001863,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-01",
+      "start_ms": 1009.9000000003725,
+      "end_ms": 1079.6000000005588,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-02",
+      "start_ms": 1142.4000000003725,
+      "end_ms": 1216.5,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-03",
+      "start_ms": 1277.7999999998137,
+      "end_ms": 1346.2999999998137,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-04",
+      "start_ms": 1409.6000000005588,
+      "end_ms": 1525.2999999998137,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-05",
+      "start_ms": 1586.9000000003725,
+      "end_ms": 1694.6000000005588,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-06",
+      "start_ms": 1756.4000000003725,
+      "end_ms": 1858.5,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-07",
+      "start_ms": 1919,
+      "end_ms": 1979.4000000003725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-08",
+      "start_ms": 2040.7000000001863,
+      "end_ms": 2107.600000000559,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-09",
+      "start_ms": 2167.9000000003725,
+      "end_ms": 2226.600000000559,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-10",
+      "start_ms": 2287.7999999998137,
+      "end_ms": 2346,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "episode-11",
+      "start_ms": 2407.600000000559,
+      "end_ms": 2477.7999999998137,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "1440-light-saved",
+      "start_ms": 4141,
+      "end_ms": 4206.700000000186,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "1440-dark-draft",
+      "start_ms": 120.79999999981374,
+      "end_ms": 191.5,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "1440-dark-saved",
+      "start_ms": 2091.7999999998137,
+      "end_ms": 2152.2999999998137,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "390-light-draft",
+      "start_ms": 120.5,
+      "end_ms": 159.59999999962747,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "390-light-saved",
+      "start_ms": 2041.7000000001863,
+      "end_ms": 2083.7999999998137,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "390-dark-draft",
+      "start_ms": 127.8999999994412,
+      "end_ms": 164.70000000018626,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "390-dark-saved",
+      "start_ms": 2024.8999999994412,
+      "end_ms": 2066.5,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "newer-draft",
+      "start_ms": 1918.0999999996275,
+      "end_ms": 1986.2999999998137,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "reverse-00",
+      "start_ms": 2148.2999999998137,
+      "end_ms": 2211.5999999996275,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "reverse-01",
+      "start_ms": 2332.5999999996275,
+      "end_ms": 2412,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "reverse-02",
+      "start_ms": 2536.7999999998137,
+      "end_ms": 2611.4000000003725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "reverse-03-settled",
+      "start_ms": 3442.5,
+      "end_ms": 3500.0999999996275,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "failed-save",
+      "start_ms": 4644.200000000186,
+      "end_ms": 4698.799999999814,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "long-draft",
+      "start_ms": 7410,
+      "end_ms": 7482,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "long-saved",
+      "start_ms": 9294,
+      "end_ms": 9366.700000000186,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "over-limit",
+      "start_ms": 10238.599999999627,
+      "end_ms": 10317.799999999814,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "unreadable",
+      "start_ms": 32.299999999813735,
+      "end_ms": 96.59999999962747,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "clear-failed",
+      "start_ms": 2818.199999999255,
+      "end_ms": 2894.2999999998137,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "reduced-390-light",
+      "start_ms": 1203.2999999998137,
+      "end_ms": 1254,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "reduced-1440-dark",
+      "start_ms": 1193.5999999996275,
+      "end_ms": 1259.7999999998137,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "390-dark-zh-draft",
+      "start_ms": 96.5,
+      "end_ms": 138.1000000005588,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "390-dark-zh-saved",
+      "start_ms": 1973.2000000001863,
+      "end_ms": 2004.2999999998137,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "errors": [],
+  "source_hashes": {
+    "styles.css": "214c1c83b026f8b78106e936873ef72faa61fdddc403924e1cc7451add24e54d",
+    "README.md": "b66d264f727ccee15dbc56e10f53a40260c7360edc685d47dc7311f24af23a26",
+    "app.js": "42a3a2ddff2577461c0da9014eae4d0a7e9cc52b1a616436182c4a01d6ebb6da",
+    "THIRD_PARTY.md": "038a00769118525dc7ea14831f868f034c8d58ad09d05617c2d236b061ef0ad7",
+    "index.html": "a1939f29e6c1d379696a47704b5efff4af5d7ead1ce990315302c491be0d2668"
+  }
+}

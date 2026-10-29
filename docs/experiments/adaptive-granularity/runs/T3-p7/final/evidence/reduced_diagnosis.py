@@ -1,0 +1,6 @@
+from playwright.sync_api import sync_playwright
+from pathlib import Path
+with sync_playwright() as p:
+ b=p.chromium.launch(executable_path='/workspace/scratch/43b440780c87/playwright-cache/chrome-headless-shell-linux64/chrome-headless-shell',args=['--no-sandbox'])
+ page=b.new_page(viewport={'width':390,'height':844},reduced_motion='reduce');page.goto('http://127.0.0.1:8737');page.screenshot(path='evidence/reduced-before.png');print(page.locator('#save').evaluate('''e=>{const r=e.getBoundingClientRect();return {rect:r.toJSON(),hits:document.elementsFromPoint(r.x+r.width/2,r.y+r.height/2).map(el=>({id:el.id,cls:el.className,inert:el.inert,css:getComputedStyle(el).cssText,z:getComputedStyle(el).zIndex,vis:getComputedStyle(el).visibility}))}}'''));print(page.locator('#card-front').evaluate('(e)=>({inert:e.inert,html:e.outerHTML})'))
+ page.add_style_tag(content='.card-space{perspective:none!important}.card-face{transform:none!important}');print('no perspective:',page.locator('#save').evaluate('e=>{const r=e.getBoundingClientRect();return document.elementsFromPoint(r.x+r.width/2,r.y+r.height/2).map(el=>el.id||el.className)}'));page.locator('#save').click(timeout=3000);print('clicked');b.close()

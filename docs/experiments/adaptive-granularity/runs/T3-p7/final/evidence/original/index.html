@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Study · Note preview</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to note</a>
+  <header class="site-header">
+    <a class="brand" href="#editor" aria-label="Study"><span aria-hidden="true">S</span>Study</a>
+    <div class="utilities">
+      <button id="saved-link" class="text-button" type="button" data-i18n="savedNotes">Saved note</button>
+      <button id="locale-toggle" class="utility" type="button" aria-label="中文 · Switch to Chinese">中文</button>
+      <button id="theme-toggle" class="utility" type="button" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span></button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="page-shell">
+    <section id="editor" aria-labelledby="page-title">
+      <div class="intro"><p class="eyebrow" data-i18n="eyebrow">Research / Local demo</p><h1 id="page-title" data-i18n="pageTitle">Keep an idea in view</h1></div>
+      <div class="workspace">
+        <section class="preview" aria-label="Note preview">
+          <div id="card-space" class="card-space">
+            <article id="note-card" data-record-id="heating-study" data-face="front" aria-label="District heating note">
+              <div id="card-front" class="card-face card-front">
+                <div id="motion-stage" class="motion-stage" aria-hidden="true"><div class="orbit-path"></div><div class="orbit-arm"><i id="orbit-dot"></i></div><div class="center-disc"></div><span class="art-caption">01 / FIELD STUDY</span></div>
+                <div class="card-copy"><p class="card-kicker" data-i18n="subject">Energy / Cities</p><h2 data-i18n="question">How can cities reduce peak heating demand?</h2></div>
+              </div>
+              <div id="card-back" class="card-face card-back" aria-hidden="true" inert>
+                <p class="card-kicker" data-i18n="context">Working context</p><h2 data-i18n="subject">Energy / Cities</h2><div id="preview-note" class="preview-note" tabindex="0"></div><p class="card-foot" data-i18n="draftBoundary">Preview of your current note</p>
+              </div>
+            </article>
+          </div>
+          <div class="preview-actions"><button id="flip" class="secondary" type="button" aria-controls="note-card" aria-pressed="false" data-i18n="showContext">See context</button><button id="motion-toggle" class="text-button" type="button" aria-pressed="false" data-i18n="pause">Pause decoration</button></div>
+        </section>
+        <section class="editor-fields" aria-label="Edit note">
+          <label for="note-text" data-i18n="noteLabel">Your research note</label>
+          <p class="hint" id="note-hint" data-i18n="noteHint">Keep evidence and open questions together.</p>
+          <textarea id="note-text" rows="4" aria-describedby="note-hint note-limit"></textarea>
+          <p id="note-limit" class="hint input-limit" aria-live="polite" aria-atomic="true"></p>
+          <div class="save-actions"><button id="save" class="primary" type="button" data-i18n="save">Save note</button><span class="hint" data-i18n="localOnly">Only in this browser</span></div>
+          <div id="status-area" class="status-area"><p id="status" role="status" aria-live="polite"></p><button id="retry" class="secondary" type="button" hidden></button></div>
+        </section>
+      </div>
+    </section>
+    <section id="collection" aria-labelledby="collection-title" hidden>
+      <div class="intro"><p class="eyebrow" data-i18n="eyebrow">Research / Local demo</p><h1 id="collection-title" tabindex="-1" data-i18n="savedNotes">Saved note</h1></div>
+      <p id="collection-status" class="collection-status" role="status" aria-live="polite"></p>
+      <div id="saved-card" class="saved-card"><p id="saved-kicker" class="card-kicker" data-i18n="localOnly">Only in this browser</p><h2 id="saved-title"></h2><p id="saved-text"></p></div>
+      <button id="return" class="secondary" type="button" data-i18n="return">Return to editing</button>
+    </section>
+  </main>
+  <footer><p data-i18n="disclosure">Interactive local demo. The save includes a 900 ms preview delay.</p><details><summary data-i18n="controls">Preview controls</summary><button id="clear" class="text-button" type="button" data-i18n="clear">Clear local demo data</button></details></footer>
+  <script src="app.js"></script>
+</body>
+</html>
