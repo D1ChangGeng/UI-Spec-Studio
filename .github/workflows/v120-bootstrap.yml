@@ -1,0 +1,45 @@
+name: v1.20 development baseline
+on:
+  push:
+    branches: ['codex/v1.20-adaptive-research']
+    paths: ['.github/workflows/v120-bootstrap.yml']
+permissions:
+  contents: read
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: 05d0286b0b27e8e57d5751d5cf649c8800408001
+          persist-credentials: false
+      - name: Export exact baseline and non-secret runtime availability
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CODEX_API_KEY: ${{ secrets.CODEX_API_KEY }}
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/v120-baseline"
+          git archive --format=tar HEAD | gzip -1 > "$RUNNER_TEMP/v120-baseline/source.tar.gz"
+          git rev-parse HEAD > "$RUNNER_TEMP/v120-baseline/source-commit.txt"
+          python - <<'PY'
+          import json, os, pathlib, shutil
+          target = pathlib.Path(os.environ['RUNNER_TEMP']) / 'v120-baseline' / 'capabilities.json'
+          target.write_text(json.dumps({
+            'baseline': '05d0286b0b27e8e57d5751d5cf649c8800408001',
+            'codex_executable_present': shutil.which('codex') is not None,
+            'openai_api_key_configured': bool(os.environ.get('OPENAI_API_KEY')),
+            'codex_api_key_configured': bool(os.environ.get('CODEX_API_KEY')),
+            'agent_runs_executed': 0,
+            'note': 'Presence only. No credential values are recorded, no model invoked.'
+          }, indent=2) + '\n', encoding='utf-8')
+          PY
+          cd "$RUNNER_TEMP/v120-baseline"
+          sha256sum source.tar.gz > SHA256SUMS
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: v120-baseline-source
+          path: ${{ runner.temp }}/v120-baseline/
+          if-no-files-found: error
+          retention-days: 7
