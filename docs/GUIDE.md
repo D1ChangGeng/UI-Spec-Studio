@@ -70,6 +70,20 @@ and a demonstrated fit to wider implementation. Specific access needs can prompt
 one focused request for normal authorized material. The agent keeps responsibility
 for analysis, selection and verification. See [the research method](EXPERIENCE-RESEARCH.md).
 
+### Observe important design events while work continues
+
+The conversation presents consequential findings and actual results when they can
+inform the design. A first meaningful local preview can appear before the entire
+increment is complete; its scope and remaining gaps remain explicit. Major source
+choices identify the observed quality and the implementation actually used. A
+material mismatch prompts correction and reinspection within the existing SPEC.
+
+These disclosures follow actual events rather than a fixed sequence of reports.
+A small repair can combine its purpose, result and check in one concise delivery.
+Showing an artifact makes it available; user examination and scoped approval have
+their own evidence. Existing execution authorization supports continued work and
+does not imply acceptance of a newly shown result. See [observable execution](OBSERVABLE-EXECUTION.md).
+
 ## 2. Review a named scope
 
 ```text

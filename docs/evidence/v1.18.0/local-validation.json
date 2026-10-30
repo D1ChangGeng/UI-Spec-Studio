@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-30",
+  "runtime_candidate": "v1.18.0",
+  "browser": "Chrome for Testing headless shell 156.0.8078.80",
+  "automation": "Playwright 1.57.0",
+  "checks": {
+    "package_structure": "pass",
+    "catalog_generation": "pass",
+    "readme_art_generation": "pass",
+    "readme_local_matrix": 12,
+    "scenario": {
+      "result": "pass",
+      "captures": 28,
+      "checks": 18,
+      "storage_verified": true
+    },
+    "asset_delivery": {
+      "result": "pass",
+      "views": 8,
+      "state_checks": 8
+    },
+    "content": {
+      "result": "pass",
+      "captures": 53,
+      "tests": 39,
+      "storage_verified": true
+    },
+    "temporal": {
+      "result": "pass",
+      "episodes": 23,
+      "captures": 227,
+      "videos": 2,
+      "storage_verified": true,
+      "visual_review": "not claimed by this automated suite"
+    },
+    "local_install": {
+      "result": "pass",
+      "installer": "skills@1.7.4",
+      "requested_agents": [
+        "codex",
+        "claude-code",
+        "opencode"
+      ],
+      "installed_copies": 2,
+      "files_per_copy": 37
+    },
+    "unit_suite": {
+      "result": "pass",
+      "tests": 302,
+      "elapsed_seconds": 24.637,
+      "log": "unit-tests.log"
+    },
+    "study_replay_after_zip_partition": {
+      "result": "pass",
+      "tests": 4,
+      "scope": "Nine input/final snapshots, original messages, component runtime identities and all original evidence-member hashes"
+    },
+    "recorder_media_identity": {
+      "result": "pass",
+      "tests": 7,
+      "scope": "Text/source identity, media snapshots surviving overwrite, missing media and workspace boundaries; included in the full suite"
+    }
+  },
+  "scope": "Existing release gates exercise fixtures and source integrity. Their passing result is separate from consuming-Agent behavior, real product aesthetics, natural-speed perceptual review and human acceptance. Distribution identity is checked from the staged clean source and again from published assets."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "message-005",
+  "channel": "final",
+  "recorded_at": "2026-10-30T09:48:08.011685+00:00",
+  "text": "已完成 Fieldnote 的源码修正，应用可以直接使用。\n\n**运行入口：**[打开 Fieldnote](http://127.0.0.1:8423/)（本地服务器保持运行）。\n\n这次调整把笔记卡的正反面统一成同一套纸面、细边、页码、阴影和留白，保留固定中心轴翻转。装饰转动放慢到 14 秒一周，书写区与保存反馈保持稳定；减少动态效果时，卡片直接切换到可读状态。标题、正文、输入框及中英文间距已重排，浅色和深色主题分别检查过。已存笔记也沿用相同的纸面与文字层级，返回编辑会恢复输入框焦点、选区和内部滚动位置。\n\n**实际验证结果：**在 1440×900、390×844，浅色／深色、英文／中文共 8 种条件下，192 项行为检查通过。覆盖连续七次快速翻转、长文本滚动、超限草稿保留、保存期间继续编辑、已存内容与新草稿的区分、返回焦点、减少动态效果及刷新后读取。存储失败由真实填满浏览器本地存储触发；失败时新草稿和旧存档均保留，释放空间后的原生重试才报告成功。最后提高了次要按钮字号，并再次检查 8 种条件的正反面，未发现横向溢出或动作按钮重叠。\n\n仍保留原应用的 **600 字符保存上限**和 **900 毫秒示例保存延迟**；超限内容不会被截断。保存仍只发生在当前浏览器。\n\n**检查边界：**本次使用 Chromium 的桌面与移动尺寸模拟，未做 Safari、Firefox、真实手机键盘或辅助技术实机测试。已查看真实页面、关键大图和自然计时的翻转／反转序列帧；录制视频已保留，但未逐段播放，因此不把这些证据表述为实机帧率或完整播放流畅度结论。\n\n源码与延续说明在 [index.html](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-k2/app/index.html)、[styles.css](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-k2/app/styles.css)、[app.js](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-k2/app/app.js) 和 [README.md](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-k2/app/README.md)。参考示例、检查记录与截图保留在本工作目录的 evidence 中。\n\n![最终桌面浅色界面](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-k2/evidence/final-1440-light-en.png)\n\n![最终移动端深色背面](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-k2/evidence/final-390-dark-zh-back.png)\n",
+  "text_sha256": "0fb0e45dafc4886616ed93b0fd19b53792cc5ea65b706845bd8bb7fde4060764",
+  "source_archive": "message-005-source.zip",
+  "source_files": {
+    "app/README.md": "b59b42ffc87d1006ab3ea92f427f88435ed53a536499ab51a6ccdd6b8b7c6f44",
+    "app/app.js": "5df7efbe21f55cc0bcb98fa22d1c877a6694e519ea51c151d9b3ff1e6991e12e",
+    "app/index.html": "75ac02632b8d0e8f202f291dce5576c01a2d795210be095470d3380bf3680848",
+    "app/styles.css": "2a1e0db75b991b98becf97f78eca528775601ced8ac98809361a0917eef38243"
+  }
+}

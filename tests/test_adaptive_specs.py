@@ -12,7 +12,7 @@ import unittest
 import zipfile
 
 from test_design_evidence import checker, sample, ROOT
-from source_continuity import runtime_v1161
+from source_continuity import runtime_v1161, runtime_v117
 from test_tools import load, package
 
 preparer = load('adaptive_experiment_preparer', 'tools/prepare_granularity_experiment.py')
@@ -111,11 +111,11 @@ class AdaptiveSpecRecordsTests(unittest.TestCase):
 
 
 class AdaptiveSpecContinuityTests(unittest.TestCase):
-    def test_exact_current_and_predecessor_identities(self):
+    def test_exact_v117_and_predecessor_identities(self):
         ledger = json.loads((ROOT/'docs/evidence/v1.17.0/continuity.json').read_text(encoding='utf-8'))
         self.assertEqual(ledger['baseline_commit'], '9cc2470e21b626c56dd293274277d9809c13defb')
         for row in ledger['files']:
-            self.assertEqual(hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest(), row['current_sha256'])
+            self.assertEqual(hashlib.sha256(runtime_v117(ROOT, row['path'])).hexdigest(), row['current_sha256'])
             self.assertEqual(hashlib.sha256(runtime_v1161(ROOT, row['path'])).hexdigest(), row['prior_sha256'])
         for row in ledger['historical_evidence_unchanged']:
             self.assertEqual(hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest(), row['sha256'])
@@ -126,7 +126,7 @@ class AdaptiveSpecContinuityTests(unittest.TestCase):
             path = 'skills/ui-spec/SKILL.md'
             target = root/path
             target.parent.mkdir(parents=True)
-            target.write_bytes((ROOT/path).read_bytes() + b'\nUnreviewed change\n')
+            target.write_bytes(runtime_v117(ROOT, path) + b'\nUnreviewed change\n')
             ledger = root/'docs/evidence/v1.17.0/continuity.json'
             ledger.parent.mkdir(parents=True)
             ledger.write_bytes((ROOT/'docs/evidence/v1.17.0/continuity.json').read_bytes())

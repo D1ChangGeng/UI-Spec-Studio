@@ -1,0 +1,441 @@
+{
+  "conditions": {
+    "desktop": "1440x900; English; light; no-preference",
+    "mobile_long": "390x844; zh-CN; dark; no-preference; 599 characters",
+    "desktop_long": "1440x900; English; light; 600 characters",
+    "reduced": "390x844; zh-CN; dark; prefers-reduced-motion: reduce",
+    "delayed_save": "actual requested 900ms timer extended to 2500ms",
+    "failure": "native localStorage quota exhaustion, original setItem called and native error rethrown"
+  },
+  "apps": {
+    "L6": {
+      "motion_face_rects": {
+        "front": {
+          "x": 184.3603057861328,
+          "y": 259.68231201171875,
+          "w": 502.88873291015625,
+          "h": 356.1978759765625
+        },
+        "back": {
+          "x": 184.3603057861328,
+          "y": 259.68231201171875,
+          "w": 502.88873291015625,
+          "h": 356.1978759765625
+        }
+      },
+      "reduced_face_rects": {
+        "front": {
+          "x": 19.906892776489258,
+          "y": 187.76759338378906,
+          "w": 335.18621826171875,
+          "h": 274.15228271484375
+        },
+        "back": {
+          "x": 19.906892776489258,
+          "y": 187.76759338378906,
+          "w": 335.18621826171875,
+          "h": 274.15228271484375
+        }
+      },
+      "desktop_initial_save_rect": {
+        "x": 775.109375,
+        "y": 603.65625,
+        "width": 102,
+        "height": 44
+      },
+      "mobile_initial_save_rect": {
+        "x": 20,
+        "y": 756.609375,
+        "width": 102,
+        "height": 44
+      },
+      "long_desktop": {
+        "length": 600,
+        "clientHeight": 173,
+        "scrollHeight": 634,
+        "wheelScrollTop": 460,
+        "keyFocus": "preview-note",
+        "savedExact": true,
+        "fontSize": "16px",
+        "lineHeight": "28.8px"
+      },
+      "long_mobile_zh_dark": {
+        "length": 599,
+        "clientHeight": 120,
+        "scrollHeight": 1155,
+        "wheelScrollTop": 1035,
+        "keyFocus": "preview-note",
+        "savedExact": true,
+        "fontSize": "15px",
+        "lineHeight": "26.25px"
+      },
+      "ordinary_turn": {
+        "first_back_accessible_ms": 6.400000000372529,
+        "first_back_facing_sample_ms": 289.6000000005588,
+        "early_focus": "preview-note",
+        "early_transform": "matrix3d(0.999882, 0, -0.0153776, 0, 0, 1, 0, 0, 0.0153776, 0, 0.999882, 0, 0, 0, 0, 1)"
+      },
+      "reverse_followup": {
+        "click_times_ms": [
+          50.70000000111759,
+          397.90000000037253,
+          503,
+          607.4000000003725
+        ],
+        "final": {
+          "target": "front",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "frontAria": "false",
+          "backAria": "true",
+          "active": "flip"
+        },
+        "pause_stable_after_settling": true
+      },
+      "save": {
+        "delay_status": "The submitted version is saved. Save again to keep your new edits.",
+        "saved_exact_a": true,
+        "draft_b_retained": true,
+        "selection_retained": [
+          12,
+          19
+        ],
+        "unsaved_reload_value": "Snapshot A: the note present when Save was pressed.",
+        "native_failures": [
+          {
+            "time": 3895.7000000001863,
+            "key": "ui-spec-temporal-note-v1",
+            "length": 672,
+            "result": "error",
+            "name": "QuotaExceededError",
+            "message": "Failed to execute 'setItem' on 'Storage': Setting the value of 'ui-spec-temporal-note-v1' exceeded the quota."
+          }
+        ],
+        "failure_draft_retained": true,
+        "failure_saved_baseline_intact": true,
+        "retry_visible": true,
+        "recovered_exact": true,
+        "failure_return_focus": "retry"
+      },
+      "mobile_long_return": {
+        "return_rect_on_entry": {
+          "x": 20,
+          "y": 2066.546875,
+          "w": 94,
+          "h": 44
+        },
+        "entry_scrollY": 0,
+        "keyboard_tab_target": "return",
+        "selection_before": [
+          106,
+          111
+        ],
+        "selection_after": [
+          106,
+          111
+        ],
+        "input_scroll_before": 146,
+        "input_scroll_after": 146,
+        "return_focus": "note-text"
+      },
+      "reduced_motion": {
+        "animations": [],
+        "control": {
+          "text": "静态视图",
+          "disabled": true,
+          "pressed": "true"
+        },
+        "return_focus": "note-text",
+        "return_selection": [
+          4,
+          8
+        ]
+      }
+    },
+    "N3": {
+      "motion_face_rects": {
+        "front": {
+          "x": 192.36053466796875,
+          "y": 266.90777587890625,
+          "w": 502.0758056640625,
+          "h": 388.2156982421875
+        },
+        "back": {
+          "x": 192.36053466796875,
+          "y": 266.90777587890625,
+          "w": 502.0758056640625,
+          "h": 388.2156982421875
+        }
+      },
+      "reduced_face_rects": {
+        "front": {
+          "x": 19.883255004882812,
+          "y": 177.80056762695312,
+          "w": 350.23345947265625,
+          "h": 270.18011474609375
+        },
+        "back": {
+          "x": 19.883255004882812,
+          "y": 177.80056762695312,
+          "w": 350.23345947265625,
+          "h": 270.18011474609375
+        }
+      },
+      "desktop_initial_save_rect": {
+        "x": 776.296875,
+        "y": 618.484375,
+        "width": 104,
+        "height": 44
+      },
+      "mobile_initial_save_rect": {
+        "x": 20,
+        "y": 792.15625,
+        "width": 104,
+        "height": 44
+      },
+      "long_desktop": {
+        "length": 600,
+        "clientHeight": 206,
+        "scrollHeight": 655,
+        "wheelScrollTop": 449,
+        "keyFocus": "preview-note",
+        "savedExact": true,
+        "fontSize": "17px",
+        "lineHeight": "29.75px"
+      },
+      "long_mobile_zh_dark": {
+        "length": 599,
+        "clientHeight": 110,
+        "scrollHeight": 1196,
+        "wheelScrollTop": 1086,
+        "keyFocus": "preview-note",
+        "savedExact": true,
+        "fontSize": "16px",
+        "lineHeight": "27.2px"
+      },
+      "ordinary_turn": {
+        "first_back_accessible_ms": 278.09999999962747,
+        "first_back_facing_sample_ms": 261.29999999981374,
+        "early_focus": "theme-toggle",
+        "early_transform": "matrix3d(0.999848, 0, -0.0174077, 0, 0, 1, 0, 0, 0.0174077, 0, 0.999848, 0, 0, 0, 0, 1)"
+      },
+      "reverse_followup": {
+        "click_times_ms": [
+          38.70000000111759,
+          385.30000000074506,
+          491.59999999962747,
+          598.3000000007451
+        ],
+        "final": {
+          "target": "front",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "frontAria": "false",
+          "backAria": "true",
+          "active": "flip"
+        },
+        "pause_stable_after_settling": true
+      },
+      "save": {
+        "delay_status": "The submitted version is saved. Save again to keep your new edits.",
+        "saved_exact_a": true,
+        "draft_b_retained": true,
+        "selection_retained": [
+          12,
+          19
+        ],
+        "unsaved_reload_value": "Snapshot A: the note present when Save was pressed.",
+        "native_failures": [
+          {
+            "time": 3736,
+            "key": "ui-spec-temporal-note-v1",
+            "length": 672,
+            "result": "error",
+            "name": "QuotaExceededError",
+            "message": "Failed to execute 'setItem' on 'Storage': Setting the value of 'ui-spec-temporal-note-v1' exceeded the quota."
+          }
+        ],
+        "failure_draft_retained": true,
+        "failure_saved_baseline_intact": true,
+        "retry_visible": true,
+        "recovered_exact": true,
+        "failure_return_focus": "retry"
+      },
+      "mobile_long_return": {
+        "return_rect_on_entry": {
+          "x": 20,
+          "y": 1803.3125,
+          "w": 96,
+          "h": 44
+        },
+        "entry_scrollY": 0,
+        "keyboard_tab_target": "return",
+        "selection_before": [
+          107,
+          112
+        ],
+        "selection_after": [
+          107,
+          112
+        ],
+        "input_scroll_before": 132,
+        "input_scroll_after": 132,
+        "return_focus": "note-text"
+      },
+      "reduced_motion": {
+        "animations": [],
+        "control": {
+          "text": "静态模式",
+          "disabled": true,
+          "pressed": "true"
+        },
+        "return_focus": "note-text",
+        "return_selection": [
+          4,
+          8
+        ]
+      }
+    },
+    "P8": {
+      "motion_face_rects": {
+        "front": {
+          "x": 192,
+          "y": 274.671875,
+          "w": 517.734375,
+          "h": 354
+        },
+        "back": {
+          "x": 192,
+          "y": 274.671875,
+          "w": 517.734375,
+          "h": 354
+        }
+      },
+      "reduced_face_rects": {
+        "front": {
+          "x": 20,
+          "y": 184.015625,
+          "w": 350,
+          "h": 284
+        },
+        "back": {
+          "x": 20,
+          "y": 184.015625,
+          "w": 350,
+          "h": 284
+        }
+      },
+      "desktop_initial_save_rect": {
+        "x": 785.734375,
+        "y": 608.046875,
+        "width": 130,
+        "height": 44
+      },
+      "mobile_initial_save_rect": {
+        "x": 20,
+        "y": 868.765625,
+        "width": 130,
+        "height": 44
+      },
+      "long_desktop": {
+        "length": 600,
+        "clientHeight": 155,
+        "scrollHeight": 588,
+        "wheelScrollTop": 433,
+        "keyFocus": "preview-note",
+        "savedExact": true,
+        "fontSize": "16px",
+        "lineHeight": "28px"
+      },
+      "long_mobile_zh_dark": {
+        "length": 599,
+        "clientHeight": 123,
+        "scrollHeight": 1122,
+        "wheelScrollTop": 999,
+        "keyFocus": "preview-note",
+        "savedExact": true,
+        "fontSize": "15px",
+        "lineHeight": "25.5px"
+      },
+      "ordinary_turn": {
+        "first_back_accessible_ms": 11.300000000745058,
+        "first_back_facing_sample_ms": 144.5,
+        "early_focus": "preview-note",
+        "early_transform": "matrix3d(0.905831, 0, -0.423639, 0, 0, 1, 0, 0, 0.423639, 0, 0.905831, 0, 0, 0, -1.6, 1)"
+      },
+      "reverse_followup": {
+        "click_times_ms": [
+          36.59999999962747,
+          382.09999999962747,
+          488.09999999962747,
+          592.1999999992549
+        ],
+        "final": {
+          "target": "front",
+          "transform": "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -1.6, 1)",
+          "frontAria": "false",
+          "backAria": "true",
+          "active": "flip"
+        },
+        "pause_stable_after_settling": true
+      },
+      "save": {
+        "delay_status": "The submitted version is saved. Save again to keep your new edits.",
+        "saved_exact_a": true,
+        "draft_b_retained": true,
+        "selection_retained": [
+          12,
+          19
+        ],
+        "unsaved_reload_value": "Snapshot A: the note present when Save was pressed.",
+        "native_failures": [
+          {
+            "time": 3789.7999999998137,
+            "key": "ui-spec-temporal-note-v1",
+            "length": 672,
+            "result": "error",
+            "name": "QuotaExceededError",
+            "message": "Failed to execute 'setItem' on 'Storage': Setting the value of 'ui-spec-temporal-note-v1' exceeded the quota."
+          }
+        ],
+        "failure_draft_retained": true,
+        "failure_saved_baseline_intact": true,
+        "retry_visible": true,
+        "recovered_exact": true,
+        "failure_return_focus": "retry"
+      },
+      "mobile_long_return": {
+        "return_rect_on_entry": {
+          "x": 20,
+          "y": 211.8125,
+          "w": 94,
+          "h": 44
+        },
+        "entry_scrollY": 13,
+        "keyboard_tab_target": "return",
+        "selection_before": [
+          109,
+          114
+        ],
+        "selection_after": [
+          109,
+          114
+        ],
+        "input_scroll_before": 103,
+        "input_scroll_after": 103,
+        "return_focus": "note-text"
+      },
+      "reduced_motion": {
+        "animations": [],
+        "control": {
+          "text": "轨迹已静止",
+          "disabled": true,
+          "pressed": "true"
+        },
+        "return_focus": "note-text",
+        "return_selection": [
+          4,
+          8
+        ]
+      }
+    }
+  }
+}

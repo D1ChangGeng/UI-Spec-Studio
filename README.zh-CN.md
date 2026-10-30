@@ -43,6 +43,14 @@ Agent 在 `init` 中说明可修订的候选规划，再根据实际证据保持
 
 [多轮使用方式](docs/GUIDE.md) · [v1.17 版本评审](docs/REVIEW-v1.17.0.md) · [实验记录](docs/experiments/adaptive-granularity/RESULTS.md)
 
+## 直接看见设计如何形成
+
+重要设计事件会随实际工作自然呈现：影响方向的研究发现或资源选择、首次有意义的局部成果、重大品质差距，以及正式增量的交付。Agent 展示具体对象与证据，说明已形成的判断，并继续完成已授权的工作。
+
+资源原始演示、项目试装与整合后的产品各自保留真实身份。早期预览让已经形成的品质和仍需修正的关系及时可见；同一份当前设计认识支持对话与后续工作，常规搜索和修改由 Agent 自主推进。
+
+[可观察的设计执行](docs/OBSERVABLE-EXECUTION.md) · [v1.18 版本评审](docs/REVIEW-v1.18.0.md)
+
 ## 先理解体验，再选择设计
 
 「像某个产品」可能指熟悉的工作方式、信息组织、视觉气质或交互细节。Agent 先形成可修正的理解，分别研究当前用户的明确意图、相关用户经验与参考产品的真实表现。
@@ -166,7 +174,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.17.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.18.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

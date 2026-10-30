@@ -5,9 +5,35 @@ import json
 from pathlib import Path
 
 
+def runtime_v117(root: Path, path: str) -> bytes:
+    """Restore the exact v1.17 runtime through the reviewed v1.18 delta."""
+    current = (root / path).read_bytes()
+    extension = root / 'docs/evidence/v1.18.0/continuity.json'
+    if not extension.is_file():
+        return current
+    ledger = json.loads(extension.read_text(encoding='utf-8'))
+    rows = [row for row in ledger['files'] if row['path'] == path]
+    if len(rows) != 1:
+        raise ValueError(f'Unknown or duplicate v1.18 continuity path: {path}')
+    row = rows[0]
+    if hashlib.sha256(current).hexdigest() != row['current_sha256']:
+        raise ValueError(f'Current source differs from v1.18 reviewed identity: {path}')
+    lines = current.decode('utf-8').splitlines(keepends=True)
+    for edit in reversed(row['inverse_edits']):
+        a, b = edit['current_start_line'], edit['current_end_line']
+        fragment = ''.join(lines[a:b]).encode('utf-8')
+        if hashlib.sha256(fragment).hexdigest() != edit['current_fragment_sha256']:
+            raise ValueError(f'Inverse v1.18 fragment differs: {path}')
+        lines[a:b] = edit['prior_text'].splitlines(keepends=True)
+    prior = ''.join(lines).encode('utf-8')
+    if hashlib.sha256(prior).hexdigest() != row['prior_sha256']:
+        raise ValueError(f'Restored v1.17 source differs: {path}')
+    return prior
+
+
 def runtime_v1161(root: Path, path: str) -> bytes:
     """Restore the exact v1.16.1 runtime through the reviewed v1.17 delta."""
-    current = (root / path).read_bytes()
+    current = runtime_v117(root, path)
     extension = root / 'docs/evidence/v1.17.0/continuity.json'
     if not extension.is_file():
         return current

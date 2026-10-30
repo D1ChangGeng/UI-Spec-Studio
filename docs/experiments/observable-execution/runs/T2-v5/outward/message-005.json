@@ -1,0 +1,14 @@
+{
+  "id": "message-005",
+  "channel": "final",
+  "recorded_at": "2026-10-30T10:01:30.579831+00:00",
+  "text": "已完成 T2-v5 的现有应用修正，预览正在运行：**[打开 Fieldnote](http://127.0.0.1:8422)**。\n\n卡片正反面现在使用同一纸面、边缘和固定空间；中心翻转支持途中反向，阴影保留落点。标题、正文和编辑区重新调整了字号与间距，手机初始页面能够直接看到保存按钮。中英文、浅深主题、暂停动效和减少动态模式均保留；返回编辑会恢复输入焦点、选择位置与滚动位置。\n\n**实际验证完成 39 项浏览器检查，全部通过。** 覆盖 1440×900、390×844 的语言与主题组合、快速反转、延迟保存时继续编辑、600 字长笔记滚动、超限草稿保留，以及减少动态模式。保存失败使用真实 localStorage 配额耗尽触发：旧记录未覆盖，草稿仍完整；释放空间后从界面重试成功，刷新后也能读回保存内容。\n\n实现和来源取舍见 [README.md](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-v5/app/README.md)，具体检查结果见 [checks.json](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-v5/evidence/checks.json)。没有新增运行时依赖，也没有部署。\n\n**边界：**保留原有 600 字符保存上限，未保存草稿只在当前页面会话中保留。此次检查使用 Chromium 桌面与窄屏模拟；真实手机键盘、Safari／Firefox、屏幕阅读器播报及硬件帧率尚未验证。运动检查包含自然时间的有序截图与状态采样，不等同于逐帧性能测量。\n\n![Fieldnote 桌面](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-v5/evidence/final-desktop.png)\n\n![Fieldnote 手机深色背面](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T2-v5/evidence/390-zh-dark-back.png)\n",
+  "text_sha256": "b81cc422f04834fd3c909a1edd5d180ffa393b950817ecd8be74108556b03eb3",
+  "source_archive": "message-005-source.zip",
+  "source_files": {
+    "app/README.md": "923ef445aa54a3cf9a2066dbd916b5532a2cb9e728792ef4cf9216b8600ee857",
+    "app/app.js": "f0732854c6f4eb839e2d7d84b1d7af766bc5a7b96585e4082c2bedf4f83d8652",
+    "app/index.html": "795449f1476a342693e284d5d2e5bfa65b850f58d7a806c16ac26a836469d6dc",
+    "app/styles.css": "18479cfcdd01d225eae03e694e1bb905d298201d480af1668762b4803cc27d11"
+  }
+}

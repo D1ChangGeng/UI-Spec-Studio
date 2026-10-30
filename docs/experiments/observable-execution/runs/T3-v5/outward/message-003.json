@@ -1,0 +1,14 @@
+{
+  "id": "message-003",
+  "channel": "final",
+  "recorded_at": "2026-10-30T09:21:20.897777+00:00",
+  "text": "已完成这次局部排版修正。工作入口：[本地预览](http://127.0.0.1:8432/)。\n\n标题与正文的占位提示现在统一为 **14px**，实际输入文字保持 **15px**。提示继续使用原有主题的辅助文字颜色，并取消额外透明度；测得浅色、深色背景下的文字对比分别为 **5.03:1、8.28:1**。\n\n已检查 **390×844、1440×900 × 中英文 × 明暗主题**的八种组合，查看空白、已输入内容和键盘焦点。与修改前比较，两个字段的尺寸、位置、内边距和输入行高均保持一致。八种组合均通过实际保存、模拟写入失败、保留草稿、键盘重试，以及刷新后从 localStorage 恢复内容的检查。\n\n修改位于 [styles.css](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-v5/app/styles.css)。可查看 [手机尺寸焦点对照](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-v5/evidence/keyboard-focus-390.png) 和 [执行检查记录](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-v5/evidence/after-checks.json)。\n\n验证范围为 Chromium 的指定 CSS 视口；尚未检查 Safari、Firefox、真实手机软键盘，以及浏览器原生存储配额耗尽。失败恢复使用应用已有的模拟写入失败开关，保存与刷新恢复使用真实浏览器 localStorage。\n",
+  "text_sha256": "93e221f9d46cf2f4b4407a3265792f90fb2ec3a55a4f9edf2f37cd22804ffad9",
+  "source_archive": "message-003-source.zip",
+  "source_files": {
+    "app/README.md": "f1b07091f32cb54c2f0f655ff33ae8c81f74b68be3141a1178e290b1fcf69b6f",
+    "app/app.js": "8c3181ff6e6dcb364b6c0a543ee2b7a89145f0f687fc5dbaa588c6e7465a83dd",
+    "app/index.html": "d8f65f613f388d77f94d073e6bf6ccef5a7aab47d4147b25615f4a7468960034",
+    "app/styles.css": "75a6d280bb3932b5694f9c093f5304afa2a5446f3eb853093c6950abeb66f1e7"
+  }
+}

@@ -11,6 +11,7 @@
 - [Localization](#localize-the-message-and-its-composition)
 - [Roles and maintenance](#maintain-content-through-roles-and-updates)
 - [Decisions and verification](#keep-a-traceable-content-decision-where-it-matters)
+- [Design-execution output and product language](#distinguish-design-execution-output-from-product-language)
 
 ## Treat words as product behavior and design material
 
@@ -127,3 +128,13 @@ When presenting a design choice to the user, describe the perceptible difference
 Keep precise resource/version/configuration language in the supporting design record so engineering remains traceable. Distinguish an observed effect from an intended one and actual reuse from a proposed option. Show representative renders or episodes when the choice is visual. Do not expose internal implementation strategy as reassuring product copy, or imply that a known dependency guarantees quality.
 
 Adapt actual wording and type together with a reused block. Preserve factual meaning when sample text is replaced, inspect glyph coverage, CJK/Latin punctuation and line breaking, and verify action/error/pending language at the actual component states. A borrowed block's elegant demo copy may not survive long real labels. Keep ordinary low-impact wording changes proportional to their known design basis.
+
+## Distinguish design-execution output from product language
+
+In the conversation, present consequential design work as observable findings, judgments and results using the [design-event principle](workflow.md#make-consequential-design-work-observable). Make the design object and its changed relationship the subject. Connect what was observed, why it matters, what decision or action follows, and what result or gap remains as useful to that event. These relationships guide clear prose; they do not require four headings, a fixed format or a retelling of internal reasoning. Distinguish an observation from an inference, a selected route from an executed change, and a proposed effect from one actually viewed.
+
+For example, when supported by the evidence: “The expanded input keeps its action row stable, but reduces the message reading area enough to obscure the newest content. The local trial will retain the action layout while the growth limit and scroll relationship are revised.” Pair a visual finding with the relevant real result. The reader can understand the professional judgment and its execution consequence without reconstructing a search log or being asked to decide each routine adjustment. Use direct collaboration when an actual user decision or explanation is needed.
+
+The product interface serves the end user's task and uses its own voice, terminology and information order. Keep design findings, resource comparisons and implementation rationale in the conversation and project records unless the product's task specifically needs them. Express promised hierarchy, material and movement through the actual interface. Tables, borders and explanatory text remain useful when they clarify real information or action; their presence does not prove or disprove craft. The evidence map's categories need not become the product's layout, and a label claiming a visual quality cannot provide it.
+
+Both audiences draw on the same current facts. Revise a superseded design choice in the current model and explain a consequential change when it occurs; preserve the earlier observation at its historical scope. Reuse existing evidence and concise, task-relevant wording so presentation supports continued design work without creating parallel reporting obligations.

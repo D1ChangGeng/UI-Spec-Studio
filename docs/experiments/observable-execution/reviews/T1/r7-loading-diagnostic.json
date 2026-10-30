@@ -1,0 +1,92 @@
+{
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 504 (Outdated Optimize Dep)"
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    }
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:8661/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/src/main.jsx",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/@vite/client",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/node_modules/.vite/deps/react.js?v=3eed83cb",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/@fs/workspace/scratch/654b1ee6916f/observable-shared-node/node_modules/vite/dist/client/env.mjs",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/src/styles.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/src/App.jsx",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/node_modules/.vite/deps/chunk-ZPWHCABL.js?v=f175b278",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/node_modules/.vite/deps/chunk-6I37OUX7.js?v=f175b278",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/node_modules/.vite/deps/react-dom.js?v=f7b387b4",
+      "status": 504
+    },
+    {
+      "url": "http://127.0.0.1:8661/src/components/magic-card.tsx",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/src/collections.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/node_modules/.vite/deps/react-dom_client.js?v=3acb5f40",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8661/node_modules/.vite/deps/lucide-react.js?v=67abbf26",
+      "status": 200
+    }
+  ],
+  "failed": [
+    {
+      "url": "http://127.0.0.1:8661/node_modules/.vite/deps/react-dom.js?v=f7b387b4",
+      "failure": "net::ERR_ABORTED"
+    }
+  ],
+  "errors": [],
+  "body": "",
+  "scripts": [
+    {
+      "src": "http://127.0.0.1:8661/@vite/client",
+      "type": "module"
+    },
+    {
+      "src": "http://127.0.0.1:8661/src/main.jsx",
+      "type": "module"
+    }
+  ]
+}

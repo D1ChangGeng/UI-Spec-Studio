@@ -1,0 +1,19 @@
+{
+  "id": "message-004",
+  "channel": "final",
+  "recorded_at": "2026-10-30T10:28:31.837055+00:00",
+  "text": "同一张笔记卡的中段焦点与语义问题已修正，延续版本可以直接检查。\n\n**运行入口：**[Fieldnote 延续版本](http://127.0.0.1:8493/)。实现与新证据均保存在独立延续目录，这次结果单独报告。\n\n修正把翻转意图和实际可见面分开：`data-face` 继续控制运动方向，当前旋转矩阵决定哪一面进入辅助语义与键盘顺序。接近侧边时，两面暂时不可聚焦；已经获得焦点的面离开视野时，焦点回到稳定的翻面按钮。Tab 输入、快速反转、动画取消、返回编辑及中途切换减少动态效果，都会重新核对实际朝向。\n\n**已验证的变化：**原问题已先复现，早期 m33 为 0.999881 时，Shift+Tab 曾进入不可见的 `preview-note`。修正后的 8 种尺寸／主题／语言条件中，同一早期操作均跳过背面，焦点落在可见的主题按钮；背面实际可见后，正文才能接收焦点。另查了 Chromium 的实际可访问性树：m33 为 0.999338 时正文节点被排除，转到 -0.833086 时节点正常进入树。\n\n本轮 **166 项断言通过**，保留了 **2,575 个自然计时、动画帧回调后的采样**，其中没有记录到朝向、aria-hidden、inert 与焦点关系不一致。覆盖连续七次反转、近侧边状态、580 字符长文滚动、选区与滚动位置恢复、导航打断以及运动中切换减少动态效果。桌面浅色英文与移动端深色中文还重新执行了真实存储满额失败和原生重试，草稿与旧存档均保留。原有纸面、布局、翻转轨迹及保存契约保留。\n\n**检查边界：**这些结果来自 Chromium 模拟窗口、实际键盘事件、可访问性树与已查看的中段截图；尚未做其他浏览器、真实手机或读屏语音测试。采样与截图不等同于全程视频播放或实机帧率结论。\n\n修改见 [app.js](sandbox:/workspace/scratch/654b1ee6916f/observable-continuation/T2-k2/app/app.js)，运行和设计关系说明见 [README.md](sandbox:/workspace/scratch/654b1ee6916f/observable-continuation/T2-k2/app/README.md)。原始采样及动作时刻保存在 [verification.json](sandbox:/workspace/scratch/654b1ee6916f/observable-continuation/T2-k2/continuation-evidence/verification.json)，实际语义树检查保存在 [accessibility-tree.json](sandbox:/workspace/scratch/654b1ee6916f/observable-continuation/T2-k2/continuation-evidence/accessibility-tree.json)。\n\n![背面实际转向读者后，正文接收焦点](sandbox:/workspace/scratch/654b1ee6916f/observable-continuation/T2-k2/continuation-evidence/1440-light-en-turning-back.png)\n",
+  "text_sha256": "a68dc9df41d64a405af8b9d57ea019e29c6dd250cbfabec1b93be59bbccbf112",
+  "source_archive": "message-004-source.zip",
+  "source_files": {
+    "app/README.md": "d340243971fe0958570d841ea5bfed9b2f724cf5dd59b1397d3169db8b12384f",
+    "app/app.js": "c9f6f51ce9c8af0dd6b49510621911639954706f1d05e1b8783dfae44014cf22",
+    "app/index.html": "75ac02632b8d0e8f202f291dce5576c01a2d795210be095470d3380bf3680848",
+    "app/styles.css": "2a1e0db75b991b98becf97f78eca528775601ced8ac98809361a0917eef38243"
+  },
+  "media_archive": "message-004-media.zip",
+  "media_files": {
+    "continuation-evidence/1440-light-en-turning-back.png": "7fc74ea8a8f622ae6af414410fa5439883ae5b1d890e1acbfbc78ead773d53e7"
+  },
+  "media_unavailable": []
+}

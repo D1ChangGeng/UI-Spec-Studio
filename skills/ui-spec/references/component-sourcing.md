@@ -46,6 +46,8 @@ Distinguish researched, visually compared, trialled, adopted and inspected resou
 
 For each consequential quality owned by the formal SPEC, expose **target quality → actually observed reference → adopted mature resource or identified custom implementation → current product presentation → remaining gap**. The current call site, asset placement and viewed result establish where the design value resides. Research volume, an installed primitive or a resource name cannot supply a missing link. Present the decisive comparison and actual result in the conversation as well as retaining the full record; use the user's observable task and visual relationships to explain the choice.
 
+When a discovery or choice materially changes art direction, an important component or a connected interaction, apply the [design-event disclosure principle](workflow.md#make-consequential-design-work-observable). Show the relevant observed candidate or comparison, explain the relationship it can supply, and identify what has actually been selected, trialled or adopted. A source still awaiting a local trial remains a proposed route. After adoption, use the current project's result to show which valuable proportions, material, states or movement survived. Reuse the current decision and evidence; ordinary installations and low-impact choices can proceed without a separate message or approval request.
+
 ## Describe the need in two dimensions
 
 State the intended perception/operation and selection conditions: content, stack/version, input modes, views, themes, languages, authority, performance, rights and maintenance. For a background, establish its expressive role, foreground relationship and motion control, then search by effect and implementation. Keep private details out of queries.
@@ -61,6 +63,8 @@ State the intended perception/operation and selection conditions: content, stack
 | Complex information | Tables, charts, editors, graphs, canvases | Are representation, data scale, navigation and real state sound? |
 
 Resource forms carry different integration costs. Extend [catalog](resource-catalog.md) leads through task-relevant research; the catalog is an entry point to a wider ecosystem.
+
+Treat a platform's categories, such as backgrounds, components or text animations, as discovery routes. Let the experience question determine which resources deserve research and which consequential findings deserve presentation. An expressive workbench may draw on publishing, spatial composition and a complete input block; show how those particular relationships serve its task and art direction. A routine control repair can inherit the established language. Neither case needs a report for every resource category or an invented new style.
 
 ## Discover efficiently and learn how the source works
 
@@ -161,6 +165,8 @@ Use a bounded trial when candidate evidence is credible and the remaining questi
 | Original candidate demo | Its own craft, states and motion |
 | Local trial | Retained quality with current fonts, content, theme, containers and behavior |
 | Assembled page/journey | Coherence and continuity among adopted parts |
+
+Identify the role of visual material when presenting it: target reference, candidate's original demo, current-project local trial or integrated UI. A single item can serve several roles when its scope is clear. Show current-product evidence for claims about retained quality; an original demo establishes the candidate's own result, and a successful local trial still leaves assembled relationships to inspect. When a consequential trial first becomes reviewable, present its actual result and important target differences under the [first-result guidance](verification.md#inspect-and-show-the-first-reviewable-result), while adaptation decisions can still benefit from that observation.
 
 Use revealing content/states: long labels, multiline input, missing material, loading/errors and required languages/views. Compare at corresponding scale, density and event phase. Inspect detail and process, then return to actual neighbors. Record what survived and why adaptation or replacement is needed. A trial can reopen selection or the experience hypothesis.
 

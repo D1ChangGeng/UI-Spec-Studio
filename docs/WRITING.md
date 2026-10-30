@@ -257,3 +257,18 @@ structural report establishes different facts from a fresh Agent experiment,
 actually viewed UI, measured efficiency or user acceptance. Attribute comparative
 findings to their actual tasks and comparable execution conditions. SPEC counts
 and completed fields do not establish a visual improvement.
+
+## Write observable execution from design events
+
+Let a consequential design fact, judgment or result determine what to present.
+Use the object and its observable relationships as the subject; connect an actual
+finding to a supported interpretation, the selected or executed action, and the
+result or remaining question. Choose the useful parts for that event rather than
+requiring fixed headings. Preserve source/demo/trial/integrated-result identity,
+facts versus hypotheses, and execution authority versus actual owner acceptance.
+
+Present real visual or temporal material when that is what the quality claim
+requires. Reuse evidence produced for design work, show important early results
+while they can influence integration, and let material gaps drive correction.
+A small task can have one compact delivery. Conversation, project records and
+product copy have distinct audiences and draw on the same current facts.

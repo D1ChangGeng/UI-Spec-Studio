@@ -2,13 +2,48 @@
 
 ## Contents
 
-[Current scope](#operate-on-the-current-scope) · [Init](#init--establish-a-useful-working-understanding) · [Shape](#shape--resolve-just-enough-direction-to-build-well) · [Iterate](#iterate--deliver-one-meaningful-increment) · [Audit](#audit--inspect-an-identified-scope) · [Finish](#finish--complete-real-connection-work) · [Continuity](#continuity-with-lightweight-records) · [Evidence map](#use-the-evidence-map-inside-each-operation)
+[Current scope](#operate-on-the-current-scope) · [Observable execution](#make-consequential-design-work-observable) · [Init](#init--establish-a-useful-working-understanding) · [Shape](#shape--resolve-just-enough-direction-to-build-well) · [Iterate](#iterate--deliver-one-meaningful-increment) · [Audit](#audit--inspect-an-identified-scope) · [Finish](#finish--complete-real-connection-work) · [Continuity](#continuity-with-lightweight-records) · [Evidence map](#use-the-evidence-map-inside-each-operation)
 
 ## Operate on the current scope
 
 The main path is `init → iterate → finish`; `audit` runs throughout and optional `shape` resolves consequential uncertainty wherever it appears. Resume or combine operations from current evidence. A local refinement can finish in one round; an approved product can enter integration directly.
 
 Connect intended experience → evidence questions → research/observation → design comparison → mature resource adoption → actual-use verification. Findings can return work to any responsible step. Use the [evidence maturity judgment](analysis.md#reason-about-uncertainty) to continue research, run a bounded trial or expand implementation. Effort follows impact, uncertainty and potential improvement within the task's scope. Research depth and routine progress are professional judgments, not added approval stages.
+
+## Make consequential design work observable
+
+Treat the conversation as a window into professional design execution. Internal work supplies actual evidence; the Current Design Model maintains the current understanding; selected outputs let the user observe consequential findings, decisions and results. The aim is to improve feedback between research and realized UI while preserving autonomous execution. Use existing evidence and records rather than producing a parallel reporting system.
+
+A **Design-Significant Disclosure Point** occurs when a fact, judgment or result materially affects the current experience model, visual direction, source choice, implementation commitment, quality or scope. Consider three lenses together: **design impact**, **user observation value** and **quality realization value**. Ask whether seeing this now would expose an important relationship, clarify an actual choice or reveal a mismatch early enough to affect the work. These lenses support judgment, without scores, timing quotas or required message counts. Search volume, a tool result, a saved file and an operation transition alone do not establish such an event.
+
+### Recognize six kinds of design event
+
+| Event | When it matters | Show the decision-useful substance |
+|---|---|---|
+| **A — Formal scope and quality target** | A formal SPEC begins or its commitments materially change | Experience objective, owned qualities, necessary relationships, inherited foundation and reason for the boundary; preserve the complete product goal. |
+| **B — Research finding** | Actual evidence changes understanding of the target or problem | The observed subject and conditions, significant visual or temporal relationship, supported judgment and effect on the current design. |
+| **C — Design or mature-resource choice** | Art direction, a resource or a realization strategy will carry consequential quality | Actual candidate or useful comparison, meaningful differences, current choice and its reason, qualities to preserve and whether adoption still needs a trial. |
+| **D — First reviewable result** | An important visual object or interaction first becomes meaningfully inspectable | The actual trial or product result, its relation to the target, qualities observed and material gaps; use evidence suited to the owned quality. |
+| **E — Material mismatch and reconsideration** | A target mismatch, adaptation failure, insufficient quality or scope problem changes the next work | Observed symptom, affected relationships, facts versus possible causes, responsible design level, correction and necessary reinspection. |
+| **F — Formal increment delivery** | The increment has an actual result to hand over | Operable/renderable result, meaningful comparison, actual adopted sources, scoped observations, remaining gaps and contribution to the evolving product. |
+
+These kinds can recur, overlap or never arise in a task. An operation can produce several events, and several operations can contribute to one useful presentation. Preserve the information represented by A and F for a formal increment; give D particular priority for complex work so its first meaningful result becomes visible before broad dependent work inherits it. For a small correction, purpose, change and verification can fit in one concise delivery. For research-only work, the reviewable result may be an inspected comparison, annotated actual reference or design proposal, identified as such; a runnable product is not implied.
+
+B, C and E carry a disclosure responsibility when their design impact warrants it. Do not manufacture a new finding, comparison or failure to populate the table. A routine icon replacement, search-query revision or inherited control adjustment usually stays within ordinary work. An unexpected mature block or expressive cross-domain reference can merit disclosure when its concrete relationships change the design. Resource-platform categories organize discovery, not the conversation's required headings.
+
+### Present the consequence, then continue the work
+
+Select the useful parts of **observation → professional judgment → decision/action → result and remaining gap**. Explain an already formed conclusion and its relevant evidence; keep internal deliberation and exhaustive search history out of the presentation. Separate what was seen from a causal hypothesis, a provisional selection from adopted code, and a planned check from its actual result. These are causal relationships, not four compulsory fields.
+
+Use the design object as the subject. For example, an observed composer trial can show that multiline input keeps its action row aligned while reducing message space; the important next question is whether the reader's scroll anchor survives that change. State which relationship the current source carries and which remains unverified. A count of examined components would not explain that choice. Use plain language for perceptible differences, with specialized detail where it supports the current judgment.
+
+Prefer an actual preview, readable image/comparison or relevant continuous episode when the target is visual or temporal. Identify its object: **Target Reference**, **Candidate Demo**, **Local Trial** or **Integrated UI**. A label in natural prose is enough; one event need not display all four. A local render establishes that trial's appearance, while integrated quality requires viewing the assembled product. Static captures can explain type or material; motion, scrolling and asynchronous relations need the relevant continuous observation. See [verification](verification.md) for capture and claim boundaries.
+
+When the first result reveals a material gap, use it to change the next action: revisit the target interpretation, resource, adaptation, content, composition or runtime mechanism at the responsible level, then inspect the repaired relationship and affected neighbors. Keep an existing quality obligation in the active SPEC. Repartition only with a supported new boundary and preserved original commitments. An empty shell is not a meaningful first result, and documenting a problem does not resolve it. Small differences outside the agreed quality responsibility do not require unbounded refinement.
+
+Keep **Disclosure**, **Review** and **Approval** distinct. Disclosure makes an event available; review requires actual examination; approval requires an actual decision with its stated scope. Existing execution authority permits continued work without implying review or acceptance of a new result. Presentation alone establishes neither user review nor assent. Continue authorized choices and repairs after showing them. Request a decision only when a consequential unresolved direction, material change to a confirmed commitment or external action actually requires one under the existing authority model; continue independent supported work.
+
+Use **Selective Strong Disclosure**: make important commitments, consequential choices, first meaningful results, major mismatches and delivery visible when they occur, while merging related low-impact events and omitting invented ones. Reuse research evidence already produced for design judgment. Maintain the current model when a disclosed choice changes; the old message remains history rather than an irrevocable design decision. Presentation detail follows the active SPEC's qualities: background work may need material/foreground comparison, while streaming work may need scroll and interruption evidence. Neither output quantity nor polished reporting certifies research, implementation or quality. Host-required progress messages retain their own purpose and do not become extra design milestones.
 
 ## init — establish a useful working understanding
 

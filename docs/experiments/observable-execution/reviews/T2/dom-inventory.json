@@ -1,0 +1,1406 @@
+{
+  "L6": [
+    {
+      "tag": "BUTTON",
+      "id": "saved-link",
+      "class": "text-button",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "utilities",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "locale-toggle",
+      "class": "utility",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "utilities",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "theme-toggle",
+      "class": "utility",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "utilities",
+      "children": [
+        {
+          "tag": "SPAN",
+          "id": "",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "MAIN",
+      "id": "main",
+      "class": "page-shell",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": "-1",
+      "parent": "",
+      "children": [
+        {
+          "tag": "SECTION",
+          "id": "editor",
+          "class": ""
+        },
+        {
+          "tag": "SECTION",
+          "id": "collection",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "SECTION",
+      "id": "editor",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "main",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "intro"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "workspace"
+        }
+      ]
+    },
+    {
+      "tag": "H1",
+      "id": "page-title",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "intro",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "card-space",
+      "class": "card-space",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "preview",
+      "children": [
+        {
+          "tag": "ARTICLE",
+          "id": "note-card",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "ARTICLE",
+      "id": "note-card",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "card-space",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "card-front",
+          "class": "card-face card-front"
+        },
+        {
+          "tag": "DIV",
+          "id": "card-back",
+          "class": "card-face card-back"
+        }
+      ]
+    },
+    {
+      "tag": "DIV",
+      "id": "card-front",
+      "class": "card-face card-front",
+      "role": null,
+      "ariaHidden": "false",
+      "tabindex": null,
+      "parent": "note-card",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "motion-stage",
+          "class": "motion-stage"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "card-copy"
+        }
+      ]
+    },
+    {
+      "tag": "DIV",
+      "id": "motion-stage",
+      "class": "motion-stage",
+      "role": null,
+      "ariaHidden": "true",
+      "tabindex": null,
+      "parent": "card-front",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "orbit-path"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "orbit-arm"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "center-disc"
+        },
+        {
+          "tag": "SPAN",
+          "id": "",
+          "class": "art-caption"
+        }
+      ]
+    },
+    {
+      "tag": "I",
+      "id": "orbit-dot",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "orbit-arm",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "card-back",
+      "class": "card-face card-back",
+      "role": null,
+      "ariaHidden": "true",
+      "tabindex": null,
+      "parent": "note-card",
+      "children": [
+        {
+          "tag": "P",
+          "id": "",
+          "class": "card-kicker"
+        },
+        {
+          "tag": "H2",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "DIV",
+          "id": "preview-note",
+          "class": "preview-note"
+        },
+        {
+          "tag": "P",
+          "id": "",
+          "class": "card-foot"
+        }
+      ]
+    },
+    {
+      "tag": "DIV",
+      "id": "preview-note",
+      "class": "preview-note",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": "0",
+      "parent": "card-back",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "flip",
+      "class": "secondary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "preview-actions",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "motion-toggle",
+      "class": "text-button",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "preview-actions",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "note-hint",
+      "class": "hint",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": []
+    },
+    {
+      "tag": "TEXTAREA",
+      "id": "note-text",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "note-limit",
+      "class": "hint input-limit",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "save",
+      "class": "primary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "save-actions",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "status-area",
+      "class": "status-area",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": [
+        {
+          "tag": "P",
+          "id": "status",
+          "class": ""
+        },
+        {
+          "tag": "BUTTON",
+          "id": "retry",
+          "class": "secondary"
+        }
+      ]
+    },
+    {
+      "tag": "P",
+      "id": "status",
+      "class": "",
+      "role": "status",
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "status-area",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "retry",
+      "class": "secondary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "status-area",
+      "children": []
+    },
+    {
+      "tag": "SECTION",
+      "id": "collection",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "main",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "intro"
+        },
+        {
+          "tag": "P",
+          "id": "collection-status",
+          "class": "collection-status"
+        },
+        {
+          "tag": "DIV",
+          "id": "saved-card",
+          "class": "saved-card"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "return",
+          "class": "secondary"
+        }
+      ]
+    },
+    {
+      "tag": "H1",
+      "id": "collection-title",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": "-1",
+      "parent": "intro",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "collection-status",
+      "class": "collection-status",
+      "role": "status",
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "collection",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "saved-card",
+      "class": "saved-card",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "collection",
+      "children": [
+        {
+          "tag": "P",
+          "id": "saved-kicker",
+          "class": "card-kicker"
+        },
+        {
+          "tag": "H2",
+          "id": "saved-title",
+          "class": ""
+        },
+        {
+          "tag": "P",
+          "id": "saved-text",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "P",
+      "id": "saved-kicker",
+      "class": "card-kicker",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "saved-card",
+      "children": []
+    },
+    {
+      "tag": "H2",
+      "id": "saved-title",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "saved-card",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "saved-text",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "saved-card",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "return",
+      "class": "secondary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "collection",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "clear",
+      "class": "text-button",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "",
+      "children": []
+    }
+  ],
+  "N3": [
+    {
+      "tag": "BUTTON",
+      "id": "saved-link",
+      "class": "text-button",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "utilities",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "locale-toggle",
+      "class": "utility",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "utilities",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "theme-toggle",
+      "class": "utility",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "utilities",
+      "children": [
+        {
+          "tag": "SPAN",
+          "id": "",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "MAIN",
+      "id": "main",
+      "class": "page-shell",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": "-1",
+      "parent": "",
+      "children": [
+        {
+          "tag": "SECTION",
+          "id": "editor",
+          "class": ""
+        },
+        {
+          "tag": "SECTION",
+          "id": "collection",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "SECTION",
+      "id": "editor",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "main",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "intro"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "workspace"
+        }
+      ]
+    },
+    {
+      "tag": "H1",
+      "id": "page-title",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "intro",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "card-space",
+      "class": "card-space",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "preview",
+      "children": [
+        {
+          "tag": "ARTICLE",
+          "id": "note-card",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "ARTICLE",
+      "id": "note-card",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "card-space",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "card-front",
+          "class": "card-face card-front"
+        },
+        {
+          "tag": "DIV",
+          "id": "card-back",
+          "class": "card-face card-back"
+        }
+      ]
+    },
+    {
+      "tag": "DIV",
+      "id": "card-front",
+      "class": "card-face card-front",
+      "role": null,
+      "ariaHidden": "false",
+      "tabindex": null,
+      "parent": "note-card",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "motion-stage",
+          "class": "motion-stage"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "card-copy"
+        }
+      ]
+    },
+    {
+      "tag": "DIV",
+      "id": "motion-stage",
+      "class": "motion-stage",
+      "role": null,
+      "ariaHidden": "true",
+      "tabindex": null,
+      "parent": "card-front",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "orbit-path"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "orbit-arm"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "center-disc"
+        },
+        {
+          "tag": "SPAN",
+          "id": "",
+          "class": "art-caption"
+        },
+        {
+          "tag": "SPAN",
+          "id": "",
+          "class": "art-index"
+        }
+      ]
+    },
+    {
+      "tag": "I",
+      "id": "orbit-dot",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "orbit-arm",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "card-back",
+      "class": "card-face card-back",
+      "role": null,
+      "ariaHidden": "true",
+      "tabindex": null,
+      "parent": "note-card",
+      "children": [
+        {
+          "tag": "P",
+          "id": "",
+          "class": "card-kicker"
+        },
+        {
+          "tag": "H2",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "DIV",
+          "id": "preview-note",
+          "class": "preview-note"
+        },
+        {
+          "tag": "P",
+          "id": "",
+          "class": "card-foot"
+        }
+      ]
+    },
+    {
+      "tag": "DIV",
+      "id": "preview-note",
+      "class": "preview-note",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": "0",
+      "parent": "card-back",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "flip",
+      "class": "secondary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "preview-actions",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "motion-toggle",
+      "class": "text-button",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "preview-actions",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "note-hint",
+      "class": "hint",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": []
+    },
+    {
+      "tag": "TEXTAREA",
+      "id": "note-text",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "note-limit",
+      "class": "hint input-limit",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "save",
+      "class": "primary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "save-actions",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "status-area",
+      "class": "status-area",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": [
+        {
+          "tag": "P",
+          "id": "status",
+          "class": ""
+        },
+        {
+          "tag": "BUTTON",
+          "id": "retry",
+          "class": "secondary"
+        }
+      ]
+    },
+    {
+      "tag": "P",
+      "id": "status",
+      "class": "",
+      "role": "status",
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "status-area",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "retry",
+      "class": "secondary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "status-area",
+      "children": []
+    },
+    {
+      "tag": "SECTION",
+      "id": "collection",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "main",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "intro"
+        },
+        {
+          "tag": "P",
+          "id": "collection-status",
+          "class": "collection-status"
+        },
+        {
+          "tag": "DIV",
+          "id": "saved-card",
+          "class": "saved-card"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "return",
+          "class": "secondary"
+        }
+      ]
+    },
+    {
+      "tag": "H1",
+      "id": "collection-title",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": "-1",
+      "parent": "intro",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "collection-status",
+      "class": "collection-status",
+      "role": "status",
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "collection",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "saved-card",
+      "class": "saved-card",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "collection",
+      "children": [
+        {
+          "tag": "P",
+          "id": "saved-kicker",
+          "class": "card-kicker"
+        },
+        {
+          "tag": "H2",
+          "id": "saved-title",
+          "class": ""
+        },
+        {
+          "tag": "P",
+          "id": "saved-text",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "P",
+      "id": "saved-kicker",
+      "class": "card-kicker",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "saved-card",
+      "children": []
+    },
+    {
+      "tag": "H2",
+      "id": "saved-title",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "saved-card",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "saved-text",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "saved-card",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "return",
+      "class": "secondary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "collection",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "clear",
+      "class": "text-button",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "",
+      "children": []
+    }
+  ],
+  "P8": [
+    {
+      "tag": "BUTTON",
+      "id": "saved-link",
+      "class": "text-button",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "utilities",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "locale-toggle",
+      "class": "utility",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "utilities",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "theme-toggle",
+      "class": "utility",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "utilities",
+      "children": [
+        {
+          "tag": "SPAN",
+          "id": "",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "MAIN",
+      "id": "main",
+      "class": "page-shell",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": "-1",
+      "parent": "",
+      "children": [
+        {
+          "tag": "SECTION",
+          "id": "editor",
+          "class": ""
+        },
+        {
+          "tag": "SECTION",
+          "id": "collection",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "SECTION",
+      "id": "editor",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "main",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "intro"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "workspace"
+        }
+      ]
+    },
+    {
+      "tag": "H1",
+      "id": "page-title",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "intro",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "card-space",
+      "class": "card-space",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "preview",
+      "children": [
+        {
+          "tag": "ARTICLE",
+          "id": "note-card",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "ARTICLE",
+      "id": "note-card",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "card-space",
+      "children": [
+        {
+          "tag": "I",
+          "id": "",
+          "class": "card-layer"
+        },
+        {
+          "tag": "I",
+          "id": "",
+          "class": "card-layer"
+        },
+        {
+          "tag": "I",
+          "id": "",
+          "class": "card-layer"
+        },
+        {
+          "tag": "DIV",
+          "id": "card-front",
+          "class": "card-face card-front"
+        },
+        {
+          "tag": "DIV",
+          "id": "card-back",
+          "class": "card-face card-back"
+        }
+      ]
+    },
+    {
+      "tag": "DIV",
+      "id": "card-front",
+      "class": "card-face card-front",
+      "role": null,
+      "ariaHidden": "false",
+      "tabindex": null,
+      "parent": "note-card",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "card-meta"
+        },
+        {
+          "tag": "DIV",
+          "id": "motion-stage",
+          "class": "motion-stage"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "card-copy"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "card-bottom"
+        }
+      ]
+    },
+    {
+      "tag": "DIV",
+      "id": "motion-stage",
+      "class": "motion-stage",
+      "role": null,
+      "ariaHidden": "true",
+      "tabindex": null,
+      "parent": "card-front",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "orbit-path"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "orbit-arm"
+        },
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "center-disc"
+        },
+        {
+          "tag": "SPAN",
+          "id": "",
+          "class": "art-caption"
+        }
+      ]
+    },
+    {
+      "tag": "I",
+      "id": "orbit-dot",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "orbit-arm",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "card-back",
+      "class": "card-face card-back",
+      "role": null,
+      "ariaHidden": "true",
+      "tabindex": null,
+      "parent": "note-card",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "card-meta"
+        },
+        {
+          "tag": "H2",
+          "id": "",
+          "class": ""
+        },
+        {
+          "tag": "DIV",
+          "id": "preview-note",
+          "class": "preview-note"
+        },
+        {
+          "tag": "P",
+          "id": "",
+          "class": "card-foot"
+        }
+      ]
+    },
+    {
+      "tag": "DIV",
+      "id": "preview-note",
+      "class": "preview-note",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": "0",
+      "parent": "card-back",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "flip",
+      "class": "secondary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "preview-actions",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "motion-toggle",
+      "class": "text-button",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "preview-actions",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "note-hint",
+      "class": "hint",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": []
+    },
+    {
+      "tag": "TEXTAREA",
+      "id": "note-text",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "note-limit",
+      "class": "hint input-limit",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "save",
+      "class": "primary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "save-actions",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "status-area",
+      "class": "status-area",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "editor-fields",
+      "children": [
+        {
+          "tag": "P",
+          "id": "status",
+          "class": ""
+        },
+        {
+          "tag": "BUTTON",
+          "id": "retry",
+          "class": "secondary"
+        }
+      ]
+    },
+    {
+      "tag": "P",
+      "id": "status",
+      "class": "",
+      "role": "status",
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "status-area",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "retry",
+      "class": "secondary",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "status-area",
+      "children": []
+    },
+    {
+      "tag": "SECTION",
+      "id": "collection",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "main",
+      "children": [
+        {
+          "tag": "DIV",
+          "id": "",
+          "class": "intro"
+        },
+        {
+          "tag": "P",
+          "id": "collection-status",
+          "class": "collection-status"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "return",
+          "class": "secondary collection-return"
+        },
+        {
+          "tag": "DIV",
+          "id": "saved-card",
+          "class": "saved-card"
+        }
+      ]
+    },
+    {
+      "tag": "H1",
+      "id": "collection-title",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": "-1",
+      "parent": "intro",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "collection-status",
+      "class": "collection-status",
+      "role": "status",
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "collection",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "return",
+      "class": "secondary collection-return",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "collection",
+      "children": []
+    },
+    {
+      "tag": "DIV",
+      "id": "saved-card",
+      "class": "saved-card",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "collection",
+      "children": [
+        {
+          "tag": "P",
+          "id": "saved-kicker",
+          "class": "card-kicker"
+        },
+        {
+          "tag": "H2",
+          "id": "saved-title",
+          "class": ""
+        },
+        {
+          "tag": "P",
+          "id": "saved-text",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "tag": "P",
+      "id": "saved-kicker",
+      "class": "card-kicker",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "saved-card",
+      "children": []
+    },
+    {
+      "tag": "H2",
+      "id": "saved-title",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "saved-card",
+      "children": []
+    },
+    {
+      "tag": "P",
+      "id": "saved-text",
+      "class": "",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "saved-card",
+      "children": []
+    },
+    {
+      "tag": "BUTTON",
+      "id": "clear",
+      "class": "text-button",
+      "role": null,
+      "ariaHidden": null,
+      "tabindex": null,
+      "parent": "",
+      "children": []
+    }
+  ]
+}

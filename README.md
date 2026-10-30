@@ -43,6 +43,14 @@ You receive the working result, important design choices, actual adopted resourc
 
 [Multi-round use](docs/GUIDE.md) · [v1.17 review](docs/REVIEW-v1.17.0.md) · [Experiment record](docs/experiments/adaptive-granularity/RESULTS.md)
 
+## See the design take shape
+
+Important design events become visible as the work develops: a consequential finding or resource choice, the first meaningful local result, a material mismatch and the delivered increment. The agent shows the actual object and its evidence, explains the decision and continues authorized work.
+
+A source demo, project trial and integrated interface keep their own identities. Early previews expose what the current product already carries and what still needs correction. The same current design record supports the conversation and later work; routine searches and edits remain autonomous.
+
+[Observable design execution](docs/OBSERVABLE-EXECUTION.md) · [v1.18 review](docs/REVIEW-v1.18.0.md)
+
 ## Understand the experience before choosing the design
 
 “Like this product” can describe a familiar way of working, information structure, visual character or interaction detail. The agent develops a revisable interpretation, using your stated intent, relevant user experience and the reference product's actual behavior as distinct evidence.
@@ -180,7 +188,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.17.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.18.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

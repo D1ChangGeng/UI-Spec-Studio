@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.18.0 — 2026-10-30
+
+- Make consequential design work observable through six selective event kinds inside the existing operations.
+- Show first meaningful actual results early enough to guide adaptation and integration; keep reference, demo, trial and integrated-result claims distinct.
+- Connect important quality gaps to actual correction and reinspection in the active formal SPEC.
+- Keep object-centered conversation output, current design records and product copy appropriate to their own audiences.
+- Preserve autonomous work, scoped approval, all 37 runtime files and unchanged neutral helpers/JSON assets.
+- Add exact v1.17 source recovery and actual three-condition study evidence with separate observability, behavior and product-quality claims.
+
 ## 1.17.0 — 2026-10-29
 
 - Treat a formal UI SPEC as a coherent, quality-assessable increment in the current product, preserving the complete goal across revisable boundaries.

@@ -1,0 +1,39 @@
+{
+  "fixture": "examples/content-review/index.html",
+  "server": "real local HTTP",
+  "conditions": {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "locale": "zh-CN",
+    "headless": true
+  },
+  "checks": {
+    "http_status": 200,
+    "local_storage_after_reload": true,
+    "fixture_save_after_reload": true,
+    "actual_cjk_glyphs_from_noto": true,
+    "recorded_video_nonempty": true
+  },
+  "browser_version": "156.0.8078.80",
+  "title_platform_fonts": [
+    {
+      "familyName": "Noto Sans CJK SC",
+      "postScriptName": "NotoSansCJKsc-Regular",
+      "isCustomFont": false,
+      "glyphCount": 10
+    }
+  ],
+  "screenshot": {
+    "path": "content-chinese.png",
+    "sha256": "65c805bb7393bc67867d3f1397399a614f67c8870537e79b32e97aaa82a0de9f"
+  },
+  "page_errors": [],
+  "video": {
+    "path": "videos/285bedc6417514db1d69b189ad2a4555.webm",
+    "bytes": 112967,
+    "sha256": "3648b7983b0e6a1a9d1a808ba77b2003db58cc6bf47e72e7e201c0ac46667f46"
+  },
+  "observed_at_utc": "2026-10-30T09:12:38Z"
+}

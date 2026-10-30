@@ -241,6 +241,25 @@ suffice. Keep long discovery logs behind the record. Users should be able to
 inspect what changed in the design, not need to reconstruct your internal
 reasoning or manually select routine components.
 
+Project evidence and conversation output are two expressions of the same current
+understanding. Internal professional work produces the evidence; the model keeps
+its actual scope and interpretation; the conversation selectively presents the
+changes with design significance. Apply the [event-driven disclosure method](workflow.md#make-consequential-design-work-observable)
+to choose what is useful now. A research finding may need only Design Detail;
+delivery can draw on the important parts of all three views. No message needs to
+reproduce every view, and no separate event document, disclosure field or report
+database is required.
+
+Keep a shown artifact's identity and claim legible: a target reference, original
+candidate demo, project trial and integrated UI support different conclusions.
+Relate the actual displayed result to its current implementation and remaining
+quality gap. Disclosure records availability, not that the user examined or
+approved it. Preserve actual user decisions in their existing scoped authority
+record. When new evidence changes a publicly shown choice, update the current
+model and expose the consequential correction; retain the earlier output as
+history without leaving both conclusions active. An unresolved gap continues
+to guide the current SPEC's action even after it has been shown to the user.
+
 ## Tool boundary
 
 The optional [structured profile](evidence-records.md) and

@@ -1,0 +1,14 @@
+{
+  "id": "message-003",
+  "channel": "final",
+  "recorded_at": "2026-10-30T09:21:36.044153+00:00",
+  "text": "已完成这次局部排版修正。标题输入框和正文文本框的占位提示统一为 **14px**，输入内容保持 **15px**；中英文使用相同层级。\n\n占位提示继续使用现有辅助文字颜色，并将不透明度设为 1。实测文字与字段背景的对比度为浅色 **5.03:1**、深色 **8.28:1**。修改仅涉及 [styles.css](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-k2/app/styles.css) 的占位提示规则。\n\n**验证结果：**\n\n- 已检查 390×844 和 1440×900，覆盖中文、英文与明暗主题的全部 8 种组合，并查看空字段、输入内容及标题和正文的焦点呈现。\n- 修改前后字段宽高、内边距、行高和输入字号的测量结果一致，未发现横向溢出。\n- 8 种组合均通过实际本地保存、刷新恢复、模拟写入失败后保留草稿、键盘重试保存及重试后的焦点恢复检查；未出现页面脚本错误。\n\n工作入口：[本机预览](http://127.0.0.1:8433/)。检查记录与源码比对见 [after.json](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-k2/evidence/after.json)。\n\n下图是修改后的真实应用，390×844、中文浅色主题、标题键盘焦点状态：\n\n![修改后的占位提示与键盘焦点](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-k2/evidence/after-390-zh-light-empty-title-focus.png)\n\n验证范围限于本机 Chromium、DPR 1；未验证 Safari、Firefox 或真实手机软键盘。失败场景使用应用现有模拟开关，正常保存与刷新恢复使用原生 localStorage。\n",
+  "text_sha256": "c4b098b09643e1dd151bb5a292659f2c969247967869a4e2f79c8baf91c82193",
+  "source_archive": "message-003-source.zip",
+  "source_files": {
+    "app/README.md": "f1b07091f32cb54c2f0f655ff33ae8c81f74b68be3141a1178e290b1fcf69b6f",
+    "app/app.js": "8c3181ff6e6dcb364b6c0a543ee2b7a89145f0f687fc5dbaa588c6e7465a83dd",
+    "app/index.html": "d8f65f613f388d77f94d073e6bf6ccef5a7aab47d4147b25615f4a7468960034",
+    "app/styles.css": "75a6d280bb3932b5694f9c093f5304afa2a5446f3eb853093c6950abeb66f1e7"
+  }
+}

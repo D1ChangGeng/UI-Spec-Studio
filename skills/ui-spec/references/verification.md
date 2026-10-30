@@ -4,6 +4,7 @@
 
 - [Coverage and assurance](#build-the-coverage-inventory-from-reality)
 - [Formal increment and related-product verification](#verify-the-increment-and-its-product-relationships)
+- [First reviewable result](#inspect-and-show-the-first-reviewable-result)
 - [Evidence sufficiency](#judge-evidence-for-the-decision)
 - [Viewing conditions and actual interaction](#capture-the-actual-viewing-condition)
 - [Temporal visual inspection](#inspect-a-time-bounded-visual-episode)
@@ -36,6 +37,14 @@ Keep research/observation scope, primary design/implementation scope and integra
 For a composer-height change, observe text growth, send, response growth and user-controlled scrolling with the neighboring reading space. If these jointly carry the goal, keep the relationship in the current SPEC's review scope. For a shared font change, inspect dependent pages' wrapping, hierarchy, control geometry and relevant locales rather than judging only the specimen. For motion, observe trigger, preparation, progression, settling, reversal and interruption where applicable, including other components that must remain spatially or semantically continuous. For a dynamic background, examine moving emphasis and foreground reading/input conditions in the assembled task. A static frame, component-area estimate or passing geometry assertion supports only its actual observation.
 
 Trace each important quality through its observed reference, actual adopted or authored implementation, current rendered result and remaining difference. Judge scope suitability, research depth and visual maturity from that evidence. Formal SPEC identity, record structure, actual implementation and perceived quality require separate conclusions; neither a smaller scope nor a completed structural report establishes them.
+
+## Inspect and show the first reviewable result
+
+When an important visual object or connected interaction first supports meaningful review, inspect it in the current project and present the actual result in the conversation. Keep this opportunity early enough to correct consequential relationships before they become a wider implementation foundation. A partial implementation can support a useful review when its working scope and remaining conditions are explicit. For a research-only or direction task, show the relevant inspectable design material and identify what it establishes.
+
+Use the [four evidence roles](component-sourcing.md#confirm-consequential-parts-in-a-local-trial) to make the subject clear. Put the current result beside the relevant target relationship or comparison, explain what is already visible and retain significant differences. Show a real preview, image or suitable episode through the host's supported surface; a written claim or a file saved out of view does not replace the consequential result. Reuse evidence gathered for the design decision rather than creating a separate presentation package.
+
+Choose evidence by the promised quality: useful-scale images can show type, composition and material; growth, scrolling, dragging and asynchronous transitions need the relevant continuous operation or playback. Apply the temporal method below, preserving natural-speed judgment and any unavailable viewing capability. A few attractive frames cannot establish the intervals between them. A simple repair may combine target, corrected result and scoped check in one delivery; complex work benefits from seeing defining relationships while they remain adjustable. Presenting an early result establishes an opportunity to inspect, not completed verification or user approval.
 
 ## Match assurance to impact
 
@@ -115,6 +124,8 @@ Connect the viewed state/interval, phenomenon, task/perceptual effect, intent, c
 
 Locate the gap: unsuitable source, damaged adaptation, content/structure mismatch, conflicting resources or an unworkable target. Correct the responsible asset, token, component, timing, state or data contract and recheck affected journeys. Preserve the accepted art direction while resolving concrete reading, operation or runtime problems; change its scope explicitly when necessary. Keep observation and causal inference distinct.
 
+When a finding materially changes the design judgment, show the observed discrepancy and its affected relationships through the [design-event disclosure principle](workflow.md#make-consequential-design-work-observable). Explain the cause being tested, the corrective direction and what must be reinspected; keep uncertain causes distinguishable from visible facts. Then carry out the relevant research, replacement or repair and inspect the changed result at the original problem's scope and its affected neighbors. A clipping wrapper may need adaptation repair, while lost material contrast may require a different composition or source. Keep the finding active in the current model until the evidence or an explicit scope decision changes its responsibility. A problem report, installed resource or passing functional test cannot settle an unresolved visual promise.
+
 New evidence can improve the SPEC. If the target remains unattainable, state the gap, effect and viable options for the consequential user decision. Integration progress does not establish quality acceptance; preserve the agreed standard until its scope or direction is explicitly revised.
 
 Keep research, correction and reinspection directed at an existing SPEC's promised experience within that SPEC. A new formal increment requires a distinct design purpose and review boundary. When evidence warrants splitting or redrawing an active SPEC, record the reason, retained target, transferred responsibility and unresolved findings in the current model. Carry the original finding and its actual condition into the receiving scope; creating a later SPEC does not resolve it. Inspect the remaining increment against its stated responsibility and report the complete product's still-open goals accurately.
@@ -139,7 +150,7 @@ Distinguish capture, visual inspection and interaction verification. Without a u
 
 ## Decide when to present the round
 
-Present inspectable work with required checks complete, blockers resolved and uncertainty scoped. Design review can precede integration. Show consequential candidates, episodes or before/after views; keep agent judgment and user approval separate.
+For formal delivery, present inspectable work with required checks complete, blockers resolved and uncertainty scoped. Design review can precede integration. Show consequential candidates, episodes or before/after views; keep agent judgment and user approval separate.
 
 Present the formal increment's actual working or renderable result in its product context. Explain what it inherited or changed, the important resource choice, observed local quality, related-product checks, remaining gaps and the next useful increment. Keep Overview, Design Detail and Execution & Assurance consistent with the same current design information. Writing the record is not the user-facing delivery: the conversation should provide the evidence and choices needed to judge this result without reading every internal note. Earlier work can be presented provisionally when that helps a decision, with its unfinished scope explicit.
 

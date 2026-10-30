@@ -3,6 +3,13 @@
 Use only the portions needed for consequential choices, or equivalent existing
 records. Keep representative evidence and decision changes rather than a search log.
 
+Use these same facts for [event-driven conversation output](../../references/workflow.md#make-consequential-design-work-observable).
+Show consequential findings and first meaningful actual results while they can
+inform the work; identify reference, original demo, local trial or integrated UI
+and connect important gaps to the next action. Select useful portions rather than
+copying the whole template or creating a document for each event. Showing a result
+does not establish user review, approval or completion of its quality obligation.
+
 ## Product and scope
 
 Task and audience; requested redesign scope; current business/engineering facts.

@@ -1,0 +1,17 @@
+{
+  "id": "message-002",
+  "channel": "commentary",
+  "recorded_at": "2026-10-30T10:22:24.213408+00:00",
+  "text": "已在延续副本中复现原问题：按下翻面约 45 毫秒后，旋转矩阵 m33 为 0.999881，卡片仍朝正面，但背面已可聚焦，Shift+Tab 确实进入了 preview-note。修正已将“翻向哪一面”的意图与“当前实际朝向”分开：语义和可聚焦性读取当前旋转矩阵；接近侧边时两面暂不接收焦点，并在键盘选取焦点前再同步一次。接下来检查这套关系在完整翻转和反转中是否一直成立。\n",
+  "text_sha256": "3b9cb8a1668ad9a350084eaf8f558fe2d140130fbbf1298014811c4f2ead7b27",
+  "source_archive": "message-002-source.zip",
+  "source_files": {
+    "app/README.md": "b59b42ffc87d1006ab3ea92f427f88435ed53a536499ab51a6ccdd6b8b7c6f44",
+    "app/app.js": "c9f6f51ce9c8af0dd6b49510621911639954706f1d05e1b8783dfae44014cf22",
+    "app/index.html": "75ac02632b8d0e8f202f291dce5576c01a2d795210be095470d3380bf3680848",
+    "app/styles.css": "2a1e0db75b991b98becf97f78eca528775601ced8ac98809361a0917eef38243"
+  },
+  "media_archive": null,
+  "media_files": {},
+  "media_unavailable": []
+}

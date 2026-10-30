@@ -1,0 +1,222 @@
+{
+  "scope": "Independent targeted review of T2-k2 continuation after extra feedback and time. This is additional follow-up evidence, excluded from the original nine-cell comparison.",
+  "original_report": "review.original.md.txt",
+  "original_source_report_name": "review.md",
+  "source_report_sha256": "05e803641fa3e3fd8ce4c77f72196b7d3b5576c59bfa9692e53de681cfcfbe78",
+  "reading_copy": {
+    "path": "review.md",
+    "sha256": "f178140292921a03cb7b35529fbf95a8e9fb2e8062409f3db617c95d506fd20f",
+    "bytes": 7791,
+    "derivation": "Only remove the same-directory sandbox URL prefix from Markdown links; preserve original wording, measurements and conclusions.",
+    "replaced_prefix": "sandbox:/workspace/scratch/654b1ee6916f/observable-continuation-review/",
+    "replacements": 16
+  },
+  "product_integrity": {
+    "original": {
+      "source_path": "/workspace/scratch/654b1ee6916f/observable-product-review/T2/L6/app",
+      "source_archive_index": "../../../runs/T2-k2/archive-index.json",
+      "source_archive_index_sha256": "b716e035782b6c4837a39e9d7054e71500fd14688c8e33c147443bc92eded7a8",
+      "snapshot": "final",
+      "authored_file_count": 4,
+      "matches_frozen_product": true,
+      "files_sha256": {
+        "README.md": "b59b42ffc87d1006ab3ea92f427f88435ed53a536499ab51a6ccdd6b8b7c6f44",
+        "app.js": "5df7efbe21f55cc0bcb98fa22d1c877a6694e519ea51c151d9b3ff1e6991e12e",
+        "index.html": "75ac02632b8d0e8f202f291dce5576c01a2d795210be095470d3380bf3680848",
+        "styles.css": "2a1e0db75b991b98becf97f78eca528775601ced8ac98809361a0917eef38243"
+      }
+    },
+    "continuation": {
+      "source_path": "/workspace/scratch/654b1ee6916f/observable-continuation/T2-k2/app",
+      "source_archive_index": "../archive-index.json",
+      "source_archive_index_sha256": "70c57fbf6f95dcd52d60e67ee97bfd9a8141952620e6d1551488fb5fde68a275",
+      "snapshot": "final",
+      "authored_file_count": 4,
+      "matches_frozen_product": true,
+      "files_sha256": {
+        "README.md": "d340243971fe0958570d841ea5bfed9b2f724cf5dd59b1397d3169db8b12384f",
+        "app.js": "c9f6f51ce9c8af0dd6b49510621911639954706f1d05e1b8783dfae44014cf22",
+        "index.html": "75ac02632b8d0e8f202f291dce5576c01a2d795210be095470d3380bf3680848",
+        "styles.css": "2a1e0db75b991b98becf97f78eca528775601ced8ac98809361a0917eef38243"
+      }
+    }
+  },
+  "reviewer_fingerprints": {
+    "record": "raw-measurements.json",
+    "scope": "Six implementation files across original and continuation products, plus the unchanged original T2 comparison report. Their recorded before/after identities and current bytes all match.",
+    "all_before_after_current_match": true,
+    "files_sha256": {
+      "/workspace/scratch/654b1ee6916f/observable-product-review/T2/L6/app/index.html": "75ac02632b8d0e8f202f291dce5576c01a2d795210be095470d3380bf3680848",
+      "/workspace/scratch/654b1ee6916f/observable-product-review/T2/L6/app/styles.css": "2a1e0db75b991b98becf97f78eca528775601ced8ac98809361a0917eef38243",
+      "/workspace/scratch/654b1ee6916f/observable-product-review/T2/L6/app/app.js": "5df7efbe21f55cc0bcb98fa22d1c877a6694e519ea51c151d9b3ff1e6991e12e",
+      "/workspace/scratch/654b1ee6916f/observable-continuation/T2-k2/app/index.html": "75ac02632b8d0e8f202f291dce5576c01a2d795210be095470d3380bf3680848",
+      "/workspace/scratch/654b1ee6916f/observable-continuation/T2-k2/app/styles.css": "2a1e0db75b991b98becf97f78eca528775601ced8ac98809361a0917eef38243",
+      "/workspace/scratch/654b1ee6916f/observable-continuation/T2-k2/app/app.js": "c9f6f51ce9c8af0dd6b49510621911639954706f1d05e1b8783dfae44014cf22",
+      "/workspace/scratch/654b1ee6916f/observable-product-review/T2/review.md": "c07be0e636822e921cc9402c96cc3b6809464191a26b18e98ebc95a7348f54a5"
+    }
+  },
+  "exclusions": [
+    "Product copies, dependencies and caches are not duplicated. Frozen product identities are linked above."
+  ],
+  "evidence_boundary": "Preserves all original captures, not a claim that every capture was visually inspected. The original report states its targeted keyboard/state observations, unavailable natural-speed playback, no screen-reader session, and unrerun product flows.",
+  "files": {
+    "captures/fixed-desktop-back-leaving-focus.png": {
+      "path": "captures/fixed-desktop-back-leaving-focus.png",
+      "sha256": "fc01c05a013ee00a309712899985ebaeb681abc6b6655a55e64ac950333f6b0b",
+      "bytes": 80341
+    },
+    "captures/fixed-desktop-early-shifttab.png": {
+      "path": "captures/fixed-desktop-early-shifttab.png",
+      "sha256": "d4c9ac13391216e1890c20b2f0da2b0f0b4c28f44f5b312126b387fa920580a3",
+      "bytes": 103096
+    },
+    "captures/fixed-desktop-handoff-settled.png": {
+      "path": "captures/fixed-desktop-handoff-settled.png",
+      "sha256": "490c2e2d459d032fc7ab1cedab9a708a451af626828531b2b21a7ddeb163b1cb",
+      "bytes": 86875
+    },
+    "captures/fixed-desktop-reduced-motion.png": {
+      "path": "captures/fixed-desktop-reduced-motion.png",
+      "sha256": "76c83fdc8fe0cc91a52a15d5752f8748126bbaec536cf840d5d54d7c43f2afd8",
+      "bytes": 64914
+    },
+    "captures/fixed-mobile-after-midpoint-reversal.png": {
+      "path": "captures/fixed-mobile-after-midpoint-reversal.png",
+      "sha256": "4e6c2c3386d59ce7b4cfde5f169300d768d880bd9d1c92ce01ac4f249ec919bf",
+      "bytes": 45884
+    },
+    "captures/fixed-mobile-back-leaving-focus.png": {
+      "path": "captures/fixed-mobile-back-leaving-focus.png",
+      "sha256": "ecab5d11169105b75d86e07f6f0200d4bd5884f337c250e8349fd7dcf997779b",
+      "bytes": 59466
+    },
+    "captures/fixed-mobile-early-shifttab.png": {
+      "path": "captures/fixed-mobile-early-shifttab.png",
+      "sha256": "3650079dafd7461ebb6609edbc762e9be56636729d653c6d9d05dedf64c9567b",
+      "bytes": 63708
+    },
+    "captures/fixed-mobile-handoff-settled.png": {
+      "path": "captures/fixed-mobile-handoff-settled.png",
+      "sha256": "980d7310c086b7c029d8b4463220575a8bb8db01a52f97a2c2a8bd9b23c3f58e",
+      "bytes": 55620
+    },
+    "captures/fixed-mobile-reduced-motion.png": {
+      "path": "captures/fixed-mobile-reduced-motion.png",
+      "sha256": "fb2e51478c5d552a8f11a8ed2ba04edb7ebfad60e4446b79a5241367491958ff",
+      "bytes": 47902
+    },
+    "captures/original-desktop-early-shifttab.png": {
+      "path": "captures/original-desktop-early-shifttab.png",
+      "sha256": "5668eb7c44013e28c55cd62e0a7a823743f91bf44924ee0d54809ef99594f207",
+      "bytes": 100807
+    },
+    "captures/original-mobile-early-shifttab.png": {
+      "path": "captures/original-mobile-early-shifttab.png",
+      "sha256": "bc6e98fed7b567db5b18c62b5835b4ffcc532f5ad72861af116409bf5e280c9f",
+      "bytes": 62880
+    },
+    "execution.log": {
+      "path": "execution.log",
+      "sha256": "870f55c243ba733b9f773f35c68627c9da74cff5e75ad53faa3396827bc3615e",
+      "bytes": 980
+    },
+    "failed-checks.md": {
+      "path": "failed-checks.md",
+      "sha256": "402c8c75b0aa1e139b3058dcada57b816baa24a03199943d66c0ed94a5576516",
+      "bytes": 1012
+    },
+    "measurements-summary.json": {
+      "path": "measurements-summary.json",
+      "sha256": "e760cf15e3b9b15c2ff65548660f06f8b7df3501a1b9d6eb8234c831cd8bb8ee",
+      "bytes": 32705
+    },
+    "raw-measurements.json": {
+      "path": "raw-measurements.json",
+      "sha256": "26b2ae86e64f16c6e73489d06e11db616779c75c36939b76818c6a8eeb77584b",
+      "bytes": 630518
+    },
+    "review.md": {
+      "path": "review.original.md.txt",
+      "sha256": "05e803641fa3e3fd8ce4c77f72196b7d3b5576c59bfa9692e53de681cfcfbe78",
+      "bytes": 8927
+    },
+    "review_continuation.py": {
+      "path": "review_continuation.py",
+      "sha256": "5051098403583ef74efe629d754e1f6eadb68660ffe185f01f73f1736a5ada66",
+      "bytes": 7704
+    },
+    "captures/fixed-desktop-after-midpoint-reversal.png": {
+      "path": "supplementary-evidence.zip",
+      "member": "captures/fixed-desktop-after-midpoint-reversal.png",
+      "sha256": "c42bb6ff6c6d75e9bfe8348e6b5f44725048acc3dc6f5211bf56382eac164a49",
+      "bytes": 62984
+    },
+    "captures/original-desktop-after-midpoint-reversal.png": {
+      "path": "supplementary-evidence.zip",
+      "member": "captures/original-desktop-after-midpoint-reversal.png",
+      "sha256": "54f9cac0f6ee5d795b6227de574bb41ecc1ac5c866e67b6466b9dfed2836e00b",
+      "bytes": 63292
+    },
+    "captures/original-desktop-back-leaving-focus.png": {
+      "path": "supplementary-evidence.zip",
+      "member": "captures/original-desktop-back-leaving-focus.png",
+      "sha256": "fd2bc8dab77f8c3010a0e7d7059dfbecea189e9fb45962e1a2e83f0d7e5e563b",
+      "bytes": 79087
+    },
+    "captures/original-desktop-handoff-settled.png": {
+      "path": "supplementary-evidence.zip",
+      "member": "captures/original-desktop-handoff-settled.png",
+      "sha256": "c89d2ed02c2db4efa21aaa0868e02b28eb11fc25bdd4dca705dad66cba827013",
+      "bytes": 86849
+    },
+    "captures/original-desktop-reduced-motion.png": {
+      "path": "supplementary-evidence.zip",
+      "member": "captures/original-desktop-reduced-motion.png",
+      "sha256": "76c83fdc8fe0cc91a52a15d5752f8748126bbaec536cf840d5d54d7c43f2afd8",
+      "bytes": 64914
+    },
+    "captures/original-mobile-after-midpoint-reversal.png": {
+      "path": "supplementary-evidence.zip",
+      "member": "captures/original-mobile-after-midpoint-reversal.png",
+      "sha256": "03b0f72883ad2ad3d89494c3b5d8624e1e3c0150810d5ec63feed1c809a01143",
+      "bytes": 45872
+    },
+    "captures/original-mobile-back-leaving-focus.png": {
+      "path": "supplementary-evidence.zip",
+      "member": "captures/original-mobile-back-leaving-focus.png",
+      "sha256": "2cfcb8d1d004ce281164614a5d42b8814bc652783f70f38a3281988cad399435",
+      "bytes": 59270
+    },
+    "captures/original-mobile-handoff-settled.png": {
+      "path": "supplementary-evidence.zip",
+      "member": "captures/original-mobile-handoff-settled.png",
+      "sha256": "65f60f5bf3097dc44deb78be9cf1c31e1d58219f670389ecc831f79ad1a7e64c",
+      "bytes": 55762
+    },
+    "captures/original-mobile-reduced-motion.png": {
+      "path": "supplementary-evidence.zip",
+      "member": "captures/original-mobile-reduced-motion.png",
+      "sha256": "fb2e51478c5d552a8f11a8ed2ba04edb7ebfad60e4446b79a5241367491958ff",
+      "bytes": 47902
+    }
+  },
+  "bundles": {
+    "supplementary-evidence.zip": {
+      "bytes": 532051,
+      "sha256": "b6ed54acbb7a66af0643c192328734f2f6ba89c3b9f87833dc314454dd2f16d4",
+      "members": 9,
+      "independently_extractable": true
+    }
+  },
+  "verification": {
+    "original_files": 26,
+    "original_bytes": 2019271,
+    "loose_original_files": 17,
+    "archived_members": 9,
+    "derived_reading_copies": 1,
+    "all_original_sha256_matched": true,
+    "both_products_match_their_frozen_sources": true,
+    "reviewer_before_after_and_current_fingerprints_match": true,
+    "all_zip_bytes_below": 11000000
+  }
+}

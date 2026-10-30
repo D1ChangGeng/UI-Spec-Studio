@@ -223,3 +223,19 @@ plan or certifying research, scope suitability or quality. Preserve all historic
 release evidence. Report method changes, engineering checks, actual independent
 Agent runs and viewed UI outcomes separately; comparable experiment conditions
 and honest limitations are required for comparative claims.
+
+## Version 1.18: observable design execution
+
+Make consequential design facts and first meaningful actual results visible as
+events arise within the existing operations. Keep disclosure, examination and
+scoped approval distinct; continue authorized work. Link shown material to its
+reference/demo/trial/integrated identity and let material gaps drive the active
+SPEC's correction and reinspection. Preserve the current model as the shared
+source for records and conversation. Keep runtime inspectors and JSON assets
+unchanged; six event kinds are neither a lifecycle nor a completion checklist.
+
+For comparative evidence, keep the adaptive-granularity foundation constant and
+separate existing output, stronger event visibility, and visibility linked to
+quality realization. Preserve actual outward messages with their contemporary
+source/artifact identity. Assess observability, behavior and product quality
+separately; retrospective reports and output counts do not prove timely feedback.

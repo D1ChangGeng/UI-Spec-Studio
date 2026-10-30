@@ -5,7 +5,7 @@ license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.17.0"
+  version: "1.18.0"
 ---
 
 # UI Spec Studio
@@ -38,6 +38,14 @@ For consequential design work, maintain **Design Coverage**, **Evidence Traceabi
 For each important decision, preserve an inspectable purpose, research question, actual evidence/limits, professional judgment, alternatives/choice, adopted implementation and verification/next action. Unknowns stay explicit. Keep acquired, observed, compared, trialed, adopted, verified and owner-approved facts separate. Use existing records or the [extended decision template](assets/templates/design-decisions.md); a schema or new document is optional, the consequential evidence relationships are required. Overview, Design Detail and Execution & Assurance are views of the same facts. Routine low-impact changes can inherit current, matching-condition decisions and use a short scoped note.
 
 Read the map when establishing or revising consequential decisions, coverage or evidence claims. Read the optional [record profile](references/evidence-records.md) only when using its [read-only checker](scripts/check_design_evidence.py); record readability, structural observations, actual research and UI quality are separate facts.
+
+## Make consequential design work observable
+
+Use **Observable Design Execution** to make important design facts, judgments and actual results directly available in the conversation while concentrating on producing high-quality UI. Let a meaningful change in the design trigger disclosure: a formal scope or quality commitment, a research finding, a consequential choice, the first reviewable result, a material mismatch or delivery. Apply the [event-driven disclosure method](references/workflow.md#make-consequential-design-work-observable); these are possible design events within the existing operations, not additional phases or approval gates.
+
+Make the current increment's purpose and actual contribution visible. For consequential visual or interaction work, inspect and show the first meaningful result while it can still inform adaptation and wider integration. Identify whether displayed material is a target reference, a candidate's original demo, a local trial or the integrated product. Connect the qualities actually visible to the intended target and retain material gaps; act on those gaps under the current SPEC's responsibility. A source demo or a successful test supports its own claim, not the quality of an unseen product.
+
+Project records preserve the full evidence and current model; conversation output selectively presents their important findings and results. Prefer the design object, observed relationship, supported judgment and execution consequence over a recital of Agent activities. Reuse existing captures and findings, combine related events for small tasks, and keep routine research and implementation autonomous. Disclosure makes information available, review examines it, and approval requires an actual authorized decision with identifiable scope. Continue supported authorized work after presenting an event; the act of presenting it neither requests nor establishes approval.
 
 ## Understand the experience and plan its evidence
 

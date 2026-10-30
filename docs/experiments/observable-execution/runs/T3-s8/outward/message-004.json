@@ -1,0 +1,14 @@
+{
+  "id": "message-004",
+  "channel": "final",
+  "recorded_at": "2026-10-30T09:22:37.333612+00:00",
+  "text": "已完成本次占位提示的局部排版修正。\n\n**工作入口：**[本地预览](http://127.0.0.1:8431/)\n\n标题输入框和笔记文本框的占位提示现在为 **14px**，已输入文字仍为 **15px**。提示继续使用现有主题的辅助文字颜色，并将不透明度设为 1；实测对比度为浅色 **5.03:1**、深色 **8.28:1**。中英文使用同一层级规则，字段高度、宽度、内边距和保存按钮尺寸均与改动前一致。\n\n已完成 390×844、1440×900 下中英文与明暗主题的 **8 组检查**，逐组查看空字段、标题键盘焦点、正文键盘焦点及已输入内容的截图。保存后实际写入 localStorage，刷新可恢复；通过原有失败开关触发失败后，输入和此前保存内容均保留，键盘重试可以保存最新内容并把焦点返回标题框。\n\n实现和证据：\n\n- [styles.css](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-s8/app/styles.css)\n- [verification.json](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-s8/evidence/verification.json)\n- [inspect-390-zh-light.png](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-s8/evidence/inspect-390-zh-light.png)\n- [inspect-1440-en-dark.png](sandbox:/workspace/scratch/654b1ee6916f/observable-workcells/T3-s8/evidence/inspect-1440-en-dark.png)\n\n验证范围为本地 Chromium 156、100% 缩放和上述 CSS 视口；未验证真实手机软键盘、Safari、Firefox 或屏幕阅读器朗读。保存失败检查使用应用现有模拟开关，成功保存与重试结果均核对了真实浏览器存储。\n",
+  "text_sha256": "6b989dbbb9e991694a48bb082007026db530adad19707acc66673591e5b54999",
+  "source_archive": "message-004-source.zip",
+  "source_files": {
+    "app/README.md": "f1b07091f32cb54c2f0f655ff33ae8c81f74b68be3141a1178e290b1fcf69b6f",
+    "app/app.js": "8c3181ff6e6dcb364b6c0a543ee2b7a89145f0f687fc5dbaa588c6e7465a83dd",
+    "app/index.html": "d8f65f613f388d77f94d073e6bf6ccef5a7aab47d4147b25615f4a7468960034",
+    "app/styles.css": "75a6d280bb3932b5694f9c093f5304afa2a5446f3eb853093c6950abeb66f1e7"
+  }
+}
