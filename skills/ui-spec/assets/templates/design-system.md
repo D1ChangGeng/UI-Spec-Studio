@@ -12,6 +12,10 @@ Typography; foreground/surface/emphasis/status colors; spacing relationships; ra
 borders/elevation; focus; icons; image treatment; motion and reduced-motion equivalents.
 Define focal/supporting roles, purposeful differences and applicable exceptions;
 connect them to tokens/variables and trials with populated work and long content.
+Identify the mature external system, validated project source or complete approved
+design carrying those relationships. Shared provenance covers related elements;
+an invented token name does not establish a source. A local adaptation records
+the relationship it preserves and the observed reason for its change.
 
 ## Page families
 
@@ -22,6 +26,10 @@ short-height/narrow-screen behavior for each family.
 
 Reusable behavior, selected sources, input/error/empty/loading/disabled states,
 keyboard/touch expectations and state-preservation rules.
+Separate semantic primitives from their mature visual foundation. Any original
+visible responsibility follows the [closed allowlist](../../references/component-sourcing.md#closed-original-construction-allowlist)
+with its narrow authority and validation scope; routine business wiring and
+source-preserving compatibility fixes remain normal implementation.
 
 ## Variants
 

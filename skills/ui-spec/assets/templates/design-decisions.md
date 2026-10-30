@@ -58,7 +58,13 @@ Concrete mature page/system/block candidates, source/demo/revision, actual obser
 states, meaningful episodes and evidence. Explain the selected level, valuable design relationships
 inherited together, local trial and meaningful alternatives. Identify the implementation actually
 adopted and the mechanisms preserved. Classify code reuse, configuration, composition,
-design transfer and original work accurately; give the evidenced gap for custom common UI.
+focused adaptation and design-system inheritance accurately. Keep design transfer
+distinct from actual adoption. Original construction is an exception under the
+[closed allowlist](../../references/component-sourcing.md#closed-original-construction-allowlist),
+not a normal candidate: state its necessity, relevant mature candidates and their
+specific limits, narrow W1/W2/W3 scope, retained mature responsibilities, actual
+authorization and scoped verification. Existing records can hold these facts;
+no separate approval lifecycle or per-element search ledger is required.
 
 Keep the design reference and implementation resource identifiable. Record the
 research question, useful clue/action and conclusion: observed phenomenon,
@@ -87,8 +93,11 @@ what makes each worth retaining, adapting or replacing against the target.
 
 Consider product objects, layout/navigation, content/typography, components, assets,
 feedback, motion, runtime readiness and operating work as applicable.
-Shared IDs can serve multiple pages. For native, authored or retained work,
-identify the actual source and fit rationale. Link the exact source and demo when
+Shared IDs can serve multiple pages and many visual details can inherit one mature
+system or block. For native or retained work, identify the actual source and fit
+rationale. For faithful design translation, identify the complete provided/confirmed
+design and its authorized scope; a reference screenshot alone is insufficient.
+For original authored work, retain the qualifying exception and authority. Link the exact source and demo when
 external work is selected. Use an existing equivalent record instead of duplicating it.
 
 Start candidates while direction is open. Reconcile studied, compared, trialed,
@@ -96,6 +105,9 @@ actually adopted and verified status with real code/assets and observed conditio
 Owner approval remains separate. A consequential trial uses current content, type,
 themes and states before wider integration. Detailed notes may hold rights, versions,
 modified mechanisms and maintenance ownership; reuse is assessed by the responsibilities carried.
+Distinguish acquisition, adoption and retained craft. Record an unresolved visual
+responsibility honestly when neither an appropriate mature source nor an authorized
+exception carries it; continue independent supported work.
 
 Link important choices to a visible fact, likely perceptual effect, explanatory relationship
 or hypothesis, product fit and actual implementation decision. Retain representative viewed
@@ -253,7 +265,8 @@ certifies research, readiness, correct design or task completion.
 
 Extend the relevant decision only as needed: intended perceptual relationship;
 useful reuse scope; actual original-demo observation; selected source/variant and
-rights; retained mechanism versus configuration or custom change; local fit with
+rights; retained mechanism versus configuration, focused adaptation or authorized
+original extension; local fit with
 real content; integrated-use result and remaining uncertainty. Functional
 foundation, visual implementation and whole-product quality are different
 responsibilities. Keep actual adopted locations in the current model and source

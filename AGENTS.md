@@ -239,3 +239,24 @@ separate existing output, stronger event visibility, and visibility linked to
 quality realization. Preserve actual outward messages with their contemporary
 source/artifact identity. Assess observability, behavior and product quality
 separately; retrospective reports and output counts do not prove timely feedback.
+
+## Version 1.19: default-deny original visual construction
+
+Mature external work and validated project resources carry normal visible design
+responsibilities. Discover externally first and select by actual fit, quality and
+continuity. The closed W1–W3 allowlist intentionally supersedes earlier open custom-gap
+and technique-transfer implementation paths; a gap alone never supplies authority.
+Preserve ordinary integration and source-preserving adaptation, complete-design
+translation within its specified authority, and explicitly provisional probes.
+
+Keep source responsibility shared at the page/system/block level where appropriate,
+not a per-DOM search quota. Original authorization has a narrow design scope and may
+already be present. Inspect acquisition, adoption and retained craft independently;
+more sources can reduce whole-product coherence. The existing SPEC, evidence map and
+disclosure mechanism carry these judgments. Runtime scripts and JSON stay neutral
+and unchanged; source/record checks cannot certify exception necessity or UI quality.
+
+Preserve the v1.18 runtime and historical evidence exactly through the current
+continuity layer. Compare complete frozen methods in fresh independent executions,
+retain unsuccessful products and distinguish their observed outcomes from general
+quality claims. Release the tested runtime bytes and disclose any later divergence.

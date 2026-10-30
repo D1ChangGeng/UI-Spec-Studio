@@ -2,11 +2,83 @@
 
 ## Contents
 
-[Foundations](#find-the-strongest-useful-starting-point) · [Selection records](#make-selection-visible-by-surface-and-design-dimension) · [Discovery](#discover-efficiently-and-learn-how-the-source-works) · [Exploration loop](#follow-visual-clues-to-answer-design-questions) · [Visual and temporal study](#understand-the-demonstration-and-the-implementation-together) · [Comparison](#challenge-the-leading-candidate) · [Adoption](#evaluate-adoption-value) · [Local trials](#confirm-consequential-parts-in-a-local-trial) · [Integration](#adapt-into-one-product) · [Assets and content](#material-medium-and-source-safety)
+[Default-deny boundary](#default-deny-original-ui-construction) · [Closed exceptions](#closed-original-construction-allowlist) · [Unresolved responsibilities](#preserve-unresolved-responsibilities) · [Technical probes](#separate-probes-from-formal-delivery) · [Foundations](#find-the-strongest-useful-starting-point) · [Selection records](#make-selection-visible-by-surface-and-design-dimension) · [Discovery](#discover-efficiently-and-learn-how-the-source-works) · [Exploration loop](#follow-visual-clues-to-answer-design-questions) · [Visual and temporal study](#understand-the-demonstration-and-the-implementation-together) · [Comparison](#challenge-the-leading-candidate) · [Adoption](#evaluate-adoption-value) · [Local trials](#confirm-consequential-parts-in-a-local-trial) · [Integration](#adapt-into-one-product) · [Assets and content](#material-medium-and-source-safety)
+
+## Default-deny original UI construction
+
+Apply **Default-Deny Original UI Construction with a Closed Exception Allowlist**. Mature visual work is the normal implementation foundation. Original construction is prohibited across all visible design responsibilities unless a qualifying W1–W3 exception has actual, bounded user authorization.
+
+**Original UI Construction** means independently deciding visible structure, form, material, composition, motion or their relationships without an adoptable mature implementation, an applicable established design system, or a complete authorized design basis, then building the result mainly from basic elements, raw primitives or handwritten styles. Complexity and code volume do not determine this classification. A few lines inventing a page's background, rounded card grid or major spacing can carry substantial unsupported design responsibility.
+
+Judge the relationship and its source. Ask: **which mature work carries this visual decision, and does the new code retain and adapt it or replace it?** Writing HTML, CSS, component wrappers or event handlers is not inherently original visual construction. Configuration, composition, data/authority wiring, routing, state ownership, focus, scrolling, responsive connections and specific compatibility repairs are permitted when they preserve the mature foundation. A new visible mechanism outside that foundation needs an authorized exception; a new handler using its existing state presentation may be ordinary integration.
+
+### Cover visual responsibility through shared provenance
+
+Maintain **Visual Provenance Obligation** for every important relationship across these visible layers:
+
+| Responsibility | What a mature source can supply |
+|---|---|
+| Page, workspace, container and layout | Spatial organization, proportion, alignment, shared anchors and responsive relationships |
+| Background, surface, border and decoration | Ground/foreground contrast, material, light, edge hierarchy and established tokens |
+| Cards, functional regions and component families | Coordinated structure, control hierarchy, typography, states and interaction |
+| Typography, text and icons | Type roles, scale, spacing, glyph/icon family and usage rules |
+| Motion, feedback and micro-interactions | Timing, continuity, interruption, quiet states and complete state relationships |
+| Cross-component composition | A coherent whole under a mature layout/system and source-grounded art direction |
+| 2D, 3D and other visual material | Suitable assets, scenes, composition and effect implementations with permitted use |
+
+Attach provenance to **Visual Design Responsibility**, not every DOM node or CSS declaration. A complete input block can cover its container, type, attachment layout, buttons, material and feedback together. A validated system can supply a plain background via its existing token; no separate background package is required. Confirm the token's origin and applicability rather than inventing values and labelling them a system. A small or visually simple element still inherits a source. Page area, implementation ease and line count do not measure design impact.
+
+Existing project work can be a valid mature source when its actual quality and fit have been established; it need not have originated under this release. Retain applicable evidence and examine changed conditions. Age, an existing filename or the Agent's own claim of maturity does not validate it. Native host presentation can supply a defined system, such as GitHub's Markdown typography and tables; document the actual host boundary rather than using native elements to justify an invented application shell. Writing new product facts or accurate copy remains content work, while its visual presentation inherits the relevant system.
+
+### Keep reference, design translation and implementation adoption distinct
+
+Studying a screenshot, video or technique supplies evidence, not automatic permission to recreate common UI. Rebuilding an available mature card with handwritten CSS is original construction even when it resembles the reference. A primitive library, icon package or animation engine supplies only its actual functional or visual scope; importing it does not give the surrounding layout, material or composition a source.
+
+When the user's task is faithful implementation of a **complete, explicit supplied or confirmed design**, keep that design's revision, authorized scope and intended differences as the basis, use suitable mature implementations where available, and verify source fidelity. This translates an already determined design rather than independently inventing one; it is not a fourth original-construction exception. An ambiguous screenshot or a general product analogy leaves missing structure, states and responsive/temporal relationships unresolved. Resolve those through mature sources or an authorized W1–W3 scope, rather than treating design translation as unlimited permission.
+
+### Keep normal source selection mature
+
+**Discover usable external mature UI work first; assess validated reusable project work alongside it; exclude original construction from normal candidates.** The discovery priority expands available quality, while actual selection follows target fit, observed visual completeness, design continuity and total integration cost. Do not replace a better-fitting established source merely because another source is external. Routine matching-condition work may inherit the already researched family without repeating broad discovery.
+
+Seek the highest appropriate coherent scope, not a fixed packaging rank. A broad template can have weak visual craft; a small dynamic component can have excellent craft in its actual role. Inspect both **Reuse Scope** and **Visual Completeness**, then verify their contribution to the assembled product. Use functional primitives for semantics, focus, keyboard, state and necessary mechanics; use lower-level drawing/motion technology to run or adapt selected work. Neither category substitutes for the required mature visual source.
+
+Exclude ordinary shortcuts: generating a shell before studying mature foundations; constructing the main visual object from raw controls; exempting simple backgrounds or borders; treating screenshots or understood techniques as implementation reuse; rebuilding after the first installation failure; relabelling heavily rewritten source as intact reuse; and shipping a rough probe as formal visual completion. A concrete defect calls for diagnosis, supported adaptation or replacement. Convenience, deadlines, familiarity, inaccessible demos, license mismatch and a claim that hand coding would be equally good do not authorize original work.
+
+## Closed original-construction allowlist
+
+Only these three classes can authorize new original visual responsibility. Each requires the actual need, research appropriate to that need, why usable mature candidates cannot carry it, the exact original boundary, mature work retained, user authorization for that boundary and independent verification. These relationships can share the existing decision record; they are not six required documents or a new approval lifecycle.
+
+| Class | Qualifying need and evidence | Limit |
+|---|---|---|
+| **W1 — Unique product identity and original art** | Originality is an explicit product goal, the user requests or authorizes that original identity/asset, and available material cannot directly supply its unique expression. Identify the intended role and quality check. | Limit work to the logo, brand graphic, illustration, unique 3D subject or other identified artwork. Brand originality does not authorize rebuilding navigation, cards or a page. |
+| **W2 — Demonstrably unmet product-specific expression** | A genuinely distinctive task, domain meaning or interaction relationship cannot be reasonably expressed by suitable mature implementations. Research relevant scope, compare candidates and explain their concrete incompatibility with necessary relationships. Obtain or identify actual authorization for the remaining original scope. | Cover only the irreducible expression. “This product is special” or “no result in my usual library” is insufficient. Retain reusable surrounding structure and behavior. |
+| **W3 — Necessary specialized extension to mature work** | A selected mature implementation continues to carry the main quality, while a specific observable gap remains after relevant configuration, adaptation and source research. The experience needs the missing visible mechanism and the user authorizes its bounded extension. | Implement only that missing mechanism. Reuse existing visual/state relationships where they apply; rebuilding the component or its core motion/material is outside this exception. |
+
+Locate authorization in the user's actual instruction or prior scoped decision. A request to create an original brand mark can already authorize W1; do not ask again. A generic instruction to build a product, continue autonomously, use a library, or fix a defect does not silently authorize an unspecified exception. General execution permission and approval of an actual visual result have separate scope. If authorization is missing, prepare a concrete explanation of the remaining need and proposed boundary, finish independent authorized work, then request the necessary decision. Continue that independent work while a decision is pending.
+
+Research does not require proving that no resource exists anywhere. It does require relevant actual candidates, observed or documented limits and a defensible account of why configuration, combination or a different reuse scope cannot reasonably carry the necessary relationship. Do not convert bounded search failure into universal absence. Keep a partly supported exception proposed, and preserve its open questions. An exception applies to design responsibilities, not indefinitely to a component name, file or future edits. Inspect source fidelity, new behavior and affected neighbors within its actual scope.
+
+## Preserve unresolved responsibilities
+
+When suitable mature work has not been established, keep the quality obligation open and choose an evidence-producing next action:
+
+1. Broaden relevant sources, authors and ecosystems through legitimate access routes. Seek complete products, blocks, component families, motion and licensed material at the level the relationship needs.
+2. Change reuse scope when useful: combine a mature layout with a specialized component, or adopt one coherent block instead of splitting its internal relationships into separate builds.
+3. Trial supported parameters, themes, composition and focused adaptation. Diagnose dependencies, font loading, CSS scope, container assumptions, state ownership and runtime compatibility before rejecting the source.
+4. Revisit conflicting selections and the product's composition; more resource imports can lower coherence or increase cost. Preserve the accepted quality target unless an actual user decision changes it.
+5. Continue independent work and state the remaining source/quality gap, its effect and next route. Evaluate W1–W3 only when the need genuinely qualifies and the authorization has the required scope.
+
+Failure to find a resource, partial fit, installation trouble, greater integration cost or Agent confidence never lifts the prohibition automatically. A lower-quality custom substitute does not fulfill the goal. If no qualifying resource or authorized exception exists, leave that responsibility unresolved; do not claim its SPEC complete or hide it by changing the SPEC number. Use existing scope judgment to keep, split, merge or redraw work while preserving the original goal and current responsibility.
+
+## Separate probes from formal delivery
+
+A **Provisional Technical Probe** may use simple temporary structures to answer an explicit feasibility, layout, state or data-contract question. Identify the question, provisional implementation and observation needed. Keep the probe's output distinct from a formal visual candidate and from the shared product foundation. It is a research tool, not W4 and not automatic W3.
+
+For example, a plain temporary container can test how composer growth affects scroll anchoring. Its observed height behavior does not make that container a finished input region. Before formal delivery, integrate the mature input implementation or establish an authorized W1–W3 scope, then verify the actual result. Preserve useful probe evidence without promoting its rough visuals, copied styles or unresolved quality into the delivered product.
 
 ## Find the strongest useful starting point
 
-Use mature implementations by default for common UI responsibilities: pages, layouts, blocks, components, type, icons, assets and motion. Adopt suitable packages, source, assets or legitimate ports through configuration, composition and focused adaptation. The actual implementation must carry valuable design relationships into the product; design references and implementation sources can differ.
+Use mature implementations as the normal foundation for all visible UI responsibilities: pages, layouts, blocks, components, type, icons, assets and motion. Apply the default-deny boundary above before committing to formal visual work. Adopt suitable packages, source, assets or legitimate ports through configuration, composition and focused adaptation. The actual implementation must carry valuable design relationships into the product; design references and implementation sources can differ.
 
 Use **Requirement-led discovery** to answer known needs and **Opportunity-led exploration** to find stronger representations while choices remain open. Derive the need from the [experience and evidence plan](analysis.md#plan-evidence-around-the-experience), then let discoveries refine it. Carry accepted resources forward while content, behavior, runtime and craft still fit. Assess existing code against the same target; proceed directly with routine adjustments inside verified fit.
 
@@ -22,7 +94,7 @@ Choose the largest coherent set of useful mature decisions. For a new page, inve
 | Asset or coordinated family | Identity, type, imagery, material, spatial/dynamic expression | Role, quality, composition, rights and delivery |
 | Effect or micro-interaction | Expressive or feedback mechanism | Attention, control, accessibility and combined runtime cost |
 
-Scope does not rank importance: one asset can define the composition. Prefer a coordinated foundation with useful specialist additions. Headless behavior still needs a mature visible surface. Compare meaningful states/sizes and matching-stack alternatives to a port. Bound custom work to observed gaps in behavior, rights, runtime, source value or distinctive requirements; extend suitable foundations first.
+Scope does not rank importance: one asset can define the composition. Prefer a coordinated foundation with useful specialist additions. Headless behavior still needs a mature visible surface. Compare meaningful states/sizes and matching-stack alternatives to a port. Resolve observed behavior, rights, runtime or fit gaps through appropriate mature alternatives and supported adaptation. Only a qualifying, authorized W1–W3 scope permits original visual construction; extend suitable foundations while preserving their design value.
 
 ### Let source fit refine the formal increment
 
@@ -44,7 +116,7 @@ Use existing records or the optional [design decision template](../assets/templa
 
 Distinguish researched, visually compared, trialled, adopted and inspected resources. Identify actual code, package or asset use and the important responsibilities it carries; dependency counts and code percentages describe different properties. Owner approval requires an actual user decision with its scope. Use optional [adoption notes](../assets/templates/resource-adoption.md) for rights, versions and maintenance, and revise the mapping when evidence changes the choice.
 
-For each consequential quality owned by the formal SPEC, expose **target quality → actually observed reference → adopted mature resource or identified custom implementation → current product presentation → remaining gap**. The current call site, asset placement and viewed result establish where the design value resides. Research volume, an installed primitive or a resource name cannot supply a missing link. Present the decisive comparison and actual result in the conversation as well as retaining the full record; use the user's observable task and visual relationships to explain the choice.
+For each consequential quality owned by the formal SPEC, expose **target quality → actually observed reference → adopted mature resource, faithful authorized design translation or qualifying authorized W1–W3 implementation → current product presentation → remaining gap**. The current call site, asset placement and viewed result establish where the design value resides. Research volume, an installed primitive or a resource name cannot supply a missing link. Present the decisive comparison and actual result in the conversation as well as retaining the full record; use the user's observable task and visual relationships to explain the choice.
 
 When a discovery or choice materially changes art direction, an important component or a connected interaction, apply the [design-event disclosure principle](workflow.md#make-consequential-design-work-observable). Show the relevant observed candidate or comparison, explain the relationship it can supply, and identify what has actually been selected, trialled or adopted. A source still awaiting a local trial remains a proposed route. After adoption, use the current project's result to show which valuable proportions, material, states or movement survived. Reuse the current decision and evidence; ordinary installations and low-impact choices can proceed without a separate message or approval request.
 
@@ -141,19 +213,22 @@ Let comparison change the action: broaden research, revise the target, trial a c
 
 Establish provenance/rights, compatibility, semantics, security and task behavior. Compare the useful relationships retained and quality in this project's composition. Assess **total cost** across research, trial, integration, adaptation, debugging, verification, runtime and maintenance; early research can prevent broad rework.
 
-Choose direct adoption through public configuration, focused extension for a concrete gap, or composition of complementary sources. Resolve shared tokens, state, events, focus, layering and lifecycle. Check combined attention, duplicate engines/listeners, rendering contexts, CSS resets and payload/maintenance growth. Identify custom scope and verify it separately from retained mature behavior. Preserve required notices and check code, asset, tool and redistribution rights.
+Choose direct adoption through public configuration, focused adaptation retaining defining craft, or coherent composition of complementary mature sources. A genuinely new visible extension must satisfy W3; ordinary wiring and use of existing visual states remain integration. Resolve shared tokens, state, events, focus, layering and lifecycle. Check combined attention, duplicate engines/listeners, rendering contexts, CSS resets and payload/maintenance growth. Identify any authorized original scope and verify it separately from retained mature behavior. Preserve required notices and check code, asset, tool and redistribution rights.
 
 ### Choose the adoption operation and the responsibilities it creates
 
 | Operation | Mature value to preserve | Responsibility retained by the project |
 |---|---|---|
-| Direct adoption | Tested public API and intended interaction | Configure, theme, connect data and verify use |
-| Focused adaptation | Valuable source mechanisms and stable behavior | Identify changed internals, verify new behavior, own maintenance |
-| Composition | Complementary systems or primitives | Resolve tokens, states, focus, events, portals, layers and cleanup |
-| Technique transfer | Understood composition or motion relationship | Reimplement under this stack and test the resulting quality |
-| Purposeful original work | Product-specific identity or evidenced unmet needs | Own the design, runtime and complete verification |
+| Direct adoption | Actual mature page, block, component, effect or asset | Preserve the selected variant and inspect actual use |
+| Configuration | Public parameters, themes and extension points | Confirm changes retain the defining design relationships |
+| Composition | Complementary mature sources under a coherent layout/system and source-grounded art direction | Resolve tokens, states, focus, events, portals, layers and cleanup; inspect the whole |
+| Integration | Existing visible system and state language | Connect data, permissions, content, events and runtime at their real owners |
+| Focused adaptation | Valuable source mechanisms and stable behavior | Explain necessary changes, preserve defining craft, verify affected behavior and own maintenance |
+| Design-system inheritance | Applicable established type, color, spacing, material and motion roles | Retain actual token/source provenance and check the current conditions |
 
-Assess total discovery, understanding, integration, debugging, validation, runtime and long-term maintenance costs. Design files can be used as references without installable code. Check source, code, tool, asset and redistribution rights separately; popularity, screenshot similarity and installer success are not project-fit evidence.
+Technique transfer can inform understanding and adaptation, but reimplementing the visible result is not a normal adoption operation. Purposeful original work belongs only to the closed W1–W3 allowlist. Faithful authorized design translation retains its specified design basis and fidelity checks.
+
+Assess total discovery, understanding, integration, debugging, validation, runtime and long-term maintenance costs. Design files can be used as references without installable code; reference use alone does not authorize reconstruction. Check source, code, tool, asset and redistribution rights separately; popularity, screenshot similarity and installer success are not project-fit evidence.
 
 ## Confirm consequential parts in a local trial
 
@@ -170,7 +245,7 @@ Identify the role of visual material when presenting it: target reference, candi
 
 Use revealing content/states: long labels, multiline input, missing material, loading/errors and required languages/views. Compare at corresponding scale, density and event phase. Inspect detail and process, then return to actual neighbors. Record what survived and why adaptation or replacement is needed. A trial can reopen selection or the experience hypothesis.
 
-Expand when consequential qualities demonstrate fit and the adaptation path is clear. Routine instances can inherit a verified family rule under matching conditions. If a target remains unmet, use the [maturity judgment](analysis.md#reason-about-uncertainty) to choose further research, assistance, another trial or bounded custom work. Retain actual shortcomings; time spent is not completion evidence.
+Expand when consequential qualities demonstrate fit and the adaptation path is clear. Routine instances can inherit a verified family rule under matching conditions. If a target remains unmet, use the [maturity judgment](analysis.md#reason-about-uncertainty) to choose further research, assistance, another trial or assessment of a qualifying authorized W1–W3 exception. Retain actual shortcomings; time spent is not completion evidence.
 
 A trial can also reveal that the formal SPEC needs different boundaries. Include necessary neighbors when a card's motion depends on data readiness, surrounding layout or interruption recovery; retain a wider mature implementation when its connected mechanism fits the goal. Independent demanding qualities can become subsequent increments while their original commitment and open gaps remain traceable. Repeated search, candidate replacement and fit repairs that still serve the current goal remain internal work of the same SPEC. For a new product, establish a representative, sufficiently resolved experience with inheritable visual relationships before expanding coverage; deferred features remain accurately identified.
 
@@ -178,9 +253,17 @@ A trial can also reveal that the formal SPEC needs different boundaries. Include
 
 Preserve the mechanisms that justified adoption. Start with content, theme, public configuration and composition; modify internals for concrete remaining needs. Identify consequential changes and states to recheck. Fonts affect wrapping and optical balance; themes affect boundaries and focus; asynchronous connections affect truthful feedback.
 
-Connect actions/data at their real owner, replace demo handlers/content and validate protected operations there. Inspect growth, variants, zoom, reduced motion and real responses. Rewriting a layout, state or motion mechanism creates corresponding new responsibility; upstream maturity covers retained behavior.
+Connect actions/data at their real owner, replace demo handlers/content and validate protected operations there. Inspect growth, variants, zoom, reduced motion and real responses. A rewrite that replaces defining layout, material, state or motion relationships is original responsibility even when the imported name or source file remains. Establish a qualifying authorized exception before that work; upstream maturity covers only the relationships actually retained.
 
 Reinspect assembled attention, hierarchy, density, material, focus and motion continuity. Measure runtime cost and cleanup at their own boundary. If quality drops, locate the gap in understanding, resource choice, adaptation, content or composition using the [repair method](verification.md#findings-and-repair), then revisit the responsible stage. Keep accepted artistic requirements visible throughout repair.
+
+### Distinguish acquisition, adoption and craft retention
+
+**Resource Acquisition** establishes that source, a package or an asset was obtained. **Resource Adoption** establishes where that actual implementation operates in the product. **Craft Retention** establishes, through source comparison and actual viewing, which defining visual and interaction relationships survived configuration, adaptation and integration. Keep their evidence separate: a download can remain unused, an import can render a damaged variant, and an unchanged component can conflict with the rest of the page.
+
+Identify the qualities that earned selection before adapting them: for example, stable text beneath moving light, face continuity through a flip, an input's type/action hierarchy, or a block's coordinated spacing and surface hierarchy. Compare the original demo, local trial and assembled result under meaningful corresponding conditions. Track consequential retained, changed and lost relationships in the same adoption decision. Copying a card while removing its material, rewriting a block's entire type/spacing system or replacing its state/motion mechanism is not intact adoption even if names and some lines remain.
+
+If retained quality drops, investigate content, fonts, tokens, CSS isolation, container geometry, state ownership, layering, motion settings and combined attention. Restore the intended source mechanism, adapt within its actual design basis, or select a more suitable mature source. Rebuilding it from primitives requires an authorized qualifying exception. Assess coherent whole-product quality and engineering burden alongside local fidelity: several individually strong resources can create a worse product through incompatible composition, duplicated engines, conflicting state or excessive payload. More imports and a higher copied-code percentage cannot resolve that finding.
 
 ## Retain useful knowledge at its responsible location
 
@@ -192,7 +275,7 @@ Inspect defining content early. Choose product captures for factual representati
 
 ## Include asset production in the choice
 
-Use the [asset method](visual-assets.md) to compare mature assets, adaptation and production. Inspect actual files and distinguish construction from delivery: a 3D scene may produce an image, video or runtime object. Link material, master, derivatives and placement; consult [specialist sources](asset-sources.md) as needed.
+Use the [asset method](visual-assets.md) to compare mature assets, adaptation and production within an authorized W1–W3 scope. Inspect actual files and distinguish construction from delivery: a 3D scene may produce an image, video or runtime object. Link material, master, derivatives and placement; consult [specialist sources](asset-sources.md) as needed.
 
 ## Research mature language patterns with interface resources
 
@@ -233,9 +316,9 @@ When known sources produce similar or inadequate options, vary the visual mechan
 
 For a consequential choice, inspect target fit, actual visual resolution, relevant state coverage, amount of useful design already solved, integration cost, source/rights reliability and assembled coherence. Explain trade-offs with representative evidence. A richly animated material may be the strongest visual match but exceed the target device's cost; a robust functional control may require a separately sourced visual foundation. Similar names and screenshots do not establish meaningful alternatives, and a fixed candidate count does not establish a good comparison.
 
-Compare corresponding content, fonts, scale, theme and event phase where possible. Keep source styling visible long enough to identify what produced its quality. Then trial actual project content and neighbors. Preserve the source's proportions, falloff, layering, spacing and interaction mechanism until there is a concrete reason to alter them. Start with supported configuration, semantic tokens, composition and focused extension. Record substantial internal rewrites as new project-owned work; upstream maturity cannot certify the rewritten behavior.
+Compare corresponding content, fonts, scale, theme and event phase where possible. Keep source styling visible long enough to identify what produced its quality. Then trial actual project content and neighbors. Preserve the source's proportions, falloff, layering, spacing and interaction mechanism until there is a concrete reason to alter them. Start with supported configuration, semantic tokens, composition and focused extension. Identify substantial internal rewrites as new project-owned responsibility, apply the default-deny/exception boundary before proceeding, and verify any authorized result independently. Upstream maturity cannot certify rewritten behavior.
 
-If fit fails, diagnose the cause before adding more effects: unsuitable source, damaged adaptation, content mismatch, conflicting composition or runtime limits. Revisit selection when preserving the source's valuable relationship would require fighting the product. Targeted original implementation is appropriate for an evidenced gap, distinct product identity, licensing incompatibility or a simpler equally convincing solution under actual constraints. Keep that reason and verify the custom part independently. Original work can be creative without pretending to be source adoption.
+If fit fails, diagnose the cause before adding more effects: unsuitable source, damaged adaptation, content mismatch, conflicting composition or runtime limits. Revisit selection when preserving the source's valuable relationship would require fighting the product. Resolve license or runtime incompatibility through usable mature alternatives and scoped adaptation. A simpler hand-built solution or an evidenced gap does not itself authorize original construction. When the actual need qualifies for W1, W2 or W3, identify the precise existing authorization or request the remaining scoped decision after independent work. Verify authorized original work separately and report it accurately rather than calling it source adoption.
 
 ### External examples are the primary reference corpus
 

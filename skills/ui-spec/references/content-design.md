@@ -17,6 +17,8 @@
 
 Content design decides what people need to understand, at which moment, in which place and form. UX writing gives interface text the right meaning, voice and action. Typography makes that content readable and gives it visual weight in the composition. Design these together with structure, controls, assets and states from the first meaningful slice.
 
+Write actual product language, translations and factual content as the task requires. [Default-deny original UI construction](component-sourcing.md#default-deny-original-ui-construction) concerns their visual design responsibilities, not the authorship of new sentences or business data. Inherit the typography, surface and component relationships from a mature system, validated product resource or complete approved design. A shared source can support many strings; ordinary copy edits do not require a separate resource search or original-design authorization for each element.
+
 Use the same professional loop that governs visual work: **user/task and source facts → needed understanding → content roles and distribution → product-language research → wording and tone → composition and behavior → real reading/action checks**. Revisit earlier decisions as rendered content, new reference work or authentic product data changes what is needed. The loop is a judgment method, not a required document sequence.
 
 ## Begin with the person's understanding
@@ -71,6 +73,8 @@ Preserve necessary qualifiers. Money, eligibility, delivery, privacy, permission
 ## Compose actual words with the interface
 
 Text occupies space. Consider wording, typography and the container together: length, line breaks, script, punctuation, measure, weight, contrast and surrounding space determine hierarchy and optical balance. Design with representative short, common and long content before fixing the layout. Choose fonts by actual language coverage, metric behavior and text role; distinguish a display/wordmark asset from a reusable reading font.
+
+Identify the mature type system and layout relationships carrying those roles. Configure and adapt them for real language while retaining their hierarchy and rhythm; a font file alone does not resolve the composition. Original lettering or a new visible text mechanism follows the [closed allowlist](component-sourcing.md#closed-original-construction-allowlist), while truthful wording and source-preserving reflow remain normal product work.
 
 Assign clear roles to display titles, headings, body, labels, supporting explanations, alerts and comparable data. A heading may need semantic line breaks and artistic rhythm; dense operational content needs scannable alignment; reading text needs sustained measure and line rhythm. Text size, wrapping and visible occupancy must remain useful across supported viewports, zoom and themes. Validate actual font readiness, fallback, numeral treatment, punctuation and mixed scripts in the renderer. Adjust theme-specific optical weight only when observation shows a real imbalance. Check that user text-spacing overrides preserve content and controls; accessibility test values describe supported overrides, not default typography tokens.
 
@@ -136,5 +140,7 @@ In the conversation, present consequential design work as observable findings, j
 For example, when supported by the evidence: “The expanded input keeps its action row stable, but reduces the message reading area enough to obscure the newest content. The local trial will retain the action layout while the growth limit and scroll relationship are revised.” Pair a visual finding with the relevant real result. The reader can understand the professional judgment and its execution consequence without reconstructing a search log or being asked to decide each routine adjustment. Use direct collaboration when an actual user decision or explanation is needed.
 
 The product interface serves the end user's task and uses its own voice, terminology and information order. Keep design findings, resource comparisons and implementation rationale in the conversation and project records unless the product's task specifically needs them. Express promised hierarchy, material and movement through the actual interface. Tables, borders and explanatory text remain useful when they clarify real information or action; their presence does not prove or disprove craft. The evidence map's categories need not become the product's layout, and a label claiming a visual quality cannot provide it.
+
+Their visual simplicity also does not remove source responsibility. A native table or inherited border token can carry the appropriate mature design relationship; an ad hoc grid of containers and labels cannot substitute for an unresolved high-completeness block merely because its copy is clear.
 
 Both audiences draw on the same current facts. Revise a superseded design choice in the current model and explain a consequential change when it occurs; preserve the earlier observation at its historical scope. Reuse existing evidence and concise, task-relevant wording so presentation supports continued design work without creating parallel reporting obligations.

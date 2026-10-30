@@ -82,8 +82,10 @@ For a small control change inside an accepted interface, that accepted page is a
 
 ## A brand asset changes the page
 
-A product brief calls for a distinct spatial symbol. Compare suitable existing
-models, an original contour-to-3D route and a simpler 2D expression. Study the
+A product brief calls for a distinct spatial symbol. Compare suitable mature
+models and reusable 2D expressions. Include an original contour-to-3D route only
+when W1's identity need and the user's actual authorization cover that asset;
+distinctness or a reference alone does not authorize original production. Study the
 silhouette and its negative space in the intended composition. A fixed-view hero
 can use a refined render; a view-dependent explanation may justify a real-time
 model with a useful poster. Preserve the actual master and rights, export the
@@ -93,7 +95,10 @@ the composition before the page family expands.
 ## A wordmark and everyday reading
 
 A user reference suggests interlocking letterforms and slower visual discovery.
-Extract the relevant contour and spacing qualities into an independent wordmark,
+Use those qualities to research mature identity material and source-supported
+adaptation. If the user has also requested or authorized an original wordmark and
+W1 qualifies for that bounded identity asset, extract the relevant contour and
+spacing qualities into an independent wordmark,
 then compare it at the header and small lockup sizes. Use appropriate ordinary
 text for navigation and the accessible name. Check font licenses and actual glyph
 coverage for the interface separately from the exported identity graphic.

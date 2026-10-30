@@ -29,7 +29,7 @@ For a new surface, explore the highest appropriate reuse level: a complete page 
 design system, a functional block, then the required components and effects.
 Inherit coherent hierarchy, proportions, typography rhythm and interaction
 relationships through suitable existing implementations. Configure, compose and
-adapt them before adding custom work for demonstrated gaps. Data connections and
+adapt them while preserving their defining craft. A demonstrated gap requires further sourcing or a qualifying, explicitly authorized W1–W3 original scope. Data connections and
 adaptation code can carry reuse; a studied relationship alone establishes design
 inheritance. For a local correction, an accepted and still-suitable product can
 already be the foundation.

@@ -8,7 +8,9 @@
 
 **Invariants — requirements:** readable content, comprehensible hierarchy, valid task paths, accessible controls, visible focus, accurate state, stable shared structure, coherent feedback, truthful claims, inspectable evidence and trusted business boundaries.
 
-**Principles — professional judgment:** type scale, density, measure, spacing, optical corrections, scroll ownership, timing and composition. Apply them to the task, input method and page family.
+**Implementation invariant:** apply [default-deny original UI construction](component-sourcing.md#default-deny-original-ui-construction) across visible design responsibilities. Use the professional principles below to discover, compare, configure, combine and adapt mature work. Original visual construction requires a qualifying, narrowly authorized [W1–W3 exception](component-sourcing.md#closed-original-construction-allowlist); knowing a technique or recognizing a simple shape does not provide that permission.
+
+**Principles — professional judgment:** type scale, density, measure, spacing, optical corrections, scroll ownership, timing and composition. Apply them within the chosen mature foundation, complete approved design or authorized original scope, considering the task, input method and page family.
 
 **Project requirements:** explicit aesthetic goals and accepted direction govern expression, identity and craft alongside task requirements. **Preferences** guide open choices; **defaults** supply starting treatments; **examples** explain contextual decisions. Conventional palettes, grids or navigation forms remain revisable.
 
@@ -19,6 +21,8 @@ Make typography, content, imagery, composition and interaction serve a clear dir
 Define the intended character, first impression and memorable relationships from audience, content and aesthetic intent. Assign expressive roles across composition, type, assets, surfaces and motion. Study functional experience, cross-domain expression and adoptable implementations together. An artistic brief needs candidates that materially change subject, composition or movement, shown at comparable completion with the same representative task.
 
 **Expressive Contrast** combines understandable tasks with a distinctive visual language. Identify the familiar relationship, the expectation being changed and the theme connecting them. Contrast may join dense information with open space, technical type with organic form, or immediate operation with a staged result. It can reach navigation, inputs and populated work; identity must survive the first action. The theme may express brand, culture or emotion without literally illustrating each function.
+
+Develop independent expression through mature resource selection, source-backed composition and coherent art direction. A request for an expressive product does not authorize recreating its ordinary controls or workspace. Use W1 for explicitly authorized unique identity/art, W2 for an evidenced and authorized unmet product expression, and W3 for its narrowly necessary mature-source extension; preserve the mature responsibilities around that scope.
 
 Coordinate strong focal elements and supporting echoes. Repair concrete failures in contrast, reachability, motion or resource cost while preserving confirmed expression. Reposition, mask, pause during input or change delivery where evidence supports it. A necessary direction change is explicit. [Verification](verification.md) assesses experience validity and expressive completion independently.
 
@@ -58,7 +62,9 @@ Choose type for character, language coverage and reading. Inspect actual scripts
 
 ## 2. Design tokens express a system
 
-Translate the trialed direction into roles for type, space, color, shape, material, icons, asset crops and motion. Use tokens, component variables and shared styles for repeated decisions. Establish type/line scales, spacing rhythm, nested-radius relationships and optical icon/text weights from actual references and renders; numeric equality alone does not establish harmony.
+Translate the trialed mature foundation into roles for type, space, color, shape, material, icons, asset crops and motion. Inherit tokens, component variables and shared styles from its explicit design system or validated project system. Establish type/line scales, spacing rhythm, nested-radius relationships and optical icon/text weights through those sources and actual renders; a viewed screenshot alone does not authorize inventing replacement values. Preserve the source relationship while making evidenced local adjustments; numeric equality alone does not establish harmony.
+
+One source can carry many related details. A mature surface token can establish an ordinary solid background, border and foreground relationship without a separate search for every declaration. Its origin and actual applicability must be identifiable; a newly invented value does not become mature merely by being named a token.
 
 Preserve purposeful differences through roles: display and reading type, expressive results and direct repeated feedback can share one system. Separate identity, page-family anchors and local composition; explain exceptional treatments and where they apply. Validate real content and related pages when shared rules change.
 
@@ -137,7 +143,7 @@ Test a bounded change against the observed relationship. Repair shared causes in
 
 ## Visual grammar: choose a means for an intended relationship
 
-Use these methods to create and diagnose relationships. Product purpose, content and accepted direction determine parameters; inspect at use size and across relevant changes.
+Use these methods to select, preserve, adapt and diagnose relationships in the established visual foundation. Product purpose, content and accepted direction guide supported parameters; inspect at use size and across relevant changes. These craft explanations do not independently authorize original construction.
 
 ### Typography as information and voice
 
@@ -171,11 +177,13 @@ For quantities, use encodings suited to comparison, explicit scales/units, meani
 
 ### The native surface also carries the design
 
-Inspect focus, selection, caret, links, controls, scrollbars, formatting and default errors. Adapt within platform/accessibility expectations. In GitHub Markdown and similar hosts, use supported headings, links, code, tables and images; let native responsive behavior support original content organization and assets.
+Inspect focus, selection, caret, links, controls, scrollbars, formatting and default errors. Adapt within platform/accessibility expectations. In GitHub Markdown and similar hosts, use supported headings, links, code, tables and images; the host's mature rendering and responsive behavior carry their actual visual responsibilities. Write the product's content and organize its reading task normally. Added artwork or a custom presentation layer retains its own source or authorized-exception responsibility.
 
 ## Define a positive, inspectable craft target
 
 State what the finished design should make understandable and what distinct character it should communicate. Identify a reference or a local probe for each defining quality, keeping its content, viewport, medium and actual observation conditions visible. Compare the organization and principal relationships before ornament; inspect identity-bearing details before making minor aesthetic corrections. A mechanically valid layout may still lack a convincing organizing idea, while an expressive composition may still obscure a user's next action.
+
+A [local probe](component-sourcing.md#separate-probes-from-formal-delivery) can answer a bounded research question. Its runnable appearance does not establish a mature implementation source or permission to use an original visual result in formal delivery.
 
 When making a design more expressive, intensify the established idea through type, subject, composition, material and motion rather than accumulating unrelated effects. When quieting the expression, preserve the relationships that communicate its identity. Assess the intended primary action, useful content, proportional balance, practical readability and coherent character together. Judge a proposed improvement by the actual complete render and task, not by adjective, library count or compliance score.
 
@@ -183,7 +191,7 @@ When making a design more expressive, intensify the established idea through typ
 
 Expand “refined,” “premium” or “textured” into purpose, precise relationships, coherent language, suitable expression and stability in use. Inspect focal intent, optical baselines/icon weight and material rules as content changes. Equal icon boxes can need optical correction. Expression intensity and design maturity are distinct; judge both against the brief, including populated work and repeated use.
 
-Coordinate a mature foundation and valuable additions through type, density, color, material and motion. Judge hierarchy through the first action, working object and continuation. A behavior primitive's visual layer needs its own foundation. Apply the [sourcing method](component-sourcing.md) to preserve observed design value through trials and adaptation; revalidate rewritten mechanisms and measure combined runtime cost.
+Coordinate a mature foundation and valuable additions through type, density, color, material and motion. Judge hierarchy through the first action, working object and continuation. A behavior primitive's visual layer needs its own foundation. Apply the [sourcing method](component-sourcing.md) to preserve observed design value through trials and adaptation. Evaluate any proposed original replacement under the closed allowlist before implementation, then validate its authorized changed scope and measure combined runtime cost. Verification does not retroactively authorize a rewrite.
 
 ## Compose mature resources as one visual and interaction system
 
@@ -216,7 +224,7 @@ A changed font, image crop, material or motion envelope can affect multiple page
 
 ## Use visual craft knowledge to discover better implementations
 
-Translate a quality word into a relationship that can be observed, explained, searched for and tested. These lenses help choose mature work; they do not prescribe a house style or replace looking at actual renders. Consult the [source-first method](component-sourcing.md#reuse-visual-craft-at-the-appropriate-scope) before recreating a technique.
+Translate a quality word into a relationship that can be observed, explained, searched for and tested. These lenses help choose mature work; they do not prescribe a house style or replace looking at actual renders. Use the [source-first method](component-sourcing.md#reuse-visual-craft-at-the-appropriate-scope) to find an adoptable realization. Technique knowledge supports inspection and adaptation; recreating its visible mechanism remains subject to default-deny and the closed allowlist.
 
 ### Typography: tension comes from roles, not one font recipe
 

@@ -1,0 +1,30 @@
+{
+  "browser": "156.0.8078.80",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "playwright": "1.57.0",
+  "smoke": "passed",
+  "execution": "require_escalated",
+  "scope": "browser launch, DOM, button operation, screenshot only",
+  "dependencies": {
+    "vite": "7.3.7",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "motion": "12.43.0",
+    "tailwindcss": "4.3.3",
+    "@tailwindcss/vite": "4.3.3"
+  },
+  "starter_build": "T1 npm run build passed; 25 modules; no participant UI implemented",
+  "chrome_source": {
+    "version": "156.0.8078.80",
+    "url": "https://storage.googleapis.com/chrome-for-testing-public/156.0.8078.80/linux64/chrome-linux64.zip"
+  },
+  "chrome_archive_sha256": "b711c720f774be355197f32edf37e0651418ba036d92446ee2da19ac017540a7",
+  "limitations": [
+    "Pinned Playwright chromium download failed at mirror",
+    "Standard process sandbox launch rejected socket operation; elevated local browser works",
+    "No participant product has been executed or visually reviewed"
+  ]
+}

@@ -2,6 +2,8 @@
 
 Read these when a concrete technique helps the current design. They are original reasoning examples with representative content, not measured model-performance claims. Adapt the mechanism to the actual task; the common principles remain the foundation.
 
+Use these patterns to identify useful mature implementations, diagnose them and adapt their supported relationships. A reasoning example is neither an adopted visual implementation nor permission to recreate one. Apply [default-deny original UI construction](component-sourcing.md#default-deny-original-ui-construction): each visible relationship inherits a mature source or complete approved design, with original construction limited to the [authorized allowlist](component-sourcing.md#closed-original-construction-allowlist). Host-provided Markdown, native controls and established diagram renderers can carry their actual visual responsibilities; their use does not authorize an unrelated custom shell. [Technical probes](component-sourcing.md#separate-probes-from-formal-delivery) retain their research scope; a formal implementation needs an actual mature foundation, complete approved design or authorized original exception and its own verification.
+
 ## A comparison that makes differences legible
 
 **Problem.** Several options repeat the same attributes, while users must compare values before choosing.
@@ -28,7 +30,7 @@ Read these when a concrete technique helps the current design. They are original
 
 **Mechanism.** Treat readable control size and total composition occupancy separately. Group the task and necessary explanation, then balance their mass within the usable frame.
 
-**Realization.** Bound the form measure, preserve a consistent spacing hierarchy and use flexible outer space. Begin with visual centering or a slight upward optical bias for compact tasks. On short viewports, natural content access governs the layout. A page inside an existing family inherits its stable shell.
+**Realization.** Select a mature focused-task layout or inherit the validated page family, then adapt its form measure, spacing hierarchy and outer space. Visual centering or a slight upward optical bias is a candidate to inspect for compact tasks, not a source-free layout recipe. On short viewports, natural content access governs the layout. A page inside an existing family inherits its stable shell.
 
 **Inspect.** Compare whole viewports, long errors, zoom and virtual keyboard conditions. The exact offset is a project decision. Large reading surfaces or activity feeds instead need a stable upper origin and growth below.
 
@@ -48,7 +50,7 @@ Read these when a concrete technique helps the current design. They are original
 
 **Mechanism.** Order information by the reader's decisions: purpose and fit, immediate entry, working example, deeper model, evidence and maintenance. Use real links and native text for the essential path. A distinctive illustration can make the organizing idea memorable without carrying the only explanation.
 
-**Realization.** Use the publishing host's headings, links, code blocks, disclosure and tables. Design a theme-aware illustration from editable geometry and inspect it at actual display sizes; provide a narrow composition when a wide layout becomes illegible. Keep all necessary claims and commands selectable. The artwork's source, palette roles and build command remain available.
+**Realization.** Use the publishing host's headings, links, code blocks, disclosure and tables, inheriting its mature rendering system. Adopt fitting editable artwork or faithfully translate a complete approved design; necessary original identity or illustration follows its authorized allowlist scope. Inspect theme variants at actual display sizes and adapt a narrow composition when a wide layout becomes illegible. Keep all necessary claims and commands selectable. The artwork's source, palette roles and build command remain available.
 
 **Inspect.** Read at narrow and wide widths, switch themes, disable images, use keyboard links, copy the command and verify its installed result. A host-compatible local preview and the remote host are separate verification conditions. This repository's README applies this pattern as its own product surface.
 
@@ -58,7 +60,7 @@ Read these when a concrete technique helps the current design. They are original
 
 **Mechanism.** Decide whether the relation is sequence, containment, dependency, state or quantity. Choose one dominant visual grammar, use consistent roles and encode direction and boundaries explicitly.
 
-**Realization.** Keep the source entities/edges or data alongside generated SVG/layout code. Route connectors for readability while preserving their endpoints. Use semantic text, units and legends where needed. Offer a readable textual or tabular equivalent. Controls such as node spacing, label measure and emphasis remain separate from the underlying facts.
+**Realization.** Use a suitable mature diagram system or renderer and keep the source entities/edges or data alongside its configuration and output. Those product facts are content; the rendering system carries the visual grammar. Configure connector routing for readability while preserving endpoints. Use semantic text, units and legends where needed. Offer a readable textual or tabular equivalent. Controls such as node spacing, label measure and emphasis remain separate from the underlying facts. A genuinely unmet bespoke visual grammar needs a scoped, authorized W2 judgment rather than an automatic hand-drawn replacement.
 
 **Inspect.** Trace a path against the source, check overlaps at actual size and verify color-independent meaning. For a simple list, native prose or a table may be more direct. A visually elegant diagram with incorrect topology is not an acceptable tradeoff.
 
@@ -103,7 +105,7 @@ When adapting one of these patterns, keep a short record only if it will improve
 
 **Look and search.** Study working input blocks through multiline growth, attached files, pending work, submission and recovery. Search for complete composition/state implementations as well as semantic foundations. Compare their actual control hierarchy, reading space and continuity under the project's content; an empty rounded field is insufficient evidence.
 
-**Adopt and adapt.** Prefer a suitable source block, configure its slots and tokens, and connect protected actions to the application. Keep source geometry and state mechanisms where they serve the task. Patch an evidenced gap such as input-method composition handling or focus restoration at the responsible boundary, preserving the rest and owning the changed behavior.
+**Adopt and adapt.** Prefer a suitable source block, configure its slots and tokens, and connect protected actions to the application. Keep source geometry and state mechanisms where they serve the task. Patch an evidenced gap such as input-method composition handling or focus restoration at the responsible boundary, preserving the rest and owning the changed behavior. Such engineering repair can be normal adaptation; a new visible mechanism that replaces the source's design responsibility requires the relevant allowlist judgment and authorization.
 
 **Inspect.** Exercise keyboard and input-method composition, long localized strings, attachment addition/removal, quick repeated input and delayed outcomes. Check that adoption retained the source's spatial relationships as well as its function. A source with the wrong workflow may be a poor foundation even when its visual finish is strong.
 
@@ -113,7 +115,7 @@ When adapting one of these patterns, keep a short record only if it will improve
 
 **Look and search.** Study cross-domain editorial, photographic or spatial references alongside mature product task flows. Find adoptable assets and visual components whose focal position, material and timing can coexist with that work. Keep candidate source and current-project evidence separate.
 
-**Adopt and adapt.** Compose a selected asset with an existing mature functional block. Adapt public controls, crop, layer order and type roles before rebuilding the asset mechanism. Keep one governing visual language while allowing different responsibilities to have different treatments. For reduced motion or limited rendering, design a still or simpler representation that retains the recognizable subject and usable task.
+**Adopt and adapt.** Compose a selected asset with an existing mature functional block. Adapt public controls, crop, layer order and type roles while retaining the asset mechanism; original replacement follows the closed allowlist. Keep one governing visual language while allowing different responsibilities to have different treatments. For reduced motion or limited rendering, use a source-supported still, derivative or simpler representation that retains the recognizable subject and usable task. Preserve any unsolved fallback quality as an explicit gap rather than inventing an unrelated substitute.
 
 **Inspect.** Use populated work, long reading, navigation and repeated input in both active and quiet states. If the background overwhelms a result, test its local placement/intensity and content layer rather than automatically removing all expression. The selected asset and mature function still require whole-page verification; source quality does not add together automatically.
 
@@ -125,8 +127,11 @@ its navigation column at a narrow width removed the user's path to history.
 Component maturity does not cover a surrounding shell's omitted entry.
 
 **Adapt at the owner.** Keep the original conversation and thread-list mechanisms.
-Provide a discoverable narrow navigation entry, associate the toggle with its
-region, and check opening, dismissal and task return with real populated content.
+Use the source's responsive variant or a compatible mature navigation control to
+provide a discoverable narrow entry. Associate the toggle with its region and
+check opening, dismissal and task return with real populated content. A necessary
+new visible extension requires the scoped W3 evidence and authorization; the missing
+entry alone does not authorize a new shell.
 A different task may use a different navigation pattern; the transferable rule
 is preservation of the journey, not this study's particular shell.
 
@@ -143,8 +148,9 @@ establish whether it was open, focusable or about to finish its exit.
 
 **Investigate and adapt.** Observe the relevant close and return sequence, inspect
 actual open state and active focus after settling, and identify ownership. Use
-supported controlled-state and close-autofocus hooks for a demonstrated gap
-before rewriting the mature drag/scroll mechanism. Preserve edited local content
+supported controlled-state and close-autofocus hooks for a demonstrated gap while
+retaining the mature drag/scroll mechanism. Any proposed original replacement
+must meet the closed allowlist before implementation. Preserve edited local content
 through reopen where the task needs it; do not imply server persistence.
 
 **Inspect.** Exercise close, reopen, Escape, scrolling, drag reversal and focus

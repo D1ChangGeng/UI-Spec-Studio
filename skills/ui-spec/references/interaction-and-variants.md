@@ -2,6 +2,8 @@
 
 Align interactions with the current task. Study mature behavior through its relevant controls and states, then verify the inherited relationships in composition and runtime.
 
+Apply [default-deny original UI construction](component-sourcing.md#default-deny-original-ui-construction) to visible states, motion, feedback and quiet alternatives as well as settled components. The methods below guide mature-source selection, configuration, business connection and focused repair. A low-level API, known physics technique or source screenshot does not authorize recreating a visual mechanism. Original additions require the [closed allowlist](component-sourcing.md#closed-original-construction-allowlist) and its actual scope authorization.
+
 ## Contents
 
 - [Controls, objects and choices](#control-semantics-and-focus)
@@ -15,6 +17,8 @@ Align interactions with the current task. Study mature behavior through its rele
 ## Control semantics and focus
 
 Use native elements or suitable accessible primitives. Name icon-only controls and provide usable targets; hover hints supplement names and touch. Follow each control pattern's focus entry, movement, dismissal and return. When a control disappears, return focus to a usable, visible task element.
+
+Separate their responsibilities: native controls can carry their platform-provided visual treatment when it fits the target, while unstyled primitives supply semantics, focus and state. A custom visual layer around a primitive still needs its mature visual foundation; using an accessible dependency does not satisfy the whole component's design-source obligation.
 
 Complete key paths with keyboard and pointer/touch. Check focus visibility, pending/disabled semantics, field-error association and useful announcements. Reinforce color status with language, shape or icons. Meet the project's accessibility target and report the checks actually performed.
 
@@ -37,13 +41,13 @@ Define locale initialization, preference priority and persistence; preserve the 
 
 ## Themes and perception
 
-Map surfaces, type, borders, focus, status, elevation and effects to semantic roles. View each theme under actual backgrounds and font rendering: brightness and contrast affect perceived weight and legibility.
+Inherit the selected design system's semantic roles for surfaces, type, borders, focus, status, elevation and effects, then configure supported themes for the product. View each theme under actual backgrounds and font rendering: brightness and contrast affect perceived weight and legibility. A missing theme is a source/adaptation question, not automatic permission to invent a new surface system.
 
 Define initialization, system preference and explicit overrides; establish theme before meaningful paint. Keep all components coherent and retain task state during switching. Controls communicate action or current state consistently. Group locale, theme, identity and navigation utilities by meaning.
 
 ## Motion
 
-Name the event and purpose: entry, navigation, manipulation, local change, feedback or expressive emphasis. Choose timing, trajectory and easing for its meaning and frequency. Inspect corresponding reference, demo, trial and integrated episodes; recheck affected motion after theme, container or state-adapter changes. Endpoints leave the transition unresolved.
+Name the event and purpose: entry, navigation, manipulation, local change, feedback or expressive emphasis. Select a mature mechanism and configure timing, trajectory and easing for its meaning and frequency while retaining its defining relationships. Inspect corresponding reference, demo, trial and integrated episodes; recheck affected motion after theme, container or state-adapter changes. Endpoints leave the transition unresolved.
 
 Preserve object identity through expansion, reversal and return. A flip needs coordinated faces, pivot, visibility and active hit regions; test reversal from intermediate positions. Acknowledgment can begin before data arrives, while pending presentation carries unresolved work. A completed animation does not establish business completion.
 
@@ -133,7 +137,7 @@ Exercise input, submit/cancel/retry, rapid selection, loading and long-content s
 
 ## Inherit behavior at its useful scope
 
-Study a foundation's complete task loop through actual controls, including concealed menus, panels and return paths. For an auxiliary area, observe width allocation, stable task entry, reading measure and focus through opening and closing. Transfer the useful relationship and test it with current content, input, loading and recovery. The current application owns product-specific behavior and outcomes.
+Study a foundation's complete task loop through actual controls, including concealed menus, panels and return paths. For an auxiliary area, observe width allocation, stable task entry, reading measure and focus through opening and closing. Adopt and adapt the implementation carrying the useful relationship, then test it with current content, input, loading and recovery. Observation or technique transfer alone does not authorize rebuilding the visible mechanism. The current application owns product-specific behavior and outcomes.
 
 ## Assets have runtime states
 
@@ -156,6 +160,8 @@ Conditions belong to the observed episode: viewport, theme, language, content gr
 
 Treat **Effect**, **Interaction Ownership** and **Implementation Route** as different questions. The effect is what becomes perceptible: reveal, flip, expand, reorder, spatial transition, changing material or narrative progression. Ownership identifies who controls progress: an authored clock, scroll position, direct input, application state or a combination. The route is a mature component, platform animation, Motion/GSAP, Canvas/WebGL or another implementation. A technology name is not a visual goal and a timed demonstration is not evidence for direct manipulation.
 
+A platform animation API or engine is a technical support layer unless a concrete mature implementation supplies the effect's visual relationships. It may run an adopted effect, implement a faithful complete-design translation, or support a narrowly authorized original exception. Choosing the engine is not a fourth construction route or an exemption for short animations.
+
 Use the relationship **intended effect → actual control requirements → mature resource discovery → viewed original episode → current-project trial → integrated-use verification**. A ready-made drawer may already coordinate focus, drag, constraints, dismissal and settling. Its adjustable visual layer is a stronger starting point than implementing gesture physics from a screenshot. An ambient material can be appropriate for a different task and should not inherit the drawer's input rules. Select a route for actual capability and total cost, not a rigid engine ladder, unverified bundle-size claim or preference for familiar technology.
 
 ### Inspect how an adopted component answers uncertain input
@@ -163,6 +169,8 @@ Use the relationship **intended effect → actual control requirements → matur
 For a directly manipulated object, inspect the interval while input is held, the release and the final settle. A residual transform transition can make the object chase the pointer rather than follow it. Boundary resistance, travel and snapping should communicate the intended object and constraints. Direction changes can conflict with page scrolling; taps and drags need distinguishable behavior. Inspect fast flicks, slow deliberate movement, reversal, new input while settling, cancellation and lost capture. A component that looks good after settling may mishandle every one of these cases.
 
 Prefer a source that already supports the relevant behavior and exposes useful controls. Investigate its velocity sampling and release decision when physical response fails: an isolated near-zero event interval can magnify noise, whereas a whole-gesture average can hide the final flick. A recent sampling window is a useful implementation candidate, but its interval, distance thresholds, damping and spring constants depend on the object and device. Do not transfer a recipe's numbers as product requirements. A simple tap control may need only immediate feedback; elaborate physics is not a universal maturity requirement.
+
+Use that diagnostic knowledge to configure or repair the selected source without replacing its defining interaction. A new visible gesture mechanism requires the applicable W2/W3 necessity, bounded scope and authorization; poor first integration or familiarity with the algorithm does not supply them. Continue supported state, focus and business integration while an independent visual gap remains unresolved.
 
 Read the actual platform contract before changing gesture ownership. With Pointer Events, browser gesture handling and `touch-action` are established at gesture start; changing it later does not retroactively claim the current gesture. Account for `pointercancel`, captured input, ordinary scrolling and pinch zoom. A mature drag component and a mature semantic dialog can still conflict when composed; check the combined focus, dismissal and scrolling owners. See [platform touch handling](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action) and [Motion's drag controls](https://motion.dev/docs/react-drag) for their scoped APIs rather than assuming every host implements the same route.
 

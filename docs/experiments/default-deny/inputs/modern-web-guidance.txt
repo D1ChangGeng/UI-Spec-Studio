@@ -1,0 +1,574 @@
+
+--- Guide for motion ---
+# Motion
+
+- Use `clip-path` and `mask-image` for custom geometric reveals and smooth fade-outs.
+- Use **Scroll-Driven Animations** (`animation-timeline: scroll()`) for non-essential scroll-bound effects instead of JS listeners.
+- Use **View Transitions** to animate between complex layout states seamlessly.
+
+### Performance
+
+- Prefer to animate `opacity` and `transform` (including individual transform properties, e.g. `translate` instead of `left/right/top/bottom`) to ensure animations stay on the compositor thread.
+- Use `transition-behavior: allow-discrete`, `@starting-style`, and (for top-layer elements like `<dialog>` or `[popover]`) `overlay` to animate discrete entry and exit states natively; see `animate-element-entry-exit` (via `npx -y modern-web-guidance@latest retrieve "animate-element-entry-exit"`) and `animate-to-from-top-layer` (via `npx -y modern-web-guidance@latest retrieve "animate-to-from-top-layer"`).
+
+```css
+.popover-reveal {
+  /* Transition discrete display and top-layer overlay alongside opacity */
+  transition:
+    opacity ease-out,
+    display,
+    overlay;
+  transition-duration: 0.2s;
+  transition-behavior: allow-discrete;
+}
+```
+
+### Accessibility
+
+Use `prefers-reduced-motion` media queries to turn off heavy motion for users who prefer it.
+- **Provide Pause mechanism**: Allow users to stop auto-running carousels, banners, or other persistent animations.
+- **Default to static views**: Consider defaulting to static states and allowing users to opt-in to motion.
+- **Don't exceed flash limits (three per second)**: Never include rapid light-to-dark flashing. Such effects can cause seizures.
+
+**DO NOT** globally apply `animation-duration: 0.01ms;` as it can cause certain animations to become _more_ jarring.
+Instead, handle motion preferences on a case-by-case basis using one of two approaches, nesting the `@media` query inside the rule so both versions are kept together:
+
+- **Start with animations enabled by default, and tone them down using `@media (prefers-reduced-motion: reduce)`**:
+
+```css
+/* Good: Dampen spin states or slow down animations for reduced motion */
+.spinner {
+  animation: spin 1s linear infinite;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+progress:not([value]) {
+  animation: slide 1s infinite linear;
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 20s;
+  }
+}
+```
+
+- **Start with no animations by default, and enable them using `@media (prefers-reduced-motion: no-preference)`**:
+
+```css
+/* Good: Default to static or gentle states and opt-in to full motion */
+.spinner {
+  opacity: 0.5;
+  @media (prefers-reduced-motion: no-preference) {
+    opacity: 1;
+    animation: spin 1s linear infinite;
+  }
+}
+
+progress:not([value]) {
+  animation: slide 20s infinite linear;
+  @media (prefers-reduced-motion: no-preference) {
+    animation-duration: 1s;
+  }
+}
+```
+
+### Working with animation and transition events in JavaScript
+
+On both the `AnimationEvent` (`animationstart`, `animationiteration`, `animationend`, `animationcancel`) and `TransitionEvent` (`transitionrun`, `transitionstart`, `transitionend`, `transitioncancel`) interfaces, `event.target` gives you the originating DOM element. To access the specific `Animation` object (`Animation`, `CSSAnimation`, or `CSSTransition`) that triggered the event, use the readonly `event.animation` property.
+
+When `event.animation` is not available, you can usually find the `Animation` instance by calling `event.target.getAnimations()` and filtering by `event.animationName` (or `event.propertyName` for transitions). However, using `event.animation` directly is preferred, in order to avoid several scenarios where this fallback that filters `event.target.getAnimations()` does not work as expected:
+
+- Web Animations API (`element.animate()`) animations do not have an `animationName`, so they cannot be matched by name when filtering `event.target.getAnimations()`.
+- Filtering by `animationName` for `AnimationEvent`s is ambiguous when multiple animations with the same name are attached to the same element.
+  - Note that filtering on `transitionProperty` for `TransitionEvent`s works as there is only one event per transition property. 
+- `event.target` always points to the originating DOM element, so it does not distinguish between animations running on the element itself versus one of its pseudo-elements — whereas `event.animation.effect.pseudoElement` exposes the target pseudo-element directly.
+
+```js
+// Works in most basic CSS animation cases, but fails for WAAPI animations,
+// duplicate animation names on the same element, or pseudo-elements.
+document.addEventListener('animationstart', (event) => {
+  const animation = event.target
+    .getAnimations()
+    .find((anim) => anim.animationName === event.animationName);
+  console.log(animation);
+});
+
+// PREFERRED: Directly access the exact Animation object via event.animation
+document.addEventListener('animationstart', (event) => {
+  const animation = event.animation;
+  console.log(animation);
+});
+```
+
+You can feature-detect support using `'animation' in AnimationEvent.prototype` (or `'animation' in TransitionEvent.prototype`).
+
+--- Guide for dialog ---
+# Dialog
+
+## Overview
+
+Use the native `<dialog>` element for modal and non-modal dialogs. It provides the accessibility semantics, focus handling, top-layer rendering and `Esc` handling that custom overlays have to rebuild by hand.
+
+## Choose the overlay type
+
+Pick the first rule that matches. If unsure, use Rule 1.
+
+### Rule 1: The overlay interrupts the user and blocks the page (default)
+
+Use for confirmations, forms, sign-in, destructive actions, and any "modal", "dialog", "lightbox" or "popup" request that does not say otherwise.
+
+Use `<dialog>` opened as a modal, declaratively with `command="show-modal"` (see `declarative-dialog-popover-control` (via `npx -y modern-web-guidance@latest retrieve "declarative-dialog-popover-control"`)) or from script with `showModal()`.
+
+```html
+<button type="button" command="show-modal" commandfor="confirm">Delete</button>
+
+<!-- MANDATORY: no role="dialog" or aria-modal; the native modal already provides them -->
+<dialog id="confirm" aria-labelledby="confirm-title">
+  <h2 id="confirm-title">Delete this item?</h2>
+  <form method="dialog">
+    <button value="cancel" autofocus>Cancel</button>
+    <button value="delete">Delete</button>
+  </form>
+</dialog>
+```
+
+The browser provides: inert page, focus containment, top layer, `::backdrop`, `Esc` and back-gesture dismissal, and focus return to the invoker.
+
+- **DON'T** add `role="dialog"`, `aria-modal`, a focus trap, `inert` toggling or an `Esc` handler.
+- **DON'T** open it with `show()` or the `open` attribute.
+- **DO** stop the page scrolling behind it with the CSS below. See `prevent-page-scroll-under-modal-dialog` (via `npx -y modern-web-guidance@latest retrieve "prevent-page-scroll-under-modal-dialog"`) for the details.
+- **DON'T** lock scrolling with `overflow: hidden` or `position: fixed` on `html` or `body`.
+
+```css
+/* MANDATORY (both rules): without them, scrolling over the backdrop or inside the dialog scrolls the page behind it */
+dialog:modal {
+  overscroll-behavior: contain; /* stops scroll gestures in the dialog chaining to the page */
+}
+dialog::backdrop {
+  overflow: hidden; /* ::backdrop is not a scroll container by default, so it would ignore overscroll-behavior */
+  overscroll-behavior: contain;
+}
+```
+
+Not for menus or tooltips: see Rule 3.
+
+### Rule 2: The user keeps working in the page while the panel is open
+
+Use for find bars, inspectors, palettes and compose panes that are still dialogs semantically.
+
+Use `<dialog popover>` for a top-layer panel with popover dismissal (`auto` light-dismisses, `manual` does not). Use `dialog.show()` only when the panel must not be in the top layer.
+
+```html
+<button type="button" popovertarget="find">Find</button>
+<dialog id="find" popover="manual" aria-labelledby="find-title">
+  <h2 id="find-title">Find</h2>
+  <input type="search" aria-label="Search">
+  <button type="button" popovertarget="find" popovertargetaction="hide">Close</button>
+</dialog>
+```
+
+The page stays interactive and is not made inert.
+
+- **DO** include a visible close button.
+- **DON'T** use `showModal()`, which blocks the page.
+
+Not for blocking confirmations: see Rule 1.
+
+### Rule 3: The overlay is not a dialog
+
+Use for menus, dropdowns, tooltips, hovercards and toasts.
+
+Use a semantic element with the `popover` attribute, not `<dialog>`.
+
+```html
+<button type="button" popovertarget="menu">Actions</button>
+<ul id="menu" popover>
+  <li><a href="/rename">Rename</a></li>
+</ul>
+```
+
+## Choose how it can be dismissed
+
+The default depends on how the dialog is opened. If `closedby` is absent or invalid, `showModal()` behaves as `closerequest` and any other way of opening behaves as `none`.
+
+- **Esc and back gesture only (modal default):** set nothing, or `closedby="closerequest"`.
+- **Also click outside to close:** use `closedby="any"`.
+- **Only the developer closes it (for example a form with unsaved changes):** use `closedby="none"` and add a confirmation path. See Closing below.
+
+## Guidelines
+
+### Accessible name and initial focus
+
+- **DO** name every dialog with `aria-labelledby` pointing at its heading, or `aria-label` when there is no visible title.
+- **DO** put `autofocus` on the primary control or first field.
+- **DO** put `autofocus` on the safe action (such as Cancel or Keep) in a destructive confirmation.
+- **DON'T** write code to return focus on close. The browser returns it to the invoker.
+
+### Opening
+
+- **DO** open declaratively with `command="show-modal"` and `commandfor` on a `<button>`. See `declarative-dialog-popover-control` (via `npx -y modern-web-guidance@latest retrieve "declarative-dialog-popover-control"`).
+- **DO** use `dialog.showModal()` when opening from script.
+
+### Closing
+
+- **DO** close with `<form method="dialog">` buttons or `command="close"`.
+- **DO** choose `closedby` deliberately: `any` (light dismiss and `Esc`), `closerequest` (`Esc` only, the modal default) or `none` (developer-controlled close only).
+- **DO** use `command="request-close"` or `requestClose()` for Cancel buttons that must honor unsaved-changes logic. They fire `cancel` first and ignore `closedby`.
+- **DO** treat `closedby` as progressive enhancement. `Esc` and the mobile back gesture already close modals without it.
+
+### Hooking into close
+
+- **DO** read `dialog.returnValue` in a `close` listener to learn which button was used, then reset it with `dialog.returnValue = ''`. `Esc` and other close requests set no value, and browsers differ on whether they clear the previous one, so without the reset a stale value can leak. Treat `''` as "dismissed without choosing".
+- **DO** use `cancel` to intercept `Esc` and `request-close`, but do not rely on `preventDefault()` for repeated `Esc` presses without user activation.
+- **DO** use `closedby="none"` with an explicit confirmation step for dirty forms.
+- **DO** tell the user why the dialog stayed open when `cancel` is prevented: show a visible message and reference it with `aria-describedby` from the control that receives focus (such as Discard), so a screen reader reads it when focus moves. Without it, focus moving to a new button announces only that button's name.
+- **DON'T** let the confirmation move controls under the pointer. Reserve the message's space (hide it with `visibility`, not `display` or `hidden`) and add the destructive button where existing buttons do not move (for example first in a right-aligned row), so a second click at the same spot cannot discard the user's changes.
+
+### Non-modal dialogs
+
+- **DO** use `<dialog popover>` (`auto` or `manual`) for a top-layer panel, and `dialog.show()` when you do not want the top layer.
+- **DO** include a visible close button in every non-modal dialog.
+
+### Backdrop and styling
+
+- **DO** style `::backdrop` and use `dialog:modal` to target modal-only styles.
+- **DO** leave animation to `animate-to-from-top-layer` (via `npx -y modern-web-guidance@latest retrieve "animate-to-from-top-layer"`), dragging to `drag` (via `npx -y modern-web-guidance@latest retrieve "drag"`), and reparenting to `persistent-top-layer-ui` (via `npx -y modern-web-guidance@latest retrieve "persistent-top-layer-ui"`).
+- **DON'T** set `display` on `dialog` unconditionally. It overrides the closed state. Scope it with `dialog[open]`.
+
+### Accessibility
+
+- **DON'T** add `role="dialog"`, `aria-modal`, a manual focus trap or `inert` toggling to a native modal.
+- **DO** use a native `<button>` with an accessible name for close controls.
+- **DO** use one consistent heading level for dialog titles.
+
+## Fallback strategies
+
+### `closedby` (`dialog-closedby`)
+
+Browser support for <dialog closedby>: Limited availability.
+Supported by: Chrome 134 (Mar 2025), Edge 134 (Mar 2025), and Firefox 141 (Jul 2025).
+Unsupported in: Safari.
+
+Without `closedby`, a modal still closes with `Esc` and the back gesture; only click-outside is lost, so this is graceful degradation. `closedby="none"` is ignored the same way: `Esc` fires `cancel` and then closes the dialog. Keep the unsaved-changes guard in a `cancel` handler, not in `closedby="none"` alone, so it also protects where `closedby` is missing. If your Baseline target requires light dismiss, add this where `closedby` is missing:
+
+```js
+if (!('closedBy' in HTMLDialogElement.prototype)) {
+  // Test the pointer position, not event.target: the <dialog> is also the target for its own
+  // padding and the gaps between its children, so a target check would close on those clicks
+  const outside = (e, dialog) => {
+    const r = dialog.getBoundingClientRect();
+    return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+  };
+  for (const dialog of document.querySelectorAll('dialog[closedby="any"]')) {
+    let pressedOutside = false;
+    dialog.addEventListener('pointerdown', (e) => { pressedOutside = outside(e, dialog); });
+    // Require the press and the release outside, so a text-selection drag that ends on the backdrop does not dismiss
+    dialog.addEventListener('pointerup', (e) => { if (pressedOutside && outside(e, dialog)) dialog.close(); });
+  }
+}
+```
+
+### `overscroll-behavior`
+
+Browser support for overscroll-behavior: Limited availability.
+Supported by: Chrome 144 (Jan 2026), Edge 144 (Jan 2026), and Firefox 150 (Apr 2026).
+Unsupported in: Safari.
+
+Treat scroll containment as progressive enhancement. Do not feature-detect it: `@supports` reports the property as supported even where non-scrollable containers ignore it. Where it is not enforced, the dialog still contains scroll whenever its own content overflows, and `showModal()` still makes the page inert. Do not fall back to `overflow: hidden` or `position: fixed` on `html` or `body`, which removes the root scrollbar and shifts the layout.
+
+### Invoker Commands (`command` / `commandfor`)
+
+Baseline status for Invoker commands: Newly available. It's been Baseline since 2025-12-12.
+Supported by: Chrome 135 (Apr 2025), Edge 135 (Apr 2025), Firefox 144 (Oct 2025), and Safari 26.2 (Dec 2025).
+
+If your Baseline target does not include Invoker Commands, keep the same markup and conditionally load the polyfill (the same experience, as progressive enhancement). Detect on the interface and never load it unconditionally:
+
+```js
+// MANDATORY: feature detect on HTMLButtonElement.prototype and load only when native support is missing
+if (!('commandForElement' in HTMLButtonElement.prototype)) {
+  import('invokers-polyfill'); // npm install invokers-polyfill
+}
+```
+
+Only Rules 2 and 3 use Popover.
+
+### Fallbacks & browser support for Popover
+
+Baseline status for Popover: Newly available. It's been Baseline since 2025-01-27.
+Supported by: Chrome 116 (Aug 2023), Edge 116 (Aug 2023), Firefox 125 (Apr 2024), Safari 17 (Sep 2023), and Safari iOS 18.3 (Jan 2025).
+
+The Popover API is mostly **progressive enhancement**, but its defining behaviors — top-layer promotion, light-dismiss, and `popovertarget` invocation — have no CSS-only equivalent. Older browsers need a polyfill, or a manual fallback if you would rather not ship one.
+
+**Polyfill:** To support the `popover` attribute in older browsers, conditionally load [`@oddbird/popover-polyfill`](https://github.com/oddbird/popover-polyfill). **MANDATORY:** Feature detect by checking for the `popover` property on `HTMLElement.prototype`, and load the polyfill **only** when native support is missing — do NOT load it unconditionally.
+
+With a bundler or import map:
+
+```js
+// MANDATORY: Feature detect 'popover' on HTMLElement.prototype.
+if (!("popover" in HTMLElement.prototype)) {
+  import("@oddbird/popover-polyfill");
+}
+```
+
+Without a bundler, import from a CDN inside a `<script type="module">`:
+
+```html
+<script type="module">
+  if (!("popover" in HTMLElement.prototype)) {
+    import("https://unpkg.com/@oddbird/popover-polyfill@latest/dist/popover.min.js");
+  }
+</script>
+```
+
+**Styling caveat:** The polyfill cannot define the real `:popover-open` pseudo-class, so it applies a `.\:popover-open` class instead. **MANDATORY:** Combine the two with `:is()` or `:where()`, otherwise browsers that lack `:popover-open` discard the entire rule:
+
+```css
+[popover]:is(:popover-open, .\:popover-open) {
+  display: block;
+}
+```
+
+Alternatively, for a legacy fallback without a polyfill, use `position: fixed` and manually calculate coordinates via `getBoundingClientRect()` or rely on default positioning with `inset: auto` if that's acceptable for the use case.
+
+
+--- Guide for prevent-page-scroll-under-modal-dialog ---
+# Prevent the Page Underneath a Modal Dialog from Scrolling
+
+When a `<dialog>` element is opened as a modal using `showModal()`, the browser promotes it to the top layer and marks the rest of the document inert. While that blocks pointer clicks and keyboard focus on the underlying page, it does not prevent scrolling:
+
+1. Scrolling while the pointer or touch gesture is over the `::backdrop` scrolls the page underneath.
+2. Scrolling inside the `<dialog>` chains to the underlying page once the dialog reaches its scroll boundary—or immediately if the dialog's content does not overflow.
+
+Per the CSS Overscroll Behavior specification, `overscroll-behavior` applies to **all scroll container elements**, including non-scrollable scroll containers (elements with `overflow: hidden`, or `overflow: auto` whose content does not currently overflow). By combining `overscroll-behavior: contain` on the `<dialog>` with `overflow: hidden` and `overscroll-behavior: contain` on `dialog::backdrop`, you can prevent the underlying page from scrolling using pure CSS.
+
+## Implementation
+
+### 1. Contain scroll chaining on the `<dialog>`
+
+The user-agent stylesheet sets `overflow: auto` on `<dialog>`, making it a scroll container by default. Apply `overscroll-behavior: contain` (or `none`) to `dialog:modal` (or `dialog`).
+
+### 2. Turn `::backdrop` into a scroll container and contain its scroll
+
+By default, `dialog::backdrop` has `overflow: visible`, which means it is **not** a scroll container and ignores `overscroll-behavior`. You must set `overflow: hidden` on `dialog::backdrop` to make it a non-scrollable scroll container, and pair it with `overscroll-behavior: contain` so scroll gestures performed over the backdrop are trapped and do not reach the document underneath.
+
+## Example Code
+
+```css
+dialog:modal {
+  /* MANDATORY: Prevent scroll gestures inside the modal (even when its content
+     does not overflow) from chaining to the underlying page. */
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  /* MANDATORY: ::backdrop defaults to overflow: visible (not a scroll container).
+     Set overflow: hidden so it becomes a non-scrollable scroll container that
+     honors overscroll-behavior. */
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+```
+
+## Best Practices & Constraints
+
+- **MANDATORY**: Set `overscroll-behavior: contain` on the `<dialog>` element itself (using the `dialog:modal` selector) and the `dialog::backdrop`. Without this declaration, scroll gestures over the backdrop or inside the dialog will still chain to the page.
+- **MANDATORY**: Set `overflow: hidden` (or `overflow: auto`) on `dialog::backdrop` so that it becomes a scroll container. Without this declaration `::backdrop` defaults to `overflow: visible` and `overscroll-behavior` will have no effect.
+- **DO NOT** use `overflow: clip` or `overflow: visible` on `dialog::backdrop` or `dialog`. Neither value establishes a scroll container, so `overscroll-behavior` will not apply.
+- **DO NOT** apply `overflow: hidden` or `position: fixed` to `<html>` or `<body>` to lock background scrolling when a dialog opens. Mutating root overflow removes the page scrollbar (causing horizontal layout shift), can reset or jump the page scroll position, and can break `position: sticky` elements on the underlying page.
+
+## Fallback Strategies
+
+Browser support for overscroll-behavior: Limited availability.
+Supported by: Chrome 144 (Jan 2026), Edge 144 (Jan 2026), and Firefox 150 (Apr 2026).
+Unsupported in: Safari.
+
+While the `overscroll-behavior` CSS property is supported across all major browsers for scroll containers that have overflowing content, respecting `overscroll-behavior` on **non-scrollable** scroll containers is a newer specification that cannot be feature detected.
+
+**DO NOT** attempt to feature-detect non-scrollable container support with `@supports (overscroll-behavior: contain)` or `CSS.supports('overscroll-behavior', 'contain')`. All modern browsers support the `overscroll-behavior: contain` property syntax and return `true`, even if they only enforce it when content overflows.
+
+Instead, treat scroll containment on non-scrollable scroll containers as a **progressive enhancement**:
+
+- In browsers that support `overscroll-behavior` on non-scrollable scroll containers, background page scrolling is completely prevented both over `dialog::backdrop` and inside the `<dialog>` (whether or not its content overflows).
+- In browsers that do not yet support `overscroll-behavior` on non-scrollable scroll containers, `overscroll-behavior: contain` on `dialog` still prevents scroll chaining whenever the dialog's own content overflows and is scrollable. Meanwhile, `showModal()` still traps keyboard focus and marks the background document `inert`.
+- Relying on progressive enhancement is recommended over legacy workarounds that apply `overflow: hidden` or `position: fixed` to `<html>` or `<body>`, because it does not remove the root scrollbar, cause horizontal layout shifts, jump the page scroll position, or break `position: sticky` elements on the underlying page.
+
+--- Guide for same-document-transitions ---
+# Same Document Transitions
+
+## The Problem
+
+Web sites often provide multiple views of an object, for instance a list of products, and then a detail page for each product. Navigating between the two views often feels disconnected. When a user clicks a product thumbnail to view its details, the thumbnail disappears and a new, larger image appears instantly elsewhere on the screen. This lack of continuity makes it harder for users to track relationships between elements.
+
+## The Solution
+
+The **View Transitions API** allows you to specify element pairs that exist in different states before and after a transition. When triggering a transition with `document.startViewTransition()` in a Single Page Navigation (SPA), the browser identifies these shared elements by their shared unique `view-transition-name`. It then automatically calculates the difference in their position, size, and styling, and animates them smoothly from the old state to the new state. This transition occurs in the top layer, above even elements with high `z-index` values.
+
+## Implementation Guide
+
+### Step 1: Wrap State Changes in `startViewTransition`
+
+For Single-Page Applications (SPAs) or simple state changes, wrap the logic that updates the DOM in `document.startViewTransition`. The browser captures a snapshot of the current state, runs the update, and then captures the new state. 
+
+```javascript
+function navigate(view) {
+  // MANDATORY: Wrap the update in startViewTransition
+  document.startViewTransition(() => updateDOM(view));
+}
+```
+
+### Step 2: Assign Shared Transition Names
+
+Use the `view-transition-name` CSS property to tell the browser which elements should be morphed. The name can be anything (except `none`). **MANDATORY**: there must be no more than 1 element before and after with a given `view-transition-name`. If there are 2 or more elements with a given `view-transition-name`, the DOM will be updated to the new state immediately, without a transition.
+
+You can use multiple `view-transition-name`s to morph multiple pairs of elements. For example, you may want to transition both the product image and title with separate transitions.
+
+Because there are multiple items on the list view, you can not give the all of them the same `view-transition-name`. This can be solved in two ways in a SPA.
+
+1. **Dynamic detail page:** Assign each item on the list page a unique `view-transition-name`, and then dynamically apply that name to the matching element on the detail page when the list item is selected, as shown here.
+
+```css
+/* In the list view, give each */
+#product-1 { view-transition-name: p1 }
+#product-2 { view-transition-name: p2 }
+#product-3 { view-transition-name: p3 }
+```
+
+```js
+function updateDOM(clickedTransitionName){
+  const hero = document.getElementById("hero");
+  hero.style.viewTransitionName = clickedTransitionName;
+}
+```
+
+2. **Dynamic list item:** Assign the element on the detail page a `view-transition-name`, and apply that name to the item on the list page when it is selected. Remove the `view-transition-name` from the item on the list page when returning to the list page.
+
+The `#hero` element on the detail page and the selected `.thumbnail` element on the list page share a `view-transition-name`. 
+
+```css
+#hero{
+  view-transition-name: hero;
+}
+.thumbnail.selected {
+  view-transition-name: hero;
+}
+```
+
+When a thumbnail is clicked, we need to prepare the list view by assigning the `view-transition-name` using the `.selected` class selector, and making any changes to the DOM before starting the transition.
+
+Then, you can call `document.startViewTransition()`, and apply the changes to transition the page from the detail to list view.
+
+After navigating back to the list view, you must clean up the view transition classes to prevent the next navigation from erroring. You can perform this cleanup after the transition's `finished` promise resolves.
+
+```javascript
+// Function called when a thumbnail is clicked
+function goFromListToDetail(e){
+  e.currentTarget.classList.add("selected");
+  const hero = document.getElementById("hero");
+  const bgColor = getComputedStyle(e.currentTarget).backgroundColor;
+  hero.style.background = bgColor;
+
+  // Trigger the transition, checking for support
+  if (!document.startViewTransition) {
+    document.body.classList.add("detail");
+    // MANDATORY Accessibility Routing: Route focus to the newly revealed heading to announce context and preserve logical tab flow
+    document.getElementById("detail-heading")?.focus();
+    return; // MANDATORY: End function execution if view transitions are not supported.  
+  }
+  const transition = document.startViewTransition(() => {
+    document.body.classList.add("detail");
+  });
+  // MANDATORY Accessibility Routing: Route focus after the view transition resolves
+  transition.finished.finally(() => {
+    document.getElementById("detail-heading")?.focus();
+  });
+}
+
+// Function called when navigating from detail back to list view
+function goFromDetailToList() {
+  if (!document.startViewTransition) {
+    document.body.classList.remove("detail");
+    document.getElementById("list-heading")?.focus();
+    return;
+  }
+  const transition = document.startViewTransition(() => {
+    document.body.classList.remove("detail");
+  });
+  // Clean up the list view and route focus
+  transition.finished.finally(() => {
+    // Route focus back to list view
+    document.getElementById("list-heading")?.focus();
+    // Remove selected classList to remove view-transition-names
+    document.querySelectorAll(".selected").forEach(
+      (element) => {
+        element.classList.remove("selected");
+      },
+    );
+  });
+}
+```
+
+The method you choose will depend on the use case. The dynamic list item requires less repeated CSS, but more manual JavaScript cleanup.
+
+
+### Step 3: Fix Aspect Ratio "Stretching"
+
+By default, the browser cross-fades the old and new snapshots within a group that stretches to fit both. If you are transitioning text, set the width of the text element to `fit-content` on both the old and new views, so that the transitioned element's aspect ratio is stable.
+
+```css
+#list-page .title {
+  width: fit-content;
+}
+
+#detail-page #title {
+  width: fit-content;
+}
+```
+
+If you are transitioning elements that change aspect ratio, you may need to set the height of the old and new pseudo-elements to 100% of the `::view-transition-pair()` pseudo-element.
+
+```css
+::view-transition-old(hero),
+::view-transition-new(hero){
+  height: 100%;
+}
+```
+
+The pseudo-elements are snapshots of the live elements, so you can also use `object-fit` and `object-position` declarations for more control of the transitioning effect.
+
+## Best Practices
+
+-   **DO NOT** specify too many transitions. Only use shared elements for primary content that the user is actively tracking (e.g., hero images, headings).
+-   **DO** remove temporary `view-transition-name` values after the transition finishes to avoid side effects on future transitions.
+-   **DO NOT** transition elements with active animations. View transitions operate on snapshots, so any animations will appear to be paused during the view transition.
+-   **DO** respect user preferences for reduced motion using the `prefers-reduced-motion` media query.
+-   **MANDATORY Accessibility Routing**: View transitions morph page layouts dynamically but do not manage programmatic focus. If focus remains on an element that is hidden or removed during the transition, focus is abandoned, leaving keyboard and assistive technology users without context. Shift focus programmatically to an updated page heading or view container (using `tabindex="-1"`) immediately after the DOM updates or when the view transition's `finished` promise resolves.
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+```
+
+## Fallback Strategies
+
+Baseline status for View transitions: Newly available. It's been Baseline since 2025-10-14.
+Supported by: Chrome 111 (Mar 2023), Edge 111 (Mar 2023), Firefox 144 (Oct 2025), and Safari 18 (Sep 2024).
+
+The View Transitions API is designed for progressive enhancement. Browsers that do not support it will simply execute the DOM update immediately without animation.
+
+```javascript
+function navigate(){
+  if (!document.startViewTransition) {
+    // Fallback: Just update the DOM
+    updateDOM();
+  } else {
+    document.startViewTransition(() => updateDOM());
+  }
+}
+```
+

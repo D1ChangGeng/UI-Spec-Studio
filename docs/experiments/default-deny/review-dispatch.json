@@ -1,0 +1,28 @@
+{
+  "event": "product_review_dispatch_records",
+  "recorded_at_host_utc": "2026-10-30T12:29:15.090173+00:00",
+  "scope": "Dispatch calls occurred before their respective review captures; exact coordinator dispatch wall times were not recorded contemporaneously. Do not infer durations from this record.",
+  "reviews": [
+    {
+      "task": "T1",
+      "agent": "/root/review_collections",
+      "fork_turns": "none",
+      "model_override": false,
+      "prompt": "Independently inspect the two applications in /workspace/scratch/724448b5313d/ui-product-review/T1. Read REVIEW.md and REQUIREMENTS.md there and perform the requested product inspection. Do not edit either application or consult other workspaces, source-method instructions, or developer self-assessments. Keep actual browser evidence and a factual Chinese report under review-output/. Do not subdelegate. Finish within the 15-minute working window and distinguish actual viewed results from unverified limits."
+    },
+    {
+      "task": "T2",
+      "agent": "/root/review_motion",
+      "fork_turns": "none",
+      "model_override": false,
+      "prompt": "Independently inspect the two applications in /workspace/scratch/724448b5313d/ui-product-review/T2. Read REVIEW.md and REQUIREMENTS.md there and perform the requested product inspection. Do not edit either application or consult other workspaces, source-method instructions, or developer self-assessments. Keep actual browser evidence and a factual Chinese report under review-output/. Do not subdelegate. Finish within the 15-minute working window and distinguish actual viewed results from unverified limits."
+    },
+    {
+      "task": "T3",
+      "agent": "/root/review_conflicts",
+      "fork_turns": "none",
+      "model_override": false,
+      "prompt": "Independently inspect the two applications in /workspace/scratch/724448b5313d/ui-product-review/T3. Read REVIEW.md and REQUIREMENTS.md there and perform the requested product inspection. Do not edit either application or consult other workspaces, source-method instructions, or developer self-assessments. Keep actual browser evidence and a factual Chinese report under review-output/. Do not subdelegate. Finish within the 15-minute working window and distinguish actual viewed results from unverified limits."
+    }
+  ]
+}

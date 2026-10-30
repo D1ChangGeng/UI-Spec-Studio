@@ -8,7 +8,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from source_continuity import runtime_v117
+from source_continuity import runtime_v117, runtime_v118
 from test_tools import ROOT, package
 
 
@@ -22,12 +22,12 @@ class ObservableReleaseContinuityTests(unittest.TestCase):
         cls.ledger = json.loads(
             (ROOT/'docs/evidence/v1.18.0/continuity.json').read_text(encoding='utf-8'))
 
-    def test_current_runtime_and_exact_v117_identity(self):
+    def test_exact_v118_and_v117_identities(self):
         self.assertEqual(self.ledger['baseline_commit'],
                          '91e993b44deed4be07fc3d69e22e8142a17eccc0')
         for row in self.ledger['files']:
             with self.subTest(path=row['path']):
-                current = (ROOT/row['path']).read_bytes()
+                current = runtime_v118(ROOT, row['path'])
                 prior = runtime_v117(ROOT, row['path'])
                 self.assertEqual(digest(current), row['current_sha256'])
                 self.assertEqual(digest(prior), row['prior_sha256'])

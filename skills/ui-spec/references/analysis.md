@@ -111,7 +111,7 @@ Use evidence maturity to choose the next action:
 
 Judge target understanding, appropriate evidence, explored directions, comparison quality, implementation basis and remaining uncertainty together. Repeated similar results support convergence only after consequential questions and alternative directions have been examined. An unmet explicit art/experience goal remains a reason to investigate. Search effort alone cannot settle it.
 
-If access or fit remains unresolved, choose alternative evidence, focused user assistance, a bounded trial, scoped design revision or custom work by its likely learning value. State consequential limitations and preserve the actual quality target. New evidence or an unsuccessful trial can reopen understanding and selection at any stage.
+If access or fit remains unresolved, choose alternative evidence, focused user assistance, a bounded trial or scoped design revision by its likely learning value. Original construction requires a qualifying [W1–W3 exception](component-sourcing.md#closed-original-construction-allowlist) with actual authorization; learning value and search failure do not supply that authority. State consequential limitations and preserve the actual quality target. New evidence or an unsuccessful trial can reopen understanding and selection at any stage.
 
 ## Define each surface by responsibility
 
@@ -155,6 +155,12 @@ For example, a conventional settings page using an already inspected system can 
 
 Explain the concrete quality risk when declining an unsuitable single-iteration scope, then organize an achievable path through the full goal. Routine evidence-supported adjustments use existing authorization. Present the consequences and recommendation for material changes to accepted direction, commitments or delivery scope; continue independent authorized work. An unfinished goal remains unfinished after repartitioning. Preserve its origin and current responsibility instead of treating a new SPEC label as a successful handover.
 
+### Let source responsibility and SPEC scope inform each other
+
+Before formal visual implementation, connect owned quality to the mature source that actually supplies it. A whole input block may coordinate typography, attachment layout, material, growth and action feedback; preserve that coherent responsibility instead of classifying its simple CSS pieces as free original work. A shared token system can cover background, type and borders across many pages without repeating searches for each element. A source's functional API alone does not settle these visual relationships.
+
+Source discoveries can expand or merge a SPEC when mature work already solves its connected mechanisms. A special motion or genuinely unmet domain expression may need concentrated research and a narrower implementation boundary. Keep the full product goal, the remaining quality and its responsible increment through either change. Scope reduction cannot turn a rough probe into an acceptable foundation or erase an unresolved resource gap. Distinguish actual resource fit from an unsupported claim of uniqueness; [default-deny sourcing](component-sourcing.md#preserve-unresolved-responsibilities) governs the next route without adding another planning lifecycle.
+
 ### Separate research, implementation and regression scopes
 
 | Scope | Purpose |
@@ -169,7 +175,7 @@ These scopes may overlap without being identical. A composer refinement can stud
 
 State the important visual and interaction qualities the SPEC is responsible for, with a review condition that can reveal each one. For an input region this can include contour, material, type, internal spacing, action hierarchy and growth within adjacent space; for streaming it can include content growth, feedback, scroll continuity and user control. A background can own subject, lighting, material, compositional contribution, motion rhythm and foreground reading. Select the qualities that actually matter to the goal.
 
-Trace **target quality → real visual reference → mature resource or concrete implementation → actual presentation in the current product → remaining quality gap**. Research volume, dependency installation and a functioning prototype each establish their own facts. Verify the consequential relationship in actual use before claiming the design value was delivered. This is professional accountability, not a requirement to fill a fixed schema.
+Trace **target quality → real visual reference → mature resource, faithful authorized design translation or qualifying authorized W1–W3 implementation → actual presentation in the current product → remaining quality gap**. Research volume, dependency installation and a functioning prototype each establish their own facts. Verify the consequential relationship in actual use before claiming the design value was delivered. This is professional accountability, not a requirement to fill a fixed schema.
 
 For a new product, choose an initial closure that can demonstrate the core experience and visual direction at a quality worth inheriting. A representative conversation entrance and reading space can establish composition, type and mature interaction before advanced tools are added. Keep undeveloped capabilities visibly truthful. An exploratory scaffold can answer a question, but its provisional roughness should not silently become the shared visual foundation. Subsequent evidence can still revise an accepted foundation. Progress can remove, merge, replace or reorganize content as well as add it.
 
@@ -243,4 +249,4 @@ Use a **Design Decision Unit** for each consequential choice rather than each CS
 
 When a brief asks for refined, tactile, expressive or mature UI, identify the visible/interactive relationship the adjective should describe. Then ask which existing page, block, visual component or asset already resolves it. Distinguish the desired reuse scope from observed visual completeness and from the functional dependencies already chosen. Do not infer the interface's visual quality from the stack or the product category.
 
-Use an initial question to discover, not to fix the answer: does the task need moving content, moving light around stable content, a photographic subject, or a different type/composition relationship? Study materially different relevant implementations, allowing a strong resource to improve the experience hypothesis. Keep comparison depth proportional to impact, uncertainty and potential gain. Unknown access or inadequate candidates can justify wider research or a bounded trial; actual evidence and product constraints justify customization. Routine supported work need not reopen the entire ecosystem.
+Use an initial question to discover, not to fix the answer: does the task need moving content, moving light around stable content, a photographic subject, or a different type/composition relationship? Study materially different relevant implementations, allowing a strong resource to improve the experience hypothesis. Keep comparison depth proportional to impact, uncertainty and potential gain. Unknown access or inadequate candidates can justify wider research or a bounded trial. Evidence and product constraints justify supported adaptation; original visual construction additionally requires a qualifying authorized W1–W3 scope. Routine supported work need not reopen the entire ecosystem.

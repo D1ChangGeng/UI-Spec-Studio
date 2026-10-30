@@ -1,0 +1,64 @@
+{
+  "recorded_at_host_utc": "2026-10-30T12:35:18.228204+00:00",
+  "source_runtime_files": 37,
+  "runtime_files_changed": 20,
+  "unit_tests": {
+    "count": 313,
+    "result": "passed",
+    "log": "unit-tests.log",
+    "seconds": 30.083,
+    "scope": "Final runtime and complete retained main/follow-up study outputs, source history and existing regressions."
+  },
+  "package_validation": "passed",
+  "catalog_generated_map": "passed",
+  "readme_art": "byte identity verified",
+  "installer": {
+    "result": "passed",
+    "copies": 2,
+    "files_per_copy": 37,
+    "agents": [
+      "codex",
+      "claude-code",
+      "opencode"
+    ],
+    "log": "install.log",
+    "source": "Final v1.19.0 runtime, including worked-example correction."
+  },
+  "publication": {
+    "rendered_conditions": 12,
+    "policy_section_captures": 8,
+    "actual_viewed_samples": [
+      "local-zh-light-390.png",
+      "policy-zh-dark-390.png",
+      "policy-en-light-1440.png",
+      "policy-en-dark-390.png",
+      "policy-zh-light-1440.png"
+    ],
+    "source_hashes": {
+      "README.md": "7a8463bac4496e49365cfc025ccc7371b7c69392f3808286a5e65c29ba622c3d",
+      "README.zh-CN.md": "799366620264e96b76fcf649c0d91304962621ff434340f940a16ded13f0feba"
+    },
+    "findings": [
+      "Final Chinese glyphs render after environment font correction.",
+      "Viewed new policy sections retain readable native heading/prose/link hierarchy in the inspected narrow/wide light/dark conditions.",
+      "No document overflow in the 12 general renders or 8 policy-section captures."
+    ],
+    "scope": "Local Markdown approximation; sampled actual visual inspection, not exact GitHub host rendering or human acceptance.",
+    "initial_limit": "First render lacked CJK font; its report is preserved and it does not support Chinese visual-quality claims.",
+    "capture_archive_index": "publication/capture-index.json",
+    "source_unchanged_since_render": true
+  },
+  "remaining_remote_gates": "Exact-commit cross-platform CI, committed/published installation, live GitHub rendering, browser fixtures and release-asset readback.",
+  "initial_unit_tests": {
+    "count": 310,
+    "log": "initial-unit-tests.log",
+    "scope": "Initial registered B source before final worked-example correction and study identity checks."
+  },
+  "final_runtime_archive_sha256": "a4cfab9d139b77bcc1e7fa057c22c7106b8eabc4432e8d709cafacd1451b89cf",
+  "study_identity": {
+    "original_cells": 6,
+    "independent_product_reviews": 3,
+    "final_runtime_followup": 1,
+    "result": "archive and source identities passed"
+  }
+}

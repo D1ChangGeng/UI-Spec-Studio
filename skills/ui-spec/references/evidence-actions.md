@@ -25,7 +25,7 @@ Do not extend a dependent visual or experience commitment beyond its supporting
 evidence. This is a scope boundary, not a whole-project freeze. Continue
 independent supported work. A reversible prototype may investigate an unresolved
 hypothesis when its boundaries and learning question are explicit; label it a
-probe rather than an accepted foundation. Existing approval or delegation can
+probe rather than an accepted foundation. Apply the [probe boundary](component-sourcing.md#separate-probes-from-formal-delivery) before any formal adoption; technical feasibility does not authorize its visual design. Existing approval or delegation can
 authorize a provisional direction, but cannot turn missing observations into
 verified quality.
 
@@ -66,7 +66,7 @@ specific dependency is blocked.
 An exception needs a real authorized decision, reason, affected scope and any
 conditions or expiry. Record it as an exception; it does not certify the missing
 quality. Agent convenience, tool failure and elapsed effort are not approval.
-Normal privacy, access, resource-license and safety obligations remain in force.
+For original visual construction, only the closed W1–W3 allowlist can qualify; this general exception description does not create an additional class. Normal privacy, access, resource-license and safety obligations remain in force.
 
 ## Carry reuse into visible implementation
 
@@ -78,9 +78,7 @@ functional foundations without constituting the whole visual implementation.
 Identify what carries the visible composition, material, typography and motion.
 
 Use the largest suitable coherent reuse level and retain the mechanisms that
-earned selection. A rewrite creates new verification responsibility. Custom work
-addresses an evidenced gap, and its actual result is inspected alongside retained
-mature material. Judge the real user's main task, populated states, continuity
+earned selection. A rewrite that replaces defining visual relationships creates original responsibility and requires a qualifying authorized [W1–W3 scope](component-sourcing.md#closed-original-construction-allowlist) before implementation. Inspect that authorized result alongside the retained mature material; a gap alone does not confer permission. Judge the real user's main task, populated states, continuity
 and expressive completion rather than the number of imported dependencies.
 
 ## Reopen only the affected decisions

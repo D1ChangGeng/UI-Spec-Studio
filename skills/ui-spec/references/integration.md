@@ -19,6 +19,8 @@ Identify the routes, states, interactions and shared rules the user approved. Us
 
 Classify each required capability as reusable, adaptable, missing or dependent on an external resource. Identify the difference between fixture behavior and real behavior. Keep this mapping proportional to the scope; a brief action-to-owner table is often enough.
 
+Carry the [visual-source obligation](component-sourcing.md#default-deny-original-ui-construction) into this assessment. Missing business wiring can be implemented at its normal owner; missing visual design remains a mature-resource or [authorized allowlist](component-sourcing.md#closed-original-construction-allowlist) question. New adapter, state, focus, responsive or compatibility code is normal integration when it preserves the adopted design responsibility. A provisional technical probe remains distinct from the formal UI.
+
 Determine actual product maturity. In an unreleased build, evolve current code and data models in place, with reproducible initialization and fixtures. In an operating product, derive data, availability and compatibility work from its evidenced obligations. Git provides source history. Operational artifacts serve the system that actually exists.
 
 ## 2. Establish the behavior contract
@@ -65,6 +67,8 @@ Provide working entry/run instructions, actual configuration boundaries, impleme
 
 A request to finish authorizes the scoped implementation. Production operations, real payments, publication and third-party account actions use the user's applicable authorization and host controls. Existing authorization can be reused for its stated scope.
 
+General implementation, continuation or finish authority does not expand into original visual construction. Reuse any already explicit original-design authorization for its actual W1–W3 responsibility without asking again. When that authority is absent, resolve the concrete resource gap and original necessity before requesting the scoped decision; continue independent authorized connections.
+
 Complete independent work while credentials or external services are pending. Describe the next required resource and the behavior it will verify. Final handover states what is working and observed, so the next developer can continue directly from the current source and evidence.
 
 ## Preserve design intent at four boundaries
@@ -86,7 +90,7 @@ A precise handover explains what can be adjusted, where the authoritative conten
 
 Reconcile each consequential adopted item with its exact source, version/variant, local trial, preserved mechanisms, modifications and ownership. Retain proven resources while conditions hold; replace fixture adapters without rebuilding their effective UI. Check actual dependency/CSS impact, SSR or hydration where relevant, cleanup, content growth and real data states. Source copies retain local maintenance responsibility; package updates follow their compatibility contracts.
 
-Map demo callbacks and sample data to real intent and trusted outcomes. Protected prices, permissions, entitlements and workflow decisions remain with their authorities. Recheck the affected visual/state relationships under real loading, denial and failure. A substantial rewrite of the original layout, state or motion mechanism needs validation of that new responsibility. Validate components and the integrated journey separately; diagnose a quality gap at its source rather than silently changing the accepted target.
+Map demo callbacks and sample data to real intent and trusted outcomes. Protected prices, permissions, entitlements and workflow decisions remain with their authorities. Recheck the affected visual/state relationships under real loading, denial and failure. An adaptation that replaces the source's defining layout, material, state presentation or motion is a new visual responsibility: reconsider the mature source/configuration first and apply the closed allowlist before any original construction. An authorized extension retains the mature implementation's main role and receives scoped independent validation. A rewrite does not become authorized merely because it can be tested. Validate components and the integrated journey separately; diagnose a quality gap at its source rather than silently changing the accepted target.
 
 Keep license notices, asset permission and reproducible configuration with the resulting source. Capture integration evidence in project records and propose reusable lessons through authorized maintenance. Final connection quality is the actual product's behavior and appearance, supported by its observed conditions.
 

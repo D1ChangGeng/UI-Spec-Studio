@@ -110,7 +110,7 @@ state. Reuse the approved shell and inspect both the narrow and wide views.
 
 The next round checks where the user starts, what the action means, which conditions apply, where the result appears, and how the user returns or retries. If two routes express the same task, the agent considers consolidating them. If the journey is broken by a missing control, repairing the control outranks drawing another page.
 
-New components are selected by actual role and local trial. A coherent layout or functional block can carry several related decisions; supplementary components and assets fill specific needs. Configuration, composition and focused extension preserve the selected implementation's useful visual and interaction relationships. Custom work addresses demonstrated gaps.
+New components are selected by actual role and local trial. A coherent layout or functional block can carry several related decisions; supplementary components and assets fill specific needs. Configuration, composition and focused extension preserve the selected implementation's useful visual and interaction relationships. Original visual work requires a qualifying, narrowly scoped and actually authorized W1–W3 exception; a demonstrated gap alone does not authorize it. See the [construction policy](ORIGINAL-CONSTRUCTION.md).
 
 Continue the same formal SPEC while fulfilling its experience goal or repairing its
 quality gaps. Start a new SPEC for a distinct coherent design objective with its own

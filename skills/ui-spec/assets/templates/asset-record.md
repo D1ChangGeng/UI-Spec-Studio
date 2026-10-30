@@ -18,11 +18,17 @@ third-party brand/subject conditions where relevant; generated-output provenance
 
 ## Production and editable master
 
-Direct adoption, adaptation or composition; concrete source gap or identity/art purpose for original work;
+Direct adoption, adaptation, source-backed composition or faithful complete-design translation;
+for original work, qualifying W1/W2/W3 scope, actual authorization source, relevant
+mature candidates and the concrete relationship they cannot carry, with mature
+responsibilities retained outside the exception;
 available tool/version and selected route; original and working source location;
 meaningful editable parameters; dependencies, transforms and export steps.
 Distinguish an image result, vector outlines, a functioning font, editable scene
 and runtime asset according to the actual deliverable.
+Use the [closed allowlist](../../references/component-sourcing.md#closed-original-construction-allowlist)
+in the existing record; source unavailability or an identity label alone does not
+authorize original production. Reuse already granted authority within its scope.
 
 ## Delivery variants and placements
 

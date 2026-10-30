@@ -61,10 +61,10 @@ multi-framework adapters need explicit documentation checks. Zero results means
 the bundled map has no match, not that the ecosystem has no solution. The helper
 is local and read-only; it neither installs resources nor calls external services.
 
-## Use mature implementation as the default
+## Use mature implementation as the normal foundation
 
-For general UI, prefer adopting, configuring, composing and extending existing
-implementations. Begin at the highest appropriate level: page/application
+For all visible UI responsibilities, adopt, configure, compose and adapt mature
+implementations under [default-deny original construction](ORIGINAL-CONSTRUCTION.md). Begin at the highest appropriate level: page/application
 template, design system, layout, functional block, component, icon, font, visual
 asset or motion. A coherent foundation can preserve connected proportions,
 hierarchy, states and interaction decisions. Add complementary resources for
@@ -78,13 +78,14 @@ when no implementation is carried forward. Choose among candidates by visual
 quality, required behavior, compatibility, rights and the total cost through
 verification and maintenance.
 
-Custom implementation addresses an identified gap: relevant candidates fail a
-necessary behavior or local trial, their adaptation would remove the value sought,
-their terms prevent adoption, or the task needs a distinct interaction. First
-consider extending a mature foundation and limit new UI mechanisms to the gap.
-Perceived coding speed, visual simplicity or understanding the reference is not
-sufficient reason to replace a suitable implementation. Independent brand and
-artistic assets can use professional custom production with their own quality checks.
+A failed trial, incompatible terms or an unmet relationship calls for further
+resource research, a different reuse scope or supported adaptation. It does not
+authorize original construction. Original work is limited to qualifying W1 identity
+and art, W2 demonstrably unmet product-specific expression, or W3 necessary narrow
+extensions, with actual user authorization and independent verification. Preserve
+the mature foundation outside that scope. An already explicit request supplies its
+own scoped authorization; generic build/continue permission does not expand it.
+Visual simplicity, familiarity and faster initial coding do not lift the prohibition.
 
 ## Trial consequential choices before broad integration
 
@@ -109,7 +110,7 @@ Trial defining artistic material with the real business components while layout
 can still change. Distinguish reference-only work, exploratory concepts and usable
 product assets; confirm production quality, permitted use, editable sources,
 delivery variants and cumulative cost. Reuse can carry the structure and motion,
-while purposeful professional production supplies an independent identity.
+while explicitly authorized original identity work can supply its bounded expression.
 
 Inspect details at their intended size and use enlargement to diagnose a specific
 relationship. Return to normal scale, neighboring regions and the whole after a
@@ -209,7 +210,7 @@ after important qualities have evidence, consequential trials preserve them and
 the adaptation path is clear. Similar new results support convergence only when
 the relevant directions have actually been explored. If candidates remain unsuitable,
 keep their actual shortcomings and options visible, then choose further research,
-targeted assistance, a bounded plan adjustment or limited custom implementation.
+targeted assistance, a bounded plan adjustment or assessment of a qualifying authorized W1–W3 scope.
 Platform documentation, item inspection and project acceptance remain separate.
 Successful project-specific choices stay in that project. Portable findings can
 enter the shared catalog through authorized maintenance and ordinary version
@@ -225,7 +226,7 @@ coverage or a better fit; refresh relevant records when conditions change.
 | Open visual direction | Inspect a small set of promising mechanisms; recommend and prototype | Whole-frame effect, readability, controls and combined cost |
 | Expressive professional workspace | Pair mature task patterns with cross-domain expression and adoptable resources; trial their combination | Distinct direction retained in populated core views, reliable tasks and inspected material/motion |
 | Font discovery | Use family catalog for glyphs; AI docs for usage | Real text, variants, loading and licensing |
-| Cross-stack reference | Compare native mature implementations and feasible ports before a custom gap | Actual inherited mechanism, current stack behavior and intended visual quality |
+| Cross-stack reference | Compare native mature implementations and faithful feasible ports; any original gap needs W1–W3 authority | Actual inherited mechanism, current stack behavior and intended visual quality |
 | Paid or unavailable resource | Request a specific authorized export or observation when it changes selection; compare viable alternatives | Actual inspection, adoption rights, remaining conditions and independent progress |
 | Finish with real responses | Reconcile source state and application authority | Visual and business regression, including delayed/error states |
 

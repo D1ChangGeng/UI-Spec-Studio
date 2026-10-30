@@ -29,6 +29,16 @@ and build the first reviewable SPEC. Show the result and the evidence behind it.
 
 After reviewing, **“Approved, continue”** carries the accepted direction into the next useful work. **“Use ui-spec: finish”** connects an accepted design to its actual content, behavior and delivery boundary. [Installation and agent options](docs/INSTALL.md) · [Multi-round guide](docs/GUIDE.md)
 
+## Mature foundations, bounded originality
+
+**Original UI construction is prohibited by default.** The agent discovers mature external work, compares applicable project resources and carries their design relationships into the result. New business wiring, configuration and necessary adaptation remain normal engineering. A coherent block or validated token system can cover many visible elements without repeated searches.
+
+Original work is limited to explicitly authorized **unique identity/art (W1)**, **demonstrably unmet product-specific expression (W2)** or **necessary narrow extensions to mature work (W3)**. A screenshot, failed search, simple element or familiar technique does not grant that authority. Existing scoped permission is used directly. Unresolved visual responsibility remains visible while independent work continues.
+
+Judge acquisition, actual adoption and retained craft separately. The original demo, project trial and integrated UI show whether source quality survived and whether the whole product works together.
+
+[Construction boundaries and examples](docs/ORIGINAL-CONSTRUCTION.md) · [v1.19 review](docs/REVIEW-v1.19.0.md) · [Comparative study](docs/experiments/default-deny/RESULTS.md)
+
 ## Give each increment enough room for quality
 
 A **formal UI SPEC** is a coherent design increment in the evolving product, with a clear experience goal and an actual result to review. Keep the complete product goal, then choose the scope that allows its important qualities to receive sufficient research, implementation and verification.
@@ -73,7 +83,7 @@ composition. [Asset practice](docs/VISUAL-ASSETS.md) · [Browser review fixture]
 
 **Product UI Experience Alignment** gives the work its goal: design maturity suited to the current users, tasks, content and operating conditions. A named reference supplies an entry point; an open brief prompts the agent to find one. Research identifies useful relationships in composition, type, component detail, state feedback and continuous interaction, while the current product develops its own expression.
 
-**Mature implementations are the default source for general UI.** Pair reference research with resource selection at the highest appropriate level: page, design system, layout, block, component, asset or motion. Inspect consequential candidates in their original demos, then trial them with the project's content, fonts, theme and states before broad integration. Configure, compose and extend the selected implementation while preserving the relationships that earned adoption. Custom work addresses demonstrated gaps.
+**Mature implementations provide the normal foundation for visible UI.** Pair reference research with resource selection at the appropriate scope: page, design system, layout, block, component, asset or motion. Inspect consequential candidates in their original demos, then trial them with the project's content, fonts, theme and states before broad integration. Configure, compose, connect and adapt the selected work while preserving the relationships that earned adoption. Original construction requires a qualifying, narrowly scoped and actually authorized exception.
 
 Review the assembled interface and continuous task again. The adoption record shows which implementation actually carries the intended quality, what changed and what was verified; studying a source and using it are recorded separately. [Product alignment and exploration](docs/PRODUCT-ALIGNMENT.md) · [Resource reuse guide](docs/RESOURCE-REUSE.md)
 
@@ -188,7 +198,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.18.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.19.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

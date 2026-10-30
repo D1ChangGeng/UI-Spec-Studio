@@ -76,6 +76,13 @@ important choice. State which research question the runnable result answers and
 which conclusion remains unsupported. For adoption, identify the source and mechanisms
 actually retained in the current implementation, local trial scope and expanded verification.
 Existing notes can carry this optional record.
+Distinguish acquisition, actual adoption and craft retention: inspect the source's
+defining relationships in the integrated UI, including any simplification or
+rewritten mechanism. Name its source/configuration, supported adaptation or
+qualifying authorized W1/W2/W3 responsibility. Package presence, code volume and
+structural record checks cannot certify visual quality or exception necessity.
+A technical probe retains its research scope. Unresolved visual responsibilities
+remain visible when no mature foundation or authorized exception carries them.
 
 State current-SPEC quality findings and related-product integrity findings
 separately. Show how the target quality reaches an observed reference, actual

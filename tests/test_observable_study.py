@@ -9,7 +9,7 @@ import tempfile
 import unittest
 import zipfile
 
-from source_continuity import runtime_v117
+from source_continuity import runtime_v117, runtime_v118
 
 ROOT = Path(__file__).resolve().parents[1]
 STUDY = ROOT/'docs/experiments/observable-execution'
@@ -43,7 +43,7 @@ class ObservableStudyIdentityTests(unittest.TestCase):
             relative = name.removeprefix('ui-spec/')
             self.assertEqual(value, runtime_v117(ROOT, 'skills/ui-spec/'+relative))
         for name, value in c.items():
-            self.assertEqual(value, (ROOT/'skills'/name).read_bytes())
+            self.assertEqual(value, runtime_v118(ROOT, 'skills/'+name))
 
     def test_visibility_comparison_preserves_baseline_except_declared_module(self):
         a = archive_files(STUDY/'inputs/runtime-s8.zip')

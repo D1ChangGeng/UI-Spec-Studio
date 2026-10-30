@@ -36,7 +36,7 @@ Keep research/observation scope, primary design/implementation scope and integra
 
 For a composer-height change, observe text growth, send, response growth and user-controlled scrolling with the neighboring reading space. If these jointly carry the goal, keep the relationship in the current SPEC's review scope. For a shared font change, inspect dependent pages' wrapping, hierarchy, control geometry and relevant locales rather than judging only the specimen. For motion, observe trigger, preparation, progression, settling, reversal and interruption where applicable, including other components that must remain spatially or semantically continuous. For a dynamic background, examine moving emphasis and foreground reading/input conditions in the assembled task. A static frame, component-area estimate or passing geometry assertion supports only its actual observation.
 
-Trace each important quality through its observed reference, actual adopted or authored implementation, current rendered result and remaining difference. Judge scope suitability, research depth and visual maturity from that evidence. Formal SPEC identity, record structure, actual implementation and perceived quality require separate conclusions; neither a smaller scope nor a completed structural report establishes them.
+Trace each important quality through its observed reference, actual mature implementation, faithful authorized design translation or qualifying authorized W1–W3 work, current rendered result and remaining difference. Judge scope suitability, research depth and visual maturity from that evidence. Formal SPEC identity, record structure, actual implementation and perceived quality require separate conclusions; neither a smaller scope nor a completed structural report establishes them.
 
 ## Inspect and show the first reviewable result
 
@@ -132,7 +132,7 @@ Keep research, correction and reinspection directed at an existing SPEC's promis
 
 ## Comparing SPEC and connected product
 
-Distinguish **Source Fidelity** from **Perceptual Quality**. Fidelity protects an identified approved design or adopted source: structure, assets, type, proportion, material and behavior. Perceptual review judges the actual composition, craft and continuous experience. Reference-informed original work can inherit maturity with an independent appearance.
+Distinguish **Source Fidelity** from **Perceptual Quality**. Fidelity protects an identified approved design or adopted source: structure, assets, type, proportion, material and behavior. Perceptual review judges the actual composition, craft and continuous experience. Authorized original work has its own quality and fidelity boundary; reference study alone supplies neither authorization nor mature implementation adoption.
 
 For strict restoration, identify the exact target/revision and intended differences; match content, viewport, pixel ratio/zoom, browser/rendering conditions, fonts, themes, locales and event phase. Use overlays, regional differences or pixel metrics to locate deviations, with task-justified tolerances and disclosed masks. Diagnose rendering variation; a similarity score cannot certify design quality.
 
@@ -222,7 +222,17 @@ Re-answer research questions beside the preview with current content, comparable
 
 ## Inspect inherited design value
 
-Identify retained, changed and authored mechanisms in code/assets and runtime. Attribution or a package name proves neither adopted scope nor quality; authored surfaces need their own basis. Compare local craft, whole-page hierarchy, proportions, reading rhythm and continuity. Revalidate rewritten layout/state/motion; upstream maturity covers retained mechanisms. Judge reuse by consequential responsibilities fulfilled, not dependency totals or code share.
+Identify retained, changed and authorized original mechanisms in code/assets and runtime. Attribution or a package name proves neither adopted scope nor quality. Check the [construction boundary](component-sourcing.md#default-deny-original-ui-construction) before treating new visual responsibility as ordinary adaptation. Compare local craft, whole-page hierarchy, proportions, reading rhythm and continuity. Revalidate authorized rewritten layout/state/motion independently; upstream maturity covers retained mechanisms. Judge reuse by consequential responsibilities fulfilled, not dependency totals or code share.
+
+### Verify retained craft and the whole product separately
+
+Keep **Resource Acquisition**, **Resource Adoption** and **Craft Retention** at their actual proof boundaries. Check the selected source and revision, the call site or actual placement, relevant configuration and modifications, then inspect the original demo, local trial and integrated task. A source can serve more than one role, but a demo screenshot cannot prove the project's result. Identify the meaningful source relationships before comparison; use corresponding content, font, scale, theme, viewport and temporal phase where possible, and state unavoidable differences.
+
+Inspect whether the important composition, type, material, light, motion and state relationships still operate. A copied card that lost its light/material, a block overwritten with arbitrary spacing or a rewritten transition is not verified reuse merely because the file or import survives. Source diffs can locate changed mechanisms; actual viewing and operation determine their effect. Check related regions after local repairs, including state ownership, focus, scroll, content growth and quiet/reduced-motion states where relevant.
+
+Keep the possibility of a negative result: using more mature resources may still reduce whole-product quality. Inspect competing focal points, incompatible typography/material, fractured spacing, motion interference, duplicate listeners/engines, dependency/payload cost and maintenance ownership. Retain the counterexample and improve composition, source selection or adaptation; do not respond with a higher resource-count requirement. Compare actual delivered quality, behavior and engineering cost independently.
+
+For W1–W3 work, examine the actual qualification, scoped user authorization, unchanged mature foundation and independently checked new relationship. A successful render cannot retroactively authorize original construction. A structural record of an exception does not certify its necessity. For a technical probe, confirm that its research result remains distinguishable from formal visual delivery and that the final responsibility has an appropriate mature basis or authorized exception. Missing sources, unviewed states and unresolved quality remain open in the existing SPEC record.
 
 ## Verify assets from master to placement
 

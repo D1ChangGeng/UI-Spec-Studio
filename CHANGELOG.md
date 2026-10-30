@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.19.0 — 2026-10-30
+
+- Establish default-deny original UI construction across all visible design responsibilities, with mature external/project foundations and closed, actually authorized W1–W3 exceptions.
+- Preserve ordinary configuration, composition, business integration, system inheritance and focused adaptation; distinguish complete-design translation and provisional technical probes.
+- Replace open custom-gap and technique-transfer routes throughout sourcing, workflow, assets, interaction, examples and optional records while retaining their professional knowledge.
+- Connect visual provenance, acquisition, adoption and craft retention to the existing SPEC, evidence map, actual-result disclosure and integrated verification; retain negative composition/cost outcomes.
+- Keep the portable 37-file inventory, installed helpers and JSON unchanged. Preserve exact prior runtime and historical evidence through reversible continuity.
+- Execute three task families in six fresh Agent threads, followed by three anonymized product reviews. Preserve mixed results, source-retention evidence, integration costs and counterexamples separately from mechanical release verification.
+- Close two legacy identity-example shortcuts in final review; publish the exact one-file delta from the comparative snapshot and a separate final-runtime execution without rewriting earlier results.
+
 ## 1.18.0 — 2026-10-30
 
 - Make consequential design work observable through six selective event kinds inside the existing operations.

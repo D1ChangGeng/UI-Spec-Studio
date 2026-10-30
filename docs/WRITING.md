@@ -96,7 +96,7 @@ connection rather than field count.
 
 Express professional knowledge as guidance for investigating and adopting concrete
 work. Give suitable mature implementations priority for common UI responsibilities;
-explain the specific gap that calls for custom work. Name the useful reuse scope,
+explain the source responsibility and any qualifying authorized W1–W3 exception. Name the useful reuse scope,
 actual implementation and connected decisions it preserves. Design inheritance
 and implementation adoption can have different sources and evidence.
 
@@ -214,8 +214,9 @@ corresponding mechanical predicate.
 Begin with a concrete perceptual problem and explain the relationships that produce
 it. Connect the mechanism to useful external reference/implementation searches,
 meaningful comparison, configuration/adaptation and actual-use checks. Keep
-technical routes and failure cases available for evidenced custom gaps, without
-turning the default into recreating mature work. Treat reusable visual craft as
+technical routes and failure cases available for supported adaptation or qualifying
+authorized W1–W3 work. A technique explanation, failed search or source gap does not
+authorize original visual construction. Treat reusable visual craft as
 separate from functional infrastructure and from assembled product quality.
 
 Use conditional examples and concrete counterexamples, not style bans, universal
@@ -272,3 +273,19 @@ requires. Reuse evidence produced for design work, show important early results
 while they can influence integration, and let material gaps drive correction.
 A small task can have one compact delivery. Conversation, project records and
 product copy have distinct audiences and draw on the same current facts.
+
+## State original-construction boundaries precisely
+
+Write the default-deny policy as an implementation invariant, with W1–W3 as the
+closed qualifying classes and actual scoped authorization as a separate fact.
+Define the visible relationship being retained or newly invented; do not equate
+new code with originality or package names with mature craft. Shared system/block
+provenance can cover many elements. Preserve the source-gap next actions and
+independent progress, complete-design translation scope and provisional probe
+boundary. Neither a quality check nor a declaration retroactively authorizes work.
+
+Keep substantive professional knowledge available for selection, diagnosis,
+source-preserving adaptation and authorized specialist production. Explain actual
+retained relationships and observed integration conflicts in user-facing results.
+A permission request names a concrete unresolved original responsibility and why
+the existing instruction does not cover it; existing scoped permission is reused.

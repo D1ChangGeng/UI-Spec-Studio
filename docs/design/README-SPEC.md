@@ -205,3 +205,22 @@ identifies actual images, crop coordinates, viewing scope, conditions and limits
 The renderer now describes its native-text assertion precisely; it does not claim
 a clipboard action. Actual GitHub presentation retains the exact-commit CI gate
 and separate publication readback described above.
+
+## Default-deny construction in 1.19
+
+The current revision adds native-text guidance after first use, with a detailed
+construction-boundary guide and versioned evidence links. GitHub's existing
+rendering continues to supply the page's type, heading, spacing, table, code and
+responsive relationships. The previously inspected artwork and its four variants
+remain byte-identical; no original artwork or custom page shell is created in this
+revision. Earlier technique-transfer descriptions above retain their historical
+scope and do not authorize new reconstruction under the current policy.
+
+The new section explains mature source responsibility, allowed integration,
+closed W1–W3 scope and actual retained quality in both languages. The local review
+uses the established renderer and additionally captures the changed section at
+390 and 1440 pixels in both themes. Font availability is part of the capture
+condition; initial missing-CJK observations are superseded by glyph-capable
+captures without changing product text or visual sources. Exact executed evidence
+belongs to the v1.19 review record, while GitHub-host output remains a separate
+publication gate.

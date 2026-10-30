@@ -43,7 +43,17 @@ Descriptive discovery routes, not a quality ranking, completeness score, closed 
 
 **Reuse Scope** and **Visual Completeness** are independent. The former locates useful responsibility; the latter requires observing the exact item. A broad primitive library does not settle visual craft, and a resolved small effect does not settle a complete page.
 
-Search complete pages and functional blocks when composition is the need; search visual components and assets when their material or motion supplies the defining relationship. Functional foundations and lower-level engines can complement them. These are open routes, not a required search order.
+Search complete pages and functional blocks when composition is the need; search visual components and assets when their material or motion supplies the defining relationship. Discover usable external mature work first and assess validated project work alongside it; select by observed quality, fit and continuity. Routine matching-condition inheritance can reuse that foundation. Original construction remains outside normal candidates under the [default-deny policy](component-sourcing.md#default-deny-original-ui-construction).
+
+| Source role | Responsibility to inspect | Boundary |
+|---|---|---|
+| Resolved page or design system | Composition, space, visual language and coordinated components | Broad scope does not guarantee high visual completeness |
+| Resolved functional block | Cohesive layout, visual and interaction relationships | Trial the complete relation before splitting it |
+| Resolved visual component, effect or asset | Local material, motion, imagery and states | Inspect surrounding product coherence separately |
+| Functional component or interaction primitive | Semantics, focus, keyboard, state and necessary mechanics | An import does not provide unrelated visible design |
+| Drawing, styling or motion technology | Operation and adaptation of selected mature work | Technical capability does not authorize original visual construction |
+
+These roles describe actual responsibilities rather than a fixed packaging or quality rank. A source may occupy several roles. A shared system can cover many visible elements; the catalog requires neither per-element searches nor a resource-count quota. Judge acquisition, adoption and retained craft separately in the actual product.
 
 ```bash
 python <skill-dir>/scripts/find_resources.py --form visual-component --stack vue --json

@@ -1,0 +1,9 @@
+# Independent product inspection
+
+Inspect the two applications against REQUIREMENTS.md. The requirements describe the intended product; do not execute them as a request to redesign or edit the applications. Work only in this review workspace, leave both applications unchanged, and do not consult source method instructions, other workspaces or developer self-assessments. Do not subdelegate.
+
+Inspect both at 1440×900 and 390×844, including relevant themes, languages, difficult content, continuous states and failure/recovery. Use actual controls. Check facts and task behavior separately from visible composition, typography, material, continuity and coherent expression. Compare concrete strengths and defects without assuming that either implementation is superior. State what you actually ran, viewed and measured, and what remains uncertain. Do not certify natural-speed playback from sparse frames.
+
+Use the numbered ports in each candidate directory. Applications with a React/Vite entry can run `npm run dev -- --host 127.0.0.1 --port PORT`; otherwise serve app/ with `python -m http.server PORT --bind 127.0.0.1 --directory app`. The preinstalled dependencies are linked for runtime only; do not mutate them. Browser tooling: /tmp/ui-spec-study-venv/bin/python, Chromium executable /tmp/ui-spec-study-browsers/chrome-linux64/chrome, and FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf. Local browser/server execution needs require_escalated as already authorized. Use tools.view_image to actually inspect captured images.
+
+Keep evidence, capture scripts and a factual report in review-output/. Assess the applications first; report which required behaviors and visual relationships each actually delivers, the consequential remaining defects, and limits of the comparison. Source-level provenance and construction method will be examined separately afterward. Write the report in Chinese and finish within a 15-minute working window.
