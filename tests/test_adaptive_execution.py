@@ -274,6 +274,127 @@ class StudyMechanicsTests(unittest.TestCase):
             self.assertEqual(runner.stop_owned_process(process),-9)
         kill_group.assert_any_call(process.pid,signal.SIGKILL)
         self.assertEqual(process.wait.call_count,2)
+    def test_cleanup_windows_helper_errors_still_kill_and_reap(self):
+        failures=(
+            subprocess.TimeoutExpired('taskkill',15),
+            OSError('fixture taskkill unavailable'),
+        )
+        for failure in failures:
+            with self.subTest(failure=type(failure).__name__):
+                process=MagicMock(pid=123456789)
+                process.wait.side_effect=[
+                    subprocess.TimeoutExpired('fixture child',5),1]
+                with patch.object(runner.os,'name','nt'), \
+                     patch.object(runner.subprocess,'run',side_effect=failure):
+                    with self.assertRaises(subprocess.SubprocessError) as caught:
+                        runner.stop_owned_process(process)
+                self.assertIs(caught.exception.__cause__,failure)
+                self.assertIn('tree termination',str(caught.exception))
+                process.kill.assert_called_once_with()
+                self.assertEqual(
+                    [call.kwargs for call in process.wait.call_args_list],
+                    [{'timeout':5},{'timeout':5}])
+
+    def test_cleanup_windows_nonzero_helper_status_is_retained(self):
+        process=MagicMock(pid=123456789)
+        process.wait.side_effect=[
+            subprocess.TimeoutExpired('fixture child',5),1]
+        with patch.object(runner.os,'name','nt'), \
+             patch.object(runner.subprocess,'run',
+                          return_value=MagicMock(returncode=1)):
+            with self.assertRaisesRegex(
+                    subprocess.SubprocessError,'taskkill exited with status 1'):
+                runner.stop_owned_process(process)
+        process.kill.assert_called_once_with()
+        self.assertEqual(process.wait.call_count,2)
+
+    def test_cleanup_direct_kill_race_or_error_still_reaps(self):
+        failures=(
+            (ProcessLookupError('fixture already exited'),False),
+            (OSError('fixture direct kill failure'),True),
+        )
+        for failure,expected_error in failures:
+            with self.subTest(failure=type(failure).__name__):
+                process=MagicMock(pid=123456789)
+                process.wait.side_effect=[
+                    subprocess.TimeoutExpired('fixture child',5),0]
+                process.kill.side_effect=failure
+                with patch.object(runner.os,'name','nt'), \
+                     patch.object(runner.subprocess,'run',
+                                  return_value=MagicMock(returncode=0)):
+                    if expected_error:
+                        with self.assertRaisesRegex(
+                                subprocess.SubprocessError,'direct child kill'):
+                            runner.stop_owned_process(process)
+                    else:
+                        self.assertEqual(runner.stop_owned_process(process),0)
+                process.kill.assert_called_once_with()
+                self.assertEqual(process.wait.call_count,2)
+
+    @unittest.skipIf(os.name=='nt','POSIX process-group behavior')
+    def test_cleanup_group_signal_errors_still_kill_and_reap(self):
+        process=MagicMock(pid=123456789)
+        process.wait.side_effect=[
+            subprocess.TimeoutExpired('fixture child',5),-9]
+        with patch.object(runner.os,'killpg',side_effect=[
+                PermissionError('fixture TERM failure'),
+                PermissionError('fixture KILL failure')]) as kill_group:
+            with self.assertRaises(subprocess.SubprocessError) as caught:
+                runner.stop_owned_process(process)
+        self.assertIn('tree termination',str(caught.exception))
+        self.assertIn('final group kill',str(caught.exception))
+        self.assertEqual([call.args for call in kill_group.call_args_list],
+                         [(process.pid,signal.SIGTERM),
+                          (process.pid,signal.SIGKILL)])
+        process.kill.assert_called_once_with()
+        self.assertEqual(process.wait.call_count,2)
+
+    def test_interruption_retains_tree_error_after_child_reaped(self):
+        # Explicit process doubles; never an Agent/model experiment.
+        self.prepare()
+        process=MagicMock(pid=123456789)
+        process.wait.side_effect=[
+            KeyboardInterrupt(),
+            subprocess.TimeoutExpired('fixture child',5),
+            -9,
+        ]
+        process.poll.return_value=-9
+        probe=MagicMock(returncode=0,stdout='explicit mechanical process fixture')
+        original_stop=runner.stop_owned_process
+
+        def run_process(args,**kwargs):
+            if args[0]=='taskkill':
+                raise subprocess.TimeoutExpired('taskkill',15)
+            return probe
+
+        def windows_cleanup(child):
+            # Change the platform only within cleanup, leaving pathlib intact.
+            with patch.object(runner.os,'name','nt'):
+                return original_stop(child)
+
+        with patch.object(runner.shutil,'which',
+                          return_value='test-double-codex'), \
+             patch.object(runner.subprocess,'run',side_effect=run_process), \
+             patch.object(runner.subprocess,'Popen',return_value=process), \
+             patch.object(runner,'stop_owned_process',
+                          side_effect=windows_cleanup):
+            with self.assertRaises(KeyboardInterrupt):
+                runner.run(study=self.out,cell_id='T1-C-r1',
+                           home=self.home,execute=True,
+                           acknowledge_cost=True)
+
+        run_path=self.out/'runs/T1-C-r1/run.json'
+        result=json.loads(run_path.read_bytes())
+        self.assertEqual(result['status'],'interrupted')
+        self.assertEqual(result['actual_independent_agent_runs'],0)
+        self.assertEqual(result['returncode'],-9)
+        self.assertTrue(result['process_cleanup']['direct_child_reaped'])
+        self.assertIn('tree termination',result['process_cleanup']['error'])
+        process.kill.assert_called_once_with()
+        self.assertEqual(process.wait.call_count,3)
+        self.assertTrue((run_path.parent/'output-index.json').is_file())
+        self.assertTrue((run_path.parent/'product-output.zip').is_file())
+
     @unittest.skipIf(os.name=='nt','POSIX SIGINT: Windows cleanup remains covered by process doubles')
     def test_real_sigint_reaps_owned_process_and_finalizes_attempt(self):
         # A sleeping Python process, NOT a Codex/Agent/model experiment.

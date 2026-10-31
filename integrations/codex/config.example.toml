@@ -1,4 +1,6 @@
-# OPTIONAL EXAMPLE — merge deliberately; the installer never edits config.toml.
+# OPTIONAL GLOBAL SETTINGS — merge deliberately; the installer does not apply these.
+# Explicit installation manages only its four-role registration block in config.toml.
+# Existing settings outside that owned block are preserved.
 # Checked against official Codex documentation on 2026-10-31.
 # Inherit the parent's available model by default. Availability is account-specific.
 [agents]

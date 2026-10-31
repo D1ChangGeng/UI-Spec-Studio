@@ -7,16 +7,16 @@
   "historical_trace_only_cells": 4,
   "historical_trace_metadata_events": 19106,
   "complete_historical_campaign_available": false,
-  "current_record": "docs/experiments/adaptive-research/RESUMPTION-20261101.md",
+  "current_record": "docs/experiments/adaptive-research/RESULTS.md",
   "current_blockers": [
-    "Local source-processing environment has no Codex executable.",
-    "No matching ACS execution capacity was observed; no native invocation was accepted.",
-    "Codex connector explicitly requires a cloud environment for this repository before the task can start.",
-    "Retained historical trace metadata lacks full raw executions, products and visual evidence needed for acceptance."
+    "The current editing session has no usable local command-execution environment.",
+    "ACS filesystem access works, but no eligible online native Harness was observed.",
+    "The Codex connector requests a repository execution environment; code-review availability is a separate capability.",
+    "The browser policy blocks navigation to the required Codex host; no workaround was attempted.",
+    "Retained historical trace metadata lacks complete raw executions, products and visual evidence needed for acceptance."
   ],
-  "engineering_source_commit": "541766cf6fdc8ec19e5ad5c3c952024d11c444f5",
-  "local_clean_unit_tests": 442,
-  "hosted_ci_run_id": 41217065594,
+  "engineering_source_commit": "5c4b4964a273972494b65f116a097b196ce2fe30",
+  "hosted_ci_run_id": 41220458894,
   "release_decision": "pending",
   "initial_development_report_preserved": {
     "status": "blocked_not_run",
@@ -31,5 +31,16 @@
     ],
     "static_tests_are_agent_experiments": false,
     "historical_evidence_reused_as_current_results": false
-  }
+  },
+  "observed_at_utc": "2026-10-31T17:03:22Z",
+  "previous_engineering_observation": {
+    "source_commit": "541766cf6fdc8ec19e5ad5c3c952024d11c444f5",
+    "local_clean_unit_tests": 442,
+    "hosted_ci_run_id": 41217065594,
+    "record": "docs/experiments/adaptive-research/RESUMPTION-20261101.md"
+  },
+  "hosted_unit_tests": 456,
+  "hosted_pr_ci_run_id": 41220463539,
+  "hosted_recovery_run_id": 41220458876,
+  "engineering_scope": "Immutable observed snapshot; later corrections require their own exact-commit checks. Engineering and authored-fixture validation do not establish native Agent or product-quality acceptance."
 }

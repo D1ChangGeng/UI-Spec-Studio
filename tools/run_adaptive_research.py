@@ -266,25 +266,53 @@ def defer_interrupt_during_cleanup():
 
 
 def stop_owned_process(process:subprocess.Popen)->int:
-    """Terminate this attempt's process tree/group and reap its direct child."""
-    if os.name=='nt':
-        subprocess.run(['taskkill','/PID',str(process.pid),'/T','/F'],
-                       capture_output=True,timeout=15,check=False)
-    else:
-        try:os.killpg(process.pid,signal.SIGTERM)
-        except ProcessLookupError:pass # it may have exited while Ctrl-C arrived
+    """Attempt tree cleanup and always perform bounded direct-child reaping."""
+    errors=[]
+    windows=os.name=='nt'
+    try:
+        if windows:
+            result=subprocess.run(['taskkill','/PID',str(process.pid),'/T','/F'],
+                                  capture_output=True,timeout=15,check=False)
+            if result.returncode:
+                errors.append(('tree termination',subprocess.SubprocessError(
+                    f'taskkill exited with status {result.returncode}')))
+        else:
+            try:os.killpg(process.pid,signal.SIGTERM)
+            except ProcessLookupError:pass
+    except (OSError,subprocess.SubprocessError) as exc:
+        errors.append(('tree termination',exc))
+
+    code=None
     try:
         code=process.wait(timeout=5)
     except subprocess.TimeoutExpired:
-        if os.name=='nt':process.kill()
-        code=None
-    finally:
-        # A group member may ignore SIGTERM even after its leader exits.
-        # Do not leave that descendant running just because wait() succeeded.
-        if os.name!='nt':
-            try:os.killpg(process.pid,signal.SIGKILL)
-            except ProcessLookupError:pass
-    return process.wait(timeout=5) if code is None else code
+        pass  # Expected escalation; still kill/reap the direct child below.
+    except (OSError,subprocess.SubprocessError) as exc:
+        errors.append(('initial child wait',exc))
+
+    # A remaining group member may ignore SIGTERM after its leader exits.
+    # A failed group signal must not skip direct-child cleanup.
+    if not windows:
+        try:os.killpg(process.pid,signal.SIGKILL)
+        except ProcessLookupError:pass
+        except OSError as exc:
+            errors.append(('final group kill',exc))
+
+    if code is None:
+        try:process.kill()
+        except ProcessLookupError:pass  # Exit raced with kill; still reap.
+        except (OSError,subprocess.SubprocessError) as exc:
+            errors.append(('direct child kill',exc))
+        try:
+            code=process.wait(timeout=5)
+        except (OSError,subprocess.SubprocessError) as exc:
+            errors.append(('final child wait',exc))
+
+    if errors:
+        details='; '.join(f'{stage}: {error}' for stage,error in errors)
+        raise subprocess.SubprocessError(
+            'Owned-process cleanup failed: '+details) from errors[0][1]
+    return code
 
 
 def run(*,study:Path,cell_id:str,home:Path|None=None,inherit_profile:bool=False,codex_executable:Path|None=None,execute:bool=False,acknowledge_cost:bool=False)->dict:

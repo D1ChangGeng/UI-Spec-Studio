@@ -33,3 +33,15 @@ Exact changed source blob identities are `eb5ea826bf49e9e2213aa829b51101b129bc9c
 For the earlier `5a21ac201bdce6541b1dbf499fd18e3846049b6b` candidate, recovery run `41219410490` succeeded, including immutable-commit remote installation and live GitHub README rendering. Its runtime-availability artifact `13049611092` (archive SHA-256 `5b67f88ef4fa1a0300ab0cb3155c094a4f9c2f1bd36ea0e99e1ae6c49bef6acc`) reports no Codex executable and no configured `OPENAI_API_KEY` or `CODEX_API_KEY` reference. No credential values were read into the report and no model was invoked.
 
 The separate arbitrary Codex Cloud task still needs a repository environment. A successful GitHub code review does not supply that execution environment and does not establish the real matched UI campaign. Preserve this distinction, the historical metadata-only evidence, and the pending final product-quality review.
+
+## Follow-up: cleanup helper failure must still reap the child
+
+A later [Codex review finding](https://github.com/D1ChangGeng/UI-Spec-Studio/pull/4#discussion_r4432457936) against `5c4b4964a273972494b65f116a097b196ce2fe30` identified a remaining Windows cancellation gap: an exception from `taskkill` skipped both direct-child termination and waiting. The same control-flow gap applied to unexpected POSIX group-signal errors.
+
+The cleanup helper now retains these diagnostics while continuing bounded waits, escalation and direct-child reaping. POSIX SIGKILL still targets remaining group members after the leader exits. A direct-kill exit race still reaches the final wait. Errors are surfaced after the available cleanup attempts, so the interrupted record can identify both a reaped child and a tree-cleanup error. A failure to stop a descendant remains a limitation; direct-child exit alone is not proof that every descendant exited.
+
+Independent static review also identified that a nonzero Windows helper exit status was discarded. The runner now preserves that diagnostic after direct-child cleanup, rather than treating a reaped child as proof of successful tree termination.
+
+Five additional mechanical regression methods cover Windows helper timeout/unavailability, its nonzero exit status, direct-kill races/errors, POSIX group-signal errors and interrupted-attempt finalization after a helper failure. They use explicit process doubles and do not count as Agent executions. No local execution environment is available in this continuation; their executed result must come from the hosted checks on the commit containing these corrections. The earlier 69/456 results and local-log identities above retain their original scope.
+
+The same continuation corrects the adapter example's outdated claim that installation never touches `config.toml`: explicit installation owns a four-role registration block while preserving settings outside it. The example's optional global settings are still not applied automatically. The study's matrix reference now points to `plan.example.json`, and current engineering progress is separated from the uncompleted native campaign.
