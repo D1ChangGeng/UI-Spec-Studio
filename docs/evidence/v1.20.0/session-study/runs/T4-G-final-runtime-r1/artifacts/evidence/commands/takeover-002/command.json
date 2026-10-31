@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "npx",
+    "-y",
+    "modern-web-guidance@latest",
+    "retrieve",
+    "persistent-toast-notifications"
+  ],
+  "cwd": "/workspace/scratch/708e8b7f118e/ui-study/worksets/w18",
+  "started_at": "2026-10-31T23:28:17.630304+00:00",
+  "timeout_seconds": 90,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-10-31T23:28:18.196028+00:00",
+  "wall_seconds": 0.565733,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 3669,
+      "sha256": "090d94298a272f0116c1d54bec6eb318c57b4128bff9e2f6f225bcdf62a2530c"
+    },
+    "stderr.txt": {
+      "bytes": 99,
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+# Main-agent visual review — Fieldnotes save feedback
+
+## Judgment and boundary
+
+The settled T4 save-feedback integration is complete within the assigned edit surface. I independently inspected the selected source before delegation, reviewed the actual code, exercised the integrated application, and personally opened the final assembled screenshots. The native Tabler visual relationships survive the integration. Source selection, placement and the surrounding page were inherited from INTEGRATION-DECISION.md; no new art direction or original-construction exception was introduced.
+
+This is main-agent design judgment for the bounded integration. It is not a claim of end-user aesthetic approval, a live screen-reader audit, real-device touch validation, or whole-gallery completion. Two visible limits remain below.
+
+## Conditions and subjects
+
+The actual browser was Chromium headless shell 143.0.7499.4 through local Python Playwright, with device scale factor 1 and the prescribed Noto CJK Fontconfig file. The evaluated combinations were 1440×900, 1280×600 and 390×844, each in light/en and dark/zh.
+
+I kept these subjects distinct:
+- The exact acquired official HTML, locally rendered and operated through its original Cookies toast trigger.
+- The supplied isolated source block rendering.
+- The unchanged prepared Fieldnotes settings page.
+- The actual integrated page and browser-local save flow.
+
+The public deployed source reports 1.7.1, while the related tagged source is revision `07f60c07da13d8ff957a370434b7ef5c86f5ab94`. The deployed snapshot's exact commit remains unknown. Original snapshots and their digests are preserved; the current live upstream page was used only as textual source context.
+
+## Whole surface, relationships and detail
+
+At 1440×900 the form retains its sidebar, account heading, profile controls and three-field row. At 1280×600 the shorter viewport requires ordinary document scrolling, and the fixed feedback remains available while the lower Save and Cancel controls are reached. At 390×844 the inherited one-column form and stacked settings navigation remain intact. Initial card, heading, display-name field and Save-button geometry exactly matched the captured baseline in all six combinations.
+
+The adopted toast retains the 350px source width, compact avatar/identity/time/close header, bordered body, subtle shadow and separated error action row. FN uses the source initials fallback; Fieldnotes supplies the identity. There is no new surface CSS. Error uses the native small primary action. Pending, success and invalid hide the action row, preserving the source body measure.
+
+English copy wraps into two lines for error and pending; Chinese copy also wraps without clipping. The dark view keeps the source's dark header/body distinction and visible thin separator. The native close target is reachable in every required viewport. Source and integrated computed width, type, radius, border, shadow and header/body padding matched in the integrator's explicit check; my own code and pixel review established that the preserved classes actually appear in the assembled product.
+
+Validation uses the existing Tabler field-error treatment. The first invalid display-name field is brought into view, visible messages remain next to the empty name and malformed email, and both languages name the first field in the notification. At the mobile viewport the invalid field remains below the fixed toast rather than being hidden by it.
+
+## Actual views opened by the main agent
+
+Original full image-tool responses are in `evidence/views/`; `evidence/viewed-images.json` provides the exact input paths and receipt identities.
+
+Source/baseline: `evidence/captures/source-1440.png`, `baseline-1440.png`, and `acquired-source-1440.png`.
+
+For **each** prefix below, I personally opened all three settled images in `evidence/integrator/004-settled/`: `-error-top.png`, `-error-actions.png`, and `-invalid.png`.
+
+| Prefix | Whole-product condition |
+| --- | --- |
+| 1440-light-en | Full desktop, light English |
+| 1440-dark-zh | Full desktop, dark Chinese |
+| 1280-light-en | Short desktop, light English |
+| 1280-dark-zh | Short desktop, dark Chinese |
+| 390-light-en | Narrow viewport, light English |
+| 390-dark-zh | Narrow viewport, dark Chinese |
+
+I also personally opened the main run's pending, success and retry-pending captures for both 1440 variants; the first integration error/invalid captures; the two unchanged mobile baseline Save-edge images; and the reduced-motion success image.
+
+## Static, controlled and natural-time evidence
+
+The 18 final settled integrator images explicitly wait for the native `showing` class to clear and use instant scrolling. Their capture brackets, viewport, scroll position, state and focus are in `004-settled/captures.json`. These support static appearance and contextual placement judgments.
+
+The main run used the store's real 750 ms timer and actual UI controls. Ordered captures in `evidence/main-check-002/` have actual page-clock capture brackets in `report.json`. The first pending screenshots sampled the start of the native fade before the toast was visible; these are retained as early-time observations. Retry-pending captures show the existing visible toast update in place, its action row removed, and focus restored to the editable display-name field. Success captures show the saved-time header while the newer draft and its unsaved-form summary remain visible.
+
+These sampled images and executed natural-timer interactions do **not** establish uninterrupted natural-speed animation smoothness. Two actual WebM recordings are retained but were not viewed as continuous playback. No claim of natural-time playback inspection, device-wide frame delivery or user-perceived latency is made. The main report's event-history arrays reset on page reload; the executed assertions, capture brackets, actual storage readbacks and original command output remain the evidence for those checks.
+
+A separate reduced-motion run exercised failure → keyboard retry → actual saved result and measured a native toast transition duration of `0s`. The resulting dark/Chinese success image was personally viewed.
+
+## Verified behavior
+
+The main independent matrix passed **203 assertions**: six required conditions plus the older-result/dismiss-pending stress. All six had zero JavaScript page errors. The checks include real storage readback, retained newer drafts, retry of the failed snapshot, native close preserving storage, first-error focus, associated field messages, non-duplicating status semantics, reload persistence, initial layout retention and toast containment.
+
+The scoped integrator separately passed **156 assertions**, including extended length validation, no auto-hide after 5.2 seconds, and additional real concurrent-operation cases. That result supports its specified checks; it did not substitute for the main agent's independent run or pixel review.
+
+## Visible limits retained with evidence
+
+### Prescribed top-right placement overlays header utilities
+
+At desktop sizes, the notification covers the right notification, app, language and user menu controls. At 390px it also covers the center of the primary-navigation toggle and the logo/user region. The native close remains directly reachable. After native dismissal and returning to the top, every sampled header control's center is reachable again.
+
+This is the observable consequence of the exact settled placement. I retained that explicit design decision and recorded the tradeoff; I do not claim the underlying header remains simultaneously pointer-accessible while the toast is displayed. Changing placement would reopen the frozen decision.
+
+### Inherited mobile Customize/Save overlap
+
+At 390×844, when Save is aligned at the viewport bottom, the unchanged floating Customize button covers part of Save's right edge. I independently rendered the preserved baseline and integrated page in both languages. The Save rectangles and hit results were identical: its center is reachable; the sampled upper-right point is covered. Keyboard activation also passed.
+
+The baseline and integrated comparison is in `evidence/neighbors/results.json` and the four corresponding images. I personally viewed both baseline images and the final integrated lower-control images. This is an inherited neighboring defect, outside the explicitly protected unrelated-control scope. It remains visible and unmodified.
+
+## Failure and correction history
+
+Two bounded-child spawn attempts returned the actual thread-limit failure before the third succeeded. Main capture attempt 005 failed on a Python string/Path conversion while recording video metadata; corrected attempt 006 passed. The integrator's first browser harness attempt failed on Playwright's required `arg=` keyword before its corrected run passed. All original attempts remain.
+
+The acquired official source page's optional banner script encountered a certificate-authority error. No TLS bypass was attempted. That script is outside the prepared product and selected shell. The source cookie emoji was unavailable in the local font set; the integrated product uses neither the cookie emoji nor the source portrait.
+
+## Acceptance
+
+No defect was observed in the assigned notification, validation, persistence or focus integration. The exact source choice and content/state mapping are implemented and independently inspected. The header overlay tradeoff and inherited mobile overlap remain the material visible limitations. Broader gallery routes, real-device touch, auditory assistive-technology behavior and uninterrupted natural-speed animation viewing remain outside these completion claims.
+

@@ -1,0 +1,21 @@
+{
+  "tool": "exec_command",
+  "arguments": {
+    "cmd": "python - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,datetime\nr=Path('/workspace/scratch/e1cfe6e447ee/UI-Spec-Studio');s=r/'docs/evidence/v1.20.0/session-study';cell_id='T4-F-integrator-r1'\nsnapshot=json.loads((s/'incomplete-attempts'/ (cell_id+'-before-takeover')/'snapshot.json').read_text())\nold=Path(snapshot['source_workspace']);replay=Path('/workspace/scratch/e1cfe6e447ee/ui-study/recovered-attempts/T4-F-integrator-before-takeover');stage=Path('/workspace/scratch/e1cfe6e447ee/ui-study/staged')/cell_id\n\ndef inventory(path):\n return {p.relative_to(path).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in path.rglob('*') if p.is_file() and not any(x in {'.git','__pycache__','.pytest_cache'} for x in p.relative_to(path).parts) and not p.relative_to(path).as_posix().startswith('app/node_modules/')}\nassert inventory(old)==snapshot['workspace_files'],'Original changed after snapshot; stop'\nassert inventory(replay)==snapshot['workspace_files'],'Retained replay differs; stop'\nplan=json.loads((s/'registration.json').read_text());cell=next(x for x in plan['cells'] if x['id']==cell_id)\nassert inventory(stage)==cell['workspace_files'],'Fresh staged input differs; stop'\nretained=old.parent.parent/'unconfirmed-worksets'/'w17-before-e1cfe6e447ee-takeover'\nassert not retained.exists();retained.parent.mkdir(exist_ok=True)\nold.rename(retained);stage.rename(old)\nassert inventory(old)==cell['workspace_files']\nprint(json.dumps({'kind':'original coordinator restoration output','completed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'cell':cell_id,'old_primary_completed':False,'retained_previous_workspace':str(retained),'retained_files_verified':len(snapshot['workspace_files']),'restored_workspace':str(old),'restored_files_verified':len(cell['workspace_files']),'task_method_role_prompt_changed':False},indent=2))\nPY",
+    "sandbox_permissions": "require_escalated",
+    "justification": "按你已授权的接手要求，保留并校验旧 T4 集成实验的全部产物后，将该实验目录恢复为已冻结输入，以便独立子 Agent 补跑。",
+    "yield_time_ms": 1000,
+    "max_output_tokens": 2000
+  },
+  "result": {
+    "chunk_id": "4fe024",
+    "wall_time_seconds": 0.183704807,
+    "exit_code": 0,
+    "original_token_count": 125,
+    "output": "{\n  \"kind\": \"original coordinator restoration output\",\n  \"completed_at\": \"2026-10-31T23:32:47.553781+00:00\",\n  \"cell\": \"T4-F-integrator-r1\",\n  \"old_primary_completed\": false,\n  \"retained_previous_workspace\": \"/workspace/scratch/708e8b7f118e/ui-study/unconfirmed-worksets/w17-before-e1cfe6e447ee-takeover\",\n  \"retained_files_verified\": 376,\n  \"restored_workspace\": \"/workspace/scratch/708e8b7f118e/ui-study/worksets/w17\",\n  \"restored_files_verified\": 162,\n  \"task_method_role_prompt_changed\": false\n}\n"
+  },
+  "export_kind": "faithful_conversation_export",
+  "synthetic": false,
+  "source": "exec_command",
+  "scope": "Actual authorized restoration after verified original retention and byte-complete replay. It is not participant evidence."
+}
