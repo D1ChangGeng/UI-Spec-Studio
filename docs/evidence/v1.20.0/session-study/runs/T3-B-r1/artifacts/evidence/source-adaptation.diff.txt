@@ -1,0 +1,92 @@
+--- upstream/themes/notebook/palettes/palette-beige
++++ product/themes/notebook/palettes/palette-beige
+@@ -47,7 +47,7 @@
+ select-tag-foreground:
+ sidebar-button-foreground: #a6a69c
+ sidebar-controls-foreground-hover: #000000
+-sidebar-controls-foreground: <<colour sidebar-button-foreground>>
++sidebar-controls-foreground: <<colour very-muted-foreground>>
+ sidebar-foreground-shadow: rgba(255,255,255, 0.8)
+ sidebar-foreground: #acacac
+ sidebar-muted-foreground-hover: #444444
+@@ -79,7 +79,7 @@
+ tiddler-border: #dbdbc7;
+ tiddler-controls-foreground-hover: #888888;
+ tiddler-controls-foreground-selected: #888888;
+-tiddler-controls-foreground: #cccccc
++tiddler-controls-foreground: <<colour very-muted-foreground>>
+ tiddler-editor-background: <<colour background>>
+ tiddler-editor-border-image: #ffffff
+ tiddler-editor-border: rgba(0,0,0,.2)
+--- upstream/themes/notebook/palettes/palette-grey.meta
++++ product/themes/notebook/palettes/palette-grey.meta
+@@ -2,4 +2,5 @@
+ name: Notebook Grey
+ tags: $:/tags/Palette $:/tags/notebook/Palette
+ title: $:/themes/nico/notebook/palettes/palette-grey
+-type: application/x-tiddler-dictionary+type: application/x-tiddler-dictionary
++color-scheme: light
+--- upstream/themes/notebook/palettes/palette-beige.meta
++++ product/themes/notebook/palettes/palette-beige.meta
+@@ -2,4 +2,5 @@
+ name: Notebook Beige
+ tags: $:/tags/Palette $:/tags/notebook/Palette
+ title: $:/themes/nico/notebook/palettes/palette-beige
+-type: application/x-tiddler-dictionary+type: application/x-tiddler-dictionary
++color-scheme: light
+--- upstream/themes/notebook/palettes/palette-dark
++++ product/themes/notebook/palettes/palette-dark
+@@ -47,7 +47,7 @@
+ select-tag-foreground:
+ sidebar-button-foreground: #5e646f
+ sidebar-controls-foreground-hover: #cad2e5
+-sidebar-controls-foreground: <<colour sidebar-button-foreground>>
++sidebar-controls-foreground: <<colour very-muted-foreground>>
+ sidebar-foreground-shadow: rgba(255,255,255, 0.8)
+ sidebar-foreground: #cad2e5
+ sidebar-muted-foreground-hover: #444444
+@@ -79,7 +79,7 @@
+ tiddler-border: #111
+ tiddler-controls-foreground-hover: #cad2e5
+ tiddler-controls-foreground-selected: #cad2e5
+-tiddler-controls-foreground: #5e646f
++tiddler-controls-foreground: <<colour very-muted-foreground>>
+ tiddler-editor-background: <<colour background>>
+ tiddler-editor-border-image: #ffffff
+ tiddler-editor-border: rgba(255, 255, 255, 0.3)
+--- upstream/themes/notebook/palettes/palette-grey
++++ product/themes/notebook/palettes/palette-grey
+@@ -47,7 +47,7 @@
+ select-tag-foreground:
+ sidebar-button-foreground: #a6a69c
+ sidebar-controls-foreground-hover: #000000
+-sidebar-controls-foreground: <<colour sidebar-button-foreground>>
++sidebar-controls-foreground: <<colour very-muted-foreground>>
+ sidebar-foreground-shadow: rgba(255,255,255, 0.8)
+ sidebar-foreground: #acacac
+ sidebar-muted-foreground-hover: #444444
+@@ -79,7 +79,7 @@
+ tiddler-border: #ddd
+ tiddler-controls-foreground-hover: #888888;
+ tiddler-controls-foreground-selected: #888888;
+-tiddler-controls-foreground: #cccccc
++tiddler-controls-foreground: <<colour very-muted-foreground>>
+ tiddler-editor-background: <<colour background>>
+ tiddler-editor-border-image: #ffffff
+ tiddler-editor-border: rgba(0,0,0,.2)
+--- upstream/themes/notebook/palettes/palette-dark.meta
++++ product/themes/notebook/palettes/palette-dark.meta
+@@ -2,4 +2,5 @@
+ name: Notebook Dark
+ tags: $:/tags/Palette $:/tags/notebook/Palette
+ title: $:/themes/nico/notebook/palettes/palette-dark
+-type: application/x-tiddler-dictionary+type: application/x-tiddler-dictionary
++color-scheme: dark
+--- upstream/themes/notebook/images/color-switch.tid
++++ product/themes/notebook/images/color-switch.tid
+@@ -8,4 +8,4 @@
+ 
+ <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-circle-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+   <path fill-rule="evenodd" d="M8 15V1a7 7 0 1 1 0 14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+-</svg
++</svg>

@@ -2,7 +2,7 @@
 
 ## Current continuation status
 
-Six registered primary executions currently have retained completed records: T1-A/B/C, T2-A/B and T4-F-main. The newly completed T4 main-only product has a byte-verified 292-file snapshot, 22 indexed final/episode PNGs and 17 actual primary image views. The full [live evidence inventory](../../evidence/v1.20.0/session-study/README.md) is authoritative for later progress. Independent review and publication remain pending.
+Seven registered primary executions currently have retained completed records: T1-A/B/C, T2-A/B, T3-B and T4-F-main. The new T3-B product has a byte-verified 9,257-file snapshot and 18 final PNGs. Its original combined six-image tool-return export stalled and was lost; three fresh post-boundary image observations of unchanged PNGs are separately dated and retained. This evidence deviation and the bounded product findings remain explicit. The full [live evidence inventory](../../evidence/v1.20.0/session-study/README.md) is authoritative for later progress. Independent review and publication remain pending.
 
 The original T2-C/T3-A delivered files lacked a retained primary terminal notification. Their complete recovered workspaces, including large original traces, remain under `session-study/incomplete-attempts/`; successful reconstructions covered 377 and 9,526 files. They are excluded from completed counts and their exact frozen inputs were restored for fresh independent executions. The unchanged candidate passed all 512 tests again. Prior checkpoint sections below retain their dated historical findings.
 

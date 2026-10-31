@@ -5,3 +5,5 @@ These copies preserve the original snapshot/index/blinding logic and replace onl
 Large original files (for example a 48 MB browser trace) are split byte for byte into separately verified ZIP payloads without discarding or rewriting their content. The continuation replay helper reassembles and verifies them against the complete original snapshot. This affects evidence packaging only.
 
 The continuation index also reads original arrays of view_image tool records, retaining each full batch unchanged while linking its actual PNGs. The continuation replay entry point resolves its bundled helpers directly and accepts --snapshot-directory for retained incomplete attempts.
+
+Navigation copies of linked text such as `.diff` or `.tsx` use an additional `.txt` suffix when the fixed source-package extension policy would omit them. Their original bytes and SHA-256 remain unchanged; the complete workspace overlay retains their original names. Unsupported binary links require explicit handling rather than silent omission.

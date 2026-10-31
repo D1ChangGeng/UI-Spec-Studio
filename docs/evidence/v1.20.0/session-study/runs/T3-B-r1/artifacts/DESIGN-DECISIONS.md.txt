@@ -1,0 +1,56 @@
+# Fieldnotes — current design model
+
+## SPEC FN-01: A composed bilingual research notebook
+
+The intended experience is read a note, follow evidence, edit, save, and return without losing work or meaning. The complete product goal includes a distinctive editorial research studio in both light and dark conditions. The implemented foundation remains TiddlyWiki 5.4.1, with the native server store, draft lifecycle, links, tags, search and editor.
+
+This one cohesive increment owns whole-workspace theme composition, reading/editing distinction, native navigation presentation, and their responsive/theme relationships. All product changes are under app/wiki. Research and evidence remain within this work package.
+
+## Current choice
+
+Selected and adopted: Notebook theme 1.4.1 and notebook-mobile 1.0.0 from NicolasPetton/Notebook, revision 465c832c885894ee3c97be76449cc524e1252eb0, MIT. Source acquisition is in evidence/sources/Notebook, actual placement in app/wiki/themes/notebook and app/wiki/plugins/notebook-mobile. The copied license remains in app/wiki/LICENSE-NOTEBOOK.txt.
+
+The source supplies the 800px paper stack, sidebar relationship, aligned toolbar, mobile bottom bar, surfaces, type hierarchy, icons, editor treatment, and palettes. The visual-source obligation is covered through that coherent foundation and the inherited TiddlyWiki system. No original W1–W3 work was introduced.
+
+Notebook was preferred after actual original-demo and populated-trial viewing. Captivate challenged it through a stronger full-frame tool/identity composition; Tufte challenged it through article typography and annotation relationships. Captivate was not trialled with Fieldnotes content, and Tufte did not establish a complete compatible workspace. The parent's observations and the child's narrower claims are separated in VISUAL-REVIEW.md and evidence/research/FINAL.md.
+
+## Supported adaptation
+
+Configuration: Notebook Beige/Dark; 1rem body size, 1.65 leading; explicit font stacks; native framed-editor family setting; zero native animation duration; native Open navigation section state.
+
+Copied-source changes: closing SVG syntax, palette color-scheme metadata, and reuse of the existing very-muted-foreground token for utility controls. A small separate compatibility stylesheet restores native keyboard focus and supplies a reduced-motion mode for source CSS animation/transition behavior. Exact diff: evidence/source-adaptation.diff.
+
+The source's title, paper, spacing, depth and responsive mechanism remain. No new effect engine or runtime npm dependency was added. CJK uses the supplied host font fixture. The archived upstream theme and local patches remain a maintenance responsibility.
+
+## Meaningful revisions
+
+1. Baseline inspected: broad reading card and right sidebar; native task model retained.
+2. Whole-workspace candidates compared: Notebook centered paper; Captivate explicit application frame; Tufte article/margin treatment.
+3. Notebook trial exposed configuration and old-source compatibility issues. These were corrected within exact source identities and supported settings.
+4. Long bilingual reading received supported metric configuration; native editor ownership required configuring the current Vanilla editor-font setting too.
+5. Scoped behavior run passed 25 assertions, including filesystem/reload agreement and restoration of original texts.
+6. Early palette-open captures and a strict-locator capture failure were retained. Final closed-popover captures completed.
+7. Six final frames were displayed and inspected; exporting their combined raw view-image returns stalled and was interrupted. Final visual acceptance is partial, as documented.
+
+## Coverage and assurance
+
+L0: bilingual research studio, fictional content disclosure, durable notes.
+L1: interview → ledger → interview; native edit/save/reload; cancel; search and keyboard activation.
+L2: native story, sidebar/search, toolbar, editor; source responsive structure.
+L3: native note controls, tags, table, title/editor fields and format toolbar.
+L4: paper/ground contrast, reading measure, heading rhythm, focus and theme roles.
+L5: exact source, supported configuration, copied-source diff, 25 scoped assertions, source/content hashes, real captures and bounded personal inspection.
+
+The 25-check run is evidence/final/verification.json. All eight note bodies and 8,823 frozen vendor hashes were unchanged at the integrity check. Final style/configuration adjustments were visually captured; the complete earlier functional run was not repeated afterward. These later changes do not replace the data or persistence owners.
+
+The final-reviewed-v2 set contains eighteen real PNGs and its condition log. Six final frames received personal review. Other captures and the video remain captured, not accepted. The offline build passed before the final font/control adjustments; rebuild the offline output before distribution.
+
+## Current open scope
+
+Final personal review of compact-height and remaining narrow/theme/locale states; continuous and natural-speed viewing; real mobile keyboard; uninterrupted keyboard traversal; screen-reader use; error/recovery and broad browser coverage; owner preference. The palette chooser retains outside-click dismissal after selection. These gaps remain part of FN-01 and are not erased by this handoff.
+
+Substantive work stopped at the registered boundary. Subsequent work is evidence-only packaging and stopping the owned server. FINAL.md is the concise delivery; VISUAL-REVIEW.md distinguishes captured, viewed and unavailable evidence.
+
+## Post-boundary evidence deviation
+
+At the coordinator's explicit request, three of the same frozen PNGs were re-observed after the boundary at **2026-10-31 23:08:42 UTC**: desktop light, desktop dark, and the narrow dark editor. Their fresh, complete view_image request/response records were saved under /tmp and copied byte-for-byte into evidence/post-boundary-observation/. This is a disclosed post-boundary evidence deviation. It does not reconstruct the lost original call, rerun the app, change product source, expand the design decision, or close the other unreviewed conditions.

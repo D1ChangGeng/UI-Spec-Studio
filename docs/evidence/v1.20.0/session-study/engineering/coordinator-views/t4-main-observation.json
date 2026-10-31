@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "kind": "coordinator visual observation; separate from primary and independent reviewer",
+  "observer": "/root",
+  "observed_at": "2026-10-31T22:54:37.231171+00:00",
+  "cell_id": "T4-F-main-r1",
+  "view_export": {
+    "path": "docs/evidence/v1.20.0/session-study/engineering/coordinator-views/t4-main-001.json",
+    "sha256": "1819179e9f81f96af6965d0a2c5312e0d3ca02442702d3f7bfe5866fad35baba"
+  },
+  "screenshots": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-main-r1/artifacts/evidence/captures/final-error-top-light-en-1440.png",
+      "sha256": "ff1ff39fc74b2e5edce5e1d787bc9c05a51fd96f239bd8d18702792d99f14225"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-main-r1/artifacts/evidence/captures/final-error-lower-light-en-390.png",
+      "sha256": "f7b9aeda126ae02992d6ac772f044cb8bb8247712cc6be23e87e2d029fd2dcf8"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-main-r1/artifacts/evidence/captures/final-invalid-dark-zh-390.png",
+      "sha256": "72b1232851901a4b6bff7e74523be4a5016df37febf1d39db77b2c110f3018c0"
+    }
+  ],
+  "observations": [
+    "The 1440px light view preserves the Tabler surface, field hierarchy and separated notification action; the toast overlaps upper-right utility actions.",
+    "The 390px lower-page error view contains the source toast within the viewport and leaves the lower Cancel and Save controls visible. It occludes some content above those controls until dismissal.",
+    "The 390px dark Chinese invalid view visibly associates a red outlined display-name field with a readable Chinese error. The dark notification retains its header and close affordance."
+  ],
+  "scope": "Three original static screenshots were actually opened. No additional interaction, keyboard behavior, persistence, screen-reader response or natural-time motion was verified by these view calls.",
+  "disposition": "Retain the composition and occlusion observations for later scoped evaluation. This is not the independent product acceptance and does not approve final-runtime G products."
+}

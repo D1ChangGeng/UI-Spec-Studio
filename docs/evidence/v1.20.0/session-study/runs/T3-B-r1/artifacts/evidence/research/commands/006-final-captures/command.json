@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "/tmp/ui-spec-validation-venv/bin/python",
+    "evidence/research/capture_final.py"
+  ],
+  "cwd": "/workspace/scratch/708e8b7f118e/ui-study/worksets/w10",
+  "started_at": "2026-10-31T22:40:36.135275+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 1,
+  "ended_at": "2026-10-31T22:40:38.060791+00:00",
+  "wall_seconds": 1.925518,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 4230,
+      "sha256": "89f8421a9a70c7f531275f881051f5c39cd222d5c13a3fbe6b72c2617b827b6a"
+    },
+    "stderr.txt": {
+      "bytes": 2846,
+      "sha256": "0d7f4c76a4299dd3c8db9942c6888de9624ce62ad5a340d0ccecfc5f399354e5"
+    }
+  }
+}

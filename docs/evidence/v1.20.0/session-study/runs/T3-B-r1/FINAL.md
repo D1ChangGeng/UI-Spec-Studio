@@ -1,0 +1,87 @@
+<!-- Derived navigation copy; never use as an original participant export. -->
+
+> Repository navigation copy. The participant report is retained byte for byte in [FINAL.md.txt](FINAL.md.txt) and the workspace overlay archives. Only local artifact link destinations below are adapted for this repository.
+
+# Fieldnotes — working notebook theme and evidence handoff
+
+Implemented a coherent paper-and-charcoal research workspace using the mature **Notebook 1.4.1** theme on the supplied **TiddlyWiki 5.4.1** application. The native note store, drafts, related-note links, search, tags, editor, and server persistence remain in place. The current server product is renderable and its core editing journey passed the recorded checks. Visual acceptance remains bounded by the limitations below.
+
+## Run the product
+
+From the supplied work package:
+
+    cd /workspace/scratch/708e8b7f118e/ui-study/worksets/w10/app
+    PORT=4410 ./start.sh
+
+Then open [http://127.0.0.1:4410/](http://127.0.0.1:4410/) in a browser that can reach the executor. The preview server started for this work has been stopped. Node 20 or newer is required; no package installation is needed.
+
+Use the top toolbar's half-circle control to choose **Notebook Beige** or **Notebook Dark**. The menu opens the native navigation sections; on narrow screens the toolbar moves to the bottom and search is available in the navigation panel. Per-note pencil, checkmark, and discard controls retain their native behavior.
+
+## Result and source choice
+
+Notebook supplies the centered 800-pixel paper stack, soft edges and depth, aligned toolbar, collapsible left navigation, responsive bottom bar, title hierarchy, editor surfaces, and matching palettes. These relationships remain visible in the populated bilingual interview.
+
+The comparison included three materially different directions:
+
+| Direction | Observed contribution | Decision |
+|---|---|---|
+| Notebook | Centered paper stack, aligned task controls, coherent reading/editor surfaces, responsive left navigation and bottom toolbar | Adopted as the complete workspace foundation |
+| Captivate | Full-width colored application frame, persistent identity/search, wider paper and a separate rail of circular actions | A credible challenge, but its task framing competes more strongly with sustained reading; no populated local trial was completed |
+| Tufte | Literary typography and nearby annotations in the original CSS reference; a separate TiddlyWiki container reserves margin space | Useful editorial reference, with a narrower reuse scope and additional content/font/integration questions |
+
+The original demos, source identities, rights, viewed captures, and research limits are retained in the [research report](artifacts/evidence/research/FINAL.md.txt). The final choice is the designer's delegated selection, not a claim of owner preference or user-study acceptance.
+
+Notebook is pinned to [NicolasPetton/Notebook](https://github.com/NicolasPetton/Notebook), revision **465c832c885894ee3c97be76449cc524e1252eb0**, with its MIT license retained. The theme lives in app/wiki/themes/notebook and its original mobile plugin in app/wiki/plugins/notebook-mobile. The supplied vendored TiddlyWiki distribution is unchanged.
+
+## Configuration and narrow repairs
+
+Supported theme settings provide a 1rem reading size, 1.65 line height, explicit mixed-script font fallbacks, and the native editor font configuration. The editor retains the source's denser writing treatment and toolbar. Native story navigation uses the supported zero-duration setting to keep repeated reading and editing quiet.
+
+The source-preserving repairs address observed compatibility issues: a malformed SVG closing tag, missing light/dark color-scheme metadata, suppressed keyboard focus outlines, reduced-motion handling for Notebook's CSS transitions, and pale resting utility controls. The latter reuse Notebook's existing foreground token. Exact copied-source differences are preserved in [source-adaptation.diff](artifacts/evidence/source-adaptation.diff.txt). No W1–W3 original-design exception was used.
+
+No new runtime npm dependency, remote service, illustration, or bundled font was introduced. The Noto CJK font remains the supplied host fixture.
+
+## Verified behavior
+
+The recorded browser run contains **25 passing scoped assertions** and no browser page errors. It exercised:
+
+- The complete interview's related link to the evidence ledger, its table, and the return to the interview.
+- Changes to an English and a Chinese passage through the native iframe editor and checkmark.
+- Agreement between the filesystem write and a subsequent browser reload.
+- Restoration of the original supplied text through another native save.
+- Discarding a later edit without changing the authoritative note.
+- Keyboard activation of a search result and pencil, including visible focus.
+- Reading reflow and complete editor content in both palettes at 1440×900, 1280×640, and 390×844.
+- The reduced-motion media condition, quiet sidebar animation state, and native zero-duration navigation.
+- A Chinese UI fixture preserving the bilingual note content.
+
+These are scoped checks, not a complete accessibility certification. The keyboard test used programmatic focus placement before keyboard activation, so uninterrupted keyboard traversal from initial entry remains unverified.
+
+The [verification record](artifacts/evidence/final/verification.json) and exact command output are retained. A separate [integrity record](artifacts/evidence/integrity.json) confirms that all **8,823** checked upstream vendor files match the frozen hashes and that all **eight supplied note bodies** remain identical after the persistence test.
+
+The offline export command passed before the final font/utility-control adjustments. The server source is the authoritative final result; the existing offline export should be rebuilt before it is used as a final distribution.
+
+## Representative final views
+
+The following final captures were displayed and personally inspected:
+
+- [Light interview, desktop](artifacts/evidence/final-reviewed-v2/beige-read-1440.png)
+- [Dark interview, desktop](artifacts/evidence/final-reviewed-v2/dark-read-1440.png)
+- [Light editor, desktop](artifacts/evidence/final-reviewed-v2/beige-edit-1440.png)
+- [Dark editor, desktop](artifacts/evidence/final-reviewed-v2/dark-edit-1440.png)
+- [Light reading, narrow](artifacts/evidence/final-reviewed-v2/beige-read-390.png)
+- [Dark editor, narrow](artifacts/evidence/final-reviewed-v2/dark-edit-390.png)
+
+The desktop views retain the source's paper width and surrounding space while the narrow views become a contiguous reading/editing surface. The final images show the palette chooser dismissed and the repaired utility controls. The earlier captures with the chooser still open remain in the evidence archive.
+
+## Remaining limits and evidence gap
+
+Substantive work stopped at the registered boundary. The final capture set contains 18 real PNGs and a condition log, but only the six final views listed above received the final personal pixel review. Compact-height, remaining narrow variants, Chinese UI, final sidebar, and reduced-motion screenshots were captured without a completed final personal review.
+
+A video of the controlled browser journey is retained, but it was not played back at natural speed. The work therefore does not establish natural-time motion quality, real mobile keyboard behavior, screen-reader operation, broad browser compatibility, server-failure recovery, or user preference. The source palette chooser stays open after selection until dismissed; its broader keyboard and dismissal behavior merits further review. Notebook's repository is archived, so these local compatibility patches need maintenance.
+
+The last image call displayed six final images successfully, then its combined raw-response export stalled and was interrupted. The requested view-set-001.json was not written. The original screenshots, their capture log, and the displayed conversation images remain, but the complete raw image-tool return objects from that call are unavailable. They were not reconstructed. Earlier raw image-tool responses and all original command successes/failures remain saved. A termination attempt returned “exec cell 52 not found,” confirming that export cell was no longer available.
+
+At the coordinator's explicit request, three of the same frozen PNGs were re-observed after the boundary at **2026-10-31 23:08:42 UTC**: desktop light, desktop dark, and the narrow dark editor. Their fresh, complete view_image request/response records were saved under /tmp and copied byte-for-byte into evidence/post-boundary-observation/. This is a disclosed post-boundary evidence deviation. It does not reconstruct the lost original call, rerun the app, change product source, expand the design decision, or close the other unreviewed conditions.
+
+Evidence-only handoff packaging was completed after the boundary. [VISUAL-REVIEW.md](artifacts/VISUAL-REVIEW.md.txt), [DESIGN-DECISIONS.md](artifacts/DESIGN-DECISIONS.md.txt), and [DELEGATION.json](artifacts/DELEGATION.json) distinguish the implemented result, actual observations, and remaining gaps.

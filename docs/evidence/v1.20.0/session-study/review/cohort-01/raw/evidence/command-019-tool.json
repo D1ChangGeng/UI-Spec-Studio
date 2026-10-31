@@ -1,0 +1,14 @@
+{
+  "tool": "exec_command",
+  "arguments": {
+    "cmd": "python /workspace/scratch/5499118f5564/ui-study/independent-review/capture_command.py --output /workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-019-freeze-verification --cwd /workspace/scratch/5499118f5564/ui-study/independent-review -- python -c 'from pathlib import Path; import subprocess,sys; p=Path(\"freeze_cohort_01.py\"); s=p.read_text().replace(\".startswith(\\\"data:image/\\\")\", \".startswith(\\\"data:\\\")\"); q=Path(\"freeze_cohort_01_v2.py\"); assert not q.exists(); q.write_text(s); raise SystemExit(subprocess.call([sys.executable,str(q)]))'",
+    "max_output_tokens": 4000
+  },
+  "result": {
+    "chunk_id": "aa6fe6",
+    "wall_time_seconds": 0.103735167,
+    "exit_code": 0,
+    "original_token_count": 140,
+    "output": "{\"cohort\": \"01\", \"products\": [\"P03\", \"P06\", \"P09\", \"P10\", \"P16\"], \"original_view_exports_verified\": 30, \"report_words\": 3369, \"freeze\": \"/workspace/scratch/5499118f5564/ui-study/independent-review/cohort-01-FREEZE.json\", \"report_sha256\": \"59a906d343d8b170e4f72511cba949759e67b13b324e8099692ef7b09f75362d\", \"cohort_products_sha256\": \"58c4bbef8f465d92da8fd0819ee16b110a3521a20e209a938ab4d09a8a6fad3f\"}\n{\"capture\": \"/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-019-freeze-verification\", \"returncode\": 0, \"wall_seconds\": 0.164599}\n"
+  }
+}

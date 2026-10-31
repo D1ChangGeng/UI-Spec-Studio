@@ -1,0 +1,389 @@
+
+PRODUCT P03 FILE TASK.md 
+ # T1 — coherent settings under a mature system
+
+Improve the supplied settings application for a bilingual knowledge-work product. Keep its established task model and authoritative settings behavior. The supplied INPUT.md identifies the selected mature system, starter revision, content, error behavior, permitted changes and preview command.
+
+Make profile, notification and privacy controls coherent in hierarchy, type, surfaces, real validation/pending/success/failure states, keyboard focus and narrow-height use. Preserve an already adequate mature family rather than introducing decorative replacements. Use authorized source-supported configuration/composition. No original visual construction is authorized.
+
+Use representative short/long Chinese and English content and both declared themes. Validate the user path through editing, saving, failure, retry and return. Study actual demos and current renders where a consequential gap exists. Do not expand a straightforward verified change into an unnecessary research campaign. Retain the main Agent's visual judgment and unresolved quality. Deliver the integrated product, actual adopted sources, relevant evidence and observed limitations.
+
+
+PRODUCT P03 FILE ORIGINAL-INPUT.md 
+ # T1 input — Fieldnotes account settings
+
+## Product and requested increment
+
+Fieldnotes is a bilingual knowledge-work product for researchers who collect notes with a small distributed team. Improve this one existing settings experience: profile identity, weekly notifications, and profile visibility should read as one coherent mature application, including editing, validation, saving, one failed save, retry, and return. The complete assignment is in `TASK.md`.
+
+The application starts from Tabler's original settings page, not a new visual mockup. Preserve its established settings navigation, content hierarchy, typography, surfaces, form family, theme system, and browser-local settings model. Source-supported configuration, composition and narrow adaptation are authorized. No original visual construction, unrelated navigation redesign, service integration, or authentication work is authorized.
+
+## Selected foundation and provenance
+
+- Upstream: `https://github.com/tabler/tabler`, MIT.
+- Version: `@tabler/core@1.7.1`; exact tag commit and package/snapshot digests are in `SOURCE-MANIFEST.json`.
+- Complete original rendered settings page: `sources/official-settings-snapshot.html`, fetched from `https://preview.tabler.io/settings.html`; it reports v1.7.1. The public deployment does not expose its exact commit, so its own content digest is the authoritative compiled-page identity. Tagged Astro source is separately retained under `sources/`.
+- All required styles and scripts are local under `app/dist`; the original demo CSS is local. No installation or remote account is needed.
+- Preparation changed product copy, connected a local settings service, removed the advertising script and portrait dependencies, retained the native avatar initials fallback, and composed the notification control from the same existing Tabler switch markup. The unchanged system source remains the visual foundation.
+- Upstream gallery navigation outside this settings page is peripheral source context; those gallery routes are not part of the runnable product contract. Do not expand the task to implement the gallery.
+
+## Authoritative behavior
+
+`app/settings-store.js` owns validation, persistence and save results. `app/settings-controller.js` binds the current page. The browser key is `fieldnotes-settings-v1`, schema version 1. `readSettings()` reads real browser storage, and `saveSettings(draft)` commits the captured draft only after its 750 ms delay succeeds. Failed saves preserve the draft and previously stored value. `subscribeSettings(listener)` emits `invalid`, `pending`, `success`, or `error` facts. Do not replace persistence with a visual simulation or change the validation rules to make a check pass.
+
+The data fields are display name (required, at most 100 characters), organization (at most 180), location (at most 100), syntactically valid email, weekly digest, and public-profile visibility. Email remains private. Profile visibility has no effect on email disclosure. All content is synthetic, and no user information is transmitted. The initial values include `Mei Lin · 林玫`, `Fieldnotes Research / 城市日常研究小组`, and `Singapore / 新加坡`.
+
+Use `?fail=once` on a fresh page load to make the next otherwise valid save fail. A retry in the same session succeeds. `window.fieldnotes.setFailureMode(true)` sets the same control without navigation. Failure remains an explicit fixture of the local service; no real remote outage is implied. Cancel restores the last persisted settings. Check the distinction between a submitted snapshot and edits made while it is pending.
+
+## Content and conditions
+
+Inspect English and Simplified Chinese, light and dark, at 1440×900 and 1280×600. Include a 390×844 narrow check of the same settings path. Use both a short name and `跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme` as long representative content. Keep actual entered values visible and editable. The existing theme and language controls are fixture controls using native Tabler buttons; polish their hierarchy within the existing family where useful.
+
+Start with `/?theme=light&lang=en` or `/?theme=dark&lang=zh`. Use the same task content and conditions in every paired run. Keyboard-only editing, saving, error recovery, focus visibility, scrolling at compact height, reload, and return are part of the requested path. The initial implementation has basic real status feedback; its full field association, state presentation, content coherence and compact-height quality remain work for the participant.
+
+## Run and scope
+
+From `app/` run:
+
+```bash
+python3 -m http.server 4111 --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:4111/`. Change the port only to avoid another study instance. No build is required. `package.json` also provides `npm run dev` for convenience.
+
+Normal editable product files are `index.html`, `settings-controller.js`, and any justified source-preserving adapters. Preserve the authoritative store contract and upstream license. Retain acquired source notices with any additional adopted resources. Avoid editing minified distribution files; use supported classes, configuration and source components. Deliver the integrated application, actual adopted sources, useful observation evidence and remaining limitations. Starter-readiness evidence does not establish participant completion.
+
+
+PRODUCT P03 FILE README.md 
+ # Product P03
+
+Read TASK.md and ORIGINAL-INPUT.md for the unchanged task and supplied foundation contract. The app/ directory contains the frozen delivered product. Condition labels, role instructions, agent identities and producer judgments are withheld during initial review.
+
+## Preview
+
+From this product directory: python3 -m http.server 4503 --bind 127.0.0.1 --directory app
+
+For an interactive test that can change files or stored data, use a separate disposable copy. Do not edit this frozen product. The browser, Playwright and CJK font conditions are supplied in the common reviewer instructions. All content and service fixtures are synthetic and local.
+
+## Evidence
+
+The PNGs listed in capture-index.json are actual captured pixels. Inspect the app at intended dimensions and meaningful states, using the original task rather than treating the number of captures as quality. A shared original source foundation is available at ../../foundations/T1/.
+
+The raw producer logs and self-assessment are withheld for the first blind judgment; they remain retained in the public study record and will be available for a separate evidence audit. Some captures precede narrowly scoped later state repairs; the delivered source is the frozen final product. Direct re-observation can resolve uncertainty.
+
+
+PRODUCT P06 FILE TASK.md 
+ # T1 — coherent settings under a mature system
+
+Improve the supplied settings application for a bilingual knowledge-work product. Keep its established task model and authoritative settings behavior. The supplied INPUT.md identifies the selected mature system, starter revision, content, error behavior, permitted changes and preview command.
+
+Make profile, notification and privacy controls coherent in hierarchy, type, surfaces, real validation/pending/success/failure states, keyboard focus and narrow-height use. Preserve an already adequate mature family rather than introducing decorative replacements. Use authorized source-supported configuration/composition. No original visual construction is authorized.
+
+Use representative short/long Chinese and English content and both declared themes. Validate the user path through editing, saving, failure, retry and return. Study actual demos and current renders where a consequential gap exists. Do not expand a straightforward verified change into an unnecessary research campaign. Retain the main Agent's visual judgment and unresolved quality. Deliver the integrated product, actual adopted sources, relevant evidence and observed limitations.
+
+
+PRODUCT P06 FILE ORIGINAL-INPUT.md 
+ # T1 input — Fieldnotes account settings
+
+## Product and requested increment
+
+Fieldnotes is a bilingual knowledge-work product for researchers who collect notes with a small distributed team. Improve this one existing settings experience: profile identity, weekly notifications, and profile visibility should read as one coherent mature application, including editing, validation, saving, one failed save, retry, and return. The complete assignment is in `TASK.md`.
+
+The application starts from Tabler's original settings page, not a new visual mockup. Preserve its established settings navigation, content hierarchy, typography, surfaces, form family, theme system, and browser-local settings model. Source-supported configuration, composition and narrow adaptation are authorized. No original visual construction, unrelated navigation redesign, service integration, or authentication work is authorized.
+
+## Selected foundation and provenance
+
+- Upstream: `https://github.com/tabler/tabler`, MIT.
+- Version: `@tabler/core@1.7.1`; exact tag commit and package/snapshot digests are in `SOURCE-MANIFEST.json`.
+- Complete original rendered settings page: `sources/official-settings-snapshot.html`, fetched from `https://preview.tabler.io/settings.html`; it reports v1.7.1. The public deployment does not expose its exact commit, so its own content digest is the authoritative compiled-page identity. Tagged Astro source is separately retained under `sources/`.
+- All required styles and scripts are local under `app/dist`; the original demo CSS is local. No installation or remote account is needed.
+- Preparation changed product copy, connected a local settings service, removed the advertising script and portrait dependencies, retained the native avatar initials fallback, and composed the notification control from the same existing Tabler switch markup. The unchanged system source remains the visual foundation.
+- Upstream gallery navigation outside this settings page is peripheral source context; those gallery routes are not part of the runnable product contract. Do not expand the task to implement the gallery.
+
+## Authoritative behavior
+
+`app/settings-store.js` owns validation, persistence and save results. `app/settings-controller.js` binds the current page. The browser key is `fieldnotes-settings-v1`, schema version 1. `readSettings()` reads real browser storage, and `saveSettings(draft)` commits the captured draft only after its 750 ms delay succeeds. Failed saves preserve the draft and previously stored value. `subscribeSettings(listener)` emits `invalid`, `pending`, `success`, or `error` facts. Do not replace persistence with a visual simulation or change the validation rules to make a check pass.
+
+The data fields are display name (required, at most 100 characters), organization (at most 180), location (at most 100), syntactically valid email, weekly digest, and public-profile visibility. Email remains private. Profile visibility has no effect on email disclosure. All content is synthetic, and no user information is transmitted. The initial values include `Mei Lin · 林玫`, `Fieldnotes Research / 城市日常研究小组`, and `Singapore / 新加坡`.
+
+Use `?fail=once` on a fresh page load to make the next otherwise valid save fail. A retry in the same session succeeds. `window.fieldnotes.setFailureMode(true)` sets the same control without navigation. Failure remains an explicit fixture of the local service; no real remote outage is implied. Cancel restores the last persisted settings. Check the distinction between a submitted snapshot and edits made while it is pending.
+
+## Content and conditions
+
+Inspect English and Simplified Chinese, light and dark, at 1440×900 and 1280×600. Include a 390×844 narrow check of the same settings path. Use both a short name and `跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme` as long representative content. Keep actual entered values visible and editable. The existing theme and language controls are fixture controls using native Tabler buttons; polish their hierarchy within the existing family where useful.
+
+Start with `/?theme=light&lang=en` or `/?theme=dark&lang=zh`. Use the same task content and conditions in every paired run. Keyboard-only editing, saving, error recovery, focus visibility, scrolling at compact height, reload, and return are part of the requested path. The initial implementation has basic real status feedback; its full field association, state presentation, content coherence and compact-height quality remain work for the participant.
+
+## Run and scope
+
+From `app/` run:
+
+```bash
+python3 -m http.server 4111 --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:4111/`. Change the port only to avoid another study instance. No build is required. `package.json` also provides `npm run dev` for convenience.
+
+Normal editable product files are `index.html`, `settings-controller.js`, and any justified source-preserving adapters. Preserve the authoritative store contract and upstream license. Retain acquired source notices with any additional adopted resources. Avoid editing minified distribution files; use supported classes, configuration and source components. Deliver the integrated application, actual adopted sources, useful observation evidence and remaining limitations. Starter-readiness evidence does not establish participant completion.
+
+
+PRODUCT P06 FILE README.md 
+ # Product P06
+
+Read TASK.md and ORIGINAL-INPUT.md for the unchanged task and supplied foundation contract. The app/ directory contains the frozen delivered product. Condition labels, role instructions, agent identities and producer judgments are withheld during initial review.
+
+## Preview
+
+From this product directory: python3 -m http.server 4506 --bind 127.0.0.1 --directory app
+
+For an interactive test that can change files or stored data, use a separate disposable copy. Do not edit this frozen product. The browser, Playwright and CJK font conditions are supplied in the common reviewer instructions. All content and service fixtures are synthetic and local.
+
+## Evidence
+
+The PNGs listed in capture-index.json are actual captured pixels. Inspect the app at intended dimensions and meaningful states, using the original task rather than treating the number of captures as quality. A shared original source foundation is available at ../../foundations/T1/.
+
+The raw producer logs and self-assessment are withheld for the first blind judgment; they remain retained in the public study record and will be available for a separate evidence audit. Some captures precede narrowly scoped later state repairs; the delivered source is the frozen final product. Direct re-observation can resolve uncertainty.
+
+
+PRODUCT P09 FILE TASK.md 
+ # T2 — conversation composer and reading continuity
+
+Improve the supplied desktop conversation workspace around one cohesive experience: growing input, attachment disclosure, streaming answers and user-controlled reading position. INPUT.md identifies the starter, synthetic-response controls (not a real model service), viewport/theme/locale targets and preview.
+
+Research mature products and independently authored implementations, not only generic input primitives. Observe full spatial relationships and meaningful episodes. High visual completeness in the input surface, typography, action hierarchy and continuity matters alongside behavior. Track design references separately from usable implementations. If an exceptional reference lacks code, preserve it honestly without reconstructing it from scratch.
+
+Handle single/multi-line input, attachment growth, send/cancel, long responses, manual scrolling while content grows, compact height, keyboard focus and return. Keep coupled relationships in this formal SPEC even if multiple research tasks are delegated. Realize the chosen mature resources in the starter and inspect their defining qualities in context. No general original-construction permission is granted. Keep evidence of actual observation, candidate differences, adoption and unresolved gaps.
+
+
+PRODUCT P09 FILE ORIGINAL-INPUT.md 
+ # T2 input — Meridian conversation workspace
+
+## Product and requested increment
+
+Meridian helps a researcher ask a question, read a long unfolding answer, attach local filenames, revisit earlier paragraphs and continue a thread. Improve the coupled relationship between the composer, attachment disclosure, answer reading space and user-controlled reading position. The exact original assignment is in `TASK.md`.
+
+The baseline is the complete assistant-ui cloud-template workspace with its actual styled Thread, ThreadListSidebar, composer, attachment UI, message actions and native behavior. A local deterministic adapter replaces the cloud transport. This is a real mature interface implementation with synthetic responses, not a real model service. Its source, core components and license are supplied for direct inspection.
+
+## Sources and preparation boundary
+
+- Repository: `https://github.com/assistant-ui/assistant-ui`.
+- Exact source revision: `ff654d8156680b839774296ef644b57ab1078425`, MIT.
+- Original application composition: `templates/cloud/app/assistant.tsx`.
+- Every copied mature component and its original path/digest is listed in `SOURCE-MANIFEST.json`. The component files under `app/src/components/`, hooks and utility were copied without code changes. Source-provided CSS is preserved except for its Tailwind discovery path. The original Inter/IBM Plex Mono font configuration is self-hosted; pinned font source and OFL notices are recorded in `FONT-SOURCES.json`.
+- Preparation replaces the Next/cloud shell with a standalone Vite shell, changes only the breadcrumb copy, supplies representative initial conversation data, and implements a filename-only local attachment adapter. The full thread/sidebar/composer UI is upstream code.
+- `app/package-lock.json` freezes dependencies. `app/LICENSE` preserves the upstream notice. The checked-in `dist/` build is a quick runnable initial artifact; rebuild after source edits.
+
+The current source already solves many interaction problems. Research should establish which consequential properties are adequate and where another mature product or independently authored implementation can improve the requested experience. Do not replace the mature family merely to produce different code. No general original-construction permission is granted.
+
+## State and synthetic response contract
+
+`app/src/synthetic.ts` owns fixed synthetic content and the model/attachment adapters. It makes no network calls. `useLocalRuntime` and assistant-ui own conversation, composer, message status, abort and reading behavior. The supplied runtime keeps thread state in memory; reload returns to the seeded conversation. Persistent remote history, real file upload and real language-model output are outside the task.
+
+- Every ordinary question yields the same long local example, delivered in 72-character chunks about 60 ms apart. The response begins with an explicit synthetic-response disclosure.
+- Include `[fail]` in a question to fail that question's first response after partial text. Retrying that same question during the session succeeds. This gives a stable failure/retry path.
+- Stop must abort future chunks. New questions, editing, retry and return should remain operable through the source runtime.
+- Attachments accept local files but retain only filename/type metadata. Their contents are never read or transmitted. The attachment UI receives the real selected filename; its current compact tiles and hover disclosure remain a concrete area to inspect with long filenames and multiple files.
+
+Keep these state boundaries intact. Participants may repair adapter defects if discovered, but must not remove failure, shorten the long response, hide attachments or force scrolling as a shortcut to satisfying the experience.
+
+## Representative conditions
+
+Inspect at 1440×900 and 1280×600, with a supplementary 390×844 check. Run both light and dark. `/?theme=dark&lang=zh` selects dark mode and Chinese seeded response text; `/?theme=light&lang=en` selects the English condition. Baseline upstream action labels remain English even in the Chinese content condition; localized labeling where needed is within the product increment. Both conditions contain actual Chinese/English text, not empty rectangles.
+
+Use a one-line question; a six-line question; a long mixed-language question; one short filename and several long filenames such as `城市出行访谈摘要_2026-10-31_final-revised-notes.txt`; and responses long enough to scroll. Observe manual scroll-away while content grows, return to latest, cancel, failure/retry, keyboard focus, and repeat-question continuity. Keep the composer and reading relationships together in the same formal SPEC.
+
+## Run
+
+For an unchanged initial build:
+
+```bash
+cd app
+python3 -m http.server 4112 --bind 127.0.0.1 --directory dist
+```
+
+For development:
+
+```bash
+cd app
+npm ci --ignore-scripts --no-audit --no-fund
+npm run dev -- --host 127.0.0.1 --port 4112
+```
+
+Build with `npm run build`. The study host may provision the same dependency cache to all copies; the lockfile remains authoritative. No account, token, server API or external model cost is required. Keep source provenance, actual observations, adopted resources and unresolved gaps with the result. A successful build or initial screenshot establishes only that boundary.
+
+
+PRODUCT P09 FILE README.md 
+ # Product P09
+
+Read TASK.md and ORIGINAL-INPUT.md for the unchanged task and supplied foundation contract. The app/ directory contains the frozen delivered product. Condition labels, role instructions, agent identities and producer judgments are withheld during initial review.
+
+## Preview
+
+From this product directory: python3 -m http.server 4509 --bind 127.0.0.1 --directory app/dist
+
+For an interactive test that can change files or stored data, use a separate disposable copy. Do not edit this frozen product. The browser, Playwright and CJK font conditions are supplied in the common reviewer instructions. All content and service fixtures are synthetic and local.
+
+## Evidence
+
+The PNGs listed in capture-index.json are actual captured pixels. Inspect the app at intended dimensions and meaningful states, using the original task rather than treating the number of captures as quality. A shared original source foundation is available at ../../foundations/T2/.
+
+The raw producer logs and self-assessment are withheld for the first blind judgment; they remain retained in the public study record and will be available for a separate evidence audit. Some captures precede narrowly scoped later state repairs; the delivered source is the frozen final product. Direct re-observation can resolve uncertainty.
+
+
+PRODUCT P10 FILE TASK.md 
+ # T2 — conversation composer and reading continuity
+
+Improve the supplied desktop conversation workspace around one cohesive experience: growing input, attachment disclosure, streaming answers and user-controlled reading position. INPUT.md identifies the starter, synthetic-response controls (not a real model service), viewport/theme/locale targets and preview.
+
+Research mature products and independently authored implementations, not only generic input primitives. Observe full spatial relationships and meaningful episodes. High visual completeness in the input surface, typography, action hierarchy and continuity matters alongside behavior. Track design references separately from usable implementations. If an exceptional reference lacks code, preserve it honestly without reconstructing it from scratch.
+
+Handle single/multi-line input, attachment growth, send/cancel, long responses, manual scrolling while content grows, compact height, keyboard focus and return. Keep coupled relationships in this formal SPEC even if multiple research tasks are delegated. Realize the chosen mature resources in the starter and inspect their defining qualities in context. No general original-construction permission is granted. Keep evidence of actual observation, candidate differences, adoption and unresolved gaps.
+
+
+PRODUCT P10 FILE ORIGINAL-INPUT.md 
+ # T2 input — Meridian conversation workspace
+
+## Product and requested increment
+
+Meridian helps a researcher ask a question, read a long unfolding answer, attach local filenames, revisit earlier paragraphs and continue a thread. Improve the coupled relationship between the composer, attachment disclosure, answer reading space and user-controlled reading position. The exact original assignment is in `TASK.md`.
+
+The baseline is the complete assistant-ui cloud-template workspace with its actual styled Thread, ThreadListSidebar, composer, attachment UI, message actions and native behavior. A local deterministic adapter replaces the cloud transport. This is a real mature interface implementation with synthetic responses, not a real model service. Its source, core components and license are supplied for direct inspection.
+
+## Sources and preparation boundary
+
+- Repository: `https://github.com/assistant-ui/assistant-ui`.
+- Exact source revision: `ff654d8156680b839774296ef644b57ab1078425`, MIT.
+- Original application composition: `templates/cloud/app/assistant.tsx`.
+- Every copied mature component and its original path/digest is listed in `SOURCE-MANIFEST.json`. The component files under `app/src/components/`, hooks and utility were copied without code changes. Source-provided CSS is preserved except for its Tailwind discovery path. The original Inter/IBM Plex Mono font configuration is self-hosted; pinned font source and OFL notices are recorded in `FONT-SOURCES.json`.
+- Preparation replaces the Next/cloud shell with a standalone Vite shell, changes only the breadcrumb copy, supplies representative initial conversation data, and implements a filename-only local attachment adapter. The full thread/sidebar/composer UI is upstream code.
+- `app/package-lock.json` freezes dependencies. `app/LICENSE` preserves the upstream notice. The checked-in `dist/` build is a quick runnable initial artifact; rebuild after source edits.
+
+The current source already solves many interaction problems. Research should establish which consequential properties are adequate and where another mature product or independently authored implementation can improve the requested experience. Do not replace the mature family merely to produce different code. No general original-construction permission is granted.
+
+## State and synthetic response contract
+
+`app/src/synthetic.ts` owns fixed synthetic content and the model/attachment adapters. It makes no network calls. `useLocalRuntime` and assistant-ui own conversation, composer, message status, abort and reading behavior. The supplied runtime keeps thread state in memory; reload returns to the seeded conversation. Persistent remote history, real file upload and real language-model output are outside the task.
+
+- Every ordinary question yields the same long local example, delivered in 72-character chunks about 60 ms apart. The response begins with an explicit synthetic-response disclosure.
+- Include `[fail]` in a question to fail that question's first response after partial text. Retrying that same question during the session succeeds. This gives a stable failure/retry path.
+- Stop must abort future chunks. New questions, editing, retry and return should remain operable through the source runtime.
+- Attachments accept local files but retain only filename/type metadata. Their contents are never read or transmitted. The attachment UI receives the real selected filename; its current compact tiles and hover disclosure remain a concrete area to inspect with long filenames and multiple files.
+
+Keep these state boundaries intact. Participants may repair adapter defects if discovered, but must not remove failure, shorten the long response, hide attachments or force scrolling as a shortcut to satisfying the experience.
+
+## Representative conditions
+
+Inspect at 1440×900 and 1280×600, with a supplementary 390×844 check. Run both light and dark. `/?theme=dark&lang=zh` selects dark mode and Chinese seeded response text; `/?theme=light&lang=en` selects the English condition. Baseline upstream action labels remain English even in the Chinese content condition; localized labeling where needed is within the product increment. Both conditions contain actual Chinese/English text, not empty rectangles.
+
+Use a one-line question; a six-line question; a long mixed-language question; one short filename and several long filenames such as `城市出行访谈摘要_2026-10-31_final-revised-notes.txt`; and responses long enough to scroll. Observe manual scroll-away while content grows, return to latest, cancel, failure/retry, keyboard focus, and repeat-question continuity. Keep the composer and reading relationships together in the same formal SPEC.
+
+## Run
+
+For an unchanged initial build:
+
+```bash
+cd app
+python3 -m http.server 4112 --bind 127.0.0.1 --directory dist
+```
+
+For development:
+
+```bash
+cd app
+npm ci --ignore-scripts --no-audit --no-fund
+npm run dev -- --host 127.0.0.1 --port 4112
+```
+
+Build with `npm run build`. The study host may provision the same dependency cache to all copies; the lockfile remains authoritative. No account, token, server API or external model cost is required. Keep source provenance, actual observations, adopted resources and unresolved gaps with the result. A successful build or initial screenshot establishes only that boundary.
+
+
+PRODUCT P10 FILE README.md 
+ # Product P10
+
+Read TASK.md and ORIGINAL-INPUT.md for the unchanged task and supplied foundation contract. The app/ directory contains the frozen delivered product. Condition labels, role instructions, agent identities and producer judgments are withheld during initial review.
+
+## Preview
+
+From this product directory: python3 -m http.server 4510 --bind 127.0.0.1 --directory app/dist
+
+For an interactive test that can change files or stored data, use a separate disposable copy. Do not edit this frozen product. The browser, Playwright and CJK font conditions are supplied in the common reviewer instructions. All content and service fixtures are synthetic and local.
+
+## Evidence
+
+The PNGs listed in capture-index.json are actual captured pixels. Inspect the app at intended dimensions and meaningful states, using the original task rather than treating the number of captures as quality. A shared original source foundation is available at ../../foundations/T2/.
+
+The raw producer logs and self-assessment are withheld for the first blind judgment; they remain retained in the public study record and will be available for a separate evidence audit. Some captures precede narrowly scoped later state repairs; the delivered source is the frozen final product. Direct re-observation can resolve uncertainty.
+
+
+PRODUCT P16 FILE TASK.md 
+ # T1 — coherent settings under a mature system
+
+Improve the supplied settings application for a bilingual knowledge-work product. Keep its established task model and authoritative settings behavior. The supplied INPUT.md identifies the selected mature system, starter revision, content, error behavior, permitted changes and preview command.
+
+Make profile, notification and privacy controls coherent in hierarchy, type, surfaces, real validation/pending/success/failure states, keyboard focus and narrow-height use. Preserve an already adequate mature family rather than introducing decorative replacements. Use authorized source-supported configuration/composition. No original visual construction is authorized.
+
+Use representative short/long Chinese and English content and both declared themes. Validate the user path through editing, saving, failure, retry and return. Study actual demos and current renders where a consequential gap exists. Do not expand a straightforward verified change into an unnecessary research campaign. Retain the main Agent's visual judgment and unresolved quality. Deliver the integrated product, actual adopted sources, relevant evidence and observed limitations.
+
+
+PRODUCT P16 FILE ORIGINAL-INPUT.md 
+ # T1 input — Fieldnotes account settings
+
+## Product and requested increment
+
+Fieldnotes is a bilingual knowledge-work product for researchers who collect notes with a small distributed team. Improve this one existing settings experience: profile identity, weekly notifications, and profile visibility should read as one coherent mature application, including editing, validation, saving, one failed save, retry, and return. The complete assignment is in `TASK.md`.
+
+The application starts from Tabler's original settings page, not a new visual mockup. Preserve its established settings navigation, content hierarchy, typography, surfaces, form family, theme system, and browser-local settings model. Source-supported configuration, composition and narrow adaptation are authorized. No original visual construction, unrelated navigation redesign, service integration, or authentication work is authorized.
+
+## Selected foundation and provenance
+
+- Upstream: `https://github.com/tabler/tabler`, MIT.
+- Version: `@tabler/core@1.7.1`; exact tag commit and package/snapshot digests are in `SOURCE-MANIFEST.json`.
+- Complete original rendered settings page: `sources/official-settings-snapshot.html`, fetched from `https://preview.tabler.io/settings.html`; it reports v1.7.1. The public deployment does not expose its exact commit, so its own content digest is the authoritative compiled-page identity. Tagged Astro source is separately retained under `sources/`.
+- All required styles and scripts are local under `app/dist`; the original demo CSS is local. No installation or remote account is needed.
+- Preparation changed product copy, connected a local settings service, removed the advertising script and portrait dependencies, retained the native avatar initials fallback, and composed the notification control from the same existing Tabler switch markup. The unchanged system source remains the visual foundation.
+- Upstream gallery navigation outside this settings page is peripheral source context; those gallery routes are not part of the runnable product contract. Do not expand the task to implement the gallery.
+
+## Authoritative behavior
+
+`app/settings-store.js` owns validation, persistence and save results. `app/settings-controller.js` binds the current page. The browser key is `fieldnotes-settings-v1`, schema version 1. `readSettings()` reads real browser storage, and `saveSettings(draft)` commits the captured draft only after its 750 ms delay succeeds. Failed saves preserve the draft and previously stored value. `subscribeSettings(listener)` emits `invalid`, `pending`, `success`, or `error` facts. Do not replace persistence with a visual simulation or change the validation rules to make a check pass.
+
+The data fields are display name (required, at most 100 characters), organization (at most 180), location (at most 100), syntactically valid email, weekly digest, and public-profile visibility. Email remains private. Profile visibility has no effect on email disclosure. All content is synthetic, and no user information is transmitted. The initial values include `Mei Lin · 林玫`, `Fieldnotes Research / 城市日常研究小组`, and `Singapore / 新加坡`.
+
+Use `?fail=once` on a fresh page load to make the next otherwise valid save fail. A retry in the same session succeeds. `window.fieldnotes.setFailureMode(true)` sets the same control without navigation. Failure remains an explicit fixture of the local service; no real remote outage is implied. Cancel restores the last persisted settings. Check the distinction between a submitted snapshot and edits made while it is pending.
+
+## Content and conditions
+
+Inspect English and Simplified Chinese, light and dark, at 1440×900 and 1280×600. Include a 390×844 narrow check of the same settings path. Use both a short name and `跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme` as long representative content. Keep actual entered values visible and editable. The existing theme and language controls are fixture controls using native Tabler buttons; polish their hierarchy within the existing family where useful.
+
+Start with `/?theme=light&lang=en` or `/?theme=dark&lang=zh`. Use the same task content and conditions in every paired run. Keyboard-only editing, saving, error recovery, focus visibility, scrolling at compact height, reload, and return are part of the requested path. The initial implementation has basic real status feedback; its full field association, state presentation, content coherence and compact-height quality remain work for the participant.
+
+## Run and scope
+
+From `app/` run:
+
+```bash
+python3 -m http.server 4111 --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:4111/`. Change the port only to avoid another study instance. No build is required. `package.json` also provides `npm run dev` for convenience.
+
+Normal editable product files are `index.html`, `settings-controller.js`, and any justified source-preserving adapters. Preserve the authoritative store contract and upstream license. Retain acquired source notices with any additional adopted resources. Avoid editing minified distribution files; use supported classes, configuration and source components. Deliver the integrated application, actual adopted sources, useful observation evidence and remaining limitations. Starter-readiness evidence does not establish participant completion.
+
+
+PRODUCT P16 FILE README.md 
+ # Product P16
+
+Read TASK.md and ORIGINAL-INPUT.md for the unchanged task and supplied foundation contract. The app/ directory contains the frozen delivered product. Condition labels, role instructions, agent identities and producer judgments are withheld during initial review.
+
+## Preview
+
+From this product directory: python3 -m http.server 4516 --bind 127.0.0.1 --directory app
+
+For an interactive test that can change files or stored data, use a separate disposable copy. Do not edit this frozen product. The browser, Playwright and CJK font conditions are supplied in the common reviewer instructions. All content and service fixtures are synthetic and local.
+
+## Evidence
+
+The PNGs listed in capture-index.json are actual captured pixels. Inspect the app at intended dimensions and meaningful states, using the original task rather than treating the number of captures as quality. A shared original source foundation is available at ../../foundations/T1/.
+
+The raw producer logs and self-assessment are withheld for the first blind judgment; they remain retained in the public study record and will be available for a separate evidence audit. Some captures precede narrowly scoped later state repairs; the delivered source is the frozen final product. Direct re-observation can resolve uncertainty.
+

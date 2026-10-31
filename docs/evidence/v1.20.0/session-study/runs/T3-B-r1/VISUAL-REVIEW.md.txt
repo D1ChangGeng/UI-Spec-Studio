@@ -1,0 +1,69 @@
+# Visual review — Fieldnotes
+
+## Observation boundary
+
+Primary designer review of the actual displayed pixels, not an inference from saved filenames. The substantive-work boundary was 23:01:42 UTC on 31 October 2026. The initial handoff was evidence-only packaging after interruption. A later explicit coordinator request authorized the three frozen-image re-observations documented below; no implementation or app rerun occurred.
+
+## Viewed sources and trial
+
+The baseline light 1440×900 frame was personally viewed. Its wide card and quiet right sidebar establish the native product foundation. Original Notebook, TiddlyWiki Tufte-container, and Captivate desktop captures supplied meaningful composition comparisons. Their actual earlier view_image responses are retained under evidence/baseline-current and evidence/research.
+
+Notebook's original demo shows an approximately 800px paper stack, warm surrounding ground, aligned toolbar, and a separate left navigation region. Captivate visibly moves identity and tools into a full-frame composition with a floating right action rail. The Tufte container has a narrow paragraph region and large reserved margin, while retaining the original workspace shell. The cross-domain Tufte CSS article was viewed by the research child; the parent did not independently inspect its pixels.
+
+The populated Notebook trial was personally viewed in light reading and an early editor-transition frame. The reading view retained the source width and warm ground with Chinese and English paragraphs. The early editor frame contained transitional overlap and was not treated as a settled result. The native zero-duration configuration later removed that specific story transition.
+
+## Final personally viewed frames
+
+Six final images were displayed by functions.exec cell g4:52:
+
+1. evidence/final-reviewed-v2/beige-read-1440.png
+2. evidence/final-reviewed-v2/dark-read-1440.png
+3. evidence/final-reviewed-v2/beige-edit-1440.png
+4. evidence/final-reviewed-v2/dark-edit-1440.png
+5. evidence/final-reviewed-v2/beige-read-390.png
+6. evidence/final-reviewed-v2/dark-edit-390.png
+
+At desktop size, the source's paper boundaries and toolbar alignment remain intact. The long interview's English body and Chinese paragraphs share a consistent measure and relaxed reading rhythm. Large section headings distinguish the argument's stages without shortening the supplied content. The dark view retains these relationships with a charcoal ground and lighter paper.
+
+The editor keeps the same outer paper and clear native draft/title/tags/formatting sequence. Its writing area is denser than reading, and the dark variant uses matching native surfaces. Actual computed font-family was recorded, but that does not prove which physical fallback face rendered each glyph.
+
+At 390px, the reading view becomes a continuous document with a bottom toolbar. The sampled title, controls, paragraphs, and editor fit the viewport. The narrow dark editor shows the native title selection/focus and wrapping toolbar above the complete input. These frames establish their sampled states; they do not establish real on-screen keyboard behavior or every scroll position.
+
+## Findings and corrections
+
+- Initial configuration included a newline in the exact theme identifier and an incorrect palette title. The failed trial and diagnostic state were retained; exact native identifiers were corrected before the successful run.
+- The source color-switch icon contained an incomplete closing SVG tag. It was repaired in the copied source, with the original identity retained.
+- Source button focus was suppressed. Native outline:auto was restored for focus-visible, and a scoped keyboard-focus assertion passed.
+- Old palette metadata did not identify its color scheme to current TiddlyWiki's native iframe editor. Light/dark metadata was added.
+- The source's pale resting utility icons were strengthened by reusing its existing very-muted-foreground token. Final viewed controls are clearer while preserving their form and placement.
+- The palette chooser stayed open in early matrix captures. Those captures remain historical; the final viewed set closes it through an outside click.
+- A capture script hit a strict-locator error because retained elements produced duplicate matches. The failed command and captures remain. The corrected capture targets visible controls and completed.
+
+## Captured but not finally viewed
+
+The other twelve final-reviewed-v2 PNGs, including compact-height views, remaining narrow conditions, ending checkpoints, sidebar, Chinese UI, and reduced-motion navigation, were captured with actual condition metadata but did not receive final parent pixel inspection. Earlier successful assertions cover their stated content/reflow conditions; those assertions do not replace visual judgment.
+
+The controlled journey video is retained under evidence/final/video and was not played back. No natural-speed pacing or continuous-motion acceptance is claimed. Normal and reduced-motion behavior were exercised by automation; the reduced-motion state passed the recorded computed-style/native-duration check.
+
+## Interrupted raw-response export
+
+Cell g4:52 displayed the six actual view_image results before yielding. Its subsequent attempt to write the combined full tool returns to evidence/final-reviewed-v2/view-set-001.json stalled. The file is absent. The original raw return objects were not recoverable after interruption, and no replacement was synthesized from the PNGs.
+
+The conversation retains the displayed images, and the original screenshot files plus capture-log.json remain on disk. Earlier successfully saved view_image records remain. An explicit termination attempt for g4:52 returned exactly:
+
+    Script failed
+    Wall time 0.0 seconds
+    Script error:
+    exec cell 52 not found
+
+This report records observations and gaps; it is not a substitute for the unavailable original return bytes.
+
+## Acceptance limits
+
+The complete visual matrix, uninterrupted keyboard-only navigation, assistive technology, real mobile keyboards, error/retry behavior, natural-time motion and owner preference remain open. The source remains a viable implemented workspace, with a partial final visual acceptance boundary.
+
+## Explicit post-boundary re-observation
+
+At the coordinator's explicit request, three of the same frozen PNGs were re-observed after the boundary at **2026-10-31 23:08:42 UTC**: desktop light, desktop dark, and the narrow dark editor. Their fresh, complete view_image request/response records were saved under /tmp and copied byte-for-byte into evidence/post-boundary-observation/. This is a disclosed post-boundary evidence deviation. It does not reconstruct the lost original call, rerun the app, change product source, expand the design decision, or close the other unreviewed conditions.
+
+The new displayed pixels agree with the earlier observations: the same paper/toolbar geometry and bilingual reading hierarchy in light and dark; the same narrow dark native editor with title focus, tags, wrapped formatting toolbar and input. This is observation of the saved frames only. The three complete raw responses and byte-identity hashes are in evidence/post-boundary-observation/manifest.json. No remaining condition was silently promoted to reviewed.

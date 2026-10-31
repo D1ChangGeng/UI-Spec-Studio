@@ -1,0 +1,345 @@
+[
+  {
+    "anonymous_product": "P03",
+    "task_family": "T1",
+    "cohort": "01",
+    "phase": "condition-blind",
+    "review_completed_at": "2026-10-31T22:56:21.761Z",
+    "judgment": "The exercised local settings scope is supported; no material blocker found within that scope.",
+    "findings": {
+      "strengths": [
+        "[behavior] Empty name plus incomplete email produced errors and moved focus to the name field. Failed valid save preserved the draft and storage; retry succeeded.",
+        "[behavior] Edits during the pending save stayed in the form while the submitted snapshot was persisted. Cancel restored the saved snapshot; toggle values and edited identity survived reload.",
+        "[behavior] Keyboard-only form editing from an initial first-field focus reached Save, failed once, restored retry focus, and succeeded on Enter.",
+        "[source] The authoritative settings-store.js and Tabler dist files match the common T1 foundation.",
+        "[pixels] Original 004/016 show coherent light/dark desktop hierarchy with long bilingual values. Original 090 and reviewer narrow capture show three-line expanding name and organization fields.",
+        "[pixels + source] The submitted-snapshot/newer-unsaved message uses a warning treatment. Saved identity and initials update and wrap after saving."
+      ],
+      "defects": [
+        "[pixels] Repeating a long saved identity above the editable name consumes additional narrow-screen height.",
+        "[behavior] Narrow section selection focused and revealed notifications-heading but left the navigation expanded; this is a modest efficiency issue, not a blocked route."
+      ],
+      "unknowns": [
+        "No screen-reader or formal contrast-ratio evaluation; visual readability and keyboard behavior are sampled judgments.",
+        "Not every browser-storage failure, field-length boundary, browser, or viewport was exercised.",
+        "Peripheral gallery routes were outside the supplied product contract."
+      ],
+      "required_disposition": "No material blocker found within the explicitly exercised scope."
+    },
+    "viewed_original_files": [
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P03/captures/004.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P03/captures/016.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P03/captures/077.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P03/captures/086.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P03/captures/090.png"
+    ],
+    "view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P03-004.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P03-016.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P03-077.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P03-086.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P03-090.json"
+    ],
+    "additionally_viewed_reviewer_captures": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/P03-narrow-dark-zh-long-top.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P03-keyboard-retry-focus-dark.png"
+    ],
+    "reviewer_capture_view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-001-P03-narrow-dark-zh-long-top.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-003-P03-keyboard-retry-focus-dark.json"
+    ],
+    "additional_behavior_evidence": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/P03-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P03-keyboard-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-008-behavior/command.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-014-targeted-followup/command.json"
+    ],
+    "measurement_caveat": null,
+    "report": "/workspace/scratch/5499118f5564/ui-study/independent-review/BLIND-REVIEW.md",
+    "isolation_limit": "Instructional blinding on a shared host, not a separate security sandbox."
+  },
+  {
+    "anonymous_product": "P06",
+    "task_family": "T1",
+    "cohort": "01",
+    "phase": "condition-blind",
+    "review_completed_at": "2026-10-31T22:56:21.761Z",
+    "judgment": "The exercised local settings scope is supported; compact narrow hierarchy is effective, with a minor state-emphasis reservation.",
+    "findings": {
+      "strengths": [
+        "[behavior] Empty name plus incomplete email produced errors and moved focus to the name field. Failed valid save preserved the draft and storage; retry succeeded.",
+        "[behavior] Edits during the pending save stayed in the form while the submitted snapshot was persisted. Cancel restored the saved snapshot; toggle values and edited identity survived reload.",
+        "[behavior] Keyboard-only form editing from an initial first-field focus reached Save, failed once, restored retry focus, and succeeded on Enter.",
+        "[source] The authoritative settings-store.js and Tabler dist files match the common T1 foundation.",
+        "[pixels] Compact account heading and local-storage explanation, readable long-value textareas, collapsed narrow navigation, and clear dark keyboard focus.",
+        "[behavior] Narrow section navigation focused notifications-heading and closed the navigation panel."
+      ],
+      "defects": [
+        "[pixels + source] Submitted changes saved with newer unsaved edits is presented with success styling. The copy is accurate, but the remaining work receives less visual emphasis than P03.",
+        "[pixels + source] The ML avatar remains static after the tested name change; no persistence defect was observed."
+      ],
+      "unknowns": [
+        "No screen-reader or formal contrast-ratio evaluation; visual readability and keyboard behavior are sampled judgments.",
+        "Not every browser-storage failure, field-length boundary, browser, or viewport was exercised.",
+        "Peripheral gallery routes were outside the supplied product contract."
+      ],
+      "required_disposition": "No material blocker found within the explicitly exercised scope."
+    },
+    "viewed_original_files": [
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P06/captures/033.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P06/captures/040.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P06/captures/045.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P06/captures/059.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P06/captures/083.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P06/captures/051.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P06/captures/050.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P06/captures/047.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P06/captures/048.png"
+    ],
+    "view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P06-033.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P06-040.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P06-045.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P06-059.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P06-083.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P06-051.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P06-050.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P06-047.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P06-048.json"
+    ],
+    "additionally_viewed_reviewer_captures": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/P06-narrow-dark-zh-long-top.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/P06-submitted-snapshot-with-new-edits.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/P06-failure-compact.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P06-keyboard-retry-focus-dark.png"
+    ],
+    "reviewer_capture_view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-001-P06-narrow-dark-zh-long-top.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-001-P06-submitted-snapshot-with-new-edits.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-001-P06-failure-compact.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-003-P06-keyboard-retry-focus-dark.json"
+    ],
+    "additional_behavior_evidence": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/P06-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P06-keyboard-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-008-behavior/command.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-014-targeted-followup/command.json"
+    ],
+    "measurement_caveat": null,
+    "report": "/workspace/scratch/5499118f5564/ui-study/independent-review/BLIND-REVIEW.md",
+    "isolation_limit": "Instructional blinding on a shared host, not a separate security sandbox."
+  },
+  {
+    "anonymous_product": "P09",
+    "task_family": "T2",
+    "cohort": "01",
+    "phase": "condition-blind",
+    "review_completed_at": "2026-10-31T22:56:21.761Z",
+    "judgment": "The exercised composer, filename disclosure, manual reading, explicit return, stop, and failure/retry scope is supported.",
+    "findings": {
+      "strengths": [
+        "[pixels] Desktop and narrow light/dark captures show a readable mature thread family, distinct send action, bounded multi-line input and compact wrapping filename chips.",
+        "[behavior + pixels] Focus disclosed the full long mixed-language filename and filename-only explanation; Escape dismissed it while retaining attachment focus, and removing a file restored input focus.",
+        "[behavior] Corrected measurement observed 998 additional rendered characters while scrollTop stayed unchanged after manual scroll-away.",
+        "[behavior + pixels] Return to latest reached gap=0 by the 100 ms sample and remained at the growing tail through 2550 ms.",
+        "[behavior + pixels] At 390 CSS pixels the outer thread stayed at scrollLeft=0 and scrollWidth=clientWidth=388 under a horizontal wheel gesture in the reading area.",
+        "[behavior] The corrected post-stop samples were stable at 1386 characters and input focus was restored. Failure/retry completed through Observation theme 7.",
+        "[source] The supplied synthetic adapter remains unchanged; the mature viewport/runtime family is retained."
+      ],
+      "defects": [
+        "[pixels + source] Four narrow attachments require scrolling inside a capped region. A clipped next chip provides a continuation cue, but no visible total count was observed.",
+        "[behavior + source] The failed-response action is disclosed as Regenerate response rather than the more specific Retry response."
+      ],
+      "unknowns": [
+        "Existing-message editing and sidebar thread restoration were not directly exercised; source and original capture evidence do not establish their full behavior.",
+        "No physical mobile software keyboard, IME, screen reader, real file upload, remote history, or model service was evaluated.",
+        "Served the delivered dist build without rebuilding. Complete source/build parity and all external source-adoption provenance were not audited.",
+        "Reload was exercised and initial scroll geometry returned, but the first-run assistant text selector was invalid; no valid post-reload text-equality measurement is claimed."
+      ],
+      "required_disposition": "No material blocker found within the explicitly exercised scope."
+    },
+    "viewed_original_files": [
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P09/captures/048.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P09/captures/049.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P09/captures/044.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P09/captures/046.png"
+    ],
+    "view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P09-048.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P09-049.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P09-044.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P09-046.json"
+    ],
+    "additionally_viewed_reviewer_captures": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P09-filename-disclosure-narrow.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P09-returned-while-streaming.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P09-failed-response.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P09-return-latest-after-2550ms.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P09-narrow-after-reading-horizontal-wheel.png"
+    ],
+    "reviewer_capture_view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-002-P09-filename-disclosure-narrow.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-002-P09-returned-while-streaming.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-002-P09-failed-response.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-003-P09-return-latest-after-2550ms.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-003-P09-narrow-after-reading-horizontal-wheel.json"
+    ],
+    "additional_behavior_evidence": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P09-desktop-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P09-narrow-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P09-confirmed-flow-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P09-overflow-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-011-t2-behavior/command.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-014-targeted-followup/command.json"
+    ],
+    "measurement_caveat": "behavior-002 assistantCount/text-length/growth/stop-text/seventh-theme measurements used a nonexistent selector and are invalid. behavior-003 is the separately retained corrected follow-up. Scroll and focus observations remain separately inspectable.",
+    "report": "/workspace/scratch/5499118f5564/ui-study/independent-review/BLIND-REVIEW.md",
+    "isolation_limit": "Instructional blinding on a shared host, not a separate security sandbox."
+  },
+  {
+    "anonymous_product": "P10",
+    "task_family": "T2",
+    "cohort": "01",
+    "phase": "condition-blind",
+    "review_completed_at": "2026-10-31T22:56:21.761Z",
+    "judgment": "Full requested T2 scope is not supported as delivered because of two confirmed integration defects.",
+    "findings": {
+      "strengths": [
+        "[pixels] Mature thread typography and source-family composer remain coherent in desktop light/dark views. The single horizontal attachment row leaves more vertical reading space than wrapping chips.",
+        "[behavior + pixels] Explicit attachment-details dialog exposed the full filename and filename-only statement. Keyboard opening, Escape dismissal, trigger-focus restoration, and removal-to-composer focus worked.",
+        "[behavior] Manual reading position was preserved during response growth. The deliberate failed response displayed an error and retry completed through Observation theme 7.",
+        "[source] The supplied long synthetic adapter and failure fixture remain unchanged."
+      ],
+      "defects": [
+        "[behavior + pixels, material] After Return to latest, remaining gaps to the streaming tail were 1224, 1394, 1634, and 1951 CSS pixels at 100, 450, 1150, and 2550 ms. The viewed final sample still showed Observation theme 1. It reached the bottom after streaming ended.",
+        "[behavior + pixels, material] With four attachments at 390×844, outer thread width was 388 and scrollWidth 1049. A horizontal reading-area wheel gesture moved outer scrollLeft to 450 and composer input x to -425, leaving a blank canvas below the header."
+      ],
+      "unknowns": [
+        "Existing-message editing and sidebar thread restoration were not directly exercised; source and original capture evidence do not establish their full behavior.",
+        "No physical mobile software keyboard, IME, screen reader, real file upload, remote history, or model service was evaluated.",
+        "Served the delivered dist build without rebuilding. Complete source/build parity and all external source-adoption provenance were not audited.",
+        "Reload was exercised and initial scroll geometry returned, but the first-run assistant text selector was invalid; no valid post-reload text-equality measurement is claimed.",
+        "[behavior] In one corrected stop observation the running UI disappeared and input focus returned, but rendered text increased from 1275 to 1386 characters between the 200 ms and 1000 ms post-stop samples. Adapter emissions/buffering were not instrumented, so immediate visual freeze and the cause of this change remain unresolved."
+      ],
+      "required_disposition": "A separate retained continuation should repair return-to-latest while streaming and constrain outer horizontal overflow, and resolve the stop-text observation. Do not overwrite the blind report or the original product evidence."
+    },
+    "viewed_original_files": [
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P10/captures/021.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P10/captures/027.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P10/captures/022.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P10/captures/025.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P10/captures/040.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P10/captures/036.png"
+    ],
+    "view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P10-021.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P10-027.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P10-022.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P10-025.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P10-040.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P10-036.json"
+    ],
+    "additionally_viewed_reviewer_captures": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P10-narrow-dark-six-lines-four-files.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P10-six-lines-four-files-compact.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P10-filename-disclosure-narrow.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P10-returned-while-streaming.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P10-failed-response.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P10-return-latest-after-2550ms.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P10-narrow-after-reading-horizontal-wheel.png"
+    ],
+    "reviewer_capture_view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-002-P10-narrow-dark-six-lines-four-files.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-002-P10-six-lines-four-files-compact.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-002-P10-filename-disclosure-narrow.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-002-P10-returned-while-streaming.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-002-P10-failed-response.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-003-P10-return-latest-after-2550ms.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-003-P10-narrow-after-reading-horizontal-wheel.json"
+    ],
+    "additional_behavior_evidence": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P10-desktop-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-002/P10-narrow-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P10-confirmed-flow-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P10-overflow-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-011-t2-behavior/command.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-014-targeted-followup/command.json"
+    ],
+    "measurement_caveat": "behavior-002 assistantCount/text-length/growth/stop-text/seventh-theme measurements used a nonexistent selector and are invalid. behavior-003 is the separately retained corrected follow-up. Scroll and focus observations remain separately inspectable.",
+    "report": "/workspace/scratch/5499118f5564/ui-study/independent-review/BLIND-REVIEW.md",
+    "isolation_limit": "Instructional blinding on a shared host, not a separate security sandbox."
+  },
+  {
+    "anonymous_product": "P16",
+    "task_family": "T1",
+    "cohort": "01",
+    "phase": "condition-blind",
+    "review_completed_at": "2026-10-31T22:56:21.761Z",
+    "judgment": "Core local settings behavior is supported. Full requested narrow and long-value scope is not supported as delivered.",
+    "findings": {
+      "strengths": [
+        "[behavior] Empty name plus incomplete email produced errors and moved focus to the name field. Failed valid save preserved the draft and storage; retry succeeded.",
+        "[behavior] Edits during the pending save stayed in the form while the submitted snapshot was persisted. Cancel restored the saved snapshot; toggle values and edited identity survived reload.",
+        "[behavior] Keyboard-only form editing from an initial first-field focus reached Save, failed once, restored retry focus, and succeeded on Enter.",
+        "[source] The authoritative settings-store.js and Tabler dist files match the common T1 foundation.",
+        "[pixels] Mature Tabler desktop composition, readable light/dark states, clear failed-save feedback and visible keyboard focus."
+      ],
+      "defects": [
+        "[pixels + behavior measurement] At 390×844 the expanded section navigation occupies most of the first screen. The delivered Chinese dark run placed the first name input at y=763 CSS pixels.",
+        "[pixels + behavior measurement] The prescribed long name and organization are clipped in single-line controls: clientWidth 330 versus scrollWidth 656. Values persist and remain editable; the defect is incomplete at-a-glance visibility.",
+        "[pixels + source] A separate Edit email button consumes narrow field width and focuses an already editable field. The tested email input had clientWidth 232 versus scrollWidth 244, and the button adds a keyboard stop."
+      ],
+      "unknowns": [
+        "No screen-reader or formal contrast-ratio evaluation; visual readability and keyboard behavior are sampled judgments.",
+        "Not every browser-storage failure, field-length boundary, browser, or viewport was exercised.",
+        "Peripheral gallery routes were outside the supplied product contract."
+      ],
+      "required_disposition": "A separate retained continuation is needed to improve narrow hierarchy and representative long-value readability within the mature source family."
+    },
+    "viewed_original_files": [
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P16/captures/093.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P16/captures/026.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P16/captures/094.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P16/captures/050.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P16/captures/068.png",
+      "/workspace/scratch/5499118f5564/ui-study/review-pack/products/P16/captures/052.png"
+    ],
+    "view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P16-093.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P16-026.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P16-094.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P16-050.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P16-068.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-P16-052.json"
+    ],
+    "additionally_viewed_reviewer_captures": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/P16-narrow-dark-zh-long-top.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/P16-failure-compact.png",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P16-keyboard-retry-focus-dark.png"
+    ],
+    "reviewer_capture_view_exports": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-001-P16-narrow-dark-zh-long-top.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-001-P16-failure-compact.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/view-own-003-P16-keyboard-retry-focus-dark.json"
+    ],
+    "additional_behavior_evidence": [
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-001/P16-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/events.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/behavior-003/P16-keyboard-trace.zip",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-008-behavior/command.json",
+      "/workspace/scratch/5499118f5564/ui-study/independent-review/evidence/command-014-targeted-followup/command.json"
+    ],
+    "measurement_caveat": null,
+    "report": "/workspace/scratch/5499118f5564/ui-study/independent-review/BLIND-REVIEW.md",
+    "isolation_limit": "Instructional blinding on a shared host, not a separate security sandbox."
+  }
+]

@@ -23,7 +23,15 @@ def main():
         path=replay/relative
         if not path.is_file():raise FileNotFoundError(relative)
         if sha(path.read_bytes())!=snapshot['workspace_files'].get(relative):raise ValueError('Retained snapshot differs: '+relative)
-        target=out/'artifacts'/(relative+'.txt' if relative.endswith('.md') else relative);target.parent.mkdir(parents=True,exist_ok=True)
+        # Original text remains byte-identical. Use a data suffix for Markdown
+        # and text types omitted by the source bundle's fixed extension policy.
+        # The full workspace overlay always keeps the original filename.
+        published_suffixes={'.toml','.py','.json','.yml','.yaml','.txt','.svg','.html','.css','.js','.png','.mp4','.csv','.jsonl','.mjs','.log','.woff2','.webm','.zip','.jpg','.jpeg','.sha256'}
+        data_name=relative
+        if path.suffix=='.md' or (path.suffix not in published_suffixes and path.name!='LICENSE'):
+            path.read_bytes().decode('utf-8')
+            data_name=relative+'.txt'
+        target=out/'artifacts'/data_name;target.parent.mkdir(parents=True,exist_ok=True)
         if target.exists() and target.read_bytes()!=path.read_bytes():raise ValueError('Already retained bytes differ')
         shutil.copyfile(path,target)
         return ref(target)

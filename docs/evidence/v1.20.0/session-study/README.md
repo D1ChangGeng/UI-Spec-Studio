@@ -9,8 +9,8 @@ context pressure and a human acceptance panel remain unverified.
 
 ## Execution inventory
 
-6 of 18 registered primary executions currently have completed
-records, with 3 completed child records. This count is execution coverage,
+7 of 18 registered primary executions currently have completed
+records, with 4 completed child records. This count is execution coverage,
 not a product-quality score or release status. Independent review and the final
 release decision have their own records. Every planned cell remains visible.
 
@@ -25,14 +25,14 @@ release decision have their own records. Every planned cell remains visible.
 | T2-C-r1 | C | Dispatched; no retained final completion yet | Pending completion |
 | T2-G-final-runtime-r1 | G-final-runtime | Not dispatched | — |
 | T3-A-r1 | A | Dispatched; no retained final completion yet | Pending completion |
-| T3-B-r1 | B | Dispatched; no retained final completion yet | Pending completion |
+| T3-B-r1 | B | [Completed record](runs/T3-B-r1/run.json) · [product](runs/T3-B-r1/FINAL.md) | 1 |
 | T3-C-r1 | C | Not dispatched | — |
 | T3-G-final-runtime-r1 | G-final-runtime | Not dispatched | — |
 | T2-D-r1 | D | Not dispatched | — |
 | T2-E-challenger-r1 | E-challenger | Not dispatched | — |
 | T2-E-observer-r1 | E-observer | Not dispatched | — |
 | T4-F-main-r1 | F-main | [Completed record](runs/T4-F-main-r1/run.json) · [product](runs/T4-F-main-r1/FINAL.md) | 0 |
-| T4-F-integrator-r1 | F-integrator | Not dispatched | — |
+| T4-F-integrator-r1 | F-integrator | Dispatched; no retained final completion yet | Pending completion |
 | T4-G-final-runtime-r1 | G-final-runtime | Not dispatched | — |
 
 ## What is retained

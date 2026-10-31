@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path; import json; root=Path(\"/workspace/scratch/5499118f5564/ui-study/review-pack/products\"); s=(root/\"P09/app/src/components/assistant-ui/elements/thread.aui.tsx\").read_text().splitlines(); print(\"\\n\".join(str(i+1)+\": \"+s[i] for i in range(200,min(len(s),800)) if any(t in s[i] for t in [\"MessagePrimitive.Root\",\"assistant\",\"data-message\", \"data-role\", \"aui-message\"]))); a=json.loads(Path(\"evidence/behavior-002/events.json\").read_text()); [print(json.dumps({k:v for k,v in x.items() if k!=\"metrics\"},ensure_ascii=False),json.dumps({k:v for k,v in x.get(\"metrics\",{}).items() if k in [\"scroll\",\"assistantCount\",\"lastAssistantLength\",\"returnButton\",\"attachmentCount\",\"active\"]},ensure_ascii=False)) for x in a if x[\"event\"] in [\"manual_scroll_away\",\"growth_while_away\",\"return_to_latest\",\"stop_and_focus\",\"test_exception\",\"test_exception_narrow\",\"retried_complete\"]]"
+  ],
+  "cwd": "/workspace/scratch/5499118f5564/ui-study/independent-review",
+  "started_at": "2026-10-31T22:50:19.156777+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-10-31T22:50:19.188994+00:00",
+  "wall_seconds": 0.032225,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 8047,
+      "sha256": "99af84d9bf3d3eca09fe37fb92131f1c797fafcf10c9b31fcad6e877c8aa7b2a"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}
