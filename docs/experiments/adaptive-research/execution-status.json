@@ -15,8 +15,8 @@
     "The browser policy blocks navigation to the required Codex host; no workaround was attempted.",
     "Retained historical trace metadata lacks complete raw executions, products and visual evidence needed for acceptance."
   ],
-  "engineering_source_commit": "5c4b4964a273972494b65f116a097b196ce2fe30",
-  "hosted_ci_run_id": 41220458894,
+  "engineering_source_commit": "8f3cbef07f526a30fe23bcb5e160342d78d3ff25",
+  "hosted_ci_run_id": 41222879561,
   "release_decision": "pending",
   "initial_development_report_preserved": {
     "status": "blocked_not_run",
@@ -32,15 +32,24 @@
     "static_tests_are_agent_experiments": false,
     "historical_evidence_reused_as_current_results": false
   },
-  "observed_at_utc": "2026-10-31T17:03:22Z",
+  "observed_at_utc": "2026-10-31T17:09:36Z",
   "previous_engineering_observation": {
     "source_commit": "541766cf6fdc8ec19e5ad5c3c952024d11c444f5",
     "local_clean_unit_tests": 442,
     "hosted_ci_run_id": 41217065594,
     "record": "docs/experiments/adaptive-research/RESUMPTION-20261101.md"
   },
-  "hosted_unit_tests": 456,
-  "hosted_pr_ci_run_id": 41220463539,
-  "hosted_recovery_run_id": 41220458876,
-  "engineering_scope": "Immutable observed snapshot; later corrections require their own exact-commit checks. Engineering and authored-fixture validation do not establish native Agent or product-quality acceptance."
+  "hosted_unit_tests": 461,
+  "hosted_pr_ci_run_id": 41222883976,
+  "hosted_recovery_run_id": 41222879554,
+  "engineering_scope": "Immutable observed snapshot; later corrections require their own exact-commit checks. Engineering and authored-fixture validation do not establish native Agent or product-quality acceptance.",
+  "previous_hosted_engineering_observation": {
+    "source_commit": "5c4b4964a273972494b65f116a097b196ce2fe30",
+    "hosted_unit_tests": 456,
+    "hosted_ci_run_id": 41220458894,
+    "hosted_pr_ci_run_id": 41220463539,
+    "hosted_recovery_run_id": 41220458876
+  },
+  "hosted_windows_platform_skips": 6,
+  "engineering_evidence_record": "docs/evidence/v1.20.0/engineering-8f3cbef.json"
 }
