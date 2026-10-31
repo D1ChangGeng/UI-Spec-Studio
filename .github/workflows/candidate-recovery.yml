@@ -1,0 +1,61 @@
+name: Candidate recovery snapshot
+
+on:
+  push:
+    branches:
+      - 'work/v1.20.0-recovery-*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - name: Save tracked source and identity without credentials or workspace state
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/ui-spec-recovery"
+          git archive --format=tar.gz --output="$RUNNER_TEMP/ui-spec-recovery/source.tar.gz" HEAD
+          python - <<'PY'
+          import hashlib, json, os, pathlib, subprocess
+          root = pathlib.Path(os.environ['RUNNER_TEMP']) / 'ui-spec-recovery'
+          source = root / 'source.tar.gz'
+          manifest = {
+              'schema_version': 1,
+              'repository': os.environ['GITHUB_REPOSITORY'],
+              'commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+              'tree': subprocess.check_output(['git', 'rev-parse', 'HEAD^{tree}'], text=True).strip(),
+              'source_archive_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
+              'run_id': os.environ['GITHUB_RUN_ID'],
+              'run_attempt': os.environ['GITHUB_RUN_ATTEMPT'],
+              'scope': 'Exact tracked source recovery snapshot; not an Agent experiment, visual acceptance or published release.'
+          }
+          (root / 'identity.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Build candidate distribution without publishing
+        run: python tools/package.py
+      - name: Preserve source snapshot
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: candidate-source-${{ github.sha }}
+          path: ${{ runner.temp }}/ui-spec-recovery/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Preserve candidate distributions
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: candidate-distributions-${{ github.sha }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
