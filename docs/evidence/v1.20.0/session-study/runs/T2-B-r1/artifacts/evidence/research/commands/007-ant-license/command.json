@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "import urllib.request,pathlib; u=\"https://raw.githubusercontent.com/ant-design/x/da08db16714b608d7f5db248c2b2fcc30a756660/packages/x/LICENSE\"; b=urllib.request.urlopen(u).read(); pathlib.Path(\"evidence/research/source/ant-design-x-LICENSE\").write_bytes(b); print(u); print(b.decode())"
+  ],
+  "cwd": "/workspace/scratch/708e8b7f118e/ui-study/worksets/w06",
+  "started_at": "2026-10-31T21:03:33.458544+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-10-31T21:03:33.723455+00:00",
+  "wall_seconds": 0.264921,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 1207,
+      "sha256": "736c03137d5b5d696208f57e0eb44053f87b3edebcf9d44edba621d389a9e1da"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

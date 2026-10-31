@@ -1,0 +1,57 @@
+# Adoption and design decisions
+
+## Current decision
+
+SPEC 01 retains the supplied assistant-ui cloud workspace and runtime. The final visual adaptation composes its already-present File, Dialog, Button and TooltipIconButton families with the existing attachment state owner. The final reading policy is the source-supported `turnAnchor="bottom"` with `autoScroll`, using the existing viewport, measured footer and return control. No independent scroll controller, new visual system, or original W1–W3 exception was introduced.
+
+The complete goal remains composing, identifying local filenames, reading a growing answer, revisiting older text and continuing a thread. The single SPEC keeps input geometry, attachment disclosure, streaming, focus and reading position coupled. Sidebar, header, Markdown typography, source fonts, message actions and state presentation remain inherited.
+
+## D1 — Persistent filename identity within the reading budget
+
+**Question.** Can a researcher distinguish several selected files without hovering, while keeping a six-line draft and useful reading space at 1280×600?
+
+**Baseline observation.** `evidence/captures/baseline-grown-attachments.png`, personally opened with the full view response in `evidence/view-baseline-02.json`, shows three visually identical 56px document tiles. The six-line draft fits, but filenames are absent from the resting view. The source provides hover/focus names; the defect is immediate identity, not a claim that the original files were inaccessible by every method.
+
+**Comparison.** Independent research and original exports are in `evidence/research/RESEARCH-REPORT.md`. The primary designer personally opened the important external captures, independently of the child's conclusions.
+
+| Candidate | Actual observed relationship | Decision for Meridian |
+|---|---|---|
+| Existing assistant-ui thumbnail tiles | Compact one-row strip, visual icon identity, hover/focus filename | Preserve the strip's bounded height but replace filename-only tiles through source composition |
+| assistant-ui File, original live demo | Outline row, icon, medium-weight filename, smaller metadata, trailing action; size and material variants | Adopt the existing local `File.Root`, `File.Icon`, `File.Name`; its default row resolves the visible file hierarchy |
+| Vercel AI Elements inline Attachments | Small filename badges beside icons; four visible items wrap into a second row | Strong density reference; wrapping would make attachment height vary with count, and importing another state family has no demonstrated benefit here |
+| Vercel AI Elements list Attachments | Larger stacked filename/MIME rows and trailing removal | More metadata space than the filename-only contract needs; greater vertical cost |
+| Ant Design X Sender.Header + Attachments | Separate attachment header can open above six-line draft and close to recover space | Useful alternative for a richer file workflow; introduces a separate disclosure mode and a different component family without a demonstrated need in this increment |
+
+The chosen source is the supplied assistant-ui revision `ff654d8156680b839774296ef644b57ab1078425`, MIT. Original file implementation: `packages/ui/src/components/react/assistant-ui/elements/file.tsx`; present locally as `app/src/components/assistant-ui/elements/file.tsx`, unchanged. Original demo: https://www.assistant-ui.com/elements/file. The official API explicitly exposes these parts for composition. Original source, current source and rendered craft have separate evidence: supplied SOURCE-MANIFEST; inspected source; `evidence/research/cloud/assistant-file-original.jpg`; final local captures.
+
+**Adaptation.** Filename-only attachments render as default outline File rows in the existing horizontal strip. A fixed 16rem item width keeps individual names and trailing removal usable; long labels truncate. The existing Dialog reveals the full name on click, tap or Enter and states that contents are never read or transmitted. The secondary metadata role says “Filename only” / “仅文件名”. Removal remains a separate source button and returns focus to the composer. User-message attachments wrap using the same rows so sent file identity remains available. Actual image preview code remains in place for a future adapter with a valid source, while the supplied adapter remains metadata only.
+
+**Retained craft.** Original outline/material tokens, rounded row, icon/name/secondary-copy hierarchy, source button states and Dialog surface persist. The workspace's 44rem reading measure, Inter/CJK rendering, neutral themes, composer contour and add/send hierarchy remain. No new package was needed.
+
+**Tradeoff.** Not all names fit simultaneously. At the narrow view only one complete row and part of another are visible; at desktop a third is partial. Horizontal scrolling and keyboard focus reveal the remainder. The keyboard test reached the fourth file at scrollLeft 398, opened full details, closed back to the same control, removed it and preserved the draft. This is an explicit compromise between immediate identity and bounded vertical growth.
+
+## D2 — Reader intent and resumed following
+
+**Question.** Does scrolling away hold the reader's place, and does explicit return continue following subsequent chunks?
+
+The first trial set `autoScroll` while retaining `turnAnchor="top"`. The actual run failed: scrollTop stayed 1709 after return while the bottom gap increased from 194 to 516px. The screenshot `evidence/captures/episode-en-latest.png` and `evidence/verification-attempt-01.json` preserve that failure. Source inspection showed a top-anchor `holdFollow` condition; the next action was to trial the documented bottom mode, not author another scroll owner.
+
+**Final adoption.** `ThreadPrimitive.Viewport` uses `turnAnchor="bottom"` and `autoScroll`; source `ScrollToBottom`, footer measurement, interruption detection and focus handling remain. The label is “Return to latest” / “回到最新内容”. Reduced-motion preference disables CSS smooth scrolling through the source class system. Official contract: https://www.assistant-ui.com/docs/api-reference/primitives/thread; actual retrieval retained in `evidence/web-primary.json`.
+
+**Result.** Final EN and ZH episodes both held scrollTop while answer text grew, then maintained a zero bottom gap while further text arrived after return. Stop prevented future chunks. The coupled normal-motion test held scrollTop at 26px as the answer grew from 2324 to 2823 characters and the footer expanded from y=482 to y=302. Stop preserved the six-line draft and attached filenames. These are local deterministic runtime results, not a real model-service or field performance claim.
+
+## D3 — Growth, keyboard continuation and content
+
+The mature autosizing composer remains the input owner. Its original 12rem maximum is now bounded by 25dvh so short viewports keep reading room. The same bound applies to editing. Width, 16px/24px type, padding, source shell and stable action row remain. The modern-web-guidance lookup and retrieval are retained in `evidence/commands/001-guidance-search` and `002-guidance-retrieve`; the mature existing autosize implementation supplies compatibility rather than adding a competing CSS-only growth mechanism.
+
+The source's touch-primary Enter option is enabled: Enter inserts a newline when touch is the primary input and the visible send action submits. Desktop Enter and Shift+Enter retain the original behavior. Stop and attachment removal now return focus to the composer without scrolling. The Dialog's original settled focus return was verified; an immediate pre-settlement null aria-label was not misclassified as a defect.
+
+Composer, file details, close, retry, regenerate, edit, update, cancel and latest controls have local Chinese labels where used. Sidebar/header and some inherited auxiliary controls remain English, as allowed by INPUT.md. New copy is product content; its visual hierarchy inherits the source families.
+
+## Engineering and maintenance
+
+`app/src/synthetic.ts` remains unchanged: same seven-section responses, 72-character chunks, 60ms delay, first-attempt `[fail]` path, abort and filename metadata boundary. Dependencies and lockfile remain pinned. Source licenses and font notices remain present.
+
+Three mature source files are adapted: `thread.aui.tsx`, `attachment.aui.tsx`, and `ui/dialog.tsx`. `evidence/source-changes.json` records baseline and final SHA-256 digests and exact upstream paths. `app/src/locale.ts` supplies query-selected copy. A TypeScript 7 compatibility repair removes the obsolete `baseUrl` option and adds Vite's client declarations; the original failures and passing recheck are retained in commands 013–016. Final build digests are in `evidence/final-build-digests.json`.
+
+Build and typecheck pass. Vite continues to warn that the complete upstream bundle exceeds 500kB; bundle splitting was not part of this increment. No cross-browser, physical-device keyboard, real IME session, screen-reader user study, or natural-time video playback claim is made. Final static pixels and timestamped controlled episodes were personally inspected; owner acceptance remains separate.

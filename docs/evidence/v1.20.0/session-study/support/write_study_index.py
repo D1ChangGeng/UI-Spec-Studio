@@ -50,7 +50,7 @@ release decision have their own records. Every planned cell remains visible.
   lineage distinguishes earlier unchanged layouts from later affected states.
 - Spawn and final-notification exports under `coordination/`. These are faithful
   available conversation exports, not fabricated native engine events. Derived
-  audits are labeled separately. The T1-C prompt audit retains its one-final-LF
+  audits are labeled separately. The T1-C and T2-B prompt audits retain their one-final-LF
   difference; substantive prompt and role bytes were not silently altered.
 - [Engineering evidence](engineering/index.json), including original failures,
   source checks, browser observations and the narrowly scoped installation test.
@@ -59,7 +59,10 @@ Original Markdown report bytes are retained as `.md.txt` exports and inside the
 immutable workspace ZIPs. Each `FINAL.md` is explicitly a derived repository
 navigation copy whose local link destinations are adapted. The first evidence
 checkpoint's CI/local link-check failure and the successful packaging correction
-remain retained; no frozen candidate code or validator was changed for that fix.
+remain retained; no frozen candidate code or validator was changed for that fix. The first failed
+standalone harness is likewise retained byte for byte as `.py.txt` data, so its
+real SyntaxError is not misclassified as executable distribution source. The
+failed and corrected packaging checks remain in the engineering record.
 
 The available export boundary excludes hidden reasoning, an inaccessible native
 engine transcript, unrelated session data, dependency caches, and external
