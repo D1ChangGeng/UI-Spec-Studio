@@ -40,8 +40,12 @@ class PreviewProvisioningTests(unittest.TestCase):
         path = self.root / "fixture.zip"
         with zipfile.ZipFile(path, "w") as archive:
             info = zipfile.ZipInfo(name)
+            # Keep the adversarial archive name despite host separator normalization.
+            info.filename = name
             info.external_attr = mode << 16
             archive.writestr(info, b"fixture executable bytes")
+        with zipfile.ZipFile(path) as archive:
+            self.assertEqual(archive.infolist()[0].orig_filename, name)
         return path
 
     def test_verified_download_records_actual_digest_and_source(self):
@@ -92,8 +96,9 @@ class PreviewProvisioningTests(unittest.TestCase):
         provisioner.extract_archive(self.archive("nested/browser"), destination)
         self.assertEqual((destination / "nested/browser").read_bytes(), b"fixture executable bytes")
 
-    def test_path_escape_absolute_and_windows_paths_are_rejected(self):
-        for name in ("../escape", "/escape", "C:/escape", "nested\\escape"):
+    def test_path_escape_absolute_and_windows_traversal_are_rejected(self):
+        # Windows normalizes ZIP separators on read; this remains actual traversal.
+        for name in ("../escape", "/escape", "C:/escape", "nested\\..\\..\\escape"):
             with self.subTest(name=name):
                 with self.assertRaises(provisioner.ProvisionError):
                     provisioner.extract_archive(self.archive(name), self.root / "extracted")
