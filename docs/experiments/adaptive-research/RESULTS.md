@@ -1,4 +1,54 @@
-# Actual status — adaptive research study
+# Adaptive research study — current and historical evidence
+
+## Owner-authorized session study — checkpoint, 2026-11-01 JST
+
+The owner explicitly authorized actual independent agents in this session to
+perform the closest feasible substitute for the unavailable native Cloud study,
+followed by product review, PR #4 merge and v1.20.0 publication. The separate
+[schema-v2 acceptance route](SESSION-SIMULATION.md) preserves the native checks
+and their historical failures. It does not authenticate native role binding,
+resolved backend models, native token/billing/context metrics or human acceptance.
+
+The complete new 18-cell plan is frozen in
+[registration.json](../../evidence/v1.20.0/session-study/registration.json), SHA-256
+`3072de1df10611c922273e62ae3c6e66dfd2790627727e265410075b1ee43ab6`.
+Its complete candidate source fingerprint is
+`eb7752a1b0eb4af180e9bb4bd0922587a3c9c96744e24ec8cf299517516e8759`.
+Source and input checkpoints are `c83491af0e8a1247addeba760fa643a1769c001b` and
+`eee3dae8fe23182305feb15e16fc4ad6607d7544`.
+
+The first evidence checkpoint is
+[4ee35aaa5d9eff6c68b89f443c224a4cd4528e1b](https://github.com/D1ChangGeng/UI-Spec-Studio/commit/4ee35aaa5d9eff6c68b89f443c224a4cd4528e1b).
+Four real primary executions have completed: T1-A, T1-B, T1-C and T2-A.
+The first settings A/B/C comparison is complete; B used an actual generic
+research child and C used an actual research-role child. Raw available command
+outputs, tool returns, complete delivered workspaces, failed attempts, PNGs and
+actual image-view exports are retained. Archive replay matched 394, 721, 614
+and 465 files respectively. The T2-A producer preserves a compact reading-space
+cost; completed execution is not an unqualified product-quality result.
+
+The first checkpoint's CI exposed temporary `sandbox:` links in original agent
+Markdown. The original report bytes remain in immutable workspace archives and
+`.md.txt` exports. Separately labeled navigation copies resolve local links in
+the repository. The original failing CI/local output and successful package
+recheck are retained; the validator and frozen candidate source were not changed.
+T1-C also discloses a one-trailing-newline difference between the frozen child
+prompt file and the actual dispatched argument. Its substantive inquiry and
+role instruction bytes match; both exact versions are preserved.
+
+Exact-candidate local engineering passed 512 tests, package/catalog/art checks,
+installation, the authored browser scenarios and README rendering. The
+[engineering index](../../evidence/v1.20.0/session-study/engineering/index.json)
+retains the original captures and scoped coordinator visual observations.
+Those fixture results remain separate from the new independent products.
+
+At this checkpoint, the remaining cells, independent blinded product review,
+final release decision, merge, tag and publication are still pending. The
+anonymous review allocation was fixed before any completed product. This is a
+progress checkpoint, not release approval. All native-history sections below
+remain dated historical observations rather than current substitute results.
+
+## Historical native campaign and recovery status
 
 Observed on 2026-10-31 UTC / 2026-11-01 Asia/Tokyo. **v1.20.0 is not released. The new exact-candidate 18-cell campaign has not started, and the release decision remains pending.**
 

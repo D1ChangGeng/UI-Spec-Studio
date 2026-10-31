@@ -1,3 +1,7 @@
+<!-- Derived navigation copy; never use as an original participant export. -->
+
+> Repository navigation copy. The participant report is retained byte for byte in [FINAL.md.txt](FINAL.md.txt) and the workspace overlay archives. Only local artifact link destinations below are adapted for this repository.
+
 # Meridian — composer and reading continuity delivered
 
 The running application increment is complete in this work package, with rebuilt production output in `app/dist/` and the original dependency lockfile retained. The mature assistant-ui workspace remains the visual and behavioral foundation.
@@ -43,7 +47,7 @@ The production build and TypeScript check pass. The following actual browser che
 
 The earlier Chinese edit-harness timeout, incorrect selector attempt, failed touch attempts and source-configuration trial remain recorded; they are not erased by the passing final checks.
 
-I personally inspected all six initial and all six settled expanded-composer views at 1440×900, 1280×600 and 390×844 in light/en and dark/zh, plus selected ordered streaming, disclosure and editing frames. Actual view-image responses are saved. Representative captures: [compact English](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w05/evidence/settled-final/light-en-1280x600.png), [compact Chinese](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w05/evidence/settled-final/dark-zh-1280x600.png), [mobile Chinese](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w05/evidence/settled-final/dark-zh-390x844.png), and [touch filename disclosure](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w05/evidence/touch-complete/01-touch.png).
+I personally inspected all six initial and all six settled expanded-composer views at 1440×900, 1280×600 and 390×844 in light/en and dark/zh, plus selected ordered streaming, disclosure and editing frames. Actual view-image responses are saved. Representative captures: [compact English](artifacts/evidence/settled-final/light-en-1280x600.png), [compact Chinese](artifacts/evidence/settled-final/dark-zh-1280x600.png), [mobile Chinese](artifacts/evidence/settled-final/dark-zh-390x844.png), and [touch filename disclosure](artifacts/evidence/touch-complete/01-touch.png).
 
 In the English controlled episode, scrollTop stayed at 26 while visible answer length grew from 1088 to 1980 characters. Return then reached and continued following the bottom. After a second scroll-away, the position again held. After Stop settled, two samples remained at 4491 characters with textarea focus. This supports the intended reading behavior; it is not a human user study.
 
@@ -55,5 +59,5 @@ The main design tradeoff is space: at 1280×600, four identifiable filenames and
 
 No outstanding defect was observed in the final targeted checks. Verification is limited to Chromium, emulated viewport/touch and a synthetic IME event. Physical mobile keyboards, screen readers, other engines and natural-time video playback were not tested. The inherited production bundle still triggers Vite's size warning at about 1.29MB minified JavaScript.
 
-The complete rationale, source relationships, preserved failures and inspection boundaries are in [SPEC.md](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w05/SPEC.md), [ADOPTION.md](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w05/ADOPTION.md), and [VISUAL-REVIEW.md](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w05/VISUAL-REVIEW.md). The [final source audit](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w05/evidence/provenance-complete/source-audit.json) records exact original and current hashes.
+The complete rationale, source relationships, preserved failures and inspection boundaries are in [SPEC.md](artifacts/SPEC.md.txt), [ADOPTION.md](artifacts/ADOPTION.md.txt), and [VISUAL-REVIEW.md](artifacts/VISUAL-REVIEW.md.txt). The [final source audit](artifacts/evidence/provenance-complete/source-audit.json) records exact original and current hashes.
 

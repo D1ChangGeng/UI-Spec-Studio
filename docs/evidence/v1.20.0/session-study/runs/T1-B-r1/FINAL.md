@@ -1,6 +1,10 @@
+<!-- Derived navigation copy; never use as an original participant export. -->
+
+> Repository navigation copy. The participant report is retained byte for byte in [FINAL.md.txt](FINAL.md.txt) and the workspace overlay archives. Only local artifact link destinations below are adapted for this repository.
+
 # Fieldnotes settings — delivered
 
-The working settings application is implemented in the supplied `app/` directory. It retains Tabler’s mature settings layout, type, surfaces, fields, switches and theme family. The authoritative `settings-store.js` is byte-for-byte unchanged. Product changes are confined to `index.html` and `settings-controller.js`; no distribution CSS, dependency or original visual design was added. See [SOURCE-ADOPTION.md](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/SOURCE-ADOPTION.md) and the [source-integrity record](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/final-source-integrity.json).
+The working settings application is implemented in the supplied `app/` directory. It retains Tabler’s mature settings layout, type, surfaces, fields, switches and theme family. The authoritative `settings-store.js` is byte-for-byte unchanged. Product changes are confined to `index.html` and `settings-controller.js`; no distribution CSS, dependency or original visual design was added. See [SOURCE-ADOPTION.md](artifacts/SOURCE-ADOPTION.md.txt) and the [source-integrity record](artifacts/evidence/final-source-integrity.json).
 
 ## Run the product
 
@@ -28,22 +32,22 @@ Keyboard recovery received a specific repair: after pending disable displaces fo
 
 The adopted foundation is the supplied Tabler 1.7.1 implementation and MIT license, with its exact tagged source and independently identified deployed HTML snapshot retained. The primary designer personally inspected the supplied original snapshot rendered locally, exact-source alert/validation specimens, the baseline and the integrated product.
 
-Field-local feedback plus a persistent footer alert was selected over a toast because it gives field correction and operation outcome separate, visible homes without adding overlay or dismissal behavior. The default source tint/border was retained, with the source body-text color utility for readable status text. The page, grid, avatar and button changes are configuration/composition within the existing family. Detailed choices and the evidence that changed them are in [DESIGN-DECISIONS.md](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/DESIGN-DECISIONS.md).
+Field-local feedback plus a persistent footer alert was selected over a toast because it gives field correction and operation outcome separate, visible homes without adding overlay or dismissal behavior. The default source tint/border was retained, with the source body-text color utility for readable status text. The page, grid, avatar and button changes are configuration/composition within the existing family. Detailed choices and the evidence that changed them are in [DESIGN-DECISIONS.md](artifacts/DESIGN-DECISIONS.md.txt).
 
 ## Verification completed
 
 | Check | Actual result and evidence |
 | --- | --- |
-| Viewport/theme/language matrix | All 12 combinations of 1440×900, 1280×600 and 390×844 × light/dark × English/Chinese exercised. [Results](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/final-run-02/results.json) |
+| Viewport/theme/language matrix | All 12 combinations of 1440×900, 1280×600 and 390×844 × light/dark × English/Chinese exercised. [Results](artifacts/evidence/final-run-02/results.json) |
 | Real settings journey | Required/length/email errors, no invalid writes, failed save, retry, newer edits during pending, cancel, reload, theme/language retention and section return passed. No page script errors were recorded in that run. |
-| Final visible states | All 12 combinations recaptured through invalid, pending, failed and successful save after removal of the overlapping trigger. [Capture index](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/final-captures/results.json) |
-| Focus recovery | Four fresh compact/narrow conditions passed immediate Enter retry, focus return and no focus theft from newer edits. [Results](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/focus-recheck/results.json) |
-| Existing saved value and pending locale changes | Failure preserved an already persisted value; language and theme changed while the operation was actually pending; retry saved the draft; a 101-character name was rejected without mutation. [Results](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/persisted-failure/results.json) |
-| Final state presentation | Four representative conditions passed immediately visible invalid focus, the native spinner’s child-content contract and Enter retry at the final code hashes. [Results](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/state-presentation-final/results.json) |
+| Final visible states | All 12 combinations recaptured through invalid, pending, failed and successful save after removal of the overlapping trigger. [Capture index](artifacts/evidence/final-captures/results.json) |
+| Focus recovery | Four fresh compact/narrow conditions passed immediate Enter retry, focus return and no focus theft from newer edits. [Results](artifacts/evidence/focus-recheck/results.json) |
+| Existing saved value and pending locale changes | Failure preserved an already persisted value; language and theme changed while the operation was actually pending; retry saved the draft; a 101-character name was rejected without mutation. [Results](artifacts/evidence/persisted-failure/results.json) |
+| Final state presentation | Four representative conditions passed immediately visible invalid focus, the native spinner’s child-content contract and Enter retry at the final code hashes. [Results](artifacts/evidence/state-presentation-final/results.json) |
 
 The primary designer opened all twelve final initial viewport images and representative long-content, validation, pending, failure, success and focused-recovery frames. Actual image-tool responses, command stdout/stderr, timestamps and the unsuccessful first narrow run remain under `evidence/`. The first narrow failure was diagnosed as a 21.5 px Save movement during pointerdown/up; that defect was repaired and rechecked. The earlier keyboard test’s broad pass was challenged by its focus log and followed by the focused recovery repair.
 
-Representative output: [desktop settings](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/final-captures/1440x900-light-en/initial.png), [narrow focused retry](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/focus-recheck/390-light-en/03-focused-retry.png), and [final narrow validation](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/state-presentation-final/390-light-zh/invalid-visible-focus.png).
+Representative output: [desktop settings](artifacts/evidence/final-captures/1440x900-light-en/initial.png), [narrow focused retry](artifacts/evidence/focus-recheck/390-light-en/03-focused-retry.png), and [final narrow validation](artifacts/evidence/state-presentation-final/390-light-zh/invalid-visible-focus.png).
 
 ## Remaining limitations
 
@@ -53,4 +57,4 @@ Verification used the supplied local Chromium environment and provisioned CJK fo
 
 Gallery destinations and sample gallery chrome remain peripheral source context under the input contract. Authentication and external service work were not added. There is no unresolved blocker in the exercised browser-local settings path, and no owner approval or user-comprehension study is implied.
 
-Full observation notes are in [VISUAL-REVIEW.md](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/VISUAL-REVIEW.md). The single read-only research child’s exact prompt, request/result, report and final-notification exports are linked from [DELEGATION.json](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/DELEGATION.json); model/backend identity, native role bindings, total tokens and billed cost remain unknown where the host did not expose them.
+Full observation notes are in [VISUAL-REVIEW.md](artifacts/VISUAL-REVIEW.md.txt). The single read-only research child’s exact prompt, request/result, report and final-notification exports are linked from [DELEGATION.json](artifacts/DELEGATION.json); model/backend identity, native role bindings, total tokens and billed cost remain unknown where the host did not expose them.

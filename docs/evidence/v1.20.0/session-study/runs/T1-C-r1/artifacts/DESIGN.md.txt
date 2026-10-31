@@ -1,0 +1,38 @@
+# Fieldnotes settings — current design model
+
+## Overall goal and formal increment
+One coherent settings journey, from profile/notification/privacy editing through validation, pending, failed save, retry, cancel, reload and return. This single formal increment retains the complete Tabler 1.7.1 settings page family. It owns content hierarchy, real status, field associations, bilingual/theme reflow, focus and compact-height operation. Gallery routes remain external source context.
+
+## Evidence and current choices
+- L0/L1: this is a browser-local settings editor. `app/settings-store.js` remains authoritative and unchanged. Submitted snapshot and subsequent edits are different objects.
+- L2: preserve SettingsLayout card, md 3/9 navigation/content proportions and natural document scrolling. The inspected baseline (`evidence/baseline-light-en.png`, `baseline-narrow-en.png`) has a long narrow navigation block before fields and state feedback remote from the footer. Configure the existing collapse component for narrow navigation; preserve its desktop list structure.
+- L3/L4: inherit Tabler form-control, row/gutters, card-title, form-hint, invalid-feedback, switch, button and alert families. Move existing fixture controls into the page header. Keep profile, email, notifications and privacy sections. Use source form-control textareas with native resizing plus content-height adaptation for long identity values.
+- L1/L3 feedback choice (provisional pending trial): persistent Tabler alert near footer actions rather than a transient toast; important failure and unsaved edits remain available at the recovery point. Use semantic form submission, field-level error association and first-invalid focus. Existing source `Alert.astro` and `Toast.astro` establish alternatives; no new visual treatment is authored.
+- Content: local-only storage is explicit; privacy states concern workspace profile discovery, never email disclosure. Locale switching must preserve draft, scroll, validation and pending work. Existing switch text that says “currently visible” can imply saved state while only a draft has changed; use preference language instead.
+
+## Acquisition, adoption and verification boundaries
+Tabler package and rendered snapshot provenance are in `SOURCE-MANIFEST.json`; tagged Astro source is retained in `sources/`. No new visual library or original construction is planned. Current web guidance is captured in `evidence/commands/001-modern-search` and `002-modern-forms` (forms and accessible-error-announcement). Inherit source classes rather than guidance sample CSS. Keep store validation authoritative rather than adding conflicting native rules.
+
+Research child independently investigates source/status/navigation fit. Main agent retains all product code, final choices and final visual inspection. Initial baseline PNGs were actually opened; command captures establish execution, not viewing. Final checks will use 1440×900, 1280×600 and 390×844, both locales/themes, controlled async episodes and keyboard-only operation. Natural-time perceptual playback will not be claimed from sparse frames.
+
+## Open evidence questions before trial
+Does footer feedback remain legible and associated during error/retry at 600px height? Do long mixed-script identity values reflow without replacing or clipping the entered text? Does the mobile collapse retain all settings links and keyboard reachability? These need rendered and behavioral checks after integration.
+
+## Integrated decision and meaningful revisions
+The primary designer personally viewed the original official settings snapshot rendered with local 1.7.1 assets and the child’s invalid-save frame (`evidence/view-research-*.json`). The inherited quarter-width settings navigation, white/dark card, restrained section hierarchy, source control contours and right-aligned primary/secondary footer are retained. The footer alert is adopted; the more complex toast header/overlay remains a studied alternative, not an installed resource. Sources and actual compatibility evidence are in `evidence/research/FINAL.md` and `SOURCE-ADOPTION.md`.
+
+The local trial exposed two integration defects, both repaired at their owners: an invalid selector interrupted initialization (commands 004/005); blur-time validation could move the mobile Save target before click completion (006). Field focus now uses explicit reveal and blur validation leaves button activation stable. A rapid mobile section selection during collapse expansion exposed the source component’s documented transition guard (007); the adapter now waits for the source `shown.bs.collapse` event before hiding it. No source transition was rewritten. Keyboard focus returns to Save after pending only when focus otherwise fell to the body; active field editing is never interrupted.
+
+Visual review also found the upstream floating customizer covering the English email hint at 390px. The source responsive display utilities hide this peripheral demo affordance below the md breakpoint; the explicit page-header theme control remains available. The desktop source chrome is unchanged.
+
+A measured source-configuration trial (`evidence/commands/010-contrast-trial`) found alert info/success text at 3.05:1/2.74:1 against white and danger text at 3.25:1 against the dark card. Existing `text-{state}-emphasis` utilities improve those same relationships to 15.28:1/14.79:1 and 6.49:1 respectively. These source tokens are now applied to status and field errors. This is a bounded color measurement, not whole-page accessibility certification.
+
+## Current evidence map and closure
+- L0 intended experience: browser-local settings with clear save ownership and private email. TASK/INPUT and unchanged store supply the facts.
+- L1 journey: actual visible editing → invalid → pending → one failure → retry → success → newer unsaved draft → cancel → reload; keyboard-only name editing/save/failure/retry also executed. Commands 008 and 011 carry the main matrix; command 009 separately exercises notification/privacy switches, theme/locale preservation, locale switching during a pending save, reload, rapid section return and unreadable storage preservation.
+- L2 composition: 1440×900, 1280×600 and 390×844 in all four language/theme combinations. Document scrolling owns overflow; narrow navigation uses the source collapse, desktop keeps the original list. No horizontal overflow was observed by the tested assertion.
+- L3 components: native semantic form, labeled controls, field-specific errors and source alert/button/switch states. No simulated persistence and no validation rule changes.
+- L4 perception: actual viewed frames show source type/surface rhythm, long mixed-script reflow, source focus outlines, compact footer feedback and recovered error focus. Contrast repair uses the source theme-aware role.
+- L5 realization: only `app/index.html` and `app/settings-controller.js` are changed product files. Source package, license, authoritative store and minified distribution files remain intact. Test outputs include source hashes and capture time brackets.
+
+The final current implementation is the same accumulated app, not a separate demo. Later captures supersede relevant failed/earlier states while their original evidence remains available. Final owner acceptance and live assistive-technology/natural-speed playback are not asserted.

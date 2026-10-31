@@ -31,6 +31,9 @@ def main():
     record={'schema_version':1,'cell_id':args.cell,'captured_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'kind':'coordinator byte snapshot, not a tool-event transcript','source_workspace':str(package),'reconstruction':'Extract the frozen task inputs and cell instructions at the work-package root, the complete method archive into method/, and applicable distributed-role archive into roles/. Overlay every workspace-overlay ZIP at the work-package root; remove deleted_paths. Archives preserve file bytes and executable mode with normalized archive timestamps. app/node_modules is an excluded dependency cache; T2 includes its built app/dist in the original/overlay inputs.','excluded':'app/node_modules, .git, __pycache__, .pytest_cache; external browser/Python/font runtime is documented separately.','workspace_files':identities,'workspace_modes':{p.relative_to(package).as_posix():oct(p.stat().st_mode&0o777) for p in paths},'changed_or_added':sorted(p.relative_to(package).as_posix() for p in changed),'deleted_paths':deleted,'method_changes':protocol_changes,'role_changes':role_changes,'overlay':archives}
     write_json(target/'snapshot.json',record)
     for name in ['FINAL.md','VISUAL-REVIEW.md','DELEGATION.json']:
-        if (package/name).is_file():shutil.copyfile(package/name,target/name)
+        if (package/name).is_file():
+            # Preserve raw participant Markdown as data, including temporary sandbox links.
+            destination=name+'.txt' if name.endswith('.md') else name
+            shutil.copyfile(package/name,target/destination)
     print(json.dumps({'cell':args.cell,'files':len(paths),'changed':len(changed),'deleted':len(deleted),'method_changes':len(protocol_changes),'role_changes':len(role_changes),'archives':archives['archives']},indent=2))
 if __name__=='__main__':main()

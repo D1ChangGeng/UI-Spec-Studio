@@ -1,0 +1,68 @@
+# Visual review — Fieldnotes settings
+
+## Observer and conditions
+
+The primary package agent retained implementation/design responsibility and personally opened real PNG outputs with `view_image`. Full actual viewer responses are saved as `evidence/view-*.json`. No research or implementation child was used.
+
+Dedicated local Chromium headless shell 143.0.7499.4, Playwright 1.57.0, device-pixel ratio 1, CSS viewports 1440×900, 1280×600 and 390×844. Every browser process used `FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf`. English and Simplified Chinese, light and dark, with the required long bilingual string and short name `Li`. This is executor-local browser evidence, not native connected-browser access.
+
+## Viewed sources and first trial
+
+- `initial/starter-en-light.png` and `initial/starter-narrow.png`: source family is coherent, but the original three-column row cuts ordinary organization content; mobile settings navigation occupies much of the first screen. Utilities visually compete with profile identity.
+- `initial/official-source-reference.png`: failed route interception, actually viewed 404. This is a retained failed attempt, not source-design evidence.
+- `source-corrected/official-source-reference.png`: actual retained original demo rendered locally. Its card split, restrained surfaces, labels, section rhythm and primary action family justify retaining the existing system. Portraits are missing in this local source render.
+- `trial/starter-en-light.png` and `trial/starter-narrow.png`: wider fields and separated utilities retain the source family. Narrow title wrapping and the floating gallery customizer were observed, then corrected with existing grid/display utilities.
+
+## Final static views
+
+Personally opened all twelve `final-r2/{en,zh}-{light,dark}-{1440x900,1280x600,390x844}-top-long.png` images. These were captured and read at their actual viewport size, not as a compressed contact sheet.
+
+| Viewed scope | Observation and judgment |
+|---|---|
+| 1440×900, all four locale/theme variants | The inherited settings card and left navigation remain recognizable. Profile identity, field labels, hints, notifications and privacy follow one type/surface family. The required long mixed-script value is visible in the wider editable fields. Dark mode uses the same hierarchy with source dark surfaces. |
+| 1280×600, all four variants | Long name/organization values remain readable; lower controls intentionally require document scrolling. There is no separate trapped scroll region. |
+| 390×844, all four variants | Settings navigation is a source collapse control; the complete required long string wraps into three visible lines in the textareas. Title and fixture controls form separate responsive rows. No horizontal page overflow was measured. |
+| Compact footer, light/dark English; narrow footer, light/dark Chinese | Privacy help stays attached to its switch. Save/Cancel and status remain within the original card footer, are reachable, and have coherent primary/secondary weight. The floating source customizer no longer overlaps narrow controls. |
+
+The r2 primary views remain applicable to the final code: subsequent changes affected colored status text, validation-time textarea recalculation, pending focus and loading footprint. Those affected states were recaptured and rechecked separately. The basic neutral form composition was not changed after this matrix.
+
+## Controlled episodes and corrections
+
+The full r2 path used the native skip link, Tab, text entry, Space and Enter for invalid submission, correction, failed save and retry in every locale/theme. The source store emitted real `invalid → pending → error → pending → success` events. Logged pending-to-outcome intervals were approximately 751–755 ms in that run. This is the actual local fixture delay, not evidence of remote service latency.
+
+The first run (`commands/006-full-verification`) failed after 25 successful assertions because disabling Save removed keyboard focus. That failure and its images are retained. The controller now restores Save focus after the result only if it had focus before pending and focus is still on the document body; it does not steal focus from subsequent edits. The repeated full run passed 141 assertions and reported no uncaught page exceptions.
+
+Further personally viewed states:
+
+- `final-r2` English/light and Chinese/dark invalid/focus/newer-edit frames exposed the need to remeasure long text after the validation icon.
+- `final-r3/en-light-*`: invalid, pending, failure and success showed the corrected contrast and full long invalid value.
+- `final-r4/en-dark-*`, `zh-light-*` and `zh-dark-*`: personally opened all four ordered invalid/pending/failure/success frames per variant.
+- `final-r4/en-light-pending.png` and `en-light-failure-settled.png`: personally opened final loading-width and focus-return treatment. Other English/light settled appearances carry forward from the immediately prior equivalent render.
+- `final-r4/zh-dark-narrow-failure.png` and `zh-dark-narrow-success.png`: actual tap-driven failure/retry at 390×844; status wraps cleanly and both actions remain accessible.
+- All four `final-concurrency/*-newer-edits.png` images: final warning text clearly distinguishes the committed snapshot from later, still-editable unsaved changes.
+
+Two source-preserving visual repairs were made after inspection:
+
+1. Default alert text against the alert surface measured approximately 4.20:1 in light and 3.01:1 in dark. Existing Tabler emphasis utilities raise the measured opaque error-text ratios to approximately 15.40:1 and 6.03:1. These are scoped browser/canvas calculations, not a full WCAG audit. The helper-text measurements in the same diagnostic do not composite alpha and are not used for a compliance claim.
+2. The loading class hides a label while retaining its intrinsic width. Keeping the existing button label during pending restores that source mechanism; the accessible name still announces saving. Four final variant checks confirmed unchanged button width.
+
+The final refinement run passed 28 assertions, covering the affected states, all four locale/theme variants, touch-sized recovery, unreadable-storage preservation and local-only observed requests. Final concurrency checks again confirmed snapshot persistence, retained later edits, explicit unsaved feedback, display-name length errors and Cancel restoration in all four variants.
+
+## Temporal evidence limits
+
+Browser interactions ran on the natural clock. Captures have monotonic start/end brackets, state, active element, viewport and scroll offsets in their JSON reports; store events have browser `performance.now()` timestamps. I viewed ordered still frames. Videos were recorded in the r2 run but were not played back by this agent. Do not interpret the recordings' existence as natural-time visual playback or frame-rate assurance.
+
+Some pending captures occur during the inherited smooth scroll initiated by focus, so their scroll offset differs from the settled outcome. Tabler applies root smooth scrolling under `prefers-reduced-motion: no-preference`. The frames establish the displayed states and the logs establish event order; unsampled movement and subjective pacing remain unverified.
+
+## Remaining limitations
+
+- Chromium only. No Safari, Firefox, physical phone keyboard, screen-reader session or user comprehension study was performed.
+- Narrow checks include an emulated touch context, not a physical mobile device.
+- The outer Tabler gallery chrome, placeholder account identity, English gallery menus and unrelated destination routes remain source context, as excluded by INPUT.md. This is a completed bounded settings path, not an implementation of the full upstream gallery.
+- LocalStorage remains browser-local and origin/port specific. No authentication, cross-device sync or remote service was added.
+- No owner acceptance is implied. The observed product and scoped engineering results are agent verification.
+
+
+## Delivery previews
+
+After the final source was frozen, I also personally opened `evidence/delivery-en-light.png` (1440×900) and `evidence/delivery-zh-dark.png` (390×844). The captures wait 400 ms after edits and reset scrolling instantly; the source switch's initial transition has settled. Both show the complete required long name/organization in the editable form-control family. The desktop preserves the source card/nav balance; the narrow view wraps both values cleanly and keeps the utility row and collapsed settings navigation distinct. These are the current delivered-source previews linked in FINAL.md.

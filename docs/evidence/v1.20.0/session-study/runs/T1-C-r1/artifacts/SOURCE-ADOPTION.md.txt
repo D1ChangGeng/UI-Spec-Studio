@@ -1,0 +1,32 @@
+# Actual source adoption
+
+## Foundation identity
+
+- Repository: https://github.com/tabler/tabler
+- Package/tag: `@tabler/core@1.7.1`
+- Tag commit: `07f60c07da13d8ff957a370434b7ef5c86f5ab94`
+- License: MIT, retained in `app/LICENSE` and the supplied method notices.
+- Official compiled source: `sources/official-settings-snapshot.html`, SHA-256 `ed80162e38d7667bfe020b5d16d228c4adc64f301233cfbeeeae6f606697a06e`. Its deployment commit is unknown; this digest is its identity. Package digest and prepared source provenance remain in `SOURCE-MANIFEST.json`.
+
+## Responsibility to implementation
+
+| Visible responsibility | Actual mature source | Product adoption and narrow adaptation |
+|---|---|---|
+| Page chrome, settings card, nav grid | Supplied official settings HTML; `sources/shared/layouts/SettingsLayout.astro`; local Tabler CSS | Retain original shell, card, col-12/md-3 + col-12/md-9 division, transparent list group, section navigation and footer. |
+| Heading/action hierarchy | Original page header and Tabler page-header/btn-list pattern | Existing fixture language/theme controls move to header; source responsive columns place them below the title at narrow width. |
+| Identity and form typography/surfaces | Source avatar sizes, card-title, row/g-3, form-label, form-control, form-hint | Configure avatar-lg; use source textareas for long name/organization values and source grid for location/email. Height-only content adapter preserves source typography/border/padding and native resizing. |
+| Notifications and profile visibility | `sources/shared/ui/form/Check.astro` | Retain form-check/form-switch/form-switch-lg and native checkboxes. Stable labels avoid implying that an unsaved preference is already persisted. |
+| Field validation | Local CSS is-invalid/invalid-feedback and official Tabler validation pattern | Connect unchanged service fieldErrors to class, message ID, aria-invalid and described-by; focus and reveal first invalid control. |
+| Save result feedback | `sources/shared/ui/Alert.astro`; local alert-minor + alert-state classes | Persistent source alert in original card footer, role=status and live atomic announcement. No toast dependency adopted. |
+| Pending button | Source btn, btn-primary, btn-loading | Store-driven pending state, real disabled and aria-busy, disabled Cancel during non-cancellable commitment. Keyboard focus restoration is conditional. |
+| Theme-aware feedback text | Supplied semantic `text-info-emphasis`, `text-success-emphasis`, `text-danger-emphasis` classes and token values | Use supported emphasis roles after source-class contrast trial, preserving source palette and theme computation. |
+| Narrow navigation | Existing source Bootstrap Collapse via `window.tabler.bootstrap.Collapse`, source collapse/d-md-block | Mobile disclosure preserves the same list. A short adapter queues hide after the source shown event when selection happens mid-transition. |
+| Narrow customizer obstruction | Source responsive display utilities | Hide only peripheral floating demo customizer below md with d-none/d-md-block; page-header theme control remains. |
+
+## Acquisition, use and observed retention
+
+No new visual package, icon, font, generated asset or original design construction was added. All visual classes above are present in the retained runtime. New JavaScript owns local application wiring, localization, source component configuration, focus, draft reconciliation and height adaptation. No distribution stylesheet was edited.
+
+The primary designer viewed the original source render at 1440×900 and its 1280×600 footer, then the current product at all requested theme/language/viewport combinations. Shared card boundaries, nav proportions, control family, type scale, section rhythm and footer action hierarchy remain recognizable. Long content and explicit state presentation are the intentional product differences. Original source images have unavailable portraits; that asset quality is outside the comparison.
+
+The research child obtained current official documentation as textual guidance and inspected source compatibility; live public demos were blocked. The local official snapshot is the actual viewed external reference. See `evidence/research/FINAL.md` for exact sources, alternatives and access failures. These documentation sources informed configuration; the pinned runtime remains the adopted implementation.

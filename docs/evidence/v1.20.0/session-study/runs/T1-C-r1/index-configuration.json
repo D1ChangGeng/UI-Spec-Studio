@@ -1,0 +1,71 @@
+{
+  "preview_command": "Reconstruct the retained workspace with support/replay_snapshot.py, then run python3 -m http.server 4403 --bind 127.0.0.1 --directory app. Use ?theme=light&lang=en, ?theme=dark&lang=zh, and &fail=once for the declared local fault fixture.",
+  "capture_conditions": "Playwright 1.57.0, Chrome headless shell 143.0.7499.4, recorded Noto CJK font, DPR 1; 1440x900, 1280x600, 390x844, English/Chinese and light/dark. Actual unchanged 750 ms local save fixture. Sampled still frames, not natural-time playback.",
+  "direct_source_files": [
+    "app/index.html",
+    "app/settings-controller.js",
+    "app/settings-store.js"
+  ],
+  "cell_id": "T1-C-r1",
+  "agent_id": "/root/product_03",
+  "capture_lineage": "final-v5 is the final code matrix. Additional behavior checks and earlier matrix/source/trial frames remain in the full workspace, with their own source hashes. Only actual primary views pointing to final-v5 captures establish viewed images in this index.",
+  "final_capture_prefixes": [
+    "evidence/final-v5"
+  ],
+  "primary_view_globs": [
+    "evidence/view-release-*.json"
+  ],
+  "behavior_log_globs": [
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt"
+  ],
+  "additional_tool_exports": [
+    "evidence/view-research-1.json",
+    "evidence/view-research-2.json",
+    "evidence/view-research-3.json"
+  ],
+  "report_files": [
+    "SOURCE-ADOPTION.md",
+    "DESIGN.md",
+    "VISUAL-REVIEW.md",
+    "DELEGATION.json",
+    "evidence/delivery-manifest.json",
+    "evidence/final-v5/results.json",
+    "evidence/research/FINAL.md",
+    "evidence/research/VISUAL-REVIEW.md",
+    "evidence/coordination/research-final-notification.md"
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_03/research",
+      "role": "ui_researcher",
+      "prompt_repository_path": "docs/evidence/v1.20.0/session-study/coordination/T1-C-r1-child-dispatched-prompt.txt",
+      "spawn": "DELEGATION.json",
+      "completion_repository_path": "docs/evidence/v1.20.0/session-study/coordination/T1-C-r1-child-completion-observation.json",
+      "completion_source": "collaboration.list_agents",
+      "result": "evidence/research/FINAL.md",
+      "command_globs": [
+        "evidence/research/commands/*/command.json",
+        "evidence/research/commands/*/stdout.txt",
+        "evidence/research/commands/*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/research/search-001.json",
+        "evidence/research/web-002.json",
+        "evidence/research/web-003.json",
+        "evidence/research/web-004.json",
+        "evidence/research/web-005.json",
+        "evidence/research/browser-001.json"
+      ]
+    }
+  ],
+  "audit_observations": [
+    "Actual fresh research child read the distributed ui_researcher role instructions and independently inspected the pre-repair app and pinned source. The primary implemented and inspected final product output.",
+    "Minor byte-level protocol deviation: actual child spawn message omitted the one final LF from frozen RESEARCH-PROMPT.md; all substantive bytes match. The exact actual 1245-byte argument and a derived comparison audit are retained. The 1246-byte file named research-prompt-exact.md is not asserted to be the exact dispatched argument.",
+    "Only app/index.html and app/settings-controller.js changed among product source. Authoritative store, mature assets, complete method and distributed roles remain unchanged.",
+    "Final primary matrix reports 13 scenarios and 83 captures, plus six extra checks. Selector, blur-induced movement, rapid collapse race and narrow customizer overlap failures and corrections remain retained.",
+    "All 614 files reconstructed byte for byte from frozen inputs and overlays. Native dispatch/model/usage telemetry is not supplied by this route."
+  ],
+  "limitations": "One unrandomized cell with actual fresh agents and simulated role instructions on a shared host. One trailing-newline prompt deviation is disclosed. Public live demo was blocked; exact supplied official snapshot rendered locally was the viewed reference. Chromium sampled frames only; no physical keyboard, screen-reader, cross-engine, natural-time playback or human study. Native role binding, resolved models, tokens, billing and context pressure unknown."
+}
