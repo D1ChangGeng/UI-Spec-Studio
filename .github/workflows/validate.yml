@@ -60,7 +60,8 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: python tools/install_smoke.py --source "https://github.com/${GITHUB_REPOSITORY}/tree/${GITHUB_SHA}"
   publication:
-    runs-on: ubuntu-latest
+    # Playwright 1.57's dependency definitions support this fixed OS release.
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -80,15 +81,23 @@ jobs:
                 "$apt_source"
             fi
           done
-      - run: python -m playwright install --with-deps chromium
+      - run: python -m playwright install-deps chromium
+      - name: Provision the verified browser and recorder
+        id: browser
+        run: |
+          python tools/provision_preview_browser.py \
+            --output-dir "$RUNNER_TEMP/ui-spec-preview-browser" \
+            --report publication-evidence/browser-provision.json \
+            --github-output "$GITHUB_OUTPUT"
+          printf 'PLAYWRIGHT_BROWSERS_PATH=%s\n' "$RUNNER_TEMP/ui-spec-preview-browser" >> "$GITHUB_ENV"
       - name: Install CJK fonts for README locales
         run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
       - run: python tools/readme_art.py --check
       - name: Local publication rendering
-        run: python tools/preview_readme.py --output-dir publication-evidence/local
+        run: python tools/preview_readme.py --output-dir publication-evidence/local --browser-path "${{ steps.browser.outputs.browser_path }}"
       - name: Published-source GitHub rendering
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: python tools/preview_readme.py --output-dir publication-evidence/github --live-commit "$GITHUB_SHA"
+        run: python tools/preview_readme.py --output-dir publication-evidence/github --live-commit "$GITHUB_SHA" --browser-path "${{ steps.browser.outputs.browser_path }}"
       - name: Store publication evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -98,7 +107,7 @@ jobs:
           if-no-files-found: error
           retention-days: 30
   scenario:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
@@ -118,17 +127,27 @@ jobs:
                 "$apt_source"
             fi
           done
-      - run: python -m playwright install --with-deps chromium
+      - run: python -m playwright install-deps chromium
+      - name: Provision the verified browser and recorder
+        id: browser
+        run: |
+          python tools/provision_preview_browser.py \
+            --output-dir "$RUNNER_TEMP/ui-spec-preview-browser" \
+            --report scenario-evidence/browser-provision.json \
+            --github-output "$GITHUB_OUTPUT"
+          printf 'PLAYWRIGHT_BROWSERS_PATH=%s\n' "$RUNNER_TEMP/ui-spec-preview-browser" >> "$GITHUB_ENV"
       - name: Install CJK fonts for the declared sample locale
         run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk
       - name: Exercise product intent and resource decisions
-        run: python tools/validate_scenario.py --output-dir scenario-evidence
+        run: python tools/validate_scenario.py --output-dir scenario-evidence --browser-path "${{ steps.browser.outputs.browser_path }}"
       - name: Exercise visual asset delivery
-        run: python tools/validate_assets.py --output-dir scenario-evidence/assets
+        run: python tools/validate_assets.py --output-dir scenario-evidence/assets --browser-path "${{ steps.browser.outputs.browser_path }}"
       - name: Exercise bilingual content and UX writing
-        run: python tools/validate_content.py --output-dir scenario-evidence/content
+        run: python tools/validate_content.py --output-dir scenario-evidence/content --browser-path "${{ steps.browser.outputs.browser_path }}"
       - name: Capture and check temporal interaction episodes
-        run: python tools/validate_temporal.py --output-dir scenario-evidence/temporal
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: ${{ steps.browser.outputs.browsers_path }}
+        run: python tools/validate_temporal.py --output-dir scenario-evidence/temporal --browser-path "${{ steps.browser.outputs.browser_path }}"
       - name: Store scenario evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

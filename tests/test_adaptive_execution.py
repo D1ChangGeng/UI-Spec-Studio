@@ -16,7 +16,10 @@ guard=load('adaptive_release_guard',ROOT/'tools/check_adaptive_release.py')
 
 class StudyMechanicsTests(unittest.TestCase):
     def setUp(self):
-        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.r=Path(self.temp.name)
+        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
+        # Canonical fixture roots avoid macOS's system /var alias without
+        # relaxing the runner's rejection of caller-supplied linked ancestors.
+        self.r=Path(self.temp.name).resolve()
         self.base=self.r/'baseline';self.candidate=self.r/'candidate'
         for method in (self.base,self.candidate):
             (method/'references').mkdir(parents=True);(method/'SKILL.md').write_text('# Explicit mechanical fixture, not real study input\n')
@@ -149,18 +152,21 @@ class StudyMechanicsTests(unittest.TestCase):
                    'vendor/LICENSE':'MIT license fixture\nCopyright upstream\n',
                    'vendor/LICENSE-MIT':'Permission notice fixture\n',
                    'vendor/NOTICE':'Required attribution fixture\n',
+                   'vendor/NOTICE-CRLF':'Required attribution fixture\r\nOriginal Windows newlines\r\n',
                    'vendor/COPYING':'Redistribution terms fixture\n',
                    'theme.scss':'$space: 1rem; .page { padding: $space; }',
                    'note.tid':'title: Example\n\nEditable research note\n',
                    'yarn.lock':'# Pinned dependency fixture\n'}
-        for name,content in originals.items():(work/'app'/name).write_text(content)
+        # Write exact LF and CRLF source bytes on every OS; the archiver must
+        # preserve both, rather than normalize platform text-mode output.
+        for name,content in originals.items():(work/'app'/name).write_bytes(content.encode('utf-8'))
         (work/'app/vendor/font.woff2').write_bytes(b'not an actual font')
         (work/'app/.next/cache').mkdir(parents=True)
         (work/'app/.next/cache/generated.js').write_text('generated dependency cache, not product source')
         out=self.r/'result';out.mkdir();result=runner.snapshot_outputs(work,out)
         with zipfile.ZipFile(out/'product-output.zip') as archive:
             for name,content in originals.items():
-                self.assertEqual(archive.read('app/'+name),content.encode())
+                self.assertEqual(archive.read('app/'+name),content.encode('utf-8'))
             self.assertNotIn('app/vendor/font.woff2',archive.namelist())
             self.assertNotIn('app/.next/cache/generated.js',archive.namelist())
         self.assertEqual(result['excluded'],[{'path':'app/vendor/font.woff2','reason':'unsupported or private-sensitive type'}])
@@ -202,10 +208,17 @@ class StudyMechanicsTests(unittest.TestCase):
         try:(self.st/'app/link.txt').symlink_to(self.plan)
         except OSError:self.skipTest('symlinks unavailable')
         with self.assertRaises(runner.StudyError):self.prepare()
+    def test_symlink_output_ancestor_rejected(self):
+        target=self.r/'real-output';target.mkdir();alias=self.r/'output-alias'
+        try:alias.symlink_to(target,target_is_directory=True)
+        except OSError:self.skipTest('symlinks unavailable')
+        self.out=alias/'campaign'
+        with self.assertRaisesRegex(runner.StudyError,'Linked study root'):self.prepare()
+        self.assertEqual(list(target.iterdir()),[])
 
 class ReleaseEvidenceMechanicsTests(unittest.TestCase):
     def setUp(self):
-        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.r=Path(self.temp.name)
+        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.r=Path(self.temp.name).resolve()
         (self.r/'docs/evidence/v1.20.0').mkdir(parents=True)
     def write_decision(self,data):
         (self.r/guard.DECISION).write_text(json.dumps(data))
@@ -239,11 +252,13 @@ class ReleaseEvidenceMechanicsTests(unittest.TestCase):
         try:(self.r/'alias').symlink_to(self.r/'actual')
         except OSError:self.skipTest('symlinks unavailable')
         with self.assertRaises(guard.EvidenceError):guard.path_at(self.r,'alias')
+        root_alias=self.r/'root-alias';root_alias.symlink_to(self.r,target_is_directory=True)
+        with self.assertRaisesRegex(guard.EvidenceError,'Linked evidence root'):guard.path_at(root_alias,'actual')
 
 class ReleaseRecordConsistencyTests(unittest.TestCase):
     """Synthetic file records test the checker only, never an actual approval."""
     def setUp(self):
-        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.r=Path(self.temp.name)
+        self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.r=Path(self.temp.name).resolve()
         for name in ('VERSION','AGENTS.md','docs/MODEL.md','docs/WRITING.md'):
             self.put(name,b'mechanical-test-fixture')
         self.put('skills/ui-spec/SKILL.md',b'mechanical fixture')

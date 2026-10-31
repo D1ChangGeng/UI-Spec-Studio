@@ -27,7 +27,9 @@ class LauncherTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.base = Path(self.temp.name)
+        # Canonicalize only the test-owned root, including macOS's /var alias.
+        # Deliberately supplied project/role symlinks still exercise rejection.
+        self.base = Path(self.temp.name).resolve()
         self.project = self.base / 'product with spaces'
         self.project.mkdir()
         self.codex = self.project / '.codex'

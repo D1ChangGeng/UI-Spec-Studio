@@ -11,7 +11,9 @@ mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
 class AdapterTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
-        self.base=Path(self.temp.name);self.root=self.base/'project/.codex'
+        # Use the canonical path of our own fixture; macOS temp paths may start
+        # with the system /var alias. Caller-supplied links remain rejected.
+        self.base=Path(self.temp.name).resolve();self.root=self.base/'project/.codex'
         self.source=self.base/'source';shutil.copytree(ADAPTER,self.source)
     def run_install(self,**kw): return mod.execute(self.root,'install',self.source,**kw)
     def new_version(self,version='1.20.1',role='ui_researcher'):
@@ -120,6 +122,13 @@ class AdapterTests(unittest.TestCase):
         try:p.symlink_to(other)
         except OSError:self.skipTest('Symlink privilege unavailable')
         with self.assertRaises(mod.InstallError):self.run_install()
+    def test_symlink_destination_ancestor_rejected(self):
+        target=self.base/'real-root';target.mkdir();alias=self.base/'root-alias'
+        try:alias.symlink_to(target,target_is_directory=True)
+        except OSError:self.skipTest('Symlink privilege unavailable')
+        with self.assertRaisesRegex(mod.InstallError,'linked destination ancestor'):
+            mod.execute(alias/'new-project/.codex','install',self.source)
+        self.assertEqual(list(target.iterdir()),[])
     def test_install_lock_respected(self):
         p=self.root/mod.LOCK;p.parent.mkdir(parents=True);p.write_text('other writer')
         with self.assertRaises(mod.InstallError):self.run_install()

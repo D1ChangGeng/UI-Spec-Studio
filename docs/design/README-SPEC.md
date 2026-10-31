@@ -61,6 +61,42 @@ The original README exercise was completed against v1.4.0. Its artwork and readi
 3. **Published host:** GitHub Actions reopens the exact committed README in GitHub and checks actual images, document width and native controls. Read back this evidence separately from the local approximation.
 4. **Judgment:** review the visible first screen, visual scale, content density and reader's first-use path. Manual aesthetic conclusions remain scoped to the inspected frames. A successful render is evidence of the tested artifact, not a comparative test of Agent design quality on every screen-based medium.
 
+### Reproducible CI browser environment
+
+The publication and scenario jobs run on Ubuntu 24.04 with Playwright 1.57.0.
+The fixed OS avoids changes in `ubuntu-latest` outrunning that Playwright
+version's dependency definitions. `playwright install-deps chromium` installs
+system libraries; the existing CJK font installation remains separate.
+
+[`tools/provision_preview_browser.py`](../../tools/provision_preview_browser.py)
+downloads the exact Chrome for Testing **headless shell** 143.0.7499.4 from
+[Google's official archive](https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.4/linux64/chrome-headless-shell-linux64.zip)
+and FFmpeg build 1011 from the official Playwright download mirrors. These match
+the pinned Playwright package's browser registry. The headless shell is the
+tested browser product; this evidence does not establish headed Chrome behavior.
+
+The provisioner checks reviewed archive lengths and SHA-256 digests before
+extracting regular files into a fresh job directory. These digests were computed
+from complete official downloads and reviewed on 2026-10-31; they are repository
+pins, not a claim that Google or Microsoft published these SHA-256 values.
+Archive extraction checks CRCs and rejects path traversal, duplicate paths and
+links. Failed downloads or compatibility checks fail the job. Official mirror
+fallbacks must supply the same pinned bytes.
+
+Each acceptance command receives the verified executable through `--browser-path`.
+`PLAYWRIGHT_BROWSERS_PATH` selects the same provisioned FFmpeg directory, including
+the temporal fixture's normal video capture. `browser-provision.json` accompanies
+the existing evidence artifacts with actual download attempts, archive/executable
+digests and the browser's reported version. The local bilingual/theme/viewport
+matrix, scenario checks, videos and exact-commit live GitHub rendering remain
+separate acceptance steps. The main-branch publication job still inspects the
+actual GitHub host.
+
+When upgrading this environment, update Playwright, its corresponding browser and
+recorder pins, and the supported OS together; repeat the real rendering and
+recording gates against the acquired files. Ordinary local contributors can keep
+using Playwright's normal installer or the scripts' existing `--browser-path`.
+
 ### 2026-10-25 local iteration
 
 The source-format and link validator passed. The 126 existing tests passed after preserving the README's documented resource-guide reference. Local Chromium rendered 12 language/theme/viewport combinations with viewports and full-page captures, tested first copyable installation text, disclosure and absence of document-level horizontal overflow. The opening screens at 1440 light, 390 light/dark and 390 Chinese were visually inspected; the lead was shortened so the primary install command enters the narrow first viewport. The wide and compact SVG plates were viewed separately after regenerating the source.
