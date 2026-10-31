@@ -5,7 +5,7 @@ license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.19.0"
+  version: "1.20.0"
 ---
 
 # UI Spec Studio
@@ -233,3 +233,13 @@ The **Design Evidence Map** maintains current product understanding and links to
 **The structural inspector reports what is represented, not what is professionally sufficient, correct, ready, or complete.** An unlisted theoretical category invites consideration, not a requirement; a broken declared reference is a structural fact, not a design verdict. Never convert readable JSON, exit 0, a file's presence or a declared status into completed research, adopted runtime behavior or accepted UI quality. The Agent applies the professional action rules to the actual task; tools do not choose, veto or execute those actions.
 
 Keep **Current Design Model → Meaningful Revisions → Evidence Archive** as linked ordinary project records. Use the current model for continuation, concise revisions for what changed/why/affected scope, and archived original materials for traceability. Replace outdated current judgments deliberately while preserving historical evidence. Conditions and local dependencies determine relevance; a global version change alone does not invalidate unrelated observations. Both experience/research/judgment and source/trial/implementation/verification can revisit earlier decisions whenever evidence warrants it.
+
+## Keep the main agent responsible while expanding research capacity
+
+Use **Main-Agent-Centered Adaptive Research & Integration** when independent research can improve the current design decision. The main agent retains the complete product goal, current UI, formal SPEC, consequential visual judgment, final mature-resource choice, whole-product integration and quality acceptance. A role may investigate and recommend; it does not acquire product-level design authority.
+
+Delegate complete, bounded inquiries rather than separating search, viewing and comparison into a fixed pipeline. Specialist researchers apply this Skill's full professional foundation, investigate repeatedly and curate relevant resources, actually viewed evidence, meaningful alternatives and consequential unknowns. Natural-language intent and relevant project references are sufficient; no delegation schema or candidate quota is required. Read the [workflow](references/workflow.md#augment-research-without-outsourcing-design) and [sourcing method](references/component-sourcing.md#curate-an-entry-point-not-a-final-answer).
+
+Use those results as a better starting point for your own high-value analysis. Directly inspect the evidence needed for important visual choices and the actual integrated result; do not merely approve a subordinate's summary or repeat its entire browsing history. Preserve exceptional references that lack reusable source, and distinguish them from adoptable implementations. Reopen affected research when a trial reveals lost craft or incompatible composition.
+
+An already selected foundation and explicit change boundaries can support delegated integration. Retain source identity, defining visual relationships, real behavior and relevant verification; unresolved design choices return to the main agent. Research tasks are internal work, not new formal SPECs. Available subagents, models, tools and permissions are host capabilities, not requirements of the portable Skill. Without them, continue the same professional research directly. The eight-reference reading contract and default-deny original-construction boundary remain unchanged.

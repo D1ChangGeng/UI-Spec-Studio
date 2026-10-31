@@ -9,8 +9,8 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 TOP = {"README.md", "README.zh-CN.md", "LICENSE", "VERSION", "AGENTS.md", ".gitignore", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md", ".gitattributes"}
-DIRS = {"skills", "docs", "examples", "tools", "tests", ".github"}
-SUFFIXES = {".md", ".py", ".json", ".yml", ".yaml", ".txt", ".svg", ".html", ".css", ".js", ".png", ".mp4"}
+DIRS = {"skills", "docs", "examples", "tools", "tests", ".github", "integrations"}
+SUFFIXES = {".toml", ".md", ".py", ".json", ".yml", ".yaml", ".txt", ".svg", ".html", ".css", ".js", ".png", ".mp4"}
 # Preserve declared study inputs and local replay assets in the full source package.
 # This does not enlarge the portable Skill's asset policy.
 EVIDENCE_SUFFIXES = {".csv", ".jsonl", ".mjs", ".log", ".woff2", ".webm", ".zip", ".jpg", ".jpeg"}

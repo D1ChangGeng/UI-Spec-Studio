@@ -154,3 +154,9 @@ a reason for all-new research. Record important updated judgments in the current
 link their reasons in meaningful revisions and keep original evidence available.
 Reopen an approved or previously verified choice when relevant new evidence exposes
 a real problem, while preserving the user's authorization scope and unaffected work.
+
+## Let auxiliary findings change the responsible action
+
+When an independent investigation returns, identify the design question it actually resolved and the important conditions it did not observe. Useful outcomes include new high-quality candidates, a corrected experience hypothesis, an adoptable mature source, a credible counterexample or a more precise unresolved gap. A completed report alone does not justify implementation expansion.
+
+The main agent chooses targeted follow-up, direct visual comparison, a local trial, supported integration or retention of the current choice. Inspect pivotal visual evidence rather than simply ratify a recommendation. If a trial loses source craft or conflicts with surrounding content, return to the source, adaptation or composition question that the actual failure implicates. Keep independent work moving while dependent quality remains unresolved. No failed research path lifts the default-deny original-construction rule.

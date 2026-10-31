@@ -260,3 +260,7 @@ Preserve the v1.18 runtime and historical evidence exactly through the current
 continuity layer. Compare complete frozen methods in fresh independent executions,
 retain unsuccessful products and distinguish their observed outcomes from general
 quality claims. Release the tested runtime bytes and disclose any later divergence.
+
+## Version 1.20: main-agent-led adaptive research and integration
+
+Preserve the complete professional foundation and v1.17–v1.19 responsibilities. Auxiliary research improves the main agent's evidence and candidates, not its product-level authority. Bounded integration does not outsource unresolved design. Keep role instructions, model policy and host capabilities distinct. Never replace actual independent executions with scripted scenarios or reuse old studies as new results. Release v1.20 only after the exact candidate, actual comparisons and all existing release checks have been reviewed. Preserve separate installed-role and actual-invocation identities, matched research/implementation responsibilities and any runtime-profile contamination limits.

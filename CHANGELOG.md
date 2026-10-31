@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.20.0 — development candidate; not released
+
+- Add main-agent-led adaptive research, curated evidence and bounded mature-source integration.
+- Supply four explicitly installed Codex roles (two primary and two on-demand), ownership-aware installation and separate model policy.
+- Preserve all eight-reference, source-boundary, adaptive-SPEC and neutral-inspector contracts.
+- Preserve historical runtime identities through exact inverse recovery.
+- Register real-execution comparisons; no independent Agent or UI-quality result is claimed before execution.
+
 ## 1.19.0 — 2026-10-30
 
 - Establish default-deny original UI construction across all visible design responsibilities, with mature external/project foundations and closed, actually authorized W1–W3 exceptions.

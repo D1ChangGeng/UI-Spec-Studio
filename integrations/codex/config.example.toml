@@ -1,0 +1,8 @@
+# OPTIONAL EXAMPLE — merge deliberately; the installer never edits config.toml.
+# Checked against official Codex documentation on 2026-10-31.
+# Inherit the parent's available model by default. Availability is account-specific.
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3
+# default_subagent_model = "gpt-6.1-sol"
+# default_subagent_reasoning_effort = "medium"

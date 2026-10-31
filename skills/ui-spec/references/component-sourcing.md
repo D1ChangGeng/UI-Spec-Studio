@@ -341,3 +341,15 @@ that survived. Keep build success, browser assertions, actually viewed results
 and user acceptance separate. The project's shell, navigation, data authority,
 content and focus adapters retain their own obligations even when component
 internals are unchanged.
+
+## Curate an entry point, not a final answer
+
+An auxiliary researcher must perform the same substantive discovery, real viewing, perceptual analysis, temporal inspection, comparison and source tracing as direct research. It may change queries, source ecosystems and observation scale as findings develop. A page can lead to its type system, an effect to an author and implementation, and a promising component to a complete workspace. Independent design lineages matter more than duplicate listings. Never stop only because one plausible candidate appeared; also avoid repeated low-value searching after important uncertainty is sufficiently resolved.
+
+Return a high-quality entry point for the main agent's continued analysis. Connect the delegated intent to actual candidates, defining visual relationships, meaningful differences, source identity and adoptable mechanisms. Keep concise decision-relevant findings in the parent context and retain accessible originals, screenshots, viewed intervals and detailed material for selective inspection. Resource names, flattering descriptions and long URL inventories do not establish visual quality.
+
+Curating removes noise, not useful diversity. Retain an exceptional reference even when its implementation is not available, clearly identify it as reference-only, and trace alternatives capable of carrying its valuable relationship. Preserve counterexamples and important unknowns rather than force a unique winner. Ease of installation, popularity and a single aesthetic score cannot replace relevance, visual completeness and reuse-scope judgment. A bounded unsuccessful search establishes its investigated limits, not universal absence.
+
+For consequential results, make the original demo or evidence directly retrievable and identify the specific item/variant, observation conditions, actual inspected scope, source/rights facts and unverified assumptions. Distinguish discovered, downloaded, actually viewed, documented, inferred, trialed, adopted and verified facts. The parent should be able to decide its next useful search, comparison or trial without reconstructing the whole exploration history.
+
+The main agent directly examines the evidence needed for important visual choices and connects it to the complete current product. It may retain, reject, combine or further investigate recommendations. All normal implementation still uses mature foundations; researcher confidence, source inaccessibility, license mismatch and trial failure do not authorize original construction. The existing closed W1–W3 rules continue to govern exact authorized exceptions.

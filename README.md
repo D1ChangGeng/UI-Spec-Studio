@@ -29,6 +29,14 @@ and build the first reviewable SPEC. Show the result and the evidence behind it.
 
 After reviewing, **“Approved, continue”** carries the accepted direction into the next useful work. **“Use ui-spec: finish”** connects an accepted design to its actual content, behavior and delivery boundary. [Installation and agent options](docs/INSTALL.md) · [Multi-round guide](docs/GUIDE.md)
 
+## Deepen research while keeping design ownership clear
+
+The main agent owns the complete product goal, formal UI SPEC, source selection and final visual review. Independent specialists can explore consequential questions, inspect actual examples and return the candidates, evidence and unresolved differences that matter for the next decision. Clearly bounded integration can be delegated once its source and design are settled.
+
+The [Codex adapter](integrations/codex/README.md) installs four roles with one explicit command: `ui_researcher`, `ui_integrator`, `ui_challenger` and `ui_experience_observer`. The main agent calls them when useful; the portable Skill also supports direct work by one agent. Roles inherit the host's available models, tools and permissions.
+
+[Installation and natural delegation](integrations/codex/README.md) · [Version evidence and limits](docs/REVIEW-v1.20.0.md)
+
 ## Mature foundations, bounded originality
 
 **Original UI construction is prohibited by default.** The agent discovers mature external work, compares applicable project resources and carries their design relationships into the result. New business wiring, configuration and necessary adaptation remain normal engineering. A coherent block or validated token system can cover many visible elements without repeated searches.
@@ -198,7 +206,7 @@ Before substantive work, the agent reads **eight common references in full**: [w
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.19.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.20.0 --skill ui-spec
 ```
 
 The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

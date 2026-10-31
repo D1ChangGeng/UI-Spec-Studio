@@ -106,7 +106,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.19.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.20.0 --skill ui-spec
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
@@ -170,3 +170,15 @@ remain presentation-only. See [the boundary and migration guide](STRUCTURAL-INSP
 Unfilled templates contain no inferred viewport/locale/theme or research action.
 `check_file_integrity.py` independently compares a requested local SHA-256; its
 match/mismatch applies only to those bytes.
+
+## Optional adaptive research support
+
+The portable Skill still works with a single agent. See [the Codex adapter](../integrations/codex/README.md) for explicit installation of all four roles, natural delegation, model/GUI limitations and safe upgrade/uninstall. Role installation does not install or authenticate Codex and does not change permissions. See [the current development review](REVIEW-v1.20.0.md) before treating this candidate as validated.
+
+When the host does not load the installed project registrations, the adapter's optional Python 3.11+ launcher registers the installed roles for one Codex invocation:
+
+```bash
+python integrations/codex/launch.py --project /path/to/product
+```
+
+The launcher enables native multi-agent support for that invocation and preserves the host's model, authentication and sandbox choices. `--dry-run` prints the exact argument array without starting Codex or writing files; `--` forwards native Codex arguments. The adapter guide documents file checks, rejected conflicting options and the requirement for a native custom-role selector in the chosen host/model interface.

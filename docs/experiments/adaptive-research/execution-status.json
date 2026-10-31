@@ -1,0 +1,14 @@
+{
+  "status": "blocked_not_run",
+  "independent_agent_runs": 0,
+  "actual_ui_comparisons": 0,
+  "model_comparisons": 0,
+  "reasons": [
+    "No local authenticated Codex runner exposed",
+    "ACS connector exposes reading, not execution or delegation",
+    "GitHub has some branch/file/PR write actions; complete release pipeline not run or verified",
+    "No authenticated independent Agent runner with verified GUI/tool inheritance available"
+  ],
+  "static_tests_are_agent_experiments": false,
+  "historical_evidence_reused_as_current_results": false
+}
