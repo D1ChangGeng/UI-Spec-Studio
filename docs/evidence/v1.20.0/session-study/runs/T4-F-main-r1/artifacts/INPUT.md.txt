@@ -1,0 +1,19 @@
+# T4 input — settled Tabler save-feedback integration
+
+Implement the exact bounded integration in `INTEGRATION-DECISION.md` within the supplied working Fieldnotes settings application. The original task is in `TASK.md`. The source and visual direction are settled for this experiment. There is no resource-selection or new art-direction assignment.
+
+The application is Tabler's original settings page with real browser-local profile persistence, notification/privacy fields, bilingual content and the native light/dark system. Its `settings-store.js` is the authority for validation and save outcomes. The source origin, tagged commit, deployed HTML digest, license and preparation changes are in `SOURCE-MANIFEST.json`. The public deployed HTML identifies version 1.7.1 without advertising its exact deployment commit; that snapshot identity and the related tagged source remain separate.
+
+The selected source is the action-bearing Tabler Toast. Its exact acquired HTML is `sources/tabler-toast-cookies.html`, the original Astro component is `sources/shared/components/demo/Toast.astro`, and the local source rendering is `app/toast-source-preview.html`. The cookie copy belongs only to source inspection. The requested integration uses the same mature shell for save feedback, with the content/state mapping already specified by the decision. The source-preview page does not count as an integrated product.
+
+Run from `app/`:
+
+```bash
+python3 -m http.server 4114 --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:4114/` for the application and `/toast-source-preview.html` for the selected source rendering. No build or install is required. Equivalent inspection conditions are 1440×900, 1280×600, and a 390×844 check, with `?theme=light&lang=en` and `?theme=dark&lang=zh`.
+
+Use `?fail=once` on a new load, or `window.fieldnotes.setFailureMode(true)`, to make the next otherwise valid local save fail once. Retry succeeds unless browser storage itself fails. The error path must preserve the submitted draft and previous stored value. All data is synthetic; nothing is sent to another service. Keep separate actual source observation, local block rendering, integrated behavior and main-agent whole-product inspection.
+
+Current global gallery navigation outside settings remains upstream context; its unrelated routes are outside this bounded application contract. Leave all unrelated task behavior intact. Do not change the underlying local persistence boundary, validation policy, mature family, or source choice. Return a consequential ambiguity to the main agent and continue independent authorized work.

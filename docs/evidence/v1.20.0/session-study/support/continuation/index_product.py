@@ -67,13 +67,15 @@ def main():
     for path in sorted({p for pattern in cfg['primary_view_globs'] for p in replay.glob(pattern) if p.is_file()}):
         try:d=json.loads(path.read_text())
         except (ValueError,UnicodeError):continue
-        if not isinstance(d,dict) or d.get('tool')!='view_image':continue
-        image_path=d.get('arguments',{}).get('path')
-        if not isinstance(image_path,str):continue
-        try:relative=Path(image_path).relative_to(package).as_posix()
-        except ValueError:continue
-        if relative in image_names:
-            views.append({'viewer_agent_id':cfg['agent_id'],'screenshot':retain(relative),'view_export':retained_export(path.relative_to(replay).as_posix(),'view_image','Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.')})
+        calls=d if isinstance(d,list) else [d]
+        for call in calls:
+            if not isinstance(call,dict) or call.get('tool')!='view_image':continue
+            image_path=call.get('arguments',{}).get('path')
+            if not isinstance(image_path,str):continue
+            try:relative=Path(image_path).relative_to(package).as_posix()
+            except ValueError:continue
+            if relative in image_names:
+                views.append({'viewer_agent_id':cfg['agent_id'],'screenshot':retain(relative),'view_export':retained_export(path.relative_to(replay).as_posix(),'view_image','Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.')})
     if not screenshots or not views:raise ValueError('Real final captures and primary view exports are required')
     behavior=command_exports(cfg['behavior_log_globs'])
     if not behavior:raise ValueError('No retained original behavior logs')

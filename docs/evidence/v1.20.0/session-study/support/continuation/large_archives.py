@@ -2,6 +2,8 @@
 from pathlib import Path
 import hashlib
 import zipfile
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from archive_evidence_v2 import bounded_archives, write_json
 
 def sha(raw):

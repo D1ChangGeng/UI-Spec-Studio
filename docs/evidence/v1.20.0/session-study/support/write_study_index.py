@@ -89,6 +89,10 @@ change wiki files and a fresh browser context for browser-local persistence.
 The coordinator helpers document evidence handling; they are not a substitute
 for rerunning independent agents or reproducing a resolved native model.
 '''
+    previous=(study/'README.md').read_text() if (study/'README.md').exists() else ''
+    marker='## Continuation and retained incomplete attempts'
+    if marker in previous:text+='\n'+previous[previous.index(marker):]
+    text=text.replace('support/replay_snapshot.py', 'support/continuation/replay_snapshot.py')
     (study/'README.md').write_text(text)
     print(json.dumps({'indexed_cells':done,'completed_children':children,'planned_cells':len(plan['cells'])}))
 if __name__=='__main__':main()

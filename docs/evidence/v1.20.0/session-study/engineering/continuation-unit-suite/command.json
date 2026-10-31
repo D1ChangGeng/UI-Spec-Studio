@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "/workspace/scratch/1e61855ad686/UI-Spec-Studio",
+  "started_at": "2026-10-31T22:39:14.200501+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-10-31T22:40:34.938593+00:00",
+  "wall_seconds": 80.738096,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr.txt": {
+      "bytes": 72398,
+      "sha256": "7a22552ed61bbac3ac86a25152103286b57ce371b7a2a74545cee5e1bcc64050"
+    }
+  }
+}

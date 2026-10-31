@@ -1,0 +1,7 @@
+{
+  "outcome": "fail",
+  "checks": 1,
+  "captures": 1,
+  "errors": [],
+  "exception": "Traceback (most recent call last):\n  File \"/workspace/scratch/708e8b7f118e/ui-study/worksets/w16/support/verify_product.py\", line 133, in <module>\n    run()\n  File \"/workspace/scratch/708e8b7f118e/ui-study/worksets/w16/support/verify_product.py\", line 39, in run\n    state(page,'pending')\n  File \"/workspace/scratch/708e8b7f118e/ui-study/worksets/w16/support/verify_product.py\", line 11, in state\n    page.wait_for_function('(state)=>document.querySelector(\"#save-notification\").dataset.state===state',expected)\nTypeError: Page.wait_for_function() takes 2 positional arguments but 3 were given\n"
+}

@@ -1,0 +1,49 @@
+# Completed: Fieldnotes save-feedback integration
+
+The running settings application now uses the selected Tabler action-bearing Toast for **pending, success, error/retry and invalid-field feedback**. The existing settings store remains the authority for validation, the 750 ms pending interval, snapshots and browser-local persistence.
+
+## Run
+
+From `/workspace/scratch/708e8b7f118e/ui-study/worksets/w16/app`:
+
+```bash
+python3 -m http.server 4416 --bind 127.0.0.1
+```
+
+Open [light/English](http://127.0.0.1:4416/?theme=light&lang=en) or [dark/Chinese](http://127.0.0.1:4416/?theme=dark&lang=zh). Add `&fail=once` on a new load to exercise failure and retry. No build, install or new dependency is required. The inspection server was stopped after verification.
+
+## What changed
+
+Only the allowed application files changed:
+
+- `app/index.html`: adopted the supplied toast shell and native fixed placement, retained the MIT notice, and removed the inline summary's duplicate live-region role.
+- `app/settings-controller.js`: coordinated authoritative events, pending controls, draft summaries, field-linked errors, localized validation and focus recovery.
+- `app/save-notification.js`: renders the latest authoritative event, invokes explicit retry using the failed snapshot, and uses Tabler's bundled Toast for presentation and dismissal.
+
+Successful saves preserve later form edits. Failed saves preserve both the submitted snapshot and previous stored value. Retry saves the failed version while keeping a newer current draft intact. Native close affects only feedback. Older errors cannot replace newer notification results. A focused retry or close control has a sensible return path when it disappears.
+
+The exact diff is retained in `evidence/integration.diff`. Protected store, source-preview, acquired block and core asset hashes passed their unchanged checks.
+
+## Verification and visual result
+
+The browser run recorded **126 passing assertions plus six event-sequence records**, with no JavaScript exceptions. It exercised valid saves, edits during pending, storage readback, forced failure, retry, invalid fields, keyboard activation and focus, explicit close, replacement during dismissal, stale events, reduced motion and persistence after reload.
+
+I personally inspected the source rendering and final assembled product at **1440×900, 1280×600 and 390×844**, in both **light/en** and **dark/zh**. The source's 350 px width, identity header, compact body, separated small-button row, typography, material and native behavior remain intact. A settled comparison of 72 computed properties per theme found no differences between the native source shell and integrated shell.
+
+Representative results:
+
+- `evidence/captures/final-error-top-light-en-1440.png`
+- `evidence/captures/final-error-top-dark-zh-1280.png`
+- `evidence/captures/final-error-lower-light-en-390.png`
+- `evidence/captures/final-invalid-dark-zh-390.png`
+
+The complete visual findings and actual viewing records are linked from `VISUAL-REVIEW.md`. Original command exports, the first failed harness attempt and its correction, final captures, source comparisons and actual tool responses remain under `evidence/`.
+
+## Limits and retained tradeoff
+
+The prescribed fixed toast covers part of the upstream utility header while visible, particularly on mobile. Its close control remains reachable; dismissal restores access to the covered header controls. The lower settings actions remain available. The selected placement was preserved.
+
+The temporal review used ordered captures from actual natural-time operation; it does not establish continuous playback or frame-rate smoothness. Live-region semantics were checked, but a screen reader was not listened to. Other browser engines and touch hardware were not tested. The supplied local source rendering and public textual retrieval are distinguished from a live public-demo visual observation. Unrelated gallery routes remain outside the bounded settings contract.
+
+This was the **main-only allocation**: no children, merge operation or source reselection were used. No unfinished in-scope product defect was found. The result is a scoped implementation and main-agent inspection judgment, not a claim of end-user aesthetic approval.
+
