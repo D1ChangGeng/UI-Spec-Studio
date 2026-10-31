@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "/tmp/ui-spec-validation-venv/bin/python",
+    "tools/validate_assets.py",
+    "--output-dir",
+    "/workspace/scratch/708e8b7f118e/validation-work/final-assets",
+    "--browser-path",
+    "/tmp/ui-spec-preview-browser/chrome-headless-shell-143.0.7499.4/chrome-headless-shell-linux64/chrome-headless-shell"
+  ],
+  "cwd": "/workspace/scratch/708e8b7f118e/UI-Spec-Studio",
+  "started_at": "2026-10-31T20:07:12.401404+00:00",
+  "timeout_seconds": 900,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-10-31T20:07:28.230558+00:00",
+  "wall_seconds": 15.829162,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 191,
+      "sha256": "00743a4ceeeb7e721a75ed96e8cc957feadad2681354d937ba809fdcd80c0a38"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

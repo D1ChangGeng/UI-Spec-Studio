@@ -1,0 +1,78 @@
+# Fieldnotes settings: source and experience research
+
+Research scope: the supplied w02 package and relevant public Tabler/Bootstrap sources. This report informs the parent designer's decision; it does not select the final product design or verify the parent's integrated implementation. Product code and the authoritative settings store were not changed.
+
+## Decision-useful findings
+
+The existing Tabler family supplies the needed layout, validation and status components. The consequential problem is how operation feedback, field correction and the captured save snapshot relate to the current draft.
+
+The isolated baseline demonstrated three failures:
+
+1. At 1280 × 600, submitting an empty name and invalid email left the generic status above the viewport, with its top at −224 px after the Save click. The visible email input had neither field-error styling nor a corrective message. The failure status after a valid simulated save was likewise above the viewport (−155 px). The user could see Save become available again without seeing why saving failed.
+2. When “Submitted snapshot” was saved and then edited to “Newer unsaved draft” during the pending interval, the store correctly persisted the submitted snapshot and kept the newer draft in the form. The controller nevertheless reported the undifferentiated message “Changes saved in this browser.” The evidence establishes a communication defect, not a store defect.
+3. Switching language reloaded the page and replaced the newer unsaved draft with the persisted snapshot. Theme switching did not require a reload.
+
+These observations are retained in `baseline-observations.json`, the actual stdout in `commands/003-baseline-observation/`, and the viewed baseline PNGs listed below. They describe the pre-change baseline only.
+
+## Source lineage and actual observation
+
+The package's mature foundation is Tabler 1.7.1, commit `07f60c07da13d8ff957a370434b7ef5c86f5ab94`, MIT. The supplied official settings HTML has SHA-256 `ed80162e38d7667bfe020b5d16d228c4adc64f301233cfbeeeae6f606697a06e`. Its deployed exact commit is unknown; it must not be equated with the tagged source commit merely because both report 1.7.1.
+
+I actually viewed the public [settings demo](https://preview.tabler.io/settings.html) and [minor-alert section](https://docs.tabler.io/ui/components/alert#minor-alerts) through the cloud browser. Settings uses one unified card with a quarter-width settings navigation, three-quarter content, section headings, native controls and footer actions. Minor alerts use a plain border and quiet surface; colored headings and secondary body text remain distinct.
+
+**Public screenshot retention limitation:** the documented cloud-browser shared-file export did not materialize the public screenshot files in this workspace. These original observations remain in the browser tool conversation, but there is no retained local PNG that can honestly be called an original public alert/validation/header demo screenshot. The local captures below are explicitly different evidence roles. Validation and page-header conclusions are supported by exact tagged source, documentation and the local source trial; no public-original pixel inspection of those two demos is claimed.
+
+For durable visual evidence, I rendered:
+
+- The **unchanged supplied settings HTML**, using the package's local 1.7.1 assets. One avatar returned 404 and the external promotional banner request was blocked, both recorded. This is an original-source snapshot rendered locally, not a capture of the deployed page.
+- A **local source specimen** containing unchanged validation-feedback examples and alert-action/minor-alert examples extracted from the exact tagged documentation. Its outer page-header/card grid is a native-source composition with research labels. It is not a proposed final product screen. No custom CSS was introduced. Provenance is in `source-specimen-provenance.json`; the reproducible builder and capture script are retained.
+
+The specimen was actually viewed at 1440 × 900 light, 1280 × 600 dark and 390 × 844 dark. The invalid field's border, symbol and explanatory line remain together. Minor alerts are visibly quieter than the tinted failure alert. At 390 px the cards stack and the retry link wraps beneath its explanation. The native header action can compress a long title; its final product use therefore needs the actual product's narrow-width inspection. Static screenshots do not establish contrast ratios or screen-reader usability.
+
+## Materially different approaches
+
+| Candidate | Observed or source-supported relationship | Practical adoption path and limit |
+|---|---|---|
+| Field-local feedback plus an inline operation alert | The source validation example places `invalid-feedback` immediately after the input and associates it with `aria-describedby`. Alert examples can contain a corrective action. The baseline proves a top-only status can be invisible from Save. | Let store errors drive `is-invalid`, `aria-invalid` and associated bilingual messages. Keep a persistent operation-status container near the relevant action area. This combines two scopes: specific correction and save outcome. Parent determines final placement and variant. |
+| Minor inline alert | The observed public example and exact CSS remove the tinted fill while retaining a plain border. It is materially quieter than the default tinted alert. | Native `alert alert-minor alert-*` needs no new styling. Confirm that a quiet operation message remains discoverable in the assembled product, especially after failure. |
+| Filled important alert | Exact source provides `alert-important`, with solid state color and white content. | It can emphasize an exceptional interruption; a routine 750 ms local save may not justify this visual weight. This is source inspection, not a locally viewed important-alert specimen. |
+| Toast | Exact tagged `Toast.astro` defaults to `role=status`, polite announcements, atomic content and no autohide; an urgent prop switches to alert/assertive. | It can keep operation feedback close to the viewport, but adds placement, dismissal and overlay responsibilities. It does not identify which field needs repair and is insufficient as the sole validation mechanism. Toast behavior and final placement were not exercised. |
+| Native browser validity prompts | Bootstrap discusses browser validation as a distinct alternative and cautions that custom visual styles alone are not accessible. | Do not let a second browser constraint system silently replace the supplied store's regex/length rules. The store remains authoritative; native semantics may be added only with matching behavior. |
+
+The source offers a subtle icon-only validation variant, but the tagged documentation itself says to retain a textual reason and association. The task's corrective messages are better served by the complete field-feedback relationship than by a symbol alone. This is a research assessment, not a product design decision.
+
+## Integration paths supported by the sources
+
+**Field correction.** [Tagged validation documentation](https://github.com/tabler/tabler/blob/07f60c07da13d8ff957a370434b7ef5c86f5ab94/docs/content/ui/forms/validation.mdx) supplies `is-invalid`, `invalid-feedback`, `aria-invalid` and `aria-describedby`, and recommends focusing the first failed field on submit. Bootstrap's [validation documentation](https://getbootstrap.com/docs/5.3/forms/validation/) independently supports manual state classes and explicit feedback association. Preserve existing help IDs as well as the error ID. Avoid announcing a fresh error on every keystroke. Revalidation of a previously failed field can clear obsolete feedback without claiming that the entire form was saved. The parent's reported pointer/blur issue was not independently reproduced in this research; it belongs to integrated testing.
+
+**Operation feedback.** [Tagged alert documentation](https://github.com/tabler/tabler/blob/07f60c07da13d8ff957a370434b7ef5c86f5ab94/docs/content/ui/components/alert.mdx) supports urgency-appropriate roles, a live region present before the message, explicit state words, action links and text-color utilities. The exact [alert CSS](https://github.com/tabler/tabler/blob/07f60c07da13d8ff957a370434b7ef5c86f5ab94/core/scss/ui/_alerts.scss) confirms the minor variant's transparent background and plain border. A source comment calls it “borderless”; that comment is inconsistent with the CSS and rendered result. Pending/success announcements should avoid stealing editing focus; a validation focus move and live announcement should not produce redundant instructions.
+
+**Snapshot honesty.** Store events include operation identifiers and submitted snapshots or saved settings. Preserve that distinction in controller state. On success, compare the current draft with the event's saved settings: equal values permit a plain saved confirmation; different values require wording such as “Submitted changes saved. You have newer unsaved changes.” Do not overwrite the newer draft. This path changes integration logic and copy, not the store contract. A pending operation cannot be cancelled by the existing store, so Cancel must not imply aborting it.
+
+**Header controls and long content.** [Tagged PageHeader.astro](https://github.com/tabler/tabler/blob/07f60c07da13d8ff957a370434b7ef5c86f5ab94/shared/components/layout/PageHeader.astro) has a `row g-2 align-items-center`, a title `col` and an action `col-auto ms-auto d-print-none`. The source's action slot supports relocating existing utility buttons through ordinary composition. [Form-elements source](https://github.com/tabler/tabler/blob/07f60c07da13d8ff957a370434b7ef5c86f5ab94/preview/pages/form-elements.astro) demonstrates full-width form rows and a footer with supporting content beside actions. A full-width name field is a source-supported grid choice. The baseline's equal three-column row horizontally scrolls the representative long name; field width should improve inspection without truncating the actual value. Even full width cannot guarantee an entire long single-line value is simultaneously visible on a 390 px screen.
+
+**Locale and privacy copy.** Change locale without discarding draft, errors or pending state. Keep privacy-toggle wording about the selected draft preference until Save completes; a draft toggle alone does not prove the persisted profile is currently visible. Keep the supplied guarantee that email remains private.
+
+## Retained evidence index
+
+All paths below are relative to `/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/research/`.
+
+| Evidence | Retained path |
+|---|---|
+| Exact tagged alert, validation and header sources | `tool-008-tagged-alert-source.json`, `tool-010-source-1.json`, `tool-011-source-0.json`, `tool-012-tagged-alert-docs.json` |
+| Public primary-source search/open outputs | `tool-001-search.json`, `tool-003-primary-search.json`, `tool-006-docs-open.json`, `tool-007-docs-focused.json` |
+| Required current-web guidance search/retrieve | `tool-002-guidance-search.json`, `tool-005-1.json` |
+| Baseline source reads and actual behavior output | `commands/001-source-read/`, `commands/003-baseline-observation/`, `baseline-observations.json` |
+| Personally viewed source specimen | `captures/source-specimen-1440-light.png`, `captures/source-specimen-1280-dark.png`, `captures/source-specimen-390-dark.png` |
+| Personally viewed supplied snapshot rendered locally | `captures/official-snapshot-local-1440-light.png` |
+| Personally viewed baseline failures and long content | `captures/baseline-1280-invalid-at-footer.png`, `captures/baseline-1280-error-at-footer.png`, `captures/baseline-1280-success-with-unsaved-edit.png`, `captures/baseline-1440-long-name.png`, `captures/baseline-language-switch-reloads-saved-value.png`, `captures/baseline-390-dark-zh-footer.png` |
+| Capture provenance and actual source-trial output | `source-specimen-provenance.json`, `source-observations.json`, `commands/004-source-specimen/` |
+| Actual image-tool outputs retained at viewing time | Matching `view-*.json` files for the images above and baseline 1440 light |
+| Failed acquisition attempts, preserved | `commands/002-acquire-sources/`, `source-snapshots/acquisition.json`, `tool-004-browser-init.json`, `tool-005-0.json` |
+
+## Limits and handoff
+
+The research supports source adoption and identifies specific baseline defects; it does not certify the integrated product. No assistive-technology session, measured contrast audit, natural-time video viewing or cross-browser verification was performed. Baseline ordered captures and event timestamps prove sampled state relationships, not smooth motion. The source specimen has no persistence or real save interaction. Some baseline captures exist without a matching view record; they are capture evidence only, not claimed pixel inspection.
+
+The read-only research is complete. The parent owns final component selection, bilingual copy, header/form composition and final integrated journey/visual acceptance.
+

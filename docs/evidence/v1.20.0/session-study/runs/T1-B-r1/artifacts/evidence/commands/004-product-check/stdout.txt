@@ -1,0 +1,30 @@
+1440x900-light-en passed
+1440x900-light-zh passed
+1440x900-dark-en passed
+1440x900-dark-zh passed
+1280x600-light-en passed
+1280x600-light-zh passed
+1280x600-dark-en passed
+1280x600-dark-zh passed
+Traceback (most recent call last):
+  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/scripts/verify_product.py", line 39, in <module>
+    expect(page.locator('#save-status')).to_have_attribute('data-state','invalid')
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 19408, in to_have_attribute
+    self._sync(
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 266, in to_have_attribute
+    await self._expect_impl(
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 85, in _expect_impl
+    raise AssertionError(
+AssertionError: Locator expected to have attribute 'invalid'
+Actual value: idle 
+Call log:
+  - Expect "to_have_attribute" with timeout 5000ms
+  - waiting for locator("#save-status")
+    9 × locator resolved to <div role="status" id="save-status" data-state="idle" aria-live="polite" aria-atomic="true" class="alert alert-info mb-3">You have unsaved changes.</div>
+      - unexpected value "idle"
+
+
+{"conditions": 8, "errors": [], "failure": {"type": "AssertionError", "message": "Locator expected to have attribute 'invalid'\nActual value: idle \nCall log:\n  - Expect \"to_have_attribute\" with timeout 5000ms\n  - waiting for locator(\"#save-status\")\n    9 × locator resolved to <div role=\"status\" id=\"save-status\" data-state=\"idle\" aria-live=\"polite\" aria-atomic=\"true\" class=\"alert alert-info mb-3\">You have unsaved changes.</div>\n      - unexpected value \"idle\"\n", "traceback": "Traceback (most recent call last):\n  File \"/workspace/scratch/708e8b7f118e/ui-study/worksets/w02/evidence/scripts/verify_product.py\", line 39, in <module>\n    expect(page.locator('#save-status')).to_have_attribute('data-state','invalid')\n  File \"/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/sync_api/_generated.py\", line 19408, in to_have_attribute\n    self._sync(\n  File \"/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 266, in to_have_attribute\n    await self._expect_impl(\n  File \"/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_assertions.py\", line 85, in _expect_impl\n    raise AssertionError(\nAssertionError: Locator expected to have attribute 'invalid'\nActual value: idle \nCall log:\n  - Expect \"to_have_attribute\" with timeout 5000ms\n  - waiting for locator(\"#save-status\")\n    9 × locator resolved to <div role=\"status\" id=\"save-status\" data-state=\"idle\" aria-live=\"polite\" aria-atomic=\"true\" class=\"alert alert-info mb-3\">You have unsaved changes.</div>\n      - unexpected value \"idle\"\n\n"}, "keyboard": null}

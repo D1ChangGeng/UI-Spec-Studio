@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "/tmp/ui-spec-validation-venv/bin/python",
+    "tools/catalog_docs.py",
+    "--check"
+  ],
+  "cwd": "/workspace/scratch/708e8b7f118e/UI-Spec-Studio",
+  "started_at": "2026-10-31T20:06:41.348181+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-10-31T20:06:41.413517+00:00",
+  "wall_seconds": 0.065334,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 38,
+      "sha256": "93666823b91742105db4cd8ff13bc001439faa964a575bd65bec9817ed282306"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}
