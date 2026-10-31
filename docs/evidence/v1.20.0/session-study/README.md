@@ -87,3 +87,11 @@ change wiki files and a fresh browser context for browser-local persistence.
 
 The coordinator helpers document evidence handling; they are not a substitute
 for rerunning independent agents or reproducing a resolved native model.
+
+## Continuation and retained incomplete attempts
+
+The next coordinator recovered the original worksets and the same pinned browser, Python and CJK font. All eleven previously untouched worksets matched the frozen input hashes. The local five-product checkpoint was saved to GitHub as `a729b667882daf1810c3c914f8d7c045bbaa6670`, with the identical source tree.
+
+T2-C and T3-A had delivered files but no available primary terminal-notification export. Their complete observed workspaces are retained under `incomplete-attempts/`, with original coordination, explicit status, reports, all captured files and successful byte-for-byte reconstruction checks (377 and 9,526 files). They are not counted as completed experiments. Their original live directories were preserved separately and the registered paths restored from unchanged frozen inputs for new independent attempts. The continuation replay helper supports oversized original trace files through verified byte pieces; no trace content was discarded.
+
+The continuation parameterized coordinator helpers are in `support/continuation/`; candidate runtime, tests, installed Skill, adapter and frozen registration remain unchanged.

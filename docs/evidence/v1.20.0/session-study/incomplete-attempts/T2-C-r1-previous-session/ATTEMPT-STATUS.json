@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "cell_id": "T2-C-r1",
+  "kind": "coordinator recovery audit, not a completion event",
+  "recorded_at": "2026-10-31T22:37:12.573911+00:00",
+  "status": "terminal_notification_unavailable",
+  "observed_final_report": true,
+  "counted_as_completed_run": false,
+  "disposition": "Retain full recovered source/evidence and replay integrity. Repeat this cell from the exact frozen inputs in a new independent agent, retaining both attempts.",
+  "limitations": "The final report exists, but the original primary terminal notification was not retained in the available session checkpoint; it is not recreated from file presence."
+}
