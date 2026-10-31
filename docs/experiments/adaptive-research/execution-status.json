@@ -1,55 +1,51 @@
 {
-  "status": "blocked_not_run",
-  "scope": "Fresh reproducible independent campaign in this continuation; not a claim that no historical Agent activity ever occurred.",
+  "status": "blocked_by_native_approval_and_unavailable_environment",
+  "scope": "New exact-candidate campaign; historical attempts and capability probes are separate.",
+  "observed_at_utc": "2026-10-31T18:29:34Z",
+  "source_commit": "4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+  "candidate_identity": "6aeba48963d8b72cf1906cb9e8b4500eeb4d9934daa5e7c5b575d867a5e177bc",
   "independent_agent_runs": 0,
   "actual_ui_comparisons": 0,
   "model_comparisons": 0,
-  "historical_trace_only_cells": 4,
-  "historical_trace_metadata_events": 19106,
-  "complete_historical_campaign_available": false,
-  "current_record": "docs/experiments/adaptive-research/RESULTS.md",
-  "current_blockers": [
-    "The current editing session has no usable local command-execution environment.",
-    "ACS filesystem access works, but no eligible online native Harness was observed.",
-    "The Codex connector requests a repository execution environment; code-review availability is a separate capability.",
-    "The browser policy blocks navigation to the required Codex host; no workaround was attempted.",
-    "Retained historical trace metadata lacks complete raw executions, products and visual evidence needed for acceptance."
+  "historical_attempts_recovered_locally": 18,
+  "historical_locked_reviews": 5,
+  "historical_raw_archive_uploaded": false,
+  "native_role_metadata_verified": [
+    "ui_researcher"
   ],
-  "engineering_source_commit": "8f3cbef07f526a30fe23bcb5e160342d78d3ff25",
-  "hosted_ci_run_id": 41222879561,
+  "four_roles_installed_by_default": true,
+  "native_gui_verified": false,
+  "source_ci": "passed",
+  "hosted_unit_tests": 489,
+  "hosted_windows_skips": 8,
   "release_decision": "pending",
-  "initial_development_report_preserved": {
-    "status": "blocked_not_run",
-    "independent_agent_runs": 0,
-    "actual_ui_comparisons": 0,
-    "model_comparisons": 0,
-    "reasons": [
-      "No local authenticated Codex runner exposed",
-      "ACS connector exposes reading, not execution or delegation",
-      "GitHub has some branch/file/PR write actions; complete release pipeline not run or verified",
-      "No authenticated independent Agent runner with verified GUI/tool inheritance available"
-    ],
-    "static_tests_are_agent_experiments": false,
-    "historical_evidence_reused_as_current_results": false
-  },
-  "observed_at_utc": "2026-10-31T17:09:36Z",
-  "previous_engineering_observation": {
-    "source_commit": "541766cf6fdc8ec19e5ad5c3c952024d11c444f5",
-    "local_clean_unit_tests": 442,
-    "hosted_ci_run_id": 41217065594,
-    "record": "docs/experiments/adaptive-research/RESUMPTION-20261101.md"
-  },
-  "hosted_unit_tests": 461,
-  "hosted_pr_ci_run_id": 41222883976,
-  "hosted_recovery_run_id": 41222879554,
-  "engineering_scope": "Immutable observed snapshot; later corrections require their own exact-commit checks. Engineering and authored-fixture validation do not establish native Agent or product-quality acceptance.",
-  "previous_hosted_engineering_observation": {
-    "source_commit": "5c4b4964a273972494b65f116a097b196ce2fe30",
-    "hosted_unit_tests": 456,
-    "hosted_ci_run_id": 41220458894,
-    "hosted_pr_ci_run_id": 41220463539,
-    "hosted_recovery_run_id": 41220458876
-  },
-  "hosted_windows_platform_skips": 6,
-  "engineering_evidence_record": "docs/evidence/v1.20.0/engineering-8f3cbef.json"
+  "merged": false,
+  "tag_created": false,
+  "formal_release_created": false,
+  "current_record": "docs/experiments/adaptive-research/RESULTS.md",
+  "continuation_record": "docs/evidence/v1.20.0/continuation-4819c38.json",
+  "previous_observation_ref": "79d1083f10428ce1b5b1cda720ed7de6ac439714",
+  "blockers": [
+    {
+      "kind": "automatic_approval_rejection",
+      "action": "180-second inherited-profile ephemeral native browser smoke with one parent and one generic child",
+      "reason": "Possible direct/indirect writes to protected /root/.codex/sessions or related configuration paths; automatic review acknowledged user authorization but rejected the action.",
+      "reconsideration": "Actual ephemeral:true/path:null and local SQLite/log metadata supplied; launch still rejected.",
+      "native_execution_started": false,
+      "record_kind": "attributed summary, not a complete verbatim approval transcript"
+    },
+    {
+      "kind": "safer_environment_unavailable",
+      "action": "bwrap read-only mount namespace capability check running only /bin/true",
+      "result": "EPERM under ordinary execution and an approved elevated capability check; no Codex launch or credential access"
+    },
+    {
+      "kind": "execution_environment_unavailable",
+      "environment_id": "ccarenv_b64_Y2NhcmVudl82YWEyYzkyMzlmZjg4MTkxYjk0NGY1MmMwMGU3OTU4NA",
+      "state": "unavailable",
+      "exec_tool_result": "No usable execution environment is available. Wait for an environment to become available before using this tool.",
+      "fallback_reads": "The two connected ACS filesystems did not expose the known scratch paths."
+    }
+  ],
+  "boundary": "This status is a derived checkpoint. Local original archives and media remain unuploaded and inaccessible while the execution environment is unavailable."
 }
