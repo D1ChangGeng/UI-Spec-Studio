@@ -22,5 +22,6 @@
     "Single execution per cell supports bounded findings, not population-wide effectiveness or model rankings.",
     "Network state can drift; retain errors and source revisions.",
     "Known older raw historical evidence remains unuploaded; current evidence does not reconstruct it."
-  ]
+  ],
+  "dependency_policy": "T2 package-lock.json is authoritative. Each cell receives a separate copy of the same prepared node_modules dependency tree; dependency/cache files are excluded from source snapshots and may be reinstalled with npm ci. No application state or browser profile is shared."
 }
