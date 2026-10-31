@@ -7,6 +7,7 @@ A completed CLI turn is not a successful UI task or proof of subagent use.
 """
 from __future__ import annotations
 import argparse
+from contextlib import ExitStack, contextmanager
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -251,6 +252,41 @@ def snapshot_outputs(workspace:Path,out:Path)->dict:
     write_json(out/'output-index.json',index);return index
 
 
+@contextmanager
+def defer_interrupt_during_cleanup():
+    """A second Ctrl-C must not skip owned-process cleanup or the attempt record."""
+    try:
+        previous=signal.signal(signal.SIGINT,signal.SIG_IGN)
+    except ValueError:
+        # A library caller outside the main thread cannot change handlers.
+        yield
+        return
+    try:yield
+    finally:signal.signal(signal.SIGINT,previous)
+
+
+def stop_owned_process(process:subprocess.Popen)->int:
+    """Terminate this attempt's process tree/group and reap its direct child."""
+    if os.name=='nt':
+        subprocess.run(['taskkill','/PID',str(process.pid),'/T','/F'],
+                       capture_output=True,timeout=15,check=False)
+    else:
+        try:os.killpg(process.pid,signal.SIGTERM)
+        except ProcessLookupError:pass # it may have exited while Ctrl-C arrived
+    try:
+        code=process.wait(timeout=5)
+    except subprocess.TimeoutExpired:
+        if os.name=='nt':process.kill()
+        code=None
+    finally:
+        # A group member may ignore SIGTERM even after its leader exits.
+        # Do not leave that descendant running just because wait() succeeded.
+        if os.name!='nt':
+            try:os.killpg(process.pid,signal.SIGKILL)
+            except ProcessLookupError:pass
+    return process.wait(timeout=5) if code is None else code
+
+
 def run(*,study:Path,cell_id:str,home:Path|None=None,inherit_profile:bool=False,codex_executable:Path|None=None,execute:bool=False,acknowledge_cost:bool=False)->dict:
     if inherit_profile == (home is not None):
         raise StudyError('Select exactly one provisioned CODEX_HOME or inherited profile')
@@ -287,36 +323,40 @@ def run(*,study:Path,cell_id:str,home:Path|None=None,inherit_profile:bool=False,
     if inherit_profile:runtime_dir.mkdir()
     cmd=command(executable,row,workspace,inherit_profile=inherit_profile,runtime_dir=runtime_dir)
     report['command']=cmd;report['started_at']=now()
-    begin=time.monotonic();timed_out=False
-    with (out/'events.jsonl').open('wb') as stdout,(out/'stderr.log').open('wb') as stderr:
-        process=subprocess.Popen(cmd,stdout=stdout,stderr=stderr,env=env,
-                                 start_new_session=(os.name!='nt'))
-        try:code=process.wait(timeout=row['timeout_seconds'])
-        except subprocess.TimeoutExpired:
-            timed_out=True
-            if os.name=='nt':
-                subprocess.run(['taskkill','/PID',str(process.pid),'/T','/F'],capture_output=True,timeout=15,check=False)
-            else:os.killpg(process.pid,signal.SIGTERM)
-            try:code=process.wait(timeout=5)
-            except subprocess.TimeoutExpired:
-                if os.name!='nt':os.killpg(process.pid,signal.SIGKILL)
-                else:process.kill()
-                code=process.wait(timeout=5)
-    report['elapsed_seconds']=round(time.monotonic()-begin,3);report['ended_at']=now();report['returncode']=code
-    report.update(summarize_events((out/'events.jsonl').read_bytes()))
-    if timed_out:report['status']='timed_out'
-    elif code==0 and report['thread_id'] and report['completed_turns'] and not report['malformed_lines'] and not report['failure_events']:
-        report['status']='process_completed';report['actual_independent_agent_runs']=1
-    else:report['status']='process_failed_or_incomplete'
-    report['events']={'path':(out/'events.jsonl').relative_to(study).as_posix(),'sha256':sha((out/'events.jsonl').read_bytes())}
-    report['stderr']={'path':(out/'stderr.log').relative_to(study).as_posix(),'sha256':sha((out/'stderr.log').read_bytes())}
-    report['execution_audit']=None;report['product_evidence_index']=None
-    report['boundary']='Actual CLI execution only. Independent audit must confirm native subagents, observation, artifact provenance, UI results and total usage.'
-    try:
-        report['output_snapshot']=snapshot_outputs(workspace,out)
-    except (OSError,ValueError) as exc:
-        report['output_snapshot']={'status':'capture_failed','error':str(exc)}
-    write_json(out/'run.json',report)
+    begin=time.monotonic();timed_out=False;interrupted=False
+    with ExitStack() as cleanup:
+        with (out/'events.jsonl').open('wb') as stdout,(out/'stderr.log').open('wb') as stderr:
+            process=subprocess.Popen(cmd,stdout=stdout,stderr=stderr,env=env,
+                                     start_new_session=(os.name!='nt'))
+            try:code=process.wait(timeout=row['timeout_seconds'])
+            except (subprocess.TimeoutExpired,KeyboardInterrupt) as exc:
+                interrupted=isinstance(exc,KeyboardInterrupt);timed_out=not interrupted
+                cleanup.enter_context(defer_interrupt_during_cleanup())
+                try:
+                    code=stop_owned_process(process)
+                    report['process_cleanup']={'direct_child_reaped':True,'returncode':code}
+                except (OSError,subprocess.SubprocessError) as error:
+                    code=process.poll()
+                    report['process_cleanup']={'direct_child_reaped':code is not None,
+                                               'error':str(error),'returncode':code}
+        report['elapsed_seconds']=round(time.monotonic()-begin,3);report['ended_at']=now();report['returncode']=code
+        report.update(summarize_events((out/'events.jsonl').read_bytes()))
+        if interrupted:report['status']='interrupted'
+        elif timed_out:report['status']='timed_out'
+        elif code==0 and report['thread_id'] and report['completed_turns'] and not report['malformed_lines'] and not report['failure_events']:
+            report['status']='process_completed';report['actual_independent_agent_runs']=1
+        else:report['status']='process_failed_or_incomplete'
+        report['events']={'path':(out/'events.jsonl').relative_to(study).as_posix(),'sha256':sha((out/'events.jsonl').read_bytes())}
+        report['stderr']={'path':(out/'stderr.log').relative_to(study).as_posix(),'sha256':sha((out/'stderr.log').read_bytes())}
+        report['execution_audit']=None;report['product_evidence_index']=None
+        report['boundary']='Actual CLI execution only. Independent audit must confirm native subagents, observation, artifact provenance, UI results and total usage.'
+        try:
+            report['output_snapshot']=snapshot_outputs(workspace,out)
+        except (OSError,ValueError) as exc:
+            report['output_snapshot']={'status':'capture_failed','error':str(exc)}
+        write_json(out/'run.json',report)
+        # Propagate only after reaping and recording this immutable failed attempt.
+        if interrupted:raise KeyboardInterrupt
     # Never automatically copy profiles, credentials, generated binaries or private logs into a public release.
     return report
 
@@ -344,6 +384,8 @@ def main()->int:
         if args.action=='prepare':result=prepare(baseline_skill=args.baseline_skill,candidate_skill=args.candidate_skill,starters=args.starters,plan=args.plan,output=args.output,roles=args.roles)
         else:result=run(study=args.study,cell_id=args.cell,home=args.codex_home,inherit_profile=args.inherit_profile,codex_executable=args.codex_executable,execute=args.execute,acknowledge_cost=args.acknowledge_cost)
         print(json.dumps(result,indent=2,ensure_ascii=False));return 2 if result.get('status')=='blocked_not_run' else 0
+    except KeyboardInterrupt:
+        print('adaptive study: interrupted; inspect the retained attempt record before retrying',file=sys.stderr);return 130
     except (StudyError,OSError,ValueError,KeyError,TypeError,subprocess.SubprocessError) as exc:
         print('adaptive study: '+str(exc),file=sys.stderr);return 2
 

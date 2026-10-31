@@ -17,6 +17,7 @@ BASE='05d0286b0b27e8e57d5751d5cf649c8800408001'
 HASH=re.compile(r'[0-9a-f]{64}\Z')
 DECISION='docs/evidence/v1.20.0/release-decision.json'
 EXCLUDED={'__pycache__','.git','node_modules','dist','.pytest_cache'}
+ADAPTER_ROLES=('ui_researcher','ui_integrator','ui_challenger','ui_experience_observer')
 
 class EvidenceError(ValueError): pass
 
@@ -76,7 +77,9 @@ def require_release_evidence(root:Path=ROOT)->dict:
             raise EvidenceError(f'Missing review declaration: {key}')
     report=artifact(root,decision.get('review_report'))
     if not report.strip(): raise EvidenceError('Empty review report')
-    plan=json.loads(artifact(root,decision.get('registered_plan')))
+    registered_bytes=artifact(root,decision.get('registered_plan'))
+    registration_sha256=digest(registered_bytes)
+    plan=json.loads(registered_bytes)
     if not isinstance(plan,dict) or plan.get('candidate_source_identity')!=candidate_identity(root):
         raise EvidenceError('Frozen study does not identify the current complete candidate')
     cells=plan.get('cells')
@@ -109,6 +112,20 @@ def require_release_evidence(root:Path=ROOT)->dict:
         if not any(e.get('type')=='turn.completed' for e in parsed if isinstance(e,dict)):
             raise EvidenceError('No actual completed turn event')
         item=next(r for r in cells if r['id']==cell)
+        # Cell names and briefs can recur across campaigns. Bind to the exact
+        # frozen registration and workspace, including model and role changes.
+        if run.get('registration_sha256')!=registration_sha256:
+            raise EvidenceError('Execution belongs to a different frozen registration')
+        workspace_files=item.get('workspace_files')
+        if not isinstance(workspace_files,dict) or not workspace_files or any(
+                not isinstance(name,str) or not name or
+                not isinstance(value,str) or not HASH.fullmatch(value)
+                for name,value in workspace_files.items()):
+            raise EvidenceError('Missing or invalid frozen workspace identities')
+        # Keep the serialization identical to the runner's existing record.
+        expected_workspace=digest(json.dumps(workspace_files,sort_keys=True).encode())
+        if run.get('input_workspace_identity')!=expected_workspace:
+            raise EvidenceError('Execution input workspace differs from the frozen registration')
         if run.get('task_sha256')!=item.get('task_sha256'):
             raise EvidenceError('Task identity changed after registration')
         conditions.add(str(item.get('condition')).split('-')[0]);tasks.add(item.get('task'))
@@ -154,6 +171,16 @@ def require_release_evidence(root:Path=ROOT)->dict:
     final_cells=[r for r in executed if r['condition']=='G-final-runtime']
     if not final_cells or any(r.get('method_files')!=candidate for r in final_cells):
         raise EvidenceError('No actual exact final-runtime execution')
+    expected_roles={'.codex/agents/'+role+'.toml':
+        digest(path_at(root,'integrations/codex/agents/'+role+'.toml').read_bytes())
+        for role in ADAPTER_ROLES}
+    for row in final_cells:
+        installed=row.get('installed_role_names')
+        if not isinstance(installed,list) or len(installed)!=len(ADAPTER_ROLES) or any(
+                not isinstance(role,str) for role in installed) or set(installed)!=set(ADAPTER_ROLES):
+            raise EvidenceError('Exact final-runtime role registrations require all four distributed roles')
+        if any(row['workspace_files'].get(path)!=value for path,value in expected_roles.items()):
+            raise EvidenceError('Exact final-runtime role files differ from the distributed adapter')
     checks=decision.get('engineering_checks',[])
     if not isinstance(checks,list): raise EvidenceError('Invalid engineering checks')
     required={'upstream_unit_suite','package_validation','catalog','readme_art','browser_scenarios','installer_smoke','package_build'}

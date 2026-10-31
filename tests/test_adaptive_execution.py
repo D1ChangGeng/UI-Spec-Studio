@@ -2,10 +2,15 @@
 from __future__ import annotations
 import importlib.util
 import json
+import os
+import signal
+import subprocess
+import sys
+import time
 from pathlib import Path
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -216,6 +221,99 @@ class StudyMechanicsTests(unittest.TestCase):
         with self.assertRaisesRegex(runner.StudyError,'Linked study root'):self.prepare()
         self.assertEqual(list(target.iterdir()),[])
 
+    def test_interruption_reaps_child_and_retains_failed_attempt(self):
+        self.prepare()
+        process=MagicMock(pid=123456789)
+        process.wait.side_effect=[KeyboardInterrupt(),-15]
+        probe=MagicMock(returncode=0,stdout='explicit mechanical process fixture')
+        with patch.object(runner.shutil,'which',return_value='test-double-codex'), \
+             patch.object(runner.subprocess,'run',return_value=probe), \
+             patch.object(runner.subprocess,'Popen',return_value=process), \
+             patch.object(runner.os,'killpg',create=True) as kill_group:
+            with self.assertRaises(KeyboardInterrupt):
+                runner.run(study=self.out,cell_id='T1-C-r1',home=self.home,execute=True,acknowledge_cost=True)
+        run_path=self.out/'runs/T1-C-r1/run.json'
+        self.assertTrue(run_path.is_file(),'interrupted attempts must be finalized before cancellation propagates')
+        result=json.loads(run_path.read_bytes())
+        self.assertEqual(result['status'],'interrupted')
+        self.assertEqual(result['actual_independent_agent_runs'],0)
+        self.assertEqual(result['returncode'],-15)
+        self.assertGreaterEqual(process.wait.call_count,2)
+        if runner.os.name!='nt':kill_group.assert_any_call(process.pid,runner.signal.SIGTERM)
+        self.assertTrue((run_path.parent/'output-index.json').is_file())
+        self.assertTrue((run_path.parent/'product-output.zip').is_file())
+    def test_interruption_preserves_record_when_output_capture_fails(self):
+        self.prepare()
+        process=MagicMock(pid=123456789)
+        process.wait.side_effect=[KeyboardInterrupt(),-15]
+        probe=MagicMock(returncode=0,stdout='explicit mechanical process fixture')
+        with patch.object(runner.shutil,'which',return_value='test-double-codex'), \
+             patch.object(runner.subprocess,'run',return_value=probe), \
+             patch.object(runner.subprocess,'Popen',return_value=process), \
+             patch.object(runner.os,'killpg',create=True), \
+             patch.object(runner,'snapshot_outputs',side_effect=OSError('fixture capture failure')):
+            with self.assertRaises(KeyboardInterrupt):
+                runner.run(study=self.out,cell_id='T1-C-r1',home=self.home,execute=True,acknowledge_cost=True)
+        result=json.loads((self.out/'runs/T1-C-r1/run.json').read_bytes())
+        self.assertEqual(result['status'],'interrupted')
+        self.assertEqual(result['output_snapshot']['status'],'capture_failed')
+
+    @unittest.skipIf(os.name=='nt','POSIX process-group behavior')
+    def test_cleanup_kills_remaining_group_after_leader_exits(self):
+        process=MagicMock(pid=123456789)
+        process.wait.return_value=-15
+        with patch.object(runner.os,'killpg') as kill_group:
+            self.assertEqual(runner.stop_owned_process(process),-15)
+        self.assertEqual([call.args for call in kill_group.call_args_list],
+                         [(process.pid,signal.SIGTERM),(process.pid,signal.SIGKILL)])
+    @unittest.skipIf(os.name=='nt','POSIX process-group behavior')
+    def test_cleanup_escalates_and_reaps_unresponsive_child(self):
+        process=MagicMock(pid=123456789)
+        process.wait.side_effect=[subprocess.TimeoutExpired('fixture',5),-9]
+        with patch.object(runner.os,'killpg') as kill_group:
+            self.assertEqual(runner.stop_owned_process(process),-9)
+        kill_group.assert_any_call(process.pid,signal.SIGKILL)
+        self.assertEqual(process.wait.call_count,2)
+    @unittest.skipIf(os.name=='nt','POSIX SIGINT: Windows cleanup remains covered by process doubles')
+    def test_real_sigint_reaps_owned_process_and_finalizes_attempt(self):
+        # A sleeping Python process, NOT a Codex/Agent/model experiment.
+        self.prepare()
+        ready=self.r/'mechanical-child-ready.json'
+        child_code=('import json,os,time;from pathlib import Path;'
+                    'Path('+repr(str(ready))+').write_text(json.dumps({"pid":os.getpid()}));'
+                    'time.sleep(60)')
+        driver=self.r/'mechanical-runner-driver.py'
+        driver.write_text(
+            'import importlib.util,json,sys\nfrom pathlib import Path\n'
+            'spec=importlib.util.spec_from_file_location("runner",'+repr(str(ROOT/'tools/run_adaptive_research.py'))+')\n'
+            'runner=importlib.util.module_from_spec(spec);spec.loader.exec_module(runner)\n'
+            'runner.command=lambda *args,**kwargs: [sys.executable,"-u","-c",'+repr(child_code)+']\n'
+            'sys.argv=["runner","run","--study",'+repr(str(self.out))+',"--cell","T1-C-r1",'
+            '"--codex-home",'+repr(str(self.home))+',"--codex-executable",sys.executable,"--execute","--acknowledge-cost"]\n'
+            'raise SystemExit(runner.main())\n',encoding='utf-8')
+        parent=subprocess.Popen([sys.executable,str(driver)],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+        child_pid=None
+        try:
+            deadline=time.monotonic()+10
+            while not ready.exists() and parent.poll() is None and time.monotonic()<deadline:time.sleep(.02)
+            self.assertTrue(ready.exists(),'mechanical sleeping child did not start')
+            child_pid=json.loads(ready.read_text())['pid']
+            parent.send_signal(signal.SIGINT)
+            _,stderr=parent.communicate(timeout=15)
+            self.assertEqual(parent.returncode,130,stderr)
+            record=json.loads((self.out/'runs/T1-C-r1/run.json').read_bytes())
+            self.assertEqual(record['status'],'interrupted')
+            self.assertEqual(record['actual_independent_agent_runs'],0)
+            self.assertTrue(record['process_cleanup']['direct_child_reaped'])
+            self.assertTrue((self.out/'runs/T1-C-r1/output-index.json').is_file())
+            with self.assertRaises(ProcessLookupError):os.kill(child_pid,0)
+        finally:
+            if parent.poll() is None:parent.kill()
+            parent.communicate(timeout=10)
+            if child_pid is not None:
+                try:os.killpg(child_pid,signal.SIGKILL)
+                except ProcessLookupError:pass
+
 class ReleaseEvidenceMechanicsTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.r=Path(self.temp.name).resolve()
@@ -262,6 +360,11 @@ class ReleaseRecordConsistencyTests(unittest.TestCase):
         for name in ('VERSION','AGENTS.md','docs/MODEL.md','docs/WRITING.md'):
             self.put(name,b'mechanical-test-fixture')
         self.put('skills/ui-spec/SKILL.md',b'mechanical fixture')
+        self.role_files={}
+        for role in runner.ADAPTER_ROLES:
+            raw=('name = "'+role+'"\n# Mechanical fixture, not an Agent execution\n').encode()
+            self.put('integrations/codex/agents/'+role+'.toml',raw)
+            self.role_files['.codex/agents/'+role+'.toml']=guard.digest(raw)
         self.cells=[];self.runs=[]
         for i,(task,condition) in enumerate((('T1','A'),('T1','B'),('T1','C'),('T2','C'),('T3','C'),('T4','F-main'),('T4','F-integrator'),('T2','G-final-runtime'))):
             cell=task+'-'+condition
@@ -275,6 +378,13 @@ class ReleaseRecordConsistencyTests(unittest.TestCase):
                  'execution_audit':self.put('fake/'+cell+'-audit.md',b'Explicit test double, not a real audit'),
                  'product_evidence_index':self.put('fake/'+cell+'-product.json',b'{"fixture":true}')}
             self.runs.append(self.put('fake/'+cell+'-run.json',json.dumps(run).encode()))
+        for cell in self.cells:
+            installed=list(runner.ADAPTER_ROLES) if cell['condition'] not in ('A','B') else []
+            cell['installed_role_names']=installed
+            cell['workspace_files']={'TASK.md':cell['task_sha256'],
+                '.agents/skills/ui-spec/SKILL.md':guard.digest(b'mechanical fixture')}
+            cell['workspace_files'].update({path:value for path,value in self.role_files.items()
+                                           if path.split('/')[-1][:-5] in installed})
         checks=[]
         for name in ('upstream_unit_suite','package_validation','catalog','readme_art','browser_scenarios','installer_smoke','package_build'):
             checks.append({'name':name,'status':'passed','log':self.put('fake/'+name+'.log',b'explicit mechanical test double')})
@@ -285,6 +395,7 @@ class ReleaseRecordConsistencyTests(unittest.TestCase):
             'registered_plan':self.put('fake/plan.json',json.dumps({'cells':self.cells,'candidate_source_identity':guard.candidate_identity(self.r),
                      'candidate_method_files':{'SKILL.md':guard.digest(b'mechanical fixture')}}).encode()),
             'run_records':self.runs,'engineering_checks':checks,'unexecuted_cells':{}}
+        self.freeze_plan()
     def put(self,rel,raw):
         p=self.r/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(raw)
         return {'path':rel,'sha256':guard.digest(raw)}
@@ -293,6 +404,49 @@ class ReleaseRecordConsistencyTests(unittest.TestCase):
     def change_run(self,index,changes):
         ref=self.runs[index];data=json.loads((self.r/ref['path']).read_bytes());data.update(changes)
         self.runs[index]=self.put(ref['path'],json.dumps(data).encode());self.decision['run_records']=self.runs
+    def freeze_plan(self,bind_runs=True):
+        # These are explicitly synthetic consistency fixtures, never Agent evidence.
+        self.decision['registered_plan']=self.put('fake/plan.json',json.dumps({
+            'cells':self.cells,'candidate_source_identity':guard.candidate_identity(self.r),
+            'candidate_method_files':{'SKILL.md':guard.digest(b'mechanical fixture')}}).encode())
+        if bind_runs:
+            for i,reference in enumerate(self.runs):
+                record=json.loads((self.r/reference['path']).read_bytes())
+                cell=next(row for row in self.cells if row['id']==record['cell_id'])
+                self.change_run(i,{'registration_sha256':self.decision['registered_plan']['sha256'],
+                    'input_workspace_identity':guard.digest(json.dumps(cell['workspace_files'],sort_keys=True).encode())})
+    def test_wrong_registration_identity_rejected(self):
+        self.change_run(0,{'registration_sha256':'0'*64})
+        with self.assertRaisesRegex(guard.EvidenceError,'registration'):self.check()
+    def test_missing_registration_identity_rejected(self):
+        self.change_run(0,{'registration_sha256':None})
+        with self.assertRaisesRegex(guard.EvidenceError,'registration'):self.check()
+    def test_reprepared_model_plan_cannot_reuse_old_runs(self):
+        for cell in self.cells:cell['main_model']='a-different-model'
+        self.freeze_plan(bind_runs=False)
+        with self.assertRaisesRegex(guard.EvidenceError,'registration'):self.check()
+    def test_wrong_input_workspace_identity_rejected(self):
+        self.change_run(0,{'input_workspace_identity':'0'*64})
+        with self.assertRaisesRegex(guard.EvidenceError,'workspace'):self.check()
+    def test_missing_input_workspace_identity_rejected(self):
+        self.change_run(0,{'input_workspace_identity':None})
+        with self.assertRaisesRegex(guard.EvidenceError,'workspace'):self.check()
+    def test_final_runtime_rejects_different_distributed_role_bytes(self):
+        self.cells[-1]['workspace_files']['.codex/agents/ui_researcher.toml']=guard.digest(b'older role')
+        self.freeze_plan() # authentic binding alone does not establish current role bytes
+        with self.assertRaisesRegex(guard.EvidenceError,'final-runtime role'):self.check()
+    def test_final_runtime_requires_all_four_installed_roles(self):
+        self.cells[-1]['installed_role_names']=list(runner.ADAPTER_ROLES[:2])
+        self.freeze_plan()
+        with self.assertRaisesRegex(guard.EvidenceError,'final-runtime role'):self.check()
+    def test_final_runtime_rejects_duplicate_role_registration(self):
+        self.cells[-1]['installed_role_names'][-1]='ui_researcher'
+        self.freeze_plan()
+        with self.assertRaisesRegex(guard.EvidenceError,'final-runtime role'):self.check()
+    def test_final_runtime_requires_every_role_file_hash(self):
+        self.cells[-1]['workspace_files'].pop('.codex/agents/ui_experience_observer.toml')
+        self.freeze_plan()
+        with self.assertRaisesRegex(guard.EvidenceError,'final-runtime role'):self.check()
     def test_consistent_declarations_are_not_quality_authentication(self):
         result=self.check();self.assertEqual(result['status'],'declared_evidence_consistent')
         self.assertIn('does not authenticate',result['boundary'])
@@ -323,8 +477,7 @@ class ReleaseRecordConsistencyTests(unittest.TestCase):
         with self.assertRaises(guard.EvidenceError):self.check()
     def test_unexecuted_cells_need_explicit_limitation(self):
         self.cells.append({'id':'T2-D','task':'T2','condition':'D','task_sha256':'0'*64})
-        self.decision['registered_plan']=self.put('fake/plan.json',json.dumps({'cells':self.cells,'candidate_source_identity':guard.candidate_identity(self.r),
-                     'candidate_method_files':{'SKILL.md':guard.digest(b'mechanical fixture')}}).encode())
+        self.freeze_plan()
         self.decision['unexecuted_cells']={'T2-D':'Unavailable model in this hypothetical fixture'}
         with self.assertRaises(guard.EvidenceError):self.check()
         self.decision['decision']='approve_limited'
@@ -335,8 +488,7 @@ class ReleaseRecordConsistencyTests(unittest.TestCase):
         with self.assertRaises(guard.EvidenceError):self.check()
     def test_network_mismatch_rejected(self):
         self.cells[1]['network_access']=True
-        self.decision['registered_plan']=self.put('fake/plan.json',json.dumps({'cells':self.cells,'candidate_source_identity':guard.candidate_identity(self.r),
-                     'candidate_method_files':{'SKILL.md':guard.digest(b'mechanical fixture')}}).encode())
+        self.freeze_plan()
         with self.assertRaisesRegex(guard.EvidenceError,'network_access'):self.check()
 
 if __name__=='__main__':unittest.main()
