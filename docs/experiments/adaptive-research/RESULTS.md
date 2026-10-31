@@ -32,6 +32,8 @@ Markdown. The original report bytes remain in immutable workspace archives and
 `.md.txt` exports. Separately labeled navigation copies resolve local links in
 the repository. The original failing CI/local output and successful package
 recheck are retained; the validator and frozen candidate source were not changed.
+The corrected four-product checkpoint is
+[009b1a02f88b8f706b068d0a83214eaf434d409a](https://github.com/D1ChangGeng/UI-Spec-Studio/commit/009b1a02f88b8f706b068d0a83214eaf434d409a).
 T1-C also discloses a one-trailing-newline difference between the frozen child
 prompt file and the actual dispatched argument. Its substantive inquiry and
 role instruction bytes match; both exact versions are preserved.

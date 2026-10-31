@@ -1,0 +1,20 @@
+test_all_python_sources_parse (test_contracts.ContractTests.test_all_python_sources_parse) ... ERROR
+
+======================================================================
+ERROR: test_all_python_sources_parse (test_contracts.ContractTests.test_all_python_sources_parse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/708e8b7f118e/UI-Spec-Studio/tests/test_contracts.py", line 33, in test_all_python_sources_parse
+    ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/ast.py", line 52, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/708e8b7f118e/UI-Spec-Studio/docs/evidence/v1.20.0/session-study/engineering/standalone-check-attempt-01.py", line 19
+    original=b"# user fixture; preserve exactly\\nmodel = \\"existing-choice\\"\\n".decode("unicode_escape").encode()
+                                                                             ^
+SyntaxError: unexpected character after line continuation character
+
+----------------------------------------------------------------------
+Ran 1 test in 0.341s
+
+FAILED (errors=1)
