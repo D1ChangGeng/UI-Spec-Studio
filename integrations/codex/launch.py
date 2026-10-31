@@ -126,8 +126,9 @@ def command(project: str | None, user: bool, executable: str, args: list[str]) -
     # Resolve before changing cwd, so a relative executable keeps its meaning.
     result = [str(Path(found).absolute()), '--enable', 'multi_agent', '-c', 'agents.enabled=true']
     for name, path, description in roles:
-        result += ['-c', f'agents.{name}.config_file=' + json.dumps(str(path)),
-                   '-c', f'agents.{name}.description=' + json.dumps(description)]
+        # TOML requires scalar values, not surrogate pairs, and an escaped DEL.
+        result += ['-c', f'agents.{name}.config_file=' + json.dumps(str(path), ensure_ascii=False).replace('\x7f', '\\u007f'),
+                   '-c', f'agents.{name}.description=' + json.dumps(description, ensure_ascii=False).replace('\x7f', '\\u007f')]
     return result + args, cwd
 
 

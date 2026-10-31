@@ -13,7 +13,7 @@ DIRS = {"skills", "docs", "examples", "tools", "tests", ".github", "integrations
 SUFFIXES = {".toml", ".md", ".py", ".json", ".yml", ".yaml", ".txt", ".svg", ".html", ".css", ".js", ".png", ".mp4"}
 # Preserve declared study inputs and local replay assets in the full source package.
 # This does not enlarge the portable Skill's asset policy.
-EVIDENCE_SUFFIXES = {".csv", ".jsonl", ".mjs", ".log", ".woff2", ".webm", ".zip", ".jpg", ".jpeg"}
+EVIDENCE_SUFFIXES = {".csv", ".jsonl", ".mjs", ".log", ".woff2", ".webm", ".zip", ".jpg", ".jpeg", ".sha256"}
 EXCLUDED = {"__pycache__", "node_modules", ".git", ".pytest_cache", "dist"}
 
 
@@ -59,6 +59,15 @@ def build(root: Path = ROOT, output_dir: Path | None = None) -> list[Path]:
     skill_root = root / "skills/ui-spec"
     archive(skill_zip, [("ui-spec/" + p.relative_to(skill_root).as_posix(), p.read_bytes())
                         for p in files if p.is_relative_to(skill_root)])
+    archives = [repo_zip, skill_zip]
+    adapter_root = root / "integrations/codex"
+    if (adapter_root / "manifest.json").is_file():
+        adapter_zip = output / f"ui-spec-codex-{version}.zip"
+        items = [("ui-spec-codex/" + p.relative_to(adapter_root).as_posix(), p.read_bytes())
+                 for p in files if p.is_relative_to(adapter_root)]
+        items.append(("ui-spec-codex/LICENSE", (root / "LICENSE").read_bytes()))
+        archive(adapter_zip, items)
+        archives.append(adapter_zip)
     inventory = output / "contents.json"
     inventory.write_text(json.dumps({"version": version, "files": [
         {"path": p.relative_to(root).as_posix(), "bytes": p.stat().st_size,
@@ -66,8 +75,8 @@ def build(root: Path = ROOT, output_dir: Path | None = None) -> list[Path]:
     ]}, indent=2) + "\n", encoding="utf-8", newline="\n")
     hashes = output / "SHA256SUMS.txt"
     hashes.write_text("".join(f"{hashlib.sha256(p.read_bytes()).hexdigest()}  {p.name}\n"
-                              for p in (repo_zip, skill_zip, inventory)), encoding="utf-8", newline="\n")
-    return [repo_zip, skill_zip, inventory, hashes]
+                              for p in (*archives, inventory)), encoding="utf-8", newline="\n")
+    return [*archives, inventory, hashes]
 
 
 if __name__ == "__main__":

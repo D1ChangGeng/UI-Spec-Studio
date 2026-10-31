@@ -7,6 +7,7 @@ is correct or whether a UI is beautiful. Actual review remains indispensable.
 """
 from __future__ import annotations
 import hashlib
+import importlib.util
 import json
 from pathlib import Path, PurePosixPath
 import re
@@ -59,6 +60,25 @@ def candidate_files(root:Path)->dict[str,str]:
 def candidate_identity(root:Path)->str:
     return digest(json.dumps(candidate_files(root),sort_keys=True,separators=(',',':')).encode())
 
+def native_backend():
+    spec=importlib.util.spec_from_file_location('adaptive_release_appserver',Path(__file__).with_name('adaptive_appserver.py'))
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
+
+def require_exec_intervention(parsed,item):
+    spawns=[e.get('item',{}) for e in parsed if isinstance(e,dict) and e.get('type')=='item.completed'
+            and e.get('item',{}).get('type')=='collab_tool_call'
+            and e.get('item',{}).get('tool')=='spawn_agent'
+            and e.get('item',{}).get('status')=='completed'
+            and e.get('item',{}).get('receiver_thread_ids')]
+    condition=item['condition']
+    if condition in {'A','F-main'} and spawns:raise EvidenceError('Main-agent-only condition invoked a native child')
+    if condition in {'B','C','D','E-challenger','E-observer','F-integrator'}:
+        if not spawns:raise EvidenceError('Required delegated intervention has no actual native spawn event')
+        # Current exec --json omits child native role metadata/tool history.
+        # Its successful process remains usable, but cannot authenticate the
+        # registered generic/specialist intervention for this publication.
+        raise EvidenceError('Exec spawn alone lacks native child role/tool evidence; use the native app-server evidence transport')
+
 def require_release_evidence(root:Path=ROOT)->dict:
     try:
         decision=json.loads(path_at(root,DECISION).read_bytes())
@@ -90,7 +110,7 @@ def require_release_evidence(root:Path=ROOT)->dict:
         raise EvidenceError('Invalid or duplicate experiment cells')
     records=decision.get('run_records')
     if not isinstance(records,list) or not records: raise EvidenceError('No actual run records')
-    seen=set();sessions=set();conditions=set();tasks=set()
+    seen=set();sessions=set();conditions=set();tasks=set();profiles={}
     for reference in records:
         run=json.loads(artifact(root,reference))
         cell=run.get('cell_id')
@@ -107,10 +127,6 @@ def require_release_evidence(root:Path=ROOT)->dict:
             if line.strip():
                 try: parsed.append(json.loads(line))
                 except ValueError as exc: raise EvidenceError('Malformed execution event log') from exc
-        if not any(e.get('type')=='thread.started' and e.get('thread_id')==sid for e in parsed if isinstance(e,dict)):
-            raise EvidenceError('Declared thread is absent from its raw event log')
-        if not any(e.get('type')=='turn.completed' for e in parsed if isinstance(e,dict)):
-            raise EvidenceError('No actual completed turn event')
         item=next(r for r in cells if r['id']==cell)
         # Cell names and briefs can recur across campaigns. Bind to the exact
         # frozen registration and workspace, including model and role changes.
@@ -128,6 +144,34 @@ def require_release_evidence(root:Path=ROOT)->dict:
             raise EvidenceError('Execution input workspace differs from the frozen registration')
         if run.get('task_sha256')!=item.get('task_sha256'):
             raise EvidenceError('Task identity changed after registration')
+        for key,allowed in (('transport',{'exec','app-server'}),('profile_mode',{'inherited','provisioned'}),
+                            ('session_persistence',{'ephemeral','persistent'})):
+            if item.get(key) not in allowed or run.get(key)!=item[key]:raise EvidenceError('Missing or changed frozen '+key)
+        if type(item.get('network_access')) is not bool or run.get('network_access') is not item['network_access']:
+            raise EvidenceError('Missing or changed frozen network_access')
+        if item['transport']=='app-server':
+            if item['profile_mode']!='inherited':raise EvidenceError('App-server must preserve the inherited authentication profile')
+            if item['condition']=='B' and ('generic_role_binding' not in item or item['generic_role_binding'] not in (None,'default')):
+                raise EvidenceError('Generic default-role metadata representation was not frozen')
+            profile=run.get('profile',{})
+            if 'config_sha256' not in profile or not isinstance(profile.get('user_instruction_identities'),dict):
+                raise EvidenceError('Inherited native profile fingerprints are missing')
+            reference=run.get('appserver_evidence');manifest=json.loads(artifact(root,reference))
+            manifest_root=path_at(root,reference['path']).parent
+            try:native_backend().verify_manifest(manifest,lambda ref:artifact(manifest_root,ref),item,run,events)
+            except ValueError as exc:raise EvidenceError('Invalid native app-server evidence: '+str(exc)) from exc
+        else:
+            if item['session_persistence']!='ephemeral':raise EvidenceError('Exec transport must remain ephemeral')
+            if not any(e.get('type')=='thread.started' and e.get('thread_id')==sid for e in parsed if isinstance(e,dict)):
+                raise EvidenceError('Declared thread is absent from its raw event log')
+            if not any(e.get('type')=='turn.completed' for e in parsed if isinstance(e,dict)):
+                raise EvidenceError('No actual completed turn event')
+            if any(e.get('type') in {'turn.failed','error'} for e in parsed if isinstance(e,dict)):
+                raise EvidenceError('Native exec failure event cannot establish success')
+            require_exec_intervention(parsed,item)
+        profile=run.get('profile',{})
+        profiles[cell]={'config_sha256':profile.get('config_sha256'),
+                        'user_instruction_identities':profile.get('user_instruction_identities',{})}
         conditions.add(str(item.get('condition')).split('-')[0]);tasks.add(item.get('task'))
         # The main-agent-only baseline is legitimate; subagent use in relevant
         # arms must be independently inspected, not inferred from a role file.
@@ -154,6 +198,10 @@ def require_release_evidence(root:Path=ROOT)->dict:
                     raise EvidenceError(f'Unmatched A/B/C variable: {key}')
             if any(r.get('network_access',False)!=trio[0].get('network_access',False) for r in trio[1:]):
                 raise EvidenceError('Unmatched A/B/C variable: network_access')
+            for key in ('transport','profile_mode','session_persistence'):
+                if any(r[key]!=trio[0][key] for r in trio[1:]):raise EvidenceError('Unmatched A/B/C variable: '+key)
+            if any(profiles[r['id']]!=profiles[trio[0]['id']] for r in trio[1:]):
+                raise EvidenceError('Unmatched A/B/C inherited profile fingerprints')
             pairs.append(task)
     if not pairs: raise EvidenceError('No actual same-task A/B/C comparison')
     integrations={r['condition']:r for r in executed if r['task']=='T4'}
@@ -164,6 +212,10 @@ def require_release_evidence(root:Path=ROOT)->dict:
         if not a.get(key) or a[key]!=b.get(key): raise EvidenceError(f'Unmatched integration variable: {key}')
     if integrations['F-main'].get('network_access',False)!=integrations['F-integrator'].get('network_access',False):
         raise EvidenceError('Unmatched integration variable: network_access')
+    for key in ('transport','profile_mode','session_persistence'):
+        if integrations['F-main'][key]!=integrations['F-integrator'][key]:raise EvidenceError('Unmatched integration variable: '+key)
+    if profiles[integrations['F-main']['id']]!=profiles[integrations['F-integrator']['id']]:
+        raise EvidenceError('Unmatched integration inherited profile fingerprints')
     candidate={p.relative_to(root/'skills/ui-spec').as_posix():digest(p.read_bytes())
                for p in (root/'skills/ui-spec').rglob('*') if p.is_file() and '__pycache__' not in p.parts}
     if not candidate or plan.get('candidate_method_files')!=candidate:

@@ -70,6 +70,20 @@ class LauncherTests(unittest.TestCase):
         for role in launch.install.ROLES:
             self.assertIn(f'agents.{role}.config_file=' + json.dumps(str(self.codex / 'agents' / f'{role}.toml')), prefix)
 
+    def test_non_bmp_project_paths_decode_to_installed_role_files(self):
+        project = self.base / 'product \U0001f9ea-\x7f'
+        self.project.rename(project)
+        self.project = project
+        self.codex = project / '.codex'
+        argv, cwd = self.build()
+        parsed = launch.tomllib.loads('\n'.join(argv[index + 1]
+                                              for index, token in enumerate(argv) if token == '-c'))
+        self.assertEqual(cwd, project)
+        for role in launch.install.ROLES:
+            path = self.codex / 'agents' / f'{role}.toml'
+            self.assertEqual(parsed['agents'][role]['config_file'], str(path))
+            self.assertTrue(Path(parsed['agents'][role]['config_file']).is_file())
+
     def test_role_configuration_overrides_are_rejected_without_mutation(self):
         path = self.codex / 'agents/ui_researcher.toml'
         original = path.read_bytes()

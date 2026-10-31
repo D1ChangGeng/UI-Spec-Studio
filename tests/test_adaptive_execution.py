@@ -18,6 +18,7 @@ def load(name,path):
     spec=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);return m
 runner=load('adaptive_study',ROOT/'tools/run_adaptive_research.py')
 guard=load('adaptive_release_guard',ROOT/'tools/check_adaptive_release.py')
+rpc_fixture=load('adaptive_rpc_release_fixture',ROOT/'tests/adaptive_rpc_fixture.py')
 
 class StudyMechanicsTests(unittest.TestCase):
     def setUp(self):
@@ -118,12 +119,35 @@ class StudyMechanicsTests(unittest.TestCase):
             self.assertIn(f'agents.{role}.config_file='+json.dumps(str(workspace/'.codex/agents'/f'{role}.toml')),cmd)
             self.assertTrue(any(value.startswith(f'agents.{role}.description=') for value in cmd))
         self.assertIn('multi_agent',cmd)
+    def test_non_bmp_paths_decode_to_frozen_roles_and_runtime_directories(self):
+        try:import tomllib
+        except ImportError:self.skipTest('TOML path roundtrip requires Python 3.11+')
+        self.out=self.r/'study-\U0001f9ea-\x7f'
+        row=self.prepare()['cells'][0]
+        workspace=self.out/'cells/T1-C-r1/workspace'
+        runtime=self.r/'runtime-\U0001f9ea-\x7f'
+        cmd=runner.command('codex',row,workspace,inherit_profile=True,runtime_dir=runtime)
+        parsed=tomllib.loads('\n'.join(cmd[index+1] for index,token in enumerate(cmd) if token=='-c'))
+        for role in runner.ADAPTER_ROLES:
+            path=workspace/'.codex/agents'/f'{role}.toml'
+            self.assertEqual(parsed['agents'][role]['config_file'],str(path))
+            self.assertTrue(Path(parsed['agents'][role]['config_file']).is_file())
+        self.assertEqual(parsed['sqlite_home'],str(runtime/'state'))
+        self.assertEqual(parsed['log_dir'],str(runtime/'logs'))
     def test_network_access_is_frozen_and_explicit_in_command(self):
         self.row['network_access']=True;self.plan.write_text(json.dumps({'cells':[self.row]}))
         row=self.prepare()['cells'][0]
         self.assertTrue(row['network_access'])
         cmd=runner.command('codex',row,self.out/'cells/T1-C-r1/workspace')
         self.assertIn('sandbox_workspace_write.network_access=true',cmd)
+    def test_native_transport_profile_and_persistence_are_frozen(self):
+        self.row.update(transport='app-server',profile_mode='inherited',session_persistence='ephemeral')
+        self.plan.write_text(json.dumps({'cells':[self.row]}))
+        frozen=self.prepare()['cells'][0]
+        self.assertEqual((frozen['transport'],frozen['profile_mode'],frozen['session_persistence']),
+                         ('app-server','inherited','ephemeral'))
+        with self.assertRaisesRegex(runner.StudyError,'profile'):
+            runner.run(study=self.out,cell_id=self.row['id'],home=self.home)
     def test_profile_choice_must_be_explicit_and_exclusive(self):
         with self.assertRaises(runner.StudyError):
             runner.run(study=self.out,cell_id='unused')
@@ -175,6 +199,27 @@ class StudyMechanicsTests(unittest.TestCase):
             self.assertNotIn('app/vendor/font.woff2',archive.namelist())
             self.assertNotIn('app/.next/cache/generated.js',archive.namelist())
         self.assertEqual(result['excluded'],[{'path':'app/vendor/font.woff2','reason':'unsupported or private-sensitive type'}])
+    def test_output_snapshot_restores_native_wiki_manifests_and_browser_assets(self):
+        work=self.r/'work';(work/'app/core/language').mkdir(parents=True)
+        originals={
+            'app/core/tiddlywiki.files':b'{"tiddlers":[{"file":"language/Buttons.multids"}]}',
+            'app/core/plugin.info':b'{"title":"$:/core","type":"application/json"}',
+            'app/core/language/Buttons.multids':b'title: $:/language/Buttons/Save\n\nSave\n',
+            'app/core/language/Buttons.multids.meta':b'type: application/x-tiddlers\n',
+            'app/site.webmanifest':b'{"name":"Research workspace"}',
+            'app/favicon.ico':b'\x00\x00\x01\x00',
+            'app/.babelrc':b'{"presets":["next/babel"]}',
+            'app/Dockerfile':b'FROM node:22\n',
+        }
+        for name,raw in originals.items():(work/name).write_bytes(raw)
+        out=self.r/'result';out.mkdir();result=runner.snapshot_outputs(work,out)
+        restored=self.r/'restored'
+        with zipfile.ZipFile(out/'product-output.zip') as archive:archive.extractall(restored)
+        for name,raw in originals.items():self.assertEqual((restored/name).read_bytes(),raw)
+        manifest=json.loads((restored/'app/core/tiddlywiki.files').read_bytes())
+        referenced=restored/'app/core'/manifest['tiddlers'][0]['file']
+        self.assertTrue(referenced.is_file())
+        self.assertEqual(result['excluded'],[])
     def test_missing_app_prevents_preparation(self):
         (self.st/'app/index.html').unlink()
         with self.assertRaises(runner.StudyError):self.prepare()
@@ -492,12 +537,26 @@ class ReleaseRecordConsistencyTests(unittest.TestCase):
             self.cells.append({'id':cell,'task':task,'condition':condition,'task_sha256':guard.digest(task.encode()),
                 'starter_files':{'app.txt':guard.digest(task.encode())},'method_files':{'SKILL.md':guard.digest(b'mechanical fixture')},
                 'main_model':'fixture','subagent_model':'fixture','main_effort':'high','subagent_effort':'medium',
-                'timeout_seconds':10,'max_subagents':2})
+                'timeout_seconds':10,'max_subagents':2,'transport':'app-server','profile_mode':'inherited',
+                'session_persistence':'ephemeral','network_access':False})
+            if condition=='B':self.cells[-1]['generic_role_binding']='default'
             events=(json.dumps({'type':'thread.started','thread_id':'TEST-DOUBLE-'+str(i)})+'\n'+json.dumps({'type':'turn.completed'})+'\n').encode()
             run={'cell_id':cell,'simulation':False,'status':'process_completed','thread_id':'TEST-DOUBLE-'+str(i),
+                 'transport':'app-server','profile_mode':'inherited','session_persistence':'ephemeral','network_access':False,
+                 'profile':{'config_sha256':None,'user_instruction_identities':{}},
                  'task_sha256':guard.digest(task.encode()),'events':self.put('fake/'+cell+'.jsonl',events),
                  'execution_audit':self.put('fake/'+cell+'-audit.md',b'Explicit test double, not a real audit'),
                  'product_evidence_index':self.put('fake/'+cell+'-product.json',b'{"fixture":true}')}
+            prefix='fake/'+cell+'/native/'
+            files=rpc_fixture.manifest_files(self.cells[-1],run);refs={}
+            for name,raw in files.items():
+                ref=self.put(prefix+name,raw);refs[name]={'path':name,'sha256':ref['sha256']}
+            run['events']={**self.put(prefix+'wire.jsonl',files['wire.jsonl']),
+                           'format':'codex-app-server-jsonrpc','derived':False}
+            manifest={'schema_version':1,'transport':'app-server','derived':False,'internal_raw_events':False,
+                      'root_thread_id':run['thread_id'],'profile_mode':'inherited','session_persistence':'ephemeral',
+                      'network_access':False,'study_identity':{},'files':refs}
+            run['appserver_evidence']=self.put(prefix+'evidence-manifest.json',json.dumps(manifest).encode())
             self.runs.append(self.put('fake/'+cell+'-run.json',json.dumps(run).encode()))
         for cell in self.cells:
             installed=list(runner.ADAPTER_ROLES) if cell['condition'] not in ('A','B') else []
@@ -536,6 +595,10 @@ class ReleaseRecordConsistencyTests(unittest.TestCase):
                 cell=next(row for row in self.cells if row['id']==record['cell_id'])
                 self.change_run(i,{'registration_sha256':self.decision['registered_plan']['sha256'],
                     'input_workspace_identity':guard.digest(json.dumps(cell['workspace_files'],sort_keys=True).encode())})
+                record=json.loads((self.r/self.runs[i]['path']).read_bytes())
+                reference=record['appserver_evidence'];manifest=json.loads((self.r/reference['path']).read_bytes())
+                manifest['study_identity']={key:record[key] for key in ('cell_id','registration_sha256','input_workspace_identity','task_sha256')}
+                self.change_run(i,{'appserver_evidence':self.put(reference['path'],json.dumps(manifest).encode())})
     def test_wrong_registration_identity_rejected(self):
         self.change_run(0,{'registration_sha256':'0'*64})
         with self.assertRaisesRegex(guard.EvidenceError,'registration'):self.check()
@@ -611,5 +674,8 @@ class ReleaseRecordConsistencyTests(unittest.TestCase):
         self.cells[1]['network_access']=True
         self.freeze_plan()
         with self.assertRaisesRegex(guard.EvidenceError,'network_access'):self.check()
+    def test_changed_inherited_profile_fingerprint_rejected(self):
+        self.change_run(1,{'profile':{'config_sha256':'d'*64,'user_instruction_identities':{}}})
+        with self.assertRaisesRegex(guard.EvidenceError,'profile fingerprints'):self.check()
 
 if __name__=='__main__':unittest.main()

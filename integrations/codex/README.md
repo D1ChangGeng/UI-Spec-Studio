@@ -2,6 +2,8 @@
 
 This is an optional host adapter, not a replacement for `ui-spec`. Install the complete Skill first through your established Skills workflow. The main agent and substantive specialist work retain its eight-reference reading contract. Models and permissions come from the actual host; a role file cannot create a sandbox, a browser, a login or a separate desktop.
 
+The release build includes `ui-spec-codex-1.20.0.zip` as a separate asset, with its digest in `SHA256SUMS.txt`. Extract its `ui-spec-codex/` directory and run `python install.py install --project /path/to/product` from that directory. It includes the installer, launcher, doctor, four role files, model guidance and license. The complete Skill is distributed separately as `ui-spec-1.20.0.zip`.
+
 ## Install without overwriting personal work
 
 Use Python 3.11+ when the target already has user configuration, so the standard-library TOML parser can validate a safe merge. Python 3.10 supports a fresh configuration and unchanged installer-owned registrations. From the repository or this standalone adapter directory:
@@ -57,6 +59,8 @@ For integration, identify the selected source/variant, protected visual relation
 
 For the checked configuration contract, consult the official sources in `MODEL-POLICY.md`. Current role TOML uses `name`, `description`, `developer_instructions`; it intentionally does not set a model. Optional model preferences remain experiments, not product defaults.
 
-Native custom-role selection depends on the host's exposed orchestration interface. Some model/tool combinations expose subagent creation without a custom-role selector. Confirm that the desired role is actually selected before counting that run as a specialist; giving a generic child the role name is insufficient. Hosts that require the `multi_agent` feature can enable it through their normal configuration or the documented `--enable multi_agent` launch option. The study runner registers exact role paths per invocation and preserves ephemeral CLI sessions; observed host/version/model combinations belong in the version's runtime evidence.
+Native custom-role selection depends on the host's exposed orchestration interface. Some model/tool combinations expose subagent creation without a custom-role selector. Confirm that the desired role is actually selected before counting that run as a specialist; giving a generic child the role name is insufficient. Hosts that require the `multi_agent` feature can enable it through their normal configuration or the documented `--enable multi_agent` launch option. Select custom roles in fresh contexts on the tested native interface: a full-history fork inherits the parent type.
+
+The maintainer study runner registers exact role paths per invocation. Its optional standard app-server transport records native child role/parent metadata, actual tool events and per-thread usage without enabling internal raw events. Ephemeral capture relies on the live stream on the tested version; incomplete evidence is not repaired by pretending that unavailable history was read back. Transport, profile inheritance and persistence are frozen study conditions, not settings installed into consumer projects. See `docs/experiments/adaptive-research/RUNNING.md` in the full source distribution for the execution contract and limits.
 
 Consult the version review and adaptive-research study records for the exact environments, executions and observed limits. Native role discovery, comparative model results and UI quality each require their own evidence; installer tests establish only the exercised file lifecycle.

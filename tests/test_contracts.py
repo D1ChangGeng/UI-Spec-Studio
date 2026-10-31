@@ -62,7 +62,8 @@ class ContractTests(unittest.TestCase):
     def test_content_inventory_matches_archives(self):
         with tempfile.TemporaryDirectory() as td:
             result = package.build(ROOT, Path(td))
-            inventory = json.loads(result[2].read_text())
+            inventory_path = next(path for path in result if path.name == "contents.json")
+            inventory = json.loads(inventory_path.read_text())
             with zipfile.ZipFile(result[0]) as archive:
                 for item in inventory["files"]:
                     data = archive.read("ui-spec-studio/" + item["path"])

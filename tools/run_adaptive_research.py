@@ -10,6 +10,7 @@ import argparse
 from contextlib import ExitStack, contextmanager
 from datetime import datetime, timezone
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -29,11 +30,11 @@ TASKS=('T1','T2','T3','T4')
 ADAPTER_ROLES=('ui_researcher','ui_integrator','ui_challenger','ui_experience_observer')
 CONDITIONS={
  'A': {'skill':'baseline','roles':[],'agents':False,'instruction':'Complete this task in the main agent without spawning auxiliary agents.'},
- 'B': {'skill':'baseline','roles':[],'agents':True,'instruction':'Use generic auxiliary agents only when useful to deepen research and curate evidence. Keep final design decisions and pivotal visual inspection in the main agent. Do not delegate product implementation in this arm.'},
- 'C': {'skill':'baseline','roles':['ui_researcher'],'agents':True,'instruction':'Use ui_researcher when useful to deepen research and curate evidence. You retain key visual judgment and final design responsibility. Do not delegate product implementation in this arm.'},
- 'D': {'skill':'baseline','roles':['ui_researcher'],'agents':True,'instruction':'Use ui_researcher when useful to deepen research and curate evidence. You retain key visual judgment and final design responsibility. Do not delegate product implementation in this arm.'},
- 'E-challenger': {'skill':'baseline','roles':['ui_researcher','ui_challenger'],'agents':True,'instruction':'Use ui_researcher when useful, and ui_challenger only for a consequential independent comparison. Keep final decisions and pivotal visual inspection yourself. Do not delegate product implementation in this arm.'},
- 'E-observer': {'skill':'baseline','roles':['ui_researcher','ui_experience_observer'],'agents':True,'instruction':'Use ui_researcher when useful and ui_experience_observer for a genuinely complex GUI episode. Ordinary observation remains your own capability. Retain final judgment. Do not delegate product implementation in this arm.'},
+ 'B': {'skill':'baseline','roles':[],'agents':True,'instruction':'Delegate a substantive research inquiry to a generic default-role auxiliary agent in a fresh context, and use its returned evidence in your own product work. Select the native default role and preserve its actual role metadata. Choose the inquiry from the task\'s actual uncertainty. Keep final design decisions and pivotal visual inspection in the main agent. Do not delegate product implementation in this arm.'},
+ 'C': {'skill':'baseline','roles':['ui_researcher'],'agents':True,'instruction':'Delegate a substantive research inquiry to ui_researcher in a fresh context, and use its returned evidence in your own product work. Choose the inquiry from the task\'s actual uncertainty. Keep final design decisions and pivotal visual inspection in the main agent. Do not delegate product implementation in this arm.'},
+ 'D': {'skill':'baseline','roles':['ui_researcher'],'agents':True,'instruction':'Delegate a substantive research inquiry to ui_researcher in a fresh context, and use its returned evidence in your own product work. Choose the inquiry from the task\'s actual uncertainty. Keep final design decisions and pivotal visual inspection in the main agent. Do not delegate product implementation in this arm.'},
+ 'E-challenger': {'skill':'baseline','roles':['ui_researcher','ui_challenger'],'agents':True,'instruction':'Delegate a substantive research inquiry to ui_researcher in a fresh context, and use its returned evidence in your own product work. Also invoke ui_challenger in a fresh context to examine a consequential source-selection judgment. Choose the inquiries from the task\'s actual uncertainty. Keep final design decisions and pivotal visual inspection in the main agent. Do not delegate product implementation in this arm.'},
+ 'E-observer': {'skill':'baseline','roles':['ui_researcher','ui_experience_observer'],'agents':True,'instruction':'Delegate a substantive research inquiry to ui_researcher in a fresh context, and use its returned evidence in your own product work. Also invoke ui_experience_observer in a fresh context to investigate a consequential interaction episode. Choose the inquiries from the task\'s actual uncertainty. Keep final design decisions and pivotal visual inspection in the main agent. Do not delegate product implementation in this arm.'},
  'F-main': {'skill':'candidate','roles':[],'agents':False,'instruction':'Integrate the established resource yourself, preserving settled design and source craft. Do not spawn auxiliary agents.'},
  'F-integrator': {'skill':'candidate','roles':['ui_integrator'],'agents':True,'instruction':'Delegate only the established, bounded integration to ui_integrator. Inspect its actual result yourself and own overall acceptance. Return unresolved design choices to yourself.'},
  'G-final-runtime': {'skill':'candidate','roles':list(ADAPTER_ROLES),'agents':True,'instruction':'Use the complete candidate UI Spec Studio. Delegate research or already-settled bounded integration only where valuable. Call ui_challenger or ui_experience_observer only when the decision or GUI investigation warrants it. Retain all pivotal visual judgments and final responsibility.'}
@@ -41,6 +42,10 @@ CONDITIONS={
 COMMON='''\nUse the installed ui-spec Skill and read its complete required professional references. The same user brief, starting application, source rights, theme/locale/viewport targets and verification expectations apply across paired conditions. Research access is not permission to recreate unavailable UI. Keep mature visual provenance and scoped W1-W3 authorization intact.\n\nUse available tools for actual source viewing, meaningful interaction episodes and final product inspection. Preserve exact source identity, observed conditions, relevant screenshots/recordings and a concise account of what changed your design decisions in evidence/. Do not claim observation from descriptions, or smoothness from sparse frames. Keep unsuccessful attempts and unresolved quality visible. No real purchases, external account changes, private uploads or destructive external operations are authorized.\n\nDeliver the working application and your factual evidence. Do not claim that a successful build proves visual quality. Do not modify the study method, task, installed Skill or role files.\n'''
 
 class StudyError(ValueError): pass
+
+def appserver_backend():
+    spec=importlib.util.spec_from_file_location('adaptive_appserver',ROOT/'tools/adaptive_appserver.py')
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
 
 def sha(raw:bytes)->str:return hashlib.sha256(raw).hexdigest()
 def now()->str:return datetime.now(timezone.utc).isoformat()
@@ -89,6 +94,16 @@ def validate_cell(row:dict):
     if type(row.get('timeout_seconds')) is not int or row['timeout_seconds']<=0:raise StudyError('Positive explicit runtime budget required')
     if type(row.get('max_subagents')) is not int or not 1<=row['max_subagents']<=16:raise StudyError('Explicit bounded concurrency required')
     if 'network_access' in row and type(row['network_access']) is not bool:raise StudyError('network_access must be an explicit boolean')
+    transport=row.get('transport','exec')
+    if transport not in {'exec','app-server'}:raise StudyError('Unknown execution transport')
+    if row.get('profile_mode','provisioned') not in {'provisioned','inherited'}:raise StudyError('Unknown frozen profile_mode')
+    if row.get('session_persistence','ephemeral') not in {'ephemeral','persistent'}:raise StudyError('Unknown session_persistence')
+    if transport=='exec' and row.get('session_persistence','ephemeral')!='ephemeral':raise StudyError('The exec backend remains ephemeral')
+    if transport=='app-server' and row.get('profile_mode')!='inherited':
+        raise StudyError('app-server requires explicit profile_mode=inherited; it never changes CODEX_HOME')
+    if transport=='app-server' and row['condition']=='B' and (
+            'generic_role_binding' not in row or row['generic_role_binding'] not in (None,'default')):
+        raise StudyError('B requires the observed default-role generic_role_binding (null or default), frozen before execution')
 
 def prepare(*,baseline_skill:Path,candidate_skill:Path,starters:Path,plan:Path,output:Path,roles:Path)->dict:
     if output.exists():raise StudyError('Use a fresh output directory; prior attempts are immutable')
@@ -123,6 +138,8 @@ def prepare(*,baseline_skill:Path,candidate_skill:Path,starters:Path,plan:Path,o
         registry['candidate_source_identity']=module.candidate_identity(candidate_root)
     for row in cells:
         info=dict(row);info['network_access']=row.get('network_access',False)
+        info.update(transport=row.get('transport','exec'),profile_mode=row.get('profile_mode','provisioned'),
+                    session_persistence=row.get('session_persistence','ephemeral'))
         cond=CONDITIONS[row['condition']];task=STUDY/'tasks'/f'{row["task"]}.md'
         if not task.is_file():raise StudyError('Missing canonical task brief')
         taskraw=task.read_bytes()
@@ -132,7 +149,7 @@ def prepare(*,baseline_skill:Path,candidate_skill:Path,starters:Path,plan:Path,o
         if installed_roles:
             role_boundary=('\nAll four adapter roles are installed. In this condition, call only these custom roles: '+
                            (', '.join(cond['roles']) if cond['roles'] else 'none')+
-                           '. Installation does not require invocation. Preserve actual child role identities for the execution audit.\n')
+                           '. Installation does not require invocation. Select custom roles in fresh contexts; a full-history fork inherits the parent type on the tested native interface. Preserve actual child role identities for the execution audit.\n')
         files['AGENTS.md']=('Read TASK.md and INPUT.md. The installed ui-spec Skill is in .agents/skills/ui-spec/.\n'+
                             cond['instruction']+role_boundary+COMMON).encode()
         for rel,raw in methods[cond['skill']].items():files['.agents/skills/ui-spec/'+rel]=raw
@@ -197,13 +214,18 @@ def summarize_events(raw:bytes)->dict:
             'total_subagent_usage':None,'actual_auxiliary_agent_count':None}
 
 def command(executable:str,row:dict,workspace:Path,*,inherit_profile:bool=False,runtime_dir:Path|None=None)->list[str]:
+    native=row.get('transport','exec')=='app-server'
     values={'agents.enabled':row['subagents_enabled'],
             'agents.max_concurrent_threads_per_session':row['max_subagents'],
             'agents.default_subagent_model':row['subagent_model'],
             'agents.default_subagent_reasoning_effort':row['subagent_effort'],
             'model_reasoning_effort':row['main_effort'],
             'sandbox_workspace_write.network_access':row.get('network_access',False)}
-    cmd=[executable,'exec','--json','--ephemeral','--cd',str(workspace),'--sandbox','workspace-write','--model',row['main_model']]
+    cmd=([executable,'app-server','--stdio'] if native else
+         [executable,'exec','--json','--ephemeral','--cd',str(workspace),'--sandbox','workspace-write','--model',row['main_model']])
+    if native:
+        values.update({'approval_policy':'on-request','approvals_reviewer':'auto_review',
+                       'features.multi_agent':row['subagents_enabled']})
     if row['subagents_enabled']:cmd+=['--enable','multi_agent']
     for role in row.get('installed_role_names',[]):
         if role not in ADAPTER_ROLES:raise StudyError('Unknown installed role registration')
@@ -214,16 +236,19 @@ def command(executable:str,row:dict,workspace:Path,*,inherit_profile:bool=False,
         values[f'agents.{role}.description']=json.loads(match[1])
     if inherit_profile:
         if runtime_dir is None:raise StudyError('Inherited runtime needs a local state/log directory')
-        cmd.append('--ignore-user-config')
+        if not native:cmd.append('--ignore-user-config')
         values.update(sqlite_home=str(runtime_dir/'state'),log_dir=str(runtime_dir/'logs'))
-    for k,v in values.items():cmd+=['-c',k+'='+json.dumps(v)]
-    return cmd+['Read AGENTS.md, TASK.md and INPUT.md. Carry out the task and preserve actual evidence.']
+    # TOML requires scalar values, not surrogate pairs, and an escaped DEL.
+    for k,v in values.items():cmd+=['-c',k+'='+json.dumps(v,ensure_ascii=False).replace('\x7f','\\u007f')]
+    return cmd if native else cmd+['Read AGENTS.md, TASK.md and INPUT.md. Carry out the task and preserve actual evidence.']
 
 def snapshot_outputs(workspace:Path,out:Path)->dict:
     """Freeze selected public output bytes; never collect a profile or font files."""
     allowed={'.html','.css','.scss','.sass','.less','.js','.jsx','.mjs','.cjs','.ts','.tsx','.mts','.cts','.vue','.svelte','.json',
              '.md','.txt','.svg','.png','.jpg','.jpeg','.webp','.webm','.mp4','.csv',
-             '.yml','.yaml','.toml','.py','.mdx','.tid','.lock'}
+             '.yml','.yaml','.toml','.py','.mdx','.tid','.lock',
+             '.multids','.files','.info','.meta','.sh','.rs','.ico','.icns','.webmanifest','.conf','.jsonl'}
+    build_names={'Dockerfile','Makefile','.babelrc','.browserslistrc','.dockerignore','.eslintignore','.gitignore','.gitattributes'}
     excluded_types={'.woff','.woff2','.ttf','.otf','.ttc','.eot','.pem','.key','.p12','.pfx'}
     records={};excluded=[];total=0
     archive=out/'product-output.zip'
@@ -238,7 +263,7 @@ def snapshot_outputs(workspace:Path,out:Path)->dict:
                 legal_name=p.name.upper()
                 is_legal=any(legal_name==name or legal_name.startswith(name+'-') or legal_name.startswith(name+'.')
                              for name in ('LICENSE','LICENCE','COPYING','NOTICE','AUTHORS','COPYRIGHT','PATENTS'))
-                if p.name.startswith('.env') or p.name in {'auth.json','credentials.json','id_rsa','id_ed25519'} or p.suffix.lower() in excluded_types or not (p.suffix in allowed or is_legal):
+                if p.name.startswith('.env') or p.name in {'auth.json','credentials.json','id_rsa','id_ed25519'} or p.suffix.lower() in excluded_types or not (p.suffix in allowed or is_legal or p.name in build_names):
                     excluded.append({'path':rel.as_posix(),'reason':'unsupported or private-sensitive type'});continue
                 if p.stat().st_size>32*1024*1024 or total+p.stat().st_size>256*1024*1024:
                     excluded.append({'path':rel.as_posix(),'reason':'archive size boundary'});continue
@@ -322,6 +347,9 @@ def run(*,study:Path,cell_id:str,home:Path|None=None,inherit_profile:bool=False,
     rows=[r for r in registration['cells'] if r['id']==cell_id]
     if len(rows)!=1:raise StudyError('Unknown or duplicate registered cell')
     row=rows[0];workspace=study/'cells'/cell_id/'workspace'
+    transport=row.get('transport','exec');profile_mode='inherited' if inherit_profile else 'provisioned'
+    if row.get('profile_mode',profile_mode)!=profile_mode:raise StudyError('Execution profile differs from frozen profile_mode')
+    if transport=='app-server' and not inherit_profile:raise StudyError('app-server must keep the existing inherited authentication profile')
     if describe(public_files_including_methods(workspace))!=row['workspace_files']:
         raise StudyError('Frozen workspace changed; create a new registered attempt rather than overwriting evidence')
     executable=shutil.which(str(codex_executable) if codex_executable is not None else 'codex')
@@ -330,10 +358,15 @@ def run(*,study:Path,cell_id:str,home:Path|None=None,inherit_profile:bool=False,
             'thread_id':None,'registration_sha256':sha((study/'registration.json').read_bytes()),
             'ui_quality':'not_evaluated','subagent_use':'not_verified','created_at':now(),
             'network_access':row.get('network_access',False),
+            'transport':transport,'profile_mode':profile_mode,'session_persistence':row.get('session_persistence','ephemeral'),
             'input_workspace_identity':sha(json.dumps(row['workspace_files'],sort_keys=True).encode())}
     if not executable:
         report['status']='blocked_not_run';report['reason']='codex executable not available';return report
     report['profile']=inherited_profile_preflight() if inherit_profile else profile_preflight(home)
+    if transport=='app-server':
+        report['profile'].update(mode='inherited_profile_user_config_loaded',
+            other_global_instruction_contamination='app-server loads existing user configuration with recorded process-scoped overrides; no empty-profile claim',
+            persistence=row.get('session_persistence','ephemeral'))
     version=subprocess.run([executable,'--version'],capture_output=True,text=True,timeout=15,check=False)
     if version.returncode:raise StudyError('Codex version probe failed')
     report['codex_version']=version.stdout.strip()
@@ -351,6 +384,32 @@ def run(*,study:Path,cell_id:str,home:Path|None=None,inherit_profile:bool=False,
     if inherit_profile:runtime_dir.mkdir()
     cmd=command(executable,row,workspace,inherit_profile=inherit_profile,runtime_dir=runtime_dir)
     report['command']=cmd;report['started_at']=now()
+    if transport=='app-server':
+        with ExitStack() as cleanup:
+            backend=appserver_backend()
+            result=backend.execute(command=cmd,row=row,workspace=workspace,out=out/'appserver',env=env,
+                stop_process=stop_owned_process,
+                prompt='Read AGENTS.md, TASK.md and INPUT.md. Carry out the task and preserve actual evidence.',
+                identity={key:report[key] for key in ('cell_id','registration_sha256','input_workspace_identity','task_sha256')},
+                on_cancel=lambda:cleanup.enter_context(defer_interrupt_during_cleanup()))
+            report.update(result);report['ended_at']=now()
+            report['actual_independent_agent_runs']=1 if report['status']=='process_completed' else 0
+            report['subagent_use']='native_metadata_and_tool_events' if report['status']=='process_completed' else 'not_verified'
+            wire=out/'appserver/wire.jsonl'
+            if not wire.exists():wire.write_bytes(b'')
+            report['events']={'path':wire.relative_to(study).as_posix(),'sha256':sha(wire.read_bytes()),
+                              'format':'codex-app-server-jsonrpc','derived':False,
+                              'retention':'selected original standard wire lines; reasoning omissions indexed separately'}
+            for key,name in [('appserver_evidence','evidence-manifest.json'),('stderr','stderr.log')]:
+                p=out/'appserver'/name
+                report[key]={'path':p.relative_to(study).as_posix(),'sha256':sha(p.read_bytes())}
+            report['execution_audit']=None;report['product_evidence_index']=None
+            report['boundary']='Native execution and role/tool identity evidence only. Independent audit must evaluate research participation, actual visual observation, product quality and scope. Model metadata distinguishes configured, creation-resolved and unknown per-response identity.'
+            try:report['output_snapshot']=snapshot_outputs(workspace,out)
+            except (OSError,ValueError) as exc:report['output_snapshot']={'status':'capture_failed','error':str(exc)}
+            write_json(out/'run.json',report)
+            if result['interrupted']:raise KeyboardInterrupt
+        return report
     begin=time.monotonic();timed_out=False;interrupted=False
     with ExitStack() as cleanup:
         with (out/'events.jsonl').open('wb') as stdout,(out/'stderr.log').open('wb') as stderr:
@@ -404,7 +463,7 @@ def main()->int:
     p=sub.add_parser('run');p.add_argument('--study',type=Path,required=True);p.add_argument('--cell',required=True)
     profile=p.add_mutually_exclusive_group(required=True)
     profile.add_argument('--codex-home',type=Path)
-    profile.add_argument('--inherit-profile',action='store_true',help='Keep the existing environment unchanged, ignore user config, record inherited-profile limitations')
+    profile.add_argument('--inherit-profile',action='store_true',help='Keep the existing environment unchanged; exec ignores user config, app-server records loaded-user-config limitations')
     p.add_argument('--codex-executable',type=Path,help='Use an explicitly located Codex binary; defaults to the PATH lookup')
     p.add_argument('--execute',action='store_true');p.add_argument('--acknowledge-cost',action='store_true')
     args=parser.parse_args()
