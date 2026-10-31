@@ -1,14 +1,35 @@
 {
   "status": "blocked_not_run",
+  "scope": "Fresh reproducible independent campaign in this continuation; not a claim that no historical Agent activity ever occurred.",
   "independent_agent_runs": 0,
   "actual_ui_comparisons": 0,
   "model_comparisons": 0,
-  "reasons": [
-    "No local authenticated Codex runner exposed",
-    "ACS connector exposes reading, not execution or delegation",
-    "GitHub has some branch/file/PR write actions; complete release pipeline not run or verified",
-    "No authenticated independent Agent runner with verified GUI/tool inheritance available"
+  "historical_trace_only_cells": 4,
+  "historical_trace_metadata_events": 19106,
+  "complete_historical_campaign_available": false,
+  "current_record": "docs/experiments/adaptive-research/RESUMPTION-20261101.md",
+  "current_blockers": [
+    "Local source-processing environment has no Codex executable.",
+    "No matching ACS execution capacity was observed; no native invocation was accepted.",
+    "Codex connector explicitly requires a cloud environment for this repository before the task can start.",
+    "Retained historical trace metadata lacks full raw executions, products and visual evidence needed for acceptance."
   ],
-  "static_tests_are_agent_experiments": false,
-  "historical_evidence_reused_as_current_results": false
+  "engineering_source_commit": "541766cf6fdc8ec19e5ad5c3c952024d11c444f5",
+  "local_clean_unit_tests": 442,
+  "hosted_ci_run_id": 41217065594,
+  "release_decision": "pending",
+  "initial_development_report_preserved": {
+    "status": "blocked_not_run",
+    "independent_agent_runs": 0,
+    "actual_ui_comparisons": 0,
+    "model_comparisons": 0,
+    "reasons": [
+      "No local authenticated Codex runner exposed",
+      "ACS connector exposes reading, not execution or delegation",
+      "GitHub has some branch/file/PR write actions; complete release pipeline not run or verified",
+      "No authenticated independent Agent runner with verified GUI/tool inheritance available"
+    ],
+    "static_tests_are_agent_experiments": false,
+    "historical_evidence_reused_as_current_results": false
+  }
 }

@@ -1,5 +1,15 @@
 # v1.20.0 candidate review
 
+## 2026-11-01 continuation
+
+The initial environment report below is retained as a historical snapshot. Source
+integration and engineering checks have since progressed; current evidence and
+the still-blocked independent execution are described in
+[the continuation record](experiments/adaptive-research/RESUMPTION-20261101.md).
+This does not approve the release or claim a completed visual comparison.
+
+## Initial development-candidate snapshot (historical)
+
 Baseline: v1.19.0, commit `05d0286b0b27e8e57d5751d5cf649c8800408001`.
 
 Runtime changes add main-agent responsibility, natural complete inquiries, professional curation, pivotal main-agent viewing, scoped integration, isolated GUI evidence and feedback at their existing responsible references. Existing professional paragraphs, the eight-reference contract, neutral helpers/JSON and W1–W3 remain. The updater generates an inverse ledger from actual baseline bytes; no historical evidence is rewritten.
