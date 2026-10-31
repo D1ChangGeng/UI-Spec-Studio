@@ -47,5 +47,23 @@
       "fallback_reads": "The two connected ACS filesystems did not expose the known scratch paths."
     }
   ],
-  "boundary": "This status is a derived checkpoint. Local original archives and media remain unuploaded and inaccessible while the execution environment is unavailable."
+  "boundary": "This status is a derived checkpoint. Local original archives and media remain unuploaded and inaccessible while the execution environment is unavailable.",
+  "cloud_preflight_20261101": {
+    "source_commit": "f34201d9ef119e86d8f2d60e759daae6600fccd4",
+    "candidate_identity": "6aeba48963d8b72cf1906cb9e8b4500eeb4d9934daa5e7c5b575d867a5e177bc",
+    "status": "blocked_by_proxy_policy_and_missing_starters",
+    "formal_cells_executed": 0,
+    "native_smoke_status": "timed_out",
+    "native_smoke_seconds": 90.035,
+    "native_specialist_verified": false,
+    "browser_fixture_checks": 18,
+    "unit_tests_passed": 489,
+    "historical_raw_archive_recovered": false,
+    "evidence": "docs/evidence/v1.20.0/cloud-preflight-20261101/index.json",
+    "network_draft_saved": [
+      "chatgpt.com",
+      "api.github.com"
+    ],
+    "network_draft_applied": false
+  }
 }

@@ -80,3 +80,18 @@ Four-role model defaults remain inherited. `gpt-5.6-luna` exposed the tested v1 
 Remaining work is to restore an approved native route, recover/persist the original archives, verify actual screenshot/view and cross-tool/child preview use, freeze and execute the full matrix, independently inspect products and the research-to-design chain, repair demonstrated weaknesses and complete exact final-candidate acceptance. Only supported evidence can approve the release.
 
 **PR #4 remains draft. No merge, v1.20.0 tag, formal Release or release-asset installation has been completed.** The verified published release is still [v1.19.0](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.19.0).
+
+
+## Codex Cloud continuation — 2026-11-01 JST
+
+Continued PR #4 at `f34201d9ef119e86d8f2d60e759daae6600fccd4` without replacing the committed repairs. The exact method fingerprint remains `6aeba48963d8b72cf1906cb9e8b4500eeb4d9934daa5e7c5b575d867a5e177bc`.
+
+New evidence: [preflight index](../../evidence/v1.20.0/cloud-preflight-20261101/index.json). Codex CLI 0.163.0 authenticated-status check reported ChatGPT login. The real app-server initialized a fresh ephemeral parent with workspace-write/on-request/auto_review. Its model connection to `wss://chatgpt.com/backend-api/codex/responses` received proxy CONNECT 403; the bounded probe timed out after 90.035 seconds. Zero native children or completed model turns were observed. Parent `agentRole: null` does not establish generic-child binding. Four roles were explicitly installed in the separate smoke project, but professional role selection, alternate model availability and child live-browser access remain unverified. This failure is not a formal experimental cell.
+
+A separate generic audit child actually read protocol/runtime files and viewed the same screenshot as the main thread. It is not a selected `ui_researcher`, a controlled intervention, or blinded acceptance. The real existing product-intent fixture completed 18 checks, 28 captures and actual storage verification using system Chromium; the main thread viewed the retained 390px light-theme capture. Other captures remain unreviewed here; natural-time motion quality was not accepted. This repository fixture does not substitute for missing T1–T4 starters.
+
+All 489 unit tests passed on Python 3.12.14. Package/artwork/catalog checks passed; three candidate ZIPs were built and all four listed artifact digests matched SHA256SUMS. Release gate remains exit 2, as required. No current Windows CI run, new 18-cell campaign, independent matched product review or release approval is claimed.
+
+`/workspace/scratch` is empty; the historical recovery archive and prepared starters were not recovered. Git fetch verified the branch and pull refs at the same head and found no v1.20.0 tag. GitHub API access returned Forbidden, so live PR draft/merge status and API write access remain unverified. Existing GitHub CLI token failure alone is not interpreted as absence of Git proxy access.
+
+A supported network draft now adds only `chatgpt.com` and `api.github.com`, preserving the package-manager preset. The save does not apply that policy or publish the environment. Apply the saved network changes in environment settings, recheck native model/API access, then retry with a new attempt directory. Do not reuse or overwrite attempt-01. No credentials were copied, no approval was forged and no release gate was relaxed. Runtime/profile/stderr files are deliberately excluded from public evidence; full local private diagnostics remain under `/workspace/v120-cloud`. The retained public index covers the exact promoted bytes.

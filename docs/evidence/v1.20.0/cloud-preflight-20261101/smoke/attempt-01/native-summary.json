@@ -1,0 +1,88 @@
+{
+  "thread_id": "01a19352-20c0-7022-b058-2feef4207af2",
+  "child_thread_ids": [],
+  "actual_auxiliary_agent_count": 0,
+  "completed_turns": 0,
+  "native_roles": {},
+  "native_metadata": {
+    "01a19352-20c0-7022-b058-2feef4207af2": {
+      "id": "01a19352-20c0-7022-b058-2feef4207af2",
+      "environments": [
+        {
+          "environmentId": "local",
+          "cwd": "/workspace/v120-cloud/smoke/project",
+          "runtimeWorkspaceRoots": [
+            "/workspace/v120-cloud/smoke/project"
+          ]
+        }
+      ],
+      "extra": null,
+      "sessionId": "01a19352-20c0-7022-b058-2feef4207af2",
+      "forkedFromId": null,
+      "parentThreadId": null,
+      "preview": "",
+      "ephemeral": true,
+      "section": null,
+      "sectionEnteredAt": null,
+      "projectId": null,
+      "historyMode": "paginated",
+      "modelProvider": "openai",
+      "model": "gpt-6.1-sol",
+      "reasoningEffort": "medium",
+      "createdAt": 1793472998,
+      "updatedAt": 1793472998,
+      "recencyAt": 1793472998,
+      "status": {
+        "type": "idle"
+      },
+      "path": null,
+      "cwd": "/workspace/v120-cloud/smoke/project",
+      "cliVersion": "0.163.0",
+      "originator": "ui_spec_study",
+      "source": "vscode",
+      "canAcceptDirectInput": true,
+      "threadSource": null,
+      "agentNickname": null,
+      "agentRole": null,
+      "gitInfo": null,
+      "name": null,
+      "daybreakEnabled": null,
+      "turns": []
+    }
+  },
+  "native_usage_by_thread": {},
+  "native_model_metadata": {
+    "01a19352-20c0-7022-b058-2feef4207af2": {
+      "configured": "gpt-6.1-sol",
+      "resolved_at_creation": null,
+      "per_response_model": null
+    }
+  },
+  "tool_items": [],
+  "evidence_errors": [
+    "Command 'app-server response' timed out after 31.884984659999645 seconds",
+    "missing or invalid native token usage",
+    "parent or child turn failed, was interrupted, or has no terminal completion",
+    "required specialist intervention or native role binding is missing",
+    "started parent or child turn is unfinished",
+    "started parent turn has no native completion"
+  ],
+  "status": "timed_out",
+  "interrupted": false,
+  "returncode": 0,
+  "elapsed_seconds": 90.035,
+  "process_cleanup": {
+    "direct_child_reaped": true,
+    "returncode": 0
+  },
+  "failure_events": 6,
+  "malformed_lines": 0,
+  "reported_usage": [
+    null
+  ],
+  "total_subagent_usage": null,
+  "native_cost_by_thread": {},
+  "native_total_cost_usd": null,
+  "usage_boundary": "Native per-thread totals are retained separately; no inferred child-cost sum or token-to-dollar estimate.",
+  "history_capture": "live_only_no_pagination"
+}
