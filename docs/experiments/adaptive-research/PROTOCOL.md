@@ -4,6 +4,15 @@
 
 This protocol defines the evidence required for the current candidate. Historical runs and runtime smokes must be reported separately from an exact-candidate registered campaign; their existence does not establish current UI-quality acceptance or a model ranking. See `RESULTS.md` for the execution and review status. The runner's unit tests use explicit process/event test doubles and are not study participants.
 
+The native campaign below remains unchanged. The repository owner has separately
+authorized the closest feasible substitute using actual independent agents in
+the current ChatGPT session when native Codex Cloud execution is unavailable.
+That route uses [its own frozen plan and schema-v2 evidence](SESSION-SIMULATION.md)
+and can support only a limited release. Role instructions are simulated in real
+agent contexts; their use never establishes native role binding or resolved model
+identity. Preserve the original campaign's unexecuted cells and failed attempts.
+The authorization must be retained with its exact source and publication scope.
+
 ## Freeze before dispatch
 
 Use a clean exact baseline worktree at `05d0286b0b27e8e57d5751d5cf649c8800408001` and a separate applied candidate worktree. Use four real, runnable starter applications under `starters/T1` through `T4`; each has `app/` and `INPUT.md`. Freeze product intent, allowed modifications, authoritative behavior, source revisions/rights, preview commands and equivalent content/themes/locales/viewports. T4 also needs a complete `INTEGRATION-DECISION.md`. Use permitted open or user-owned sources. Do not invent this decision merely to make preparation pass.

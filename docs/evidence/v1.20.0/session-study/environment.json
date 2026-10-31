@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-31T19:49:10.082812+00:00",
+  "host": "Current ChatGPT Work independent collaboration agents and shared executor; not native Codex Cloud/app-server",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "node": "v24.22.1",
+  "agent_interface": "collaboration.spawn_agent with fork_turns=none; canonical task names are actual returned agent identities",
+  "model_policy": "Main and ordinary child requests inherit the session defaults. Only D requests gpt-6.1-terra. Resolved backend model/effort, usage and billing are not exposed.",
+  "tool_profile": "session-tools-2026-11-01-with-pinned-chromium",
+  "research_tools": "Public web search/open, GitHub connector, authorized public source CLI downloads, dedicated local app subprocess tests, view_image",
+  "browser": "Chromium headless 143.0.7499.4; Playwright Python 1.57.0; exact binary/provenance report retained",
+  "browser_contexts": "Fresh dedicated context per capture/check; no native Codex child or user browser access inferred",
+  "font": "Noto Sans CJK SC regular SHA256 2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b; FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf",
+  "font_source": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+  "preflight": "Existing authored scenario produced 28 captures and 18 passed assertions. Actual viewing found missing CJK font; corrected before registration. Preflight is not a comparative participant.",
+  "limitations": [
+    "Shared filesystem/host and system/tool catalog, with instructed disjoint workspaces rather than OS isolation.",
+    "Role instructions are read in independent ordinary agents; no native agentRole binding is available or claimed.",
+    "Connected browser cannot reach executor localhost; actual app tests use pinned dedicated subprocess browser.",
+    "Full hidden session stream/reasoning is not available or exported. Retained original subprocess bytes and captured tool responses are the actual available raw evidence; faithful coordination exports are labeled.",
+    "Single execution per cell supports bounded findings, not population-wide effectiveness or model rankings.",
+    "Network state can drift; retain errors and source revisions.",
+    "Known older raw historical evidence remains unuploaded; current evidence does not reconstruct it."
+  ]
+}

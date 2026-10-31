@@ -84,6 +84,13 @@ def require_release_evidence(root:Path=ROOT)->dict:
         decision=json.loads(path_at(root,DECISION).read_bytes())
     except (ValueError,UnicodeError) as exc:
         raise EvidenceError('No readable release decision') from exc
+    if isinstance(decision,dict) and decision.get('schema_version')==2:
+        # The owner-authorized session route has a separate schema and claim
+        # boundary. Keep the original native evidence checks below unchanged.
+        spec=importlib.util.spec_from_file_location('adaptive_release_session',Path(__file__).with_name('session_simulation_evidence.py'))
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        return module.require_session_evidence(root,decision,artifact=artifact,
+            candidate_identity=candidate_identity,error_type=EvidenceError,baseline=BASE)
     if not isinstance(decision,dict) or decision.get('schema_version')!=1:
         raise EvidenceError('Unknown release-decision format')
     if decision.get('decision') not in ('approve','approve_limited'):

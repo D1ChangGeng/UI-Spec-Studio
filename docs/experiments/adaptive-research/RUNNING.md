@@ -2,6 +2,13 @@
 
 The scripts do not perform any work until invoked. They do not provide model credentials or a graphical environment. Preserve the original baseline and candidate in separate worktrees. Follow PROTOCOL.md before using real account credits.
 
+For the owner's authorized session substitute, follow
+[SESSION-SIMULATION.md](SESSION-SIMULATION.md) instead of invoking this native
+runner. Its schema-v2 records retain genuine collaboration calls and task tool
+outputs, with explicit export provenance. Do not convert them into native events
+or set the native runner's simulation flag to false. The original schema-v1
+publication path and its runtime checks continue to apply to native claims.
+
 Prepare four real starter directories as described in the protocol; T4 needs a settled mature-resource decision. Edit `plan.example.json` into a separate plan using models actually available to the experiment account, matched budgets and a registered order. Do not use model aliases unsupported by the host.
 
 Set each cell's `network_access` to a real boolean. It defaults to `false`; authorized public-source research can set it to `true`, which is passed explicitly as `sandbox_workspace_write.network_access` while retaining the workspace sandbox. Match it across paired conditions and verify actual connectivity before freezing the campaign. Network permission does not supply credentials, authorize account changes or establish that a resource is reachable.
