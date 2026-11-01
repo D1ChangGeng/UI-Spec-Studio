@@ -1,8 +1,16 @@
-# Optional Codex adapter — v1.20.0
+# Optional Codex adapter — v1.20.1
+
+The recommended **unified installer** installs the portable Skill and this native adapter in one invocation without cloning the GitHub source repository:
+
+```bash
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex
+```
+
+The instructions below are the independent manual adapter path for advanced consumers.
 
 This is an optional host adapter, not a replacement for `ui-spec`. Install the complete Skill first through your established Skills workflow. The main agent and substantive specialist work retain its eight-reference reading contract. Models and permissions come from the actual host; a role file cannot create a sandbox, a browser, a login or a separate desktop.
 
-The release build includes `ui-spec-codex-1.20.0.zip` as a separate asset, with its digest in `SHA256SUMS.txt`. Extract its `ui-spec-codex/` directory and run `python install.py install --project /path/to/product` from that directory. It includes the installer, launcher, doctor, four role files, model guidance and license. The complete Skill is distributed separately as `ui-spec-1.20.0.zip`.
+The release build includes `ui-spec-codex-1.20.1.zip` as a separate asset, with its digest in `SHA256SUMS.txt`. Extract its `ui-spec-codex/` directory and run `python install.py install --project /path/to/product` from that directory. It includes the installer, launcher, doctor, four role files, model guidance and license. The complete Skill is distributed separately as `ui-spec-1.20.1.zip`.
 
 ## Install without overwriting personal work
 
