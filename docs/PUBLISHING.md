@@ -1,8 +1,10 @@
 # Versioned release procedure
 
-The distribution source is `D1ChangGeng/UI-Spec-Studio`. The standard Skills CLI
-installs its skill directory directly from GitHub. The project requires no separate
-npm package publication.
+The distribution source is `D1ChangGeng/UI-Spec-Studio`. Consumer installation
+uses the fixed-name `ui-spec-installer.tgz` release asset rather than cloning the
+entire GitHub repository. This self-contained, dependency-free npm executable
+bundles the portable Skill and the supported native Harness adapters. It requires
+no npm registry account or separate npm package publication.
 
 ## Prepare the version
 
@@ -17,8 +19,10 @@ python -m unittest discover -s tests -v
 python tools/package.py
 ```
 
-The build produces a full source ZIP, standalone skill ZIP, per-file content
-inventory and SHA-256 checksums in `dist/`. ZIP entries use fixed timestamps,
+The build produces a full source ZIP, standalone skill ZIP, Codex adapter ZIP,
+portable npm installer tarball, per-file inventory and SHA-256 checksums in `dist/`.
+The installer tarball uses sorted fixed-metadata gzip/tar entries with an internal
+SHA-256 file manifest. ZIP entries use fixed timestamps,
 permissions, order and stored bytes; `.gitattributes` keeps source line endings
 consistent across platforms.
 
@@ -82,8 +86,8 @@ existing release before retrying.
 ## Verify what users receive
 
 ```bash
-npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.17.0 --skill ui-spec
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.1/ui-spec-installer.tgz install --agent codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.1/ui-spec-1.20.1.zip --skill ui-spec -a codex
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
