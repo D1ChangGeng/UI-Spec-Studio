@@ -1,0 +1,93 @@
+# CHILD-01 — composer, attachments and reading continuity
+
+## Recommendation for the parent
+
+Keep the assistant-ui cloud-template visual and runtime foundation. The evidence supports a focused composition using its existing named `File.Root/Icon/Name` family, independent remove action, and existing Dialog for the complete filename. Treat a cap on composer growth as a source-supported adaptation that must be checked against the actual short-height reading viewport. Preserve assistant-ui's existing scroll owner and return-to-latest mechanism.
+
+This is a research recommendation, not a final product design or acceptance. I did not edit product code.
+
+## Decisive comparisons
+
+| Candidate/reference | Evidence actually obtained | Consequence for Meridian |
+|---|---|---|
+| **AI Elements Attachments, original public demo** at https://elements.ai-sdk.dev/components/attachments | Actually rendered and viewed at 1280×900, light. The inline example displays four named attachments across two compact rows, with file-type icons alongside names. The list example displays larger full-width rows with filename, MIME type and an independent remove control. | Persistent names support recognition among several files without requiring a hover. Inline density fits a composer better than the taller list rows. The current assistant-ui File family can carry that relationship without importing a new visual system. |
+| **Vercel complete chatbot**, pinned source `c2f8235e1f3ea903ad8b7f61447c4f74164b5c58` | Source and license acquired. The actual `PreviewAttachment` is a materially different 96×96 image tile; non-image files display the generic word “File.” Remove appears on group hover. The attachment strip uses horizontal overflow. The shared `PromptInputTextarea` has `field-sizing-content max-h-48 min-h-16`. Its independent scroll hook follows growth only while at bottom and not in a user-scrolling interval. | A wholesale substitution would worsen filename recognition for this filename-only task. Its bounded textarea and explicit follow/leave/return state support retaining the current runtime with a bounded composer. The source does not justify transferring its exact 100px bottom threshold or timing values without a local trial. |
+| **ChatGPT, signed-out desktop entry**, https://chatgpt.com | Actually operated and viewed: empty/single-line entry → six-line draft → one-line draft, at 1280×900, light. No message was submitted. The composer changes from a compact single line with side actions into a taller text region with a bottom action row; restoring one line restores the compact arrangement. | The important relationship is that text growth moves actions into their own row while keeping the outer composer width stable. This is reference-only evidence; no reusable product implementation or streaming behavior is established. |
+| **Claude** | Official upload help accessible; fresh browser access redirects to a login surface. | Retain as documented task reference only. It does not establish attachment geometry or streaming scroll behavior. |
+
+### Viewed spatial detail
+
+The AI Elements inline preview is compact enough to expose four distinct filenames in approximately two text rows. This is a materially different information treatment from anonymous square tiles. The list variant gives each file substantially more height (about 74px in the viewed example) for an image/icon, name, MIME type and removal. The list's information density is useful for a management view; carrying that height into a short conversation composer would reduce reading space.
+
+The signed-out ChatGPT episode is an **entry-page** observation. Its surrounding heading shifts upward as the composer expands. It should not be used to justify movement of the reading surface in an active conversation. Measured textarea bounds were 618×24 initially, 726×160 with six lines, and 618×24 on return; the extra internal width comes from moving actions to their own row. Screenshots were acquired sequentially and actually opened. They establish these sampled states, not natural-time animation smoothness.
+
+## Source and adoption trace
+
+### Existing foundation recommended for the current change
+
+- Supplied assistant-ui revision: `ff654d8156680b839774296ef644b57ab1078425`, MIT, as recorded in INPUT.md/SOURCE-MANIFEST.json.
+- Relevant supplied implementation: `app/src/components/assistant-ui/elements/file.tsx`, with the existing attachment primitives and source Dialog.
+- The parent owns the final composition and must inspect full-filename keyboard/touch disclosure, independent remove, composer growth, reading-space reduction and scroll-away/return together.
+- Because this inquiry did not verify the parent's new integrated result, it makes no craft-retention or completed-quality claim about that trial.
+
+### Independent adoptable implementation actually acquired
+
+Repository: https://github.com/vercel/chatbot
+
+Exact revision: `c2f8235e1f3ea903ad8b7f61447c4f74164b5c58`.
+
+License: **Apache License 2.0**, copyright 2024 Vercel, Inc. The exact retrieved LICENSE is retained. Do not classify this candidate as MIT.
+
+Exact implementation paths:
+
+- `components/chat/multimodal-input.tsx`
+- `components/chat/preview-attachment.tsx`
+- `components/ai-elements/prompt-input.tsx`
+- `hooks/use-scroll-to-bottom.tsx`
+
+Acquisition route: pinned GitHub raw URLs, retained verbatim below. This is adoptable source with license obligations; I recommend it as a comparison and do **not** recommend importing the image-tile attachment treatment for Meridian.
+
+The AI Elements demo's source link points to https://github.com/vercel/ai-elements and `apps/docs/content/components/(chatbot)/attachments.mdx`. The demo and the pinned Vercel chatbot are distinct sources. No exact AI Elements commit/license acquisition was completed, so the viewed demo is **not** represented as a fully traced new adoption item. Its documentation also announces a move to shadcn/ui and deprecation at the end of November 2026; preserve this maintenance uncertainty if considering that family.
+
+## Evidence index
+
+All paths are relative to this work package.
+
+### High-value viewed images
+
+- `evidence/research/child-01/elements04-inline.png` — actual independent named-badge composition.
+- `evidence/research/child-01/elements04-list.png` — actual independent file-row composition.
+- `evidence/research/child-01/view03.json`, `view04.json` — exact image-view tool responses; both images were opened.
+- `evidence/research/child-01/chatgpt.png`, `chatgpt-six.png`, `chatgpt-return.png` — ordered mature-product composer episode.
+- `evidence/research/child-01/view02.json`, `w08-child01-chatgpt.png.json`, `w08-child01-chatgpt-return.png.json` — exact image-view responses; all three images were opened.
+- `evidence/research/child-01/chatgpt-run.json` — interaction result and actual bounds, not inferred from screenshots.
+
+### Exact network/source responses
+
+- `evidence/research/child-01/search01.json` — original search tool arguments/result.
+- `evidence/research/child-01/vercel-head.body`, `vercel-head.json` — commit response/body and HTTP metadata.
+- `evidence/research/child-01/vercel-license.body`, `vercel-license.json` — license response/body and HTTP metadata.
+- `evidence/research/child-01/network02/source-prompt-input.body`
+- `evidence/research/child-01/network02/source-scroll.body`
+- `evidence/research/child-01/network04/vercel-multimodal.body`
+- `evidence/research/child-01/network04/vercel-attachment.body`
+- Each source body has an adjacent JSON containing exact requested URL, returned URL/status and headers.
+- `network02/`, `network03/`, `network04/` retain actual browser resource responses and HTTP metadata.
+- `command01/` through `command04/` retain command stdout/stderr, arguments, timestamps, status and elapsed time.
+- `guidance01/`, `guidance02/` retain current web-guidance search and full retrieval for `form-fields-automatically-fit-contents`. It supports stable width and min/max size limits; this is technical guidance, not a replacement visual source.
+
+## Access and claim limits
+
+- Direct Chromium HTTPS initially failed with ERR_CERT_AUTHORITY_INVALID. The second route used Playwright interception backed by Python urllib's normal verified TLS/proxy transport. Original response bytes and metadata were saved before fulfillment; TLS verification was not disabled.
+- `https://chat.vercel.ai` returned 404 DEPLOYMENT_NOT_FOUND. No live template behavior was observed.
+- `https://ai-sdk.dev/elements/components/attachments` returned page HTML but its CSS/JS assets returned 404; the viewed unstyled image is retained as a failed render, not design evidence. The original `elements.ai-sdk.dev` host subsequently rendered successfully.
+- Both prompt-kit host variants returned 403. Its repository metadata was acquired, but no valid source-demo observation or completed license trace was obtained; it is not recommended as an adoption route.
+- Claude login blocked its conversation surface. ChatGPT explicitly gated uploads behind login. No login or account action was attempted.
+- Streaming cancellation, scroll-away and return during a live answer were **not observed in an external product**. The Vercel hook provides source evidence; the parent's local controlled assistant-ui episodes remain necessary for actual behavior and integrated visual claims.
+- The AI Elements page's off-canvas Ask AI textarea was automatically detected by the generic script. Its recorded bounds are outside the viewport and are not evidence about the attachment demo's composer. Do not use `elements04-six.png` or those bounds as a source composer-growth observation.
+- Native role binding, resolved backend identity, total tokens and billed cost are unknown.
+
+## What could change the recommendation
+
+A local trial could show that named chips still obscure distinguishing suffixes, that more attachments consume too much short-height reading space, or that Dialog focus return disrupts editing. Test long mixed-language filenames, several attachments, six-line/long drafts, keyboard opening/removal and manual scroll-away during growth at 1280×600. Keep full filename disclosure deliberate and reachable; do not claim a hover hint alone resolves keyboard/touch disclosure.
+

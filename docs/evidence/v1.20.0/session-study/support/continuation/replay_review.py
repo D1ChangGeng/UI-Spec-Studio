@@ -6,6 +6,7 @@ import hashlib
 import json
 from replay_snapshot import safe, extract
 from large_archives import restore_large_files
+from review_snapshot_io import read_snapshot
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -20,7 +21,7 @@ def main():
     chain = []
     path = safe(repo, args.snapshot)
     while True:
-        data = json.loads(path.read_text())
+        data = read_snapshot(path)
         chain.append((path.parent, data))
         reference = data.get("previous_snapshot")
         if reference is None:

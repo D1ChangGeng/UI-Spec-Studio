@@ -9,9 +9,9 @@ context pressure and a human acceptance panel remain unverified.
 
 ## Execution inventory
 
-Observed 2026-11-01T09:40:03.631090+00:00. **11 of 18** registered cells have retained completed evidence records, with **6** completed child contexts. Execution coverage is distinct from product success and release approval.
+Observed 2026-11-01T10:04:40.880949+00:00. **13 of 18** registered cells have retained completed evidence records, with **8** completed child contexts. Execution coverage is distinct from product success and release approval.
 
-The fresh independent reviewer froze eight anonymous judgments at 2026-11-01T09:28:24.318286+00:00. All 36,538 retained review workspace files reconstructed byte for byte; 26 actual views of original product PNGs map to the frozen products, with additional source/interaction views retained separately. Three comparator revisions remain. No G disclosure or final release acceptance has occurred; remaining anonymous cohorts are pending.
+Fresh blind cohort 01 is frozen for eight products with complete reconstructed originals. Cohort 02 is actively reviewing P04, P05, P08, P12 and P17 through original image viewing and core interactions. Initial additional comparator focus-continuity findings remain unresolved; no condition disclosure or final acceptance has occurred.
 
 | Cell | Condition | Retained status | Completed children |
 | --- | --- | --- | ---: |
@@ -22,19 +22,24 @@ The fresh independent reviewer froze eight anonymous judgments at 2026-11-01T09:
 | T2-A-r1 | A | [Completed record](runs/T2-A-r1/run.json) · [product](runs/T2-A-r1/FINAL.md) | 0 |
 | T2-B-r1 | B | [Completed record](runs/T2-B-r1/run.json) · [product](runs/T2-B-r1/FINAL.md) | 1 |
 | T2-C-r1 | C | [Completed record](runs/T2-C-r1/run.json) · [product](runs/T2-C-r1/FINAL.md) | 1 |
-| T2-G-final-runtime-r1 | G-final-runtime | Fresh execution active; terminal evidence not yet retained | Active |
+| T2-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T2-G-final-runtime-r1-public/run.json) · [product](runs/T2-G-final-runtime-r1-public/FINAL.md) | 1 |
 | T3-A-r1 | A | [Completed record](runs/T3-A-r1/run.json) · [product](runs/T3-A-r1/FINAL.md) | 0 |
 | T3-B-r1 | B | [Completed record](runs/T3-B-r1/run.json) · [product](runs/T3-B-r1/FINAL.md) | 1 |
-| T3-C-r1 | C | Frozen inputs restored; fresh complete evidence required | — |
+| T3-C-r1 | C | Fresh execution active; terminal evidence not yet retained | Active |
 | T3-G-final-runtime-r1 | G-final-runtime | Frozen inputs restored; fresh complete evidence required | — |
 | T2-D-r1 | D | Frozen inputs restored; fresh complete evidence required | — |
 | T2-E-challenger-r1 | E-challenger | Frozen inputs restored; fresh complete evidence required | — |
 | T2-E-observer-r1 | E-observer | Frozen inputs restored; fresh complete evidence required | — |
 | T4-F-main-r1 | F-main | [Completed record](runs/T4-F-main-r1/run.json) · [product](runs/T4-F-main-r1/FINAL.md) | 0 |
-| T4-F-integrator-r1 | F-integrator | Fresh execution active; terminal evidence not yet retained | Active |
+| T4-F-integrator-r1 | F-integrator | [Completed record](runs/T4-F-integrator-r1-recovery/run.json) · [product](runs/T4-F-integrator-r1-recovery/FINAL.md) | 1 |
 | T4-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T4-G-final-runtime-r1/run.json) · [product](runs/T4-G-final-runtime-r1/FINAL.md) | 0 |
 
 ## What is retained
+
+### T2-G privacy projection
+
+The T2-G final-runtime application, instructions, reports, original PNGs and actual image returns are unchanged. Its research captured session-bearing response/query values in 314 network files. The [explicit public projection](coordination/recovery-0830/T2-G-privacy-projection.json) identifies every changed original/public hash; the unchanged affected originals are delivered privately to the owner. [Complete original reconstruction](engineering/recovery-0830/T2-G-complete-originals-reconstruction.json) verifies all 1,931 original files. Follow the [reconstruction instructions](runs/T2-G-final-runtime-r1-public/RECONSTRUCTION.md); the public network projections are not labeled unmodified raw returns.
+
 
 - [Frozen registration](registration.json), exact dispatched primary prompts,
   original task/application/method/role input archives and [environment](environment.json).

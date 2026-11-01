@@ -5,6 +5,7 @@ if (!/^[a-z0-9-]+$/.test(LABEL)) throw Error('Invalid checkpoint label');
 const namespace='github_sync_'+LABEL;
 const files=MANIFEST.files;
 if(files.some(f=>f.path.includes('/provider-originals-audit-')))throw Error('Private recovery original must remain outside public delivery');
+if(files.some(f=>f.path.startsWith('docs/evidence/v1.20.0/session-study/runs/T2-G-final-runtime-r1/')))throw Error('Session-bearing original G run must remain private; use its explicitly declared public projection');
 let known={...(load('takeover_uploaded_objects')||{}),...(load('extra_uploaded_blobs')||{})};
 if(Array.isArray(known))known=Object.fromEntries(known.map(x=>[x,true]));
 const receipts=[];

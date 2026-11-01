@@ -50,7 +50,7 @@ Representative corroborating captures:
 
 ## Original evidence and reconstruction
 
-The [cohort snapshot](cohort-01/snapshot.json) identifies all 258 retained files, their SHA-256 values, exact available tool outputs, source scripts, command captures, screenshots and traces. Its archive reconstruction [passed](cohort-01/reconstruction-check-02/stdout.txt) for every original file. Disposable application copies are excluded because their unchanged frozen sources remain in the product snapshots; no browser profiles, credentials or hidden reasoning are included.
+The [cohort snapshot](cohort-01/snapshot.json) identifies all 258 retained files, their SHA-256 values, exact available tool outputs, source scripts, command captures, screenshots and traces. Its archive reconstruction [passed](cohort-01/reconstruction-check/stdout.txt) for every original file. Disposable application copies are excluded because their unchanged frozen sources remain in the product snapshots; no browser profiles, credentials or hidden reasoning are included.
 
 From the repository or extracted full source distribution:
 

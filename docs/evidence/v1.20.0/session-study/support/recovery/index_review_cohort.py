@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Link an actual anonymous review to frozen product images without judging it."""
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "continuation"))
+from review_snapshot_io import read_snapshot
 import argparse
 import base64
 import hashlib
@@ -21,7 +24,7 @@ def main():
     repo = args.repo.resolve()
     study = repo / 'docs/evidence/v1.20.0/session-study'
     snapshot_path = args.snapshot.resolve()
-    snapshot = json.loads(snapshot_path.read_text())
+    snapshot = read_snapshot(snapshot_path)
     source = Path(snapshot['source_workspace'])
 
     def read_ref(reference):

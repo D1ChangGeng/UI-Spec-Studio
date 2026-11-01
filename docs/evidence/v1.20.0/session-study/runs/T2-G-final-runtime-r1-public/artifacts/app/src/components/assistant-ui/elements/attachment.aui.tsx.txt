@@ -1,0 +1,294 @@
+"use client";
+
+import {
+  type PropsWithChildren,
+  useState,
+  type FC,
+  isValidElement,
+} from "react";
+import {
+  XIcon,
+  PlusIcon,
+  FileText,
+  Loader2Icon,
+  AlertCircleIcon,
+} from "lucide-react";
+import {
+  AttachmentPrimitive,
+  ComposerPrimitive,
+  MessagePrimitive,
+  useAuiState,
+} from "@assistant-ui/react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
+  Dialog,
+  DialogTitle,
+  DialogDescription,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { File } from "./file";
+import { returnToComposer } from "../utils/return-to-composer";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { TooltipIconButton } from "@/components/assistant-ui/elements/tooltip-icon-button";
+import { useAttachmentState } from "./attachment-state";
+import { cn } from "@/lib/utils";
+
+type AttachmentPreviewProps = {
+  src: string;
+  name: string;
+};
+
+const AttachmentPreview: FC<AttachmentPreviewProps> = ({ src, name }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  return (
+    <img
+      src={src}
+      alt={`Preview of ${name}`}
+      className={cn(
+        "block h-auto max-h-[80vh] w-auto max-w-full rounded-sm object-contain transition-opacity duration-300 motion-reduce:transition-none",
+        isLoaded
+          ? "aui-attachment-preview-image-loaded opacity-100"
+          : "aui-attachment-preview-image-loading opacity-0",
+      )}
+      onLoad={() => setIsLoaded(true)}
+    />
+  );
+};
+
+type AttachmentPreviewDialogProps = PropsWithChildren<{
+  src: string | undefined;
+  name: string;
+}>;
+
+const AttachmentPreviewDialog: FC<AttachmentPreviewDialogProps> = ({
+  children,
+  src,
+  name,
+}) => {
+  if (!src) return children;
+
+  return (
+    <Dialog>
+      <DialogTrigger
+        nativeButton={false}
+        className="aui-attachment-preview-trigger cursor-zoom-in"
+        render={
+          isValidElement(children) ? (
+            children
+          ) : (
+            <button type="button">{children}</button>
+          )
+        }
+      />
+      <DialogContent className="aui-attachment-preview-dialog-content [&>button]:bg-foreground/60 [&>button]:hover:bg-foreground/80 [&_svg]:text-background p-2 sm:max-w-3xl [&>button]:rounded-full [&>button]:p-1 [&>button]:opacity-100 [&>button]:ring-0!">
+        <DialogTitle className="aui-sr-only sr-only">
+          Preview {name}
+        </DialogTitle>
+        <div className="aui-attachment-preview bg-background relative mx-auto flex max-h-[80dvh] w-full items-center justify-center overflow-hidden rounded-sm">
+          <AttachmentPreview src={src} name={name} />
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+const AttachmentThumb: FC<{ src: string | undefined }> = ({ src }) => {
+  return (
+    <Avatar className="aui-attachment-tile-avatar h-full w-full rounded-none after:hidden">
+      <AvatarImage
+        src={src}
+        alt=""
+        className="aui-attachment-tile-image rounded-none object-cover"
+      />
+      <AvatarFallback>
+        <FileText className="aui-attachment-tile-fallback-icon text-muted-foreground/80 size-6 stroke-[1.5]" />
+      </AvatarFallback>
+    </Avatar>
+  );
+};
+
+// Meridian composition: use the source's named-file family for metadata-only
+// attachments, with its source dialog for full keyboard/touch disclosure.
+const FilenameAttachment: FC<{ name: string; isComposer: boolean }> = ({ name, isComposer }) => {
+  const mimeType = useAuiState((s) => s.attachment.contentType);
+  const zh = document.documentElement.lang.startsWith("zh");
+  return (
+    <AttachmentPrimitive.Root className="aui-attachment-root shrink-0 max-w-full">
+      <File.Root size="sm" className="max-w-64">
+        <File.Icon mimeType={mimeType} />
+        <Dialog>
+          <DialogTrigger
+            render={<button type="button" className="min-w-0 flex-1 text-start outline-none focus-visible:ring-2 focus-visible:ring-ring" />}
+            aria-label={`${zh ? "查看附件" : "View attachment"}: ${name}`}
+          >
+            <File.Name className="block">{name}</File.Name>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogTitle>{zh ? "附件详情" : "Attachment details"}</DialogTitle>
+            <File.Root className="w-full min-w-0">
+              <File.Icon mimeType={mimeType} />
+              <File.Name className="whitespace-normal break-all">{name}</File.Name>
+            </File.Root>
+            <DialogDescription>
+              {zh ? "仅附加文件名。文件内容不会被读取或发送。" : "Only the filename is attached. File contents are never read or sent."}
+            </DialogDescription>
+          </DialogContent>
+        </Dialog>
+        {isComposer && (
+          <AttachmentPrimitive.Remove
+            render={<Button variant="ghost" size="icon-sm" className="shrink-0" />}
+            onClick={returnToComposer}
+            aria-label={`${zh ? "移除" : "Remove"} ${name}`}
+          >
+            <XIcon className="size-4" />
+          </AttachmentPrimitive.Remove>
+        )}
+      </File.Root>
+    </AttachmentPrimitive.Root>
+  );
+};
+
+const AttachmentUI: FC = () => {
+  const {
+    isComposer,
+    src,
+    isImage,
+    name,
+    typeLabel,
+    isUploading,
+    isError,
+    errorMessage,
+  } = useAttachmentState();
+
+  if (!src) return <FilenameAttachment name={name} isComposer={isComposer} />;
+
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <AttachmentPrimitive.Root
+          className={cn(
+            "aui-attachment-root relative",
+            isComposer &&
+              "animate-in fade-in-0 zoom-in-95 duration-200 motion-reduce:animate-none",
+            isImage &&
+              !isComposer &&
+              "aui-attachment-root-message only:*:first:size-24",
+          )}
+        >
+          <AttachmentPreviewDialog src={src} name={name}>
+            <TooltipTrigger
+              render={
+                <div
+                  className={cn(
+                    "aui-attachment-tile bg-muted hover:after:bg-foreground/10 focus-visible:ring-ring/50 relative size-14 overflow-hidden rounded-[calc(var(--composer-radius,1rem)-var(--composer-padding,8px))] transition-transform outline-none after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:ring-1 after:ring-black/10 after:transition-colors after:ring-inset focus-visible:ring-1 motion-reduce:transition-none dark:after:ring-white/10",
+                    src
+                      ? "cursor-zoom-in active:scale-[0.96]"
+                      : "cursor-default",
+                    isError &&
+                      "after:ring-destructive/60 dark:after:ring-destructive/60",
+                  )}
+                  role={src ? "button" : "group"}
+                  tabIndex={0}
+                  aria-label={`${src ? `Preview ${name}` : `${typeLabel} attachment ${name}`}${
+                    isError
+                      ? ", upload failed"
+                      : isUploading
+                        ? ", uploading"
+                        : ""
+                  }`}
+                />
+              }
+            >
+              <AttachmentThumb src={src} />
+              {isUploading && (
+                <div
+                  aria-hidden="true"
+                  className="aui-attachment-tile-uploading bg-background/60 animate-in fade-in-0 absolute inset-0 flex items-center justify-center backdrop-blur-[2px] motion-reduce:animate-none"
+                >
+                  <Loader2Icon className="text-muted-foreground size-4 animate-spin" />
+                </div>
+              )}
+              {isError && (
+                <div
+                  aria-hidden="true"
+                  className="aui-attachment-tile-error bg-background/70 animate-in fade-in-0 absolute inset-0 flex items-center justify-center backdrop-blur-[2px] motion-reduce:animate-none"
+                >
+                  <AlertCircleIcon className="text-destructive size-4" />
+                </div>
+              )}
+            </TooltipTrigger>
+          </AttachmentPreviewDialog>
+          {isComposer && <AttachmentRemove name={name} />}
+        </AttachmentPrimitive.Root>
+        <TooltipContent side="top">
+          <AttachmentPrimitive.Name />
+          {errorMessage && (
+            <p className="aui-attachment-error-message">{errorMessage}</p>
+          )}
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+};
+
+const AttachmentRemove: FC<{ name: string }> = ({ name }) => {
+  return (
+    <AttachmentPrimitive.Remove
+      render={
+        <TooltipIconButton
+          tooltip={`Remove ${name}`}
+          className="aui-attachment-tile-remove absolute end-1 top-1 size-5 rounded-full bg-black/50! text-white after:absolute after:-inset-1.5 hover:bg-black/70! hover:text-white! active:scale-[0.96] motion-reduce:transition-none"
+          side="top"
+        />
+      }
+    >
+      <XIcon className="aui-attachment-remove-icon size-3 stroke-[2.5]" />
+    </AttachmentPrimitive.Remove>
+  );
+};
+
+export const UserMessageAttachments: FC = () => {
+  return (
+    <div className="aui-user-message-attachments-end col-span-full col-start-1 row-start-1 flex w-full flex-row flex-wrap justify-end gap-2 empty:hidden">
+      <MessagePrimitive.Attachments>
+        {() => <AttachmentUI />}
+      </MessagePrimitive.Attachments>
+    </div>
+  );
+};
+
+export const ComposerAttachments: FC = () => {
+  return (
+    <div className="aui-composer-attachments flex w-full flex-row items-center gap-2 overflow-x-auto empty:hidden">
+      <ComposerPrimitive.Attachments>
+        {() => <AttachmentUI />}
+      </ComposerPrimitive.Attachments>
+    </div>
+  );
+};
+
+export const ComposerAddAttachment: FC = () => {
+  return (
+    <ComposerPrimitive.AddAttachment
+      render={
+        <TooltipIconButton
+          tooltip={document.documentElement.lang.startsWith("zh") ? "添加附件" : "Add attachment"}
+          side="bottom"
+          variant="ghost"
+          size="icon"
+          className="aui-composer-add-attachment text-muted-foreground hover:text-foreground hover:bg-muted-foreground/15 dark:border-muted-foreground/15 dark:hover:bg-muted-foreground/30 size-7 rounded-full active:scale-[0.96] motion-reduce:transition-none"
+          aria-label={document.documentElement.lang.startsWith("zh") ? "添加附件" : "Add attachment"}
+        />
+      }
+    >
+      <PlusIcon className="aui-attachment-add-icon size-4" />
+    </ComposerPrimitive.AddAttachment>
+  );
+};

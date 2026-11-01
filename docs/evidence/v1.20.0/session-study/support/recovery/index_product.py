@@ -19,7 +19,9 @@ def main():
     plan=json.loads((study/'registration.json').read_text());cell=next(c for c in plan['cells'] if c['id']==cfg['cell_id']);name=cell['id'];run_name=cfg.get('run_directory_name',name)
     if Path(run_name).name!=run_name:raise ValueError('Expected a single explicit run-directory name')
     out=study/'runs'/run_name
-    snapshot=json.loads((out/'snapshot.json').read_text());package=Path(snapshot['source_workspace']);replay=root/'ui-study/replay-audit'/name
+    snapshot=json.loads((out/'snapshot.json').read_text());package=Path(snapshot['source_workspace']);replay_name=cfg.get('replay_directory_name',name)
+    if Path(replay_name).name!=replay_name:raise ValueError('Expected a single explicit replay-directory name')
+    replay=root/'ui-study/replay-audit'/replay_name
     if not replay.is_dir():raise ValueError('Verified reconstruction is required')
     if snapshot['method_changes'] or snapshot['role_changes']:raise ValueError('Frozen method/role changes need explicit adjudication')
     def ref(path):return {'path':path.relative_to(repo).as_posix(),'sha256':sha(path.read_bytes())}
@@ -103,8 +105,13 @@ def main():
     source_files=list(cell['input_artifacts'])+[ref(out/x['file']) for x in snapshot['overlay']['archives']]+[ref(out/'snapshot.json')]
     source_files.extend(ref(out/part['file']) for item in snapshot['overlay'].get('split_files',[]) for part in item['parts'])
     source_files.extend(retain(name) for name in cfg.get('direct_source_files',[]))
+    for relative in cfg.get('additional_source_repository_paths',[]):
+        path=(repo/relative).resolve();path.relative_to(repo.resolve());source_files.append(ref(path))
     product={'schema_version':1,'cell_id':name,'preview_command':cfg['preview_command'],'capture_conditions':cfg['capture_conditions'],'source_files':source_files,'screenshots':screenshots,'behavior_logs':behavior,'viewed_screenshots':views,'capture_lineage':cfg.get('capture_lineage','See retained capture metadata and primary visual review for exact source/state scope.'),'all_original_evidence':'The byte-complete input/overlay reconstruction also retains baseline, research, failed attempts and captures outside this final-product index.'}
     write(out/'product-evidence.json',product)
+    if 'all_original_evidence' in cfg:
+        product['all_original_evidence']=cfg['all_original_evidence']
+        write(out/'product-evidence.json',product)
     main_tools=behavior.copy()
     for rel in cfg.get('additional_tool_exports',[]):main_tools.append(retained_export(rel,'actual tool call as named in retained record','Full actual tool return captured by the primary participant; scope is identified in the original record.'))
     for item in views:main_tools.append(item['view_export'])

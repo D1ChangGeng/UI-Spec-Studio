@@ -1,0 +1,97 @@
+{
+  "cell_id": "T2-G-final-runtime-r1",
+  "run_directory_name": "T2-G-final-runtime-r1-public",
+  "replay_directory_name": "T2-G-final-runtime-r1-public",
+  "agent_id": "/root/product_08_recovered",
+  "preview_command": "From the reconstructed workspace: python3 -m http.server 4408 --bind 127.0.0.1 --directory app/dist; open /?theme=light&lang=en or /?theme=dark&lang=zh. The retained package lock supports npm ci and npm run build from app.",
+  "capture_conditions": "Pinned Chromium 143.0.7499.4 / Playwright 1.57.0, DPR 1 and Noto Sans CJK SC. Desktop 1440x900, short 1280x600 and narrow 390x844; light/English and dark/Chinese. Settled disclosure images, controlled active-return/cancellation samples and rebuilt production retry are separately identified.",
+  "final_capture_prefixes": [
+    "evidence/screenshots/delivered-settled",
+    "evidence/screenshots/recheck-final",
+    "evidence/screenshots/cancel-boundary",
+    "evidence/screenshots/production"
+  ],
+  "final_capture_files": [
+    "evidence/screenshots/delivered/light-en-1440x900.png",
+    "evidence/screenshots/delivered/light-en-1280x600.png",
+    "evidence/screenshots/delivered/light-en-390x844.png",
+    "evidence/screenshots/delivered/dark-zh-1440x900.png",
+    "evidence/screenshots/delivered/dark-zh-1280x600.png",
+    "evidence/screenshots/delivered/dark-zh-390x844.png",
+    "evidence/screenshots/delivered/light-en-expanded.png"
+  ],
+  "primary_view_globs": [
+    "evidence/view-*.json"
+  ],
+  "behavior_log_globs": [
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt",
+    "evidence/final-checks.json",
+    "evidence/recheck-final.json",
+    "evidence/cancel-boundary.json",
+    "evidence/delivered-surfaces.json",
+    "evidence/delivered-settled-surfaces.json",
+    "evidence/production-retry.json"
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_08_recovered/research_08",
+      "role": "ui_researcher",
+      "prompt": "evidence/coordination/child-01-prompt.txt",
+      "spawn": "DELEGATION.json",
+      "completion": "evidence/coordination/child-01-final.txt",
+      "result": "CHILD-01-REPORT.md",
+      "command_globs": [
+        "evidence/research/child-01/command*/command.json",
+        "evidence/research/child-01/command*/stdout.txt",
+        "evidence/research/child-01/command*/stderr.txt",
+        "evidence/research/child-01/guidance*/command.json",
+        "evidence/research/child-01/guidance*/stdout.txt",
+        "evidence/research/child-01/guidance*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/research/child-01/search01.json",
+        "evidence/research/child-01/view01.json",
+        "evidence/research/child-01/view02.json",
+        "evidence/research/child-01/view03.json",
+        "evidence/research/child-01/view04.json",
+        "evidence/research/child-01/w08-child01-chatgpt.png.json",
+        "evidence/research/child-01/w08-child01-chatgpt-return.png.json"
+      ]
+    }
+  ],
+  "additional_tool_exports": [],
+  "direct_source_files": [
+    "app/src/components/assistant-ui/elements/attachment.aui.tsx",
+    "app/src/components/assistant-ui/elements/markdown-text.tsx",
+    "app/src/components/assistant-ui/elements/thread.aui.tsx",
+    "app/src/components/assistant-ui/utils/return-to-composer.ts",
+    "app/src/components/ui/dialog.tsx",
+    "app/src/synthetic.ts",
+    "app/package-lock.json"
+  ],
+  "additional_source_repository_paths": [
+    "docs/evidence/v1.20.0/session-study/coordination/recovery-0830/T2-G-privacy-projection.json",
+    "docs/evidence/v1.20.0/session-study/engineering/recovery-0830/T2-G-complete-originals-reconstruction.json"
+  ],
+  "audit_observations": [
+    "One actual fresh researcher completed under an adaptively authored bounded inquiry. Its exact prompt, actual spawn response, identity-bearing final notification, original search/image returns and report are retained. Final design and implementation remained with the primary.",
+    "The original 1,931-file workspace and the public projection both reconstructed successfully. Frozen method/role files, all application source, original screenshots, image-return objects and outcome reports are unchanged by publication filtering.",
+    "Public-source research captured session-bearing response-cookie/query values. Exactly 314 original network metadata/body files are retained in a separate private owner-delivered ZIP; the public copies replace only the exact values with a declared marker. All 1,931 original files were verified as recoverable from the public workspace plus the private originals. This is a privacy projection, not fabricated raw output or a rerun.",
+    "The actual final notification adds a self-link, clickable local preview URLs and minor punctuation to the saved FINAL.md. Both originals are retained without forcing a false byte match.",
+    "The broad and targeted browser runs retain their real failures. Dedicated cancellation and rebuilt-production retry checks are later bounded closures, not retroactive passing labels for those earlier runs."
+  ],
+  "limitations": "Fresh execution after the earlier unavailable attempt. Shared host and instruction isolation; requested inherited models have no authenticated resolved identity or native usage telemetry. Public network evidence has the explicitly linked privacy projection; complete affected originals are delivered privately. The six-condition local Chromium matrix, sampled return/cancellation and observed PNGs do not establish natural-time playback, physical mobile keyboards, assistive-technology use, other engines or real-service behavior. Surrounding English navigation and the approximately 1.29 MB active JavaScript chunk warning remain.",
+  "capture_lineage": "The final index includes settled delivered surfaces, final return/edit rechecks, dedicated early-stop captures, rebuilt production failure/retry, and the seven stable delivered views that the primary actually opened. It excludes the visibly transitional dark disclosure and earlier broad-run failures from final-product captures; all remain in the complete original archive. Earlier failure/retry frames precede the text-reveal settlement fix and are not used for final completion-text claims.",
+  "all_original_evidence": "All application/instruction source, reports, screenshots, actual image returns and unaffected evidence remain original bytes in the public reconstruction. 314 session-bearing network files have explicit public projections and separately retained private originals. The linked projection manifest and complete-originals reconstruction audit identify exact original/public hashes and the private ZIP digest; the full original workspace is recoverable without inventing missing evidence.",
+  "report_files": [
+    "FINAL.md",
+    "VISUAL-REVIEW.md",
+    "ADOPTION.md",
+    "SPEC.md",
+    "CHILD-01-REPORT.md",
+    "DELEGATION.json",
+    "evidence/source-integrity-final.json"
+  ]
+}

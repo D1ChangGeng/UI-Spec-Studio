@@ -9,6 +9,7 @@ import hashlib
 import json
 import shutil
 from large_archives import archive_with_large_files
+from review_snapshot_io import read_snapshot, write_snapshot
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -30,7 +31,7 @@ def main():
     review.mkdir(exist_ok=True)
     target = review / args.cohort
     prior = sorted(review.glob("cohort-*/snapshot.json"))
-    previous = json.loads(prior[-1].read_text()) if prior else None
+    previous = read_snapshot(prior[-1]) if prior else None
     if target.exists():
         raise ValueError("An existing frozen cohort must not be overwritten")
     target.mkdir()
@@ -99,7 +100,7 @@ def main():
         "direct_export_policy": "Reviewer-created copies/ trees are archive-only; their full original paths and hashes remain in file_hashes and are verified by reconstruction.",
         "exclusions": "Directories literally named disposable, node_modules, .git, __pycache__ or .pytest_cache, and symbolic links. Other reviewer-created application copies, including copies/ and their exercised persistence states, are retained. The original reviewed application source and original product captures also remain in each frozen product snapshot. No browser profile, credentials or hidden reasoning are included.",
     }
-    (target / "snapshot.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+    write_snapshot(target / "snapshot.json", result)
     print(json.dumps({"cohort": args.cohort, "files": len(files), "changed": len(changed),
                       "bytes": sum(p.stat().st_size for p in changed),
                       "direct_artifacts": len(direct), "snapshot": str(target / "snapshot.json")}, indent=2))
