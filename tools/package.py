@@ -69,12 +69,13 @@ def build(root: Path = ROOT, output_dir: Path | None = None) -> list[Path]:
         items.append(("ui-spec-codex/LICENSE", (root / "LICENSE").read_bytes()))
         archive(adapter_zip, items)
         archives.append(adapter_zip)
-    spec = importlib.util.spec_from_file_location("ui_spec_installer_packager", root / "tools/package_installer.py")
-    if spec is None or spec.loader is None:
-        raise ValueError("Installer packager unavailable")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    archives.append(module.build_installer(root, output))
+    if (root / "installer/package.json").is_file():
+        spec = importlib.util.spec_from_file_location("ui_spec_installer_packager", Path(__file__).resolve().parent / "package_installer.py")
+        if spec is None or spec.loader is None:
+            raise ValueError("Installer packager unavailable")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        archives.append(module.build_installer(root, output))
     inventory = output / "contents.json"
     inventory.write_text(json.dumps({"version": version, "files": [
         {"path": p.relative_to(root).as_posix(), "bytes": p.stat().st_size,
