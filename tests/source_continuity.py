@@ -13,8 +13,9 @@ def runtime_v119(root: Path, path: str) -> bytes:
     # exact known one-line delta before checking the immutable v1.20.0 ledger.
     # Any other content change must still fail the prior SHA-256 identity check.
     if (path == 'skills/ui-spec/SKILL.md' and (root / 'VERSION').is_file()
-            and (root / 'VERSION').read_text(encoding='utf-8').strip() == '1.20.1'):
-        patch = b'  version: "1.20.1"\n'
+            and (root / 'VERSION').read_text(encoding='utf-8').strip() in {'1.20.1', '1.20.2'}):
+        version = (root / 'VERSION').read_text(encoding='utf-8').strip()
+        patch = ('  version: "' + version + '"\n').encode('utf-8')
         prior = b'  version: "1.20.0"\n'
         if current.count(patch) == 1:
             current = current.replace(patch, prior, 1)

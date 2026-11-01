@@ -2,6 +2,7 @@
 """Offline end-to-end checks for the release tarball and its managed host adapters."""
 from __future__ import annotations
 import hashlib
+import os
 import json
 import shutil
 from pathlib import Path
@@ -97,11 +98,122 @@ def run() -> dict[str, object]:
                     raise AssertionError('An unowned standalone Codex registration was removed')
                 command([sys.executable, str(native), 'uninstall', '--project', str(project)], project)
             project_checks.append(agent)
+        # The legacy Skills CLI has no ownership receipt. It may have copied
+        # ordinary files or linked a shared Skill through a Windows Junction.
+        source_skill = package / 'payload/skill'
+        old = base / 'legacy-copied'
+        old_target = old / '.agents/skills/ui-spec'
+        old_target.parent.mkdir(parents=True)
+        shutil.copytree(source_skill, old_target)
+        old_entry = old_target / 'SKILL.md'
+        original = old_entry.read_bytes().replace(b'version: "1.20.2"', b'version: "1.20.1"') + b'\n# user annotation\n'
+        old_entry.write_bytes(original)
+        flags = ['--agent', 'codex', '--project', str(old)]
+        cli_command = ['node', str(cli)]
+        observed = json.loads(command(cli_command + ['status', *flags], base).stdout)
+        if observed['status'] != 'legacy':
+            raise AssertionError('Existing old-version Skills CLI copy was not detected')
+        refused = command(cli_command + ['install', *flags, '--no-tui'], base, success=False)
+        if '--migrate' not in refused.stderr or old_entry.read_bytes() != original:
+            raise AssertionError('Refused legacy installation was modified or gave no migration guidance')
+        command(cli_command + ['install', *flags, '--migrate', '--dry-run'], base)
+        if (old_target / '.ui-spec-install.json').exists() or (old / '.agents/ui-spec-studio').exists():
+            raise AssertionError('Legacy dry-run made persistent changes')
+        migrated = json.loads(command(cli_command + ['install', *flags, '--migrate', '--lang', 'zh'], base).stdout)
+        if migrated['result'] != 'upgraded' or migrated['backup'] == str(old_target):
+            raise AssertionError('Legacy migration did not report an independent backup')
+        backup = Path(migrated['backup'])
+        if not backup.is_dir() or (backup / 'SKILL.md').read_bytes() != original:
+            raise AssertionError('Legacy source was not preserved byte for byte')
+        if not (old_target / '.ui-spec-install.json').exists():
+            raise AssertionError('New managed receipt missing')
+        restored = json.loads(command(cli_command + ['uninstall', *flags], base).stdout)
+        if restored['result'] != 'original-restored' or old_entry.read_bytes() != original:
+            raise AssertionError('Uninstall did not automatically restore the legacy original')
+        if backup.exists() or (old_target / '.ui-spec-install.json').exists():
+            raise AssertionError('Legacy restored copy still carries installer ownership')
+
+        # Identical unowned Skill: the user can explicitly adopt it, but an
+        # uninstall must leave those originally pre-existing files in place.
+        adopt = base / 'legacy-adopt'
+        adopt_target = adopt / '.agents/skills/ui-spec'
+        adopt_target.parent.mkdir(parents=True)
+        shutil.copytree(source_skill, adopt_target)
+        adopt_flags = ['--agent', 'claude-code', '--project', str(adopt)]
+        # Claude Code's Skill directory differs from Codex; use the actual host.
+        shutil.rmtree(adopt_target)
+        adopt_target = adopt / '.claude/skills/ui-spec'
+        adopt_target.parent.mkdir(parents=True)
+        shutil.copytree(source_skill, adopt_target)
+        command(cli_command + ['install', *adopt_flags, '--adopt'], base)
+        receipt = json.loads((adopt_target / '.ui-spec-install.json').read_text())
+        if not receipt.get('adopted'):
+            raise AssertionError('Identical copy was not adopted in place')
+        command(cli_command + ['uninstall', *adopt_flags], base)
+        if (adopt_target / '.ui-spec-install.json').exists() or not (adopt_target / 'SKILL.md').exists():
+            raise AssertionError('Adopted original files were deleted on uninstall')
+
+        # Refuse to replace another unrelated product's directory.
+        unrelated = base / 'other-product'
+        unrelated_target = unrelated / '.claude/skills/ui-spec'
+        unrelated_target.mkdir(parents=True)
+        (unrelated_target / 'SKILL.md').write_text('---\nname: unrelated\n---\n', encoding='utf-8')
+        command(cli_command + ['install', '--agent', 'claude-code', '--project', str(unrelated), '--migrate'], base, success=False)
+        if not (unrelated_target / 'SKILL.md').is_file():
+            raise AssertionError('Unrelated Skill file was overwritten')
+
+        # Preserve the symlink itself (including relative-target semantics)
+        # while leaving the real backing source completely untouched.
+        linked = base / 'legacy-linked'
+        linked_store = base / 'legacy-source'
+        linked_target = linked / '.agents/skills/ui-spec'
+        linked_target.parent.mkdir(parents=True)
+        shutil.copytree(source_skill, linked_store)
+        linked_bytes = (linked_store / 'SKILL.md').read_bytes()
+        linked_created = False
+        try:
+            if sys.platform == 'win32':
+                # Directory junctions do not require Windows Developer Mode.
+                cmd = subprocess.run(['cmd', '/c', 'mklink', '/J', str(linked_target), str(linked_store)],
+                                     capture_output=True, text=True, timeout=15)
+                linked_created = cmd.returncode == 0
+                if not linked_created:
+                    raise AssertionError('Windows Junction creation failed: ' + cmd.stderr)
+            else:
+                linked_target.symlink_to(Path(os.path.relpath(linked_store, linked_target.parent)),
+                                         target_is_directory=True)
+                linked_created = True
+        except (OSError, NotImplementedError):
+            if sys.platform == 'win32':
+                raise  # Junction compatibility must be tested, not skipped.
+        if linked_created:
+            flags = ['--agent', 'codex', '--project', str(linked)]
+            status = json.loads(command(cli_command + ['status', *flags], base).stdout)
+            if status['status'] != 'legacy-link':
+                raise AssertionError('Linked/Junction legacy installation was not detected')
+            result = json.loads(command(cli_command + ['install', *flags, '--migrate'], base).stdout)
+            archived_link = Path(result['backup'])
+            is_link = lambda path: path.is_symlink() or (hasattr(path, 'is_junction') and path.is_junction())
+            if not is_link(archived_link) or not linked_target.is_dir() or is_link(linked_target):
+                raise AssertionError('Linked source was not safely replaced by ordinary Skill files')
+            command(cli_command + ['uninstall', *flags], base)
+            if not is_link(linked_target) or (linked_store / 'SKILL.md').read_bytes() != linked_bytes:
+                raise AssertionError('Legacy link or its backing source was modified on recovery')
+
+        # An existing lock is a conflict rather than permission to race another installer.
+        locked = base / 'locked'
+        lock_dir = locked / '.claude/skills'
+        lock_dir.mkdir(parents=True)
+        (lock_dir / '.ui-spec-install.lock').write_text('another process')
+        command(cli_command + ['install', '--agent', 'claude-code', '--project', str(locked)], base, success=False)
+        if not (lock_dir / '.ui-spec-install.lock').is_file():
+            raise AssertionError('Concurrent install lock was removed without ownership')
+
         result = command([(shutil.which('npx') or 'npx'), '--yes', '--offline', archive.as_uri(), 'status', '--agent', 'codex', '--project', str(base / 'not-installed')], base)
         if json.loads(result.stdout)['status'] != 'absent':
             raise AssertionError('npx tarball command failed')
         return {'archive': archive.name, 'archive_bytes': archive.stat().st_size,
-                'source_checkout': False, 'skill_files': len(expected), 'verified_hosts': project_checks,
+                'source_checkout': False, 'skill_files': len(expected), 'verified_hosts': project_checks, 'legacy_scenarios': ['copied', 'adopt', 'unrelated', 'symlink-if-supported', 'concurrent-lock'],
                 'checksum': hashlib.sha256(archive.read_bytes()).hexdigest()}
 
 

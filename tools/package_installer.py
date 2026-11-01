@@ -66,6 +66,14 @@ def build_installer(root: Path = ROOT, output_dir: Path | None = None) -> Path:
         'package/bin/ui-spec.mjs': (root / 'installer/bin/ui-spec.mjs').read_bytes(),
         'package/payload/manifest.json': (json.dumps(manifest, sort_keys=True, indent=2) + '\n').encode(),
     }
+    # Bundle the small host-agnostic terminal UI. npm resolves mature Clack
+    # primitives at install time; the built-in fallback remains offline safe.
+    for file in sorted((root / 'installer/lib').glob('*.mjs')):
+        if file.is_symlink() or not file.is_file():
+            raise ValueError(f'Invalid installer UI module: {file}')
+        files[f'package/lib/{file.name}'] = file.read_bytes()
+    if 'package/lib/experience.mjs' not in files:
+        raise ValueError('Terminal UI module missing from distribution')
     files.update({f'package/payload/{path}': content for path, content in items.items()})
     output = Path(output_dir or root / 'dist') / 'ui-spec-installer.tgz'
     output.parent.mkdir(parents=True, exist_ok=True)
