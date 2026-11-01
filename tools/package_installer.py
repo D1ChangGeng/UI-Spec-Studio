@@ -48,7 +48,7 @@ def build_installer(root: Path = ROOT, output_dir: Path | None = None) -> Path:
         'package/payload/manifest.json': (json.dumps(manifest, sort_keys=True, indent=2) + '\n').encode(),
     }
     files.update({f'package/payload/{path}': content for path, content in items.items()})
-    output = Path(output_dir or root / 'dist') / f'ui-spec-installer-{version}.tgz'
+    output = Path(output_dir or root / 'dist') / 'ui-spec-installer.tgz'
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open('wb') as raw:
         with gzip.GzipFile(fileobj=raw, mode='wb', filename='', mtime=0, compresslevel=9) as stream:
