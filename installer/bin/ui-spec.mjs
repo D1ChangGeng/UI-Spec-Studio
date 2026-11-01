@@ -222,7 +222,7 @@ async function safeBackup(target, boundary) {
   if (await exists(destination)) fail('Backup location already exists: ' + destination);
   return { backupName, destination };
 }
-async function stageSkill(target, files, receipt) {
+async function stageSkill(target, files, receipt, onFile = () => {}) {
   const staging = await mkdtemp(join(dirname(target), '.ui-spec-stage-'));
   try {
     for (const rel of Object.keys(files)) {
@@ -230,6 +230,7 @@ async function stageSkill(target, files, receipt) {
       const dest = join(staging, ...rel.split('/'));
       await mkdir(dirname(dest), { recursive: true });
       await writeFile(dest, await readFile(join(payload, 'skill', ...rel.split('/'))));
+      onFile(rel);
     }
     await writeFile(join(staging, receiptFile), receiptBytes(receipt.version, files, receipt.extra));
     return staging;
@@ -329,6 +330,7 @@ async function main() {
       if (decision === null) fail('Existing managed version ' + installed.version + ': use --upgrade to update.');
     }
   }
+  if (decision === 'upgrade') options.upgrade = true;
   if (decision === 'keep') {
     show(ui, options, { ...plan, result: 'cancelled' }, ui.tr('Existing installation preserved', '保留旧安装'));
     return;
@@ -406,8 +408,8 @@ async function main() {
     const receipt = { version: manifest.version, extra: {
       ...(migration ? { migration } : {}),
     } };
-    const staging = await ui.step(ui.tr('Copying and verifying Skill files', '复制并验证 Skill 文件'),
-      () => stageSkill(target, files, receipt), ui.tr('Skill staged', 'Skill 文件已准备'));
+    const staging = await ui.copyFiles(Object.keys(files).length,
+      advance => stageSkill(target, files, receipt, advance));
     let moved = false, swapped = false;
     try {
       if (current.exists) {
@@ -421,7 +423,7 @@ async function main() {
         () => runAdapter(spec, 'install', options), ui.tr('Native components ready', '原生组件已就绪'));
       if (backup && temporaryBackup) await rm(backup, { recursive: true });
       return { ...plan, result: current.exists ? 'upgraded' : 'installed',
-        ...(migration ? { backup: backup || backupLocation(target, migration.backupName) } : {}) };
+        ...(migration ? { backup: backupLocation(target, migration.backupName) } : {}) };
     } catch (err) {
       if (swapped) await rm(target, { recursive: true, force: true });
       if (moved) await rename(backup, target);
