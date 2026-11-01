@@ -1,0 +1,35 @@
+# SPEC 01 — Compose, disclose, and keep the reading position
+
+## Experience goal and boundary
+
+Meridian remains a conversation workspace for asking a question, checking local filenames, reading a long synthetic answer, reviewing earlier paragraphs, and continuing the thread. This single formal increment owns the coupled composer height, attachment identity/disclosure, send/stop state, answer measure, and user-controlled reading position. Separating these would hide their shared height and scroll dependencies.
+
+The deliverable is the runnable local product with the supplied in-memory assistant-ui runtime. Real model service, file contents, upload, and persisted remote history remain outside the task as specified in INPUT.md. The synthetic adapter, seven-theme long answer, fail-once marker, and abort contract remain intact.
+
+## Current foundation and scope
+
+The source is assistant-ui cloud template revision ff654d8156680b839774296ef644b57ab1078425, as mapped in SOURCE-MANIFEST.json, plus its locked runtime dependencies and self-hosted font configuration. The first viewed 1440×900 light English capture shows a 672px composer, a restrained rounded surface, 16px prose, and a stable action row. These relationships are the provisional foundation to retain, subject to actual compact and growth checks.
+
+Research scope includes full conversation examples and independently authored attachment/reading implementations. Primary implementation stays in Thread and attachment composition; regression covers sidebar, existing message actions, edit, retry, themes, English/Chinese, keyboard focus, and mobile reflow.
+
+## Questions and evidence map
+
+| Decision | Scales and purpose | Evidence so far | Next action and change criterion |
+| --- | --- | --- | --- |
+| D1 Keep the mature Thread family | L0 task / L2 shell / L4 text and surface / L5 exact source | Source inspection and personally viewed baseline initial render | Preserve unless substantive public comparison or local operation exposes a family-level failure |
+| D2 Filename disclosure | L1 attach/check/remove / L3 attachment / L4 name and action spacing | baseline-002/02 at 1280×600: four icon-only tiles; names absent from resting surface; animation still in progress in this frame | Compare original chip/File family demonstrations; trial visible filename plus existing keyboard/touch disclosure without replacing composer material |
+| D3 Reading continuity | L1 send/read/scroll-away/return / L3 viewport+footer / L5 runtime | baseline-002/events.json: manual scroll 0 remains 0 while scrollHeight grows 2003→2829; return sample remains behind the growing bottom | Inspect supported autoScroll/turnAnchor settings, then test deliberate return and sustained following with before/after measures |
+| D4 Compact growth | L2 reading/composer allocation / L3 textarea+attachments / L4 rhythm | Six lines plus four files yield 270px composer in 536px viewport; 152px textarea | Trial supported bounded textarea sizing, retain native runtime auto-size and action row, then inspect six-line/long mixed script use |
+| D5 State language and focus | L1 cancel/retry/edit/repeat / L3 controls / L4 meaningful labels | Original English icon labels in Chinese condition; runtime owns stop/retry | Localize task labels where needed; inspect exact stop, failure/retry, return and edit focus paths |
+
+## Observation boundaries
+
+Baseline-002 runs through actual controls and saves timestamped ordered states. Static frames establish only their visible state; there is no claim of native natural-speed playback. Browser uses the supplied headless Chrome with sandbox enabled under existing nonprivileged oai. Initial root launch failure and the corrected visible-textarea locator attempt remain in evidence/commands/002 and 004. Public-source evidence will distinguish docs, source, actual viewed demos, and current product fit.
+
+No original visual construction exception is requested or assumed. Normal source-supported configuration, composition, reflow, state wiring, and compatibility repairs are authorized. Missing visual responsibility stays open if mature implementation cannot supply it.
+
+## Final settled increment
+
+D1 retains the exact Thread family; no replacement visual system was built. D2 adopts its supplied File and Dialog composition for visible filename identity and full-name disclosure, wrapping sent attachments while retaining the draft row's native scrolling. D3 uses supported bottom anchoring plus immediate deliberate return; automatic following pauses during manual review and resumes at latest. D4 caps compact-height input at 96px while keeping the runtime autosizer and full draft. D5 localizes task controls, repairs Stop/remove focus, and disables source markdown reveal smoothing so Stop also stops visible text immediately.
+
+Acceptance evidence is final-003: 59/59 controlled checks, 36 captures, no page errors, both locale episodes and six viewport/theme combinations. Build and typecheck pass. ADOPTION.md records exact source relationships and rejected trials; VISUAL-REVIEW.md separates personally viewed pixels from automated measurements and unplayed recordings. No known failure remains in the final controlled matrix. Public independent visual comparison remains incomplete because accessible source retrieval did not produce trustworthy live-browser renders; native mobile keyboard, IME and screen-reader use also remain unverified.

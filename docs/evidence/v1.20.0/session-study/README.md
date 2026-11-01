@@ -9,7 +9,7 @@ context pressure and a human acceptance panel remain unverified.
 
 ## Execution inventory
 
-Observed 2026-11-01T10:57:58.764514+00:00. **13 of 18** registered cells have retained completed evidence records, with **8** completed child contexts. Execution coverage is distinct from product success and release approval.
+Observed 2026-11-01T11:30:28.914753+00:00. **14 of 18** registered cells have retained completed evidence records, with **9** completed child contexts. Execution coverage is distinct from product success and release approval.
 
 Fresh blind cohorts 01 and 02 are frozen for 13 anonymous products. All 46,071 current reviewer-workspace files reconstruct; 45 original-capture view exports match frozen products. Comparator defects and caveats remain unchanged. Remaining products and separate final-runtime acceptance are pending; no condition mapping has been disclosed.
 
@@ -27,8 +27,8 @@ Fresh blind cohorts 01 and 02 are frozen for 13 anonymous products. All 46,071 c
 | T3-B-r1 | B | [Completed record](runs/T3-B-r1/run.json) · [product](runs/T3-B-r1/FINAL.md) | 1 |
 | T3-C-r1 | C | Frozen inputs restored; fresh complete evidence required | — |
 | T3-G-final-runtime-r1 | G-final-runtime | Fresh execution active; terminal evidence not yet retained | Active |
-| T2-D-r1 | D | Fresh execution active; terminal evidence not yet retained | Active |
-| T2-E-challenger-r1 | E-challenger | Frozen inputs restored; fresh complete evidence required | — |
+| T2-D-r1 | D | [Completed record](runs/T2-D-r1/run.json) · [product](runs/T2-D-r1/FINAL.md) | 1 |
+| T2-E-challenger-r1 | E-challenger | Fresh execution active; terminal evidence not yet retained | Active |
 | T2-E-observer-r1 | E-observer | Frozen inputs restored; fresh complete evidence required | — |
 | T4-F-main-r1 | F-main | [Completed record](runs/T4-F-main-r1/run.json) · [product](runs/T4-F-main-r1/FINAL.md) | 0 |
 | T4-F-integrator-r1 | F-integrator | [Completed record](runs/T4-F-integrator-r1-recovery/run.json) · [product](runs/T4-F-integrator-r1-recovery/FINAL.md) | 1 |

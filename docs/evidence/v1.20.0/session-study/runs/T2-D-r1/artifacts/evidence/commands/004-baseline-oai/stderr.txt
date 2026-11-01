@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w13/evidence/baseline_check.py", line 59, in <module>
+    asyncio.run(main())
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w13/evidence/baseline_check.py", line 28, in main
+    await page.locator('textarea').fill('\n'.join(['Please compare the reading continuity evidence.' for _ in range(6)]))
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/async_api/_generated.py", line 15949, in fill
+    await self._impl_obj.fill(
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 215, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 607, in fill
+    await self._fill(**locals_to_params(locals()))
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 619, in _fill
+    await self._channel.send("fill", self._timeout, locals_to_params(locals()))
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.fill: Error: strict mode violation: locator("textarea") resolved to 2 elements:
+    1) <textarea rows="1" name="input" enterkeyhint="send" aria-label="Message input" placeholder="Send a message..." class="aui-composer-input caret-primary placeholder:text-muted-foreground/60 max-h-48 min-h-10 w-full resize-none bg-transparent px-2.5 py-1 text-base leading-6 outline-none"></textarea> aka get_by_role("textbox", name="Message input")
+    2) <textarea tabindex="-1" aria-hidden="true"></textarea> aka locator("textarea").nth(1)
+
+Call log:
+  - waiting for locator("textarea")
+

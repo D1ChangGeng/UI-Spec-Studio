@@ -17,7 +17,8 @@ def main():
     import os
     root=Path(os.environ['UI_STUDY_ROOT']);repo=Path(os.environ['UI_STUDY_REPO']);study=repo/'docs/evidence/v1.20.0/session-study'
     plan=json.loads((study/'registration.json').read_text());cell=next(c for c in plan['cells'] if c['id']==args.cell)
-    dispatch=json.loads((root/'ui-study/dispatch-map.json').read_text());package=Path(next(c for c in dispatch if c['id']==args.cell)['work_package'])
+    dispatch=json.loads((root/'ui-study/dispatch-map.json').read_text());registered_package=next(c for c in dispatch if c['id']==args.cell)['work_package'];package=Path(os.environ.get('UI_STUDY_WORKSPACE_OVERRIDE',registered_package))
+    if not package.is_absolute() or not package.is_dir():raise ValueError('An explicit existing absolute workspace is required')
     if not (package/'FINAL.md').is_file():raise ValueError('Participant FINAL.md is required; completion export must be recorded separately.')
     target=study/'runs'/args.cell
     target.mkdir(parents=True,exist_ok=False)
@@ -30,6 +31,7 @@ def main():
     role_changes={role:{'expected':expected,'observed':identities.get('roles/'+role+'.toml')} for role,expected in cell['role_instruction_files'].items() if identities.get('roles/'+role+'.toml')!=expected}
     archives=archive_with_large_files(package,changed,target,'workspace-overlay')
     record={'schema_version':1,'cell_id':args.cell,'captured_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'kind':'coordinator byte snapshot, not a tool-event transcript','source_workspace':str(package),'reconstruction':'Extract the frozen task inputs and cell instructions at the work-package root, the complete method archive into method/, and applicable distributed-role archive into roles/. Overlay every workspace-overlay ZIP at the work-package root; remove deleted_paths. Archives preserve file bytes and executable mode with normalized archive timestamps. app/node_modules is an excluded dependency cache; T2 includes its built app/dist in the original/overlay inputs.','excluded':'app/node_modules, .git, __pycache__, .pytest_cache; external browser/Python/font runtime is documented separately.','workspace_files':identities,'workspace_modes':{p.relative_to(package).as_posix():oct(p.stat().st_mode&0o777) for p in paths},'changed_or_added':sorted(p.relative_to(package).as_posix() for p in changed),'deleted_paths':deleted,'method_changes':protocol_changes,'role_changes':role_changes,'overlay':archives}
+    if str(package)!=registered_package:record['registered_source_workspace']=registered_package;record['host_path_scope']='Explicit coordinator host path mapping; actual captured source workspace above, unchanged frozen input content and registered primary prompt.'
     write_json(target/'snapshot.json',record)
     for name in ['FINAL.md','VISUAL-REVIEW.md','DELEGATION.json']:
         if (package/name).is_file():

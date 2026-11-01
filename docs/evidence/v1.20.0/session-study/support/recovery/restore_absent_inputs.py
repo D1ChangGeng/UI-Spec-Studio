@@ -7,6 +7,7 @@ p.add_argument('--repo',type=Path,required=True)
 p.add_argument('--root',type=Path,required=True)
 p.add_argument('--output-record',default='remaining-input-restoration-1048.json')
 p.add_argument('--attempt-context',default='Unstarted registered cells; no prior output supplied.')
+p.add_argument('--restoration-observation',default='The old locations were absent in ordinary and elevated checks. This observation does not identify their deletion cause or reconstruct any completed experiment.')
 p.add_argument('cells',nargs='+')
 a=p.parse_args()
 repo=a.repo.resolve();root=a.root.resolve();study=repo/'docs/evidence/v1.20.0/session-study'
@@ -35,7 +36,7 @@ for name in a.cells:
     if not (work/'TASK.md').is_file():
         raise ValueError('Registered alias unreadable')
     rows.append({'cell_id':name,'registered_path':str(work),'physical_workspace':str(target),'verified_files':len(actual),'registered_input_bytes_changed':False,'alias_scope':'Filesystem continuity only; exact registered prompt, input content and method/role files remain unchanged.'})
-result={'kind':'coordinator restoration of absent registered inputs','observed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'attempt_context':a.attempt_context,'records':rows,'limitations':'The old locations were absent in ordinary and elevated checks. This observation does not identify their deletion cause or reconstruct any completed experiment.'}
+result={'kind':'coordinator restoration of absent registered inputs','observed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'attempt_context':a.attempt_context,'records':rows,'limitations':a.restoration_observation}
 if Path(a.output_record).name!=a.output_record or not a.output_record.endswith('.json'):raise ValueError('Use a single JSON record filename')
 output=study/'coordination/recovery-0830'/a.output_record
 if output.exists():raise ValueError('Do not overwrite restoration record')

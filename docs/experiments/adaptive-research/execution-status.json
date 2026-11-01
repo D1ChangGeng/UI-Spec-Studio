@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
   "status": "owner_authorized_session_study_recovery_in_progress",
-  "observed_at_utc": "2026-11-01T10:57:58.764514+00:00",
+  "observed_at_utc": "2026-11-01T11:30:28.914753+00:00",
   "candidate_identity": "eb7752a1b0eb4af180e9bb4bd0922587a3c9c96744e24ec8cf299517516e8759",
   "acceptance_route": "owner_authorized_session_simulation",
   "registered_primary_cells": 18,
-  "completed_primary_cells": 13,
-  "completed_child_contexts": 8,
+  "completed_primary_cells": 14,
+  "completed_child_contexts": 9,
   "completed_cell_ids": [
     "T1-A-r1",
     "T1-B-r1",
@@ -15,6 +15,7 @@
     "T2-A-r1",
     "T2-B-r1",
     "T2-C-r1",
+    "T2-D-r1",
     "T2-G-final-runtime-r1",
     "T3-A-r1",
     "T3-B-r1",
@@ -23,8 +24,8 @@
     "T4-G-final-runtime-r1"
   ],
   "active_primary_cells": {
-    "T3-G-final-runtime-r1": "/root/product_12_recovered",
-    "T2-D-r1": "/root/product_13_recovered"
+    "T2-E-challenger-r1": "/root/product_14_final",
+    "T3-G-final-runtime-r1": "/root/product_12_final"
   },
   "active_review_agent": null,
   "independent_product_acceptance": "Fresh blind cohorts 01 and 02 are frozen for 13 anonymous products. All 46,071 current reviewer-workspace files reconstruct; 45 original-capture view exports match frozen products. Comparator defects and caveats remain unchanged. Remaining products and separate final-runtime acceptance are pending; no condition mapping has been disclosed.",
@@ -33,7 +34,7 @@
   "resolved_models_authenticated": false,
   "native_usage_available": false,
   "historical_native_archive_available": false,
-  "latest_verified_remote_evidence_commit": "6055abcad792c4c22402f8b5ed55b8484a9bf770",
+  "latest_verified_remote_evidence_commit": "8bd5d267f315d974a78d75ccb60ad81fb77a7a90",
   "release_decision": "pending",
   "merged": false,
   "tag_created": false,
@@ -41,7 +42,7 @@
   "current_record": "docs/evidence/v1.20.0/session-study/README.md",
   "recovery_record": "docs/evidence/v1.20.0/session-study/coordination/recovery-0830/recovery-observation.json",
   "boundary": "Actual completion messages for lost attempts are historical observations only. A counted current run requires complete retained source/capture/tool evidence and verified reconstruction. Frozen registration and candidate runtime are unchanged.",
-  "latest_checkpoint_ci": "Checkpoint 08 workflow 41299073059 completed successfully for the exact thirteen-product commit 6055abcad792c4c22402f8b5ed55b8484a9bf770. The prior historical-link failure and correction remain retained.",
+  "latest_checkpoint_ci": "Checkpoint 09 workflow 41300056537 passed after a scoped rerun request for the README publication job. Its original Page.captureScreenshot protocol failure and successful follow-up remain retained; candidate source and check conditions were unchanged.",
   "additional_unavailable_attempt": {
     "cell_id": "T3-C-r1",
     "agent_id": "/root/product_11_recovered",
@@ -49,5 +50,10 @@
     "surviving_original_exports": 36,
     "preservation_index": "docs/evidence/v1.20.0/session-study/incomplete-attempts/T3-C-r1-recovery-0956-partial/preservation-index.json",
     "disposition": "Retain partial originals and actual completion separately; new independent execution from exact frozen inputs is required."
+  },
+  "recent_interrupted_attempt": {
+    "cell_id": "T3-G-final-runtime-r1",
+    "agent_id": "/root/product_12_recovered",
+    "reason": "Four-image inspection tool call remained pending for 1,309.5 seconds; coordinator interrupted after original substantive bound. Complete actual terminal report and source will be preserved; fresh exact-input re-execution is required."
   }
 }

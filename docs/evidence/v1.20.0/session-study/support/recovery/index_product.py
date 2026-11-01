@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'continuation'))
 from datetime import datetime,timezone
-import argparse,hashlib,json,shutil,re,os
+import argparse,base64,hashlib,json,shutil,re,os
 
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def write(path,data):path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
@@ -20,6 +20,17 @@ def main():
     if Path(run_name).name!=run_name:raise ValueError('Expected a single explicit run-directory name')
     out=study/'runs'/run_name
     snapshot=json.loads((out/'snapshot.json').read_text());package=Path(snapshot['source_workspace']);replay_name=cfg.get('replay_directory_name',name)
+    package_paths=[package]
+    for alias in cfg.get('source_workspace_aliases',[]):
+        alias_path=Path(alias)
+        if not alias_path.is_absolute() or not alias_path.is_dir() or alias_path.resolve()!=package.resolve():
+            raise ValueError('A workspace alias must resolve to this exact captured source workspace')
+        if alias_path not in package_paths:package_paths.append(alias_path)
+    def source_relative(path):
+        for source_path in package_paths:
+            try:return path.relative_to(source_path).as_posix()
+            except ValueError:pass
+        raise ValueError('Original path is outside the captured workspace and verified aliases: '+str(path))
     if Path(replay_name).name!=replay_name:raise ValueError('Expected a single explicit replay-directory name')
     replay=root/'ui-study/replay-audit'/replay_name
     if not replay.is_dir():raise ValueError('Verified reconstruction is required')
@@ -58,7 +69,7 @@ def main():
     directory_links=[]
     def portable_link(match):
         original_path=Path(match.group(1))
-        try:relative=original_path.relative_to(package).as_posix()
+        try:relative=source_relative(original_path)
         except ValueError:raise ValueError('Final report links outside captured workspace: '+str(original_path))
         if (replay/relative).is_dir():
             if not any(name.startswith(relative.rstrip('/')+'/') for name in snapshot['workspace_files']):raise ValueError('Directory lacks captured source bytes')
@@ -95,10 +106,21 @@ def main():
             if not isinstance(call,dict) or call.get('tool')!='view_image':continue
             image_path=call.get('arguments',{}).get('path')
             if not isinstance(image_path,str):continue
-            try:relative=Path(image_path).relative_to(package).as_posix()
+            try:relative=source_relative(Path(image_path))
             except ValueError:continue
             if relative in image_names:
                 views.append({'viewer_agent_id':cfg['agent_id'],'screenshot':retain(relative),'view_export':retained_export(path.relative_to(replay).as_posix(),'view_image','Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.')})
+    for item in cfg.get('primary_return_views',[]):
+        relative=item['screenshot'];export_path=item['export']
+        if relative not in image_names:raise ValueError('Explicit returned-image view is outside the final capture set')
+        original=json.loads((replay/export_path).read_bytes())
+        payload=original.get('image_url') if isinstance(original,dict) else None
+        if not isinstance(payload,str) or payload.split(',',1)[0] not in {'data:image/png;base64','data:application/octet-stream;base64'}:
+            raise ValueError('Expected an original PNG image-tool return')
+        returned_bytes=base64.b64decode(payload.split(',',1)[1],validate=True)
+        if not returned_bytes.startswith(b'\x89PNG\r\n\x1a\n') or returned_bytes!=(replay/relative).read_bytes():
+            raise ValueError('Original image-tool return differs from its declared capture')
+        views.append({'viewer_agent_id':cfg['agent_id'],'screenshot':retain(relative),'view_export':retained_export(export_path,'view_image','Original full image-tool returned object saved at call time. Its PNG payload is byte-identical to the retained screenshot. The request arguments are not present in this original export; the primary visual report identifies the actual inspection. No request is reconstructed here.','original_tool_output')})
     if not screenshots or not views:raise ValueError('Real final captures and primary view exports are required')
     behavior=command_exports(cfg['behavior_log_globs'])
     if not behavior:raise ValueError('No retained original behavior logs')

@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w13/evidence/final_check002.py", line 145, in <module>
+    try:asyncio.run(main())
+        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w13/evidence/final_check002.py", line 129, in main
+    check(tag+' edit cancellation retains question',long in await page.locator('[data-slot="aui_user-message-root"]').last.inner_text())
+  File "/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w13/evidence/final_check002.py", line 27, in check
+    if not value: raise AssertionError(label+': '+str(detail))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: episode-light-en edit cancellation retains question: None
