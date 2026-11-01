@@ -1,0 +1,787 @@
+{
+  "schema_version": 1,
+  "cell_id": "T4-F-integrator-r1",
+  "preview_command": "Reconstruct the retained workspace, then run cd app && python -m http.server 4417 --bind 127.0.0.1. Open /?theme=light&lang=en or /?theme=dark&lang=zh; add &fail=once for the actual one-time failed-save/retry path. The original dedicated preview was stopped after verification.",
+  "capture_conditions": "Chromium headless shell 143.0.7499.4 through local Python Playwright, DPR 1 and the prescribed Noto CJK Fontconfig fixture. Actual app states at 1440x900, 1280x600 and 390x844 in light/en and dark/zh. Eighteen settled error/validation captures, 26 main final-source behavior/episode captures, two integrated mobile-neighbor captures and one reduced-motion success capture. The store uses its real 750 ms timer; captured videos were not viewed continuously.",
+  "source_files": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/T4-input.zip",
+      "sha256": "0992feaf05a778c353231ef92e7f6d4f0c5a7759a1d766abcbf20abcfde4c315"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/method-v1.20.0.zip",
+      "sha256": "f69e05c16d50c2742ab5c89b8dac58a7942fdfd780f394ea7ab91773fdbff2b7"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/T4-F-integrator-r1-instructions.zip",
+      "sha256": "0f92b3919c604b67c3a1dd773e4650dd2fd0b88b1b254752ae35c1f8d93fa3b9"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/distributed-role-instructions.zip",
+      "sha256": "961f077d17cf9c8d29605d1b8511776f2639591904c4df951fbdafbbf9853e14"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/workspace-overlay-part-01.zip",
+      "sha256": "95c3cde4598dc7d8f5ba06ccf32c49122873ee968a654cd2d4ed7a22dca59ce3"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/workspace-overlay-part-02.zip",
+      "sha256": "a49e4487905854156da9ff66f3e5afda2690d591a3961d7572b8900ebd66504d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/snapshot.json",
+      "sha256": "25850f8964e1a2ca90232c0e66369b66c0b806889ab9ff2e9c21ebfa68edea39"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/app/index.html",
+      "sha256": "44445bf96a5834fe54fef97dd36d57664382126ed8ea6fa2a0dced274203153f"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/app/settings-controller.js",
+      "sha256": "3f49a9e4920ef92ef57711d5b6de6611c45199fef7d12cdd73a0d1c7b5b0ff87"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/app/save-notification.js",
+      "sha256": "58efadc22fd5997ac1f219d0e8040ca0b17909a19e4024b22da2136f7dfe4809"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/app/settings-store.js",
+      "sha256": "32139de23b4ad411c402620e84d5592f7ccfbcf68cece1a123946c29b63c2da0"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/SOURCE-MANIFEST.json",
+      "sha256": "fab8d25c2062ed6ba09a923034c2b00b8a828818b454ad6478d871af89494781"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-error-actions.png",
+      "sha256": "2e38d7daf303ceb46d62fd51fe0b2a0df74b8b7ac157bcf563d6d9749b26850e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-error-top.png",
+      "sha256": "1e0c45a2dcc03c03465319279a53d9f9b31a1a3760847c73a7abbc06e8ecefbe"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-invalid.png",
+      "sha256": "b86d0aeef74344a80f623676ab857ca50a0907adba1de984b333acbf46c19979"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-error-actions.png",
+      "sha256": "669025e8abbca10b323affcd0cd655259f69fd0b2d7f76d558d79ed88c057315"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-error-top.png",
+      "sha256": "6b8101fdd5c68a5619a792f4000d1a004b52abde8713ce70eb0eb6bad91fae4f"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-invalid.png",
+      "sha256": "7a3f49ee354f55c61b3eac8f880f42c0ebe876c0336a649d47486ccaaaceb8c3"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-error-actions.png",
+      "sha256": "6dcb00598a706e7fc3b61431975cad09947b760ef61833cb4b620b61b91f6d49"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-error-top.png",
+      "sha256": "a60d98b736b655f7ca4bd1740af220f7590402a4936c2b54779028fc99783d9e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-invalid.png",
+      "sha256": "a05faa76a8943c6802970f2ea659ad459c0de102ae145f83f19dc747b51c663e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-error-actions.png",
+      "sha256": "4e029a7544e0208757cec6fb2ce3f171b3524698b1d58f4ff9d645c29b3274c7"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-error-top.png",
+      "sha256": "b4baffab5538028c2269c2f036f7217ffeaf308c6c8f7c153db5c0335b6b442f"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-invalid.png",
+      "sha256": "8b3645bc74174e208e4ace43cdcd02450e8285d45ee48d281f46ba8b00723fe4"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-error-actions.png",
+      "sha256": "ee783ca210046ef51201dbd6bdfd5bc0504b7714eae5eea07304bece85b08362"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-error-top.png",
+      "sha256": "d4c2cd0f27de09664c9b192ea9e5fb88215d132c9455a81f402c48119d11ca0f"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-invalid.png",
+      "sha256": "239bd93ce96ad60579c63cb88df764374bebc2d5b82edf1f6b962b00dd98ce4e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-error-actions.png",
+      "sha256": "c43b310ca9683bc18145085e26bf0aa1713494b0a7802d72eda7307d098b4786"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-error-top.png",
+      "sha256": "2fa1512e24e154f2c89a803406c53979fe333729bc6d7da4dafe6125be42c9c6"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-invalid.png",
+      "sha256": "eeada23dd0433444eeea04a836b5d184e68f27b882c58ec0dd2b2c78e6ca2868"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-dark-zh-error.png",
+      "sha256": "891e6009e6b7c0a4dd4f42c4439249c91337a1fa6484d69f8c9eb00fda0065b1"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-dark-zh-initial.png",
+      "sha256": "905bf7a12403633fec0339670cb03ecdce3a8732afaddfc6d328f87c05732e03"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-dark-zh-success.png",
+      "sha256": "2c2d34c78a4b4969c71699a41715f725fd7068653830ca1daab2f7808375a5f2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-light-en-error.png",
+      "sha256": "6378749268a9c8a13bdf7bc322109a94ea7d01d7561c0a7df9f89db4b40d64b8"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-light-en-initial.png",
+      "sha256": "b7ee1d8dc3759652ee834d3e394044b23ae7bbb52bd8d78315c5d9b144649bd2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-light-en-success.png",
+      "sha256": "5c773e7afc533fad5d06723b9876be6f06237f3892df130345c47abd727fe370"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-error.png",
+      "sha256": "fdf2a6e49f7bff38051feda8f23c11a7aa2e1e3e374b0df5639f39888f4955b4"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-initial.png",
+      "sha256": "f961f0e3299b42e4b727be9a4b5b5f6eea76b7ac5d38a8c54a4fe06beb8df49e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-invalid.png",
+      "sha256": "1226b24a4c308b50db08beb1347695aaf4c9ab94e8a6cacb8013a9750d545e93"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-pending.png",
+      "sha256": "010bf74588d1f220463da6dbf1c21a890281fe8e9f41d8a0cf9285a997ecb1dc"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-retry-pending.png",
+      "sha256": "d414467e918f295ee19a629303319addf8d99327bcc6801df3690841752725da"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-success.png",
+      "sha256": "18c4d5b6fba4b599c4780c36703eb9f8c625b4a6df576d4c7688afbb89a793b1"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-error.png",
+      "sha256": "6630ccd2b05aa6b46b63ce73ee3bb46c3abd669fb3e8e44ba0555e6d304fec79"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-initial.png",
+      "sha256": "8839b10e1cc0358fcc8dfe8ed45f78068aa45cadc753bfbb169095bbd34b864b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-invalid.png",
+      "sha256": "d983bd9822257c4d546a4dca4447e09e0c7e0bf78829533e0446e0bb2c9c46a4"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-pending.png",
+      "sha256": "e2a65c7a5102f264e7984fb84457d12c4396b12da933573a2b3241e0989d4171"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-retry-pending.png",
+      "sha256": "88357ace0f1e2c9079b843108f461704b27efae51918fab68f7e613870a0ffb1"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-success.png",
+      "sha256": "7175c29f58db8a31cc6485802753ba03512302ccf5cf84af643a55ec9f822111"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-dark-zh-error-lower-controls.png",
+      "sha256": "0d456bef8d0216071d9916b4b601ebd02479e5e9b99d228e2c8f5281fae56f7f"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-dark-zh-error.png",
+      "sha256": "891db1b647d40487b78a3157a27241b2ef560dab9484698713e07f2fd9f118fb"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-dark-zh-initial.png",
+      "sha256": "2b11cd1d5124df4f1fe0f12d63c1596d524f2a9b6a652b228f04d628b889bf78"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-dark-zh-success.png",
+      "sha256": "ae84bfe6746f0c5990e527fb4b284b838c033afd854d66d990c3fdbfa4bd9866"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-light-en-error-lower-controls.png",
+      "sha256": "fbeb381337484ad3c21f852ce0faaf98cd93f9d0aa7d4ac7d14073371a990ccc"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-light-en-error.png",
+      "sha256": "7a68dbbf33aa977b97d0872d06cf9cdbfa32aafd53df69c155f8f03475896278"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-light-en-initial.png",
+      "sha256": "fbd971b0394ae7ff66a1cc1ca4be5468bc8da3d80ccbb752befbad18a2af4caf"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-light-en-success.png",
+      "sha256": "55e80eb911c22a944c6bb6915b3706c96b5405c6a180914a74f48a34130b15c0"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/neighbors/integrated-en-save-edge.png",
+      "sha256": "2ab52a0ab9f602ce401194ac4300caf42d62f9d1b72484cad982ce2d1a8cc66d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/neighbors/integrated-zh-save-edge.png",
+      "sha256": "bfb4654121f3b6cbf42538a76de65a8481388ba9c60e9f32dd588f1532579f8e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/neighbors/reduced-motion-success.png",
+      "sha256": "3805f9c112f26cdcc14848558b4de7aad5850461fd0566fa6f8910f05e8ce1db"
+    }
+  ],
+  "behavior_logs": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/001-guidance-search/command.json",
+      "sha256": "c8ae192e83571b066486ea577ecd3ae67ac8400f3ba4319223641827972b6339",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/001-guidance-search/stderr.txt",
+      "sha256": "e0d6d3c118cdb1a7d738df76d301ba79d545c76952d428386b9f70c2e2413d5a",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/001-guidance-search/stdout.txt",
+      "sha256": "93c57139a1045fcb0da2f16b7d7aa7a956578893ac3986cc37e290cde8083aea",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/002-source-capture/command.json",
+      "sha256": "aa7e1fe1a4280573d4f7e313f197c8a275dba2d84635db2e87952fae26430f86",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/002-source-capture/stdout.txt",
+      "sha256": "7b875730219095953d9712dfbcebbf3ba64631d641c1fff62d64d152ff9d3b05",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/003-guidance-retrieve/command.json",
+      "sha256": "9d0af5faf5bbfe0751da5e7ded053c690987689ded6400f6c2353410451f8695",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/003-guidance-retrieve/stderr.txt",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/003-guidance-retrieve/stdout.txt",
+      "sha256": "75e54bff3fdbfc84da15da1a19a8c1c9ad12305daf4bd5ec5019e49f8538672e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/004-baseline-inspect/command.json",
+      "sha256": "37a6f15b8ccdb1aaef6dbe69a57ceab4869bbe54d6677e901fc54ad52136b70f",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/004-baseline-inspect/stdout.txt",
+      "sha256": "06d8f7103c0ba65d59851138fc271bbf4078d5a9326da60c6b4417be8b5e51f7",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/005-main-check/command.json",
+      "sha256": "e6b98e634f399176a42fc894c4e5e0633640f92bef267d12a8a40f9263d8b34d",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/005-main-check/stderr.txt",
+      "sha256": "89c6d9aa7a6bffc1935c999ffccb01aa56feff071191527b8033c53c0fb6370d",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/006-main-check/command.json",
+      "sha256": "548776ca3750bcc9ee2b4088413b4485a1bb489d0a64371c642812a9b419d629",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/006-main-check/stdout.txt",
+      "sha256": "263f14195b5e889e7e9432cc8f5bd30b8efb5ac0b9f87886913f71a54630f5bc",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/007-neighbors/command.json",
+      "sha256": "1b7bc006a187952703829b3cf777bb260e42a6fd09471c228c15765ec1bb01ab",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/007-neighbors/stdout.txt",
+      "sha256": "dc52d40655278042e14b55308ce639edcf86f5eff0f315a9a78ab670fd5c6536",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/008-final-integrity/command.json",
+      "sha256": "124b573cf990b9bac728f696d19f3ed328dbe49b8ed8b11ce6787499a9bbd350",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/008-final-integrity/stdout.txt",
+      "sha256": "d3c264961b97e73d1bfe2492f45edb77780d136c3b6f73f1ec13b7abbfd944ad",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/009-stop-preview/command.json",
+      "sha256": "c5fa209dacac07cdf9f806c315cfa9b424462c77e54abe0cfa779812a13fa7ff",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/commands/009-stop-preview/stdout.txt",
+      "sha256": "01fc0bb12ffe3eec23f2003fbea1c65bb5f9711f03dcfcb3d0085014e49250ed",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    }
+  ],
+  "viewed_screenshots": [
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-pending.png",
+        "sha256": "010bf74588d1f220463da6dbf1c21a890281fe8e9f41d8a0cf9285a997ecb1dc"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-dark-zh-pending.json",
+        "sha256": "4bc29e983a12b1d1febc6d0d0cfdfc2d9fc6f1ec166bd336c91e6025538b54c8",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-retry-pending.png",
+        "sha256": "d414467e918f295ee19a629303319addf8d99327bcc6801df3690841752725da"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-dark-zh-retry-pending.json",
+        "sha256": "6bf94e175495695814055028eb67008f8eb59e28f31b36e720f1eebcff37f15f",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-success.png",
+        "sha256": "18c4d5b6fba4b599c4780c36703eb9f8c625b4a6df576d4c7688afbb89a793b1"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-dark-zh-success.json",
+        "sha256": "7a8826d9c8d0bd1cb1b250a31caad253ad8a77ae3e6c8a1b1ef0b72cc7eb5ea9",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-pending.png",
+        "sha256": "e2a65c7a5102f264e7984fb84457d12c4396b12da933573a2b3241e0989d4171"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-light-en-pending.json",
+        "sha256": "31f2f42cd95f830f74837a50476749ebc6c76eba99dd5c38f53ce20d8a533cdf",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-retry-pending.png",
+        "sha256": "88357ace0f1e2c9079b843108f461704b27efae51918fab68f7e613870a0ffb1"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-light-en-retry-pending.json",
+        "sha256": "6fa6ef2eac1ddf707ddc7424104abd87329db126eefe8fc1ec75673653584db9",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-success.png",
+        "sha256": "7175c29f58db8a31cc6485802753ba03512302ccf5cf84af643a55ec9f822111"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-light-en-success.json",
+        "sha256": "6c12de9c793a48729ae83eaeb56c83b2999a1b98c955dc21fb45c8e8554c4d53",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-error-actions.png",
+        "sha256": "2e38d7daf303ceb46d62fd51fe0b2a0df74b8b7ac157bcf563d6d9749b26850e"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-dark-zh-error-actions.json",
+        "sha256": "2353b67cf66eed428c2ed93531f71d99be61bc066718f7313b9b1194dafd37e7",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-error-top.png",
+        "sha256": "1e0c45a2dcc03c03465319279a53d9f9b31a1a3760847c73a7abbc06e8ecefbe"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-dark-zh-error-top.json",
+        "sha256": "e26bf3b0c0e3f84e478e04dc9e418255701ae58e51a8156bd805d3d05df2e084",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-invalid.png",
+        "sha256": "b86d0aeef74344a80f623676ab857ca50a0907adba1de984b333acbf46c19979"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-dark-zh-invalid.json",
+        "sha256": "497322afb46a357aa986657455d3917ccd67729dd37249b306938a6f0395d283",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-error-actions.png",
+        "sha256": "669025e8abbca10b323affcd0cd655259f69fd0b2d7f76d558d79ed88c057315"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-light-en-error-actions.json",
+        "sha256": "abbd4659d46be054efaffa504042007ab3b6cbcf73080ee609342e206c3e37e5",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-error-top.png",
+        "sha256": "6b8101fdd5c68a5619a792f4000d1a004b52abde8713ce70eb0eb6bad91fae4f"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-light-en-error-top.json",
+        "sha256": "fd30e772bacbbb4c74cc8400da2cd1a2eecfb6f723e2aa8c309ff6ffbfbf70c5",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-invalid.png",
+        "sha256": "7a3f49ee354f55c61b3eac8f880f42c0ebe876c0336a649d47486ccaaaceb8c3"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-light-en-invalid.json",
+        "sha256": "c04e3b95c960f6843467099b0fac94c802a3dbd3fc46500e0b3ce483adde00fa",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-error-actions.png",
+        "sha256": "6dcb00598a706e7fc3b61431975cad09947b760ef61833cb4b620b61b91f6d49"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-dark-zh-error-actions.json",
+        "sha256": "2335ff435d94e0463caafe53edbfbceed7b328008e972fc57e7a4e2ea126ca7a",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-error-top.png",
+        "sha256": "a60d98b736b655f7ca4bd1740af220f7590402a4936c2b54779028fc99783d9e"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-dark-zh-error-top.json",
+        "sha256": "dc44db1cc8c81d72acff12a3c7485ba552c169c2f070ee388292d6f96999aa02",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-invalid.png",
+        "sha256": "a05faa76a8943c6802970f2ea659ad459c0de102ae145f83f19dc747b51c663e"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-dark-zh-invalid.json",
+        "sha256": "f6408e73e7c1cc15f918675a8a4cffba28e5490c2556e9bc7edff83f4feb4a65",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-error-actions.png",
+        "sha256": "4e029a7544e0208757cec6fb2ce3f171b3524698b1d58f4ff9d645c29b3274c7"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-light-en-error-actions.json",
+        "sha256": "64fa7470a7a3835748ba9e4948e81e69670d3f71bb9886cf79bc184e0165aed1",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-error-top.png",
+        "sha256": "b4baffab5538028c2269c2f036f7217ffeaf308c6c8f7c153db5c0335b6b442f"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-light-en-error-top.json",
+        "sha256": "4baa17448bfb5042b577b69959968b9c103645be992e9dc256688f7d0061a0ab",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-invalid.png",
+        "sha256": "8b3645bc74174e208e4ace43cdcd02450e8285d45ee48d281f46ba8b00723fe4"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-light-en-invalid.json",
+        "sha256": "8c470a0465d2e1e78b58238a1499a905fe4fa11f1e64f3d918e2bea7d6066511",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-error-actions.png",
+        "sha256": "ee783ca210046ef51201dbd6bdfd5bc0504b7714eae5eea07304bece85b08362"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-dark-zh-error-actions.json",
+        "sha256": "005626433f6c58c334ddb8e417c815c67988343c9beb2c6e32e3552cab663e57",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-error-top.png",
+        "sha256": "d4c2cd0f27de09664c9b192ea9e5fb88215d132c9455a81f402c48119d11ca0f"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-dark-zh-error-top.json",
+        "sha256": "3763b6e6ac7142092fbc5a641e68daee744515b9a1ce2edd099daaed693e1819",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-invalid.png",
+        "sha256": "239bd93ce96ad60579c63cb88df764374bebc2d5b82edf1f6b962b00dd98ce4e"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-dark-zh-invalid.json",
+        "sha256": "efe86bc23f7e5cbc112f2299f189c8a92b1d816177526e5b86c9712b1fb1f85a",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-error-actions.png",
+        "sha256": "c43b310ca9683bc18145085e26bf0aa1713494b0a7802d72eda7307d098b4786"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-light-en-error-actions.json",
+        "sha256": "3b242eec983906f68e3187971ef15d7ed78c969e4d0b0252faed4970a9f1a463",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-error-top.png",
+        "sha256": "2fa1512e24e154f2c89a803406c53979fe333729bc6d7da4dafe6125be42c9c6"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-light-en-error-top.json",
+        "sha256": "3c249a2ad0cf8f153d5a66af61c907e29cf209e93efef63f8d633f8a147403a4",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-invalid.png",
+        "sha256": "eeada23dd0433444eeea04a836b5d184e68f27b882c58ec0dd2b2c78e6ca2868"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-light-en-invalid.json",
+        "sha256": "2f8f8aa1b9114b37b59c996411222b8d627f7f1f70f5a13459390dd26dd8d8d0",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_17_cont",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/neighbors/reduced-motion-success.png",
+        "sha256": "3805f9c112f26cdcc14848558b4de7aad5850461fd0566fa6f8910f05e8ce1db"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-neighbor-view-reduced-motion-success.json",
+        "sha256": "a06e50b245366e2ddf90d72b5f2c06840595005a6efe623a19fcaa9663300a00",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    }
+  ],
+  "capture_lineage": "evidence/integrator/004-settled contains the final 18 settled error-top/error-actions/invalid images after showing-class clearance and instant scrolling. All 18 were personally viewed by the primary, separately from the integrator. evidence/main-check-002 contains the corrected primary run on the same final source; its 26 images include early pending frames during the native fade and later result states, so they are timed observations rather than uniformly settled renders. Three additional images document integrated neighbor geometry and reduced-motion success. Earlier source/baseline views, failed main-check/first integrator harness attempts and 003-browser transition captures remain in the complete snapshot. No participant source changed during this reconciliation.",
+  "all_original_evidence": "The byte-complete input/overlay reconstruction also retains baseline, research, failed attempts and captures outside this final-product index."
+}

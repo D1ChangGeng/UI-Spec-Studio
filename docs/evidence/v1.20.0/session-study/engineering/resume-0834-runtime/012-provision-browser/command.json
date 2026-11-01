@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "/tmp/ui-spec-validation-venv/bin/python",
+    "/workspace/scratch/1e61855ad686/UI-Spec-Studio/tools/provision_preview_browser.py",
+    "--output-dir",
+    "/tmp/ui-spec-preview-browser",
+    "--report",
+    "/tmp/ui-spec-runtime-restoration-0834/browser-provision.json"
+  ],
+  "cwd": "/tmp",
+  "started_at": "2026-11-01T08:35:00.628425+00:00",
+  "timeout_seconds": 300,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T08:35:04.602494+00:00",
+  "wall_seconds": 3.974076,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 2488,
+      "sha256": "c11f5d3b190bab94a084a83a13cc60b934c3642973abd068abb78fb6ebb63328"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

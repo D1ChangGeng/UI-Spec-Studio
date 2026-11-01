@@ -1,0 +1,22 @@
+{
+  "command": [
+    "curl",
+    "--fail",
+    "--location",
+    "--retry",
+    "2",
+    "--create-dirs",
+    "--output",
+    "/tmp/ui-spec-runtime-restoration-0834/source/tools/requirements-preview.txt",
+    "https://raw.githubusercontent.com/D1ChangGeng/UI-Spec-Studio/89cf94495dc1300dbb21c3f93e5972a2c67ab020/tools/requirements-preview.txt"
+  ],
+  "cwd": "/tmp",
+  "started_at": "2026-11-01T08:33:46.899950+00:00",
+  "finished_at": "2026-11-01T08:33:47.096635+00:00",
+  "returncode": 0,
+  "stdout": "/tmp/ui-spec-runtime-restoration-0834/003-fetch-requirements-preview-txt.stdout",
+  "stderr": "/tmp/ui-spec-runtime-restoration-0834/003-fetch-requirements-preview-txt.stderr",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "c4ef84d80d6191e7a8cfd058b39ee350a164ed37b640782cf6c7a9c0cda5c686",
+  "capture": "bootstrap capture used before repository capture_command.py available"
+}

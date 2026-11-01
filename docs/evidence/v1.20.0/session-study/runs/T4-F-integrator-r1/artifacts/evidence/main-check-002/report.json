@@ -1,0 +1,2389 @@
+{
+  "subject": "independent main-agent integrated product checks",
+  "browser": "Chromium headless shell 143.0.7499.4",
+  "device_scale_factor": 1,
+  "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+  "cases": [
+    {
+      "name": "1440x900-light-en",
+      "viewport": [
+        1440,
+        900
+      ],
+      "theme": "light",
+      "lang": "en",
+      "checks": [
+        {
+          "check": "initial form geometry retained",
+          "pass": true,
+          "detail": {
+            "before": {
+              ".page-body .card": {
+                "x": 76,
+                "y": 196,
+                "width": 1288,
+                "height": 839
+              },
+              "#profile-heading": {
+                "x": 418.5,
+                "y": 217,
+                "width": 924.5,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 418.5,
+                "y": 511,
+                "width": 297.5,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 1211.359375,
+                "y": 974,
+                "width": 131.640625,
+                "height": 40
+              }
+            },
+            "after": {
+              ".page-body .card": {
+                "x": 76,
+                "y": 196,
+                "width": 1288,
+                "height": 839
+              },
+              "#profile-heading": {
+                "x": 418.5,
+                "y": 217,
+                "width": 924.5,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 418.5,
+                "y": 511,
+                "width": 297.5,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 1211.359375,
+                "y": 974,
+                "width": 131.640625,
+                "height": 40
+              }
+            }
+          }
+        },
+        {
+          "check": "no horizontal document overflow",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "correct initial theme",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "save is disabled during authoritative pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "newer draft survives completion",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "completion preserves field focus",
+          "pass": true,
+          "detail": {
+            "before": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            },
+            "after": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            }
+          }
+        },
+        {
+          "check": "actual persisted submitted snapshot",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:14:49.390Z"
+          }
+        },
+        {
+          "check": "success only after store event",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "success stays visible",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "native persistent setting",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "failure preserves prior storage",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:14:49.390Z"
+          }
+        },
+        {
+          "check": "failure preserves newer draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast remains within viewport",
+          "pass": true,
+          "detail": {
+            "x": 1074,
+            "y": 16,
+            "width": 350,
+            "height": 156.5
+          }
+        },
+        {
+          "check": "native close receives pointer at center",
+          "pass": true,
+          "detail": {
+            "x": 1392.5,
+            "y": 25,
+            "width": 24.5,
+            "height": 24.5
+          }
+        },
+        {
+          "check": "toast does not move form layout",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "retry hides its action during pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "focus remains on a usable control after Retry disappears",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "retry saves failed snapshot rather than current later draft",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Failed version / 失败版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:14:52.144Z"
+          }
+        },
+        {
+          "check": "retry preserves current later draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close preserves storage and draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close restores usable task focus",
+          "pass": true,
+          "detail": {
+            "id": "save-settings",
+            "tag": "BUTTON",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "rejected submit focuses actual first invalid field",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "#business-name has associated field error",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#business-name description exists",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#email has associated field error",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "#email description exists",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "invalid submit preserves stored value",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "invalid toast identifies first field",
+          "pass": true,
+          "detail": "FN\nFieldnotes\nJust now\nCheck profile fields. Start with Display name."
+        },
+        {
+          "check": "inline summary is not a duplicate live status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast uses polite atomic status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "existing Cancel restores stored version",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "saved data survives reload",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "no page JavaScript errors",
+          "pass": true,
+          "detail": []
+        }
+      ],
+      "page_errors": [],
+      "console_errors": [],
+      "status": "pass",
+      "events": [],
+      "video": "evidence/main-check-002/videos/634397f28c4256e0de694f5bf58c8d75.webm"
+    },
+    {
+      "name": "1440x900-dark-zh",
+      "viewport": [
+        1440,
+        900
+      ],
+      "theme": "dark",
+      "lang": "zh",
+      "checks": [
+        {
+          "check": "initial form geometry retained",
+          "pass": true,
+          "detail": {
+            "before": {
+              ".page-body .card": {
+                "x": 76,
+                "y": 196,
+                "width": 1288,
+                "height": 839
+              },
+              "#profile-heading": {
+                "x": 418.5,
+                "y": 217,
+                "width": 924.5,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 418.5,
+                "y": 511,
+                "width": 297.5,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 1253,
+                "y": 974,
+                "width": 90,
+                "height": 40
+              }
+            },
+            "after": {
+              ".page-body .card": {
+                "x": 76,
+                "y": 196,
+                "width": 1288,
+                "height": 839
+              },
+              "#profile-heading": {
+                "x": 418.5,
+                "y": 217,
+                "width": 924.5,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 418.5,
+                "y": 511,
+                "width": 297.5,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 1253,
+                "y": 974,
+                "width": 90,
+                "height": 40
+              }
+            }
+          }
+        },
+        {
+          "check": "no horizontal document overflow",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "correct initial theme",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "save is disabled during authoritative pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "newer draft survives completion",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "completion preserves field focus",
+          "pass": true,
+          "detail": {
+            "before": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            },
+            "after": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            }
+          }
+        },
+        {
+          "check": "actual persisted submitted snapshot",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:14:55.503Z"
+          }
+        },
+        {
+          "check": "success only after store event",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "success stays visible",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "native persistent setting",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "failure preserves prior storage",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:14:55.503Z"
+          }
+        },
+        {
+          "check": "failure preserves newer draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast remains within viewport",
+          "pass": true,
+          "detail": {
+            "x": 1074,
+            "y": 16,
+            "width": 350,
+            "height": 156.5
+          }
+        },
+        {
+          "check": "native close receives pointer at center",
+          "pass": true,
+          "detail": {
+            "x": 1392.5,
+            "y": 25,
+            "width": 24.5,
+            "height": 24.5
+          }
+        },
+        {
+          "check": "toast does not move form layout",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "retry hides its action during pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "focus remains on a usable control after Retry disappears",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "retry saves failed snapshot rather than current later draft",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Failed version / 失败版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:14:58.436Z"
+          }
+        },
+        {
+          "check": "retry preserves current later draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close preserves storage and draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close restores usable task focus",
+          "pass": true,
+          "detail": {
+            "id": "save-settings",
+            "tag": "BUTTON",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "rejected submit focuses actual first invalid field",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "#business-name has associated field error",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#business-name description exists",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#email has associated field error",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "#email description exists",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "invalid submit preserves stored value",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "invalid toast identifies first field",
+          "pass": true,
+          "detail": "FN\nFieldnotes\n刚刚\n请检查个人资料字段。请先检查显示名称。"
+        },
+        {
+          "check": "inline summary is not a duplicate live status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast uses polite atomic status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "existing Cancel restores stored version",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "saved data survives reload",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "no page JavaScript errors",
+          "pass": true,
+          "detail": []
+        }
+      ],
+      "page_errors": [],
+      "console_errors": [],
+      "status": "pass",
+      "events": [],
+      "video": "evidence/main-check-002/videos/e24c9654ec4212bb307f493173cc0044.webm"
+    },
+    {
+      "name": "1280x600-light-en",
+      "viewport": [
+        1280,
+        600
+      ],
+      "theme": "light",
+      "lang": "en",
+      "checks": [
+        {
+          "check": "initial form geometry retained",
+          "pass": true,
+          "detail": {
+            "before": {
+              ".page-body .card": {
+                "x": 86,
+                "y": 196,
+                "width": 1108,
+                "height": 839
+              },
+              "#profile-heading": {
+                "x": 383.5,
+                "y": 217,
+                "width": 789.5,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 383.5,
+                "y": 511,
+                "width": 252.5,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 1041.359375,
+                "y": 974,
+                "width": 131.640625,
+                "height": 40
+              }
+            },
+            "after": {
+              ".page-body .card": {
+                "x": 86,
+                "y": 196,
+                "width": 1108,
+                "height": 839
+              },
+              "#profile-heading": {
+                "x": 383.5,
+                "y": 217,
+                "width": 789.5,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 383.5,
+                "y": 511,
+                "width": 252.5,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 1041.359375,
+                "y": 974,
+                "width": 131.640625,
+                "height": 40
+              }
+            }
+          }
+        },
+        {
+          "check": "no horizontal document overflow",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "correct initial theme",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "save is disabled during authoritative pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "newer draft survives completion",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "completion preserves field focus",
+          "pass": true,
+          "detail": {
+            "before": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            },
+            "after": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            }
+          }
+        },
+        {
+          "check": "actual persisted submitted snapshot",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:01.737Z"
+          }
+        },
+        {
+          "check": "success only after store event",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "success stays visible",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "native persistent setting",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "failure preserves prior storage",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:01.737Z"
+          }
+        },
+        {
+          "check": "failure preserves newer draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast remains within viewport",
+          "pass": true,
+          "detail": {
+            "x": 914,
+            "y": 16,
+            "width": 350,
+            "height": 156.5
+          }
+        },
+        {
+          "check": "native close receives pointer at center",
+          "pass": true,
+          "detail": {
+            "x": 1232.5,
+            "y": 25,
+            "width": 24.5,
+            "height": 24.5
+          }
+        },
+        {
+          "check": "toast does not move form layout",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "retry hides its action during pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "focus remains on a usable control after Retry disappears",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "retry saves failed snapshot rather than current later draft",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Failed version / 失败版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:03.849Z"
+          }
+        },
+        {
+          "check": "retry preserves current later draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close preserves storage and draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close restores usable task focus",
+          "pass": true,
+          "detail": {
+            "id": "save-settings",
+            "tag": "BUTTON",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "rejected submit focuses actual first invalid field",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "#business-name has associated field error",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#business-name description exists",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#email has associated field error",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "#email description exists",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "invalid submit preserves stored value",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "invalid toast identifies first field",
+          "pass": true,
+          "detail": "FN\nFieldnotes\nJust now\nCheck profile fields. Start with Display name."
+        },
+        {
+          "check": "inline summary is not a duplicate live status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast uses polite atomic status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "existing Cancel restores stored version",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "saved data survives reload",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "no page JavaScript errors",
+          "pass": true,
+          "detail": []
+        }
+      ],
+      "page_errors": [],
+      "console_errors": [],
+      "status": "pass",
+      "events": []
+    },
+    {
+      "name": "1280x600-dark-zh",
+      "viewport": [
+        1280,
+        600
+      ],
+      "theme": "dark",
+      "lang": "zh",
+      "checks": [
+        {
+          "check": "initial form geometry retained",
+          "pass": true,
+          "detail": {
+            "before": {
+              ".page-body .card": {
+                "x": 86,
+                "y": 196,
+                "width": 1108,
+                "height": 839
+              },
+              "#profile-heading": {
+                "x": 383.5,
+                "y": 217,
+                "width": 789.5,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 383.5,
+                "y": 511,
+                "width": 252.5,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 1083,
+                "y": 974,
+                "width": 90,
+                "height": 40
+              }
+            },
+            "after": {
+              ".page-body .card": {
+                "x": 86,
+                "y": 196,
+                "width": 1108,
+                "height": 839
+              },
+              "#profile-heading": {
+                "x": 383.5,
+                "y": 217,
+                "width": 789.5,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 383.5,
+                "y": 511,
+                "width": 252.5,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 1083,
+                "y": 974,
+                "width": 90,
+                "height": 40
+              }
+            }
+          }
+        },
+        {
+          "check": "no horizontal document overflow",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "correct initial theme",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "save is disabled during authoritative pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "newer draft survives completion",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "completion preserves field focus",
+          "pass": true,
+          "detail": {
+            "before": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            },
+            "after": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            }
+          }
+        },
+        {
+          "check": "actual persisted submitted snapshot",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:07.305Z"
+          }
+        },
+        {
+          "check": "success only after store event",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "success stays visible",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "native persistent setting",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "failure preserves prior storage",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:07.305Z"
+          }
+        },
+        {
+          "check": "failure preserves newer draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast remains within viewport",
+          "pass": true,
+          "detail": {
+            "x": 914,
+            "y": 16,
+            "width": 350,
+            "height": 156.5
+          }
+        },
+        {
+          "check": "native close receives pointer at center",
+          "pass": true,
+          "detail": {
+            "x": 1232.5,
+            "y": 25,
+            "width": 24.5,
+            "height": 24.5
+          }
+        },
+        {
+          "check": "toast does not move form layout",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "retry hides its action during pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "focus remains on a usable control after Retry disappears",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "retry saves failed snapshot rather than current later draft",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Failed version / 失败版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:09.448Z"
+          }
+        },
+        {
+          "check": "retry preserves current later draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close preserves storage and draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close restores usable task focus",
+          "pass": true,
+          "detail": {
+            "id": "save-settings",
+            "tag": "BUTTON",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "rejected submit focuses actual first invalid field",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "#business-name has associated field error",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#business-name description exists",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#email has associated field error",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "#email description exists",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "invalid submit preserves stored value",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "invalid toast identifies first field",
+          "pass": true,
+          "detail": "FN\nFieldnotes\n刚刚\n请检查个人资料字段。请先检查显示名称。"
+        },
+        {
+          "check": "inline summary is not a duplicate live status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast uses polite atomic status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "existing Cancel restores stored version",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "saved data survives reload",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "no page JavaScript errors",
+          "pass": true,
+          "detail": []
+        }
+      ],
+      "page_errors": [],
+      "console_errors": [],
+      "status": "pass",
+      "events": []
+    },
+    {
+      "name": "390x844-light-en",
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "light",
+      "lang": "en",
+      "checks": [
+        {
+          "check": "initial form geometry retained",
+          "pass": true,
+          "detail": {
+            "before": {
+              ".page-body .card": {
+                "x": 8,
+                "y": 140,
+                "width": 374,
+                "height": 1599
+              },
+              "#profile-heading": {
+                "x": 29,
+                "y": 585,
+                "width": 332,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 29,
+                "y": 919,
+                "width": 332,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 229.359375,
+                "y": 1678,
+                "width": 131.640625,
+                "height": 40
+              }
+            },
+            "after": {
+              ".page-body .card": {
+                "x": 8,
+                "y": 140,
+                "width": 374,
+                "height": 1599
+              },
+              "#profile-heading": {
+                "x": 29,
+                "y": 585,
+                "width": 332,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 29,
+                "y": 919,
+                "width": 332,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 229.359375,
+                "y": 1678,
+                "width": 131.640625,
+                "height": 40
+              }
+            }
+          }
+        },
+        {
+          "check": "no horizontal document overflow",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "correct initial theme",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "save is disabled during authoritative pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "newer draft survives completion",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "completion preserves field focus",
+          "pass": true,
+          "detail": {
+            "before": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            },
+            "after": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            }
+          }
+        },
+        {
+          "check": "actual persisted submitted snapshot",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:14.196Z"
+          }
+        },
+        {
+          "check": "success only after store event",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "success stays visible",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "native persistent setting",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "failure preserves prior storage",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:14.196Z"
+          }
+        },
+        {
+          "check": "failure preserves newer draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast remains within viewport",
+          "pass": true,
+          "detail": {
+            "x": 24,
+            "y": 16,
+            "width": 350,
+            "height": 156.5
+          }
+        },
+        {
+          "check": "native close receives pointer at center",
+          "pass": true,
+          "detail": {
+            "x": 342.5,
+            "y": 25,
+            "width": 24.5,
+            "height": 24.5
+          }
+        },
+        {
+          "check": "toast does not move form layout",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "lower save control remains reachable",
+          "pass": true,
+          "detail": {
+            "x": 229.359375,
+            "y": 599,
+            "width": 131.640625,
+            "height": 40
+          }
+        },
+        {
+          "check": "retry hides its action during pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "focus remains on a usable control after Retry disappears",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "retry saves failed snapshot rather than current later draft",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Failed version / 失败版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:18.300Z"
+          }
+        },
+        {
+          "check": "retry preserves current later draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close preserves storage and draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close restores usable task focus",
+          "pass": true,
+          "detail": {
+            "id": "save-settings",
+            "tag": "BUTTON",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "rejected submit focuses actual first invalid field",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "#business-name has associated field error",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#business-name description exists",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#email has associated field error",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "#email description exists",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "invalid submit preserves stored value",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "invalid toast identifies first field",
+          "pass": true,
+          "detail": "FN\nFieldnotes\nJust now\nCheck profile fields. Start with Display name."
+        },
+        {
+          "check": "inline summary is not a duplicate live status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast uses polite atomic status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "existing Cancel restores stored version",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "saved data survives reload",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "no page JavaScript errors",
+          "pass": true,
+          "detail": []
+        }
+      ],
+      "page_errors": [],
+      "console_errors": [],
+      "status": "pass",
+      "events": []
+    },
+    {
+      "name": "390x844-dark-zh",
+      "viewport": [
+        390,
+        844
+      ],
+      "theme": "dark",
+      "lang": "zh",
+      "checks": [
+        {
+          "check": "initial form geometry retained",
+          "pass": true,
+          "detail": {
+            "before": {
+              ".page-body .card": {
+                "x": 8,
+                "y": 140,
+                "width": 374,
+                "height": 1471
+              },
+              "#profile-heading": {
+                "x": 29,
+                "y": 585,
+                "width": 332,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 29,
+                "y": 879,
+                "width": 332,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 271,
+                "y": 1550,
+                "width": 90,
+                "height": 40
+              }
+            },
+            "after": {
+              ".page-body .card": {
+                "x": 8,
+                "y": 140,
+                "width": 374,
+                "height": 1471
+              },
+              "#profile-heading": {
+                "x": 29,
+                "y": 585,
+                "width": 332,
+                "height": 28
+              },
+              "#business-name": {
+                "x": 29,
+                "y": 879,
+                "width": 332,
+                "height": 40
+              },
+              "#save-settings": {
+                "x": 271,
+                "y": 1550,
+                "width": 90,
+                "height": 40
+              }
+            }
+          }
+        },
+        {
+          "check": "no horizontal document overflow",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "correct initial theme",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "save is disabled during authoritative pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "newer draft survives completion",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "completion preserves field focus",
+          "pass": true,
+          "detail": {
+            "before": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            },
+            "after": {
+              "id": "business-name",
+              "tag": "INPUT",
+              "disabled": false,
+              "visible": true
+            }
+          }
+        },
+        {
+          "check": "actual persisted submitted snapshot",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:22.552Z"
+          }
+        },
+        {
+          "check": "success only after store event",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "success stays visible",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "native persistent setting",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "failure preserves prior storage",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Submitted version / 已提交版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:22.552Z"
+          }
+        },
+        {
+          "check": "failure preserves newer draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast remains within viewport",
+          "pass": true,
+          "detail": {
+            "x": 24,
+            "y": 16,
+            "width": 350,
+            "height": 156.5
+          }
+        },
+        {
+          "check": "native close receives pointer at center",
+          "pass": true,
+          "detail": {
+            "x": 342.5,
+            "y": 25,
+            "width": 24.5,
+            "height": 24.5
+          }
+        },
+        {
+          "check": "toast does not move form layout",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "lower save control remains reachable",
+          "pass": true,
+          "detail": {
+            "x": 271,
+            "y": 599,
+            "width": 90,
+            "height": 40
+          }
+        },
+        {
+          "check": "retry hides its action during pending",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "focus remains on a usable control after Retry disappears",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "retry saves failed snapshot rather than current later draft",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Failed version / 失败版本",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": false,
+              "publicProfile": true
+            },
+            "savedAt": "2026-10-31T23:15:26.683Z"
+          }
+        },
+        {
+          "check": "retry preserves current later draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close preserves storage and draft",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "close restores usable task focus",
+          "pass": true,
+          "detail": {
+            "id": "save-settings",
+            "tag": "BUTTON",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "rejected submit focuses actual first invalid field",
+          "pass": true,
+          "detail": {
+            "id": "business-name",
+            "tag": "INPUT",
+            "disabled": false,
+            "visible": true
+          }
+        },
+        {
+          "check": "#business-name has associated field error",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#business-name description exists",
+          "pass": true,
+          "detail": "business-name-error"
+        },
+        {
+          "check": "#email has associated field error",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "#email description exists",
+          "pass": true,
+          "detail": "email-error"
+        },
+        {
+          "check": "invalid submit preserves stored value",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "invalid toast identifies first field",
+          "pass": true,
+          "detail": "FN\nFieldnotes\n刚刚\n请检查个人资料字段。请先检查显示名称。"
+        },
+        {
+          "check": "inline summary is not a duplicate live status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "toast uses polite atomic status",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "existing Cancel restores stored version",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "saved data survives reload",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "check": "no page JavaScript errors",
+          "pass": true,
+          "detail": []
+        }
+      ],
+      "page_errors": [],
+      "console_errors": [],
+      "status": "pass",
+      "events": []
+    },
+    {
+      "name": "stale-operation-and-dismiss-pending",
+      "checks": [
+        {
+          "check": "old failed event cannot replace newer invalid feedback",
+          "pass": true,
+          "detail": "FN\nFieldnotes\nJust now\nCheck profile fields. Start with Display name."
+        },
+        {
+          "check": "dismissing pending does not cancel persistence",
+          "pass": true,
+          "detail": {
+            "schemaVersion": 1,
+            "settings": {
+              "displayName": "Dismiss pending verification",
+              "organization": "Fieldnotes Research / 城市日常研究小组",
+              "location": "Singapore / 新加坡",
+              "email": "mei.lin@example.invalid",
+              "weeklyDigest": true,
+              "publicProfile": false
+            },
+            "savedAt": "2026-10-31T23:15:30.360Z"
+          }
+        },
+        {
+          "check": "next authoritative result returns feedback",
+          "pass": true,
+          "detail": null
+        }
+      ],
+      "status": "pass"
+    }
+  ],
+  "captures": [
+    {
+      "case": "1440x900-light-en",
+      "state": "initial",
+      "path": "evidence/main-check-002/1440x900-light-en-initial.png",
+      "capture_start_page_ms": 756.5999999977648,
+      "capture_end_page_ms": 825.6999999992549,
+      "wall_timestamp": 1793488488.401083,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 0,
+      "focus": {
+        "id": "",
+        "tag": "BODY",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-light-en",
+      "state": "pending",
+      "path": "evidence/main-check-002/1440x900-light-en-pending.png",
+      "capture_start_page_ms": 1082.0999999977648,
+      "capture_end_page_ms": 1179,
+      "wall_timestamp": 1793488488.7611744,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 207,
+      "focus": {
+        "id": "",
+        "tag": "BODY",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-light-en",
+      "state": "success",
+      "path": "evidence/main-check-002/1440x900-light-en-success.png",
+      "capture_start_page_ms": 1854.5,
+      "capture_end_page_ms": 1927.199999999255,
+      "wall_timestamp": 1793488489.5061119,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 138,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-light-en",
+      "state": "error",
+      "path": "evidence/main-check-002/1440x900-light-en-error.png",
+      "capture_start_page_ms": 3638,
+      "capture_end_page_ms": 3723.699999999255,
+      "wall_timestamp": 1793488491.3036017,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 19,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-light-en",
+      "state": "retry-pending",
+      "path": "evidence/main-check-002/1440x900-light-en-retry-pending.png",
+      "capture_start_page_ms": 3838.599999997765,
+      "capture_end_page_ms": 3919.599999997765,
+      "wall_timestamp": 1793488491.4950066,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 0,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-light-en",
+      "state": "invalid",
+      "path": "evidence/main-check-002/1440x900-light-en-invalid.png",
+      "capture_start_page_ms": 5101.39999999851,
+      "capture_end_page_ms": 5165.89999999851,
+      "wall_timestamp": 1793488492.741338,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 243,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-dark-zh",
+      "state": "initial",
+      "path": "evidence/main-check-002/1440x900-dark-zh-initial.png",
+      "capture_start_page_ms": 713.8999999985099,
+      "capture_end_page_ms": 797.8000000007451,
+      "wall_timestamp": 1793488494.5796802,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 0,
+      "focus": {
+        "id": "",
+        "tag": "BODY",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-dark-zh",
+      "state": "pending",
+      "path": "evidence/main-check-002/1440x900-dark-zh-pending.png",
+      "capture_start_page_ms": 990.5,
+      "capture_end_page_ms": 1056.5,
+      "wall_timestamp": 1793488494.8366253,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 127,
+      "focus": {
+        "id": "",
+        "tag": "BODY",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-dark-zh",
+      "state": "success",
+      "path": "evidence/main-check-002/1440x900-dark-zh-success.png",
+      "capture_start_page_ms": 1790.5,
+      "capture_end_page_ms": 1918.5,
+      "wall_timestamp": 1793488495.7023058,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 63,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-dark-zh",
+      "state": "error",
+      "path": "evidence/main-check-002/1440x900-dark-zh-error.png",
+      "capture_start_page_ms": 3686.89999999851,
+      "capture_end_page_ms": 3816.599999997765,
+      "wall_timestamp": 1793488497.600725,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 6,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-dark-zh",
+      "state": "retry-pending",
+      "path": "evidence/main-check-002/1440x900-dark-zh-retry-pending.png",
+      "capture_start_page_ms": 3922.5,
+      "capture_end_page_ms": 3983.5,
+      "wall_timestamp": 1793488497.7681189,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 0,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1440x900-dark-zh",
+      "state": "invalid",
+      "path": "evidence/main-check-002/1440x900-dark-zh-invalid.png",
+      "capture_start_page_ms": 5202.300000000745,
+      "capture_end_page_ms": 5272.199999999255,
+      "wall_timestamp": 1793488499.0526972,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollY": 243,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1280x600-light-en",
+      "state": "initial",
+      "path": "evidence/main-check-002/1280x600-light-en-initial.png",
+      "capture_start_page_ms": 805.9000000022352,
+      "capture_end_page_ms": 853,
+      "wall_timestamp": 1793488500.8489313,
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "scrollY": 0,
+      "focus": {
+        "id": "",
+        "tag": "BODY",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1280x600-light-en",
+      "state": "success",
+      "path": "evidence/main-check-002/1280x600-light-en-success.png",
+      "capture_start_page_ms": 1768.5,
+      "capture_end_page_ms": 1824.699999999255,
+      "wall_timestamp": 1793488501.820556,
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "scrollY": 460,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1280x600-light-en",
+      "state": "error",
+      "path": "evidence/main-check-002/1280x600-light-en-error.png",
+      "capture_start_page_ms": 3005,
+      "capture_end_page_ms": 3062.5,
+      "wall_timestamp": 1793488503.0584297,
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "scrollY": 493,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1280x600-dark-zh",
+      "state": "initial",
+      "path": "evidence/main-check-002/1280x600-dark-zh-initial.png",
+      "capture_start_page_ms": 744.1000000014901,
+      "capture_end_page_ms": 799.2000000029802,
+      "wall_timestamp": 1793488506.3664343,
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "scrollY": 0,
+      "focus": {
+        "id": "",
+        "tag": "BODY",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1280x600-dark-zh",
+      "state": "success",
+      "path": "evidence/main-check-002/1280x600-dark-zh-success.png",
+      "capture_start_page_ms": 1776.6000000014901,
+      "capture_end_page_ms": 1832.9000000022352,
+      "wall_timestamp": 1793488507.3999312,
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "scrollY": 480,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "1280x600-dark-zh",
+      "state": "error",
+      "path": "evidence/main-check-002/1280x600-dark-zh-error.png",
+      "capture_start_page_ms": 3022.300000000745,
+      "capture_end_page_ms": 3064.800000000745,
+      "wall_timestamp": 1793488508.6319525,
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "scrollY": 521,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "390x844-light-en",
+      "state": "initial",
+      "path": "evidence/main-check-002/390x844-light-en-initial.png",
+      "capture_start_page_ms": 813.5,
+      "capture_end_page_ms": 853.1999999992549,
+      "wall_timestamp": 1793488512.0395892,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 0,
+      "focus": {
+        "id": "",
+        "tag": "BODY",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "390x844-light-en",
+      "state": "success",
+      "path": "evidence/main-check-002/390x844-light-en-success.png",
+      "capture_start_page_ms": 3037.699999999255,
+      "capture_end_page_ms": 3073.300000000745,
+      "wall_timestamp": 1793488514.2605567,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 927,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "390x844-light-en",
+      "state": "error",
+      "path": "evidence/main-check-002/390x844-light-en-error.png",
+      "capture_start_page_ms": 5330.800000000745,
+      "capture_end_page_ms": 5371.5,
+      "wall_timestamp": 1793488516.5578542,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 1069,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "390x844-light-en",
+      "state": "error-lower-controls",
+      "path": "evidence/main-check-002/390x844-light-en-error-lower-controls.png",
+      "capture_start_page_ms": 6301.699999999255,
+      "capture_end_page_ms": 6336.60000000149,
+      "wall_timestamp": 1793488517.5231311,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 1079,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "390x844-dark-zh",
+      "state": "initial",
+      "path": "evidence/main-check-002/390x844-dark-zh-initial.png",
+      "capture_start_page_ms": 712.4000000022352,
+      "capture_end_page_ms": 747.9000000022352,
+      "wall_timestamp": 1793488520.4333508,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 0,
+      "focus": {
+        "id": "",
+        "tag": "BODY",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "390x844-dark-zh",
+      "state": "success",
+      "path": "evidence/main-check-002/390x844-dark-zh-success.png",
+      "capture_start_page_ms": 2898.5,
+      "capture_end_page_ms": 2953.400000002235,
+      "wall_timestamp": 1793488522.6392035,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 863,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "390x844-dark-zh",
+      "state": "error",
+      "path": "evidence/main-check-002/390x844-dark-zh-error.png",
+      "capture_start_page_ms": 5202.800000000745,
+      "capture_end_page_ms": 5240.60000000149,
+      "wall_timestamp": 1793488524.9263937,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 949,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    },
+    {
+      "case": "390x844-dark-zh",
+      "state": "error-lower-controls",
+      "path": "evidence/main-check-002/390x844-dark-zh-error-lower-controls.png",
+      "capture_start_page_ms": 6186.5,
+      "capture_end_page_ms": 6222.400000002235,
+      "wall_timestamp": 1793488525.9076636,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 951,
+      "focus": {
+        "id": "business-name",
+        "tag": "INPUT",
+        "disabled": false,
+        "visible": true
+      }
+    }
+  ],
+  "limits": [
+    "Desktop browser viewport emulation; no real mobile virtual keyboard.",
+    "Recorded video is retained but not declared as naturally viewed playback.",
+    "Live-region semantics checked; no screen-reader auditory session."
+  ],
+  "protected_store_sha256": "32139de23b4ad411c402620e84d5592f7ccfbcf68cece1a123946c29b63c2da0",
+  "pass": true
+}

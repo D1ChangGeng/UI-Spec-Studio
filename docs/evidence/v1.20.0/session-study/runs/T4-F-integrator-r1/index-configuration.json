@@ -1,0 +1,106 @@
+{
+  "cell_id": "T4-F-integrator-r1",
+  "agent_id": "/root/product_17_cont",
+  "preview_command": "Reconstruct the retained workspace, then run cd app && python -m http.server 4417 --bind 127.0.0.1. Open /?theme=light&lang=en or /?theme=dark&lang=zh; add &fail=once for the actual one-time failed-save/retry path. The original dedicated preview was stopped after verification.",
+  "capture_conditions": "Chromium headless shell 143.0.7499.4 through local Python Playwright, DPR 1 and the prescribed Noto CJK Fontconfig fixture. Actual app states at 1440x900, 1280x600 and 390x844 in light/en and dark/zh. Eighteen settled error/validation captures, 26 main final-source behavior/episode captures, two integrated mobile-neighbor captures and one reduced-motion success capture. The store uses its real 750 ms timer; captured videos were not viewed continuously.",
+  "capture_lineage": "evidence/integrator/004-settled contains the final 18 settled error-top/error-actions/invalid images after showing-class clearance and instant scrolling. All 18 were personally viewed by the primary, separately from the integrator. evidence/main-check-002 contains the corrected primary run on the same final source; its 26 images include early pending frames during the native fade and later result states, so they are timed observations rather than uniformly settled renders. Three additional images document integrated neighbor geometry and reduced-motion success. Earlier source/baseline views, failed main-check/first integrator harness attempts and 003-browser transition captures remain in the complete snapshot. No participant source changed during this reconciliation.",
+  "final_capture_prefixes": [
+    "evidence/integrator/004-settled",
+    "evidence/main-check-002"
+  ],
+  "final_capture_files": [
+    "evidence/neighbors/integrated-en-save-edge.png",
+    "evidence/neighbors/integrated-zh-save-edge.png",
+    "evidence/neighbors/reduced-motion-success.png"
+  ],
+  "primary_view_globs": [
+    "evidence/views/*.json"
+  ],
+  "behavior_log_globs": [
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt"
+  ],
+  "direct_source_files": [
+    "app/index.html",
+    "app/settings-controller.js",
+    "app/save-notification.js",
+    "app/settings-store.js",
+    "SOURCE-MANIFEST.json"
+  ],
+  "additional_tool_exports": [
+    "evidence/views/acquired-source-view.json",
+    "evidence/views/baseline-view.json",
+    "evidence/views/first-error-view.json",
+    "evidence/views/first-invalid-view.json",
+    "evidence/views/source-view.json",
+    "evidence/views/w17-neighbor-view-baseline-en-save-edge.json",
+    "evidence/views/w17-neighbor-view-baseline-zh-save-edge.json",
+    "evidence/source/toast-web.json",
+    "evidence/source/toast-web-accessibility.json",
+    "evidence/setup-tool.json",
+    "evidence/server-tool.json",
+    "evidence/server-completion-tool.json",
+    "evidence/delegation/spawn-001.json",
+    "evidence/delegation/spawn-002.json",
+    "evidence/delegation/spawn-003.json",
+    "evidence/delegation/child-followup-messages.json"
+  ],
+  "report_files": [
+    "DESIGN-RECORD.md",
+    "INTEGRATION-DECISION.md",
+    "VISUAL-REVIEW.md",
+    "DELEGATION.json",
+    "INTEGRATOR-REPORT.md",
+    "FINAL-SOURCE-DIGESTS.json",
+    "evidence/viewed-images.json",
+    "evidence/main-check-002/report.json",
+    "evidence/neighbors/results.json",
+    "evidence/integrator/003-browser/results.json",
+    "evidence/integrator/004-settled/captures.json",
+    "evidence/integrator/final-file-checks.json",
+    "evidence/delegation/integrator-prompt.txt",
+    "evidence/delegation/child-followup-messages.json"
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_17_cont/ui_integrator",
+      "role": "ui_integrator",
+      "prompt_repository_path": "docs/evidence/v1.20.0/session-study/coordination/reconciliation-T4-F-integrator-r1-child-dispatched-prompt.txt",
+      "spawn": "evidence/delegation/spawn-003.json",
+      "completion": "evidence/delegation/child-final-notification.json",
+      "completion_source": "collaboration FINAL_ANSWER notification faithfully exported by the primary participant from its retained conversation",
+      "result": "evidence/integrator/FINAL.md",
+      "command_globs": [
+        "evidence/integrator/*/command.json",
+        "evidence/integrator/*/stdout.txt",
+        "evidence/integrator/*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/integrator/view-1440-dark-zh-success.json",
+        "evidence/integrator/view-1440-light-en-error.json",
+        "evidence/integrator/view-1440-light-en-invalid.json",
+        "evidence/integrator/view-baseline.json",
+        "evidence/integrator/view-final-1280-dark-zh-error-actions.json",
+        "evidence/integrator/view-final-1280-light-en-invalid.json",
+        "evidence/integrator/view-final-1440-dark-zh-error-actions.json",
+        "evidence/integrator/view-final-1440-light-en-error-top.json",
+        "evidence/integrator/view-final-390-dark-zh-invalid.json",
+        "evidence/integrator/view-final-390-light-en-error-actions.json",
+        "evidence/integrator/view-source.json"
+      ]
+    }
+  ],
+  "audit_observations": [
+    "The actual original /root/product_17_cont FINAL_ANSWER is now retained after coordinator resume, allowing this completed execution index over the preserved snapshot. The older terminal-notification-unavailable record and snapshot bytes remain unchanged.",
+    "One actual bounded ui_integrator child, /root/product_17_cont/ui_integrator, implemented only the settled three-file surface. Two earlier capacity-limited spawn responses remain preserved and created no additional children. The primary retained source/design decisions and independently exercised and viewed the assembled result.",
+    "The successful child-spawn request is exactly 3305 UTF-8 bytes. The participant prompt file is 3306 bytes with one extra final LF. Exact dispatched bytes have their own coordinator extraction; original prompt, complete spawn export, child FINAL_ANSWER and child reports remain unchanged. No model/effort override was supplied and no native role binding is asserted.",
+    "The original main report contains 203 passing assertions and the child report contains 156 passing assertions; the six-condition main matrix and child report show no page errors. These are scoped original checks, not new coordinator execution or owner acceptance.",
+    "The 18 settled images were actually viewed by the primary through evidence/views/w17-final-*.json. All 32 primary and 11 child view exports decode to the exact retained PNG bytes; the main viewed-images catalogue hashes and paths agree. Primary indexing excludes child-only view records.",
+    "Only app/index.html, app/settings-controller.js and app/save-notification.js differ from registered input under app/. All 12 final source-digest entries match. Frozen method and role bytes, source selection and prescribed placement remain unchanged.",
+    "The prescribed toast overlays header utilities until dismissal; an inherited mobile Customize/Save overlap remains. The primary reports both with baseline/integrated hit evidence. Scoped integration does not establish all-gallery, touch-device, screen-reader or continuous-motion acceptance.",
+    "The terminal payload equals original FINAL.md apart from its two terminal LF bytes. Original notification and report are separately retained.",
+    "The coordination interval ends at post-resume notification export and includes reset/recovery/export latency; it is not active product runtime or native completion timing."
+  ],
+  "limitations": "One unrandomized shared-host session execution with one bounded simulated ui_integrator role; native resolved model/role identities, tokens, billing and context metrics remain unavailable. The actual child request omits the participant prompt file terminal LF. Completed execution does not imply owner acceptance. Prescribed top-right feedback temporarily covers header utilities and the inherited 390px Customize/Save overlap remains. Static views and actual timer-driven interactions do not establish uninterrupted natural-speed playback; early pending samples may precede native fade completion. Original videos are retained but were not viewed. Real-device touch, auditory screen-reader behavior, full gallery navigation and exact deployed upstream commit remain unverified. Capacity failures and corrected harness failures are preserved. Post-resume notification-export time is not actual engine completion or active duration."
+}

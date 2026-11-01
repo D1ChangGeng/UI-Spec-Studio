@@ -1,0 +1,32 @@
+# Fieldnotes — current design model
+
+## Overall goal and formal increment
+
+A working bilingual research notebook whose notes can be read, followed, edited, saved and resumed. The single increment owns the coupled reading surface, sidebar, native editor, palette and responsive relationships. The authoritative product is TiddlyWiki 5.4.1 with tiddlyweb/filesystem; the eight supplied notes retain their meaning, links, tables and unfinished status. No W1/W2/W3 exception is authorized or used.
+
+## Current decision
+
+Adopt Vanilla Paper 0.10.0 by Simon Huber at commit 031a78d4d4187128c632f8a647fa05408eddc700. Its complete layout, structural CSS, surface and plugin compatibility family lives in app/wiki/themes/vanilla-paper. All 55 upstream files are byte-identical to the acquired revision; the MIT license is additionally retained beside them. Paper carries the warm ground, cream sheet, margin rule, serif reading/sans interface/mono editor roles, ruled editor, native control states and responsive geometry together.
+
+Supported configuration chooses the leading-edge sidebar and permanently visible tiddler toolbar. The initial page remains the index and interview. Native search autofocus is disabled. Day and Night palette shadow tiddlers retain original identity and all source colors; three low-contrast control/date roles use their existing palette sidebar-foreground color (#6b6558 day, #a49e90 night). This is a narrow palette configuration, not a replacement theme. No new visible component, handwritten layout, font asset, image, animation engine or storage model was authored.
+
+## Consequential comparison
+
+| Candidate | Evidence and useful relationship | Decision |
+|---|---|---|
+| Snow White baseline | Actual baseline-1440.png: wide native story sheet, right sidebar and common sans typography | Functional baseline retained at the data/control layer; its long line measure and uniform type roles do not carry the desired editorial character |
+| Notebook 1.4.1 | Original author beige screenshot viewed; unmodified complete theme and mobile plugin trialled on the same interview. Compact sans sheet, persistent top bar and optional left rail | First preference challenged. Reading is economical, but 15px/22px type and a toolbar strip create a more generic workpad. Not retained in runtime |
+| Starlight | Native source inspected and real populated trial viewed. Arvo slab serif and textured background, 962px measured body width | Stronger texture, but its source explicitly describes an example refinement and the broad measure remains. Rejected; no asset from it is newly adopted |
+| Vanilla Paper | Original source rendered locally with its own readme; populated trial and assembled product viewed. 636px body measure, 17px/30px reading rhythm and three type roles | Chosen for a complete, source-supplied editorial system that continues into actual editing, with matched day/night material |
+
+Cross-domain exploration considered book/editorial/Tufte treatments and Material themes. Those were textual discovery leads; they are not claimed as viewed or adopted. Paper's own source supplies the actual paper/editorial implementation. The public GitHub/forum page retrieval returned DisabledError/403; the exact Git source was acquired successfully and rendered locally. The local source rendering is not represented as the author's hosted demo.
+
+## Evidence relationships
+
+L0 identity and calm reading → Paper sheet/type/material family → populated interview captures. L1 read/ledger/return/edit/save/cancel/search → native controls → verification.json. L2 left navigation and bounded river → Paper public sidebarside setting and layout source → settled-start and viewport matrix. L3 editor and actions → native TW plus Paper editor styles → settled editing captures. L4 type, color, margin and focus → exact source and three palette-role configurations → visually opened captures. L5 authority/source retention → filesystem write, reload equality and source-retention.json.
+
+## Revisions and evidence limits
+
+Initial Notebook/Starlight comparison was superseded by Paper after broader sourcing. A first editor capture landed during the native read-to-edit transition; that frame is retained and not treated as a settled layout. New settled captures wait for the transition and replace the affected static claim. The first large image-response export stalled and was interrupted; returned image data was subsequently recorded with a /tmp-to-work-package approved write correction. The editor-probe cancel selector failed; the real native Discard control subsequently passed cancellation. The palette probe initially selected the wrong semantic role; visible native tab labels subsequently completed both palette selections.
+
+Owner preference is not measured. Browser coverage is Chromium 143 at device scale 1; native system fonts and host Noto CJK fixture are used. English reading/editing is captured at all three sizes in both palettes; Chinese UI reading is captured in both palettes at 1280×640. Native failure/retry recovery and assistive-technology acceptance were not fault-injected or certified. Motion evidence comprises controlled operations and timestamped ordered frames, not viewed natural-speed playback.

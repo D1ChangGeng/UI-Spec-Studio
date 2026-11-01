@@ -1,0 +1,823 @@
+{
+  "schema_version": 1,
+  "kind": "coordinator-derived reconciliation and provenance audit; not a participant event or independent visual review",
+  "cell_id": "T3-A-r1",
+  "recorded_at": "2026-11-01T08:42:51.220425+00:00",
+  "basis": {
+    "completion": {
+      "path": "docs/evidence/v1.20.0/session-study/coordination/T3-A-r1-completion.json",
+      "sha256": "cbda2a4433890a536ad0d5fb562a2ec00c250d561f66b1e6e1651bb0c80b6540"
+    },
+    "snapshot": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/snapshot.json",
+      "sha256": "79ed6411c27963f7b013338419af0d5c2fb6061329df66e26c6fe565c22a0687"
+    },
+    "reconstruction_command": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/reconstruction-check/command.json",
+      "sha256": "2a1b8a18cd17a91573032a24e4d66f2f4778baeeab3955840778c31099c3d571"
+    }
+  },
+  "reconciliation_scope": "The original primary FINAL_ANSWER notification became available to the resumed coordinator after the earlier incomplete-attempt record. This indexes the already captured execution; no new product run, repair, recapture, synthetic tool return, or independent visual judgment is supplied.",
+  "snapshot_kind_preserved": "coordinator byte snapshot of unconfirmed prior attempt, not a completion record",
+  "verified_replay": {
+    "files": 9247,
+    "missing": [],
+    "extra": [],
+    "changed": [],
+    "method_changes": {},
+    "role_changes": {}
+  },
+  "historical_incomplete_attempts_preserved": [
+    {
+      "directory": "docs/evidence/v1.20.0/session-study/incomplete-attempts/T3-A-r1-before-takeover",
+      "file_count": 7,
+      "manifest_sha256": "00acc973b0e77427eb5aa95b327f61c69bb46cc18a95a8a945e0dc02beb83436"
+    },
+    {
+      "directory": "docs/evidence/v1.20.0/session-study/incomplete-attempts/T3-A-r1-previous-session",
+      "file_count": 44,
+      "manifest_sha256": "1cf47ca2f280b4178293f9c44e01d4a360ea0cf8a25f6f4ed100da53b13a2a7f"
+    }
+  ],
+  "notification_vs_original_report_differences": [
+    {
+      "operation": "replace",
+      "original": "'",
+      "notification": "’"
+    },
+    {
+      "operation": "replace",
+      "original": "'",
+      "notification": "’"
+    },
+    {
+      "operation": "replace",
+      "original": "'",
+      "notification": "’"
+    },
+    {
+      "operation": "insert",
+      "original": "",
+      "notification": "**"
+    },
+    {
+      "operation": "insert",
+      "original": "",
+      "notification": "**"
+    },
+    {
+      "operation": "delete",
+      "original": "\n",
+      "notification": ""
+    }
+  ],
+  "view_exports": [
+    {
+      "export": "evidence/view-001.json",
+      "export_sha256": "5e417c117c0d653e6251d7f093a4ac2fcb646b4c5cf9b7808ca96cce630cea2f",
+      "image": "evidence/research/notebook-source/screenshots/beige.png",
+      "image_sha256": "f5bfaeecb33780a0cee535033d46b9263861f2b58b09c3c876e6d46f24c0f227",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/view-002.json",
+      "export_sha256": "13e81ac68177806342b5f7ff6dcce602ec688aa451cbf4df10fd3ef1a50b895c",
+      "image": "evidence/captures/baseline-1440.png",
+      "image_sha256": "fee115d1c41c5c0abe8b331e62554ae8e4d0cf5e1954678af0ea99568bc86d90",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/view-003.json",
+      "export_sha256": "5961ff7d4f60898481ffe462fc9d543f450d2d98f201b2e4568697e470044869",
+      "image": "evidence/captures/trial-paper-interview.png",
+      "image_sha256": "5c59be4bb814e72be7a2c222492f87a780f2473c5864d6021e68be8c8cd9d95a",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/view-004.json",
+      "export_sha256": "c9ceae263a14ac4c7275b2fd584f940cf9bbfe3b2bd92b85b65c0c1f89bc3661",
+      "image": "evidence/captures/trial-notebook-interview.png",
+      "image_sha256": "1d101d6b88ca400d1cf0578cc4cf225522b2f67230031d9574c1b799bf8ec6fc",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/view-005-recovered.json",
+      "export_sha256": "08a7669e1ec744a9d40cb9f1741a71f97f74fa6e4bd39049c313ad99d1b7cce4",
+      "image": "evidence/captures/trial-starlight-interview.png",
+      "image_sha256": "fce15d9b4d273e49a1e2120c65f8ac89f6cde67e3a5d9abbbbbd510954cb93ba",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-006.json",
+      "export_sha256": "1dd137789b9d843328d792c833ee03694211b1ca73ac7554dda8e74920c28283",
+      "image": "evidence/captures/final-start.png",
+      "image_sha256": "b54a977b64ab7547c35971f9c6f62bba44bc7720ead6cdedb5ab3213ae5e657f",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-007.json",
+      "export_sha256": "0e757dd4b4c1867dcc0c4e0335946c0d9c09fa7ad76bb9eef059bb49d73e4e9c",
+      "image": "evidence/captures/final-night-reading-1440.png",
+      "image_sha256": "c0567074557978389c0153cb0bb3b002a78457ed54bb5844c35fc66424376e7c",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-008.json",
+      "export_sha256": "81ff28551382121b0960b12fc0ad537466455c44b27c9af12d734bc9f86fe3e5",
+      "image": "evidence/captures/final-day-editing-1280.png",
+      "image_sha256": "2bfb877acb50bba6f4fc7c590751cfaa0c0b31d6583e779c43f2448c4fa4b33f",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-009.json",
+      "export_sha256": "9cd18526c92e5b4fee9777f7f531af27d0f7df89e67f866c49a8a202a79bf709",
+      "image": "evidence/captures/paper-source-readme.png",
+      "image_sha256": "cea8b2a547e1e8c80cc38aa79d4063d4ee1c63d80a9da020b36bf0ecfd8c06ef",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-010.json",
+      "export_sha256": "07227520a17be3effab8c8dc6ac751d93530731d5a272bd936beee33a4e1e227",
+      "image": "evidence/captures/settled-day-editing-1280.png",
+      "image_sha256": "52cdce7eb5ba1b11fcfc39684668bbec47dc46f522f61a2e5f61903f298aa792",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-011.json",
+      "export_sha256": "0a8ca0997398548c09d03a1cfc072cc47cbb9ec8cefe76f2b3b9e42587d46c82",
+      "image": "evidence/captures/settled-day-reading-390.png",
+      "image_sha256": "a3a1d47e72e62961010769569993f27efb325d42ce9a4c021b64bc7120757d8d",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-012.json",
+      "export_sha256": "5744d9365b8446264f27c7500cad7610d824b153634c04b48bcdecabc3637f3e",
+      "image": "evidence/captures/settled-night-editing-390.png",
+      "image_sha256": "c54ed58b17b7c8908dcf1c8d0f02575f4ec803de9a46932a9838c1c50c36611b",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-013.json",
+      "export_sha256": "483ccf085124eb5ecc0936023c80415263ddd749eca81fc52fb903589482356d",
+      "image": "evidence/captures/settled-start.png",
+      "image_sha256": "d251a543c1dc4a0307c5671c6bf5348e135898a16265d14ade868d2284300c5d",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-014.json",
+      "export_sha256": "def033b05e5d88e26485a20054aa78afecf1dda371b962d055de997704bbec5b",
+      "image": "evidence/captures/settled-night-reading-1440.png",
+      "image_sha256": "a628ab274e61ce4b5b41a21f00f0d5e2deeae8df9a1199b65575ec1d53c03e49",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-015.json",
+      "export_sha256": "2e5869924f772fbf798fa8715dc6a51ad59fa369f128b781d7315154cba845d9",
+      "image": "evidence/captures/settled-chinese-night-1280.png",
+      "image_sha256": "b8cd908e7b8b13263f04f297afaee50e018aeacba8ac709785697b33d7252510",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-016.json",
+      "export_sha256": "ded6e479dbcafe5e4b7d925273e242a7b95890900a2867cbbf96299eabcd59dc",
+      "image": "evidence/captures/episode-normal-before.png",
+      "image_sha256": "fdd8d43c72acf9a2084e4b59679769169330711cf2c4d80256f52c4ba5a3ac8b",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-017.json",
+      "export_sha256": "136231918a5c4ce2ad7d3ae5a68f78fe31cb9ab007d62b2eebc7aae15334afc2",
+      "image": "evidence/captures/episode-normal-first.png",
+      "image_sha256": "a7d291f057edd528460f7b1c79081b10d7c493b39439fa337fff60445a51487b",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-018.json",
+      "export_sha256": "cf30f273ea8011641c2293faf136e20bc1e6f411c474b10af4d7734eca97ecbb",
+      "image": "evidence/captures/episode-normal-settled.png",
+      "image_sha256": "c9c57e25f8d78bd812680579be736645ec75cb06092e9716b36fbb069da0ebd1",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-019.json",
+      "export_sha256": "ae7c0940b15629e7f9e8ca013584c4511d8980e8b390e1368d70da50a63dd02b",
+      "image": "evidence/captures/episode-reduced-after.png",
+      "image_sha256": "54c24b61e4f135dc3ad5c30d2a1c9d571ad9f12ac5338453e6bf5a275ccfbfdd",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-020.json",
+      "export_sha256": "1ae502265fa88fd27fde5d2bb32699d0fb92e3ce2c8a9a48fa97f3ee5cfc8973",
+      "image": "evidence/captures/normal-motion-1.png",
+      "image_sha256": "6ac1f4c0aa6c3a1dc08b9addee02f2ffb47c7f6ed2f96dc3f7e0b67c55ec4c08",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-021.json",
+      "export_sha256": "5c1052629e2fe45fdb5ac8de146fe20c26984475c10009762e7071ef60862266",
+      "image": "evidence/captures/normal-motion-2.png",
+      "image_sha256": "9bdbd458b7f85aa43a9bac617c150a3166909b8777a83b362add31c158539739",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-022.json",
+      "export_sha256": "ab4de8a8a49d5e8c03a8806a1420332a15baf7e285cb20b84f33ffb409bdd1bd",
+      "image": "evidence/captures/normal-motion-3.png",
+      "image_sha256": "3f00c8437e731bad89df5c10f275894924cf895c57e356fd9008bf6ddb0b1432",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/w09-view-023.json",
+      "export_sha256": "1b72676390e379767b808a25a58b833f03b496c2a3df63a22131a273bd1eadf3",
+      "image": "evidence/captures/reduced-settled.png",
+      "image_sha256": "3f00c8437e731bad89df5c10f275894924cf895c57e356fd9008bf6ddb0b1432",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    }
+  ],
+  "command_exports": [
+    {
+      "metadata": "evidence/commands/001/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/002/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/003/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/004/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/005/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/006/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/007/command.json",
+      "status": "completed",
+      "returncode": 1,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/008/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/009/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/010/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/011/command.json",
+      "status": "completed",
+      "returncode": 1,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/012/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/013/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/014/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/015/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/016/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/017/command.json",
+      "status": "completed",
+      "returncode": 1,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    }
+  ],
+  "missing_required_exports": [],
+  "timing_caveat": "The recorded final-notification time is its export after coordinator resume. Started_at to completed_at includes the workspace reset/recovery and delayed notification export. It is not native active runtime, an efficiency measurement, or the actual engine completion time.",
+  "original_report_sha256": "8d5158ed62de6684e46989e0619046830fddae205ac5cb69aef29ddc582f6cff",
+  "source_integrity": {
+    "unchanged_upstream_theme_files": 55,
+    "unchanged_registered_vendor_files": 8823,
+    "scope": "Compared the retained local upstream theme bytes and registered input vendor digests. This establishes byte retention, not product acceptance."
+  },
+  "acceptance_issue": {
+    "fresh_native_boot_pass": false,
+    "evidence": "evidence/commands/017/command.json and stdout.txt; evidence/final-integrity.json; VISUAL-REVIEW.md",
+    "finding": "The final fresh native boot loaded a stale test draft after an unsuccessful archive/rebuild attempt. Final store hygiene remains unresolved; completed agent execution does not mean accepted continued editing."
+  },
+  "indexed_at": "2026-11-01T08:44:41.804479+00:00",
+  "configuration": {
+    "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/index-configuration.json",
+    "sha256": "1db2706b5d5b3993bb97a23b642856c985412558fcc9640779bfbace52b2b975"
+  },
+  "indexing_command": {
+    "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/reconciliation-index-command/command.json",
+    "sha256": "744781e77473861ae2be143290d95bd93d2f3399651616c40e0202b5edb7ad74"
+  },
+  "outputs": {
+    "run": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/run.json",
+      "sha256": "0e9bd150b5876887369bd531e5763ff99846b85213d36fd0bd387aca28cd78f4"
+    },
+    "product_evidence": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/product-evidence.json",
+      "sha256": "e926a021c9b3ab44f8f0b2a70cff7e8bfcfdbe976846af4ca2a41aa4cb01638e"
+    },
+    "execution_audit": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/execution-audit.json",
+      "sha256": "1c873a6ef777d8647a9762c73c3191adaff1b3075a8cc67845564bf46e9f7980"
+    }
+  },
+  "indexed_counts": {
+    "source_snapshot_files": 9247,
+    "screenshots": 19,
+    "primary_views": 10,
+    "primary_behavior_log_files": 40,
+    "primary_tool_output_exports": 68,
+    "children": 0,
+    "child_tool_output_exports": 0
+  },
+  "selected_captures": [
+    {
+      "original_path": "evidence/captures/settled-chinese-day-1280.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-chinese-day-1280.png",
+        "sha256": "b6ea60f6b3db0d099f08a2c9bc98215014773a046f87781067ab0626bffcd798"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-chinese-night-1280.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-chinese-night-1280.png",
+        "sha256": "b8cd908e7b8b13263f04f297afaee50e018aeacba8ac709785697b33d7252510"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-day-editing-1280.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-day-editing-1280.png",
+        "sha256": "52cdce7eb5ba1b11fcfc39684668bbec47dc46f522f61a2e5f61903f298aa792"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-day-editing-1440.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-day-editing-1440.png",
+        "sha256": "f99b67eac2cfedbc4c712241a11795db4e06cc4fab08b5e44a5fb8268ba21bf4"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-day-editing-390.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-day-editing-390.png",
+        "sha256": "772f7f1722b32b3efceec690b7914399d59698ee8048ed9c2c3bdd1708af8399"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-day-reading-1280.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-day-reading-1280.png",
+        "sha256": "d159142e259f5c9dff3994a4b463153fb811b30c0b4579e5ba7ddbe909a5585d"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-day-reading-1440.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-day-reading-1440.png",
+        "sha256": "1bd9f2fd6d7f10666c1a726fc3945ed985d82f8d2a2c380d9d39ca4940348e56"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-day-reading-390.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-day-reading-390.png",
+        "sha256": "a3a1d47e72e62961010769569993f27efb325d42ce9a4c021b64bc7120757d8d"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-night-editing-1280.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-night-editing-1280.png",
+        "sha256": "f044c321d0e8a283b3fcb89564250cb9ee59c175f67b05e879ad42de3bdb1bd2"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-night-editing-1440.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-night-editing-1440.png",
+        "sha256": "d212d607bd70041b8eec89bcb7c42db9f2c8aa6911e1299800d8be59f341c682"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-night-editing-390.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-night-editing-390.png",
+        "sha256": "c54ed58b17b7c8908dcf1c8d0f02575f4ec803de9a46932a9838c1c50c36611b"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-night-reading-1280.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-night-reading-1280.png",
+        "sha256": "24edf589236b87ebfa2a73994d9eab4a0f110260da2d25775d8ce153556aeaf8"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-night-reading-1440.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-night-reading-1440.png",
+        "sha256": "a628ab274e61ce4b5b41a21f00f0d5e2deeae8df9a1199b65575ec1d53c03e49"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-night-reading-390.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-night-reading-390.png",
+        "sha256": "33e608cb23b1b564fe871ef1cf2e8133da072629008ab6aa051a6541af9fd895"
+      }
+    },
+    {
+      "original_path": "evidence/captures/settled-start.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-start.png",
+        "sha256": "d251a543c1dc4a0307c5671c6bf5348e135898a16265d14ade868d2284300c5d"
+      }
+    },
+    {
+      "original_path": "evidence/captures/normal-motion-1.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/normal-motion-1.png",
+        "sha256": "6ac1f4c0aa6c3a1dc08b9addee02f2ffb47c7f6ed2f96dc3f7e0b67c55ec4c08"
+      }
+    },
+    {
+      "original_path": "evidence/captures/normal-motion-2.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/normal-motion-2.png",
+        "sha256": "9bdbd458b7f85aa43a9bac617c150a3166909b8777a83b362add31c158539739"
+      }
+    },
+    {
+      "original_path": "evidence/captures/normal-motion-3.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/normal-motion-3.png",
+        "sha256": "3f00c8437e731bad89df5c10f275894924cf895c57e356fd9008bf6ddb0b1432"
+      }
+    },
+    {
+      "original_path": "evidence/captures/reduced-settled.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/reduced-settled.png",
+        "sha256": "3f00c8437e731bad89df5c10f275894924cf895c57e356fd9008bf6ddb0b1432"
+      }
+    }
+  ],
+  "selected_primary_views": [
+    {
+      "original_image": "evidence/captures/settled-day-editing-1280.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-010.json",
+        "sha256": "07227520a17be3effab8c8dc6ac751d93530731d5a272bd936beee33a4e1e227",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-day-editing-1280.png",
+        "sha256": "52cdce7eb5ba1b11fcfc39684668bbec47dc46f522f61a2e5f61903f298aa792"
+      }
+    },
+    {
+      "original_image": "evidence/captures/settled-day-reading-390.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-011.json",
+        "sha256": "0a8ca0997398548c09d03a1cfc072cc47cbb9ec8cefe76f2b3b9e42587d46c82",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-day-reading-390.png",
+        "sha256": "a3a1d47e72e62961010769569993f27efb325d42ce9a4c021b64bc7120757d8d"
+      }
+    },
+    {
+      "original_image": "evidence/captures/settled-night-editing-390.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-012.json",
+        "sha256": "5744d9365b8446264f27c7500cad7610d824b153634c04b48bcdecabc3637f3e",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-night-editing-390.png",
+        "sha256": "c54ed58b17b7c8908dcf1c8d0f02575f4ec803de9a46932a9838c1c50c36611b"
+      }
+    },
+    {
+      "original_image": "evidence/captures/settled-start.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-013.json",
+        "sha256": "483ccf085124eb5ecc0936023c80415263ddd749eca81fc52fb903589482356d",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-start.png",
+        "sha256": "d251a543c1dc4a0307c5671c6bf5348e135898a16265d14ade868d2284300c5d"
+      }
+    },
+    {
+      "original_image": "evidence/captures/settled-night-reading-1440.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-014.json",
+        "sha256": "def033b05e5d88e26485a20054aa78afecf1dda371b962d055de997704bbec5b",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-night-reading-1440.png",
+        "sha256": "a628ab274e61ce4b5b41a21f00f0d5e2deeae8df9a1199b65575ec1d53c03e49"
+      }
+    },
+    {
+      "original_image": "evidence/captures/settled-chinese-night-1280.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-015.json",
+        "sha256": "2e5869924f772fbf798fa8715dc6a51ad59fa369f128b781d7315154cba845d9",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/settled-chinese-night-1280.png",
+        "sha256": "b8cd908e7b8b13263f04f297afaee50e018aeacba8ac709785697b33d7252510"
+      }
+    },
+    {
+      "original_image": "evidence/captures/normal-motion-1.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-020.json",
+        "sha256": "1ae502265fa88fd27fde5d2bb32699d0fb92e3ce2c8a9a48fa97f3ee5cfc8973",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/normal-motion-1.png",
+        "sha256": "6ac1f4c0aa6c3a1dc08b9addee02f2ffb47c7f6ed2f96dc3f7e0b67c55ec4c08"
+      }
+    },
+    {
+      "original_image": "evidence/captures/normal-motion-2.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-021.json",
+        "sha256": "5c1052629e2fe45fdb5ac8de146fe20c26984475c10009762e7071ef60862266",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/normal-motion-2.png",
+        "sha256": "9bdbd458b7f85aa43a9bac617c150a3166909b8777a83b362add31c158539739"
+      }
+    },
+    {
+      "original_image": "evidence/captures/normal-motion-3.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-022.json",
+        "sha256": "ab4de8a8a49d5e8c03a8806a1420332a15baf7e285cb20b84f33ffb409bdd1bd",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/normal-motion-3.png",
+        "sha256": "3f00c8437e731bad89df5c10f275894924cf895c57e356fd9008bf6ddb0b1432"
+      }
+    },
+    {
+      "original_image": "evidence/captures/reduced-settled.png",
+      "viewer_agent_id": "/root/product_09_repeat",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/w09-view-023.json",
+        "sha256": "1b72676390e379767b808a25a58b833f03b496c2a3df63a22131a273bd1eadf3",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/captures/reduced-settled.png",
+        "sha256": "3f00c8437e731bad89df5c10f275894924cf895c57e356fd9008bf6ddb0b1432"
+      }
+    }
+  ],
+  "children": [],
+  "post_index_integrity": {
+    "guarded_original_files": 95,
+    "changed_or_missing_guarded_files": [],
+    "replayed_participant_files_still_match_snapshot": 9247,
+    "raw_final_report_preserved": true,
+    "raw_visual_report_preserved": true,
+    "no_missing_index_references": true,
+    "original_view_returns_preserved_without_mime_rewrite": true
+  },
+  "capture_groups": {
+    "settled_matrix_and_index": {
+      "count": 15,
+      "selector": "evidence/captures/settled-*.png"
+    },
+    "later_temporal_samples": {
+      "count": 4,
+      "files": [
+        "evidence/captures/normal-motion-1.png",
+        "evidence/captures/normal-motion-2.png",
+        "evidence/captures/normal-motion-3.png",
+        "evidence/captures/reduced-settled.png"
+      ]
+    }
+  },
+  "inspection_scope": "Ten selected PNGs have genuine primary view exports: six settled product views and four later motion samples. Nine other settled PNGs were captured but do not have primary view exports; no missing return was fabricated."
+}

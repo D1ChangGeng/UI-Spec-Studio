@@ -102,7 +102,8 @@ def main():
         for rel in c.get('tool_exports',[]):tools.append(retained_export(rel,'actual child tool call as named in retained record','Original child research/inspection tool output; retained independently from the parent report.'))
         role=c['role']
         children.append({'agent_id':c['agent_id'],'parent_agent_id':cfg['agent_id'],'fork_turns':'none','status':'completed','role':role,'prompt':ref(repo/c['prompt_repository_path']) if 'prompt_repository_path' in c else retain(c['prompt']),'spawn':retained_export(c['spawn'],'collaboration.spawn_agent','Faithful original child-spawn response containing the actual canonical agent ID; the separate request is retained in the full workspace.'),'completion':export(completion,c.get('completion_source','collaboration notification'),'Faithful actual child completion notification/status observation; full delivered research text is separately retained.'),'tool_outputs':tools,'result':retain(c['result']),'role_instruction_sha256':cell['role_instruction_files'].get(role),'model_requested':cell['subagent_model'],'model_resolved':None})
-    spawn_path=study/'coordination'/f'{name}-spawn.json';completion_path=study/'coordination'/f'{name}-completion.json'
+    spawn_path=repo/cfg['spawn_repository_path'] if cfg.get('spawn_repository_path') else study/'coordination'/f'{name}-spawn.json'
+    completion_path=repo/cfg['completion_repository_path'] if cfg.get('completion_repository_path') else study/'coordination'/f'{name}-completion.json'
     spawn=json.loads(spawn_path.read_text());completion=json.loads(completion_path.read_text())
     if spawn['result']['task_name']!=cfg['agent_id'] or completion['agent_id']!=cfg['agent_id'] or completion['message_type']!='FINAL_ANSWER':raise ValueError('Actual primary completion/spawn identity differs')
     start=iso(spawn['observed_request_prepared_at']);end=iso(completion['observed_recorded_at'])

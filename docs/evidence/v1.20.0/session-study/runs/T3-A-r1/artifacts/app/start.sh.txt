@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+exec node vendor/tiddlywiki/tiddlywiki.js wiki --listen host=127.0.0.1 port="${PORT:-4313}"

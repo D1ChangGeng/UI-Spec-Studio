@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python3",
+    "docs/evidence/v1.20.0/session-study/support/continuation/restore_absent_worksets.py",
+    "--repo",
+    ".",
+    "T1-G-final-runtime-r1",
+    "T2-C-r1",
+    "T2-G-final-runtime-r1",
+    "T3-C-r1",
+    "T3-G-final-runtime-r1",
+    "T2-D-r1",
+    "T2-E-challenger-r1",
+    "T2-E-observer-r1"
+  ],
+  "cwd": "/workspace/scratch/1e61855ad686/UI-Spec-Studio",
+  "started_at": "2026-11-01T08:36:49.698644+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 1,
+  "ended_at": "2026-11-01T08:36:49.812957+00:00",
+  "wall_seconds": 0.114323,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr.txt": {
+      "bytes": 487,
+      "sha256": "d6792b466c2f5e3cc02753412c5ac484d517708e505bb52f9d3b63ee4f8c45db"
+    }
+  }
+}

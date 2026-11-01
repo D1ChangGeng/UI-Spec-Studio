@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python3",
+    "/workspace/scratch/1e61855ad686/UI-Spec-Studio/docs/evidence/v1.20.0/session-study/support/continuation/replay_snapshot.py",
+    "--repo",
+    "/workspace/scratch/1e61855ad686/UI-Spec-Studio",
+    "--cell",
+    "T3-B-r1",
+    "--output",
+    "/workspace/scratch/1e61855ad686/ui-study/replay-audit/T3-B-r1"
+  ],
+  "cwd": "/workspace/scratch/1e61855ad686/UI-Spec-Studio",
+  "started_at": "2026-11-01T08:40:18.116126+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T08:40:21.589419+00:00",
+  "wall_seconds": 3.4733,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 320,
+      "sha256": "6ac0d47d300df8566431a350843e1c0c1014cabc320f59f642e8e7a810266c3f"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

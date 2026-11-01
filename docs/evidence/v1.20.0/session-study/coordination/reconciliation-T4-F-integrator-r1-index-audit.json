@@ -1,0 +1,1678 @@
+{
+  "schema_version": 1,
+  "kind": "coordinator-derived reconciliation and provenance audit; not a participant event or independent visual review",
+  "cell_id": "T4-F-integrator-r1",
+  "recorded_at": "2026-11-01T08:42:51.491621+00:00",
+  "basis": {
+    "completion": {
+      "path": "docs/evidence/v1.20.0/session-study/coordination/T4-F-integrator-r1-completion.json",
+      "sha256": "11c079e17741665c9d53705b60e4910eac27bddab8bde07157fedd6407520f05"
+    },
+    "snapshot": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/snapshot.json",
+      "sha256": "25850f8964e1a2ca90232c0e66369b66c0b806889ab9ff2e9c21ebfa68edea39"
+    },
+    "reconstruction_command": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/reconstruction-check/command.json",
+      "sha256": "9a4209b50bdcc0d98a90c021449fb8f9c4ab4db24fbda8e308bdbc9eaa85678c"
+    }
+  },
+  "reconciliation_scope": "The original primary FINAL_ANSWER notification became available to the resumed coordinator after the earlier incomplete-attempt record. This indexes the already captured execution; no new product run, repair, recapture, synthetic tool return, or independent visual judgment is supplied.",
+  "snapshot_kind_preserved": "coordinator byte snapshot, not a tool-event transcript",
+  "verified_replay": {
+    "files": 376,
+    "missing": [],
+    "extra": [],
+    "changed": [],
+    "method_changes": {},
+    "role_changes": {}
+  },
+  "historical_incomplete_attempts_preserved": [
+    {
+      "directory": "docs/evidence/v1.20.0/session-study/incomplete-attempts/T4-F-integrator-r1-before-takeover",
+      "file_count": 8,
+      "manifest_sha256": "a8d73604ec112ba3f31cb38d106dcf9fbab77bb88adbe937d39b0fad57904866"
+    }
+  ],
+  "notification_vs_original_report_differences": [
+    {
+      "operation": "delete",
+      "original": "\n\n",
+      "notification": ""
+    }
+  ],
+  "view_exports": [
+    {
+      "export": "evidence/integrator/view-1440-dark-zh-success.json",
+      "export_sha256": "64e81d5754b7cbcfb3438a1aa92f2c3428bc9e1756b3d27115342671d711cbb5",
+      "image": "evidence/integrator/003-browser/1440-dark-zh-success.png",
+      "image_sha256": "01c416b8d9180fde0919aaa8ce55550bb540c7baeb80b61a694783d0a45e0679",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-1440-light-en-error.json",
+      "export_sha256": "3991ebe30e8e26ea0fbe65b689360ff43f209db7b1c34148396a6b14cc081f43",
+      "image": "evidence/integrator/003-browser/1440-light-en-error.png",
+      "image_sha256": "a4cbc7a02a165baef1b5fff84e3d7f9e3a0e455bb4f6ddcba4675ec6dd740e30",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-1440-light-en-invalid.json",
+      "export_sha256": "a489f72af5a9396db5d04ed30691653fd0f5a61d8a0be5794e38724cbe26a17b",
+      "image": "evidence/integrator/003-browser/1440-light-en-invalid.png",
+      "image_sha256": "941164a9e5302665852a66026e334e2ca2faa84e35b8af767214255af6688478",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-baseline.json",
+      "export_sha256": "3f2df7792161735d4b1f5f1dd537eeb489b81751fca161a883f90255d99e9ea3",
+      "image": "evidence/captures/baseline-1440.png",
+      "image_sha256": "8839b10e1cc0358fcc8dfe8ed45f78068aa45cadc753bfbb169095bbd34b864b",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-final-1280-dark-zh-error-actions.json",
+      "export_sha256": "2353b67cf66eed428c2ed93531f71d99be61bc066718f7313b9b1194dafd37e7",
+      "image": "evidence/integrator/004-settled/1280-dark-zh-error-actions.png",
+      "image_sha256": "2e38d7daf303ceb46d62fd51fe0b2a0df74b8b7ac157bcf563d6d9749b26850e",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-final-1280-light-en-invalid.json",
+      "export_sha256": "c04e3b95c960f6843467099b0fac94c802a3dbd3fc46500e0b3ce483adde00fa",
+      "image": "evidence/integrator/004-settled/1280-light-en-invalid.png",
+      "image_sha256": "7a3f49ee354f55c61b3eac8f880f42c0ebe876c0336a649d47486ccaaaceb8c3",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-final-1440-dark-zh-error-actions.json",
+      "export_sha256": "2335ff435d94e0463caafe53edbfbceed7b328008e972fc57e7a4e2ea126ca7a",
+      "image": "evidence/integrator/004-settled/1440-dark-zh-error-actions.png",
+      "image_sha256": "6dcb00598a706e7fc3b61431975cad09947b760ef61833cb4b620b61b91f6d49",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-final-1440-light-en-error-top.json",
+      "export_sha256": "4baa17448bfb5042b577b69959968b9c103645be992e9dc256688f7d0061a0ab",
+      "image": "evidence/integrator/004-settled/1440-light-en-error-top.png",
+      "image_sha256": "b4baffab5538028c2269c2f036f7217ffeaf308c6c8f7c153db5c0335b6b442f",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-final-390-dark-zh-invalid.json",
+      "export_sha256": "efe86bc23f7e5cbc112f2299f189c8a92b1d816177526e5b86c9712b1fb1f85a",
+      "image": "evidence/integrator/004-settled/390-dark-zh-invalid.png",
+      "image_sha256": "239bd93ce96ad60579c63cb88df764374bebc2d5b82edf1f6b962b00dd98ce4e",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-final-390-light-en-error-actions.json",
+      "export_sha256": "3b242eec983906f68e3187971ef15d7ed78c969e4d0b0252faed4970a9f1a463",
+      "image": "evidence/integrator/004-settled/390-light-en-error-actions.png",
+      "image_sha256": "c43b310ca9683bc18145085e26bf0aa1713494b0a7802d72eda7307d098b4786",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/integrator/view-source.json",
+      "export_sha256": "8b35ad1beb644a06dfef54266e7f935be4700c686e6c5e655365a5a47df490ca",
+      "image": "evidence/captures/source-1440.png",
+      "image_sha256": "9ab6f64f752646a9175bc219ee183d0b3184274db15e6161609394490868821d",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "child"
+    },
+    {
+      "export": "evidence/views/acquired-source-view.json",
+      "export_sha256": "7311207d0813794ec7122f1382f127ea3b30f46644ce0164483c6ef363554a77",
+      "image": "evidence/captures/acquired-source-1440.png",
+      "image_sha256": "a78da961494cfa3b7f92ca6bdf9657c7c24e63b3a9f71236ca2ef705a360f81f",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/baseline-view.json",
+      "export_sha256": "3f2df7792161735d4b1f5f1dd537eeb489b81751fca161a883f90255d99e9ea3",
+      "image": "evidence/captures/baseline-1440.png",
+      "image_sha256": "8839b10e1cc0358fcc8dfe8ed45f78068aa45cadc753bfbb169095bbd34b864b",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/first-error-view.json",
+      "export_sha256": "75138d7fda09cd496b874ab9c45a8b0a908bf93c8829906f54c5dd32a22ee0a6",
+      "image": "evidence/main-check/1440x900-light-en-error.png",
+      "image_sha256": "9d7fdbbd7d59fd3be49a7c28f3c2040d88b8b7b2b6392af0ec8312331aa680ed",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/first-invalid-view.json",
+      "export_sha256": "7914d5618328ea5c5f4e26a386ff9c7ab289909f4c630e958304aca865cce855",
+      "image": "evidence/main-check/1440x900-light-en-invalid.png",
+      "image_sha256": "3602edb7aa4d201d53721db2f71009f6f471af3da5fb6b6b32735ede96e3f913",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/source-view.json",
+      "export_sha256": "8b35ad1beb644a06dfef54266e7f935be4700c686e6c5e655365a5a47df490ca",
+      "image": "evidence/captures/source-1440.png",
+      "image_sha256": "9ab6f64f752646a9175bc219ee183d0b3184274db15e6161609394490868821d",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-episode-1440x900-dark-zh-pending.json",
+      "export_sha256": "4bc29e983a12b1d1febc6d0d0cfdfc2d9fc6f1ec166bd336c91e6025538b54c8",
+      "image": "evidence/main-check-002/1440x900-dark-zh-pending.png",
+      "image_sha256": "010bf74588d1f220463da6dbf1c21a890281fe8e9f41d8a0cf9285a997ecb1dc",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-episode-1440x900-dark-zh-retry-pending.json",
+      "export_sha256": "6bf94e175495695814055028eb67008f8eb59e28f31b36e720f1eebcff37f15f",
+      "image": "evidence/main-check-002/1440x900-dark-zh-retry-pending.png",
+      "image_sha256": "d414467e918f295ee19a629303319addf8d99327bcc6801df3690841752725da",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-episode-1440x900-dark-zh-success.json",
+      "export_sha256": "7a8826d9c8d0bd1cb1b250a31caad253ad8a77ae3e6c8a1b1ef0b72cc7eb5ea9",
+      "image": "evidence/main-check-002/1440x900-dark-zh-success.png",
+      "image_sha256": "18c4d5b6fba4b599c4780c36703eb9f8c625b4a6df576d4c7688afbb89a793b1",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-episode-1440x900-light-en-pending.json",
+      "export_sha256": "31f2f42cd95f830f74837a50476749ebc6c76eba99dd5c38f53ce20d8a533cdf",
+      "image": "evidence/main-check-002/1440x900-light-en-pending.png",
+      "image_sha256": "e2a65c7a5102f264e7984fb84457d12c4396b12da933573a2b3241e0989d4171",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-episode-1440x900-light-en-retry-pending.json",
+      "export_sha256": "6fa6ef2eac1ddf707ddc7424104abd87329db126eefe8fc1ec75673653584db9",
+      "image": "evidence/main-check-002/1440x900-light-en-retry-pending.png",
+      "image_sha256": "88357ace0f1e2c9079b843108f461704b27efae51918fab68f7e613870a0ffb1",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-episode-1440x900-light-en-success.json",
+      "export_sha256": "6c12de9c793a48729ae83eaeb56c83b2999a1b98c955dc21fb45c8e8554c4d53",
+      "image": "evidence/main-check-002/1440x900-light-en-success.png",
+      "image_sha256": "7175c29f58db8a31cc6485802753ba03512302ccf5cf84af643a55ec9f822111",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1280-dark-zh-error-actions.json",
+      "export_sha256": "2353b67cf66eed428c2ed93531f71d99be61bc066718f7313b9b1194dafd37e7",
+      "image": "evidence/integrator/004-settled/1280-dark-zh-error-actions.png",
+      "image_sha256": "2e38d7daf303ceb46d62fd51fe0b2a0df74b8b7ac157bcf563d6d9749b26850e",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1280-dark-zh-error-top.json",
+      "export_sha256": "e26bf3b0c0e3f84e478e04dc9e418255701ae58e51a8156bd805d3d05df2e084",
+      "image": "evidence/integrator/004-settled/1280-dark-zh-error-top.png",
+      "image_sha256": "1e0c45a2dcc03c03465319279a53d9f9b31a1a3760847c73a7abbc06e8ecefbe",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1280-dark-zh-invalid.json",
+      "export_sha256": "497322afb46a357aa986657455d3917ccd67729dd37249b306938a6f0395d283",
+      "image": "evidence/integrator/004-settled/1280-dark-zh-invalid.png",
+      "image_sha256": "b86d0aeef74344a80f623676ab857ca50a0907adba1de984b333acbf46c19979",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1280-light-en-error-actions.json",
+      "export_sha256": "abbd4659d46be054efaffa504042007ab3b6cbcf73080ee609342e206c3e37e5",
+      "image": "evidence/integrator/004-settled/1280-light-en-error-actions.png",
+      "image_sha256": "669025e8abbca10b323affcd0cd655259f69fd0b2d7f76d558d79ed88c057315",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1280-light-en-error-top.json",
+      "export_sha256": "fd30e772bacbbb4c74cc8400da2cd1a2eecfb6f723e2aa8c309ff6ffbfbf70c5",
+      "image": "evidence/integrator/004-settled/1280-light-en-error-top.png",
+      "image_sha256": "6b8101fdd5c68a5619a792f4000d1a004b52abde8713ce70eb0eb6bad91fae4f",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1280-light-en-invalid.json",
+      "export_sha256": "c04e3b95c960f6843467099b0fac94c802a3dbd3fc46500e0b3ce483adde00fa",
+      "image": "evidence/integrator/004-settled/1280-light-en-invalid.png",
+      "image_sha256": "7a3f49ee354f55c61b3eac8f880f42c0ebe876c0336a649d47486ccaaaceb8c3",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1440-dark-zh-error-actions.json",
+      "export_sha256": "2335ff435d94e0463caafe53edbfbceed7b328008e972fc57e7a4e2ea126ca7a",
+      "image": "evidence/integrator/004-settled/1440-dark-zh-error-actions.png",
+      "image_sha256": "6dcb00598a706e7fc3b61431975cad09947b760ef61833cb4b620b61b91f6d49",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1440-dark-zh-error-top.json",
+      "export_sha256": "dc44db1cc8c81d72acff12a3c7485ba552c169c2f070ee388292d6f96999aa02",
+      "image": "evidence/integrator/004-settled/1440-dark-zh-error-top.png",
+      "image_sha256": "a60d98b736b655f7ca4bd1740af220f7590402a4936c2b54779028fc99783d9e",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1440-dark-zh-invalid.json",
+      "export_sha256": "f6408e73e7c1cc15f918675a8a4cffba28e5490c2556e9bc7edff83f4feb4a65",
+      "image": "evidence/integrator/004-settled/1440-dark-zh-invalid.png",
+      "image_sha256": "a05faa76a8943c6802970f2ea659ad459c0de102ae145f83f19dc747b51c663e",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1440-light-en-error-actions.json",
+      "export_sha256": "64fa7470a7a3835748ba9e4948e81e69670d3f71bb9886cf79bc184e0165aed1",
+      "image": "evidence/integrator/004-settled/1440-light-en-error-actions.png",
+      "image_sha256": "4e029a7544e0208757cec6fb2ce3f171b3524698b1d58f4ff9d645c29b3274c7",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1440-light-en-error-top.json",
+      "export_sha256": "4baa17448bfb5042b577b69959968b9c103645be992e9dc256688f7d0061a0ab",
+      "image": "evidence/integrator/004-settled/1440-light-en-error-top.png",
+      "image_sha256": "b4baffab5538028c2269c2f036f7217ffeaf308c6c8f7c153db5c0335b6b442f",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-1440-light-en-invalid.json",
+      "export_sha256": "8c470a0465d2e1e78b58238a1499a905fe4fa11f1e64f3d918e2bea7d6066511",
+      "image": "evidence/integrator/004-settled/1440-light-en-invalid.png",
+      "image_sha256": "8b3645bc74174e208e4ace43cdcd02450e8285d45ee48d281f46ba8b00723fe4",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-390-dark-zh-error-actions.json",
+      "export_sha256": "005626433f6c58c334ddb8e417c815c67988343c9beb2c6e32e3552cab663e57",
+      "image": "evidence/integrator/004-settled/390-dark-zh-error-actions.png",
+      "image_sha256": "ee783ca210046ef51201dbd6bdfd5bc0504b7714eae5eea07304bece85b08362",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-390-dark-zh-error-top.json",
+      "export_sha256": "3763b6e6ac7142092fbc5a641e68daee744515b9a1ce2edd099daaed693e1819",
+      "image": "evidence/integrator/004-settled/390-dark-zh-error-top.png",
+      "image_sha256": "d4c2cd0f27de09664c9b192ea9e5fb88215d132c9455a81f402c48119d11ca0f",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-390-dark-zh-invalid.json",
+      "export_sha256": "efe86bc23f7e5cbc112f2299f189c8a92b1d816177526e5b86c9712b1fb1f85a",
+      "image": "evidence/integrator/004-settled/390-dark-zh-invalid.png",
+      "image_sha256": "239bd93ce96ad60579c63cb88df764374bebc2d5b82edf1f6b962b00dd98ce4e",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-390-light-en-error-actions.json",
+      "export_sha256": "3b242eec983906f68e3187971ef15d7ed78c969e4d0b0252faed4970a9f1a463",
+      "image": "evidence/integrator/004-settled/390-light-en-error-actions.png",
+      "image_sha256": "c43b310ca9683bc18145085e26bf0aa1713494b0a7802d72eda7307d098b4786",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-390-light-en-error-top.json",
+      "export_sha256": "3c249a2ad0cf8f153d5a66af61c907e29cf209e93efef63f8d633f8a147403a4",
+      "image": "evidence/integrator/004-settled/390-light-en-error-top.png",
+      "image_sha256": "2fa1512e24e154f2c89a803406c53979fe333729bc6d7da4dafe6125be42c9c6",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-final-390-light-en-invalid.json",
+      "export_sha256": "2f8f8aa1b9114b37b59c996411222b8d627f7f1f70f5a13459390dd26dd8d8d0",
+      "image": "evidence/integrator/004-settled/390-light-en-invalid.png",
+      "image_sha256": "eeada23dd0433444eeea04a836b5d184e68f27b882c58ec0dd2b2c78e6ca2868",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-neighbor-view-baseline-en-save-edge.json",
+      "export_sha256": "3b618f305a50c70ea49596fdfc44c1556c28896ddf3ff9c6ed9e96914109f8cb",
+      "image": "evidence/neighbors/baseline-en-save-edge.png",
+      "image_sha256": "2ab52a0ab9f602ce401194ac4300caf42d62f9d1b72484cad982ce2d1a8cc66d",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-neighbor-view-baseline-zh-save-edge.json",
+      "export_sha256": "db662258bcb4eee45104087e3eb85ff02a230d7643e4fc6d9479584f6a357e9f",
+      "image": "evidence/neighbors/baseline-zh-save-edge.png",
+      "image_sha256": "bfb4654121f3b6cbf42538a76de65a8481388ba9c60e9f32dd588f1532579f8e",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    },
+    {
+      "export": "evidence/views/w17-neighbor-view-reduced-motion-success.json",
+      "export_sha256": "a06e50b245366e2ddf90d72b5f2c06840595005a6efe623a19fcaa9663300a00",
+      "image": "evidence/neighbors/reduced-motion-success.png",
+      "image_sha256": "3805f9c112f26cdcc14848558b4de7aad5850461fd0566fa6f8910f05e8ce1db",
+      "returned_png_matches_retained_png": true,
+      "returned_mime": "application/octet-stream",
+      "observer": "primary"
+    }
+  ],
+  "command_exports": [
+    {
+      "metadata": "evidence/commands/001-guidance-search/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/002-source-capture/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/003-guidance-retrieve/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/004-baseline-inspect/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/005-main-check/command.json",
+      "status": "completed",
+      "returncode": 1,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/006-main-check/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/007-neighbors/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/008-final-integrity/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/commands/009-stop-preview/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "primary"
+    },
+    {
+      "metadata": "evidence/integrator/001-implementation/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "child"
+    },
+    {
+      "metadata": "evidence/integrator/002-browser-command/command.json",
+      "status": "completed",
+      "returncode": 1,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "child"
+    },
+    {
+      "metadata": "evidence/integrator/003-browser-command/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "child"
+    },
+    {
+      "metadata": "evidence/integrator/004-settled-command/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "child"
+    },
+    {
+      "metadata": "evidence/integrator/005-handover/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "child"
+    },
+    {
+      "metadata": "evidence/integrator/006-final/command.json",
+      "status": "completed",
+      "returncode": 0,
+      "stream_bytes_and_digests_match": [
+        "stdout.txt",
+        "stderr.txt"
+      ],
+      "observer": "child"
+    }
+  ],
+  "missing_required_exports": [],
+  "timing_caveat": "The recorded final-notification time is its export after coordinator resume. Started_at to completed_at includes the workspace reset/recovery and delayed notification export. It is not native active runtime, an efficiency measurement, or the actual engine completion time.",
+  "original_report_sha256": "ee5a242b4f036408df509ea9a76903677c7167933ff17d9fd1f0035a02fd56c3",
+  "child_prompt_comparison": {
+    "exact_request": {
+      "path": "docs/evidence/v1.20.0/session-study/coordination/reconciliation-T4-F-integrator-r1-child-dispatched-prompt.txt",
+      "sha256": "3ed198b9a63cc9ed1737bf0b3cbf7155c184c76fea6eb26adecd7bcf3ed156dd"
+    },
+    "request_bytes": 3305,
+    "participant_prompt_file": "evidence/delegation/integrator-prompt.txt",
+    "participant_prompt_file_bytes": 3306,
+    "participant_prompt_file_sha256": "69d4de9bf6a670ca617e56a7084388cf6ba2a959c304847959ab04f1030e4f2a",
+    "difference": "The actual successful spawn request omits the one terminal LF present in the participant prompt file. Exact request bytes are retained separately without adding a newline; the original participant file remains unchanged.",
+    "source_spawn": "evidence/delegation/spawn-003.json",
+    "child_agent_id": "/root/product_17_cont/ui_integrator",
+    "child_completion": "evidence/delegation/child-final-notification.json"
+  },
+  "source_integrity": {
+    "verified_final_source_digest_count": 12,
+    "changed_product_paths": [
+      "app/index.html",
+      "app/save-notification.js",
+      "app/settings-controller.js"
+    ],
+    "unchanged_frozen_method_and_roles": true,
+    "scope": "Compared final digest report to captured bytes and input-to-snapshot change map; no application execution or new acceptance result."
+  },
+  "primary_view_catalogue": {
+    "path": "evidence/viewed-images.json",
+    "declared_count": 32,
+    "verified_count": 32,
+    "record_hashes_and_input_paths_match": true
+  },
+  "indexed_at": "2026-11-01T08:44:41.883999+00:00",
+  "configuration": {
+    "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/index-configuration.json",
+    "sha256": "2a896e712c68e729cb44dc4483e48d16b7f1ad60f975d2676d8a222b4a90c206"
+  },
+  "indexing_command": {
+    "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/reconciliation-index-command/command.json",
+    "sha256": "af1f1a8b568f0b248272b6787c8dd9dc665533348c3c0ec7483f9534b8f3dac7"
+  },
+  "outputs": {
+    "run": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/run.json",
+      "sha256": "92dbf388d01e2f5d741251d20d9508208adf95a0e4380779e1ec1d4c368bc95a"
+    },
+    "product_evidence": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/product-evidence.json",
+      "sha256": "470d69e388a6090bf73f562788574d87984413d294e4831341b5a74590a31c9e"
+    },
+    "execution_audit": {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/execution-audit.json",
+      "sha256": "6f3d460405993eb56e73e9beef15d87b4d7447900477c38113d9ebf3425538d3"
+    }
+  },
+  "indexed_counts": {
+    "source_snapshot_files": 376,
+    "screenshots": 47,
+    "primary_views": 25,
+    "primary_behavior_log_files": 20,
+    "primary_tool_output_exports": 61,
+    "children": 1,
+    "child_tool_output_exports": 23
+  },
+  "selected_captures": [
+    {
+      "original_path": "evidence/integrator/004-settled/1280-dark-zh-error-actions.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-error-actions.png",
+        "sha256": "2e38d7daf303ceb46d62fd51fe0b2a0df74b8b7ac157bcf563d6d9749b26850e"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1280-dark-zh-error-top.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-error-top.png",
+        "sha256": "1e0c45a2dcc03c03465319279a53d9f9b31a1a3760847c73a7abbc06e8ecefbe"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1280-dark-zh-invalid.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-invalid.png",
+        "sha256": "b86d0aeef74344a80f623676ab857ca50a0907adba1de984b333acbf46c19979"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1280-light-en-error-actions.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-error-actions.png",
+        "sha256": "669025e8abbca10b323affcd0cd655259f69fd0b2d7f76d558d79ed88c057315"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1280-light-en-error-top.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-error-top.png",
+        "sha256": "6b8101fdd5c68a5619a792f4000d1a004b52abde8713ce70eb0eb6bad91fae4f"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1280-light-en-invalid.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-invalid.png",
+        "sha256": "7a3f49ee354f55c61b3eac8f880f42c0ebe876c0336a649d47486ccaaaceb8c3"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1440-dark-zh-error-actions.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-error-actions.png",
+        "sha256": "6dcb00598a706e7fc3b61431975cad09947b760ef61833cb4b620b61b91f6d49"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1440-dark-zh-error-top.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-error-top.png",
+        "sha256": "a60d98b736b655f7ca4bd1740af220f7590402a4936c2b54779028fc99783d9e"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1440-dark-zh-invalid.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-invalid.png",
+        "sha256": "a05faa76a8943c6802970f2ea659ad459c0de102ae145f83f19dc747b51c663e"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1440-light-en-error-actions.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-error-actions.png",
+        "sha256": "4e029a7544e0208757cec6fb2ce3f171b3524698b1d58f4ff9d645c29b3274c7"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1440-light-en-error-top.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-error-top.png",
+        "sha256": "b4baffab5538028c2269c2f036f7217ffeaf308c6c8f7c153db5c0335b6b442f"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/1440-light-en-invalid.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-invalid.png",
+        "sha256": "8b3645bc74174e208e4ace43cdcd02450e8285d45ee48d281f46ba8b00723fe4"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/390-dark-zh-error-actions.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-error-actions.png",
+        "sha256": "ee783ca210046ef51201dbd6bdfd5bc0504b7714eae5eea07304bece85b08362"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/390-dark-zh-error-top.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-error-top.png",
+        "sha256": "d4c2cd0f27de09664c9b192ea9e5fb88215d132c9455a81f402c48119d11ca0f"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/390-dark-zh-invalid.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-invalid.png",
+        "sha256": "239bd93ce96ad60579c63cb88df764374bebc2d5b82edf1f6b962b00dd98ce4e"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/390-light-en-error-actions.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-error-actions.png",
+        "sha256": "c43b310ca9683bc18145085e26bf0aa1713494b0a7802d72eda7307d098b4786"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/390-light-en-error-top.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-error-top.png",
+        "sha256": "2fa1512e24e154f2c89a803406c53979fe333729bc6d7da4dafe6125be42c9c6"
+      }
+    },
+    {
+      "original_path": "evidence/integrator/004-settled/390-light-en-invalid.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-invalid.png",
+        "sha256": "eeada23dd0433444eeea04a836b5d184e68f27b882c58ec0dd2b2c78e6ca2868"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1280x600-dark-zh-error.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-dark-zh-error.png",
+        "sha256": "891e6009e6b7c0a4dd4f42c4439249c91337a1fa6484d69f8c9eb00fda0065b1"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1280x600-dark-zh-initial.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-dark-zh-initial.png",
+        "sha256": "905bf7a12403633fec0339670cb03ecdce3a8732afaddfc6d328f87c05732e03"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1280x600-dark-zh-success.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-dark-zh-success.png",
+        "sha256": "2c2d34c78a4b4969c71699a41715f725fd7068653830ca1daab2f7808375a5f2"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1280x600-light-en-error.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-light-en-error.png",
+        "sha256": "6378749268a9c8a13bdf7bc322109a94ea7d01d7561c0a7df9f89db4b40d64b8"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1280x600-light-en-initial.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-light-en-initial.png",
+        "sha256": "b7ee1d8dc3759652ee834d3e394044b23ae7bbb52bd8d78315c5d9b144649bd2"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1280x600-light-en-success.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1280x600-light-en-success.png",
+        "sha256": "5c773e7afc533fad5d06723b9876be6f06237f3892df130345c47abd727fe370"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-dark-zh-error.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-error.png",
+        "sha256": "fdf2a6e49f7bff38051feda8f23c11a7aa2e1e3e374b0df5639f39888f4955b4"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-dark-zh-initial.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-initial.png",
+        "sha256": "f961f0e3299b42e4b727be9a4b5b5f6eea76b7ac5d38a8c54a4fe06beb8df49e"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-dark-zh-invalid.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-invalid.png",
+        "sha256": "1226b24a4c308b50db08beb1347695aaf4c9ab94e8a6cacb8013a9750d545e93"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-dark-zh-pending.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-pending.png",
+        "sha256": "010bf74588d1f220463da6dbf1c21a890281fe8e9f41d8a0cf9285a997ecb1dc"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-dark-zh-retry-pending.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-retry-pending.png",
+        "sha256": "d414467e918f295ee19a629303319addf8d99327bcc6801df3690841752725da"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-dark-zh-success.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-success.png",
+        "sha256": "18c4d5b6fba4b599c4780c36703eb9f8c625b4a6df576d4c7688afbb89a793b1"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-light-en-error.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-error.png",
+        "sha256": "6630ccd2b05aa6b46b63ce73ee3bb46c3abd669fb3e8e44ba0555e6d304fec79"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-light-en-initial.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-initial.png",
+        "sha256": "8839b10e1cc0358fcc8dfe8ed45f78068aa45cadc753bfbb169095bbd34b864b"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-light-en-invalid.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-invalid.png",
+        "sha256": "d983bd9822257c4d546a4dca4447e09e0c7e0bf78829533e0446e0bb2c9c46a4"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-light-en-pending.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-pending.png",
+        "sha256": "e2a65c7a5102f264e7984fb84457d12c4396b12da933573a2b3241e0989d4171"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-light-en-retry-pending.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-retry-pending.png",
+        "sha256": "88357ace0f1e2c9079b843108f461704b27efae51918fab68f7e613870a0ffb1"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/1440x900-light-en-success.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-success.png",
+        "sha256": "7175c29f58db8a31cc6485802753ba03512302ccf5cf84af643a55ec9f822111"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/390x844-dark-zh-error-lower-controls.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-dark-zh-error-lower-controls.png",
+        "sha256": "0d456bef8d0216071d9916b4b601ebd02479e5e9b99d228e2c8f5281fae56f7f"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/390x844-dark-zh-error.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-dark-zh-error.png",
+        "sha256": "891db1b647d40487b78a3157a27241b2ef560dab9484698713e07f2fd9f118fb"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/390x844-dark-zh-initial.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-dark-zh-initial.png",
+        "sha256": "2b11cd1d5124df4f1fe0f12d63c1596d524f2a9b6a652b228f04d628b889bf78"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/390x844-dark-zh-success.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-dark-zh-success.png",
+        "sha256": "ae84bfe6746f0c5990e527fb4b284b838c033afd854d66d990c3fdbfa4bd9866"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/390x844-light-en-error-lower-controls.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-light-en-error-lower-controls.png",
+        "sha256": "fbeb381337484ad3c21f852ce0faaf98cd93f9d0aa7d4ac7d14073371a990ccc"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/390x844-light-en-error.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-light-en-error.png",
+        "sha256": "7a68dbbf33aa977b97d0872d06cf9cdbfa32aafd53df69c155f8f03475896278"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/390x844-light-en-initial.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-light-en-initial.png",
+        "sha256": "fbd971b0394ae7ff66a1cc1ca4be5468bc8da3d80ccbb752befbad18a2af4caf"
+      }
+    },
+    {
+      "original_path": "evidence/main-check-002/390x844-light-en-success.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/390x844-light-en-success.png",
+        "sha256": "55e80eb911c22a944c6bb6915b3706c96b5405c6a180914a74f48a34130b15c0"
+      }
+    },
+    {
+      "original_path": "evidence/neighbors/integrated-en-save-edge.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/neighbors/integrated-en-save-edge.png",
+        "sha256": "2ab52a0ab9f602ce401194ac4300caf42d62f9d1b72484cad982ce2d1a8cc66d"
+      }
+    },
+    {
+      "original_path": "evidence/neighbors/integrated-zh-save-edge.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/neighbors/integrated-zh-save-edge.png",
+        "sha256": "bfb4654121f3b6cbf42538a76de65a8481388ba9c60e9f32dd588f1532579f8e"
+      }
+    },
+    {
+      "original_path": "evidence/neighbors/reduced-motion-success.png",
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/neighbors/reduced-motion-success.png",
+        "sha256": "3805f9c112f26cdcc14848558b4de7aad5850461fd0566fa6f8910f05e8ce1db"
+      }
+    }
+  ],
+  "selected_primary_views": [
+    {
+      "original_image": "evidence/main-check-002/1440x900-dark-zh-pending.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-dark-zh-pending.json",
+        "sha256": "4bc29e983a12b1d1febc6d0d0cfdfc2d9fc6f1ec166bd336c91e6025538b54c8",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-pending.png",
+        "sha256": "010bf74588d1f220463da6dbf1c21a890281fe8e9f41d8a0cf9285a997ecb1dc"
+      }
+    },
+    {
+      "original_image": "evidence/main-check-002/1440x900-dark-zh-retry-pending.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-dark-zh-retry-pending.json",
+        "sha256": "6bf94e175495695814055028eb67008f8eb59e28f31b36e720f1eebcff37f15f",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-retry-pending.png",
+        "sha256": "d414467e918f295ee19a629303319addf8d99327bcc6801df3690841752725da"
+      }
+    },
+    {
+      "original_image": "evidence/main-check-002/1440x900-dark-zh-success.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-dark-zh-success.json",
+        "sha256": "7a8826d9c8d0bd1cb1b250a31caad253ad8a77ae3e6c8a1b1ef0b72cc7eb5ea9",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-dark-zh-success.png",
+        "sha256": "18c4d5b6fba4b599c4780c36703eb9f8c625b4a6df576d4c7688afbb89a793b1"
+      }
+    },
+    {
+      "original_image": "evidence/main-check-002/1440x900-light-en-pending.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-light-en-pending.json",
+        "sha256": "31f2f42cd95f830f74837a50476749ebc6c76eba99dd5c38f53ce20d8a533cdf",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-pending.png",
+        "sha256": "e2a65c7a5102f264e7984fb84457d12c4396b12da933573a2b3241e0989d4171"
+      }
+    },
+    {
+      "original_image": "evidence/main-check-002/1440x900-light-en-retry-pending.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-light-en-retry-pending.json",
+        "sha256": "6fa6ef2eac1ddf707ddc7424104abd87329db126eefe8fc1ec75673653584db9",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-retry-pending.png",
+        "sha256": "88357ace0f1e2c9079b843108f461704b27efae51918fab68f7e613870a0ffb1"
+      }
+    },
+    {
+      "original_image": "evidence/main-check-002/1440x900-light-en-success.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-episode-1440x900-light-en-success.json",
+        "sha256": "6c12de9c793a48729ae83eaeb56c83b2999a1b98c955dc21fb45c8e8554c4d53",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/main-check-002/1440x900-light-en-success.png",
+        "sha256": "7175c29f58db8a31cc6485802753ba03512302ccf5cf84af643a55ec9f822111"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1280-dark-zh-error-actions.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-dark-zh-error-actions.json",
+        "sha256": "2353b67cf66eed428c2ed93531f71d99be61bc066718f7313b9b1194dafd37e7",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-error-actions.png",
+        "sha256": "2e38d7daf303ceb46d62fd51fe0b2a0df74b8b7ac157bcf563d6d9749b26850e"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1280-dark-zh-error-top.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-dark-zh-error-top.json",
+        "sha256": "e26bf3b0c0e3f84e478e04dc9e418255701ae58e51a8156bd805d3d05df2e084",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-error-top.png",
+        "sha256": "1e0c45a2dcc03c03465319279a53d9f9b31a1a3760847c73a7abbc06e8ecefbe"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1280-dark-zh-invalid.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-dark-zh-invalid.json",
+        "sha256": "497322afb46a357aa986657455d3917ccd67729dd37249b306938a6f0395d283",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-dark-zh-invalid.png",
+        "sha256": "b86d0aeef74344a80f623676ab857ca50a0907adba1de984b333acbf46c19979"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1280-light-en-error-actions.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-light-en-error-actions.json",
+        "sha256": "abbd4659d46be054efaffa504042007ab3b6cbcf73080ee609342e206c3e37e5",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-error-actions.png",
+        "sha256": "669025e8abbca10b323affcd0cd655259f69fd0b2d7f76d558d79ed88c057315"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1280-light-en-error-top.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-light-en-error-top.json",
+        "sha256": "fd30e772bacbbb4c74cc8400da2cd1a2eecfb6f723e2aa8c309ff6ffbfbf70c5",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-error-top.png",
+        "sha256": "6b8101fdd5c68a5619a792f4000d1a004b52abde8713ce70eb0eb6bad91fae4f"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1280-light-en-invalid.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1280-light-en-invalid.json",
+        "sha256": "c04e3b95c960f6843467099b0fac94c802a3dbd3fc46500e0b3ce483adde00fa",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1280-light-en-invalid.png",
+        "sha256": "7a3f49ee354f55c61b3eac8f880f42c0ebe876c0336a649d47486ccaaaceb8c3"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1440-dark-zh-error-actions.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-dark-zh-error-actions.json",
+        "sha256": "2335ff435d94e0463caafe53edbfbceed7b328008e972fc57e7a4e2ea126ca7a",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-error-actions.png",
+        "sha256": "6dcb00598a706e7fc3b61431975cad09947b760ef61833cb4b620b61b91f6d49"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1440-dark-zh-error-top.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-dark-zh-error-top.json",
+        "sha256": "dc44db1cc8c81d72acff12a3c7485ba552c169c2f070ee388292d6f96999aa02",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-error-top.png",
+        "sha256": "a60d98b736b655f7ca4bd1740af220f7590402a4936c2b54779028fc99783d9e"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1440-dark-zh-invalid.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-dark-zh-invalid.json",
+        "sha256": "f6408e73e7c1cc15f918675a8a4cffba28e5490c2556e9bc7edff83f4feb4a65",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-dark-zh-invalid.png",
+        "sha256": "a05faa76a8943c6802970f2ea659ad459c0de102ae145f83f19dc747b51c663e"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1440-light-en-error-actions.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-light-en-error-actions.json",
+        "sha256": "64fa7470a7a3835748ba9e4948e81e69670d3f71bb9886cf79bc184e0165aed1",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-error-actions.png",
+        "sha256": "4e029a7544e0208757cec6fb2ce3f171b3524698b1d58f4ff9d645c29b3274c7"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1440-light-en-error-top.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-light-en-error-top.json",
+        "sha256": "4baa17448bfb5042b577b69959968b9c103645be992e9dc256688f7d0061a0ab",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-error-top.png",
+        "sha256": "b4baffab5538028c2269c2f036f7217ffeaf308c6c8f7c153db5c0335b6b442f"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/1440-light-en-invalid.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-1440-light-en-invalid.json",
+        "sha256": "8c470a0465d2e1e78b58238a1499a905fe4fa11f1e64f3d918e2bea7d6066511",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/1440-light-en-invalid.png",
+        "sha256": "8b3645bc74174e208e4ace43cdcd02450e8285d45ee48d281f46ba8b00723fe4"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/390-dark-zh-error-actions.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-dark-zh-error-actions.json",
+        "sha256": "005626433f6c58c334ddb8e417c815c67988343c9beb2c6e32e3552cab663e57",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-error-actions.png",
+        "sha256": "ee783ca210046ef51201dbd6bdfd5bc0504b7714eae5eea07304bece85b08362"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/390-dark-zh-error-top.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-dark-zh-error-top.json",
+        "sha256": "3763b6e6ac7142092fbc5a641e68daee744515b9a1ce2edd099daaed693e1819",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-error-top.png",
+        "sha256": "d4c2cd0f27de09664c9b192ea9e5fb88215d132c9455a81f402c48119d11ca0f"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/390-dark-zh-invalid.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-dark-zh-invalid.json",
+        "sha256": "efe86bc23f7e5cbc112f2299f189c8a92b1d816177526e5b86c9712b1fb1f85a",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-dark-zh-invalid.png",
+        "sha256": "239bd93ce96ad60579c63cb88df764374bebc2d5b82edf1f6b962b00dd98ce4e"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/390-light-en-error-actions.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-light-en-error-actions.json",
+        "sha256": "3b242eec983906f68e3187971ef15d7ed78c969e4d0b0252faed4970a9f1a463",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-error-actions.png",
+        "sha256": "c43b310ca9683bc18145085e26bf0aa1713494b0a7802d72eda7307d098b4786"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/390-light-en-error-top.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-light-en-error-top.json",
+        "sha256": "3c249a2ad0cf8f153d5a66af61c907e29cf209e93efef63f8d633f8a147403a4",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-error-top.png",
+        "sha256": "2fa1512e24e154f2c89a803406c53979fe333729bc6d7da4dafe6125be42c9c6"
+      }
+    },
+    {
+      "original_image": "evidence/integrator/004-settled/390-light-en-invalid.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-final-390-light-en-invalid.json",
+        "sha256": "2f8f8aa1b9114b37b59c996411222b8d627f7f1f70f5a13459390dd26dd8d8d0",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled/390-light-en-invalid.png",
+        "sha256": "eeada23dd0433444eeea04a836b5d184e68f27b882c58ec0dd2b2c78e6ca2868"
+      }
+    },
+    {
+      "original_image": "evidence/neighbors/reduced-motion-success.png",
+      "viewer_agent_id": "/root/product_17_cont",
+      "retained_view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/views/w17-neighbor-view-reduced-motion-success.json",
+        "sha256": "a06e50b245366e2ddf90d72b5f2c06840595005a6efe623a19fcaa9663300a00",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "retained_capture": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/neighbors/reduced-motion-success.png",
+        "sha256": "3805f9c112f26cdcc14848558b4de7aad5850461fd0566fa6f8910f05e8ce1db"
+      }
+    }
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_17_cont/ui_integrator",
+      "parent_agent_id": "/root/product_17_cont",
+      "fork_turns": "none",
+      "status": "completed",
+      "role": "ui_integrator",
+      "prompt": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/reconciliation-T4-F-integrator-r1-child-dispatched-prompt.txt",
+        "sha256": "3ed198b9a63cc9ed1737bf0b3cbf7155c184c76fea6eb26adecd7bcf3ed156dd"
+      },
+      "spawn": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/delegation/spawn-003.json",
+        "sha256": "99e2b123202a10e3148cf5c34c010ceeff64bbc83fb1d45790e9823bcba189e5",
+        "source": "collaboration.spawn_agent",
+        "scope": "Faithful original child-spawn response containing the actual canonical agent ID; the separate request is retained in the full workspace.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "completion": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/delegation/child-final-notification.json",
+        "sha256": "30a1c26278af5fed45c4376f59249e8b56b7bea9c90a071d223f7eb6442bd072",
+        "source": "collaboration FINAL_ANSWER notification faithfully exported by the primary participant from its retained conversation",
+        "scope": "Faithful actual child completion notification/status observation; full delivered research text is separately retained.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "tool_outputs": [
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/001-implementation/command.json",
+          "sha256": "e578079d578ce29291d2281fe5f7309370771359697ec455f83ef0b2fc85801e",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/001-implementation/stdout.txt",
+          "sha256": "8f0e6f6c807e4a034fcf04925f8bc7e2e5531324163c7333001d2f15f0c95cb9",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/002-browser-command/command.json",
+          "sha256": "0de30d2665d4e6d1ebad8ae3413c99715a6e3f85e52c152602f15771fccfd10b",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/002-browser-command/stderr.txt",
+          "sha256": "cdd36f69ea66725740d8649c735b8b45cb919129c035b211935484f8e63af1bd",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/002-browser-command/stdout.txt",
+          "sha256": "ad2d32450926b7260d2134ebf248e0809eb6ca6730b13224e717847376964757",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/003-browser-command/command.json",
+          "sha256": "797a80e1675bc93184f4c53faa6d1d5a56267930821ef00862e1a7c6b8589300",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/003-browser-command/stdout.txt",
+          "sha256": "2ff531987b7b285ce3248a98a9d4a06d03af3420423a55391ea84e1b67a9d1ce",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled-command/command.json",
+          "sha256": "b92aaf0300b7c00e0adf398efc64bfb843123aa782f660e0b29618a3c6a925a4",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/004-settled-command/stdout.txt",
+          "sha256": "ac01d3ce26c3b1bcaa9cde1e58bc1cb6f69375f3d228c85edb7aa95a24080125",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/005-handover/command.json",
+          "sha256": "0d0e5788a810210c6f92775662ff3df211af21ecc2f3bc2ea4620fa0df74d757",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/005-handover/stdout.txt",
+          "sha256": "9eb1cb5e46161f44a0fae0f5fbf1713d88b5643eccb50944340ba38ea96aaf3b",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/006-final/command.json",
+          "sha256": "e2819e02b5acbdac09a08512b5aa9cb99d008dfebecab594278259ddc93f26c2",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-1440-dark-zh-success.json",
+          "sha256": "64e81d5754b7cbcfb3438a1aa92f2c3428bc9e1756b3d27115342671d711cbb5",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-1440-light-en-error.json",
+          "sha256": "3991ebe30e8e26ea0fbe65b689360ff43f209db7b1c34148396a6b14cc081f43",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-1440-light-en-invalid.json",
+          "sha256": "a489f72af5a9396db5d04ed30691653fd0f5a61d8a0be5794e38724cbe26a17b",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-baseline.json",
+          "sha256": "3f2df7792161735d4b1f5f1dd537eeb489b81751fca161a883f90255d99e9ea3",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-final-1280-dark-zh-error-actions.json",
+          "sha256": "2353b67cf66eed428c2ed93531f71d99be61bc066718f7313b9b1194dafd37e7",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-final-1280-light-en-invalid.json",
+          "sha256": "c04e3b95c960f6843467099b0fac94c802a3dbd3fc46500e0b3ce483adde00fa",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-final-1440-dark-zh-error-actions.json",
+          "sha256": "2335ff435d94e0463caafe53edbfbceed7b328008e972fc57e7a4e2ea126ca7a",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-final-1440-light-en-error-top.json",
+          "sha256": "4baa17448bfb5042b577b69959968b9c103645be992e9dc256688f7d0061a0ab",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-final-390-dark-zh-invalid.json",
+          "sha256": "efe86bc23f7e5cbc112f2299f189c8a92b1d816177526e5b86c9712b1fb1f85a",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-final-390-light-en-error-actions.json",
+          "sha256": "3b242eec983906f68e3187971ef15d7ed78c969e4d0b0252faed4970a9f1a463",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/view-source.json",
+          "sha256": "8b35ad1beb644a06dfef54266e7f935be4700c686e6c5e655365a5a47df490ca",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        }
+      ],
+      "result": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1/artifacts/evidence/integrator/FINAL.md.txt",
+        "sha256": "505de2370ca48959347b4ecafc001d4d8ddf788518aaf03f6ef3df3b5ce35320"
+      },
+      "role_instruction_sha256": "843109095af49bfe5dc135f3aa8df7475e2efff42c7cf3a09a8d50897275502f",
+      "model_requested": "session-default-inherited",
+      "model_resolved": null
+    }
+  ],
+  "post_index_integrity": {
+    "guarded_original_files": 95,
+    "changed_or_missing_guarded_files": [],
+    "replayed_participant_files_still_match_snapshot": 376,
+    "raw_final_report_preserved": true,
+    "raw_visual_report_preserved": true,
+    "no_missing_index_references": true,
+    "original_view_returns_preserved_without_mime_rewrite": true
+  },
+  "capture_groups": {
+    "settled_error_validation": {
+      "count": 18,
+      "directory": "evidence/integrator/004-settled",
+      "primary_views": 18
+    },
+    "main_behavior_and_episode": {
+      "count": 26,
+      "directory": "evidence/main-check-002",
+      "primary_views": 6,
+      "timing_note": "Pending frames include early native fades and are not claimed to be settled."
+    },
+    "integrated_mobile_neighbor": {
+      "count": 2,
+      "files": [
+        "evidence/neighbors/integrated-en-save-edge.png",
+        "evidence/neighbors/integrated-zh-save-edge.png"
+      ],
+      "primary_views": 0,
+      "scope": "Primary viewed baseline comparison images and settled lower-control product views; these two integrated comparison files are not attributed separate primary view exports."
+    },
+    "reduced_motion_success": {
+      "count": 1,
+      "file": "evidence/neighbors/reduced-motion-success.png",
+      "primary_views": 1
+    }
+  },
+  "inspection_scope": "All eighteen final settled integrator captures have genuine primary view exports. Six main episode captures and reduced-motion success also have primary views. Supplementary captured states without primary exports are not represented as personally viewed. The child independently retained eleven view exports, six of final settled states.",
+  "child_export_validation": {
+    "actual_agent_id": "/root/product_17_cont/ui_integrator",
+    "successful_spawn": "evidence/delegation/spawn-003.json",
+    "actual_completion": "evidence/delegation/child-final-notification.json",
+    "completion_message_type": "FINAL_ANSWER",
+    "fork_turns": "none",
+    "model_override_supplied": false,
+    "effort_override_supplied": false,
+    "role_instruction": "roles/ui_integrator.toml",
+    "role_instruction_sha256": "843109095af49bfe5dc135f3aa8df7475e2efff42c7cf3a09a8d50897275502f",
+    "role_instruction_matches_registration": true,
+    "failed_capacity_spawns": [
+      "evidence/delegation/spawn-001.json",
+      "evidence/delegation/spawn-002.json"
+    ],
+    "original_final": "evidence/integrator/FINAL.md",
+    "notification_vs_original_final_differences": [
+      {
+        "operation": "replace",
+        "original": "'",
+        "notification": "’"
+      },
+      {
+        "operation": "delete",
+        "original": "\n",
+        "notification": ""
+      }
+    ],
+    "view_exports_verified": 11,
+    "final_settled_view_exports": 6,
+    "command_metadata_records_verified": 6,
+    "tool_output_export_count": 23,
+    "frozen_integration_decision_unchanged": true,
+    "frozen_source_manifest_unchanged": true,
+    "native_role_binding": "unavailable; role describes simulated supplied instructions"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "fieldnotes-tiddlywiki-study-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node vendor/tiddlywiki/tiddlywiki.js wiki --listen host=127.0.0.1 port=4313",
+    "build": "node vendor/tiddlywiki/tiddlywiki.js wiki --build index"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

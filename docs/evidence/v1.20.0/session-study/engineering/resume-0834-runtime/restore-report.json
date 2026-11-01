@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-01T08:36:20.136082+00:00",
+  "status": "ready",
+  "scope": "Exact pinned browser runtime restoration after filesystem reset; environment preparation, no study participation or product review",
+  "readiness": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "playwright": "1.57.0",
+    "browser_executable": "/tmp/ui-spec-preview-browser/chrome-headless-shell-143.0.7499.4/chrome-headless-shell-linux64/chrome-headless-shell",
+    "browser_sha256": "20ffc88be1c6f7dc8351bebfaca965ff9a07617bddf696f0b67ef85e5868b29a",
+    "font_path": "/tmp/ui-spec-fonts/NotoSansCJKsc-Regular.otf",
+    "font_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "FONTCONFIG_FILE": "/tmp/ui-spec-fonts/fonts.conf",
+    "PLAYWRIGHT_BROWSERS_PATH": "/tmp/ui-spec-preview-browser",
+    "scope": "runtime verification only; isolated synthetic page, no application or study product loaded",
+    "runtime_browser_version": "143.0.7499.4",
+    "rendered_fonts": [
+      {
+        "familyName": "Noto Sans CJK SC",
+        "postScriptName": "NotoSansCJKsc-Regular",
+        "isCustomFont": false,
+        "glyphCount": 10
+      }
+    ],
+    "font_smoke_screenshot": "/tmp/ui-spec-runtime-restoration-0834/runtime-font-smoke.png",
+    "screenshot_sha256": "dfecf3075498a074da0a7b4f51e64581f5cda175ac0b420337e33b1257f7a1c5",
+    "status": "ready"
+  },
+  "authoritative_repository": "D1ChangGeng/UI-Spec-Studio",
+  "authoritative_commit": "89cf94495dc1300dbb21c3f93e5972a2c67ab020",
+  "source_hashes": {
+    "tools/provision_preview_browser.py": "04eb7bed1be5c7d32e171fa503011645225c77b82acbade67ddf79fc6cfef3c9",
+    "tools/requirements-preview.txt": "06b836f3cb53689ccc7e38d83a3daffdd547eae0fbcf5185674a10a26b7c762b",
+    "docs/evidence/v1.20.0/session-study/environment.json": "54afa3b5febd8abbbb4fdc6062f0656e61bb81d74aa35af1e8f6c0afe8698dc3",
+    "docs/evidence/v1.20.0/session-study/environment/fonts.conf": "d418286fc5a3c1b522324030f26192b2a7a1e59170bf05b58c57fe01d7de58e0",
+    "docs/evidence/v1.20.0/session-study/environment/browser-provision.json": "c11f5d3b190bab94a084a83a13cc60b934c3642973abd068abb78fb6ebb63328",
+    "docs/evidence/v1.20.0/session-study/support/capture_command.py": "04e5594bf8c7842b87e341b5764d818b977e68f3e87c8676f87429cf1f61eefa"
+  },
+  "provision_report_identical_to_retained_record": true,
+  "python_packages": {
+    "greenlet": "3.5.6",
+    "markdown-it-py": "4.0.0",
+    "mdurl": "0.1.2",
+    "pip": "25.0.1",
+    "playwright": "1.57.0",
+    "pyee": "13.0.1",
+    "typing_extensions": "4.16.0"
+  },
+  "registered_identity_mismatches": [],
+  "blockers": [],
+  "runtime_environment_file": "/tmp/ui-spec-runtime-restoration-0834/runtime.env",
+  "source_or_app_mutations_by_this_agent": [],
+  "capture_note": "Commands 001-008 used the retained bootstrap capture before repository support/capture_command.py was located; 009 onward use the repository capture script. Original command output streams and statuses retained. A failed fetch at tools/capture_command.py returned 404; correct support/capture_command.py then used.",
+  "network_context": {
+    "skill_and_network_reference_read": true,
+    "environment_status_tool": "unavailable in exposed tool registry",
+    "startup_policy_snapshot": "/etc/codex/network-policy.json absent",
+    "proxy_and_tls": "inherited settings preserved, TLS verification kept enabled",
+    "actual_download_outcome": "official sources succeeded under supported exec escalation"
+  }
+}

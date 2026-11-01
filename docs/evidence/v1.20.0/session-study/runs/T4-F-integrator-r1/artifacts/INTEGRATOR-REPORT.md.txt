@@ -1,0 +1,88 @@
+# Bounded integrator report — Tabler save feedback
+
+## Scope and result
+
+Implemented the settled `INTEGRATION-DECISION.md` in the existing Fieldnotes settings page. The implementation is available on the already-running `http://127.0.0.1:4417/` preview. This report establishes scoped implementation, behavior checks, and integrator visual observations; it does not declare the formal SPEC complete or supply main-agent whole-product acceptance.
+
+Product writes are limited to:
+
+| File | Change |
+| --- | --- |
+| `app/index.html` | Adopted action-toast markup and full MIT notice; selected fixed utility container; native inline validation feedback slots; removed live-region semantics from the inline summary. |
+| `app/settings-controller.js` | Coordinates authoritative store events, concise form summary, native field-error classes and associations, rejected-submit focus, stale-event filtering, and feedback focus return. Unrelated handlers and localization tail remain intact. |
+| `app/save-notification.js` | New event-rendering adapter using bundled `tabler.Toast`; retains a failed snapshot for explicit retry; coordinates focus and native dismissal transitions. |
+
+No CSS, dependency, store, source-preview, distribution asset, navigation, or theme-control changes were made. The existing preview server was neither started nor stopped by this integrator.
+
+## Exact source and retained craft
+
+The source is the acquired `sources/tabler-toast-cookies.html` action variant and the supplied `shared/components/demo/Toast.astro` from Tabler tag `@tabler/core@1.7.1`, revision `07f60c07da13d8ff957a370434b7ef5c86f5ab94`. `SOURCE-MANIFEST.json` remains unchanged: the deployed HTML snapshot reports 1.7.1 but does not expose its exact deployment commit. The tagged source and deployed snapshot remain distinct identities.
+
+The adopted block retains `.toast`, `.toast-header`, `.avatar.avatar-xs.me-2`, `.me-auto`, the small time slot, `.ms-2.btn-close`, `.toast-body`, `.mt-2.pt-2.border-top`, and `.btn.btn-primary.btn-sm`. The container is exactly `toast-container position-fixed top-0 end-0 p-3`. Its header remains avatar → Fieldnotes identity → time → native close. The initials fallback is `FN`; the demo portrait and cookie sample text are replaced by the settled save content. No independent width, padding, border, surface, type, shadow, focus-ring, or transition styling was introduced.
+
+The source action row remains inside the native toast body and is shown only for failure. Retry intentionally omits the demo action's `data-bs-dismiss="toast"`: the requested retry calls `saveSettings` and only its authoritative pending event replaces the failure state. The close button retains `data-bs-dismiss="toast"`. The bundled Bootstrap/Tabler Toast implementation owns show, hide, transition, and dismissal.
+
+The source's `role="status"`, `aria-live="polite"`, `aria-atomic="true"`, and `data-bs-autohide="false"` are present in the initial document. The adapter also configures `autohide:false`. The inline form summary has no live-region role, so it does not create a second result announcement. Screen-reader behavior was not evaluated with a live assistive-technology session.
+
+At matching light-theme conditions, actual source and integrated computed values matched for 350px width, font size, border radius, box shadow, border width, and header/body padding. This is a measured source-retention check; the separately viewed screenshots support the perceptual observations below.
+
+## Data, state, and focus behavior
+
+`settings-store.js` remains the only validation, persistence, operation-ID, pending-interval, and result authority. Every rendered state comes from its subscription events. The adapter renders no timer-based success and performs no persistence writes of its own.
+
+- Pending disables the existing Save control, marks it busy, and hides the toast action row. Form editing stays available.
+- Success uses `event.settings` and `event.savedAt`; the header shows the localized actual saved time and the body identifies storage in this browser. It does not reload or overwrite form values. When the form differs from the saved version, the inline summary says the form has unsaved changes.
+- Error retains a copy of `event.snapshot`. Retry explicitly passes that snapshot to `saveSettings`; it never silently reads a later form draft. Error text explains that retry saves the failed version.
+- Invalid renders the actual store-provided field errors using existing Tabler `.is-invalid` and `.invalid-feedback` classes, connects them through `aria-describedby`, sets `aria-invalid`, names the first field in the toast, and focuses the first invalid field. Known messages are localized in Chinese; editing clears the corrected field's error without clearing other fields.
+- Both controller and adapter ignore older operation IDs. This includes a newer invalid event while an earlier valid save remains in flight.
+- A completion does not move ordinary form focus. When a focused Retry disappears during pending, focus returns to the last editable field because Save is disabled. Native close returns focus to an enabled Save control, or the last field if a save is pending. If focus has already moved elsewhere during dismissal, it is preserved.
+- A newer event arriving during native hiding is displayed after `hidden.bs.toast`, avoiding an older dismissal callback hiding a newer result.
+
+## Executed checks and evidence
+
+The dedicated local Python Playwright environment and prescribed headless browser were used with `FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf`, not a connected browser. All application interaction used isolated local contexts with synthetic data.
+
+`evidence/integrator/003-browser/results.json` records **156 passing assertions, no failures, and zero page errors**. The matrix was 1440×900, 1280×600, and 390×844, each in light/en and dark/zh. The checks cover:
+
+- Valid save, pending state, disabled Save, hidden non-error retry, and actual localStorage readback.
+- Newer edits and input focus preserved through pending and success.
+- One-time forced failure preserving the previous stored value and newer form draft.
+- Retry saving the failed snapshot, leaving still-newer edits in the form, and keyboard focus recovery.
+- Native close, focus return, and unchanged persistence after dismissal.
+- Empty display name, malformed email, excessive organization/location lengths, real associated localized field errors, and first-field focus.
+- Rejected submissions preserving previous storage; per-field clearing while editing.
+- Native 350px width, viewport containment, and close-button hit reachability in all six conditions.
+- Failure remaining visible beyond 5.2 seconds without auto-hide.
+- Real concurrent store events: an older failure cannot replace a newer pending/success state; an older success cannot replace a newer invalid state.
+- Source/integrated computed shell relationships and unchanged digests for the read-only store, source-preview, and source manifest.
+
+Original command stdout/stderr, arguments, timestamps, and exit codes are retained in `001-implementation/`, `002-browser-command/`, `003-browser-command/`, and `004-settled-command/`. The first browser harness attempt failed because Python Playwright requires the `arg=` keyword for `wait_for_function`; that actual failure remains in `002-browser-command/`. The harness was corrected, not the application. The executable corrected harness, implementation script, and settled capture script are retained as `check.py`, `implementation.py`, and `capture-settled.py`.
+
+## Actually viewed render evidence
+
+Before editing, I opened the supplied source and baseline captures through `view_image`; actual tool-result records are `evidence/integrator/view-source.json` and `view-baseline.json`. The source view establishes the selected compact 350px shell, thin header/body separation, body measure, separated small-button action, rounded edge, and subtle shadow.
+
+The first behavior run produced 20 PNGs in `003-browser/`. Some early show captures sampled the native fade or an in-progress source smooth scroll; those remain historical evidence and are not treated as settled visual outcomes. A second capture-only run produced 18 settled PNGs in `004-settled/`, waiting for the native `showing` class to clear and using instant scrolling. `captures.json` records actual capture-time brackets, state, focus, viewport, and scroll position.
+
+I personally opened these six final captures at their actual saved resolution:
+
+| Capture in `evidence/integrator/004-settled/` | Observation |
+| --- | --- |
+| `1440-light-en-error-top.png` | Source header, body, action separator, small primary button, edge/shadow, and width remain recognizable. The prescribed fixed position overlaps right header utilities; the native close remains accessible. |
+| `1440-dark-zh-error-actions.png` | Native dark surfaces and borders carry the same hierarchy; Chinese failure/retry copy is legible. Lower save/cancel controls remain visible. |
+| `1280-light-en-invalid.png` | Concise toast names Display name; visible native field errors remain adjacent to the empty name and malformed email. No duplicated live summary was introduced. |
+| `1280-dark-zh-error-actions.png` | The source-sized toast stays within the short viewport and leaves lower save/cancel controls available. The fixed overlay can cover underlying upper form content at this scroll position. |
+| `390-light-en-error-actions.png` | The full 350px toast fits horizontally, keeps its small action row, and leaves the lower form available. The pre-existing Customize floating button overlaps part of Save at this narrow viewport. |
+| `390-dark-zh-invalid.png` | The Chinese validation toast fits the viewport; display-name and email errors remain readable and associated with their fields. |
+
+Full actual `view_image` responses for these final views are retained as `view-final-*.json`. Additional settled top/header, lower-action, and invalid captures exist for every matrix condition for the main agent's independent inspection.
+
+## Remaining boundaries and handover
+
+No implementation defect was found by the scoped checks. Formal whole-product acceptance remains with the main agent. In particular, the fixed top-right placement covers some right-side header utilities until dismissed; changing that placement is a settled-design decision outside this delegation. The narrow Customize/Save overlap is an existing upstream relationship and was not modified. Both observations were sent to the parent for its independent judgment.
+
+The integrator viewed static states and executed natural-timer interactions. These do not establish natural-speed animation smoothness, real-device touch behavior, assistive-technology announcement timing, or broader upstream gallery navigation. The parent is independently examining assembled context and sampled transition evidence.
+
+The supplied role, full Skill, eight full common references, and integration reference were read before implementation. The already-captured modern forms guidance was read from `evidence/commands/003-guidance-retrieve/stdout.txt`. No new source selection, art direction, original-construction exception, or recursive delegation was undertaken.
+
+Useful selectors: `#save-notification`, `#save-notification-message`, `#save-notification-time`, `#save-notification-close`, `#retry-save`; `data-state` and `data-operation-id` expose the rendered authoritative event for inspection.

@@ -1,0 +1,53 @@
+# Actual visual review
+
+## Conditions and scope
+
+Chromium headless shell 143.0.7499.4; device scale 1; CSS viewports 1440×900, 1280×640, 390×844; FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf. Browser date rendering uses America/New_York (observed), though command timestamps are UTC. Source fonts are system stacks with the supplied Noto CJK fixture; no product font download was introduced. Static captures use the browser's normal animation behavior; settled-* captures explicitly wait after transitions. No pixels were synthesized or retouched.
+
+## Personally opened sources and comparison
+
+view-001.json: original Notebook beige screenshot. Its centered sheet, broad side padding and top action strip are visible.
+view-002.json: actual Snow White baseline. The wide sheet gives English paragraphs long lines, with the native right sidebar.
+view-003.json: Paper populated local trial. 636px measured body width, 17px/30px body type, serif Latin reading and rendered CJK; cream sheet and red margin establish editorial identity.
+view-004.json: Notebook populated local trial. The same text fits more densely at 15px/22px. The script scrolled the note to the viewport top, under its fixed bar; this screenshot does not prove native navigation would obscure the title.
+view-005-recovered.json: Starlight populated local trial. Slab serif Latin and image-backed ground are visible, but the reading measure remains broad (962px). No Starlight asset is retained in runtime.
+w09-view-009.json: Paper's original readme rendered locally with source-default layout. This is an authorized local source render, not an observed author-hosted demo. Public page retrieval failures remain in evidence/research/paper-web.json.
+
+## Personally opened integrated product
+
+w09-view-006/007/008: initial final-start, dark reading and compact editor. The compact editor frame exposed a mid-transition overlap; it is retained as intermediate evidence and superseded for the settled-layout claim.
+w09-view-010: settled-day-editing-1280.png. The ruled mono editor, title, tags and formatting controls are readable; check and cancel remain reachable. There is no overlapping read frame.
+w09-view-011: settled-day-reading-390.png. The long title, tag pills and serif heading wrap within the viewport; reading remains one vertical column.
+w09-view-012: settled-night-editing-390.png. Title, native cancel/check, wrapping toolbar and ruled text area fit the narrow page. The real input surface contains the full note.
+w09-view-013: settled-start.png. Native navigation is at the leading edge, the sheet has a distinct margin and a bounded measure, and persistent action visibility improves pencil discoverability. Search is reset.
+w09-view-014: settled-night-reading-1440.png. Warm dark page, pale body, blue links and muted tags retain the same hierarchy as Day. The long Chinese paragraphs are rendered, not missing glyphs.
+w09-view-015: settled-chinese-night-1280.png. Native navigation labels and date localize; mixed-language authored content stays intact.
+
+The full 12-state reading/editing matrix was captured and geometry-checked. Personal pixel inspection above is representative, rather than a claim that every captured PNG or every possible state was opened. Final product captures use the exact selected source and supported configuration; unused trial themes were removed before settled captures.
+
+## Controlled motion episodes
+
+w09-view-016–019 contain the first normal/reduced episode samples. The first reduced after-click image is too early to establish the settled condition, despite state=no; this observation led to a later settled capture.
+w09-view-020–022 show the normal sidebar hide episode at approximately 72–129ms, 251–291ms and 643–728ms after trigger. The sidebar exits toward its source-supported leading edge while the sheet moves toward center; text stays readable in these sampled frames. w09-view-023 shows the reduced-motion settled state; actual DOM geometry was x=-360/right=0, visibility=hidden. Showing the sidebar again remained operable.
+
+These are viewed timestamped frames and controlled operations. Natural-speed playback, frame pacing, display-device smoothness and unobserved intervals are not certified. The original source reduced-motion behavior is retained. No ambient animation was added; native global Animation duration=0 provides a quiet setting.
+
+## Behavior and integration evidence
+
+commands/008 and verification.json contain 23 passed assertions: full interview bottom reachable; ledger table; native return; English and Chinese input; filesystem write; exact reload; cancel preserving saved content and clearing draft; keyboard search/editor; page/editor bounds in both palettes at three viewports; Chinese UI; reduced sidebar state; no page errors. commands/009 adds settled captures and zero document horizontal overflow in the captured matrix. commands/013 verifies actual native palette selection through Control Panel tabs, corrected after an initial test role mismatch. Its tag click is logged but the empty popup selector result is not a tag-navigation pass.
+
+The server was stopped before final build (commands/015). final-integrity.json compares all eight authoritative note bodies to the seed and records resource sizes. Seven note bodies are unchanged; the interview has only the two documented meaning-preserving edits. The final browser request observation has no external requests. No animation engine or media payload was added. This is a bounded source/payload observation, not a device performance benchmark.
+
+## Remaining limits
+
+One browser engine, emulated viewports, no physical mobile keyboard, no assistive-technology user test, no injected server failure/retry test, no owner preference validation. Paper's own settings copy remains English. Native control semantics and persistence are retained; whole-product WCAG conformance is not claimed. Source-default hover/transitions and font fallback differ across operating systems.
+
+## Evidence failures and recovery
+
+The large image-response export stalled outside the writable root and the coordinator interrupted the pending turn. Its old exec cell was subsequently unavailable (termination returned “exec cell 32 not found”). The actual PNGs survived. A fresh image inspection was saved via an approved /tmp write/copy correction; unreturned content was not reconstructed. commands/007 records the initial cancel-selector failure; commands/008 performs the corrected native cancel. commands/011 records the tab-role selector failure; commands/012 diagnoses actual markup and commands/013 succeeds using visible native tab labels. Original failures are retained.
+
+## Final store hygiene finding
+
+The final offline integrity scan found stale seed/draft files and duplicate language-state files left after the browser test runs and restart/build sequence. With the server stopped, these specific test artifacts were archived in evidence/stale-files-after-tests; the actual saved interview file was retained as the sole authoritative note. This was a concrete late finding, not inferred deletion success. final-integrity.json was rerun, and the final export was rebuilt. No supplied material was lost. The earlier in-browser cancel assertion establishes browser state; it did not by itself establish removal of every stale draft file on disk.
+
+commands/017 FAILED its fresh-boot assertion: a draft tiddler was still loaded. Subsequent file inspection found the stale draft/state files present again after the attempted archive. The cause remains unresolved within the run boundary. Do not treat the cleanup or final store-hygiene claim as passed. The earlier live UI persistence/reload and cancellation checks retain their narrower scope.

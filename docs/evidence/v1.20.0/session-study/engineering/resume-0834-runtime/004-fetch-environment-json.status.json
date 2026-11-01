@@ -1,0 +1,22 @@
+{
+  "command": [
+    "curl",
+    "--fail",
+    "--location",
+    "--retry",
+    "2",
+    "--create-dirs",
+    "--output",
+    "/tmp/ui-spec-runtime-restoration-0834/source/docs/evidence/v1.20.0/session-study/environment.json",
+    "https://raw.githubusercontent.com/D1ChangGeng/UI-Spec-Studio/89cf94495dc1300dbb21c3f93e5972a2c67ab020/docs/evidence/v1.20.0/session-study/environment.json"
+  ],
+  "cwd": "/tmp",
+  "started_at": "2026-11-01T08:33:50.121492+00:00",
+  "finished_at": "2026-11-01T08:33:50.273319+00:00",
+  "returncode": 0,
+  "stdout": "/tmp/ui-spec-runtime-restoration-0834/004-fetch-environment-json.stdout",
+  "stderr": "/tmp/ui-spec-runtime-restoration-0834/004-fetch-environment-json.stderr",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "ad5313821b834676ab5868c5985db0bd52f3da83cde038851f9417ebb0c8d1e5",
+  "capture": "bootstrap capture used before repository capture_command.py available"
+}

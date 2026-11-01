@@ -1,0 +1,13 @@
+# Integration decision
+
+Authority: TASK.md and INPUT.md allow themes/plugins, documented configuration, narrow source-preserving adaptation and compatibility repair inside app/wiki. No original-construction exception is authorized; none is used.
+
+Selected: Vanilla Paper 0.10.0, MIT, Simon Huber; https://github.com/BurningTreeC/vanilla-paper at 031a78d4d4187128c632f8a647fa05408eddc700. All 55 supplied theme files are intact. License: app/wiki/themes/vanilla-paper/LICENSE. Exact file hashes: evidence/source-retention.json. Acquired source: evidence/research/paper-source. Source identity and native override titles are unchanged.
+
+Configuration: $:/theme selects Paper; $:/palette selects VanillaPaperDay; options/sidebarside=start; options/toolbaralways=yes; Search/AutoFocus=false. Day/Night palette shadow overrides change only sidebar-controls-foreground, tiddler-controls-foreground and tiddler-subtitle-foreground to their existing source sidebar-foreground value. No invented palette values or layout CSS are added.
+
+Native boundary: pencil → native draft → framed textarea → native checkmark → tiddlyweb → Node filesystem adaptor → wiki/tiddlers → browser reload. No localStorage substitute, fake save state or service is present. Native cancellation and search are unchanged. Two small meaning-preserving interview edits were saved through the visible editor: “not simply a memorable object” became “more than a memorable object”; “保留这种条件差异” became “保留这些条件差异”. The other seven notes are unchanged in meaning and text. Seed snapshots remain in evidence/seed.
+
+Trial-only Notebook and notebook-mobile copies were removed from the runtime; their full acquired source remains under evidence/research. Starlight was removed from the runtime theme list. The complete original TiddlyWiki distribution was not modified. No dependencies were installed in app; the supplied launch and build scripts remain.
+
+Use Node 20+, run PORT=4409 ./start.sh from app, and open http://127.0.0.1:4409/. Stop the server before editing files directly or invoking a source-mutating build. Native Control Panel → Appearance → Palette exposes Vanilla Paper Day/Night. Control Panel → Appearance → Paper exposes the source's supported composition options. The source's global animation-duration setting supports a quiet value of 0.

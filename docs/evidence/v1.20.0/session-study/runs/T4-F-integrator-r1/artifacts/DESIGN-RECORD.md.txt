@@ -1,0 +1,55 @@
+# Fieldnotes save feedback — current design record
+
+## Current increment and goal
+
+Complete the already settled T4 integration in the existing working settings page: tell the user whether the submitted profile version is pending, saved locally, rejected, or failed; retain the editable draft and provide explicit retry of the failed version. The visible foundation remains Tabler 1.7.1. This increment owns save feedback and its relationships to form state, focus, inline validation, page/header space and the lower save controls. Global gallery routes are outside the supplied application contract.
+
+The frozen source/placement/content authority is INTEGRATION-DECISION.md. No resource-selection round, visual direction change or original construction exception is opened.
+
+## Evidence and source responsibility
+
+- Exact tagged Tabler source: `07f60c07da13d8ff957a370434b7ef5c86f5ab94`, MIT. The deployed 1.7.1 snapshot has a separately known digest; its deployment commit remains unknown.
+- Acquired original action-bearing block: `sources/tabler-toast-cookies.html`, SHA-256 `767fe7aaddd46979d9f2748c1488063902086109962051881aeae94ad04dc75a`.
+- Native source responsibilities: 350px maximum width, header/avatar/identity/time/close arrangement, body padding, separated action row, small primary button, borders, shadow, typography, native fade/dismissal and reduced-motion behavior.
+- Ordinary integration responsibilities: state subscription, accurate bilingual copy, failed-snapshot retry, current-operation guards, field-error association, no duplicate result announcements, and focus return.
+- Protected store digest: `32139de23b4ad411c402620e84d5592f7ccfbcf68cece1a123946c29b63c2da0`. Store owns the actual local persistence boundary and 750 ms delay.
+
+## Main-agent source observation
+
+Personally opened and inspected:
+1. `evidence/captures/source-1440.png`: supplied isolated source rendering with the original cookie content.
+2. `evidence/captures/baseline-1440.png`: unchanged assembled Fieldnotes settings page.
+3. `evidence/captures/acquired-source-1440.png`: exact acquired official full HTML rendered locally with matching local Tabler assets, activated through its Cookies toast button. This is not a live upstream browser session.
+
+The compact header and body share the page's text scale, fine borders and quiet shadow. The separated source action row makes the retry action distinct without changing the form itself. Its fixed placement avoids form-flow displacement. The selected top-right placement intentionally differs from the acquired original page's bottom-right demonstration, as prescribed by the frozen decision.
+
+The source cookie emoji does not render in this test font environment; the adopted product uses no emoji or portrait. The acquired full source attempted its upstream banner script and received `net::ERR_CERT_AUTHORITY_INVALID`; the exact failure is in command 004. TLS was not bypassed. This banner is not part of the prepared product or selected toast shell.
+
+## Bounded delegation and independent responsibility
+
+A fresh ui_integrator owns only the frozen allowed edits: `app/index.html`, `app/settings-controller.js`, and optional `app/save-notification.js`. The main agent retains all visual decisions and assembled-product acceptance. Actual prompt, two capacity failures, and the successful canonical child ID are retained under `evidence/delegation/` and `DELEGATION.json`. Model and effort were inherited; backend identity, tokens and cost are unknown.
+
+## Current questions and evidence-producing checks
+
+| Relationship | Required check |
+| --- | --- |
+| Authoritative outcome → feedback | Read actual browser storage after success and after forced failure; observe real store events. |
+| Submitted version → newer edits | Edit while pending, then verify success and retry do not replace the current newer form draft. |
+| Failure → retry | Activate Retry by keyboard and prove that the failed snapshot, not the later draft, is persisted. |
+| Rejected submit → correction | Check actual first invalid field, associated visible messages and focus. |
+| Feedback → surrounding page | Compare original geometry and inspect header, fields, lower save controls and close reachability. |
+| Source shell → integrated appearance | Compare actual source and integrated styles plus personally viewed screenshots. |
+| State replacement → focus | Inspect pending, completion, close and retry with actual activeElement and visible focus. |
+| Variants | 1440×900, 1280×600, 390×844; light/en and dark/zh, CJK fonts loaded. |
+| Time | Ordered event-stamped natural-progression captures support sampled states; do not claim smooth playback from stills. |
+
+## Completed realization and current judgment
+
+The bounded integration is implemented in the three permitted product files. Main independent checks passed 203 assertions across the six required conditions; the scoped integrator separately passed 156. The main agent personally viewed all 18 settled final error/validation views, actual source/baseline images and selected timed states. `VISUAL-REVIEW.md` owns the detailed current judgment and evidence limits; `FINAL.md` is the runnable handoff.
+
+The original state and persistence owner remains byte-identical. Initial geometry matched the baseline in every condition. The native Toast surface, action row, typography, spacing, borders, shadow and transitions are retained. Actual command logs, failures and corrected runs are in `evidence/`; final code identities are in `FINAL-SOURCE-DIGESTS.json`.
+
+Two consequential contextual observations remain: the prescribed top-right placement overlays header controls until dismissal, and the unchanged mobile Customize floater partly overlaps Save. Independent hit tests show native close is reachable and the header returns to full sampled reachability after dismissal; baseline/integrated Save geometry and partial occlusion match exactly. These are recorded limits, not silently repaired through a scope or source change.
+
+The formal T4 integration is complete within the settled decision. No new formal increment or original-construction exception was introduced. End-user aesthetic acceptance, auditory assistive-technology validation, real-device touch and continuous natural-speed playback remain outside the evidence. The owned preview server was stopped after verification; run instructions remain in `FINAL.md`.
+

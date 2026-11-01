@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w17/evidence/main-check.py", line 157, in <module>
+    if width==1440:case['video']=str(page.video.path().relative_to(ROOT))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'relative_to'
