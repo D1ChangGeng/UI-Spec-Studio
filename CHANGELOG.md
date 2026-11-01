@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.20.1 — 2026-11-02
+
+- Replace the default full-repository Skills CLI clone with a lightweight, deterministic release-hosted installer tarball. The stable latest asset contains only the runtime Skill and supported Harness adapter payload.
+- Introduce one explicit install/status/uninstall/upgrade surface with per-Harness skill paths, native Codex role registration, ownership receipts, SHA-256 checks, dry runs and conservative update/rollback behavior.
+- Keep the standard portable Skill ZIP and Codex adapter ZIP for compatibility, with release smoke checks that install directly from these assets rather than cloning GitHub source.
+- Preserve the v1.20.0 design method, source evidence and scope of native-runtime verification; this patch covers delivery mechanics only.
+
 ## 1.20.0 — 2026-11-01
 
 - Add main-agent-led adaptive research, curated evidence and bounded mature-source integration.
