@@ -1,0 +1,128 @@
+{
+  "repo": "/workspace/scratch/dc68edd00fe1/UI-Spec-Studio",
+  "cell_id": "T2-E-observer-r1",
+  "agent_id": "/root/t2observer_product",
+  "source_workspace": "/workspace/scratch/dc68edd00fe1/ui-study/w15",
+  "replay_directory": "/workspace/scratch/dc68edd00fe1/ui-study/replay-audit/T2-E-observer-dc68-r3",
+  "evidence_directory": "docs/evidence/v1.20.0/session-study/continuation-2100/supplementary/T2-E-observer-dc68-r3",
+  "spawn_repository_path": "docs/evidence/v1.20.0/session-study/continuation-2100/coordination/t2observer_product-spawn.json",
+  "completion_repository_path": "docs/evidence/v1.20.0/session-study/continuation-2100/coordination/t2observer_product-completion.json",
+  "prompt_deviation_audit": "docs/evidence/v1.20.0/session-study/continuation-2100/prompt-audits/T2-E-observer-r1/audit.json",
+  "started_at": "2026-11-01T12:53:38.667840+00:00",
+  "completed_at": "2026-11-01T13:14:12.974719+00:00",
+  "timing_scope": "started_at is the earliest retained original subprocess command start (evidence/commands/001-guidance/command.json), not the unavailable first action. completed_at is the participant finishing clock observation in evidence/DELIVERY-INDEX.json, not an authenticated engine completion or terminal notification time. Interval covers these two retained observations only; actual FIRST_ACTION time is unknown. Primary FINAL_ANSWER notification is separately retained.",
+  "audit_observations": [
+    "Actual fresh primary completed the product with two fresh specialized children; exact role instructions remain simulated, not native bindings.",
+    "ui_researcher investigated same-revision mature attachment chips, rendered original local demo and returned source/limits; ui_experience_observer independently tested reading/focus/scroll behavior, reported defects, and rechecked a narrow repair.",
+    "Failed research acquisition/browser attempts, initial stop-focus defect, subsequent repair checks and older probe outputs remain in the complete byte snapshot.",
+    "Actual primary dispatch is environment-relocated with explicit supplementary instructions, separate from the frozen prompt digest. This record is supplementary replacement evidence, not a passed exact original registered execution."
+  ],
+  "limitations": "Supplementary replacement attempt with disclosed actual-dispatch deviation. Earliest retained command and finishing observations do not measure first-action-to-completion duration. Native roles/resolved model identities/usage remain unavailable. Local synthetic responses and filename-only attachment boundary; inherited English shell/action labels remain in Chinese condition. Natural-time playback, mobile virtual keyboards and screen-reader operation were not verified. Independent public alternative demo comparison is textual where rendering failed. The pre-existing large-bundle warning remains. Producer and child findings are not independent final product acceptance.",
+  "preview_command": "cd app && npm run dev -- --host 127.0.0.1 --port 55115 --strictPort; or python3 -m http.server 4514 --bind 127.0.0.1 --directory app/dist",
+  "capture_conditions": "Primary final captures include light/English and dark/Chinese at 1440x900, 1280x600 and 390x844, local synthetic data, browser/font/runtime provenance and source/server/built identities retained. Sampled continuity episodes are controlled browser observations, not natural-time playback.",
+  "final_capture_prefixes": [
+    "evidence/final-build/",
+    "evidence/final-11/",
+    "evidence/final-episode-04/",
+    "evidence/final-dark-episode/",
+    "evidence/final-growth-02/",
+    "evidence/extra/"
+  ],
+  "primary_view_globs": [
+    "evidence/view-delivery-*.json"
+  ],
+  "behavior_log_globs": [
+    "evidence/final-11/checks.json",
+    "evidence/final-episode-04/log.json",
+    "evidence/final-dark-episode/log.json",
+    "evidence/final-growth-02/log.json",
+    "evidence/extra/checks.json",
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt"
+  ],
+  "direct_source_files": [
+    "app/package.json",
+    "app/package-lock.json"
+  ],
+  "report_files": [
+    "DESIGN.md",
+    "VISUAL-REVIEW.md",
+    "DELEGATION.json",
+    "evidence/DELIVERY-INDEX.json",
+    "evidence/coordination/research-final-notification.md",
+    "evidence/coordination/observer-final-notification.md",
+    "evidence/research/FINAL.md",
+    "evidence/research/VISUAL-REVIEW.md",
+    "evidence/observer/FINAL.md",
+    "evidence/observer/VISUAL-REVIEW.md"
+  ],
+  "additional_tool_exports": [
+    "evidence/coordination/research-notifications.json",
+    "evidence/coordination/observer-notifications.json"
+  ],
+  "capture_lineage": "Selected delivery prefixes are those identified by the primary DELIVERY-INDEX. final-11 captures precede some final interaction/renderer repairs; final-episode-04 and final-dark-episode record scroll-away/return/stop after repair, final-growth-02 records compact growth, and final-build/final-current.png is the final built product capture personally viewed by primary. Earlier/failed captures and reports are retained separately in the complete snapshot, not silently discarded.",
+  "children": [
+    {
+      "agent_id": "/root/t2observer_product/mature_research",
+      "role": "ui_researcher",
+      "prompt": "evidence/coordination/research-dispatched-prompt.txt",
+      "spawn": "evidence/coordination/research-spawn.json",
+      "completion": "evidence/coordination/research-notifications.json",
+      "completion_source": "collaboration FINAL_ANSWER notification manifest with separate exact payload",
+      "result": "evidence/research/FINAL.md",
+      "command_globs": [
+        "evidence/research/*/command.json",
+        "evidence/research/*/stdout.txt",
+        "evidence/research/*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/research/web-001.json",
+        "evidence/research/web-002.json",
+        "evidence/research/web-003.json",
+        "evidence/research/view-baseline-initial.png.json",
+        "evidence/research/view-chip-demo-done.png.json",
+        "evidence/research/view-chip-demo-progress.png.json",
+        "evidence/research/view-chip-demo-removed.png.json"
+      ]
+    },
+    {
+      "agent_id": "/root/t2observer_product/ui_experience_observer",
+      "role": "ui_experience_observer",
+      "prompt": "evidence/coordination/observer-dispatched-prompt.txt",
+      "spawn": "evidence/coordination/observer-spawn.json",
+      "completion": "evidence/coordination/observer-notifications.json",
+      "completion_source": "collaboration FINAL_ANSWER notification manifest with separate exact payload",
+      "result": "evidence/observer/FINAL.md",
+      "command_globs": [
+        "evidence/observer/command-*/command.json",
+        "evidence/observer/command-*/stdout.txt",
+        "evidence/observer/command-*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/observer/view-01.json",
+        "evidence/observer/view-02-stream-top.json",
+        "evidence/observer/view-03-scroll-away.json",
+        "evidence/observer/view-04-scroll-away-growth.json",
+        "evidence/observer/view-05-return-latest.json",
+        "evidence/observer/view-08-repeat-question.json",
+        "evidence/observer/view-09-failed.json",
+        "evidence/observer/view-10-retry.json",
+        "evidence/observer/view-11-reading-before-expand.json",
+        "evidence/observer/view-12-six-line.json",
+        "evidence/observer/view-13-attachments.json",
+        "evidence/observer/view-14-tooltip.json",
+        "evidence/observer/view-15-collapse.json",
+        "evidence/observer/view-16-before-stop.json",
+        "evidence/observer/view-17-keyboard-stopped.json",
+        "evidence/observer/view-18-stop-hold.json",
+        "evidence/observer/view-19-failure-top.json",
+        "evidence/observer/view-20-failure-bottom.json",
+        "evidence/observer/view-21-retry-start.json",
+        "evidence/observer/view-22-retry-complete.json",
+        "evidence/observer/view-24-stop-repair.json",
+        "evidence/observer/view-25-stop-repair-hold.json"
+      ]
+    }
+  ]
+}

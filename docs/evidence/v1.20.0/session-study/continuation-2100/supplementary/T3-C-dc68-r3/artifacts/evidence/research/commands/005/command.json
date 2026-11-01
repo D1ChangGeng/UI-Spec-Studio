@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "curl",
+    "-L",
+    "--max-time",
+    "25",
+    "https://api.github.com/repos/BurningTreeC/vanilla-paper/commits/main"
+  ],
+  "cwd": "/workspace/scratch/dc68edd00fe1/ui-study/w11",
+  "started_at": "2026-11-01T12:55:17.248495+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T12:55:22.333343+00:00",
+  "wall_seconds": 5.084853,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 17916,
+      "sha256": "5344493e91bc5d031f70864e23cf8393fe2b29042da18b328067de128ecf3c5e"
+    },
+    "stderr.txt": {
+      "bytes": 712,
+      "sha256": "67d5a555bb859fb8d083be9c9bff8ffa87574667d72e54e17d45ea34b5c76986"
+    }
+  }
+}

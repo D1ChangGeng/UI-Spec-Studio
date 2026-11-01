@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/dc68edd00fe1/ui-study/w15/evidence/final-check-10.py", line 6, in <module>
+    identity={'serverPid':server.pid,'requestedCwd':str(r/'app'),'actualCwd':os.readlink(f'/proc/{server.pid}/cwd'),'port':55115,'command':['npm','run','dev','--','--host','127.0.0.1','--port','55115','--strictPort'],'sourceHashes':{str(f.relative_to(r)):hashlib.sha256(f.read_bytes()).hexdigest() for f in (r/'app/src').rglob('*') if f.is_file()}}
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/proc/6/cwd'

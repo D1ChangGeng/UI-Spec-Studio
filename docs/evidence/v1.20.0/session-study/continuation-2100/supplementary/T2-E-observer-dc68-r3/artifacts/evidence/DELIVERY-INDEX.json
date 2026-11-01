@@ -1,0 +1,69 @@
+{
+  "first_action_utc": null,
+  "first_action_note": "Initial direct tool read did not expose a UTC timestamp. Do not infer first substantive start from later dispatch exports. Root may have independently retained host dispatch timing.",
+  "earliest_saved_clock_observation": {
+    "utc": "2026-11-01T12:53:12.444177+00:00",
+    "source": "evidence/coordination/research-spawn.json captured_at",
+    "meaning": "spawn-export observation; not substantive start"
+  },
+  "earliest_original_command_start": {
+    "utc": "2026-11-01T12:53:38.667840+00:00",
+    "source": "evidence/commands/001-guidance/command.json started_at"
+  },
+  "finishing_clock_observation": "2026-11-01T13:14:12.974719+00:00",
+  "capture_prefixes": [
+    "evidence/final-build/",
+    "evidence/final-11/",
+    "evidence/final-episode-04/",
+    "evidence/final-dark-episode/",
+    "evidence/final-growth-02/",
+    "evidence/extra/"
+  ],
+  "primary_actual_view_exports": [
+    "evidence/view-delivery-*.json",
+    "evidence/view-source-chip-demo.json",
+    "evidence/view-baseline-*.json",
+    "evidence/view-trial-attachments.json"
+  ],
+  "behavior_logs": [
+    "evidence/final-11/checks.json",
+    "evidence/final-episode-04/log.json",
+    "evidence/final-dark-episode/log.json",
+    "evidence/final-growth-02/log.json",
+    "evidence/extra/checks.json"
+  ],
+  "identity": [
+    "evidence/final-11/identity.json",
+    "evidence/final-11/server-child-identity.json",
+    "evidence/final-11/served-thread-module.js",
+    "evidence/final-build/identity.json",
+    "evidence/final-build/child-identity.json"
+  ],
+  "children": [
+    {
+      "spawn": "evidence/coordination/research-spawn.json",
+      "completion_notification": "evidence/coordination/research-final-notification.md",
+      "report": "evidence/research/FINAL.md",
+      "notifications": "evidence/coordination/research-notifications.json"
+    },
+    {
+      "spawn": "evidence/coordination/observer-spawn.json",
+      "completion_notification": "evidence/coordination/observer-final-notification.md",
+      "report": "evidence/observer/FINAL.md",
+      "notifications": "evidence/coordination/observer-notifications.json"
+    }
+  ],
+  "final_build": "evidence/commands/041-final-build/command.json",
+  "final_types": "evidence/commands/035-final-types/command.json",
+  "unchanged_adapter_check": "evidence/commands/027-adapter/command.json",
+  "scope": "SPEC-01 single coupled composer/attachment/reading increment; no original visual construction",
+  "unverified": [
+    "Natural-time motion playback",
+    "native mobile virtual keyboards",
+    "screen-reader operation",
+    "visual observation of independent public alternative demos"
+  ],
+  "coordination": "DELEGATION.json",
+  "final_build_smoke": "evidence/commands/042-build-smoke/command.json",
+  "final_built_image_personally_viewed": "evidence/view-delivery-final-built.json"
+}

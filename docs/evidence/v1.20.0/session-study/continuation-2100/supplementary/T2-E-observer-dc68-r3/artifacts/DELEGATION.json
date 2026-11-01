@@ -1,0 +1,36 @@
+{
+  "children": [
+    {
+      "task_name": "/root/t2observer_product/mature_research",
+      "role": "ui_researcher developer_instructions referenced in dispatched prompt",
+      "original_prompt": "evidence/coordination/research-original-prompt.txt",
+      "dispatched_prompt": "evidence/coordination/research-dispatched-prompt.txt",
+      "spawn_export": "evidence/coordination/research-spawn.json",
+      "fork_turns": "none",
+      "requested_model": null,
+      "requested_reasoning_effort": null,
+      "native_role_binding": null,
+      "resolved_backend_identity": null,
+      "total_tokens": null,
+      "billed_cost": null,
+      "report": "evidence/research/FINAL.md",
+      "notifications": "evidence/coordination/research-notifications.json"
+    },
+    {
+      "task_name": "/root/t2observer_product/ui_experience_observer",
+      "role": "ui_experience_observer developer_instructions supplied verbatim",
+      "dispatched_prompt": "evidence/coordination/observer-dispatched-prompt.txt",
+      "spawn_export": "evidence/coordination/observer-spawn.json",
+      "fork_turns": "none",
+      "requested_model": null,
+      "requested_reasoning_effort": null,
+      "native_role_binding": null,
+      "resolved_backend_identity": null,
+      "total_tokens": null,
+      "billed_cost": null,
+      "report": "evidence/observer/FINAL.md",
+      "notifications": "evidence/coordination/observer-notifications.json"
+    }
+  ],
+  "path_correction": "Only /workspace/scratch/dc68edd00fe1/ui-study/w15 used; original prompt retained unchanged, dispatched prompt corrects unavailable prefix."
+}
