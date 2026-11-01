@@ -61,7 +61,7 @@ class ContractTests(unittest.TestCase):
 
     def test_content_inventory_matches_archives(self):
         with tempfile.TemporaryDirectory() as td:
-            result = package.build(ROOT, Path(td))
+            result = package.build(ROOT, Path(td), include_evidence=False)
             inventory_path = next(path for path in result if path.name == "contents.json")
             inventory = json.loads(inventory_path.read_text())
             with zipfile.ZipFile(result[0]) as archive:
@@ -73,7 +73,7 @@ class ContractTests(unittest.TestCase):
 
     def test_checksum_manifest_covers_release_artifacts(self):
         with tempfile.TemporaryDirectory() as td:
-            result = package.build(ROOT, Path(td))
+            result = package.build(ROOT, Path(td), include_evidence=False)
             for line in result[-1].read_text().splitlines():
                 digest, name = line.split("  ")
                 self.assertEqual(digest, hashlib.sha256((Path(td) / name).read_bytes()).hexdigest())
@@ -82,7 +82,10 @@ class ContractTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             for source in package.source_files(ROOT):
-                target = root / source.relative_to(ROOT); target.parent.mkdir(parents=True, exist_ok=True)
+                rel = source.relative_to(ROOT)
+                if rel.parts[:2] in (('docs', 'evidence'), ('docs', 'experiments')):
+                    continue
+                target = root / rel; target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(source, target)
             entry = root / "skills/ui-spec/SKILL.md"
             entry.write_text(entry.read_text(encoding="utf-8").replace('name: ui-spec', 'name: "unterminated'), encoding="utf-8")
@@ -96,7 +99,7 @@ class ContractTests(unittest.TestCase):
 
     def test_standalone_bundle_has_all_reference_files(self):
         with tempfile.TemporaryDirectory() as td:
-            result = package.build(ROOT, Path(td))
+            result = package.build(ROOT, Path(td), include_evidence=False)
             with zipfile.ZipFile(result[1]) as archive:
                 for name in (*validator.COMMON, "integration", "examples", "sources"):
                     self.assertIn(f"ui-spec/references/{name}.md", archive.namelist())
