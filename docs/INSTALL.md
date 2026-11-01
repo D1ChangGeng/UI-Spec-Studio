@@ -2,7 +2,7 @@
 
 ## Primary: lightweight release installer
 
-Run this from the consumer project. Node.js 20+ and network access to download the small signed-by-release-origin npm tarball are required; the installer itself has no npm dependencies and never clones the GitHub repository.
+Run this from the consumer project. Node.js 20+ and network access to download the small release-hosted npm tarball are required; the installer itself has no npm dependencies and never clones the GitHub repository.
 
 ```bash
 npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex
