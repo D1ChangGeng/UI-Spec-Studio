@@ -1,0 +1,117 @@
+name: Official npm CLI candidate and trusted publication
+
+on:
+  pull_request:
+    paths:
+      - installer/**
+      - integrations/codex/**
+      - skills/ui-spec/**
+      - tools/package_installer.py
+      - tools/installer_smoke.py
+      - VERSION
+      - .github/workflows/npm-publish.yml
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish verified VERSION through the configured npm trusted publisher
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Check official package identity
+        shell: bash
+        run: |
+          python tools/validate_package.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          pkg = json.loads(Path('installer/package.json').read_text(encoding='utf-8'))
+          version = Path('VERSION').read_text(encoding='utf-8').strip()
+          assert pkg['name'] == 'ui-spec-studio'
+          assert pkg['version'] == version
+          assert pkg['repository']['url'] == 'https://github.com/D1ChangGeng/UI-Spec-Studio'
+          assert pkg['bin'] == {'ui-spec': 'bin/ui-spec.mjs'}
+          print(f"Official package candidate: {pkg['name']}@{version}")
+          PY
+      - name: Verify portable installer and legacy ownership paths
+        run: python tools/installer_smoke.py
+      - name: Assemble deterministic npm distribution
+        run: python tools/package_installer.py
+      - name: Verify npm package structure and local binary
+        shell: bash
+        run: |
+          npm pack --dry-run ./dist/ui-spec-installer.tgz --json > "$RUNNER_TEMP/pack-report.json"
+          node -e "const r=require(process.argv[1]); if(r.length!==1 || r[0].name!=='ui-spec-studio' || !r[0].files.some(f=>f.path==='bin/ui-spec.mjs') || !r[0].files.some(f=>f.path==='payload/skill/SKILL.md'))process.exit(1);" "$RUNNER_TEMP/pack-report.json"
+          npx --yes --offline "file://$PWD/dist/ui-spec-installer.tgz" --version | grep -F "ui-spec-studio $(cat VERSION)"
+      - name: Provide standalone npm bootstrap artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: official-npm-installer-candidate
+          path: dist/ui-spec-installer.tgz
+          if-no-files-found: error
+          retention-days: 14
+
+  publish:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.publish
+    needs: candidate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+      - name: Require published Git tag and exact main commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          ver="$(cat VERSION)"
+          git fetch --depth=1 origin "refs/tags/v$ver:refs/tags/v$ver"
+          test "$(git rev-parse HEAD)" = "$(git rev-parse "v$ver^{commit}")"
+      - name: Build byte-identical npm artifact
+        run: python tools/package_installer.py
+      - name: Publish only a new or byte-identical npm version
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(cat VERSION)"
+          local_integrity="$(node -e "const c=require('node:crypto'),f=require('node:fs'); console.log('sha512-'+c.createHash('sha512').update(f.readFileSync('dist/ui-spec-installer.tgz')).digest('base64'))")"
+          remote_integrity="$(npm view "ui-spec-studio@$version" dist.integrity --json --prefer-online 2>/dev/null || true)"
+          remote_integrity="${remote_integrity//\"/}"
+          if [[ "$remote_integrity" == "$local_integrity" ]]; then
+            echo "Identical npm version already published; no duplicate publication"
+          elif [[ -n "$remote_integrity" ]]; then
+            echo "Existing registry version has conflicting archive identity; refusing publication" >&2
+            exit 1
+          else
+            npm publish ./dist/ui-spec-installer.tgz --access public
+          fi
+          npm view "ui-spec-studio@$version" version dist.integrity --json --prefer-online
