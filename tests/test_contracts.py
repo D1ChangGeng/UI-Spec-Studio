@@ -89,7 +89,7 @@ class ContractTests(unittest.TestCase):
                 shutil.copyfile(source, target)
             entry = root / "skills/ui-spec/SKILL.md"
             entry.write_text(entry.read_text(encoding="utf-8").replace('name: ui-spec', 'name: "unterminated'), encoding="utf-8")
-            self.assertTrue(validator.validate(root))
+            self.assertIn("Invalid scalar: name", validator.validate(root))
 
     def test_version_metadata_matches_release_notes(self):
         version = (ROOT / "VERSION").read_text().strip()
