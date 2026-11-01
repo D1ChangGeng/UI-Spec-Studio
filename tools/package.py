@@ -49,12 +49,20 @@ def archive(output: Path, items: list[tuple[str, bytes]]) -> None:
             z.writestr(info, content)
 
 
-def build(root: Path = ROOT, output_dir: Path | None = None) -> list[Path]:
+def build(root: Path = ROOT, output_dir: Path | None = None, *, include_evidence: bool = True) -> list[Path]:
+    """Build release archives; lean test runs may omit only historical evidence.
+
+    The default production/publishing mode always retains full evidence.
+    Isolated evidence-replay tests separately require and verify those bytes.
+    """
     output = output_dir or root / "dist"
     version = (root / "VERSION").read_text(encoding="utf-8").strip()
     if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", version):
         raise ValueError("VERSION must use major.minor.patch")
     files = source_files(root)
+    if not include_evidence:
+        files = [p for p in files if p.relative_to(root).parts[:2] not in (
+            ('docs', 'evidence'), ('docs', 'experiments'))]
     repo_zip = output / f"ui-spec-studio-{version}.zip"
     skill_zip = output / f"ui-spec-{version}.zip"
     archive(repo_zip, [("ui-spec-studio/" + p.relative_to(root).as_posix(), p.read_bytes()) for p in files])
