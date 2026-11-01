@@ -26,6 +26,19 @@ export async function createPresentation({ noTui = false, json = false, lang, ve
       try { const result = await fn(); spin.stop(finished); return result; }
       catch (err) { spin.stop(tr('Action failed', '操作失败')); throw err; }
     },
+    async copyFiles(total, operation) {
+      if (!active) return await operation(() => {});
+      const bar = p.progress({ max: total });
+      bar.start(tr('Preparing ' + total + ' Skill files', '正在准备 ' + total + ' 个 Skill 文件'));
+      try {
+        const result = await operation(() => bar.advance(1));
+        bar.stop(tr('All files copied and verified', '所有 Skill 文件已复制并验证'));
+        return result;
+      } catch (err) {
+        bar.stop(tr('File preparation failed', '文件准备失败'));
+        throw err;
+      }
+    },
     async chooseAgent(names) {
       if (!active) throw new Error(tr('Select a Harness with --agent or use an interactive terminal', '请通过 --agent 指定宿主，或使用交互终端'));
       const value = await p.select({
