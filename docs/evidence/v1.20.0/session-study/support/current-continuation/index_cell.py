@@ -162,6 +162,16 @@ def main():
     record['prompt_identity_scope']=audit['prompt_identity_scope']
     actual_message=spawn['request']['message'].encode()
     record['actual_dispatched_prompt_sha256']=sha(actual_message)
+    import sys
+    sys.path.insert(0,str(repo/'tools'))
+    from check_adaptive_release import artifact,candidate_identity,EvidenceError,BASE
+    from session_simulation_evidence import SessionEvidence
+    structural=SessionEvidence(repo,{},artifact,candidate_identity,EvidenceError,BASE)
+    primary=structural.participant(record)
+    for child in children:structural.participant(child,parent=primary)
+    structural.product(record['product_evidence_index'],name,primary)
+    required={'C':{'ui_researcher'},'E-observer':{'ui_researcher','ui_experience_observer'}}.get(cell['condition'],set())
+    if not required <= {child['role'] for child in children}:raise ValueError('Actual required child role evidence is incomplete')
     write(out/'run.json',record)
     write(out/'index-configuration.json',cfg)
     print(json.dumps({'cell':name,'screenshots':len(screenshots),'primary_views':len(views),'raw_behavior_logs':len(behavior),'children':len(children),'declared_execution_interval_seconds':audit['declared_execution_interval_seconds']},indent=2))

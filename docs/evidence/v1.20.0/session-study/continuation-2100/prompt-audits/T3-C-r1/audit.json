@@ -23,5 +23,7 @@
   "byte_identical_dispatch": false,
   "deviation_scope": "The actual spawn message is retained exactly. The registered prompt is unchanged. Current dispatch uses a replacement executor workspace prefix and appends explicit path/evidence/fresh-time-bound instructions; this audit does not treat the resulting bytes as the registered dispatch.",
   "timing_scope": "spawn exported_at is export time only, not participant run start.",
-  "acceptance_scope": "This record preserves a deviation for coordinator/reviewer adjudication. It does not amend registration or establish original-protocol equivalence or completed participation."
+  "acceptance_scope": "This record preserves a deviation for coordinator/reviewer adjudication. It does not amend registration or establish original-protocol equivalence or completed participation.",
+  "registered_timeout_seconds": 1800,
+  "coordinator_intervention_scope_judgment": "The extra dispatch text relocates an unavailable executor prefix, repeats evidence-retention/fresh-child requirements and restates the original 1800-second bound. The task and assigned role intervention are intended to stay the same. This is a coordinator judgment supporting supplementary comparison, not exact dispatch equivalence or a registration amendment."
 }
