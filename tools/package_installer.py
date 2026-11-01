@@ -62,6 +62,8 @@ def build_installer(root: Path = ROOT, output_dir: Path | None = None) -> Path:
                 'files': {path: hashlib.sha256(content).hexdigest() for path, content in sorted(items.items())}}
     files = {
         'package/package.json': (root / 'installer/package.json').read_bytes(),
+        'package/README.md': (root / 'installer/README.md').read_bytes(),
+        'package/LICENSE': (root / 'LICENSE').read_bytes(),
         'package/harnesses.json': (root / 'installer/harnesses.json').read_bytes(),
         'package/bin/ui-spec.mjs': (root / 'installer/bin/ui-spec.mjs').read_bytes(),
         'package/payload/manifest.json': (json.dumps(manifest, sort_keys=True, indent=2) + '\n').encode(),
