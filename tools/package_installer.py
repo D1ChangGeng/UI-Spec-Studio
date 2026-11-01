@@ -47,6 +47,8 @@ def build_installer(root: Path = ROOT, output_dir: Path | None = None) -> Path:
                     continue
                 rel = file.relative_to(folder).as_posix()
                 items[f'{prefix}/{rel}'] = file.read_bytes()
+    for name in sorted(included_adapters):
+        items[f'adapters/{name}/LICENSE'] = (root / 'LICENSE').read_bytes()
     if not any(path == 'skill/SKILL.md' for path in items):
         raise ValueError('Skill entry missing')
     for role in ('ui_researcher', 'ui_integrator', 'ui_challenger', 'ui_experience_observer'):
