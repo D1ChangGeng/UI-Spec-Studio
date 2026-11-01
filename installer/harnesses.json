@@ -7,15 +7,20 @@
       "adapter": {
         "runtime": "python",
         "entry": "adapters/codex/install.py"
-      }
+      },
+      "user_base": "home"
     },
     "claude-code": {
       "project_skill_dir": ".claude/skills/ui-spec",
-      "user_skill_dir": ".claude/skills/ui-spec"
+      "user_skill_dir": "skills/ui-spec",
+      "user_base": "env-fallback",
+      "user_env": "CLAUDE_CONFIG_DIR",
+      "user_fallback": ".claude"
     },
     "cursor": {
       "project_skill_dir": ".agents/skills/ui-spec",
-      "user_skill_dir": ".cursor/skills/ui-spec"
+      "user_skill_dir": ".cursor/skills/ui-spec",
+      "user_base": "home"
     },
     "opencode": {
       "project_skill_dir": ".agents/skills/ui-spec",
