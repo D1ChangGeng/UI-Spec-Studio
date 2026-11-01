@@ -39,6 +39,29 @@ export async function createPresentation({ noTui = false, json = false, lang, ve
         throw err;
       }
     },
+    async chooseScope(projectRoot, homeRoot) {
+      if (!active) return 'project';
+      const isHome = projectRoot.toLowerCase() === homeRoot.toLowerCase();
+      const project = {
+        value: 'project',
+        label: tr('Current project', '当前项目'),
+        hint: projectRoot,
+      };
+      const user = {
+        value: 'user',
+        label: tr('User-wide (all projects)', '用户级（所有项目）'),
+        hint: tr('Native user Skill directory', '宿主的用户级 Skill 目录'),
+      };
+      const chosen = await p.select({
+        message: tr('Where should the Skill be installed?', '将 Skill 安装到什么范围？'),
+        options: isHome ? [user, project] : [project, user],
+      });
+      if (p.isCancel(chosen)) {
+        p.cancel(tr('No files changed', '未修改任何文件'));
+        return 'cancel';
+      }
+      return chosen;
+    },
     async chooseAgent(names) {
       if (!active) throw new Error(tr('Select a Harness with --agent or use an interactive terminal', '请通过 --agent 指定宿主，或使用交互终端'));
       const value = await p.select({

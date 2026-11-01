@@ -1,10 +1,13 @@
 # Versioned release procedure
 
-The distribution source is `D1ChangGeng/UI-Spec-Studio`. Consumer installation
-uses the fixed-name `ui-spec-installer.tgz` release asset rather than cloning the
-entire GitHub repository. This self-contained, dependency-free npm executable
-bundles the portable Skill and the supported native Harness adapters. It requires
-no npm registry account or separate npm package publication.
+The distribution source is `D1ChangGeng/UI-Spec-Studio`. GitHub Releases
+continue to distribute the self-contained, fixed-name `ui-spec-installer.tgz`
+without cloning the multi-GB GitHub source repository. The separate canonical
+registry distribution is the **`ui-spec-studio` npm package**, resolved by npm's
+`latest` dist-tag. Registry publication requires account ownership: first a
+verified, authorized bootstrap, then OIDC trusted publishing from
+`.github/workflows/npm-publish.yml`. Until that external registry setup is
+complete, the pinned GitHub Release tarball remains the working primary entry.
 
 ## Prepare the version
 
@@ -69,6 +72,16 @@ A correction to an unpublished version can complete its release after every gate
 passes: a missing version tag activates publication. Existing published tags and
 assets retain the release tool's identity and checksum protections.
 
+## Official npm registry release
+
+The public npm name `ui-spec-studio` must be claimed by an authorized npm
+account before users can run `npx --yes ui-spec-studio@latest`. Do not confuse
+a green npm candidate build or a GitHub Release upload with npm publication.
+The npm packaging workflow verifies the same deterministic `ui-spec-installer.tgz`
+asset, exposes a small candidate artifact for first registration, and supports
+explicit GitHub Actions OIDC publication after the npm publisher is configured.
+See [the npm distribution procedure](NPM-DISTRIBUTION.md).
+
 ## Manual publication from an authorized checkout
 
 Use Git and an authenticated GitHub CLI with access to the existing repository.
@@ -86,8 +99,8 @@ existing release before retrying.
 ## Verify what users receive
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-installer.tgz install --agent codex
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-1.20.2.zip --skill ui-spec -a codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-1.20.3.zip --skill ui-spec -a codex
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep

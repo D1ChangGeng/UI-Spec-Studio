@@ -58,7 +58,7 @@ class PublicationTests(unittest.TestCase):
     def test_readme_contains_native_command_and_all_variants(self):
         for name in ['README.md','README.zh-CN.md']:
             text=(ROOT/name).read_text(encoding='utf-8')
-            self.assertIn('```bash\nnpx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex\n```',text)
+            self.assertIn('```bash\nnpx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex\n```',text)
             for path in art.outputs(ROOT):self.assertIn(path.relative_to(ROOT).as_posix(),text)
             self.assertIn('docs/design/README-SPEC.md',text)
 

@@ -16,8 +16,12 @@
 ## 在项目中直接开始
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex
 ```
+
+**安装渠道说明：** 由于旧版 GitHub `latest/download` tarball 地址可能命中 npm 的旧缓存，正式 npm 包 `ui-spec-studio` 首次上架前，暂时使用固定发行版地址。npm 包真正发布并验证后，长期推荐命令将统一为 `npx --yes ui-spec-studio@latest install --agent codex`，无需填写版本或 GitHub URL。
+
+如果你已有旧版 Skill，请给上述命令增加 `--global --migrate`，以备份旧安装并完成迁移；交互终端也可在向导里选择。
 
 安装器采用分步终端向导，显示文件校验、宿主检测、安装与注册进展。检测到旧版 `skills add` 安装时，可选择**备份后升级**；不会直接覆盖原目录，卸载时可恢复旧安装。无人值守环境可以显式添加 `--migrate`；需要中文交互可添加 `--lang zh`。
 
@@ -191,10 +195,10 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 
 ```bash
 # 固定版本安装
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-1.20.2.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-1.20.3.zip --skill ui-spec -a codex
 ```
 
 统一安装器也支持 Claude Code、Cursor 和 OpenCode（通过 `--agent`）；Codex 的原生四角色适配器由同一命令处理。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

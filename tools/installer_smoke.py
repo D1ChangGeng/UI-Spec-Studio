@@ -49,6 +49,14 @@ def run() -> dict[str, object]:
         }:
             raise AssertionError('Unexpected payload inventory')
         command(['node', str(cli), '--help'], base)
+        version = json.loads((package / 'package.json').read_text())['version']
+        pkg = json.loads((package / 'package.json').read_text())
+        if pkg.get('name') != 'ui-spec-studio':
+            raise AssertionError('Official npm package name differs from the build contract')
+        if command(['node', str(cli), '--version'], base).stdout.strip() != f'ui-spec-studio {version}':
+            raise AssertionError('CLI --version does not report the actual installed package')
+        if 'ui-spec-studio@latest' not in command(['node', str(cli), '--help'], base).stdout:
+            raise AssertionError('Installer help does not advertise the official npm command')
         project_checks = []
         for agent in ('codex', 'claude-code', 'cursor', 'opencode'):
             project = base / agent
@@ -106,7 +114,11 @@ def run() -> dict[str, object]:
         old_target.parent.mkdir(parents=True)
         shutil.copytree(source_skill, old_target)
         old_entry = old_target / 'SKILL.md'
-        original = old_entry.read_bytes().replace(b'version: "1.20.2"', b'version: "1.20.1"') + b'\n# user annotation\n'
+        current_version = (ROOT / 'VERSION').read_text(encoding='utf-8').strip().encode('ascii')
+        fresh = old_entry.read_bytes()
+        original = fresh.replace(b'version: "' + current_version + b'"', b'version: "1.20.1"') + b'\n# user annotation\n'
+        if original == fresh + b'\n# user annotation\n':
+            raise AssertionError('Failed to construct a byte-different legacy Skill fixture')
         old_entry.write_bytes(original)
         flags = ['--agent', 'codex', '--project', str(old)]
         cli_command = ['node', str(cli)]
