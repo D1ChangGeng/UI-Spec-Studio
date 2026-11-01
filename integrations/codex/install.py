@@ -56,8 +56,18 @@ def safe(root: Path, relative: str) -> Path:
         raise InstallError(f'Unsafe relative path: {relative}')
     root = root.absolute()
     # Refuse existing links/junctions throughout the destination ancestry.
+    macos_system_aliases = {
+        Path('/var'): Path('/private/var'),
+        Path('/tmp'): Path('/private/tmp'),
+        Path('/etc'): Path('/private/etc'),
+    } if sys.platform == 'darwin' else {}
     for part in (root, *root.parents):
         if part.is_symlink() or (hasattr(part, 'is_junction') and part.is_junction()):
+            # macOS exposes these trusted OS-managed aliases. Every other
+            # symlink/junction in source or target ancestry remains forbidden.
+            expected = macos_system_aliases.get(part)
+            if expected is not None and part.resolve() == expected:
+                continue
             raise InstallError(f'Refusing linked destination ancestor: {part}')
     path = root
     for name in rel.parts:

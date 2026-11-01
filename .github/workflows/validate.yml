@@ -12,7 +12,8 @@ permissions:
   contents: read
 concurrency:
   group: ui-spec-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  # Cancel superseded feature-branch tests; never cancel main/release publication.
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 jobs:
   test:
     strategy:
@@ -56,9 +57,27 @@ jobs:
           package-manager-cache: false
       - name: Install local source
         run: python tools/install_smoke.py --source "$GITHUB_WORKSPACE"
-      - name: Install committed remote source
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: python tools/install_smoke.py --source "https://github.com/${GITHUB_REPOSITORY}/tree/${GITHUB_SHA}"
+      - name: Verify standalone installer without cloning GitHub
+        run: python tools/installer_smoke.py
+  installer-portability:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - run: python tools/installer_smoke.py
   publication:
     # Playwright 1.57's dependency definitions support this fixed OS release.
     runs-on: ubuntu-24.04
@@ -157,7 +176,7 @@ jobs:
           if-no-files-found: error
           retention-days: 30
   release:
-    needs: [test, install, publication, scenario]
+    needs: [test, install, installer-portability, publication, scenario]
     if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.publish_release))
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -204,6 +223,13 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
-      - name: Install published version
+      - name: Install published Skill-only ZIP through standard Skills CLI
         if: steps.scope.outputs.publish == 'true'
-        run: python tools/install_smoke.py --source "https://github.com/${GITHUB_REPOSITORY}/tree/v$(cat VERSION)"
+        run: python tools/install_smoke.py --source "https://github.com/${GITHUB_REPOSITORY}/releases/download/v$(cat VERSION)/ui-spec-$(cat VERSION).zip"
+      - name: Install published standalone installer from tarball URL
+        if: steps.scope.outputs.publish == 'true'
+        shell: bash
+        run: |
+          npx --yes "https://github.com/${GITHUB_REPOSITORY}/releases/download/v$(cat VERSION)/ui-spec-installer.tgz" install --agent codex --project "$RUNNER_TEMP/ui-spec-release-install"
+          test -f "$RUNNER_TEMP/ui-spec-release-install/.agents/skills/ui-spec/SKILL.md"
+          test -f "$RUNNER_TEMP/ui-spec-release-install/.codex/agents/ui_researcher.toml"

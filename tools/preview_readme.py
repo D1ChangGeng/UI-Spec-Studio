@@ -50,7 +50,7 @@ def _inspect(page, article, path: Path) -> dict:
         details.locator('summary').click()
         page.evaluate('scrollTo(0,0)')
     install=article.locator('pre').first.inner_text()
-    if 'npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec' not in install:
+    if 'npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex' not in install:
         raise ValueError('Primary installation command is not selectable native text')
     if not image.get_attribute('alt'): raise ValueError('Artwork needs alternative text')
     return {'viewport':page.viewport_size,'article':box,'artwork':img,'document_overflow':overflow,

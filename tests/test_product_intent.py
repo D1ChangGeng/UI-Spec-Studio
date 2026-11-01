@@ -100,7 +100,7 @@ class ProductIntentTests(unittest.TestCase):
 
     def test_ci_requires_actual_browser_scenario_for_release(self):
         source=(ROOT/'.github/workflows/validate.yml').read_text(encoding='utf-8')
-        self.assertIn('needs: [test, install, publication, scenario]',source)
+        self.assertIn('needs: [test, install, installer-portability, publication, scenario]',source)
         self.assertIn('python tools/validate_scenario.py --output-dir scenario-evidence',source)
         self.assertNotIn('--in-memory',source)
 

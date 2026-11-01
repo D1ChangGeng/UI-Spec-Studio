@@ -16,7 +16,7 @@
 ## 在项目中直接开始
 
 ```bash
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex
 ```
 
 随后向编程 Agent 说明目标即可，设计方向可以由 Agent 主动研究：
@@ -33,7 +33,7 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 
 主 Agent 持有完整产品目标、正式 UI SPEC、最终资源选择与关键视觉验收。独立研究员可以深入调查重要问题，实际观察成熟案例，返回能够影响下一步判断的候选、证据与未决差异；来源和设计已经确定的有界集成也可以委派。
 
-[Codex 适配器](integrations/codex/README.md)在显式执行一次安装命令后提供四类角色：`ui_researcher`、`ui_integrator`、`ui_challenger` 和 `ui_experience_observer`。主 Agent 按实际价值调用，通用 Skill 也支持单 Agent 直接工作。模型、工具与权限来自实际运行环境。
+轻量级独立安装器无需克隆 GitHub 仓库即可安装 Skill；同一命令还能通过 [Codex 适配器](integrations/codex/README.md)注册四类角色：`ui_researcher`、`ui_integrator`、`ui_challenger` 和 `ui_experience_observer`。主 Agent 按实际价值调用，通用 Skill 也支持单 Agent 直接工作。模型、工具与权限来自实际运行环境。
 
 [安装与自然语言委派](integrations/codex/README.md) · [版本证据与限制](docs/REVIEW-v1.20.0.md)
 
@@ -188,14 +188,14 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 ## 安装、验证与维护
 
 ```bash
-# 将 Skill 安装到当前项目的 Codex
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
+# 固定版本安装
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.1/ui-spec-installer.tgz install --agent codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.20.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.1/ui-spec-1.20.1.zip --skill ui-spec -a codex
 ```
 
-安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。
+统一安装器也支持 Claude Code、Cursor 和 OpenCode（通过 `--agent`）；Codex 的原生四角色适配器由同一命令处理。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。
 
 工程检查覆盖文件引用、辅助工具、安装路径及可复现打包；发布检查覆盖双语 README、响应式图片和实际页面渲染。具体产品的设计品质与业务接线效果由该项目的实际验证决定。[验证与保证范围](docs/EVALUATION.md) · [CI](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/workflows/validate.yml) · [版本记录](CHANGELOG.md)
 

@@ -58,20 +58,20 @@ class PublicationTests(unittest.TestCase):
     def test_readme_contains_native_command_and_all_variants(self):
         for name in ['README.md','README.zh-CN.md']:
             text=(ROOT/name).read_text(encoding='utf-8')
-            self.assertIn('```bash\nnpx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec\n```',text)
+            self.assertIn('```bash\nnpx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex\n```',text)
             for path in art.outputs(ROOT):self.assertIn(path.relative_to(ROOT).as_posix(),text)
             self.assertIn('docs/design/README-SPEC.md',text)
 
     def test_art_is_in_source_archive(self):
         with tempfile.TemporaryDirectory() as td:
-            result=package.build(ROOT,Path(td))
+            result=package.build(ROOT,Path(td),include_evidence=False)
             with zipfile.ZipFile(result[0]) as z:
                 for path in art.outputs(ROOT):
                     self.assertEqual(z.read('ui-spec-studio/'+path.relative_to(ROOT).as_posix()),path.read_bytes())
 
     def test_patterns_stay_self_contained(self):
         with tempfile.TemporaryDirectory() as td:
-            result=package.build(ROOT,Path(td))
+            result=package.build(ROOT,Path(td),include_evidence=False)
             with zipfile.ZipFile(result[1]) as z:
                 self.assertIn('ui-spec/references/patterns.md',z.namelist())
                 self.assertFalse(any('/docs/assets/' in name for name in z.namelist()))
@@ -104,7 +104,7 @@ class PublicationTests(unittest.TestCase):
     def test_published_standalone_adapter_installs_its_four_verified_roles(self):
         with tempfile.TemporaryDirectory() as temporary:
             base=Path(temporary).resolve()
-            outputs=package.build(ROOT,base/'dist')
+            outputs=package.build(ROOT,base/'dist',include_evidence=False)
             version=(ROOT/'VERSION').read_text().strip()
             adapter=next(p for p in outputs if p.name==f'ui-spec-codex-{version}.zip')
             checksums=(base/'dist/SHA256SUMS.txt').read_text()

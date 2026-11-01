@@ -16,7 +16,7 @@ class AdapterTests(unittest.TestCase):
         self.base=Path(self.temp.name).resolve();self.root=self.base/'project/.codex'
         self.source=self.base/'source';shutil.copytree(ADAPTER,self.source)
     def run_install(self,**kw): return mod.execute(self.root,'install',self.source,**kw)
-    def new_version(self,version='1.20.1',role='ui_researcher'):
+    def new_version(self,version='1.20.2',role='ui_researcher'):
         p=self.source/f'agents/{role}.toml';p.write_bytes(p.read_bytes()+b'\n# checked update\n')
         m=self.source/'manifest.json';d=json.loads(m.read_text());d['version']=version
         d['roles'][role]['sha256']=mod.digest(p.read_bytes());m.write_text(json.dumps(d))
@@ -67,7 +67,7 @@ class AdapterTests(unittest.TestCase):
         self.run_install();self.new_version();self.assertTrue(self.run_install()['conflicts'])
     def test_owned_upgrade_succeeds(self):
         self.run_install();self.new_version();self.assertFalse(self.run_install(upgrade=True)['conflicts'])
-        self.assertEqual(mod.receipt(self.root)[0]['version'],'1.20.1')
+        self.assertEqual(mod.receipt(self.root)[0]['version'],'1.20.2')
     def test_modified_owned_not_overwritten(self):
         self.run_install();p=self.root/'agents/ui_researcher.toml';p.write_text('edited locally')
         self.new_version();self.assertTrue(self.run_install(upgrade=True)['conflicts']);self.assertEqual(p.read_text(),'edited locally')

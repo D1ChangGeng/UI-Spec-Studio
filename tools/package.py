@@ -2,6 +2,7 @@
 """Build reproducible source and standalone skill ZIP archives."""
 from __future__ import annotations
 import hashlib
+import importlib.util
 import json
 import re
 from pathlib import Path
@@ -9,7 +10,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 TOP = {"README.md", "README.zh-CN.md", "LICENSE", "VERSION", "AGENTS.md", ".gitignore", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md", ".gitattributes"}
-DIRS = {"skills", "docs", "examples", "tools", "tests", ".github", "integrations"}
+DIRS = {"skills", "docs", "examples", "tools", "tests", ".github", "integrations", "installer"}
 SUFFIXES = {".toml", ".md", ".py", ".json", ".yml", ".yaml", ".txt", ".svg", ".html", ".css", ".js", ".png", ".mp4"}
 # Preserve declared study inputs and local replay assets in the full source package.
 # This does not enlarge the portable Skill's asset policy.
@@ -30,7 +31,8 @@ def source_files(root: Path) -> list[Path]:
                           and path.suffix in EVIDENCE_SUFFIXES)
         allowed = (len(rel.parts) == 1 and rel.name in TOP) or evidence_asset or (
             len(rel.parts) > 1 and rel.parts[0] in DIRS and
-            (path.suffix in SUFFIXES or path.name == "LICENSE"))
+            (path.suffix in SUFFIXES or path.name == "LICENSE" or
+             (rel.parts[0] == "installer" and path.suffix == ".mjs")))
         if allowed:
             result.append(path)
     return sorted(result, key=lambda p: p.relative_to(root).as_posix())
@@ -47,12 +49,20 @@ def archive(output: Path, items: list[tuple[str, bytes]]) -> None:
             z.writestr(info, content)
 
 
-def build(root: Path = ROOT, output_dir: Path | None = None) -> list[Path]:
+def build(root: Path = ROOT, output_dir: Path | None = None, *, include_evidence: bool = True) -> list[Path]:
+    """Build release archives; lean test runs may omit only historical evidence.
+
+    The default production/publishing mode always retains full evidence.
+    Isolated evidence-replay tests separately require and verify those bytes.
+    """
     output = output_dir or root / "dist"
     version = (root / "VERSION").read_text(encoding="utf-8").strip()
     if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", version):
         raise ValueError("VERSION must use major.minor.patch")
     files = source_files(root)
+    if not include_evidence:
+        files = [p for p in files if p.relative_to(root).parts[:2] not in (
+            ('docs', 'evidence'), ('docs', 'experiments'))]
     repo_zip = output / f"ui-spec-studio-{version}.zip"
     skill_zip = output / f"ui-spec-{version}.zip"
     archive(repo_zip, [("ui-spec-studio/" + p.relative_to(root).as_posix(), p.read_bytes()) for p in files])
@@ -68,6 +78,13 @@ def build(root: Path = ROOT, output_dir: Path | None = None) -> list[Path]:
         items.append(("ui-spec-codex/LICENSE", (root / "LICENSE").read_bytes()))
         archive(adapter_zip, items)
         archives.append(adapter_zip)
+    if (root / "installer/package.json").is_file():
+        spec = importlib.util.spec_from_file_location("ui_spec_installer_packager", Path(__file__).resolve().parent / "package_installer.py")
+        if spec is None or spec.loader is None:
+            raise ValueError("Installer packager unavailable")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        archives.append(module.build_installer(root, output))
     inventory = output / "contents.json"
     inventory.write_text(json.dumps({"version": version, "files": [
         {"path": p.relative_to(root).as_posix(), "bytes": p.stat().st_size,

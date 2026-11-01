@@ -9,6 +9,15 @@ from pathlib import Path
 def runtime_v119(root: Path, path: str) -> bytes:
     """Recover exact v1.19 bytes through v1.20, without modifying old evidence."""
     current = (root / path).read_bytes()
+    # v1.20.1 changes only the Skill's published version scalar. Restore that
+    # exact known one-line delta before checking the immutable v1.20.0 ledger.
+    # Any other content change must still fail the prior SHA-256 identity check.
+    if (path == 'skills/ui-spec/SKILL.md' and (root / 'VERSION').is_file()
+            and (root / 'VERSION').read_text(encoding='utf-8').strip() == '1.20.1'):
+        patch = b'  version: "1.20.1"\n'
+        prior = b'  version: "1.20.0"\n'
+        if current.count(patch) == 1:
+            current = current.replace(patch, prior, 1)
     extension = root / 'docs/evidence/v1.20.0/continuity.json'
     if not extension.is_file():
         return current

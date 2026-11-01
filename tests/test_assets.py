@@ -113,7 +113,7 @@ class AssetTests(unittest.TestCase):
 
     def test_http_asset_checks_are_in_release_gate(self):
         text = (ROOT / '.github/workflows/validate.yml').read_text(encoding='utf-8')
-        self.assertIn('needs: [test, install, publication, scenario]', text)
+        self.assertIn('needs: [test, install, installer-portability, publication, scenario]', text)
         self.assertIn('python tools/validate_assets.py --output-dir scenario-evidence/assets', text)
         self.assertNotIn('--in-memory', text)
 
