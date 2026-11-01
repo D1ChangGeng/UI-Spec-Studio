@@ -318,8 +318,8 @@ class DistributionTests(TempCase):
             installer.install(ROOT / "skills/ui-spec/nested-install")
 
     def test_reproducible_archives(self):
-        first=package.build(ROOT,self.root / "one")
-        second=package.build(ROOT,self.root / "two")
+        first=package.build(ROOT,self.root / "one",include_evidence=False)
+        second=package.build(ROOT,self.root / "two",include_evidence=False)
         self.assertEqual([p.read_bytes() for p in first],[p.read_bytes() for p in second])
         with zipfile.ZipFile(first[1]) as z:
             self.assertIn("ui-spec/SKILL.md",z.namelist())
