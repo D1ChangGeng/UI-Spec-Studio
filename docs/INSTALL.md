@@ -1,33 +1,53 @@
 # Installation and invocation
 
-## Standard Skills CLI
+## Primary: lightweight release installer
 
-Run installation from the project that should use the skill. Use a Node.js version supported by the selected Skills CLI; the release smoke test uses Node 24 and skills 1.7.4. Network access is required to obtain the CLI; the installed skill's core instructions run without a separate service.
-
-From the source repository:
+Run this from the consumer project. Node.js 20+ and network access to download the small signed-by-release-origin npm tarball are required; the installer itself has no npm dependencies and never clones the GitHub repository.
 
 ```bash
-npx skills add D1ChangGeng/UI-Spec-Studio --list
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex
 ```
 
-For a local extracted or cloned repository:
+This **one command** installs the portable `ui-spec` Skill (all its references, scripts, templates and assets) and the separately implemented native Codex adapter with its four roles. Codex adapter setup also requires Python **3.11+**, because it safely validates and merges native TOML configuration. The roles are available for on-demand use; no agent is invoked by installation.
+
+The same installer selects other supported Harness locations without installing Codex-specific roles:
 
 ```bash
-npx skills add /absolute/path/to/ui-spec-studio --skill ui-spec -a codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent claude-code
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent cursor
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent opencode
 ```
 
-Other explicit targets:
+The default scope is the current directory. Use `--project /absolute/path` to select another consumer project or `--global` to install to the host's user scope; never combine them. `--dry-run` previews the exact destination and checks the Codex adapter without writing. Use `--upgrade` only after inspecting an existing managed copy. `status` and `uninstall` use the same `--agent` and scope options.
 
 ```bash
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a claude-code -a opencode
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a cursor
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex -g
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex --dry-run
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz status --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex --upgrade
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz uninstall --agent codex
 ```
 
-`-g` selects user-wide installation; the default is the current project. `--copy` requests real copies instead of symlinks. `-y` accepts the installer's prompts; use it when the displayed source and targets are already understood. Installation does not publish a new npm package: `skills` is the existing installer, and this repository supplies skill files.
+The installer embeds a deterministic SHA-256 manifest of every packaged file, installs only the Skill files (plus a small ownership receipt), refuses unowned or locally edited Skill folders, and stages upgrades before swapping. Native role configuration remains owned and protected by its dedicated Harness adapter. If an adapter fails while installing a new Skill folder, the installer rolls back that Skill folder. Use a new terminal/Agent session where Skill discovery is cached.
 
-The current supported-agent list and directory mapping belong to the [installer documentation](https://github.com/vercel-labs/skills#supported-agents). Select a target actually supported by your installed CLI and host version.
+The GitHub source repository contains multiple gigabytes of historical evidence. **Do not use `npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec` as the recommended install:** current Skills CLI versions may clone that complete repository into a temporary directory before copying the requested Skill.
+
+## Standard Skills CLI compatibility: portable Skill only
+
+For a host that already manages Skill installation through the [Skills CLI](https://skills.sh/docs/cli), install the independent release ZIP (not the source repository) explicitly:
+
+```bash
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.1/ui-spec-1.20.1.zip --skill ui-spec -a codex
+```
+
+This installs the **portable Skill alone**, not the four Codex native agents. The Codex adapter is separately available as `ui-spec-codex-1.20.1.zip` for manual installation. Do not use both installers against an already managed Skill directory without first examining ownership receipts; neither will silently take over a copy managed by the other.
+
+For a fixed independent-installer version rather than the latest release:
+
+```bash
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.1/ui-spec-installer.tgz install --agent codex
+```
+
+The package is a standard npm executable tarball, hosted as a GitHub Release asset. It does **not** require publishing a new global npm package or granting npm registry ownership. Other Harness adapter modules can be declared in `installer/harnesses.json` and bundled under `integrations/` without adding host-specific logic to the Skill instructions.
 
 ## Offline copy from the source bundle
 
@@ -70,15 +90,7 @@ Host-specific examples may include `$ui-spec` or `/ui-spec`, depending on the ho
 
 ## Updates and removal
 
-Use the commands supported by your current Skills CLI:
-
-```bash
-npx skills check
-npx skills update
-npx skills remove ui-spec
-```
-
-Inspect scope before updating or removing a global installation. Consult `npx skills --help` and the [official CLI guide](https://skills.sh/docs/cli) for version-specific options.
+Use the same standalone installer for its own managed installations: `status`, `install --upgrade` and `uninstall`. They preserve unowned and modified user files. If a previous copy was installed through Skills CLI, use that CLI's `check`, `update` and `remove` commands for **that** copy; do not mix ownership records or manually overwrite a configuration.
 
 ## Optional project records
 
@@ -106,7 +118,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.20.0 --skill ui-spec
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.1/ui-spec-installer.tgz install --agent codex
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
