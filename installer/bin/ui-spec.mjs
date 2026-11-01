@@ -1,24 +1,29 @@
 #!/usr/bin/env node
 // Self-contained distribution installer: never clones or downloads a source repository.
-import { readFile, writeFile, readdir, mkdir, mkdtemp, rename, rm, lstat } from 'node:fs/promises';
-import { createHash } from 'node:crypto';
+import { readFile, writeFile, readdir, mkdir, mkdtemp, rename, rm, lstat, open } from 'node:fs/promises';
+import { createHash, randomUUID } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { homedir } from 'node:os';
 import { dirname, join, resolve, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createPresentation } from '../lib/experience.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const payload = join(root, 'payload');
 const receiptFile = '.ui-spec-install.json';
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
-const usage = `Usage: ui-spec install|status|uninstall --agent codex|claude-code|cursor|opencode [--project PATH|--global] [--upgrade] [--dry-run]\n\nInstalls only the bundled Skill, plus explicit native Harness adapters. Never clones GitHub.\n`;
+const usage = 'UI Spec Studio — lightweight Skill and Harness installer\n'
+  + 'Usage: ui-spec install|status|uninstall [--agent HOST] [--project PATH|--global]\n'
+  + '  install: --upgrade | --migrate | --adopt | --dry-run | --no-tui | --yes\n'
+  + '  all commands: --lang en|zh | --json | --no-tui\n'
+  + 'Existing unmanaged installations require interactive consent or explicit --migrate.\n';
 
 function fail(message) { throw new Error(message); }
 function parse(argv) {
   const action = argv.shift();
   if (!action || ['--help', '-h', 'help'].includes(action)) return { action: 'help' };
   if (!['install', 'status', 'uninstall'].includes(action)) fail(`Unknown action: ${action}`);
-  const out = { action, agent: null, project: null, global: false, upgrade: false, dryRun: false };
+  const out = { action, agent: null, project: null, global: false, upgrade: false, migrate: false, adopt: false, yes: false, noTui: false, json: false, lang: null, dryRun: false };
   const once = new Set();
   while (argv.length) {
     const arg = argv.shift();
@@ -28,12 +33,20 @@ function parse(argv) {
     else if (arg === '--project') out.project = argv.shift() || fail('Missing --project value');
     else if (arg === '--global') out.global = true;
     else if (arg === '--upgrade') out.upgrade = true;
+    else if (arg === '--migrate') out.migrate = true;
+    else if (arg === '--adopt') out.adopt = true;
+    else if (arg === '--yes') out.yes = true;
+    else if (arg === '--no-tui') out.noTui = true;
+    else if (arg === '--json') out.json = true;
+    else if (arg === '--lang') out.lang = argv.shift() || fail('Missing --lang value');
     else if (arg === '--dry-run') out.dryRun = true;
     else fail(`Unknown option: ${arg}`);
   }
-  if (!out.agent) fail('Choose a Harness explicitly with --agent');
+  if (out.lang && !['zh', 'en', 'zh-CN', 'en-US'].includes(out.lang)) fail('Use --lang en or --lang zh');
+  if (out.migrate && out.adopt) fail('--migrate and --adopt are mutually exclusive');
+  if ((out.migrate || out.adopt || out.upgrade || out.yes) && action !== 'install') fail('Install-only option used with ' + action);
   if (out.project && out.global) fail('--project and --global are mutually exclusive');
-  if (out.upgrade && out.action !== 'install') fail('--upgrade is only valid for install');
+  if (out.json) out.noTui = true;
   return out;
 }
 function safeRelative(p) {
@@ -44,7 +57,7 @@ async function regular(path) {
   try { const st = await lstat(path); if (!st.isFile() || st.isSymbolicLink()) fail(`Refusing non-regular file: ${path}`); return await readFile(path); }
   catch (e) { if (e.code === 'ENOENT') return null; throw e; }
 }
-async function assertSafeDestination(path, boundary) {
+async function assertSafeDestination(path, boundary, allowLeafLink = false) {
   const abs = resolve(path);
   const guard = resolve(boundary);
   if (abs !== guard && !abs.startsWith(guard + (process.platform === 'win32' ? '\\' : '/')))
@@ -56,8 +69,9 @@ async function assertSafeDestination(path, boundary) {
   while (true) {
     try {
       const st = await lstat(current);
-      if (st.isSymbolicLink() || !st.isDirectory())
-        fail(`Refusing linked or non-directory Skill destination: ${current}`);
+      if (st.isSymbolicLink()) {
+        if (!(allowLeafLink && current === abs)) fail('Refusing linked destination ancestor: ' + current);
+      } else if (!st.isDirectory()) fail('Refusing non-directory Skill destination: ' + current);
     } catch (e) { if (e.code !== 'ENOENT') throw e; }
     if (current === guard) break;
     current = dirname(current);
