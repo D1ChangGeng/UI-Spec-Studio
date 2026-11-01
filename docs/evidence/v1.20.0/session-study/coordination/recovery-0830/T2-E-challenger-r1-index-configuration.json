@@ -1,0 +1,114 @@
+{
+  "behavior_log_globs": [
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt",
+    "evidence/final/events.json",
+    "evidence/final/source-digests.json",
+    "evidence/final3/events.json",
+    "evidence/final3/source-digests.json",
+    "TIMING.json"
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_14_final/composer_research",
+      "role": "ui_researcher",
+      "prompt": "evidence/coordination/research-prompt.txt",
+      "spawn": "evidence/coordination/research-result.json",
+      "completion_repository_path": "docs/evidence/v1.20.0/session-study/coordination/recovery-0830/T2-E-challenger-research-completion-originals.json",
+      "completion_source": "Original parent-retained FINAL_ANSWER body with unchanged original sender/spawn/delegation provenance",
+      "result": "evidence/research/RESEARCH-REPORT.md",
+      "command_globs": [
+        "evidence/research/commands/*/command.json",
+        "evidence/research/commands/*/stdout.txt",
+        "evidence/research/commands/*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/research/view-baseline.json",
+        "evidence/research/view-compact.json",
+        "evidence/research/view-w14-research-ai-grid.jpg.json",
+        "evidence/research/view-w14-research-ai-list.jpg.json",
+        "evidence/research/view-w14-research-aui-chip.jpg.json",
+        "evidence/research/sources/001-discovery.json",
+        "evidence/research/sources/002-primary-docs.json",
+        "evidence/research/sources/003-browser-bootstrap.json",
+        "evidence/research/sources/004-scrolling-and-file.json",
+        "evidence/research/sources/initial-observations.json",
+        "evidence/research/sources/w14-research-ai-grid.json",
+        "evidence/research/sources/w14-research-ai-inline.json",
+        "evidence/research/sources/w14-research-ai-list.json",
+        "evidence/research/sources/w14-research-aui-chip.json"
+      ]
+    },
+    {
+      "agent_id": "/root/product_14_final/composer_challenger",
+      "role": "ui_challenger",
+      "prompt": "evidence/coordination/challenger-prompt.txt",
+      "spawn": "evidence/coordination/challenger-result.json",
+      "completion_repository_path": "docs/evidence/v1.20.0/session-study/coordination/recovery-0830/T2-E-challenger-challenger-completion-originals.json",
+      "completion_source": "Original parent-retained FINAL_ANSWER body with unchanged original sender/spawn/delegation provenance",
+      "result": "evidence/challenger/REPORT.md",
+      "command_globs": [
+        "evidence/challenger/command-*/command.json",
+        "evidence/challenger/command-*/stdout.txt",
+        "evidence/challenger/command-*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/challenger/view-0.json",
+        "evidence/challenger/view-1.json",
+        "evidence/challenger/view-2.json",
+        "evidence/challenger/view-3.json",
+        "evidence/challenger/view-auto-after2.json",
+        "evidence/challenger/view-auto-away2.json",
+        "evidence/challenger/view-long-after.json",
+        "evidence/challenger/view-long-away.json",
+        "evidence/challenger/view-mobile-attached.json",
+        "evidence/challenger/view-mobile-dialog.json",
+        "evidence/challenger/view-mobile-focus-return.json",
+        "evidence/challenger/view-mobile-long-dialog.json",
+        "evidence/challenger/view-mobile-long-return.json",
+        "evidence/challenger/web-primary.json"
+      ]
+    }
+  ],
+  "cell_id": "T2-E-challenger-r1",
+  "agent_id": "/root/product_14_final",
+  "source_workspace_aliases": [
+    "/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w14"
+  ],
+  "preview_command": "From the reconstructed workspace: python3 -m http.server 4414 --bind 127.0.0.1 --directory app/dist; open /?theme=light&lang=en or /?theme=dark&lang=zh. Rebuild with npm ci and npm run build in app using the unchanged lockfile.",
+  "capture_conditions": "Chromium headless shell 143.0.7499.4 / Playwright 1.57.0 under existing oai identity with browser sandbox enabled, DPR 1, supplied Noto CJK. Six populated conditions: 1440x900, 1280x600 and 390x844 in light/English and dark/Chinese, plus controlled continuity/recovery episodes.",
+  "final_capture_prefixes": [
+    "evidence/final",
+    "evidence/final3",
+    "evidence/settled"
+  ],
+  "primary_view_globs": [
+    "evidence/view-*.json"
+  ],
+  "additional_tool_exports": [
+    "evidence/coordination/research-request.json",
+    "evidence/coordination/challenger-request.json",
+    "evidence/coordination/followup-requests.json",
+    "evidence/server-stop.json"
+  ],
+  "audit_observations": [
+    "Two actual sequential research-only children completed: a researcher and independent challenger. The primary retained product choices, implementation and final inspection. No model or effort override was requested; resolved backend identities are unavailable.",
+    "All 379 captured workspace files reconstructed from four frozen input archives and two immutable overlays. Frozen method/role files and supplied lockfile/synthetic responder remain unchanged.",
+    "Primary personally viewed all six populated composer conditions, narrow focused attachment and entering filename dialog. The settled 250ms dialog was captured but not personally viewed; its original image is retained without counting it as a primary view.",
+    "The original broad run recorded 80 assertions without assertion failures but ended on a Chinese Stop timing error. A script extraction failure and final edit-control locator timeout also remain intact. Corrected controlled episode run recorded 21 passing assertions. Final TypeScript and production build passed.",
+    "A long-question smooth-scroll jump was reproduced by primary and challenger; supported bottom-anchor plus immediate positioning was subsequently checked. The challenger identified partial reveal of a narrow focused attachment, then the primary repaired and viewed its full visibility.",
+    "Recorded work close at 11:52:55.436367 UTC is 3.29393 seconds after the conservative preparation-based 1800-second bound. The last UI probe ended at 11:52:08.365024 before that bound; preview closure and record writing reached the later recorded close. The actual overrun remains visible."
+  ],
+  "limitations": "Shared host, instructional isolation and capacity delays limit causal comparison. The edit/update path remains unverified after an original control-locator timeout. The settled dialog capture was not personally viewed. Horizontal attachment navigation and truncated labels are retained tradeoffs. Recorded close exceeded the conservative bound by 3.294 seconds. Hardware keyboard/IME, touch, assistive technology, other engines, natural-time playback and device performance remain unverified; task localization is bounded. Native role/model/usage/cost telemetry remains unavailable. Independent acceptance is separate.",
+  "capture_lineage": "Final captures and final3 controlled-episode captures are indexed. The settled dialog exists but is explicitly unviewed; the prior entering-state dialog view does not establish its settled opacity. Only actual view exports 009–016 intersect this final capture set. Baseline, source research and failed/revised trials remain unchanged in the complete overlays.",
+  "report_files": [
+    "FINAL.md",
+    "VISUAL-REVIEW.md",
+    "SPEC.md",
+    "DELEGATION.json",
+    "TIMING.json",
+    "evidence/research/RESEARCH-REPORT.md",
+    "evidence/challenger/REPORT.md"
+  ]
+}

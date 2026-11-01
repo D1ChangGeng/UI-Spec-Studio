@@ -1,0 +1,48 @@
+# SPEC T2 — Composer and reading continuity
+
+## Current design model (provisional selection; 2026-11-01)
+Meridian is a local, in-memory conversation workspace. Its primary loop is ask, read an unfolding synthetic answer, revisit earlier text, and continue. The single formal increment keeps composer growth, attachment disclosure, streaming, cancellation/retry, keyboard return, and user-owned reading position together. Splitting the composer from scrolling would hide the main coupled risk.
+
+The complete assistant-ui cloud-template family at ff654d8156680b839774296ef644b57ab1078425 remains the established candidate foundation. The normal-scale baseline was personally viewed at 1440 × 900 in light English: a quiet outlined input, separate low-weight attach action, dark primary send action, 44rem reading column, stable sidebar/header, and restrained message typography. Source possession and this one viewed initial state do not establish the remaining conditions.
+
+## Quality and evidence questions
+- L0/L1: Can a researcher enter a growing question, identify local filename metadata, stop/retry, read earlier passages while streaming, and deliberately return to latest?
+- L2/L3: Does the sticky composer keep its action row reachable without consuming excessive reading space at 1280 × 600? Does attachment growth preserve identifiable objects?
+- L4: Preserve Inter reading rhythm, supplied muted/foreground surfaces, input contour/radius, action hierarchy, and light/dark contrast. Check real CJK/Latin strings and long filenames.
+- L5: Retain useLocalRuntime as state owner, deterministic 72-character/60ms adapter, complete long answer, abort/failure behavior, and filename-only contract. No visual rewrite or original exception is authorized.
+
+## Research, implementation, regression
+Research: independent full-product/block comparisons, source APIs, original demos, actual baseline episodes. Child inquiry is evidence-only.
+Primary implementation: focused configuration/composition/repair in the existing thread and attachment family.
+Regression: neighboring reading area, viewport state, focus, submit/cancel/retry/edit, thread return, supported variants and short-height/narrow rendering.
+
+## Candidate questions still open
+1. Current square document tiles disclose filenames only via tooltip. Compare same-family File.Root / File.Icon / File.Name composition with an independently authored implementation. File.tsx is a real supplied mature source, not a primitive-only styling permission.
+2. Current turnAnchor=top deliberately favors reading a new answer from its beginning. Investigate autoScroll public configuration before altering this owner; never force-scroll around manual intent.
+3. Existing max-h-48 autosizing input may use too much compact reading space. Observe six-line, long mixed-language, and attachment combination before source-preserving constraint adaptation.
+4. Accessible names, Chinese controls, input hints and metadata disclosure may need content changes; presentation must inherit existing components/tokens.
+
+## Actual evidence and limits
+- Source manifest and font provenance: SOURCE-MANIFEST.json and FONT-SOURCES.json.
+- Initial viewed render: evidence/baseline/01-light-initial.png; actual view response: evidence/view-001.json.
+- Baseline attempt 003 stopped on a strict selector collision with the autosizer's hidden textarea. This is a test-selector failure; corrected attempt 004 targets the named textbox.
+- Current modern guidance: commands/001-guidance-search and 002-guidance-retrieve. Field sizing requires bounded dimensions and fallback; the supplied autosizing component already owns the fallback. Scroll-state queries have limited availability; retain runtime-owned ScrollToBottom behavior instead of adding a second scroll engine.
+- No owner visual approval or natural-time playback claim is made.
+
+
+## Current choice and meaningful revisions
+
+The selected implementation retains the complete assistant-ui family. Persistent filename chips use the supplied File.Root, File.Icon and File.Name, with its muted/sm variant; the existing attachment primitive still owns add/remove/send. The existing Dialog supplies full-name disclosure. No File.Download is composed because file contents are not available. Original public named-chip and AI Elements list renders were personally inspected (view-004/005); their code was not copied. The final named-file surface is a composition of the supplied mature implementation, not a recreation of those screenshots.
+
+The first local trial (view-006) showed recognizable names and a stable action row. Its 144px compact cap cut the sixth input line, so the cap was adjusted to 152px at 600px height, retaining the supplied 192px maximum at taller sizes. The comparison condition with four attachments and a long draft now measures 260px composer height versus 310px baseline. The single-line surface remains 94px.
+
+Reading behavior was reopened by actual counterevidence. The baseline top-anchor configuration held manual reading but did not follow new content after explicit return (continuity-baseline/events.json). The supported bottom-anchor trial followed, but CSS scroll-smooth produced a real long-question jump: scrollTop385 to2255, with viewed frames moving from the question to Observation theme4 (view-007/008). A focused motion configuration repair changed scroll-smooth to scroll-auto. The repeated episode then held scrollTop1081 while content height grew3039 to4082 (trial-instant/events.json). No second scroll engine, forced periodic scrolling or user-content shortening was introduced.
+
+Stop previously left the visible source typewriter backlog draining after the runtime stopped. MarkdownTextPrimitive now receives smooth only while the message is running, retaining the source's smooth reveal during generation and committing already-received text immediately when stopped. The defer prop remains constant, as required by its source contract. Cancel and attachment removal restore composer focus with preventScroll.
+
+The independent challenger confirmed keyboard reachability, full-name dialog opening, Escape return and remove-to-input focus, but identified partial clipping of a focused filename after reverse tabbing at390px. A local focus repair reveals the whole source chip horizontally inside its attachment band without scrolling the conversation. This remains under verification.
+
+Typecheck exposed pre-existing TS7 compatibility issues: removed baseUrl option and missing Vite CSS import types. Paths remain explicit; vite/client types are now included. Final build/typecheck and browser evidence are still required before delivery.
+
+## Verified result
+Final six-condition geometry/keyboard checks passed. The corrected21-assertion episode run passed in both locales, including return during continued growth and a second upward scroll. Typecheck and final build passed. See FINAL.md and VISUAL-REVIEW.md for the scoped delivery and limits.

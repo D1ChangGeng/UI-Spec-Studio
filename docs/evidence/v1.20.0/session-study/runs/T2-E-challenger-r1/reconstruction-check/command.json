@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python3",
+    "docs/evidence/v1.20.0/session-study/support/continuation/replay_snapshot.py",
+    "--repo",
+    ".",
+    "--cell",
+    "T2-E-challenger-r1",
+    "--output",
+    "/workspace/scratch/e1cfe6e447ee/ui-study/replay-audit/T2-E-challenger-r1"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/UI-Spec-Studio",
+  "started_at": "2026-11-01T12:03:22.082311+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T12:03:22.497842+00:00",
+  "wall_seconds": 0.415539,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 330,
+      "sha256": "9369b398ff5c3e2dfe9d1afc68570578d90d3c2899c49854abf137e9c7ae2cf4"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

@@ -37,6 +37,14 @@ Read the [complete original second report](recovered-reviewer/cohort-02/raw/BLIN
 
 P17 remains an unrepaired negative comparator. P05's hierarchy and P12's panning/motion caveats remain explicit. Captured images, actual viewing, behavior, source observations and unknowns remain separate. The final cohort and condition-disclosed final-runtime disposition are still required.
 
+## Fresh recovery cohort 03 — frozen before disclosure
+
+The same reviewer froze P07 at **2026-11-01 11:51:04 UTC**, after verifying that all thirteen earlier product rows and both earlier immutable cohort manifests remained unchanged. The cumulative [correspondence](recovered-reviewer/cohort-03/correspondence.json) identifies 14 reviewed products and 49 original-capture view exports. The [complete snapshot](recovered-reviewer/cohort-03/snapshot.json) and its [successful reconstruction](recovered-reviewer/cohort-03/reconstruction-check/stdout.txt) retain all 46,190 reviewer-workspace files.
+
+Read the [original third report](recovered-reviewer/cohort-03/raw/BLIND-REVIEW-COHORT-03.md.txt), [immutable P07 record](recovered-reviewer/cohort-03/raw/cohorts/2026-11-01-cohort-03/products.json), [original freeze manifest](recovered-reviewer/cohort-03/raw/cohorts/2026-11-01-cohort-03/FREEZE-MANIFEST.json), and [actual completion notification](../coordination/recovery-0830/reviewer-cohort-03-completion.json). The manifest SHA-256 is `6ba682f3023db0290bb8e5e4f55c9f8a8ec2f672f7f8142ead350cff2fceb173`.
+
+P07 is satisfactory in the exercised conversation scope. Manual scrollTop remained 91 px while content height grew from 1,391 to 1,727 px; streaming return-to-latest samples stayed at bottom gap zero; keyboard Stop restored composer focus and settled text stayed unchanged. Filename disclosure/removal, failure/retry and seeded reload worked. The compact input displays part of a six-line question through an internal scroll region, multiple attachments require horizontal browsing, and full-name disclosure uses a modal. Broader assistive-technology, physical-device, extreme-input and complete edit/branch coverage remain unverified. Original and fresh scrollbar appearance differed; the reviewer did not invent a product-change cause. No condition mapping was received and no comparator was repaired.
+
 ## Earlier durable five-product review
 
 The earlier independent reviewer `/root/independent_product_reviewer` began in a fresh context with anonymous frozen products, their tasks and mature foundations. Condition labels, method files and producer judgments were withheld. Isolation is instructional on a shared host. This is an independent Agent judgment, not a human usability panel or native Codex validation.

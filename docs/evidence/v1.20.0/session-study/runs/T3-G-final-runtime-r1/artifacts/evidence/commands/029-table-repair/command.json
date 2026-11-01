@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "runuser",
+    "-u",
+    "oai",
+    "--",
+    "env",
+    "FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf",
+    "/tmp/ui-spec-validation-venv/bin/python",
+    "evidence/table_recheck.py"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-01T11:54:42.401257+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T11:54:48.836287+00:00",
+  "wall_seconds": 6.435039,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 211,
+      "sha256": "43883eee2c8af4e498824f12d653d117f859987d97ade6347a128bc3d6363f8c"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

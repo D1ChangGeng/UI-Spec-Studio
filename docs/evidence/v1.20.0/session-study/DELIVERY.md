@@ -75,16 +75,16 @@ The [complete-originals audit](engineering/recovery-0830/T2-G-complete-originals
 
 The latest frozen review snapshot points to its prior immutable snapshot. Hash/member inventories may be split into small verified JSON parts; every entry remains available.
 
-For the two currently frozen recovery cohorts:
+For the three currently frozen recovery cohorts:
 
 ```sh
 python3 docs/evidence/v1.20.0/session-study/support/continuation/replay_review.py \
   --repo . \
-  --snapshot docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/snapshot.json \
+  --snapshot docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-03/snapshot.json \
   --output /tmp/ui-spec-independent-review
 ```
 
-This reconstruction verified all 46,071 files, including exercised reviewer application copies. The cumulative correspondence links 13 products and 45 original-capture view exports. Additional reviewer captures and unsuccessful probes remain separately retained. Later cohorts and final-runtime disposition will be linked from the review index without rewriting the earlier blind judgments.
+This reconstruction verified all 46,190 files, including exercised reviewer application copies. The cumulative correspondence links 14 products and 49 original-capture view exports. Additional reviewer captures and unsuccessful probes remain separately retained. Later cohorts and final-runtime disposition will be linked from the review index without rewriting the earlier blind judgments.
 
 ## Interpretation and unavailable evidence
 

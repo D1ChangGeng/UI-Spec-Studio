@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path;import json,difflib,hashlib;r=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/review-pack\");own=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery\");f=\"src/components/ui/dialog.tsx\";p=r/\"products/P07/app\"/f;b=r/\"foundations/T2/app\"/f;print(\"DIALOG DIFF\", \"\\n\".join(difflib.unified_diff(b.read_text().splitlines(),p.read_text().splitlines(),fromfile=\"T2 foundation\",tofile=\"P07 final\")))\nd=json.loads((own/\"evidence/behavior-conversations-cohort03-P07-001/P07.json\").read_text());print(\"COMPLETED RUN\",json.dumps({k:d.get(k) for k in [\"product\",\"started\",\"completed\",\"browser\",\"playwright\",\"fontconfig\",\"device_scale_factor\",\"tested_copy\",\"server\",\"failure\",\"console_errors\",\"source_checks\"]},ensure_ascii=False))\nfor s in d[\"steps\"]:\n if s[\"name\"] in [\"disclosure-escape-focus\",\"remove-file-focus\",\"stop-focus\",\"stop-after-settling\",\"stop-stable-followup\",\"narrow-dark-four-files-six-line\",\"narrow-last-file-keyboard-disclosure\"]:\n  v=s[\"observed\"];print(\"STATE\",s[\"name\"],json.dumps({k:v[k] for k in [\"focus\",\"composer\",\"attachmentStrip\",\"dialogs\",\"running\",\"bodyTextLength\",\"horizontalOverflow\"]},ensure_ascii=False))\nfor name in [\"2026-11-01-cohort-01\",\"2026-11-01-cohort-02\"]:\n m=own/\"cohorts\"/name/\"FREEZE-MANIFEST.json\";d=json.loads(m.read_text());print(\"PRIOR COHORT\",name,\"MANIFEST SHA256\",hashlib.sha256(m.read_bytes()).hexdigest(),\"IMMUTABLE HASHES MATCH\",all(hashlib.sha256(Path(x[\"path\"]).read_bytes()).hexdigest()==x[\"sha256\"] for x in d[\"immutable_files\"]))\nold=json.loads((own/\"products.json\").read_text());frozen=[]\nfor name in [\"2026-11-01-cohort-01\",\"2026-11-01-cohort-02\"]:frozen+=json.loads((own/\"cohorts\"/name/\"products.json\").read_text())\nprint(\"CUMULATIVE PRIOR ROWS MATCH\",old==frozen,\"COUNT\",len(old))"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T11:48:09.830868+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T11:48:09.895264+00:00",
+  "wall_seconds": 0.064404,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 8593,
+      "sha256": "aeb01e6e362238f715526a70efb1256e6ae6b7032beb910a472e3eb6294e09e8"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "substantive_started_observed": "2026-11-01T11:23:59+00:00",
+  "request_prepared_by_coordinator": "2026-11-01T11:22:52.142437+00:00",
+  "substantive_closed_at": "2026-11-01T11:52:55.436367+00:00",
+  "bound_seconds": 1800,
+  "no_further_product_research_implementation_or_verification_after_close": true,
+  "note": "Earlier initial reads preceded the first explicit UTC command. Preparation time is the conservative bound origin. Any later work only preserves records or writes handover.",
+  "conservative_bound_ended_at": "2026-11-01T11:52:52.142437+00:00",
+  "recorded_close_over_bound_seconds": 3.29393,
+  "classification": "Recorded close is 3.294 seconds after the conservative bound; preserved as an overrun, not backdated. Final command timestamps are separate evidence. Subsequent work is preservation/handover only.",
+  "final_ui_probe": {
+    "schema_version": 1,
+    "evidence_kind": "original_subprocess_capture",
+    "command": [
+      "runuser",
+      "-u",
+      "oai",
+      "--",
+      "/tmp/ui-spec-validation-venv/bin/python",
+      "evidence/settled_check.py"
+    ],
+    "cwd": "/workspace/scratch/708e8b7f118e/ui-study/worksets/w14",
+    "started_at": "2026-11-01T11:51:36.139840+00:00",
+    "timeout_seconds": 40,
+    "environment": "inherited; values not exported",
+    "status": "completed",
+    "returncode": 1,
+    "ended_at": "2026-11-01T11:52:08.365024+00:00",
+    "wall_seconds": 32.225186,
+    "artifacts": {
+      "stdout.txt": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr.txt": {
+        "bytes": 1658,
+        "sha256": "6a650aac3e27c9122ebab74b655628ff1992bbb49b923246dd7275e6b02533fa"
+      }
+    }
+  }
+}

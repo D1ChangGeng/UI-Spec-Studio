@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/BurningTreeC/vanilla-paper.git",
+    "evidence/sources/vanilla-paper"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-01T11:32:01.864856+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T11:32:02.230100+00:00",
+  "wall_seconds": 0.365255,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr.txt": {
+      "bytes": 49,
+      "sha256": "1af13ca1c8c95bf1eff362deeb51ff1f4d20ac3ddf35fcf8f7dc845e56b0151a"
+    }
+  }
+}

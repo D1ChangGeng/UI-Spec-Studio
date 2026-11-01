@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path;import difflib,hashlib;r=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/review-pack\");p=r/\"products/P07/app\";b=r/\"foundations/T2/app\";\nfor f in [\"src/components/assistant-ui/elements/file.tsx\",\"src/components/ui/dialog.tsx\",\"src/components/ui/button.tsx\",\"src/synthetic.ts\",\"package-lock.json\",\"LICENSE\"]:print(\"PRESERVATION\",f,(p/f).read_bytes()==(b/f).read_bytes())\nfor f in sorted((p/\"src\").rglob(\"*.css\")):\n rel=f.relative_to(p);prior=b/rel;print(\"CSS PATH\",rel)\n if prior.exists():print(\"\\n\".join(difflib.unified_diff(prior.read_text().splitlines(),f.read_text().splitlines(),fromfile=\"T2 foundation\",tofile=\"P07 final\")))\n else:print(\"NEW CSS\",f.read_text())\nprint(\"PRODUCT LICENSE\",(p/\"LICENSE\").read_text());notice=p/\"THIRD-PARTY-NOTICES.txt\";print(\"NOTICE RETENTION\",{\"bytes\":notice.stat().st_size,\"sha256\":hashlib.sha256(notice.read_bytes()).hexdigest()})"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T11:46:33.165652+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T11:46:33.229876+00:00",
+  "wall_seconds": 0.06423,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 1979,
+      "sha256": "c69004d7346b41405f4f9eb837109b90fb4f57dd53d580a3f9be3a34f0ec085a"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

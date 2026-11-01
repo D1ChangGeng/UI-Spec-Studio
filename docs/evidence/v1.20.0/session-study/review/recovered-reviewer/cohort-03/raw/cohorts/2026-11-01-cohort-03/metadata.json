@@ -1,0 +1,49 @@
+{
+  "cohort": "2026-11-01-cohort-03",
+  "anonymous_products": [
+    "P07"
+  ],
+  "frozen_at_utc": "2026-11-01T11:51:04.369778+00:00",
+  "condition_mapping_received": false,
+  "independence": "No coordinating repository, producer assessment, release decision, sibling workset, condition mapping or other reviewer result was inspected.",
+  "isolation_limit": "Instructional isolation on a shared host, not a separate security sandbox.",
+  "no_comparator_repair": true,
+  "review_report": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-03/BLIND-REVIEW.md",
+  "records": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-03/products.json",
+  "cumulative_products": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/products.json",
+  "prior_manifests": [
+    {
+      "cohort": "2026-11-01-cohort-01",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-01/FREEZE-MANIFEST.json",
+      "sha256": "887a5940dc738e9f73d2d367454aa96c848d06e15de5ca02b615f0de89b52630"
+    },
+    {
+      "cohort": "2026-11-01-cohort-02",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-02/FREEZE-MANIFEST.json",
+      "sha256": "ba85c30226fb1eb1247fc85fbe21cdc6a0d5ee718d93494bac8e1980c506ef42"
+    }
+  ],
+  "prior_record_count": 13,
+  "prior_records_unchanged": true,
+  "material_blocker_observed": false,
+  "remaining_caveats": [
+    "Compact-height input uses internal scrolling for the representative six-line question.",
+    "The horizontal attachment collection has offscreen items; modal disclosure temporarily obscures the reading context.",
+    "Return to latest is icon-only with a localized tooltip/accessibility name.",
+    "Accessibility, arbitrary content extremes, touch, reduced-motion playback and broader browser behavior remain outside the exercised scope."
+  ],
+  "owned_server_stop_checks": [
+    {
+      "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort03-P07-001/P07.json",
+      "server": {
+        "pid": 100062,
+        "port": 4737,
+        "started": "2026-11-01T11:46:41.450129+00:00",
+        "stopped": "2026-11-01T11:46:58.974346+00:00",
+        "returncode": -15
+      }
+    }
+  ],
+  "preservation_rule": "Keep all three blind reports and each cohort's product records immutable. Further anonymous work and unblinding/repair disposition require separate records. Append later cumulative rows without rewriting prior judgments.",
+  "clock_note": "Raw timestamps retain UTC offsets; browser/application display times are not used for cross-run timing claims."
+}
