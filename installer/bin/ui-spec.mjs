@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Self-contained distribution installer: never clones or downloads a source repository.
-import { readFile, writeFile, readdir, mkdir, mkdtemp, rename, rm, lstat, open } from 'node:fs/promises';
+import { readFile, writeFile, readdir, mkdir, mkdtemp, rename, rm, lstat, readlink, open } from 'node:fs/promises';
 import { createHash, randomUUID } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { homedir } from 'node:os';
@@ -57,6 +57,20 @@ async function regular(path) {
   try { const st = await lstat(path); if (!st.isFile() || st.isSymbolicLink()) fail(`Refusing non-regular file: ${path}`); return await readFile(path); }
   catch (e) { if (e.code === 'ENOENT') return null; throw e; }
 }
+async function isLinked(path, stat) {
+  if (stat.isSymbolicLink()) return true;
+  // Some Windows filesystem providers report junctions as directories from
+  // lstat even though readlink still identifies their reparse-point target.
+  if (process.platform === 'win32' && stat.isDirectory()) {
+    try { await readlink(path); return true; }
+    catch (e) {
+      if (['EINVAL', 'UNKNOWN', 'ENOTSUP', 'EACCES'].includes(e.code)) return false;
+      if (e.code === 'ENOENT') throw e;
+      throw e;
+    }
+  }
+  return false;
+}
 async function assertSafeDestination(path, boundary, allowLeafLink = false) {
   const abs = resolve(path);
   const guard = resolve(boundary);
@@ -69,7 +83,7 @@ async function assertSafeDestination(path, boundary, allowLeafLink = false) {
   while (true) {
     try {
       const st = await lstat(current);
-      if (st.isSymbolicLink()) {
+      if (await isLinked(current, st)) {
         if (!(allowLeafLink && current === abs)) fail('Refusing linked destination ancestor: ' + current);
       } else if (!st.isDirectory()) fail('Refusing non-directory Skill destination: ' + current);
     } catch (e) { if (e.code !== 'ENOENT') throw e; }
@@ -81,6 +95,7 @@ async function listFiles(base, sub = '') {
   const result = [];
   for (const ent of await readdir(join(base, sub), { withFileTypes: true })) {
     const rel = sub ? `${sub}/${ent.name}` : ent.name;
+    if (await isLinked(join(base, rel), await lstat(join(base, rel)))) fail('Refusing linked or unusual file: ' + rel);
     if (ent.isDirectory()) result.push(...await listFiles(base, rel));
     else if (ent.isFile()) result.push(rel);
     else fail(`Refusing linked or unusual file: ${join(base, rel)}`);
@@ -114,7 +129,7 @@ async function inspectTarget(target, next) {
   let stat;
   try { stat = await lstat(target); }
   catch (e) { if (e.code === 'ENOENT') return { exists: false, kind: 'absent', identical: false }; throw e; }
-  if (stat.isSymbolicLink()) return { exists: true, kind: 'legacy-link', identical: false, version: null };
+  if (await isLinked(target, stat)) return { exists: true, kind: 'legacy-link', identical: false, version: null };
   if (!stat.isDirectory()) fail('Existing Skill path is not a directory or link: ' + target);
   const old = await regular(join(target, receiptFile));
   if (!old) {
