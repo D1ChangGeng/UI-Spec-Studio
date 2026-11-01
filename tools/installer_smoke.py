@@ -85,6 +85,17 @@ def run() -> dict[str, object]:
             if agent == 'codex':
                 if config.read_text(encoding='utf-8') != 'model = "existing-user-setting"\n':
                     raise AssertionError('Codex user configuration was not preserved')
+                # An independent native adapter registration is not owned by an
+                # absent unified Skill receipt; do not delete it on uninstall.
+                native = package / 'payload/adapters/codex/install.py'
+                command([sys.executable, str(native), 'install', '--project', str(project)], project)
+                native_role = project / '.codex/agents/ui_researcher.toml'
+                if not native_role.is_file():
+                    raise AssertionError('Independent native Codex adapter fixture did not install')
+                command(prefix + ['uninstall', *flags], project)
+                if not native_role.is_file():
+                    raise AssertionError('An unowned standalone Codex registration was removed')
+                command([sys.executable, str(native), 'uninstall', '--project', str(project)], project)
             project_checks.append(agent)
         result = command([(shutil.which('npx') or 'npx'), '--yes', '--offline', archive.as_uri(), 'status', '--agent', 'codex', '--project', str(base / 'not-installed')], base)
         if json.loads(result.stdout)['status'] != 'absent':
