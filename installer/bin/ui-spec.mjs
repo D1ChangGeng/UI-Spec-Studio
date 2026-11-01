@@ -44,18 +44,23 @@ async function regular(path) {
   try { const st = await lstat(path); if (!st.isFile() || st.isSymbolicLink()) fail(`Refusing non-regular file: ${path}`); return await readFile(path); }
   catch (e) { if (e.code === 'ENOENT') return null; throw e; }
 }
-async function assertSafeDestination(path) {
+async function assertSafeDestination(path, boundary) {
   const abs = resolve(path);
+  const guard = resolve(boundary);
+  if (abs !== guard && !abs.startsWith(guard + (process.platform === 'win32' ? '\\' : '/')))
+    fail('Skill path must stay inside the explicitly selected Harness scope');
   let current = abs;
+  // Check the user-selected project/Harness root and every child path, but not
+  // the operating system ancestors. macOS /var -> /private/var is a normal,
+  // trusted system path alias, not a project-installed Skill symlink.
   while (true) {
     try {
       const st = await lstat(current);
-      if (st.isSymbolicLink() || (!st.isDirectory() && current !== abs)) fail(`Refusing linked or non-directory ancestor: ${current}`);
-      if (current === abs && !st.isDirectory()) fail(`Refusing non-directory target: ${current}`);
+      if (st.isSymbolicLink() || !st.isDirectory())
+        fail(`Refusing linked or non-directory Skill destination: ${current}`);
     } catch (e) { if (e.code !== 'ENOENT') throw e; }
-    const parent = dirname(current);
-    if (parent === current) break;
-    current = parent;
+    if (current === guard) break;
+    current = dirname(current);
   }
 }
 async function listFiles(base, sub = '') {
@@ -125,14 +130,14 @@ function runAdapter(config, action, options, preflight = false) {
 }
 function skillDirectory(spec, options) {
   const home = homedir();
-  if (!options.global) return resolve(options.projectRoot, ...safeRelative(spec.project_skill_dir).split('/'));
+  if (!options.global) return { target: resolve(options.projectRoot, ...safeRelative(spec.project_skill_dir).split('/')), boundary: options.projectRoot };
   let base;
   if (spec.user_base === 'home') base = home;
   else if (spec.user_base === 'xdg-config') base = process.env.XDG_CONFIG_HOME || (process.platform === 'win32' && process.env.APPDATA) || join(home, '.config');
   else if (spec.user_base === 'env-fallback' && spec.user_env && spec.user_fallback)
     base = process.env[spec.user_env] || join(home, safeRelative(spec.user_fallback));
   else fail('Invalid Harness user-scope configuration');
-  return resolve(base, ...safeRelative(spec.user_skill_dir).split('/'));
+  return { target: resolve(base, ...safeRelative(spec.user_skill_dir).split('/')), boundary: base };
 }
 async function main() {
   const options = parse(process.argv.slice(2));
@@ -141,8 +146,8 @@ async function main() {
   const { registry, manifest } = await verifyBundle();
   const spec = registry.harnesses[options.agent];
   if (!spec) fail(`Unsupported Harness: ${options.agent}; supported: ${Object.keys(registry.harnesses).join(', ')}`);
-  const target = skillDirectory(spec, options);
-  await assertSafeDestination(target);
+  const { target, boundary } = skillDirectory(spec, options);
+  await assertSafeDestination(target, boundary);
   const files = Object.fromEntries(Object.entries(manifest.files).filter(([p]) => p.startsWith('skill/')).map(([p, hash]) => [p.slice(6), hash]));
   const installed = await inspectTarget(target, { version: manifest.version, files });
   const plan = { action: options.action, version: manifest.version, agent: options.agent, scope: options.global ? 'user' : 'project', skill: target, skill_files: Object.keys(files).length, adapter: spec.adapter?.entry || null, previously_installed: installed.exists };
