@@ -9,16 +9,16 @@ context pressure and a human acceptance panel remain unverified.
 
 ## Execution inventory
 
-Observed 2026-11-01T08:44:31.532264+00:00. **8 of 18** registered cells have retained completed evidence records, with **4** completed child contexts. Execution coverage is distinct from product success and release approval.
+Observed 2026-11-01T09:03:18.252837+00:00. **9 of 18** registered cells have retained completed evidence records, with **5** completed child contexts. Execution coverage is distinct from product success and release approval.
 
-Earlier five-product raw review retained. Nine-product reviewer completion message survived, but original reviewer bytes were not recovered; fresh full review required.
+Fresh independent reviewer is examining eight anonymous durable products. Earlier five-product original review remains retained; the unavailable later nine-product original review is not used for current acceptance.
 
 | Cell | Condition | Retained status | Completed children |
 | --- | --- | --- | ---: |
 | T1-A-r1 | A | [Completed record](runs/T1-A-r1/run.json) · [product](runs/T1-A-r1/FINAL.md) | 0 |
 | T1-B-r1 | B | [Completed record](runs/T1-B-r1/run.json) · [product](runs/T1-B-r1/FINAL.md) | 1 |
 | T1-C-r1 | C | [Completed record](runs/T1-C-r1/run.json) · [product](runs/T1-C-r1/FINAL.md) | 1 |
-| T1-G-final-runtime-r1 | G-final-runtime | Fresh execution active; terminal evidence not yet retained | Active |
+| T1-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T1-G-final-runtime-r1/run.json) · [product](runs/T1-G-final-runtime-r1/FINAL.md) | 1 |
 | T2-A-r1 | A | [Completed record](runs/T2-A-r1/run.json) · [product](runs/T2-A-r1/FINAL.md) | 0 |
 | T2-B-r1 | B | [Completed record](runs/T2-B-r1/run.json) · [product](runs/T2-B-r1/FINAL.md) | 1 |
 | T2-C-r1 | C | Frozen inputs restored; fresh complete evidence required | — |

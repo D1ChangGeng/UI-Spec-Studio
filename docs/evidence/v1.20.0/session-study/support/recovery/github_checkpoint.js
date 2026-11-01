@@ -27,14 +27,27 @@ async function readParts(sha,bytes){
   const data=parts.join('');if(data.length!==4*Math.ceil(bytes/3))throw Error('Incorrect base64 size');return data;
 }
 const unique=[...new Map(files.filter(f=>!f.delete&&!known[f.sha]&&(!f.text||f.bytes>180000)).map(f=>[f.sha,f])).values()];
-for(let i=0;i<unique.length;i++){
-  const file=unique[i],content=await readParts(file.sha,file.bytes);
-  const response=await tools.mcp__codex_apps__github_create_blob({repository_full_name:MANIFEST.repository_full_name,encoding:'base64',content});
-  receipts.push({tool:'github_create_blob',request_scope:{sha:file.sha,bytes:file.bytes,encoding:'base64'},response});store(namespace+'_receipts',receipts);
-  if(checkResponse(response)?.sha!==file.sha)throw Error('Uploaded blob differs from local Git object');
-  known[file.sha]=true;store('extra_uploaded_blobs',known);
-  if((i+1)%25===0)notify({checkpoint:LABEL,uploaded:i+1,total:unique.length});
+let nextObject=0,completedObjects=0,halt=false;
+const failures=[];
+async function uploadWorker(){
+  while(!halt){
+    const i=nextObject++;if(i>=unique.length)return;
+    const file=unique[i];
+    try{
+      const content=await readParts(file.sha,file.bytes);
+      const response=await tools.mcp__codex_apps__github_create_blob({repository_full_name:MANIFEST.repository_full_name,encoding:'base64',content});
+      receipts.push({tool:'github_create_blob',request_scope:{sha:file.sha,bytes:file.bytes,encoding:'base64'},response});store(namespace+'_receipts',receipts);
+      if(checkResponse(response)?.sha!==file.sha)throw Error('Uploaded blob differs from local Git object');
+      known[file.sha]=true;store('extra_uploaded_blobs',known);completedObjects++;
+      if(completedObjects%20===0)notify({checkpoint:LABEL,uploaded:completedObjects,total:unique.length});
+    }catch(error){
+      halt=true;failures.push({file,error:String(error)});store(namespace+'_failures',failures);
+    }
+  }
 }
+const workers=await Promise.allSettled(Array.from({length:Math.min(3,unique.length)},()=>uploadWorker()));
+for(const result of workers)if(result.status==='rejected'){halt=true;failures.push({error:String(result.reason)});}
+if(halt){store(namespace+'_failures',failures);throw Error('Blob delivery stopped; original failures retained and branch unchanged');}
 const textFiles=[...new Map(files.filter(f=>!f.delete&&!known[f.sha]&&f.text&&f.bytes<=180000).map(f=>[f.sha,f])).values()];
 const readGroups=[];let group=[],bytes=0;
 for(const file of textFiles){if(bytes+file.bytes>150000&&group.length){readGroups.push(group);group=[];bytes=0;}group.push(file);bytes+=file.bytes;}

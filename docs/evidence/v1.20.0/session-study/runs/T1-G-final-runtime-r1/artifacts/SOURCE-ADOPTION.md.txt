@@ -1,0 +1,22 @@
+# Source adoption and integration
+
+## Pinned foundation
+
+Tabler core 1.7.1, MIT, repository https://github.com/tabler/tabler, tag `@tabler/core@1.7.1`, revision `07f60c07da13d8ff957a370434b7ef5c86f5ab94`. The inherited compiled settings page is retained as `sources/official-settings-snapshot.html`, origin https://preview.tabler.io/settings.html, SHA-256 `ed80162e38d7667bfe020b5d16d228c4adc64f301233cfbeeeae6f606697a06e` (see authoritative SOURCE-MANIFEST.json for the exact digest). The public deployment did not advertise an exact build commit; the captured bytes are its identity. Original dist CSS/JS and LICENSE are preserved. No new visual framework, custom stylesheet, generated image or additional package was introduced.
+
+## Adopted source responsibilities
+
+- `sources/shared/layouts/SettingsLayout.astro` and `sources/preview/pages/settings.astro`: original shell, settings navigation, 3:9 card layout, card body/footer and responsive behavior.
+- `sources/shared/ui/Alert.astro`: existing alert status family; presentation uses existing alert variants plus the source text-body utility.
+- `sources/shared/ui/form/Check.astro`: existing native switch structure and theme styling.
+- Official Autosize documentation https://docs.tabler.io/ui/plugins/autosize: bundled `data-bs-toggle="autosize"`, initial rows and `getOrCreateInstance(...).update()` after restoring stored content.
+- Official validation documentation https://docs.tabler.io/ui/forms/validation: existing is-invalid/invalid-feedback styles, explicit labels, aria-invalid and describedby associations, first-invalid focus and validation on blur/submit.
+- Official alert documentation https://docs.tabler.io/ui/components/alert: state variants and utility-based content color configuration.
+
+Primary-source web tool responses are in `evidence/tools/search-001.json`, `web-002.json`, `web-004.json`; failed documentation opens are retained as `web-003.json`. Current forms guidance was retrieved with the prescribed modern-web-guidance commands in `evidence/commands/001-guidance-search/` and `002-guidance-forms/`. Documentation supplied configuration evidence; actual source and local renders supplied the adoption evidence.
+
+## Local integration responsibilities
+
+`app/index.html` composes existing source classes into a semantic settings form, localized labels and hints, autosizing identity fields, native switches, page-header utility controls and footer feedback. `app/settings-controller.js` owns draft state, localization, focus and translation of actual service events. `app/settings-store.js` is unchanged and remains authoritative for schema, validation, delay, persistence and simulated failure. The original local-storage key and migration behavior are preserved.
+
+No authored CSS replaces the source visual system. `evidence/product-changes.patch` records the two edited product files against their exact baseline copies. Final file hashes and the retained source snapshot digest are in `evidence/final-source.json`. Main design decisions and revision boundaries are recorded in DESIGN.md; independent observation provenance is in DELEGATION.json.

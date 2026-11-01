@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "cell_id": "T1-G-final-runtime-r1",
+  "preview_command": "From the reconstructed app directory: python3 -m http.server 4404 --bind 127.0.0.1; open /?lang=en&theme=light or /?lang=zh&theme=dark. A fresh &fail=once load exercises a failed valid save and retry.",
+  "capture_conditions": "Pinned Chromium 143.0.7499.4 / Playwright 1.57.0 and Noto Sans CJK SC. Final delivery captures cover 1440x900, 1280x600 and 390x844, each English/Chinese and light/dark; final states and settled narrow views are separately retained. Natural-time playback and screen-reader speech were not assessed.",
+  "source_files": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/T1-input.zip",
+      "sha256": "97b35af50c6c23812ed8adca5f63db5a2a4bfba6029b3be1722653eb546d44b6"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/method-v1.20.0.zip",
+      "sha256": "f69e05c16d50c2742ab5c89b8dac58a7942fdfd780f394ea7ab91773fdbff2b7"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/T1-G-final-runtime-r1-instructions.zip",
+      "sha256": "6a82c91bd32c0de2aa4b71db2f95c30d9ed77a0144aaed718db9728d0de9ccca"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/distributed-role-instructions.zip",
+      "sha256": "961f077d17cf9c8d29605d1b8511776f2639591904c4df951fbdafbbf9853e14"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/workspace-overlay-part-01.zip",
+      "sha256": "721dac2ec9dbc1c6666408f487e4ed55dd7b0e32f7716834b6f9b2845349e6a1"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/workspace-overlay-part-02.zip",
+      "sha256": "ae27f4c554262719efb3f0dc0b86cd48163fcd94f986450150b221e59de2e760"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/workspace-overlay-part-03.zip",
+      "sha256": "bb35aa5ba91d685b4268d09b3abe23ec3a37063aa82288a61a066f2d9db1a56d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/snapshot.json",
+      "sha256": "53798afb43123d0947e6136f6ea80421d4d2f5abccd297651a6a0530ed0ed1b2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/app/index.html",
+      "sha256": "41bac836f15f23ae7b7f818d86011dfc2fde49dd31172dc5a4d53970cc66f2cf"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/app/settings-controller.js",
+      "sha256": "1501835637e816fbbc48ad7ba718c92acf71c54a82d08687b33506a9ae494ff3"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/app/settings-store.js",
+      "sha256": "32139de23b4ad411c402620e84d5592f7ccfbcf68cece1a123946c29b63c2da0"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-dark-en-bottom.png",
+      "sha256": "ffc3993c9314ad1c65a771b3b7d8f35de3d1e2f080e55934f2f20c3d436a8383"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-dark-en-long.png",
+      "sha256": "4a7527b16e08208e6448b13af67859c24f6f08ff3d3ea412554db57400dec8b9"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-dark-en-top.png",
+      "sha256": "26066035a658a1e0ab941a589dc219b5321c38597d309813346335fdb5d8eb04"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-dark-zh-bottom.png",
+      "sha256": "1c895a62c02ea6b5058fb65433b54dabd853f4d96b0f740753a4a8080a696734"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-dark-zh-long.png",
+      "sha256": "f316dd1471041266be6b3edf24ec3ded2392b5985662b89f5b8e40394b81b789"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-dark-zh-top.png",
+      "sha256": "d99520a2ba878087c90d13c5227d64c0d3d8cf9751454553986ec75f11692103"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-light-en-bottom.png",
+      "sha256": "f362b6b2a03221f3a75bf094f062569d2350f1b4177bdf57227908953f14b578"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-light-en-long.png",
+      "sha256": "7478c880ae36f2ed08a4d79ff0fe03f24832b879ff9ff361bbeca81784dda9ae"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-light-en-top.png",
+      "sha256": "c193641a8edf756e6c4b72420f984d5e579052af49b8c192484e01eb16bc0ffa"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-light-zh-bottom.png",
+      "sha256": "6eb32adbcf923442a939745eef22f36d0f1fa4d8b6a747d2f8bb43793daf5433"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-light-zh-long.png",
+      "sha256": "4f8a2d03f9261f88a6e6c9adb4cef9cece5385858edbb539fc1fe93e7925984b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1280-light-zh-top.png",
+      "sha256": "0055fe0df7be9e8331e6c09d2674d161d1f843792385b827f4f5e51b2a2913f2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-dark-en-bottom.png",
+      "sha256": "6c6c6312a5773db9663c89a43ff0f9a83ffabfc86dd5c4bf1dae791496e86080"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-dark-en-long.png",
+      "sha256": "00181328c2e7191d0e3fd173091af4e44b218782917bf3c8b24504eeb21514bc"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-dark-en-top.png",
+      "sha256": "97adc3e7a0f0d5548d8b0d6140976198ef2d0c201d195b0a350d98de1363cafb"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-dark-zh-bottom.png",
+      "sha256": "f329ae283c38c9e37dbc0834873d7d578eb59197f685d2b36d9fd3b75bc46677"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-dark-zh-long.png",
+      "sha256": "9bf07310b1402ed8d89d0d44feb156589453cb048fbe9e56e2bdba1cc1e6514f"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-dark-zh-top.png",
+      "sha256": "ae899d72c6daef6472f7611fc2fd82e169488bcd73f4ecce7b90d833852ebed8"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-light-en-bottom.png",
+      "sha256": "9f23c001114349e066cb34acacbf39ca5d3d9236f5c41b37565abd9d49164f1d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-light-en-long.png",
+      "sha256": "7144a7835425a645a8c1085fbe2b45010558d69a48442abf42aa2786e25621b9"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-light-en-top.png",
+      "sha256": "11ee8bcaf70fad09cc538b4a985c5f525d731eb6d0dce2094b2173710e65d528"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-light-zh-bottom.png",
+      "sha256": "ca783fb3e97c3cf3d847a1277c04b97c6e6e41c97f111f30b2e326ddbc60cc7f"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-light-zh-long.png",
+      "sha256": "795f9c96c000d7b0cac45b8a04ae0b732a7650de2405d2be618aeb1ff44fdee8"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-light-zh-top.png",
+      "sha256": "84c76078c2cef3acc96df32780e3210872b7d66ef4a11616673e883223b502ed"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-dark-en-bottom.png",
+      "sha256": "5a4fa574f68108bca3f42b18aff6ee8bdbf45c75473e21fcb9c12ace06063d39"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-dark-en-long.png",
+      "sha256": "8cf2c80474770f2909271679d4ff55b49e4df2fa0bcca25de6e47f49dcfb0577"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-dark-en-top.png",
+      "sha256": "57b74d461133f75c0cd89a39e262d3be75aea7dd31e43d27084274b52f3811dd"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-dark-zh-bottom.png",
+      "sha256": "58e1edb0cf8dec01076ec1404d7f0b55e293651e9997b25c2ff3f25a1ac53e22"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-dark-zh-long.png",
+      "sha256": "9f17c411541beb4fd08d413f345e4915f522fa78e94ede021e61ac728cb84e4b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-dark-zh-top.png",
+      "sha256": "7e024249ba2dddd85f05e722e3beec2ec01be4e06e1efc60809eeff5ca79bc3b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-light-en-bottom.png",
+      "sha256": "1a9e4e4c652220530b23f960e23918f144059626d36ee69b9094a07c7e9c0fd1"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-light-en-long.png",
+      "sha256": "42ffdadcca59e6982394c4b0a1ada6cd10379d043e5f00912d94d33b70ffaad2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-light-en-top.png",
+      "sha256": "a0d0f8110b45b5ec93b78b71ce75d5ba84ef516f294e2c231394c133c6c89e74"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-light-zh-bottom.png",
+      "sha256": "b1a7089d4a45524b2132e08d9594c9d4be24feec76d9784786b8215c9e01f064"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-light-zh-long.png",
+      "sha256": "1d24d8f74e926ab646633fb8415c1b442378b8e8a287baade40e55312e0a2aa3"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-light-zh-top.png",
+      "sha256": "cc58ce7e51034d7ec4ab98ee6ccdd37db1a89ec961f36c3e69b9ea42b3b7ecfc"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-en-error.png",
+      "sha256": "df962a5d8667caef411a766dcd7302fd0033a5b874e84fbcb9731fb0a5292c9b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-en-invalid.png",
+      "sha256": "4e657b5c3bb0c12dd68c4217105bd66e7b9e5d4e8925b3650a7f6593187cee3d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-en-pending.png",
+      "sha256": "ddb0c459e27e85ee8baf75d8f2047889007397f9c35d3018c5248a87a30e174b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-en-success.png",
+      "sha256": "ab10658153779d13341f1d4f97c2a1bf5133a343cbada6cae484b5375cd0942b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-zh-error.png",
+      "sha256": "401701c23c3584151fc382f8e51609a4c626f27855ba8986866497d7f9e52088"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-zh-invalid.png",
+      "sha256": "c7ff3cebb5e320346144a5321efc548d8310dd1ee09833cf9842cd18308f60fb"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-zh-pending.png",
+      "sha256": "f33af0682ac344b37a6fc8d85dc13ca03a6a809eaa0ed997324d9e34b4f74795"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-zh-success.png",
+      "sha256": "cc5534845be774678ad9158d96796ef297ea8c6842357bd35002b6899eb042e6"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-en-error.png",
+      "sha256": "509af2919684d3011cf4dcba25d565431e80df0e12992cc666fe0e33dfd53857"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-en-invalid.png",
+      "sha256": "13cd4d1e1a85d57a12d447513719480da875109ba8cd3266a16fc19f29d96b5b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-en-pending.png",
+      "sha256": "3c87b4cca3add67edc9a933cfcb5e32e75dbcf0ba01d791c41b44b0c84e6f1ea"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-en-success.png",
+      "sha256": "86d6c042316fc9e89b10d9b2b57e16ab3b5c03196177ec9fbb8315342b14701a"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-zh-error.png",
+      "sha256": "4867a16357b900df9ad35359f3065c147ba404e4cd89d2cbce33371bd8483609"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-zh-invalid.png",
+      "sha256": "bfb76840e282c0b0cf4a852363d0c6504d73e708e7232986af1059a597ab2eb0"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-zh-pending.png",
+      "sha256": "cd695b833a8d5fc2904475464c2eb977a8d06795db0d145ecf9e5abb89bccc6b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-zh-success.png",
+      "sha256": "5e673f1fb4aced8891b96d90cb55f3559986a5de91551d5d8b366674efffa7bf"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/dark-en-actions.png",
+      "sha256": "ef8435503735d5432d6f9bddf1296c97ebdb72b89c2fe3c3f3eeadf145ec0d86"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/dark-en-fields.png",
+      "sha256": "7873e05089803c9638065ed1d85f118e473cde0a505e155bfad8ef5450efe830"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/dark-zh-actions.png",
+      "sha256": "5bcc34a90cca13cfc3621a8e3d69ad76f5b26bf9ffa896e8caf510ee42c62f34"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/dark-zh-fields.png",
+      "sha256": "aba47967f92f06ae92508f3c96b1448edc3c32c4b3b26cce77e7279d20c18237"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/light-en-actions.png",
+      "sha256": "0f04fa19a4962b0b25e5dc9fd807271cb0f2a5b05fb25e3b95eb7f82c6beb246"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/light-en-fields.png",
+      "sha256": "601dab6896844b50093f8cb5de8f05b5bada770284b933b569374baa161bdd56"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/light-zh-actions.png",
+      "sha256": "7518bd379b9af1cae79de1c4f249a5818f50f9435a62b96f508e9c4872e5b301"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/light-zh-fields.png",
+      "sha256": "408d0b968a0f99c9f75c1daa674ad4c9139092f8a5db94b198c7eb90197d7d5e"
+    }
+  ],
+  "behavior_logs": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/001-guidance-search/command.json",
+      "sha256": "acc4a069950e51a852916bd68519aba7fb2bcb8361f2793ef062cd70ea906cca",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/001-guidance-search/stderr.txt",
+      "sha256": "87cb2fbf4d7a7290646008b3b9490e177ad6417a8dc6715966681037edc49f01",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/001-guidance-search/stdout.txt",
+      "sha256": "c8f5c9bde29a4c9bc0b2c4b42ca7268171aaa69c37cf8e7be8e42742b2d4f2ec",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/002-guidance-forms/command.json",
+      "sha256": "7799a7e05c3ba02d05f7af962cc04ce10b0dc7ddd262777bc74cc66259d11f1c",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/002-guidance-forms/stderr.txt",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/002-guidance-forms/stdout.txt",
+      "sha256": "75e54bff3fdbfc84da15da1a19a8c1c9ad12305daf4bd5ec5019e49f8538672e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/003-baseline/command.json",
+      "sha256": "462d1bbf952fd553d6406743b36e5c31515a3ee6f85ddcf623740f55b0c8a810",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/003-baseline/stdout.txt",
+      "sha256": "10c172e06f746f2eddc01f9a3236a37a4f586bb8e62311fd2f613d5d0bee25ff",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/004-integrated-01/command.json",
+      "sha256": "f7758c6114467ae4f68c84ff0a13af753d98159d051af34acd8c5c99bd45932b",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/004-integrated-01/stdout.txt",
+      "sha256": "843c7be4afd01292f8b1d39308ec1c92c10315492dd1db33db92371da32235a6",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/005-integrated-final/command.json",
+      "sha256": "e976ed53b2ac5911b131b80537e67ec94608fe4fd6098f8be1919a86ce7d511a",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/005-integrated-final/stdout.txt",
+      "sha256": "1999488d50d192e67f595dc4c9d867ac425a7cd740ae984f6a64d897e46e05bb",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/006-final-behavior/command.json",
+      "sha256": "a61f452b200a707372519c1a5f326a580a202f268e7dc5357b45e5f80d69a4b1",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/006-final-behavior/stderr.txt",
+      "sha256": "cbef88f09809c598ff20f4846c5cdab32d9139d828b11e723feb93042299a18f",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/006-final-behavior/stdout.txt",
+      "sha256": "98936c3580acd04aa8c4b74748e842b7b37eaf9797db6d41a64ef831d2d96759",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/007-focus-diagnosis/command.json",
+      "sha256": "d8bf77fdfa2bf9b6e2de4dba92f5bd4cecbd7b756178db216bd6dba1ddda6f7e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/007-focus-diagnosis/stdout.txt",
+      "sha256": "072315e1f48aeab69cb4aed003bc9a7f8d884146674c746cc3282c3bdebef27c",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/008-final-behavior-02/command.json",
+      "sha256": "766515edb21bc6ec0a3c9cd92ed43effd6ef3d5ea30d73b91b82e962e326f073",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/008-final-behavior-02/stdout.txt",
+      "sha256": "9b770525f14170142a588ec0bdb61d165b62153370b37a37588957247dc0927e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/009-alert-colors-before/command.json",
+      "sha256": "2e3449927dcb7a0921e9523ffa1eafc7ebeaf5698ceea478a09129c84e6bb411",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/009-alert-colors-before/stdout.txt",
+      "sha256": "a45146cc787471cc8bff584cd842c2ed53445277ce6d5f17801ee8f98bda637e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/010-alert-contrast-trial/command.json",
+      "sha256": "6072591c7948c416154120b8ac24b72484b35c8c73f89bb271243164e4052125",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/010-alert-contrast-trial/stdout.txt",
+      "sha256": "64f1a14fa603e75896500bfcbf5584370817e2dc480c04021605524c8f406e5e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/011-final-render/command.json",
+      "sha256": "837ebace747bc210e044c5918cf81104d97bc43411a5b456413ec014b7233234",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/011-final-render/stdout.txt",
+      "sha256": "097d7053772072356d9553f3ed9ba46b503da80bc4414110d70b45dd88f7329d",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/012-final-state-view/command.json",
+      "sha256": "f2a847644145b3870ea8ed8c0347eb52070c575b103f219461d23916953d68e1",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/012-final-state-view/stdout.txt",
+      "sha256": "6f71d4ef6602ebdd5dc54bfbb5fe0ed04331bb765eca001204954b0d28b1d6ac",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/013-narrow-settled/command.json",
+      "sha256": "d38a004512fb2009202fe73c0886b5d8ec7e5f0ecdec155dcb9997acc959935a",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/commands/013-narrow-settled/stdout.txt",
+      "sha256": "e029e0e9818a62cf0602ba685f6b8a16a07fcb8bd3916213a9323769a466c559",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-behavior-02/results.json",
+      "sha256": "22447052001b72970d0402c6e5d45fd618b37213843acd893993324f7e84e360",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/facts.json",
+      "sha256": "f7069d12fcdfef3bd79fa784ed23129051c2a0c668c5a8e5e0d6515e9ec9f6fd",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/frames.json",
+      "sha256": "cd0e24f39e121ac50a0a8810f4f3bcd64243b7f252999295ab24fb36d9351b2e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/facts.json",
+      "sha256": "8f32368cfaa33cbec02f9d41ff562560b09e49d6da559a2ca9f51b2c0e96eb67",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    }
+  ],
+  "viewed_screenshots": [
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/dark-zh-actions.png",
+        "sha256": "5bcc34a90cca13cfc3621a8e3d69ad76f5b26bf9ffa896e8caf510ee42c62f34"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-closing-dark-zh-actions.json",
+        "sha256": "665a605959aa299e7ad974874d459146141a6d6e2987bd7cb88e0e4e9c97de21",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-zh-success.png",
+        "sha256": "cc5534845be774678ad9158d96796ef297ea8c6842357bd35002b6899eb042e6"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-closing-dark-zh-success.json",
+        "sha256": "d89b0a0e18c16dbe04f29740669501a49ea15fcc14c8f42c6d8454dc7c00d1f3",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-en-pending.png",
+        "sha256": "3c87b4cca3add67edc9a933cfcb5e32e75dbcf0ba01d791c41b44b0c84e6f1ea"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-closing-light-en-pending.json",
+        "sha256": "9e28df7037e2dbd51ae21fb6eaed33cc5e9e98ef12e0529430b401854328986b",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/dark-en-fields.png",
+        "sha256": "7873e05089803c9638065ed1d85f118e473cde0a505e155bfad8ef5450efe830"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-settled-dark-en-fields.json",
+        "sha256": "3b8c58d62a6b59c9e681893e53de8ed03796871293be7cc9e0fe3c65d740b453",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/dark-zh-fields.png",
+        "sha256": "aba47967f92f06ae92508f3c96b1448edc3c32c4b3b26cce77e7279d20c18237"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-settled-dark-zh-fields.json",
+        "sha256": "aebb3094e20cbc485050ed0e840b61c91e41d0ab13cf49e336f0f9667be82d61",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/light-en-fields.png",
+        "sha256": "601dab6896844b50093f8cb5de8f05b5bada770284b933b569374baa161bdd56"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-settled-light-en-fields.json",
+        "sha256": "b9bc03aed62768d8e31b84015d142d9b470cb6c4d90eaec396257deaa6373efb",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/light-zh-fields.png",
+        "sha256": "408d0b968a0f99c9f75c1daa674ad4c9139092f8a5db94b198c7eb90197d7d5e"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-settled-light-zh-fields.json",
+        "sha256": "d1a66c1a9a577175b5f708fcec3b127c389bdc42d696feabbdc42151cc186303",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-en-error.png",
+        "sha256": "df962a5d8667caef411a766dcd7302fd0033a5b874e84fbcb9731fb0a5292c9b"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-dark-en-error.json",
+        "sha256": "709f55602ac45eeba71103bc476c13dc9d6ba4d048798dea10d90079be97a0ea",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-en-invalid.png",
+        "sha256": "4e657b5c3bb0c12dd68c4217105bd66e7b9e5d4e8925b3650a7f6593187cee3d"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-dark-en-invalid.json",
+        "sha256": "b55be28a9ad67ce6ae0d1487ba7de2bd59f94a491b87ee0e49c64d4bd5b5211f",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-en-pending.png",
+        "sha256": "ddb0c459e27e85ee8baf75d8f2047889007397f9c35d3018c5248a87a30e174b"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-dark-en-pending.json",
+        "sha256": "74fb00501a3efaf306593a0c0ac6a8b90861292c7fe838a5c64083eddd7201e7",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-en-success.png",
+        "sha256": "ab10658153779d13341f1d4f97c2a1bf5133a343cbada6cae484b5375cd0942b"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-dark-en-success.json",
+        "sha256": "368e811dfb4f30caf842bb9193c068b0ce8a3c897fdc316ab38c2777efb6fe9f",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-zh-error.png",
+        "sha256": "401701c23c3584151fc382f8e51609a4c626f27855ba8986866497d7f9e52088"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-dark-zh-error.json",
+        "sha256": "5c4b0a7d03723353d58f69105420baaebafd3ffb87cf9577490f9b4df0962542",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-zh-invalid.png",
+        "sha256": "c7ff3cebb5e320346144a5321efc548d8310dd1ee09833cf9842cd18308f60fb"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-dark-zh-invalid.json",
+        "sha256": "4611e444131716c592ad986c10cfac16f617f8faee0e7b1755a45bdddb8fb9fb",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-zh-pending.png",
+        "sha256": "f33af0682ac344b37a6fc8d85dc13ca03a6a809eaa0ed997324d9e34b4f74795"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-dark-zh-pending.json",
+        "sha256": "81744c40782d04c5238fcfd504052e4abd3f3d897596ef08c8aea4cc47bd7f37",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-zh-success.png",
+        "sha256": "cc5534845be774678ad9158d96796ef297ea8c6842357bd35002b6899eb042e6"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-dark-zh-success.json",
+        "sha256": "d89b0a0e18c16dbe04f29740669501a49ea15fcc14c8f42c6d8454dc7c00d1f3",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-en-error.png",
+        "sha256": "509af2919684d3011cf4dcba25d565431e80df0e12992cc666fe0e33dfd53857"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-light-en-error.json",
+        "sha256": "fba7320e8a1de1a76d1375f48e584f63c9e37c7e975c24cf6656fd2e6ea0fb44",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-en-invalid.png",
+        "sha256": "13cd4d1e1a85d57a12d447513719480da875109ba8cd3266a16fc19f29d96b5b"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-light-en-invalid.json",
+        "sha256": "6cd13946a43b8522f3c41f9a538042a30e67172986d5e2bcee7e6b4151fbd90b",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-en-pending.png",
+        "sha256": "3c87b4cca3add67edc9a933cfcb5e32e75dbcf0ba01d791c41b44b0c84e6f1ea"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-light-en-pending.json",
+        "sha256": "9e28df7037e2dbd51ae21fb6eaed33cc5e9e98ef12e0529430b401854328986b",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-en-success.png",
+        "sha256": "86d6c042316fc9e89b10d9b2b57e16ab3b5c03196177ec9fbb8315342b14701a"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-light-en-success.json",
+        "sha256": "884da2f589a967eb96309baf1e143c470c4d03d558dcd51821f03bc532410a10",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-zh-error.png",
+        "sha256": "4867a16357b900df9ad35359f3065c147ba404e4cd89d2cbce33371bd8483609"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-light-zh-error.json",
+        "sha256": "a7aa1e46f2f0f06f741a0fa5555919ccc04a5d1321b935cee2e384ba71c03fc0",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-zh-invalid.png",
+        "sha256": "bfb76840e282c0b0cf4a852363d0c6504d73e708e7232986af1059a597ab2eb0"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-light-zh-invalid.json",
+        "sha256": "304c490bceb72a6db69736af50756a336e0c0353c68b308ae25513dbccf12fa2",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-zh-pending.png",
+        "sha256": "cd695b833a8d5fc2904475464c2eb977a8d06795db0d145ecf9e5abb89bccc6b"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-light-zh-pending.json",
+        "sha256": "8e8a979fa5df696d039614b63ff9f6bd4b2a8775df1f6526912b75fecf2069c2",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/light-zh-success.png",
+        "sha256": "5e673f1fb4aced8891b96d90cb55f3559986a5de91551d5d8b366674efffa7bf"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-state-light-zh-success.json",
+        "sha256": "c9a46be63a81a284f8a42083feba5876846b996908b5a6e2594a86c21f659313",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-dark-en-long.png",
+        "sha256": "8cf2c80474770f2909271679d4ff55b49e4df2fa0bcca25de6e47f49dcfb0577"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-view-delivery-390-dark-en-long.json",
+        "sha256": "956466df565f732e5929dd01bf5faf2d961c0a3060f091510ba51df22ea393c1",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-dark-zh-long.png",
+        "sha256": "9f17c411541beb4fd08d413f345e4915f522fa78e94ede021e61ac728cb84e4b"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-view-delivery-390-dark-zh-long.json",
+        "sha256": "25b6b7a96763e28c3948db9445167eed41772f670ba85b5d559d4d76c6f5f885",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-light-en-long.png",
+        "sha256": "42ffdadcca59e6982394c4b0a1ada6cd10379d043e5f00912d94d33b70ffaad2"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-view-delivery-390-light-en-long.json",
+        "sha256": "1a3d2bbf0142099b74b975e68b3fb812da9129660f4e35f26be8660d551afc07",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_04_recovered",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/390-light-zh-long.png",
+        "sha256": "1d24d8f74e926ab646633fb8415c1b442378b8e8a287baade40e55312e0a2aa3"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/tools/w04-view-delivery-390-light-zh-long.json",
+        "sha256": "c3b206f5d3fe9f86d22fd75483fdbaeacae98a3665c6321a57b8ff3dd86a4074",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object (or original batch containing it) saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    }
+  ],
+  "capture_lineage": "This final-product index contains only final-render, final-state-view and narrow-settled captures of the delivery revision. Earlier whole-desktop/compact views, source observations, observer revision captures and failures remain in the complete original workspace. Narrow-settled captures resolve earlier smooth-scroll sampling; the original VISUAL-REVIEW.md explicitly scopes the late status text utility change and prior behavior/observer assertions.",
+  "all_original_evidence": "The byte-complete input/overlay reconstruction also retains baseline, research, failed attempts and captures outside this final-product index."
+}
