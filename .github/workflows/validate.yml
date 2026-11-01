@@ -56,9 +56,8 @@ jobs:
           package-manager-cache: false
       - name: Install local source
         run: python tools/install_smoke.py --source "$GITHUB_WORKSPACE"
-      - name: Install committed remote source
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: python tools/install_smoke.py --source "https://github.com/${GITHUB_REPOSITORY}/tree/${GITHUB_SHA}"
+      - name: Verify standalone installer without cloning GitHub
+        run: python tools/installer_smoke.py
   publication:
     # Playwright 1.57's dependency definitions support this fixed OS release.
     runs-on: ubuntu-24.04
@@ -204,6 +203,13 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
-      - name: Install published version
+      - name: Install published Skill-only ZIP through standard Skills CLI
         if: steps.scope.outputs.publish == 'true'
-        run: python tools/install_smoke.py --source "https://github.com/${GITHUB_REPOSITORY}/tree/v$(cat VERSION)"
+        run: python tools/install_smoke.py --source "https://github.com/${GITHUB_REPOSITORY}/releases/download/v$(cat VERSION)/ui-spec-$(cat VERSION).zip"
+      - name: Install published standalone installer from tarball URL
+        if: steps.scope.outputs.publish == 'true'
+        shell: bash
+        run: |
+          npx --yes "https://github.com/${GITHUB_REPOSITORY}/releases/download/v$(cat VERSION)/ui-spec-installer.tgz" install --agent codex --project "$RUNNER_TEMP/ui-spec-release-install"
+          test -f "$RUNNER_TEMP/ui-spec-release-install/.agents/skills/ui-spec/SKILL.md"
+          test -f "$RUNNER_TEMP/ui-spec-release-install/.codex/agents/ui_researcher.toml"
