@@ -159,7 +159,6 @@ jobs:
             echo 'Manual npm publish requires the exact tagged release commit' >&2
             exit 1
           fi
-          gh release view "v$ver" --json tagName,isDraft --jq 'select(.tagName == "v" + env.VER and .isDraft == false)' >/dev/null || true
           if [[ "$(gh release view "v$ver" --json isDraft --jq '.isDraft')" != 'false' ]]; then
             echo "GitHub release v$ver is not publicly published" >&2
             exit 1
