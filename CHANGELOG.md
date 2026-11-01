@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.20.2 — 2026-11-02
+
+- Add a guided terminal installer based on mature Clack interactions, with real install-stage progress, bilingual labels and stable headless output.
+- Recognize previous Skills CLI installations and Windows symlinks/junctions; introduce explicit adoption, reversible backup-and-replace, and no-change choices without silently replacing user files.
+- Preserve original copied/linked Skills when uninstalling a migrated installation; retain Codex four-role installation and cross-Harness delivery.
+- Keep the lightweight release distribution, historical evidence boundaries, and actual verification claims separate.
+
 ## 1.20.1 — 2026-11-02
 
 - Replace the default full-repository Skills CLI clone with a lightweight, deterministic release-hosted installer tarball. The stable latest asset contains only the runtime Skill and supported Harness adapter payload.
