@@ -33,7 +33,7 @@ The installer includes optional, pinned `@clack/prompts` terminal components. Th
 npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-installer.tgz" install --agent codex --global --migrate
 ```
 
-Use the above **already published tag** for emergency recovery until v1.20.3 and the npm package have been formally published. Avoid reusing the GitHub `releases/latest/download/ui-spec-installer.tgz` URL as a npm package specifier: npm may reuse its earlier cached tarball for this unchanged URL. A previous error message reading `Existing unowned Skill directory; refusing to overwrite` originated in v1.20.1, not the current migration-aware installer. Never paste literal Markdown hyperlink notation `[url](url)` into PowerShell.
+Use the above **already published tag** for emergency recovery until v1.20.3 and the npm package have been formally published. Avoid reusing the GitHub `releases/latest/download/ui-spec-installer.tgz` URL as a npm package specifier: npm may reuse its earlier cached tarball for this unchanged URL. A previous error message reading `Existing unowned Skill directory; refusing to overwrite` originated in v1.20.1, not the current migration-aware installer. Never paste literal Markdown hyperlink notation `bracketed Markdown hyperlink syntax` into PowerShell.
 
 ## One-time npm package bootstrap: account holder action
 
