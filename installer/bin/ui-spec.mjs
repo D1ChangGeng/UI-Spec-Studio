@@ -12,7 +12,8 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const payload = join(root, 'payload');
 const receiptFile = '.ui-spec-install.json';
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
-const usage = 'UI Spec Studio — lightweight Skill and Harness installer\n'
+const usage = 'UI Spec Studio — official Skill and Harness installer\n'
+  + 'Quick start: npx --yes ui-spec-studio@latest\n'
   + 'Usage: ui-spec install|status|uninstall [--agent HOST] [--project PATH|--global]\n'
   + '  install: --upgrade | --migrate | --adopt | --dry-run | --no-tui | --yes\n'
   + '  all commands: --lang en|zh | --json | --no-tui\n'
@@ -20,8 +21,12 @@ const usage = 'UI Spec Studio — lightweight Skill and Harness installer\n'
 
 function fail(message) { throw new Error(message); }
 function parse(argv) {
-  const action = argv.shift();
-  if (!action || ['--help', '-h', 'help'].includes(action)) return { action: 'help' };
+  const first = argv.shift();
+  const action = (!first || (first.startsWith('-') && !['-h', '--help', '--version', '-V'].includes(first)))
+    ? 'install' : first;
+  if (first?.startsWith('-') && action === 'install') argv.unshift(first);
+  if (['--help', '-h', 'help'].includes(action)) return { action: 'help' };
+  if (['--version', '-V', 'version'].includes(action)) return { action: 'version' };
   if (!['install', 'status', 'uninstall'].includes(action)) fail(`Unknown action: ${action}`);
   const out = { action, agent: null, project: null, global: false, upgrade: false, migrate: false, adopt: false, yes: false, noTui: false, json: false, lang: null, dryRun: false };
   const once = new Set();
@@ -276,6 +281,11 @@ let currentPresentation = null;
 async function main() {
   const options = parse(process.argv.slice(2));
   if (options.action === 'help') { process.stdout.write(usage); return; }
+  if (options.action === 'version') {
+    const pkg = JSON.parse((await readFile(join(root, 'package.json'))).toString());
+    console.log(pkg.name + ' ' + pkg.version);
+    return;
+  }
   options.projectRoot = resolve(options.project || process.cwd());
   const pkg = JSON.parse((await readFile(join(root, 'package.json'))).toString());
   const ui = await createPresentation({ ...options, version: pkg.version });
@@ -289,6 +299,11 @@ async function main() {
   if (!options.agent) {
     options.agent = await ui.chooseAgent(Object.keys(registry.harnesses));
     if (!options.agent) return;
+  }
+  if (options.action === 'install' && !options.project && !options.global) {
+    const choice = await ui.chooseScope(options.projectRoot, resolve(homedir()));
+    if (choice === 'cancel') return;
+    if (choice === 'user') options.global = true;
   }
   const spec = registry.harnesses[options.agent];
   if (!spec) fail('Unsupported Harness: ' + options.agent + '; choose ' + Object.keys(registry.harnesses).join(', '));
