@@ -100,22 +100,62 @@ async function verifyBundle() {
   }
   return { registry, manifest };
 }
-async function inspectTarget(target, versionFiles) {
+function legacyVersion(content) {
+  const body = content.toString('utf8');
+  const header = /^---\r?\n([\s\S]*?)\r?\n---/m.exec(body)?.[1] || '';
+  if (!/^name:\s*ui-spec\s*$/m.test(header)) fail('Existing directory is not a recognizable ui-spec Skill; refusing to replace it');
+  return /^\s*version:\s*["']?(\d+\.\d+\.\d+)/m.exec(header)?.[1] || null;
+}
+function backupLocation(target, backupName) {
+  if (!/^ui-spec-\d{8}T\d{6}Z-[a-f0-9]{8}$/.test(backupName)) fail('Invalid backup identity in the installation receipt');
+  return join(dirname(dirname(target)), 'ui-spec-studio', 'backups', backupName);
+}
+async function inspectTarget(target, next) {
+  let stat;
+  try { stat = await lstat(target); }
+  catch (e) { if (e.code === 'ENOENT') return { exists: false, kind: 'absent', identical: false }; throw e; }
+  if (stat.isSymbolicLink()) return { exists: true, kind: 'legacy-link', identical: false, version: null };
+  if (!stat.isDirectory()) fail('Existing Skill path is not a directory or link: ' + target);
   const old = await regular(join(target, receiptFile));
-  const exists = await lstat(target).then(() => true, (e) => { if (e.code === 'ENOENT') return false; throw e; });
-  if (!exists) return { exists: false, clean: false, identical: false };
-  if (!old) fail(`Existing unowned Skill directory; refusing to overwrite: ${target}`);
+  if (!old) {
+    const entry = await regular(join(target, 'SKILL.md'));
+    if (!entry) fail('Existing directory has no regular SKILL.md; no changes made: ' + target);
+    const version = legacyVersion(entry);
+    let identical = false;
+    try {
+      const actual = await listFiles(target);
+      const expected = Object.keys(next.files).sort();
+      if (JSON.stringify(actual) === JSON.stringify(expected)) {
+        identical = true;
+        for (const name of expected) {
+          const observed = await regular(join(target, ...name.split('/')));
+          if (!observed || sha(observed) !== next.files[name]) { identical = false; break; }
+        }
+      }
+    } catch (e) {
+      if (!/Refusing linked or unusual file/.test(String(e.message))) throw e;
+    }
+    return { exists: true, kind: 'legacy', identical, version };
+  }
   let receipt;
-  try { receipt = JSON.parse(old.toString('utf8')); } catch { fail('Unreadable installation receipt'); }
-  if (receipt.schema_version !== 1 || !receipt.files || typeof receipt.version !== 'string') fail('Unknown installation receipt');
+  try { receipt = JSON.parse(old.toString('utf8')); } catch { fail('Unreadable managed receipt; preserve the directory for inspection'); }
+  if (![1, 2].includes(receipt.schema_version) || !receipt.files || typeof receipt.version !== 'string')
+    fail('Unrecognized managed installation receipt; no changes made');
   const recorded = Object.keys(receipt.files).sort();
-  const actual = (await listFiles(target)).filter((x) => x !== receiptFile).sort();
-  if (JSON.stringify(recorded) !== JSON.stringify(actual)) fail('Existing Skill has untracked or missing files; no changes made');
+  const actual = (await listFiles(target)).filter(name => name !== receiptFile).sort();
+  if (JSON.stringify(recorded) !== JSON.stringify(actual)) fail('Managed Skill has added or missing files; no changes made');
   for (const rel of recorded) {
     safeRelative(rel);
-    if (!/^[a-f0-9]{64}$/.test(receipt.files[rel]) || sha(await readFile(join(target, ...rel.split('/')))) !== receipt.files[rel]) fail(`Existing Skill was modified: ${rel}`);
+    const hash = receipt.files[rel];
+    if (!/^[a-f0-9]{64}$/.test(hash) || sha(await readFile(join(target, ...rel.split('/')))) !== hash)
+      fail('Managed Skill contains a modified file: ' + rel);
   }
-  return { exists: true, clean: true, identical: receipt.version === versionFiles.version && JSON.stringify(receipt.files) === JSON.stringify(versionFiles.files), version: receipt.version };
+  if (receipt.migration) backupLocation(target, receipt.migration.backupName);
+  return {
+    exists: true, kind: 'managed', version: receipt.version,
+    identical: receipt.version === next.version && JSON.stringify(receipt.files) === JSON.stringify(next.files),
+    migration: receipt.migration || null, adopted: receipt.adopted === true,
+  };
 }
 function findPython() {
   for (const cmd of (process.platform === 'win32' ? ['py', 'python', 'python3'] : ['python3', 'python'])) {
