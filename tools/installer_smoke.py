@@ -3,6 +3,7 @@
 from __future__ import annotations
 import hashlib
 import json
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -85,7 +86,7 @@ def run() -> dict[str, object]:
                 if config.read_text(encoding='utf-8') != 'model = "existing-user-setting"\n':
                     raise AssertionError('Codex user configuration was not preserved')
             project_checks.append(agent)
-        result = command(['npx', '--yes', '--offline', archive.as_uri(), 'status', '--agent', 'codex', '--project', str(base / 'not-installed')], base)
+        result = command([(shutil.which('npx') or 'npx'), '--yes', '--offline', archive.as_uri(), 'status', '--agent', 'codex', '--project', str(base / 'not-installed')], base)
         if json.loads(result.stdout)['status'] != 'absent':
             raise AssertionError('npx tarball command failed')
         return {'archive': archive.name, 'archive_bytes': archive.stat().st_size,
