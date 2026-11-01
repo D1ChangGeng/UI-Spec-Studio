@@ -65,6 +65,56 @@ def wizard(cmd: list[str], project: Path, keys: bytes, *, timeout: float = 35) -
         proc.wait(timeout=5)
 
 
+def guided_install(package: Path, project: Path, *, timeout: float = 35) -> str:
+    """Exercise the package's zero-argument Harness and scope menus."""
+    cmd = ['node', str(package / 'bin/ui-spec.mjs'), '--lang', 'en']
+    master, slave = pty.openpty()
+    fcntl.ioctl(slave, termios.TIOCSWINSZ, struct.pack('HHHH', 44, 140, 0, 0))
+    env = dict(os.environ, CI='false', TERM='xterm-256color', NO_COLOR='1')
+    proc = subprocess.Popen(cmd, cwd=project, env=env, stdin=slave, stdout=slave, stderr=slave,
+                            start_new_session=True)
+    os.close(slave)
+    prompts = [
+        b'Which coding Harness will use UI Spec Studio?',
+        b'Where should the Skill be installed?',
+    ]
+    index = 0
+    output = bytearray()
+    deadline = time.monotonic() + timeout
+    try:
+        while time.monotonic() < deadline:
+            readable, _, _ = select.select([master], [], [], 0.2)
+            if readable:
+                try:
+                    part = os.read(master, 65536)
+                except OSError:
+                    part = b''
+                if part:
+                    output.extend(part)
+                    if index < len(prompts) and prompts[index] in output:
+                        time.sleep(0.12)
+                        os.write(master, b'\r')
+                        index += 1
+            if proc.poll() is not None:
+                break
+        text = output.decode('utf-8', 'replace')
+        if proc.poll() is None:
+            proc.kill()
+            raise AssertionError('Zero-argument wizard did not exit: ' + text[-2500:])
+        if proc.returncode != 0 or index != len(prompts):
+            raise AssertionError('Harness/scope wizard failed: ' + text[-3000:])
+        if not (project / '.agents/skills/ui-spec/SKILL.md').is_file():
+            raise AssertionError('Guided project scope did not install the Skill')
+        if not (project / '.codex/agents/ui_researcher.toml').is_file():
+            raise AssertionError('Guided Harness selection omitted native Codex integration')
+        return text
+    finally:
+        os.close(master)
+        if proc.poll() is None:
+            proc.kill()
+        proc.wait(timeout=5)
+
+
 def run() -> None:
     if os.name != 'posix':
         raise SystemExit('Interactive POSIX PTY test runs on Ubuntu; Windows native behavior has separate smoke tests')
@@ -115,7 +165,12 @@ def run() -> None:
         )
         if removed.returncode or (target / 'SKILL.md').read_bytes() != before:
             raise AssertionError('Interactive migration did not preserve and restore original files:\n' + removed.stderr)
-        print('Clack terminal prompts, choice preservation, file progress and restore: PASS')
+        guided = root / 'guided-project'
+        guided.mkdir()
+        output = guided_install(package, guided)
+        if 'UI SPEC STUDIO' not in output or 'files' not in output.lower():
+            raise AssertionError('Zero-argument terminal experience lacks its product summary')
+        print('Clack terminal prompts, choice preservation, file progress, restore and zero-argument wizard: PASS')
 
 
 if __name__ == '__main__':
