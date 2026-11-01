@@ -1,0 +1,880 @@
+{
+  "schema_version": 2,
+  "execution_kind": "real_session_agent",
+  "simulation": true,
+  "status": "completed",
+  "cell_id": "T3-C-r1",
+  "candidate_source_identity": "eb7752a1b0eb4af180e9bb4bd0922587a3c9c96744e24ec8cf299517516e8759",
+  "registration_sha256": "3072de1df10611c922273e62ae3c6e66dfd2790627727e265410075b1ee43ab6",
+  "task_sha256": "224af91a225efd053b2c016d47035f1a03669f931f0ce01f35a633e652a7024e",
+  "prompt_sha256": "7b0fd6d5cfa2910a8c3e81c9a34e9ee7f7ebd20695918b62045fb8023827f856",
+  "registered_prompt_sha256": "cc876c1ad192ce535924cc99e30ddab24330935c0e8fe1623aedeb55190e9e7b",
+  "registered_cell_id": "T3-C-r1",
+  "supplementary_attempt_id": "T3-C-path-relocation-r2",
+  "registered_exact_dispatch": false,
+  "deviation": {
+    "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/path-migration.json",
+    "sha256": "ca152a77ddcdbbdbc36b007f19e9c60bdfc368250e3ba4f66d2ca8d6b744a5a9"
+  },
+  "dispatched_prompt": {
+    "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/dispatched-prompt.txt",
+    "sha256": "7b0fd6d5cfa2910a8c3e81c9a34e9ee7f7ebd20695918b62045fb8023827f856"
+  },
+  "input_workspace_identity": "33fd2ae64cf3e44554d2027ccfb576b39d348bbe1b37471274c3ed57608c2876",
+  "environment_sha256": "54afa3b5febd8abbbb4fdc6062f0656e61bb81d74aa35af1e8f6c0afe8698dc3",
+  "agent_id": "/root/product_t3c_final",
+  "parent_agent_id": "/root",
+  "fork_turns": "none",
+  "started_at": "2026-11-01T12:36:36.280904+00:00",
+  "completed_at": "2026-11-01T12:56:10.082991+00:00",
+  "spawn": {
+    "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/spawn.json",
+    "sha256": "8232b770f38685a3c376b14cd2e9bfe9618e2d4ef87aa7ac04fa71e9d59f02af",
+    "source": "collaboration.spawn_agent",
+    "scope": "Exact actual primary spawn arguments and returned canonical ID.",
+    "export_kind": "faithful_conversation_export",
+    "synthetic": false
+  },
+  "completion": {
+    "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/completion.json",
+    "sha256": "feeea7da8d53e035dcbb4cd6fcac26a50f9c2b719ace2614494fea7174356ca4",
+    "source": "collaboration FINAL_ANSWER notification",
+    "scope": "Faithful export of the actual visible primary completion notification.",
+    "export_kind": "faithful_conversation_export",
+    "synthetic": false
+  },
+  "tool_outputs": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/001-guidance-search/command.json",
+      "sha256": "f9d2aaa0053a353e2b62b27af5c7f11a40b84e306a045114b4086d7512fe9c89",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/001-guidance-search/stderr.txt",
+      "sha256": "e0d6d3c118cdb1a7d738df76d301ba79d545c76952d428386b9f70c2e2413d5a",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/001-guidance-search/stdout.txt",
+      "sha256": "b9e544da9e55ced171522061b7b963a62148dc9a506968513d2bb9bf1459c30c",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/002-guidance-retrieve/command.json",
+      "sha256": "36488d2b28a062c6952b1ba8d9339169fab14ed27c7fc6bea73ce25eb696e4c6",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/002-guidance-retrieve/stderr.txt",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/002-guidance-retrieve/stdout.txt",
+      "sha256": "0dc10dd0bfa3f052bbbceeab54d47fbde39feb3bbeda150380c0146fe7565216",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/003-preview-server/command.json",
+      "sha256": "1746966a308334e48da205d40fac85d1bf509373f4625bedc8846442692f3176",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/003-preview-server/stderr.txt",
+      "sha256": "d6957d42ba7f38625a6d5c8a597f834d58d8c83d82d4612fa72dbb7bcb2a1914",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/003-preview-server/stdout.txt",
+      "sha256": "d9ad9edf6c95b6653e453a3d5db36e66a463480b4ffcc18824998f119e58d635",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/004-baseline/command.json",
+      "sha256": "a671d02fcf6259b9976977219ee9078a279c809963032a3d65afb6019415376f",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/004-baseline/stdout.txt",
+      "sha256": "563a4512eac6e1dcf7b50ea5b8ab95e299f699e2ad712a82a85c820579968ea3",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/005-paper-source/command.json",
+      "sha256": "3e80c4d494b5f3881803adefcb320b5222e7c2ef33719e5a5980c7c1ad5c7faf",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/005-paper-source/stderr.txt",
+      "sha256": "1af13ca1c8c95bf1eff362deeb51ff1f4d20ac3ddf35fcf8f7dc845e56b0151a",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/006-paper-server/command.json",
+      "sha256": "1d4f03f0ab39514c7dd3b1f9901ae8dcbdf96007bae513db34be3b6313cf4c1c",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/006-paper-server/stderr.txt",
+      "sha256": "965b22460791ef9259dd8f619054e9232d48c763aeaac2f026e7da9fd0573830",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/006-paper-server/stdout.txt",
+      "sha256": "170cb9ec3f602af5936bb03f9bce56befe5ff91d4665aabadc7ca3d23c39add3",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/007-paper-trial/command.json",
+      "sha256": "31b8b27b4c9592d235cc4e52015ee8a23e47362f8d29ec52504c7075e52d5e89",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/007-paper-trial/stdout.txt",
+      "sha256": "4fd0a2d766e13f26c068d9d37b79d677c6453945f98daf6ade1f18402d6b27cf",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/008-paper-server-corrected/command.json",
+      "sha256": "2696da8af348628a242b29563900664bf0e95f63129fb9fc8d284d938360c506",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/008-paper-server-corrected/stderr.txt",
+      "sha256": "bc8239e57397f015e021b54cc833e0100fc485a50efb1c2657bae6e679ace595",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/008-paper-server-corrected/stdout.txt",
+      "sha256": "6fcab8e59fffe1291caa2809919775e5abdc11afef34e65f478ce3af57ba903d",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/009-paper-trial-corrected/command.json",
+      "sha256": "bbac9e5cf17ad40823439d572400320035a6898fad7085d1f2c6adb7307a7c48",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/009-paper-trial-corrected/stdout.txt",
+      "sha256": "ef029cd09227f598b2753bbd723b5aad7ad0cc940a66b55051a64bad5cbc2c94",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/010-product-verification/command.json",
+      "sha256": "a8f21feceeed91df5e5727e6e3bcf75b045b99ea69e03cf1b41082d93d8f0700",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/010-product-verification/stderr.txt",
+      "sha256": "4ef01c449a5b9ce4e79858a8963d314eb5a6ef26ee277d90ae120a0af866849c",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/010-product-verification/stdout.txt",
+      "sha256": "a5194060d8ec526f94dce2b260ea18d1b1be6b54db6c7c434e8e70e264b64a9f",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/011-product-verification-v2/command.json",
+      "sha256": "e0399aede42991cc4b36f99553a6d146b79e9ba2b57161288d44a9ac92aceb5d",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/011-product-verification-v2/stderr.txt",
+      "sha256": "86e1df15a536352e422e5a4e0c93f1028c47732c80b9d0b18381f1fbb93d5731",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/011-product-verification-v2/stdout.txt",
+      "sha256": "02d2781556fcadc2e967def33e4543004e4a30f0ef249260e6a01a432cac746e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/012-final-server/command.json",
+      "sha256": "7db6051b632bd525294322e7d7d423a3cac846575b0dab904b9cf041361ebcdd",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/012-final-server/stderr.txt",
+      "sha256": "d9037ddd247f6b91964e7942ab063c573097f7aecdfe40d2ef555585882efb73",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/012-final-server/stdout.txt",
+      "sha256": "ceb23499573104cf50e008f049376f4295c9ccc8f9af1342280eeaa18898fe29",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/013-final-capture/command.json",
+      "sha256": "e4b1bfdffda975d1ce64247a657dd8197d88cd5a6e78a11580d369c0796df65e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/013-final-capture/stderr.txt",
+      "sha256": "15811de353f85af257e8e8fb18319dba65a623bca608acbf4ebbd70b5394571b",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/013-final-capture/stdout.txt",
+      "sha256": "4da30570400b69e9200ff95d31ab59a9045f254c1cde7a42cea54d79021cc2b0",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/014-final-capture-v2/command.json",
+      "sha256": "c4f7d02404764622459a0c727405cb3b5ad01f4f87a90062625f20f0e9db999a",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/014-final-capture-v2/stderr.txt",
+      "sha256": "c6e2e3b283cbfd8c3adb353c5adb555891617b1e2da245905d88df470ef101cb",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/014-final-capture-v2/stdout.txt",
+      "sha256": "7c254c5ac86757817c9437a41afb86d6f96d51d225dab5863b5da7f22680320a",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/015-final-capture-v3/command.json",
+      "sha256": "b7bf2e02f4bd97b5b5fdb9124691ab305939ae38456f2afafa30af6fb4a045e3",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/015-final-capture-v3/stdout.txt",
+      "sha256": "bda3de2d3de3bcb0fd59cbe8fd7e0008a9598831995af21348d0ccdf7b8e1adf",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/016-keyboard-check/command.json",
+      "sha256": "6929e9381c5b7d3491189d83f5e34111d1432a8291afa4618474b93937393333",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/016-keyboard-check/stdout.txt",
+      "sha256": "6e0c7464f538562782d0b5c6347536e1839ff67ba701ba8272b91f90e7de32b4",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/017-delivery-server/command.json",
+      "sha256": "09da683af52b3b0bed4186327f50adb10061b187f9f744e7ff6fd9d7d06953c4",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/017-delivery-server/stderr.txt",
+      "sha256": "b56a3d4808c31854c868effeaf4af9a6ea70ac04581ae286fddea38a57cba2c7",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/017-delivery-server/stdout.txt",
+      "sha256": "9d211454c6f1833b71029135647d229d1fbef3eed58451a186f9cb0ab7afda0d",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/018-keyboard-and-start/command.json",
+      "sha256": "5ee2dc90b67b51f15c02f60f1ed4e747bdae2d128ca2d3b1d8e85ad560b4d6d9",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/018-keyboard-and-start/stdout.txt",
+      "sha256": "79fb67a3270f96744b1d27b1b07aaaa12dcb0e0c2348b2f7f1f6f62eac949a77",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/019-build/command.json",
+      "sha256": "58518c685274d48e5bf47eeaedab62abe9f105a8066daaa3fd805d3fe289e06c",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/019-build/stderr.txt",
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/019-build/stdout.txt",
+      "sha256": "d3329f15b9bda53eb88169c4f363ff17fb4744325295229fc59c27f077f3261a",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/020-stop-preview/command.json",
+      "sha256": "a780f53af8306cd7ca471947b274a8ec452ad50a66b4b23a6fad5970f1d32d93",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/020-stop-preview/stderr.txt",
+      "sha256": "4c246b0948cd7c877835ccb4b49ff319040ef6581372b35ab3149d36cc0fbe1c",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/commands/020-stop-preview/stdout.txt",
+      "sha256": "c0e1b8325d848049c5ecba2c19ab3ec4c530bdded91ad813a2678057b4ebcbf8",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/final-verification-v3.json",
+      "sha256": "7c142265933cd0dc2436fff43734858366d0f7b4214d279a93199009529e10bf",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/keyboard-check-v2.json",
+      "sha256": "ebdfd148035eaa4c685676da1a91f00fe7e96a2cfec51c590ce63608c57605a2",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/verification-002.json",
+      "sha256": "2cadf8b2d8d3a9e2dff4f4ffa09cf2119010fbd75514103bcf85afa4cd56192e",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-delivery-keyboard-note-focus.json",
+      "sha256": "e71d550c8efa071e0bc5c8bd056096c13ce92307c629d61fecaa766b8599f62e",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-delivery-start-1440.json",
+      "sha256": "08f24101f079e2b4f57201f6f5797d69c0e55fa4a563c8c37bb8b7b5e740ca41",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-delivery-start-390.json",
+      "sha256": "c15508a437f9f4d4c6a468cd93be21e2ac86db16036a6f883e8a36f68f82f0b7",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-chinese-night-1440.json",
+      "sha256": "1efe7bc2c1bb442a64638ea8eeeca7d179eaccfef30ca6f73f4ed31a16c00f22",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-editing-day-1280.json",
+      "sha256": "e686d6f0bf934de1560194d6ce48319d42d51642bca525be6195a79beee931ad",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-editing-day-1440.json",
+      "sha256": "263ef2c2756150457dd09e806d198bbd5179f5586c4c505b61e04547beb8f808",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-editing-day-390.json",
+      "sha256": "d1a3550b80cfd332b4be461ea45ab3cfdb2ce619fe6159d734fdd57e5309b74a",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-editing-night-1280.json",
+      "sha256": "dd8c298471b930b23a7105bc498d11f213a276a89bad7440a57ba1a37ba8e374",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-editing-night-1440.json",
+      "sha256": "6dd885a10e507b2f978bad82b9e3e58ff0d73126f71f3af58366b54881cc48f8",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-editing-night-390.json",
+      "sha256": "8412174e440d2f3b0b8aeb2c17ed69004ec5825eedf0038001a62e4c7f2582f8",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-reading-day-1280.json",
+      "sha256": "7edd37129746909e04d9e01eccec86dac65d7fe038f15452d9c96529f025b4c5",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-reading-day-1440.json",
+      "sha256": "36b4d7154af375d5e628ea5a0f1bc54229d11fd7eb6692cf91b02801420c4abb",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-reading-day-390.json",
+      "sha256": "77e32a464db0dbfb8da1433afbf79de1e8f6705360b4a3a681c081e06d227ee8",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-reading-night-1280.json",
+      "sha256": "c360a9ea43c74184ea7318e4596724490656b16fee152bcc9560719f61aa0284",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-reading-night-1440.json",
+      "sha256": "e6ec87d0b6b713d230beb433d8787cb07223d6654355511a70f509526763f6ed",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-final-reading-night-390.json",
+      "sha256": "7d57bebf1d661f970467ee63b5f1c77af1ba44f16ed8b5440af79acb2ba2658f",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-verified-journey-reading-0.json",
+      "sha256": "3824c6c39cc91e58ba23d75aaecc22dca7c96b32c62e609efb109f8bd6689e6f",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-verified-journey-reading-1.json",
+      "sha256": "ffa0350173023fde8a269ed70d5c1664a96416b3cd879c5c5ba56c4346d0d9a2",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-verified-journey-reading-2.json",
+      "sha256": "1bf372e83acfae63357bc84873788a373b6acf75f804609e13ee4a1ec77af837",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/view-verified-ledger-day-1440.json",
+      "sha256": "a59dfd7d4e22f3ecf372bf92638c52b29e7b29a6188af06038cee61360b06198",
+      "source": "view_image",
+      "scope": "Full actual view_image request and validated returned PNG object (or original batch containing it) saved by the primary participant at call time; request path matches the frozen original retained separately. The tool may resize display pixels; byte equality is not asserted for this branch.",
+      "export_kind": "faithful_conversation_export",
+      "synthetic": false
+    }
+  ],
+  "result": {
+    "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/FINAL.md.txt",
+    "sha256": "a1fc1cb3bdd80c59089256b3448f0b4c02ca074a9f564c393d1f84dde8f2be61"
+  },
+  "children": [
+    {
+      "agent_id": "/root/product_t3c_final/research",
+      "parent_agent_id": "/root/product_t3c_final",
+      "fork_turns": "none",
+      "status": "completed",
+      "role": "ui_researcher",
+      "prompt": {
+        "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/child-research-dispatched-prompt.txt",
+        "sha256": "7446cb461fb944d6a42566a3b7233c22554655d580267016125e3ef3d59e51c7"
+      },
+      "spawn": {
+        "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/DELEGATION.json",
+        "sha256": "e468352d3d3bdb65c34d8a84d2f4c54b1c5626769608ec4bc2648b33984fe6c8",
+        "source": "collaboration.spawn_agent",
+        "scope": "Faithful original child-spawn response containing the actual canonical agent ID; the separate request is retained in the full workspace.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "completion": {
+        "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/DELEGATION.json",
+        "sha256": "e468352d3d3bdb65c34d8a84d2f4c54b1c5626769608ec4bc2648b33984fe6c8",
+        "source": "collaboration notification",
+        "scope": "Faithful actual child completion notification/status observation; full delivered research text is separately retained.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      },
+      "tool_outputs": [
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/004-fetch/command.json",
+          "sha256": "1c7f298b4831b5f3808433df486c7cff42bba5350d3d69fd3ddfc1ab7bf4cf0d",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/004-fetch/stdout.txt",
+          "sha256": "a4a85274c824bbe48c207f7e8d50ea28593e4d89c1ffbc349a21002a60c651bc",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/006-fetch/command.json",
+          "sha256": "51bf639c817e6dbf20511934fead0617734429333bdbd41f87d2e5075f8ebbbc",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/006-fetch/stdout.txt",
+          "sha256": "05c022a64cb5a06b897c5e7f66a4e7e65146df108851137835bad3b690bb5727",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/007-render/command.json",
+          "sha256": "b79c51ba01b90b51be186e0ff711b8140777c51659cce5c1aa0b56c958fedd5f",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/007-render/stdout.txt",
+          "sha256": "f5e7e5451000823857771c11e2ef87e217ed12d6a074518feea6d1a66287a284",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/010-trial/command.json",
+          "sha256": "62b6b33bce6dae6931ad20395b47aa123893cacec55fff00654fd0a61a1c904f",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/010-trial/stderr.txt",
+          "sha256": "bcb452e4395f1d1db60e97439df5dcf59867f392d32db2700ec26fcaea58e722",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/012-trial/command.json",
+          "sha256": "9bd5e844015e267d3350742f7bbf2ebc8a8c2e2c2e6d70ecc61ffaffdea609a3",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/012-trial/stdout.txt",
+          "sha256": "c173b057452b2cdc3a801b42ad9fc6d532ba5386caa8a7c42bbf59004b96576a",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/014-episode/command.json",
+          "sha256": "6287503663b9ce7bf874f3711da29ec0b2b16e8a13910b3fea876819a8c70b87",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/014-episode/stderr.txt",
+          "sha256": "bdd090d94355d47b734966eaffeca598140653056c216bb333978542ac5f46fc",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/015-episode/command.json",
+          "sha256": "ecd7e4f9344a27491105aec645d7060d09840b317adc6b18d08852b2649112e0",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/commands/015-episode/stdout.txt",
+          "sha256": "a8a824fc7e7ee95fc132dd18e1fddac82121ab29b9f3e6749e533edff8ea0387",
+          "source": "capture_command.py / actual subprocess capture",
+          "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+          "export_kind": "original_tool_output",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/search-001.json",
+          "sha256": "7637e61990b05d5271b2e53ed92ae5cb715ce94a4b4cd7f50cb42d41d754d93d",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/web-002.json",
+          "sha256": "71003f17b9cb4a9e5fd0ff3a0ae41579e8a25d26c08ed3ab8475d26db6775b12",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/search-003.json",
+          "sha256": "899dc25d2ccf4d10ec071c6d368e2d851c82d6bef36c290925d644a6e404adcc",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/view-008-paper.json",
+          "sha256": "af2c2351cf1f60cfa9665039dcee8cc9b6f6d9c452f3d0f8aab152de7bd9c48e",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/view-008-notebook.json",
+          "sha256": "c084b3aa389188ef79586b8b9a4b10913d38c4444e7ef5dfb5ae840087fadd36",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        },
+        {
+          "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/view-013-paper-trial-interview-1440-v2.json",
+          "sha256": "8f209cf049fb6d8165eac341fb55731b36e83f3dc011c077c920aba29ea38584",
+          "source": "actual child tool call as named in retained record",
+          "scope": "Original child research/inspection tool output; retained independently from the parent report.",
+          "export_kind": "faithful_conversation_export",
+          "synthetic": false
+        }
+      ],
+      "result": {
+        "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/artifacts/evidence/research/RESEARCH-REPORT.md.txt",
+        "sha256": "83913ba448a3faada1e83d936867655ace6c43139f4227e983b0b0604efd84b1"
+      },
+      "role_instruction_sha256": "5d82ba675c0924c4f849e8380ecb4d1cc4fda420a224b65508b2dffd5847125b",
+      "model_requested": "session-default-inherited",
+      "model_resolved": null
+    }
+  ],
+  "execution_audit": {
+    "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/execution-audit.json",
+    "sha256": "94e061e96ce09ba8c96bcc2557f3efe8b2a28366b318c22a3e19362768fb8d75"
+  },
+  "product_evidence_index": {
+    "path": "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2/product-evidence.json",
+    "sha256": "d23cae83fcec9fde5237b03ef988a2e60ccd9b91082164616240d4cae03a1202"
+  },
+  "model_observation": {
+    "main_requested": "session-default-inherited",
+    "subagent_requested": "session-default-inherited",
+    "main_resolved": null,
+    "subagent_resolved": null,
+    "scope": "Actual omitted model overrides mean inherited session defaults; explicit experimental requests, where present, remain requests. The host does not expose authenticated resolved backend identities."
+  },
+  "metrics": {
+    "native_usage_tokens": null,
+    "native_billing_cost": null,
+    "main_context_pressure": null,
+    "unavailable_reason": "The session collaboration interface does not expose native per-thread token/billing/context telemetry. Values are not inferred from duration or tool counts."
+  },
+  "limitations": "Supplementary path-relocated execution, not a zero-deviation exact registered dispatch. Shared-host instructional isolation, native backend/role identity and usage telemetry limits remain. Narrow initial navigation is tall. No human panel, full accessibility/contrast audit, physical keyboard/IME, Firefox/Safari or injected network-failure verification. Ordered frames were viewed; natural-speed video was not played. Independent acceptance is separate."
+}

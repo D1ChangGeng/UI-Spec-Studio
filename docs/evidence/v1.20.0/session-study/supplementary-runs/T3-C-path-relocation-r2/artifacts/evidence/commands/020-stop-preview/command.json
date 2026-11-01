@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "fuser",
+    "-k",
+    "-TERM",
+    "4411/tcp"
+  ],
+  "cwd": "/workspace/scratch/c0a45b688c5b/ui-study/active-worksets/w11-final",
+  "started_at": "2026-11-01T12:54:54.257031+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T12:54:54.372492+00:00",
+  "wall_seconds": 0.115535,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 7,
+      "sha256": "c0e1b8325d848049c5ecba2c19ab3ec4c530bdded91ad813a2678057b4ebcbf8"
+    },
+    "stderr.txt": {
+      "bytes": 21,
+      "sha256": "4c246b0948cd7c877835ccb4b49ff319040ef6581372b35ab3149d36cc0fbe1c"
+    }
+  }
+}

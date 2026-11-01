@@ -1,0 +1,72 @@
+# Fieldnotes — completed editorial workspace
+
+**Fieldnotes now uses a complete, pinned Vanilla Paper theme on the genuine TiddlyWiki 5.4.1 application.** The result has warm paper surfaces, a bounded reading column, serif reading type, distinct sans navigation, visible native note actions and a ruled editor. The full bilingual interview, evidence tables and unfinished argument remain available. The native edit, save, reload and cancel workflow passed against the filesystem.
+
+![Fieldnotes final light workspace](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/evidence/final/table-repair/final-opening-clean-1440.png)
+
+The primary designer made the final source choice, implemented the changes and personally inspected the assembled visual result. The independent child supplied source research and rights evidence. This delivery is an implemented and reviewed direction under the task's authority; it does not claim separate owner approval.
+
+## Run the product
+
+From the supplied work package:
+
+```bash
+cd /workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/app
+PORT=4411 ./start.sh
+```
+
+Open `http://127.0.0.1:4411/`. Node 20 or newer is required; no installation or external service is needed. The verification server was stopped after completion, as required by the run controls.
+
+The [native offline export](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/app/wiki/output/index.html) also built successfully. The server remains the authoritative mode for the verified filesystem persistence behavior. The offline export was built, not separately exercised as a saving workflow.
+
+## Why this direction
+
+Three materially different routes were examined beyond the supplied baseline:
+
+| Source | What the actual comparison showed | Decision |
+|---|---|---|
+| Native Starlight | Arvo headings and a textured background add character, but the fixed bright background remains in dark mode and weakens the sidebar | Rejected as the defining foundation; its reuse scope is primarily type/material refinement |
+| Notebook 1.4.1 | A centered sans reading sheet, compact top controls and collapsible left navigation create a distinct, efficient working composition | A substantive challenger, but its reading/utility type contrast was less suited to the requested editorial identity |
+| Vanilla Paper 0.10.0 | Bounded sheets, warm day/night materials, a red margin rule, serif reading and ruled editing form a coherent notebook metaphor | Adopted as the complete visual foundation |
+
+The choice came from original demonstration views and populated product trials, including the long interview. Paper's shorter public testing history remains a maintenance limitation. Its source demonstration used a newer prerelease core; the delivered product was verified on the supplied 5.4.1 runtime.
+
+Paper is pinned to `031a78d4d4187128c632f8a647fa05408eddc700` from [BurningTreeC/vanilla-paper](https://github.com/BurningTreeC/vanilla-paper). The MIT notice, full source and exact adaptations are retained. No imagery or downloadable font was added. Its system type stacks, layout dimensions and surfaces remain the design foundation.
+
+## What changed
+
+- Selected Paper's complete theme and its Day/Night palettes. Native sidebar, search, tags, story navigation and editor controls remain the actual product controls.
+- Enabled source-supported always-visible actions and sticky titles. Four faint metadata/control palette tokens now reuse the source's existing sidebar foreground color in each palette.
+- Selected quiet native animation duration and disabled press animation. One copied source line reduces the reduced-motion transition from 150ms to 1ms so that reduced preference does not reintroduce noticeable movement.
+- Composed three tables with TiddlyWiki's documented scroll wrapper and real header cells. The wrapper is keyboard focusable and labelled. At 390px, the ledger and prototype tables now reveal their final columns with ArrowRight; the observation table fits directly.
+- Enabled the native `retain-original-tiddler-path` configuration after an actual duplicate-path save/cancel issue. The successful repeat checked the single canonical saved file and reload behavior.
+- Saved two small English/Chinese copy corrections through the native interview editor. No note was shortened for presentation. Table cell text, related links and the unfinished note's content remain intact.
+
+All implementation changes are in `app/wiki`. Every one of the **8,823 supplied upstream vendor files** matched its original SHA-256 at final verification. The adopted 55-file Paper copy differs internally in only the one reduced-motion source line; supported palette overrides and configuration are separate tiddlers.
+
+## Actual verification
+
+The main controlled run passed **36 of 36 checks**. It read the complete interview, followed the ledger and returned, edited both languages, saved through the checkmark, checked the filesystem, reloaded, cancelled a disposable edit and continued to another note. Keyboard testing reached search, a result, its pencil control and the native body editor using Tab/Enter.
+
+Reading and editing were captured in both palettes at **1440×900, 1280×640 and 390×844**, DPR1. The complete bilingual editor value remained intact throughout. No document-level horizontal overflow, browser page error, external runtime request or idle animation was found in the sampled matrix.
+
+A separate final check passed **13 of 13 checks** after a server restart and the table repair. It confirmed the selected theme/palette, persisted bilingual corrections, no drafts, semantic table headers, bounded wrappers and keyboard access to the final columns. The final store contains the original eight notes, no duplicate titles and no native drafts.
+
+The native offline build succeeded and produced a 3,337,082-byte HTML file. The original failures, their corrections, command output, browser traces and capture timing brackets remain in the evidence archive.
+
+## Visual evidence and records
+
+The primary designer personally opened the decisive original demos, populated candidate views and representative final captures. The final review includes desktop light/dark reading, compact reading/editing, narrow reading/editing, Chinese UI editing and a narrow dark reduced-motion editor. Visual inspection found the clipped narrow table that the initial page-width check missed; the repaired table was then opened and inspected again.
+
+- [Fresh final opening, light 1440×900](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/evidence/final/table-repair/final-opening-clean-1440.png)
+- [Dark interview, 390×844](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/evidence/final/interview-dark-390.png)
+- [Chinese interface and bilingual editor](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/evidence/final/chinese-ui-editor-light-1440.png)
+- [Repaired narrow ledger, final column and keyboard focus](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/evidence/final/table-repair/ledger-dark-right-390.png)
+- [Current design decisions](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/DESIGN-DECISIONS.md), [source provenance](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/SOURCE-PROVENANCE.md), and [personal visual review](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/VISUAL-REVIEW.md)
+- [Main verification checks](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/evidence/verification/checks.json) and [fresh-server/table checks](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11/evidence/final/table-repair/checks.json)
+
+## Remaining limits
+
+Testing used sandboxed Chromium 143 with the supplied Noto CJK host fixture. English UI covers the complete light/dark size matrix; Chinese UI is sampled in light at 1440×900, and reduced preference in dark at 390×844. Other browsers, physical touch, screen readers and every locale/theme/size permutation were not tested. Static captures and controlled episodes do not establish user preference, broad accessibility acceptance or natural-speed animation quality; no natural-speed video was personally watched.
+
+The exact child prompt, spawn request/result and research report are retained in `DELEGATION.json` and the evidence archive. A separate byte-exact export of the final child host notification was not captured; this audit gap is explicitly recorded, without constructing a substitute native event. No unresolved defect was observed in the verified core workflow after the repairs.

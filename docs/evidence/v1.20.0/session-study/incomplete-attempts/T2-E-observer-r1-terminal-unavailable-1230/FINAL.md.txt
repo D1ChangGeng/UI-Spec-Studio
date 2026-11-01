@@ -1,0 +1,56 @@
+# Meridian composer and reading continuity — completed
+
+The runnable application now shows identifiable filename attachments with complete keyboard/click disclosure, preserves voluntary reading position during generation, resumes following through an explicit return action, and settles the response when Stop is acknowledged. The supplied assistant-ui visual family and runtime remain intact. The primary retained design and implementation responsibility and personally inspected the actual assembled output.
+
+## Product changes
+
+- **Visible filename identity.** The original identical document tiles are replaced with a focused adaptation of the same pinned assistant-ui source's named attachment chip. Each chip shows a filename and truthful “Filename only” metadata. A native Dialog exposes the complete wrapped filename and explains that contents are not read or sent. Escape returns focus to the trigger; removal returns to the existing input without losing the draft.
+- **Bounded growth.** The source autosizing input retains its 192px cap. Attachments wrap within a 112px scrolling region. At 1280×600, four names plus six lines produce a 311px composer with about 201px of reading area above it. At 390px, users scroll the attachment region to reach later chips; keyboard reachability was verified. This keeps the source action row available while accepting a clear compact-height tradeoff.
+- **User-controlled following.** Supported bottom anchoring plus an instant return action replaces the prior top-anchor behavior that failed to resume following. Manual scroll-away pauses following. In the controlled final episodes, the earlier position stayed fixed as content grew; explicit return reached bottom distance zero and continued following.
+- **Coherent cancellation.** Stop preserves the draft and restores input focus. Independent observation caught inherited text smoothing revealing buffered text after Stop. The existing MarkdownText option is now disabled only for cancelled messages, settling already-received text when cancellation is acknowledged while retaining ordinary source smoothing.
+- **Core Chinese labels.** Composer, filename disclosure/removal, return, stop and retry controls have Chinese labels in the Chinese condition. Some upstream shell and secondary action labels remain English.
+
+The fixed long responses, failure/retry trigger, filename-only adapter, memory-only conversation behavior, fonts, source tokens, sidebar and reading-column hierarchy are preserved. No model service, file-content upload or persistence was added.
+
+## Source choice and research
+
+The product retains assistant-ui at revision `ff654d8156680b839774296ef644b57ab1078425`, with its MIT license and exact dependency lockfile. The additional chip source and original demonstration were acquired at that same revision and rendered locally before adoption. The source audit shows 32 supplied copied files remain byte-identical; only Thread, attachment and MarkdownText integrations changed, with two focused filename/locale modules added.
+
+Independent research compared the current workspace with Ant Design X Sender.Header/Attachments and its complete Ultramodern workspace, plus Vercel AI Elements Prompt Input/Attachments and the announced shadcn/ui successor. Those references revealed real alternatives, but did not establish a better verified sustained-reading episode or justify a second component/runtime family. The independent report distinguishes public rendered observations, documented APIs, source availability and archive limits. The primary inspected the returned local evidence and made the adoption decision.
+
+Full provenance, rejected trials and adaptation boundaries are in [ADOPTION.md](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/ADOPTION.md). The coupled scope and decisions are in [SPEC.md](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/SPEC.md).
+
+## Verification
+
+The final production build succeeds. Original stdout/stderr, warnings and timestamps are retained in `evidence/commands/027-cancellation-build/`.
+
+The primary matrix covered 1440×900, 1280×600 and 390×844, each in light/English and dark/Chinese. Checks exercised one-line, six-line and long mixed-language drafts; four filenames; full-name dialog; Escape; removal/focus; bounded input; composition-event Enter guard; Shift+Enter; document overflow; file-content read instrumentation; application network mutations; and uncaught page errors. Both language episodes exercised streaming, manual reading, explicit return, keyboard stop, retained draft, deliberate failure, same-question retry and repeated questions.
+
+The broad runner records **66 passed checks and two failed edit probes**, preserved honestly in [checks.json](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/evidence/final/checks.json). The edit probes omitted the source's hover-to-reveal trigger. A focused corrected English edit/update run passes; Chinese editing was not independently rerun.
+
+The fresh independent observer verified the combined stream → scroll away → file selection → six-line draft → keyboard filename dialog → Escape → remove → return → stop → next-question episode. Sampled reading position and landmarks remained fixed through the coupled changes. After the cancellation refinement, response text was identical at approximately 100, 479 and 1184ms after Stop; four filenames, the draft and input focus remained. See the [independent observation report](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/evidence/observer/FINAL.md).
+
+The primary personally opened final captures spanning all six expanded viewport/theme conditions, narrow complete-name disclosure, compact long input, stream-away/return, failure, corrected edit, and the independent repaired-stop output. [VISUAL-REVIEW.md](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/VISUAL-REVIEW.md) identifies each actual viewed image and separates static views from controlled episodes.
+
+## Run and inspect
+
+The complete source, exact lockfile and production build are retained in [app](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/app). From that directory:
+
+```bash
+npm run dev -- --host 127.0.0.1 --port 4415
+```
+
+Use `/?theme=light&lang=en` or `/?theme=dark&lang=zh`. Enter `[fail]` in a question to exercise the deliberate first-attempt failure, then retry. The owned preview server was stopped after verification, as required by the run controls; it is a local executable deliverable, not a published service.
+
+Representative actual final images:
+
+- [Desktop, four filenames and six-line draft](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/evidence/final/1440x900-light-en-expanded.png)
+- [Compact dark/Chinese composition](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/evidence/final/1280x600-dark-zh-expanded.png)
+- [Narrow full-name disclosure](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/evidence/final/390x844-dark-zh-filename-dialog.png)
+- [Independently verified repaired Stop](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/evidence/observer/run-007-repaired-stop/04-after-stop.png)
+
+## Limits retained
+
+No natural-speed playback, screen-reader session, real OS IME, physical mobile keyboard or touch-device testing is claimed. The source's English secondary labels and large production-chunk warning remain. Public browser captures viewed by the researcher remain in its tool transcript because no documented local-file export was available; local source/product captures are archived. Primary TLS-blocked attempts, initial child-capacity failure, expired preview session, setup failures and corrected checks remain in evidence. No TLS, proxy or browser-sandbox policy was bypassed.
+
+Both required children completed sequentially with fresh contexts and no product edits. Exact dispatches, final notifications and report references are retained in [DELEGATION.json](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w15/DELEGATION.json). Native backend identities, token totals and billed costs were not exposed and remain unknown. Substantive work was completed within the conservative 1,800-second bound from the supplied request-preparation timestamp.

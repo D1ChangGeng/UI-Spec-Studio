@@ -25,14 +25,20 @@ Fresh blind cohorts 01, 02 and 03 are frozen for 14 anonymous products; 49 actua
 | T2-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T2-G-final-runtime-r1-public/run.json) · [product](runs/T2-G-final-runtime-r1-public/FINAL.md) | 1 |
 | T3-A-r1 | A | [Completed record](runs/T3-A-r1/run.json) · [product](runs/T3-A-r1/FINAL.md) | 0 |
 | T3-B-r1 | B | [Completed record](runs/T3-B-r1/run.json) · [product](runs/T3-B-r1/FINAL.md) | 1 |
-| T3-C-r1 | C | Fresh execution active; terminal evidence not yet retained | Active |
+| T3-C-r1 | C | Original exact-dispatch terminal unavailable; supplementary execution tracked separately below | — |
 | T3-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T3-G-final-runtime-r1/run.json) · [product](runs/T3-G-final-runtime-r1/FINAL.md) | 0 |
 | T2-D-r1 | D | [Completed record](runs/T2-D-r1/run.json) · [product](runs/T2-D-r1/FINAL.md) | 1 |
 | T2-E-challenger-r1 | E-challenger | [Completed record](runs/T2-E-challenger-r1/run.json) · [product](runs/T2-E-challenger-r1/FINAL.md) | 2 |
-| T2-E-observer-r1 | E-observer | Fresh execution active; terminal evidence not yet retained | Active |
+| T2-E-observer-r1 | E-observer | Original exact-dispatch terminal unavailable; supplementary execution tracked separately below | — |
 | T4-F-main-r1 | F-main | [Completed record](runs/T4-F-main-r1/run.json) · [product](runs/T4-F-main-r1/FINAL.md) | 0 |
 | T4-F-integrator-r1 | F-integrator | [Completed record](runs/T4-F-integrator-r1-recovery/run.json) · [product](runs/T4-F-integrator-r1-recovery/FINAL.md) | 1 |
 | T4-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T4-G-final-runtime-r1/run.json) · [product](runs/T4-G-final-runtime-r1/FINAL.md) | 0 |
+
+## Final-session supplementary work
+
+The original registration and its sixteen complete run records remain unchanged. Old T3-C and T2-E-observer source workspaces were preserved, but no accessible primary terminal notification establishes them as complete. Their old aliases proved unstable. Fresh executions therefore use prospectively declared physical-path relocation and record the actual changed dispatch prompts/hashes. They are supplementary attempts, not silently substituted exact-dispatch registered records.
+
+[T3-C-path-relocation-r2](supplementary-runs/T3-C-path-relocation-r2/run.json) is complete: 9,414 original workspace files reconstructed exactly, with one actual researcher child and twenty personally viewed indexed product captures. T2-E-observer-path-relocation-r2 is active. A new independent reviewer `/root/final_product_reviewer` is reviewing all current products from anonymous frozen materials. Final acceptance remains pending.
 
 ## What is retained
 

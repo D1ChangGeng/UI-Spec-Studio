@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "dispatches": [
+    "evidence/delegation/attempt-001.json",
+    "evidence/delegation/attempt-002.json",
+    "evidence/delegation/attempt-003.json"
+  ],
+  "children": [
+    {
+      "canonical_path": "/root/product_15_final/source_research",
+      "requested_model": "unspecified",
+      "requested_reasoning_effort": "unspecified",
+      "fork_turns": "none",
+      "report": "evidence/research/FINAL.md",
+      "status": "completed",
+      "final_notification": "evidence/delegation/research-final-notification.md",
+      "native_final_notification_type": "FINAL_ANSWER"
+    },
+    {
+      "canonical_path": "/root/product_15_final/experience_observer",
+      "fork_turns": "none",
+      "requested_model": "unspecified",
+      "requested_reasoning_effort": "unspecified",
+      "report": "evidence/observer/FINAL.md",
+      "status": "completed",
+      "final_notification": "evidence/delegation/observer-final-notification.md",
+      "native_final_notification_type": "FINAL_ANSWER"
+    }
+  ],
+  "native_role_bindings": null,
+  "resolved_backend_identities": null,
+  "total_tokens": null,
+  "billed_cost": null,
+  "completion_recorded_at": "2026-11-01T12:26:07.500299+00:00"
+}

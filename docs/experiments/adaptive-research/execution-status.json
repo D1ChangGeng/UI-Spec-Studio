@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "status": "owner_authorized_session_study_recovery_in_progress",
-  "observed_at_utc": "2026-11-01T12:05:36.208052+00:00",
+  "status": "final_candidate_evidence_and_review_in_progress",
+  "observed_at_utc": "2026-11-01T13:01:00.891255+00:00",
   "candidate_identity": "eb7752a1b0eb4af180e9bb4bd0922587a3c9c96744e24ec8cf299517516e8759",
   "acceptance_route": "owner_authorized_session_simulation",
   "registered_primary_cells": 18,
@@ -25,26 +25,23 @@
     "T4-F-main-r1",
     "T4-G-final-runtime-r1"
   ],
-  "active_primary_cells": {
-    "T3-C-r1": "/root/product_11_final",
-    "T2-E-observer-r1": "/root/product_15_final"
-  },
-  "active_review_agent": null,
-  "independent_product_acceptance": "Fresh blind cohorts 01, 02 and 03 are frozen for 14 anonymous products; 49 actual original-capture view exports match the frozen products. The cohort-03 snapshot contains 46,190 reviewer-workspace files; reconstruction is separately recorded. Prior defects and judgments are unchanged. Four remaining products and separate final-runtime acceptance are pending; no condition mapping has been disclosed.",
+  "active_primary_cells": {},
+  "active_review_agent": "/root/final_product_reviewer",
+  "independent_product_acceptance": "Fresh independent reviewer has inspected all sixteen registered products and is freezing the first blind cohort; P15 supplementary product delivered anonymously. No mapping disclosed. Final acceptance remains pending.",
   "native_cloud_campaign_completed": false,
   "native_role_binding_authenticated": false,
   "resolved_models_authenticated": false,
   "native_usage_available": false,
   "historical_native_archive_available": false,
-  "latest_verified_remote_evidence_commit": "d193512e36b661304d6a929af7bbb30293f87dfc",
+  "latest_verified_remote_evidence_commit": "f042dcacc076a4b6423f2b6382b6107471110de1",
   "release_decision": "pending",
   "merged": false,
   "tag_created": false,
   "formal_release_created": false,
   "current_record": "docs/evidence/v1.20.0/session-study/README.md",
   "recovery_record": "docs/evidence/v1.20.0/session-study/coordination/recovery-0830/recovery-observation.json",
-  "boundary": "Actual completion messages for lost attempts are historical observations only. A counted current run requires complete retained source/capture/tool evidence and verified reconstruction. Frozen registration and candidate runtime are unchanged.",
-  "latest_checkpoint_ci": "Checkpoint 10 workflow 41302513475 completed successfully: four OS/Python test jobs, install, publication and scenario all passed; release correctly skipped on the PR branch. Exact final workflow/job returns are retained.",
+  "boundary": "Sixteen original registered records remain complete. Two old exact-dispatch attempts lack retained primary terminal notifications; their complete observed workspaces are preserved as incomplete attempts. Fresh path-relocated supplementary work uses identical frozen input bytes but actual changed prompts and hashes, without promoting it into the original registration.",
+  "latest_checkpoint_ci": "Workflow 41307892920 completed successfully: four OS/Python test jobs, install, publication and scenario passed; release correctly skipped on the PR branch.",
   "additional_unavailable_attempt": {
     "cell_id": "T3-C-r1",
     "agent_id": "/root/product_11_recovered",
@@ -58,5 +55,11 @@
     "agent_id": "/root/product_12_recovered",
     "reason": "Four-image inspection tool call remained pending for 1,309.5 seconds; coordinator interrupted after original substantive bound. Complete 9,233-file terminal workspace and original report were preserved and reconstructed separately. A fresh exact-input execution has since completed with complete originals."
   },
-  "completed_awaiting_evidence_index": []
+  "completed_awaiting_evidence_index": [],
+  "active_supplementary_attempts": {
+    "T2-E-observer-path-relocation-r2": "/root/product_t2observer_final"
+  },
+  "completed_supplementary_attempts": [
+    "T3-C-path-relocation-r2"
+  ]
 }
