@@ -155,8 +155,13 @@ async function main() {
   if (options.action === 'install' && installed.exists && !installed.identical && !options.upgrade) fail('A different managed Skill is installed; retry explicitly with --upgrade');
   if (options.dryRun) { if (options.action === 'install') runAdapter(spec, 'install', options, true); process.stdout.write(JSON.stringify({ ...plan, dry_run: true }, null, 2) + '\n'); return; }
   if (options.action === 'uninstall') {
+    // A separately installed native adapter is not owned by this Skill receipt.
+    // An absent managed Skill must never remove its native Harness registrations.
+    if (!installed.exists) {
+      process.stdout.write(JSON.stringify({ ...plan, result: 'not-installed' }, null, 2) + '\n'); return;
+    }
     if (spec.adapter) runAdapter(spec, 'uninstall', options);
-    if (installed.exists) await rm(target, { recursive: true });
+    await rm(target, { recursive: true });
     process.stdout.write(JSON.stringify({ ...plan, result: 'uninstalled' }, null, 2) + '\n'); return;
   }
   runAdapter(spec, 'install', options, true);
