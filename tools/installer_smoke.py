@@ -49,6 +49,14 @@ def run() -> dict[str, object]:
         }:
             raise AssertionError('Unexpected payload inventory')
         command(['node', str(cli), '--help'], base)
+        version = json.loads((package / 'package.json').read_text())['version']
+        pkg = json.loads((package / 'package.json').read_text())
+        if pkg.get('name') != 'ui-spec-studio':
+            raise AssertionError('Official npm package name differs from the build contract')
+        if command(['node', str(cli), '--version'], base).stdout.strip() != f'ui-spec-studio {version}':
+            raise AssertionError('CLI --version does not report the actual installed package')
+        if 'ui-spec-studio@latest' not in command(['node', str(cli), '--help'], base).stdout:
+            raise AssertionError('Installer help does not advertise the official npm command')
         project_checks = []
         for agent in ('codex', 'claude-code', 'cursor', 'opencode'):
             project = base / agent
