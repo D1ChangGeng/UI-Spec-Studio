@@ -93,6 +93,8 @@ jobs:
       - name: Rehearse the account owner's SHA-256 verified first-publication flow
         shell: pwsh
         run: ./tools/bootstrap-npm.ps1 -DryRun
+      - name: Verify public npm-named CLI when registry has the candidate release
+        run: python tools/official_npm_smoke.py
       - name: Provide standalone npm bootstrap artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
@@ -214,3 +216,6 @@ jobs:
             npm publish ./dist/ui-spec-installer.tgz --access public
           fi
           npm view "ui-spec-studio@$version" version dist.integrity --json --prefer-online
+      - name: Verify public npm-named CLI and reversible legacy migration
+        if: steps.release_gate.outputs.eligible == 'true' && steps.registry_gate.outputs.registered == 'true'
+        run: python tools/official_npm_smoke.py --require-published
