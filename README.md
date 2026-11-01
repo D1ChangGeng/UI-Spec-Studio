@@ -16,8 +16,12 @@ A portable [Agent Skill](https://agentskills.io/specification) for **product int
 ## Start in your project
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex
 ```
+
+**Distribution note:** The primary installer remains a pinned GitHub release while the official npm package `ui-spec-studio` completes its first registry publication. Reusing the old mutable `latest/download` tarball URL can select stale npm cache content. Once the npm package has been published and verified, the permanent version-independent entry point will be `npx --yes ui-spec-studio@latest install --agent codex`.
+
+For an older Skills CLI installation, run the pinned command with `--global --migrate` to back up the existing Skill before replacing it. The installer also provides an interactive migration choice.
 
 The installer uses a guided terminal flow with live verification, host-specific registration and reversible migration of older Skills CLI installations. A pre-existing unowned Skill is **not** silently replaced: interactive users can select a backed-up migration; headless users may explicitly pass `--migrate`. The original installation is restored on uninstall. For Chinese prompts, append `--lang zh`.
 
@@ -205,13 +209,13 @@ Before substantive work, the agent reads **eight common references in full**: [w
 
 ```bash
 # Install Skill and native Codex roles from the lightweight release package
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex
 
 # Pin this installer to an immutable release version
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex
 
 # Standard Skills CLI: install only the portable Skill ZIP (not native roles)
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-1.20.2.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-1.20.3.zip --skill ui-spec -a codex
 ```
 
 The unified installer also supports Claude Code, Cursor and OpenCode through `--agent`; Codex alone activates the separately registered four-role adapter. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).
