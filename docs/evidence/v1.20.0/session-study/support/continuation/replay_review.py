@@ -30,6 +30,15 @@ def main():
             raise ValueError("Previous review snapshot differs")
     args.output.mkdir(parents=True, exist_ok=False)
     for directory, data in reversed(chain):
+        for item in data["archives"].get("member_inventory_parts", []):
+            inventory = safe(directory, item["file"])
+            if inventory.stat().st_size != item["bytes"] or digest(inventory) != item["sha256"]:
+                raise ValueError("Review member inventory differs")
+            rows = json.loads(inventory.read_text())
+            if len(rows) != item["members"]:
+                raise ValueError("Review member inventory count differs")
+            if any(data["file_hashes"].get(row["path"]) != row["sha256"] for row in rows):
+                raise ValueError("Review member inventory differs from original file hashes")
         for item in data["archives"]["archives"]:
             archive = safe(directory, item["file"])
             if digest(archive) != item["sha256"]:

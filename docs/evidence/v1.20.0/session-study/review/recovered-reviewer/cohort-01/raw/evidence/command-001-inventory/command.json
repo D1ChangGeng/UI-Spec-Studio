@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "import os,json; root=\"/workspace/scratch/e1cfe6e447ee/ui-study/review-pack\"; ids=[\"P01\",\"P03\",\"P06\",\"P09\",\"P10\",\"P13\",\"P16\",\"P18\"]; print(json.dumps({\"root_entries\":os.listdir(root),\"products\":{i:os.listdir(root+\"/products/\"+i) for i in ids}},indent=2))"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack",
+  "started_at": "2026-11-01T08:55:27.339301+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T08:55:27.371377+00:00",
+  "wall_seconds": 0.032078,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 1210,
+      "sha256": "5a17723e51a3628c4e624c57817069f7b55ec9e25fa72cc93399f7a1d148e1b5"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

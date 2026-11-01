@@ -44,9 +44,28 @@ def main():
     old = previous["file_hashes"] if previous else {}
     changed = [p for p in files if hashes[p.relative_to(source).as_posix()] != old.get(p.relative_to(source).as_posix())]
     archives = archive_with_large_files(source, changed, target, "original-review")
+    # A large set of reviewer working copies can make the duplicate member
+    # inventory exceed the connector's object bound. Keep every row in small
+    # hashed JSON parts; file_hashes remains the full reconstruction contract.
+    if len(json.dumps(archives.get("members", [])).encode()) > 3_000_000:
+        members = archives.pop("members")
+        archives["member_inventory_parts"] = []
+        for offset in range(0, len(members), 5000):
+            part = target / f"member-inventory-{offset // 5000 + 1:03d}.json"
+            rows = members[offset:offset + 5000]
+            part.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n")
+            archives["member_inventory_parts"].append({
+                "file": part.name, "bytes": part.stat().st_size,
+                "sha256": digest(part), "members": len(rows),
+            })
     direct = dict(previous.get("direct_artifacts", {})) if previous else {}
     for path in changed:
         relative = path.relative_to(source).as_posix()
+        # Stateful reviewer copies remain byte-complete in the immutable
+        # archives; avoid duplicating their entire dependency/source trees as
+        # direct navigation exports.
+        if relative.startswith("copies/"):
+            continue
         if path.suffix not in {".json", ".jsonl", ".png", ".md", ".txt", ".log", ".py"}:
             continue
         if path.stat().st_size > 11_000_000:
@@ -77,7 +96,8 @@ def main():
         "archives": archives,
         "direct_artifacts": direct,
         "scope": "Original reviewer reports, exact available tool outputs, command stdout/stderr, scripts, traces and captures. Raw Markdown/Python direct exports use .txt; archive entries preserve original names and bytes.",
-        "exclusions": "Disposable duplicate application copies, dependency caches and bytecode. The reviewed application source and original product captures remain in each frozen product snapshot. No browser profile, credentials or hidden reasoning are included.",
+        "direct_export_policy": "Reviewer-created copies/ trees are archive-only; their full original paths and hashes remain in file_hashes and are verified by reconstruction.",
+        "exclusions": "Directories literally named disposable, node_modules, .git, __pycache__ or .pytest_cache, and symbolic links. Other reviewer-created application copies, including copies/ and their exercised persistence states, are retained. The original reviewed application source and original product captures also remain in each frozen product snapshot. No browser profile, credentials or hidden reasoning are included.",
     }
     (target / "snapshot.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps({"cohort": args.cohort, "files": len(files), "changed": len(changed),

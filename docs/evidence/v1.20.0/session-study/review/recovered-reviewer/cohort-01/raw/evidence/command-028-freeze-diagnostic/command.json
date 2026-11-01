@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path; import json; r=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery\"); print((r/\"INSTRUCTIONS.txt\").read_text()); print((r/\"freeze_cohort_01.py\").read_text()); p=r/\"evidence/additional-view-P01-narrow-dark-fields.json\"; d=json.loads(p.read_text()); print(\"EXPORT KEYS\",list(d)); print(\"EXPORT NONBINARY\",{k:v for k,v in d.items() if k!=\"result\" and k!=\"actual_tool_return\"}); print(\"RESULT SHAPES\",{k:list(v) if isinstance(v,dict) else type(v).__name__ for k,v in d.items()}); print(\"COHORT FILES\",list((r/\"cohorts/2026-11-01-cohort-01\").iterdir()))"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T09:27:59.394605+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T09:27:59.426714+00:00",
+  "wall_seconds": 0.032112,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 15285,
+      "sha256": "0956b22d46e8e7a6527ae7beeb336efaff7754681947766f50d791dbf417ccba"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

@@ -13,6 +13,7 @@ def archive_with_large_files(source, paths, output, stem):
     normal = [p for p in paths if p.stat().st_size <= 7_500_000]
     result = bounded_archives(source, normal, output, stem)
     result['split_files'] = []
+    created_parts = set()
     for path in sorted(set(paths) - set(normal)):
         raw = path.read_bytes()
         record = {'path': path.relative_to(source).as_posix(), 'bytes': len(raw),
@@ -21,10 +22,12 @@ def archive_with_large_files(source, paths, output, stem):
             piece = raw[start:start + 7_500_000]
             name = f'large-object-{record["sha256"][:16]}-part-{i:03d}.zip'
             archive = output / name
-            if archive.exists():
+            if archive.exists() and name not in created_parts:
                 raise FileExistsError(archive)
-            with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
-                z.writestr('payload', piece)
+            if name not in created_parts:
+                with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
+                    z.writestr('payload', piece)
+                created_parts.add(name)
             with zipfile.ZipFile(archive) as z:
                 if z.read('payload') != piece:
                     raise ValueError('Large original piece mismatch')

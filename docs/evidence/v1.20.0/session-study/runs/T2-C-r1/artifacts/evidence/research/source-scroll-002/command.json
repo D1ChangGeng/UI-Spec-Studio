@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path; print(Path('app/node_modules/@assistant-ui/react/src/primitives/thread/useThreadViewportAutoScroll.ts').read_text())"
+  ],
+  "cwd": "/workspace/scratch/708e8b7f118e/ui-study/worksets/w07",
+  "started_at": "2026-11-01T09:18:54.861004+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T09:18:54.893026+00:00",
+  "wall_seconds": 0.032028,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 4287,
+      "sha256": "7cfb5e6d53404da92f07086e050b5b49d3ca356724e014735fb28ce044697f80"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

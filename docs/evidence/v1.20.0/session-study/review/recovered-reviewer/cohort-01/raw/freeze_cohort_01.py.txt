@@ -1,0 +1,77 @@
+import json,hashlib,base64,struct,shutil,os
+from pathlib import Path
+from datetime import datetime,timezone
+ROOT=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery")
+PACK=Path("/workspace/scratch/e1cfe6e447ee/ui-study/review-pack")
+COHORT="2026-11-01-cohort-01"
+DEST=ROOT/"cohorts"/COHORT
+if DEST.exists():
+ assert not any(DEST.iterdir()),"Existing cohort is not empty; do not overwrite a frozen cohort."
+else:
+ DEST.mkdir(parents=True,exist_ok=False)
+IDS=["P01","P03","P06","P09","P10","P13","P16","P18"]
+definitions=json.loads((ROOT/"cohort-01-judgments-input.json").read_text())
+assert [r["anonymous_product"] for r in definitions]==IDS
+assert not (ROOT/"products.json").exists(),"Cumulative products already exists; do not overwrite an earlier judgment."
+def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def dimensions(path):
+ raw=path.read_bytes()
+ assert raw[:8]==b"\x89PNG\r\n\x1a\n",str(path)
+ return list(struct.unpack(">II",raw[16:24]))
+views=[]
+for export in sorted((ROOT/"evidence").glob("*view-*.json")):
+ record=json.loads(export.read_text())
+ if record.get("tool")!="view_image":continue
+ path=Path(record["arguments"]["path"])
+ assert path.exists(),str(path)
+ result=record["result"]
+ assert result.get("image_url","").startswith("data:") and ";base64," in result["image_url"],str(export)
+ delivered=base64.b64decode(result["image_url"].split(",",1)[1])
+ assert delivered[:8]==b"\x89PNG\r\n\x1a\n",str(export)
+ views.append({"request_path":str(path),"view_export":str(export),"export_timestamp":record["timestamp"],"original_file_sha256":sha(path),"original_dimensions":dimensions(path),"export_sha256":sha(export),"returned_image_bytes_sha256":hashlib.sha256(delivered).hexdigest(),"tool_detail":result.get("detail")})
+source_names={"T1":["T1-light-desktop.png"],"T2":["T2-light-desktop.png"],"T3":["T3-foundation-initial.png"],"T4":["T4-source-toast.png"]}
+for r in definitions:
+ pid=r["anonymous_product"]
+ original=sorted([v for v in views if v["request_path"].startswith(str(PACK/"products"/pid/"captures")+"/")],key=lambda v:v["request_path"])
+ additional=sorted([v for v in views if v["request_path"].startswith(str(ROOT/"evidence")+"/") and Path(v["request_path"]).name.startswith(pid+"-")],key=lambda v:v["request_path"])
+ sources=sorted([v for v in views if Path(v["request_path"]).name in source_names[r["task_family"]]],key=lambda v:v["request_path"])
+ assert len(original)>=3,pid
+ assert any(v["original_dimensions"]==[390,844] for v in original),pid
+ assert any(v["original_dimensions"][0]>=1280 for v in original),pid
+ for field in ["behavior_evidence","source_inspection_evidence"]:
+  for path in r[field]:assert Path(path).exists(),path
+ r["cohort"]=COHORT
+ r["condition_mapping_received"]=False
+ r["viewed_original_files"]=[v["request_path"] for v in original]
+ r["view_exports"]=[v["view_export"] for v in original]
+ r["additional_viewed_files"]=[v["request_path"] for v in additional]
+ r["additional_view_exports"]=[v["view_export"] for v in additional]
+ r["source_viewed_files"]=[v["request_path"] for v in sources]
+ r["source_view_exports"]=[v["view_export"] for v in sources]
+ r["review_conditions"]={"browser":"Chromium 143.0.7499.4","playwright":"1.57.0","device_scale_factor":1,"fontconfig":"/tmp/ui-spec-fonts/fonts.conf","viewports":[[1440,900],[1280,640 if r["task_family"]=="T3" else 600],[390,844]],"isolation":"Instructional isolation on a shared host; source choices and product differences are visible.","stateful_tests":"Disposable application copy; frozen products and original captures were not changed.","review_type":"Independent agent product judgment; not a human usability or assistive-technology study."}
+records=json.dumps(definitions,ensure_ascii=False,indent=2)+"\n"
+(ROOT/"products.json").write_text(records)
+(DEST/"products.json").write_text(records)
+shutil.copyfile(ROOT/"BLIND-REVIEW.md",DEST/"BLIND-REVIEW.md")
+evidence_files=[]
+for path in sorted((ROOT/"evidence").rglob("*")):
+ if not path.is_file():continue
+ if "command-030-freeze" in str(path):continue
+ evidence_files.append({"path":str(path),"bytes":path.stat().st_size,"sha256":sha(path)})
+scripts=[]
+for path in sorted(ROOT.glob("*.py")):
+ scripts.append({"path":str(path),"bytes":path.stat().st_size,"sha256":sha(path)})
+metadata={"cohort":COHORT,"anonymous_products":IDS,"frozen_at_utc":datetime.now(timezone.utc).isoformat(),"condition_mapping_received":False,"independence":"No coordinator repository, condition/role allocation, producer judgment, sibling workset, release decision or other reviewer result was inspected.","isolation_limit":"Instruction only on a shared host, not a separate security sandbox.","no_comparator_repair":True,"review_report":str(DEST/"BLIND-REVIEW.md"),"records":str(DEST/"products.json"),"cumulative_products":str(ROOT/"products.json"),"preservation_rule":"Keep initial report and this cohort's records immutable; later anonymous cohorts append to cumulative products without rewriting these judgments. Unblinding and disposition require a separate continuation.","clock_note":"UTC timestamps are retained in emitting runtime records; browser display times use application/browser formatting. Only within-run monotonic intervals are compared.","remaining_material_scope":["P10 Return to latest during streaming","P13 narrow Evidence ledger table overflow","P16 T1 narrow navigation and representative long-value presentation"],"test_failure_policy":"Sandbox launch and wiki selector failures remain in actual command records; successful follow-ups are separate."}
+(DEST/"metadata.json").write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+"\n")
+index={"cohort":COHORT,"created_at_utc":metadata["frozen_at_utc"],"view_evidence":views,"raw_evidence_files":evidence_files,"review_scripts":scripts,"note":"Only view_evidence entries establish an actual image-view call. Other retained screenshots are not counted as viewed. Judgments are separate from raw outputs."}
+(DEST/"EVIDENCE-INDEX.json").write_text(json.dumps(index,ensure_ascii=False,indent=2)+"\n")
+immutable=[ROOT/"BLIND-REVIEW.md",ROOT/"cohort-01-judgments-input.json",DEST/"BLIND-REVIEW.md",DEST/"products.json",DEST/"metadata.json",DEST/"EVIDENCE-INDEX.json"]
+manifest={"cohort":COHORT,"frozen_at_utc":metadata["frozen_at_utc"],"hash_algorithm":"SHA-256","condition_mapping_received":False,"immutable_files":[{"path":str(x),"bytes":x.stat().st_size,"sha256":sha(x)} for x in immutable],"cumulative_products_sha256_at_freeze":sha(ROOT/"products.json"),"cumulative_products_note":"This digest is a historical checkpoint. The mutable cumulative file may later append new records; this cohort's immutable products.json preserves the original eight records.","evidence_preservation":"The immutable evidence index hashes all retained pre-freeze evidence files and actual view returns. No original capture was altered."}
+(DEST/"FREEZE-MANIFEST.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
+immutable.append(DEST/"FREEZE-MANIFEST.json")
+for file in immutable:file.chmod(0o444)
+for entry in manifest["immutable_files"]:
+ assert sha(Path(entry["path"]))==entry["sha256"]
+assert json.loads((ROOT/"products.json").read_text())==json.loads((DEST/"products.json").read_text())
+print(json.dumps({"cohort":COHORT,"frozen_at_utc":metadata["frozen_at_utc"],"products":IDS,"report":str(ROOT/"BLIND-REVIEW.md"),"immutable_records":str(DEST/"products.json"),"cumulative_records":str(ROOT/"products.json"),"evidence_index":str(DEST/"EVIDENCE-INDEX.json"),"manifest":str(DEST/"FREEZE-MANIFEST.json"),"manifest_sha256":sha(DEST/"FREEZE-MANIFEST.json"),"immutable_file_hashes_verified":True,"original_views_by_product":{r["anonymous_product"]:len(r["viewed_original_files"]) for r in definitions},"additional_views_by_product":{r["anonymous_product"]:len(r["additional_viewed_files"]) for r in definitions}},ensure_ascii=False,indent=2))
+

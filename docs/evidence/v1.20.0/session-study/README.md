@@ -9,9 +9,9 @@ context pressure and a human acceptance panel remain unverified.
 
 ## Execution inventory
 
-Observed 2026-11-01T09:12:38.094643+00:00. **10 of 18** registered cells have retained completed evidence records, with **5** completed child contexts. Execution coverage is distinct from product success and release approval.
+Observed 2026-11-01T09:40:03.631090+00:00. **11 of 18** registered cells have retained completed evidence records, with **6** completed child contexts. Execution coverage is distinct from product success and release approval.
 
-Fresh independent reviewer is examining eight anonymous durable products. Earlier five-product original review remains retained; the unavailable later nine-product original review is not used for current acceptance.
+The fresh independent reviewer froze eight anonymous judgments at 2026-11-01T09:28:24.318286+00:00. All 36,538 retained review workspace files reconstructed byte for byte; 26 actual views of original product PNGs map to the frozen products, with additional source/interaction views retained separately. Three comparator revisions remain. No G disclosure or final release acceptance has occurred; remaining anonymous cohorts are pending.
 
 | Cell | Condition | Retained status | Completed children |
 | --- | --- | --- | ---: |
@@ -21,8 +21,8 @@ Fresh independent reviewer is examining eight anonymous durable products. Earlie
 | T1-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T1-G-final-runtime-r1/run.json) · [product](runs/T1-G-final-runtime-r1/FINAL.md) | 1 |
 | T2-A-r1 | A | [Completed record](runs/T2-A-r1/run.json) · [product](runs/T2-A-r1/FINAL.md) | 0 |
 | T2-B-r1 | B | [Completed record](runs/T2-B-r1/run.json) · [product](runs/T2-B-r1/FINAL.md) | 1 |
-| T2-C-r1 | C | Fresh execution active; terminal evidence not yet retained | Active |
-| T2-G-final-runtime-r1 | G-final-runtime | Frozen inputs restored; fresh complete evidence required | — |
+| T2-C-r1 | C | [Completed record](runs/T2-C-r1/run.json) · [product](runs/T2-C-r1/FINAL.md) | 1 |
+| T2-G-final-runtime-r1 | G-final-runtime | Fresh execution active; terminal evidence not yet retained | Active |
 | T3-A-r1 | A | [Completed record](runs/T3-A-r1/run.json) · [product](runs/T3-A-r1/FINAL.md) | 0 |
 | T3-B-r1 | B | [Completed record](runs/T3-B-r1/run.json) · [product](runs/T3-B-r1/FINAL.md) | 1 |
 | T3-C-r1 | C | Frozen inputs restored; fresh complete evidence required | — |
@@ -31,7 +31,7 @@ Fresh independent reviewer is examining eight anonymous durable products. Earlie
 | T2-E-challenger-r1 | E-challenger | Frozen inputs restored; fresh complete evidence required | — |
 | T2-E-observer-r1 | E-observer | Frozen inputs restored; fresh complete evidence required | — |
 | T4-F-main-r1 | F-main | [Completed record](runs/T4-F-main-r1/run.json) · [product](runs/T4-F-main-r1/FINAL.md) | 0 |
-| T4-F-integrator-r1 | F-integrator | Frozen inputs restored; fresh complete evidence required | — |
+| T4-F-integrator-r1 | F-integrator | Fresh execution active; terminal evidence not yet retained | Active |
 | T4-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T4-G-final-runtime-r1/run.json) · [product](runs/T4-G-final-runtime-r1/FINAL.md) | 0 |
 
 ## What is retained

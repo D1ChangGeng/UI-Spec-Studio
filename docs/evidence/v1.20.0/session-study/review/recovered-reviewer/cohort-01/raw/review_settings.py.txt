@@ -1,0 +1,136 @@
+import os, sys, json, time, shutil, subprocess, traceback, hashlib
+from pathlib import Path
+from datetime import datetime, timezone
+from urllib.request import urlopen
+from importlib.metadata import version
+from playwright.sync_api import sync_playwright
+
+ROOT=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery")
+PACK=Path("/workspace/scratch/e1cfe6e447ee/ui-study/review-pack")
+OUT=ROOT/"evidence/behavior-settings-001"
+OUT.mkdir(parents=True,exist_ok=False)
+IDS=["P01","P03","P06","P16","P18"]
+CHROME="/tmp/ui-spec-preview-browser/chrome-headless-shell-143.0.7499.4/chrome-headless-shell-linux64/chrome-headless-shell"
+LONG="跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme"
+ENV=dict(os.environ,FONTCONFIG_FILE="/tmp/ui-spec-fonts/fonts.conf",PLAYWRIGHT_BROWSERS_PATH="/tmp/ui-spec-preview-browser")
+def now(): return datetime.now(timezone.utc).isoformat()
+def state(page):
+    return page.evaluate("""() => {
+      const q=id=>document.getElementById(id);
+      const fields=Object.fromEntries(['business-name','business-id','location','email','weekly-digest','public-profile'].map(id=>[id,q(id)?.type==='checkbox'?q(id).checked:q(id)?.value]));
+      const toast=q('save-notification');
+      return {url:location.href,fields,stored:localStorage.getItem('fieldnotes-settings-v1'),focus:{id:document.activeElement?.id,tag:document.activeElement?.tagName,text:document.activeElement?.textContent?.slice(0,120)},status:q('save-status')?.textContent,statusData:q('save-status')?.dataset,saveDisabled:q('save-settings')?.disabled,saveLabel:q('save-settings')?.getAttribute('aria-label'),cancelDisabled:q('cancel-settings')?.disabled,toast:toast?{class:toast.className,state:toast.dataset.state,text:toast.innerText,role:toast.getAttribute('role'),live:toast.getAttribute('aria-live')}:null,invalid:[...document.querySelectorAll('[aria-invalid=true]')].map(x=>({id:x.id,describedby:x.getAttribute('aria-describedby')})),horizontalOverflow:document.documentElement.scrollWidth>innerWidth,scrollY,viewport:{width:innerWidth,height:innerHeight}};
+    }""")
+def record(data,name,page):
+    data["steps"].append({"time":now(),"name":name,"observed":state(page)})
+    (OUT/(data["product"]+".json")).write_text(json.dumps(data,ensure_ascii=False,indent=2))
+def shot(data,name,page):
+    file=OUT/(data["product"]+"-"+name+".png")
+    page.screenshot(path=str(file))
+    data["screenshots"].append({"name":name,"path":str(file),"time":now(),"viewport":page.viewport_size})
+def tab_to(page,target,limit=90):
+    trace=[]
+    for _ in range(limit):
+        if page.evaluate("document.activeElement.id")==target: return trace
+        page.keyboard.press("Tab")
+        trace.append(page.evaluate("({id:document.activeElement.id,tag:document.activeElement.tagName,text:document.activeElement.textContent?.slice(0,80)})"))
+    raise RuntimeError("Keyboard Tab did not reach "+target+"; trace="+json.dumps(trace))
+all_results=[]
+with sync_playwright() as p:
+  browser=p.chromium.launch(executable_path=CHROME,headless=True,env=ENV,args=["--no-sandbox"])
+  for i,pid in enumerate(IDS):
+    data={"product":pid,"started":now(),"browser":browser.version,"playwright":version("playwright"),"device_scale_factor":1,"fontconfig":ENV["FONTCONFIG_FILE"],"steps":[],"screenshots":[],"console_errors":[],"checks":[]}
+    app=ROOT/"copies/settings-001"/pid/"app"
+    shutil.copytree(PACK/"products"/pid/"app",app,ignore=shutil.ignore_patterns("node_modules"))
+    data["tested_copy"]=str(app)
+    foundation="T4" if pid in ["P01","P18"] else "T1"
+    data["source_checks"]={"authoritative_store_matches_foundation":(app/"settings-store.js").read_bytes()==(PACK/"foundations"/foundation/"app/settings-store.js").read_bytes(),"index_sha256":hashlib.sha256((app/"index.html").read_bytes()).hexdigest()}
+    port=4701+i
+    logfile=open(OUT/(pid+"-server.log"),"w")
+    server=subprocess.Popen([sys.executable,"-m","http.server",str(port),"--bind","127.0.0.1","--directory",str(app)],stdout=logfile,stderr=subprocess.STDOUT,env=ENV)
+    data["server"]={"pid":server.pid,"port":port,"started":now()}
+    context=None
+    try:
+      for _ in range(50):
+        if server.poll() is not None: raise RuntimeError("Owned preview server exited "+str(server.returncode))
+        try:
+          urlopen(f"http://127.0.0.1:{port}/",timeout=.5).close(); break
+        except Exception: time.sleep(.1)
+      context=browser.new_context(viewport={"width":1440,"height":900},device_scale_factor=1)
+      page=context.new_page()
+      page.on("pageerror",lambda error:data["console_errors"].append(str(error)))
+      page.on("dialog",lambda dialog:dialog.accept())
+      page.goto(f"http://127.0.0.1:{port}/?theme=light&lang=en",wait_until="networkidle")
+      page.wait_for_function("window.fieldnotes && document.getElementById('business-name').value.length")
+      record(data,"initial-light",page);shot(data,"initial-light",page)
+      if pid=="P01":
+        source=context.new_page();source.goto(f"http://127.0.0.1:{port}/toast-source-preview.html",wait_until="networkidle")
+        source.screenshot(path=str(OUT/"T4-source-toast.png"));source.close()
+      data["initial_keyboard_path"]=tab_to(page,"business-name")
+      page.keyboard.press("Control+A");page.keyboard.insert_text(LONG)
+      page.keyboard.press("Tab");page.keyboard.press("Control+A");page.keyboard.insert_text(LONG)
+      page.set_viewport_size({"width":1280,"height":600})
+      data["save_keyboard_path"]=tab_to(page,"save-settings")
+      page.keyboard.press("Enter");page.wait_for_timeout(110)
+      record(data,"valid-save-pending",page)
+      page.locator("#location").fill("Newer unsaved location / 后续编辑")
+      record(data,"edit-during-pending",page)
+      page.wait_for_timeout(850)
+      record(data,"saved-snapshot-newer-draft-kept",page);shot(data,"saved-newer-draft",page)
+      saved=json.loads(page.evaluate("localStorage.getItem('fieldnotes-settings-v1')"))
+      data["checks"].append({"name":"pending_snapshot_and_newer_draft","pass":saved["settings"]["displayName"]==LONG and saved["settings"]["location"]=="Singapore / 新加坡" and page.locator("#location").input_value()=="Newer unsaved location / 后续编辑","stored":saved})
+      page.locator("#cancel-settings").focus();page.keyboard.press("Enter");record(data,"cancel-restores-saved",page)
+      data["checks"].append({"name":"cancel_restores","pass":page.locator("#location").input_value()=="Singapore / 新加坡"})
+      page.evaluate("window.fieldnotes.setFailureMode(true)")
+      failed="Failed snapshot "+pid+" / 失败版本"
+      newer="Newer draft "+pid+" / 更新草稿"
+      page.locator("#business-name").fill(failed)
+      page.locator("#save-settings").focus();page.keyboard.press("Enter")
+      page.wait_for_timeout(1000)
+      record(data,"forced-error",page);shot(data,"forced-error",page)
+      after_failure=json.loads(page.evaluate("localStorage.getItem('fieldnotes-settings-v1')"))
+      data["checks"].append({"name":"failure_preserves_previous_store_and_draft","pass":after_failure==saved and page.locator("#business-name").input_value()==failed})
+      page.locator("#business-name").fill(newer)
+      retry=page.locator("#retry-save") if pid in ["P01","P18"] else page.locator("#save-settings")
+      retry.focus();page.keyboard.press("Enter");page.wait_for_timeout(100)
+      record(data,"retry-pending-focus",page);page.wait_for_timeout(900)
+      record(data,"retry-success",page);shot(data,"retry-success",page)
+      after_retry=json.loads(page.evaluate("localStorage.getItem('fieldnotes-settings-v1')"))
+      expectation=failed if pid in ["P01","P18"] else newer
+      data["checks"].append({"name":"retry_contract","pass":after_retry["settings"]["displayName"]==expectation and page.locator("#business-name").input_value()==newer,"expected_saved_name":expectation,"observed_saved_name":after_retry["settings"]["displayName"],"observed_draft":page.locator("#business-name").input_value()})
+      if pid in ["P01","P18"]:
+        page.locator("#save-notification [data-bs-dismiss='toast']").focus();page.keyboard.press("Enter");page.wait_for_timeout(400)
+        record(data,"explicit-close-and-focus-return",page)
+      page.locator("#business-name").fill("")
+      page.locator("#save-settings").focus();page.keyboard.press("Enter");page.wait_for_timeout(150)
+      record(data,"invalid-name-focus-recovery",page);shot(data,"invalid-name",page)
+      data["checks"].append({"name":"invalid_focus_and_association","pass":page.evaluate("document.activeElement.id")=="business-name" and page.locator("#business-name").get_attribute("aria-invalid")=="true"})
+      page.keyboard.insert_text("Mei / 玫")
+      page.locator("#save-settings").focus();page.keyboard.press("Enter");page.wait_for_timeout(950)
+      record(data,"short-name-saved",page)
+      page.reload(wait_until="networkidle");record(data,"reload-confirmed",page)
+      data["checks"].append({"name":"reload_persistence","pass":page.locator("#business-name").input_value()=="Mei / 玫"})
+      page.set_viewport_size({"width":390,"height":844})
+      page.goto(f"http://127.0.0.1:{port}/?theme=dark&lang=zh",wait_until="networkidle")
+      page.locator("#business-name").fill(LONG);page.locator("#business-id").fill(LONG)
+      page.evaluate("window.scrollTo(0,0)");record(data,"narrow-dark-long-top",page);shot(data,"narrow-dark-top",page)
+      page.locator("#business-name").scroll_into_view_if_needed()
+      page.locator("#business-name").focus();record(data,"narrow-dark-long-fields",page);shot(data,"narrow-dark-fields",page)
+      data["long_field_geometry"]=page.locator("#business-name, #business-id").evaluate_all("""els=>els.map(el=>({id:el.id,tag:el.tagName,value:el.value,clientWidth:el.clientWidth,scrollWidth:el.scrollWidth,clientHeight:el.clientHeight,scrollHeight:el.scrollHeight,rect:el.getBoundingClientRect().toJSON()}))""")
+      page.locator("#save-settings").focus();page.keyboard.press("Enter");page.wait_for_timeout(950)
+      record(data,"narrow-dark-save",page);shot(data,"narrow-dark-save",page)
+      data["completed"]=now()
+    except Exception:
+      data["failure"]=traceback.format_exc();print(pid,data["failure"],flush=True)
+    finally:
+      if context: context.close()
+      server.terminate()
+      try: server.wait(timeout=5)
+      except subprocess.TimeoutExpired: server.kill();server.wait()
+      logfile.close();data["server"]["stopped"]=now();data["server"]["returncode"]=server.returncode
+      (OUT/(pid+".json")).write_text(json.dumps(data,ensure_ascii=False,indent=2))
+      all_results.append({"product":pid,"checks":data["checks"],"failure":data.get("failure"),"console_errors":data["console_errors"],"evidence":str(OUT/(pid+".json"))})
+      print(json.dumps(all_results[-1],ensure_ascii=False),flush=True)
+  browser.close()
+(OUT/"summary.json").write_text(json.dumps(all_results,ensure_ascii=False,indent=2))
+

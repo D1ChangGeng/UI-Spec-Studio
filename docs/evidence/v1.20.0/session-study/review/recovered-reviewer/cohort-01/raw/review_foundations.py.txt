@@ -1,0 +1,40 @@
+import os,sys,json,time,subprocess,hashlib
+from pathlib import Path
+from datetime import datetime,timezone
+from urllib.request import urlopen
+from playwright.sync_api import sync_playwright
+ROOT=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery");PACK=Path("/workspace/scratch/e1cfe6e447ee/ui-study/review-pack")
+OUT=ROOT/"evidence/foundation-comparison-001";OUT.mkdir(parents=True,exist_ok=False)
+ENV=dict(os.environ,FONTCONFIG_FILE="/tmp/ui-spec-fonts/fonts.conf",PLAYWRIGHT_BROWSERS_PATH="/tmp/ui-spec-preview-browser")
+CHROME="/tmp/ui-spec-preview-browser/chrome-headless-shell-143.0.7499.4/chrome-headless-shell-linux64/chrome-headless-shell"
+result=[]
+with sync_playwright() as p:
+ browser=p.chromium.launch(executable_path=CHROME,headless=True,env=ENV,args=["--no-sandbox"])
+ for family,port,subdir in [("T1",4721,"app"),("T2",4722,"app/dist")]:
+  directory=PACK/"foundations"/family/subdir;log=open(OUT/(family+"-server.log"),"w")
+  server=subprocess.Popen([sys.executable,"-m","http.server",str(port),"--bind","127.0.0.1","--directory",str(directory)],stdout=log,stderr=subprocess.STDOUT,env=ENV)
+  try:
+   for _ in range(50):
+    try:urlopen(f"http://127.0.0.1:{port}/",timeout=.5).close();break
+    except Exception:time.sleep(.1)
+   page=browser.new_page(viewport={"width":1440,"height":900},device_scale_factor=1)
+   page.goto(f"http://127.0.0.1:{port}/?theme=light&lang=en",wait_until="networkidle")
+   page.screenshot(path=str(OUT/(family+"-light-desktop.png")))
+   result.append({"family":family,"time":datetime.now(timezone.utc).isoformat(),"browser":browser.version,"fontconfig":ENV["FONTCONFIG_FILE"],"url":page.url,"viewport":page.viewport_size,"source":str(directory),"screenshot":str(OUT/(family+"-light-desktop.png")),"bodyText":page.locator("body").inner_text()})
+   page.close()
+  finally:server.terminate();server.wait(timeout=5);log.close()
+ browser.close()
+source_checks=[]
+for pid,family in [("P01","T4"),("P03","T1"),("P06","T1"),("P16","T1"),("P18","T4")]:
+ for folder in ["dist","preview"]:
+  base=PACK/"foundations"/family/"app"/folder;prod=PACK/"products"/pid/"app"/folder
+  diffs=[]
+  for f in base.rglob("*"):
+   if f.is_file():
+    rel=f.relative_to(base);target=prod/rel
+    if not target.exists() or f.read_bytes()!=target.read_bytes():diffs.append(str(rel))
+  source_checks.append({"product":pid,"asset_folder":folder,"differing_or_missing_foundation_files":diffs})
+result.append({"source_checks":source_checks})
+(OUT/"record.json").write_text(json.dumps(result,ensure_ascii=False,indent=2))
+print(json.dumps({"captures":[x.get("screenshot") for x in result if x.get("screenshot")],"source_checks":source_checks},ensure_ascii=False,indent=2))
+

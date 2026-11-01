@@ -1,0 +1,125 @@
+import os,sys,json,time,shutil,subprocess,traceback,hashlib
+from pathlib import Path
+from datetime import datetime,timezone
+from urllib.request import urlopen
+from playwright.sync_api import sync_playwright
+ROOT=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery");PACK=Path("/workspace/scratch/e1cfe6e447ee/ui-study/review-pack")
+OUT=ROOT/"evidence/behavior-wiki-001";OUT.mkdir(parents=True,exist_ok=False)
+ENV=dict(os.environ,FONTCONFIG_FILE="/tmp/ui-spec-fonts/fonts.conf",PLAYWRIGHT_BROWSERS_PATH="/tmp/ui-spec-preview-browser")
+CHROME="/tmp/ui-spec-preview-browser/chrome-headless-shell-143.0.7499.4/chrome-headless-shell-linux64/chrome-headless-shell"
+TITLE="访谈笔记 — 傍晚通勤"
+def now():return datetime.now(timezone.utc).isoformat()
+def state(page):
+ return page.evaluate("""() => ({url:location.href,viewport:{width:innerWidth,height:innerHeight},palette:$tw.wiki.getTiddlerText('$:/palette'),theme:$tw.wiki.getTiddlerText('$:/theme'),language:$tw.wiki.getTiddlerText('$:/language'),story:$tw.wiki.getTiddlerList('$:/StoryList'),focus:{tag:document.activeElement?.tagName,label:document.activeElement?.getAttribute('aria-label'),title:document.activeElement?.getAttribute('title'),value:document.activeElement?.value},buttons:[...document.querySelectorAll('button')].filter(e=>e.getBoundingClientRect().width).map(e=>({label:e.getAttribute('aria-label'),title:e.getAttribute('title'),text:e.innerText})),selects:[...document.querySelectorAll('select')].map(e=>({value:e.value,options:[...e.options].map(o=>({value:o.value,text:o.textContent}))})),horizontalOverflow:document.documentElement.scrollWidth>innerWidth,scrollY,bodyText:document.body.innerText.slice(0,16000)})""")
+def rec(data,name,page):
+ data["steps"].append({"time":now(),"name":name,"observed":state(page)});(OUT/(data["product"]+".json")).write_text(json.dumps(data,ensure_ascii=False,indent=2))
+def shot(data,name,page):
+ path=OUT/(data["product"]+"-"+name+".png");page.screenshot(path=str(path));data["screenshots"].append({"name":name,"path":str(path),"viewport":page.viewport_size,"time":now()})
+def note(page,title):
+ return page.locator(".tc-tiddler-frame").filter(has=page.locator(".tc-title-text").filter(has_text=title)).first
+def exact_note(page,title):
+ return page.locator(".tc-tiddler-frame").filter(has=page.locator(".tc-title-text").filter(has_text=title)).first
+def search_open(page,title):
+ search=page.locator('input[type="search"]:visible').first
+ search.fill(title);page.wait_for_timeout(350)
+ link=page.get_by_role("link",name=title,exact=True).last
+ link.focus();page.keyboard.press("Enter");page.wait_for_timeout(350)
+ search.fill("");page.keyboard.press("Escape")
+ return exact_note(page,title)
+def body_editor(page):
+ for frame in page.frames:
+  for ta in frame.locator("textarea").all():
+   if ta.is_visible():
+    value=ta.input_value()
+    if "A route remembered" in value:return ta
+ raise RuntimeError("No native body textarea located; frames="+str([(f.url,f.locator('textarea').count()) for f in page.frames]))
+summary=[]
+with sync_playwright() as p:
+ browser=p.chromium.launch(executable_path=CHROME,headless=True,env=ENV,args=["--no-sandbox"])
+ for source,port in [("T3-foundation",4713),("P13",4714)]:
+  data={"product":source,"started":now(),"browser":browser.version,"device_scale_factor":1,"fontconfig":ENV["FONTCONFIG_FILE"],"steps":[],"screenshots":[],"checks":[],"network_writes":[],"console_errors":[]}
+  base=PACK/"foundations/T3/app" if source=="T3-foundation" else PACK/"products/P13/app"
+  app=ROOT/"copies/wiki-001"/source/"app";shutil.copytree(base,app,ignore=shutil.ignore_patterns("node_modules","output"))
+  data["tested_copy"]=str(app);log=open(OUT/(source+"-server.log"),"w")
+  server=subprocess.Popen(["bash",str(app/"start.sh")],cwd=app,env=dict(ENV,PORT=str(port)),stdout=log,stderr=subprocess.STDOUT)
+  data["server"]={"pid":server.pid,"port":port,"started":now()};context=None
+  try:
+   for _ in range(100):
+    if server.poll() is not None:raise RuntimeError("Wiki server exited "+str(server.returncode))
+    try:urlopen(f"http://127.0.0.1:{port}/",timeout=.5).close();break
+    except Exception:time.sleep(.1)
+   context=browser.new_context(viewport={"width":1440,"height":900},device_scale_factor=1)
+   page=context.new_page();page.on("pageerror",lambda e:data["console_errors"].append(str(e)))
+   page.on("dialog",lambda d:d.accept())
+   page.on("response",lambda r:data["network_writes"].append({"method":r.request.method,"url":r.url,"status":r.status,"time":now()}) if r.request.method in ["PUT","DELETE","POST"] else None)
+   page.goto(f"http://127.0.0.1:{port}/",wait_until="domcontentloaded");page.wait_for_function("window.$tw && $tw.wiki");page.wait_for_timeout(900)
+   rec(data,"initial",page);shot(data,"initial",page)
+   if source=="T3-foundation":
+    data["completed"]=now()
+   else:
+    initial_palette=page.evaluate("$tw.wiki.getTiddlerText('$:/palette')")
+    frame=search_open(page,TITLE);frame.locator(".tc-title-text").scroll_into_view_if_needed()
+    rec(data,"interview-reading",page);shot(data,"interview-reading",page)
+    for _ in range(4):page.mouse.wheel(0,600);page.wait_for_timeout(80)
+    rec(data,"long-reading-end",page);shot(data,"long-reading-end",page)
+    ledger_link=frame.get_by_role("link",name="Evidence ledger",exact=True)
+    if ledger_link.count():
+     ledger_link.first.click();page.wait_for_timeout(300);data["ledger_route"]="related link in interview"
+    else:search_open(page,"Evidence ledger");data["ledger_route"]="native search"
+    ledger=exact_note(page,"Evidence ledger");ledger.locator(".tc-title-text").scroll_into_view_if_needed()
+    rec(data,"evidence-ledger",page);shot(data,"evidence-ledger",page)
+    data["ledger_table"]=ledger.locator("table").evaluate_all("els=>els.map(e=>({text:e.innerText,rect:e.getBoundingClientRect().toJSON(),width:e.scrollWidth}))")
+    frame=search_open(page,TITLE)
+    edit=frame.get_by_role("button",name="edit",exact=True);edit.focus();page.keyboard.press("Enter");page.wait_for_timeout(300)
+    rec(data,"editor-open-keyboard",page)
+    ta=body_editor(page);original=ta.input_value()
+    edited=original.replace("This synthetic interview combines","This synthetic interview carefully combines",1).replace("林把路线分成三个片段","林将路线分成三个片段",1)
+    if edited==original:raise RuntimeError("Expected bilingual passages not found")
+    ta.fill(edited);shot(data,"bilingual-editor",page)
+    save=page.get_by_role("button",name="save changes",exact=True).last;save.focus();page.keyboard.press("Enter")
+    page.wait_for_timeout(1200)
+    rec(data,"saved-bilingual-edit",page)
+    disk=[]
+    for f in (app/"wiki/tiddlers").glob("*.tid"):
+     raw=f.read_text()
+     if ("title: "+TITLE+"\n") in raw:
+      disk.append({"path":str(f),"sha256":hashlib.sha256(f.read_bytes()).hexdigest(),"edited_text_present":edited in raw})
+    data["disk_after_save"]=disk
+    page.reload(wait_until="domcontentloaded");page.wait_for_function("window.$tw && $tw.wiki");page.wait_for_timeout(700)
+    native=page.evaluate("title=>$tw.wiki.getTiddlerText(title)",TITLE)
+    data["checks"].append({"name":"bilingual_edit_disk_reload_agree","pass":native==edited and any(f["edited_text_present"] for f in disk),"english_changed":"carefully combines" in native,"chinese_changed":"林将路线分成三个片段" in native})
+    rec(data,"reload-persistence",page)
+    frame=search_open(page,TITLE);frame.get_by_role("button",name="edit",exact=True).click();page.wait_for_timeout(250)
+    ta=body_editor(page);ta.fill(edited+"\n\nDISCARDED-REVIEW-CANDIDATE / 放弃的复核修改")
+    page.get_by_role("button",name="cancel",exact=True).last.click();page.wait_for_timeout(400)
+    rec(data,"cancel-edit",page)
+    data["checks"].append({"name":"cancel_preserves_saved_note","pass":page.evaluate("title=>$tw.wiki.getTiddlerText(title)",TITLE)==edited})
+    search_open(page,"Quiet route — working draft");rec(data,"continue-to-unfinished-note",page);shot(data,"unfinished-note",page)
+    control=page.get_by_role("button",name="control panel",exact=True).first;control.click();page.wait_for_timeout(250)
+    page.get_by_role("button",name="Appearance",exact=True).last.click();page.wait_for_timeout(250)
+    if page.get_by_role("button",name="Palette",exact=True).count():page.get_by_role("button",name="Palette",exact=True).last.click()
+    page.wait_for_timeout(250);rec(data,"palette-ui",page)
+    select=page.locator('select').filter(has=page.locator('option[value="$:/palettes/Nord"]')).first
+    select.select_option("$:/palettes/Nord");page.wait_for_timeout(300)
+    frame=search_open(page,TITLE);frame.locator(".tc-title-text").scroll_into_view_if_needed()
+    rec(data,"dark-reading",page);shot(data,"dark-reading",page)
+    page.set_viewport_size({"width":1280,"height":640});rec(data,"dark-compact",page);shot(data,"dark-compact",page)
+    page.set_viewport_size({"width":390,"height":844});frame.locator(".tc-title-text").scroll_into_view_if_needed();rec(data,"dark-narrow",page);shot(data,"dark-narrow",page)
+    page.emulate_media(reduced_motion="reduce")
+    data["reduced_motion_styles"]=page.evaluate("""() => ({matches:matchMedia('(prefers-reduced-motion: reduce)').matches,sidebar:[...document.querySelectorAll('.nc-sidebar,.tc-drop-down,.sidebar-toggle')].map(e=>({class:e.className,animation:getComputedStyle(e).animationName,transition:getComputedStyle(e).transitionDuration}))})""")
+    rec(data,"narrow-reduced-motion",page);shot(data,"narrow-reduced-motion",page)
+    data["completed"]=now()
+  except Exception:
+   data["failure"]=traceback.format_exc();print(source,data["failure"],flush=True)
+  finally:
+   if context:context.close()
+   server.terminate()
+   try:server.wait(timeout=5)
+   except subprocess.TimeoutExpired:server.kill();server.wait()
+   log.close();data["server"]["stopped"]=now();data["server"]["returncode"]=server.returncode
+   (OUT/(source+".json")).write_text(json.dumps(data,ensure_ascii=False,indent=2))
+   summary.append({"product":source,"checks":data["checks"],"failure":data.get("failure"),"console_errors":data["console_errors"],"evidence":str(OUT/(source+".json"))})
+   print(json.dumps(summary[-1],ensure_ascii=False),flush=True)
+ browser.close()
+(OUT/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2))
+

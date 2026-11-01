@@ -1,0 +1,89 @@
+{
+  "kind": "coordinator-derived failed archive operation record, not participant evidence",
+  "recorded_at": "2026-11-01T09:38:04.527991+00:00",
+  "actual_error": "FileExistsError: /workspace/scratch/e1cfe6e447ee/UI-Spec-Studio/docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/large-object-c1d1a19a13c5b8d8-part-001.zip",
+  "cause": "Distinct reviewer working-copy paths contained the same oversized bytes. The archive helper used content-derived piece names but rejected reuse of a piece it had already generated within the same call.",
+  "disposition": "Original review workspace and immutable review manifest remain unchanged. Partial generated archives were moved to a private scratch failure directory. The coordinator helper now reuses only a piece created during the same call, verifies payload bytes on every reuse, and still rejects pre-existing output archives. A fresh complete snapshot will be generated and reconstructed.",
+  "partial_generated_archives": [
+    {
+      "file": "original-review-part-07.zip",
+      "bytes": 6600152,
+      "sha256": "83b67a08bdc22c4c0caf4475482e77b9164d6c0b8b195c44644a5bfaea7b7b5f"
+    },
+    {
+      "file": "original-review-part-05.zip",
+      "bytes": 6944681,
+      "sha256": "39fdedf553ed79b39a8de9510d46c21f82cb17cc643e264665879fac2f251200"
+    },
+    {
+      "file": "original-review-part-14.zip",
+      "bytes": 2847078,
+      "sha256": "3cded5a7e1074a239bb5536f858cba4c09c8c2a879b38757672923b53acc42fc"
+    },
+    {
+      "file": "original-review-part-04.zip",
+      "bytes": 6365477,
+      "sha256": "bd28c79c72fa775bdfdbc15c4f08e184ff72a02e7b01686b6e4de289c3b6d009"
+    },
+    {
+      "file": "original-review-part-12.zip",
+      "bytes": 6692166,
+      "sha256": "1f1be5f1e64dd6ca47e1139677d9734c8bf2c90edff114648b3f4150e357e886"
+    },
+    {
+      "file": "original-review-part-11.zip",
+      "bytes": 6921965,
+      "sha256": "db49be14ebc048f73bdddd8ce0e75a4a3ea37a9357dcb4e61ea56121426ea986"
+    },
+    {
+      "file": "original-review-part-06.zip",
+      "bytes": 6237187,
+      "sha256": "004dad1054fb2d35aa6fded810ce215b4492dfae299d0a6117ecaa46f4a3c0b6"
+    },
+    {
+      "file": "original-review-part-01.zip",
+      "bytes": 7401530,
+      "sha256": "7592269ddf08ac32293633b07220f79c6dc185e31818d88a232093ababd6bbc5"
+    },
+    {
+      "file": "original-review-part-03.zip",
+      "bytes": 6755750,
+      "sha256": "ed2df81d62eeac0be162cb1f2aacfa931afe24fd3849f31bd2bfa6a89e1e5099"
+    },
+    {
+      "file": "original-review-part-09.zip",
+      "bytes": 6348915,
+      "sha256": "20032f333e6d8dc4679352db76e2fa087b6f0fc0cbd16aea7ae56d9c5fa8f63a"
+    },
+    {
+      "file": "large-object-c1d1a19a13c5b8d8-part-002.zip",
+      "bytes": 53740,
+      "sha256": "1d75e5d969ddfe1782b6c179865f47219b1e9defbe8fca3c65713e4d47ee3772"
+    },
+    {
+      "file": "original-review-part-10.zip",
+      "bytes": 6643905,
+      "sha256": "f902904cd6711e808ff5a354b94679b02a6a6c8fc73f6161e50c6d410a2e225a"
+    },
+    {
+      "file": "large-object-c1d1a19a13c5b8d8-part-001.zip",
+      "bytes": 2485085,
+      "sha256": "e46ca17ec3aaded7543fe6ea809151666ad1db17f260803fbc0c22606b026a32"
+    },
+    {
+      "file": "original-review-part-08.zip",
+      "bytes": 6971227,
+      "sha256": "ed784be6911505e4bee4c82e601f0be59e7b4ef7e8f9b47a616dbb7e3c2f7043"
+    },
+    {
+      "file": "original-review-part-13.zip",
+      "bytes": 7942085,
+      "sha256": "df3a432b6848b12a61a15924c6041b9f307c1461ba4df02aece54ffc53619640"
+    },
+    {
+      "file": "original-review-part-02.zip",
+      "bytes": 6719366,
+      "sha256": "288da5c59608d3b66e829e3e905d41a0321fe6513035d102657b5ec6c5de2dae"
+    }
+  ]
+}

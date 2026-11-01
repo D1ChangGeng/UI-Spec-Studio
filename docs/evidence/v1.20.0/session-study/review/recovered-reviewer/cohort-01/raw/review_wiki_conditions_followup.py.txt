@@ -1,0 +1,13 @@
+from pathlib import Path
+source=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/review_wiki_conditions.py").read_text()
+source=source.replace("behavior-wiki-004","behavior-wiki-005")
+old='page.locator("select").filter(has=page.locator(\'option[value="\'+value+\'"]\')).first.select_option(value);page.wait_for_timeout(250)'
+new='page.get_by_text("Nord - An arctic, north-bluish color palette." if value=="$:/palettes/Nord" else "Notebook Beige - A beige colour palette for Notebook",exact=True).click();page.wait_for_timeout(250);data["checks"].append({"name":"palette-selected","expected":value,"actual":page.evaluate("$tw.wiki.getTiddlerText(\\\'$:/palette\\\')")})'
+assert old in source
+source=source.replace(old,new)
+start='  page.set_viewport_size({"width":1440,"height":900});control_panel(page);tab(page,"Basics");rec("basics-ui",page)'
+end='  data["completed"]=now()'
+a=source.index(start);b=source.index(end,a)
+source=source[:a]+'  data["language_limit"]="Native UI language switching was not exercised; inspected English controls with bilingual note content."\n'+source[b:]
+exec(source)
+

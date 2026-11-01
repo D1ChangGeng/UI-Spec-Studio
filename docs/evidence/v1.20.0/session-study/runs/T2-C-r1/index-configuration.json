@@ -1,0 +1,81 @@
+{
+  "cell_id": "T2-C-r1",
+  "agent_id": "/root/product_07_recovered",
+  "preview_command": "From the reconstructed workspace: python3 -m http.server 4407 --bind 127.0.0.1 --directory app/dist; open /?theme=light&lang=en or /?theme=dark&lang=zh. To rebuild, run npm ci and npm run build from app with its frozen lockfile.",
+  "capture_conditions": "Pinned Chromium 143.0.7499.4 / Playwright 1.57.0, DPR 1 and Noto Sans CJK SC. Actual final product captures include 1440x900, 1280x600 and 390x844 in light/English and dark/Chinese; controlled streaming episodes and a separate continuation are retained.",
+  "final_capture_prefixes": [
+    "evidence/final-05",
+    "evidence/continuation-02"
+  ],
+  "primary_view_globs": [
+    "evidence/views/*.json"
+  ],
+  "behavior_log_globs": [
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt",
+    "evidence/final-05/report.json",
+    "evidence/continuation-02/report.json"
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_07_recovered/research",
+      "role": "ui_researcher",
+      "prompt": "evidence/coordination/child-prompt.txt",
+      "spawn": "evidence/coordination/spawn.json",
+      "completion": "evidence/coordination/child-final-notification.md",
+      "result": "evidence/research/RESEARCH-REPORT.md",
+      "command_globs": [
+        "evidence/research/*/command.json",
+        "evidence/research/*/stdout.txt",
+        "evidence/research/*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/research/tool-responses/w07-research-browser-bootstrap.json",
+        "evidence/research/tool-responses/w07-research-license005.json",
+        "evidence/research/tool-responses/w07-research-open003.json",
+        "evidence/research/tool-responses/w07-research-search001.json",
+        "evidence/research/tool-responses/w07-research-search002.json",
+        "evidence/research/tool-responses/w07-research-search004.json",
+        "evidence/research/tool-responses/w07-research-view001.json",
+        "evidence/research/tool-responses/w07-research-view002.json",
+        "evidence/research/tool-responses/w07-research-view003.json",
+        "evidence/research/tool-responses/w07-research-view004.json",
+        "evidence/research/tool-responses/w07-research-view005.json",
+        "evidence/research/tool-responses/w07-research-view006.json",
+        "evidence/research/tool-responses/w07-research-view007.json"
+      ],
+      "completion_repository_path": "docs/evidence/v1.20.0/session-study/coordination/recovery-0830/T2-C-child-completion-originals.json",
+      "completion_source": "Original parent-retained collaboration completion body with original spawn response and delegation ledger"
+    }
+  ],
+  "additional_tool_exports": [],
+  "direct_source_files": [
+    "app/src/components/assistant-ui/elements/thread.aui.tsx",
+    "app/src/components/assistant-ui/elements/attachment.aui.tsx",
+    "app/src/components/assistant-ui/elements/markdown-text.tsx",
+    "app/src/lib/locale.ts",
+    "app/src/synthetic.ts",
+    "app/package-lock.json"
+  ],
+  "audit_observations": [
+    "The new primary and one fresh researcher completed; the actual child request, returned ID, final notification, report, source screenshots, complete available tool returns and failed public-source attempts are retained. The exact frozen researcher text was dispatched with its terminal newline omitted; this serialization detail is explicitly reported by the primary.",
+    "All 542 captured files reconstructed byte for byte from registered inputs and four immutable overlay archives. Frozen method and role files are unchanged.",
+    "The primary reports 53 final-05 and 7 continuation-02 passing assertions, with production build and TypeScript output retained. These are exercised implementation checks, not independent visual acceptance.",
+    "The source adoption ledger and original public reference images are retained, including child JPEG originals and separately converted PNGs used for actual viewing. Failed selectors, timing assumptions and trial defects remain in the complete workspace.",
+    "The first coordinator consistency check rejected the bare original child completion body because it omitted the sender header. An envelope now retains that unchanged body together with the original spawn response and original delegation ledger identifying the sender and completion file. No original output, frozen validator or participant source was changed; the first failed check remains retained."
+  ],
+  "limitations": "Fresh execution after the unavailable prior attempt. Shared host and instructional isolation, cache/acquisition timing and unavailable resolved identities/native usage limit comparisons. The main visual review distinguishes pre-final final-04 observations from final-05 return-surface views and a continuation. Controlled Chromium operations and viewed frames do not establish physical mobile keyboard/IME, other engines, screen-reader experience, natural-time playback or human acceptance. The source-family build advisory and broader inherited English navigation remain.",
+  "capture_lineage": "Only final-05 and continuation-02 original PNGs identify delivery here. Earlier final-04 views and trials are retained in the full archive; the late opaque return-button source configuration was followed by the complete final-05 suite and four actual final-05 image views, plus a viewed continuation frame.",
+  "report_files": [
+    "FINAL.md",
+    "VISUAL-REVIEW.md",
+    "ADOPTION.md",
+    "SPEC.md",
+    "SOURCE-ADOPTION.json",
+    "DELEGATION.json",
+    "evidence/research/RESEARCH-REPORT.md",
+    "evidence/research/VISUAL-REVIEW.md",
+    "evidence/research/evidence-file-manifest.json"
+  ]
+}

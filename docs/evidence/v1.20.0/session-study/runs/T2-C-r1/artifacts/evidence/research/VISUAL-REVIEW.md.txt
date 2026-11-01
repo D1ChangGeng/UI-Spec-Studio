@@ -1,0 +1,23 @@
+# Visual review ledger
+
+This is an authored observation ledger, not a reconstructed tool response. Exact response files, AX strings and screenshot bytes are retained separately.
+
+## Actually viewed
+
+- `baseline-six-lines-files-1280.png` — viewed through `view_image`; four identical document tiles, six readable lines, stable lower action row; composer 270px tall as measured separately. Full tool response in `tool-responses/w07-research-view001.json`.
+- `baseline-stream-13.png` — viewed through `view_image`; earlier response passage remains visible while cancellation control indicates the run is active; return button above composer. Response in view002.
+- `baseline-stream-23.png` — viewed through `view_image`; later answer passage visible, return control still present after completion; timing samples show remaining 299px distance. Response in view003.
+- `baseline-dark-zh-390.png` — viewed through `view_image`; readable Chinese body, narrow inset margins, collapsed sidebar, composer remains available. Settled state only, no claim about keyboard or growth here. Response in view004.
+- `public-captures/w07-ai-elements-inline.jpg` — viewed in the cloud browser and re-viewed locally; named compact badges with three in first row, one wrapped below. Component example, not an integrated composer.
+- `public-captures/w07-ai-elements-chatbot-rest.jpg` — viewed in cloud browser; seeded answer at bottom, suggestions and composer beneath a bounded conversation.
+- `public-captures/w07-ai-elements-chatbot-six-lines-settled.jpg` — viewed in cloud browser and re-viewed locally; six mixed-script lines, expanded composer, bottom tools/send footer steady, reduced reading viewport.
+- `public-captures/w07-assistant-ui-file-final.jpg` — viewed in cloud browser and re-viewed locally; outline/muted styles, icon/name/size/download relationship, small/default/large examples. Only Root/Icon/Name apply to metadata-only task data.
+- `public-captures/w07-assistant-ui-scroll-anchor.jpg` — viewed in cloud browser; compact scripted message preview and return concept. No continuous-motion claim.
+
+## Retained but not independent visual evidence
+
+Other local PNGs are captured frames not all individually viewed. Their existence is not a visual acceptance claim. `w07-ai-elements-chatbot-six-lines-final.jpg` is an intermediate render immediately after filling: its AX state already contains the draft while the screenshot still shows the preceding render. The later `six-lines-settled` capture is the visible filled state. This discrepancy is retained rather than overwritten. A replay attempt of the scripted Scroll anchor example produced truncated tool output; no exported replay frames survived, so it is excluded from time-based conclusions.
+
+## Timing and provenance limits
+
+Local streaming samples are ordered and carry monotonic timestamps; selected screenshots were viewed. They support stable sampled reading position and the measured final gap. They do not by themselves establish animation smoothness. Public observations are live source previews at a different viewport, with no public stream sent. Capture names do not certify success; observed state and original logs control interpretation.
