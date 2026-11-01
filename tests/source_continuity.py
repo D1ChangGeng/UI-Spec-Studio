@@ -12,7 +12,8 @@ def runtime_v119(root: Path, path: str) -> bytes:
     # v1.20.1 changes only the Skill's published version scalar. Restore that
     # exact known one-line delta before checking the immutable v1.20.0 ledger.
     # Any other content change must still fail the prior SHA-256 identity check.
-    if path == 'skills/ui-spec/SKILL.md' and (root / 'VERSION').read_text(encoding='utf-8').strip() == '1.20.1':
+    if (path == 'skills/ui-spec/SKILL.md' and (root / 'VERSION').is_file()
+            and (root / 'VERSION').read_text(encoding='utf-8').strip() == '1.20.1'):
         patch = b'  version: "1.20.1"\n'
         prior = b'  version: "1.20.0"\n'
         if current.count(patch) == 1:
