@@ -1,0 +1,16 @@
+{
+  "kind": "coordinator restoration of absent registered inputs",
+  "observed_at": "2026-11-01T10:56:46.057247+00:00",
+  "attempt_context": "New independent execution required after complete original workspace became unavailable; surviving originals remain separately retained and are not supplied.",
+  "records": [
+    {
+      "cell_id": "T3-C-r1",
+      "registered_path": "/workspace/scratch/708e8b7f118e/ui-study/worksets/w11",
+      "physical_workspace": "/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w11",
+      "verified_files": 8890,
+      "registered_input_bytes_changed": false,
+      "alias_scope": "Filesystem continuity only; exact registered prompt, input content and method/role files remain unchanged."
+    }
+  ],
+  "limitations": "The old locations were absent in ordinary and elevated checks. This observation does not identify their deletion cause or reconstruct any completed experiment."
+}

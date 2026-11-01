@@ -1,0 +1,2609 @@
+{
+  "schema_version": 1,
+  "kind": "coordinator-derived correspondence over actual reviewer output; not a review outcome",
+  "agent_id": "/root/product_reviewer_recovered",
+  "review_snapshot": {
+    "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/snapshot.json",
+    "sha256": "4ca79efd7a21bd6d2a328f69e9cded889a1c081a17e9dae5df0f52707c2b3cf4"
+  },
+  "reviewer_records": {
+    "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+    "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+  },
+  "reviewed_products": [
+    {
+      "cell_id": "T4-F-main-r1",
+      "anonymous_product": "P01",
+      "product_evidence_sha256": "5831562b0e022483e78ac729eea8c5d7ce649f830580f7c10db13324fa9840cd",
+      "judgment": {
+        "status": "satisfactory_bounded_scope",
+        "summary": "The settled Tabler Toast integration is satisfactory in the exercised bounded scope; surrounding narrow-form limitations remain.",
+        "scope": "Initial blind product judgment, not final release acceptance."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"source\"], \"observation\": \"The original dark desktop, light compact and narrow failure views retain the selected Toast header/body/separated action-row relationship, native typography, border, shadow and small primary retry action.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Success persists the submitted snapshot while later location edits remain in the form; failure preserves the previous stored value; retry saves the failed snapshot while keeping a newer name draft.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P01.json\"]}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Invalid submission focuses and associates the name field. Disappearing retry and explicit close return focus to Save. Cancel restores persisted data, and later successful data survives reload.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P01.json\"]}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\", \"geometry\"], \"observation\": \"The narrow top-right toast overlaps upper context, while inherited full navigation and single-line fields remain. The representative long fields have scrollWidth 656 versus clientWidth 330. These surrounding features are outside T4's bounded redesign authority.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"source\"], \"observation\": \"The authoritative store and all compared existing Tabler dist/preview files match the supplied foundation.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"No screen-reader announcement study, storage-quota failure, broad browser compatibility or unrelated gallery-route acceptance is claimed.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-main-r1/artifacts/evidence/captures/final-error-lower-dark-zh-1440.png",
+            "sha256": "5481ca95cffc28439b0173a975e4ba28258904988a454cc423ea1f0762abe065"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P01-010.json",
+            "sha256": "8a1cf4c10fd5d4ada03878e2cb6b6ceec91bd47648b9180397137444ac621d3b",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-main-r1/artifacts/evidence/captures/final-error-lower-light-en-1280.png",
+            "sha256": "505e44004a3f8f53da7bc89d7471a43a229e0d339c1d8d0bc82f669989c57570"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P01-012.json",
+            "sha256": "42701de94fc85039d906dcadcca79251a6c080b5f7f8d532114e3224c51cbc0a",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-main-r1/artifacts/evidence/captures/final-error-top-light-en-390.png",
+            "sha256": "2e9a5ad431e1ee64e4289849d5d8e220127e9e23232a99118550b0079b29dc86"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P01-020.json",
+            "sha256": "ab9f2c09cc5df0cdec44699f3af796c64595d39c4daffb517e3da258220997f3",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P01",
+        "task_family": "T4",
+        "judgment": {
+          "status": "satisfactory_bounded_scope",
+          "summary": "The settled Tabler Toast integration is satisfactory in the exercised bounded scope; surrounding narrow-form limitations remain.",
+          "scope": "Initial blind product judgment, not final release acceptance."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "source"
+            ],
+            "observation": "The original dark desktop, light compact and narrow failure views retain the selected Toast header/body/separated action-row relationship, native typography, border, shadow and small primary retry action."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Success persists the submitted snapshot while later location edits remain in the form; failure preserves the previous stored value; retry saves the failed snapshot while keeping a newer name draft.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P01.json"
+            ]
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Invalid submission focuses and associates the name field. Disappearing retry and explicit close return focus to Save. Cancel restores persisted data, and later successful data survives reload.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P01.json"
+            ]
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels",
+              "geometry"
+            ],
+            "observation": "The narrow top-right toast overlaps upper context, while inherited full navigation and single-line fields remain. The representative long fields have scrollWidth 656 versus clientWidth 330. These surrounding features are outside T4's bounded redesign authority."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "source"
+            ],
+            "observation": "The authoritative store and all compared existing Tabler dist/preview files match the supplied foundation."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "No screen-reader announcement study, storage-quota failure, broad browser compatibility or unrelated gallery-route acceptance is claimed."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P01.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-008-settings-interactions",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-007-settings-interactions"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-004-remaining-contracts",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-006-settings-source",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/record.json"
+        ],
+        "material_unresolved_items": [],
+        "cohort": "2026-11-01-cohort-01",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P01/captures/010.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P01/captures/012.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P01/captures/020.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P01-010.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P01-012.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P01-020.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P01-narrow-dark-fields.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P01-narrow-dark-fields.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/T4-source-toast.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T4-source-toast.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P01.json",
+        "sha256": "f3eec0a8b6679533ef7138a0a295cf272b98d1c9acf548e28c97009e026d73d0"
+      }
+    },
+    {
+      "cell_id": "T1-A-r1",
+      "anonymous_product": "P03",
+      "product_evidence_sha256": "9181bd5320261e8dedea6c2e885e379784192f35ab3ef40fee8ad33e8987c366",
+      "judgment": {
+        "status": "satisfactory_exercised_scope",
+        "summary": "A coherent source-preserving settings improvement, with complete representative long values and useful narrow navigation.",
+        "scope": "Observed settings paths and specified viewports; broader accessibility and content extremes remain unknown."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\"], \"observation\": \"Full-width name/organization fields, a distinct saved-identity unit, required/length hints and private-email wording form a clear hierarchy in the mature Tabler family.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"geometry\"], \"observation\": \"Narrow navigation collapses and the representative bilingual long values wrap over three visible lines. Both fields have equal 330 px client/scroll widths and 78 px client/scroll heights.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Actual Tab navigation into editing and onward to Save worked. Submitted snapshots, later edits, failure, current-form retry, cancel, validation focus and reload persistence worked.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03.json\"]}, {\"kind\": \"limitation\", \"evidence_type\": [\"behavior\"], \"observation\": \"During pending, disabling Save briefly leaves activeElement at BODY; initiating focus returns after completion if the user has not moved elsewhere. Later field focus is preserved.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03.json\"]}, {\"kind\": \"strength\", \"evidence_type\": [\"pixels\"], \"observation\": \"Viewed light error feedback has a distinct native tinted alert, and the dark narrow form remains legible with visible field focus.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"The long form needs vertical scrolling. Physical mobile keyboard, screen-reader behavior, storage-quota failures, and exhaustive maximum-length/unbroken-token values were not evaluated.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-A-r1/artifacts/evidence/final-concurrency/zh-light-newer-edits.png",
+            "sha256": "434990ed852344f4bee7ac294ecbb9c7131b24812afc003fa0f40e2c7874aa2d"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P03-088.json",
+            "sha256": "ed8f69ff618fb518bb0f2a2da95cefdfd2400504ff7470c468c175b125527823",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-A-r1/artifacts/evidence/delivery-en-light.png",
+            "sha256": "f8094a73811724cd474f93cbc34676d3bcf5cb51e28d1c871a80f7747f418b07"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P03-089.json",
+            "sha256": "c824cbe9dc0275bdd93abac7fb61fb9e72972d5fe7961abc0de60a42f575f33f",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-A-r1/artifacts/evidence/delivery-zh-dark.png",
+            "sha256": "794a6301ae680d065f8e3b21de0288fbbd0fe6082a4a8cabe43c4629de5c4b5c"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P03-090.json",
+            "sha256": "2e05506a55a8d8d8104030b7203f75a7f8e51a9648fce7b0d26304f7130e71f8",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P03",
+        "task_family": "T1",
+        "judgment": {
+          "status": "satisfactory_exercised_scope",
+          "summary": "A coherent source-preserving settings improvement, with complete representative long values and useful narrow navigation.",
+          "scope": "Observed settings paths and specified viewports; broader accessibility and content extremes remain unknown."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "Full-width name/organization fields, a distinct saved-identity unit, required/length hints and private-email wording form a clear hierarchy in the mature Tabler family."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "geometry"
+            ],
+            "observation": "Narrow navigation collapses and the representative bilingual long values wrap over three visible lines. Both fields have equal 330 px client/scroll widths and 78 px client/scroll heights."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Actual Tab navigation into editing and onward to Save worked. Submitted snapshots, later edits, failure, current-form retry, cancel, validation focus and reload persistence worked.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03.json"
+            ]
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "During pending, disabling Save briefly leaves activeElement at BODY; initiating focus returns after completion if the user has not moved elsewhere. Later field focus is preserved.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03.json"
+            ]
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "Viewed light error feedback has a distinct native tinted alert, and the dark narrow form remains legible with visible field focus."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "The long form needs vertical scrolling. Physical mobile keyboard, screen-reader behavior, storage-quota failures, and exhaustive maximum-length/unbroken-token values were not evaluated."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-008-settings-interactions"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-006-settings-source",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/record.json"
+        ],
+        "material_unresolved_items": [],
+        "cohort": "2026-11-01-cohort-01",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P03/captures/088.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P03/captures/089.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P03/captures/090.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P03-088.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P03-089.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P03-090.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-forced-error.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-narrow-dark-fields.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P03-forced-error.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P03-narrow-dark-fields.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/T1-light-desktop.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T1-light-desktop.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P03.json",
+        "sha256": "590666ec249fb82dcc6d7e95d884e4a35b6ab3e0db9a6215143d94e9a2cf6865"
+      }
+    },
+    {
+      "cell_id": "T1-C-r1",
+      "anonymous_product": "P06",
+      "product_evidence_sha256": "e5e7f18aedce4e87b152af92b75fd535c2c4964cd442cdcb51ca84eced2d2d2a",
+      "judgment": {
+        "status": "satisfactory_exercised_scope",
+        "summary": "A compact, coherent settings composition with wrapping long fields, localized state wording and working data recovery.",
+        "scope": "Observed settings paths and specified viewports; remaining limits are recorded."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\"], \"observation\": \"The compact avatar/account heading places the browser-local persistence boundary beside identity; profile controls, hints and secondary language/theme controls remain coherent.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"geometry\"], \"observation\": \"Collapsed narrow navigation leaves more form content visible. Representative long name and organization values wrap completely with matching 330 px client/scroll widths.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Actual Tab-to-edit/save, pending edits, failed save, current-form retry, cancel, invalid-name recovery and reload persistence completed. Failed writes preserve previous storage.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P06.json\"]}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\"], \"observation\": \"Error/status treatment is more restrained than P03's tinted alert. Its wording is readable but has lower visual emphasis.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"behavior\"], \"observation\": \"Disabled Save temporarily leaves activeElement at BODY during pending; focus returns on completion unless the user moved to another control.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P06.json\"]}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"Vertical scrolling remains necessary. No assistive-technology, storage-quota, physical mobile-keyboard or exhaustive content acceptance is claimed.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-C-r1/artifacts/evidence/final-v5/1440-900-dark-en-footer.png",
+            "sha256": "3ec2feedb4639f073c084b3f25318de338bea1ae8f4ab5035b9fe716d5dd9b2a"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P06-033.json",
+            "sha256": "d3312fc8fbf61729b9ae562c62233ea7a1406d4c7349f7b673d54e5be6d5247d",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-C-r1/artifacts/evidence/final-v5/390-844-light-zh-saved-newer.png",
+            "sha256": "484274ad2ae5f76f9fbb369564dfbc85aa5e62bdd863f4d20c0121206731cb82"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P06-079.json",
+            "sha256": "6ecaa38f59352c1c79d69f7a766380aac4e8ca682727a379364f08b9d95f880a",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-C-r1/artifacts/evidence/final-v5/keyboard-save-focus.png",
+            "sha256": "66153c7ccc33d0dd86b5cf3c17774e6fad88ae41bd77079cab2d389e3e0f70b8"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P06-083.json",
+            "sha256": "91abe4b0b9ba988fff84dfc0785689018fb8475cae0f806382e6c0851e95b35e",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P06",
+        "task_family": "T1",
+        "judgment": {
+          "status": "satisfactory_exercised_scope",
+          "summary": "A compact, coherent settings composition with wrapping long fields, localized state wording and working data recovery.",
+          "scope": "Observed settings paths and specified viewports; remaining limits are recorded."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "The compact avatar/account heading places the browser-local persistence boundary beside identity; profile controls, hints and secondary language/theme controls remain coherent."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "geometry"
+            ],
+            "observation": "Collapsed narrow navigation leaves more form content visible. Representative long name and organization values wrap completely with matching 330 px client/scroll widths."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Actual Tab-to-edit/save, pending edits, failed save, current-form retry, cancel, invalid-name recovery and reload persistence completed. Failed writes preserve previous storage.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P06.json"
+            ]
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "Error/status treatment is more restrained than P03's tinted alert. Its wording is readable but has lower visual emphasis."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Disabled Save temporarily leaves activeElement at BODY during pending; focus returns on completion unless the user moved to another control.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P06.json"
+            ]
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "Vertical scrolling remains necessary. No assistive-technology, storage-quota, physical mobile-keyboard or exhaustive content acceptance is claimed."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P06.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-008-settings-interactions"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-005-source-inventory",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/record.json"
+        ],
+        "material_unresolved_items": [],
+        "cohort": "2026-11-01-cohort-01",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P06/captures/033.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P06/captures/079.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P06/captures/083.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P06-033.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P06-079.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P06-083.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P06-forced-error.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P06-initial-light.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P06-narrow-dark-top.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P06-forced-error.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P06-initial-light.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P06-narrow-dark-top.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/T1-light-desktop.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T1-light-desktop.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P06.json",
+        "sha256": "0eb78ce2722035ab830f7d653cb783ec5ccf5496379bd9ac4e2ed4a95152d482"
+      }
+    },
+    {
+      "cell_id": "T2-A-r1",
+      "anonymous_product": "P09",
+      "product_evidence_sha256": "56ac2c6737f5bf276fc9ec86d93b81d67ed8823d6ba26327b3622c88802b2330",
+      "judgment": {
+        "status": "satisfactory_exercised_scope",
+        "summary": "The mature conversation workspace remains coherent, and filename disclosure, bounded composer growth and reading continuity worked.",
+        "scope": "Local synthetic response and filename-only workflow; no real upload, remote history or live model service."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"behavior\"], \"observation\": \"Compact wrapped chips disclose a complete long filename and the filename-only boundary on keyboard focus; the narrow tooltip preserves surrounding reading context. File removal returns focus to the composer.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P09.json\"]}, {\"kind\": \"strength\", \"evidence_type\": [\"pixels\"], \"observation\": \"Six-line input and multiple filenames retain the existing composer, source typography and reading column in light/dark desktop, compact and narrow views.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Manual scroll-away stayed at scrollTop 10 while height grew from 1298 to 1620 px. Explicit Return to latest reached zero bottom gap and followed growth throughout the matched revisit.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P09.json\", \"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversation-followup-001/P09.json\"]}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Stop settled output and returned composer focus; partial-response failure retried to the complete long response; another question remained operable; reload returned to the seeded memory boundary.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\", \"source\"], \"observation\": \"The bounded attachment region scrolls and does not show all filenames at once. Failure recovery still uses an icon described as Regenerate response, rather than an explicit visible Retry label.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"No physical touch, screen-reader, live model, real file-content transfer, remote-history or natural-speed motion study was performed.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-A-r1/artifacts/evidence/details-release/expanded-1280x600.png",
+            "sha256": "91498a7908821cbf7f6981ebd9fd752d5710465f692a102c3d94b70debdab663"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P09-040.json",
+            "sha256": "338c31b4f94496e3f350ee1a2753e3a30ce5490cf7982f352c8905c5ff0d6c44",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-A-r1/artifacts/evidence/settled-final/dark-zh-1440x900.png",
+            "sha256": "0fc5c4a2c719fd2ebf1ee6099ebaa1105fb665ee49526c1b0177a3ab822900ba"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P09-045.json",
+            "sha256": "ff7ad2d5c6dabb03600178fad9847713b73691131f2cc69026f6e03c7301aadd",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-A-r1/artifacts/evidence/settled-final/light-en-390x844.png",
+            "sha256": "46b52ece3941bd673c8f0f8175960487f1f75e20f8e9af08cce9cdc85d09003e"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P09-049.json",
+            "sha256": "8bbe1c6852257e64cab86620b05c250a9d5d5fca5285ba6dd3dbd77db6ff57ac",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P09",
+        "task_family": "T2",
+        "judgment": {
+          "status": "satisfactory_exercised_scope",
+          "summary": "The mature conversation workspace remains coherent, and filename disclosure, bounded composer growth and reading continuity worked.",
+          "scope": "Local synthetic response and filename-only workflow; no real upload, remote history or live model service."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "behavior"
+            ],
+            "observation": "Compact wrapped chips disclose a complete long filename and the filename-only boundary on keyboard focus; the narrow tooltip preserves surrounding reading context. File removal returns focus to the composer.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P09.json"
+            ]
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "Six-line input and multiple filenames retain the existing composer, source typography and reading column in light/dark desktop, compact and narrow views."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Manual scroll-away stayed at scrollTop 10 while height grew from 1298 to 1620 px. Explicit Return to latest reached zero bottom gap and followed growth throughout the matched revisit.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P09.json",
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversation-followup-001/P09.json"
+            ]
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Stop settled output and returned composer focus; partial-response failure retried to the complete long response; another question remained operable; reload returned to the seeded memory boundary."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels",
+              "source"
+            ],
+            "observation": "The bounded attachment region scrolls and does not show all filenames at once. Failure recovery still uses an icon described as Regenerate response, rather than an explicit visible Retry label."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "No physical touch, screen-reader, live model, real file-content transfer, remote-history or natural-speed motion study was performed."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P09.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversation-followup-001/P09.json"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-009-conversation-source",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-010-runtime-source-details",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/record.json"
+        ],
+        "material_unresolved_items": [],
+        "cohort": "2026-11-01-cohort-01",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P09/captures/040.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P09/captures/045.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P09/captures/049.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P09-040.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P09-045.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P09-049.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversation-followup-001/P09-returned-1500ms.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P09-compact-height-composer.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P09-forced-response-failure.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P09-narrow-last-file-disclosure.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P09-returned-1500ms.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P09-compact-height-composer.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P09-forced-response-failure.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P09-narrow-last-file-disclosure.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/T2-light-desktop.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T2-light-desktop.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P09.json",
+        "sha256": "13d9fd348d15e22daab8d607681d2a924b6fd0d8c2816608a53f49aff32b54cb"
+      }
+    },
+    {
+      "cell_id": "T2-B-r1",
+      "anonymous_product": "P10",
+      "product_evidence_sha256": "93cda734dc8f46e5f24ba9d5f3c7ad60005070320b47c79ce0c64df23eb02bf3",
+      "judgment": {
+        "status": "revision_required",
+        "summary": "The other core conversation paths work, but Return to latest fails to catch and follow growing content in the tested compact-height condition.",
+        "scope": "Full T2 acceptance withheld pending a separately retained repair/review of the return behavior."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"behavior\"], \"observation\": \"Source File cards and Dialog disclosure show full filenames and clear filename-only wording. Escape closes the dialog; removing a file restores composer focus. The horizontal strip preserves vertical reading space.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Manual scroll-away remained at scrollTop 37 while content height increased from 1325 to 1647 px. Failure/retry, repeated questions and the seeded reload boundary worked.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P10.json\"]}, {\"kind\": \"defect\", \"severity\": \"material\", \"evidence_type\": [\"pixels\", \"behavior\", \"geometry\"], \"observation\": \"An actual Return to latest click during growth did not catch the latest content. In the completion revisit the bottom gap was 1145 px at 1.51 s, 2134 px when the response became non-running at 5.05 s, and 798 px after another 600 ms. A second click after completion reached zero gap.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversation-followup-001/P10.json\", \"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-return-latest-001/P10.json\"]}, {\"kind\": \"clarification\", \"evidence_type\": [\"behavior\", \"source\"], \"observation\": \"The first broad stop check failed because body text changed after running stopped. A narrower follow-up showed final Markdown text stabilizing, no running control, and composer focus. Deferred visible rendering settled for roughly one second. The first failure is retained and is not treated as proof of an indefinitely continuing response.\"}, {\"kind\": \"inference\", \"evidence_type\": [\"source\"], \"observation\": \"The source retains smooth/default return behavior during repeated growth, unlike P09's explicit instant behavior. This is a possible contributor, not a proven causal diagnosis.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\"], \"observation\": \"The horizontal card strip reveals a subset of files at once, and modal filename lines can break at awkward characters/extensions. The dialog intentionally removes surrounding reading context.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"Other browsers, physical mobile input, assistive technology and real backend behavior were not evaluated.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-B-r1/artifacts/evidence/captures/run-03/final-1440x900-dark-zh-details.png",
+            "sha256": "12f4f0a52cf4583a946d5eed762eab0cc1ca2d4439be8aad176d43f8bbda7c3a"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P10-021.json",
+            "sha256": "d784f49064e4a17725f12d24d2118a49028a09be15cbe92ad5386b92a6f81381",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-B-r1/artifacts/evidence/captures/run-03/final-390x844-light-en-initial.png",
+            "sha256": "4ebe81cdf4c607cf459f7cb32003966be73253ca2f6a64ce125cdf69d2e05432"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P10-032.json",
+            "sha256": "4205ddae7b6f8d527823ac7eedcc97181034f0290242af8dfcd7014fabbe599a",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-B-r1/artifacts/evidence/captures/coupled/manual-reading-expanded-composer.png",
+            "sha256": "8bcbb9a8a09899cf0e9ace01538ecced286542ef520fde789f565d667c1d9dcc"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P10-039.json",
+            "sha256": "a5fc46cc319b5269ae7a5ce562f03ad2d1e98ea9688732c88779d60285d832df",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P10",
+        "task_family": "T2",
+        "judgment": {
+          "status": "revision_required",
+          "summary": "The other core conversation paths work, but Return to latest fails to catch and follow growing content in the tested compact-height condition.",
+          "scope": "Full T2 acceptance withheld pending a separately retained repair/review of the return behavior."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "behavior"
+            ],
+            "observation": "Source File cards and Dialog disclosure show full filenames and clear filename-only wording. Escape closes the dialog; removing a file restores composer focus. The horizontal strip preserves vertical reading space."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Manual scroll-away remained at scrollTop 37 while content height increased from 1325 to 1647 px. Failure/retry, repeated questions and the seeded reload boundary worked.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P10.json"
+            ]
+          },
+          {
+            "kind": "defect",
+            "severity": "material",
+            "evidence_type": [
+              "pixels",
+              "behavior",
+              "geometry"
+            ],
+            "observation": "An actual Return to latest click during growth did not catch the latest content. In the completion revisit the bottom gap was 1145 px at 1.51 s, 2134 px when the response became non-running at 5.05 s, and 798 px after another 600 ms. A second click after completion reached zero gap.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversation-followup-001/P10.json",
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-return-latest-001/P10.json"
+            ]
+          },
+          {
+            "kind": "clarification",
+            "evidence_type": [
+              "behavior",
+              "source"
+            ],
+            "observation": "The first broad stop check failed because body text changed after running stopped. A narrower follow-up showed final Markdown text stabilizing, no running control, and composer focus. Deferred visible rendering settled for roughly one second. The first failure is retained and is not treated as proof of an indefinitely continuing response."
+          },
+          {
+            "kind": "inference",
+            "evidence_type": [
+              "source"
+            ],
+            "observation": "The source retains smooth/default return behavior during repeated growth, unlike P09's explicit instant behavior. This is a possible contributor, not a proven causal diagnosis."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "The horizontal card strip reveals a subset of files at once, and modal filename lines can break at awkward characters/extensions. The dialog intentionally removes surrounding reading context."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "Other browsers, physical mobile input, assistive technology and real backend behavior were not evaluated."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P10.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversation-followup-001/P10.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-return-latest-001/P10.json"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-009-conversation-source",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-014-conversation-render-source",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/record.json"
+        ],
+        "material_unresolved_items": [
+          {
+            "issue": "Return to latest during streaming",
+            "required_disposition": "Preserve the frozen comparator. If repair is authorized in a later continuation, use a separate copy/version and retain a growth, manual-scroll-away, explicit-return and stop check at the specified compact viewport."
+          }
+        ],
+        "cohort": "2026-11-01-cohort-01",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P10/captures/021.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P10/captures/032.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P10/captures/039.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P10-021.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P10-032.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P10-039.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversation-followup-001/P10-returned-1500ms.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P10-compact-height-composer.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P10-dark-desktop-composer.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P10-filename-disclosure.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P10-forced-response-failure.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-001/P10-narrow-last-file-disclosure.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-return-latest-001/P10-after-completion.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P10-returned-1500ms.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P10-compact-height-composer.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P10-dark-desktop-composer.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P10-filename-disclosure.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P10-forced-response-failure.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P10-narrow-last-file-disclosure.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P10-after-completion.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/T2-light-desktop.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T2-light-desktop.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P10.json",
+        "sha256": "5ed96b468765dde2802490f613d9b368f9bd25e22b8e2d2c51d22956c132eaf6"
+      }
+    },
+    {
+      "cell_id": "T3-B-r1",
+      "anonymous_product": "P13",
+      "product_evidence_sha256": "db0a249ea8a65b72d3c0859c4efc237690739889bbdda609efa4c964ad8bd022",
+      "judgment": {
+        "status": "core_supported_narrow_revision_required",
+        "summary": "The adopted editorial direction and native edit/save/return workflow are supported; the narrow evidence table remains incomplete.",
+        "scope": "Core workflow accepted as observed; full narrow-layout scope remains unresolved. Native Chinese UI-language switching and server-outage recovery were not exercised."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"source\"], \"observation\": \"Notebook provides a real whole-workspace composition: centered paper-like reading area, cream light surroundings, purple links, generous headings and compact toolbar. Nord preserves hierarchy in dark mode. This is materially different from the viewed Vanilla foundation.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\", \"disk\"], \"observation\": \"Native search/related links reached interview and ledger. An English and Chinese edit agreed in the native wiki store, an actual tiddler file, and reload. A discarded later edit preserved saved content; navigation continued to the unfinished draft.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-003/P13.json\"]}, {\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"behavior\", \"source\"], \"observation\": \"Compact/narrow editors retain bilingual text and native controls. Native palette selection worked. The narrow menu remained orderly; targeted reduced-motion menu/dropdown styles reported animation none and transition 0s.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13.json\"]}, {\"kind\": \"defect\", \"severity\": \"material_for_narrow_scope\", \"evidence_type\": [\"pixels\", \"geometry\"], \"observation\": \"At 390 px the Evidence ledger table is 440.36 px wide at x=15, reaching x≈455.36; the document reports horizontal overflow. The initial narrow frame clips the important Does not establish column.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13.json\", \"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-025-wiki-layout-state\"]}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\", \"judgment\"], \"observation\": \"The native wikitext editor is denser than the reading view and dark toolbar symbols have subdued contrast. The editorial identity is strongest in reading.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"Horizontal-panning recovery of the table was not exercised, so permanent content inaccessibility is not claimed. Direct Chinese UI switching, server outage recovery, broad accessibility, natural-speed motion and all editor tools remain unverified.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"source\"], \"observation\": \"Notebook 1.4.1 identifies its source and retains its MIT notice; all compared supplied TiddlyWiki vendor files match the foundation. No store replacement or comparator repair was performed.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T3-B-r1/artifacts/evidence/final-reviewed-v2/beige-read-1440.png",
+            "sha256": "bc91d9303a40220d4f5f9e1ce37e73d007cbde0fd26300b50f7e257935d1f5c9"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P13-007.json",
+            "sha256": "0c2bf18e283ef655759643d723481ecfc8637714e50e7ed46cfb0bda099387a9",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T3-B-r1/artifacts/evidence/final-reviewed-v2/beige-read-390.png",
+            "sha256": "ec5003c60e6ce4775c334c047d7eea55c436d28161a1925e88dc1519b379325a"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P13-008.json",
+            "sha256": "6039bffccfc1fbfa089b0b35622369a1e92ef9e5b9c86ca4edbd35fee04ff808",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T3-B-r1/artifacts/evidence/final-reviewed-v2/dark-read-1440.png",
+            "sha256": "1148b8bb74b1dd8b58008be0603dade09633a487fc0170ec2560f593f5ab39bb"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P13-015.json",
+            "sha256": "7f410ae1c32dea771405fa5d8633668453c231d804a1f3ee14cc58a66b99c823",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T3-B-r1/artifacts/evidence/final-reviewed-v2/dark-read-390.png",
+            "sha256": "04330059a26172109d6fc3ca676950d5f32a8f4530e7daab0b011a140f2bc4e4"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P13-016.json",
+            "sha256": "3c4030f919d43d8295b1e38ffcc539361aba825b95c791e35ae2f5657314c104",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T3-B-r1/artifacts/evidence/final-reviewed-v2/final-entry-1440.png",
+            "sha256": "d84afc0d64c431547e6364f85847cd4b3171a1e1cf4e775db825a3adba02a956"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P13-018.json",
+            "sha256": "91bbc8f81dd3fc63c6c2888fcb7d57f307d8801cbf38f3e4989221214c71b723",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P13",
+        "task_family": "T3",
+        "judgment": {
+          "status": "core_supported_narrow_revision_required",
+          "summary": "The adopted editorial direction and native edit/save/return workflow are supported; the narrow evidence table remains incomplete.",
+          "scope": "Core workflow accepted as observed; full narrow-layout scope remains unresolved. Native Chinese UI-language switching and server-outage recovery were not exercised."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "source"
+            ],
+            "observation": "Notebook provides a real whole-workspace composition: centered paper-like reading area, cream light surroundings, purple links, generous headings and compact toolbar. Nord preserves hierarchy in dark mode. This is materially different from the viewed Vanilla foundation."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior",
+              "disk"
+            ],
+            "observation": "Native search/related links reached interview and ledger. An English and Chinese edit agreed in the native wiki store, an actual tiddler file, and reload. A discarded later edit preserved saved content; navigation continued to the unfinished draft.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-003/P13.json"
+            ]
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "behavior",
+              "source"
+            ],
+            "observation": "Compact/narrow editors retain bilingual text and native controls. Native palette selection worked. The narrow menu remained orderly; targeted reduced-motion menu/dropdown styles reported animation none and transition 0s.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13.json"
+            ]
+          },
+          {
+            "kind": "defect",
+            "severity": "material_for_narrow_scope",
+            "evidence_type": [
+              "pixels",
+              "geometry"
+            ],
+            "observation": "At 390 px the Evidence ledger table is 440.36 px wide at x=15, reaching x≈455.36; the document reports horizontal overflow. The initial narrow frame clips the important Does not establish column.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13.json",
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-025-wiki-layout-state"
+            ]
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels",
+              "judgment"
+            ],
+            "observation": "The native wikitext editor is denser than the reading view and dark toolbar symbols have subdued contrast. The editorial identity is strongest in reading."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "Horizontal-panning recovery of the table was not exercised, so permanent content inaccessibility is not claimed. Direct Chinese UI switching, server outage recovery, broad accessibility, natural-speed motion and all editor tools remain unverified."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "source"
+            ],
+            "observation": "Notebook 1.4.1 identifies its source and retains its MIT notice; all compared supplied TiddlyWiki vendor files match the foundation. No store replacement or comparator repair was performed."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-003/P13.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-001/P13.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-002/P13.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-004/P13.json"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-010-runtime-source-details",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-026-final-source-checks",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-001/T3-foundation.json"
+        ],
+        "material_unresolved_items": [
+          {
+            "issue": "Narrow Evidence ledger table overflow",
+            "required_disposition": "A later authorized revision must preserve the complete table meaning while making the limitation column usable at 390 px. Frozen product and blind evidence must remain unchanged."
+          }
+        ],
+        "cohort": "2026-11-01-cohort-01",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P13/captures/007.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P13/captures/008.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P13/captures/015.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P13/captures/016.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P13/captures/018.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P13-007.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P13-008.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P13-015.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P13-016.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P13-018.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-003/P13-bilingual-editor.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13-dark-editor.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13-light-narrow-ledger.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13-narrow-dark-editor-body.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13-narrow-dark-editor.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-005/P13-narrow-reduced-motion-menu.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P13-bilingual-editor.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P13-dark-editor.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P13-light-narrow-ledger.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P13-narrow-dark-editor-body.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P13-narrow-dark-editor.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P13-narrow-reduced-motion-menu.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-001/T3-foundation-initial.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T3-foundation-initial.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              640
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P13.json",
+        "sha256": "c8cc80b7d6b122b0d2d09f618b0d4791a73ea93a52e3608cda0b61a28ea499b7"
+      }
+    },
+    {
+      "cell_id": "T1-B-r1",
+      "anonymous_product": "P16",
+      "product_evidence_sha256": "e9604d25cca9185bb2a0b1398ed8c045e6e85fd79d20f05dcf5be97013f935b9",
+      "judgment": {
+        "status": "core_supported_narrow_revision_required",
+        "summary": "Local settings behavior works, but long-content and narrow-layout completion is weaker than the stated T1 goal.",
+        "scope": "Core data/recovery path supported; full narrow/long-content acceptance withheld."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\"], \"observation\": \"Desktop validation, the browser-local save boundary, native switches and primary action retain the mature source family and useful field error wording.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Edit/save, pending edits, failure, retry, cancel, invalid-field focus and reload persistence worked. No core data-loss defect was demonstrated.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P16.json\"]}, {\"kind\": \"defect\", \"severity\": \"material_for_content_scope\", \"evidence_type\": [\"pixels\", \"geometry\"], \"observation\": \"Representative long name and organization values remain single-line fields with scrollWidth 656 versus clientWidth 330. The viewed name shows only a trailing segment rather than the complete entered value.\"}, {\"kind\": \"defect\", \"severity\": \"layout_completion\", \"evidence_type\": [\"pixels\", \"geometry\"], \"observation\": \"At 390 px the full navigation stack precedes the form, placing the first name field around y=760 and organization below the initial viewport. The original narrow email view also clips its value beside Edit email.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\", \"judgment\"], \"observation\": \"The unchecked privacy label Keep my profile hidden uses imperative wording, making the state/action relationship less immediate. This is a semantic judgment, not an observed human error.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"source\"], \"observation\": \"The authoritative store and compared existing Tabler assets match the supplied foundation.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"No screen-reader, physical mobile-keyboard, storage-quota or cross-browser acceptance is claimed.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/1280-dark-zh/pending-spinner.png",
+            "sha256": "fbb34aa3b1638300abdd543aafd8acb079bc1ac1a0640986232ae722a3f9cd78"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P16-091.json",
+            "sha256": "f9b78f630d90ba13705fa7c20e3fb889721fe1881f32b944660ed7b3a341d157",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/1440-light-en/invalid-visible-focus.png",
+            "sha256": "6195a3a378a67d20d71daa420f3eef5730cae851a848f70a6a0efb78763b0bb9"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P16-092.json",
+            "sha256": "3db92ddc938f732078194d783ef653bacf33df1dcf724070caabf76fc3480b99",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/390-dark-en/invalid-visible-focus.png",
+            "sha256": "806a6c767370db4d6e5154324e2cf08ab7ecc17fcd8cab3375cd8be7f9ea1e1d"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P16-094.json",
+            "sha256": "9dcdbc5a63a659ed1bd6b154bd5d6ab61382524ad46d52478d35aeeb9e56bc96",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P16",
+        "task_family": "T1",
+        "judgment": {
+          "status": "core_supported_narrow_revision_required",
+          "summary": "Local settings behavior works, but long-content and narrow-layout completion is weaker than the stated T1 goal.",
+          "scope": "Core data/recovery path supported; full narrow/long-content acceptance withheld."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "Desktop validation, the browser-local save boundary, native switches and primary action retain the mature source family and useful field error wording."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Edit/save, pending edits, failure, retry, cancel, invalid-field focus and reload persistence worked. No core data-loss defect was demonstrated.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P16.json"
+            ]
+          },
+          {
+            "kind": "defect",
+            "severity": "material_for_content_scope",
+            "evidence_type": [
+              "pixels",
+              "geometry"
+            ],
+            "observation": "Representative long name and organization values remain single-line fields with scrollWidth 656 versus clientWidth 330. The viewed name shows only a trailing segment rather than the complete entered value."
+          },
+          {
+            "kind": "defect",
+            "severity": "layout_completion",
+            "evidence_type": [
+              "pixels",
+              "geometry"
+            ],
+            "observation": "At 390 px the full navigation stack precedes the form, placing the first name field around y=760 and organization below the initial viewport. The original narrow email view also clips its value beside Edit email."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels",
+              "judgment"
+            ],
+            "observation": "The unchecked privacy label Keep my profile hidden uses imperative wording, making the state/action relationship less immediate. This is a semantic judgment, not an observed human error."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "source"
+            ],
+            "observation": "The authoritative store and compared existing Tabler assets match the supplied foundation."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "No screen-reader, physical mobile-keyboard, storage-quota or cross-browser acceptance is claimed."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P16.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-008-settings-interactions"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-006-settings-source",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/record.json"
+        ],
+        "material_unresolved_items": [
+          {
+            "issue": "T1 narrow navigation and representative long-value presentation",
+            "required_disposition": "A later source-preserving revision should improve narrow navigation and keep representative long entered values readable. The frozen comparator is not repaired by this review."
+          }
+        ],
+        "cohort": "2026-11-01-cohort-01",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P16/captures/091.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P16/captures/092.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P16/captures/094.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P16-091.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P16-092.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P16-094.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P16-forced-error.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P16-narrow-dark-fields.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P16-forced-error.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P16-narrow-dark-fields.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/T1-light-desktop.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T1-light-desktop.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P16.json",
+        "sha256": "670ebe36e8b6f2a00d5abd71af851ae18601c13921d7768399df1dbcbb432c3e"
+      }
+    },
+    {
+      "cell_id": "T4-G-final-runtime-r1",
+      "anonymous_product": "P18",
+      "product_evidence_sha256": "c372e28c2a7218c4ad0c15732a805202813a9650884564ba849e4e6e1fccbd82",
+      "judgment": {
+        "status": "satisfactory_bounded_scope",
+        "summary": "The settled source Toast shell and authoritative snapshot/retry/focus behavior are satisfactory within the exercised integration scope.",
+        "scope": "Initial blind product judgment, not full settings redesign or final release acceptance."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\"], \"observation\": \"Original light/dark success views and a narrow invalid state retain the selected identity header, time/close control, body padding, native surfaces and focused Save action. The invalid message names a real field and the form shows its associated error.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Submitted snapshot persistence, preservation of later edits, failure preservation and failed-snapshot retry worked. A newer name draft remained after retry saved the older failed snapshot.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P18.json\"]}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Disappearing retry and explicit close return focus to Save; invalid submission focuses and associates the name field; cancel and reload persistence worked.\", \"evidence\": [\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P18.json\"]}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\", \"geometry\"], \"observation\": \"The inherited large narrow navigation and clipped single-line long fields remain. The top-right toast overlaps upper content but is contained and dismissible; that placement is explicitly settled by T4.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"source\"], \"observation\": \"The authoritative store and compared existing Tabler assets remain identical to the supplied foundation. Save wording reflects browser-local storage.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"No broad storage-failure, assistive-technology announcement or unrelated upstream-gallery acceptance is claimed.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T4-G-final-runtime-r1/artifacts/evidence/keyboard-final-03/390x844-dark-zh-settled-invalid.png",
+            "sha256": "a17e8ed10793c360a77da921aff3f54641b9655d105d33e6bb3bf5e6ac6c6776"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P18-047.json",
+            "sha256": "accc4d5595520a65ab985c231af5c0cd3a960cabe3037dd0adeac0415b73b00b",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T4-G-final-runtime-r1/artifacts/evidence/temporal-01/dark-zh-0900ms.png",
+            "sha256": "1361601509e9acc4b6075b1010a547e9555474a43694f00d57820219e9375f6f"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P18-055.json",
+            "sha256": "aa8078e6f1dc1f891f2ef3d5fb664e37b4324409adfd246353bfd0f6fd315746",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T4-G-final-runtime-r1/artifacts/evidence/temporal-01/light-en-0900ms.png",
+            "sha256": "d45d111b7097ce78ce3d38efa5530a066ea512a15e3d2ca13b8a00a42ee89dad"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-01/raw/evidence/view-P18-061.json",
+            "sha256": "e0630a0bee508bb2f2965ceee2d86526bac00898bf2a9df669c35f317cebdadd",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P18",
+        "task_family": "T4",
+        "judgment": {
+          "status": "satisfactory_bounded_scope",
+          "summary": "The settled source Toast shell and authoritative snapshot/retry/focus behavior are satisfactory within the exercised integration scope.",
+          "scope": "Initial blind product judgment, not full settings redesign or final release acceptance."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "Original light/dark success views and a narrow invalid state retain the selected identity header, time/close control, body padding, native surfaces and focused Save action. The invalid message names a real field and the form shows its associated error."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Submitted snapshot persistence, preservation of later edits, failure preservation and failed-snapshot retry worked. A newer name draft remained after retry saved the older failed snapshot.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P18.json"
+            ]
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Disappearing retry and explicit close return focus to Save; invalid submission focuses and associates the name field; cancel and reload persistence worked.",
+            "evidence": [
+              "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P18.json"
+            ]
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels",
+              "geometry"
+            ],
+            "observation": "The inherited large narrow navigation and clipped single-line long fields remain. The top-right toast overlaps upper content but is contained and dismissible; that placement is explicitly settled by T4."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "source"
+            ],
+            "observation": "The authoritative store and compared existing Tabler assets remain identical to the supplied foundation. Save wording reflects browser-local storage."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "No broad storage-failure, assistive-technology announcement or unrelated upstream-gallery acceptance is claimed."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P18.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-008-settings-interactions"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-004-remaining-contracts",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-006-settings-source",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/record.json"
+        ],
+        "material_unresolved_items": [],
+        "cohort": "2026-11-01-cohort-01",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P18/captures/047.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P18/captures/055.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P18/captures/061.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P18-047.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P18-055.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P18-061.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P18-narrow-dark-save.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P18-narrow-dark-save.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/T4-source-toast.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T4-source-toast.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P18.json",
+        "sha256": "a40f89777f73d80ed2588674af8a54422c7dc0789451d9d9e0e66cc09f650f45"
+      }
+    },
+    {
+      "cell_id": "T2-G-final-runtime-r1",
+      "anonymous_product": "P04",
+      "product_evidence_sha256": "30895e2d110fdf718bc86949e755976bb08f69f542f2a84d63e5b4c575dbc5a8",
+      "judgment": {
+        "status": "satisfactory_exercised_scope",
+        "summary": "The coupled conversation path is satisfactory in the exercised scope: attachment disclosure, manual reading position, return to latest, Stop focus and failure/retry worked.",
+        "scope": "Initial blind product judgment, not final release acceptance."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"source\"], \"observation\": \"The source-family sidebar, centered reading column and composer remain coherent in original light/dark desktop, narrow reading and compact six-line captures. File-family source is byte-identical to the foundation.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Keyboard filename disclosure and Escape restored the trigger; removing a file restored composer focus. The filename-only synthetic adapter matched the foundation.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Manual scrollTop stayed 0 while content height grew 1277 to 1625 px. Return to latest had bottom gap 0 at all three samples across approximately 1.5 seconds of continued streaming.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\", \"source\"], \"observation\": \"Keyboard Stop restored composer focus by the first 100 ms sample. After settling, body text length stayed stable over 500 ms. Forced failure/retry completed Observation theme 7, and reload returned to the seeded state.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\", \"behavior\"], \"observation\": \"Horizontal attachment browsing preserves height but leaves some files outside the visible strip. Full-name modal disclosure blurs the reading context; the viewed narrow filename breaks working between lines.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"Full assistive-technology behavior, arbitrary attachment counts, extreme composer growth, all edit/branch actions and physical touch behavior were not certified.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-G-final-runtime-r1-public/artifacts/evidence/screenshots/delivered/light-en-1440x900.png",
+            "sha256": "a91342dff2336d7545d22febc8ecf3b9dc4766bcea33f8f2cf6bcf0f309963f1"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P04-033.json",
+            "sha256": "c9eb92517ac760093f48b0b71fe63587f622e499971ccec7643c8744d6762b07",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-G-final-runtime-r1-public/artifacts/evidence/screenshots/delivered/light-en-390x844.png",
+            "sha256": "4ebe81cdf4c607cf459f7cb32003966be73253ca2f6a64ce125cdf69d2e05432"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P04-035.json",
+            "sha256": "2bfa56fa289473fec1daf8c067492b0a158d71eeaab8e1a6fb3d9299f54cfcf8",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-G-final-runtime-r1-public/artifacts/evidence/screenshots/delivered/dark-zh-1440x900.png",
+            "sha256": "a5cc055edcf30da34950e27e0aa33d3cdb706214f283c8a86680b8037ee8d801"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P04-036.json",
+            "sha256": "085da0f3b6712889c06af8d12e73c0fe28dc3b73c71960dcf1a320b8115a24c5",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-G-final-runtime-r1-public/artifacts/evidence/screenshots/delivered/light-en-expanded.png",
+            "sha256": "b79c47ffa25512610207f5b2ab507db721ec5bbb4bc410c1d20f02097520ea94"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P04-039.json",
+            "sha256": "2e03b880de5c2ce04eb32dc6fb6663fa099b4400fa7dbe9ca361d7a9e5ef97e9",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P04",
+        "task_family": "T2",
+        "judgment": {
+          "status": "satisfactory_exercised_scope",
+          "summary": "The coupled conversation path is satisfactory in the exercised scope: attachment disclosure, manual reading position, return to latest, Stop focus and failure/retry worked.",
+          "scope": "Initial blind product judgment, not final release acceptance."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "source"
+            ],
+            "observation": "The source-family sidebar, centered reading column and composer remain coherent in original light/dark desktop, narrow reading and compact six-line captures. File-family source is byte-identical to the foundation."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Keyboard filename disclosure and Escape restored the trigger; removing a file restored composer focus. The filename-only synthetic adapter matched the foundation."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Manual scrollTop stayed 0 while content height grew 1277 to 1625 px. Return to latest had bottom gap 0 at all three samples across approximately 1.5 seconds of continued streaming."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior",
+              "source"
+            ],
+            "observation": "Keyboard Stop restored composer focus by the first 100 ms sample. After settling, body text length stayed stable over 500 ms. Forced failure/retry completed Observation theme 7, and reload returned to the seeded state."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels",
+              "behavior"
+            ],
+            "observation": "Horizontal attachment browsing preserves height but leaves some files outside the visible strip. Full-name modal disclosure blurs the reading context; the viewed narrow filename breaks working between lines."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "Full assistive-technology behavior, arbitrary attachment counts, extreme composer growth, all edit/branch actions and physical touch behavior were not certified."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-P04-001/P04.json"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-048-P04-source/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-053-cohort02-final-source-scope/stdout.txt"
+        ],
+        "material_unresolved_items": [],
+        "cohort": "2026-11-01-cohort-02",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P04/captures/033.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P04/captures/035.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P04/captures/036.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P04/captures/039.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P04-033.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P04-035.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P04-036.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P04-039.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-P04-001/P04-forced-response-failure.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-P04-001/P04-narrow-last-file-disclosure.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P04-forced-response-failure.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P04-narrow-last-file-disclosure.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/T2-light-desktop.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T2-light-desktop.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study.",
+          "source_view_reuse": "Previously personally viewed common-source captures may be reused; timestamps and exports identify them separately from new product views."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P04.json",
+        "sha256": "918a65708218f9da7385387d85e106464d81996c7dec51e3a4ea0ab7899b43a2"
+      }
+    },
+    {
+      "cell_id": "T1-G-final-runtime-r1",
+      "anonymous_product": "P05",
+      "product_evidence_sha256": "1c2dba8769c28162cff7e436c9b4f6d450482b03e34de65d1fc78ef7d02b5304",
+      "judgment": {
+        "status": "satisfactory_core_with_narrow_hierarchy_caveat",
+        "summary": "Core settings behavior and representative long-value presentation are supported. The expanded narrow navigation pushes primary editing down and remains a hierarchy caveat.",
+        "scope": "Initial blind product judgment; narrow polish is qualified, and final release acceptance is not implied."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\"], \"observation\": \"Tabler-native labels, helper text, state wording and tinted error/status feedback form a coherent settings surface in both themes.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"behavior\"], \"observation\": \"At 390 px, display name and organization wrapped the representative long bilingual value in textareas with clientWidth=scrollWidth=330 and clientHeight=scrollHeight=78.\"}, {\"kind\": \"defect\", \"evidence_type\": [\"pixels\", \"behavior\"], \"observation\": \"The full vertical settings navigation precedes the form. The display-name field begins around y=765 and organization around y=910.5 in the 390×844 view, making primary editing less prominent.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\", \"source\"], \"observation\": \"The authoritative store and distribution assets matched the foundation. Submitted snapshot saving preserved later draft edits; Cancel, failure preservation, current-draft retry, invalid-name focus and short-name reload persistence succeeded.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"behavior\"], \"observation\": \"Native disabling briefly moved pending Save focus to BODY. Completion restored Save when focus was abandoned and did not steal it from continued editing.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"The run did not exhaust all validation/toggle permutations, storage corruption/quota behavior, extreme unbroken input strings or assistive-technology paths.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-dark-en-bottom.png",
+            "sha256": "6c6c6312a5773db9663c89a43ff0f9a83ffabfc86dd5c4bf1dae791496e86080"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P05-013.json",
+            "sha256": "55332b5f88b39c934437b5243514f26634bb253ce3a07011c793c658768793ca",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-render/1440-light-en-bottom.png",
+            "sha256": "9f23c001114349e066cb34acacbf39ca5d3d9236f5c41b37565abd9d49164f1d"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P05-019.json",
+            "sha256": "84c76b8f3e6a7327a957f04f61ec964198042325908f7a41df387206f486ea53",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/final-state-view/dark-en-error.png",
+            "sha256": "df962a5d8667caef411a766dcd7302fd0033a5b874e84fbcb9731fb0a5292c9b"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P05-037.json",
+            "sha256": "a7d41b1f1295d2e5f0432550f5df912cda9a6ad7d389eee117af9754cdc8c9e1",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T1-G-final-runtime-r1/artifacts/evidence/narrow-settled/dark-en-actions.png",
+            "sha256": "ef8435503735d5432d6f9bddf1296c97ebdb72b89c2fe3c3f3eeadf145ec0d86"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P05-053.json",
+            "sha256": "4b8e716fd546d9a5bd48aecb55252a5421cf93f14418e60c35c5bda62a59b134",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P05",
+        "task_family": "T1",
+        "judgment": {
+          "status": "satisfactory_core_with_narrow_hierarchy_caveat",
+          "summary": "Core settings behavior and representative long-value presentation are supported. The expanded narrow navigation pushes primary editing down and remains a hierarchy caveat.",
+          "scope": "Initial blind product judgment; narrow polish is qualified, and final release acceptance is not implied."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "Tabler-native labels, helper text, state wording and tinted error/status feedback form a coherent settings surface in both themes."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "behavior"
+            ],
+            "observation": "At 390 px, display name and organization wrapped the representative long bilingual value in textareas with clientWidth=scrollWidth=330 and clientHeight=scrollHeight=78."
+          },
+          {
+            "kind": "defect",
+            "evidence_type": [
+              "pixels",
+              "behavior"
+            ],
+            "observation": "The full vertical settings navigation precedes the form. The display-name field begins around y=765 and organization around y=910.5 in the 390×844 view, making primary editing less prominent."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior",
+              "source"
+            ],
+            "observation": "The authoritative store and distribution assets matched the foundation. Submitted snapshot saving preserved later draft edits; Cancel, failure preservation, current-draft retry, invalid-name focus and short-name reload persistence succeeded."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Native disabling briefly moved pending Save focus to BODY. Completion restored Save when focus was abandoned and did not steal it from continued editing."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "The run did not exhaust all validation/toggle permutations, storage corruption/quota behavior, extreme unbroken input strings or assistive-technology paths."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-001/P05.json"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-033-cohort02-source-inspection/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-040-cohort02-state-and-provenance/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-043-cohort02-source-preservation/stdout.txt"
+        ],
+        "material_unresolved_items": [
+          "Narrow settings navigation hierarchy remains a polish caveat; no failed persistence path was observed."
+        ],
+        "cohort": "2026-11-01-cohort-02",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P05/captures/013.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P05/captures/019.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P05/captures/037.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P05/captures/053.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P05-013.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P05-019.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P05-037.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P05-053.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-001/P05-forced-error.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-001/P05-narrow-dark-top.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P05-forced-error.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P05-narrow-dark-top.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/T1-light-desktop.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T1-light-desktop.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study.",
+          "source_view_reuse": "Previously personally viewed common-source captures may be reused; timestamps and exports identify them separately from new product views."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P05.json",
+        "sha256": "8cd39f9de04888ac0cb9171ddee1d03ea33dd53a4c4254729bf69ecafdcfd0ac"
+      }
+    },
+    {
+      "cell_id": "T4-F-integrator-r1",
+      "anonymous_product": "P08",
+      "product_evidence_sha256": "a08e6bb08d8b01a26aa242b4cfa94ded08d9d650777af6739ed2946c173ecbba",
+      "judgment": {
+        "status": "satisfactory_bounded_scope",
+        "summary": "The settled native Tabler action-toast integration is satisfactory in the exercised bounded scope, including failed-snapshot retry and focus recovery.",
+        "scope": "Initial blind judgment against the settled T4 integration; inherited broader settings issues are outside its redesign scope."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"source\"], \"observation\": \"The source toast header/body/separated action row, standard width, typography, border, shadow and native close remain recognizable in the assembled product. Source preview, store, dist and preview assets matched the foundation.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"A valid submitted snapshot saved while later edits stayed in the form. Failure preserved prior storage. Retry saved the failed snapshot while preserving a newer draft and an accurate unsaved-edit summary.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\", \"source\"], \"observation\": \"Pending Save remained focused using a disabled visual class and aria-disabled plus a guarded handler. Focus returned to Save when Retry disappeared and when the toast closed; invalid-name submission focused the associated field.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"source\", \"behavior\"], \"observation\": \"Success wording and time followed authoritative store events. Toast role=status, polite live region and aria-atomic coexist with an aria-live=off inline summary.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\"], \"observation\": \"Prescribed fixed top-right placement remains contained at narrow width but can overlay header or upper form content. Long navigation and single-line identity clipping are inherited broader settings limitations.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"All possible dismissal/result races, concurrent operation orderings, gallery menus and screen-reader announcement behavior were not exercised.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1-recovery/artifacts/evidence/primary-settled-004/1280x600-dark-zh/03-retry-focus.png",
+            "sha256": "993b463e698ac71eae23c4606699eaa7fb05ae079bdb6f80aa0ed36c3686022b"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P08-004.json",
+            "sha256": "9a1395567f4b3ef87d032ba376230a353df71adb65d95b074836aac78b38a4a3",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1-recovery/artifacts/evidence/source-and-neighbors-final/1440-light-header-menu.png",
+            "sha256": "9c15265ee4fd983f76a7e3b16a0a2acb0435518d34fab4fec5a25a20a5fdbd56"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P08-050.json",
+            "sha256": "218ac2d91a46ac2ca9c71cd406abda6d78eed8c2068cf6d912671c3be3bb6c83",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1-recovery/artifacts/evidence/source-and-neighbors-final/390-dark-header-menu.png",
+            "sha256": "740549e391cd4ee50e6a9b17504d7608f87acc20505c3b25710f0c28f0271805"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P08-052.json",
+            "sha256": "3e478515915886be29dfa3f4aea37c50a47a2175dc7434137791a100da78e085",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P08",
+        "task_family": "T4",
+        "judgment": {
+          "status": "satisfactory_bounded_scope",
+          "summary": "The settled native Tabler action-toast integration is satisfactory in the exercised bounded scope, including failed-snapshot retry and focus recovery.",
+          "scope": "Initial blind judgment against the settled T4 integration; inherited broader settings issues are outside its redesign scope."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "source"
+            ],
+            "observation": "The source toast header/body/separated action row, standard width, typography, border, shadow and native close remain recognizable in the assembled product. Source preview, store, dist and preview assets matched the foundation."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "A valid submitted snapshot saved while later edits stayed in the form. Failure preserved prior storage. Retry saved the failed snapshot while preserving a newer draft and an accurate unsaved-edit summary."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior",
+              "source"
+            ],
+            "observation": "Pending Save remained focused using a disabled visual class and aria-disabled plus a guarded handler. Focus returned to Save when Retry disappeared and when the toast closed; invalid-name submission focused the associated field."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "source",
+              "behavior"
+            ],
+            "observation": "Success wording and time followed authoritative store events. Toast role=status, polite live region and aria-atomic coexist with an aria-live=off inline summary."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "Prescribed fixed top-right placement remains contained at narrow width but can overlay header or upper form content. Long navigation and single-line identity clipping are inherited broader settings limitations."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "All possible dismissal/result races, concurrent operation orderings, gallery menus and screen-reader announcement behavior were not exercised."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-P08-001/P08.json"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-051-P08-decision-source/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-053-cohort02-final-source-scope/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-054-cohort02-review-checkpoint/stdout.txt"
+        ],
+        "material_unresolved_items": [],
+        "cohort": "2026-11-01-cohort-02",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P08/captures/004.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P08/captures/050.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P08/captures/052.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P08-004.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P08-050.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P08-052.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-P08-001/P08-narrow-dark-save.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P08-narrow-dark-save.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/T4-source-toast.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-P08-001/T4-source-toast.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T4-source-toast.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P08-source-toast.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study.",
+          "source_view_reuse": "Previously personally viewed common-source captures may be reused; timestamps and exports identify them separately from new product views."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P08.json",
+        "sha256": "1f1da60120f18b15c3070f5db359e5b7de018e8eb2e92a09b4c7ac5feb62a93d"
+      }
+    },
+    {
+      "cell_id": "T3-A-r1",
+      "anonymous_product": "P12",
+      "product_evidence_sha256": "e9f78f9d70123665fbd1d37dbe4774b83f0ae26f38625a139c32eac6db787d8d",
+      "judgment": {
+        "status": "satisfactory_exercised_scope_with_caveats",
+        "summary": "The expressive paper/serif research workspace and native edit/save/disk/reload path are supported. Narrow tables require local panning, and reduced motion retains a shortened transition.",
+        "scope": "Initial blind product judgment; table access and motion limits remain explicit, with no general accessibility or motion-comfort certification."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"source\"], \"observation\": \"A populated paper-like sheet, warm light/dark surfaces, serif English text, red margin, separate right navigation and ruled native editor establish a distinct whole-workspace treatment. Bundled source identifies Vanilla Paper 0.10.0 by Simon Huber with MIT license; the supplied TiddlyWiki vendor files matched the foundation.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Native search/related-note navigation, bilingual passage edits, save, exact disk text, reload agreement, cancelled-draft preservation and continuing to the unfinished note succeeded.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\", \"pixels\"], \"observation\": \"Native Vanilla Paper Day/Night palette selections and Simplified Chinese UI selection succeeded; long bilingual content was inspected in the declared viewport/theme conditions.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\", \"behavior\"], \"observation\": \"The approximately 483 px ledger table is inside a 318 px local overflow-x:auto region. Actual horizontal wheel input reached the rightmost Does not establish column without widening the 390 px document. Initial offscreen columns have limited explicit disclosure.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"behavior\", \"source\"], \"observation\": \"The page-container transition changes from 0.4 s normally to 0.15 s under reduced motion. A real keyboard sidebar toggle still had intermediate positions. A later universal 150 ms rule overrides the earlier 1 ms rule, so the behavior is shortened rather than instant.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"Keyboard/touch access to all table columns, server-outage recovery, every native wiki tool, assistive-technology access, upstream acquisition authentication, resource profiling and natural-speed motion comfort were not established.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/settled-final/day-zh-Hans-1280-edit.png",
+            "sha256": "069903be9eb1fd1ea2f77878d00d0c9c3ee9521d6a326790737f180d0e1f084c"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P12-010.json",
+            "sha256": "02eaa69641a6111eae2f61ca14329a8ea86ed6f8b587113bd9f5052bda5e8e8e",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/settled-final-continuation/reduced-night-390-edit.png",
+            "sha256": "5c8b4f464bddaa5152047cdb802b069080b77cb940c1234d0041068633cfe6a2"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P12-040.json",
+            "sha256": "01afa7e962ac0f090f1a37706578f06f4e6907f073f7b3d32a53295ba14f77cc",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T3-A-r1/artifacts/evidence/delivery-final/delivery-entry.png",
+            "sha256": "783df0ed79ec16ba83bab7a370c8118ec08655a3422c0547bd00fc04fee660a9"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P12-042.json",
+            "sha256": "534dd22030a5c458eb0deedd8a2caee1c8809dd00a511bd27ab021db1bc3f24f",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P12",
+        "task_family": "T3",
+        "judgment": {
+          "status": "satisfactory_exercised_scope_with_caveats",
+          "summary": "The expressive paper/serif research workspace and native edit/save/disk/reload path are supported. Narrow tables require local panning, and reduced motion retains a shortened transition.",
+          "scope": "Initial blind product judgment; table access and motion limits remain explicit, with no general accessibility or motion-comfort certification."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "source"
+            ],
+            "observation": "A populated paper-like sheet, warm light/dark surfaces, serif English text, red margin, separate right navigation and ruled native editor establish a distinct whole-workspace treatment. Bundled source identifies Vanilla Paper 0.10.0 by Simon Huber with MIT license; the supplied TiddlyWiki vendor files matched the foundation."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Native search/related-note navigation, bilingual passage edits, save, exact disk text, reload agreement, cancelled-draft preservation and continuing to the unfinished note succeeded."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior",
+              "pixels"
+            ],
+            "observation": "Native Vanilla Paper Day/Night palette selections and Simplified Chinese UI selection succeeded; long bilingual content was inspected in the declared viewport/theme conditions."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels",
+              "behavior"
+            ],
+            "observation": "The approximately 483 px ledger table is inside a 318 px local overflow-x:auto region. Actual horizontal wheel input reached the rightmost Does not establish column without widening the 390 px document. Initial offscreen columns have limited explicit disclosure."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "behavior",
+              "source"
+            ],
+            "observation": "The page-container transition changes from 0.4 s normally to 0.15 s under reduced motion. A real keyboard sidebar toggle still had intermediate positions. A later universal 150 ms rule overrides the earlier 1 ms rule, so the behavior is shortened rather than instant."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "Keyboard/touch access to all table columns, server-outage recovery, every native wiki tool, assistive-technology access, upstream acquisition authentication, resource profiling and natural-speed motion comfort were not established."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-cohort02-001/P12.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-conditions-cohort02-001/P12.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-narrow-cohort02-001/P12.json"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-036-cohort02-source/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-037-P12-source-and-test/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-043-cohort02-source-preservation/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-045-P12-reduced-motion-scope/stdout.txt"
+        ],
+        "material_unresolved_items": [
+          "Table scrolling requires lateral panning and has limited disclosure; keyboard/touch panning was not certified.",
+          "Reduced motion retains a 150 ms sidebar/layout transition rather than eliminating motion."
+        ],
+        "cohort": "2026-11-01-cohort-02",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P12/captures/010.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P12/captures/040.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P12/captures/042.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P12-010.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P12-040.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P12-042.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-conditions-cohort02-001/P12-chinese-light-reading.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-conditions-cohort02-001/P12-dark-editor.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-conditions-cohort02-001/P12-dark-narrow-reading.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-conditions-cohort02-001/P12-light-narrow-ledger.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-narrow-cohort02-001/P12-narrow-ledger-panned-right.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P12-chinese-light-reading.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P12-dark-editor.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P12-dark-narrow-reading.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P12-light-narrow-ledger.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P12-narrow-ledger-panned-right.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-001/T3-foundation-initial.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T3-foundation-initial.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              640
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study.",
+          "source_view_reuse": "Previously personally viewed common-source captures may be reused; timestamps and exports identify them separately from new product views."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P12.json",
+        "sha256": "5c88673a02e29f17820368fcb0b9df1dd2d5749c9c2badaab23e3dee8e81e5fe"
+      }
+    },
+    {
+      "cell_id": "T2-C-r1",
+      "anonymous_product": "P17",
+      "product_evidence_sha256": "01256c89d44af2c6bd9f35427b78acff7a8818c70abe9179c0c8db4b33f8c396",
+      "judgment": {
+        "status": "core_supported_keyboard_focus_revision_required",
+        "summary": "Reading, attachments, return to latest and failure/retry are supported, but keyboard Stop loses focus to BODY and requires a consequential detour back to the composer.",
+        "scope": "Initial blind product judgment. Full T2 keyboard-continuity scope remains unresolved; no repair was made."
+      },
+      "findings": "[{\"kind\": \"strength\", \"evidence_type\": [\"pixels\", \"source\"], \"observation\": \"The mature workspace, compact File-family attachment strip, six-line composer and explicit text-bearing Return to latest control remain coherent across the viewed light/dark and narrow/compact conditions. File source and the synthetic adapter matched the foundation.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\"], \"observation\": \"Full filename dialog disclosure, Escape trigger return and remove-to-composer focus worked. Manual scrollTop stayed 0 while height grew 1277 to 1599 px; return-to-latest bottom gaps stayed 0 across approximately 1.5 seconds while streaming.\"}, {\"kind\": \"strength\", \"evidence_type\": [\"behavior\", \"pixels\"], \"observation\": \"The forced partial response failure was clearly visible; keyboard retry completed the long fixed response and reload returned to the seeded in-memory state.\"}, {\"kind\": \"defect\", \"evidence_type\": [\"behavior\"], \"observation\": \"Keyboard Stop ended the stream and text stabilized, but activeElement was BODY at 100 ms and remained BODY around 1.1 and 1.6 seconds. A separate targeted run reproduced the loss and required 12 Tabs through other controls to reach the composer.\"}, {\"kind\": \"qualification\", \"evidence_type\": [\"behavior\"], \"observation\": \"After the 12-Tab recovery, a keyboard follow-up could be sent. This is a substantial continuity defect, not a complete keyboard trap or evidence of indefinite post-stop generation.\"}, {\"kind\": \"limitation\", \"evidence_type\": [\"pixels\"], \"observation\": \"The horizontally browsed attachment strip hides some files outside the current view, and modal filename disclosure temporarily obscures the reading context.\"}, {\"kind\": \"unknown\", \"evidence_type\": [\"scope\"], \"observation\": \"All editor/branch paths, arbitrary content extremes, physical touch behavior and assistive-technology behavior were not certified.\"}]",
+      "viewed_screenshots": [
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-C-r1/artifacts/evidence/final-05/dark-zh-1440x900-filename-dialog.png",
+            "sha256": "fd93e5d52f633fc4fa36b706ae5df151d8fc6668a377f88bc3d3099f9960fe2c"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P17-005.json",
+            "sha256": "8471cef7a43c3b4a67c3df74bea52670204a9df2e2ee3cb856a4064a8a43a8cc",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-C-r1/artifacts/evidence/final-05/light-en-1440x900-filename-dialog.png",
+            "sha256": "fc6cca743bf77a423cb41edac21d9ab07dd6a3b9762fed72c3654bbe6d4d4458"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P17-025.json",
+            "sha256": "09b195144fdae8d017319e835ce04d9633621ad78e25e7ae89ebe80e46996a61",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-C-r1/artifacts/evidence/final-05/light-en-1440x900-initial.png",
+            "sha256": "b59312ec5b2604f699959d7e8f18e8ab9f7c0efd1da7bf2def9b1b5c6b300889"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P17-026.json",
+            "sha256": "c19cc93b9e38dd8ac382af23cd5888c6c551f3f9ef04a90b8051870d56ba4198",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-C-r1/artifacts/evidence/final-05/light-en-390x844-initial.png",
+            "sha256": "53f67b6e122a76d4d563b0e60d96338d75ea91e4d7ee4081fc627e32f2bb230c"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P17-030.json",
+            "sha256": "e7b25ca0f0b7c54548794eb1c5527ea8e75470569581b32d13c289e8de2f99df",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        },
+        {
+          "viewer_agent_id": "/root/product_reviewer_recovered",
+          "screenshot": {
+            "path": "docs/evidence/v1.20.0/session-study/runs/T2-C-r1/artifacts/evidence/final-05/light-en-episode-08-retry-complete.png",
+            "sha256": "71a9d7b811da60a69ad558cd783012a13c348be7934b0895121fb0f8ed6805cf"
+          },
+          "view_export": {
+            "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/evidence/view-P17-040.json",
+            "sha256": "07357443c1c0d60294d2e2bc296585a651f454b94ec0351cbba8a0a2a189e5a8",
+            "source": "view_image",
+            "scope": "Actual independent reviewer request and returned pixels for the original frozen anonymous product capture; matched by path, retained hashes and PNG bytes.",
+            "export_kind": "faithful_conversation_export",
+            "synthetic": false
+          }
+        }
+      ],
+      "original_reviewer_record": {
+        "anonymous_product": "P17",
+        "task_family": "T2",
+        "judgment": {
+          "status": "core_supported_keyboard_focus_revision_required",
+          "summary": "Reading, attachments, return to latest and failure/retry are supported, but keyboard Stop loses focus to BODY and requires a consequential detour back to the composer.",
+          "scope": "Initial blind product judgment. Full T2 keyboard-continuity scope remains unresolved; no repair was made."
+        },
+        "findings": [
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "pixels",
+              "source"
+            ],
+            "observation": "The mature workspace, compact File-family attachment strip, six-line composer and explicit text-bearing Return to latest control remain coherent across the viewed light/dark and narrow/compact conditions. File source and the synthetic adapter matched the foundation."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Full filename dialog disclosure, Escape trigger return and remove-to-composer focus worked. Manual scrollTop stayed 0 while height grew 1277 to 1599 px; return-to-latest bottom gaps stayed 0 across approximately 1.5 seconds while streaming."
+          },
+          {
+            "kind": "strength",
+            "evidence_type": [
+              "behavior",
+              "pixels"
+            ],
+            "observation": "The forced partial response failure was clearly visible; keyboard retry completed the long fixed response and reload returned to the seeded in-memory state."
+          },
+          {
+            "kind": "defect",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "Keyboard Stop ended the stream and text stabilized, but activeElement was BODY at 100 ms and remained BODY around 1.1 and 1.6 seconds. A separate targeted run reproduced the loss and required 12 Tabs through other controls to reach the composer."
+          },
+          {
+            "kind": "qualification",
+            "evidence_type": [
+              "behavior"
+            ],
+            "observation": "After the 12-Tab recovery, a keyboard follow-up could be sent. This is a substantial continuity defect, not a complete keyboard trap or evidence of indefinite post-stop generation."
+          },
+          {
+            "kind": "limitation",
+            "evidence_type": [
+              "pixels"
+            ],
+            "observation": "The horizontally browsed attachment strip hides some files outside the current view, and modal filename disclosure temporarily obscures the reading context."
+          },
+          {
+            "kind": "unknown",
+            "evidence_type": [
+              "scope"
+            ],
+            "observation": "All editor/branch paths, arbitrary content extremes, physical touch behavior and assistive-technology behavior were not certified."
+          }
+        ],
+        "behavior_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-001/P17.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-stop-focus-cohort02-001/P17.json"
+        ],
+        "source_inspection_evidence": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-036-cohort02-source/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-040-cohort02-state-and-provenance/stdout.txt",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-043-cohort02-source-preservation/stdout.txt"
+        ],
+        "material_unresolved_items": [
+          "Keyboard Stop focus restoration requires a separately retained authorized repair and verification before unqualified T2 acceptance."
+        ],
+        "cohort": "2026-11-01-cohort-02",
+        "condition_mapping_received": false,
+        "viewed_original_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P17/captures/005.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P17/captures/025.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P17/captures/026.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P17/captures/030.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P17/captures/040.png"
+        ],
+        "view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P17-005.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P17-025.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P17-026.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P17-030.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/view-P17-040.json"
+        ],
+        "additional_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-001/P17-compact-height-composer.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-001/P17-dark-desktop-composer.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-001/P17-forced-response-failure.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-001/P17-narrow-last-file-disclosure.png",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-001/P17-returned-1500ms.png"
+        ],
+        "additional_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P17-compact-height-composer.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P17-dark-desktop-composer.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P17-forced-response-failure.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P17-narrow-last-file-disclosure.json",
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-P17-returned-1500ms.json"
+        ],
+        "source_viewed_files": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/foundation-comparison-001/T2-light-desktop.png"
+        ],
+        "source_view_exports": [
+          "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/additional-view-T2-light-desktop.json"
+        ],
+        "review_conditions": {
+          "browser": "Chromium 143.0.7499.4",
+          "playwright": "1.57.0",
+          "device_scale_factor": 1,
+          "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+          "viewports": [
+            [
+              1440,
+              900
+            ],
+            [
+              1280,
+              600
+            ],
+            [
+              390,
+              844
+            ]
+          ],
+          "isolation": "Instructional isolation on a shared host; source choices and product differences are visible.",
+          "stateful_tests": "Disposable application copy; frozen products and original captures were not changed.",
+          "review_type": "Independent agent product judgment; not a human usability or assistive-technology study.",
+          "source_view_reuse": "Previously personally viewed common-source captures may be reused; timestamps and exports identify them separately from new product views."
+        }
+      },
+      "reviewer_records": {
+        "path": "docs/evidence/v1.20.0/session-study/review/recovered-reviewer/cohort-02/raw/products.json",
+        "sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a"
+      },
+      "anonymous_material_map": {
+        "path": "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P17.json",
+        "sha256": "0b6271bb5fc016acb04d8e53c6fda5b4c3620d7b9d3970929234baf2a1415e7c"
+      }
+    }
+  ],
+  "scope": "Links anonymous original PNG views to frozen product identities. Findings and judgments are copied from the reviewer; additional reviewer captures remain separate. This index does not supply acceptance."
+}

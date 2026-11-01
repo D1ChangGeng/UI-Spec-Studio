@@ -17,9 +17,25 @@ The [complete original blind report](recovered-reviewer/cohort-01/raw/BLIND-REVI
 | P16 | Core supported; narrow-layout revision required. Expanded navigation pushes the form down, and long single-line values remain horizontally clipped. |
 | P18 | Satisfactory within the bounded notification task; correct retry semantics and newer-draft feedback exercised. |
 
-These are the reviewer's scoped judgments, not a release approval or a claim that every comparator succeeded. Earlier P10 stop sampling was investigated and was not treated as indefinite post-stop generation. No comparator was repaired. P05, P12 and P17 are prepared for a later anonymous cohort; further products remain in execution. No condition mapping or producer judgments have been supplied to this reviewer, and final-runtime acceptance remains pending.
+These are the reviewer's scoped judgments, not a release approval or a claim that every comparator succeeded. Earlier P10 stop sampling was investigated and was not treated as indefinite post-stop generation. No comparator was repaired. A second cohort is now frozen below. No condition mapping or producer judgments have been supplied to this reviewer, and final-runtime acceptance remains pending.
 
 The unavailable later-session nine-product review originals are not replaced by their completion notification. The earlier durable five-product review below remains a separate historical record. Shared-host instruction isolation and independent agent judgment do not establish a human usability panel or native Codex role/model attestation.
+
+## Fresh recovery cohort 02 — frozen before disclosure
+
+The same independent reviewer froze P04, P05, P08, P12 and P17 at **2026-11-01 10:11:06 UTC**, keeping all eight earlier rows unchanged. It inspected 19 additional original product PNGs and exercised their core interactions in disposable copies. The cumulative [derived correspondence](recovered-reviewer/cohort-02/correspondence.json) now links 13 actual product judgments and 45 original-capture view exports to their frozen source identities.
+
+Read the [complete original second report](recovered-reviewer/cohort-02/raw/BLIND-REVIEW-COHORT-02.md.txt), [immutable second-cohort records](recovered-reviewer/cohort-02/raw/cohorts/2026-11-01-cohort-02/products.json), [original freeze manifest](recovered-reviewer/cohort-02/raw/cohorts/2026-11-01-cohort-02/FREEZE-MANIFEST.json), and [actual completion notification](../coordination/recovery-0830/reviewer-cohort-02-completion.json). The [snapshot](recovered-reviewer/cohort-02/snapshot.json) preserves the prior cohort chain and all new original files. Its [reconstruction passed](recovered-reviewer/cohort-02/reconstruction-check/stdout.txt) for all 46,071 files, including the exercised reviewer copies. Large hash/member inventories are losslessly split into verified JSON parts.
+
+| Anonymous product | Frozen independent judgment |
+| --- | --- |
+| P04 | Satisfactory exercised conversation scope; manual reading position, return to latest, Stop-focus recovery and failure/retry worked. Horizontal attachment browsing and the full-name modal retain spatial tradeoffs. |
+| P05 | Core settings and long-value wrapping supported; expanded navigation places the name field around y=765 at 390×844, leaving a narrow-hierarchy caveat. |
+| P08 | Satisfactory bounded native-toast integration; failed-snapshot retry preserves a newer unsaved draft, and pending/dismissal/retry focus behavior worked. Prescribed placement can overlap neighboring content. |
+| P12 | Satisfactory exercised native reading/editing/persistence scope. The complete narrow table was recovered by local horizontal panning; reduced motion shortens the sidebar transition from 400 to 150 ms, with intermediate motion retained. |
+| P17 | Core conversation behavior supported, but keyboard Stop loses focus to BODY; the targeted follow-up needed 12 Tabs to reach the composer. Return to latest worked and the stopped text stabilized. |
+
+P17 remains an unrepaired negative comparator. P05's hierarchy and P12's panning/motion caveats remain explicit. Captured images, actual viewing, behavior, source observations and unknowns remain separate. The final cohort and condition-disclosed final-runtime disposition are still required.
 
 ## Earlier durable five-product review
 

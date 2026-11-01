@@ -14,6 +14,7 @@ def main():
     parser.add_argument('--root', type=Path, required=True)
     parser.add_argument('--cell', required=True)
     parser.add_argument('--task-name', required=True)
+    parser.add_argument('--record-suffix', default='')
     args = parser.parse_args()
     repo, root = args.repo.resolve(), args.root.resolve()
     study = repo / 'docs/evidence/v1.20.0/session-study'
@@ -42,13 +43,16 @@ def main():
         raise ValueError('Dispatch map differs from the exact frozen prompt')
     if '/' in args.task_name or not args.task_name:
         raise ValueError('Use a fresh simple task name')
+    if args.record_suffix and (not args.record_suffix.startswith('-') or not all(c.isalnum() or c == '-' for c in args.record_suffix)):
+        raise ValueError('Use an explicit alphanumeric attempt suffix beginning with a hyphen')
+    record_name = args.cell + args.record_suffix
     recovery = study / 'coordination/recovery-0830'
-    intent = recovery / (args.cell + '-dispatch-intent.json')
+    intent = recovery / (record_name + '-dispatch-intent.json')
     if intent.exists():
         raise ValueError('Do not overwrite a previous dispatch intent')
     old = study / 'coordination' / (args.cell + '-spawn.json')
     if old.exists():
-        preserved = recovery / ('prior-' + old.name)
+        preserved = recovery / ('prior-' + record_name + '-spawn.json')
         if preserved.exists() and preserved.read_bytes() != old.read_bytes():
             raise ValueError('Previous dispatch preservation collision')
         shutil.copyfile(old, preserved)

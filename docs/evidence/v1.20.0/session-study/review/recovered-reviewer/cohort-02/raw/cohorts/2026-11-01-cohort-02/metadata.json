@@ -1,0 +1,112 @@
+{
+  "cohort": "2026-11-01-cohort-02",
+  "anonymous_products": [
+    "P04",
+    "P05",
+    "P08",
+    "P12",
+    "P17"
+  ],
+  "frozen_at_utc": "2026-11-01T10:11:06.145036+00:00",
+  "condition_mapping_received": false,
+  "independence": "No coordinating repository, condition/role allocation, producer judgment, sibling workset, release decision or other reviewer result was inspected.",
+  "isolation_limit": "Instruction only on a shared host, not a separate security sandbox.",
+  "no_comparator_repair": true,
+  "review_report": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-02/BLIND-REVIEW.md",
+  "records": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-02/products.json",
+  "cumulative_products": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/products.json",
+  "prior_manifest": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-01/FREEZE-MANIFEST.json",
+  "prior_manifest_sha256": "887a5940dc738e9f73d2d367454aa96c848d06e15de5ca02b615f0de89b52630",
+  "prior_records_unchanged": true,
+  "preservation_rule": "Keep both blind cohort reports and each cohort's records immutable. Cumulative records may append later cohorts without rewriting earlier rows. Any unblinding or repair disposition requires a separate continuation.",
+  "material_revision": "P17 keyboard focus after Stop; independently reproduced, with 12 Tabs needed to reach the composer in the targeted run.",
+  "other_caveats": [
+    "P05 expanded narrow settings navigation hierarchy",
+    "P12 local horizontal table panning and residual 150 ms reduced-motion transition",
+    "Bounded and non-exhaustive scope detailed per product"
+  ],
+  "owned_server_stop_checks": [
+    {
+      "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-P04-001/P04.json",
+      "server": {
+        "pid": 71723,
+        "port": 4724,
+        "started": "2026-11-01T10:02:58.436398+00:00",
+        "stopped": "2026-11-01T10:03:16.059829+00:00",
+        "returncode": -15
+      }
+    },
+    {
+      "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-001/P05.json",
+      "server": {
+        "pid": 68967,
+        "port": 4725,
+        "started": "2026-11-01T09:54:55.915211+00:00",
+        "stopped": "2026-11-01T09:55:04.019382+00:00",
+        "returncode": -15
+      }
+    },
+    {
+      "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-P08-001/P08.json",
+      "server": {
+        "pid": 72843,
+        "port": 4728,
+        "started": "2026-11-01T10:05:53.539359+00:00",
+        "stopped": "2026-11-01T10:06:02.577423+00:00",
+        "returncode": -15
+      }
+    },
+    {
+      "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-cohort02-001/P12.json",
+      "server": {
+        "pid": 69368,
+        "port": 4726,
+        "started": "2026-11-01T09:56:10.266454+00:00",
+        "stopped": "2026-11-01T09:56:21.692604+00:00",
+        "returncode": -15
+      }
+    },
+    {
+      "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-conditions-cohort02-001/P12.json",
+      "server": {
+        "pid": 70233,
+        "port": 4726,
+        "started": "2026-11-01T09:58:00.523148+00:00",
+        "stopped": "2026-11-01T09:58:11.852789+00:00",
+        "returncode": -15
+      }
+    },
+    {
+      "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-narrow-cohort02-001/P12.json",
+      "server": {
+        "pid": 71101,
+        "port": 4726,
+        "started": "2026-11-01T10:01:13.496722+00:00",
+        "stopped": "2026-11-01T10:01:17.404542+00:00",
+        "returncode": -15
+      }
+    },
+    {
+      "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-001/P17.json",
+      "server": {
+        "pid": 69463,
+        "port": 4727,
+        "started": "2026-11-01T09:56:12.140131+00:00",
+        "stopped": "2026-11-01T09:56:29.792473+00:00",
+        "returncode": -15
+      }
+    },
+    {
+      "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-stop-focus-cohort02-001/P17.json",
+      "server": {
+        "pid": 70143,
+        "port": 4727,
+        "started": "2026-11-01T09:57:59.294756+00:00",
+        "stopped": "2026-11-01T09:58:02.851384+00:00",
+        "returncode": -15
+      }
+    }
+  ],
+  "test_failure_policy": "The wrong source path in command-033 and the substantive P17 failed composite check are retained with their separate follow-ups.",
+  "clock_note": "Raw UTC timestamps are preserved. Browser-rendered save times use browser/application formatting; only within-run intervals are compared."
+}

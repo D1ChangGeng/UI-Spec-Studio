@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path; p=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P12/app/wiki/themes/vanilla-paper\");\nfor name in [\"1-layout.tid\",\"3-surface.tid\"]:\n lines=(p/name).read_text().splitlines();print(\"SOURCE\",name)\n for i,line in enumerate(lines):\n  if \"prefers-reduced-motion\" in line:print(\"\\n\".join(str(j+1)+\": \"+lines[j] for j in range(max(0,i-2),min(len(lines),i+28))))\nfor name in [\"sidebar-toggle.tid\",\"topleftbar-sidebar-toggle.tid\"]:print(\"SOURCE\",name,\"\\n\",(p/name).read_text())"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T10:00:18.596406+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T10:00:18.631719+00:00",
+  "wall_seconds": 0.035363,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 3195,
+      "sha256": "c40d82847e1e8e7c5eee72488ccc9173c3a445108c8676b3b3737f2f4f5edfaa"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

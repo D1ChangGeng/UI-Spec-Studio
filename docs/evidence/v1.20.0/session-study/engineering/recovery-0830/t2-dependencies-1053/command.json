@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "npm",
+    "ci",
+    "--cache",
+    "/tmp/npm-cache",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w13/app",
+  "started_at": "2026-11-01T10:52:10.269599+00:00",
+  "timeout_seconds": 240,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T10:52:17.559986+00:00",
+  "wall_seconds": 7.290392,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 26,
+      "sha256": "b5cac30dd5a69b2ae9361feddd3257e0c897306ac159c3defc35ccab8f9c78b6"
+    },
+    "stderr.txt": {
+      "bytes": 99,
+      "sha256": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f"
+    }
+  }
+}

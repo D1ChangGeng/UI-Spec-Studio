@@ -1,0 +1,182 @@
+# Independent blind review — cohort 02
+
+## Freeze scope and conclusions
+
+This is the second condition-blind cohort of the independent product review. It covers P04, P05, P08, P12 and P17. P05, P12 and P17 were supplied first; P04 and P08 were added only after the coordinator stated that their original sources and captures were frozen. No condition mapping, producer judgment, release decision or sibling workset was inspected. The coordinator's scope messages supplied product identities and timing, not findings.
+
+Cohort 01 remains immutable. This report adds findings; it does not revise that report or its eight product records. These are independent agent product judgments, not human acceptance votes or universal certifications. Each product is judged against its own task and actual delivered application. No comparator was repaired.
+
+| Product | Task | Initial blind judgment | Outstanding scope |
+| --- | --- | --- | --- |
+| P04 | T2 conversation | Satisfactory in the exercised scope | Attachment browsing and modal disclosure have spatial tradeoffs; full accessibility and arbitrary input extremes remain untested. |
+| P05 | T1 settings | Core supported, with a narrow-hierarchy caveat | The full vertical settings navigation precedes the form at 390 px and pushes identity editing down. This is a polish limitation, not a failed persistence path. |
+| P08 | T4 bounded toast integration | Satisfactory within the settled bounded scope | Prescribed top-right feedback can cover neighboring header/form content; inherited broader settings-layout issues remain outside the bounded integration. |
+| P12 | T3 research wiki | Satisfactory in the exercised scope, with explicit table and motion caveats | Narrow tables require horizontal panning. Reduced motion shortens the sidebar transition to 150 ms; it does not eliminate it. |
+| P17 | T2 conversation | Core supported; keyboard-focus revision required | Keyboard Stop loses focus to BODY. A targeted run required 12 Tabs to return to the composer. |
+
+The material functional revision in this cohort is P17's keyboard continuity after Stop. P05's narrow hierarchy remains weaker than its desktop presentation. P12's initially clipped table was investigated: the final column is available through a local horizontal scroll region, so the evidence does not support calling that column inaccessible.
+
+## Method, environment and evidence boundaries
+
+I personally opened the original PNGs through view_image. The immutable product records enumerate each original path and its actual request/response export. Additional screenshots were produced during independent behavior runs and are separately marked as additional_viewed_files only when I actually opened them. A screenshot's existence, a passing assertion, or a producer's viewing flag is not treated as a visual judgment.
+
+Original captures personally viewed in this cohort:
+
+| Product | Original capture files |
+| --- | --- |
+| P04 | 033.png, 035.png, 036.png, 039.png |
+| P05 | 013.png, 019.png, 037.png, 053.png |
+| P08 | 004.png, 050.png, 052.png |
+| P12 | 010.png, 040.png, 042.png |
+| P17 | 005.png, 025.png, 026.png, 030.png, 040.png |
+
+All originals are under /workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/Pxx/captures/. The records and evidence index retain full paths and hashes.
+
+The independent behavior work used Playwright 1.57.0 and Chromium headless shell 143.0.7499.4, device scale factor 1, and FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf. T1, T2 and T4 used 1440×900, 1280×600 and 390×844. T3 used 1440×900, 1280×640 and 390×844. Light/English and dark/Chinese conditions were inspected as specified. P12 additionally exercised native palette selection and the native Simplified Chinese UI selection. Its content remained bilingual in both UI language states.
+
+Each stateful test used a disposable application copy under this review workspace. T2 ran the delivered dist build following its README. T3 ran its native Node server and wrote only to the disposable wiki. The settings products used their authoritative browser-local store. All owned preview servers were terminated and their exit status recorded; the behavior records have completed timestamps and stopped server entries.
+
+Complete wrapped command stdout, stderr, arguments, exit status and timestamps are retained, together with actual tool-return objects. The first cohort-02 source-inspection command used an incorrect T2 component path and failed before reaching that diff. The failed return remains in command-033; command-034 established the actual paths, and command-036 completed the source inspection. This was a reviewer path error, not a product failure.
+
+Isolation is by instruction on a shared host, not a separate security sandbox. Actual source choices and visible product differences cannot be hidden. No credentials, remote service, real model, real research participant, external account or backend identity was involved. I did not perform a human usability study, assistive-technology certification, natural-speed motion study, exhaustive browser matrix, storage-quota study or external provenance audit. The evidence supports bounded product findings.
+
+## P04 — conversation workspace
+
+### Composition and source coherence
+
+P04 preserves the assistant-ui workspace: a left thread sidebar, breadcrumb/header, centered long-form conversation, restrained message actions and a persistent composer. The original light and dark desktop captures retain readable paragraph rhythm and clear separation of user question and assistant response. At 390 px the collapsed sidebar gives the conversation most of the available width. The original compact six-line composer capture shows the relationship among reading space, attachment strip and send action rather than an isolated input component.
+
+Its attachment treatment uses the supplied File family at small size. Source inspection found the File component byte-identical to the common foundation; product changes compose that family with the existing Dialog and runtime attachment primitives. The horizontal strip keeps attachment height bounded, but several long files cannot all be visible simultaneously. This is an explicit spatial tradeoff, not hidden or removed attachments.
+
+The full-name dialog is operable and explains the filename-only boundary. In the independently viewed narrow dark dialog, the entire selected filename remained present, but break-all split the word working between lines. This is a small legibility blemish. The modal also temporarily blurs the conversation behind it. Returning from it restores the attachment trigger.
+
+### Exercised behavior
+
+I selected one short filename and three long filenames, entered the same six-line mixed-language question used for the other conversation products, opened a long filename by keyboard, dismissed it with Escape, and removed the short attachment. Removal returned focus to the composer. The synthetic adapter matched the foundation byte-for-byte.
+
+After sending, an actual wheel scroll moved away from the growing response. The sampled scrollTop stayed at 0 while the content height grew from 1,277 to 1,625 px. Activating Return to latest then reached the bottom and followed continued streaming: all three sampled bottom gaps were 0 over approximately 1.5 seconds. The control remains an icon with a localized tooltip/accessibility label, so it is less explicit visually than P17's text-bearing control, but the tested action worked.
+
+Keyboard Stop restored focus to the composer by the first 100 ms observation. After the settling allowance, text length remained unchanged across the subsequent 500 ms sample and the runtime was no longer running. The source adapter schedules focus restoration to the containing thread composer without changing its scroll position. This source inspection helps explain the observed continuity; it does not replace the behavior evidence.
+
+The forced partial-response failure remained visible in a clear red error surface. Keyboard Retry completed the full fixed response through Observation theme 7. A follow-up question could be sent and stopped, and reload returned to the seeded conversation, consistent with the declared in-memory boundary. No page errors occurred in the recorded run.
+
+### Judgment and limits
+
+The exercised coupled reading/composer path is satisfactory. The narrow horizontal attachment strip, modal interruption, small icon-only return control and occasional midword filename break remain tradeoffs. I did not establish a complete screen-reader path, very large attachment-count behavior, every edit/branch action, or behavior on a physical touch device.
+
+Primary evidence: [P04 core behavior](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-P04-001/P04.json), [source differences](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-048-P04-source/stdout.txt), and [source/focus preservation](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-053-cohort02-final-source-scope/stdout.txt).
+
+## P05 — settings
+
+### Composition and content
+
+The desktop presentation is coherent with Tabler. Profile identity, notifications and privacy form one continuous settings surface. Labels and helper copy explain required versus optional values, browser-local persistence and private email. The public-profile off-state says that the profile will be private, which is clearer state wording than an imperative that could be mistaken for an action.
+
+The original long-value captures show real multiline display-name and organization fields in both themes. Independent narrow geometry confirmed that each textarea held the representative mixed-language value within its visible dimensions: clientWidth equaled scrollWidth at 330 px, and clientHeight equaled scrollHeight at 78 px. The value was wrapped over three lines, rather than represented only by its trailing segment.
+
+The important caveat is the narrow hierarchy. The full vertical settings navigation precedes My Account. In the fresh 390×844 dark/Chinese view, the display-name field begins around y=765 and extends to y=845; organization begins around y=910.5. The field contents themselves are readable once reached, but much of the initial narrow screen is navigation. The task permits source-supported narrow adaptation, so this remains a useful improvement area within T1. It is not evidence that the field cannot be edited or that saving fails.
+
+At compact height, the footer/error area remains clear after scrolling. The tinted error message and primary Try again action have adequate hierarchy in the viewed light and dark states. This preserves the established form family rather than introducing a new notification style.
+
+### Exercised behavior
+
+The authoritative settings-store.js matched the foundation, and the supplied distribution assets were unchanged. The core run reached the identity fields and Save through keyboard Tab, entered the representative long values, submitted them, and changed location while saving. Storage retained the submitted location while the newer draft stayed in the form; the status explicitly said that later edits still needed saving.
+
+Cancel restored the persisted settings. A forced failure retained both the previous stored value and the failed draft. After I edited the name again, the T1 retry saved the current form value, which is the correct T1 interaction in this product rather than T4's distinct failed-snapshot action.
+
+Submitting an empty name moved focus to the associated invalid field. A short bilingual name saved and survived reload. The dark/Chinese narrow form remained editable and saved successfully. No page errors occurred.
+
+During a pending save, the native disabled Save button temporarily lost focus to BODY. When no other field took focus, completion restored the initiating Save button; when I continued editing location, the completion did not steal that focus. The review therefore does not claim uninterrupted focus on the button throughout the pending interval.
+
+### Judgment and limits
+
+The core settings behavior and long-value treatment are supported. The narrow navigation hierarchy is an outstanding polish caveat, not a persistence blocker. Compared with the earlier frozen P03/P06 findings, P05 does not offer the same compact narrow navigation. Compared with the earlier P16 finding, P05 does resolve the representative long-value clipping. Those comparisons describe observed products without attributing the differences to an undisclosed condition.
+
+The exercised validation example was the required name; this was not an exhaustive validation matrix. Storage corruption/quota behavior, all toggle permutations, extreme unbroken strings and assistive-technology behavior remain outside the tested scope.
+
+Primary evidence: [P05 core behavior](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-001/P05.json), [geometry and focus observations](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-040-cohort02-state-and-provenance/stdout.txt), and [source preservation](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-043-cohort02-source-preservation/stdout.txt).
+
+## P08 — bounded action-toast integration
+
+### Settled source and neighboring experience
+
+P08 was judged against the settled T4 integration decision, not the broader T1 redesign task. I read the common decision, inspected the original source toast rendering again, and compared the assembled product. Its original captures include light desktop failure feedback, dark compact pending feedback, and narrow dark feedback over the header/navigation area.
+
+The selected Tabler shell is retained: identity/header/time/close control, compact body and separated small primary retry action. Typography, border, shadow, spacing and native close behavior remain within that source family. The source-preview file, settings store, dist assets and preview assets matched the foundation. The integrated HTML retains role=status, polite live announcements and aria-atomic; the inline summary has aria-live=off. This supports the intended announcement ownership, though no screen reader was tested.
+
+The prescribed fixed top-right toast is contained at 390 px. It can cover header context or the upper part of a scrolled form, as the viewed captures show. Its lower save controls remain separate. The broader application still has long navigation and single-line identity fields; those inherited issues do not become authorized redesign work merely because they are visible beside a toast.
+
+### State and focus behavior
+
+The main path exercised valid save, continued draft edits during pending, Cancel, forced failure, retry, invalid input, explicit dismissal, short-name save/reload and narrow dark saving. The previous stored value survived failure. Retry saved the failed snapshot while retaining a different newer form draft. The inline summary continued to say that newer edits were unsaved after the retried snapshot succeeded.
+
+In this implementation, pending Save uses the native disabled visual class, aria-disabled and a guarded handler while keeping the control focusable. The actual pending observation retained focus on Save. The disappearance of the focused Retry action returned focus to Save, and closing the toast also returned to Save. An invalid required name moved focus to its associated field and the toast named that field.
+
+Success wording was tied to the actual store event and included its save time. The native toast remained until explicit dismissal or replacement. No page errors occurred.
+
+### Judgment and limits
+
+The bounded integration is satisfactory in the exercised scope. Its prescribed overlap and the inherited broader settings limitations remain visible caveats. I did not establish every possible dismissal/result race, arbitrary concurrent operations, all gallery menus or screen-reader announcement behavior. The source includes ordering guards and a dismissal-transition handler; those are source observations rather than blanket concurrency certification.
+
+Primary evidence: [P08 core behavior](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-P08-001/P08.json), [decision and adapter source](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-051-P08-decision-source/stdout.txt), and [focus/checkpoint observations](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-054-cohort02-review-checkpoint/stdout.txt).
+
+## P12 — editorial research wiki
+
+### Expressive direction and source scope
+
+P12 presents a materially distinct reading workspace compared with the supplied Vanilla baseline. The paper-like sheet, warm page surround, red margin rule, serif English reading typography, strong headings, tag pills and separate right-hand navigation give the populated notes an editorial identity. The dark condition keeps a warm dark sheet and light ink rather than simply applying an unrelated bright accent. The native ruled monospaced editor visibly distinguishes raw note editing from reading.
+
+The delivered source identifies the active theme as Vanilla Paper 0.10.0 by Simon Huber, with a retained MIT license and a complete theme implementation. It contains layout, structure and surface styles, not only a palette. The active theme identity was confirmed from the running wiki. The complete supplied TiddlyWiki vendor distribution matched the foundation in the file comparison. This is a local source/notice inspection, not an independent authentication of the upstream acquisition chain.
+
+The original desktop project index and compact/narrow editors, plus fresh long bilingual reading views, show the direction on real content. English serif passages and Chinese text remain readable and the headings preserve the distinction between observation, interpretation and unresolved questions. The editor has many native controls and becomes dense at narrow width, but its title, save/cancel controls and note text remain available.
+
+### Native task and persistence
+
+Using the native search and related-note navigation, I read the interview, reached Evidence ledger and returned. I opened the editor by keyboard and changed an English phrase and a Chinese phrase. After the native confirmation action, the exact edited text appeared in the disposable wiki file and in the native store after reload. A subsequent cancelled draft did not replace the saved text. I continued to the unfinished Quiet route note without converting its unresolved material into a finished conclusion.
+
+I then selected the actual Vanilla Paper Night and Day options through the native palette UI. The running palette identities matched those selections. Native Simplified Chinese UI selection also succeeded, and the subsequent Chinese controls were viewed with the same bilingual note content. The core run recorded no page errors.
+
+### Narrow table and reduced-motion findings
+
+The first narrow ledger view cut off the rightmost column. A targeted follow-up established the boundary: a roughly 483 px table sits inside a 318 px-wide local tc-table-wrapper with overflow-x:auto. An actual horizontal wheel gesture reached the rightmost Does not establish column while document width stayed within the 390 px viewport. I opened the resulting panned screenshot and could read that column. This supports a contained, recoverable table treatment. It still requires lateral panning, and the initial view offers limited explicit disclosure that further columns exist. Full keyboard and touch access to that scroll region was not established.
+
+Reduced motion was also investigated rather than inferred from a media-query name. The page-container transition was 0.4 s in the normal condition and 0.15 s under prefers-reduced-motion:reduce. An actual keyboard sidebar toggle produced sampled intermediate positions before reaching the closed state. Source inspection found that a later universal 150 ms rule overrides an earlier layout-specific 1 ms rule. Therefore the interface reduces the duration but is not motion-free or instant. There was no ongoing animation in the inspected reading state. I did not assess natural-speed motion comfort or resource-cost profiling.
+
+### Judgment and limits
+
+The exercised reading/editing/persistence path and expressive completion are supported. The table-panning and residual-motion caveats should remain with that judgment. They do not justify rewriting the initial clipped image as a failure to render the whole table, nor do the successful core checks establish every native wiki tool, server-outage recovery, assistive-technology access or mobile input method.
+
+Compared with the earlier frozen P13 review, P12 uses a paper/serif sheet with a separate right sidebar rather than Notebook's more compact centered presentation. P12's table overflow is confined and was directly recovered by panning. This is a within-task product comparison, not a condition-level explanation.
+
+Primary evidence: [native core edit/save path](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-cohort02-001/P12.json), [theme/language conditions](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-conditions-cohort02-001/P12.json), [table and motion follow-up](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-wiki-narrow-cohort02-001/P12.json), and [theme source/rights](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-043-cohort02-source-preservation/stdout.txt).
+
+## P17 — conversation workspace
+
+### Strengths and coherent tradeoffs
+
+P17 preserves the same mature workspace family while using small File-family attachment items, a full-name Dialog and a text-bearing Return to latest control. The original captures and fresh compact/dark views show a clear reading column, readable text and a composer that can hold six lines without removing the surrounding conversation. Its input height is capped with a viewport-relative maximum in source. The underlying File component and synthetic adapter matched the supplied foundation.
+
+The filename dialog states the local filename-only boundary and displays the complete selected name. Escape returned focus to its attachment trigger, and removing an attachment returned to the composer. The horizontal strip limits composer height but hides some files until horizontally traversed. Modal disclosure temporarily obscures the conversation; it is a deliberate tradeoff compared with a local tooltip.
+
+Manual scrolling away held the sampled scrollTop at 0 while content height grew from 1,277 to 1,599 px. Return to latest reached and followed the bottom during continued streaming; every sampled gap was 0 across approximately 1.5 seconds. The text-bearing action is more explicit visually than P04's icon-only control. The forced partial-response error was clearly visible, and keyboard retry completed the long response. Reload respected the seeded in-memory boundary.
+
+### Consequential Stop-focus defect
+
+The primary run's combined stop-and-focus check was false. The retained evidence separates its components: the runtime stopped and text was stable, but activeElement was BODY at the first observation and remained BODY after approximately 1.1 and 1.6 seconds. This is not evidence that generation continued indefinitely.
+
+A separate targeted run reproduced the focus loss after keyboard Stop. The next Tab restarted through sidebar/global controls. The composer was reached on the 12th Tab; after reaching it, a keyboard follow-up could be sent. The product is therefore not a complete keyboard trap, but it loses the local continuation point at a core task transition. A user who has just stopped an answer should not need to traverse unrelated navigation to continue the same thread.
+
+The final source still uses the runtime's ordinary Cancel composition without P04's explicit focus-return adapter. That is an implementation observation consistent with the result, not a generalized causal claim about the hidden production condition. No repair was made in the frozen product or disposable copy.
+
+### Judgment and disposition
+
+The main reading, attachment and response-recovery behavior is supported, but the exercised keyboard continuation path needs revision before an unqualified T2 judgment. A separately retained authorized continuation could repair focus after the disappearing Stop control and verify that it returns to the correct composer without stealing focus or scrolling the reading position. This report does not authorize or perform that repair.
+
+Primary evidence: [P17 core behavior](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-conversations-cohort02-001/P17.json), [independent Stop/Tab follow-up](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-stop-focus-cohort02-001/P17.json), and [source differences](sandbox:/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-036-cohort02-source/stdout.txt).
+
+## Preservation and next-step boundary
+
+The immutable cohort records preserve the distinctions among pixels, behavior, source inspection, inference and unknowns. The cumulative products.json appends these five records while retaining the earlier eight records unchanged. A separate manifest hashes this report, the cohort product records, metadata and evidence index; that index hashes the retained raw evidence and actual image-view exports.
+
+P17's focus issue remains unresolved. P05's narrow hierarchy remains a caveat. P12's contained table panning and shortened-but-present transitions remain explicit limitations. Successful tests elsewhere do not erase them. No condition identity has been supplied, and no condition-level causal conclusion or final release acceptance is made. Any later unblinding, repair disposition or further anonymous cohort must be recorded separately.
+

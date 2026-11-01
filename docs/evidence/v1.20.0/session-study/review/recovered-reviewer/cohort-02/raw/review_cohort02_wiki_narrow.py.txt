@@ -1,0 +1,40 @@
+from pathlib import Path
+prefix=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/review_wiki_conditions.py").read_text().split('log=open(OUT/"P13-server.log"')[0]
+prefix=prefix.replace("behavior-wiki-004","behavior-wiki-narrow-cohort02-001").replace("copies/wiki-003/P13/app","copies/wiki-cohort02-001/P12/app").replace("P13","P12")
+exec(compile(prefix,"review-shared-wiki-narrow-helpers","exec"))
+def geometry(page):
+ return page.evaluate("""() => ({viewport:{width:innerWidth,height:innerHeight},documentWidth:document.documentElement.scrollWidth,sidebarState:$tw.wiki.getTiddlerText('$:/state/sidebar'),reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,layout:[...document.querySelectorAll('.tc-page-container,.tc-sidebar-scrollable,.tc-story-river')].map(e=>({class:e.className,rect:e.getBoundingClientRect().toJSON(),transitionProperty:getComputedStyle(e).transitionProperty,transitionDuration:getComputedStyle(e).transitionDuration,animationName:getComputedStyle(e).animationName,open:getComputedStyle(e).getPropertyValue('--btc-open')})),tables:[...document.querySelectorAll('.tc-table-wrapper')].filter(e=>e.getBoundingClientRect().width).map(e=>({rect:e.getBoundingClientRect().toJSON(),scrollLeft:e.scrollLeft,scrollWidth:e.scrollWidth,clientWidth:e.clientWidth,lastColumn:[...e.querySelectorAll('tr')].map(tr=>tr.lastElementChild).filter(Boolean).map(c=>({text:c.innerText,rect:c.getBoundingClientRect().toJSON()}))}))})""")
+log=open(OUT/"P12-server.log","w");server=subprocess.Popen(["bash",str(app/"start.sh")],cwd=app,env=dict(ENV,PORT="4726"),stdout=log,stderr=subprocess.STDOUT)
+data["server"]={"pid":server.pid,"port":4726,"started":now()};data["geometry"]=[]
+with sync_playwright() as p:
+ browser=None
+ try:
+  for _ in range(100):
+   if server.poll() is not None:raise RuntimeError("Owned wiki preview exited")
+   try:urlopen("http://127.0.0.1:4726/",timeout=.5).close();break
+   except Exception:time.sleep(.1)
+  browser=p.chromium.launch(executable_path=CHROME,headless=True,env=ENV,args=["--no-sandbox"])
+  data["browser"]=browser.version;data["fontconfig"]=ENV["FONTCONFIG_FILE"];data["device_scale_factor"]=1
+  page=browser.new_page(viewport={"width":1440,"height":900},device_scale_factor=1);page.set_default_timeout(8000)
+  page.goto("http://127.0.0.1:4726/",wait_until="domcontentloaded");page.wait_for_function("window.$tw && $tw.wiki");page.wait_for_timeout(500)
+  frame=open_note(page,"Evidence ledger");page.set_viewport_size({"width":390,"height":844});frame.locator(".tc-titlebar").scroll_into_view_if_needed();page.wait_for_timeout(200)
+  rec("narrow-table-before-pan",page);data["geometry"].append({"time":now(),"name":"before-pan","observed":geometry(page)})
+  wrapper=frame.locator(".tc-table-wrapper");box=wrapper.bounding_box();page.mouse.move(box["x"]+box["width"]/2,max(100,min(400,box["y"]+120)));page.mouse.wheel(600,0);page.wait_for_timeout(250)
+  rec("narrow-table-after-horizontal-wheel",page);data["geometry"].append({"time":now(),"name":"after-pan","observed":geometry(page)});shot("narrow-ledger-panned-right",page)
+  g=geometry(page);target=g["tables"][0]
+  data["checks"].append({"name":"rightmost-table-column-reached-with-local-horizontal-wheel","pass":target["scrollLeft"]>0 and all(c["rect"]["right"]<=target["rect"]["right"]+1 for c in target["lastColumn"]) and g["documentWidth"]<=g["viewport"]["width"]})
+  page.set_viewport_size({"width":1440,"height":900});page.emulate_media(reduced_motion="no-preference");page.wait_for_timeout(150)
+  data["geometry"].append({"time":now(),"name":"normal-motion-layout","observed":geometry(page)})
+  page.emulate_media(reduced_motion="reduce");page.wait_for_timeout(50)
+  data["geometry"].append({"time":now(),"name":"reduced-motion-layout","observed":geometry(page)})
+  page.locator(".btc-sidebar-toggle:visible").first.focus();page.keyboard.press("Enter")
+  for delay in [20,80,150]:
+   page.wait_for_timeout(delay);data["geometry"].append({"time":now(),"name":"reduced-sidebar-toggle-sample","after_previous_wait_ms":delay,"observed":geometry(page)})
+  rec("reduced-sidebar-toggle-completed",page);shot("reduced-sidebar-toggle",page)
+  data["completed"]=now()
+ except Exception:data["failure"]=traceback.format_exc();print(data["failure"],flush=True)
+ finally:
+  if browser:browser.close()
+  server.terminate();server.wait(timeout=5);log.close();data["server"]["stopped"]=now();data["server"]["returncode"]=server.returncode
+  (OUT/"P12.json").write_text(json.dumps(data,ensure_ascii=False,indent=2))
+  print(json.dumps({"product":"P12","checks":data["checks"],"failure":data.get("failure"),"motion_samples":[{"name":g["name"],"layout":g["observed"]["layout"]} for g in data["geometry"] if "motion" in g["name"] or "toggle" in g["name"]],"evidence":str(OUT/"P12.json")},ensure_ascii=False),flush=True)

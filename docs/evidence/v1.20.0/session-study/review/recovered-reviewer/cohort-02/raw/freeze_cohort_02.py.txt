@@ -1,0 +1,80 @@
+import json,hashlib,base64,struct,shutil,os,re
+from pathlib import Path
+from datetime import datetime,timezone
+ROOT=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery")
+PACK=Path("/workspace/scratch/e1cfe6e447ee/ui-study/review-pack")
+COHORT="2026-11-01-cohort-02";DEST=ROOT/"cohorts"/COHORT
+IDS=["P04","P05","P08","P12","P17"]
+REPORT=ROOT/"BLIND-REVIEW-COHORT-02.md";INPUT=ROOT/"cohort-02-judgments-input.json"
+PRIOR=ROOT/"cohorts/2026-11-01-cohort-01"
+def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def dimensions(path):
+ raw=path.read_bytes();assert raw[:8]==b"\x89PNG\r\n\x1a\n",str(path)
+ return list(struct.unpack(">II",raw[16:24]))
+def check_manifest(manifest):
+ for item in manifest["immutable_files"]:assert sha(Path(item["path"]))==item["sha256"],item["path"]
+assert not DEST.exists(),"Cohort 02 already exists; do not overwrite any cohort."
+prior_manifest_path=PRIOR/"FREEZE-MANIFEST.json"
+prior_manifest=json.loads(prior_manifest_path.read_text());check_manifest(prior_manifest)
+prior_manifest_sha=sha(prior_manifest_path)
+old_records=json.loads((ROOT/"products.json").read_text());old_sha=sha(ROOT/"products.json")
+assert old_records==json.loads((PRIOR/"products.json").read_text()),"Unexpected cumulative records; preserve and inspect before append."
+definitions=json.loads(INPUT.read_text());assert [r["anonymous_product"] for r in definitions]==IDS
+assert not set(IDS)&{r["anonymous_product"] for r in old_records}
+for link in re.findall(r"\]\(sandbox:([^\)]+)\)",REPORT.read_text()):assert Path(link).exists(),link
+views=[]
+for export in sorted((ROOT/"evidence").glob("*view-*.json")):
+ record=json.loads(export.read_text())
+ if record.get("tool")!="view_image":continue
+ path=Path(record["arguments"]["path"]);assert path.exists(),str(path)
+ result=record["result"];url=result.get("image_url","")
+ assert url.startswith("data:") and ";base64," in url,str(export)
+ delivered=base64.b64decode(url.split(",",1)[1]);assert delivered[:8]==b"\x89PNG\r\n\x1a\n",str(export)
+ views.append({"request_path":str(path),"view_export":str(export),"export_timestamp":record["timestamp"],"original_file_sha256":sha(path),"original_dimensions":dimensions(path),"export_sha256":sha(export),"returned_image_bytes_sha256":hashlib.sha256(delivered).hexdigest(),"tool_detail":result.get("detail")})
+source_names={"T1":["T1-light-desktop.png"],"T2":["T2-light-desktop.png"],"T3":["T3-foundation-initial.png"],"T4":["T4-source-toast.png"]}
+selected_exports=set();server_checks=[]
+for r in definitions:
+ pid=r["anonymous_product"]
+ original=sorted([v for v in views if v["request_path"].startswith(str(PACK/"products"/pid/"captures")+"/")],key=lambda v:v["request_path"])
+ additional=sorted([v for v in views if v["request_path"].startswith(str(ROOT/"evidence")+"/") and Path(v["request_path"]).name.startswith(pid+"-")],key=lambda v:v["request_path"])
+ sources=sorted([v for v in views if Path(v["request_path"]).name in source_names[r["task_family"]]],key=lambda v:v["request_path"])
+ assert len(original)>=3,pid
+ assert any(v["original_dimensions"]==[390,844] for v in original),pid
+ assert any(v["original_dimensions"]==[1440,900] for v in original),pid
+ assert any(v["original_dimensions"][0]==1280 for v in original),pid
+ for field in ["behavior_evidence","source_inspection_evidence"]:
+  for path in r[field]:assert Path(path).exists(),path
+ for path in r["behavior_evidence"]:
+  behavior=json.loads(Path(path).read_text());assert behavior.get("completed"),path;assert not behavior.get("failure"),path
+  server=behavior["server"];assert server.get("stopped") and server.get("returncode") is not None,path
+  server_checks.append({"evidence":path,"server":server})
+ r["cohort"]=COHORT;r["condition_mapping_received"]=False
+ r["viewed_original_files"]=[v["request_path"] for v in original];r["view_exports"]=[v["view_export"] for v in original]
+ r["additional_viewed_files"]=[v["request_path"] for v in additional];r["additional_view_exports"]=[v["view_export"] for v in additional]
+ r["source_viewed_files"]=[v["request_path"] for v in sources];r["source_view_exports"]=[v["view_export"] for v in sources]
+ for v in original+additional+sources:selected_exports.add(v["view_export"])
+ r["review_conditions"]={"browser":"Chromium 143.0.7499.4","playwright":"1.57.0","device_scale_factor":1,"fontconfig":"/tmp/ui-spec-fonts/fonts.conf","viewports":[[1440,900],[1280,640 if r["task_family"]=="T3" else 600],[390,844]],"isolation":"Instructional isolation on a shared host; source choices and product differences are visible.","stateful_tests":"Disposable application copy; frozen products and original captures were not changed.","review_type":"Independent agent product judgment; not a human usability or assistive-technology study.","source_view_reuse":"Previously personally viewed common-source captures may be reused; timestamps and exports identify them separately from new product views."}
+DEST.mkdir(parents=True,exist_ok=False)
+records=json.dumps(definitions,ensure_ascii=False,indent=2)+"\n"
+(DEST/"products.json").write_text(records);shutil.copyfile(REPORT,DEST/"BLIND-REVIEW.md")
+evidence_files=[]
+for path in sorted((ROOT/"evidence").rglob("*")):
+ if not path.is_file() or "command-055-freeze" in str(path):continue
+ evidence_files.append({"path":str(path),"bytes":path.stat().st_size,"sha256":sha(path)})
+scripts=[{"path":str(path),"bytes":path.stat().st_size,"sha256":sha(path)} for path in sorted(ROOT.glob("*.py"))]
+metadata={"cohort":COHORT,"anonymous_products":IDS,"frozen_at_utc":datetime.now(timezone.utc).isoformat(),"condition_mapping_received":False,"independence":"No coordinating repository, condition/role allocation, producer judgment, sibling workset, release decision or other reviewer result was inspected.","isolation_limit":"Instruction only on a shared host, not a separate security sandbox.","no_comparator_repair":True,"review_report":str(DEST/"BLIND-REVIEW.md"),"records":str(DEST/"products.json"),"cumulative_products":str(ROOT/"products.json"),"prior_manifest":str(prior_manifest_path),"prior_manifest_sha256":prior_manifest_sha,"prior_records_unchanged":True,"preservation_rule":"Keep both blind cohort reports and each cohort's records immutable. Cumulative records may append later cohorts without rewriting earlier rows. Any unblinding or repair disposition requires a separate continuation.","material_revision":"P17 keyboard focus after Stop; independently reproduced, with 12 Tabs needed to reach the composer in the targeted run.","other_caveats":["P05 expanded narrow settings navigation hierarchy","P12 local horizontal table panning and residual 150 ms reduced-motion transition","Bounded and non-exhaustive scope detailed per product"],"owned_server_stop_checks":server_checks,"test_failure_policy":"The wrong source path in command-033 and the substantive P17 failed composite check are retained with their separate follow-ups.","clock_note":"Raw UTC timestamps are preserved. Browser-rendered save times use browser/application formatting; only within-run intervals are compared."}
+(DEST/"metadata.json").write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+"\n")
+index={"cohort":COHORT,"created_at_utc":metadata["frozen_at_utc"],"view_evidence":[v for v in views if v["view_export"] in selected_exports],"raw_evidence_files":evidence_files,"review_scripts":scripts,"note":"Only view_evidence entries establish personally opened images for this cohort, including explicitly reused common-source views. Other retained screenshots are not counted as viewed. The raw-evidence inventory includes earlier retained evidence for continuity; prior immutable cohort records are unchanged. The executing finalization command is retained separately after this snapshot to avoid self-reference."}
+(DEST/"EVIDENCE-INDEX.json").write_text(json.dumps(index,ensure_ascii=False,indent=2)+"\n")
+combined=old_records+definitions
+assert combined[:len(old_records)]==old_records
+pending=ROOT/"products.cohort02.pending.json";assert not pending.exists()
+pending.write_text(json.dumps(combined,ensure_ascii=False,indent=2)+"\n");os.replace(pending,ROOT/"products.json")
+assert json.loads((ROOT/"products.json").read_text())[:len(old_records)]==old_records
+check_manifest(prior_manifest);assert sha(prior_manifest_path)==prior_manifest_sha
+immutable=[REPORT,INPUT,DEST/"BLIND-REVIEW.md",DEST/"products.json",DEST/"metadata.json",DEST/"EVIDENCE-INDEX.json"]
+manifest={"cohort":COHORT,"frozen_at_utc":metadata["frozen_at_utc"],"hash_algorithm":"SHA-256","condition_mapping_received":False,"immutable_files":[{"path":str(x),"bytes":x.stat().st_size,"sha256":sha(x)} for x in immutable],"prior_manifest":str(prior_manifest_path),"prior_manifest_sha256":prior_manifest_sha,"prior_immutable_file_hashes_verified":True,"previous_cumulative_products_sha256":old_sha,"previous_records_preserved":True,"cumulative_products_sha256_at_freeze":sha(ROOT/"products.json"),"cumulative_products_note":"Historical checkpoint; future cohorts may append to the cumulative file, while this cohort's five original records remain immutable here.","evidence_preservation":"The immutable evidence index hashes retained pre-finalization evidence and actual view returns. Original captures were not changed."}
+(DEST/"FREEZE-MANIFEST.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
+for path in immutable+[DEST/"FREEZE-MANIFEST.json"]:path.chmod(0o444)
+check_manifest(manifest);check_manifest(prior_manifest)
+print(json.dumps({"cohort":COHORT,"frozen_at_utc":metadata["frozen_at_utc"],"products":IDS,"report":str(REPORT),"immutable_records":str(DEST/"products.json"),"cumulative_records":str(ROOT/"products.json"),"cumulative_product_count":len(combined),"evidence_index":str(DEST/"EVIDENCE-INDEX.json"),"manifest":str(DEST/"FREEZE-MANIFEST.json"),"manifest_sha256":sha(DEST/"FREEZE-MANIFEST.json"),"new_and_prior_immutable_hashes_verified":True,"prior_records_preserved":True,"owned_servers_stopped":True,"original_views_by_product":{r["anonymous_product"]:len(r["viewed_original_files"]) for r in definitions},"additional_views_by_product":{r["anonymous_product"]:len(r["additional_viewed_files"]) for r in definitions}},ensure_ascii=False,indent=2))

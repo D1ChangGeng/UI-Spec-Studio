@@ -1,0 +1,40 @@
+2286-                  <div class="col-12 col-md-9 d-flex flex-column">
+2287-                    <div class="card-body">
+2288-                      <h2 class="mb-4" id="profile-heading">My Account</h2>
+2289:<p class="card-subtitle" id="save-status" aria-live="off">Changes are saved only in this browser.</p>
+2290-
+2291-                      <h2 class="card-title">Profile Details</h2>
+2292-
+--
+3521-THE SOFTWARE.
+3522-    -->
+3523-    <div class="toast-container position-fixed top-0 end-0 p-3">
+3524:      <div class="toast" id="save-notification" role="status" aria-live="polite" aria-atomic="true" data-bs-autohide="false">
+3525-        <div class="toast-header">
+3526-          <span class="avatar avatar-xs me-2" aria-hidden="true">FN</span>
+3527-          <strong class="me-auto">Fieldnotes</strong>
+3528:          <small id="save-notification-time"></small>
+3529-          <button type="button" class="ms-2 btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+3530-        </div>
+3531-        <div class="toast-body">
+3532:          <span id="save-notification-message"></span>
+3533:          <div class="mt-2 pt-2 border-top" id="save-notification-action" hidden>
+3534:            <button type="button" class="btn btn-primary btn-sm" id="retry-save">Retry save</button>
+3535-          </div>
+3536-        </div>
+3537-      </div>
+P08 PRESERVATION dist {'files_checked': 24, 'different_or_added': []}
+P08 PRESERVATION preview {'files_checked': 1, 'different_or_added': []}
+P04 FILE SOURCE MATCH True
+P04 FOCUS ADAPTER // Focus repair for source actions that remove their own trigger. Keep the
+// runtime's action/state owner and avoid moving the conversation scrollport.
+export function returnToComposer(event: { currentTarget: HTMLElement }) {
+  const input = event.currentTarget
+    .closest('[data-aui-composer-type="thread"]')
+    ?.querySelector<HTMLTextAreaElement>('.aui-composer-input');
+  requestAnimationFrame(() => input?.focus({ preventScroll: true }));
+}
+
+EARLIER RECORD SCHEMA {'anonymous_product': 'str', 'task_family': 'str', 'judgment': 'dict', 'findings': 'list', 'behavior_evidence': 'list', 'source_inspection_evidence': 'list', 'material_unresolved_items': 'list', 'cohort': 'str', 'condition_mapping_received': 'bool', 'viewed_original_files': 'list', 'view_exports': 'list', 'additional_viewed_files': 'list', 'additional_view_exports': 'list', 'source_viewed_files': 'list', 'source_view_exports': 'list', 'review_conditions': 'dict'}
+EARLIER JUDGMENT SHAPE {'status': 'satisfactory_bounded_scope', 'summary': 'The settled Tabler Toast integration is satisfactory in the exercised bounded scope; surrounding narrow-form limitations remain.', 'scope': 'Initial blind product judgment, not final release acceptance.'}
+EARLIER FINDING SHAPE {'kind': 'strength', 'evidence_type': ['pixels', 'source'], 'observation': 'The original dark desktop, light compact and narrow failure views retain the selected Toast header/body/separated action-row relationship, native typography, border, shadow and small primary retry action.'}

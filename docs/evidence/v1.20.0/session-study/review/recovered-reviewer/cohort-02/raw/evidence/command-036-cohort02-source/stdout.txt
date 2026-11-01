@@ -1,0 +1,295 @@
+P17 SOURCE DIFF src/components/assistant-ui/elements/thread.aui.tsx
+--- T2 foundation
+
++++ P17 final
+
+@@ -26,6 +26,7 @@
+
+ import { Button } from "@/components/ui/button";
+ import { Skeleton } from "@/components/ui/skeleton";
+ import { cn } from "@/lib/utils";
++import { taskText } from "@/lib/locale";
+ import {
+   ActionBarMorePrimitive,
+   ActionBarPrimitive,
+@@ -235,9 +236,9 @@
+
+       }}
+     >
+       <ThreadPrimitive.Viewport
+-        turnAnchor="top"
++        turnAnchor="bottom"
+         data-slot="aui_thread-viewport"
+-        className="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-smooth"
++        className="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-auto"
+       >
+         <div
+           className={cn(
+@@ -467,14 +468,15 @@
+
+ 
+ const ThreadScrollToBottom: FC = () => {
+   return (
+-    <ThreadPrimitive.ScrollToBottom asChild>
+-      <TooltipIconButton
+-        tooltip="Scroll to bottom"
++    <ThreadPrimitive.ScrollToBottom behavior="instant" asChild>
++      <Button
+         variant="outline"
+-        className="aui-thread-scroll-to-bottom dark:border-border dark:bg-background dark:hover:bg-accent absolute -top-12 z-10 self-center rounded-full p-4 disabled:invisible"
++        size="default"
++        className="aui-thread-scroll-to-bottom border-border bg-background hover:bg-accent absolute -top-12 z-10 self-center rounded-full disabled:invisible"
+       >
+-        <ArrowDownIcon />
+-      </TooltipIconButton>
++        <ArrowDownIcon aria-hidden="true" />
++        {taskText("Return to latest", "回到最新内容")}
++      </Button>
+     </ThreadPrimitive.ScrollToBottom>
+   );
+ };
+@@ -533,12 +535,12 @@
+
+         >
+           <ComposerAttachments />
+           <ComposerPrimitive.Input
+-            placeholder="Send a message..."
+-            className="aui-composer-input caret-primary placeholder:text-muted-foreground/60 max-h-48 min-h-10 w-full resize-none bg-transparent px-2.5 py-1 text-base leading-6 outline-none"
++            placeholder={taskText("Ask a follow-up…", "继续提问…")}
++            className="aui-composer-input caret-primary placeholder:text-muted-foreground/60 max-h-[min(12rem,30dvh)] min-h-10 w-full resize-none bg-transparent px-2.5 py-1 text-base leading-6 outline-none"
+             rows={1}
+             autoFocus={autoFocus}
+             enterKeyHint="send"
+-            aria-label="Message input"
++            aria-label={taskText("Message input", "输入消息")}
+           />
+           <ComposerAction />
+         </div>
+@@ -609,13 +611,13 @@
+
+         >
+           <ComposerPrimitive.Send asChild>
+             <TooltipIconButton
+-              tooltip="Send message"
++              tooltip={taskText("Send message", "发送消息")}
+               side="bottom"
+               type="button"
+               variant="default"
+               size="icon"
+               className="aui-composer-send size-7 rounded-full"
+-              aria-label="Send message"
++              aria-label={taskText("Send message", "发送消息")}
+             >
+               <ArrowUpIcon className="aui-composer-send-icon size-4" />
+             </TooltipIconButton>
+@@ -649,7 +651,7 @@
+
+               variant="default"
+               size="icon"
+               className="aui-composer-cancel size-7 rounded-full"
+-              aria-label={isSending ? "Cancel sending" : "Stop generating"}
++              aria-label={isSending ? taskText("Cancel sending", "取消发送") : taskText("Stop generating", "停止生成")}
+             >
+               <SquareIcon className="aui-composer-cancel-icon size-3.5 fill-current" />
+             </Button>
+@@ -813,7 +815,7 @@
+
+         </ActionBarPrimitive.FeedbackNegative>
+       </AuiIf>
+       <ActionBarPrimitive.Reload asChild>
+-        <TooltipIconButton tooltip="Refresh">
++        <TooltipIconButton tooltip={taskText("Retry response", "重试回答")}>
+           <RefreshCwIcon />
+         </TooltipIconButton>
+       </ActionBarPrimitive.Reload>
+@@ -907,7 +909,7 @@
+
+       className="aui-user-action-bar-root flex flex-col items-end"
+     >
+       <ActionBarPrimitive.Edit asChild>
+-        <TooltipIconButton tooltip="Edit" className="aui-user-action-edit">
++        <TooltipIconButton tooltip={taskText("Edit message", "编辑消息")} className="aui-user-action-edit">
+           <PencilIcon />
+         </TooltipIconButton>
+       </ActionBarPrimitive.Edit>
+P17 SOURCE DIFF src/components/assistant-ui/elements/attachment.aui.tsx
+--- T2 foundation
+
++++ P17 final
+
+@@ -29,11 +29,15 @@
+
+   DialogTitle,
+   DialogContent,
+   DialogTrigger,
++  DialogDescription,
++  DialogHeader,
+ } from "@/components/ui/dialog";
+ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+ import { TooltipIconButton } from "@/components/assistant-ui/elements/tooltip-icon-button";
+ import { useAttachmentState } from "./attachment-state";
+ import { cn } from "@/lib/utils";
++import { taskText } from "@/lib/locale";
++import { File, fileVariants } from "./file";
+ 
+ type AttachmentPreviewProps = {
+   src: string;
+@@ -120,6 +124,44 @@
+
+     isError,
+     errorMessage,
+   } = useAttachmentState();
++
++  if (!isImage) {
++    return (
++      <AttachmentPrimitive.Root className="aui-attachment-root relative max-w-64 shrink-0">
++        <Dialog>
++          <DialogTrigger
++            render={<button type="button" />}
++            className={cn(
++              fileVariants({ size: "sm", variant: "outline" }),
++              "max-w-full text-start outline-none focus-visible:ring-ring/50 focus-visible:ring-1",
++              isComposer && "pr-8",
++              isError && "border-destructive",
++            )}
++            aria-label={taskText(`Details for ${name}`, `查看附件：${name}`)}
++          >
++            <File.Icon />
++            <File.Name>{name}</File.Name>
++            {isUploading && <Loader2Icon className="size-4 animate-spin motion-reduce:animate-none" />}
++            {isError && <AlertCircleIcon className="text-destructive size-4" />}
++          </DialogTrigger>
++          <DialogContent>
++            <DialogHeader>
++              <DialogTitle>{taskText("Attachment details", "附件详情")}</DialogTitle>
++              <DialogDescription>
++                {taskText("Only the filename is attached. File contents are never read or sent.", "仅附加文件名。文件内容不会被读取或发送。")}
++              </DialogDescription>
++            </DialogHeader>
++            <File.Root className="min-w-0">
++              <File.Icon />
++              <File.Name className="whitespace-normal [overflow-wrap:anywhere]">{name}</File.Name>
++            </File.Root>
++            {errorMessage && <p className="text-destructive text-sm">{errorMessage}</p>}
++          </DialogContent>
++        </Dialog>
++        {isComposer && <AttachmentRemove name={name} />}
++      </AttachmentPrimitive.Root>
++    );
++  }
+ 
+   return (
+     <TooltipProvider>
+@@ -193,9 +235,12 @@
+
+ const AttachmentRemove: FC<{ name: string }> = ({ name }) => {
+   return (
+     <AttachmentPrimitive.Remove
++      onClick={() => requestAnimationFrame(() => {
++        document.querySelector<HTMLTextAreaElement>(".aui-composer-input")?.focus({ preventScroll: true });
++      })}
+       render={
+         <TooltipIconButton
+-          tooltip={`Remove ${name}`}
++          tooltip={taskText(`Remove ${name}`, `移除 ${name}`)}
+           className="aui-attachment-tile-remove absolute end-1 top-1 size-5 rounded-full bg-black/50! text-white after:absolute after:-inset-1.5 hover:bg-black/70! hover:text-white! active:scale-[0.96] motion-reduce:transition-none"
+           side="top"
+         />
+@@ -208,7 +253,7 @@
+
+ 
+ export const UserMessageAttachments: FC = () => {
+   return (
+-    <div className="aui-user-message-attachments-end col-span-full col-start-1 row-start-1 flex w-full flex-row justify-end gap-2 empty:hidden">
++    <div className="aui-user-message-attachments-end col-span-full col-start-1 row-start-1 flex w-full flex-row flex-wrap justify-end gap-2 empty:hidden">
+       <MessagePrimitive.Attachments>
+         {() => <AttachmentUI />}
+       </MessagePrimitive.Attachments>
+@@ -231,12 +276,12 @@
+
+     <ComposerPrimitive.AddAttachment
+       render={
+         <TooltipIconButton
+-          tooltip="Add Attachment"
++          tooltip={taskText("Add Attachment", "添加附件")}
+           side="bottom"
+           variant="ghost"
+           size="icon"
+           className="aui-composer-add-attachment text-muted-foreground hover:text-foreground hover:bg-muted-foreground/15 dark:border-muted-foreground/15 dark:hover:bg-muted-foreground/30 size-7 rounded-full active:scale-[0.96] motion-reduce:transition-none"
+-          aria-label="Add Attachment"
++          aria-label={taskText("Add Attachment", "添加附件")}
+         />
+       }
+     >
+P12 WIKI CONFIG {
+  "description": "Fieldnotes: populated local research notebook study starter",
+  "plugins": [
+    "tiddlywiki/tiddlyweb",
+    "tiddlywiki/filesystem",
+    "tiddlywiki/highlight"
+  ],
+  "themes": [
+    "tiddlywiki/vanilla",
+    "tiddlywiki/snowwhite"
+  ],
+  "build": {
+    "index": [
+      "--render",
+      "$:/plugins/tiddlywiki/tiddlyweb/save/offline",
+      "index.html",
+      "text/plain"
+    ],
+    "static": [
+      "--render",
+      "$:/core/templates/static.template.html",
+      "static.html",
+      "text/plain",
+      "--render",
+      "$:/core/templates/alltiddlers.template.html",
+      "alltiddlers.html",
+      "text/plain",
+      "--render",
+      "[!is[system]]",
+      "[encodeuricomponent[]addprefix[static/]addsuffix[.html]]",
+      "text/plain",
+      "$:/core/templates/static.tiddler.html",
+      "--render",
+      "$:/core/templates/static.template.css",
+      "static/static.css",
+      "text/plain"
+    ]
+  },
+  "languages": [
+    "zh-Hans"
+  ]
+}
+
+P12 TIDDLERS ['tiddlers/$__StoryList.tid', 'tiddlers/$__language.tid', 'tiddlers/$__language_1.tid', 'tiddlers/$__palette.tid', 'tiddlers/$__palette_1.tid', 'tiddlers/$__palette_2.tid', 'tiddlers/$__theme.tid', 'tiddlers/Evidence ledger.tid', 'tiddlers/Observation log — East entrance.tid', 'tiddlers/Prototype comparison — signs and landmarks.tid', 'tiddlers/config-01.tid', 'tiddlers/config-02.tid', 'tiddlers/config-03.tid', 'tiddlers/config-04.tid', 'tiddlers/config-05.tid', 'tiddlers/fieldnotes-palette-day.tid', 'tiddlers/fieldnotes-palette-night.tid', 'tiddlers/fieldnotes-paper-metric-bodyfontsize.tid', 'tiddlers/fieldnotes-paper-metric-bodylineheight.tid', 'tiddlers/fieldnotes-paper-metric-fontsize.tid', 'tiddlers/fieldnotes-paper-metric-lineheight.tid', 'tiddlers/fieldnotes-paper-option-stickytitles.tid', 'tiddlers/fieldnotes-paper-option-toolbaralways.tid', 'tiddlers/fieldnotes-theme.tid', 'tiddlers/note-01.tid', 'tiddlers/note-02.tid', 'tiddlers/note-03.tid', 'tiddlers/note-06.tid', 'tiddlers/note-07.tid', 'tiddlers/note-08.tid', 'tiddlers/访谈笔记 — 傍晚通勤.tid']
+OWN SCRIPT review_wiki_followup2.py 
+ from pathlib import Path
+source=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/review_wiki.py").read_text()
+source=source.replace("wiki-001","wiki-003")
+source=source.replace('[("T3-foundation",4713),("P13",4714)]','[("P13",4714)]')
+source=source.replace('".tc-title-text"','".tc-titlebar"')
+source=source.replace('name="edit",exact=True','name="Edit this tiddler",exact=True')
+source=source.replace('name="save changes",exact=True','name="Confirm changes to this tiddler",exact=True')
+source=source.replace('name="cancel",exact=True','name="Discard changes to this tiddler",exact=True')
+source=source.replace('page=context.new_page();','page=context.new_page();page.set_default_timeout(8000);')
+exec(source)
+
+
+OWN SCRIPT review_wiki_conditions_followup.py 
+ from pathlib import Path
+source=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/review_wiki_conditions.py").read_text()
+source=source.replace("behavior-wiki-004","behavior-wiki-005")
+old='page.locator("select").filter(has=page.locator(\'option[value="\'+value+\'"]\')).first.select_option(value);page.wait_for_timeout(250)'
+new='page.get_by_text("Nord - An arctic, north-bluish color palette." if value=="$:/palettes/Nord" else "Notebook Beige - A beige colour palette for Notebook",exact=True).click();page.wait_for_timeout(250);data["checks"].append({"name":"palette-selected","expected":value,"actual":page.evaluate("$tw.wiki.getTiddlerText(\\\'$:/palette\\\')")})'
+assert old in source
+source=source.replace(old,new)
+start='  page.set_viewport_size({"width":1440,"height":900});control_panel(page);tab(page,"Basics");rec("basics-ui",page)'
+end='  data["completed"]=now()'
+a=source.index(start);b=source.index(end,a)
+source=source[:a]+'  data["language_limit"]="Native UI language switching was not exercised; inspected English controls with bilingual note content."\n'+source[b:]
+exec(source)
+
+

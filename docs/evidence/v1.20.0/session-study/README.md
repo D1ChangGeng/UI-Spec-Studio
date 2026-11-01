@@ -9,9 +9,9 @@ context pressure and a human acceptance panel remain unverified.
 
 ## Execution inventory
 
-Observed 2026-11-01T10:04:40.880949+00:00. **13 of 18** registered cells have retained completed evidence records, with **8** completed child contexts. Execution coverage is distinct from product success and release approval.
+Observed 2026-11-01T10:57:58.764514+00:00. **13 of 18** registered cells have retained completed evidence records, with **8** completed child contexts. Execution coverage is distinct from product success and release approval.
 
-Fresh blind cohort 01 is frozen for eight products with complete reconstructed originals. Cohort 02 is actively reviewing P04, P05, P08, P12 and P17 through original image viewing and core interactions. Initial additional comparator focus-continuity findings remain unresolved; no condition disclosure or final acceptance has occurred.
+Fresh blind cohorts 01 and 02 are frozen for 13 anonymous products. All 46,071 current reviewer-workspace files reconstruct; 45 original-capture view exports match frozen products. Comparator defects and caveats remain unchanged. Remaining products and separate final-runtime acceptance are pending; no condition mapping has been disclosed.
 
 | Cell | Condition | Retained status | Completed children |
 | --- | --- | --- | ---: |
@@ -25,9 +25,9 @@ Fresh blind cohort 01 is frozen for eight products with complete reconstructed o
 | T2-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T2-G-final-runtime-r1-public/run.json) · [product](runs/T2-G-final-runtime-r1-public/FINAL.md) | 1 |
 | T3-A-r1 | A | [Completed record](runs/T3-A-r1/run.json) · [product](runs/T3-A-r1/FINAL.md) | 0 |
 | T3-B-r1 | B | [Completed record](runs/T3-B-r1/run.json) · [product](runs/T3-B-r1/FINAL.md) | 1 |
-| T3-C-r1 | C | Fresh execution active; terminal evidence not yet retained | Active |
-| T3-G-final-runtime-r1 | G-final-runtime | Frozen inputs restored; fresh complete evidence required | — |
-| T2-D-r1 | D | Frozen inputs restored; fresh complete evidence required | — |
+| T3-C-r1 | C | Frozen inputs restored; fresh complete evidence required | — |
+| T3-G-final-runtime-r1 | G-final-runtime | Fresh execution active; terminal evidence not yet retained | Active |
+| T2-D-r1 | D | Fresh execution active; terminal evidence not yet retained | Active |
 | T2-E-challenger-r1 | E-challenger | Frozen inputs restored; fresh complete evidence required | — |
 | T2-E-observer-r1 | E-observer | Frozen inputs restored; fresh complete evidence required | — |
 | T4-F-main-r1 | F-main | [Completed record](runs/T4-F-main-r1/run.json) · [product](runs/T4-F-main-r1/FINAL.md) | 0 |

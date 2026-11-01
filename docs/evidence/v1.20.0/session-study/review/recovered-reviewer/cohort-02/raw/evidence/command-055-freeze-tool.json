@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-11-01T10:11:06.369Z",
+  "tool": "exec_command",
+  "arguments": {
+    "cmd": "python /workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/capture_command.py --output /workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-055-freeze --cwd /workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery --timeout 60 -- /tmp/ui-spec-validation-venv/bin/python /workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/freeze_cohort_02.py",
+    "workdir": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+    "max_output_tokens": 5000
+  },
+  "result": {
+    "chunk_id": "67b007",
+    "wall_time_seconds": 0.156714795,
+    "exit_code": 0,
+    "original_token_count": 355,
+    "output": "{\n  \"cohort\": \"2026-11-01-cohort-02\",\n  \"frozen_at_utc\": \"2026-11-01T10:11:06.145036+00:00\",\n  \"products\": [\n    \"P04\",\n    \"P05\",\n    \"P08\",\n    \"P12\",\n    \"P17\"\n  ],\n  \"report\": \"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/BLIND-REVIEW-COHORT-02.md\",\n  \"immutable_records\": \"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-02/products.json\",\n  \"cumulative_records\": \"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/products.json\",\n  \"cumulative_product_count\": 13,\n  \"evidence_index\": \"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-02/EVIDENCE-INDEX.json\",\n  \"manifest\": \"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-02/FREEZE-MANIFEST.json\",\n  \"manifest_sha256\": \"ba85c30226fb1eb1247fc85fbe21cdc6a0d5ee718d93494bac8e1980c506ef42\",\n  \"new_and_prior_immutable_hashes_verified\": true,\n  \"prior_records_preserved\": true,\n  \"owned_servers_stopped\": true,\n  \"original_views_by_product\": {\n    \"P04\": 4,\n    \"P05\": 4,\n    \"P08\": 3,\n    \"P12\": 3,\n    \"P17\": 5\n  },\n  \"additional_views_by_product\": {\n    \"P04\": 2,\n    \"P05\": 2,\n    \"P08\": 1,\n    \"P12\": 5,\n    \"P17\": 5\n  }\n}\n{\"capture\": \"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/command-055-freeze\", \"returncode\": 0, \"wall_seconds\": 0.214665}\n"
+  }
+}
