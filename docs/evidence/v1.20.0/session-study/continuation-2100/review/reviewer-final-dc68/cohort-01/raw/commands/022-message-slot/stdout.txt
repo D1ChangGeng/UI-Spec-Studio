@@ -1,0 +1,57 @@
+  );
+};
+
+const AssistantMessage: FC = () => {
+  const {
+    ToolFallback: ToolFallbackComponent = ToolFallback,
+    ToolGroup,
+    ReasoningGroup,
+    TaskGroup: TaskGroupComponent,
+  } = useContext(ThreadComponentsContext);
+  const groupBy = TaskGroupComponent ? taskAwareGroupBy : messageGroupBy;
+
+  const ACTION_BAR_PT = "pt-1.5";
+  // Keep the action bar inside the contained root's paint box, then cancel its reserved space in flow.
+  const ACTION_BAR_HEIGHT = `min-h-7.5 ${ACTION_BAR_PT}`;
+
+  return (
+    <MessagePrimitive.Root
+      data-slot="aui_assistant-message-root"
+      data-role="assistant"
+      className="fade-in slide-in-from-bottom-1 animate-in relative -mb-7.5 pb-7.5 duration-150 [contain-intrinsic-size:auto_200px] [content-visibility:auto]"
+    >
+      <div
+        data-slot="aui_assistant-message-content"
+        className="text-foreground px-2 leading-relaxed wrap-break-word"
+      >
+        <MessagePrimitive.GroupedParts groupBy={groupBy}>
+          {({ part, children }) => {
+            switch (part.type) {
+              case "group-chainOfThought":
+                return <div data-slot="aui_chain-of-thought">{children}</div>;
+              case "group-task":
+                return TaskGroupComponent ? (
+                  <TaskGroupComponent group={part} />
+                ) : null;
+              case "group-tool":
+                if (ToolGroup) {
+MIT License
+
+Copyright (c) 2026 Simon Huber
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+{
+    "title": "$:/themes/nico/notebook",
+    "name": "Notebook theme",
+    "description": "A clean, uncluttered TiddlyWiki theme",
+    "author": "NicolasPetton",
+    "version": "1.4.1",
+    "core-version": ">=5.1.22",
+    "source": "https://github.com/NicolasPetton/Notebook",
+    "list": "LICENSE changelog",
+    "dependents": "$:/themes/tiddlywiki/vanilla $:/plugins/nico/notebook-mobile",
+    "plugin-type": "theme"
+}

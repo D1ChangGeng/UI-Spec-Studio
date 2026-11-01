@@ -1,0 +1,71 @@
+P04
+P07
+P09
+P10
+P11
+P17
+review-pack/products/P02/app/wiki/tiddlers/$__theme.tid
+review-pack/products/P02/app/wiki/tiddlers/fieldnotes-sticky.tid
+review-pack/products/P02/app/wiki/tiddlers/note-08.tid
+review-pack/products/P02/app/wiki/tiddlers/note-04.tid
+review-pack/products/P02/app/wiki/tiddlers/fieldnotes-quiet.tid
+review-pack/products/P02/app/wiki/tiddlers/config-04.tid
+review-pack/products/P02/app/wiki/tiddlers/config-03.tid
+review-pack/products/P02/app/wiki/tiddlers/config-05.tid
+review-pack/products/P02/app/wiki/tiddlers/fieldnotes-theme.tid
+review-pack/products/P02/app/wiki/tiddlers/note-03.tid
+review-pack/products/P02/app/wiki/tiddlers/note-07.tid
+review-pack/products/P02/app/wiki/tiddlers/note-01.tid
+review-pack/products/P02/app/wiki/tiddlers/note-02.tid
+review-pack/products/P02/app/wiki/tiddlers/fieldnotes-color-scheme.tid
+review-pack/products/P02/app/wiki/tiddlers/fieldnotes-toolbar.tid
+review-pack/products/P02/app/wiki/tiddlers/$__palette.tid
+review-pack/products/P02/app/wiki/tiddlers/$__StoryList.tid
+review-pack/products/P02/app/wiki/tiddlers/config-02.tid
+review-pack/products/P02/app/wiki/tiddlers/config-01.tid
+review-pack/products/P02/app/wiki/tiddlers/note-06.tid
+review-pack/products/P02/app/wiki/tiddlers/fieldnotes-paper-day.tid
+review-pack/products/P02/app/wiki/tiddlers/note-05.tid
+review-pack/products/P02/app/wiki/tiddlers/fieldnotes-paper-night.tid
+{
+  "description": "Fieldnotes: populated local research notebook study starter",
+  "plugins": [
+    "tiddlywiki/tiddlyweb",
+    "tiddlywiki/filesystem",
+    "tiddlywiki/highlight"
+  ],
+  "themes": [
+    "tiddlywiki/vanilla",
+    "tiddlywiki/snowwhite"
+  ],
+  "build": {
+    "index": [
+      "--render",
+      "$:/plugins/tiddlywiki/tiddlyweb/save/offline",
+      "index.html",
+      "text/plain"
+    ],
+    "static": [
+      "--render",
+      "$:/core/templates/static.template.html",
+      "static.html",
+      "text/plain",
+      "--render",
+      "$:/core/templates/alltiddlers.template.html",
+      "alltiddlers.html",
+      "text/plain",
+      "--render",
+      "[!is[system]]",
+      "[encodeuricomponent[]addprefix[static/]addsuffix[.html]]",
+      "text/plain",
+      "$:/core/templates/static.tiddler.html",
+      "--render",
+      "$:/core/templates/static.template.css",
+      "static/static.css",
+      "text/plain"
+    ]
+  },
+  "languages": [
+    "zh-Hans"
+  ]
+}

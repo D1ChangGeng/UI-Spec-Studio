@@ -1,0 +1,12 @@
+import asyncio,json,pathlib,subprocess,os
+from playwright.async_api import async_playwright
+BASE=pathlib.Path('/workspace/scratch/dc68edd00fe1/independent-review')
+async def main():
+ out=BASE/'behavior/P15/return';out.mkdir(parents=True);log=open(out/'server.log','w');dest=BASE/'copies/P15/wiki-followup4';s=subprocess.Popen(['node','vendor/tiddlywiki/tiddlywiki.js','wiki','--listen','host=127.0.0.1','port=4972'],cwd=dest,stdout=log,stderr=subprocess.STDOUT)
+ try:
+  await asyncio.sleep(1);assert s.poll() is None
+  async with async_playwright() as pw:
+   b=await pw.chromium.launch(executable_path='/tmp/ui-spec-preview-browser/chrome-headless-shell-143.0.7499.4/chrome-headless-shell-linux64/chrome-headless-shell',env={**os.environ,'FONTCONFIG_FILE':'/tmp/ui-spec-fonts/fonts.conf'});p=await b.new_page(viewport={'width':1280,'height':640},device_scale_factor=1,reduced_motion='reduce')
+   await p.goto('http://127.0.0.1:4972/#Evidence%20ledger');await p.wait_for_timeout(700);frame=p.locator('.tc-tiddler-frame[data-tiddler-title="Evidence ledger"]');link=frame.get_by_role('link',name='访谈笔记 — 傍晚通勤',exact=True);await link.focus();await p.keyboard.press('Enter');await p.wait_for_timeout(500);interview=p.locator('.tc-tiddler-frame[data-tiddler-title="访谈笔记 — 傍晚通勤"]');r={'server_pid':s.pid,'returned_interview_count':await interview.count(),'saved_english_present':await interview.get_by_text('Independent reviewer saved English passage.',exact=False).count(),'saved_chinese_present':await interview.get_by_text('独立审阅保存中文段落。',exact=False).count(),'discarded_marker_present':await interview.get_by_text('CANCELLED REVIEW TEXT',exact=False).count(),'frames':await p.locator('.tc-tiddler-frame').evaluate_all('(es)=>es.map(e=>e.getAttribute("data-tiddler-title"))')};await p.screenshot(path=str(out/'returned-interview.png'));(out/'result.json').write_text(json.dumps(r,ensure_ascii=False,indent=2));print(json.dumps(r,ensure_ascii=False));await b.close()
+ finally:s.terminate();s.wait();log.close()
+asyncio.run(main())

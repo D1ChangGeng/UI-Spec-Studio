@@ -1,12 +1,13 @@
 # Changelog
 
-## 1.20.0 — development candidate; not released
+## 1.20.0 — 2026-11-01
 
 - Add main-agent-led adaptive research, curated evidence and bounded mature-source integration.
-- Supply four explicitly installed Codex roles (two primary and two on-demand), ownership-aware installation and separate model policy.
+- Make all four Codex roles available by default after one explicit installation action; invoke them adaptively, with ownership-aware installation and separate host/model policy.
 - Preserve all eight-reference, source-boundary, adaptive-SPEC and neutral-inspector contracts.
 - Preserve historical runtime identities through exact inverse recovery.
-- Register real-execution comparisons; no independent Agent or UI-quality result is claimed before execution.
+- Retain sixteen original registered products and two separately retained path-corrected replacements, real independent child work, immutable anonymous reviews and scoped final-runtime acceptance. Preserve original outputs, failed attempts and complete reconstruction.
+- Publish under the owner-authorized independent-session acceptance route. Native Cloud/role/model/usage and generalized improvement claims remain unverified.
 
 ## 1.19.0 — 2026-10-30
 

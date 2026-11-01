@@ -96,3 +96,24 @@ members. Reports include only paths, categories, counts and digests. Pattern
 matches need contextual judgment; the absence of known patterns is a bounded
 check, not a declaration that arbitrary data is public. No helper pushes to GitHub
 or edits old/frozen evidence.
+
+## Final reviewer schema projection
+
+`index_review.py` preserves the complete original reviewer declaration and records
+its deterministic schema projection in `declaration-projection.json`. Ordered
+`scope`/`limitations` string lists are joined with a single newline, including
+per-cell declarations. Actual no-repair verification entries are mapped from their
+original absolute source paths to retained byte REFs while preserving each original
+`kind` and source path. They support the reviewer's no-repair disposition and are
+not reclassified as product repairs. Outcome, text, exclusions and repair judgment
+remain reviewer-authored. Original arrays and records remain in the raw declaration
+and `original_reviewer_declaration`.
+
+The reviewer snapshot retains all owned stateful test copies, including directories
+named `disposable`. Only actual `node_modules`, `.git`, `__pycache__` and
+`.pytest_cache` dependency/cache directories are excluded. Supplied-input symbolic
+links are recorded literally without traversal and restored after file-byte
+verification. This makes the shared input boundary explicit without duplicating
+its products. `audit_review_index.py` checks eligible source inventory, original
+and supplementary cohort separation, participant/view/reference consistency, and
+every deterministic projection against the immutable reviewer declaration.

@@ -9,9 +9,9 @@ context pressure and a human acceptance panel remain unverified.
 
 ## Execution inventory
 
-Observed 2026-11-01T12:05:36.208052+00:00. **16 of 18** registered cells have retained completed evidence records, with **11** completed child contexts. Execution coverage is distinct from product success and release approval.
+The strict registered inventory contains **16 of 18** completed original-dispatch records. The two remaining original exact-dispatch completions are explicitly limited. Fresh path-corrected replacements for T3-C and T2-E-observer are fully retained as [supplementary attempts](continuation-2100/supplementary/HANDOFF.md), with complete reconstruction and three actual child contexts; their actual messages are not relabeled as original registered prompts.
 
-Fresh blind cohorts 01, 02 and 03 are frozen for 14 anonymous products; 49 actual original-capture view exports match the frozen products. The cohort-03 snapshot contains 46,190 reviewer-workspace files; reconstruction is separately recorded. Prior defects and judgments are unchanged. Four remaining products and separate final-runtime acceptance are pending; no condition mapping has been disclosed.
+A fresh independent reviewer froze all sixteen original products and both current supplementary products before the limited G mapping. Its [final scoped acceptance](continuation-2100/review/README.md) preserves 74 original initial-cohort PNG views and 13 supplementary PNG views, actual core interactions, full tool returns and all negative comparators. The final continuation is condition-disclosed, accepting four G scopes with explicit exclusions. Native Cloud/role/model/usage and generalized superiority remain unverified.
 
 | Cell | Condition | Retained status | Completed children |
 | --- | --- | --- | ---: |

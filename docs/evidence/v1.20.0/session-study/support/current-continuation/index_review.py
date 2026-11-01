@@ -4,6 +4,7 @@ import argparse
 import base64
 import hashlib
 import json
+import shutil
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'continuation'))
@@ -42,9 +43,29 @@ def main():
             raise ValueError('Retained reference differs: ' + ref['path'])
         return raw
 
+    materialized_originals = {}
     def original(name):
-        ref = snapshot['direct_artifacts'][name]
-        raw = read_ref(ref)
+        if name not in snapshot['file_hashes']:
+            raise ValueError('Original reviewer path absent from snapshot: ' + name)
+        if name in snapshot['direct_artifacts']:
+            ref = snapshot['direct_artifacts'][name]
+            raw = read_ref(ref)
+        else:
+            # A byte borrowed from an immutable product can still require a
+            # direct reference in this declared reviewer index. Preserve the
+            # observed reviewer bytes, verify them against the frozen inventory,
+            # and materialize only this specific original artifact.
+            path = source / name
+            path.resolve().relative_to(source.resolve())
+            raw = path.read_bytes()
+            exported = name + '.txt' if path.suffix in {'.md', '.py'} else name
+            destination = output / 'artifacts' / exported
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            if destination.exists() and destination.read_bytes() != raw:
+                raise ValueError('Already materialized reviewer artifact differs')
+            destination.write_bytes(raw)
+            ref = reference(destination)
+            materialized_originals[name] = ref
         if digest(raw) != snapshot['file_hashes'][name]:
             raise ValueError('Reviewer source differs from snapshot: ' + name)
         return ref, raw
@@ -148,6 +169,52 @@ def main():
                 'scope', 'limitations', 'final_runtime_acceptance']
     if any(key not in declaration for key in required):
         raise ValueError('Reviewer-authored acceptance declaration lacks required fields')
+    # This deterministic projection adapts only schema shapes. The complete
+    # reviewer declaration remains immutable and is embedded/referenced below.
+    transformations = []
+    def normalize(value, pointer=''):
+        if isinstance(value, dict):
+            result = {}
+            for key, child in value.items():
+                here = pointer + '/' + key
+                if key in {'scope', 'limitations'} and isinstance(child, list):
+                    if not child or any(not isinstance(item, str) for item in child):
+                        raise ValueError('Only ordered nonempty string lists can be projected')
+                    result[key] = '\n'.join(child)
+                    transformations.append({'json_pointer': here,
+                                            'operation': 'join every ordered original string with a single newline',
+                                            'original_value': child, 'projected_value': result[key]})
+                elif key == 'repair_evidence':
+                    if not isinstance(child, list):
+                        raise ValueError('Original repair-disposition evidence must be a list')
+                    mapped = []
+                    for item in child:
+                        if not isinstance(item, dict) or not isinstance(item.get('kind'), str):
+                            raise ValueError('Original evidence kind is required')
+                        original_path = Path(item['path'])
+                        if not original_path.is_absolute():
+                            raise ValueError('Original reviewer evidence path must be absolute')
+                        relative = original_path.relative_to(source).as_posix()
+                        ref, _ = original(relative)
+                        mapped.append({**item, **ref, 'original_source_path': item['path']})
+                    result[key] = mapped
+                    transformations.append({'json_pointer': here,
+                                            'operation': 'map each actual no-repair verification path to its retained byte REF; preserve kind and original source path',
+                                            'original_value': child, 'projected_value': mapped})
+                else:
+                    result[key] = normalize(child, here)
+            return result
+        if isinstance(value, list):
+            return [normalize(item, pointer + '/' + str(index)) for index, item in enumerate(value)]
+        return value
+    normalized_declaration = normalize(declaration)
+    projection = {'schema_version': 1,
+                  'kind': 'explicit coordinator schema projection of immutable reviewer judgment; not a new review or original tool output',
+                  'source_declaration': declaration_ref,
+                  'transforms': transformations,
+                  'scope': 'Only ordered scope/limitations list-to-newline conversion and actual verification-path REF mapping. Outcome, findings, exclusions and no-product-repair judgment remain reviewer-authored. Verification evidence supports the no-repair disposition; no product repair is inferred.'}
+    projection_path = output / 'declaration-projection.json'
+    projection_path.write_text(json.dumps(projection, ensure_ascii=False, indent=2) + '\n')
     # No default acceptance, repaired disposition or positive outcome is invented.
     result_ref, _ = original(cfg.get('result_file', 'FINAL.md'))
     for name in cfg.get('additional_tool_exports', []):
@@ -161,7 +228,11 @@ def main():
               'completion': export(completion_ref, 'collaboration FINAL_ANSWER notification', 'Exact actual terminal reviewer notification; export timestamp is not inferred execution time.'),
               'tool_outputs': tools, 'result': result_ref, 'reviewed_products': rows,
               'review_declaration': declaration_ref, 'review_snapshot': reference(snapshot_path),
-              **{key: declaration[key] for key in required}}
+              'original_reviewer_declaration': declaration,
+              'declaration_projection': reference(projection_path),
+              'projection_scope': projection['scope'],
+              'materialized_original_artifacts': materialized_originals,
+              **{key: normalized_declaration[key] for key in required}}
     (output / 'review.json').write_text(json.dumps(review, ensure_ascii=False, indent=2) + '\n')
     (output / 'index-configuration.json').write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'reviewer': reviewer, 'products': len(rows), 'original_view_exports': len(tools),

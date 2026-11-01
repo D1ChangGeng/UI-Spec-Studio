@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python3",
+    "-c",
+    "import json,pathlib; [print(p.parts[-3],json.dumps({k:v for k,v in json.loads(p.read_text()).items() if k!='buttons_after_edit'},ensure_ascii=False)) for p in pathlib.Path('behavior').glob('*/followup2/result.json')]"
+  ],
+  "cwd": "/workspace/scratch/dc68edd00fe1/independent-review",
+  "started_at": "2026-11-01T13:03:58.710447+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T13:03:58.742590+00:00",
+  "wall_seconds": 0.032149,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 7901,
+      "sha256": "87f50bdb597eedda8fce2951679222dc54f8d7a63bdbef939f70a11df62a0249"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

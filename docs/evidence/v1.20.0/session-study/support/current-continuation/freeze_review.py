@@ -8,6 +8,7 @@ import datetime
 import hashlib
 import json
 import shutil
+import os
 from large_archives import archive_with_large_files
 from review_snapshot_io import read_snapshot, write_snapshot
 
@@ -41,7 +42,7 @@ def main():
     files = sorted(
         p for p in source.rglob("*")
         if p.is_file() and not p.is_symlink()
-        and not any(part in {"disposable", "__pycache__", ".git", "node_modules", ".pytest_cache"}
+        and not any(part in {"__pycache__", ".git", "node_modules", ".pytest_cache"}
                     for part in p.relative_to(source).parts)
     )
     hashes = {p.relative_to(source).as_posix(): digest(p) for p in files}
@@ -120,6 +121,8 @@ def main():
         "cohort": args.cohort,
         "captured_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "source_workspace": str(source),
+        "symbolic_links": {path.relative_to(source).as_posix(): os.readlink(path) for path in source.rglob("*") if path.is_symlink()},
+        "symbolic_link_scope": "Original link targets are retained literally without traversing shared supplied-input links. Own reviewer output and stateful test copies are retained. The old review-pack supplied-input link remains an explicit external input boundary, separately identified by original product snapshots/maps.",
         "file_hashes": hashes,
         "changed_or_added": [p.relative_to(source).as_posix() for p in changed],
         "deleted_since_previous": sorted(set(old) - set(hashes)),
@@ -135,7 +138,7 @@ def main():
         "direct_artifacts": direct,
         "scope": "Original reviewer reports, exact available tool outputs, command stdout/stderr, scripts, traces and captures. Raw Markdown/Python direct exports use .txt; archive entries preserve original names and bytes.",
         "direct_export_policy": "Reviewer-created copies/ trees are archive-only; their full original paths and hashes remain in file_hashes and are verified by reconstruction.",
-        "exclusions": "Directories literally named disposable, node_modules, .git, __pycache__ or .pytest_cache, and symbolic links. Other reviewer-created application copies, including copies/ and their exercised persistence states, are retained. The original reviewed application source and original product captures also remain in each frozen product snapshot. No browser profile, credentials or hidden reasoning are included.",
+        "exclusions": "Dependency directories literally named node_modules and actual .git/__pycache__/.pytest_cache caches. Symbolic links are recorded literally without traversal. No directory is excluded merely for being named disposable. Other reviewer-created application copies, including copies/ and their exercised persistence states, are retained. The original reviewed application source and original product captures also remain in each frozen product snapshot. No browser profile, credentials or hidden reasoning are included.",
     }
     write_snapshot(target / "snapshot.json", result)
     print(json.dumps({"cohort": args.cohort, "files": len(files), "changed": len(changed),

@@ -1,0 +1,152 @@
+                  );
+                }
+                const running = part.status.type === "running";
+                return (
+                  <ReasoningRoot streaming={running}>
+                    <ReasoningTrigger
+                      active={running}
+                      duration={reasoningDuration(part.timing)}
+                    />
+                    <ReasoningContent aria-busy={running}>
+                      <ReasoningText>{children}</ReasoningText>
+                    </ReasoningContent>
+                  </ReasoningRoot>
+                );
+              }
+              case "text":
+                return <MarkdownText />;
+              case "reasoning":
+                return <Reasoning {...part} />;
+              case "tool-call":
+                return part.toolUI ?? <ToolFallbackComponent {...part} />;
+              case "data":
+                return part.dataRendererUI;
+              case "file":
+                return (
+                  <div data-slot="aui_assistant-message-file" className="py-1">
+                    <MessageFile {...part} />
+                  </div>
+                );
+              case "image":
+                return (
+                  <div data-slot="aui_assistant-message-image" className="py-1">
+                    <Image {...part} />
+                  </div>
+                );
+              case "indicator":
+                return (
+                  <span
+                    data-slot="aui_assistant-message-indicator"
+                    className="animate-pulse font-sans"
+                    aria-label="Assistant is working"
+                  >
+                    {"●"}
+                  </span>
+                );
+              default:
+                return null;
+            }
+          }}
+        </MessagePrimitive.GroupedParts>
+        <MessageError />
+      </div>
+
+      <div
+        data-slot="aui_assistant-message-footer"
+        className={cn("ms-2 flex items-center", ACTION_BAR_HEIGHT)}
+      >
+        <BranchPicker />
+        <AssistantActionBar />
+      </div>
+    </MessagePrimitive.Root>
+  );
+};
+
+const AssistantActionBar: FC = () => {
+  return (
+    <ActionBarPrimitive.Root
+      hideWhenRunning
+      autohide="not-last"
+      className="aui-assistant-action-bar-root text-muted-foreground animate-in fade-in col-start-3 row-start-2 -ms-1 flex gap-1 duration-200"
+    >
+        src={src}
+        alt=""
+        className="aui-attachment-tile-image rounded-none object-cover"
+      />
+      <AvatarFallback>
+        <FileText className="aui-attachment-tile-fallback-icon text-muted-foreground/80 size-6 stroke-[1.5]" />
+      </AvatarFallback>
+    </Avatar>
+  );
+};
+
+const AttachmentUI: FC = () => {
+  const aui = useAui();
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const detailsId = useId();
+  const {
+    isComposer,
+    src,
+    isImage,
+    name,
+    typeLabel,
+    isUploading,
+    isError,
+    errorMessage,
+  } = useAttachmentState();
+
+  if (!src) {
+    return (
+      <AttachmentPrimitive.Root className="aui-attachment-root max-w-full">
+        <TooltipProvider>
+          <Tooltip open={detailsOpen} triggerId={`${detailsId}-trigger`} onOpenChange={(open, details) => {
+            // A focused filename remains disclosed until blur, outside press, or Escape.
+            if (!open && document.activeElement?.id === `${detailsId}-trigger` && details.reason !== "outside-press" && details.reason !== "escape-key") return;
+            setDetailsOpen(open);
+          }}>
+            <TooltipTrigger id={`${detailsId}-trigger`} closeOnClick={false} onClick={(event) => { if (event.target instanceof Element && event.target.closest("button")) return; event.currentTarget.focus({ preventScroll: true }); setDetailsOpen(true); }} render={<div role="group" tabIndex={0} aria-describedby={detailsOpen ? detailsId : undefined} onFocus={() => setDetailsOpen(true)} onBlur={() => setDetailsOpen(false)} aria-label={name} className="max-w-full rounded-[14px] outline-none focus-visible:ring-1 focus-visible:ring-ring/50" />}>
+              <ComposerAttachmentChip
+                attachment={{ name, meta: isError ? (errorMessage ?? copy.filenameOnly) : copy.filenameOnly, kind: "text", state: isUploading ? "uploading" : isError ? "error" : "done" }}
+                className="max-w-full"
+                removeLabel={copy.remove(name)}
+                onRemove={isComposer ? () => {
+                  const input = document.activeElement?.closest(".aui-composer-root")?.querySelector<HTMLTextAreaElement>("textarea");
+                  input?.focus({ preventScroll: true });
+                  aui.attachment.remove();
+                } : undefined}
+              />
+            </TooltipTrigger>
+            <TooltipContent role="tooltip" id={detailsId} side="top" className="flex-col items-start [overflow-wrap:anywhere]">
+              <span>{name}</span>
+              <span className="break-normal">{copy.fileDisclosure}</span>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </AttachmentPrimitive.Root>
+    );
+  }
+
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <AttachmentPrimitive.Root
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-dynannotate.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-codemirror-6-lint.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/vanilla-compat-options.multids
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-codemirror-6.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-comments.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/LICENSE
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-codemirror-6-themes.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-freelinks.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-innerwiki.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-consent-banner.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/options.multids
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-help.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-menubar.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/3-surface.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-tour.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-highlight.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/VanillaPaperDay.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-translators.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/plugin-markdown.tid
+review-pack/products/P02/app/wiki/themes/vanilla-paper/tracker-menubar.tid

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "bash",
+    "-c",
+    "for p in P04 P07 P09 P10 P11 P17; do echo $p; rg -n \"aria-label|tooltip|file|Dialog|Popover|ScrollToBottom|autoScroll|scroll\" review-pack/products/$p/app/src/components/assistant-ui/{thread,attachment}.tsx | head -70; done; find review-pack/products/P02/app/wiki/tiddlers -maxdepth 1 -type f | head -30; cat review-pack/products/P13/app/wiki/tiddlywiki.info"
+  ],
+  "cwd": "/workspace/scratch/dc68edd00fe1/independent-review",
+  "started_at": "2026-11-01T13:00:19.049214+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T13:00:19.081652+00:00",
+  "wall_seconds": 0.032441,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 2368,
+      "sha256": "da973d22361fea6ae959f8e1911c8403afd1cda5a322f1a04eb8990017e9e468"
+    },
+    "stderr.txt": {
+      "bytes": 1368,
+      "sha256": "c055407b164714bac57ebfd79123a96832d6f63caad01494a01f3c3aa12157b4"
+    }
+  }
+}

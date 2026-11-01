@@ -1,0 +1,133 @@
+review-pack/products/P01/app/settings-store.js
+review-pack/products/P01/app/LICENSE
+review-pack/products/P01/app/toast-source-preview.html
+review-pack/products/P01/app/index.html
+review-pack/products/P01/app/settings-controller.js
+review-pack/products/P01/app/save-notification.js
+review-pack/products/P01/app/package.json
+review-pack/products/P03/app/settings-store.js
+review-pack/products/P03/app/LICENSE
+review-pack/products/P03/app/index.html
+review-pack/products/P03/app/settings-controller.js
+review-pack/products/P03/app/package.json
+review-pack/products/P04/app/THIRD-PARTY-NOTICES.txt
+review-pack/products/P04/app/dist/index.html
+review-pack/products/P04/app/LICENSE
+review-pack/products/P04/app/index.html
+review-pack/products/P04/app/vite.config.ts
+review-pack/products/P04/app/tsconfig.json
+review-pack/products/P04/app/package.json
+review-pack/products/P04/app/package-lock.json
+review-pack/products/P04/app/src/styles.css
+review-pack/products/P04/app/src/assistant.tsx
+review-pack/products/P04/app/src/fonts.css
+review-pack/products/P04/app/src/main.tsx
+review-pack/products/P04/app/src/synthetic.ts
+review-pack/products/P02/app/wiki/tiddlywiki.info
+review-pack/products/P02/app/start.sh
+review-pack/products/P02/app/README.md
+review-pack/products/P02/app/package.json
+import { readSettings, saveSettings, subscribeSettings, setFailureMode } from './settings-store.js';
+import { createSaveNotification } from './save-notification.js';
+
+const ids = {displayName:'business-name',organization:'business-id',location:'location',email:'email',weeklyDigest:'weekly-digest',publicProfile:'public-profile'};
+const status = document.querySelector('#save-status');
+const save = document.querySelector('#save-settings');
+const params = new URLSearchParams(location.search);
+const zh = params.get('lang') === 'zh';
+const copy = zh ? {
+  idle:'更改仅保存在当前浏览器中。', pending:'本次提交正在保存。', success:'当前表单与已保存版本一致。',
+  newer:'后续编辑尚未保存。', error:'更改尚未保存。', invalid:'请修正标记的字段。', dirty:'有尚未保存的更改。'
+} : {
+  idle:'Changes are saved only in this browser.', pending:'Submitted version in progress.', success:'The form matches the saved version.',
+  newer:'Your newer edits have not been saved.', error:'Changes remain unsaved.', invalid:'Correct the highlighted fields.', dirty:'You have unsaved changes.'
+};
+const errorTranslations = {
+  'Add a display name.':'请填写显示名称。',
+  'Use 100 characters or fewer.':'请使用不超过 100 个字符。',
+  'Use 180 characters or fewer.':'请使用不超过 180 个字符。',
+  'Enter a complete email address.':'请输入完整的电子邮箱地址。'
+};
+const fieldError = message => zh ? (errorTranslations[message] || message) : message;
+const fieldLabel = key => document.querySelector('label[for="' + ids[key] + '"]').textContent.trim();
+let latestOperation = 0;
+let pending = false;
+let userSubmit = false;
+let savedSettings;
+
+function draft() {
+  return Object.fromEntries(Object.entries(ids).map(([key,id])=>{
+    const el=document.getElementById(id);
+    return [key,el.type==='checkbox'?el.checked:el.value];
+  }));
+}
+function sameDraft(data) {
+  return data && Object.entries(draft()).every(([key,value])=>data[key]===value);
+}
+function clearError(key) {
+  const el=document.getElementById(ids[key]);
+  el.classList.remove('is-invalid');
+  el.removeAttribute('aria-invalid');
+  const errorId=ids[key]+'-error';
+  const descriptions=(el.getAttribute('aria-describedby') || '').split(' ').filter(id=>id && id!==errorId);
+  if(descriptions.length) el.setAttribute('aria-describedby',descriptions.join(' '));
+  else el.removeAttribute('aria-describedby');
+  document.getElementById(errorId)?.remove();
+}
+function clearErrors() { Object.keys(ids).forEach(clearError); }
+function showErrors(errors) {
+  clearErrors();
+  for(const [key,message] of Object.entries(errors)) {
+    const el=document.getElementById(ids[key]);
+    const feedback=document.createElement('div');
+    feedback.id=ids[key]+'-error';
+    feedback.className='invalid-feedback';
+    feedback.textContent=fieldError(message);
+    el.after(feedback);
+    el.classList.add('is-invalid');
+    el.setAttribute('aria-invalid','true');
+    el.setAttribute('aria-describedby',[el.getAttribute('aria-describedby'),feedback.id].filter(Boolean).join(' '));
+  }
+  const first=Object.keys(errors)[0];
+  if(userSubmit && first && document.activeElement!==document.getElementById(ids[first])) document.getElementById(ids[first]).focus();
+}
+function load() {
+  const data=readSettings();
+  savedSettings=data;
+  for(const [key,id] of Object.entries(ids)) {
+    const el=document.getElementById(id);
+    if(el.type==='checkbox') el.checked=data[key]; else el.value=data[key];
+  }
+}
+function submit(snapshot) {
+  userSubmit=true;
+  const operation=saveSettings(snapshot);
+  userSubmit=false;
+  return operation.catch(()=>{});
+}
+const notification=createSaveNotification({
+  saveSnapshot:submit, zh, fieldLabel, fieldError, fallbackFocus:()=>save
+});
+try { load(); status.textContent=copy.idle; } catch(error) { status.textContent=error.message; }
+subscribeSettings(event=>{
+  if(event.operationId<latestOperation) return;
+  latestOperation=event.operationId;
+  pending=event.status==='pending';
+  // A native disabled button loses keyboard focus; Tabler's existing disabled
+  // presentation plus aria-disabled retains focus while the handler blocks repeats.
+  save.classList.toggle('disabled',pending);
+  save.setAttribute('aria-disabled',String(pending));
+  save.setAttribute('aria-busy',String(pending));
+  if(event.status==='success') savedSettings=event.settings;
+  status.textContent=event.status==='success' && !sameDraft(event.settings) ? copy.newer : (copy[event.status] || copy.idle);
+  status.dataset.state=event.status;
+  notification.render(event);
+  if(event.status==='invalid') showErrors(event.fieldErrors);
+  else if(event.status==='pending') clearErrors();
+});
+save.addEventListener('click',()=>{
+  if(!pending) void submit(draft());
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+exec node vendor/tiddlywiki/tiddlywiki.js wiki --listen host=127.0.0.1 port="${PORT:-4313}"

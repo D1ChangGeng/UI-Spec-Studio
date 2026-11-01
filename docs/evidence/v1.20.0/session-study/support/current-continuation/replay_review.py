@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -74,7 +75,13 @@ def main():
         actual = {p.relative_to(output).as_posix(): sha(p) for p in output.rglob('*') if p.is_file()}
         if actual != snapshot['file_hashes']:
             raise ValueError('Reconstructed reviewer differs from full original file inventory')
-        print(json.dumps({'status': 'passed', 'verified_files': len(actual), 'borrowed_files': len(borrowed),
+        for name, target in snapshot.get('symbolic_links', {}).items():
+            link = safe(output, name)
+            link.parent.mkdir(parents=True, exist_ok=True)
+            link.symlink_to(target)
+            if os.readlink(link) != target:
+                raise ValueError('Original symbolic link target differs')
+        print(json.dumps({'status': 'passed', 'restored_symbolic_links': len(snapshot.get('symbolic_links', {})), 'verified_files': len(actual), 'borrowed_files': len(borrowed),
                           'scope': 'Byte-complete reconstruction of the retained reviewer snapshot with verified product-byte reuse; not an additional review or acceptance.'}, indent=2))
     finally:
         shutil.rmtree(temporary, ignore_errors=True)

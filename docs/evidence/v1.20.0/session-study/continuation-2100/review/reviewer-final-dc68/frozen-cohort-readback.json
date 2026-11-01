@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "kind": "coordinator byte readback of reviewer-authored freeze manifests; not another review",
+  "manifests": [
+    {
+      "manifest": "INITIAL-COHORT-FROZEN.json",
+      "manifest_sha256": "47fd9c13f2692017aa2046eb264ae2c5ff8b2938adcba388a0897fc186945906",
+      "verified_files": [
+        {
+          "path": "BLIND-REVIEW.md",
+          "sha256": "d0cacf4e7193454d790327214e264867bdeb9d1e83bd94040929e43cf785c279",
+          "bytes": 13050
+        },
+        {
+          "path": "products.json",
+          "sha256": "b10af8ccc56fb557c53df2361573eca0147fdd197269e4a4b6ea8990f630d0fd",
+          "bytes": 65271
+        },
+        {
+          "path": "authored-findings.json",
+          "sha256": "13b95fdc534119967790daad840cf0345ff4f0308d0c2d6c1d6aaf804f315770",
+          "bytes": 19748
+        },
+        {
+          "path": "authored-P18.json",
+          "sha256": "f66cb6141c3f69b4d8f49ca2236f6796f07b255e428cfe98505fdbf61877df05",
+          "bytes": 1318
+        },
+        {
+          "path": "frozen-view-exports.json",
+          "sha256": "5afd9bd2a33a9585411c2acb1913d56247440850d40e1477d6b9cb22f2705cc6",
+          "bytes": 9081
+        }
+      ]
+    },
+    {
+      "manifest": "SUPPLEMENTARY-COHORT-FROZEN.json",
+      "manifest_sha256": "93c7adbd5b70bee88659c6fd90286cd6f25134b13c6fb4e748f4c19d92ea94a5",
+      "verified_files": [
+        {
+          "path": "SUPPLEMENTARY-REVIEW.md",
+          "sha256": "3368b3998df05fe66d606a2b8f2acd4411eb02381e8bdb3fccf8178753d919be",
+          "bytes": 7765
+        },
+        {
+          "path": "supplementary-products.json",
+          "sha256": "ffbe1c0a51c3461b3038bbe748ab8363c0eeb0cd644b30367d463a39db4fb20b",
+          "bytes": 13049
+        },
+        {
+          "path": "supplementary-authored-findings.json",
+          "sha256": "08f3ff563e8ddde9c4a21e9d5e31ed8ab53a7faee59c06ccba5b8c28e81e4e02",
+          "bytes": 5508
+        },
+        {
+          "path": "supplementary-view-exports.json",
+          "sha256": "c4223b749cfafed99a7f9bb8c07cc2d7830228b515959cbb1ad09fcafdae5080",
+          "bytes": 1913
+        }
+      ]
+    },
+    {
+      "manifest": "FINAL-ACCEPTANCE-FROZEN.json",
+      "manifest_sha256": "294a5d8f10820100dc52144388d504948fc625c6f7fc2f3dd6141aa8e5310cf0",
+      "verified_files": [
+        {
+          "path": "FINAL.md",
+          "sha256": "26db378718dd0f7b36ade2a4238558a06947d6045fd4e2a33a6a9850a72fcae0",
+          "bytes": 5063
+        },
+        {
+          "path": "REVIEW-DECLARATION.json",
+          "sha256": "46a7964cb188d704932108513b3bce163beaa5ee600c96abe003278b2a8aa234",
+          "bytes": 25495
+        },
+        {
+          "path": "final-acceptance-authored.json",
+          "sha256": "411f25d64f97dd48f97d4948296f6ce41330ec6c330bdaaffb0a9655e6e456d2",
+          "bytes": 6311
+        }
+      ]
+    }
+  ],
+  "source_workspace": "/workspace/scratch/dc68edd00fe1/independent-review",
+  "symbolic_links": {
+    "review-pack": "/workspace/scratch/c0a45b688c5b/independent-final-review/review-pack"
+  }
+}

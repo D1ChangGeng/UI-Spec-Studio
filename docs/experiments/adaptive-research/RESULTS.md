@@ -1,6 +1,18 @@
 # Adaptive research study — current and historical evidence
 
-## Current recovery status — 2026-11-01 UTC
+## Final limited acceptance — 2026-11-01 JST
+
+The final independent reviewer froze sixteen anonymous registered products and then two path-corrected supplementary products before receiving only the four G identities. It personally viewed 74 original PNGs in the initial cohort and 13 original supplementary PNGs, exercised every product's core workflow, and preserved failures and scoped unknowns. The separate final continuation records `condition_blind: false`, `accept_limited` and four `accepted_with_limits` G dispositions. The initial/supplementary reports and product rows were hash-verified unchanged.
+
+The four G scopes cover exercised local settings/recovery, synthetic conversation continuity/disclosure, editorial reading/editing and real filesystem persistence, and bounded toast retry semantics. They do not establish complete mobile/assistive-technology/natural-time acceptance. T3-G horizontal keyboard table access remains unresolved and excluded; compact hierarchy, lateral attachment discovery, sticky titles, header occlusion and inherited field presentation retain their scoped reservations. Negative comparator findings are unchanged. No uniform condition/model superiority, native context saving or cost reduction is established.
+
+The strict release record contains sixteen original registered runs; original T3-C and T2-E-observer exact-dispatch completions remain declared omissions. Current fresh path-corrected replacements for those two targets completed with three actual child contexts and fully retained outputs. Their 668-file and 9,755-file workspaces reconstruct exactly; original and actual prompts, observational timing, owned-server/source identities, failures and final image returns remain separate. They are not relabeled as exact original dispatches. The earlier T3-C path-relocation execution is also retained separately.
+
+The current and earlier independent reviews exercise different scopes. In the current continuity script, Stop is pointer-activated and text stability is sampled; this does not retest the earlier P17 keyboard-Stop focus failure or its twelve-Tab recovery. Return-to-latest samples establish immediate position, without the earlier review's subsequent growing-stream follow samples. The earlier P10 following failure and P17 keyboard-focus negative findings are therefore preserved, not overturned by a broader reading of the current local acceptance. No comparator was repaired and no reviewer vote substitutes for matching observation conditions.
+
+See the [final independent review](../../evidence/v1.20.0/session-study/continuation-2100/review/README.md), [two current supplementary products](../../evidence/v1.20.0/session-study/continuation-2100/supplementary/HANDOFF.md), [release decision](../../evidence/v1.20.0/release-decision.json), and frozen registration. The candidate fingerprint remains `eb7752a1b0eb4af180e9bb4bd0922587a3c9c96744e24ec8cf299517516e8759`. The local large-archive full-suite rerun was resource-terminated and retained; successful complete remote CI and every existing publication check remain required. Native Cloud/role/model/usage claims remain false.
+
+## Historical recovery checkpoint — 2026-11-01 UTC
 
 Sixteen registered executions have complete retained product records and successful source/evidence reconstruction: T1-A/B/C/G, T2-A/B/C/D/E-challenger/G, T3-A/B/G, and T4-F-main/F-integrator/G. Their eleven actual child contexts remain identified by original requests, returned IDs, tool outputs and reports. The [live inventory](../../evidence/v1.20.0/session-study/README.md) gives current records and active work. Execution completion is distinct from product quality.
 
