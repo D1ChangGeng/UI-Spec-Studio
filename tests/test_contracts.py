@@ -92,7 +92,7 @@ class ContractTests(unittest.TestCase):
         version = (ROOT / "VERSION").read_text().strip()
         self.assertTrue((ROOT / f"docs/releases/v{version}.md").is_file())
         for filename in ("README.md", "README.zh-CN.md"):
-            self.assertIn(f"tree/v{version}", (ROOT / filename).read_text(encoding="utf-8"))
+            self.assertIn(f"releases/download/v{version}/ui-spec-installer.tgz", (ROOT / filename).read_text(encoding="utf-8"))
 
     def test_standalone_bundle_has_all_reference_files(self):
         with tempfile.TemporaryDirectory() as td:
