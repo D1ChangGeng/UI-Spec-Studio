@@ -90,6 +90,9 @@ jobs:
             echo "npm registry unavailable or returned a non-404 error: $response" >&2
             exit 1
           fi
+      - name: Rehearse the account owner's SHA-256 verified first-publication flow
+        shell: pwsh
+        run: ./tools/bootstrap-npm.ps1 -DryRun
       - name: Provide standalone npm bootstrap artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
