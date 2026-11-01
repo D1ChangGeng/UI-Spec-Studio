@@ -1,0 +1,63 @@
+# Fieldnotes — terminal delivery
+
+**Status: incomplete.** The native TiddlyWiki application is preserved and runnable. Two licensed visual candidates were acquired, built with the supplied notes and captured as provisional offline trials. No new theme was integrated into the authoritative server application, and the required final visual and persistence checks were not completed.
+
+The substantive work window ended while a four-image inspection call was pending. That call returned only **“aborted by user after 1309.5s.”** It delivered no inspectable image results to the main designer. Subsequent work was limited to preservation, process closure, an inventory and this report.
+
+## Delivered state
+
+The authoritative application remains under `app/`, with the complete pinned TiddlyWiki 5.4.1 distribution, original licenses and eight supplied notes. No authored note-content or product-theme change was made. The native server wrote its ordinary `$:/StoryList` state during startup/use. No W1, W2 or W3 exception was claimed or used.
+
+Run the preserved application with:
+
+```bash
+cd /workspace/scratch/708e8b7f118e/ui-study/worksets/w12/app
+PORT=4412 ./start.sh
+```
+
+Then open `http://127.0.0.1:4412/` in a browser that can reach the executor. The preview process started by this run is no longer running: its bounded command session returned exit 124 after its 600-second timeout. No other process was stopped.
+
+Provisional, renderable offline candidate exports are retained at:
+
+- `evidence/trials/paper/output/index.html`
+- `evidence/trials/notebook/output/index.html`
+
+These are research trials, not the authoritative persistence path or an accepted final product. Their source trees, configuration, builder and capture script remain available.
+
+## Sources and design findings
+
+| Candidate | Exact source and rights | Established scope |
+|---|---|---|
+| **Vanilla Paper 0.10.0** | BurningTreeC/vanilla-paper, commit `031a78d4d4187128c632f8a647fa05408eddc700`, MIT | Complete standalone editorial theme. Original demo was personally viewed by the main designer. Source provides warm paper/desk surfaces, serif reading, sans interface text, red margin rule, ruled editor and Day/Night palettes. |
+| **Notebook 1.4.1** | NicolasPetton/Notebook, commit `465c832c885894ee3c97be76449cc524e1252eb0`, MIT | Materially different candidate with top utilities and custom left navigation. Source, native Vanilla dependency and notebook-mobile 1.0.0 were acquired and built in a same-content trial. Corrected trial captures were not personally reviewed. |
+| **Krystal 0.5.2** | crazko/krystal, commit `d1d0574ce36cd8c7a7f3e88eaa0bc3aa985a9305` | Research reference for a horizontal story river. Redistribution rights were not established; it was not integrated or selected. |
+
+Paper was the leading provisional direction because its original demo visibly distinguished reading text, interface utilities and page material. Notebook challenged that preference through a different navigation structure. This was not a settled product selection: the missing review of both populated trials leaves the decisive comparison incomplete.
+
+All acquired archives and notices are retained. `DESIGN-MODEL.md` preserves the intended experience and unresolved decisions; `evidence/research-child/REPORT.md` preserves the independent research and its limitations. `DELEGATION.json` and the exact child completion preserve the dispatched inquiry and returned evidence. Backend identity, tokens and billed cost remain unknown.
+
+## What actually ran
+
+- The original server started on port 4412 and the native baseline was captured.
+- Chromium initially failed with sandboxing enabled under root. The retained error is in `evidence/commands/003-baseline-capture/`.
+- The existing nonprivileged `oai` account successfully ran the supplied Chromium with its sandbox enabled. No sandbox, TLS or proxy bypass was introduced by the main designer.
+- The first baseline visual inspection showed missing Chinese glyphs. The host font directory was inaccessible to that account; the coordinator repaired its directory access without changing font/config bytes. The invalid earlier capture remains retained.
+- The first offline Paper trial was unstyled because a trailing newline was written into the exact native theme/palette title. The configuration writer was corrected and a separate attempt was captured.
+- Both corrected offline candidates built successfully. At 1440×900 and DPR 1, the capture script followed the interview link and activated the native per-note edit control. It saved source-demo, index, interview and editor screenshots plus condition data. This establishes those exercised local actions and capture availability; it does not establish final visual quality or durable saves.
+- The latest completed captured product command was `009-trial-captures-corrected`, ending **2026-11-01 10:59:40.437013 UTC**, exit 0. Its actual stdout/stderr and metadata are retained.
+
+The main designer personally viewed only the native baseline, the original Paper demo and the failed first Paper export. Corrected trial PNGs are retained under `evidence/trial-captures-v2/` but remain **captured, not reviewed**. `VISUAL-REVIEW.md` distinguishes these scopes. No natural-time motion claim is made.
+
+## Unfinished requirements
+
+The requested expressive application result has not been delivered. Remaining work includes final candidate comparison and adoption in `app/wiki/`; source-versus-integrated-product visual comparison; complete interview/ledger/return; English and Chinese edit/save/filesystem/reload agreement; edit cancellation; keyboard search or tag navigation into the editor; light/dark long reading and editing; 1280×640 and 390×844 conditions; reduced motion and quiet states; and bounded resource-cost observation.
+
+Native persistence was not replaced or faked. It also was not verified in this run. Source-demo observations and offline editor entry cannot substitute for that verification.
+
+## Timing, interruption and preservation
+
+Coordinator request preparation was **2026-11-01 10:50:56.102555 UTC**, explicitly a preparation timestamp rather than an authenticated engine start. Initial work-package reads preceded the first explicit time sample at **10:51:53 UTC**; their exact start timestamp was not exposed. The coordinator observed the interruption at **11:21:37 UTC**, after the registered 1,800-second bound. The first preservation-only clock sample was **11:22:06 UTC**. These facts remain separate in `RUN-TIMING.json`; delivery latency is not presented as productive design time.
+
+The pending image-call request and actual abort text are retained in `evidence/tool-interruption.json`. No replacement image responses were fabricated. `SOURCE-INVENTORY.json` records current source/artifact paths, byte sizes and SHA-256 hashes; its presence is a preservation fact, not product verification.
+
+The useful continuation point is the corrected same-content trials and their existing captures. Their unresolved visual comparison must be completed before a final source selection and server integration can be accepted.

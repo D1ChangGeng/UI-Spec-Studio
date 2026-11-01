@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path; r=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products\");\nfor name in [\"P05\",\"P12\",\"P17\"]:\n p=r/name; print(\"PRODUCT\",name)\n for child in sorted(p.iterdir()):print(child.name)\n for f in sorted(p.glob(\"*.md\")):print(\"FILE\",str(f),\"\\n\",f.read_text())\n for f in sorted(p.glob(\"*.json\")):print(\"FILE\",str(f),\"\\n\",f.read_text())"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T09:52:36.943551+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T09:52:36.975557+00:00",
+  "wall_seconds": 0.032011,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 58537,
+      "sha256": "7f9ad5479c842e37b7c5247035f29d581ecb03467c60b7235aa8c1b1f10f5e53"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

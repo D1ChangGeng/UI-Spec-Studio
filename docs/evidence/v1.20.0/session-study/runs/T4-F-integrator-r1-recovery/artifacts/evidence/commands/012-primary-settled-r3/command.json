@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "/tmp/ui-spec-validation-venv/bin/python",
+    "evidence/primary_settled_views.py",
+    "primary-settled-003"
+  ],
+  "cwd": "/workspace/scratch/708e8b7f118e/ui-study/worksets/w17",
+  "started_at": "2026-11-01T09:50:07.306388+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 1,
+  "ended_at": "2026-11-01T09:50:39.054961+00:00",
+  "wall_seconds": 31.74858,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 6934,
+      "sha256": "717345e3b08fc39e0c4818393dfe1c3cb4296ef713ded3492e5d6a9cdd80638e"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

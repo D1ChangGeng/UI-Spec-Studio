@@ -1,0 +1,42 @@
+# Fieldnotes source research
+
+Paper is the strongest candidate for the stated editorial goal; Notebook is a credible, materially different challenger. This is a research recommendation, not a final product design decision. No product code was changed.
+
+## Decision-useful comparison
+
+| Candidate | Actually observed relationships | Practical consequence |
+|---|---|---|
+| **Vanilla Paper 0.10.0** | Warm desk/cream sheet, fine red margin rule, serif reading and headings, sans navigation, ruled monospace editing; 720px sheet in the 1440px trial. Its night palette retains warm light text and a darker sheet distinct from the desk. | Carries identity through populated reading **and** editing. Long bilingual prose remains readable, at the cost of more vertical scrolling. Best fit for the stated editorial studio. |
+| **Notebook 1.4.1** | Centered 800px white sheet, sans text/headings, compact editor, fixed search/utility topbar and mobile bottom bar; cool slate dark palette with orange tags. | More text visible per frame and more persistent search access. This challenges Paper's spaciousness and right-sidebar composition, but provides less differentiation between reading and editing. |
+| **Vendored Starlight** | Source inspected: global Arvo/Times typography and repeated bitmap background over Snow White; its own comment calls it a placeholder refinement. | Useful native material/type alternative, but weaker evidence for a complete distinctive work direction. Not rendered by this research child; do not treat it as a visually compared final arm. |
+
+Both external theme demos were genuinely rendered from downloaded original HTML and viewed. Paper's public demo runs TW 5.5.0-prerelease; Notebook's public demo runs 5.3.3. Separate populated trials run this package's actual 5.4.1 distribution. Demo and trial evidence are distinct.
+
+## Sources, identity and rights
+
+- Paper source: https://github.com/BurningTreeC/vanilla-paper, revision **031a78d4d4187128c632f8a647fa05408eddc700**, theme **0.10.0**, MIT, Copyright 2026 Simon Huber. Demo: https://burningtreec.github.io/vanilla-paper/.
+- Notebook source: https://github.com/NicolasPetton/Notebook, revision **465c832c885894ee3c97be76449cc524e1252eb0**, theme **1.4.1**, MIT, Copyright 2020 Nicolas Petton. Public demo linked by the official community themes page: https://saqimtiaz.github.io/sq-tw/notebook.html.
+- Official discovery/context: https://tiddlywiki.com/static/Community%2520Themes.html. Paper's author explains its notebook material, layout mechanism and known testing limits in https://talk.tiddlywiki.org/t/vanilla-notebook-now-paper-theme/15545.
+- Acquired complete source directories, archives and licenses are retained here. **SOURCES.json** records exact file SHA-256 values and resolved revisions. Paper's plugin.info Git blob hash was independently matched to the commit API response. Archive SHA-256: Paper **8c7fe37648f0c2c55a38616633c58e3787e083168813f35630a540187b496127**; Notebook **e2c2d16ffad251da2fb33f214e13dffce196768f2555d1039babddeffa33c637**.
+- Paper uses system serif/sans/mono stacks, no downloaded font or bitmap assets. The supplied Noto CJK host fixture handled Chinese fallback in these captures; no new font rights are implied.
+
+## Adoption path and source relationships to retain
+
+Paper is a **whole-workspace theme**, not a palette or icon dependency. Install its complete `themes/BurningTreeC/vanilla-paper/` folder as a local wiki theme/plugin; select the exact `$:/themes/BurningTreeC/vanilla-paper` title and its `$:/palettes/VanillaPaperDay` / `$:/palettes/VanillaPaperNight` palettes. Preserve LICENSE. Its numbered layout, structure and surface stylesheets have a load-bearing order; retain them together. The existing native tiddlyweb/filesystem authority remains responsible for editing and persistence.
+
+Paper is standalone; no Vanilla/Snow White theme dependency is needed. It deliberately ships Vanilla-namespace metrics/settings compatibility shims. Its readme warns that changing Paper metrics does not update these static shim values, so future breakpoint changes require consistency checks. Preserve the serif/sans/mono roles, sheet/margin proportions, ruled editor line rhythm and day/night surface relationships when configuring it.
+
+Notebook needs Vanilla **loaded**, plus its Notebook theme and notebook-mobile plugin. Select its exact theme and beige/dark palette titles. Its left-sidebar/topbar/mobile navigation composition is meaningful implementation reuse; copying only its colors would lose the challenger’s principal advantage.
+
+## Evidence and observed limits
+
+- Final corrected populated comparison: **commands/013/** and **capture-trials.py**. Representative viewed frames: `paper-v5-editor-day.png`, `paper-v5-390-night.png`, `notebook-v5-1440-day.png`, `notebook-v5-interview-night.png`, `notebook-v5-390-night.png`. Original demo captures: `paper-original-demo-1440.png`, `notebook-original-demo-1440.png`; metadata in **commands/012/**.
+- Trials used 1440×900, 1280×640 and 390×844, DPR1, Chromium143, provided CJK fixture; same supplied content lengths. A clean initial StoryList, explicit theme dependencies and native dialog acceptance were used in the final run. Edit and cancel were operated; editor disappearance was asserted. Persistence/save/reload and full user journeys belong to the parent's independent verification.
+- At 390px Paper keeps the long heading, prose and Chinese text inside the sheet. Notebook also reflows; its bottom utility bar uses permanent vertical space. On desktop Notebook's sticky topbar can cover a title after a raw programmatic scroll-to-top; actual native navigation/focus behavior should be checked independently.
+- **Upstream reduced-motion conflict:** Paper's layout stylesheet sets 1ms transitions in reduced motion, but its later surface stylesheet sets `transition-duration:150ms !important` globally. Actual computed page-container duration is **0.15s**. A narrowly scoped specificity correction can preserve its documented quiet-layout intent. This finding was sent to the parent before final integration.
+- Controls and date metadata have low visual emphasis, especially at night; native toolbar visibility configuration deserves attention for pencil discoverability.
+- Failed attempts are retained: initial Paper unstyled render came from a trial writer's trailing newline in the exact theme title; the first Notebook trial inherited a concurrently changed theme list and missed Vanilla. Intermediate captures also caught native transitions or a cancel confirmation. They are **not** evidence against the source's final quality.
+- Static views were personally opened with view_image; actual responses are retained in `view-*.json`. No natural-time playback was available in this research, so no smoothness, pacing, interruption or frame-rate claim is made. Paper is a newer theme with published compatibility/testing caveats; finite successful trials do not establish broad accessibility, plugin compatibility or user preference.
+
+Research outputs: search-001/002/003.json preserve actual discovery/tool responses; commands/001–014 preserve acquisition, metadata, trials and failures; source archives, exact source files, runnable capture scripts and viewed PNGs remain under this directory.
+

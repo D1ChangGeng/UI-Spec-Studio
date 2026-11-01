@@ -1,0 +1,40 @@
+# Visual review
+
+## Baseline, personally viewed
+
+Viewed `evidence/baseline-run/baseline-interview-light.png` and `baseline-interview-dark.png` through actual `view_image` returns retained in `evidence/view-001-baseline-light.json` and `view-002-baseline-dark.json`. Conditions: Chromium 143 headless shell, sandbox enabled under oai, Noto CJK host configuration, 1440×900 CSS pixels, device scale 1, unchanged native Vanilla/Snow White and Vanilla/Nord palettes. Captures were made after fonts loaded; only settled static appearance is established here.
+
+The reading card occupies roughly three quarters of the viewport while the right sidebar is a narrow utility column. Chinese and English are rendered without missing glyph boxes. Large section headings divide the interview, but the English line length is broad and the long CJK paragraphs create wide horizontal bands. The frame communicates a conventional notebook rather than a developed editorial studio. In Nord, the slate card and darker page remain distinct; supporting timestamps and toolbar icons are visually faint. These observations motivate a whole-theme trial with tighter reading measure and stronger differences between reading and utility type. No claim of user preference or broad accessibility compliance is made.
+
+## Temporal boundary
+
+No new motion is selected at this point. The static baseline captures do not establish natural-time transition quality. Native task episodes will be exercised and recorded separately.
+
+
+## Candidate comparison, personally viewed
+
+Views 003–005 distinguish an initially inactive Starlight trial from the corrected active trial. The active light frame gains texture and Arvo headings; the active dark frame retains the bright background, weakening the side utilities. This is a visual rejection at the actual type/background-layer scope, not a claim that the whole native product failed.
+
+Views 006–007 show the unchanged Paper and Notebook demonstrations. Paper's bounded sheet, serif/sans contrast and red margin visibly form an editorial system; Notebook's top controls and centered sans sheet offer a genuinely different working composition. Views 008–010 show these themes with the supplied interview. Paper retained a stronger reading/utility distinction. View 011 caught the 300ms editor transition in flight; its overlap is recorded as an unsettled frame and was not used as proof of settled editor quality. View 012 exposed missing resting actions on narrow Paper, motivating its supported always-visible option.
+
+## Integrated final result, personally viewed
+
+Actual view returns 013–026 are stored individually. All use Chromium 143, sandbox enabled, DPR1 and the prescribed CJK font configuration. Captures and timing brackets are in evidence/verification/events.json and evidence/final/table-repair/events.json.
+
+| Views | Actual state | Observation and decision |
+|---|---|---|
+| 013, 026 | Light opening, 1440×900; 026 is a fresh browser/server state | Warm paper sheet, bounded text, visible native note actions and distinct right utility area. Final fresh state opens the index and interview with empty search; all original links remain |
+| 014, 022 | Bilingual native editor at 1440×900; 022 uses Chinese UI | Ruled monospace editor is visibly different from serif reading. Chinese labels, title and full mixed-language body render clearly; native save/cancel remain visible |
+| 015, 021 | Dark interview at 1440×900 and 390×844 | Warm near-black reading surface preserves the source hierarchy. Narrow title/actions fit; Chinese/English body wraps without missing glyphs. Supporting metadata and icons now remain visible at rest |
+| 016–019, 023 | Narrow light editor, narrow light reading, compact light/dark editors; 023 dark reduced-motion editor | Native toolbar wraps at narrow width; title, cancel and checkmark remain available. At compact height the body can scroll beneath the pinned editor controls. Reduced preference retains the same readable quiet composition |
+| 024 | Light interview, 1280×640 | The long reading measure remains bounded alongside native search results. Search focus is visibly outlined; results shown are task state, not persistent start-state content |
+| 020 | Dark narrow ledger before repair | Last column was clipped. A page-width assertion alone missed this defect; the visual review drove native wrapper composition |
+| 025 | Dark narrow ledger after repair, keyboard scrolled to end | Focus ring marks the bounded scroll region. The complete final column, “Does not establish”, and its cell values are visible. Earlier columns intentionally move outside the horizontal viewport while the page itself remains bounded |
+
+Additional captures exist for each light/dark reading/editor size. They were generated and checked by the controlled run; only the states listed above are claimed as personally opened. The table repair also verifies all three tables' headers and bounds. The observation table fits its width without scrolling; ledger and prototype reach their last columns by ArrowRight.
+
+## Behavior and temporal boundary
+
+The actual controlled journey follows links interview → ledger → interview, fills English and Chinese edits, saves using the native checkmark, checks the filesystem, reloads, cancels a disposable edit and continues. Search → result → pencil → body editor is reached by Tab/Enter. Logs and Playwright traces retain browser events and actual captures. The final fresh-server check repeats persistence and no-draft observations after restart.
+
+These are controlled browser episodes and settled static visual inspections. No natural-speed video was personally watched, and no smoothness claim is made. Quiet native duration is zero in normal and reduced preference; the reduced source repair limits remaining CSS transitions to 1ms. There are no idle animations in the sampled final matrix. No touch or screen-reader acceptance is inferred. The Chinese UI and reduced-motion samples are intentionally bounded as described in DESIGN-DECISIONS.md.

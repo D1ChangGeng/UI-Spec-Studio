@@ -1,0 +1,9 @@
+# Maintain the capability at its responsible layer
+
+Maintain the professional Skill, role behavior and model/tool choices independently. Preserve still-valid knowledge before reorganizing it. Record which actual failure prompts a change: premature research convergence, unviewed visual claims, lost counterexamples, final design outsourcing, source craft loss, overlapping writes, GUI state interference or cost without decision value.
+
+For each proposed revision, identify the frozen previous/current role and Skill bytes, affected task conditions, actual model/provider/tool version, relevant raw evidence and the behavior expected to change. Run a matched comparison; retain negative results, declared limitations and a known-good adapter. Do not infer improvement from longer prompts, newer model names, more child threads or a lower token rate. Preserve the current full-reference reading contract until an independently evaluated, source-faithful alternative is approved.
+
+Keep a concise case index in ordinary maintainer records: task and failure, evidence paths, responsible layer, proposed correction, actual retest, and disposition. This index is not a second product-design database. A proposed task-specific model setting remains experimental until quality, review burden and total observed cost support it. Recheck host/model/tool availability when versions change, and leave unavailable costs unknown.
+
+An adapter version records changed distributed behavior. A model alias update alone need not rewrite every role. Never silently replace a stable setting with an unverified model. Use explicit ownership-aware upgrades; preserve manually customized roles. Rollback requires the actual prior adapter bytes and passes the same conflict checks. No automatic agent rewrites its own production prompt or approves its own release.

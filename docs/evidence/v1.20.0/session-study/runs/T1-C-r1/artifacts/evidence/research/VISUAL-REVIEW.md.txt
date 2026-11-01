@@ -1,0 +1,23 @@
+# Research visual review
+
+Scope: source reference and pre-repair application only; no integrated-product acceptance.
+
+## Actually viewed
+
+- Original official snapshot, local render, 1440×900 light: mature shared card, quarter-width navigation, native input family, consistent section rhythm. Source avatar portrait absent; no claim about portrait rendering.
+- Original official snapshot, corrected capture, 1280×600 footer: distinct border separates action row; secondary Cancel and blue Submit are adjacent at the right edge. Actual footer was reached by scrolling to the source Submit button.
+- Current pre-repair 1280×600 English initial: source family is retained; three equal columns constrain the bilingual organization value; theme/language fixtures sit in the avatar row and compete with profile content.
+- Current invalid Save frame: action row visible, error feedback outside viewport; no visible field error. The DOM log independently records status y=-284 and absent field association.
+- Current pending → failure → retry frames, individually opened in order: disabled Save is the only visible pending cue; failure and success return to nearly identical footer frames. These sampled frames do not establish continuous natural-time pacing, lack of flashes, or application frame rate.
+- Current 390×844 dark/Chinese initial: tall navigation and the fixture/identity region delay the first editable field beyond the first viewport. Chinese glyphs render; mixed English peripheral labels remain.
+- Current 390×844 dark/Chinese footer: control descriptions wrap and the real footer is reachable by document scrolling; no sticky overlay obstructs it in this sample.
+- The file named current-390-zh-long was opened, but the field itself is outside its image. It establishes neither long-field readability nor complete visibility. Long-field verification remains open.
+
+## Viewing method and limits
+
+All images above were opened with view_image and its full returned objects retained as view-*.json. The current-app capture-index records exact screenshot time brackets, viewport, locale, theme, scroll offset, and source SHA-256. The browser ran with the supplied FONTCONFIG_FILE and the supplied Chromium headless shell.
+
+The browser actions used the real local service with its 750 ms delay and failure-once fixture. A stored snapshot / newer draft mismatch and a language-switch draft loss were observed in original runtime output. Those behavioral facts are separate from visual impressions.
+
+No natural-time video playback, screen-reader operation, touch hardware, or final repaired-app review was performed. Public current demos could not be rendered through the attempted surfaces; textual docs and the supplied original snapshot are identified separately.
+

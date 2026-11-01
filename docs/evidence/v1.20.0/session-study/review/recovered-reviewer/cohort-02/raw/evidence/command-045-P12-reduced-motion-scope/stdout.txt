@@ -1,0 +1,85 @@
+SOURCE 1-layout.tid
+603: ** ========================================================================== */
+604: 
+605: @media (prefers-reduced-motion: reduce) {
+606: 
+607: 	.tc-page-container,
+608: 	.tc-page-container-inner::after {
+609: 		transition-duration: 1ms;
+610: 	}
+611: 
+612: 	.tc-sidebar-scrollable,
+613: 	.tc-story-river {
+614: 		will-change: auto;
+615: 	}
+616: }
+617: 
+618: /* ==========================================================================
+619: ** Print — chrome off, river unconstrained
+620: ** ========================================================================== */
+621: 
+622: @media print {
+623: 
+624: 	.tc-sidebar-scrollable,
+625: 	.tc-topbar,
+626: 	.tc-page-controls,
+627: 	.tc-tiddler-controls {
+628: 		display: none !important;
+629: 	}
+630: 
+631: 	.tc-story-river {
+632: 		position: static;
+SOURCE 3-surface.tid
+1957: ** ========================================================================== */
+1958: 
+1959: @media (prefers-reduced-motion: reduce) {
+1960: 
+1961: 	*,
+1962: 	*::before,
+1963: 	*::after {
+1964: 		animation-duration: 1ms !important;
+1965: 		animation-iteration-count: 1 !important;
+1966: 		transition-duration: 150ms !important;
+1967: 	}
+1968: 
+1969: 	/* The focus ring must never be animated, in either mode */
+1970: 	:focus-visible {
+1971: 		transition: none !important;
+1972: 	}
+1973: }
+1974: 
+1975: /* ==========================================================================
+1976: ** Overrides on the shared structure
+1977: **
+1978: ** 2-structure carries the structural rules this theme shares with the rest
+1979: ** of the family. What follows is only where THIS theme disagrees with it.
+1980: ** Core sorts before every theme name, so these win on an equal-specificity
+1981: ** tie without !important.
+1982: ** ========================================================================== */
+1983: 
+1984: /* ---- Core structural rules — the systematic pass ---- */
+1985: /*
+1986: ** Small screens only.
+SOURCE sidebar-toggle.tid 
+ title: $:/themes/BurningTreeC/vanilla-paper/sidebar-toggle
+
+\whitespace trim
+<$list filter="[[$:/state/sidebar]get[text]] +[else[yes]!match[no]]" variable="ignore">
+<$button set="$:/state/sidebar" setTo="no" tooltip={{$:/language/Buttons/HideSideBar/Hint}} aria-label={{$:/language/Buttons/HideSideBar/Caption}} class="tc-btn-invisible tc-hide-sidebar-btn btc-sidebar-toggle">{{$:/core/images/chevron-right}}</$button>
+</$list>
+<$list filter="[[$:/state/sidebar]get[text]] +[else[yes]match[no]]" variable="ignore">
+<$button set="$:/state/sidebar" setTo="yes" tooltip={{$:/language/Buttons/ShowSideBar/Hint}} aria-label={{$:/language/Buttons/ShowSideBar/Caption}} class="tc-btn-invisible tc-show-sidebar-btn btc-sidebar-toggle">{{$:/core/images/chevron-left}}</$button>
+</$list>
+
+SOURCE topleftbar-sidebar-toggle.tid 
+ title: $:/themes/BurningTreeC/vanilla-paper/topleftbar-sidebar-toggle
+tags: $:/tags/TopLeftBar
+list-before: 
+
+\whitespace trim
+<$list filter="[{$:/theme}addsuffix[/options/sidebarside]get[text]match[start]]" variable="ignore">
+<$list filter="[[$:/plugins/tiddlywiki/menubar]!is[tiddler]]" variable="ignore">
+{{$:/themes/BurningTreeC/vanilla-paper/sidebar-toggle}}
+</$list>
+</$list>
+

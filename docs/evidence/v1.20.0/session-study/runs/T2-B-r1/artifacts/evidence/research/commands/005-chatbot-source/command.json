@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python3",
+    "-c",
+    "import urllib.request,pathlib; u=\"https://raw.githubusercontent.com/vercel/ai-elements/ca8be600bfd01b3131f9bf6134b51602a71f4374/packages/examples/src/chatbot.tsx\"; d=urllib.request.urlopen(u,timeout=20).read(); pathlib.Path(\"evidence/research/source/vercel-chatbot.tsx\").write_bytes(d); print(u); print(d.decode())"
+  ],
+  "cwd": "/workspace/scratch/708e8b7f118e/ui-study/worksets/w06",
+  "started_at": "2026-10-31T21:00:32.043581+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-10-31T21:00:32.408808+00:00",
+  "wall_seconds": 0.365235,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 22056,
+      "sha256": "095486d3958bf5f8832abd4f209f8b3d584ca63517fc058a3741eaf792a282e8"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

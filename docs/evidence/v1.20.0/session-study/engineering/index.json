@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "candidate_source_identity": "eb7752a1b0eb4af180e9bb4bd0922587a3c9c96744e24ec8cf299517516e8759",
+  "scope": "Actual engineering commands against the frozen candidate; authored browser fixtures are not independent product comparisons.",
+  "checks": [
+    {
+      "name": "upstream_unit_suite",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-unit-suite/command.json",
+        "sha256": "c2adeebc45a3e5e89d25168316992839b40a7f7063c10b692f9fea4b59c13260"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-unit-suite/stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-unit-suite/stderr.txt",
+        "sha256": "e2c56535e22d30d8243c29293f1610d8e676d702174924acbfdc0fbee5e8d482"
+      },
+      "wall_seconds": 31.856531
+    },
+    {
+      "name": "package_validation",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/package-validation/command.json",
+        "sha256": "184fd8f230df9a46ddc7e0c010505df1e1bc373896f3e19b456d5c54ba715f7a"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/package-validation/stdout.txt",
+        "sha256": "968923d425a965eb1a752fd07b70449ddd1165ddea2f7b22faa1af0715bddff4"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/package-validation/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_seconds": 0.217335
+    },
+    {
+      "name": "catalog",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/catalog/command.json",
+        "sha256": "ab676ad1d75523695527d914ebc7e05348f4f7e90199490db72606be43905e69"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/catalog/stdout.txt",
+        "sha256": "93666823b91742105db4cd8ff13bc001439faa964a575bd65bec9817ed282306"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/catalog/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_seconds": 0.065334
+    },
+    {
+      "name": "readme_art",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/readme-art/command.json",
+        "sha256": "e31c4ead9b77f72de7db6c63a6522f97cfd74fe7596ef376d28b6d99719a033a"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/readme-art/stdout.txt",
+        "sha256": "c86d4cbd2e5fef6c2986796a3a0976b5bc2061e04ee6fbe4b841c210a866c75a"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/readme-art/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_seconds": 0.064886
+    },
+    {
+      "name": "installer_smoke",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-installer/command.json",
+        "sha256": "1b59df04a87bac02544b00ab305477b5cf9ef9849105a1c07546d49996f8c394"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-installer/stdout.txt",
+        "sha256": "6c8f0d515261ad2b4395f47912b96f19366386a1fe52c94da80cfbbc8f91272f"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-installer/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_seconds": 1.46852
+    },
+    {
+      "name": "scenario",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-scenario-command/command.json",
+        "sha256": "c432b2b36c778e2e0c4ec2de30a96549a07ed5c0f5369e6cd18cc7ce7a310c27"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-scenario-command/stdout.txt",
+        "sha256": "b8e6eb035fd4b30c426dc40a92a4d79504a45bd81dfcba92b4c5989434276933"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-scenario-command/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_seconds": 20.347504
+    },
+    {
+      "name": "assets",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-assets-command/command.json",
+        "sha256": "d7415021ca367f78079a1f3f66278a1bc0bdd557ec8a3cd41c87ed06c8cf045b"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-assets-command/stdout.txt",
+        "sha256": "00743a4ceeeb7e721a75ed96e8cc957feadad2681354d937ba809fdcd80c0a38"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-assets-command/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_seconds": 15.829162
+    },
+    {
+      "name": "content",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-content-command/command.json",
+        "sha256": "73f0c8837e9b32316facccad513598fc64a806f28300408b3a121c542e91d5d8"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-content-command/stdout.txt",
+        "sha256": "b5caf8ece863dbba7af7e93435da7c37690fc0bb21aaef07ca3e7ac620b095b9"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-content-command/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_seconds": 19.337579
+    },
+    {
+      "name": "temporal",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-temporal-command/command.json",
+        "sha256": "e1b5a9975ef834f3e804244ff50e6ab0eb1fbbe8b6d97dfeb5f39a62862de9ad"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-temporal-command/stdout.txt",
+        "sha256": "d76e7f9fbace34de8e40c716d47442c743150b06380aebf315b72d3c5fc516ab"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-temporal-command/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_seconds": 33.275541
+    },
+    {
+      "name": "readme_preview",
+      "status": "passed",
+      "command": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-readme-preview-command/command.json",
+        "sha256": "b1c2e9e157c06ad7cc75d0b9f861bb311431b0181fc1f5dc47a2cd1a137d37b4"
+      },
+      "stdout": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-readme-preview-command/stdout.txt",
+        "sha256": "640e8f437ceac844fa0a8ba475c6c11251ac2e5e0d6c3e0f681ecdccfc2f21e9"
+      },
+      "stderr": {
+        "path": "docs/evidence/v1.20.0/session-study/engineering/commands/final-readme-preview-command/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_seconds": 9.856472
+    }
+  ],
+  "complete_raw_archive_inventory": {
+    "path": "docs/evidence/v1.20.0/session-study/engineering/original-engineering-inventory.json",
+    "sha256": "242899d09e719bad3b7baccd8287bd8bdfdc2451b9c579a8272443565b3467a2"
+  },
+  "raw_archives": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/original-engineering-part-01.zip",
+      "sha256": "15437bad3f61f566c2defaae72a52c0e0c6c9b6d216f9e5714c46bf9012eb5ab"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/original-engineering-part-02.zip",
+      "sha256": "9857062edc86f23e596fc2380481bfb0f5c56ed8072a68d1140bdea63a451d07"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/original-engineering-part-03.zip",
+      "sha256": "361c67d51ec8e226c695cc589496a83bce54b325290104845f06fb397528f063"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/original-engineering-part-04.zip",
+      "sha256": "fbc2c79cbe05dda872d0d4151038bb6341a711b17791704cfd82c7636e5d8ed3"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/original-engineering-part-05.zip",
+      "sha256": "82acc90799e32eed0d52092e26600d5be3ec26724c120ddf066d51b1eb2f08ea"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/original-engineering-part-06.zip",
+      "sha256": "e7ba400c6aba3df097eaa1a82750701b4a78c0ddb8e556302d76db7fccc51584"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/original-engineering-part-07.zip",
+      "sha256": "6687b7fb10c024e8a404762549baf33d14dffe5828a4e4cd80c72134d651845f"
+    }
+  ],
+  "visual_review": {
+    "path": "docs/evidence/v1.20.0/session-study/engineering/ROOT-VISUAL-REVIEW.json",
+    "sha256": "84d255e081ddc6bf4732da334b17781957e3678dad2c5d6981ed1dca99a09c0e"
+  },
+  "worktree_note": "Browser reports may mark the worktree dirty because a pre-existing untracked temporary capture file was retained and because evidence-only files were added. Candidate runtime/tool/test fingerprint remains frozen.",
+  "standalone_adapter": {
+    "report": {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/adapter-preflight/report.json",
+      "sha256": "a128d1590358cd700b109062b63df9df5c964610af556623fb534bee8150c3c3"
+    },
+    "scope": "Five actual archive CLI operations passed. Original coordinator harness syntax-error attempt and corrected script are both retained. No candidate source changed."
+  },
+  "archive_scope": "The seven ZIPs and original inventory preserve the initial 414-file engineering capture batch. Later evidence-packaging CI failures, focused/full reruns and coordinator checks are retained directly under engineering/ and engineering/commands; they are additional original records, not retroactive modifications of the initial archives.",
+  "packaging_followups": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/cohort-01-ci-failure-original.json",
+      "sha256": "0945619d37a581448a451ffc6970b3d6c5ec54689a9dc7be00ed4630695327ac"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/cohort-01-ci-job-log-original.json",
+      "sha256": "8b4df40c966e1f705a9679fd02a984c97ac930007ef9a4f32cda408236637469"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/cohort-02-ci-job-log-original.json",
+      "sha256": "75b85895b1dfe57880479bc5d09975215bf889aa7de83213e4615de89a95add1"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/raw-failure-source-packaging.json",
+      "sha256": "4162a4275aca782d0d24360e01f6b3d49b468379fc83e96ce4781e54ecb99af6"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/commands/cohort-01-package-failure/command.json",
+      "sha256": "75589c72437f1e975423909dc3f6f130578b667e4dc887ec8ab61ce547f5e178"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/commands/cohort-02-package-validation/command.json",
+      "sha256": "a44ee434ce5593413a64f5848a9ab9a26527e5a463add96342257b50d91a680d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/commands/cohort-02-record-consistency/command.json",
+      "sha256": "2d5444047688c2b55c2f7cb61f875c73f3d3f01b21731209180fe63e7325275b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/commands/cohort-02-raw-source-packaging-recheck/command.json",
+      "sha256": "62350deab26068da861c706f4578a1898ea25ab2e91cd40fb818f3b28b1f7461"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/commands/cohort-02-raw-source-packaging-recheck-02/command.json",
+      "sha256": "fdc24be6ea35462eff6ce574cd1e2b49f8665faa6cc40c69e1a143a4a3b04b74"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/commands/cohort-02-full-unit-recheck/command.json",
+      "sha256": "ac77929b7f999f05902cbefd0f1845ec1591158165526823912a26c7f3cf8671"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/engineering/cohort-02b-ci-success-original.json",
+      "sha256": "b7e03010d214c58e7139f2ba97ccb094dbf0de2dbb735b8ed1840ac6b4ea9c0a"
+    }
+  ]
+}

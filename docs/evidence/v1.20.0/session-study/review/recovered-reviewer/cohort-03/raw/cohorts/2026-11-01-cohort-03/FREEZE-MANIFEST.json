@@ -1,0 +1,56 @@
+{
+  "cohort": "2026-11-01-cohort-03",
+  "frozen_at_utc": "2026-11-01T11:51:04.369778+00:00",
+  "hash_algorithm": "SHA-256",
+  "condition_mapping_received": false,
+  "immutable_files": [
+    {
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/BLIND-REVIEW-COHORT-03.md",
+      "bytes": 15289,
+      "sha256": "18dc97879efa6a2a6f3fb3f13fff4c89a1d35fde51aaa9ed437ed071933f2a72"
+    },
+    {
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohort-03-judgments-input.json",
+      "bytes": 4855,
+      "sha256": "257bf4879a027d98e0c5077fef832bbf66b3f1e35a50d7ac7cad57bfd1d9fa6d"
+    },
+    {
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-03/BLIND-REVIEW.md",
+      "bytes": 15289,
+      "sha256": "18dc97879efa6a2a6f3fb3f13fff4c89a1d35fde51aaa9ed437ed071933f2a72"
+    },
+    {
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-03/products.json",
+      "bytes": 8074,
+      "sha256": "1a9e277179d82ce31ef77e0df8076b157eab71602446b967bdb05064e555fbfd"
+    },
+    {
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-03/metadata.json",
+      "bytes": 2771,
+      "sha256": "2472ea39d569953fafe84c87aedbc78babb4d5e6ec64c9eb86326e2a3f6c412b"
+    },
+    {
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-03/EVIDENCE-INDEX.json",
+      "bytes": 160782,
+      "sha256": "fc043b22fd5aebea1ca66bdab58db176e71affa752808c0e898676c68e645edf"
+    }
+  ],
+  "prior_manifests": [
+    {
+      "cohort": "2026-11-01-cohort-01",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-01/FREEZE-MANIFEST.json",
+      "sha256": "887a5940dc738e9f73d2d367454aa96c848d06e15de5ca02b615f0de89b52630"
+    },
+    {
+      "cohort": "2026-11-01-cohort-02",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/cohorts/2026-11-01-cohort-02/FREEZE-MANIFEST.json",
+      "sha256": "ba85c30226fb1eb1247fc85fbe21cdc6a0d5ee718d93494bac8e1980c506ef42"
+    }
+  ],
+  "all_prior_immutable_file_hashes_verified": true,
+  "previous_cumulative_products_sha256": "22673d8ef06164e3033fd11c9cb7a93c01b5db81aa3177eeb5a17a1fc704b49a",
+  "previous_records_preserved": true,
+  "cumulative_products_sha256_at_freeze": "f1f4f81ab500aed930ea3855ed119c2ce8c1a4d21cef0a1b1ce6f3d8268ced63",
+  "cumulative_products_note": "Historical checkpoint; this cohort's single record remains immutable here even when later products append to the cumulative file.",
+  "evidence_preservation": "The evidence index hashes retained pre-finalization raw outputs and actual image-view returns. Original captures were not changed."
+}

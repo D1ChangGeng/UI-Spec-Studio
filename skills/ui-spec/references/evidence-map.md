@@ -386,3 +386,11 @@ Keep Resource Acquisition, Resource Adoption and Craft Retention as distinct fac
 For faithful design translation, identify the complete user-supplied/confirmed design and its specified scope, then link fidelity evidence. For an original W1–W3 responsibility, preserve the concrete necessity, actual mature candidates and limits, narrow original boundary, retained source, real user authorization and verification in the same decision. Existing approval may already provide the required authority; presentation alone does not. A declaration or inspector-resolved reference cannot judge qualification or confer permission.
 
 Keep unresolved sourcing and temporary technical probes identifiable, with the next discovery, trial, adaptation or scoped decision that can change their status. When source fit changes the formal SPEC boundary, preserve the original quality obligation and its current responsible increment. These are extensions of existing current-model relationships, not a new schema, approval state machine or quality certification mechanism.
+
+## Absorb independent investigations into one current model
+
+An auxiliary investigation can span several design scales without owning a second design model. Relate its purpose and important findings to the existing objects and decisions. The main agent selects which findings become current understanding, which remain hypotheses and which stay archived candidates. Preserve the original evidence identity and limits rather than promoting a report's confidence to verified fact.
+
+Keep decision-useful synthesis near the current choice, with original sources and captured material retrievable on demand. A research report is a supporting artifact, not another authoritative product plan. Reconcile conflicts by source, observation conditions and actual product relevance. An agent identifier, readable report, completed task or new record does not establish that the resource was viewed, adopted or accepted.
+
+Do not expand the neutral structural inspector into a delegation scheduler, research-sufficiency judge or UI-quality certifier. No new agent count, candidate count, report schema or design lifecycle is required. The main agent's substantive visual review and integrated verification remain separate evidence.

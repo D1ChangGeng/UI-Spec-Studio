@@ -1,0 +1,653 @@
+{
+  "evidence_kind": "derived summary of original captured outputs, not a native tool export",
+  "matrix_cases": [
+    {
+      "case": "1440x900-light-en",
+      "result": "pass",
+      "passing_checks": 30
+    },
+    {
+      "case": "1440x900-dark-zh",
+      "result": "pass",
+      "passing_checks": 30
+    },
+    {
+      "case": "1280x600-light-en",
+      "result": "pass",
+      "passing_checks": 30
+    },
+    {
+      "case": "1280x600-dark-zh",
+      "result": "pass",
+      "passing_checks": 30
+    },
+    {
+      "case": "390x844-light-en",
+      "result": "pass",
+      "passing_checks": 30
+    },
+    {
+      "case": "390x844-dark-zh",
+      "result": "pass",
+      "passing_checks": 30
+    }
+  ],
+  "first_full_command_result": "fail",
+  "supplemental_harness_error": "Page.evaluate: TypeError: Illegal invocation\n    at Storage.setItem (eval at evaluate (:290:30), <anonymous>:1:245)\n    at UtilityScript.evaluate (<anonymous>:297:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+  "supplemental_checks_before_harness_error": [
+    {
+      "check": "older error cannot overwrite newer invalid result",
+      "pass": true
+    },
+    {
+      "check": "close during pending does not cancel save",
+      "pass": true
+    },
+    {
+      "check": "new result replaces dismissed pending feedback",
+      "pass": true
+    }
+  ],
+  "corrected_boundary_and_final_capture_result": "pass",
+  "corrected_followup_checks": [
+    {
+      "check": "actual thrown storage write preserves previous value",
+      "pass": true
+    },
+    {
+      "check": "retry after storage recovery saves exact failed snapshot",
+      "pass": true
+    },
+    {
+      "check": "newer form value survives recovered storage",
+      "pass": true
+    },
+    {
+      "check": "feedback remains beyond native default timeout",
+      "pass": true
+    },
+    {
+      "check": "1440x900-light-en keyboard close recovers save control",
+      "pass": true
+    },
+    {
+      "check": "1440x900-dark-zh keyboard close recovers save control",
+      "pass": true
+    },
+    {
+      "check": "1280x600-light-en keyboard close recovers save control",
+      "pass": true
+    },
+    {
+      "check": "1280x600-dark-zh keyboard close recovers save control",
+      "pass": true
+    },
+    {
+      "check": "390x844-light-en keyboard close recovers save control",
+      "pass": true
+    },
+    {
+      "check": "390x844-dark-zh keyboard close recovers save control",
+      "pass": true
+    },
+    {
+      "check": "all 35 protected source and asset files unchanged",
+      "pass": true
+    }
+  ],
+  "keyboard_cases": [
+    {
+      "variant": "1440x900-light-en",
+      "tab_sequence": [
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Documentation"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "License"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Source code"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Sponsor"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Tabler"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "v1.7.1"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "Customize",
+          "text": ""
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "Close save feedback",
+          "text": ""
+        },
+        {
+          "id": "retry-save",
+          "tag": "BUTTON",
+          "label": null,
+          "text": "Retry save"
+        }
+      ],
+      "retry_reached_by_tabs": true,
+      "close_reached_by_shift_tab": true,
+      "close_return": "save-settings",
+      "invalid": {
+        "focus": "business-name",
+        "field": {
+          "x": 418.5,
+          "y": 430,
+          "bottom": 470,
+          "right": 716
+        },
+        "toast": {
+          "x": 1074,
+          "y": 16,
+          "bottom": 103.5,
+          "right": 1424
+        },
+        "message": "Check profile fields: Display name.",
+        "scrollY": 81
+      },
+      "result": "pass"
+    },
+    {
+      "variant": "1440x900-dark-zh",
+      "tab_sequence": [
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Documentation"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "License"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Source code"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Sponsor"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Tabler"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "v1.7.1"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "Customize",
+          "text": ""
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "关闭保存提示",
+          "text": ""
+        },
+        {
+          "id": "retry-save",
+          "tag": "BUTTON",
+          "label": null,
+          "text": "重试保存"
+        }
+      ],
+      "retry_reached_by_tabs": true,
+      "close_reached_by_shift_tab": true,
+      "close_return": "save-settings",
+      "invalid": {
+        "focus": "business-name",
+        "field": {
+          "x": 418.5,
+          "y": 430,
+          "bottom": 470,
+          "right": 716
+        },
+        "toast": {
+          "x": 1074,
+          "y": 16,
+          "bottom": 103.5,
+          "right": 1424
+        },
+        "message": "请检查个人资料字段：显示名称。",
+        "scrollY": 81
+      },
+      "result": "pass"
+    },
+    {
+      "variant": "1280x600-light-en",
+      "tab_sequence": [
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Documentation"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "License"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Source code"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Sponsor"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Tabler"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "v1.7.1"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "Customize",
+          "text": ""
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "Close save feedback",
+          "text": ""
+        },
+        {
+          "id": "retry-save",
+          "tag": "BUTTON",
+          "label": null,
+          "text": "Retry save"
+        }
+      ],
+      "retry_reached_by_tabs": true,
+      "close_reached_by_shift_tab": true,
+      "close_return": "save-settings",
+      "invalid": {
+        "focus": "business-name",
+        "field": {
+          "x": 383.5,
+          "y": 280,
+          "bottom": 320,
+          "right": 636
+        },
+        "toast": {
+          "x": 914,
+          "y": 16,
+          "bottom": 103.5,
+          "right": 1264
+        },
+        "message": "Check profile fields: Display name.",
+        "scrollY": 231
+      },
+      "result": "pass"
+    },
+    {
+      "variant": "1280x600-dark-zh",
+      "tab_sequence": [
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Documentation"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "License"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Source code"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Sponsor"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Tabler"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "v1.7.1"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "Customize",
+          "text": ""
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "关闭保存提示",
+          "text": ""
+        },
+        {
+          "id": "retry-save",
+          "tag": "BUTTON",
+          "label": null,
+          "text": "重试保存"
+        }
+      ],
+      "retry_reached_by_tabs": true,
+      "close_reached_by_shift_tab": true,
+      "close_return": "save-settings",
+      "invalid": {
+        "focus": "business-name",
+        "field": {
+          "x": 383.5,
+          "y": 280,
+          "bottom": 320,
+          "right": 636
+        },
+        "toast": {
+          "x": 914,
+          "y": 16,
+          "bottom": 103.5,
+          "right": 1264
+        },
+        "message": "请检查个人资料字段：显示名称。",
+        "scrollY": 231
+      },
+      "result": "pass"
+    },
+    {
+      "variant": "390x844-light-en",
+      "tab_sequence": [
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Documentation"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "License"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Source code"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Sponsor"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Tabler"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "v1.7.1"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "Customize",
+          "text": ""
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "Close save feedback",
+          "text": ""
+        },
+        {
+          "id": "retry-save",
+          "tag": "BUTTON",
+          "label": null,
+          "text": "Retry save"
+        }
+      ],
+      "retry_reached_by_tabs": true,
+      "close_reached_by_shift_tab": true,
+      "close_return": "save-settings",
+      "invalid": {
+        "focus": "business-name",
+        "field": {
+          "x": 29,
+          "y": 402,
+          "bottom": 442,
+          "right": 361
+        },
+        "toast": {
+          "x": 24,
+          "y": 16,
+          "bottom": 103.5,
+          "right": 374
+        },
+        "message": "Check profile fields: Display name.",
+        "scrollY": 517
+      },
+      "result": "pass"
+    },
+    {
+      "variant": "390x844-dark-zh",
+      "tab_sequence": [
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Documentation"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "License"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Source code"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Sponsor"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "Tabler"
+        },
+        {
+          "id": "",
+          "tag": "A",
+          "label": null,
+          "text": "v1.7.1"
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "Customize",
+          "text": ""
+        },
+        {
+          "id": "",
+          "tag": "BUTTON",
+          "label": "关闭保存提示",
+          "text": ""
+        },
+        {
+          "id": "retry-save",
+          "tag": "BUTTON",
+          "label": null,
+          "text": "重试保存"
+        }
+      ],
+      "retry_reached_by_tabs": true,
+      "close_reached_by_shift_tab": true,
+      "close_return": "save-settings",
+      "invalid": {
+        "focus": "business-name",
+        "field": {
+          "x": 29,
+          "y": 402,
+          "bottom": 442,
+          "right": 361
+        },
+        "toast": {
+          "x": 24,
+          "y": 16,
+          "bottom": 103.5,
+          "right": 374
+        },
+        "message": "请检查个人资料字段：显示名称。",
+        "scrollY": 477
+      },
+      "result": "pass"
+    }
+  ],
+  "source_identity_checks": [
+    {
+      "file": "sources/official-settings-snapshot.html",
+      "expected_sha256": "ed80162e38d7667bfe020b5d16d228c4adc64f301233cfbeeeae6f606697a06e",
+      "actual_sha256": "ed80162e38d7667bfe020b5d16d228c4adc64f301233cfbeeeae6f606697a06e",
+      "match": true
+    },
+    {
+      "file": "sources/official-toasts-snapshot.html",
+      "expected_sha256": "c5d0c06e11c2990ef70e5502cc72c2a2a8f6d13af25ac08d64a9859fe93c5e5d",
+      "actual_sha256": "c5d0c06e11c2990ef70e5502cc72c2a2a8f6d13af25ac08d64a9859fe93c5e5d",
+      "match": true
+    },
+    {
+      "file": "sources/tabler-toast-cookies.html",
+      "expected_sha256": "767fe7aaddd46979d9f2748c1488063902086109962051881aeae94ad04dc75a",
+      "actual_sha256": "767fe7aaddd46979d9f2748c1488063902086109962051881aeae94ad04dc75a",
+      "match": true
+    }
+  ],
+  "product_changes": [
+    {
+      "file": "app/index.html",
+      "added_lines": 19,
+      "removed_lines": 1,
+      "final_sha256": "a9dbf718a903b31fa75c3cfcec0c1b63bf43d51be7c46cf9d67192ac565a7a01"
+    },
+    {
+      "file": "app/settings-controller.js",
+      "added_lines": 68,
+      "removed_lines": 4,
+      "final_sha256": "76a8d1c1c2e8d9c809b5879c90715955482d461305bdf1389dfce91ec799c608"
+    },
+    {
+      "file": "app/save-notification.js",
+      "added_lines": 69,
+      "removed_lines": 0,
+      "final_sha256": "3090be2fb610bca7b3ae4d8593d565dd39feb867fc70ae81f52b093bf0b0f1a2"
+    }
+  ],
+  "new_dependencies": 0,
+  "new_custom_css_rules": 0,
+  "delegated_package_children": 0,
+  "backend_identity": null,
+  "token_count": null,
+  "billed_cost": null,
+  "comparison_limit": "No other work package or agent result was inspected. No comparative productivity or cost claim is made.",
+  "final_read_only_integrity": {
+    "checked": 35,
+    "unchanged": true
+  },
+  "syntax_checks": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "app/settings-controller.js"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "app/save-notification.js"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

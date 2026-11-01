@@ -1,0 +1,73 @@
+{
+  "cell_id": "T3-B-r1",
+  "agent_id": "/root/product_10_cont",
+  "preview_command": "Reconstruct the retained workspace, then run cd app && PORT=4410 ./start.sh. Node 20 or newer; the bundled TiddlyWiki distribution is retained. Use native palette controls for Notebook Beige/Dark. The server source is final; the offline export predates the last font/control adjustments and needs a fresh build.",
+  "capture_conditions": "Pinned Chrome headless shell 143.0.7499.4 and Playwright 1.57.0, supplied Noto CJK font, DPR 1. Actual reading/editing captures at 1440x900,1280x640,390x844; Notebook Beige and Dark with original bilingual notes. Programmatic focus placement preceded keyboard activation tests. Video captured but not played back.",
+  "capture_lineage": "final-reviewed-v2 contains eighteen actual final-source captures with palette popover dismissed. Earlier final/trial images, failed capture attempts, prior style iterations and video remain in the complete snapshot. Six final images were initially displayed but their combined raw tool-return save hung; a separately labeled post-boundary re-observation preserves fresh actual returns for the unchanged PNGs, not reconstructed lost returns.",
+  "final_capture_prefixes": [
+    "evidence/final-reviewed-v2"
+  ],
+  "primary_view_globs": [
+    "evidence/**/view*.json",
+    "evidence/**/reobservation*.json",
+    "evidence/post-boundary-observation/*.json"
+  ],
+  "behavior_log_globs": [
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt"
+  ],
+  "direct_source_files": [],
+  "additional_tool_exports": [
+    "evidence/baseline-current/view-001.json",
+    "evidence/research/parent-view-notebook.json",
+    "evidence/research/parent-view-tufte.json",
+    "evidence/research/parent-view-captivate.json"
+  ],
+  "report_files": [
+    "DESIGN-DECISIONS.md",
+    "VISUAL-REVIEW.md",
+    "DELEGATION.json",
+    "evidence/final/verification.json",
+    "evidence/integrity.json",
+    "evidence/research/FINAL.md",
+    "evidence/research/VISUAL-REVIEW.md",
+    "evidence/coordination/interrupted-view-export.json",
+    "evidence/post-boundary-observation/manifest.json"
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_10_cont/research",
+      "role": "generic",
+      "prompt_repository_path": "docs/evidence/v1.20.0/session-study/coordination/T3-B-r1-child-dispatched-prompt.txt",
+      "spawn": "DELEGATION.json",
+      "completion": "evidence/coordination/child-final-notification.json",
+      "completion_source": "collaboration FINAL_ANSWER notification faithfully exported by primary participant from retained conversation",
+      "result": "evidence/research/FINAL.md",
+      "command_globs": [
+        "evidence/research/commands/*/command.json",
+        "evidence/research/commands/*/stdout.txt",
+        "evidence/research/commands/*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/research/search-001.json",
+        "evidence/research/open-002.json",
+        "evidence/research/search-003.json",
+        "evidence/research/open-004.json",
+        "evidence/research/view-notebook-1440.json",
+        "evidence/research/view-notebook-390.json",
+        "evidence/research/view-tufte-1440.json",
+        "evidence/research/view-captivate-1440.json"
+      ]
+    }
+  ],
+  "audit_observations": [
+    "One fresh generic research child performed original source retrieval and viewing. Parent retained product choice and all source changes, inspected Notebook/Tufte/Captivate, adopted Notebook 1.4.1 MIT and made bounded compatibility/configuration changes.",
+    "The actual child request string exported in DELEGATION.json is 1084 UTF-8 bytes, omitting only the last LF of the 1085-byte frozen RESEARCH-PROMPT.md and participant dispatched-prompt file. Both originals and the actual exported request are retained; no hidden normalization is claimed.",
+    "Primary reports 25 passing scoped behavior assertions and no page errors; source integrity checked 8823 vendor files and all eight original note bodies. These engineering results do not establish product acceptance.",
+    "Host write/export hang interrupted the primary after six final PNGs had been displayed. No source changes or new app tests were requested during evidence handoff. Lost original view-return bytes are explicitly unavailable; any later image-tool results are fresh post-boundary observations.",
+    "Substantive source work stopped before handoff. The coordination interval includes the stalled export, interruption, recovery messages, report preparation and later image re-observation. It is not a comparable native execution duration.",
+    "The final server source is retained. Offline build predates final font/utility-color changes; source UI and offline export are not falsely equated."
+  ],
+  "limitations": "One unrandomized shared-host execution. Actual final-product primary inspection is partial; some final variants were captured but not personally viewed before handoff. Original combined six-image return export was lost after a host write hang, retained PNGs are intact, and post-boundary image evidence is separately dated. Core checks used programmatic focus setup; uninterrupted keyboard traversal, screen reader, real mobile keyboard, error/retry, other engines and natural-time playback remain unverified. Notebook upstream is archived; local compatibility patches need maintenance. Child request omits final LF. Resolved native model/role identity, tokens, billing and context metrics unavailable."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "curl",
+    "--fail",
+    "--location",
+    "--max-time",
+    "45",
+    "https://burningtreec.github.io/vanilla-paper/",
+    "--output",
+    "evidence/sources/paper-demo.html"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-01T11:33:43.568964+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T11:33:43.884390+00:00",
+  "wall_seconds": 0.315435,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr.txt": {
+      "bytes": 317,
+      "sha256": "e4e4ab771aea31fd998cb47ac161c2267b638ad4d460aaccff8f6802195bbd8e"
+    }
+  }
+}

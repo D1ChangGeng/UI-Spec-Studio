@@ -1,0 +1,14 @@
+{
+  "tool": "exec_command",
+  "arguments": {
+    "cmd": "cat /workspace/scratch/5499118f5564/ui-study/independent-review/capture_command.py",
+    "max_output_tokens": 5000
+  },
+  "result": {
+    "chunk_id": "b6e19c",
+    "wall_time_seconds": 0.000034512,
+    "exit_code": 0,
+    "original_token_count": 586,
+    "output": "#!/usr/bin/env python3\n\"\"\"Retain actual command stdout/stderr for the session study, without environment dumps.\"\"\"\nimport argparse\nimport datetime\nimport hashlib\nimport json\nfrom pathlib import Path\nimport subprocess\nimport sys\nimport time\n\ndef main():\n    parser=argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('--output',required=True)\n    parser.add_argument('--cwd',required=True)\n    parser.add_argument('--timeout',type=int,default=600)\n    parser.add_argument('command',nargs=argparse.REMAINDER)\n    args=parser.parse_args()\n    command=args.command[1:] if args.command[:1]==['--'] else args.command\n    if not command:parser.error('command required')\n    output=Path(args.output);output.mkdir(parents=True,exist_ok=False)\n    start=datetime.datetime.now(datetime.timezone.utc).isoformat();clock=time.monotonic()\n    metadata={'schema_version':1,'evidence_kind':'original_subprocess_capture','command':command,'cwd':args.cwd,'started_at':start,'timeout_seconds':args.timeout,'environment':'inherited; values not exported'}\n    with (output/'stdout.txt').open('wb') as out,(output/'stderr.txt').open('wb') as err:\n        try:\n            result=subprocess.run(command,cwd=args.cwd,stdout=out,stderr=err,timeout=args.timeout,check=False)\n            metadata.update(status='completed',returncode=result.returncode)\n        except subprocess.TimeoutExpired:\n            metadata.update(status='timed_out',returncode=124)\n        except OSError as exc:\n            err.write(str(exc).encode());metadata.update(status='failed_to_start',returncode=127)\n    metadata.update(ended_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),wall_seconds=round(time.monotonic()-clock,6))\n    metadata['artifacts']={name:{'bytes':(output/name).stat().st_size,'sha256':hashlib.sha256((output/name).read_bytes()).hexdigest()} for name in ('stdout.txt','stderr.txt')}\n    (output/'command.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\\n')\n    for name,stream in [('stdout.txt',sys.stdout.buffer),('stderr.txt',sys.stderr.buffer)]:\n        stream.write((output/name).read_bytes());stream.flush()\n    print(json.dumps({'capture':str(output),'returncode':metadata['returncode'],'wall_seconds':metadata['wall_seconds']}))\n    return metadata['returncode']\n\nif __name__=='__main__':raise SystemExit(main())\n"
+  }
+}

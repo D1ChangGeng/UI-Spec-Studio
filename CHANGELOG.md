@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.20.0 — 2026-11-01
+
+- Add main-agent-led adaptive research, curated evidence and bounded mature-source integration.
+- Make all four Codex roles available by default after one explicit installation action; invoke them adaptively, with ownership-aware installation and separate host/model policy.
+- Preserve all eight-reference, source-boundary, adaptive-SPEC and neutral-inspector contracts.
+- Preserve historical runtime identities through exact inverse recovery.
+- Retain sixteen original registered products and two separately retained path-corrected replacements, real independent child work, immutable anonymous reviews and scoped final-runtime acceptance. Preserve original outputs, failed attempts and complete reconstruction.
+- Publish under the owner-authorized independent-session acceptance route. Native Cloud/role/model/usage and generalized improvement claims remain unverified.
+
 ## 1.19.0 — 2026-10-30
 
 - Establish default-deny original UI construction across all visible design responsibilities, with mature external/project foundations and closed, actually authorized W1–W3 exceptions.

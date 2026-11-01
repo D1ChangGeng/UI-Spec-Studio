@@ -1,0 +1,76 @@
+{
+  "cell_id": "T2-D-r1",
+  "agent_id": "/root/product_13_recovered",
+  "source_workspace_aliases": [
+    "/workspace/scratch/e1cfe6e447ee/ui-study/active-worksets/w13"
+  ],
+  "preview_command": "From the reconstructed workspace: python3 -m http.server 4413 --bind 127.0.0.1 --directory app/dist; open /?theme=light&lang=en or /?theme=dark&lang=zh. Rebuild using npm ci and npm run build in app with the retained exact lockfile.",
+  "capture_conditions": "Chromium headless shell 143.0.7499.4 / Playwright 1.57.0, sandbox enabled under the existing oai identity, DPR 1 and supplied Noto CJK. Final six-condition static matrix: 1440x900, 1280x600, 390x844 in light/English and dark/Chinese, plus two controlled compact-height episodes. Final captures remove Chromium's default hide-scrollbars flag; baseline captures used its default.",
+  "final_capture_prefixes": [
+    "evidence/final-003"
+  ],
+  "primary_view_globs": [],
+  "primary_return_views": [
+    {
+      "export": "evidence/view-013.json",
+      "screenshot": "evidence/final-003/light-en-1280x600-draft-attachments.png"
+    },
+    {
+      "export": "evidence/view-014.json",
+      "screenshot": "evidence/final-003/dark-zh-390x844-filename-dialog.png"
+    },
+    {
+      "export": "evidence/view-015.json",
+      "screenshot": "evidence/final-003/episode-dark-zh-return-latest.png"
+    }
+  ],
+  "behavior_log_globs": [
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt",
+    "evidence/final-003/results.json",
+    "evidence/WORK-TIMING.json",
+    "evidence/protected-final.json"
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_13_recovered/research_w13",
+      "role": "ui_researcher",
+      "prompt": "evidence/coordination/research-prompt-exact.txt",
+      "spawn": "evidence/coordination/spawn-result-002.json",
+      "completion_repository_path": "docs/evidence/v1.20.0/session-study/coordination/recovery-0830/T2-D-child-completion-original.json",
+      "completion_source": "collaboration.list_agents actual completed-child row",
+      "result": "evidence/research/REPORT.md",
+      "command_globs": [],
+      "tool_exports": [
+        "evidence/research/view-six.json",
+        "evidence/research/public-sources.json"
+      ]
+    }
+  ],
+  "additional_tool_exports": [
+    "evidence/coordination/actual-spawn-arguments-001.json",
+    "evidence/coordination/actual-spawn-arguments-002.json",
+    "evidence/server-stop-tool.json"
+  ],
+  "audit_observations": [
+    "The fresh primary and one requested gpt-6.1-terra researcher completed. The first child dispatch encountered actual shared capacity exhaustion; the second returned the retained canonical ID. Waiting included ongoing primary work. Resolved backend identity remains unavailable.",
+    "All 423 workspace files reconstructed from four registered input archives and three immutable overlay archives. Frozen method and role instructions are unchanged. The supplied synthetic responder and lockfile hashes remain protected.",
+    "The primary reports 59 of 59 final assertions, 36 final PNGs, two episode videos and two traces, with no page errors. Production build and TypeScript checks passed. Earlier failed browser attempts and the source-supported Stop repair remain in the complete originals.",
+    "The final viewed-image index uses only original returns 013, 014 and 015. Each original image_url payload is byte-identical to its retained PNG. These originals contain the returned object but omit request arguments; no request has been synthesized. Views 010–012 remain archived but are not counted because their conversation display exceeded output limits.",
+    "The actual researcher prompt omitted only the terminal newline from the frozen file; both the exact file copy and actual tool-argument strings are retained rather than described as byte-identical.",
+    "Primary recorded substantive close at 11:22:04 UTC, 1,750 seconds after registered request preparation at 10:52:54 UTC, within the unchanged bound. Coordinator export latency is separate."
+  ],
+  "limitations": "Shared host/instructional isolation and cache/capacity timing limit controlled comparison. Requested alternate child model is known but resolved model, native role binding, tokens and cost are unavailable. Public browser demos failed TLS validation and verified retrieval also returned 403; no bypass was used. Alternative implementations have primary-source research but no actual comparative visual trial. Physical keyboard/IME, native touch, screen-reader use, other engines and natural-speed recording playback remain unverified. Task localization is bounded; source-family bundle advisory remains. Independent acceptance is separate from primary checks.",
+  "capture_lineage": "Only final-003 captures identify final delivery. Earlier baseline, trial, final-001/final-002 failures and repairs are retained in full original archives. Three final image-tool return objects are indexed by exact PNG payload identity; truncated-display batch 010–012 is explicitly excluded.",
+  "report_files": [
+    "FINAL.md",
+    "VISUAL-REVIEW.md",
+    "ADOPTION.md",
+    "SPEC.md",
+    "DELEGATION.json",
+    "evidence/research/REPORT.md",
+    "evidence/WORK-TIMING.json",
+    "evidence/protected-final.json"
+  ]
+}

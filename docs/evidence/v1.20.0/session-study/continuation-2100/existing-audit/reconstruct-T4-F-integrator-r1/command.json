@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/c0a45b688c5b/UI-Spec-Studio-release/docs/evidence/v1.20.0/session-study/support/continuation/replay_snapshot.py",
+    "--repo",
+    "/workspace/scratch/c0a45b688c5b/UI-Spec-Studio-release",
+    "--cell",
+    "T4-F-integrator-r1",
+    "--snapshot-directory",
+    "/workspace/scratch/c0a45b688c5b/UI-Spec-Studio-release/docs/evidence/v1.20.0/session-study/runs/T4-F-integrator-r1",
+    "--output",
+    "/tmp/ui-study-history-replay-wb2102l5/T4-F-integrator-r1"
+  ],
+  "cwd": "/workspace/scratch/c0a45b688c5b/UI-Spec-Studio-release",
+  "started_at": "2026-11-01T12:53:41.274948+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T12:53:41.589687+00:00",
+  "wall_seconds": 0.314744,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 330,
+      "sha256": "604d3ba471fb88fd14e39b7e48d75a2a0368d12125b005df3852c107e0e29270"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

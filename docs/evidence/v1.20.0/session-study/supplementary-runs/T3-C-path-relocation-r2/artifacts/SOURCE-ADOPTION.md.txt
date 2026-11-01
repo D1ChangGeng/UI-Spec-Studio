@@ -1,0 +1,11 @@
+# Source adoption and maintenance
+
+Application: TiddlyWiki 5.4.1, upstream revision `d391595836e2aead565480763f9bf9eb52e29e75`; supplied vendor distribution is unchanged. Existing licenses/notices and PROVENANCE.json retained. Native tiddlyweb and filesystem remain the sole authoritative persistence path.
+
+Visual foundation: Simon Huber / BurningTreeC, Vanilla Paper 0.10.0, https://github.com/BurningTreeC/vanilla-paper at `031a78d4d4187128c632f8a647fa05408eddc700`. MIT license retained in source repository and `app/wiki/themes/vanilla-paper/LICENSE`. Source demo https://burningtreec.github.io/vanilla-paper/ was actually captured and viewed; product was tested independently on 5.4.1. All 55 source theme files are installed, with one line of CSS changed to correct the reduced-motion override. Hashes and exact diff are in evidence/adoption-manifest.json and evidence/paper-reduced-motion.patch.
+
+Retained responsibilities: whole layout, bounded reading sheet, warm Day/Night palette systems, serif/sans/monospace type roles, margin and editor ruling, native action styling, responsive layout, sidebar motion, focus/state styles and optional plugin compatibility styles. Source templates retain upstream identities. Supported configuration enables permanently visible tiddler actions. No original UI exception, new image, font payload, JavaScript animation engine or remote service was introduced.
+
+Compared but not adopted: Nicolas Petton Notebook 1.4.1 and notebook-mobile 1.0.0, MIT, commit `465c832c885894ee3c97be76449cc524e1252eb0`; Tufte CSS article system, MIT; native Starlight and Centralised. Complete research provenance, author limitations, actual captures and trial evidence are in evidence/research/RESEARCH-REPORT.md.
+
+Maintenance: keep the reduced-motion declaration repair when updating Paper, or remove it only when upstream resolves the cascade. Recheck theme and native core compatibility on updates, particularly narrow editing, sidebar state, focus, palettes and filesystem persistence. The 357,280-byte source size is an uncompressed source-tree measurement, not a measured network or runtime memory budget. No new packaged fonts/images are required. Physical-device performance is unmeasured.

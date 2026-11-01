@@ -1,0 +1,28 @@
+# Fieldnotes settings — one coherent settings increment
+
+## Goal and boundary
+The current product is the supplied Tabler settings page with browser-local persistence. This single increment owns profile, notification and privacy editing; real validation, pending, failure, retry, cancel and return; English/Chinese; light/dark; desktop, compact height and narrow reflow. The existing Tabler page, card, typography, navigation, form and theme family remains the foundation. Gallery routes are source context and outside this product contract. No original visual construction or W1–W3 exception is used.
+
+## Questions, evidence and decisions
+- **Page and task continuity (L0–L2):** the starter capture shows clear inherited card/sidebar grouping, but the mobile settings menu consumes most of the first viewport. Retain the same navigation and apply Tabler's existing collapse pattern on narrow screens. Retain document scrolling for short heights; do not introduce a new fixed workspace.
+- **Profile content and type (L3–L4):** the initial 1440×900 capture truncates ordinary organization content in the three-column field row. Recompose the existing grid with wider fields. Use Tabler form-control textareas where name/organization need wrapping, keeping values editable and using source type/surface rules. Move fixture language/theme buttons to the existing page-header action row so profile identity and preview settings have distinct roles.
+- **Save state (L1, L3, L5):** `settings-store.js` is authoritative and remains unchanged. The starter's status text cannot associate errors with fields or explain newer edits after a pending snapshot. Use the retained Tabler Alert and form validation classes; bind messages to store events. Keep fields editable during pending, prevent duplicate submission, and distinguish the committed snapshot from subsequent edits. Cancel reloads the last saved value and is disabled during pending because the store has no cancellation operation.
+- **Language and themes:** keep Tabler semantic colors and theme implementation. Switch language in place to retain draft, focus and failure-fixture state. Translate core controls, hints, validation and status messages. Preserve entered values.
+
+## Source relationships and alternatives
+The authoritative source identities are `SOURCE-MANIFEST.json`, `sources/official-settings-snapshot.html`, `sources/preview/pages/settings.astro`, `sources/shared/layouts/SettingsLayout.astro`, `sources/shared/ui/Alert.astro`, and `sources/shared/ui/form/Check.astro`. Tabler 1.7.1 CSS/JS and MIT notice stay intact. Existing snapshot is the full-page adoption source; component source and current official docs support class composition. A toast was considered, but inline feedback beside Save stays in the task reading path and remains available for recovery. A replacement design system is unnecessary and outside authorization.
+
+Current official docs were retrieved in `evidence/tabler-research-001.json`. Modern-web-guidance search and full forms guide are captured under `evidence/commands/001-guidance-search` and `002-guidance-forms`. Use semantic form submission, explicit labels, field descriptions, required indicators, useful live feedback and submit-time errors. Browser-local storage is the real boundary; server fallback and service security guidance do not apply. Retain mature Tabler sizing rather than introduce an unrelated CSS recipe.
+
+## Evidence status and next action
+Initial application images were actually opened via view_image. The first original-source route attempt returned 404 because its interception omitted the query; preserve that failed image and correct the capture. Next: implement the supported composition/state adapter, inspect integrated renders, exercise delayed snapshot edits, failure/retry, keyboard and return, then record observed limits. Static views alone will not establish continuous pacing or assistive-technology behavior.
+
+## Final resolved decisions and evidence
+
+The integrated scope is complete at the declared browser-local boundary. `evidence/final-r2/verification.json` contains the full 12-condition matrix and four keyboard journeys (141 passing assertions). `evidence/final-r4/verification.json` contains the final affected-state checks (28 passing assertions), and `evidence/final-concurrency/verification.json` repeats snapshot/edit separation and Cancel in all four theme/locale variants on the delivered controller revision.
+
+The first full verification exposed loss of keyboard focus after disabling Save. Focus restoration now follows the result only when the user has not moved elsewhere. The visual review also exposed weak colored alert text and validation-icon reflow; Tabler emphasis utilities and a focused content-height adapter resolved those gaps. The native loading button now retains its label footprint while its spinner is shown. Original failure evidence remains in place.
+
+The important source relationships survived adaptation: page/card split, source surfaces, input typography/material, switches, focus family, themes, footer actions and status palette. The source's narrow gallery customizer is hidden with supported responsive classes because it overlapped the form. In-place locale changes preserve the live draft and failure fixture. No new design family or original visual exception was needed.
+
+Current limits and exactly viewed evidence are in `VISUAL-REVIEW.md`; actual source ownership is in `SOURCES.md`. Primary neutral layout images from r2 remain relevant after the state-only refinements; final affected states were recaptured. No claim of user approval, screen-reader validation, physical-device behavior or video playback is made.

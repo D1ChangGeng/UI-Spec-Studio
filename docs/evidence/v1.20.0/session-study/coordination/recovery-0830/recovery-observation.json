@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "coordinator recovery observation, not reconstructed missing evidence",
+  "observed_at": "2026-11-01 08:33:43 UTC",
+  "verified_remote_head": "89cf94495dc1300dbb21c3f93e5972a2c67ab020",
+  "unpublished_local_head": "521dd85d77a64b1f78691a790173697e4d47a6c6",
+  "unpublished_local_tree": "7a17eefe3876514d9c0011819bc2caaa7587968e",
+  "unpublished_manifest_files": 930,
+  "surviving_uploaded_blobs": [
+    {
+      "sha": "a76186a002153705f8f190952090f82fff499920",
+      "bytes": 251804,
+      "paths": [
+        "docs/evidence/v1.20.0/session-study/engineering/takeover-main-views/T3-C-desktop-reading.json"
+      ]
+    },
+    {
+      "sha": "0987a96b3a9de9d3bdfd5ad03425b08f09f0723d",
+      "bytes": 1364703,
+      "paths": [
+        "docs/evidence/v1.20.0/session-study/coordination/blind-materials-P15.json"
+      ]
+    },
+    {
+      "sha": "fa70db8d3af037600124ffe434271d82a45465ee",
+      "bytes": 1097625,
+      "paths": [
+        "docs/evidence/v1.20.0/session-study/historical-recovery/UI-Spec-Studio-v1.20.0-experiment-event-records.zip"
+      ]
+    }
+  ],
+  "failed_upload_count": 291,
+  "observations": [
+    "Old registered worksets and local repository bytes are not available in the resumed executor. Existing scratch roots were empty at direct observation.",
+    "The remote PR remains open/draft at the eight-product checkpoint; GitHub returned 404 for Release v1.20.0.",
+    "Three orphan blobs from the interrupted upload were created successfully with exact expected Git object hashes; the remaining 291 blob reads failed and no checkpoint tree/commit/ref was created.",
+    "Primary and reviewer FINAL_ANSWER messages survived, but missing source/capture/tool bytes must not be reconstructed from those descriptions or counted as complete raw evidence."
+  ],
+  "next_action": "Restore verified remote inputs and evidence, preserve surviving exact blobs and failure metadata, recover provider originals if available, and re-execute missing cells as explicitly new attempts."
+}

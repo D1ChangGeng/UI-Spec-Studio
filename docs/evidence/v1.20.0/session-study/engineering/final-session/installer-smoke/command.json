@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python3",
+    "tools/install_smoke.py",
+    "--source",
+    "/workspace/scratch/c0a45b688c5b/UI-Spec-Studio-release"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-01T12:45:00.675169+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T12:45:02.501567+00:00",
+  "wall_seconds": 1.826407,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 1600,
+      "sha256": "206783370491525ec4826c8c9a91f931fd2692d4dcc32c71db0f603fdb64d093"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

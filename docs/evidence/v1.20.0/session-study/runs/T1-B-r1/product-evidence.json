@@ -1,0 +1,995 @@
+{
+  "schema_version": 1,
+  "cell_id": "T1-B-r1",
+  "preview_command": "Reconstruct the retained workspace with support/replay_snapshot.py, then run python3 -m http.server 4402 --bind 127.0.0.1 --directory app. Use ?theme=light&lang=en, ?theme=dark&lang=zh, and &fail=once for the declared local fault fixture.",
+  "capture_conditions": "Playwright 1.57.0, Chrome headless shell 143.0.7499.4, recorded Noto CJK font, DPR 1; 1440x900, 1280x600 and 390x844, both themes and English/Chinese. Real 750 ms local settings delay. Controlled sampled states; no natural-time playback or physical-device claim.",
+  "source_files": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/T1-input.zip",
+      "sha256": "97b35af50c6c23812ed8adca5f63db5a2a4bfba6029b3be1722653eb546d44b6"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/method-v1.19.0.zip",
+      "sha256": "7f4ef6628f0316c32ed06c0437127d31cb3563b825b9b0c5410e30f47978addd"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/inputs/T1-B-r1-instructions.zip",
+      "sha256": "61ae68afb4ffae9397d65deb471becbb9177ec66ccca603d642ab6e3295aa931"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/workspace-overlay-part-01.zip",
+      "sha256": "36c6143cdd8eee6293d51c1da1e4296ad523c72f75a7a5a74b9cf5d8cd55a668"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/workspace-overlay-part-02.zip",
+      "sha256": "47c73a32957cd47bb24c208b4046368854ec229636bbc20e15f85744199009be"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/workspace-overlay-part-03.zip",
+      "sha256": "de13aa68e91396034d93e166c8f9982ff49de17ef005ebee0dc2f616b659d724"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/workspace-overlay-part-04.zip",
+      "sha256": "f30a331110dbb308b184fad02388e5eaa41abb5bf2cfe2e887d014854d10b19d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/snapshot.json",
+      "sha256": "dad0892c1c137f7c66b769b568de0cc15e638176fe20d1e564c348c82d16cfa1"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/app/index.html",
+      "sha256": "cf4eb37e86d59478c60aa274cb2fd787a6402e16145caf1bbbe79f6480ab5ade"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/app/settings-controller.js",
+      "sha256": "031fc7fa568c0c85bd45f8f0626d0959c62556c49a81fb6d028810400cafe02a"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/app/settings-store.js",
+      "sha256": "32139de23b4ad411c402620e84d5592f7ccfbcf68cece1a123946c29b63c2da0"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-en/failed.png",
+      "sha256": "d0c12ba1d2a792a43a591c305feb491a325a1838227ea07d062179ecf0223ff4"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-en/initial.png",
+      "sha256": "b569f3698eb136400b552b1353f5175ae1d4bf6843e213664ba9ad6dba3fdf65"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-en/invalid-focus.png",
+      "sha256": "ec737148058f230f02fc0021c8643412330a25b908f675e44423d2be860858dd"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-en/long-content.png",
+      "sha256": "459da1cb2fb4af46edf3c16f07493627d988ca266c60e297f9aa52d5c3b25df5"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-en/pending.png",
+      "sha256": "2390bdd8a6d6e1467d0fb60c0381367ede0dfe151ecf00992448b10378085cb8"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-en/success.png",
+      "sha256": "75b4b58d3cad13ad86b3f4c18da3efe5c4f25cd3cb4795fefe82be5858cb36d7"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-zh/failed.png",
+      "sha256": "c8a91c1f7e230dfd4b8d5c3c9b86bd9bbbb24fef272c8a815c01b61bad6a0a26"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-zh/initial.png",
+      "sha256": "309d09d906a8e068686e8d6d004f380447a756d29029646d9b9b9300554c060e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-zh/invalid-focus.png",
+      "sha256": "22863f44b31f53c20541548f5d9b3782b62f850a7b388b86c11b39bf25ec3bf7"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-zh/long-content.png",
+      "sha256": "85569b88a1039336d0b831912a70a35929fe96d294927194d5f3826d386a6673"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-zh/pending.png",
+      "sha256": "7189dfb9457155f60640f304057bfebefd681fb30a159ecc7f052044715c2e61"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-zh/success.png",
+      "sha256": "2ac9df8528bd4bb205e8c6e70de0655afa936c07581c4fd6b921d0ef6ea68a46"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-en/failed.png",
+      "sha256": "4c7c94151c884f56234086de1c024d31856c8f1f9639c92e7e04743e3ffef0ed"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-en/initial.png",
+      "sha256": "ee2da14399e61faaa9d9ab37deb4bf2f0c3dbef10cc62d2b9675f6754399eba0"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-en/invalid-focus.png",
+      "sha256": "02bd2b4a4c0b22f01cfffdf358aa6b40f5772a211b4901598a595d0dff87fe86"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-en/long-content.png",
+      "sha256": "c2df651aaf77d0e9a7128ba8c7cbe57b22e72e5a3f995e10fed15e52fa6a6b78"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-en/pending.png",
+      "sha256": "04e790bd9ca4b0cf2d3d8fcec40eb15bfa8f76dfc4e54643eeb8a1ca0a70a72f"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-en/success.png",
+      "sha256": "70c2de1177d4a17a0ce36f7bd65b02b28edcb07a659417c40d9d8d461337b148"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-zh/failed.png",
+      "sha256": "0dbf5a530880bf8e3abcf8fc8aa51b9c0f251f4a55578b921892fc14a93d75e2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-zh/initial.png",
+      "sha256": "1ad0f7f449186fbf7d6d50641df1062470b304db7d201a6ea6c24e13227c337e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-zh/invalid-focus.png",
+      "sha256": "d72ba76d3a09747cbad0fe0c02edef034ee03fdd0ac41753f70069b408b37159"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-zh/long-content.png",
+      "sha256": "339eb8b3d7ea09911ff2236fac5e00996ae703cc85a2154672e469733bda67d2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-zh/pending.png",
+      "sha256": "29fb63e79524f0b1b38581fe1425907d0daf24e9c2329e18deb2cc2dce51a92b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-zh/success.png",
+      "sha256": "36d7e3a71e23d98643783da6c734b1a46651fcb04c19ec718710e0154fa9e8ef"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-en/failed.png",
+      "sha256": "fc559caac85d9911cc7c921de6c0cd2d627b0cd306c4b2bf49a46b5ea742e0d5"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-en/initial.png",
+      "sha256": "cf462f07a3212de4dc31ba531b5d9fcc960b272d358f77860aa34fd5a280fc11"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-en/invalid-focus.png",
+      "sha256": "b51e01941d7380a91ae7f9e30aa7f7951e6c9acf4f16db7d465027275bb553a5"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-en/long-content.png",
+      "sha256": "c9b5acd0573835ea0c4578e304854343b7e291776359a76b50f21de0d0295733"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-en/pending.png",
+      "sha256": "dee2d3dd04fcea8d6526b05d1a3c9bfcb5bed1ee85a7cec9a047b6895e581028"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-en/success.png",
+      "sha256": "d8b22e4a41bc150e1dc22489730bf8abb61561b70c923e4b4da228ecadd9dc91"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-zh/failed.png",
+      "sha256": "d97a458ec9a009437acdcfe18af9253f567f695286d0789ac82149708af07df8"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-zh/initial.png",
+      "sha256": "f457347f061040714b7cd3c41ac0902bd07067a3b51a14d24b7b7c26880a4618"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-zh/invalid-focus.png",
+      "sha256": "b85c48a6e69a44fdd4e192438b2e6fd8254414487598bfbc2d1ba3ae61202afe"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-zh/long-content.png",
+      "sha256": "8d9f59a5674ed73d9e820f223becf8a53983ec2be819a66677430241911d5d70"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-zh/pending.png",
+      "sha256": "1c6836b484cd8196959d3b7c5a55d73f7a7e272ef401c86503de982893b49058"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-zh/success.png",
+      "sha256": "79c083fddaf6edeee0924b3cb1e672119ed69655d00dfa64d2f7b0ff7b315114"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-en/failed.png",
+      "sha256": "cb1716f87aae8909de6f6c238f388bb90461a2786127e5d886c2f0e954287b5b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-en/initial.png",
+      "sha256": "d3ebb7571a739faefe99c681a33994e109d3d08d7c0be381d44249068e784a15"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-en/invalid-focus.png",
+      "sha256": "a2c4d46d108463cd89e1066204e56065f8e31c2c633392133cd4842a010eb57b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-en/long-content.png",
+      "sha256": "9056b1fadb52690071f4b472fbaf29ac5bd25679789c829072d87d78f384a5e6"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-en/pending.png",
+      "sha256": "d1a8971b38c2b198ea83e98166eef647ba657a43895bafe8a9a504b41b296795"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-en/success.png",
+      "sha256": "fa6a48daf7fe2dc4d967aacbc3ebadcd6a757067ba8de6869a852563c8bf149b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-zh/failed.png",
+      "sha256": "ea98fe75175a089312b5066dcaed5b0c9d59024fe1a5c3f581c4e276a2b88fbd"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-zh/initial.png",
+      "sha256": "472ca78c2ecf489cfa6fda7931e4452d0dc6aa002d7e224a3bd36a672a9b5c34"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-zh/invalid-focus.png",
+      "sha256": "c02a690205c50e4953f74e62273c8dd21455c2553fa327eae1abb83f9b626fa5"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-zh/long-content.png",
+      "sha256": "0d1e721691b7e2663cb4c49780ac466588ceffb649f88efa3bb9686d2e6a6a23"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-zh/pending.png",
+      "sha256": "4bf33c3c5053472e93f71b404992a204787a7f13f484dbb6435a11eb7167379a"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-zh/success.png",
+      "sha256": "18eb9b316a0622a863ca6af89eb97d5de9f11a64d760b87c55f841a2c2ca16e0"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-en/failed.png",
+      "sha256": "9f7806342f82c6329e7865b8b79b05a0deb1ccdf1272a8b0d8089a58cd4be734"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-en/initial.png",
+      "sha256": "2d923fe4a3f330b9457cdedf35de37deb395b59a08599e53a76b1436172b6a5f"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-en/invalid-focus.png",
+      "sha256": "5a0742aa50a096bb58fbc692fd0d981550794ba117ddea85133913ae18bd8992"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-en/long-content.png",
+      "sha256": "1797238a9517d3f55e0e232e40aed7acdac92ef305020df4d91683aa912f4602"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-en/pending.png",
+      "sha256": "3f0a3b596ad98cb4fde755f75c85142e37efb0c5d1bb1e52b291ba5d38e36cf6"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-en/success.png",
+      "sha256": "092764770f55b8e18201f69ea7561715c1b0a2950309fc42510391cbeac080cd"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-zh/failed.png",
+      "sha256": "2edf1ab77cfb4f282881c867806cf57cf4ab6a731cc082ce385219d89d7e136c"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-zh/initial.png",
+      "sha256": "06d333da518dc352bccf494ee0dff40d3270677769cc99d223a68ab5462604b4"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-zh/invalid-focus.png",
+      "sha256": "928e9bc6ac29e806e644f5650fbf1528a208b7ddd164603b5657745466ab77e2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-zh/long-content.png",
+      "sha256": "1c561f98cfd155314934c4b8338d74f35724b23081abac10fbe0866d5556be5d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-zh/pending.png",
+      "sha256": "00a3aa99d4cf6d773c0a01e8279bc45f8a55fca86c951b615b5fe5dff8d5c616"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-zh/success.png",
+      "sha256": "2e426ecd8792d6bed13cb2cb869da136735da44de6b3da501fbe043bb2930426"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-en/failed.png",
+      "sha256": "5ab6bead5a750501250772dc26c6b9649a91895d7c1b21cbe030174479df7ab2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-en/initial.png",
+      "sha256": "6cae60b7052d8612a1cf0c61da6c9ad336d96713171c0389c12be02e94ea2594"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-en/invalid-focus.png",
+      "sha256": "ec5584f6f5683b9761061a938dd5c9b6b127a07d18c945fd7e1ada37df84feeb"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-en/long-content.png",
+      "sha256": "cffcfb391d48ca721c07c71aecfdc953f4504173e63e51e5db9ea99d560c6452"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-en/pending.png",
+      "sha256": "d08ce30c70876958c9ced66ad85ba0ec9290d4a9bf7ff24021616cd462721960"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-en/success.png",
+      "sha256": "95d8ab326b4e1ecf426f25930ce3a4afe9ccc0d189a21e79087f765368a57451"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-zh/failed.png",
+      "sha256": "f9c84e60b35a55ef7f3e05ebfaf3ae0d33c13dba203ad4a66aa3ec8b4b71fb51"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-zh/initial.png",
+      "sha256": "910b15814934a5f8e69206f26506a09fd3926f78413009aaf22091f884dac7da"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-zh/invalid-focus.png",
+      "sha256": "036ff02f4456c520845912b655a4b537d83f172ff78560166867ec3df4272b78"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-zh/long-content.png",
+      "sha256": "265fabb944de22b6f7e916e469a8adcc73c087d766e007339c760b6fd8aa0289"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-zh/pending.png",
+      "sha256": "daaec7907414dab360ecbb68c3ed01274d8b8f2657c0690a83e303bc3753f340"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-zh/success.png",
+      "sha256": "5e0818a88bdda9a678706eb0edcca8eb10bdce9841ab9be7213dabc9f687b9e7"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-dark-zh/01-focused-save.png",
+      "sha256": "6e26b490becb117e91d579c68ede215544c909ab28bf4b3ba2f9ec98bba9169d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-dark-zh/02-pending.png",
+      "sha256": "8e59b7a76f5f679e3e2737973c7b8379d9e74815af006a9c3e6c57d9c174f1ab"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-dark-zh/03-focused-retry.png",
+      "sha256": "aa30dba1609346ea48d61350b15d1f6848dc7fe7e39dc9813e5a3263eb62b30b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-dark-zh/04-focused-success.png",
+      "sha256": "16be900b1debf21b41cba2a445e12d38688b8846528cafa043fc8582559ec571"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-light-en/01-focused-save.png",
+      "sha256": "bb108539b5d12e300093765879133b0b10cd86ac008a79a5f60e36318e2f73e6"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-light-en/02-pending.png",
+      "sha256": "16d9a3238376ef861851a316a40a63526fc3c9f2732667a83e078d5990ce0ea8"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-light-en/03-focused-retry.png",
+      "sha256": "1605f2c50fbbdbaf94e0c2b08ff5a0749b7f5df9cecdf4ef3b008afdcfd29dd1"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-light-en/04-focused-success.png",
+      "sha256": "9780fc762475757544e67114f454c1feb9c2d04e9050a6faa137994f7f582069"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-dark-zh/01-focused-save.png",
+      "sha256": "c983fc0b507d15ca4e67d45bb8f276473571b05096dc7b61d97a5a6350b6b10e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-dark-zh/02-pending.png",
+      "sha256": "9ecb858ab56258a645502d91b68a4178d7ab6ac57b97622ff91a875c068ec5d8"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-dark-zh/03-focused-retry.png",
+      "sha256": "2b22c4f764943a5fbfd2577a1c06e91ebfa3925cd5b38159096c8ebdee6763d6"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-dark-zh/04-focused-success.png",
+      "sha256": "5c39afce8692c77d9590d658783eaabe6fad5bf801489b2ec5b31e8d39d2195e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-light-en/01-focused-save.png",
+      "sha256": "f898333f2b3357fa311ee8cf98266fb6c660d3dbb2cad08206d28b34ec3371fc"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-light-en/02-pending.png",
+      "sha256": "e18f572d6434ff696f2a43924308b8bb4fac033c418b62136d618e4256f43e27"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-light-en/03-focused-retry.png",
+      "sha256": "1930e62b8367e9104f5ebec5d51c6bef583882b363509b96be9b3158ba5357f7"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-light-en/04-focused-success.png",
+      "sha256": "e8d3af960670c893bbc1103abc8f8e39343efc98f9dfdbd231e4096aefdb8ee0"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/persisted-failure/failed-preserved.png",
+      "sha256": "69bfe28b9cfe92c44235a1087bd870062e3524bd9fae6d8e0028aa1c382ba53e"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/1280-dark-zh/invalid-visible-focus.png",
+      "sha256": "c3171da7890a13b5a077b3901b38c3ae23fe6113856dff9910db6cbe3d9639b9"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/1280-dark-zh/pending-spinner.png",
+      "sha256": "fbb34aa3b1638300abdd543aafd8acb079bc1ac1a0640986232ae722a3f9cd78"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/1440-light-en/invalid-visible-focus.png",
+      "sha256": "6195a3a378a67d20d71daa420f3eef5730cae851a848f70a6a0efb78763b0bb9"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/1440-light-en/pending-spinner.png",
+      "sha256": "eda41e89217cbc640e7028962bb7838b1d77562a033dcf3a43a9d2f66b112f69"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/390-dark-en/invalid-visible-focus.png",
+      "sha256": "806a6c767370db4d6e5154324e2cf08ab7ecc17fcd8cab3375cd8be7f9ea1e1d"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/390-dark-en/pending-spinner.png",
+      "sha256": "7eb13dbf032ba64fc70a43db6adede819202cc448e0c72a50ecf20eda27e4051"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/390-light-zh/invalid-visible-focus.png",
+      "sha256": "aacec63b6853a526b640f0844711a34d90cf70bf48658998e13a2dce883ee902"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/390-light-zh/pending-spinner.png",
+      "sha256": "49a5c7a2fdb3888ed8999b33a996e6b9fd78f8f63696d5779b67403b45f53adc"
+    }
+  ],
+  "behavior_logs": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/004-product-check/command.json",
+      "sha256": "20c2f20d25ccbd8888700b0180f15240e4a66a14b8dcecc107891a87341fde4c",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/004-product-check/stdout.txt",
+      "sha256": "fb54030c2b7536c7bd91d488b1dcf8feb87ce09d10464c64d15fa6c0488ac417",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/005-narrow-diagnosis/command.json",
+      "sha256": "e3f4486fc369708000b6e925f49dc2dd3cc3694fd6efd69073385b2732cad20f",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/005-narrow-diagnosis/stdout.txt",
+      "sha256": "d5133a3bf41a4828650cdd5efeb1ad70ca501d9066b556b4a754de1c7432d496",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/006-product-recheck/command.json",
+      "sha256": "0072c496aa1228bfe9a7fd1e830bf6bafa136d55edf793e32c9a398a17d8600c",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/006-product-recheck/stdout.txt",
+      "sha256": "bb14f18fa5de0b86370ac6d100992d12ff68e7dc753ffa18b1af7ef9346e2bc8",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/007-final-captures/command.json",
+      "sha256": "a4625bb865d8504c45370092b70e0d4226505286f3dc85523b00b694d874ea47",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/007-final-captures/stdout.txt",
+      "sha256": "e81f4eeae0d0bdb064d98993834c4794211147f7d434e71327b67705ce72d6da",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/008-focus-recheck/command.json",
+      "sha256": "7e7cf9c1a7be21952bd0b35ca0497982a0767282c748fc2e95316d9bf17e8afb",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/008-focus-recheck/stdout.txt",
+      "sha256": "31796c2a72152f5c1867118f4884ed365d7c280cd31d58b7ff2ffe5f13184066",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/009-persisted-failure/command.json",
+      "sha256": "b8aedbba81d5d8b7232339c7948c6bcf00f080a9b62063077672661ea11d32eb",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/009-persisted-failure/stdout.txt",
+      "sha256": "301a20c3a3e293adea75327741ea1341dddfd0ae43e52b742a296357e75de55a",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/010-state-presentation/command.json",
+      "sha256": "fe80f4ed7d1f8d94083c27e9a7bc1cd1df5402a638ab1fd218a8312bfc7e6b60",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/commands/010-state-presentation/stdout.txt",
+      "sha256": "373f15fe6ec1b6293777a77f53a981a31ff0563c99d6b3981648a1b9c86fcda3",
+      "source": "capture_command.py / actual subprocess capture",
+      "scope": "Original nonempty command output or contemporaneous capture metadata. The participant authored the exercised commands; this is not independent product acceptance.",
+      "export_kind": "original_tool_output",
+      "synthetic": false
+    }
+  ],
+  "viewed_screenshots": [
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-en/failed.png",
+        "sha256": "d0c12ba1d2a792a43a591c305feb491a325a1838227ea07d062179ecf0223ff4"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-dark-en-failed.json",
+        "sha256": "aae53cb4ff4419b7327f481f5d57eb45baac8bc08bc8283a7e4f832dd19d5c10",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-en/initial.png",
+        "sha256": "b569f3698eb136400b552b1353f5175ae1d4bf6843e213664ba9ad6dba3fdf65"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-dark-en-initial.json",
+        "sha256": "d7246ac26b2b310db4bfb3e7bab31e6f189d978f2e8ef7df5f053f978651fec3",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-en/invalid-focus.png",
+        "sha256": "ec737148058f230f02fc0021c8643412330a25b908f675e44423d2be860858dd"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-dark-en-invalid-focus.json",
+        "sha256": "2b2171b76e95b174d2bc4c018597d9ee8957d833bd889eb2ccf99476d00ebb43",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-zh/failed.png",
+        "sha256": "c8a91c1f7e230dfd4b8d5c3c9b86bd9bbbb24fef272c8a815c01b61bad6a0a26"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-dark-zh-failed.json",
+        "sha256": "0140aeb5de780c627e98409d7ea5ddf01a4a67765b462021740194a270ae8446",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-zh/initial.png",
+        "sha256": "309d09d906a8e068686e8d6d004f380447a756d29029646d9b9b9300554c060e"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-dark-zh-initial.json",
+        "sha256": "54e11f1289fbf67b2a57e6856251286bf41a8e80eaedef6c2d86b572d75433a9",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-dark-zh/pending.png",
+        "sha256": "7189dfb9457155f60640f304057bfebefd681fb30a159ecc7f052044715c2e61"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-dark-zh-pending.json",
+        "sha256": "31e84aaee185c7fd359e73c55875031c8cde6330070401c13b3e89960af078ed",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-en/failed.png",
+        "sha256": "4c7c94151c884f56234086de1c024d31856c8f1f9639c92e7e04743e3ffef0ed"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-light-en-failed.json",
+        "sha256": "9badb9c9e918efd3b453343115ebc0fa0c02edea8d559278f8795754d57d341d",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-en/initial.png",
+        "sha256": "ee2da14399e61faaa9d9ab37deb4bf2f0c3dbef10cc62d2b9675f6754399eba0"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-light-en-initial.json",
+        "sha256": "fdbeb8f88ba41c0b03c3e00dfefc30e7a78509bf6906f25ba2f6652afb67290c",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-en/pending.png",
+        "sha256": "04e790bd9ca4b0cf2d3d8fcec40eb15bfa8f76dfc4e54643eeb8a1ca0a70a72f"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-light-en-pending.json",
+        "sha256": "7343966bf576e48a86e3a7b79aa83bbf3b5dbeb7db81995f369781bd62d67f26",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-zh/failed.png",
+        "sha256": "0dbf5a530880bf8e3abcf8fc8aa51b9c0f251f4a55578b921892fc14a93d75e2"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-light-zh-failed.json",
+        "sha256": "744e68247ff98d896180d486668c56b42082e259036190501642bc7d123ef835",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-zh/initial.png",
+        "sha256": "1ad0f7f449186fbf7d6d50641df1062470b304db7d201a6ea6c24e13227c337e"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-light-zh-initial.json",
+        "sha256": "1f1e179ed295ef3a3734e85d8c6977da5bb2491b043f029f7bc48b2ab98851d2",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1280x600-light-zh/success.png",
+        "sha256": "36d7e3a71e23d98643783da6c734b1a46651fcb04c19ec718710e0154fa9e8ef"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1280x600-light-zh-success.json",
+        "sha256": "59e70139c0455213be1f529d3fff04cbdf68ad15d997b52902263ea91da36b96",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-en/initial.png",
+        "sha256": "cf462f07a3212de4dc31ba531b5d9fcc960b272d358f77860aa34fd5a280fc11"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1440x900-dark-en-initial.json",
+        "sha256": "32d3822719409d4265f1f0d70315105e80b2a16bfb760c43be11156d749df611",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-dark-zh/initial.png",
+        "sha256": "f457347f061040714b7cd3c41ac0902bd07067a3b51a14d24b7b7c26880a4618"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1440x900-dark-zh-initial.json",
+        "sha256": "663ea45d241f978b2a139340abeb4f5950c2e4ecad3a872ee2f2f536d96aed82",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-en/initial.png",
+        "sha256": "d3ebb7571a739faefe99c681a33994e109d3d08d7c0be381d44249068e784a15"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1440x900-light-en-initial.json",
+        "sha256": "500fc56f1d439a5c87d3ec3d0c75782968f133bb8f690c8998ebf11ab33d06a3",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/1440x900-light-zh/initial.png",
+        "sha256": "472ca78c2ecf489cfa6fda7931e4452d0dc6aa002d7e224a3bd36a672a9b5c34"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-1440x900-light-zh-initial.json",
+        "sha256": "ab63f1cd1ead16ed14017113e1525fe071286286d0070686f397eb1bd5d9c17c",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-en/initial.png",
+        "sha256": "2d923fe4a3f330b9457cdedf35de37deb395b59a08599e53a76b1436172b6a5f"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-390x844-dark-en-initial.json",
+        "sha256": "6e08d79332b90d3b046edab3658e4b8b6c0eff92711d2a8adb6af27ebb5d9b33",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-zh/initial.png",
+        "sha256": "06d333da518dc352bccf494ee0dff40d3270677769cc99d223a68ab5462604b4"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-390x844-dark-zh-initial.json",
+        "sha256": "412651f0c4d45591006dafe9f6c1f19d0ab361138db6217d7c877f0fafa3c090",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-dark-zh/long-content.png",
+        "sha256": "1c561f98cfd155314934c4b8338d74f35724b23081abac10fbe0866d5556be5d"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-390x844-dark-zh-long-content.json",
+        "sha256": "191189ec136703b2f47ed2674adcbd1f190e4aad29a24b490d4c953a10db27d1",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-en/initial.png",
+        "sha256": "6cae60b7052d8612a1cf0c61da6c9ad336d96713171c0389c12be02e94ea2594"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-390x844-light-en-initial.json",
+        "sha256": "c440573cf1728c9a108b3fdfea1b49e7b413208f8ee9dfd426b49caa95eec19f",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/final-captures/390x844-light-zh/initial.png",
+        "sha256": "910b15814934a5f8e69206f26506a09fd3926f78413009aaf22091f884dac7da"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-final-390x844-light-zh-initial.json",
+        "sha256": "1d91736291b7fb80008f12e96d2c6a6807eb49ac45fcbce8e9913bb594e4f1ea",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-dark-zh/03-focused-retry.png",
+        "sha256": "aa30dba1609346ea48d61350b15d1f6848dc7fe7e39dc9813e5a3263eb62b30b"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-focus-1280-dark-zh-03-focused-retry.json",
+        "sha256": "ec384ea99c126faf2ad6dc9f6145b67d421db1283285c6920f4aa3423dd1d771",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/1280-light-en/03-focused-retry.png",
+        "sha256": "1605f2c50fbbdbaf94e0c2b08ff5a0749b7f5df9cecdf4ef3b008afdcfd29dd1"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-focus-1280-light-en-03-focused-retry.json",
+        "sha256": "e0115b73970195c26abc2e0f36f5ed777cd00e208a8d287a6af4e9bfe3d7a5a8",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-dark-zh/04-focused-success.png",
+        "sha256": "5c39afce8692c77d9590d658783eaabe6fad5bf801489b2ec5b31e8d39d2195e"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-focus-390-dark-zh-04-focused-success.json",
+        "sha256": "9dc35f8d5e3757ee4a3527130f03136d47dda88746ee8e7d1b458bc744d65b94",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/focus-recheck/390-light-en/03-focused-retry.png",
+        "sha256": "1930e62b8367e9104f5ebec5d51c6bef583882b363509b96be9b3158ba5357f7"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-focus-390-light-en-03-focused-retry.json",
+        "sha256": "ae102b79ee3c7b4f5fb30bfab33c14101caf2334687919e820bcf73860ad4dc7",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/1280-dark-zh/pending-spinner.png",
+        "sha256": "fbb34aa3b1638300abdd543aafd8acb079bc1ac1a0640986232ae722a3f9cd78"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-state-1280-dark-zh-pending-spinner.json",
+        "sha256": "6c9026e33ff0fae2680d9ff296456ead747d0fbf64aa7333f135e6e5652f4088",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/1440-light-en/pending-spinner.png",
+        "sha256": "eda41e89217cbc640e7028962bb7838b1d77562a033dcf3a43a9d2f66b112f69"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-state-1440-light-en-pending-spinner.json",
+        "sha256": "d2973828c14b94bdd16bdd22f841769f62a0ed6309c384d8f545c0fed995ea24",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/390-dark-en/invalid-visible-focus.png",
+        "sha256": "806a6c767370db4d6e5154324e2cf08ab7ecc17fcd8cab3375cd8be7f9ea1e1d"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-state-390-dark-en-invalid-visible-focus.json",
+        "sha256": "b54fd42331609591b431d3bd09c4b3c2782593170ffea22921bce667c2c1b316",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    },
+    {
+      "viewer_agent_id": "/root/product_02",
+      "screenshot": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/state-presentation-final/390-light-zh/invalid-visible-focus.png",
+        "sha256": "aacec63b6853a526b640f0844711a34d90cf70bf48658998e13a2dce883ee902"
+      },
+      "view_export": {
+        "path": "docs/evidence/v1.20.0/session-study/runs/T1-B-r1/artifacts/evidence/inspect-state-390-light-zh-invalid-visible-focus.json",
+        "sha256": "73e80c5fbbd1a07c3c0a088a27fa7398c9a571e6cf46727eacbd01f6404d9688",
+        "source": "view_image",
+        "scope": "Full actual view_image request/returned object saved by the primary participant at call time; the original PNG is retained separately.",
+        "export_kind": "faithful_conversation_export",
+        "synthetic": false
+      }
+    }
+  ],
+  "capture_lineage": "The primary visual review discloses that final-captures resting layouts precede focus/spinner-only adapter fixes. Changed focus/validation/loading states have subsequent final-code captures under focus-recheck and state-presentation-final. Preserve that limited carry-forward; do not label all captures as simultaneous.",
+  "all_original_evidence": "The byte-complete input/overlay reconstruction also retains baseline, research, failed attempts and captures outside this final-product index."
+}

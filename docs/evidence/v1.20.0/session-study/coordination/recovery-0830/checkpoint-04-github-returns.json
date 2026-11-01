@@ -1,0 +1,77 @@
+{
+  "kind": "actual GitHub connector returns for the recovery checkpoint",
+  "checkpoint": "recovery-04",
+  "receipts": [
+    {
+      "tool": "github_create_tree",
+      "request_scope": {
+        "base_tree_sha": "7166511ad9b5b9447958de3529b2ab9890b6c540",
+        "entries": 65
+      },
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "sha": "d77636a39e578359a496aa0ecc3884337d3c076f"
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "github_create_commit",
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "sha": "68dfaca7741fa39c3c48142cc8ccb66df0b3d3fe"
+        },
+        "isError": false
+      }
+    },
+    {
+      "tool": "github_update_ref",
+      "response": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Action completed."
+          }
+        ],
+        "structuredContent": {
+          "success": true
+        },
+        "isError": false
+      }
+    }
+  ],
+  "readback": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\"ref\":\"refs/heads/work/v1.20.0-recovery-20261101\",\"node_id\":\"REF_kwDOVVK4v9oAKXJlZnMvaGVhZHMvd29yay92MS4yMC4wLXJlY292ZXJ5LTIwMjYxMTAx\",\"url\":\"https://api.github.com/repos/D1ChangGeng/UI-Spec-Studio/git/refs/heads/work/v1.20.0-recovery-20261101\",\"object\":{\"sha\":\"68dfaca7741fa39c3c48142cc8ccb66df0b3d3fe\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/D1ChangGeng/UI-Spec-Studio/git/commits/68dfaca7741fa39c3c48142cc8ccb66df0b3d3fe\"}}",
+      "title": "v1.20.0-recovery-20261101",
+      "modified_date": null,
+      "url": "https://api.github.com/repos/D1ChangGeng/UI-Spec-Studio/git/ref/heads/work/v1.20.0-recovery-20261101",
+      "display_url": "https://api.github.com/repos/D1ChangGeng/UI-Spec-Studio/git/ref/heads/work/v1.20.0-recovery-20261101",
+      "display_title": "v1.20.0-recovery-20261101",
+      "structuredContent": {
+        "title": "v1.20.0-recovery-20261101",
+        "content": "{\"ref\":\"refs/heads/work/v1.20.0-recovery-20261101\",\"node_id\":\"REF_kwDOVVK4v9oAKXJlZnMvaGVhZHMvd29yay92MS4yMC4wLXJlY292ZXJ5LTIwMjYxMTAx\",\"url\":\"https://api.github.com/repos/D1ChangGeng/UI-Spec-Studio/git/refs/heads/work/v1.20.0-recovery-20261101\",\"object\":{\"sha\":\"68dfaca7741fa39c3c48142cc8ccb66df0b3d3fe\",\"type\":\"commit\",\"url\":\"https://api.github.com/repos/D1ChangGeng/UI-Spec-Studio/git/commits/68dfaca7741fa39c3c48142cc8ccb66df0b3d3fe\"}}",
+        "display_url": "https://api.github.com/repos/D1ChangGeng/UI-Spec-Studio/git/ref/heads/work/v1.20.0-recovery-20261101"
+      }
+    },
+    "isError": false
+  }
+}

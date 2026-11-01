@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path;import difflib;r=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/review-pack\");\nfor f in [\"src/components/assistant-ui/elements/thread.aui.tsx\",\"src/components/assistant-ui/elements/attachment.aui.tsx\",\"src/index.css\"]:\n p=r/\"products/P07/app\"/f;b=r/\"foundations/T2/app\"/f\n if not p.exists() or not b.exists():print(\"PATH NOT PRESENT\",f);continue\n print(\"P07 SOURCE DIFF\",f);print(\"\\n\".join(difflib.unified_diff(b.read_text().splitlines(),p.read_text().splitlines(),fromfile=\"T2 foundation\",tofile=\"P07 final\")))\nprint(\"P07 THIRD PARTY NOTICE\",(r/\"products/P07/app/THIRD-PARTY-NOTICES.txt\").read_text())"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T11:45:55.641278+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T11:45:55.673960+00:00",
+  "wall_seconds": 0.032686,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 495422,
+      "sha256": "911e725c77392786d0714ceb90cf03acf10986aa389ec37684384fd607a161be"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

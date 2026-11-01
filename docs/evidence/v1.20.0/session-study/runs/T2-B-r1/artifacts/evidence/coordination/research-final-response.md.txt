@@ -1,0 +1,102 @@
+Saved the report: [RESEARCH-REPORT.md](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w06/evidence/research/RESEARCH-REPORT.md).
+
+# Meridian composer and reading continuity — research report
+
+Research completed 2026-10-31 UTC. Scope: the w06 package and relevant public implementations. This researcher made no product-code changes and makes no final product design decision. The local implementation trial described below was authored by the parent agent.
+
+## Decision-useful finding
+
+The consequential question is how attachment identity and draft growth share limited vertical space with an unfolding answer. The original mature workspace already supplies the useful overall shell, type rhythm, actions and state machinery. Its compact attachment tiles conceal identity until disclosure. Public examples reveal three materially different ways to address that weakness: persistent small filename badges, larger metadata rows, or a collapsible attachment header. These should be judged together with reading space and focus return.
+
+The current parent trial composes the existing assistant-ui File row inside a single horizontal attachment strip. It has a directly usable, visually observed source; it does not require rebuilding a reference from screenshots. The compact trial demonstrates persistent identity and accessible details within the established workspace, but reveals a specific remaining cost: two complete rows and part of a third are visible at once in the narrow conversation column. Truncation and horizontal access remain real, visible tradeoffs.
+
+## Inquiry and method
+
+I read TASK.md, INPUT.md, RUN-CONTROL.md and the complete ui-spec method: SKILL.md and all required reference documents, plus the evidence map and evidence actions. I treated the composer, attachment disclosure, footer growth, scroll ownership and keyboard return as one coupled experience.
+
+The inquiry evolved from “which attachment presentation is stronger?” to “which identity disclosure fits the compact reading budget?” and then to “which existing viewport policy actually restores follow after an explicit return?” That refinement followed the public variants and the parent’s failing top-anchor trial; a static filename screenshot cannot settle the scrolling question.
+
+Search, original source acquisition, live demo observation and local trial inspection are distinct evidence levels below. Public screenshots are actual browser captures, not recreated specimens. Screenshot endpoints establish visible states, not natural-time motion quality.
+
+## Sources and materially different candidates
+
+| Source | Actually observed relationship | Useful adoption path | Cost or unresolved limit |
+|---|---|---|---|
+| **assistant-ui File**, original live demo and supplied source | Quiet outline row; type icon at left; filename carries primary emphasis; smaller metadata below; trailing action. Muted and size variants are visible. The hierarchy makes file identity immediately available. | Compose existing `File.Root`, `File.Icon` and `File.Name` with supplied attachment state, existing Dialog and existing remove control. This stays inside the installed family and preserves the workspace’s type, borders and actions. | A fixed row needs truncation and disclosure for long names. A single horizontal strip limits vertical growth but does not show all files simultaneously. |
+| **Vercel AI Elements Attachments**, live inline and list variants | Inline badges keep filename text beside a small preview/icon and wrap into multiple rows. List variant uses full-width bordered rows with filename plus secondary MIME information and trailing remove. More disclosure occupies more height. | Registry/source is available. Inline names are a concrete alternative if density dominates; list rows suit richer metadata. Integrating actual components requires adapting `FileUIPart`/context and shadcn dependencies. | Wrap can grow the composer as files accumulate; list spends still more vertical space. A remove click was attempted, but the immediate retained endpoint remained unchanged, so removal behavior is not validated here. |
+| **Ant Design X Attachments with Sender**, live composed demo | Attachment header sits above the draft; attachment/open control remains at lower left and send at lower right. Six-line draft remains visible when the header is closed; closing recovers attachment-panel height without discarding text. | `Sender.Header` plus Attachments is an actual composed implementation with controlled open state, rather than a screenshot-only reference. Suitable when attachments deserve a distinct management surface. | Open header consumes substantial height. Adopting the family adds Ant visual and data dependencies. Demo previews use object URLs; that behavior must not be imported into Meridian’s filename-only contract. |
+| **Vercel AI Elements Chatbot**, whole rendered example | Message body scroll area ends above suggestions and a wide persistent input/action area. A submitted generic question and synthetic answer are both visible in the final capture; input clears back to its placeholder. The source defines local timed mock streaming. | `Conversation`, `ConversationContent` and `ConversationScrollButton` are available source components based on `use-stick-to-bottom`. Useful as an independent continuity comparison. | Final endpoint does not establish interruption, resumed follow or cancel quality. Replacing the existing viewport adds another scroll owner and adaptation work; no benefit was demonstrated that requires that replacement. |
+
+Public pages opened and inspected:
+
+- [assistant-ui File](https://www.assistant-ui.com/elements/file)
+- [assistant-ui Thread primitive](https://www.assistant-ui.com/docs/primitives/thread)
+- [Vercel AI Elements Attachments](https://elements.ai-sdk.dev/components/attachments)
+- [Vercel AI Elements Conversation](https://elements.ai-sdk.dev/components/conversation)
+- [Vercel AI Elements Chatbot](https://elements.ai-sdk.dev/examples/chatbot)
+- [Ant Design X Attachments](https://ant-design-x.antgroup.com/components/attachments)
+
+The assistant-ui page is both a visual reference and a usable implementation source. The independent Vercel and Ant examples are also usable source candidates, but remain comparative references in this package; this researcher did not integrate them.
+
+## Source provenance and rights
+
+The supplied assistant-ui source is pinned by INPUT.md and SOURCE-MANIFEST.json at `ff654d8156680b839774296ef644b57ab1078425`, MIT. Its File composition is already present in `app/src/components/assistant-ui/elements/file.tsx`. Inspected defaults include `gap-3`, outline border, rounded corners, `text-sm`, a nonshrinking type icon and a truncating medium-weight filename. These defaults provide a concrete adoption path rather than permission to invent a replacement appearance.
+
+Official Vercel GitHub tree and relevant implementation/example files were downloaded at `ca8be600bfd01b3131f9bf6134b51602a71f4374`. Its retained LICENSE is **Apache 2.0**. Files include attachments, conversation and the whole chatbot example. Conversation uses the independent `use-stick-to-bottom` implementation and shows its scroll button when not at bottom. The final demo’s response is a local timed mock in the inspected source; it is not evidence of live model quality.
+
+Official Ant Design X tree and Attachments with Sender example were downloaded at `da08db16714b608d7f5db248c2b2fcc30a756660`. The package license was retrieved from `packages/x/LICENSE` and is **MIT**. The example uses controlled header-open state and prevents real upload with `beforeUpload` returning false. It creates local preview object URLs, which differs from Meridian’s explicit metadata-only contract.
+
+Exact URLs, original returned tree bodies, source bytes and command outputs are retained under `source/` and `commands/004-source-fetch/`, `005-chatbot-source/`, and `007-ant-license/`. Rights notices should travel with any actual copied source. No external candidate code was copied into the product by this research task.
+
+## Local baseline and integrated trial observation
+
+I personally viewed the unchanged initial workspace at 1440×900, light/en, before the parent’s trial rebuild. It establishes the complete source shell: fixed sidebar, restrained centered conversation column, readable text rhythm, bottom composer and nearby message actions. It does not establish every interaction state.
+
+I then independently exercised the parent’s current trial at 1280×600, dark/zh:
+
+1. Filled a six-line mixed Chinese/English draft.
+2. Selected three empty synthetic test files, including a long Chinese/English filename.
+3. Viewed the resulting whole workspace.
+4. Opened the `notes.txt` details control.
+5. Viewed the Dialog with the filename and explicit statement that contents are neither read nor transmitted.
+6. Pressed Escape.
+
+The six-line draft, attachment strip and add/send actions remain visible. The strip stays one row high. The short filename is readable; the longer name truncates; a third card is only partly visible, making horizontal access necessary. The composer fills much of the lower half of the compact frame, while preceding response text remains visible above. The details surface uses existing Dialog hierarchy and preserves the draft behind it.
+
+![Compact trial with six-line draft and three filenames](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w06/evidence/research/local-trial-six-line-three-files.png)
+
+The immediate post-Escape script read of `activeElement`’s `aria-label` was null. That is insufficient to classify focus loss: the check did not wait for close settlement or inspect element identity beyond that attribute. I reported this measurement to the parent for its focused keyboard test. I did not claim a verified return target from this run.
+
+Artifacts: `local-baseline-initial.png`, `local-trial-six-line-three-files.png`, `local-trial-details.png`, `local-trial-log.json`, and `commands/006-local-trial/`. Actual image-open outputs are retained under `views/001.json` and `views/005.json`–`006.json`.
+
+## Reading continuity: source contract versus verified behavior
+
+The official assistant-ui Thread documentation describes bottom-anchored and top-anchored policies and says `autoScroll` defaults true for bottom and false for top. It also describes manual scroll-away pausing follow and explicit return allowing follow to resume. Those are source contracts, not proof that a particular combination in this package satisfies the requested episode. genui{"citation":{"ref":"turn22search0"}}
+
+The parent reports that top plus explicit `autoScroll` jumped once but failed to resume following during later growth because `holdFollow` remained active. That failed integrated run should remain part of the main package evidence. The parent subsequently selected the documented bottom policy and reports passing interruption, return/resumed growth, cancel, failure/retry and repeat-question tests in both locales. Those are the parent’s integrated findings, not independently re-executed measurements by this researcher.
+
+The practical implication is to prefer the existing runtime’s demonstrated policy over adding a second scroll controller. The decisive episode must include continued growth after return; “the button jumps to latest once” is not an adequate acceptance test.
+
+Modern web guidance was retrieved for growing textarea and IME-safe Enter behavior. It reinforces keeping width constrained and height bounded, and guarding custom Enter submission during composition. No custom Enter implementation was introduced here; retaining the mature composer’s behavior avoids introducing an unnecessary keyboard owner. Cross-browser IME validation remains a meaningful limit.
+
+## Evidence correction and capture integrity
+
+`cloud/vercel-attachments-inline.jpg` is a retained failed early capture: its pixels show Installation/Usage while the page was still moving after anchor navigation. Its name does not establish the inline specimen. **Use `cloud/vercel-attachments-inline-stable.jpg` instead.** The stable capture was personally opened through `view_image`, and its full returned tool object is in `views/003.json`.
+
+Other actual personally viewed captures include:
+
+- `cloud/assistant-file-original.jpg` — original File demo; bytes confirmed in this package; `views/002.json`.
+- `cloud/vercel-attachments-list.jpg` — list variant in original page context.
+- `cloud/ant-sender-six-line-open.jpg` — draft plus expanded attachment header; `views/004.json`.
+- `cloud/ant-sender-final.jpg` — same draft with header closed.
+- `cloud/vercel-chatbot-final.jpg` — completed local mock turn and persistent composer; `views/007.json`.
+
+Cloud browser screenshots and original accessibility observations are saved in `cloud/`. They retain source page context. Early standalone public-browser attempts failed with `ERR_CERT_AUTHORITY_INVALID`; TLS was not bypassed. Those exact errors remain in `commands/002-public-capture/` and `public-observation-log.json`. The browser extension entry point was unavailable in this context; its actual errors remain in `web/003-browser-bootstrap.json` and `004-browser-bootstrap-corrected.json`. Public UI observation was completed in the cloud browser.
+
+## Unresolved limits and handoff
+
+This research establishes source feasibility and concrete visible relationships across three independently authored families. It does not certify every candidate’s accessibility, mobile behavior, upload handling or interruption semantics. Public demos were viewed at their browser frames, not uniformly reproduced at Meridian’s exact target dimensions. Ant’s open/closed frames are sampled states, not a motion recording. The public chatbot final frame is not evidence of manual scrolling while streaming.
+
+The parent should retain the coupled acceptance evidence: long draft plus attachments at compact height; keyboard reach to obscured attachment controls and full-name details; settled focus after removal/close/cancel; manual read-away during growth; explicit return followed by further growth; stop preventing later chunks; failure/retry and another question. The parent is already running those integrated checks. Touch drag/scroll, a broader browser matrix and IME composition remain outside this short run unless independently demonstrated.
+
+No exceptional screenshot-only reference was found that warrants reconstructing an interface. The existing File composition is the lowest-adaptation implementation candidate with directly observed visual evidence; inline badges and a collapsible header remain materially distinct alternatives if the product prioritizes a different balance between immediate identity, number of visible files and reading area.

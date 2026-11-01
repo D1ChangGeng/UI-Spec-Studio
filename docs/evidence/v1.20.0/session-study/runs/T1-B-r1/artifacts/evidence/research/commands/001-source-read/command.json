@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python3",
+    "-c",
+    "from pathlib import Path; import hashlib,json; files=[\"sources/shared/ui/Alert.astro\",\"sources/shared/components/demo/Toast.astro\",\"sources/shared/layouts/SettingsLayout.astro\",\"sources/shared/ui/form/Check.astro\",\"sources/preview/pages/settings.astro\",\"app/settings-controller.js\",\"app/settings-store.js\"]; print(json.dumps({p:{\"sha256\":hashlib.sha256(Path(p).read_bytes()).hexdigest(),\"content\":Path(p).read_text()} for p in files},ensure_ascii=False,indent=2))"
+  ],
+  "cwd": "/workspace/scratch/708e8b7f118e/ui-study/worksets/w02",
+  "started_at": "2026-10-31T20:06:01.664148+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-10-31T20:06:01.696125+00:00",
+  "wall_seconds": 0.03198,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 18880,
+      "sha256": "31cdb93381bac83087d6b9f9d4114f4bd2925411dc0bf8f41623eace4f37d747"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

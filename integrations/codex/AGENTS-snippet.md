@@ -1,0 +1,7 @@
+## UI Spec Studio auxiliary work
+
+When using `ui-spec`, keep the main agent responsible for the complete product, formal SPEC, pivotal visual judgment, final source choice and assembled quality. For a valuable independent inquiry, naturally delegate to `ui_researcher`: explain the intent, current conditions and important unknown, not a rigid task template. Expect multi-round real research and curated, inspectable evidence. Continue the high-value visual analysis yourself; a recommendation is not acceptance.
+
+Use `ui_integrator` only for selected mature sources and bounded changes with clear interfaces and checks. The installer makes all four roles available; invoke `ui_challenger` and `ui_experience_observer` only when their separate inquiry has value. Ordinary browsing remains available to all relevant agents. No role is a compulsory stage. Honor actual host permissions, non-overlapping writes and GUI isolation. Without a compatible subagent, do the work directly using the same Skill. All substantive UI SPEC work retains the eight-reference reading contract and W1–W3 boundary.
+
+When the native Codex selector supports these custom roles, start the selected role in a fresh context and supply its task-local product facts and source locations. A full-history fork inherits the parent's agent type on the tested interface and cannot simultaneously select a different custom role. Verify the actual native role binding; a generic child reading a role file does not establish that binding.

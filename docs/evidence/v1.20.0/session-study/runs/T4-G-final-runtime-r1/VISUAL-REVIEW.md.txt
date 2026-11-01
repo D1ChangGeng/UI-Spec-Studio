@@ -1,0 +1,47 @@
+# Visual review — W18 save feedback
+
+## Reviewer and scope
+
+The package owner personally opened the source, trial, final and repaired images using `view_image`; the original returned objects are preserved in `evidence/views/` and `evidence/source-inspection/view-*.json`. `evidence/viewed-images.json` indexes the actual viewed images. This report is professional judgment, not a native tool export or end-user aesthetic acceptance.
+
+The retained source is Tabler 1.7.1's action-bearing cookie Toast. Source identity and composition were settled by the supplied integration decision; no new resource choice or original visual exception was made. The primary task is editing and persisting browser-local settings with truthful feedback and recovery.
+
+## Source observations
+
+I read the exact extracted block and tagged Astro component, then viewed the supplied standalone source rendering in light and dark. I also operated the original Cookies toast trigger in the exact acquired full deployed HTML, rendered locally with the matching supplied assets. Its full-page image includes the entrance transition; the separately viewed toast crop is settled. This is distinct from the integrated settings application.
+
+The live public demo failed certificate verification (`ERR_CERT_AUTHORITY_INVALID`); TLS checks were not weakened. The original deployed snapshot was fulfilled at a local test route, with nonlocal requests blocked. The unavailable sample portrait and cookie glyph are limitations of that source rendering, not assets shipped in the integration. The product uses the authorized FN initials fallback and no emoji.
+
+The source's value is a compact 350 px shell with a quiet identity/time/close header, readable body, and a fine separator above one small primary action. The integrated error state retains those relationships. Native computed values include 14 px body type, 20 px line height, 8×12 px header padding, 12 px body padding, 8 px action margin/padding, 6 px corner radius and the existing border/shadow. They are inherited from the unchanged assets, not replacement CSS.
+
+## Whole-product observations
+
+| Condition | Actually viewed relationship | Judgment |
+|---|---|---|
+| 1440×900, light/English and dark/Chinese | Initial composition, error toast, source detail, pending and success samples, repaired invalid state | The toast remains a compact secondary surface. The main settings hierarchy, mixed-script values, sidebar and form grouping remain intact. |
+| 1280×600, both declared variants | Error at the top and lower document position; repaired invalid states | Short height requires the inherited document scroll. Retry and close remain visible, while the lower Save/Cancel row remains unobstructed. |
+| 390×844, both declared variants | Error at top and lower positions; Chinese success; repaired invalid states; restored headers | The 350 px toast fits within the viewport at x=24…374. English and Chinese copy wrap naturally; action text and close stay within the surface. No horizontal page overflow was measured. |
+
+The prescribed top-right placement overlaps some upstream header utilities while feedback is visible; at narrow size it covers much of the header/title area. This is an observed consequence of the fixed integration decision. The native Close control remains exposed, and the restored-header views show the navigation unobscured after dismissal. I preserved the mandated placement rather than changing art direction. Settings controls and lower save actions remain usable by scrolling.
+
+## A real defect found after functional checks
+
+The first matrix verified that invalid submission moved DOM focus to Display name, but a subsequent settled narrow screenshot showed that the field was at y=0, underneath the fixed toast. This was a visible-focus defect, not a passing visual result. The failed screenshot and geometry remain in `evidence/keyboard-final-02`, and commands 011/013 retain the failed assertions.
+
+The allowed controller now uses native `scrollIntoView({block:'center', behavior:'instant'})`, then focuses with `preventScroll`. The final keyboard recheck covers all six declared conditions. The focused field now sits at y=430 at 1440×900, y=280 at 1280×600, and y=402 at 390×844, below the toast. I personally viewed all six repaired invalid-state images and the two restored narrow headers. The field label, input boundary and localized error are visible together. No source CSS, toast transition, placement or store rule changed.
+
+The real Tab sequence from Save reaches Close and Retry in nine Tab steps through the existing footer controls. Shift+Tab returns from Retry to Close; Enter dismisses; focus returns to Save. These were executed in all six final conditions, separately from programmatic focus checks.
+
+## Time, focus and state
+
+I viewed ordered pending/edit/error/retry/success samples and the later measured entrance/result frames. `evidence/temporal-01` records browser `performance.now()` brackets, native Toast events and actual operation events. Frame filename offsets are requested targets; JSON timestamps are the actual capture times. For example, the English file labelled 0400 ms was captured at approximately 617 ms because of capture overhead.
+
+Early entrance frames have the native `showing` class and opacity 0, followed by the source fade. Later pending frames are fully readable before authoritative success. The inline summary acknowledges the operation immediately. Pending and success retain the same compact height, and the lower form action remains anchored. Native focus styling remains visible on Save while its disabled presentation changes. Error adds the inherited separated action row; retry removes that row and returns focus to Save. Editing during pending and success retains the newer draft.
+
+These are real-time automated interactions plus actually viewed ordered frames, with unobserved intervals between samples. No natural-speed live or video playback was viewed, and no smoothness, frame-rate or screen-reader speech claim is made. ARIA ownership and field associations were checked structurally; actual assistive-technology output remains untested.
+
+## Current evidence applicability
+
+The broad save/retry matrix and the source/error/success views precede the narrow recovery-scroll repair. Their state, persistence, source and appearance claims remain applicable because the final delta changes only invalid-field recovery scrolling. All affected invalid-focus, keyboard and restored-header conditions were freshly rerun and viewed after that delta. Final source hashes, protected-file hashes and JavaScript syntax were rechecked after the repair.
+
+Within the stated browser and conditions, the bounded save-feedback integration is ready for review. The remaining visible tradeoff is the prescribed header overlap. Live-source access, normal-speed motion review, real screen-reader output and unrelated upstream routes are outside the completed evidence claims.

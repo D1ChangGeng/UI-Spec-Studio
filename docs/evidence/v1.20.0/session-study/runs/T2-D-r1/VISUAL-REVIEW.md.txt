@@ -1,0 +1,31 @@
+# Primary visual review
+
+## Personally inspected pixels
+
+Original image-tool responses are retained as `evidence/view-*.json`. Saving a screenshot alone is not counted as inspection.
+
+- Baseline views 001–004: the supplied 1440×900 shell and reading measure, compact six-line draft with four icon-only attachments, growing answer while away, and Chinese mobile typography. Attachment identity was absent at rest; compact input consumed substantial reading space.
+- Trial views 005–006: the existing File and Dialog composition supplies visible identity and complete filename disclosure while preserving the source family.
+- Final-001 views 007–009: retained 1440px hierarchy and mobile Chinese dialog. The compact frame exposed an unwanted thread horizontal scrollbar; the attachment containing block was subsequently repaired.
+- Final-003 view-013: 1280×600 English six-line draft with four attachments. The textarea shows four lines and an internal scrollbar. Names and remove actions are visible in a horizontally scrollable file row. The 672px source composer retains its outline and action row; there is no outer thread horizontal scrollbar. The 219px composer leaves the preceding answer and its actions readable.
+- Final-003 view-014: 390×844 Chinese dark filename dialog. The entire mixed filename wraps legibly in the source dialog, the close control remains reachable, and the description accurately states that only metadata is attached. The scrim and softened background preserve the dialog's focus hierarchy.
+- Final-003 view-015: Chinese dark return-to-latest during streaming at 1280×600. The current paragraph and streaming indicator sit above a stable bottom composer; Stop is present and readable. Paragraph spacing and Chinese glyphs are intact.
+- Research view-016: personally opened the child's original six-line baseline. It corroborates substantial composer growth; it is not an independently authored public-demo observation.
+
+The view-010–012 tool batch exceeded available conversation output; those saved tool results are not relied upon here as independently inspected pixels. Reopened view-013 establishes the final repaired compact layout. The mobile screenshot used for the detailed final judgment is view-014.
+
+## Controlled behavior and coverage
+
+`evidence/final-003/results.json` contains 59 passing checks, 36 ordered screenshots and no browser page errors. Static matrix: 1440×900, 1280×600 and 390×844, each light/English and dark/Chinese. All retain four attachments without page or thread horizontal overflow. Chinese mobile sent attachments wrap. Desktop compact textarea height is 96px with internal overflow for six lines.
+
+Both locale episodes cover empty disabled send, Shift+Enter, a single short file, long filename disclosure, Escape focus return, remove/input focus, Enter submission, streaming, manual wheel-away during growth, deliberate latest and subsequent following, Stop/text stability/input focus, fail-once/retry completion, all seven answer sections, long mixed draft retention, repeat submission, edit cancel and edit update. Reduced-motion behavior resolves to auto scrolling.
+
+English scrollTop held at 0 while scrollHeight grew 1297→1555; Chinese held at 285 while scrollHeight grew 1889→2559. After explicit latest, final sampled distance from bottom was 0 in both locales. These are controlled measurements, not an assertion about every possible browser timing.
+
+Final source passed production build and TypeScript check in command captures 021 and 022. Final browser run is command 023. Production build retains the source-family large-chunk warning. Protected adapter and lockfile hashes match the initial values.
+
+## Temporal and environmental limits
+
+Two episode videos and traces are retained under final-003. I inspected ordered static states and controlled measurements; I did not play the recordings at natural speed and make no claim of subjective motion smoothness. Disabling reveal smoothing intentionally exposes the supplied chunk cadence and makes Stop immediate.
+
+Chrome headless shell 143.0.7499.4 / Playwright 1.57.0 ran under oai, sandbox enabled, supplied Noto CJK font configuration, device scale factor 1, native scrollbars visible. The 390px condition is browser emulation, not physical phone or mobile keyboard testing. Screen-reader use, actual Chinese IME composition, native touch interaction and owner acceptance remain untested. Baseline recordings hid native scrollbars through the browser's default argument; final captures explicitly remove that argument. Public browser TLS failures and a verified retrieval 403 remain; independent public alternatives have source evidence, not viewed live behavior.

@@ -39,6 +39,9 @@ def plan(owner: str, name: str) -> dict[str, object]:
 
 def publish(owner: str, name: str) -> dict[str, str]:
     details = plan(owner, name)
+    if (ROOT / "VERSION").read_text(encoding="utf-8").strip() == "1.20.0":
+        from check_adaptive_release import require_release_evidence
+        require_release_evidence(ROOT)
     errors = validate(ROOT)
     if errors:
         raise ValueError("Package validation failed: " + "; ".join(errors))

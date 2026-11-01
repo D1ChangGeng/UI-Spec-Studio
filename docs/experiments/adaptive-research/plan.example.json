@@ -1,0 +1,204 @@
+{
+  "status": "example_not_registered_or_run",
+  "model_choices": "unverified experiment hypotheses; replace only before freezing",
+  "cells": [
+    {
+      "id": "T1-A-r1",
+      "task": "T1",
+      "condition": "A",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T1-B-r1",
+      "task": "T1",
+      "condition": "B",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T1-C-r1",
+      "task": "T1",
+      "condition": "C",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T1-G-final-runtime-r1",
+      "task": "T1",
+      "condition": "G-final-runtime",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T2-A-r1",
+      "task": "T2",
+      "condition": "A",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T2-B-r1",
+      "task": "T2",
+      "condition": "B",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T2-C-r1",
+      "task": "T2",
+      "condition": "C",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T2-G-final-runtime-r1",
+      "task": "T2",
+      "condition": "G-final-runtime",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T3-A-r1",
+      "task": "T3",
+      "condition": "A",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T3-B-r1",
+      "task": "T3",
+      "condition": "B",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T3-C-r1",
+      "task": "T3",
+      "condition": "C",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T3-G-final-runtime-r1",
+      "task": "T3",
+      "condition": "G-final-runtime",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T2-D-r1",
+      "task": "T2",
+      "condition": "D",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-terra",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T2-E-challenger-r1",
+      "task": "T2",
+      "condition": "E-challenger",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T2-E-observer-r1",
+      "task": "T2",
+      "condition": "E-observer",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T4-F-main-r1",
+      "task": "T4",
+      "condition": "F-main",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T4-F-integrator-r1",
+      "task": "T4",
+      "condition": "F-integrator",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    },
+    {
+      "id": "T4-G-final-runtime-r1",
+      "task": "T4",
+      "condition": "G-final-runtime",
+      "main_model": "gpt-6.1-sol",
+      "subagent_model": "gpt-6.1-sol",
+      "main_effort": "high",
+      "subagent_effort": "medium",
+      "timeout_seconds": 3600,
+      "max_subagents": 3
+    }
+  ]
+}

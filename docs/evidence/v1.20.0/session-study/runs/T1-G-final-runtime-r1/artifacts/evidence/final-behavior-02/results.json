@@ -1,0 +1,937 @@
+{
+  "source": {
+    "index.html": "5aae297ad9e43d97ca16a33ea980653a5fb4a65d45ca962a937339a37d99199c",
+    "settings-controller.js": "1efa634b866f461b10a99315ce776052b3a0668b8dd075da8bcda48a56f0164f",
+    "settings-store.js": "32139de23b4ad411c402620e84d5592f7ccfbcf68cece1a123946c29b63c2da0"
+  },
+  "runs": [
+    {
+      "name": "light-en",
+      "checks": [
+        {
+          "label": "validation focuses first invalid field",
+          "pass": true
+        },
+        {
+          "label": "field errors have ARIA association",
+          "pass": true
+        },
+        {
+          "label": "validation writes no storage",
+          "pass": true
+        },
+        {
+          "label": "all authoritative character limits surface inline",
+          "pass": true
+        },
+        {
+          "label": "pending exposes busy and blocks duplicate commit/cancel",
+          "pass": true
+        },
+        {
+          "label": "failure preserves previous storage",
+          "pass": true
+        },
+        {
+          "label": "failure retains complete submitted draft",
+          "pass": true
+        },
+        {
+          "label": "failure restores Save retry focus",
+          "pass": true
+        },
+        {
+          "label": "keyboard retry persists switches and text",
+          "pass": true
+        },
+        {
+          "label": "snapshot committed while newer draft stays editable",
+          "pass": true
+        },
+        {
+          "label": "success does not steal continued field focus",
+          "pass": true
+        },
+        {
+          "label": "success accurately names newer unsaved edits",
+          "pass": true
+        },
+        {
+          "label": "language switch keeps draft",
+          "pass": true
+        },
+        {
+          "label": "theme switch keeps draft",
+          "pass": true
+        },
+        {
+          "label": "Cancel returns to last committed snapshot",
+          "pass": true
+        },
+        {
+          "label": "reload returns real persisted settings",
+          "pass": true
+        },
+        {
+          "label": "no JS page errors",
+          "pass": true
+        }
+      ],
+      "frames": [
+        {
+          "label": "invalid",
+          "before": 1418.2000000001863,
+          "after": 1472.1000000000931,
+          "clock": "performance.now ms",
+          "focus": "business-name",
+          "status": "Check the highlighted fields, then save again."
+        },
+        {
+          "label": "pending",
+          "before": 1733.3999999999069,
+          "after": 1772.3999999999069,
+          "clock": "performance.now ms",
+          "focus": "BODY",
+          "status": "Saving submitted changes… You can keep editing."
+        },
+        {
+          "label": "error",
+          "before": 2654.2000000001863,
+          "after": 2698.600000000093,
+          "clock": "performance.now ms",
+          "focus": "save-settings",
+          "status": "Save did not complete. Your draft is preserved. Try again."
+        },
+        {
+          "label": "success",
+          "before": 3579.600000000093,
+          "after": 3621.399999999907,
+          "clock": "performance.now ms",
+          "focus": "save-settings",
+          "status": "Changes saved in this browser."
+        },
+        {
+          "label": "newer-draft",
+          "before": 5154.600000000093,
+          "after": 5202.600000000093,
+          "clock": "performance.now ms",
+          "focus": "business-name",
+          "status": "Submitted changes saved. Your newer edits still need saving."
+        }
+      ],
+      "pageErrors": [],
+      "events": [
+        {
+          "status": "invalid",
+          "operationId": 1,
+          "at": 792.2000000001863,
+          "settings": null,
+          "snapshot": null,
+          "fieldErrors": {
+            "displayName": "Add a display name.",
+            "email": "Enter a complete email address."
+          }
+        },
+        {
+          "status": "invalid",
+          "operationId": 2,
+          "at": 1568.8999999999069,
+          "settings": null,
+          "snapshot": null,
+          "fieldErrors": {
+            "displayName": "Use 100 characters or fewer.",
+            "organization": "Use 180 characters or fewer.",
+            "location": "Use 100 characters or fewer."
+          }
+        },
+        {
+          "status": "pending",
+          "operationId": 3,
+          "at": 1718.1000000000931,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Mei",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "error",
+          "operationId": 3,
+          "at": 2470.100000000093,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Mei",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "pending",
+          "operationId": 4,
+          "at": 2709.8000000002794,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Mei",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "success",
+          "operationId": 4,
+          "at": 3462.899999999907,
+          "settings": {
+            "displayName": "Mei",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "snapshot": null,
+          "fieldErrors": null
+        },
+        {
+          "status": "pending",
+          "operationId": 5,
+          "at": 3669,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Submitted snapshot",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "success",
+          "operationId": 5,
+          "at": 4419.5,
+          "settings": {
+            "displayName": "Submitted snapshot",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "snapshot": null,
+          "fieldErrors": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "light-zh",
+      "checks": [
+        {
+          "label": "validation focuses first invalid field",
+          "pass": true
+        },
+        {
+          "label": "field errors have ARIA association",
+          "pass": true
+        },
+        {
+          "label": "validation writes no storage",
+          "pass": true
+        },
+        {
+          "label": "all authoritative character limits surface inline",
+          "pass": true
+        },
+        {
+          "label": "pending exposes busy and blocks duplicate commit/cancel",
+          "pass": true
+        },
+        {
+          "label": "failure preserves previous storage",
+          "pass": true
+        },
+        {
+          "label": "failure retains complete submitted draft",
+          "pass": true
+        },
+        {
+          "label": "failure restores Save retry focus",
+          "pass": true
+        },
+        {
+          "label": "keyboard retry persists switches and text",
+          "pass": true
+        },
+        {
+          "label": "snapshot committed while newer draft stays editable",
+          "pass": true
+        },
+        {
+          "label": "success does not steal continued field focus",
+          "pass": true
+        },
+        {
+          "label": "success accurately names newer unsaved edits",
+          "pass": true
+        },
+        {
+          "label": "language switch keeps draft",
+          "pass": true
+        },
+        {
+          "label": "theme switch keeps draft",
+          "pass": true
+        },
+        {
+          "label": "Cancel returns to last committed snapshot",
+          "pass": true
+        },
+        {
+          "label": "reload returns real persisted settings",
+          "pass": true
+        },
+        {
+          "label": "no JS page errors",
+          "pass": true
+        }
+      ],
+      "frames": [
+        {
+          "label": "invalid",
+          "before": 1418.5,
+          "after": 1462.1000000000931,
+          "clock": "performance.now ms",
+          "focus": "business-name",
+          "status": "请检查标出的字段，然后重新保存。"
+        },
+        {
+          "label": "pending",
+          "before": 1771.1000000000931,
+          "after": 1820.7000000001863,
+          "clock": "performance.now ms",
+          "focus": "BODY",
+          "status": "正在保存已提交的更改… 你可以继续编辑。"
+        },
+        {
+          "label": "error",
+          "before": 2696.600000000093,
+          "after": 2744.399999999907,
+          "clock": "performance.now ms",
+          "focus": "save-settings",
+          "status": "保存未完成。草稿已保留，请重试。"
+        },
+        {
+          "label": "success",
+          "before": 3627.600000000093,
+          "after": 3686.7000000001863,
+          "clock": "performance.now ms",
+          "focus": "save-settings",
+          "status": "更改已保存到当前浏览器。"
+        },
+        {
+          "label": "newer-draft",
+          "before": 5228.300000000279,
+          "after": 5272.200000000186,
+          "clock": "performance.now ms",
+          "focus": "business-name",
+          "status": "已提交的更改已保存，之后的编辑仍需保存。"
+        }
+      ],
+      "pageErrors": [],
+      "events": [
+        {
+          "status": "invalid",
+          "operationId": 1,
+          "at": 796.8999999999069,
+          "settings": null,
+          "snapshot": null,
+          "fieldErrors": {
+            "displayName": "Add a display name.",
+            "email": "Enter a complete email address."
+          }
+        },
+        {
+          "status": "invalid",
+          "operationId": 2,
+          "at": 1573.8999999999069,
+          "settings": null,
+          "snapshot": null,
+          "fieldErrors": {
+            "displayName": "Use 100 characters or fewer.",
+            "organization": "Use 180 characters or fewer.",
+            "location": "Use 100 characters or fewer."
+          }
+        },
+        {
+          "status": "pending",
+          "operationId": 3,
+          "at": 1754.3999999999069,
+          "settings": null,
+          "snapshot": {
+            "displayName": "林玫",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "error",
+          "operationId": 3,
+          "at": 2507.2000000001863,
+          "settings": null,
+          "snapshot": {
+            "displayName": "林玫",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "pending",
+          "operationId": 4,
+          "at": 2757.7000000001863,
+          "settings": null,
+          "snapshot": {
+            "displayName": "林玫",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "success",
+          "operationId": 4,
+          "at": 3510.2000000001863,
+          "settings": {
+            "displayName": "林玫",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "snapshot": null,
+          "fieldErrors": null
+        },
+        {
+          "status": "pending",
+          "operationId": 5,
+          "at": 3737.5,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Submitted snapshot",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "success",
+          "operationId": 5,
+          "at": 4488.100000000093,
+          "settings": {
+            "displayName": "Submitted snapshot",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "snapshot": null,
+          "fieldErrors": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "dark-en",
+      "checks": [
+        {
+          "label": "validation focuses first invalid field",
+          "pass": true
+        },
+        {
+          "label": "field errors have ARIA association",
+          "pass": true
+        },
+        {
+          "label": "validation writes no storage",
+          "pass": true
+        },
+        {
+          "label": "all authoritative character limits surface inline",
+          "pass": true
+        },
+        {
+          "label": "pending exposes busy and blocks duplicate commit/cancel",
+          "pass": true
+        },
+        {
+          "label": "failure preserves previous storage",
+          "pass": true
+        },
+        {
+          "label": "failure retains complete submitted draft",
+          "pass": true
+        },
+        {
+          "label": "failure restores Save retry focus",
+          "pass": true
+        },
+        {
+          "label": "keyboard retry persists switches and text",
+          "pass": true
+        },
+        {
+          "label": "snapshot committed while newer draft stays editable",
+          "pass": true
+        },
+        {
+          "label": "success does not steal continued field focus",
+          "pass": true
+        },
+        {
+          "label": "success accurately names newer unsaved edits",
+          "pass": true
+        },
+        {
+          "label": "language switch keeps draft",
+          "pass": true
+        },
+        {
+          "label": "theme switch keeps draft",
+          "pass": true
+        },
+        {
+          "label": "Cancel returns to last committed snapshot",
+          "pass": true
+        },
+        {
+          "label": "reload returns real persisted settings",
+          "pass": true
+        },
+        {
+          "label": "no JS page errors",
+          "pass": true
+        }
+      ],
+      "frames": [
+        {
+          "label": "invalid",
+          "before": 1390.6999999997206,
+          "after": 1436.0999999996275,
+          "clock": "performance.now ms",
+          "focus": "business-name",
+          "status": "Check the highlighted fields, then save again."
+        },
+        {
+          "label": "pending",
+          "before": 1720.2999999998137,
+          "after": 1770.1999999997206,
+          "clock": "performance.now ms",
+          "focus": "BODY",
+          "status": "Saving submitted changes… You can keep editing."
+        },
+        {
+          "label": "error",
+          "before": 2643.7999999998137,
+          "after": 2682.0999999996275,
+          "clock": "performance.now ms",
+          "focus": "save-settings",
+          "status": "Save did not complete. Your draft is preserved. Try again."
+        },
+        {
+          "label": "success",
+          "before": 3562.7999999998137,
+          "after": 3603.2999999998137,
+          "clock": "performance.now ms",
+          "focus": "save-settings",
+          "status": "Changes saved in this browser."
+        },
+        {
+          "label": "newer-draft",
+          "before": 5133.0999999996275,
+          "after": 5182.899999999907,
+          "clock": "performance.now ms",
+          "focus": "business-name",
+          "status": "Submitted changes saved. Your newer edits still need saving."
+        }
+      ],
+      "pageErrors": [],
+      "events": [
+        {
+          "status": "invalid",
+          "operationId": 1,
+          "at": 771.7999999998137,
+          "settings": null,
+          "snapshot": null,
+          "fieldErrors": {
+            "displayName": "Add a display name.",
+            "email": "Enter a complete email address."
+          }
+        },
+        {
+          "status": "invalid",
+          "operationId": 2,
+          "at": 1517.5999999996275,
+          "settings": null,
+          "snapshot": null,
+          "fieldErrors": {
+            "displayName": "Use 100 characters or fewer.",
+            "organization": "Use 180 characters or fewer.",
+            "location": "Use 100 characters or fewer."
+          }
+        },
+        {
+          "status": "pending",
+          "operationId": 3,
+          "at": 1700.5999999996275,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Mei",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "error",
+          "operationId": 3,
+          "at": 2452.5999999996275,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Mei",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "pending",
+          "operationId": 4,
+          "at": 2692.5999999996275,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Mei",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "success",
+          "operationId": 4,
+          "at": 3445.7999999998137,
+          "settings": {
+            "displayName": "Mei",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "snapshot": null,
+          "fieldErrors": null
+        },
+        {
+          "status": "pending",
+          "operationId": 5,
+          "at": 3647.1999999997206,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Submitted snapshot",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "success",
+          "operationId": 5,
+          "at": 4397.699999999721,
+          "settings": {
+            "displayName": "Submitted snapshot",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "snapshot": null,
+          "fieldErrors": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "name": "dark-zh",
+      "checks": [
+        {
+          "label": "validation focuses first invalid field",
+          "pass": true
+        },
+        {
+          "label": "field errors have ARIA association",
+          "pass": true
+        },
+        {
+          "label": "validation writes no storage",
+          "pass": true
+        },
+        {
+          "label": "all authoritative character limits surface inline",
+          "pass": true
+        },
+        {
+          "label": "pending exposes busy and blocks duplicate commit/cancel",
+          "pass": true
+        },
+        {
+          "label": "failure preserves previous storage",
+          "pass": true
+        },
+        {
+          "label": "failure retains complete submitted draft",
+          "pass": true
+        },
+        {
+          "label": "failure restores Save retry focus",
+          "pass": true
+        },
+        {
+          "label": "keyboard retry persists switches and text",
+          "pass": true
+        },
+        {
+          "label": "snapshot committed while newer draft stays editable",
+          "pass": true
+        },
+        {
+          "label": "success does not steal continued field focus",
+          "pass": true
+        },
+        {
+          "label": "success accurately names newer unsaved edits",
+          "pass": true
+        },
+        {
+          "label": "language switch keeps draft",
+          "pass": true
+        },
+        {
+          "label": "theme switch keeps draft",
+          "pass": true
+        },
+        {
+          "label": "Cancel returns to last committed snapshot",
+          "pass": true
+        },
+        {
+          "label": "reload returns real persisted settings",
+          "pass": true
+        },
+        {
+          "label": "no JS page errors",
+          "pass": true
+        }
+      ],
+      "frames": [
+        {
+          "label": "invalid",
+          "before": 1393.8000000002794,
+          "after": 1438.2000000001863,
+          "clock": "performance.now ms",
+          "focus": "business-name",
+          "status": "请检查标出的字段，然后重新保存。"
+        },
+        {
+          "label": "pending",
+          "before": 1654.7000000001863,
+          "after": 1692.2000000001863,
+          "clock": "performance.now ms",
+          "focus": "BODY",
+          "status": "正在保存已提交的更改… 你可以继续编辑。"
+        },
+        {
+          "label": "error",
+          "before": 2570.4000000003725,
+          "after": 2606.7000000001863,
+          "clock": "performance.now ms",
+          "focus": "save-settings",
+          "status": "保存未完成。草稿已保留，请重试。"
+        },
+        {
+          "label": "success",
+          "before": 3488.9000000003725,
+          "after": 3527.8000000002794,
+          "clock": "performance.now ms",
+          "focus": "save-settings",
+          "status": "更改已保存到当前浏览器。"
+        },
+        {
+          "label": "newer-draft",
+          "before": 5076.4000000003725,
+          "after": 5124.100000000093,
+          "clock": "performance.now ms",
+          "focus": "business-name",
+          "status": "已提交的更改已保存，之后的编辑仍需保存。"
+        }
+      ],
+      "pageErrors": [],
+      "events": [
+        {
+          "status": "invalid",
+          "operationId": 1,
+          "at": 776.9000000003725,
+          "settings": null,
+          "snapshot": null,
+          "fieldErrors": {
+            "displayName": "Add a display name.",
+            "email": "Enter a complete email address."
+          }
+        },
+        {
+          "status": "invalid",
+          "operationId": 2,
+          "at": 1507.5,
+          "settings": null,
+          "snapshot": null,
+          "fieldErrors": {
+            "displayName": "Use 100 characters or fewer.",
+            "organization": "Use 180 characters or fewer.",
+            "location": "Use 100 characters or fewer."
+          }
+        },
+        {
+          "status": "pending",
+          "operationId": 3,
+          "at": 1640.6000000000931,
+          "settings": null,
+          "snapshot": {
+            "displayName": "林玫",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "error",
+          "operationId": 3,
+          "at": 2393.2000000001863,
+          "settings": null,
+          "snapshot": {
+            "displayName": "林玫",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "pending",
+          "operationId": 4,
+          "at": 2622.5,
+          "settings": null,
+          "snapshot": {
+            "displayName": "林玫",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "success",
+          "operationId": 4,
+          "at": 3375.8000000002794,
+          "settings": {
+            "displayName": "林玫",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "snapshot": null,
+          "fieldErrors": null
+        },
+        {
+          "status": "pending",
+          "operationId": 5,
+          "at": 3577.2000000001863,
+          "settings": null,
+          "snapshot": {
+            "displayName": "Submitted snapshot",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "fieldErrors": null
+        },
+        {
+          "status": "success",
+          "operationId": 5,
+          "at": 4327.600000000093,
+          "settings": {
+            "displayName": "Submitted snapshot",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": false,
+            "publicProfile": true
+          },
+          "snapshot": null,
+          "fieldErrors": null
+        }
+      ],
+      "pass": true
+    }
+  ]
+}

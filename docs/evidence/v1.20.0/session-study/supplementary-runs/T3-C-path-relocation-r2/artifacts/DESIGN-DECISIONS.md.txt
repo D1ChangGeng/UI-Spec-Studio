@@ -1,0 +1,34 @@
+# Fieldnotes design record — active SPEC F1
+
+## Goal and responsibility
+Create an editorial research studio in the existing TiddlyWiki 5.4.1 application. Preserve all eight supplied notes, native story river, links, search/tags, editor, drafts, and tiddlyweb/filesystem authority. F1 covers the connected read → follow evidence → edit/save → return experience across light/dark and three required viewports. Its visual responsibility is type hierarchy, reading measure, navigation/reading separation, editor character, and quiet states. This is a working local application, not a staged prototype.
+
+## Initial observed foundation
+`evidence/baseline-1440.png` was opened with view_image. Vanilla/Snow White presents broad white elevated cards, a 1048px-wide first note at 1440px viewport, uniform sans typography and faint native controls. The long index fills nearly the first screen. The meaning and task structure are sound; sustained bilingual reading and editorial identity are unresolved qualities.
+
+## Provisional resource decision (before trial)
+The external Paper theme is a self-contained complete theme with native templates, a serif reading/sans UI/monospace editor relationship, paper surfaces, margin rule, ruled editing, two coordinated palettes and a sliding sidebar. Source acquired from https://github.com/BurningTreeC/vanilla-paper at commit `031a78d4d4187128c632f8a647fa05408eddc700`, version 0.10.0, MIT (Simon Huber 2026). Source readme and settings were inspected. No original UI construction is authorized or proposed.
+
+Paper is not assumed mature by name or source volume: the author records unfinished testing. Adoptability depends on a populated local trial covering reading, controls, narrow widths and persistence. Challenger Notebook is under independent research; native Starlight (serif/texture) and Centralised were source-inspected but Starlight explicitly calls itself a placeholder and Centralised's fixed 770px geometry is only a layout adjustment. Neither alone supplies a resolved editorial workspace.
+
+Next action: load the complete unmodified Paper theme and its own Day/Night palettes; inspect the actual notes and native editor. Reject or repair through supported settings if reading/control continuity fails. Keep original source and license, and do not modify the upstream TiddlyWiki distribution. Owner acceptance remains pending; task delegates design choice to the primary agent.
+
+## Selected direction and final realization
+Paper is adopted after the actual source-demo, matched-content Notebook challenger, Tufte CSS cross-domain reference, and real 5.4.1 application were viewed. Notebook's centered sans sheets and persistent top/bottom controls offer better immediate mobile reading occupancy; Paper's serif reading hierarchy, red margin, warm sheet/desk separation and ruled monospace editor more closely carry the requested editorial studio identity through actual work. Tufte CSS contributes a reference for typographic proportion, not product code. Native Starlight and Centralised were inspected but not installed.
+
+Installed source: `app/wiki/themes/vanilla-paper/`, all 55 source files, 357,280 source bytes before the narrow repair. The full original repository and MIT license are retained. `evidence/adoption-manifest.json` hashes each original and product file. The complete theme supplies layout, surfaces, reading type, native controls, editor treatment, palettes and sidebar behavior. TiddlyWiki 5.4.1 remains the functional/persistence foundation. No W1/W2/W3 scope was used.
+
+Configuration: `$:/theme` selects Paper; `$:/palette` defaults to Paper Day; Paper Night remains in the native Control Panel palette chooser; `$:/language` defaults to en-GB with the supplied zh-Hans language retained; Paper's `toolbaralways=yes` makes note actions visible at rest. All remaining proportions and typography inherit the source. No font or imagery was added; Latin uses the source system-serif stack, Chinese uses the host Noto Sans CJK SC fixture. There is no added animation engine or remote service.
+
+### Narrow source-preserving repair
+Actual computed CSS and independent research both exposed a reduced-motion conflict: layout.tid asks for 1 ms, but 3-surface.tid later imposes 150 ms with `!important`. Changed that one declaration from 150 ms to 1 ms under its existing reduced-motion media query. Original identity and all other source content remain. Exact patch: `evidence/paper-reduced-motion.patch`. Recheck measured normal 0.4 s and reduced 0.001 s; the first sampled reduced-motion geometry was already full-width. This supports the scoped repair, not a frame-rate or natural-speed smoothness claim.
+
+### Verification and learning
+The first theme trial accidentally wrote a newline into the selector and rendered Vanilla; failed images are retained and correctly excluded from Paper claims. Corrected selectors rendered the adopted theme. The native filesystem adaptor renamed the interview file after save; the first verifier assumed the seed filename and failed. The corrected verifier resolved the native title and demonstrated English + Chinese disk persistence, exact reload agreement, original-text restoration and cancellation. Later test failures were Control Panel role/anchor locator mistakes, an overly broad sidebar locator, and a keyboard check expecting English after a language-test setting persisted. All are retained as distinct attempts. Final state settings were consolidated while the server was stopped; final English/day startup and full keyboard journey were rechecked.
+
+## Current assurance and remaining scope
+- Source and product comparison: original Paper demo on 5.5.0-prerelease, Notebook demo on 5.3.3, and actual product on pinned 5.4.1 are explicitly distinct.
+- Main task: read complete interview, follow ledger, return; edit English/Chinese, save to filesystem, reload exact text; restore text; cancel edit; native search via ArrowDown/Enter, Tab to pencil, Enter editor. Passed exercised checks.
+- Static variants: personally opened final reading and editing captures at 1440×900, 1280×640 and 390×844 in Day and Night; all six reading conditions have no page-wide horizontal overflow. Chinese UI was viewed at 1440×900 Night. Initial English Day startup verified after cleanup.
+- Native palette chooser operated; reduced-motion source correction rechecked; offline build passed.
+- Pending: physical mobile keyboard/IME, screen-reader/full contrast audit, Firefox/Safari, network failure/recovery injection, broader plugin compatibility, exhaustive locale×viewport combinations, natural-speed video playback and user acceptance. The mobile initial sidebar occupies about 380 px before the first sheet; the native toggle or navigation yields the full reading view. Source metadata and resting control colors remain subdued and need contrast review before a broad accessibility claim.

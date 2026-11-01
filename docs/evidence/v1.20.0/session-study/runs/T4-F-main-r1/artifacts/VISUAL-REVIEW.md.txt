@@ -1,0 +1,61 @@
+# Visual review — Fieldnotes save feedback
+
+## Review boundary
+
+Main-agent visual inspection of the settled Tabler 1.7.1 save-feedback integration. Source, local block and product observations remain separate. No new art direction or original construction was introduced.
+
+Actual images were opened with `view_image`; full returned tool objects are retained in `evidence/views/`. Browser execution used the supplied Chromium 143 headless shell, Playwright 1.57.0, device pixel ratio 1 and the provisioned Noto CJK Fontconfig file. Product checks used the exact light/en and dark/zh URL pairs. Browser timezone observed in the capture log was America/New_York; saved timestamps are rendered in that browser-local time.
+
+## Source observation
+
+Read `sources/tabler-toast-cookies.html`, the exact acquired block, and `sources/shared/components/demo/Toast.astro`. The tagged revision and separately acquired deployed snapshot identities remain in `SOURCE-MANIFEST.json`. The public deployment does not advertise its exact commit; it is not represented as the tagged commit.
+
+Personally viewed `source-local-light-1440.png` and `source-local-dark-1440.png` at 1440×900. These are the provided local rendering of the acquired source, not a newly observed live public demo. The source has a 350 px outer width, a compact identity/time/close header, body and separated small-button row. Its light and dark material relationships are quiet and consistent with the existing settings page. The sample cookie glyph renders as missing in this environment; the integrated copy contains no emoji and is unaffected.
+
+The original public Tabler page and Bootstrap toast documentation were also retrieved as textual references in `evidence/web-source-001.json`. That retrieval does not establish live rendered observation.
+
+## Integrated static views personally inspected
+
+| Conditions | Actual opened captures | Observation |
+|---|---|---|
+| 1440×900 light/en | `final-error-top-light-en-1440.png`; earlier `002-integrated-error-light-en-1440.png` | Compact feedback occupies the fixed upper-right region. Header/body/action rhythm, subtle border and shadow remain source-like. Profile fields retain their original columns. |
+| 1440×900 dark/zh | `final-error-top-dark-zh-1440.png`; `002-integrated-success-dark-zh-1440.png` | Chinese copy is readable without missing glyphs. Identity and close remain aligned. The success view retains the form and lower save row while reporting the stored submitted version. |
+| 1280×600 light/en | `final-error-lower-light-en-1280.png`; `002-integrated-error-lower-light-en-1280.png`; episode initial frame | The short-height page scrolls normally. The fixed toast stays away from the lower Save/Cancel controls; its action row remains legible. |
+| 1280×600 dark/zh | `final-error-top-dark-zh-1280.png`; `final-error-lower-dark-zh-1280.png` | Header, columns, switches, lower actions and toast preserve the mature dark family. The notification does not displace form layout. |
+| 390×844 light/en | `final-error-top-light-en-390.png`; `final-error-lower-light-en-390.png` | Toast remains 350 px wide at x=24 with 16 px right clearance. Retry and close stay inside the viewport. Save/Cancel and notification/privacy controls are usable below. No horizontal overflow was observed or measured. |
+| 390×844 dark/zh | `final-invalid-dark-zh-390.png`; `final-error-lower-dark-zh-390.png` | Native field error text and red invalid treatment are visible below the focused display-name field. Chinese toast and action text fit. The lower save action remains clear. |
+
+The prescribed fixed placement covers part of the upstream utility header while open, especially on mobile. The close button is reachable, and dismissal restores access to the covered controls. This is an observed consequence of the explicitly settled placement; placement or navigation redesign was outside this integration.
+
+## Source craft retention
+
+The integrated block retains the source classes, header → body → separated action-row relationship, native avatar initials fallback, width, padding, typography, border, shadow, small primary button, close control and Bootstrap Toast state/motion implementation. Product-specific content replaces sample person/cookie copy. The action row is present only for an authoritative error, per the settled mapping.
+
+`evidence/source-comparison-settled.json` compares 12 computed properties for each of toast, header, body, action row, button and close in light and dark. No differences remained after native Toast activation and settlement on both source and product pages. This is engineering support for the personally viewed retained relationships, not a substitute for that viewing.
+
+The first metric capture in `final-capture-log.json` compared an already-shown source preview against a dynamically activated product toast and sampled the source's dark-theme button during its transition. That produced transition/shadow/color differences. The original observations are retained. Command 009 corrects those comparison conditions; it did not change product code.
+
+## Controlled real-time episode
+
+Personally opened all eight `episode-00` through `episode-07` PNGs. They show actual browser operation at 1280×600, light/en, using the unchanged 750 ms store delay and one-time failure. They were captured with native animation enabled and no simulated clock.
+
+- Pre-submit and pending frames show native focus scrolling toward the initiating Save button. Its focus ring remains visible while the source disabled presentation marks pending.
+- The pending toast enters with its native fade. The file named `episode-02-pending-settled.png` is **not fully settled**: the recorded end-of-capture opacity was approximately 0.44. The filename reflects the intended checkpoint; the actual observation is an intermediate frame.
+- Error shows the separated Retry action. Explicit retry returns focus to Save before removing that action row.
+- Success reports the local save and actual browser-local saved time. It remains visible.
+- Native dismissal fades the toast; the final frame shows it hidden and the Save focus ring restored.
+
+Exact capture-time brackets, event states, opacity, focus and scroll positions are in `evidence/final-capture-log.json`. The episode runs approximately two seconds between its first and last sampled frames. Sparse ordered frames establish these sampled relationships and ordering. They do not establish continuous visual smoothness, frame delivery, or natural-speed playback; no such playback was performed.
+
+## Behavior evidence and scope limits
+
+`evidence/behavior-002.json` contains 126 passing assertions plus six actual event-sequence records across the six required viewport/variant conditions and focused edge cases. Real browser storage was read after success and failure. The checks establish snapshot writes, newer draft retention, retrying the failed snapshot, no repeat UI submission while pending, field/error associations, close/focus return, stale error rejection, native reduced motion, reload persistence and no JavaScript exceptions.
+
+The first harness attempt failed because its Playwright call passed an argument positionally; this was a harness issue. Its actual failure remains in command 005 and `behavior-001.json`; the corrected run is command 006. No product repair was needed after the passing run.
+
+Screen-reader announcement delivery was not listened to. DOM evidence establishes one result live region and a non-live inline summary; actual assistive-technology output remains unverified. Touch hardware, browser engines other than the provided Chromium, operating-system storage failures, and continuous video playback were not tested. The gallery routes outside settings remain upstream context and outside the stated application contract.
+
+## Judgment
+
+The specified source-preserving integration is complete in this application. The toast remains visually coherent with the existing mature page in the inspected conditions, and the actual settings journey retains its draft, persistence and recovery boundaries. No unfinished in-scope product defect was found. This is the main agent's scoped inspection judgment; it does not claim end-user aesthetic approval.
+

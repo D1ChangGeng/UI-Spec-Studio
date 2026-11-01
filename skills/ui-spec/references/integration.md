@@ -143,3 +143,13 @@ Present the same underlying service state according to each role's task and acce
 Resolve important decisions in [the evidence map](evidence-map.md) to actual component/asset locations, source versions, configuration, adaptation and integrated checks. Preserve the reference → demo → trial → adoption distinctions while replacing fixtures with real owners. Verify dependent states and conditions when runtime data, authority or timing changes. A completed dependency installation is not a connected user task; a local pass does not approve a whole journey.
 
 For consequential unresolved fit or visual questions, apply [the action rules](evidence-actions.md): advance supported independent connections, use bounded probes where they resolve uncertainty, and keep unsupported dependent commitments provisional. Record actual approval or a scoped exception separately from verified product behavior.
+
+## Delegate bounded integration without transferring design ownership
+
+A scoped integrator can configure, compose and connect an already selected mature implementation under the main agent's visual direction. Before writing, establish the source/version/variant, protected proportions/type/material/motion, allowed modules, shared interfaces, real data/state ownership and observable acceptance conditions. Natural-language instructions and authoritative project references can express these relationships; a fixed delegation schema is unnecessary.
+
+Permit source-supported adaptation, routing, data and event wiring, responsive connections and compatibility repairs while retaining the reason the source was chosen. An unmade design choice is not a deterministic implementation task. Return material layout, visual-language, motion or source-selection questions to the main agent instead of silently inventing CSS or rebuilding a mature component. Original visual responsibility still requires the exact authorized W1–W3 scope.
+
+Assign non-overlapping files or isolated worktrees where useful and agree on shared contracts before parallel writes. Do not assume that different agent names create separate filesystems. Verify the actual checkout, preserve unrelated changes and stop conflicting writes. Integrating multiple contributions requires a main-agent whole-product pass; isolated component success does not establish coherent density, type, focus, scrolling or continuous task behavior.
+
+Return actual changes, exact adopted sources, checks performed, viewed evidence and unresolved risks. Tests passing, dependency installation and code imports establish their own facts, not retained craft or final SPEC acceptance. Trial or integration failures can trigger targeted source investigation; keep unresolved quality visible within its responsible formal SPEC.

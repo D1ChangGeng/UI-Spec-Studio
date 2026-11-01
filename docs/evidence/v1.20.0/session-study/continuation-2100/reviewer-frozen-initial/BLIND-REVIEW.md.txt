@@ -1,0 +1,68 @@
+# Independent condition-blind product review — initial cohort
+
+This is an independent agent product judgment of P01–P13 and P16–P18, before any condition mapping. It is not a human acceptance vote, an accessibility certification, or evidence of native role binding or backend model identity. No method is presumed successful. The findings concern the supplied frozen applications and their declared local contracts.
+
+The initial cohort is fixed at sixteen products. A later directory scan saw P15's task/input hashes as it appeared in the shared pack; no P15 product, captures, judgments or source were reviewed for this cohort. No allocation map, producer judgment, prior reviewer report, sibling workset or coordinating repository was inspected. Isolation is instructional on a shared host, not a security sandbox; source choices and visible differences are observable.
+
+## Review scope and evidence
+
+I personally opened the original PNGs listed per product in products.json with view_image. Each product has original desktop, narrow and meaningful task-state pixels, with both themes represented. Actual image request/returned-object exports were saved at call time under evidence/. Original pixels were not altered. Additional live PNGs are separately identified as reviewer captures, not original producer captures.
+
+I read the task/input contracts, README instructions and applicable source foundation; task/input hashes agree within the task families. The authoritative settings stores were byte-compared to their foundations and are unchanged. Source inspection was limited to allowed product/foundation files, including the selected toast decision/source preview, adopted theme configuration and retained license notices. Producer source-selection research and broader provenance claims were withheld, so acceptance here does not certify that process.
+
+Behavior ran in disposable copies under copies/, on distinct local ports 4660–4675, 4770–4775, 4790–4792, 4870–4875, 4890–4896 and 4920–4922. Only servers started by this review were terminated. Retained server logs show no address-in-use failures. Later passes additionally checked that the started process had not exited before navigation. These are owned local tests, not the user's connected browser.
+
+Playwright 1.57.0 used the supplied Chrome headless shell 143.0.7499.4 and FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf. Device scale was 1. Active workflows used 1280×600 (settings/chat), 1280×640 (wiki), and 390×844. Original captures additionally covered 1440×900. Most active reruns used reduced motion; both theme judgments draw on actual original pixels, while the repeated behavior tests primarily ran in light English. The later table-only pass used normal motion but did not assess natural-speed animation.
+
+The commands/ tree retains full subprocess stdout/stderr, command, return status and timezone-bearing timestamps through capture_command.py, including failures. JSON tool returns retain the actual returned objects even when console display was truncated. There are two bootstrap limitations: the first instruction-read tool result is retained in the conversation only; a few initial listing/contract commands preceded delivery of capture_command.py and have exact tool-return JSONs rather than wrapper directories. No missing return was reconstructed. Image-view exports were preserved at call time throughout. Different execution surfaces expose different literal wall clocks; their timestamps are retained and should not be used to infer cross-surface elapsed time.
+
+## Product judgments
+
+### Settings — T1
+
+P03, P05 and P06 are acceptable within the exercised browser-local increment. They preserve Tabler's type, surfaces, forms and settings hierarchy while making bilingual labels, validation and save states substantially coherent. All three display the long representative name/organization in wrapping fields. P03 and P06 expose a compact settings-navigation disclosure on narrow screens. P05's paired large fields remain readable but demand more vertical room. P06's identity/title grouping places the local-storage boundary close to the form's primary identity and is especially economical.
+
+P16 has a working local flow, but I limit acceptance of the complete narrow presentation. Its display name and organization remain single-line fields that show fragments of the supplied long value; reviewing the whole string requires moving inside the fields. The tall stacked navigation also pushes the form far down. The unchecked visibility control's changing wording, “Keep my profile hidden,” reads like an action whose checkbox polarity conflicts with the underlying public-profile meaning; surrounding help reduces, but does not eliminate, that ambiguity. These are presentation/comprehension reservations, not evidence of lost data.
+
+For every T1 product I exercised a real valid save and reload, a forced failed write preserving prior storage and current draft, retry, rejected empty-name focus/association, and editing after a pending submission. All preserved the newer field draft while storing only the earlier submitted snapshot and reported that distinction. Keyboard Enter activated Save and Cancel; Cancel restored persistence. A later retry after editing the failed form saves the current draft in these T1 products. That is distinguishable from the explicit failed-snapshot retry contract in T4 and is not scored as a T4 violation.
+
+### Conversation workspace — T2
+
+P04, P07, P09, P10, P11 and P17 support the requested local composer/reading path and are acceptable within that synthetic-runtime scope. Their visible differences are comparatively narrow; all retain the source reading column, calm sidebar, light/dark typography, compact composer and actionable feedback. No broad preference ranking or causal conclusion follows from this sample.
+
+Every product completed the deliberate partial failure/retry path to the long seven-theme local answer. In a second pass, real wheel scrolling away kept the user's chosen position fixed while answer text grew by approximately two thousand characters. Return to latest returned to the bottom. Stop left the answer's text stable across a subsequent one-second observation, and the composer remained usable. This corrects the uncertainty in an earlier whole-body-length check, where changing action labels confounded a direct text comparison.
+
+Each product accepted real local filenames and a six-line mixed-language draft. At 390px, the document stayed 390px wide. P04/P07/P10/P11/P17 use a compact horizontal attachment rail: later files require lateral discovery, and some narrow states show only part of the next chip. P07 makes the horizontal scrollbar more visible, though its narrow composer can combine rail and textarea scrolling in close proximity. P09 wraps filename-only chips in a bounded vertical region; it uses more height and clips part of the next attachment row initially.
+
+The full filename and metadata boundary were actually disclosed by keyboard in all six products. The dialog products closed with Escape and restored the exact initiating filename button after the close transition. P09's focusable group showed a persistent tooltip; Escape hid it while preserving group focus. Its trigger is less explicit than a details button, and its deliberate failure recovery is labeled Regenerate response. P11 distinguishes Retry response after failure from Regenerate response after success. P17's separate dialog title, explanatory boundary text and filename block form a clear details hierarchy.
+
+Some P10 originals captured a dim/blurred transition. Settled current disclosure was readable; those frames alone do not establish a persistent contrast defect. Normal-motion quality remains unknown because the primary reruns used reduced motion. Mobile software-keyboard occlusion, full message editing/branch navigation, touch discovery and assistive-technology use were not exhaustively tested.
+
+### Research workspace — T3
+
+P02 and P12 are acceptable local editorial workspaces with table-scroll discoverability reservations. Their paper theme provides a recognisable material and type direction rather than a palette alone: warm surrounding surface, paper river, red margin, serif long-form reading, subdued tags, and a ruled monospaced editor. English and Chinese retain their complete content and useful heading relationships in both themes. Narrow reading remains composed, though the editor toolbar takes several rows and sticky titles consume reading space.
+
+P13's Notebook theme is coherent at desktop: a broader paper reading surface, left navigation/top toolbar and strong headings. Its dark editor is denser than the paper products but readable in the viewed originals. I accept desktop reading/editing and observed persistence, while withholding full narrow-workspace acceptance because the evidence ledger has uncontained horizontal overflow.
+
+Every wiki received an English and Chinese addition through its native editor; confirmation, reload and actual tiddler-file contents agreed. After correcting the harness to accept the native discard confirmation, cancellation removed the temporary edit and preserved the saved note. Following the ledger link, searching for another note, focusing a result, activating it and entering its editor by keyboard all worked. P13 required the theme's actual search input rather than the Vanilla-specific selector. Retained selector failures are harness errors and are not product failures.
+
+The final narrow table inspection materially distinguishes the products. P02's table itself scrolls horizontally inside its 318px area; P12 uses a named, focusable Evidence table wrapper. Horizontal wheel inspection exposed the complete “Does not establish” column in both without moving the surrounding page. Their initial clip is not data loss, although neither state gives an especially strong visible scroll hint. P12's explicit wrapper is a better stated keyboard affordance; horizontal keyboard scrolling itself was not exercised.
+
+P13's table reaches x=455px in a 390px viewport and expands the document to 455px. Horizontal wheel input pans the entire document by 65px. This reveals the final column but clips the note title and surrounding prose on the left, while the bottom toolbar remains viewport-sized. A source-preserving table containment repair is required before accepting this narrow ledger scope. The core persistence result does not erase this whole-product layout defect.
+
+### Bounded toast integration — T4
+
+P01, P08 and P18 are acceptable for their bounded toast integration in the exercised local scope. The live original source rendering and original integrated captures show the same mature header/body/separated-action relationship, width, typography, border and shadow family. They use the existing native close and Tabler action button instead of introducing another visual system. All keep the authoritative store unchanged.
+
+For each, keyboard retry submitted the failed snapshot rather than a later unrelated field draft. Storage contained the failed submitted version, the newer draft remained in the form, and the summary explicitly said it was unsaved. Cancel restored persistence. Closing feedback returned focus to Save and did not change storage. Original pixels cover error, success, pending or invalid meaningful states in both themes and at narrow size.
+
+Persistent top-right feedback covers some upstream header/menu content until dismissed; at 390px it can cover the title and navigation. That is a visible tradeoff of the settled source placement, with a reachable close control, rather than evidence of a chosen alternative layout. The inherited single-line profile fields still crop long values. Acceptance applies to this T4 increment, not a claim that those underlying settings fields have been redesigned.
+
+## Remaining limits and disposition
+
+The material product scopes held are P13's narrow evidence-ledger composition and P16's complete narrow long-value presentation. No comparator was repaired. If later final-runtime mapping includes either product, its continuation must retain that unresolved scope or document an independently reviewed source-preserving repair; a successful build or persistence check alone is insufficient.
+
+Other accepted scopes remain bounded by the local contracts and actual exercises. Full sequential Tab traversal, email-edit flows, server synchronization outage recovery, comprehensive screen-reader use, natural-speed motion and mobile software-keyboard behavior remain unknown where stated. Synthetic model output, filename metadata and browser-local/wiki persistence must not be generalized to real model services, cloud history, uploads or collaboration.
+
+The initial report and products.json are frozen after the final inspection. Later products and unblinded disposition belong in separate records. Original evidence paths, exact image exports and per-product behavior results are indexed in products.json.
+

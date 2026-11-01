@@ -1,0 +1,30 @@
+{
+  "schema": "plain coordination export",
+  "children": [
+    {
+      "prompt": "evidence/coordination/child-prompt.txt",
+      "request": "evidence/coordination/spawn-request.json",
+      "result": "evidence/coordination/spawn-result.json",
+      "canonical_agent_id": "/root/product_02/source_research",
+      "requested_model": null,
+      "requested_reasoning_effort": null,
+      "resolved_backend": null,
+      "native_role_binding": null,
+      "total_tokens": null,
+      "billed_cost": null,
+      "report": "evidence/research/RESEARCH.md",
+      "report_delivery": "evidence/research/FINAL.md",
+      "final_notification": "evidence/research/FINAL-NOTIFICATION.txt",
+      "final_notification_sha256": "41a4dda888d70c1a92862ac1e8da1d12da17439bd01784d7987bee7d730ab8e7",
+      "visual_review": "evidence/research/VISUAL-REVIEW.md",
+      "parent_view_exports": [
+        "evidence/parent-view-source-specimen-1440-light.json",
+        "evidence/parent-view-source-specimen-1280-dark.json",
+        "evidence/parent-view-official-snapshot-local-1440-light.json"
+      ],
+      "child_product_code_changes": false,
+      "status": "complete",
+      "coordination_exports": "evidence/coordination/followups.json"
+    }
+  ]
+}

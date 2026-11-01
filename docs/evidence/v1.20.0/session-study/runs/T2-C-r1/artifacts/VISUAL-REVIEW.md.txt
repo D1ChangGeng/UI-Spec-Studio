@@ -1,0 +1,31 @@
+# Main-agent visual review
+
+Date: 2026-11-01. Subject: the actual built Meridian application and the three returned original-source demos. Browser: local Chromium 143 headless, Playwright 1.57.0, DPR 1, FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf. Theme/locale uses the supplied URL query. Screenshots include real English/Chinese text and settled fonts. Full actual view_image objects, including image bytes, are retained in evidence/views/. Source-child observations have a separate evidence/research/VISUAL-REVIEW.md.
+
+## Personally viewed baseline and source evidence
+- Baseline 1440×900 light initial: coherent 44rem reading measure, quiet sidebar, clear text hierarchy, bottom composer.
+- Baseline compact six-line/four-file and 390px narrow: four anonymous document squares, stable lower add/send row, 270px combined composer at 600px height.
+- Baseline dark earlier-reading and returned-answer frames: preserved glyph coverage and source surfaces; sampled reading behavior supported by actual logs.
+- Original assistant-ui File demo: compact icon/name rows, outline/muted variations, type/space relationships. AI Elements inline: immediately visible filename badges with a fourth item wrapping. AI Elements full chatbot: six mixed lines with bottom controls retained. These were personally opened from actual captured PNG bytes, with original JPEGs and public tool outputs retained by the researcher. They are reference subjects, not product screenshots.
+
+## First integrated trial
+Personally opened evidence/trial-01/02-compact-six-lines-files.png, 02b-file-details.png and 03-narrow-files.png. Named rows clearly distinguished short and long filenames while conserving height. The first dialog frame was captured during its source fade transition and was visibly translucent; it was not treated as the settled result. Later static captures wait 200ms after dialog visibility and were separately inspected. This was a capture-condition correction, not removal of the source animation.
+
+## Final static review
+Personally opened final-04: light-en-1440x900-initial; light-en-1280x600-six-lines-files; light-en-390x844-six-lines-files; light-en-1280x600-filename-dialog; dark-zh-1440x900-initial; dark-zh-1280x600-six-lines-files; dark-zh-390x844-six-lines-files; dark-zh-390x844-filename-dialog.
+
+Observed: inherited reading width, line rhythm and understated surface hierarchy remain coherent. Six-line input and actions are visible in compact and narrow states. Named rows retain the source's small outlined file treatment. Long names are truncated in the strip, then wrap completely in the source dialog; light/dark modal foreground remains distinct and focused close control is visible. Chinese glyphs render in both message text and filenames. The horizontal composer strip intentionally reveals fewer files at narrow width; keyboard focus/scroll can reach every attachment. Sent attachments wrap, with all four objects retained.
+
+The source scroll Button's first light treatment was translucent enough to compete with underlying paragraph text. This was a real pixel-review finding; the final source configuration applies opaque background and border tokens in both themes and uses the source default button size. The following final-05 views were personally opened after that change: light-en-episode-03-growing-away, dark-zh-episode-03-growing-away, dark-zh-episode-07-failure, light-en-episode-08-retry-complete. The return pill now reads as a distinct action above the composer. It still overlaps a small part of the reading area by design, as in the inherited floating control. The failure surface visibly names the local synthetic failure, and the completed retry preserves source branch/action presentation.
+
+Also personally opened continuation-02/01-files-sent.png. Four named attachments wrap coherently above their sent question, with no invented metadata or download. Full fourth-name disclosure is verified by the actual dialog interaction.
+
+## Controlled temporal review
+Personally opened the ordered final-04 English sequence: 01-running, 02-away, 03-growing-away, 04-return, 05-following. Real timestamps and geometry are in the report. The earlier question and paragraphs occupy matching positions in away/growing-away samples while response height increases. The return samples reveal later content and the source stop action remains available. After the final surface change, the complete suite was rerun as final-05; behavior assertions remain passing in both variants.
+
+The evidence consists of actual browser operations, timestamped sampled states, and personally viewed ordered frames. Natural-time video playback was not viewed; no claim about uninterrupted perceived smoothness or frame rate is made. The source controller's behavior, DOM geometry and adapter checks explain these sampled observations but do not replace them.
+
+## Verification and limits
+Final-05: 53/53 browser assertions pass, no page errors. Continuation-02: 7/7 pass, including sent files, edit cancellation, draft growth at scrollTop 343→343, and draft preservation on stop. Adapter abortion and no-content-read checks pass. Build and TypeScript pass. The source-family build still emits a bundle-size advisory.
+
+Not established: physical mobile touch/keyboard behavior, native OS IME, other browser engines, screen-reader experience, user comprehension or owner acceptance. Some broader inherited labels remain English in the Chinese content condition. These limits are retained rather than converted into passes. No remaining observed defect in the exercised product scope is concealed by the assertion counts.

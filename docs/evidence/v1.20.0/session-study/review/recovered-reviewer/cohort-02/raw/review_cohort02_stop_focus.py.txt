@@ -1,0 +1,41 @@
+from pathlib import Path
+prefix=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/review_conversations.py").read_text().split("summary=[]")[0]
+prefix=prefix.replace("behavior-conversations-001","behavior-stop-focus-cohort02-001")
+exec(compile(prefix,"review-shared-conversation-helpers","exec"))
+pid="P17";app=ROOT/"copies/conversations-cohort02-001/P17/app";port=4727
+data={"product":pid,"started":now(),"tested_copy":str(app),"steps":[],"screenshots":[],"tab_recovery":[]}
+log=open(OUT/"P17-server.log","w")
+server=subprocess.Popen([sys.executable,"-m","http.server",str(port),"--bind","127.0.0.1","--directory",str(app/"dist")],stdout=log,stderr=subprocess.STDOUT,env=ENV)
+data["server"]={"pid":server.pid,"port":port,"started":now()}
+with sync_playwright() as p:
+ browser=None
+ try:
+  for _ in range(50):
+   if server.poll() is not None:raise RuntimeError("Owned preview exited")
+   try:urlopen(f"http://127.0.0.1:{port}/",timeout=.5).close();break
+   except Exception:time.sleep(.1)
+  browser=p.chromium.launch(executable_path=CHROME,headless=True,env=ENV,args=["--no-sandbox"])
+  data["browser"]=browser.version;data["fontconfig"]=ENV["FONTCONFIG_FILE"];data["device_scale_factor"]=1
+  page=browser.new_page(viewport={"width":1280,"height":600},device_scale_factor=1)
+  page.goto(f"http://127.0.0.1:{port}/?theme=light&lang=en",wait_until="networkidle")
+  input=page.locator(".aui-composer-input:visible");input.fill("Review stop and continue / 停止后继续");input.press("Enter")
+  stop=page.locator(".aui-composer-cancel");stop.wait_for();page.wait_for_timeout(500)
+  stop.focus();page.keyboard.press("Enter");page.wait_for_timeout(100)
+  rec(data,"keyboard-stop-100ms",page);page.wait_for_timeout(1000);rec(data,"keyboard-stop-1100ms",page);shot(data,"keyboard-stop-lost-focus",page)
+  for i in range(12):
+   page.keyboard.press("Tab");observed=state(page)
+   data["tab_recovery"].append({"tab":i+1,"focus":observed["focus"]})
+   if "aui-composer-input" in observed["focus"]["class"]:break
+  data["composer_reached_by_tab"]=page.evaluate("document.activeElement.classList.contains('aui-composer-input')")
+  rec(data,"tab-recovery-end",page)
+  if data["composer_reached_by_tab"]:
+   page.keyboard.insert_text("Keyboard continuation / 键盘继续");page.keyboard.press("Enter");page.locator(".aui-composer-cancel").wait_for();page.wait_for_timeout(150)
+   rec(data,"keyboard-continuation-sent",page)
+   page.locator(".aui-composer-cancel").click();page.wait_for_timeout(200)
+  data["completed"]=now()
+ except Exception:data["failure"]=traceback.format_exc();print(data["failure"],flush=True)
+ finally:
+  if browser:browser.close()
+  server.terminate();server.wait(timeout=5);log.close();data["server"]["stopped"]=now();data["server"]["returncode"]=server.returncode
+  (OUT/"P17.json").write_text(json.dumps(data,ensure_ascii=False,indent=2))
+  print(json.dumps({"product":pid,"tab_recovery":data["tab_recovery"],"composer_reached_by_tab":data.get("composer_reached_by_tab"),"failure":data.get("failure"),"evidence":str(OUT/"P17.json")},ensure_ascii=False),flush=True)

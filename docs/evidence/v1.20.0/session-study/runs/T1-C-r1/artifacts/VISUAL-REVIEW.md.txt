@@ -1,0 +1,41 @@
+# Primary designer visual review
+
+## Observation boundary
+
+This review records pixels actually opened through `view_image`. Screenshots were produced by the owned local application in headless Chromium 143 with Playwright 1.57, device scale 1, the exact CSS viewports stated below, and `FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf`. Font readiness was awaited. Synthetic content was used. Source hashes, state, focus, scroll and screenshot time brackets are retained in each run’s results. A captured file is not counted as viewed merely because it exists.
+
+## Reference and baseline personally viewed
+
+The original official source was rendered locally with the supplied pinned assets. I opened its 1440×900 whole viewport and 1280×600 footer (`evidence/view-research-1.json`, `view-research-2.json`). The card boundary, quarter-width navigation, section rhythm, control contours and right-aligned action hierarchy are the relevant mature relationships. Missing original portrait images limit that asset comparison.
+
+I also opened the starting app at 1440×900 and 390×844, and the research child’s invalid-save frame. In the compact invalid frame, the Save action is visible but the top status and affected field are absent. In the narrow baseline, the long settings navigation delays the first editable field beyond the opening viewport. These observations support feedback relocation and narrow navigation composition; they do not justify a new visual system.
+
+## Assembled product observations
+
+| Condition and actual viewed material | Observed judgment |
+|---|---|
+| All four language/theme combinations at 1440×900, `view-final-desktop-*.json`; final light/English and dark/Chinese repeated in `view-release-context-1/2.json` | Source card/nav proportions, type hierarchy and section alignment remain coherent. The header utilities read as secondary. Initial values remain editable and the identity field area uses the source control family. The final source changes after the first full matrix affect status colors and a narrow-only peripheral overlay, not these initial desktop relationships. |
+| All four combinations at 1280×600, `view-final-short-*.json`, plus final current-code state captures in `view-release-states-*.json` | Document scrolling gives access to the complete form. Initial compact view is intentionally a portion of the form. At the scrolled action position, feedback and Cancel/Save or Retry are together and readable. The original footer/action proportions remain. |
+| All four combinations at 390×844, final current-code `view-release-narrow-1..4.json` | Header title stays on one line, fixture controls occupy a separate source grid row, and the collapsed settings list no longer consumes the opening viewport. Display name, organization, location and email are visible in the initial view. The source floating customization control no longer covers the email help. |
+| Long Chinese/English name and organization, including final dark/Chinese `view-release-narrow-5.json` | Actual entered text wraps into the source textareas. The long representative string remains visible rather than replaced with a summary. The textarea border, type, padding and resize affordance are inherited. Focus remains visible. |
+| Invalid state, `view-release-states-1.json` | First invalid display name is centered in view, with the source invalid border/icon, specific correction text and visible label. Long invalid organization text grows without covering neighboring text. Other errors are reachable below. |
+| Failure/retry in light/Chinese and dark/Chinese, `view-release-states-2/4/8.json`, narrow English/Chinese `view-release-narrow-6.json` and `view-release-context-3.json` | Outcome and retry instruction remain immediately above the action row. Both themes use legible source emphasis roles. Narrow text wraps inside the alert without clipping the controls. |
+| Pending/success/newer unsaved edits, `view-release-states-3/5/6.json` | Pending is visibly distinct and does not claim completion. Success follows the real service. The “submitted changes saved; newer edits still need saving” message accurately separates the persisted snapshot from current draft. The pending screenshot samples the inherited loading button transition; no natural-speed smoothness claim is made. |
+| Keyboard Save and recovery, `view-release-states-7/8.json` | Source focus outline is clear on Save and remains/restores on Retry. The completely keyboard-operated test used Tab, Control+A, inserted text and Enter; it reached actual persisted success. |
+| Narrow section return, `view-release-context-4.json` | Privacy remains visible after selecting it; the disclosure closes, the section retains focus, and the current values remain. This is the settled outcome; the collapse interval itself was not continuously viewed. |
+
+## Repairs prompted by inspection and operation
+
+Original attempts remain intact. A selector error, blur-induced Save-target movement, and a rapid collapse selection race were found by actual runs and fixed before the final matrix. The earlier mobile customizer overlap is visible in `view-mobile-1.json`; the final narrow frames establish its removal through source responsive utilities.
+
+Feedback color was a real remaining issue: the source alert colors gave 3.05:1 info and 2.74:1 success against white, and 3.25:1 danger against the dark card. The source emphasis utilities now produce 15.28:1, 14.79:1 and 6.49:1 respectively in the captured source-class comparison. Final viewed messages show the corresponding darker light-theme text and lighter dark-theme text. These numbers concern the measured status text/background pairs only.
+
+## Static, controlled-episode and natural-time distinctions
+
+- Static views: the listed screenshots were actually opened at the tool’s native image display scale. Whole viewport context and relevant field/footer details were inspected.
+- Controlled episodes: the unchanged service’s real 750 ms delay, failure fixture, storage result, current draft, focus and retry were exercised. Ordered captures and their actual time brackets support sampled state/order judgments. No mocked completion or clock fast-forwarding was used.
+- Natural-time viewing: no video playback or continuous live-browser visual observation was available/performed. Smoothness between sampled frames, real mobile keyboard behavior, screen-reader announcement quality and broader accessibility certification remain unverified.
+
+## Current conclusion
+
+The requested browser-local settings path is implemented and the scoped checks pass. The mature Tabler family carries the visible result. No unresolved functional blocker was observed in the tested path. Public live-source access remained blocked; the supplied official snapshot was the actual viewed reference. Gallery routes and upstream demo chrome outside settings remain outside this delivery’s product contract.

@@ -1,0 +1,66 @@
+{
+  "kind": "actual runtime and input readback after initial restoration",
+  "observed_at": "2026-11-01T08:37:03.029704+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "python": "Python 3.12.14",
+  "node": "v24.22.1",
+  "assets": [
+    {
+      "artifact": "chrome-headless-shell",
+      "version": "143.0.7499.4",
+      "archive_sha256": "a9a525cb3832d59a810f78f8ba6c5ed3592a6a488984627f5d827c2a365c8a5a",
+      "verified_extracted_files": 287
+    },
+    {
+      "artifact": "ffmpeg",
+      "version": "1011",
+      "archive_sha256": "ebc74fc5b94830176a3c2914ae96bd8bc7f6a91f4f33890230f84a172ee61ccc",
+      "verified_extracted_files": 2
+    }
+  ],
+  "font_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+  "fontconfig_matches_registered": true,
+  "inputs": [
+    {
+      "cell_id": "T1-G-final-runtime-r1",
+      "files": 158
+    },
+    {
+      "cell_id": "T2-C-r1",
+      "files": 115
+    },
+    {
+      "cell_id": "T2-G-final-runtime-r1",
+      "files": 115
+    },
+    {
+      "cell_id": "T3-A-r1",
+      "files": 8886
+    },
+    {
+      "cell_id": "T3-C-r1",
+      "files": 8890
+    },
+    {
+      "cell_id": "T3-G-final-runtime-r1",
+      "files": 8890
+    },
+    {
+      "cell_id": "T2-D-r1",
+      "files": 115
+    },
+    {
+      "cell_id": "T2-E-challenger-r1",
+      "files": 115
+    },
+    {
+      "cell_id": "T2-E-observer-r1",
+      "files": 115
+    },
+    {
+      "cell_id": "T4-F-integrator-r1",
+      "files": 162
+    }
+  ],
+  "scope": "Initially absent runtime path later became visible; exact archives, extracted files, font and registered inputs now verified. Existing browser provisioning refusal is retained. Mechanism of host path visibility change is unknown; no inference of identical hardware or native engine identity."
+}

@@ -1,0 +1,285 @@
+PRODUCT ROOT ['ORIGINAL-INPUT.md', 'capture-index.json', 'captures', 'TASK.md', 'README.md', 'app']
+APP FILES ['settings-store.js', 'dist', 'LICENSE', 'toast-source-preview.html', 'index.html', 'settings-controller.js', 'save-notification.js', 'preview', 'package.json', 'static']
+COMMON DECISION /workspace/scratch/e1cfe6e447ee/ui-study/review-pack/foundations/T4/INTEGRATION-DECISION.md 
+ # Settled integration decision — Tabler action-bearing save feedback
+
+## Decision identity and authority
+
+The experiment coordinator selected and personally inspected the acquired source rendering and the current settings application before freezing this input. The coordinator confirmed this source-preserving integration under the already authorized study preparation: retain the exact Tabler action-toast header/body/action-footer shell, native close behavior, typography, borders, shadow and spacing, and map it to the authoritative local save events. This is a settled experiment-design decision. It is not a claim of end-user aesthetic acceptance.
+
+No W1, W2 or W3 original-construction exception is authorized. No source comparison or direction change remains delegated to the integrator.
+
+## Actual selected resource
+
+Use `sources/tabler-toast-cookies.html`, acquired from the original `https://preview.tabler.io/toasts.html`, plus the MIT Tabler 1.7.1 `shared/components/demo/Toast.astro` source already supplied. `SOURCE-MANIFEST.json` contains the exact tagged revision and SHA-256 identities of the deployed HTML and extracted block. The acquired deployed page reports 1.7.1 but does not advertise an exact deployment commit; preserve this limitation.
+
+The source variant has a header with an avatar/identity slot, title, relative time and native close button; a compact body; and a separated action row containing one primary small button. It uses `role="status"`, polite announcements, `aria-atomic="true"`, and `data-bs-autohide="false"`. The source's cookie text and person portrait are sample content, not required design elements.
+
+Use the already loaded matching Tabler assets and its bundled Bootstrap Toast implementation. Do not reimplement the surface, close mechanism, transition, focus ring or spacing in a new CSS system.
+
+## Settled composition and placement
+
+Preserve the header → body → separated action-row relationship, the source's standard width, padding, typography, border, shadow, button size and native close interaction. Replace the portrait with the same source avatar initials fallback `FN`; use `Fieldnotes` as the identity. No imagery or emoji is required.
+
+Place the toast in a native utility-configured container, `toast-container position-fixed top-0 end-0 p-3`. This uses the existing Tabler/Bootstrap toast container and position utilities, keeping feedback outside form flow and away from the lower save controls. Preserve its source maximum width and responsive containment. Inspect the header/menu area and close control for reachability while feedback is visible. Do not invent a different notification rail or restyle this block.
+
+Retain the current inline status slot as a concise non-duplicating form summary; assign announcements so the same result is not announced twice. A toast must not steal focus merely because a save completes. Failed or successful feedback remains until explicitly dismissed or replaced by a subsequent save event; automatic disappearance is outside the decision.
+
+## Data and state owners
+
+`app/settings-store.js` is read-only for this integration. It owns `fieldnotes-settings-v1`, schema version 1, validation, the 750 ms pending interval, snapshot persistence, and `invalid` / `pending` / `success` / `error` events. Its `subscribeSettings(listener)` event payloads are authoritative. `app/settings-controller.js` owns current form values and the save/cancel controls. The notification adapter owns only rendering of these events and invoking an explicitly requested retry.
+
+`pending` includes `operationId` and `snapshot`; `success` includes saved `settings`, `savedAt` and `operationId`; `error` includes `snapshot`, `error` and `operationId`; `invalid` includes `fieldErrors` and the submitted `draft`. Successful storage writes, not timers or button clicks, authorize saved wording. Do not clear the user's fields, rewrite stored data from notification rendering, or replace a newer draft with an older saved snapshot.
+
+## State/content/action mapping
+
+| Authoritative state | Header/body content | Source action row | Focus and continuity |
+| --- | --- | --- | --- |
+| Pending | Saving changes / 正在保存更改; explain that the current submitted version is being saved locally | Hidden; no second submit | Keep focus and draft edits; mark the existing save operation pending |
+| Success | Changes saved / 更改已保存; identify the actual browser-local boundary and saved time | Hidden | Announce once politely; preserve reading and form focus |
+| Error | Save did not complete / 保存未完成; draft remains available / 草稿仍然保留 | Retry save / 重试保存 | Retry the failed snapshot through `saveSettings`; do not read an unrelated later draft silently |
+| Invalid | Check profile fields / 请检查个人资料字段; name the actual first invalid field | Hidden | Associate existing field errors with fields and move focus only when necessary to recover from the user's rejected submit |
+
+Native close dismisses only feedback. It never cancels a save, discards a draft or changes persistence. If the user explicitly activates Retry, keep the error context until the authoritative pending event arrives, then display that state. An error notification from an older operation must not overwrite a newer authoritative result. Preserve a route back to a sensible initiating control if a focused retry/close control disappears.
+
+## Bounded edit surface
+
+Allowed edits are `app/index.html` for the selected source container/block, `app/settings-controller.js` for subscriptions/focus/inline summary coordination, and a new `app/save-notification.js` adapter if useful. Preserve `settings-store.js`, `dist/`, `preview/`, the source-preview file, and unrelated navigation/theme controls. Copy license notices with the adopted block. No new dependency is needed. Any consequential store-contract ambiguity returns to the main agent rather than widening the integration.
+
+## Required inspection
+
+Inspect the original source rendering, then the actual assembled settings page in both declared themes and languages at 1440×900 and 1280×600; include the 390×844 containment check. Exercise valid save, pending edits, success, forced one-time failure, retry, invalid input, explicit close and return, with keyboard focus. Read back browser storage after successful save and after a failed write. Compare source shell retention with the integrated block and inspect neighboring header, settings controls and lower save action. Keep source inspection, behavior checks and whole-product judgment separate. Test success alone does not establish visual acceptance.
+
+P08 SOURCE settings-controller.js 
+ import { readSettings, saveSettings, subscribeSettings, setFailureMode } from './settings-store.js';
+import { createSaveNotification } from './save-notification.js';
+
+const ids = {displayName:'business-name',organization:'business-id',location:'location',email:'email',weeklyDigest:'weekly-digest',publicProfile:'public-profile'};
+const status = document.querySelector('#save-status');
+const save = document.querySelector('#save-settings');
+const params = new URLSearchParams(location.search);
+const zh = params.get('lang') === 'zh';
+const copy = zh ? {
+  idle:'更改仅保存在当前浏览器中。', pending:'保存期间可以继续编辑。',
+  newer:'较新的编辑尚未保存。', clean:'没有尚未保存的更改。',
+  error:'你可以继续编辑表单。', invalid:'请修改标记的字段。'
+} : {
+  idle:'Changes are saved only in this browser.', pending:'You can keep editing while this version saves.',
+  newer:'Your newer edits are not saved yet.', clean:'No unsaved changes.',
+  error:'You can keep editing this form.', invalid:'Review the marked fields.'
+};
+const fieldNames = zh
+  ? {displayName:'显示名称',organization:'机构',location:'地点',email:'电子邮件'}
+  : {displayName:'Display name',organization:'Organization',location:'Location',email:'Email'};
+const errorTranslations = {
+  'Add a display name.':'请填写显示名称。',
+  'Use 100 characters or fewer.':'请使用不超过 100 个字符。',
+  'Use 180 characters or fewer.':'请使用不超过 180 个字符。',
+  'Enter a complete email address.':'请输入完整的电子邮件地址。'
+};
+const fieldLabel = key => fieldNames[key] || key;
+const fieldError = text => zh ? (errorTranslations[text] || text) : text;
+let baseline;
+let currentEvent = null;
+let latestOperation = 0;
+let pending = false;
+let rejectedSubmitRecovery = false;
+let initiatingControl = save;
+
+function draft() {
+  return Object.fromEntries(Object.entries(ids).map(([key,id]) => {
+    const el = document.getElementById(id);
+    return [key,el.type === 'checkbox' ? el.checked : el.value];
+  }));
+}
+function matches(a,b) { return b && Object.keys(ids).every(key => a[key] === b[key]); }
+function load() {
+  const data = readSettings();
+  baseline = {...data};
+  for (const [key,id] of Object.entries(ids)) {
+    const el = document.getElementById(id);
+    if (el.type === 'checkbox') el.checked = data[key]; else el.value = data[key];
+  }
+}
+function updateSummary() {
+  const values = draft();
+  const state = currentEvent?.status;
+  if (state === 'pending') status.textContent = matches(values,currentEvent.snapshot) ? copy.pending : copy.newer;
+  else if (state === 'invalid' && document.querySelector('.form-control.is-invalid')) status.textContent = copy.invalid;
+  else if (state === 'error') status.textContent = copy.error;
+  else status.textContent = matches(values,baseline) ? (state === 'success' ? copy.clean : copy.idle) : copy.newer;
+}
+function clearFieldError(key) {
+  const el = document.getElementById(ids[key]);
+  if (!el) return;
+  const errorId = `${el.id}-error`;
+  el.classList.remove('is-invalid');
+  el.removeAttribute('aria-invalid');
+  const describedBy = (el.getAttribute('aria-describedby') || '').split(' ').filter(id => id && id !== errorId);
+  if (describedBy.length) el.setAttribute('aria-describedby',describedBy.join(' '));
+  else el.removeAttribute('aria-describedby');
+  document.getElementById(errorId)?.remove();
+}
+function clearFieldErrors() { Object.keys(ids).forEach(clearFieldError); }
+function showFieldErrors(errors) {
+  clearFieldErrors();
+  for (const [key,text] of Object.entries(errors)) {
+    const el = document.getElementById(ids[key]);
+    if (!el) continue;
+    const feedback = document.createElement('div');
+    feedback.id = `${el.id}-error`;
+    feedback.className = 'invalid-feedback';
+    feedback.textContent = fieldError(text);
+    el.insertAdjacentElement('afterend',feedback);
+    el.classList.add('is-invalid');
+    el.setAttribute('aria-invalid','true');
+    el.setAttribute('aria-describedby',[el.getAttribute('aria-describedby'),feedback.id].filter(Boolean).join(' '));
+  }
+  const invalidElements = Object.keys(errors).map(key => document.getElementById(ids[key])).filter(Boolean);
+  if (rejectedSubmitRecovery && !invalidElements.includes(document.activeElement)) {
+    const firstInvalid = invalidElements[0];
+    firstInvalid?.focus();
+    // Keep rejected-submit recovery clear of the fixed toast while inheriting
+    // the source's native smooth/reduced-motion scrolling behavior.
+    firstInvalid?.scrollIntoView({block:'center'});
+  }
+}
+function restoreFocus() {
+  const target = initiatingControl?.isConnected && !initiatingControl.disabled ? initiatingControl : save;
+  target.focus();
+}
+try { load(); status.textContent = copy.idle; } catch (error) { status.textContent = error.message; }
+
+subscribeSettings(event => {
+  if (!Number.isInteger(event.operationId) || event.operationId < latestOperation) return;
+  latestOperation = event.operationId;
+  currentEvent = event;
+  pending = event.status === 'pending';
+  // The native disabled visual state, aria-disabled and the guarded handler keep
+  // the initiating button focusable while preventing a duplicate submission.
+  save.classList.toggle('disabled',pending);
+  save.setAttribute('aria-disabled',String(pending));
+  save.setAttribute('aria-busy',String(pending));
+  status.dataset.state = event.status;
+  if (event.status === 'invalid') showFieldErrors(event.fieldErrors);
+  if (event.status === 'pending') clearFieldErrors();
+  if (event.status === 'success') baseline = {...event.settings};
+  updateSummary();
+});
+createSaveNotification({subscribeSettings,saveSettings,zh,fieldLabel,fieldError,restoreFocus});
+
+save.addEventListener('click',async () => {
+  if (pending) return;
+  initiatingControl = save;
+  rejectedSubmitRecovery = true;
+  const operation = saveSettings(draft());
+  rejectedSubmitRecovery = false; // Validation is emitted synchronously by the store.
+  try { await operation; } catch { /* Authoritative events supply all feedback. */ }
+});
+for (const [key,id] of Object.entries(ids)) {
+  document.getElementById(id).addEventListener('input',() => { clearFieldError(key); updateSummary(); });
+}
+document.querySelector('#cancel-settings').addEventListener('click',() => {
+  try { load(); clearFieldErrors(); if (!pending) currentEvent = null; updateSummary(); }
+  catch (error) { status.textContent = error.message; }
+});
+document.querySelector('#focus-email').addEventListener('click',()=>document.querySelector('#email').focus());
+document.querySelector('#language-toggle').addEventListener('click',()=>{params.set('lang',zh?'en':'zh');location.search=params.toString();});
+document.querySelector('#theme-toggle').addEventListener('click',()=>{const dark=document.documentElement.getAttribute('data-bs-theme')==='dark';document.documentElement.setAttribute('data-bs-theme',dark?'light':'dark');localStorage.setItem('tabler-theme',dark?'light':'dark');});
+window.fieldnotes = { readSettings, saveSettings, setFailureMode, draft };
+if (zh) {
+  document.documentElement.lang='zh-CN';
+  const dictionary={
+    'Account Settings':'账户设置','My Account':'我的账户','Profile Details':'个人资料','Business Profile':'工作资料','Display name':'显示名称','Organization':'机构','Location':'地点','Email':'电子邮件','Edit email':'编辑邮箱','Notifications':'通知','My Notifications':'我的通知','Privacy':'隐私','Public profile':'公开个人资料','Save changes':'保存更改','Cancel':'取消','Switch theme':'切换主题','Business settings':'工作设置',
+    'Receive a weekly digest of research notes shared with your workspace.':'每周接收工作区共享研究笔记的摘要。',
+    'Weekly digest is enabled':'已开启每周摘要','Weekly digest is disabled':'已关闭每周摘要',
+    'Allow other members of this research workspace to find your profile. Your email remains private.':'允许研究工作区的其他成员找到你的个人资料。电子邮箱仍为私密信息。',
+    "You're currently visible":'当前可见',"You're currently invisible":'当前不可见',
+    'This contact will be shown to others publicly, so choose it carefully.':'此邮箱用于工作区通知，不会显示在公开个人资料中。'
+  };
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  while(walker.nextNode()){const node=walker.currentNode;const source=node.textContent.trim();if(dictionary[source])node.textContent=node.textContent.replace(source,dictionary[source]);}
+} else {
+  for(const el of document.querySelectorAll('.card-subtitle')) if(el.textContent.trim()==='This contact will be shown to others publicly, so choose it carefully.') el.textContent='This email receives workspace notifications and stays private.';
+}
+
+P08 SOURCE save-notification.js 
+ // Render authoritative settings events through the selected native Tabler Toast.
+// Persistence, validation and operation IDs remain owned by settings-store.js.
+export function createSaveNotification({subscribeSettings, saveSettings, zh, fieldLabel, fieldError, restoreFocus}) {
+  const element = document.getElementById('save-notification');
+  const message = document.getElementById('save-notification-message');
+  const time = document.getElementById('save-notification-time');
+  const action = document.getElementById('save-notification-action');
+  const retry = document.getElementById('retry-save');
+  const close = element.querySelector('[data-bs-dismiss="toast"]');
+  const toast = window.tabler.Toast.getOrCreateInstance(element, {autohide:false});
+  let latestOperation = 0;
+  let failedSnapshot = null;
+  let hiding = false;
+  let wantsVisible = false;
+  const copy = zh ? {
+    pending:'正在保存更改。正在将本次提交的版本保存在当前浏览器中。',
+    success:'更改已保存。本次提交的版本仅保存在当前浏览器中。',
+    error:'保存未完成。草稿仍然保留。重试将保存此前提交的版本。',
+    invalid:'请检查个人资料字段。',
+    pendingTime:'正在保存…', errorTime:'未保存', invalidTime:'检查字段',
+    retry:'重试保存', close:'关闭保存提示'
+  } : {
+    pending:'Saving changes. This submitted version is being saved in this browser.',
+    success:'Changes saved. This submitted version is saved only in this browser.',
+    error:'Save did not complete. Your submitted draft is still available. Retry saves that version.',
+    invalid:'Check profile fields.',
+    pendingTime:'Saving…', errorTime:'Not saved', invalidTime:'Check fields',
+    retry:'Retry save', close:'Close save notification'
+  };
+  retry.textContent = copy.retry;
+  close.setAttribute('aria-label', copy.close);
+
+  // Keep the upstream close interaction and transition. A result arriving during
+  // native dismissal waits for hidden.bs.toast instead of racing its callback.
+  element.addEventListener('hide.bs.toast', () => {
+    hiding = true;
+    wantsVisible = false;
+    if (element.contains(document.activeElement)) restoreFocus();
+  });
+  element.addEventListener('hidden.bs.toast', () => {
+    hiding = false;
+    if (wantsVisible) toast.show();
+  });
+
+  retry.addEventListener('click', async () => {
+    if (!failedSnapshot || action.hidden) return;
+    // Never replace the user's newer live form with this submitted snapshot.
+    const snapshot = {...failedSnapshot};
+    try { await saveSettings(snapshot); } catch { /* The store emits the outcome. */ }
+  });
+
+  return subscribeSettings(event => {
+    if (!Number.isInteger(event.operationId) || event.operationId < latestOperation) return;
+    if (!['pending','success','error','invalid'].includes(event.status)) return;
+    latestOperation = event.operationId;
+    failedSnapshot = event.status === 'error' ? {...event.snapshot} : null;
+    if (event.status !== 'error' && action.contains(document.activeElement)) restoreFocus();
+    action.hidden = event.status !== 'error';
+    element.dataset.state = event.status;
+    element.dataset.operationId = String(event.operationId);
+    let text = copy[event.status];
+    if (event.status === 'invalid') {
+      const field = Object.keys(event.fieldErrors)[0];
+      text += zh ? `${fieldLabel(field)}：${fieldError(event.fieldErrors[field])}`
+                 : ` ${fieldLabel(field)}: ${fieldError(event.fieldErrors[field])}`;
+    }
+    message.textContent = text;
+    time.textContent = event.status === 'success'
+      ? new Intl.DateTimeFormat(zh ? 'zh-CN' : 'en', {hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(new Date(event.savedAt))
+      : copy[`${event.status}Time`];
+    if (event.status === 'success') time.title = event.savedAt;
+    else time.removeAttribute('title');
+    wantsVisible = true;
+    if (!hiding && !toast.isShown()) toast.show();
+  });
+}
+
+P08 SOURCE IDENTITY settings-store.js True
+P08 SOURCE IDENTITY toast-source-preview.html True

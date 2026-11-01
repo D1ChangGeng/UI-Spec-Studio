@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, hashlib, datetime, shutil
+ROOT=Path("/workspace/scratch/5499118f5564/ui-study/independent-review")
+products=json.loads((ROOT/"products.json").read_text())
+assert {p["anonymous_product"] for p in products}=={"P03","P06","P09","P10","P16"}
+checks=[];paths=set()
+for p in products:
+    assert len(p["viewed_original_files"])==len(p["view_exports"])
+    index=json.loads((Path("/workspace/scratch/5499118f5564/ui-study/review-pack/products")/p["anonymous_product"]/"capture-index.json").read_text())
+    expected={str(Path("/workspace/scratch/5499118f5564/ui-study/review-pack/products")/p["anonymous_product"]/x["file"]):x["sha256"] for x in index["captures"]}
+    for png,exp in zip(p["viewed_original_files"],p["view_exports"]):
+        f=Path(png);data=f.read_bytes();digest=hashlib.sha256(data).hexdigest()
+        assert digest==expected[png],png
+        obj=json.loads(Path(exp).read_text())
+        assert obj["tool"]=="view_image" and obj["arguments"]["path"]==png and obj["result"]["image_url"].startswith("data:image/")
+        checks.append({"product":p["anonymous_product"],"original_png":png,"sha256":digest,"actual_view_export":exp})
+        paths.add(exp)
+    for png,exp in zip(p["additionally_viewed_reviewer_captures"],p["reviewer_capture_view_exports"]):
+        assert Path(png).is_file() and Path(exp).is_file()
+        obj=json.loads(Path(exp).read_text())
+        assert obj["arguments"]["path"]==png and obj["result"]["image_url"].startswith("data:image/")
+        paths.add(exp)
+    for f in p["additional_behavior_evidence"]:
+        assert Path(f).is_file(),f;paths.add(f)
+dated=ROOT/"BLIND-REVIEW-2026-10-31-cohort-01.md";snapshot=ROOT/"products-cohort-01.json"
+assert not dated.exists() and not snapshot.exists()
+shutil.copyfile(ROOT/"BLIND-REVIEW.md",dated);shutil.copyfile(ROOT/"products.json",snapshot)
+for f in [ROOT/"BLIND-REVIEW.md",dated,snapshot,ROOT/"products.json",ROOT/"run_behavior_001.py",ROOT/"run_behavior_002.py",ROOT/"run_behavior_003.py"]:paths.add(str(f))
+frozen={"schema_version":1,"cohort":"01","phase":"condition-blind","frozen_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),"immutable_reports":[str(ROOT/"BLIND-REVIEW.md"),str(dated)],"immutable_product_snapshot":str(snapshot),"cumulative_products_at_this_freeze":str(ROOT/"products.json"),"later_cohorts":"Append cumulative product entries and create separate dated reports; do not rewrite the cohort-01 report or snapshot.","original_capture_integrity_checks":checks,"artifact_sha256":{f:hashlib.sha256(Path(f).read_bytes()).hexdigest() for f in sorted(paths)}}
+(ROOT/"cohort-01-FREEZE.json").write_text(json.dumps(frozen,ensure_ascii=False,indent=2)+"\n")
+print(json.dumps({"cohort":"01","products":[p["anonymous_product"] for p in products],"original_view_exports_verified":len(checks),"report_words":len((ROOT/"BLIND-REVIEW.md").read_text().split()),"freeze":str(ROOT/"cohort-01-FREEZE.json"),"report_sha256":frozen["artifact_sha256"][str(ROOT/"BLIND-REVIEW.md")],"cohort_products_sha256":frozen["artifact_sha256"][str(snapshot)]},ensure_ascii=False))
+

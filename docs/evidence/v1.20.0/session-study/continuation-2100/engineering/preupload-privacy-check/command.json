@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "docs/evidence/v1.20.0/session-study/support/current-continuation/privacy_audit.py",
+    "--repo",
+    ".",
+    "--commit",
+    "bb2378049de331f1f30199a7e436b0253adac34b",
+    "--output",
+    "docs/evidence/v1.20.0/session-study/continuation-2100/preupload-privacy-check"
+  ],
+  "cwd": ".",
+  "started_at": "2026-11-01T13:22:47.571351+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T13:23:01.080040+00:00",
+  "wall_seconds": 13.508696,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 68093,
+      "sha256": "7d7ce6aa0a0e9fa8dddef37f6fe74a0149bbddafe05588d2b05001985a98d860"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

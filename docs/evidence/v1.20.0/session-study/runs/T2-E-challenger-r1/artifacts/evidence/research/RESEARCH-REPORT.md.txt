@@ -1,0 +1,65 @@
+# Meridian composer research — decision support
+
+## Finding
+
+The evidence supports a bounded trial of **persistent filename text using the existing assistant-ui family**, while keeping the composer and thread runtime. The consequential defect is file identification within limited reading space. A replacement composer family has not demonstrated a better overall fit. This is a research recommendation; final source selection and integrated acceptance remain with the parent designer.
+
+The supplied source is assistant-ui revision `ff654d8156680b839774296ef644b57ab1078425`, MIT, as recorded in INPUT.md and SOURCE-MANIFEST.json. I read the role, task, input, run conditions, complete UI Spec Studio skill, all eight common references, evidence-map and evidence-actions. No product code was changed.
+
+## Actual local observations
+
+At **1440×900, light/English**, the unchanged preview has a clear central reading column and a visually quiet bottom composer. The text measure, message/action hierarchy and consistent rounded surfaces are already a coherent mature foundation. This supports retaining the surrounding family rather than replacing it solely to create a visible change.
+
+At **1280×600, dark/Chinese**, I entered six mixed-language lines and selected four synthetic local filenames. The composer measured **672×270 px**; its textarea was **654×152 px**. The four documents were identical **56×56 px** icon tiles with no visible filename text. They occupied a shallow row, but the complete expanded input already consumed 45% of viewport height. The reading area above its top edge was approximately 243 px after the header. This establishes the identity/space tradeoff under real project typography.
+
+A subsequent programmatic focus on the long Chinese filename tile did not expose a tooltip in that run. This is a narrowly scoped observation, **not** proof that keyboard Tab or pointer hover cannot disclose it; the source does provide a tooltip. Genuine keyboard traversal remains an integration check.
+
+Evidence:
+
+- `captures/baseline-initial.png`, personally opened with `view_image`; original image response retained in `view-baseline.json`.
+- `captures/baseline-compact-attachments.png`, personally opened; response retained in `view-compact.json`.
+- `captures/baseline-compact-filename-focus.png` captured but not separately visually inspected.
+- Exact actions, geometry and output: `research_local.py` and `commands/005-local-compact/`.
+
+## Compared resources
+
+| Candidate / exact variant | Actual observation and useful relationship | Adoption path and limit |
+|---|---|---|
+| Existing assistant-ui tile, supplied `attachment.aui.tsx` | Compact horizontal collection; documents have equal anonymous square silhouettes; names are provided through disclosure and accessible labels. | Already adopted. Preserve image preview and attachment state ownership, but tile-only identity is weak for several text documents. |
+| assistant-ui **ComposerAttachmentChip**, public composer-attachments demo | Two named, two-line chips sit above the text field. Small type icon, filename, secondary size and trailing remove are grouped inside each chip. The action row remains below. This visibly separates file identity from the drafting area without a tall vertical file list. | Current public element is available through `@assistant-ui/elements-composer`; it is a source-backed option, not installed here. Lower-cost trial: use the already supplied `File.Root`, `File.Icon`, `File.Name` with existing attachment primitives. Its source is present and uses the family’s outline/muted variants and sm/default sizes. Do not add download behavior to metadata-only attachments. |
+| Vercel **AI Elements Attachments — grid, inline, list** | Original grid demo renders image thumbnails and anonymous document/video tiles. The inline example visibly shows small icons and filenames in wrapping badges. The list demo exposes filename, MIME and remove in aligned rows, but five rows occupy a large vertical region. | Independently authored comparison, with documented `variant="grid" | "inline" | "list"`, `AttachmentInfo` and `AttachmentRemove`. Acquisition: official registry command `npx ai-elements@latest add attachments` or official repository. No code adopted. It brings another component/data vocabulary and the official site currently announces a move to shadcn/ui; importing it requires pinning the exact item and reviewing its license/dependencies. No independent license conclusion is asserted here. |
+
+The difference that matters is **persistent identity per unit of height**. Visible names in a compact source-backed row/chip are a stronger fit than preserving identical document squares, while a fully expanded vertical metadata list is a poor default for the compact-height case. Long names still need an accessible complete disclosure and a bounded collection layout. Exact truncation/wrapping and growth bounds require the parent’s local trial.
+
+Decisive public pixels retained:
+
+- `captures/w14-research-aui-chip.jpg`
+- `captures/w14-research-ai-grid.jpg`
+- `captures/w14-research-ai-list.jpg`
+
+Their original browser state exports are in `sources/` under matching names. All three were actually viewed at the browser’s ordinary viewport scale. The inline example was also viewed, but its screenshot export did not synchronize to this executor during the available checks; it is not counted as a retained capture. An attempted File-page navigation still showed the attachments surface in the captured frame, so **File’s own public rendered demo is not claimed as inspected**.
+
+## Reading continuity: documented contract and remaining experiment
+
+The official assistant-ui Thread documentation says bottom following pauses when a person scrolls up and resumes through returning to the bottom or ScrollToBottom. It distinguishes that behavior from `turnAnchor="top"`, which anchors the question at the top while the answer grows below. These are **published contracts**, not verification of the supplied runtime under every condition.
+
+The AI Elements Conversation demo was opened and sampled from an empty state to a populated conversation. Its docs describe automatic bottom scrolling and a return button. I did not observe a complete controlled scroll-away → continued growth → explicit return episode there, so it supplies no basis to claim superior continuity or replace assistant-ui’s owner.
+
+Given the parent’s separately reported baseline observations—manual scroll-away holds, but explicit return does not keep following later growth—the useful next experiment is the **supported bottom-anchor/auto-scroll configuration**, retaining the current runtime. Check following, wheel pause, explicit return, subsequent growth, composer resizing, cancellation and a repeated question as one episode. Do not infer this pass from a static screenshot or source contract.
+
+## Sources and evidence limits
+
+Primary sources, retrieved 2026-11-01:
+
+1. [assistant-ui composer attachments](https://www.assistant-ui.com/elements/composer-attachments)
+2. [assistant-ui File](https://www.assistant-ui.com/elements/file)
+3. [assistant-ui Thread primitive](https://www.assistant-ui.com/docs/primitives/thread)
+4. [AI Elements attachments](https://elements.ai-sdk.dev/components/attachments)
+5. [AI Elements Conversation](https://elements.ai-sdk.dev/components/conversation)
+6. [Vercel AI Elements source](https://github.com/vercel/ai-elements)
+7. [ibelick/prompt-kit source](https://github.com/ibelick/prompt-kit) — original repository identified, but its public chat-container demo returned “403 FORBIDDEN”; no rendered-quality conclusion.
+
+Original search/document objects: `sources/001-discovery.json`, `002-primary-docs.json`, `004-scrolling-and-file.json`. Prescribed modern-web-guidance search/retrieve outputs are retained in `commands/001-guidance-search/` and `002-guidance-retrieve/`; relevant guidance covers bounded textarea growth and IME-safe Enter submission. Preserve the source’s existing growth and IME behavior unless an observed failure requires repair.
+
+Local public-site browser attempts encountered certificate trust errors; TLS validation was kept enabled. The extension browser was unavailable. Cloud Browser then supplied actual public observations. Failures and correction attempts remain in command logs and `sources/003-browser-bootstrap.json`. Public captures are static/ordered observations, not natural-time playback. No real uploads, real model calls, product changes, final design decisions or final acceptance were performed.
+

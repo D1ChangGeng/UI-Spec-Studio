@@ -1,0 +1,411 @@
+P04
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:29:  Dialog,
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:30:  DialogTitle,
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:31:  DialogDescription,
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:32:  DialogContent,
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:33:  DialogTrigger,
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:65:type AttachmentPreviewDialogProps = PropsWithChildren<{
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:70:const AttachmentPreviewDialog: FC<AttachmentPreviewDialogProps> = ({
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:78:    <Dialog>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:79:      <DialogTrigger
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:90:      <DialogContent className="aui-attachment-preview-dialog-content [&>button]:bg-foreground/60 [&>button]:hover:bg-foreground/80 [&_svg]:text-background p-2 sm:max-w-3xl [&>button]:rounded-full [&>button]:p-1 [&>button]:opacity-100 [&>button]:ring-0!">
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:91:        <DialogTitle className="aui-sr-only sr-only">
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:93:        </DialogTitle>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:94:        <div className="aui-attachment-preview bg-background relative mx-auto flex max-h-[80dvh] w-full items-center justify-center overflow-hidden rounded-sm">
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:97:      </DialogContent>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:98:    </Dialog>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:126:        <Dialog>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:127:          <DialogTrigger
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:129:            aria-label={`${zh ? "查看附件" : "View attachment"}: ${name}`}
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:132:          </DialogTrigger>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:133:          <DialogContent>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:134:            <DialogTitle>{zh ? "附件详情" : "Attachment details"}</DialogTitle>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:139:            <DialogDescription>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:141:            </DialogDescription>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:142:          </DialogContent>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:143:        </Dialog>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:148:            aria-label={`${zh ? "移除" : "Remove"} ${name}`}
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:185:          <AttachmentPreviewDialog src={src} name={name}>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:190:                    "aui-attachment-tile bg-muted hover:after:bg-foreground/10 focus-visible:ring-ring/50 relative size-14 overflow-hidden rounded-[calc(var(--composer-radius,1rem)-var(--composer-padding,8px))] transition-transform outline-none after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:ring-1 after:ring-black/10 after:transition-colors after:ring-inset focus-visible:ring-1 motion-reduce:transition-none dark:after:ring-white/10",
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:199:                  aria-label={`${src ? `Preview ${name}` : `${typeLabel} attachment ${name}`}${
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:227:          </AttachmentPreviewDialog>
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:246:          tooltip={`Remove ${name}`}
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:269:    <div className="aui-composer-attachments flex w-full flex-row items-center gap-2 overflow-x-auto empty:hidden">
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:282:          tooltip={document.documentElement.lang.startsWith("zh") ? "添加附件" : "Add attachment"}
+review-pack/products/P04/app/src/components/assistant-ui/elements/attachment.aui.tsx:287:          aria-label={document.documentElement.lang.startsWith("zh") ? "添加附件" : "Add attachment"}
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:240:      <ThreadPrimitive.Viewport
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:242:        autoScroll
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:244:        className="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-auto"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:270:          <ThreadPrimitive.ViewportFooter
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:272:              "aui-thread-viewport-footer bg-background flex flex-col gap-4 overflow-visible pb-4 md:pb-6",
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:277:            <ThreadScrollToBottom />
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:283:          </ThreadPrimitive.ViewportFooter>
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:285:      </ThreadPrimitive.Viewport>
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:371:              aria-label="Assistant is speaking"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:391:        <TooltipIconButton tooltip={label("Copy", "复制")} className="size-6">
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:472:const ThreadScrollToBottom: FC = () => {
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:474:    <ThreadPrimitive.ScrollToBottom asChild>
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:476:        tooltip={label("Return to latest", "返回最新内容")}
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:482:    </ThreadPrimitive.ScrollToBottom>
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:545:            aria-label={label("Message input", "消息输入")}
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:578:                tooltip="Voice input"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:584:                aria-label="Start voice input"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:593:                tooltip="Stop dictation"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:599:                aria-label="Stop voice input"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:616:              tooltip={label("Send message", "发送消息")}
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:622:              aria-label={label("Send message", "发送消息")}
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:631:              tooltip={label("Resume generating", "继续生成")}
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:637:              aria-label={label("Resume generating", "继续生成")}
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:656:              aria-label={isSending ? label("Cancel sending", "取消发送") : label("Stop generating", "停止生成")}
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:760:                    aria-label="Assistant is working"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:792:        <TooltipIconButton tooltip={label("Copy", "复制")}>
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:804:            tooltip="Helpful"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:812:            tooltip="Not helpful"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:820:        <TooltipIconButton tooltip={label("Retry response", "重试回答")}>
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:827:            tooltip="More"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:837:          className="aui-action-bar-more-content bg-popover text-popover-foreground data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:animate-out data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[8rem] overflow-hidden rounded-xl border p-1.5"
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:914:        <TooltipIconButton tooltip={label("Edit", "编辑")} className="aui-user-action-edit">
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:930:          aria-label={label("Edit message", "编辑消息")}
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:965:        <TooltipIconButton tooltip={label("Previous", "上一个")}>
+review-pack/products/P04/app/src/components/assistant-ui/elements/thread.aui.tsx:973:        <TooltipIconButton tooltip={label("Next", "下一个")}>
+P07
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:28:  Dialog,
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:29:  DialogTitle,
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:30:  DialogContent,
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:31:  DialogTrigger,
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:32:  DialogDescription,
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:42:// Compose the supplied File and Dialog families for metadata-only documents.
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:50:        <Dialog>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:51:          <DialogTrigger
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:53:            aria-label={uiText(`View filename ${name}`, `查看文件名 ${name}`)}
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:58:          </DialogTrigger>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:59:          <DialogContent className="max-h-[80dvh] overflow-y-auto">
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:60:            <DialogTitle className="pr-6 leading-relaxed [overflow-wrap:anywhere]">{name}</DialogTitle>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:61:            <DialogDescription>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:63:            </DialogDescription>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:65:          </DialogContent>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:66:        </Dialog>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:67:        {isUploading && <Loader2Icon className="text-muted-foreground size-4 animate-spin" aria-label={uiText("Preparing attachment", "正在准备附件")} />}
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:68:        {isError && <AlertCircleIcon className="text-destructive size-4" aria-label={uiText("Attachment error", "附件出错")} />}
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:71:            render={<TooltipIconButton tooltip={uiText(`Remove ${name}`, `移除 ${name}`)} className="size-7 shrink-0" onClick={(event) => {
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:106:type AttachmentPreviewDialogProps = PropsWithChildren<{
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:111:const AttachmentPreviewDialog: FC<AttachmentPreviewDialogProps> = ({
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:119:    <Dialog>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:120:      <DialogTrigger
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:131:      <DialogContent className="aui-attachment-preview-dialog-content [&>button]:bg-foreground/60 [&>button]:hover:bg-foreground/80 [&_svg]:text-background p-2 sm:max-w-3xl [&>button]:rounded-full [&>button]:p-1 [&>button]:opacity-100 [&>button]:ring-0!">
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:132:        <DialogTitle className="aui-sr-only sr-only">
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:134:        </DialogTitle>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:135:        <div className="aui-attachment-preview bg-background relative mx-auto flex max-h-[80dvh] w-full items-center justify-center overflow-hidden rounded-sm">
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:138:      </DialogContent>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:139:    </Dialog>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:185:          <AttachmentPreviewDialog src={src} name={name}>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:190:                    "aui-attachment-tile bg-muted hover:after:bg-foreground/10 focus-visible:ring-ring/50 relative size-14 overflow-hidden rounded-[calc(var(--composer-radius,1rem)-var(--composer-padding,8px))] transition-transform outline-none after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:ring-1 after:ring-black/10 after:transition-colors after:ring-inset focus-visible:ring-1 motion-reduce:transition-none dark:after:ring-white/10",
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:199:                  aria-label={`${src ? `Preview ${name}` : `${typeLabel} attachment ${name}`}${
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:227:          </AttachmentPreviewDialog>
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:246:          tooltip={`Remove ${name}`}
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:269:    <div className="aui-composer-attachments flex w-full flex-row items-center gap-2 overflow-x-auto empty:hidden">
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:282:          tooltip={uiText("Attach local filenames", "附加本地文件名")}
+review-pack/products/P07/app/src/components/assistant-ui/elements/attachment.aui.tsx:287:          aria-label={uiText("Attach local filenames", "附加本地文件名")}
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:238:      <ThreadPrimitive.Viewport
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:240:        autoScroll
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:242:        className="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-smooth"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:268:          <ThreadPrimitive.ViewportFooter
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:270:              "aui-thread-viewport-footer bg-background flex flex-col gap-4 overflow-visible pb-4 md:pb-6",
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:275:            <ThreadScrollToBottom />
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:281:          </ThreadPrimitive.ViewportFooter>
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:283:      </ThreadPrimitive.Viewport>
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:369:              aria-label="Assistant is speaking"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:389:        <TooltipIconButton tooltip="Copy" className="size-6">
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:470:const ThreadScrollToBottom: FC = () => {
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:472:    <ThreadPrimitive.ScrollToBottom behavior="instant" asChild>
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:474:        tooltip={uiText("Return to latest", "回到最新内容")}
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:480:    </ThreadPrimitive.ScrollToBottom>
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:543:            aria-label={uiText("Message input", "输入消息")}
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:576:                tooltip="Voice input"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:582:                aria-label="Start voice input"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:591:                tooltip="Stop dictation"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:597:                aria-label="Stop voice input"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:614:              tooltip={uiText("Send message", "发送消息")}
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:620:              aria-label={uiText("Send message", "发送消息")}
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:629:              tooltip="Resume generating"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:635:              aria-label="Resume generating"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:654:              aria-label={isSending ? uiText("Cancel sending", "取消发送") : uiText("Stop generating", "停止生成")}
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:762:                    aria-label="Assistant is working"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:794:        <TooltipIconButton tooltip="Copy">
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:806:            tooltip="Helpful"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:814:            tooltip="Not helpful"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:822:        <TooltipIconButton tooltip={uiText("Retry response", "重试回答")}>
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:829:            tooltip="More"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:839:          className="aui-action-bar-more-content bg-popover text-popover-foreground data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:animate-out data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[8rem] overflow-hidden rounded-xl border p-1.5"
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:916:        <TooltipIconButton tooltip={uiText("Edit", "编辑")} className="aui-user-action-edit">
+review-pack/products/P07/app/src/components/assistant-ui/elements/thread.aui.tsx:966:        <TooltipIconButton tooltip="Previous">
+P09
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:30:  Dialog,
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:31:  DialogTitle,
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:32:  DialogContent,
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:33:  DialogTrigger,
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:64:type AttachmentPreviewDialogProps = PropsWithChildren<{
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:69:const AttachmentPreviewDialog: FC<AttachmentPreviewDialogProps> = ({
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:77:    <Dialog>
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:78:      <DialogTrigger
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:89:      <DialogContent className="aui-attachment-preview-dialog-content [&>button]:bg-foreground/60 [&>button]:hover:bg-foreground/80 [&_svg]:text-background p-2 sm:max-w-3xl [&>button]:rounded-full [&>button]:p-1 [&>button]:opacity-100 [&>button]:ring-0!">
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:90:        <DialogTitle className="aui-sr-only sr-only">
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:92:        </DialogTitle>
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:93:        <div className="aui-attachment-preview bg-background relative mx-auto flex max-h-[80dvh] w-full items-center justify-center overflow-hidden rounded-sm">
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:96:      </DialogContent>
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:97:    </Dialog>
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:140:            <TooltipTrigger id={`${detailsId}-trigger`} closeOnClick={false} onClick={(event) => { if (event.target instanceof Element && event.target.closest("button")) return; event.currentTarget.focus({ preventScroll: true }); setDetailsOpen(true); }} render={<div role="group" tabIndex={0} aria-describedby={detailsOpen ? detailsId : undefined} onFocus={() => setDetailsOpen(true)} onBlur={() => setDetailsOpen(false)} aria-label={name} className="max-w-full rounded-[14px] outline-none focus-visible:ring-1 focus-visible:ring-ring/50" />}>
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:152:            <TooltipContent role="tooltip" id={detailsId} side="top" className="flex-col items-start [overflow-wrap:anywhere]">
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:175:          <AttachmentPreviewDialog src={src} name={name}>
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:180:                    "aui-attachment-tile bg-muted hover:after:bg-foreground/10 focus-visible:ring-ring/50 relative size-14 overflow-hidden rounded-[calc(var(--composer-radius,1rem)-var(--composer-padding,8px))] transition-transform outline-none after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:ring-1 after:ring-black/10 after:transition-colors after:ring-inset focus-visible:ring-1 motion-reduce:transition-none dark:after:ring-white/10",
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:189:                  aria-label={`${src ? `Preview ${name}` : `${typeLabel} attachment ${name}`}${
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:217:          </AttachmentPreviewDialog>
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:236:          tooltip={`Remove ${name}`}
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:259:    <div role="region" aria-label={copy.files} tabIndex={0} className="aui-composer-attachments flex max-h-28 w-full flex-row flex-wrap items-center gap-2 overflow-y-auto rounded-sm outline-none focus-visible:ring-1 focus-visible:ring-ring/50 empty:hidden">
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:272:          tooltip={copy.addFile}
+review-pack/products/P09/app/src/components/assistant-ui/elements/attachment.aui.tsx:277:          aria-label={copy.addFile}
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:238:      <ThreadPrimitive.Viewport
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:240:        autoScroll
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:242:        className="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-smooth motion-reduce:scroll-auto"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:268:          <ThreadPrimitive.ViewportFooter
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:270:              "aui-thread-viewport-footer bg-background flex flex-col gap-4 overflow-visible pb-4 md:pb-6",
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:275:            <ThreadScrollToBottom />
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:281:          </ThreadPrimitive.ViewportFooter>
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:283:      </ThreadPrimitive.Viewport>
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:369:              aria-label="Assistant is speaking"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:389:        <TooltipIconButton tooltip={copy.copy} className="size-6">
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:470:const ThreadScrollToBottom: FC = () => {
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:472:    <ThreadPrimitive.ScrollToBottom asChild behavior="instant">
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:474:        tooltip={copy.latest}
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:480:    </ThreadPrimitive.ScrollToBottom>
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:543:            aria-label={copy.input}
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:576:                tooltip="Voice input"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:582:                aria-label="Start voice input"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:591:                tooltip="Stop dictation"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:597:                aria-label="Stop voice input"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:614:              tooltip={copy.send}
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:620:              aria-label={copy.send}
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:629:              tooltip="Resume generating"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:635:              aria-label="Resume generating"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:654:              aria-label={isSending ? copy.cancelSending : copy.stop}
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:759:                    aria-label="Assistant is working"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:791:        <TooltipIconButton tooltip={copy.copy}>
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:803:            tooltip="Helpful"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:811:            tooltip="Not helpful"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:819:        <TooltipIconButton tooltip={copy.retry}>
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:826:            tooltip="More"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:836:          className="aui-action-bar-more-content bg-popover text-popover-foreground data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:animate-out data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[8rem] overflow-hidden rounded-xl border p-1.5"
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:913:        <TooltipIconButton tooltip={copy.edit} className="aui-user-action-edit">
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:963:        <TooltipIconButton tooltip="Previous">
+review-pack/products/P09/app/src/components/assistant-ui/elements/thread.aui.tsx:971:        <TooltipIconButton tooltip="Next">
+P10
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:28:  Dialog,
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:29:  DialogTitle,
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:30:  DialogContent,
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:31:  DialogTrigger,
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:32:  DialogDescription,
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:33:  DialogHeader,
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:65:type AttachmentPreviewDialogProps = PropsWithChildren<{
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:70:const AttachmentPreviewDialog: FC<AttachmentPreviewDialogProps> = ({
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:78:    <Dialog>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:79:      <DialogTrigger
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:90:      <DialogContent className="aui-attachment-preview-dialog-content [&>button]:bg-foreground/60 [&>button]:hover:bg-foreground/80 [&_svg]:text-background p-2 sm:max-w-3xl [&>button]:rounded-full [&>button]:p-1 [&>button]:opacity-100 [&>button]:ring-0!">
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:91:        <DialogTitle className="aui-sr-only sr-only">
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:93:        </DialogTitle>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:94:        <div className="aui-attachment-preview bg-background relative mx-auto flex max-h-[80dvh] w-full items-center justify-center overflow-hidden rounded-sm">
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:97:      </DialogContent>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:98:    </Dialog>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:129:  // Compose the source File and Dialog families for filename-only attachments.
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:135:          <Dialog>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:136:            <DialogTrigger
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:138:              aria-label={copy(`View attachment details: ${name}`, `查看附件详情：${name}`)}
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:145:            </DialogTrigger>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:146:            <DialogContent>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:147:              <DialogHeader>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:148:                <DialogTitle>{copy("Attachment details", "附件详情")}</DialogTitle>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:149:                <DialogDescription className="break-all">{name}</DialogDescription>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:150:              </DialogHeader>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:151:              <DialogDescription>{copy("Only this filename is attached to the local conversation. File contents are never read or transmitted.", "此本地对话仅附带文件名，不会读取或传输文件内容。")}</DialogDescription>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:152:            </DialogContent>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:153:          </Dialog>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:156:              render={<TooltipIconButton tooltip={copy(`Remove ${name}`, `移除 ${name}`)} className="size-7 shrink-0" />}
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:183:          <AttachmentPreviewDialog src={src} name={name}>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:188:                    "aui-attachment-tile bg-muted hover:after:bg-foreground/10 focus-visible:ring-ring/50 relative size-14 overflow-hidden rounded-[calc(var(--composer-radius,1rem)-var(--composer-padding,8px))] transition-transform outline-none after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:ring-1 after:ring-black/10 after:transition-colors after:ring-inset focus-visible:ring-1 motion-reduce:transition-none dark:after:ring-white/10",
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:197:                  aria-label={`${src ? `Preview ${name}` : `${typeLabel} attachment ${name}`}${
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:225:          </AttachmentPreviewDialog>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:244:          tooltip={`Remove ${name}`}
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:267:    <div className="aui-composer-attachments flex w-full flex-row items-center gap-2 overflow-x-auto p-0.5 empty:hidden" aria-label={copy("Attached filenames", "已附加的文件名")}>
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:280:          tooltip={copy("Add attachment", "添加附件")}
+review-pack/products/P10/app/src/components/assistant-ui/elements/attachment.aui.tsx:285:          aria-label={copy("Add attachment", "添加附件")}
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:238:      <ThreadPrimitive.Viewport
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:240:        autoScroll
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:242:        className="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-smooth motion-reduce:scroll-auto"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:268:          <ThreadPrimitive.ViewportFooter
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:270:              "aui-thread-viewport-footer bg-background flex flex-col gap-4 overflow-visible pb-4 md:pb-6",
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:275:            <ThreadScrollToBottom />
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:281:          </ThreadPrimitive.ViewportFooter>
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:283:      </ThreadPrimitive.Viewport>
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:369:              aria-label="Assistant is speaking"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:389:        <TooltipIconButton tooltip="Copy" className="size-6">
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:470:const ThreadScrollToBottom: FC = () => {
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:472:    <ThreadPrimitive.ScrollToBottom asChild>
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:474:        tooltip={copy("Return to latest", "回到最新内容")}
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:480:    </ThreadPrimitive.ScrollToBottom>
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:543:            aria-label={copy("Message input", "消息输入")}
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:577:                tooltip="Voice input"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:583:                aria-label="Start voice input"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:592:                tooltip="Stop dictation"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:598:                aria-label="Stop voice input"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:615:              tooltip={copy("Send message", "发送消息")}
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:621:              aria-label={copy("Send message", "发送消息")}
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:630:              tooltip="Resume generating"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:636:              aria-label="Resume generating"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:655:              aria-label={isSending ? copy("Cancel sending", "取消发送") : copy("Stop generating", "停止生成")}
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:763:                    aria-label="Assistant is working"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:796:        <TooltipIconButton tooltip={copy("Copy", "复制")}>
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:808:            tooltip="Helpful"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:816:            tooltip="Not helpful"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:824:        <TooltipIconButton tooltip={failed ? copy("Retry response", "重试回答") : copy("Regenerate response", "重新生成回答")}>
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:831:            tooltip={copy("More", "更多")}
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:841:          className="aui-action-bar-more-content bg-popover text-popover-foreground data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:animate-out data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[8rem] overflow-hidden rounded-xl border p-1.5"
+review-pack/products/P10/app/src/components/assistant-ui/elements/thread.aui.tsx:918:        <TooltipIconButton tooltip={copy("Edit", "编辑")} className="aui-user-action-edit">
+P11
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:28:  Dialog,
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:29:  DialogTitle,
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:30:  DialogContent,
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:31:  DialogTrigger,
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:32:  DialogHeader,
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:33:  DialogDescription,
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:64:type AttachmentPreviewDialogProps = PropsWithChildren<{
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:69:const AttachmentPreviewDialog: FC<AttachmentPreviewDialogProps> = ({
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:77:    <Dialog>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:78:      <DialogTrigger
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:89:      <DialogContent className="aui-attachment-preview-dialog-content [&>button]:bg-foreground/60 [&>button]:hover:bg-foreground/80 [&_svg]:text-background p-2 sm:max-w-3xl [&>button]:rounded-full [&>button]:p-1 [&>button]:opacity-100 [&>button]:ring-0!">
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:90:        <DialogTitle className="aui-sr-only sr-only">
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:92:        </DialogTitle>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:93:        <div className="aui-attachment-preview bg-background relative mx-auto flex max-h-[80dvh] w-full items-center justify-center overflow-hidden rounded-sm">
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:96:      </DialogContent>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:97:    </Dialog>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:145:          <AttachmentPreviewDialog src={src} name={name}>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:150:                    "aui-attachment-tile bg-muted hover:after:bg-foreground/10 focus-visible:ring-ring/50 relative size-14 overflow-hidden rounded-[calc(var(--composer-radius,1rem)-var(--composer-padding,8px))] transition-transform outline-none after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:ring-1 after:ring-black/10 after:transition-colors after:ring-inset focus-visible:ring-1 motion-reduce:transition-none dark:after:ring-white/10",
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:159:                  aria-label={`${src ? `Preview ${name}` : `${typeLabel} attachment ${name}`}${
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:187:          </AttachmentPreviewDialog>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:220:        <Dialog>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:221:          <DialogTrigger
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:223:            aria-label={copy(`View filename ${name}`, `查看文件名 ${name}`)}
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:230:          </DialogTrigger>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:231:          <DialogContent>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:232:            <DialogHeader>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:233:              <DialogTitle className="break-all pr-6 leading-normal">{name}</DialogTitle>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:234:              <DialogDescription>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:236:              </DialogDescription>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:237:            </DialogHeader>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:238:          </DialogContent>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:239:        </Dialog>
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:251:          tooltip={copy(`Remove ${name}`, `移除 ${name}`)}
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:277:    <div className="aui-composer-attachments flex w-full min-w-0 flex-row items-center gap-2 overflow-x-auto empty:hidden">
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:290:          tooltip={copy("Add local filename", "添加本地文件名")}
+review-pack/products/P11/app/src/components/assistant-ui/elements/attachment.aui.tsx:295:          aria-label={copy("Add local filename", "添加本地文件名")}
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:238:      <ThreadPrimitive.Viewport
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:241:        className="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-auto"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:267:          <ThreadPrimitive.ViewportFooter
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:269:              "aui-thread-viewport-footer bg-background flex flex-col gap-4 overflow-visible pb-4 md:pb-6",
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:274:            <ThreadScrollToBottom />
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:280:          </ThreadPrimitive.ViewportFooter>
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:282:      </ThreadPrimitive.Viewport>
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:368:              aria-label="Assistant is speaking"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:388:        <TooltipIconButton tooltip="Copy" className="size-6">
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:469:const ThreadScrollToBottom: FC = () => {
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:471:    <ThreadPrimitive.ScrollToBottom asChild>
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:473:        tooltip={copy("Return to latest", "回到最新内容")}
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:479:    </ThreadPrimitive.ScrollToBottom>
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:542:            aria-label={copy("Message input", "消息输入")}
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:579:                tooltip="Voice input"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:585:                aria-label="Start voice input"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:594:                tooltip="Stop dictation"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:600:                aria-label="Stop voice input"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:617:              tooltip={copy("Send message", "发送消息")}
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:623:              aria-label={copy("Send message", "发送消息")}
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:632:              tooltip="Resume generating"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:638:              aria-label="Resume generating"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:657:              aria-label={isSending ? copy("Cancel sending", "取消发送") : copy("Stop generating", "停止生成")}
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:764:                    aria-label="Assistant is working"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:797:        <TooltipIconButton tooltip="Copy">
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:809:            tooltip="Helpful"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:817:            tooltip="Not helpful"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:825:        <TooltipIconButton tooltip={failed ? copy("Retry response", "重试回答") : copy("Regenerate response", "重新生成回答")}>
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:832:            tooltip="More"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:842:          className="aui-action-bar-more-content bg-popover text-popover-foreground data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:animate-out data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[8rem] overflow-hidden rounded-xl border p-1.5"
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:919:        <TooltipIconButton tooltip="Edit" className="aui-user-action-edit">
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:969:        <TooltipIconButton tooltip="Previous">
+review-pack/products/P11/app/src/components/assistant-ui/elements/thread.aui.tsx:977:        <TooltipIconButton tooltip="Next">
+P17
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:28:  Dialog,
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:29:  DialogTitle,
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:30:  DialogContent,
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:31:  DialogTrigger,
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:32:  DialogDescription,
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:33:  DialogHeader,
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:64:type AttachmentPreviewDialogProps = PropsWithChildren<{
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:69:const AttachmentPreviewDialog: FC<AttachmentPreviewDialogProps> = ({
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:77:    <Dialog>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:78:      <DialogTrigger
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:89:      <DialogContent className="aui-attachment-preview-dialog-content [&>button]:bg-foreground/60 [&>button]:hover:bg-foreground/80 [&_svg]:text-background p-2 sm:max-w-3xl [&>button]:rounded-full [&>button]:p-1 [&>button]:opacity-100 [&>button]:ring-0!">
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:90:        <DialogTitle className="aui-sr-only sr-only">
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:92:        </DialogTitle>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:93:        <div className="aui-attachment-preview bg-background relative mx-auto flex max-h-[80dvh] w-full items-center justify-center overflow-hidden rounded-sm">
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:96:      </DialogContent>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:97:    </Dialog>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:131:        <Dialog>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:132:          <DialogTrigger
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:140:            aria-label={taskText(`Details for ${name}`, `查看附件：${name}`)}
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:146:          </DialogTrigger>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:147:          <DialogContent>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:148:            <DialogHeader>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:149:              <DialogTitle>{taskText("Attachment details", "附件详情")}</DialogTitle>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:150:              <DialogDescription>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:152:              </DialogDescription>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:153:            </DialogHeader>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:156:              <File.Name className="whitespace-normal [overflow-wrap:anywhere]">{name}</File.Name>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:159:          </DialogContent>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:160:        </Dialog>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:179:          <AttachmentPreviewDialog src={src} name={name}>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:184:                    "aui-attachment-tile bg-muted hover:after:bg-foreground/10 focus-visible:ring-ring/50 relative size-14 overflow-hidden rounded-[calc(var(--composer-radius,1rem)-var(--composer-padding,8px))] transition-transform outline-none after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:ring-1 after:ring-black/10 after:transition-colors after:ring-inset focus-visible:ring-1 motion-reduce:transition-none dark:after:ring-white/10",
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:193:                  aria-label={`${src ? `Preview ${name}` : `${typeLabel} attachment ${name}`}${
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:221:          </AttachmentPreviewDialog>
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:243:          tooltip={taskText(`Remove ${name}`, `移除 ${name}`)}
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:266:    <div className="aui-composer-attachments flex w-full flex-row items-center gap-2 overflow-x-auto empty:hidden">
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:279:          tooltip={taskText("Add Attachment", "添加附件")}
+review-pack/products/P17/app/src/components/assistant-ui/elements/attachment.aui.tsx:284:          aria-label={taskText("Add Attachment", "添加附件")}
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:238:      <ThreadPrimitive.Viewport
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:241:        className="relative flex flex-1 flex-col overflow-x-auto overflow-y-scroll scroll-auto"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:267:          <ThreadPrimitive.ViewportFooter
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:269:              "aui-thread-viewport-footer bg-background flex flex-col gap-4 overflow-visible pb-4 md:pb-6",
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:274:            <ThreadScrollToBottom />
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:280:          </ThreadPrimitive.ViewportFooter>
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:282:      </ThreadPrimitive.Viewport>
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:368:              aria-label="Assistant is speaking"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:388:        <TooltipIconButton tooltip="Copy" className="size-6">
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:469:const ThreadScrollToBottom: FC = () => {
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:471:    <ThreadPrimitive.ScrollToBottom behavior="instant" asChild>
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:480:    </ThreadPrimitive.ScrollToBottom>
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:543:            aria-label={taskText("Message input", "输入消息")}
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:576:                tooltip="Voice input"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:582:                aria-label="Start voice input"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:591:                tooltip="Stop dictation"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:597:                aria-label="Stop voice input"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:614:              tooltip={taskText("Send message", "发送消息")}
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:620:              aria-label={taskText("Send message", "发送消息")}
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:629:              tooltip="Resume generating"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:635:              aria-label="Resume generating"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:654:              aria-label={isSending ? taskText("Cancel sending", "取消发送") : taskText("Stop generating", "停止生成")}
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:758:                    aria-label="Assistant is working"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:790:        <TooltipIconButton tooltip="Copy">
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:802:            tooltip="Helpful"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:810:            tooltip="Not helpful"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:818:        <TooltipIconButton tooltip={taskText("Retry response", "重试回答")}>
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:825:            tooltip="More"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:835:          className="aui-action-bar-more-content bg-popover text-popover-foreground data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=closed]:animate-out data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[8rem] overflow-hidden rounded-xl border p-1.5"
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:912:        <TooltipIconButton tooltip={taskText("Edit message", "编辑消息")} className="aui-user-action-edit">
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:962:        <TooltipIconButton tooltip="Previous">
+review-pack/products/P17/app/src/components/assistant-ui/elements/thread.aui.tsx:970:        <TooltipIconButton tooltip="Next">

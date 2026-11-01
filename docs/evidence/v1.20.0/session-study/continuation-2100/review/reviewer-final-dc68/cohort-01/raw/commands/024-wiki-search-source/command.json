@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "bash",
+    "-c",
+    "rg -n \"tc-search|searchInput\" review-pack/products/P02/app/vendor/tiddlywiki/core/ui/SideBarSegments/search.tid review-pack/products/P02/app/vendor/tiddlywiki/core/ui/DefaultSearchResultList.tid; rg -n \"<\\$edit|input\" review-pack/products/P02/app/vendor/tiddlywiki/core/ui/SideBarSegments/search.tid; rg -n \"Address already|EADDRINUSE|Errno 98\" behavior/*/server.log behavior/*/*/server.log || true"
+  ],
+  "cwd": "/workspace/scratch/dc68edd00fe1/independent-review",
+  "started_at": "2026-11-01T13:06:29.398753+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T13:06:29.414886+00:00",
+  "wall_seconds": 0.016139,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 4672,
+      "sha256": "3f3bf90dbd7f9ea6351b0cdd493c7a06be15a5caf7e5e586703974ef44dff185"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

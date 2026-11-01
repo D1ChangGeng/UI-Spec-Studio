@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "derived_continuation_summary",
+  "observed_at_utc": "2026-10-31T18:29:34Z",
+  "source_commit": "4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+  "source_tree": "6fe60e115d529d6122f565a3a85f24688486c514",
+  "candidate_fingerprint": "6aeba48963d8b72cf1906cb9e8b4500eeb4d9934daa5e7c5b575d867a5e177bc",
+  "baseline_commit": "05d0286b0b27e8e57d5751d5cf649c8800408001",
+  "target_version": "1.20.0",
+  "release": {
+    "decision": "pending",
+    "merged": false,
+    "tag_created": false,
+    "release_created": false,
+    "latest_verified_published_version": "1.19.0",
+    "latest_verified_release_url": "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.19.0"
+  },
+  "source_readback": {
+    "method": "Fetch each changed file at the exact committed SHA and compare its complete UTF-8 contents with the submitted source retained in orchestration memory.",
+    "files": [
+      {
+        "path": "docs/experiments/adaptive-research/PROTOCOL.md",
+        "returned_git_blob_sha": "393db43969ec1511ba26941d63366acc14432296",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "docs/experiments/adaptive-research/RUNNING.md",
+        "returned_git_blob_sha": "ec68fc77aeabd5d9726ae63a058450d18b2f30b2",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "integrations/codex/AGENTS-snippet.md",
+        "returned_git_blob_sha": "e30b53ff76945d19f0d6ee92e7181dec5c4f48ec",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "integrations/codex/README.md",
+        "returned_git_blob_sha": "b44b9ea7ff8bca220546f65d9d6e625b183325e9",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "integrations/codex/launch.py",
+        "returned_git_blob_sha": "df0532d9f7bef53929313d9ebdd09987cec355c1",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tests/adaptive_rpc_fixture.py",
+        "returned_git_blob_sha": "a23c76624f96226afdbdf209cc78ef9f0054ed7f",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tests/test_adaptive_appserver.py",
+        "returned_git_blob_sha": "9203ab70061ec587545e9a58d2969a20003ea543",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tests/test_adaptive_execution.py",
+        "returned_git_blob_sha": "33f17040401d8d6a1e380a1cca569a764a400211",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tests/test_codex_launcher.py",
+        "returned_git_blob_sha": "c8d8c046dcc9179a8422243d642433bdfc553d78",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tests/test_contracts.py",
+        "returned_git_blob_sha": "62db24f1305fcff779784c9fa31b0daafb9ec597",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tests/test_publication.py",
+        "returned_git_blob_sha": "9b7f40aab72add6907d4aabe21d530bcba3bda77",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tools/adaptive_appserver.py",
+        "returned_git_blob_sha": "715cf74f687e009c197cc8ed24bc0adc6975ccfe",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tools/check_adaptive_release.py",
+        "returned_git_blob_sha": "600f2f526a7a976bfb35e250967f93246026e2ce",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tools/package.py",
+        "returned_git_blob_sha": "09bb4fae57c74a47503954fdc9737fb21cf78732",
+        "submitted_content_matches": true
+      },
+      {
+        "path": "tools/run_adaptive_research.py",
+        "returned_git_blob_sha": "9653d92575eed7ddf3e26575bdc453964b4cf039",
+        "submitted_content_matches": true
+      }
+    ]
+  },
+  "hosted_checks": [
+    {
+      "run_id": 41229206910,
+      "name": "Validate and release",
+      "event": "push",
+      "conclusion": "success",
+      "validation_jobs": 7,
+      "release_job": "skipped",
+      "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41229206910"
+    },
+    {
+      "run_id": 41229210675,
+      "name": "Validate and release",
+      "event": "pull_request",
+      "conclusion": "success",
+      "validation_jobs": 7,
+      "release_job": "skipped",
+      "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41229210675"
+    },
+    {
+      "run_id": 41229206978,
+      "name": "Candidate recovery snapshot",
+      "event": "push",
+      "conclusion": "success",
+      "jobs": [
+        "snapshot",
+        "candidate-live-readme",
+        "candidate-install",
+        "runtime-availability"
+      ],
+      "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41229206978"
+    }
+  ],
+  "hosted_unit_log_readback": [
+    {
+      "job_id": 124619654093,
+      "platform": "Ubuntu",
+      "python": "3.13",
+      "tests": 489,
+      "seconds": 37.585,
+      "result": "OK",
+      "source": "GitHub job log fetched directly"
+    },
+    {
+      "job_id": 124619654159,
+      "platform": "Windows",
+      "python": "3.13",
+      "tests": 489,
+      "seconds": 56.186,
+      "result": "OK",
+      "skipped": 8,
+      "source": "GitHub job log fetched directly"
+    }
+  ],
+  "local_engineering_before_environment_loss": {
+    "evidence_state": "Performed and independently reviewed locally; original logs and media were not uploaded before the environment became unavailable.",
+    "source_fingerprint": "6aeba48963d8b72cf1906cb9e8b4500eeb4d9934daa5e7c5b575d867a5e177bc",
+    "unit_tests": 489,
+    "unit_seconds": 30.541,
+    "unit_result": "OK",
+    "validation": [
+      "package structure",
+      "catalog",
+      "readme art",
+      "package build",
+      "diff whitespace"
+    ],
+    "browser": {
+      "readme_combinations": 12,
+      "scenario_checks": 18,
+      "asset_checks": 8,
+      "content_checks": 39,
+      "temporal_episodes": 23,
+      "representative_screenshots_actually_viewed": 18,
+      "videos_captured": 2,
+      "videos_normal_speed_playback_claimed": false
+    },
+    "standard_skill_install": {
+      "cli": "skills@1.7.4",
+      "requested_hosts": [
+        "Codex",
+        "Claude Code",
+        "OpenCode"
+      ],
+      "canonical_physical_copies": 2,
+      "each_copy_files": 37,
+      "each_copy_byte_comparison": "matched"
+    },
+    "standalone_adapter": {
+      "actual_built_asset": "ui-spec-codex-1.20.0.zip",
+      "cli_operations": 18,
+      "expected_conflict_exits": 4,
+      "all_four_default_roles_verified": true,
+      "launcher_mode": "dry-run only",
+      "no_published_v119_adapter_claim": true
+    },
+    "knowledge": {
+      "skill_files": 37,
+      "unchanged_from_initial_continuity_review": true,
+      "required_full_common_references": 8
+    },
+    "failures_preserved": [
+      "Initial full suite failed because a positional contents.json index pointed to the new adapter ZIP; selecting by filename fixed it, then all 489 tests passed.",
+      "Initial public Skills installation hit ordinary-sandbox network EPERM; the approved bounded public dependency/install retry succeeded.",
+      "Directly copied historical Markdown had 27 original sandbox links; the original reports and validator were unchanged, and a byte-preserving archive wrapper passed validation."
+    ],
+    "release_guard": {
+      "exit_code": 2,
+      "status": "blocked_pending"
+    },
+    "final_report_path": "/workspace/scratch/f60561cc17ed/acceptance-final-preexperiment/engineering-results.json",
+    "final_report_sha256": "9ae71f9ee66505f18d44c661de0e48d6eb4595489ec34dfc564e6335bba9f4bc"
+  },
+  "native_capability": {
+    "cli_path": "/opt/codex/bin/codex",
+    "cli_version": "0.166.0-alpha.1",
+    "cli_sha256": "024a5f04692900156bb1f9eaa11c8fafd1ce925d04b30eb65a65f614e5799e09",
+    "login_state": "existing authenticated native runtime; authentication bytes not read/copied by this work",
+    "four_role_installation_verified": true,
+    "four_cli_child_spawns_observed": true,
+    "four_native_role_bindings_verified": false,
+    "standard_api_specialist_bindings_verified": [
+      "ui_researcher"
+    ],
+    "default_generic_role_native_value": null,
+    "default_generic_role_fields_explicitly_present": true,
+    "parent_and_child_full_skill_reference_file_outputs_verified": true,
+    "actual_child_web_search_observed": true,
+    "native_screenshot_and_image_view_succeeded": false,
+    "browser_failure": "Chromium launched, but parent and child could not reach the outer driver's localhost URL (ERR_CONNECTION_REFUSED).",
+    "preview_reuse_across_native_tools_and_children": "unverified",
+    "models": {
+      "parent_configured": "gpt-5.6-luna",
+      "child_configured": "gpt-6.1-sol",
+      "creation_resolved_model": "unknown where absent",
+      "per_response_model": "unknown",
+      "proposed_model_only_comparison": "gpt-6.1-terra; not executed in the new campaign"
+    },
+    "dollars": "unknown",
+    "original_persistent_diagnostic_distinguished_from_ephemeral": true,
+    "preserved_negative_results": [
+      "Unsupported history/resume RPC errors",
+      "Original evidence_incomplete default-role-binding outcome",
+      "Failed native browser tools",
+      "Two pre-launch automatic approval rejections"
+    ],
+    "safe_evidence_zip_path": "/workspace/scratch/f60561cc17ed/UI-Spec-Studio/docs/evidence/v1.20.0/native-recovery-20261101/evidence.zip",
+    "safe_evidence_zip_sha256": "b133be59f05c08bfa89b0d1f9df1c67a76ca4e3b326e8dc9c02badcce7bb1d24",
+    "safe_evidence_zip_bytes": 483329,
+    "safe_evidence_files": 55,
+    "original_sha256sums_sha256": "768976bc9ab842b1625db3b3b643fa63cf5af3de1a447ca4a52cb250b2e01789",
+    "evidence_remote_upload_confirmed": false
+  },
+  "historical_recovery": {
+    "original_root": "/workspace/scratch/cd6433ed9e28",
+    "recovery_root": "/workspace/scratch/f60561cc17ed/recovered-history",
+    "real_attempts": 18,
+    "process_completed": 14,
+    "timed_out": 3,
+    "failed_or_incomplete": 1,
+    "original_registration_sha256": "c5593db164c1cadc0e89330e9d111e6c9d4a53500e82d8c548be2a18fbfb496a",
+    "original_candidate_fingerprint": "1be67172a99f661766e0887e979e88021d4cdfcea5a662a28c5726a54051fca0",
+    "recovery_files": 148,
+    "recovery_tree_bytes": 170351080,
+    "content_objects": 3880,
+    "locked_reviews": 5,
+    "locked_references_verified": 847,
+    "recovery_manifest_sha256": "099efd308a49180852162b4efc2ba6c0b8e8132f5ef990b3ae3b21377c9d5e34",
+    "wrapper_metadata_zip_sha256": "e69adf510fb2375ed953bbccfc119f0fbd932061fa57a01ca380aa3dc78da579",
+    "wrapper_metadata_zip_bytes": 10765238,
+    "actual_restoration_checks": "All 148 transported files matched the original recovery; original verifier passed 3880 objects, 18 product selections and 847 locks, including a restoration from a built source ZIP.",
+    "current_candidate_registration_rebinding": false,
+    "causal_limits": [
+      "All three B attempts had no native child.",
+      "Old parent logs lacked complete native child role/tool evidence.",
+      "Only five product reviews were locked.",
+      "The complete candidate source fingerprint differs.",
+      "Negative and timed-out attempts remain unsuccessful."
+    ],
+    "independent_ai_review_findings": [
+      "T1 draft/saved authority and pending-navigation problems",
+      "T2 reading-position/focus and draft continuity defects",
+      "T3 palette selection, reduced-motion and mobile search-focus defects",
+      "The reviewed T4 main integration retained native behavior within its observed scope"
+    ],
+    "correction_preserved": "The T1-C review's new-CSS-alone originality inference was withdrawn in POLICY-ADDENDUM.md.",
+    "exclusions": "Runtime/dependencies/profiles and unreviewed font binaries; reviewed Inter/OFL retained, Arvo still excluded with source/hash/license leads.",
+    "remote_archive_upload_confirmed": false,
+    "upload_attempt": "The first small README create_blob request returned no SHA before interruption; no large ZIP upload was confirmed. No branch was changed for those archives."
+  },
+  "prepared_next_campaign": {
+    "status": "draft_not_registered_not_executed",
+    "cells": 18,
+    "tasks": [
+      "T1",
+      "T2",
+      "T3",
+      "T4"
+    ],
+    "parallel_parent_ceiling": 2,
+    "per_cell_budget_seconds": 3600,
+    "starter_files": 1946,
+    "changed_environment_paths": 6,
+    "ui_fixture_task_and_t4_decision_preserved": true,
+    "preparation_source_sha256": "5888bb21bce91650b5f5e41e8544840597b2ce70e2d6219fa507b4a32498df4b",
+    "review_plan_sha256": "7aa0f867f97309837e8a06e763564d234964d501927ca4db9bbc5a1e0adf4812",
+    "private_mapping_predeclaration_sha256": "9d724c7cbaa5c26ec727f09a495769115420433fc540bec7cb74b713fd4853a8",
+    "prepared_path": "/workspace/scratch/f60561cc17ed/experiment-prep",
+    "t2_final_preflight": {
+      "masks_http_status": 200,
+      "http_ready_seconds": 86.912,
+      "visible_composer_seconds": 90.001,
+      "short_local_synthetic_response_completed": true
+    },
+    "formal_new_executions": 0,
+    "accepted_matched_new_ui_comparisons": 0
+  },
+  "blockers": [
+    {
+      "kind": "automatic_approval_rejection",
+      "action": "180-second inherited-profile ephemeral native browser smoke with one parent and one generic child",
+      "reason": "Possible direct/indirect writes to protected /root/.codex/sessions or related configuration paths; automatic review acknowledged user authorization but rejected the action.",
+      "reconsideration": "Actual ephemeral:true/path:null and local SQLite/log metadata supplied; launch still rejected.",
+      "native_execution_started": false,
+      "record_kind": "attributed summary, not a complete verbatim approval transcript"
+    },
+    {
+      "kind": "safer_environment_unavailable",
+      "action": "bwrap read-only mount namespace capability check running only /bin/true",
+      "result": "EPERM under ordinary execution and an approved elevated capability check; no Codex launch or credential access"
+    },
+    {
+      "kind": "execution_environment_unavailable",
+      "environment_id": "ccarenv_b64_Y2NhcmVudl82YWEyYzkyMzlmZjg4MTkxYjk0NGY1MmMwMGU3OTU4NA",
+      "state": "unavailable",
+      "exec_tool_result": "No usable execution environment is available. Wait for an environment to become available before using this tool.",
+      "fallback_reads": "The two connected ACS filesystems did not expose the known scratch paths."
+    }
+  ],
+  "outstanding": [
+    "Restore an approved native environment and recover/persist the complete local evidence archives.",
+    "Finish same-process screenshot/view and cross-tool/child preview capability verification.",
+    "Freeze and execute all 18 exact-candidate cells with authentic role/tool identities.",
+    "Independently review products, analyze evidence use and source craft, repair demonstrated weaknesses and complete final-candidate acceptance.",
+    "Only after approval: merge PR #4, tag/release v1.20.0, verify assets/checksums and install the actual release."
+  ],
+  "claim_boundary": "This committed summary preserves facts observed before the environment failed and direct GitHub readbacks. It is not the missing raw experiment archive, a successful new UI campaign or product-level release approval.",
+  "hosted_recovery_details": {
+    "exact_commit": "4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+    "live_readme_captures": 24,
+    "remote_skill_cli": "skills@1.7.4",
+    "requested_hosts": [
+      "codex",
+      "claude-code",
+      "opencode"
+    ],
+    "canonical_physical_copies": 2,
+    "files_each": 37,
+    "helpers_executed": true,
+    "packaged_assets": [
+      "ui-spec-studio-1.20.0.zip",
+      "ui-spec-1.20.0.zip",
+      "ui-spec-codex-1.20.0.zip",
+      "contents.json",
+      "SHA256SUMS.txt"
+    ],
+    "runtime_job": {
+      "authenticated_execution_verified": false,
+      "actual_agent_runs": 0
+    },
+    "boundary": "Successful candidate recovery checks do not establish authenticated study-agent execution. Its git-archive snapshot does not include uncommitted local recovered evidence."
+  },
+  "candidate_artifacts": {
+    "kind": "temporary_actions_artifacts_not_release_assets",
+    "download_and_independent_rehash_performed": false,
+    "digest_source": "GitHub artifact API; independently corroborated against upload logs by code-review agent",
+    "artifacts": [
+      {
+        "id": 13053107905,
+        "name": "candidate-distributions-4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "bytes": 355679042,
+        "digest": "sha256:b8394aadc6704c878c834e209a4283fa6d93d2a5f29e560c21efa6a883e43dc1",
+        "expired": false,
+        "expires_at": "2026-11-30T18:24:12Z",
+        "source_commit": "4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41229206978/artifacts/13053107905"
+      },
+      {
+        "id": 13053008137,
+        "name": "candidate-remote-install-4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "bytes": 1207,
+        "digest": "sha256:2203064a1ef25b95767205c65e238f705b9655095ac2240a0c6a6aa032c87af9",
+        "expired": false,
+        "expires_at": "2026-11-30T18:24:06Z",
+        "source_commit": "4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41229206978/artifacts/13053008137"
+      },
+      {
+        "id": 13052938097,
+        "name": "candidate-runtime-availability-4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "bytes": 459,
+        "digest": "sha256:5bb5e30b252b614404eab8a352fe10ace7aae88124e15c4c4c5871a18c676ba3",
+        "expired": false,
+        "expires_at": "2026-11-30T18:23:51Z",
+        "source_commit": "4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41229206978/artifacts/13052938097"
+      },
+      {
+        "id": 13052399436,
+        "name": "candidate-source-4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "bytes": 355514183,
+        "digest": "sha256:95cab06d01e0638d2199c93cc07be6ed663339cabf415ad3d9397ba7926df0d8",
+        "expired": false,
+        "expires_at": "2026-11-30T18:24:04Z",
+        "source_commit": "4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41229206978/artifacts/13052399436"
+      },
+      {
+        "id": 13052364538,
+        "name": "candidate-live-readme-4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "bytes": 42008779,
+        "digest": "sha256:cc7e66043659b9821bfbbd3922873c83e38f10216e3cd3633d6b7bfb87454f26",
+        "expired": false,
+        "expires_at": "2026-11-30T18:24:54Z",
+        "source_commit": "4819c38af71d797e83bd80e6b253df7fa07b6d0a",
+        "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41229206978/artifacts/13052364538"
+      }
+    ]
+  },
+  "hosted_decoded_logs": [
+    {
+      "path": "docs/evidence/v1.20.0/engineering-4819c38/ubuntu-python313.log",
+      "source_job_id": 124619654093,
+      "representation": "Decoded UTF-8 job log exactly as returned by the GitHub connector; not a native Agent event stream."
+    },
+    {
+      "path": "docs/evidence/v1.20.0/engineering-4819c38/windows-python313.log",
+      "source_job_id": 124619654159,
+      "representation": "Decoded UTF-8 job log exactly as returned by the GitHub connector; not a native Agent event stream."
+    }
+  ]
+}

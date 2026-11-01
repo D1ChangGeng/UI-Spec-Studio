@@ -1,0 +1,46 @@
+{
+  "kind": "Coordinator actual-pixel spot review; separate from independent review and behavior testing",
+  "observer": "/root",
+  "observed_at": "2026-11-01T12:48:58.981776+00:00",
+  "view_exports": [
+    {
+      "path": "docs/evidence/v1.20.0/session-study/review/coordinator-final/T1-G-narrow-view.json",
+      "sha256": "6d12c4c31fe7abd2cc74fd2b899045fd1b486113ad501cc333b6d289fb1ebf83"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/review/coordinator-final/T1-G-wide-view.json",
+      "sha256": "9c7bb71920ceb3b70d221f4c7f22800d24e22a100b593d0e808547c781451df1"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/review/coordinator-final/T2-G-narrow-view.json",
+      "sha256": "a628b4c1c9a4f3fb2e73d495ad393b9e9b8be03a5bd14be350249f7b637a54c2"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/review/coordinator-final/T2-G-wide-view.json",
+      "sha256": "99e6ead186f8ebf6e94b8b2cfdcba69e5dd480ae38b460383a0271eb0c364c34"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/review/coordinator-final/T3-G-narrow-edit-view.json",
+      "sha256": "7e44fbb9513db99e4ee5804cf120dde4a40633ca58826a324711f9d45240ce85"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/review/coordinator-final/T3-G-wide-view.json",
+      "sha256": "49c5562654bc3f65f42aa477af1a66597d29ad8abe26f2030c27da469623856b"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/review/coordinator-final/T4-G-narrow-restored-view.json",
+      "sha256": "c6081838388c09cb3ce562948f103e6deacc78eb9c713829d159a3ad656adfde"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/review/coordinator-final/T4-G-wide-error-view.json",
+      "sha256": "5616006903d6aaabcf4eddd22dcb5bad63f8c79a9ca0d1436937e70702b60209"
+    }
+  ],
+  "observations": {
+    "T1-G": "1440px light long bilingual values wrap within consistent source-derived form fields. The 390px dark capture retains readable Chinese and distinct navigation selection, but the expanded settings navigation consumes most of the first viewport and places the first field near its bottom. This is a real narrow hierarchy limitation, not evidence of missing fields or confirmed keyboard failure.",
+    "T2-G": "1440px and 390px delivered captures show a bounded reading column, visually distinct question/answer hierarchy and a separate composer that remains visible. These settled images do not establish streaming following, cancellation or dialog focus; independent interaction evidence is needed for those claims.",
+    "T3-G": "1440px warm Paper composition shows a restrained sheet, margin rule, strong serif headings, readable bilingual navigation and coherent source-derived sidebar. 390px dark native edit view retains the title, toolbar and ruled editor; dense toolbar rows and narrow body wrapping remain visible tradeoffs. Static viewing alone does not verify persistence or motion.",
+    "T4-G": "Wide dark error capture shows readable retained-draft/retry language in a source-style notification at the top right, with visible occlusion of top navigation. The narrow restored capture exposes the header after dismissal and retains the inherited long settings navigation. The inspected images support state presentation, not independently rerun retry semantics."
+  },
+  "disposition": "No release approval in this spot review. Preserve these concrete findings and assess the separate fresh independent reviewer result before final acceptance."
+}

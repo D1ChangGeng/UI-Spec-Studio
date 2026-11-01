@@ -1,0 +1,21 @@
+import asyncio,json,pathlib,subprocess,os,time
+from playwright.async_api import async_playwright
+BASE=pathlib.Path('/workspace/scratch/dc68edd00fe1/independent-review')
+BROWSER='/tmp/ui-spec-preview-browser/chrome-headless-shell-143.0.7499.4/chrome-headless-shell-linux64/chrome-headless-shell'
+async def main():
+ async with async_playwright() as pw:
+  b=await pw.chromium.launch(executable_path=BROWSER,headless=True,env={**os.environ,'FONTCONFIG_FILE':'/tmp/ui-spec-fonts/fonts.conf'})
+  for i,pid in enumerate(['P02','P12','P13']):
+   out=BASE/'behavior'/pid/'tables';out.mkdir(parents=True);log=open(out/'server.log','w');port=4920+i
+   s=subprocess.Popen(['node','vendor/tiddlywiki/tiddlywiki.js','wiki','--listen','host=127.0.0.1',f'port={port}'],cwd=BASE/'copies'/pid/'wiki-followup4',stdout=log,stderr=subprocess.STDOUT)
+   c=await b.new_context(viewport={'width':390,'height':844},device_scale_factor=1);p=await c.new_page()
+   try:
+    await asyncio.sleep(1);await p.goto(f'http://127.0.0.1:{port}/#Evidence%20ledger');await p.wait_for_timeout(1000)
+    t=p.locator('.tc-tiddler-frame[data-tiddler-title="Evidence ledger"] table');await t.scroll_into_view_if_needed()
+    r={'product':pid,'before':await t.evaluate('(e)=>({client:e.clientWidth,scroll:e.scrollWidth,left:e.scrollLeft,parentClient:e.parentElement.clientWidth,parentScroll:e.parentElement.scrollWidth,parentLeft:e.parentElement.scrollLeft,tabindex:e.getAttribute("tabindex")})')}
+    await t.hover();await p.mouse.wheel(700,0);await p.wait_for_timeout(250)
+    r['after_wheel']=await t.evaluate('(e)=>({left:e.scrollLeft,parentLeft:e.parentElement.scrollLeft,documentLeft:document.scrollingElement.scrollLeft})')
+    await p.screenshot(path=str(out/'scrolled-right.png'));(out/'result.json').write_text(json.dumps(r,ensure_ascii=False,indent=2));print(json.dumps(r),flush=True)
+   finally:await c.close();s.terminate();s.wait();log.close()
+  await b.close()
+asyncio.run(main())

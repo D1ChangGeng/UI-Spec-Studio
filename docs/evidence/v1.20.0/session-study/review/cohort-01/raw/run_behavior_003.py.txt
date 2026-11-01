@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+import os, sys, json, subprocess, datetime, traceback, time, urllib.request
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+ROOT=Path("/workspace/scratch/5499118f5564/ui-study/independent-review");OUT=ROOT/"evidence/behavior-003";OUT.mkdir(parents=True,exist_ok=False)
+CHROME="/tmp/ui-spec-preview-browser/chrome-headless-shell-143.0.7499.4/chrome-headless-shell-linux64/chrome-headless-shell"
+os.environ["FONTCONFIG_FILE"]="/tmp/ui-spec-fonts/fonts.conf";os.environ["PLAYWRIGHT_BROWSERS_PATH"]="/tmp/ui-spec-preview-browser"
+NAMES=["notes.txt","城市出行访谈摘要_2026-10-31_final-revised-notes.txt","accessibility-interviews-longitudinal-research-final.txt","reading-continuity-fieldnotes-working-copy.txt"]
+SIX="Please compare these materials.\nSeparate observations from interpretation.\n城市交通研究 notes\nKeep caveats visible.\nInclude seven themes.\nThen suggest next questions."
+records=[]
+def now():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+def log(p,event,**d):
+  o={"at":now(),"product":p,"event":event,**d};records.append(o);(OUT/"events.json").write_text(json.dumps(records,ensure_ascii=False,indent=2)+"\n");print(json.dumps(o,ensure_ascii=False),flush=True)
+def snap(page,p,name):
+  path=OUT/f"{p}-{name}.png";page.screenshot(path=str(path));log(p,"screenshot",path=str(path),name=name,viewport=page.viewport_size)
+def m(page):
+  return page.evaluate("""() => {
+    const v=document.querySelector('[data-slot=aui_thread-viewport]'),a=[...document.querySelectorAll('[data-role=assistant]')],e=document.activeElement,b=document.querySelector('.aui-thread-scroll-to-bottom'),row=document.querySelector('.aui-composer-attachments'),inp=document.querySelector('textarea.aui-composer-input');
+    const text=a.at(-1)?.innerText||'';
+    return {assistantCount:a.length,text,textLength:text.length,scroll:v?{left:v.scrollLeft,top:v.scrollTop,height:v.clientHeight,scrollHeight:v.scrollHeight,width:v.clientWidth,scrollWidth:v.scrollWidth,gap:v.scrollHeight-v.clientHeight-v.scrollTop}:null,returnDisabled:b?.disabled,active:{tag:e?.tagName,label:e?.getAttribute('aria-label'),id:e?.id},attachmentRow:row?{left:row.scrollLeft,top:row.scrollTop,width:row.clientWidth,scrollWidth:row.scrollWidth,height:row.clientHeight,scrollHeight:row.scrollHeight,rect:row.getBoundingClientRect().toJSON()}:null,inputRect:inp?.getBoundingClientRect().toJSON(),running:!!document.querySelector('.aui-composer-cancel'),errors:[...document.querySelectorAll('.aui-message-error-message')].map(e=>e.textContent)}
+  }""")
+def slim(x):
+  x=dict(x);t=x.pop("text","");x["textStart"]=t[:100];x["textEnd"]=t[-150:];return x
+def attach(page):
+  with page.expect_file_chooser() as f:page.locator(".aui-composer-add-attachment").click()
+  f.value.set_files([{"name":n,"mimeType":"text/plain","buffer":b"synthetic reviewer fixture"} for n in NAMES]);page.wait_for_timeout(200)
+servers=[]
+try:
+  for p in ["P03","P06","P16","P09","P10"]:
+    port=4600+int(p[1:]);serve=ROOT/"disposable"/p/"app";serve=serve/"dist" if p in ["P09","P10"] else serve
+    so=(OUT/f"{p}-server-stdout.txt").open("wb");se=(OUT/f"{p}-server-stderr.txt").open("wb")
+    pr=subprocess.Popen([sys.executable,"-m","http.server",str(port),"--bind","127.0.0.1","--directory",str(serve)],stdout=so,stderr=se,env=os.environ.copy());servers.append((p,pr,so,se))
+    for _ in range(50):
+      try:urllib.request.urlopen(f"http://127.0.0.1:{port}/",timeout=.2).close();break
+      except Exception:
+        if pr.poll() is not None:raise RuntimeError(f"{p} server exited")
+        time.sleep(.1)
+    log(p,"server_started",port=port,pid=pr.pid,serve=str(serve))
+  with sync_playwright() as pw:
+    b=pw.chromium.launch(executable_path=CHROME,headless=True,args=["--no-sandbox"],env=os.environ.copy())
+    log("COHORT","browser",version=b.version,executable=CHROME,fontconfig=os.environ["FONTCONFIG_FILE"],playwright="1.57.0",measurement_correction="behavior-002 used a nonexistent assistant CSS class. Its assistantCount/textLength/stop-text/seventh-theme fields are invalid. This run uses the actual data-role=assistant elements. Original records preserved.")
+    for p in ["P03","P06","P16"]:
+      c=b.new_context(viewport={"width":1280,"height":600},device_scale_factor=1);c.tracing.start(screenshots=True,snapshots=True,sources=True);page=c.new_page();page.set_default_timeout(10000)
+      try:
+        page.goto(f"http://127.0.0.1:{4600+int(p[1:])}/?theme=dark&lang=en&fail=once",wait_until="networkidle");page.wait_for_function("window.fieldnotes!==undefined")
+        page.locator("#business-name").focus()
+        seq=[];values={"business-name":"Keyboard name / 键盘","business-id":"Keyboard organization","location":"Keyboard location","email":"keyboard@example.invalid"};done=set()
+        for _ in range(15):
+          focus=page.evaluate("({id:document.activeElement.id,tag:document.activeElement.tagName,text:document.activeElement.textContent.slice(0,80)})");seq.append(focus);fid=focus["id"]
+          if fid in values and fid not in done:page.keyboard.press("Control+A");page.keyboard.insert_text(values[fid]);done.add(fid)
+          elif fid in ["weekly-digest","public-profile"] and fid not in done:page.keyboard.press("Space");done.add(fid)
+          if fid=="save-settings":page.keyboard.press("Enter");break
+          page.keyboard.press("Tab")
+        page.wait_for_timeout(900)
+        log(p,"keyboard_form_failure",tab_sequence=seq,active=page.evaluate("document.activeElement.id"),status=page.locator("#save-status").inner_text(),draft=page.evaluate("window.fieldnotes.draft()"));snap(page,p,"keyboard-retry-focus-dark")
+        page.keyboard.press("Enter");page.wait_for_timeout(900)
+        log(p,"keyboard_retry_success",status=page.locator("#save-status").inner_text(),active=page.evaluate("document.activeElement.id"),stored=page.evaluate("localStorage.getItem('fieldnotes-settings-v1')"))
+        page.set_viewport_size({"width":390,"height":844});page.evaluate("scrollTo(0,0)")
+        toggle=page.get_by_role("button",name="Settings sections",exact=True)
+        if toggle.count():toggle.click();page.wait_for_timeout(400)
+        page.locator("a[href='#notifications-heading']").click();page.wait_for_timeout(400)
+        log(p,"narrow_navigation_focus",active=page.evaluate("({id:document.activeElement.id,tag:document.activeElement.tagName,scrollY:scrollY})"),toggleExpanded=toggle.get_attribute("aria-expanded") if toggle.count() else None);snap(page,p,"narrow-navigation-dark")
+      except Exception as e:log(p,"test_exception",message=str(e),traceback=traceback.format_exc())
+      finally:c.tracing.stop(path=str(OUT/f"{p}-keyboard-trace.zip"));c.close()
+    for p in ["P09","P10"]:
+      c=b.new_context(viewport={"width":1280,"height":600},device_scale_factor=1);c.tracing.start(screenshots=True,snapshots=True,sources=True);page=c.new_page();page.set_default_timeout(10000)
+      try:
+        page.goto(f"http://127.0.0.1:{4600+int(p[1:])}/?theme=light&lang=en",wait_until="networkidle")
+        inp=page.locator("textarea.aui-composer-input");inp.fill(SIX);attach(page);inp.focus();inp.press("Enter");page.wait_for_timeout(1100)
+        v=page.locator("[data-slot=aui_thread-viewport]");r=v.bounding_box();page.mouse.move(r["x"]+r["width"]*.65,r["y"]+100);page.mouse.wheel(0,-650);page.wait_for_timeout(350)
+        a=m(page);page.wait_for_timeout(800);z=m(page)
+        log(p,"confirmed_growth_while_away",before=slim(a),after=slim(z),character_growth=z["textLength"]-a["textLength"],scroll_top_delta=z["scroll"]["top"]-a["scroll"]["top"])
+        page.locator(".aui-thread-scroll-to-bottom").click()
+        elapsed=0
+        for delay in [100,350,700,1400]:
+          page.wait_for_timeout(delay);elapsed+=delay;log(p,"return_latest_sample",elapsed_ms=elapsed,metrics=slim(m(page)))
+        snap(page,p,"return-latest-after-2550ms")
+        page.wait_for_timeout(4000);log(p,"after_stream_completion",metrics=slim(m(page)))
+        inp.fill("Independent stop check");inp.press("Enter");page.wait_for_timeout(1100);page.get_by_role("button",name="Stop generating",exact=True).click();page.wait_for_timeout(200)
+        a=m(page);page.wait_for_timeout(800);z=m(page);log(p,"confirmed_stop",before=slim(a),after=slim(z),text_changed=z["text"]!=a["text"]);snap(page,p,"confirmed-stop")
+        inp.fill("Second independent recovery check [fail]");inp.press("Enter");page.wait_for_timeout(1100);log(p,"confirmed_failure",metrics=slim(m(page)));snap(page,p,"confirmed-failure")
+        page.get_by_role("button",name="Regenerate response" if p=="P09" else "Retry response",exact=True).last.click();page.wait_for_timeout(8500);z=m(page)
+        log(p,"confirmed_retry_complete",metrics=slim(z),seventh_theme_present="Observation theme 7" in z["text"]);snap(page,p,"confirmed-retry-complete")
+      except Exception as e:
+        log(p,"test_exception",message=str(e),traceback=traceback.format_exc())
+        try:snap(page,p,"exception")
+        except:pass
+      finally:c.tracing.stop(path=str(OUT/f"{p}-confirmed-flow-trace.zip"));c.close()
+      c=b.new_context(viewport={"width":390,"height":844},device_scale_factor=1,is_mobile=True,has_touch=True);c.tracing.start(screenshots=True,snapshots=True,sources=True);page=c.new_page();page.set_default_timeout(10000)
+      try:
+        page.goto(f"http://127.0.0.1:{4600+int(p[1:])}/?theme=dark&lang=zh",wait_until="networkidle")
+        page.locator("textarea.aui-composer-input").fill(SIX);attach(page);page.mouse.move(195,200);page.wait_for_timeout(250)
+        log(p,"narrow_before_horizontal_wheel",metrics=slim(m(page)));snap(page,p,"narrow-before-horizontal-wheel")
+        page.mouse.wheel(450,0);page.wait_for_timeout(500);log(p,"narrow_after_reading_horizontal_wheel",metrics=slim(m(page)));snap(page,p,"narrow-after-reading-horizontal-wheel")
+        page.mouse.wheel(-1000,0);page.wait_for_timeout(500)
+        row=page.locator(".aui-composer-attachments");rect=row.bounding_box();page.mouse.move(195,rect["y"]+25);page.mouse.wheel(450,0);page.wait_for_timeout(500)
+        log(p,"narrow_after_attachment_horizontal_wheel",metrics=slim(m(page)));snap(page,p,"narrow-after-attachment-horizontal-wheel")
+      except Exception as e:log(p,"test_exception_narrow",message=str(e),traceback=traceback.format_exc())
+      finally:c.tracing.stop(path=str(OUT/f"{p}-overflow-trace.zip"));c.close()
+    b.close()
+finally:
+  for p,pr,so,se in servers:
+    pr.terminate()
+    try:pr.wait(timeout=5)
+    except subprocess.TimeoutExpired:pr.kill();pr.wait()
+    so.close();se.close();log(p,"server_stopped",pid=pr.pid,returncode=pr.returncode)
+

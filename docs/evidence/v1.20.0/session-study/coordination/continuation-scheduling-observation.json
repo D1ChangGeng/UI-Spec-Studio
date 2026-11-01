@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "kind": "coordinator scheduling observation, not a native event transcript",
+  "recorded_at": "2026-10-31T22:48:23.456426+00:00",
+  "observation": "After collaboration.list_agents reported the T3-B generic research child completed, the fresh T3-A main-only repeat was started while T3-B primary and T4 F-main were still running. Three primary contexts overlapped on the shared host. T3-A and F-main forbid delegation; the B primary had completed its required single child.",
+  "registered_policy_difference": "The registration normally reserves one child slot with two primary agents. This temporary three-primary overlap is retained as an actual scheduling difference; future mixed/delegated arms return to the two-primary ceiling.",
+  "interpretation_limit": "Shared-host scheduling, network and elapsed work cannot establish a latency or cost comparison. Requested task/method/model/environment identities remain unchanged.",
+  "three_primary_overlap_end": "2026-10-31T22:51:02.730794+00:00"
+}

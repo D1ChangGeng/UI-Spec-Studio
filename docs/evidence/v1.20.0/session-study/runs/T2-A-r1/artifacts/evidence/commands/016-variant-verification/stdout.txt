@@ -1,0 +1,27 @@
+{
+  "checks": [
+    {
+      "name": "Chinese filename disclosure and privacy copy",
+      "pass": true
+    },
+    {
+      "name": "Chinese streaming preserves manual reading point",
+      "pass": true
+    },
+    {
+      "name": "Chinese return follows latest text",
+      "pass": true
+    },
+    {
+      "name": "Chinese keyboard stop restores composer focus and stops text",
+      "pass": true
+    },
+    {
+      "name": "Chinese failure/retry completes all seven themes",
+      "pass": true
+    }
+  ],
+  "errors": [
+    "Traceback (most recent call last):\n  File \"/workspace/scratch/708e8b7f118e/ui-study/worksets/w05/support/verify_variants.py\", line 47, in main\n    await inp.fill('保留这份草稿');await page.get_by_role('button',name='编辑',exact=True).last.click()\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/async_api/_generated.py\", line 15609, in click\n    await self._impl_obj.click(\n  File \"/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_locator.py\", line 162, in click\n    return await self._frame._click(self._selector, strict=True, **params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_frame.py\", line 566, in _click\n    await self._channel.send(\"click\", self._timeout, locals_to_params(locals()))\n  File \"/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py\", line 69, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ui-spec-validation-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for get_by_role(\"button\", name=\"编辑\", exact=True).last\n\n"
+  ]
+}

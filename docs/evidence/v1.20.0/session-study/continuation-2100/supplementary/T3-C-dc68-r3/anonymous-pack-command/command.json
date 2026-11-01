@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "docs/evidence/v1.20.0/session-study/support/current-continuation/prepare_blind_product.py",
+    "--cell",
+    "T3-C-r1",
+    "--repo",
+    "/workspace/scratch/dc68edd00fe1/UI-Spec-Studio",
+    "--run",
+    "/workspace/scratch/dc68edd00fe1/UI-Spec-Studio/docs/evidence/v1.20.0/session-study/continuation-2100/supplementary/T3-C-dc68-r3",
+    "--replay",
+    "/workspace/scratch/dc68edd00fe1/ui-study/replay-audit/T3-C-dc68-r3",
+    "--review-pack",
+    "/workspace/scratch/dc68edd00fe1/independent-review/additional-pack",
+    "--label",
+    "P15",
+    "--mapping-output",
+    "/workspace/scratch/dc68edd00fe1/UI-Spec-Studio/docs/evidence/v1.20.0/session-study/continuation-2100/coordination/blind-materials-P15-dc68-r3.json"
+  ],
+  "cwd": "/workspace/scratch/dc68edd00fe1/UI-Spec-Studio",
+  "started_at": "2026-11-01T13:19:17.169037+00:00",
+  "timeout_seconds": 300,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T13:19:20.898355+00:00",
+  "wall_seconds": 3.729327,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 100,
+      "sha256": "56293d1415cc9c3c32929e9d8dd7b8dbd0d24c8e34ebb3df1e6f7663d6dcd54a"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

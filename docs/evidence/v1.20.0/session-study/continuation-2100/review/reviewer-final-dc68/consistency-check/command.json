@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "docs/evidence/v1.20.0/session-study/support/current-continuation/audit_review_index.py",
+    "--repo",
+    "/workspace/scratch/dc68edd00fe1/UI-Spec-Studio",
+    "--configuration",
+    "docs/evidence/v1.20.0/session-study/continuation-2100/configurations/reviewer-final-core-dc68.json"
+  ],
+  "cwd": "/workspace/scratch/dc68edd00fe1/UI-Spec-Studio",
+  "started_at": "2026-11-01T13:38:03.203713+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T13:39:05.769807+00:00",
+  "wall_seconds": 62.566067,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 1210,
+      "sha256": "730445925bcc371e8e3a0c15c013950794033f8aa99f375dd5ef284b2e51081e"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

@@ -29,6 +29,14 @@ npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
 
 审阅通过后，只需说 **「本轮通过，继续」**，Agent 就会沿已确认的方向推进下一项有价值的工作；使用 **「ui-spec: finish」**，则会将已确认的设计接入真实内容、功能或作品的发布环境。[安装与宿主选项](docs/INSTALL.md) · [多轮使用指南](docs/GUIDE.md)
 
+## 深入研究，保持清晰的设计责任
+
+主 Agent 持有完整产品目标、正式 UI SPEC、最终资源选择与关键视觉验收。独立研究员可以深入调查重要问题，实际观察成熟案例，返回能够影响下一步判断的候选、证据与未决差异；来源和设计已经确定的有界集成也可以委派。
+
+[Codex 适配器](integrations/codex/README.md)在显式执行一次安装命令后提供四类角色：`ui_researcher`、`ui_integrator`、`ui_challenger` 和 `ui_experience_observer`。主 Agent 按实际价值调用，通用 Skill 也支持单 Agent 直接工作。模型、工具与权限来自实际运行环境。
+
+[安装与自然语言委派](integrations/codex/README.md) · [版本证据与限制](docs/REVIEW-v1.20.0.md)
+
 ## 成熟成果承接视觉品质，原创遵守明确边界
 
 **正常实现路径中默认禁止从零自建 UI。** Agent 主动发现外部成熟实现，同时评估项目中已验证的可复用成果，把它们的设计关系带入实际产品。业务接线、配置和必要适配继续正常进行；一个成熟区块或 Token 体系可以承接多个可见元素，无须逐元素重复搜索。
@@ -184,7 +192,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.19.0 --skill ui-spec
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.20.0 --skill ui-spec
 ```
 
 安装检查也覆盖 Claude Code 和 OpenCode。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

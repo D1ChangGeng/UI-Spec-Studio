@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path; r=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/review-pack/products/P12/app/wiki\"); own=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery\");\nfor f in [\"$__theme.tid\",\"$__palette.tid\",\"$__palette_1.tid\",\"$__palette_2.tid\",\"fieldnotes-theme.tid\",\"fieldnotes-palette-day.tid\",\"fieldnotes-palette-night.tid\"]:\n p=r/\"tiddlers\"/f; print(\"P12 CONFIG SOURCE\",f,\"bytes\",p.stat().st_size,\"\\n\",p.read_text())\nfor f in [\"review_wiki.py\",\"review_wiki_conditions.py\"]:print(\"OWN SCRIPT\",f,\"\\n\",(own/f).read_text())"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T09:55:08.058272+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T09:55:08.090358+00:00",
+  "wall_seconds": 0.032088,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 29603,
+      "sha256": "9a38bb2db88a0a49e4d20b2c2662de6cac89e19d525da3298fe1ee7f8b5e4f89"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

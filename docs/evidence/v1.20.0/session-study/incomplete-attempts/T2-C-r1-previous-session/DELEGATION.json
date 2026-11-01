@@ -1,0 +1,31 @@
+{
+  "tool": "collaboration.spawn_agent",
+  "request": {
+    "task_name": "ui_research",
+    "fork_turns": "none",
+    "message": "Read and follow the developer_instructions in /workspace/scratch/708e8b7f118e/ui-study/worksets/w07/roles/ui_researcher.toml as your specialized research role.\n\nUse the complete ui-spec method at /workspace/scratch/708e8b7f118e/ui-study/worksets/w07/method/ to investigate the consequential UI source and experience questions in /workspace/scratch/708e8b7f118e/ui-study/worksets/w07/TASK.md and /workspace/scratch/708e8b7f118e/ui-study/worksets/w07/INPUT.md. Read /workspace/scratch/708e8b7f118e/ui-study/worksets/w07/RUN-CONTROL.md for evidence and environment conditions. Inspect the current app and relevant mature public products/implementations; search, genuinely observe, compare and refine the inquiry where evidence warrants. Return concise decision-useful sources, actual observed relationships, materially different candidates where useful, practical adoption paths and unresolved limits, with original tool outputs and real viewed captures retained under /workspace/scratch/708e8b7f118e/ui-study/worksets/w07/evidence/research/. Do not change product code or make final product design decisions. Work only on this package and relevant public sources. Do not create further agents. Save a final research report and return its contents.\n"
+  },
+  "result": {
+    "task_name": "/root/product_07/ui_research"
+  },
+  "prompt_file": "evidence/coordination/research-prompt.txt",
+  "requested_model": null,
+  "requested_reasoning_effort": null,
+  "native_role_binding": null,
+  "resolved_backend_identity": null,
+  "total_tokens": null,
+  "billed_cost": null,
+  "research_report": "evidence/research/RESEARCH-REPORT.md",
+  "final_child_notification": "evidence/coordination/research-final-notification.md",
+  "notification_export_followup": {
+    "tool": "collaboration.followup_task",
+    "request": {
+      "target": "ui_research",
+      "message": "Please save the exact text of your delivered final research notification (including introductory delivery sentence and report body) to evidence/coordination/research-final-notification.md, clearly identified as a faithful export of your own final message. Do not rerun research or change product files. Return the saved path. This is for RUN-CONTROL's required final notification retention."
+    },
+    "returned_object": null,
+    "return_capture_note": "Tool response exposed no payload. Later actual child final notification confirmed the saved path."
+  },
+  "scope_outcome": "Research only. No child product-code changes. Primary designer selected, implemented and inspected final product.",
+  "export_confirmation_notification": "Saved the faithful export to [research-final-notification.md](sandbox:/workspace/scratch/708e8b7f118e/ui-study/worksets/w07/evidence/coordination/research-final-notification.md)."
+}

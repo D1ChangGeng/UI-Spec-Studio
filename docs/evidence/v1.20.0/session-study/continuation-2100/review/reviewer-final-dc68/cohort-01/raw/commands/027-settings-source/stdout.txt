@@ -1,0 +1,40 @@
+P01
+4:const ids = {displayName:'business-name',organization:'business-id',location:'location',email:'email',weeklyDigest:'weekly-digest',publicProfile:'public-profile'};
+73:function submit(snapshot) {
+75:  const operation=saveSettings(snapshot);
+123:    "You're currently visible":'当前可见',"You're currently invisible":'当前不可见',
+P03
+3:const ids = {displayName:'business-name', organization:'business-id', location:'location', email:'email', weeklyDigest:'weekly-digest', publicProfile:'public-profile'};
+21:    weeklyDigest:'Weekly digest', publicProfile:'Public profile', profileVisible:'Visible to workspace members',
+23:    cancel:'Cancel', save:'Save changes', retry:'Retry save', saving:'Saving…',
+47:    weeklyDigest:'每周摘要', publicProfile:'公开个人资料', profileVisible:'对工作区成员可见',
+49:    cancel:'取消', save:'保存更改', retry:'重试保存', saving:'正在保存…',
+132:  if (!pending) save.textContent = t(phase === 'error' ? 'retry' : 'save');
+158:    pendingSnapshot = event.snapshot;
+P05
+4:const ids = {displayName:'business-name', organization:'business-id', location:'location', email:'email', weeklyDigest:'weekly-digest', publicProfile:'public-profile'};
+19:  publicProfile:'Public profile', privacyHelp:'Allow other members of this research workspace to find your profile. Your email remains private.', publicOn:'Your profile will be visible', publicOff:'Your profile will be private',
+20:  businessSettings:'Business settings', myNotifications:'My Notifications', privacy:'Privacy', plans:'Plans', billing:'Billing & Invoices', experience:'Experience', feedback:'Give Feedback', cancel:'Cancel', save:'Save changes', retry:'Try again', saving:'Saving…', dark:'Dark theme', light:'Light theme',
+28:  publicProfile:'公开个人资料', privacyHelp:'允许研究工作区的其他成员找到你的个人资料。电子邮箱仍为私密信息。', publicOn:'你的个人资料将公开', publicOff:'你的个人资料将保持私密',
+29:  businessSettings:'工作设置', myNotifications:'我的通知', privacy:'隐私', plans:'套餐', billing:'账单与发票', experience:'使用体验', feedback:'提供反馈', cancel:'取消', save:'保存更改', retry:'重试', saving:'正在保存…', dark:'深色主题', light:'浅色主题',
+66: save.textContent = t(pending ? 'saving' : phase === 'error' ? 'retry' : 'save');
+P06
+4:const ids = {displayName:'business-name', organization:'business-id', location:'location', email:'email', weeklyDigest:'weekly-digest', publicProfile:'public-profile'};
+21:    localHint:'Settings are saved only in this browser.', profileDetails:'Profile details', displayName:'Display name', nameHint:'Required · up to 100 characters', organization:'Organization', organizationHint:'Optional · up to 180 characters', location:'Location', locationHint:'Optional · up to 100 characters', email:'Email', emailHint:'Receives workspace notifications. Always private.', notifications:'Notifications', digestHint:'Receive a weekly digest of research notes shared with your workspace.', weeklyDigest:'Weekly digest', privacyHint:'Let members of this research workspace find your profile. Your email stays private.', publicProfile:'Public profile', cancel:'Cancel', save:'Save changes', retry:'Retry save', saving:'Saving…', dark:'Use dark theme', light:'Use light theme',
+27:    localHint:'设置仅保存在当前浏览器中。', profileDetails:'个人资料', displayName:'显示名称', nameHint:'必填 · 最多 100 个字符', organization:'机构', organizationHint:'选填 · 最多 180 个字符', location:'地点', locationHint:'选填 · 最多 100 个字符', email:'电子邮箱', emailHint:'用于接收工作区通知，始终保持私密。', notifications:'通知', digestHint:'每周接收工作区共享研究笔记的摘要。', weeklyDigest:'每周摘要', privacyHint:'允许研究工作区的成员找到你的个人资料。电子邮箱始终保持私密。', publicProfile:'公开个人资料', cancel:'取消', save:'保存更改', retry:'重试保存', saving:'正在保存…', dark:'使用深色主题', light:'使用浅色主题',
+74:  save.textContent = t(pending ? 'saving' : state === 'error' ? 'retry' : 'save');
+110:    // Never replace edits made after submission with the completed snapshot.
+P08
+4:const ids = {displayName:'business-name',organization:'business-id',location:'location',email:'email',weeklyDigest:'weekly-digest',publicProfile:'public-profile'};
+54:  if (state === 'pending') status.textContent = matches(values,currentEvent.snapshot) ? copy.pending : copy.newer;
+144:    "You're currently visible":'当前可见',"You're currently invisible":'当前不可见',
+P16
+4:const ids = {displayName:'business-name', organization:'business-id', location:'location', email:'email', weeklyDigest:'weekly-digest', publicProfile:'public-profile'};
+28:    save:'Save changes', saving:'Saving…', retry:'Retry save', cancel:'Cancel',
+38:    save:'保存更改', saving:'正在保存…', retry:'重试保存', cancel:'取消',
+55:  'Allow members to find my profile':'允许成员找到我的个人资料', 'Keep my profile hidden':'隐藏我的个人资料',
+110:  saveLabel.textContent=pending ? copy.saving : state==='error' ? copy.retry : copy.save;
+137:    pendingSnapshot=event.snapshot; fieldErrors={};
+P18
+4:const ids = {displayName:'business-name',organization:'business-id',location:'location',email:'email',weeklyDigest:'weekly-digest',publicProfile:'public-profile'};
+90:    "You're currently visible":'当前可见',"You're currently invisible":'当前不可见',

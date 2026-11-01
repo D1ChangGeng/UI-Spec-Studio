@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path;import json,hashlib;r=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery\");\nfor folder,pid in [(\"behavior-settings-cohort02-001\",\"P05\"),(\"behavior-settings-cohort02-P08-001\",\"P08\"),(\"behavior-conversations-cohort02-001\",\"P17\"),(\"behavior-conversations-cohort02-P04-001\",\"P04\"),(\"behavior-wiki-cohort02-001\",\"P12\"),(\"behavior-wiki-conditions-cohort02-001\",\"P12\"),(\"behavior-wiki-narrow-cohort02-001\",\"P12\"),(\"behavior-stop-focus-cohort02-001\",\"P17\")]:\n p=r/\"evidence\"/folder/(pid+\".json\");d=json.loads(p.read_text());print(\"REVIEW COMPLETION\",json.dumps({\"file\":str(p),\"product\":pid,\"completed\":d.get(\"completed\"),\"failure\":d.get(\"failure\"),\"server\":d.get(\"server\"),\"source_checks\":d.get(\"source_checks\")},ensure_ascii=False))\n if pid==\"P08\":\n  for s in d[\"steps\"]:\n   if s[\"name\"] in [\"valid-save-pending\",\"retry-pending-focus\",\"retry-success\",\"explicit-close-and-focus-return\",\"invalid-name-focus-recovery\"]:print(\"P08 FOCUS\",s[\"name\"],json.dumps({k:v for k,v in s[\"observed\"].items() if k in [\"focus\",\"status\",\"toast\",\"invalid\",\"saveDisabled\"]},ensure_ascii=False))\n if pid==\"P04\":\n  for s in d[\"steps\"]:\n   if s[\"name\"] in [\"stop-focus\",\"disclosure-escape-focus\"]:print(\"P04 FOCUS\",s[\"name\"],s[\"observed\"][\"focus\"])\nmanifest=json.loads((r/\"cohorts/2026-11-01-cohort-01/FREEZE-MANIFEST.json\").read_text()); print(\"COHORT01_HASHES\",[{\"path\":e[\"path\"],\"matches\":hashlib.sha256(Path(e[\"path\"]).read_bytes()).hexdigest()==e[\"sha256\"]} for e in manifest[\"immutable_files\"]])"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T10:07:23.030046+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T10:07:23.094253+00:00",
+  "wall_seconds": 0.064218,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 7358,
+      "sha256": "4f3c424f9d567f6e098d88e1bb7e10153c4000b13add5611056321ec93fe3468"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

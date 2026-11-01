@@ -1,0 +1,27 @@
+{
+  "observed_at": "2026-11-01T10:55:41.949298+00:00",
+  "directory": "/tmp/ui-spec-fonts",
+  "mode_before": "0o750",
+  "mode_after": "0o755",
+  "file_hashes_unchanged": {
+    "fonts.conf": "d418286fc5a3c1b522324030f26192b2a7a1e59170bf05b58c57fe01d7de58e0",
+    "FONT-LICENSE.txt": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+    "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+  },
+  "actual_probe": {
+    "argv": [
+      "runuser",
+      "-u",
+      "oai",
+      "--",
+      "env",
+      "FONTCONFIG_FILE=/tmp/ui-spec-fonts/fonts.conf",
+      "fc-match",
+      ":lang=zh"
+    ],
+    "returncode": 0,
+    "stdout": "DejaVuSans.ttf: \"DejaVu Sans\" \"Book\"\n",
+    "stderr": ""
+  },
+  "scope": "Nonsecret shared font fixture directory traversal permission only; font/config bytes and browser security settings unchanged."
+}

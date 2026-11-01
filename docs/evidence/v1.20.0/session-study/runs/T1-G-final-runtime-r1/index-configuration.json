@@ -1,0 +1,92 @@
+{
+  "cell_id": "T1-G-final-runtime-r1",
+  "agent_id": "/root/product_04_recovered",
+  "preview_command": "From the reconstructed app directory: python3 -m http.server 4404 --bind 127.0.0.1; open /?lang=en&theme=light or /?lang=zh&theme=dark. A fresh &fail=once load exercises a failed valid save and retry.",
+  "capture_conditions": "Pinned Chromium 143.0.7499.4 / Playwright 1.57.0 and Noto Sans CJK SC. Final delivery captures cover 1440x900, 1280x600 and 390x844, each English/Chinese and light/dark; final states and settled narrow views are separately retained. Natural-time playback and screen-reader speech were not assessed.",
+  "final_capture_prefixes": [
+    "evidence/final-render",
+    "evidence/final-state-view",
+    "evidence/narrow-settled"
+  ],
+  "primary_view_globs": [
+    "evidence/tools/*.json"
+  ],
+  "behavior_log_globs": [
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt",
+    "evidence/final-behavior-02/results.json",
+    "evidence/final-render/facts.json",
+    "evidence/final-state-view/frames.json",
+    "evidence/narrow-settled/facts.json"
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_04_recovered/settings_observer",
+      "role": "ui_experience_observer",
+      "prompt": "evidence/coordination/child-prompt.txt",
+      "spawn": "evidence/coordination/spawn-result.json",
+      "completion": "evidence/coordination/child-final-notification.json",
+      "result": "evidence/observer/REPORT.md",
+      "command_globs": [
+        "evidence/observer/commands-*/command.json",
+        "evidence/observer/commands-*/stdout.txt",
+        "evidence/observer/commands-*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/observer/w04_observer_view_01.json",
+        "evidence/observer/w04_observer_view_02.json",
+        "evidence/observer/w04_observer_view_03.json",
+        "evidence/observer/w04_observer_view_04.json",
+        "evidence/observer/w04_observer_view_05.json",
+        "evidence/observer/w04_observer_view_06.json",
+        "evidence/observer/w04_observer_view_07.json",
+        "evidence/observer/w04_observer_view_08.json",
+        "evidence/observer/w04_observer_view_09.json",
+        "evidence/observer/w04_observer_view_10.json",
+        "evidence/observer/w04_observer_view_11.json",
+        "evidence/observer/w04_observer_view_12.json",
+        "evidence/observer/w04_observer_view_13.json",
+        "evidence/observer/w04_observer_view_14.json",
+        "evidence/observer/w04_observer_view_15.json",
+        "evidence/observer/w04_observer_view_16.json",
+        "evidence/observer/w04_observer_view_17.json",
+        "evidence/observer/w04_observer_view_18.json",
+        "evidence/observer/w04_observer_view_19.json",
+        "evidence/observer/w04_observer_view_20.json",
+        "evidence/observer/w04_observer_view_21.json",
+        "evidence/observer/w04_observer_view_22.json",
+        "evidence/observer/w04_observer_view_23.json"
+      ]
+    }
+  ],
+  "additional_tool_exports": [
+    "evidence/tools/search-001.json",
+    "evidence/tools/web-002.json",
+    "evidence/tools/web-003.json",
+    "evidence/tools/web-004.json"
+  ],
+  "direct_source_files": [
+    "app/index.html",
+    "app/settings-controller.js",
+    "app/settings-store.js"
+  ],
+  "audit_observations": [
+    "The actual new primary and one fresh instruction-role observer completed. The exact child dispatch explicitly directs reading the unchanged local ui_experience_observer.toml rather than inlining its developer_instructions. Native role binding remains unverified.",
+    "The authoritative store and every frozen method/role byte match the registered input. Main-agent implementation and source-family adaptation remain distinct from the independent observer work.",
+    "All 552 retained workspace files reconstructed byte for byte. Failed captures, selector/sampling observations and corrected behavior remain in the immutable overlay.",
+    "The main suite records 68 assertions; the observer records 27 assertions against its earlier exact revision. Later main-owned pointer/validation repairs and the status-text utility change are separately described in the original reports. These counts are exercised checks, not a product-quality score.",
+    "An initial coordinator indexing assumption that the whole role text had been inlined was false; the read-only check stopped before creating the configuration. Two dependent indexing attempts then reported missing files. Inspection of the original prompt established the actual file-reference delivery; no participant evidence or frozen validator was altered."
+  ],
+  "limitations": "Fresh execution after the earlier interrupted attempt became unavailable; earlier material is preserved separately and is not combined into this run. Shared host and instructional isolation, external acquisition/cache timing and unavailable resolved models/native usage limit comparisons. The observer checks precede later main fixes; the 68-assertion suite precedes only the final presentation utility change, while final state/render frames identify delivery bytes. Inherited narrow navigation is long and outer gallery copy remains English. Local Chromium and controlled frame observations do not establish other engines, physical mobile interaction, screen-reader speech, continuous playback or human acceptance.",
+  "capture_lineage": "This final-product index contains only final-render, final-state-view and narrow-settled captures of the delivery revision. Earlier whole-desktop/compact views, source observations, observer revision captures and failures remain in the complete original workspace. Narrow-settled captures resolve earlier smooth-scroll sampling; the original VISUAL-REVIEW.md explicitly scopes the late status text utility change and prior behavior/observer assertions.",
+  "report_files": [
+    "FINAL.md",
+    "VISUAL-REVIEW.md",
+    "SOURCE-ADOPTION.md",
+    "DESIGN.md",
+    "DELEGATION.json",
+    "evidence/observer/REPORT.md",
+    "evidence/final-source.json"
+  ]
+}

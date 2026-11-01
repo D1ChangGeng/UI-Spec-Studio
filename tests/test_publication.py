@@ -1,7 +1,11 @@
 """Publication structure, generation and knowledge links; aesthetics require viewing."""
 from __future__ import annotations
 import ast
+import hashlib
+import json
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 import zipfile
@@ -72,6 +76,22 @@ class PublicationTests(unittest.TestCase):
                 self.assertIn('ui-spec/references/patterns.md',z.namelist())
                 self.assertFalse(any('/docs/assets/' in name for name in z.namelist()))
 
+    def test_source_archive_keeps_replay_checksum_manifest(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)/'repo';root.mkdir()
+            (root/'VERSION').write_text('1.20.0\n')
+            skill=root/'skills/ui-spec';skill.mkdir(parents=True)
+            (skill/'SKILL.md').write_text('# Test fixture\n')
+            evidence=root/'docs/evidence/campaign';evidence.mkdir(parents=True)
+            content=b'fixed evidence fixture\n'
+            (evidence/'events.jsonl').write_bytes(content)
+            checksum=(hashlib.sha256(content).hexdigest()+'  events.jsonl\n').encode()
+            (evidence/'MANIFEST.sha256').write_bytes(checksum)
+            outputs=package.build(root,Path(td)/'dist')
+            with zipfile.ZipFile(outputs[0]) as archive:
+                self.assertEqual(archive.read('ui-spec-studio/docs/evidence/campaign/MANIFEST.sha256'),checksum)
+                self.assertEqual(archive.read('ui-spec-studio/docs/evidence/campaign/events.jsonl'),content)
+
     def test_professional_foundation_is_complete_not_size_capped(self):
         # Inspectable professional content takes priority over an arbitrary byte limit.
         self.assertEqual(len(validator.COMMON), 8)
@@ -80,6 +100,30 @@ class PublicationTests(unittest.TestCase):
             self.assertIn("# ", text)
             self.assertIn("## ", text)
         self.assertTrue((ROOT / "docs/CONTENT-INTEGRITY.md").is_file())
+
+    def test_published_standalone_adapter_installs_its_four_verified_roles(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base=Path(temporary).resolve()
+            outputs=package.build(ROOT,base/'dist')
+            version=(ROOT/'VERSION').read_text().strip()
+            adapter=next(p for p in outputs if p.name==f'ui-spec-codex-{version}.zip')
+            checksums=(base/'dist/SHA256SUMS.txt').read_text()
+            self.assertIn(f'{hashlib.sha256(adapter.read_bytes()).hexdigest()}  {adapter.name}\n',checksums)
+            with zipfile.ZipFile(adapter) as archive:
+                archive.extractall(base/'extracted')
+                self.assertEqual(archive.read('ui-spec-codex/LICENSE'),(ROOT/'LICENSE').read_bytes())
+            standalone=base/'extracted/ui-spec-codex'
+            project=base/'consumer'
+            result=subprocess.run([sys.executable,str(standalone/'install.py'),'install','--project',str(project)],
+                                  cwd=base,capture_output=True,text=True,check=False)
+            self.assertEqual(result.returncode,0,result.stderr+result.stdout)
+            manifest=json.loads((standalone/'manifest.json').read_text())
+            self.assertEqual(set(manifest['roles']),{'ui_researcher','ui_integrator','ui_challenger','ui_experience_observer'})
+            for role,entry in manifest['roles'].items():
+                actual=project/'.codex'/entry['path']
+                self.assertTrue(entry['default_install'])
+                self.assertEqual(hashlib.sha256(actual.read_bytes()).hexdigest(),entry['sha256'])
+            self.assertTrue((standalone/'launch.py').is_file())
 
     def test_runtime_covers_design_and_medium(self):
         entry=(ROOT/'skills/ui-spec/SKILL.md').read_text(encoding='utf-8')

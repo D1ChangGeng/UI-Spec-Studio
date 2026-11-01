@@ -1,0 +1,28 @@
+{
+  "tool": "collaboration.list_agents",
+  "arguments": {},
+  "result": {
+    "agents": [
+      {
+        "agent_name": "/root",
+        "agent_status": "running"
+      },
+      {
+        "agent_name": "/root/product_07",
+        "agent_status": "running"
+      },
+      {
+        "agent_name": "/root/product_07/ui_research",
+        "agent_status": "running"
+      },
+      {
+        "agent_name": "/root/product_09",
+        "agent_status": "running"
+      }
+    ]
+  },
+  "observed_recorded_at": "2026-10-31T21:12:48.797037+00:00",
+  "export_kind": "faithful_conversation_export",
+  "synthetic": false,
+  "scope": "Exact visible live-agent registry response observed after T2-C dispatch. Completed earlier contexts were no longer listed; absence from this live snapshot is not evidence of failed earlier work."
+}

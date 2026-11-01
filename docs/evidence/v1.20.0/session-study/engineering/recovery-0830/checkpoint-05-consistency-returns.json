@@ -1,0 +1,37 @@
+{
+  "kind": "actual coordinator check tool returns; not product-quality acceptance",
+  "tools": [
+    {
+      "tool": "exec_command",
+      "arguments": {
+        "cmd": "python3 tools/validate_package.py",
+        "shell": "/bin/bash",
+        "workdir": "/workspace/scratch/e1cfe6e447ee/UI-Spec-Studio",
+        "max_output_tokens": 2000
+      },
+      "result": {
+        "chunk_id": "68cff1",
+        "wall_time_seconds": 0.102999312,
+        "exit_code": 0,
+        "original_token_count": 19,
+        "output": "Package structure, metadata, common-reference links and local paths: PASS\n"
+      }
+    },
+    {
+      "tool": "exec_command",
+      "arguments": {
+        "cmd": "python3 docs/evidence/v1.20.0/session-study/support/check_partial_records.py --repo .",
+        "shell": "/bin/bash",
+        "workdir": "/workspace/scratch/e1cfe6e447ee/UI-Spec-Studio",
+        "max_output_tokens": 4000
+      },
+      "result": {
+        "chunk_id": "d83380",
+        "wall_time_seconds": 1.904859745,
+        "exit_code": 0,
+        "original_token_count": 337,
+        "output": "{\n  \"status\": \"passed\",\n  \"candidate_source_identity\": \"eb7752a1b0eb4af180e9bb4bd0922587a3c9c96744e24ec8cf299517516e8759\",\n  \"completed_cells\": [\n    {\n      \"cell_id\": \"T1-A-r1\",\n      \"agent_id\": \"/root/product_01\",\n      \"actual_children\": 0\n    },\n    {\n      \"cell_id\": \"T1-B-r1\",\n      \"agent_id\": \"/root/product_02\",\n      \"actual_children\": 1\n    },\n    {\n      \"cell_id\": \"T1-C-r1\",\n      \"agent_id\": \"/root/product_03\",\n      \"actual_children\": 1\n    },\n    {\n      \"cell_id\": \"T1-G-final-runtime-r1\",\n      \"agent_id\": \"/root/product_04_recovered\",\n      \"actual_children\": 1\n    },\n    {\n      \"cell_id\": \"T2-A-r1\",\n      \"agent_id\": \"/root/product_05\",\n      \"actual_children\": 0\n    },\n    {\n      \"cell_id\": \"T2-B-r1\",\n      \"agent_id\": \"/root/product_06\",\n      \"actual_children\": 1\n    },\n    {\n      \"cell_id\": \"T3-B-r1\",\n      \"agent_id\": \"/root/product_10_cont\",\n      \"actual_children\": 1\n    },\n    {\n      \"cell_id\": \"T4-F-main-r1\",\n      \"agent_id\": \"/root/product_16_cont\",\n      \"actual_children\": 0\n    },\n    {\n      \"cell_id\": \"T4-G-final-runtime-r1\",\n      \"agent_id\": \"/root/product_18_takeover\",\n      \"actual_children\": 0\n    }\n  ],\n  \"verified_required_artifacts\": 1367,\n  \"scope\": \"Coordinator consistency and packaging check only. Not independent product judgment, engine attestation, or release approval.\"\n}\n"
+      }
+    }
+  ]
+}

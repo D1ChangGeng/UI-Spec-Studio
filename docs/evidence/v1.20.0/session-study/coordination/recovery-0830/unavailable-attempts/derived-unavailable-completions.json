@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "kind": "coordinator carry-forward summary of earlier observed completions; not an original notification or recovered source artifact",
+  "recorded_at": "2026-11-01T09:21:57.291363+00:00",
+  "scope": "Only the following metadata survived in the available continuation summary. Exact missing report, screenshot, workspace and tool-return bytes are not reconstructed. These entries do not count as current completed experiments or independent acceptance.",
+  "interrupted_local_commit": "521dd85d77a64b1f78691a790173697e4d47a6c6",
+  "entries": [
+    {
+      "cell_id": "T3-C-r1",
+      "agent_id": "/root/product_11_takeover",
+      "reported_completion_window": "2026-10-31 23:54 UTC",
+      "reported_snapshot_files": 9361,
+      "reported_final_captures": 30,
+      "reported_primary_views": 25,
+      "reported_children": 1,
+      "remaining_originals": "The separately retained P15 anonymous map and one actual coordinator desktop image-return export survived as Git blobs; the complete primary/child workspace and captures did not.",
+      "not_recovered": "Original completed product snapshot, complete primary/child tool returns, original final reports and complete primary viewing exports."
+    },
+    {
+      "cell_id": "T4-F-integrator-r1",
+      "agent_id": "/root/product_17_takeover",
+      "reported_completion_at": "2026-11-01T00:15:26+00:00",
+      "reported_snapshot_files": 506,
+      "reported_final_captures": 44,
+      "reported_primary_views": 24,
+      "reported_child_agent": "/root/product_17_takeover/ui_integrator",
+      "reported_final_report_sha256": "396ad6137274c971daace1639d19cb45607ff5f2d679add67c1ff9c4892b5978",
+      "remaining_originals": "Only the explicitly derived index configuration survived; it is retained separately and does not contain the original product evidence.",
+      "not_recovered": "Original completed workspace, actual integration-child outputs, report bytes and captures. Some earlier unviewed intermediate PNGs had already been overwritten within that earlier attempt, as separately reported before this interruption."
+    },
+    {
+      "kind": "independent_product_review",
+      "agent_id": "/root/final_product_reviewer",
+      "reported_frozen_at": "2026-11-01T00:16:29.809383+00:00",
+      "reported_products": 9,
+      "reported_files": 508,
+      "reported_bytes": 37764601,
+      "reported_original_view_exports": 46,
+      "reported_report_identifiers": {
+        "cohort_01_sha256": "f390027e46bf392689dd12e00f75cb971548f7d5f9e231670e852abff0dfd254",
+        "cohort_02_report_sha256": "e9e746df60c72e7fc6577d95b68b6c77cd371464595a139b8b0891750a31d5c1",
+        "cohort_02_products_sha256": "de456e2e8d56b537bf4a4779af144d78af2499774ad65e8fae8d37769ee3eb76",
+        "cumulative_products_sha256": "f2c65e91349cddab27c3f3ca6159cf31f06c420b050eeb8250d2a3ffcc64843d"
+      },
+      "not_recovered": "Original cohort reports, structured findings, actual tool/image returns and frozen review workspace. Reported digests are identifiers for recovery, not evidence that their missing bytes are presently verified."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "/tmp/ui-spec-validation-venv/bin/python",
+    "evidence/final_capture.py"
+  ],
+  "cwd": "/workspace/scratch/c0a45b688c5b/ui-study/active-worksets/w11-final",
+  "started_at": "2026-11-01T12:46:59.330225+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 1,
+  "ended_at": "2026-11-01T12:47:32.202575+00:00",
+  "wall_seconds": 32.872357,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 517,
+      "sha256": "4da30570400b69e9200ff95d31ab59a9045f254c1cde7a42cea54d79021cc2b0"
+    },
+    "stderr.txt": {
+      "bytes": 1731,
+      "sha256": "15811de353f85af257e8e8fb18319dba65a623bca608acbf4ebbd70b5394571b"
+    }
+  }
+}

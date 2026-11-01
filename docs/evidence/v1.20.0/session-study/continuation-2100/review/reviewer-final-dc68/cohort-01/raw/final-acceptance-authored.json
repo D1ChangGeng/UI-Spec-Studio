@@ -1,0 +1,97 @@
+[
+  {
+    "cell_id": "T1-G-final-runtime-r1",
+    "anonymous_product": "P05",
+    "disposition": "accepted_with_limits",
+    "scope": [
+      "Browser-local populated settings presentation, including readable bilingual long values and light/dark original visual states.",
+      "Exercised display-name save/reload, forced failure preserving previous storage and draft, retry, rejected-submit field association/focus, newer draft during pending, and keyboard Save/Cancel."
+    ],
+    "limitations": [
+      "The long navigation and larger fields require substantial compact-height/narrow scrolling to the save/status area.",
+      "Full sequential Tab traversal, email-change recovery and every field/toggle variation were not exercised; repeated behavior ran primarily in light English/reduced motion."
+    ],
+    "repair_disposition": "No additional repair is required for this accepted scope: the demonstrated persistence, recovery and pending-draft distinction agree with the unchanged authoritative store. Compact-height refinement remains an improvement; untested flows are excluded rather than presumed correct.",
+    "repair_evidence": [
+      "behavior/P05/result.json",
+      "behavior/P05/continuity/result.json",
+      "evidence/P05-013.json",
+      "evidence/P05-024.json",
+      "evidence/P05-054.json",
+      "commands/013-source-comparison/stdout.txt"
+    ]
+  },
+  {
+    "cell_id": "T2-G-final-runtime-r1",
+    "anonymous_product": "P04",
+    "disposition": "accepted_with_limits",
+    "scope": [
+      "Local synthetic conversation, populated answer/composer layout and original light/dark/narrow visual states.",
+      "Exercised partial failure/retry to the long answer, wheel-selected reading continuity during streaming, Return to latest, stable Stop, six-line mixed draft/three local filenames and keyboard full-filename disclosure with Escape focus return."
+    ],
+    "limitations": [
+      "The narrow horizontal attachment rail hides later files until lateral exploration; compact chips defer the filename-only boundary to details.",
+      "Normal-speed motion, software-keyboard occlusion, touch discovery and comprehensive message-edit/branch navigation remain unassessed. This is not acceptance of real model service, uploads or durable history."
+    ],
+    "repair_disposition": "No additional repair is required for the accepted local workflow: the wheel, response-text, retry and focus observations resolve the consequential behavior uncertainties. Rail discoverability remains a documented presentation limitation; broader interaction/platform scope requires separate verification.",
+    "repair_evidence": [
+      "behavior/P04/followup/result.json",
+      "behavior/P04/continuity/result.json",
+      "evidence/P04-033.json",
+      "evidence/P04-035.json",
+      "evidence/P04-036.json",
+      "evidence/live-P04-attachments.json",
+      "commands/023-chat-continuity/stdout.txt"
+    ]
+  },
+  {
+    "cell_id": "T3-G-final-runtime-r1",
+    "anonymous_product": "P02",
+    "disposition": "accepted_with_limits",
+    "scope": [
+      "Local editorial wiki reading/editing with retained long bilingual content and original light/dark/narrow pixels.",
+      "Exercised native English/Chinese edit confirmation, actual tiddler-file write and reload, confirmed discard, ledger navigation, search-result/editor keyboard entry, and contained narrow-table wheel inspection."
+    ],
+    "limitations": [
+      "The narrow table initially clips columns with little visible scroll guidance and has no explicit region label/tabindex in inspected DOM. Keyboard horizontal table access is unresolved and excluded from acceptance.",
+      "Sticky titles consume reading space and can overlap the first visible text line during deep scrolling.",
+      "Server-outage recovery, broad assistive-technology use, full palette-selection journey and producer candidate-research process were not audited."
+    ],
+    "repair_disposition": "No additional repair is required for the accepted reading/editing, persistence and pointer/wheel table scope: the full evidence-boundary column is reachable without panning the page and writes/reloads agree. Full keyboard-table acceptance remains unresolved; a named focusable containment treatment and direct keyboard verification should be considered before claiming that broader scope.",
+    "repair_evidence": [
+      "behavior/P02/followup4/result.json",
+      "behavior/P02/tables/result.json",
+      "evidence/P02-022.json",
+      "evidence/P02-023.json",
+      "evidence/P02-026.json",
+      "evidence/P02-037.json",
+      "evidence/live-P02-table-scrolled.json",
+      "commands/033-wiki-tables/stdout.txt"
+    ]
+  },
+  {
+    "cell_id": "T4-G-final-runtime-r1",
+    "anonymous_product": "P18",
+    "disposition": "accepted_with_limits",
+    "scope": [
+      "The settled Tabler action-toast increment on the existing browser-local settings application.",
+      "Original light/dark, desktop/narrow meaningful-state pixels and exercised save/pending/error/invalid feedback, failed-snapshot retry while preserving a later draft, storage distinction, Cancel restore and explicit close/focus continuity."
+    ],
+    "limitations": [
+      "The fixed toast obscures part of the upstream header/navigation until dismissed, especially narrow. This is a visible tradeoff of the settled placement.",
+      "Inherited single-line long profile fields remain cropped; a wider settings redesign is outside this bounded acceptance.",
+      "Dark transitions were judged from original pixels rather than every active transition; no natural-motion or assistive-technology certification."
+    ],
+    "repair_disposition": "No additional repair is required for the accepted toast increment: keyboard retry persisted the failed snapshot, preserved later edits and returned sensible focus; close did not change storage. Header occlusion and inherited fields remain disclosed, not repaired or generalized into whole-settings acceptance.",
+    "repair_evidence": [
+      "behavior/P18/result.json",
+      "behavior/P18/continuity/result.json",
+      "evidence/P18-015.json",
+      "evidence/P18-033.json",
+      "evidence/P18-047.json",
+      "evidence/P18-059.json",
+      "evidence/live-P01-toast-source.json",
+      "commands/013-source-comparison/stdout.txt"
+    ]
+  }
+]

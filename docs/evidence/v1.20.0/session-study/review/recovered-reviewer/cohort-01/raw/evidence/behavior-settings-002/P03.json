@@ -1,0 +1,866 @@
+{
+  "product": "P03",
+  "started": "2026-11-01T08:59:49.023979+00:00",
+  "browser": "143.0.7499.4",
+  "playwright": "1.57.0",
+  "device_scale_factor": 1,
+  "fontconfig": "/tmp/ui-spec-fonts/fonts.conf",
+  "steps": [
+    {
+      "time": "2026-11-01T08:59:49.853772+00:00",
+      "name": "initial-light",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "Mei Lin · 林玫",
+          "business-id": "Fieldnotes Research / 城市日常研究小组",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": null,
+        "focus": {
+          "id": "",
+          "tag": "BODY",
+          "text": "\n    Skip to main content\n\n    \n    \n    \n\n    \n      \n      \n      \n        \n          \n          \n            \n       "
+        },
+        "status": "Settings are saved only in this browser.",
+        "statusData": {
+          "state": "idle",
+          "message": "idle"
+        },
+        "saveDisabled": false,
+        "saveLabel": "Save changes",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 0,
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:50.322397+00:00",
+      "name": "valid-save-pending",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": null,
+        "focus": {
+          "id": "",
+          "tag": "BODY",
+          "text": "\n    Skip to main content\n\n    \n    \n    \n\n    \n      \n      \n      \n        \n          \n          \n            \n       "
+        },
+        "status": "Saving your changes…",
+        "statusData": {
+          "state": "pending",
+          "message": "pending"
+        },
+        "saveDisabled": true,
+        "saveLabel": "Saving…",
+        "cancelDisabled": true,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 322,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:50.352160+00:00",
+      "name": "edit-during-pending",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Newer unsaved location / 后续编辑",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": null,
+        "focus": {
+          "id": "location",
+          "tag": "INPUT",
+          "text": ""
+        },
+        "status": "Saving the submitted version. Your newer edits will need another save.",
+        "statusData": {
+          "state": "pending",
+          "message": "pendingNew"
+        },
+        "saveDisabled": true,
+        "saveLabel": "Saving…",
+        "cancelDisabled": true,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 423,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:51.205866+00:00",
+      "name": "saved-snapshot-newer-draft-kept",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Newer unsaved location / 后续编辑",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:50.958Z\"}",
+        "focus": {
+          "id": "location",
+          "tag": "INPUT",
+          "text": ""
+        },
+        "status": "Submitted changes saved. Your newer edits are still unsaved.",
+        "statusData": {
+          "state": "success",
+          "message": "savedNew"
+        },
+        "saveDisabled": false,
+        "saveLabel": "Save changes",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 582,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:51.268762+00:00",
+      "name": "cancel-restores-saved",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:50.958Z\"}",
+        "focus": {
+          "id": "cancel-settings",
+          "tag": "BUTTON",
+          "text": "Cancel"
+        },
+        "status": "Unsaved changes discarded. Last saved settings restored.",
+        "statusData": {
+          "state": "restored",
+          "message": "restored"
+        },
+        "saveDisabled": false,
+        "saveLabel": "Save changes",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 582,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:52.301899+00:00",
+      "name": "forced-error",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "Failed snapshot P03 / 失败版本",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:50.958Z\"}",
+        "focus": {
+          "id": "save-settings",
+          "tag": "BUTTON",
+          "text": "Retry save"
+        },
+        "status": "Save did not complete. Your draft is still here. Retry when ready.",
+        "statusData": {
+          "state": "error",
+          "message": "error"
+        },
+        "saveDisabled": false,
+        "saveLabel": "Retry save",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 413,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:52.480072+00:00",
+      "name": "retry-pending-focus",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "Newer draft P03 / 更新草稿",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:50.958Z\"}",
+        "focus": {
+          "id": "",
+          "tag": "BODY",
+          "text": "\n    Skip to main content\n\n    \n    \n    \n\n    \n      \n      \n      \n        \n          \n          \n            \n       "
+        },
+        "status": "Saving your changes…",
+        "statusData": {
+          "state": "pending",
+          "message": "pending"
+        },
+        "saveDisabled": true,
+        "saveLabel": "Saving…",
+        "cancelDisabled": true,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 452,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:53.384862+00:00",
+      "name": "retry-success",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "Newer draft P03 / 更新草稿",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"Newer draft P03 / 更新草稿\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:53.126Z\"}",
+        "focus": {
+          "id": "save-settings",
+          "tag": "BUTTON",
+          "text": "Save changes"
+        },
+        "status": "Your changes are saved in this browser.",
+        "statusData": {
+          "state": "success",
+          "message": "success"
+        },
+        "saveDisabled": false,
+        "saveLabel": "Save changes",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 453,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:53.624841+00:00",
+      "name": "invalid-name-focus-recovery",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"Newer draft P03 / 更新草稿\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:53.126Z\"}",
+        "focus": {
+          "id": "business-name",
+          "tag": "TEXTAREA",
+          "text": ""
+        },
+        "status": "Check the highlighted fields, then save again.",
+        "statusData": {
+          "state": "invalid",
+          "message": "invalid"
+        },
+        "saveDisabled": false,
+        "saveLabel": "Save changes",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [
+          {
+            "id": "business-name",
+            "describedby": "displayName-hint displayName-error"
+          }
+        ],
+        "horizontalOverflow": false,
+        "scrollY": 183,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:54.656428+00:00",
+      "name": "short-name-saved",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "Mei / 玫",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"Mei / 玫\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:54.450Z\"}",
+        "focus": {
+          "id": "save-settings",
+          "tag": "BUTTON",
+          "text": "Save changes"
+        },
+        "status": "Your changes are saved in this browser.",
+        "statusData": {
+          "state": "success",
+          "message": "success"
+        },
+        "saveDisabled": false,
+        "saveLabel": "Save changes",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 582,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:55.254221+00:00",
+      "name": "reload-confirmed",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=light&lang=en",
+        "fields": {
+          "business-name": "Mei / 玫",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"Mei / 玫\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:54.450Z\"}",
+        "focus": {
+          "id": "",
+          "tag": "BODY",
+          "text": "\n    Skip to main content\n\n    \n    \n    \n\n    \n      \n      \n      \n        \n          \n          \n            \n       "
+        },
+        "status": "Settings are saved only in this browser.",
+        "statusData": {
+          "state": "idle",
+          "message": "idle"
+        },
+        "saveDisabled": false,
+        "saveLabel": "Save changes",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 564,
+        "viewport": {
+          "width": 1280,
+          "height": 600
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:55.886035+00:00",
+      "name": "narrow-dark-long-top",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=dark&lang=zh",
+        "fields": {
+          "business-name": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"Mei / 玫\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:54.450Z\"}",
+        "focus": {
+          "id": "business-id",
+          "tag": "TEXTAREA",
+          "text": ""
+        },
+        "status": "你有尚未保存的更改。",
+        "statusData": {
+          "state": "idle",
+          "message": "dirty"
+        },
+        "saveDisabled": false,
+        "saveLabel": "保存更改",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:55.971771+00:00",
+      "name": "narrow-dark-long-fields",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=dark&lang=zh",
+        "fields": {
+          "business-name": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"Mei / 玫\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:54.450Z\"}",
+        "focus": {
+          "id": "business-name",
+          "tag": "TEXTAREA",
+          "text": ""
+        },
+        "status": "你有尚未保存的更改。",
+        "statusData": {
+          "state": "idle",
+          "message": "dirty"
+        },
+        "saveDisabled": false,
+        "saveLabel": "保存更改",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 0,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    },
+    {
+      "time": "2026-11-01T08:59:56.987476+00:00",
+      "name": "narrow-dark-save",
+      "observed": {
+        "url": "http://127.0.0.1:4702/?theme=dark&lang=zh",
+        "fields": {
+          "business-name": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "business-id": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weekly-digest": true,
+          "public-profile": false
+        },
+        "stored": "{\"schemaVersion\":1,\"settings\":{\"displayName\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"organization\":\"跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme\",\"location\":\"Singapore / 新加坡\",\"email\":\"mei.lin@example.invalid\",\"weeklyDigest\":true,\"publicProfile\":false},\"savedAt\":\"2026-11-01T08:59:56.782Z\"}",
+        "focus": {
+          "id": "save-settings",
+          "tag": "BUTTON",
+          "text": "保存更改"
+        },
+        "status": "更改已保存到当前浏览器。",
+        "statusData": {
+          "state": "success",
+          "message": "success"
+        },
+        "saveDisabled": false,
+        "saveLabel": "保存更改",
+        "cancelDisabled": false,
+        "toast": null,
+        "invalid": [],
+        "horizontalOverflow": false,
+        "scrollY": 715,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "initial-light",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-initial-light.png",
+      "time": "2026-11-01T08:59:49.913708+00:00",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "saved-newer-draft",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-saved-newer-draft.png",
+      "time": "2026-11-01T08:59:51.250356+00:00",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      }
+    },
+    {
+      "name": "forced-error",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-forced-error.png",
+      "time": "2026-11-01T08:59:52.352008+00:00",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      }
+    },
+    {
+      "name": "retry-success",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-retry-success.png",
+      "time": "2026-11-01T08:59:53.437896+00:00",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      }
+    },
+    {
+      "name": "invalid-name",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-invalid-name.png",
+      "time": "2026-11-01T08:59:53.676705+00:00",
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      }
+    },
+    {
+      "name": "narrow-dark-top",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-narrow-dark-top.png",
+      "time": "2026-11-01T08:59:55.926764+00:00",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "narrow-dark-fields",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-narrow-dark-fields.png",
+      "time": "2026-11-01T08:59:56.011531+00:00",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "narrow-dark-save",
+      "path": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-002/P03-narrow-dark-save.png",
+      "time": "2026-11-01T08:59:57.027637+00:00",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "console_errors": [],
+  "checks": [
+    {
+      "name": "pending_snapshot_and_newer_draft",
+      "pass": true,
+      "stored": {
+        "schemaVersion": 1,
+        "settings": {
+          "displayName": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+          "location": "Singapore / 新加坡",
+          "email": "mei.lin@example.invalid",
+          "weeklyDigest": true,
+          "publicProfile": false
+        },
+        "savedAt": "2026-11-01T08:59:50.958Z"
+      }
+    },
+    {
+      "name": "cancel_restores",
+      "pass": true
+    },
+    {
+      "name": "failure_preserves_previous_store_and_draft",
+      "pass": true
+    },
+    {
+      "name": "retry_contract",
+      "pass": true,
+      "expected_saved_name": "Newer draft P03 / 更新草稿",
+      "observed_saved_name": "Newer draft P03 / 更新草稿",
+      "observed_draft": "Newer draft P03 / 更新草稿"
+    },
+    {
+      "name": "invalid_focus_and_association",
+      "pass": true
+    },
+    {
+      "name": "reload_persistence",
+      "pass": true
+    }
+  ],
+  "tested_copy": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/copies/settings-002/P03/app",
+  "source_checks": {
+    "authoritative_store_matches_foundation": true,
+    "index_sha256": "2de7e4d69467ddc7db5199b3838ad5f0514ee404bb2fb7c06a42cb62ecae2eb3"
+  },
+  "server": {
+    "pid": 32957,
+    "port": 4702,
+    "started": "2026-11-01T08:59:49.030986+00:00",
+    "stopped": "2026-11-01T08:59:57.039662+00:00",
+    "returncode": -15
+  },
+  "initial_keyboard_path": [
+    {
+      "id": "",
+      "tag": "A",
+      "text": "Skip to main content"
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n              \n                \n                \n              \n            "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                  \n                    \n                    \n                  "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                  \n                  \n                    \n                  \n "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                  \n                  \n                    \n                    "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                  \n                  \n                    \n                    "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": " EN "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                \n                \n                  Paweł Kuna\n                "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                          \n                            \n                       "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                          \n                            \n                       "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                          \n                            \n                       "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                          \n                            \n                       "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                          \n                            \n                       "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                          \n                            \n                       "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                          \n                            \n                       "
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "\n                          \n                            \n                       "
+    },
+    {
+      "id": "",
+      "tag": "BUTTON",
+      "text": "\n                          \n                            \n                       "
+    },
+    {
+      "id": "language-toggle",
+      "tag": "BUTTON",
+      "text": "中文"
+    },
+    {
+      "id": "theme-toggle",
+      "tag": "BUTTON",
+      "text": "Use dark theme"
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "My account"
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "Notifications"
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "Privacy"
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "Plans"
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "Billing & invoices"
+    },
+    {
+      "id": "",
+      "tag": "A",
+      "text": "Give feedback"
+    },
+    {
+      "id": "business-name",
+      "tag": "TEXTAREA",
+      "text": ""
+    }
+  ],
+  "save_keyboard_path": [
+    {
+      "id": "location",
+      "tag": "INPUT",
+      "text": ""
+    },
+    {
+      "id": "email",
+      "tag": "INPUT",
+      "text": ""
+    },
+    {
+      "id": "weekly-digest",
+      "tag": "INPUT",
+      "text": ""
+    },
+    {
+      "id": "public-profile",
+      "tag": "INPUT",
+      "text": ""
+    },
+    {
+      "id": "cancel-settings",
+      "tag": "BUTTON",
+      "text": "Cancel"
+    },
+    {
+      "id": "save-settings",
+      "tag": "BUTTON",
+      "text": "Save changes"
+    }
+  ],
+  "long_field_geometry": [
+    {
+      "id": "business-name",
+      "tag": "TEXTAREA",
+      "value": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+      "clientWidth": 330,
+      "scrollWidth": 330,
+      "clientHeight": 78,
+      "scrollHeight": 78,
+      "rect": {
+        "x": 29,
+        "y": 457,
+        "width": 332,
+        "height": 80,
+        "top": 457,
+        "right": 361,
+        "bottom": 537,
+        "left": 29
+      }
+    },
+    {
+      "id": "business-id",
+      "tag": "TEXTAREA",
+      "value": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+      "clientWidth": 330,
+      "scrollWidth": 330,
+      "clientHeight": 78,
+      "scrollHeight": 78,
+      "rect": {
+        "x": 29,
+        "y": 602.5,
+        "width": 332,
+        "height": 80,
+        "top": 602.5,
+        "right": 361,
+        "bottom": 682.5,
+        "left": 29
+      }
+    }
+  ],
+  "completed": "2026-11-01T08:59:57.027659+00:00"
+}

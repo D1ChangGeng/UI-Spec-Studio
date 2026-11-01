@@ -181,3 +181,11 @@ For a card flip, inspect the source's pivot, front/back geometry, face visibilit
 For reordering or expansion, identify whether the source preserves the same object or crossfades separate surfaces. FLIP (First, Last, Invert, Play) is a possible implementation technique, not a requirement to rebuild a mature layout component. Font arrival, content insertion, scrolling and interruption can invalidate measured geometry; verify the retained mechanism under those conditions before altering it.
 
 For authored motion, inspect the trigger, first readable feedback, stable holds, full progression and return/seam. Reduced motion needs a deliberately composed readable state or simpler equivalent, not hidden content frozen at the start. A generic near-zero duration rule can leave content invisible or produce unintended event ordering. Keep meaningful controls operable without optional pointer effects. Measure actual rendering cost in the integrated task; a smooth-looking sampled clip cannot establish device-wide frame rate or input latency.
+
+## Preserve continuous relationships across delegated work
+
+Delegate observation or integration around meaningful interaction relationships rather than isolated frames. Composer growth, streamed content, reading position and adjacent panes may form one episode even when their implementation modules differ. Specify the actual relevant states and user control, allowing investigators to discover additional consequential transitions.
+
+Retain trigger, progression, settlement, reversal, interruption and repeated input where they affect the intended experience. A specialist may reproduce the episode and explain observed changes, but the main agent decides which mature mechanism fits the product and checks the integrated continuity. Tool latency, sparse frame samples and source-code inspection cannot by themselves establish natural visual smoothness.
+
+Coordinate access to shared browsers, user sessions and native desktops. Use isolated contexts when supported, preserve real permission boundaries and avoid irreversible external actions in observation tasks. When tools cannot reach the required state, record the limitation and pursue another authorized evidence route rather than infer success.

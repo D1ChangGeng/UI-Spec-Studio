@@ -1,0 +1,38 @@
+{
+  "work_package": "/workspace/scratch/dc68edd00fe1/ui-study/w11",
+  "runnable_source": "app/wiki",
+  "native_offline_export": "app/wiki/output/index.html",
+  "final_capture_prefixes": [
+    "evidence/verified-final/",
+    "evidence/verified-extra/"
+  ],
+  "primary_view_glob": "evidence/verified-final/{day,night}-{reading,editing}-{1440,1280,390}.png",
+  "supplemental_view_glob": "evidence/verified-extra/*.png",
+  "behavior_logs": [
+    "evidence/verified-final/behavior.json",
+    "evidence/commands/017/stdout.txt",
+    "evidence/commands/020/stdout.txt",
+    "evidence/commands/021/stdout.txt",
+    "evidence/commands/022/stdout.txt",
+    "evidence/commands/023/stdout.txt",
+    "evidence/final-audit.json"
+  ],
+  "image_view_exports": "evidence/view-verified*.json",
+  "source_records": [
+    "SOURCE-ADOPTION.md",
+    "evidence/source-diff.patch",
+    "evidence/source-comparison.json",
+    "evidence/research/SOURCES.json"
+  ],
+  "child_spawn_request_and_result": "DELEGATION.json",
+  "child_original_prompt": "evidence/coordination/original-prompt.md",
+  "child_actual_prompt": "evidence/coordination/dispatched-prompt.md",
+  "child_completion_summary": "evidence/coordination/research-final-notification.txt",
+  "child_report": "evidence/research/REPORT.md",
+  "raw_child_notification_limit": "Raw host final notification remains in conversation. Files contain faithful report and notification summary; not every interim notification was exported verbatim at call time. Native roles/token counts/cost unknown.",
+  "timing": "evidence/TIMING.json",
+  "delivery": "FINAL.md",
+  "final_audit": "evidence/final-audit.json",
+  "view_review": "VISUAL-REVIEW.md",
+  "stop_state": "All owned product test subprocesses terminated in script finally blocks; no persistent owned preview server retained. No further product writes after final handover."
+}

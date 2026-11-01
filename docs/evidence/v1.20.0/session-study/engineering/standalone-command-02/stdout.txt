@@ -1,0 +1,45 @@
+{"command": ["/tmp/ui-spec-validation-venv/bin/python", "/tmp/ui-spec-standalone-check-36asunfh/bundle/ui-spec-codex/install.py", "install", "--project", "/tmp/ui-spec-standalone-check-36asunfh/product", "--dry-run"], "returncode": 0, "stdout": "{\n  \"action\": \"install\",\n  \"root\": \"/tmp/ui-spec-standalone-check-36asunfh/product/.codex\",\n  \"installed_version\": null,\n  \"operations\": [\n    {\n      \"path\": \"agents/ui_researcher.toml\",\n      \"state\": \"install\"\n    },\n    {\n      \"path\": \"agents/ui_integrator.toml\",\n      \"state\": \"install\"\n    },\n    {\n      \"path\": \"agents/ui_challenger.toml\",\n      \"state\": \"install\"\n    },\n    {\n      \"path\": \"agents/ui_experience_observer.toml\",\n      \"state\": \"install\"\n    },\n    {\n      \"path\": \"config.toml\",\n      \"state\": \"register_roles\",\n      \"scope\": \"managed role block only\"\n    }\n  ],\n  \"conflicts\": [],\n  \"runtime_discovery_verified\": false,\n  \"candidate_version\": \"1.20.0\",\n  \"dry_run\": true,\n  \"changed_files\": 6\n}\n", "stderr": ""}
+{"command": ["/tmp/ui-spec-validation-venv/bin/python", "/tmp/ui-spec-standalone-check-36asunfh/bundle/ui-spec-codex/install.py", "install", "--project", "/tmp/ui-spec-standalone-check-36asunfh/product"], "returncode": 0, "stdout": "{\n  \"action\": \"install\",\n  \"root\": \"/tmp/ui-spec-standalone-check-36asunfh/product/.codex\",\n  \"installed_version\": null,\n  \"operations\": [\n    {\n      \"path\": \"agents/ui_researcher.toml\",\n      \"state\": \"install\"\n    },\n    {\n      \"path\": \"agents/ui_integrator.toml\",\n      \"state\": \"install\"\n    },\n    {\n      \"path\": \"agents/ui_challenger.toml\",\n      \"state\": \"install\"\n    },\n    {\n      \"path\": \"agents/ui_experience_observer.toml\",\n      \"state\": \"install\"\n    },\n    {\n      \"path\": \"config.toml\",\n      \"state\": \"register_roles\",\n      \"scope\": \"managed role block only\"\n    }\n  ],\n  \"conflicts\": [],\n  \"runtime_discovery_verified\": false,\n  \"candidate_version\": \"1.20.0\",\n  \"dry_run\": false,\n  \"changed_files\": 6\n}\n", "stderr": ""}
+{"command": ["/tmp/ui-spec-validation-venv/bin/python", "/tmp/ui-spec-standalone-check-36asunfh/bundle/ui-spec-codex/install.py", "status", "--project", "/tmp/ui-spec-standalone-check-36asunfh/product"], "returncode": 0, "stdout": "{\n  \"action\": \"status\",\n  \"root\": \"/tmp/ui-spec-standalone-check-36asunfh/product/.codex\",\n  \"installed_version\": \"1.20.0\",\n  \"operations\": [\n    {\n      \"path\": \"agents/ui_challenger.toml\",\n      \"state\": \"owned_unchanged\"\n    },\n    {\n      \"path\": \"agents/ui_experience_observer.toml\",\n      \"state\": \"owned_unchanged\"\n    },\n    {\n      \"path\": \"agents/ui_integrator.toml\",\n      \"state\": \"owned_unchanged\"\n    },\n    {\n      \"path\": \"agents/ui_researcher.toml\",\n      \"state\": \"owned_unchanged\"\n    },\n    {\n      \"path\": \"config.toml\",\n      \"state\": \"owned_unchanged\",\n      \"scope\": \"managed role block only\"\n    }\n  ],\n  \"conflicts\": [],\n  \"runtime_discovery_verified\": false,\n  \"dry_run\": false,\n  \"changed_files\": 0\n}\n", "stderr": ""}
+{"command": ["/tmp/ui-spec-validation-venv/bin/python", "/tmp/ui-spec-standalone-check-36asunfh/bundle/ui-spec-codex/install.py", "install", "--project", "/tmp/ui-spec-standalone-check-36asunfh/product"], "returncode": 0, "stdout": "{\n  \"action\": \"install\",\n  \"root\": \"/tmp/ui-spec-standalone-check-36asunfh/product/.codex\",\n  \"installed_version\": \"1.20.0\",\n  \"operations\": [\n    {\n      \"path\": \"agents/ui_researcher.toml\",\n      \"state\": \"already_owned\"\n    },\n    {\n      \"path\": \"agents/ui_integrator.toml\",\n      \"state\": \"already_owned\"\n    },\n    {\n      \"path\": \"agents/ui_challenger.toml\",\n      \"state\": \"already_owned\"\n    },\n    {\n      \"path\": \"agents/ui_experience_observer.toml\",\n      \"state\": \"already_owned\"\n    },\n    {\n      \"path\": \"config.toml\",\n      \"state\": \"owned_registration_unchanged\",\n      \"scope\": \"managed role block only\"\n    }\n  ],\n  \"conflicts\": [],\n  \"runtime_discovery_verified\": false,\n  \"candidate_version\": \"1.20.0\",\n  \"dry_run\": false,\n  \"changed_files\": 0\n}\n", "stderr": ""}
+{"command": ["/tmp/ui-spec-validation-venv/bin/python", "/tmp/ui-spec-standalone-check-36asunfh/bundle/ui-spec-codex/install.py", "uninstall", "--project", "/tmp/ui-spec-standalone-check-36asunfh/product"], "returncode": 0, "stdout": "{\n  \"action\": \"uninstall\",\n  \"root\": \"/tmp/ui-spec-standalone-check-36asunfh/product/.codex\",\n  \"installed_version\": \"1.20.0\",\n  \"operations\": [\n    {\n      \"path\": \"config.toml\",\n      \"state\": \"remove_owned_registration\"\n    },\n    {\n      \"path\": \"agents/ui_challenger.toml\",\n      \"state\": \"remove_owned\"\n    },\n    {\n      \"path\": \"agents/ui_experience_observer.toml\",\n      \"state\": \"remove_owned\"\n    },\n    {\n      \"path\": \"agents/ui_integrator.toml\",\n      \"state\": \"remove_owned\"\n    },\n    {\n      \"path\": \"agents/ui_researcher.toml\",\n      \"state\": \"remove_owned\"\n    }\n  ],\n  \"conflicts\": [],\n  \"runtime_discovery_verified\": false,\n  \"dry_run\": false,\n  \"changed_files\": 6\n}\n", "stderr": ""}
+{
+  "asset": "ui-spec-codex-1.20.0.zip",
+  "asset_sha256": "7a855fa0c332b31d6846d07995423fac251eb77f696761c4f5a4351c30d6331e",
+  "status": "passed",
+  "roles_verified": {
+    "ui_challenger": "0a743579e8b8615d78b6f65d5ee818790a1c6c8457c6561358e31a7aab6e289c",
+    "ui_experience_observer": "679b7cab7a99fda0981bde84b2be0ca4c656f599e83f716af1c02feb4a64987e",
+    "ui_integrator": "843109095af49bfe5dc135f3aa8df7475e2efff42c7cf3a09a8d50897275502f",
+    "ui_researcher": "5d82ba675c0924c4f849e8380ecb4d1cc4fda420a224b65508b2dffd5847125b"
+  },
+  "operations": [
+    {
+      "action": "install",
+      "extra": [
+        "--dry-run"
+      ],
+      "returncode": 0
+    },
+    {
+      "action": "install",
+      "extra": [],
+      "returncode": 0
+    },
+    {
+      "action": "status",
+      "extra": [],
+      "returncode": 0
+    },
+    {
+      "action": "install",
+      "extra": [],
+      "returncode": 0
+    },
+    {
+      "action": "uninstall",
+      "returncode": 0
+    }
+  ],
+  "scope": "Actual standalone archive extraction and CLI lifecycle in a disposable fixture; no native model execution or role-binding claim. The full suite separately covers upgrade/conflict fixtures."
+}

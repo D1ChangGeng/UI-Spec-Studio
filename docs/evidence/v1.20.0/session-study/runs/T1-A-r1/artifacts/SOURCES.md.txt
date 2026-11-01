@@ -1,0 +1,43 @@
+# Adopted sources and retained responsibilities
+
+## Foundation actually used
+
+| Source | Exact identity | Runtime responsibility and retained craft |
+|---|---|---|
+| Tabler official settings snapshot | `sources/official-settings-snapshot.html`; SHA-256 `ed80162e38d7667bfe020b5d16d228c4adc64f301233cfbeeeae6f606697a06e` | Existing page shell, settings navigation/card split, content hierarchy, form family, footer and theme configuration. The public deployment does not expose an exact commit; its compiled HTML digest is authoritative. |
+| Tabler core | `@tabler/core@1.7.1`, tagged revision `07f60c07da13d8ff957a370434b7ef5c86f5ab94` | Local `app/dist` CSS/JS: type scale, grid, spacing, surfaces, borders, buttons, loading spinner, focus, form controls, validation, collapse, switches, alerts, color modes and emphasis utilities. No minified file was edited. |
+| Tagged settings source | `sources/preview/pages/settings.astro`, `sources/shared/layouts/SettingsLayout.astro` | Source-to-page relationship and composition contract. Local HTML remains a focused adaptation of that supplied page. |
+| Tagged alert source | `sources/shared/ui/Alert.astro` | Source alert family for actual save outcomes. The adapter supplies meaningful product copy and uses `text-{color}-emphasis` to retain readable state text. |
+| Tagged switch source | `sources/shared/ui/form/Check.astro` | Existing `form-check form-switch form-switch-lg` family with native checkboxes. |
+| Existing browser-local settings store | `app/settings-store.js`; SHA-256 `32139de23b4ad411c402620e84d5592f7ccfbcf68cece1a123946c29b63c2da0` | Validation, captured-draft semantics, 750 ms asynchronous save, one-failure fixture, localStorage schema and persistence. Unchanged. |
+
+Tabler's MIT notice remains in `app/LICENSE`. Upstream repository: https://github.com/tabler/tabler. Package and source digests remain in `SOURCE-MANIFEST.json`. No extra runtime dependency, image, font package, generated artwork or original visual exception was introduced. No dependency lockfile existed or was needed for this static local application.
+
+## Current primary documentation actually consulted
+
+- https://docs.tabler.io/ui/forms/elements — textarea markup, labels, help/error associations.
+- https://docs.tabler.io/ui/forms/validation — validation family.
+- https://docs.tabler.io/ui/components/alert — status variants and supported text-color overrides.
+- https://docs.tabler.io/ui/components/button — loading class, disabled semantics, `aria-busy`, and button-list composition.
+- Current `modern-web-guidance` search followed by the retrieved `forms` guide; exact command output is under `evidence/commands/001-guidance-search` and `002-guidance-forms`.
+
+Actual web tool results are retained in `evidence/tabler-research-001.json` and `evidence/tabler-docs-002.json` through `004.json`. The Markdown-export requests in 002 were inaccessible; HTML documentation was subsequently retrieved. Documentation is supporting technical evidence, not a substitute for rendered observation.
+
+## Adoption decisions
+
+**Retained:** page/card and navigation relationships, native type and spacing tokens, input material, switch mechanism, primary/secondary actions, theme roles, focus styles and native document scrolling.
+
+**Configured/composed:** wider existing grid fields, source form-control textareas for wrapping, smaller supported avatar, settings utilities in the existing page-header row, source collapse behavior on narrow settings navigation, inline source alerts adjacent to Save.
+
+**Focused adapters:** browser-local form subscription, explicit labels/hints/error associations, in-place locale switching, snapshot-aware status text, keyboard focus restoration, textarea height after input/validation and duplicate-submit prevention. These are application wiring and content/reflow adaptations; the visible family remains Tabler.
+
+**Rejected:** toast-only save feedback, because it would detach recovery from the form and disappear; a new visual family, because the supplied mature page already fits and replacement was not authorized.
+
+The gallery's floating customizer overlapped the narrow email field in the first trial. It now uses Tabler's existing responsive display utilities to hide below the medium breakpoint. The rest of the peripheral gallery chrome remains supplied context.
+
+## Acquisition, adoption and inspection
+
+The original snapshot was rendered locally against the retained Tabler assets and personally opened. Portrait assets were unavailable in that reference render; layout/type/form comparison remained usable. The first reference-route capture returned 404 and is retained, followed by a corrected actual render.
+
+Initial application, local trial, final variant matrix, corrected state episodes and final snapshot-warning frames were all inspected separately. See `VISUAL-REVIEW.md` for exact observation limits. Source identity and imported files establish acquisition/adoption; the viewed comparisons establish the retained qualities described above.
+

@@ -1,0 +1,85 @@
+27:  TooltipTrigger,
+140:            <TooltipTrigger id={`${detailsId}-trigger`} closeOnClick={false} onClick={(event) => { if (event.target instanceof Element && event.target.closest("button")) return; event.currentTarget.focus({ preventScroll: true }); setDetailsOpen(true); }} render={<div role="group" tabIndex={0} aria-describedby={detailsOpen ? detailsId : undefined} onFocus={() => setDetailsOpen(true)} onBlur={() => setDetailsOpen(false)} aria-label={name} className="max-w-full rounded-[14px] outline-none focus-visible:ring-1 focus-visible:ring-ring/50" />}>
+151:            </TooltipTrigger>
+176:            <TooltipTrigger
+188:                  tabIndex={0}
+189:                  aria-label={`${src ? `Preview ${name}` : `${typeLabel} attachment ${name}`}${
+216:            </TooltipTrigger>
+259:    <div role="region" aria-label={copy.files} tabIndex={0} className="aui-composer-attachments flex max-h-28 w-full flex-row flex-wrap items-center gap-2 overflow-y-auto rounded-sm outline-none focus-visible:ring-1 focus-visible:ring-ring/50 empty:hidden">
+277:          aria-label={copy.addFile}
+                  <Loader2Icon className="text-muted-foreground size-4 animate-spin" />
+                </div>
+              )}
+              {isError && (
+                <div
+                  aria-hidden="true"
+                  className="aui-attachment-tile-error bg-background/70 animate-in fade-in-0 absolute inset-0 flex items-center justify-center backdrop-blur-[2px] motion-reduce:animate-none"
+                >
+                  <AlertCircleIcon className="text-destructive size-4" />
+                </div>
+              )}
+            </TooltipTrigger>
+          </AttachmentPreviewDialog>
+          {isComposer && <AttachmentRemove name={name} />}
+        </AttachmentPrimitive.Root>
+        <TooltipContent side="top">
+          <AttachmentPrimitive.Name />
+          {errorMessage && (
+            <p className="aui-attachment-error-message">{errorMessage}</p>
+          )}
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  );
+};
+
+const AttachmentRemove: FC<{ name: string }> = ({ name }) => {
+  return (
+    <AttachmentPrimitive.Remove
+      render={
+        <TooltipIconButton
+          tooltip={`Remove ${name}`}
+          className="aui-attachment-tile-remove absolute end-1 top-1 size-5 rounded-full bg-black/50! text-white after:absolute after:-inset-1.5 hover:bg-black/70! hover:text-white! active:scale-[0.96] motion-reduce:transition-none"
+          side="top"
+        />
+      }
+    >
+      <XIcon className="aui-attachment-remove-icon size-3 stroke-[2.5]" />
+    </AttachmentPrimitive.Remove>
+  );
+};
+
+export const UserMessageAttachments: FC = () => {
+  return (
+    <div className="aui-user-message-attachments-end col-span-full col-start-1 row-start-1 flex w-full flex-row flex-wrap justify-end gap-2 empty:hidden">
+      <MessagePrimitive.Attachments>
+        {() => <AttachmentUI />}
+      </MessagePrimitive.Attachments>
+    </div>
+  );
+};
+
+export const ComposerAttachments: FC = () => {
+  return (
+    <div role="region" aria-label={copy.files} tabIndex={0} className="aui-composer-attachments flex max-h-28 w-full flex-row flex-wrap items-center gap-2 overflow-y-auto rounded-sm outline-none focus-visible:ring-1 focus-visible:ring-ring/50 empty:hidden">
+      <ComposerPrimitive.Attachments>
+        {() => <AttachmentUI />}
+      </ComposerPrimitive.Attachments>
+    </div>
+  );
+};
+
+export const ComposerAddAttachment: FC = () => {
+  return (
+    <ComposerPrimitive.AddAttachment
+      render={
+        <TooltipIconButton
+          tooltip={copy.addFile}
+          side="bottom"
+          variant="ghost"
+          size="icon"
+          className="aui-composer-add-attachment text-muted-foreground hover:text-foreground hover:bg-muted-foreground/15 dark:border-muted-foreground/15 dark:hover:bg-muted-foreground/30 size-7 rounded-full active:scale-[0.96] motion-reduce:transition-none"
+          aria-label={copy.addFile}
+        />
+      }
+    >

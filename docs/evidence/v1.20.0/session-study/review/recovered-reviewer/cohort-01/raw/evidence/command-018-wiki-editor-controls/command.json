@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path; import json; d=json.loads(Path(\"evidence/behavior-wiki-002/P13.json\").read_text()); print(json.dumps([{ \"name\":s[\"name\"],\"story\":s[\"observed\"][\"story\"],\"buttons\":s[\"observed\"][\"buttons\"]} for s in d[\"steps\"] if s[\"name\"]==\"editor-open-keyboard\"],ensure_ascii=False,indent=2))"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T09:08:24.221849+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T09:08:24.254077+00:00",
+  "wall_seconds": 0.03223,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 5885,
+      "sha256": "b0fa4e9d71707aac30c6cb73d922cdf369e6c2dfac090da2c5e7370751674ab3"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

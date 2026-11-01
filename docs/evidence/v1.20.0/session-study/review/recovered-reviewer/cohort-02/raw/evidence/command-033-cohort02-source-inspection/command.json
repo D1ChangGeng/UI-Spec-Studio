@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python",
+    "-c",
+    "from pathlib import Path; import json,difflib; r=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/review-pack\"); own=Path(\"/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery\");\nfor f in [\"settings-controller.js\"]:print(\"P05 SOURCE\",f,\"\\n\",(r/\"products/P05/app\"/f).read_text())\nfor f in [\"src/components/assistant-ui/thread.tsx\",\"src/components/assistant-ui/attachment.tsx\"]:\n p=r/\"products/P17/app\"/f; b=r/\"foundations/T2/app\"/f; print(\"P17 SOURCE DIFF\",f); print(\"\\n\".join(difflib.unified_diff(b.read_text().splitlines(),p.read_text().splitlines(),fromfile=\"T2 foundation\",tofile=\"P17 final\")))\np=r/\"products/P12/app/wiki\"; print(\"P12 WIKI CONFIG\",(p/\"tiddlywiki.info\").read_text()); print(\"P12 TIDDLERS\",[str(x.relative_to(p)) for x in sorted((p/\"tiddlers\").iterdir())]); print(\"OWN WIKI SCRIPTS\",[x.name for x in own.glob(\"*wiki*.py\")]);\nfor f in [\"review_wiki.py\",\"review_wiki_conditions_followup.py\"]:\n p=own/f\n if p.exists():print(\"OWN SCRIPT\",f,\"\\n\",p.read_text())"
+  ],
+  "cwd": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery",
+  "started_at": "2026-11-01T09:54:23.540888+00:00",
+  "timeout_seconds": 60,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 1,
+  "ended_at": "2026-11-01T09:54:23.572833+00:00",
+  "wall_seconds": 0.031951,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 11311,
+      "sha256": "b752260b4a9ee5f66803751bad0bc9604b7434c56ac18c16bf5bfa3eedf3d3c2"
+    },
+    "stderr.txt": {
+      "bytes": 752,
+      "sha256": "696f927ee2ffd04daeb114f2fd7221c16f537367ae1808e53e38c9c592e0a618"
+    }
+  }
+}

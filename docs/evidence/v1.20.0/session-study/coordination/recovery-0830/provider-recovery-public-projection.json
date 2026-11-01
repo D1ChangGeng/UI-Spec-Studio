@@ -1,0 +1,181 @@
+{
+  "kind": "explicit public projection of the provider recovery audit",
+  "original_audit_sha256": "724b8ab51342645cc0251a0b00f9a8e4763a638007eef23062fe0f8bc080e4ea",
+  "audit_utc": "2026-11-01 08:37:47 UTC",
+  "scope": "Read-only search for current-session UI Spec Studio v1.20.0 missing original worksets w07,w09,w11,w17 and independent review bytes",
+  "conclusion": "No original current-session workset or review bytes recovered by this audit.",
+  "exact_missing_source_paths": [
+    "/workspace/scratch/708e8b7f118e/ui-study/worksets/w07",
+    "/workspace/scratch/708e8b7f118e/ui-study/worksets/w09",
+    "/workspace/scratch/708e8b7f118e/ui-study/worksets/w11",
+    "/workspace/scratch/708e8b7f118e/ui-study/worksets/w17",
+    "/workspace/scratch/e1cfe6e447ee/ui-study/final-independent-review"
+  ],
+  "exact_relevant_not_found_responses": {
+    "acs-local-old-worksets": {
+      "schema_version": "acs-mcp-result/3",
+      "result_type": "problem",
+      "ok": false,
+      "state": "rejected",
+      "data": {
+        "code": "not_found",
+        "retryable": false,
+        "path": "/workspace/scratch/708e8b7f118e/ui-study/worksets"
+      },
+      "follow_ups": [],
+      "metadata": {
+        "evidence_class": "authority_rejected"
+      },
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "acs-local-current-review": {
+      "schema_version": "acs-mcp-result/3",
+      "result_type": "problem",
+      "ok": false,
+      "state": "rejected",
+      "data": {
+        "code": "not_found",
+        "retryable": false,
+        "path": "/workspace/scratch/e1cfe6e447ee/ui-study/final-independent-review"
+      },
+      "follow_ups": [],
+      "metadata": {
+        "evidence_class": "authority_rejected"
+      },
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "acs-node-old-worksets": {
+      "schema_version": "acs-mcp-result/3",
+      "result_type": "problem",
+      "ok": false,
+      "state": "rejected",
+      "data": {
+        "code": "not_found",
+        "retryable": false,
+        "path": "/workspace/scratch/708e8b7f118e/ui-study/worksets"
+      },
+      "follow_ups": [],
+      "metadata": {
+        "evidence_class": "authority_rejected"
+      },
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "acs-node-current-review": {
+      "schema_version": "acs-mcp-result/3",
+      "result_type": "problem",
+      "ok": false,
+      "state": "rejected",
+      "data": {
+        "code": "not_found",
+        "retryable": false,
+        "path": "/workspace/scratch/e1cfe6e447ee/ui-study/final-independent-review"
+      },
+      "follow_ups": [],
+      "metadata": {
+        "evidence_class": "authority_rejected"
+      },
+      "error_code": "INVALID_ARGUMENT"
+    },
+    "acs-local-codex-project": {
+      "schema_version": "acs-mcp-result/3",
+      "result_type": "problem",
+      "ok": false,
+      "state": "rejected",
+      "data": {
+        "code": "not_found",
+        "retryable": false,
+        "path": "/mnt/d/Chatgpt/Codex/UI-Spec-Studio"
+      },
+      "follow_ups": [],
+      "metadata": {
+        "evidence_class": "authority_rejected"
+      },
+      "error_code": "INVALID_ARGUMENT"
+    }
+  },
+  "project_association": {
+    "matching_ui_spec_studio_project_id": null,
+    "note": "No verified association of any listed project to UI Spec Studio; none was loaded or mutated."
+  },
+  "library_title_query": {
+    "search_query": [
+      {
+        "q": "\"UI-Spec-Studio-v1.20.0\"",
+        "search_title_only": true
+      }
+    ],
+    "top_k": 100,
+    "sort": "created_at",
+    "sort_order": "desc",
+    "result_format": "metadata_only"
+  },
+  "matching_project_artifact_count": 11,
+  "library_current_session_queries": [
+    {
+      "request": {
+        "search_query": [
+          {
+            "q": "\"UI-Spec-Studio\""
+          },
+          {
+            "q": "\"ui-study\""
+          },
+          {
+            "q": "\"worksets\""
+          },
+          {
+            "q": "\"independent-review\""
+          }
+        ],
+        "filters": {
+          "created_after": "2026-11-01T00:00:00Z"
+        },
+        "top_k": 50,
+        "result_format": "metadata_only"
+      },
+      "provider_result": {
+        "api_tool_source": "files/search",
+        "results": [],
+        "retrieval_title_results": null,
+        "next_cursor": null,
+        "warnings": [
+          "No search results were found. A zero-result search does not establish that the searched content lacks the answer: the query may not match indexed text, parsed text may be missing, or retrieval may have failed. Retry once with a simpler question-equivalent query or an alternate short query. If results remain empty or parsed text appears unavailable, use `files.read` to inspect page images, or use the container tool to extract, render, or otherwise process the file(s); first use `files.materialize` for any file that is not already present in the container."
+        ],
+        "external_connectors_accessed": false
+      }
+    },
+    {
+      "request": {
+        "search_query": [
+          {
+            "q": "\"UI-Spec-Studio\"",
+            "search_title_only": true
+          }
+        ],
+        "filters": {
+          "modified_after": "2026-11-01T00:00:00Z"
+        },
+        "top_k": 100,
+        "result_format": "metadata_only"
+      },
+      "provider_result": {
+        "api_tool_source": "files/search",
+        "results": [],
+        "retrieval_title_results": [],
+        "next_cursor": null,
+        "warnings": [
+          "No search results were found. A zero-result search does not establish that the searched content lacks the answer: the query may not match indexed text, parsed text may be missing, or retrieval may have failed. Retry once with a simpler question-equivalent query or an alternate short query. If results remain empty or parsed text appears unavailable, use `files.read` to inspect page images, or use the container tool to extract, render, or otherwise process the file(s); first use `files.materialize` for any file that is not already present in the container."
+        ],
+        "external_connectors_accessed": false
+      }
+    }
+  ],
+  "limitations": [
+    "No verified UI Spec Studio ACS project/source handle was available; no unrelated project records, reviews, resources, or messages were read.",
+    "Library zero-result searches are limited by indexing/retrieval and do not prove that all possible differently named backups are absent.",
+    "Historical handoff, metadata ZIP, git SHA strings, and final-answer messages cannot be substituted for missing original source/media/event bytes.",
+    "ACS provider timestamps were labeled node_local_utc, timestamp_authority=unverified where returned.",
+    "No secrets, credential contents, hidden reasoning, project state, permissions, remote files, or experiment originals were inspected or changed."
+  ],
+  "projection_boundary": "OS account/home/discovery metadata, private Library routing identities and unrelated listing entries are omitted from this public projection. The complete original audit was separately preserved for the owner. No original experiment source, capture or work-tool output was removed by this projection; none was recovered through these providers."
+}

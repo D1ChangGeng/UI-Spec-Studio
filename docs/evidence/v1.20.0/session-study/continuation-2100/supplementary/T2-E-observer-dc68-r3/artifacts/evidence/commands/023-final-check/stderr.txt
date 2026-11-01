@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/dc68edd00fe1/ui-study/w15/evidence/final-check-07.py", line 33, in <module>
+    assert inp.evaluate('(e)=>e===document.activeElement');text=page.locator('[data-role=assistant]').last.inner_text();page.wait_for_timeout(350);assert text==page.locator('[data-role=assistant]').last.inner_text();assert page.locator('.aui-message-error-message').count()==0
+                                                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

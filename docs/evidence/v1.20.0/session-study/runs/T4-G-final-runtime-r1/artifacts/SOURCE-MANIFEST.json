@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/tabler/tabler",
+  "tag": "@tabler/core@1.7.1",
+  "revision": "07f60c07da13d8ff957a370434b7ef5c86f5ab94",
+  "license": "MIT",
+  "compiled_html": {
+    "url": "https://preview.tabler.io/settings.html",
+    "reported_version": "1.7.1",
+    "sha256": "ed80162e38d7667bfe020b5d16d228c4adc64f301233cfbeeeae6f606697a06e",
+    "scope": "Official deployed HTML snapshot. Exact deployment commit is not advertised; related 1.7.1 tagged source is separately preserved."
+  },
+  "package": {
+    "url": "https://registry.npmjs.org/@tabler/core/-/core-1.7.1.tgz",
+    "sha256": "1dad9578dddc5c50bcbe055c8cfa93c92a0f1fc52a37fe673965aec993005e98"
+  },
+  "preparation_changes": [
+    "retain original full settings layout and native framework assets",
+    "remove remote advertising script, favicon references and portrait background URLs to make fixture local and rights-bounded",
+    "replace business fields with synthetic profile content; add notification switch using the identical existing Tabler switch structure",
+    "wire browser-local authoritative settings service and label fixture theme/language controls with existing Tabler buttons",
+    "keep source gallery navigation as upstream context, outside the bounded settings task",
+    "retain source-referenced brand SVGs from the exact 1.7.1 tag; use native avatar initials fallback instead of portrait URLs"
+  ],
+  "selected_integration_resource": {
+    "source_path": "shared/components/demo/Toast.astro",
+    "compiled_snapshot_url": "https://preview.tabler.io/toasts.html",
+    "snapshot_sha256": "c5d0c06e11c2990ef70e5502cc72c2a2a8f6d13af25ac08d64a9859fe93c5e5d",
+    "variant": "toast-cookies: action-bearing toast, data-bs-autohide=false",
+    "block_sha256": "767fe7aaddd46979d9f2748c1488063902086109962051881aeae94ad04dc75a",
+    "scope": "Preserve mature Toast layout and Bootstrap/Tabler dismissal behavior; replace content/action binding as specified in INTEGRATION-DECISION.md."
+  }
+}

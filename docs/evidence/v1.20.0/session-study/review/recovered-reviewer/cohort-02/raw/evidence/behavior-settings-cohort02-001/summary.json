@@ -1,0 +1,49 @@
+[
+  {
+    "product": "P05",
+    "checks": [
+      {
+        "name": "pending_snapshot_and_newer_draft",
+        "pass": true,
+        "stored": {
+          "schemaVersion": 1,
+          "settings": {
+            "displayName": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "organization": "跨城市田野研究协作小组 — Longitudinal everyday-mobility research programme",
+            "location": "Singapore / 新加坡",
+            "email": "mei.lin@example.invalid",
+            "weeklyDigest": true,
+            "publicProfile": false
+          },
+          "savedAt": "2026-11-01T09:54:57.897Z"
+        }
+      },
+      {
+        "name": "cancel_restores",
+        "pass": true
+      },
+      {
+        "name": "failure_preserves_previous_store_and_draft",
+        "pass": true
+      },
+      {
+        "name": "retry_contract",
+        "pass": true,
+        "expected_saved_name": "Newer draft P05 / 更新草稿",
+        "observed_saved_name": "Newer draft P05 / 更新草稿",
+        "observed_draft": "Newer draft P05 / 更新草稿"
+      },
+      {
+        "name": "invalid_focus_and_association",
+        "pass": true
+      },
+      {
+        "name": "reload_persistence",
+        "pass": true
+      }
+    ],
+    "failure": null,
+    "console_errors": [],
+    "evidence": "/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/evidence/behavior-settings-cohort02-001/P05.json"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "original_subprocess_capture",
+  "command": [
+    "python3",
+    "docs/evidence/v1.20.0/session-study/support/continuation/replay_snapshot.py",
+    "--repo",
+    ".",
+    "--cell",
+    "T3-C-r1",
+    "--snapshot-directory",
+    "docs/evidence/v1.20.0/session-study/supplementary-runs/T3-C-path-relocation-r2",
+    "--output",
+    "/workspace/scratch/c0a45b688c5b/ui-study/replay-audit/T3-C-path-relocation-r2"
+  ],
+  "cwd": "/workspace/scratch/c0a45b688c5b/UI-Spec-Studio-release",
+  "started_at": "2026-11-01T12:57:21.324778+00:00",
+  "timeout_seconds": 600,
+  "environment": "inherited; values not exported",
+  "status": "completed",
+  "returncode": 0,
+  "ended_at": "2026-11-01T12:57:25.099610+00:00",
+  "wall_seconds": 3.774839,
+  "artifacts": {
+    "stdout.txt": {
+      "bytes": 320,
+      "sha256": "7f0f10e8af0aa16b68d86be88956d127e0954e73fdbb270cdb3c778615e4e2c3"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

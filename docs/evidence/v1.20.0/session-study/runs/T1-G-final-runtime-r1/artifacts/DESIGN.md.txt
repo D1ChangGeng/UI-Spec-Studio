@@ -1,0 +1,33 @@
+# Fieldnotes settings — active UI SPEC
+
+## Goal and scope
+One cohesive settings increment: edit identity, notification and profile visibility; see accurate validation and save outcomes; recover from a failure; return to persisted values. Keep Tabler 1.7.1 page/layout/type/surface/control/theme family and the authoritative browser-local store unchanged. Gallery routes outside settings are excluded by INPUT.md.
+
+## Current design model
+L0: direct, calm account editing in English and Simplified Chinese. L1: edit → validate → pending → failure → retry → saved → Cancel/reload/return. L2: retain settings sidebar and single document scroll. L3: source form-control, switch, alert, button and grid classes. L4: source type, spacing, border and theme roles; no invented decorative treatments. L5: settings-store.js owns validation and persistence; controller owns field associations, draft/status presentation, language and focus continuity.
+
+## Evidence questions before implementation
+1. Does the inherited settings composition retain legibility and action reachability at 1280×600 and 390×844? Capture baseline and integrated views.
+2. Can Tabler validation and alert families express field errors and save outcomes without replacing the foundation? Inspect source/documented examples and local trial.
+3. Does success distinguish the submitted snapshot from subsequent edits, and do locale/theme switches preserve draft/focus? Exercise actual storage, pending input, failure/retry and return.
+
+## Provisional decisions
+Retain the complete mature foundation; broaden profile inputs within the same responsive grid when baseline demonstrates text crowding. Associate errors with fields and use Tabler invalid feedback. Put live save feedback with the action footer, preserving one scroll owner. Keep language/theme updates in-page. Independent observer supports state reproduction only; primary agent owns all product changes and final visual judgment.
+
+## Status
+Baseline/source inspection and modern web guidance in progress. No visual completion or owner acceptance claimed.
+
+## Observed decisions and revision 1
+Baseline screenshot inspection: the original frame has coherent Tabler type/surface/navigation and appropriate switch scale. Its save status is above the fields and is absent from the short-height save viewport. Original email input is visibly narrow; three equal profile columns crowd bilingual content. The first product trial retains the 3:9 card/nav relationship, native type/material tokens and switch family while grouping the four profile fields into a source responsive two-column grid, moving fixture buttons into the source page-header action row, and bringing status into the footer. Validation uses documented is-invalid/invalid-feedback plus ARIA associations. Alerts use the existing alert family. No handwritten CSS or original visual construction is used.
+
+The trial at 390×844 demonstrated that the long representative name requires three text lines; the fixed two-row textarea clipped content. Tabler 1.7.1 already bundles Autosize, confirmed in the local bundle and official documentation (evidence/tools/web-004.json), so the repair uses data-bs-toggle=autosize and update() after programmatic restore. The floating gallery Customize shortcut overlapped the narrow form in the viewed capture; the duplicate shortcut now uses Tabler d-none/d-md-inline-flex while the existing menu entry remains. Header fixture controls wrap as a full-width row on narrow screens using the source grid.
+
+Observer run-02 showed that disabling a focused Save drops focus to BODY and Tab subsequently bypasses retry. The controller now restores the enabled Save/Try again control only when BODY still owns focus, preserving newer field/utility focus. This is state/focus integration, not a visual replacement. The authoritative store is unchanged.
+
+## Revision 2: validation click continuity
+The main-agent four-variant test failed validation focus. Instrumented focus events (evidence/focus-diagnosis.json) showed that the click never submitted: blur validation inserted a second helper line and moved Save between pointer down/up. The existing invalid-feedback now replaces the normal form-hint visually, preserving its source typographic slot, and blur defers to the explicit Save/Cancel transition when either receives focus. Submission still calls the authoritative validator and focuses its first field error. Failed test and diagnosis remain retained in evidence/commands/006-final-behavior and 007-focus-diagnosis; recheck is separate.
+
+## Revision 3: measured status readability
+The viewed default alert text was pale in light mode. A source-supported text-body trial retained the same alert surface/border and increased measured text contrast from 2.83:1 to 9.59:1 in light and from 4.47:1 to 10.85:1 in dark (canvas sampling of computed colors, evidence/commands/010-alert-contrast-trial). The final alert composes text-body with the original alert-info/success/danger family, explicitly supported by the official alert documentation's content-color configuration. This is a token/class configuration; no custom color or CSS was introduced. Functional results from final-behavior-02 are carried forward because only this presentation class changed afterward; final-render and final-state-view capture the actual last revision.
+
+The four-variant multi-error validation recheck passed all 68 assertions in evidence/final-behavior-02/results.json. This resolves the issue listed as pending at the historical observer report boundary.

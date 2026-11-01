@@ -1,0 +1,42 @@
+<!-- Derived navigation copy; never use as an original participant export. -->
+
+> Repository navigation copy. The participant report is retained byte for byte in [FINAL.md.txt](FINAL.md.txt) and the workspace overlay archives. Only local artifact link destinations below are adapted for this repository; directory links lead to the complete-workspace reconstruction instructions.
+
+# Meridian T2 delivered with one verification gap
+
+Implemented and rebuilt the conversation increment in `app/`, preserving the complete assistant-ui cloud-template family and its native conversation state. The source, lockfile, built `app/dist/`, original failures, research, captures, and decision records are retained in this work package.
+
+## What changed
+
+- **Recognizable attachments.** Documents now use the supplied File.Root/Icon/Name surface, with persistent filename text and a “Filename only” label. The supplied Dialog exposes the complete long filename and explains that contents are never read or uploaded. The attachment band stays one row; keyboard focus reveals the whole active chip. Removal returns focus to the composer.
+- **Bounded input growth.** The input preserves the original single-line 94px composer and 192px tall-view textarea ceiling. At 1280×600 its textarea cap is 152px, enough for six 24px lines plus padding. With four filenames and a long draft, the composer is 260px tall, compared with 310px in the baseline, leaving 50px more reading space.
+- **Reading continuity.** The viewport uses assistant-ui's supported bottom-anchor configuration with CSS scroll-auto. An initial smooth-scroll trial visibly lost the reader's position after a long question; both the main and independent challenger reproduced it. Immediate positioning fixed that measured condition while preserving the source controller's manual pause and explicit return behavior.
+- **Stop and recovery.** Source text smoothing remains enabled during generation and flushes already-received text when the runtime stops, avoiding a lingering typewriter tail. Stop restores input focus without scrolling. Retry/regenerate wording and the main composer/file controls have English and Chinese labels.
+- **Build compatibility.** Removed TypeScript 7's obsolete baseUrl option and included Vite's CSS import types. No dependency or lockfile change was needed.
+
+## Verification
+
+The 1440×900, 1280×600 and 390×844 conditions were exercised in light/English and dark/Chinese. The main designer personally inspected all six final populated composer captures. Checks covered one/six/long input, four filenames, full-name disclosure, Escape return, complete focused-chip visibility, removal focus and absence of horizontal page overflow.
+
+The final focused episode run passed 21 assertions covering Shift+Enter, streaming, manual scroll-away, return while content grows, a second upward scroll, Stop stability and focus, deliberate failure/retry through the full seven-theme answer, repeated questions, Escape cancellation and reduced motion. The earlier broader run completed 80 assertions without assertion failures but stopped when the Chinese response finished before its Stop step. Its timing error and a subsequent script extraction error remain recorded; the corrected episode run completed successfully.
+
+TypeScript and the final production build pass. Build output retains a large-bundle warning (about 1.29 MB JavaScript, 392 KB gzip); device performance was not benchmarked. Detailed evidence: `evidence/commands/011-final-browser`, `012-types-final`, `014-final-episodes-corrected`, `015-build-final`, `evidence/final/events.json`, and `evidence/final3/events.json`.
+
+## Run and review
+
+```bash
+cd /workspace/scratch/708e8b7f118e/ui-study/worksets/w14/app
+npm run dev -- --host 127.0.0.1 --port 4414
+```
+
+Open `http://127.0.0.1:4414/?theme=light&lang=en` or `http://127.0.0.1:4414/?theme=dark&lang=zh`. For the built artifact, run `python3 -m http.server 4414 --bind 127.0.0.1 --directory dist`.
+
+Read `SPEC.md` for source responsibilities and consequential revisions, `VISUAL-REVIEW.md` for actual viewing scope, `DELEGATION.json` for child requests/results, `evidence/research/RESEARCH-REPORT.md` for the compared resources, and `evidence/challenger/REPORT.md` for independent counterevidence.
+
+## Remaining limits
+
+This remains the specified in-memory synthetic application: no real model service, file-content upload or persistent remote history. Some unchanged upstream shell labels remain English in the Chinese condition. The attachment strip intentionally truncates filenames until opened; it is not claimed superior to a vertical list for every mobile scanning task. Browser checks used Chromium 143 and viewport emulation. Native mobile keyboards, touch, screen readers, other engines and natural-time playback remain unverified. User approval and production deployment are not implied.
+
+**Unfinished verification:** the final narrow-screen edit/update probe timed out locating the upstream Edit control after cancellation (command 016). It did not establish a product defect or a successful edit path; editing remains inherited and needs a fresh affordance-level check. The 250ms settled filename-dialog capture exists, but was not personally opened before the substantive time bound. Its prior entry-state capture was viewed. The owned preview was stopped after the final build; use the run command above to restart.
+
+**Timing:** the recorded product-work close is 2026-11-01T11:52:55.436367Z, 3.294 seconds after the conservative 30-minute boundary. This small recorded overrun is retained, not backdated. Subsequent activity only preserved records and prepared the handover.

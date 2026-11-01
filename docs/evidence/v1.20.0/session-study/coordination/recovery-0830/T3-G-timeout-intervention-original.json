@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "Actual coordinator timeout intervention and preservation request",
+  "observed_recorded_at": "2026-11-01 11:21:59 UTC",
+  "cell_id": "T3-G-final-runtime-r1",
+  "agent_id": "/root/product_12_recovered",
+  "request_prepared_at": "2026-11-01T10:50:56.102555+00:00",
+  "observation_at": "2026-11-01 11:21:37 UTC",
+  "observed_files": {
+    "final_report_exists": false,
+    "latest_included_file": "evidence/commands/002-server-baseline/command.json",
+    "latest_modified": "2026-11-01T11:03:01.655444+00:00"
+  },
+  "observation_scope": "Filesystem modification times and absence of FINAL.md are coordinator observations, not native engine timing or proof of all pending internal work.",
+  "calls": [
+    {
+      "tool": "collaboration.interrupt_agent",
+      "arguments": {
+        "target": "/root/product_12_recovered"
+      },
+      "result": {
+        "previous_status": "running"
+      }
+    },
+    {
+      "tool": "collaboration.followup_task",
+      "arguments": {
+        "target": "/root/product_12_recovered",
+        "message": "The registered 1,800-second substantive window has ended (request prepared 10:50:56 UTC; coordinator observation 11:21:37 UTC). I interrupted the still-running turn after timing messages received no response. This follow-up authorizes preservation and a truthful terminal report only: do not implement, repair, research or run new product verification. Retain all actual existing work, tool exports, original child report/completion and any pending original returned data. State what was last completed, any host/tool interruption or unresolved state, and actual last substantive time where known. Save FINAL.md describing the delivered state honestly, retain a source/hash inventory, stop only preview processes you own, and return that same final report. Keep missing final-product verification explicitly missing; do not create replacement evidence or inspect other products/coordinating records."
+      },
+      "returned_content": null
+    }
+  ],
+  "synthetic": false
+}

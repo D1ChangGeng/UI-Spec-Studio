@@ -9,7 +9,7 @@ import tempfile
 import unittest
 import zipfile
 
-from source_continuity import runtime_v118
+from source_continuity import runtime_v118, runtime_v119
 from test_tools import ROOT, package
 
 
@@ -33,7 +33,7 @@ class DefaultDenyReleaseIdentityTests(unittest.TestCase):
                            for row in predecessor['files']}
         for row in self.ledger['files']:
             with self.subTest(path=row['path']):
-                current = (ROOT/row['path']).read_bytes()
+                current = runtime_v119(ROOT, row['path'])
                 prior = runtime_v118(ROOT, row['path'])
                 self.assertEqual(digest(current), row['current_sha256'])
                 self.assertEqual(digest(prior), row['prior_sha256'])
@@ -192,13 +192,13 @@ class DefaultDenyStudyIdentityTests(unittest.TestCase):
                     elif relative in changes:
                         change = changes[relative]
                         expected = change['tested_text'].encode()
-                        current = (ROOT/repo_path).read_bytes()
+                        current = runtime_v119(ROOT, repo_path)
                         self.assertEqual(current, change['release_text'].encode())
                         self.assertEqual(digest(expected), change['tested_sha256'])
                         self.assertEqual(digest(current), change['release_sha256'])
                         self.assertNotEqual(expected, current)
                     else:
-                        expected = (ROOT/repo_path).read_bytes()
+                        expected = runtime_v119(ROOT, repo_path)
                     self.assertEqual(content, expected)
         release_path = self.study/delta['released_archive']
         self.assertEqual(digest(release_path.read_bytes()), delta['released_archive_sha256'])
@@ -210,7 +210,7 @@ class DefaultDenyStudyIdentityTests(unittest.TestCase):
             for relative, sha in delta['released_files'].items():
                 content = archive.read('ui-spec/'+relative)
                 self.assertEqual(digest(content), sha)
-                self.assertEqual(content, (ROOT/'skills/ui-spec'/relative).read_bytes())
+                self.assertEqual(content, runtime_v119(ROOT, 'skills/ui-spec/'+relative))
 
     def test_all_frozen_outputs_are_intact_and_in_source_distribution(self):
         distributed = set(package.source_files(ROOT))

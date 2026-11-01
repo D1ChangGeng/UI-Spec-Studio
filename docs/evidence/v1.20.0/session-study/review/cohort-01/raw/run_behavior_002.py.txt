@@ -1,0 +1,106 @@
+#!/usr/bin/env python3
+import os, sys, json, subprocess, datetime, traceback, time, urllib.request
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+ROOT=Path("/workspace/scratch/5499118f5564/ui-study/independent-review");OUT=ROOT/"evidence/behavior-002";OUT.mkdir(parents=True,exist_ok=False)
+CHROME="/tmp/ui-spec-preview-browser/chrome-headless-shell-143.0.7499.4/chrome-headless-shell-linux64/chrome-headless-shell"
+os.environ["FONTCONFIG_FILE"]="/tmp/ui-spec-fonts/fonts.conf";os.environ["PLAYWRIGHT_BROWSERS_PATH"]="/tmp/ui-spec-preview-browser"
+NAMES=["notes.txt","城市出行访谈摘要_2026-10-31_final-revised-notes.txt","accessibility-interviews-longitudinal-research-final.txt","reading-continuity-fieldnotes-working-copy.txt"]
+SIX="Please compare these materials.\nSeparate observations from interpretation.\n城市交通研究 notes\nKeep caveats visible.\nInclude seven themes.\nThen suggest next questions."
+records=[]
+def now():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+def log(p,event,**d):
+  o={"at":now(),"product":p,"event":event,**d};records.append(o);(OUT/"events.json").write_text(json.dumps(records,ensure_ascii=False,indent=2)+"\n");print(json.dumps(o,ensure_ascii=False),flush=True)
+def snap(page,p,name):
+  path=OUT/f"{p}-{name}.png";page.screenshot(path=str(path));log(p,"screenshot",path=str(path),name=name,viewport=page.viewport_size)
+def metrics(page):
+  return page.evaluate("""() => {
+    const v=document.querySelector('[data-slot=aui_thread-viewport]'), c=document.querySelector('.aui-composer-root'), a=[...document.querySelectorAll('.aui-assistant-message-root')], i=document.querySelector('textarea.aui-composer-input'), e=document.activeElement, b=document.querySelector('.aui-thread-scroll-to-bottom');
+    return {viewport:{w:innerWidth,h:innerHeight},scroll:v?{top:v.scrollTop,height:v.clientHeight,scrollHeight:v.scrollHeight,scrollWidth:v.scrollWidth,width:v.clientWidth}:null,composer:c?.getBoundingClientRect().toJSON(),input:i?{height:i.clientHeight,scrollHeight:i.scrollHeight,value:i.value}:null,assistantCount:a.length,lastAssistantText:a.at(-1)?.innerText||'',active:{tag:e?.tagName,label:e?.getAttribute('aria-label'),class:e?.className,text:e?.textContent?.slice(0,120)},returnButton:b?{disabled:b.disabled,rect:b.getBoundingClientRect().toJSON()}:null,documentOverflow:document.documentElement.scrollWidth>innerWidth,dialogs:[...document.querySelectorAll('[role=dialog]')].map(e=>e.innerText),tooltips:[...document.querySelectorAll('[role=tooltip]')].map(e=>e.innerText),attachmentCount:document.querySelectorAll('.aui-composer-attachments .aui-attachment-root').length}
+  }""")
+def compact(m):
+  if "lastAssistantText" in m:m={**m,"lastAssistantLength":len(m["lastAssistantText"]),"lastAssistantStart":m["lastAssistantText"][:200],"lastAssistantEnd":m["lastAssistantText"][-200:]};del m["lastAssistantText"]
+  return m
+def attach(page,p):
+  with page.expect_file_chooser() as fc:page.locator(".aui-composer-add-attachment").click()
+  fc.value.set_files([{"name":n,"mimeType":"text/plain","buffer":b"synthetic reviewer fixture"} for n in NAMES])
+  page.wait_for_timeout(200);log(p,"attached_filenames",names=NAMES,metrics=compact(metrics(page)))
+def details(page,p,suffix):
+  if p=="P09":
+    item=page.get_by_role("group",name=NAMES[1],exact=True);item.focus();page.wait_for_timeout(450)
+    log(p,"filename_focus_disclosure_"+suffix,metrics=compact(metrics(page)));snap(page,p,"filename-disclosure-"+suffix)
+    page.keyboard.press("Escape");page.wait_for_timeout(200);log(p,"disclosure_escape_"+suffix,metrics=compact(metrics(page)))
+  else:
+    item=page.get_by_role("button",name=("View attachment details: "+NAMES[1]) if suffix=="desktop" else ("查看附件详情："+NAMES[1]),exact=True)
+    item.focus();page.keyboard.press("Enter");page.wait_for_timeout(450)
+    log(p,"filename_dialog_"+suffix,metrics=compact(metrics(page)));snap(page,p,"filename-disclosure-"+suffix)
+    page.keyboard.press("Escape");page.wait_for_timeout(200);log(p,"disclosure_escape_"+suffix,metrics=compact(metrics(page)))
+servers=[]
+try:
+  for p in ["P09","P10"]:
+    port=4600+int(p[1:]);serve=ROOT/"disposable"/p/"app/dist";out=(OUT/f"{p}-server-stdout.txt").open("wb");err=(OUT/f"{p}-server-stderr.txt").open("wb")
+    proc=subprocess.Popen([sys.executable,"-m","http.server",str(port),"--bind","127.0.0.1","--directory",str(serve)],stdout=out,stderr=err,env=os.environ.copy());servers.append((p,proc,out,err))
+    for _ in range(50):
+      try:urllib.request.urlopen(f"http://127.0.0.1:{port}/",timeout=.2).close();break
+      except Exception:
+        if proc.poll() is not None:raise RuntimeError(f"{p} server exited")
+        time.sleep(.1)
+    log(p,"server_started",port=port,pid=proc.pid,serve=str(serve))
+  with sync_playwright() as pw:
+    b=pw.chromium.launch(executable_path=CHROME,headless=True,args=["--no-sandbox"],env=os.environ.copy())
+    log("COHORT","browser",version=b.version,executable=CHROME,fontconfig=os.environ["FONTCONFIG_FILE"],playwright="1.57.0")
+    for p in ["P09","P10"]:
+      c=b.new_context(viewport={"width":1280,"height":600},device_scale_factor=1,locale="en-US");c.tracing.start(screenshots=True,snapshots=True,sources=True)
+      page=c.new_page();page.set_default_timeout(10000);page.on("pageerror",lambda e,p=p:log(p,"pageerror",message=str(e)))
+      try:
+        page.goto(f"http://127.0.0.1:{4600+int(p[1:])}/?theme=light&lang=en",wait_until="networkidle")
+        inp=page.locator("textarea.aui-composer-input");inp.fill(SIX);attach(page,p)
+        snap(page,p,"six-lines-four-files-compact");log(p,"six_lines_four_files_compact",metrics=compact(metrics(page)))
+        details(page,p,"desktop")
+        page.get_by_role("button",name="Remove notes.txt",exact=True).click();page.wait_for_timeout(150);log(p,"remove_attachment_focus",metrics=compact(metrics(page)))
+        inp.fill("\n".join(f"Question line {i}: 城市交通研究 and a long follow-up to check." for i in range(1,21)))
+        snap(page,p,"twenty-lines-compact");log(p,"twenty_lines_compact",metrics=compact(metrics(page)))
+        inp.fill(SIX);page.set_viewport_size({"width":1440,"height":900});snap(page,p,"six-lines-desktop");page.set_viewport_size({"width":1280,"height":600})
+        inp.focus();page.keyboard.press("Enter");page.wait_for_timeout(1200);log(p,"stream_started",metrics=compact(metrics(page)))
+        v=page.locator("[data-slot=aui_thread-viewport]");rect=v.bounding_box();page.mouse.move(rect["x"]+rect["width"]*.65,rect["y"]+100);page.mouse.wheel(0,-650);page.wait_for_timeout(350)
+        before=metrics(page);log(p,"manual_scroll_away",metrics=compact(before));snap(page,p,"manual-scroll-away")
+        page.wait_for_timeout(1000);after=metrics(page);log(p,"growth_while_away",metrics=compact(after),scroll_top_delta=after["scroll"]["top"]-before["scroll"]["top"],assistant_character_growth=len(after["lastAssistantText"])-len(before["lastAssistantText"]))
+        page.locator(".aui-thread-scroll-to-bottom").click();page.wait_for_timeout(550)
+        log(p,"return_to_latest",metrics=compact(metrics(page)));snap(page,p,"returned-while-streaming")
+        page.get_by_role("button",name="Stop generating",exact=True).click();page.wait_for_timeout(180)
+        stopped=metrics(page);page.wait_for_timeout(700);later=metrics(page)
+        log(p,"stop_and_focus",metrics=compact(later),text_changed_after_stop=stopped["lastAssistantText"]!=later["lastAssistantText"]);snap(page,p,"stopped")
+        inp.fill("Independent reviewer recovery check [fail]");inp.press("Enter");page.wait_for_timeout(1300)
+        log(p,"failed_response",metrics=compact(metrics(page)),body_end=page.locator("body").inner_text()[-1600:]);snap(page,p,"failed-response")
+        retry_name="Regenerate response" if p=="P09" else "Retry response"
+        page.get_by_role("button",name=retry_name,exact=True).last.click();page.wait_for_timeout(8500)
+        done=metrics(page);log(p,"retried_complete",metrics=compact(done),seventh_theme_present="Observation theme 7" in done["lastAssistantText"]);snap(page,p,"retried-complete")
+        inp.fill("A short follow-up question");inp.press("Enter");page.wait_for_timeout(350)
+        page.get_by_role("button",name="Stop generating",exact=True).click();page.wait_for_timeout(150);log(p,"repeat_question",metrics=compact(metrics(page)))
+        page.reload(wait_until="networkidle");log(p,"reload_seeded_memory_contract",metrics=compact(metrics(page)))
+      except Exception as e:
+        log(p,"test_exception",message=str(e),traceback=traceback.format_exc())
+        try:snap(page,p,"exception-desktop")
+        except:pass
+      finally:c.tracing.stop(path=str(OUT/f"{p}-desktop-trace.zip"));c.close()
+      c=b.new_context(viewport={"width":390,"height":844},device_scale_factor=1,locale="zh-CN",is_mobile=True,has_touch=True);c.tracing.start(screenshots=True,snapshots=True,sources=True)
+      page=c.new_page();page.set_default_timeout(10000)
+      try:
+        page.goto(f"http://127.0.0.1:{4600+int(p[1:])}/?theme=dark&lang=zh",wait_until="networkidle")
+        inp=page.locator("textarea.aui-composer-input");inp.fill(SIX);attach(page,p)
+        snap(page,p,"narrow-dark-six-lines-four-files");log(p,"narrow_dark_layout",metrics=compact(metrics(page)))
+        details(page,p,"narrow")
+        page.get_by_role("button",name="移除 notes.txt",exact=True).click();page.wait_for_timeout(150);log(p,"narrow_remove_focus",metrics=compact(metrics(page)))
+      except Exception as e:
+        log(p,"test_exception_narrow",message=str(e),traceback=traceback.format_exc())
+        try:snap(page,p,"exception-narrow")
+        except:pass
+      finally:c.tracing.stop(path=str(OUT/f"{p}-narrow-trace.zip"));c.close()
+    b.close()
+finally:
+  for p,proc,out,err in servers:
+    proc.terminate()
+    try:proc.wait(timeout=5)
+    except subprocess.TimeoutExpired:proc.kill();proc.wait()
+    out.close();err.close();log(p,"server_stopped",pid=proc.pid,returncode=proc.returncode)
+
