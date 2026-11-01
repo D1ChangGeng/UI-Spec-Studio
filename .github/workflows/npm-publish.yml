@@ -59,7 +59,7 @@ jobs:
         shell: bash
         run: |
           npm pack --dry-run ./dist/ui-spec-installer.tgz --json > "$RUNNER_TEMP/pack-report.json"
-          node -e "const r=require(process.argv[1]); if(r.length!==1 || r[0].name!=='ui-spec-studio' || !r[0].files.some(f=>f.path==='bin/ui-spec.mjs') || !r[0].files.some(f=>f.path==='payload/skill/SKILL.md'))process.exit(1);" "$RUNNER_TEMP/pack-report.json"
+          node -e "const r=require(process.argv[1]); if(r.length!==1 || r[0].name!=='ui-spec-studio' || !['bin/ui-spec.mjs','payload/skill/SKILL.md','README.md','LICENSE'].every(n=>r[0].files.some(f=>f.path===n)))process.exit(1);" "$RUNNER_TEMP/pack-report.json"
           npx --yes --offline "file://$PWD/dist/ui-spec-installer.tgz" --version | grep -F "ui-spec-studio $(cat VERSION)"
       - name: Provide standalone npm bootstrap artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
