@@ -114,7 +114,11 @@ def run() -> dict[str, object]:
         old_target.parent.mkdir(parents=True)
         shutil.copytree(source_skill, old_target)
         old_entry = old_target / 'SKILL.md'
-        original = old_entry.read_bytes().replace(b'version: "1.20.2"', b'version: "1.20.1"') + b'\n# user annotation\n'
+        current_version = (ROOT / 'VERSION').read_text(encoding='utf-8').strip().encode('ascii')
+        fresh = old_entry.read_bytes()
+        original = fresh.replace(b'version: "' + current_version + b'"', b'version: "1.20.1"') + b'\n# user annotation\n'
+        if original == fresh + b'\n# user annotation\n':
+            raise AssertionError('Failed to construct a byte-different legacy Skill fixture')
         old_entry.write_bytes(original)
         flags = ['--agent', 'codex', '--project', str(old)]
         cli_command = ['node', str(cli)]
