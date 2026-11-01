@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "coordinator-derived dispatch deviation audit; not original tool output",
+  "cell_id": "T2-E-observer-r1",
+  "agent_id": "/root/t2observer_product",
+  "observed_at": "2026-11-01T12:54:21.265461+00:00",
+  "spawn_export": {
+    "path": "docs/evidence/v1.20.0/session-study/continuation-2100/coordination/t2observer_product-spawn.json",
+    "sha256": "87130031a2ae86c1bcf8df3e8101c11e4c02d035d339480c49d3ce11cb2312c5"
+  },
+  "registered_prompt": {
+    "path": "docs/evidence/v1.20.0/session-study/prompts/T2-E-observer-r1.txt",
+    "sha256": "dbe63031377080f7c5356f1474d3e090ad779f7147ba50fb2f5225bf584c717a"
+  },
+  "actual_dispatched_prompt": {
+    "path": "docs/evidence/v1.20.0/session-study/continuation-2100/prompt-audits/T2-E-observer-r1/actual-dispatched-prompt.txt",
+    "sha256": "de3261191275922ce12d42a9427354c18b508a63958163d7ec6d2a67199c59e0"
+  },
+  "diff": {
+    "path": "docs/evidence/v1.20.0/session-study/continuation-2100/prompt-audits/T2-E-observer-r1/prompt-diff.txt",
+    "sha256": "c772f141decf0befc76c955b4e0900d31a0b86e4e7984060a10cdc4ddccf7907"
+  },
+  "byte_identical_dispatch": false,
+  "deviation_scope": "The actual spawn message is retained exactly. The registered prompt is unchanged. Current dispatch uses a replacement executor workspace prefix and appends explicit path/evidence/fresh-time-bound instructions; this audit does not treat the resulting bytes as the registered dispatch.",
+  "timing_scope": "spawn exported_at is export time only, not participant run start.",
+  "acceptance_scope": "This record preserves a deviation for coordinator/reviewer adjudication. It does not amend registration or establish original-protocol equivalence or completed participation."
+}
