@@ -2,6 +2,9 @@
 """Exercise Clack's real interactive, Unicode terminal flow under a POSIX PTY."""
 from __future__ import annotations
 import os
+import fcntl
+import struct
+import termios
 from pathlib import Path
 import pty
 import select
@@ -19,6 +22,9 @@ from package_installer import build_installer
 
 def wizard(cmd: list[str], project: Path, keys: bytes, *, timeout: float = 35) -> str:
     master, slave = pty.openpty()
+    # pty.openpty() has zero terminal columns on some CI runners; Clack
+    # will wrap every character if this width is not initialized.
+    fcntl.ioctl(slave, termios.TIOCSWINSZ, struct.pack('HHHH', 44, 140, 0, 0))
     env = dict(os.environ, CI='false', TERM='xterm-256color', NO_COLOR='1')
     proc = subprocess.Popen(cmd, cwd=project, env=env, stdin=slave, stdout=slave, stderr=slave,
                             start_new_session=True)
