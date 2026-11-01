@@ -1,0 +1,37 @@
+# Source adoption and comparison
+
+## Decision
+
+Adopt Paper 0.10.0 as the complete workspace foundation. This is an existing TiddlyWiki theme, not an original replacement interface. Keep the native story, sidebar, editor, save boundary and data model. The final design uses Paper's composition, serif reading, sans navigation, ruled monospace editing, cream/charcoal surfaces, margin rule and Day/Night palettes.
+
+## Actual sources and trials
+
+| Source | Exact source | Evidence and decision |
+|---|---|---|
+| Supplied TiddlyWiki 5.4.1 | https://github.com/TiddlyWiki/TiddlyWiki5 at d391595836e2aead565480763f9bf9eb52e29e75 | Native Vanilla baseline personally viewed. Functional, broad white sheets and compact sans typography; retained as the product engine, not selected as final expressive direction. Vendor distribution untouched. |
+| Paper 0.10.0, Simon Huber / BurningTreeC | https://github.com/BurningTreeC/vanilla-paper at 031a78d4d4187128c632f8a647fa05408eddc700, MIT | Original author demo downloaded and rendered; original source inspected. Same populated interview and editor trialed. Chosen because reading, editing and navigation have distinct yet related typography and material, with native controls retained. |
+| Notebook 1.4.1, Nicolas Petton | https://github.com/NicolasPetton/Notebook at 465c832c885894ee3c97be76449cc524e1252eb0, MIT | Original demo and same-content local trial personally viewed. Its centered sheet, top search strip, hidden left sidebar and denser sans text challenged the initial Paper preference. Useful compact navigation, but weaker distinction between operational UI and sustained reading for this goal. Removed from final runtime; source retained as research. |
+| Tufte CSS | https://github.com/edwardtufte/tufte-css at b5d7b7bbe5ce9c4c50fcfad4f19ee3646cfd7ae1 | Original local publication page rendered and personally viewed as a cross-domain typography/composition reference. Strong measure and asymmetry informed the comparison; article/sidenote structure did not supply editable workspace behavior. No code, imagery or fonts adopted. |
+
+Source repositories and exact downloaded demos are retained in evidence/research. Actual search/source responses are web-001.json through web-003.json; inaccessible GitHub/talk open results are preserved. source-identities.json contains source file hashes and revision identities. Baseline/original/same-content screenshots and their actual image-tool exports are retained.
+
+## Source-to-product mapping
+
+- The 55 Paper theme files in app/wiki/themes/vanilla-paper are byte-for-byte identical to the selected revision. The upstream MIT LICENSE is also included.
+- Native configuration selects Paper and its Day palette, en-GB, always-visible note controls and sticky titles.
+- Source text metrics are equivalent rem/unitless values: 15px UI at the default root becomes 0.9375rem; 24px line height becomes 1.6; 17px body becomes 1.0625rem; 30px body rhythm becomes 1.7647058823529411. No new font binaries are shipped. The required Noto CJK fixture is a host resource.
+- Day and Night palette copies retain their original titles. Three foreground roles—note controls, sidebar controls and note subtitle—reference the source's existing sidebar-foreground role. No replacement palette or new colors.
+- Three supplied tables use Paper's existing tc-table-wrapper, with tabindex=0, role=region and descriptive bilingual aria-labels. Native editor saves composed these wrappers. All cells and links remain unchanged. At 390px, the ledger and prototype table scroll within the sheet; the observation table fits.
+- No original CSS shell, custom icon set, remote font, image asset or animation engine. No W1/W2/W3 exception was used.
+- No Notebook resources remain in the delivered runtime. The complete native application and existing dependencies remain.
+
+## Verification and repair trail
+
+An early configuration body contained a newline after the exact theme identifier. Actual final-v1 images exposed fallback Vanilla layout. The server was stopped, exact identifiers repaired, duplicate trial files backed up and removed, and final-v2 re-established Paper. The failed screenshots and configuration backups remain.
+
+Final-v2 then exposed the narrow ledger clipping. The source table wrapper resolved it; table-repair/report.json verifies native reload and unchanged cell text, and settled-final-continuation/report.json records keyboard scrolling in both palettes. The first table assertion incorrectly required all tables to scroll even when one fit; its failure is retained.
+
+Some initial editor screenshots captured the native transition. Twenty-four separate settled frames use an 850ms settling period and record frame opacity. The source theme remains unchanged.
+
+See FINAL-INTEGRITY.json for final source equality, eight-note preservation and offline export identity. Note comparison ignores blank-line differences and the added table wrapper lines only; it does not shorten or rewrite supplied prose. Native saves updated modification metadata and title-based filenames.
+

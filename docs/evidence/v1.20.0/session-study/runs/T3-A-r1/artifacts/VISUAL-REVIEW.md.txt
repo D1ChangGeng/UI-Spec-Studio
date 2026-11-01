@@ -1,0 +1,62 @@
+# Visual review
+
+Reviewer: primary agent, retained design and implementation responsibility. No child agents.
+
+## Observations actually made
+
+Original source and baseline PNGs were opened with view_image. Evidence/views contains actual returned objects captured at call time, including image data. These records are observations, not inferred from file creation. A compaction-truncated tool result for views 028–031 was not counted; fresh views 32–35 established those mobile observations.
+
+### Source comparison
+
+The supplied baseline is usable but visually broad, with pale controls and compact sans text. Paper's original has cream manuscript sheets, a red vertical rule, editorial serif reading and quieter sans navigation. Notebook's original has a centered white sheet and persistent top utility strip, denser sans reading and hidden left navigation. Tufte's publication page has an asymmetric serif measure and marginal space, but no workspace contract.
+
+Same-content Paper and Notebook interview trials were personally inspected. Paper's editor has a materially different ruled monospace body; the reading surface retains the longer bilingual paragraphs and useful hierarchy. This difference between source candidates supports the selection, not a claim of user preference.
+
+### Final settled output
+
+Personally opened representative settled frames:
+
+- Day/en-GB 1440×900 reading and editing.
+- Day/zh-Hans 1280×640 reading and editing.
+- Night/zh-Hans 1440×900 reading and editing.
+- Night/en-GB 1280×640 reading and editing.
+- Day/en-GB 390×844 reading and editing.
+- Night/zh-Hans 390×844 reading and editing.
+- Final delivered entry state at 1440×900.
+- Repaired narrow ledger at its right edge in Day and left edge in Night.
+- Earlier final-v2 long-note, narrow and compact frames, explicitly distinguished from the settled recaptures.
+
+These twelve representative matrix views show opaque resting note surfaces, clear heading roles, readable Chinese alongside serif English, differentiated ruled editor text, visible keyboard focus, and retained native controls. The 390px editor toolbar wraps into rows; title and action controls fit. Long prose continues vertically; it is not shortened. At 1280×640, editing appropriately requires vertical scrolling.
+
+Paper's light sheet and red rule give the workspace a recognizable manuscript identity. Night retains the same roles with charcoal surfaces and warm light text. Sidebar search and note links remain visually separate from content. The final entry screenshot shows the index and the interview in the open list, with the original synthetic-content disclosure and unfinished note link intact.
+
+The corrected narrow ledger right-edge screenshot shows the previously inaccessible final column, inside a clearly outlined focused region. Horizontal movement is limited to the table. This is intentional contained scrolling, not a claim that all columns are simultaneously visible at 390px.
+
+### Captures versus inspection
+
+The settled capture matrix contains all 24 combinations of three requested viewports, two palettes, two UI locales and reading/editing. Browser checks establish condition values, original editor text and no document-level horizontal overflow. Twelve representative matrix images were personally inspected as listed above; saving the remaining images is not presented as personally viewing them.
+
+## Controlled behavior and motion
+
+The final-v2 report records native interview→ledger→interview, complete interview traversal to the last paragraph, English and Chinese edit/save/reload, original restoration, cancel without persistence, and keyboard search→editor. Saved filesystem tiddlers and reload assertions provide persistence evidence. Hash fields in that report differ where one helper trims the final newline; the assertions normalize only that newline and saved raw .tid files are retained.
+
+Normal and reduced-motion sidebar actions were executed and recorded as ordered screenshots with capture time brackets. Personally opened normal-motion 70-labelled sample and reduced-motion 300-labelled sample. Both show stable reading content while the story/sidebar composition changes; these are sampled frames, not measurements of actual 70ms or 300ms elapsed transition time. Reduced-motion read/edit resting states were also captured. Paper's existing reduced-motion CSS is retained; no new motion was introduced.
+
+Video is retained under evidence/final-v2/video. Natural-speed playback was not inspected. No claim of smooth frame rate, perceptual pacing, complete native-JavaScript motion suppression or vestibular acceptance is made.
+
+## Actual defects and failed checks
+
+- Wrong initial native cancel selector: corrected to the actual localized hint.
+- Saved-note filename assumption: corrected to resolve native files by exact title.
+- Theme identifier newline: actual integration defect found through visual review, corrected before final-v2.
+- Narrow ledger clipping: actual visual defect, corrected through source table composition.
+- Editor capture timing: some v2 frames were transitional; fresh settled captures supersede them for resting appearance.
+- A table-fit assertion was overly strict; continuation accepted either fit or actual keyboard scrolling and passed all six palette/table cases.
+- Optional Control Panel Appearance automation failed twice to locate its tab; the actual outputs remain in commands 019–020. It was not treated as a passed manual settings-route test. Final state was restored and reload-verified separately by command 021.
+
+## Acceptance and limits
+
+Primary experience tasks and source-based expressive direction are complete in the controlled environment. Native error/offline recovery was preserved but not fault-injected. Testing used Chromium 143 headless, device scale 1 and the supplied fonts; physical mobile keyboards, screen readers, other browsers and real team preference were not tested. Core en-GB/zh-Hans states were checked; Paper-specific settings help is source English and was not translated.
+
+The product was built successfully, default state restored, and only this agent's preview server stopped. No remaining known clipping or lost-content defect in the inspected final states. The optional settings route and natural-time motion assessment remain unverified, rather than silently accepted.
+

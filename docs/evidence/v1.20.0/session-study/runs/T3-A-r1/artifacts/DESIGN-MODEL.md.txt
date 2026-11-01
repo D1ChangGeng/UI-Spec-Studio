@@ -1,0 +1,37 @@
+# Fieldnotes — current design model
+
+## Scope and experience
+SPEC-01 owns one coherent editorial research workspace: native TiddlyWiki note reading, linked evidence, editing, search/tag navigation, persistence, light/dark presentation, responsive reflow and quiet operation. The complete product goal remains a distinctive mature visual direction carried into populated bilingual work. User preference acceptance remains pending; execution authority is supplied by TASK/INPUT.
+
+L0: a small bilingual research team should keep observation, interpretation and unfinished arguments distinct. L1: read the complete interview → evidence ledger → return; edit English and Chinese → save → reload; cancel a draft; keyboard search/editor. L2: native story river, sidebar and control panel. L3: inherited note frames, tags, editor, tables and controls. L4: editorial reading measure, explicit type roles and tactile surface identity. L5: unchanged native tiddlyweb/filesystem ownership; original command, browser and image-view exports.
+
+## D1 — whole-workspace foundation (provisional)
+Question: can a coherent editorial theme carry stronger identity than the baseline without replacing native tasks?
+Observed sources: baseline-1440.png; paper-original-1440.png; notebook-original-1440.png, all personally opened via view_image (evidence/views). Original demos have their own content; same-content local trials are next.
+Paper 0.10.0: real cream sheet, thin red margin rule, serif titles/body against sans navigation, narrow 68-character reading measure, separately ruled mono editor. Native sidebar and note controls remain recognizable. Stronger source fit to editorial research goal, provisional favorite.
+Notebook 1.4.1: centered sheet and persistent top utility strip, with hidden left sidebar; compact sans hierarchy and palettes. Materially different composition and navigation; meaningful challenge to the first preference because it reserves more width and keeps search at hand.
+Both MIT sources acquired from original repositories. Paper is actively developed and newer, so compatibility must be established locally rather than inferred from maturity by age. Notebook uses a mobile helper plugin and older source assumptions.
+Next action: install unchanged candidate sources into the current wiki, compare the complete supplied interview/editor at equal viewports and font fixture. Failure of Chinese rhythm, native editor or narrow controls would reopen selection.
+
+## D2 — expression and motion
+Retain the chosen mature source's defining layout/type/material relationships through documented options. No W1/W2/W3 authorization exists and none is claimed. No invented CSS shell, icon system, imagery or animation.
+Paper's source offers toolbaralways, stickytitles, marginrule, ruleseditor and global animation duration. Potential configuration: always-visible actions to improve discovery; sticky title for long note continuation, subject to actual narrow/editor trial. Reduced-motion implementation must be observed.
+
+## Evidence boundaries and next work
+Original demos establish source appearance only. Local screenshots establish actual rendered states; browser assertions establish their explicit behavior. Native save proof requires filesystem text and reload agreement. Ordered frames can establish sampled transition states; natural-time playback is not yet inspected.
+Source data and screenshots are in evidence/research and evidence/captures. No child agents: ALLOCATION explicitly reserves execution to this agent. Runtime environment-status capability and /etc/codex/network-policy.json were not available; normal tool escalation is used for authorized package writes/sockets/network.
+
+
+## Revision — selected Paper after same-content trial
+The viewed 1440px interview and editor retain Paper's margin, serif reading, separate sans chrome and ruled mono editing. Notebook's topbar is a useful compact alternative but its sans reading surface creates less distinction between content and operation. Tufte CSS's local original publication demo was viewed as a cross-domain reference: strong measure and typographic roles support sustained reading, but its article/sidenote model does not supply native editable workspace behavior; none of its implementation or font assets are adopted.
+Selected: Paper 0.10.0 from revision 031a78d4d4187128c632f8a647fa05408eddc700. The complete theme is installed unchanged under app/wiki/themes/vanilla-paper with its MIT notice. Notebook is retained only as research source, removed from runtime.
+Supported configuration keeps note toolbars always visible and titles sticky. Existing numeric text metrics are expressed equivalently in rem/unitless units to respect user scaling without replacing the source type relationships. The existing Day/Night palettes are copied under their original titles with three narrow foreground-role changes to source sidebar-foreground for more legible note actions and timestamps; no new colors are invented.
+A narrow editor trial capture after resizing displayed the index at the old scroll offset, rather than the intended editor. This is retained as a failed capture condition, not passed editing evidence. Final checks must set viewport before native navigation/editing and capture the actual draft.
+Next: final source selection must pass native persistence, cancel, keyboard search, complete interview/ledger/return, both palettes and required viewports. Sticky titles need assembled inspection, particularly at 390px.
+
+## Revision — configuration fidelity repair
+Final-v1 screenshots were personally viewed and showed the native Vanilla layout despite the Paper palette. The stored theme identifier had a trailing newline, while exact theme resolution requires the actual title. This was an integration defect, not source quality. The theme and option configuration bodies are now exact strings without trailing newlines; duplicate trial configuration files were backed up and removed while the server was stopped. Final-v1 remains failed evidence. A separate test assumption was corrected: the native filesystem adaptor renames a saved note to its title-based filename, so persistence checks resolve by tiddler title. Final-v2 must re-establish selected-source appearance and complete task verification.
+
+## Completion revision
+Final-v2 passed native reading/link-return, bilingual save/filesystem/reload, original restoration, cancel and keyboard search-to-editor. Full three-viewport, two-palette, two-locale reading/editing states were captured. Actual image review found narrow table clipping; the source tc-table-wrapper was composed around the three supplied tables through the native editor, preserving cells and links. Keyboard access passes in both palettes, including the observation table that already fits.
+Twenty-four settled recaptures replace transitional editor captures as resting-state evidence. Representative final states were personally opened; actual image tool responses are retained. Native settings-tab capture remains unverified after two selector failures. Default state was independently restored and reload checked with no drafts. npm run build succeeded. FINAL-INTEGRITY.json confirms 55 source theme files unchanged and all eight note bodies preserved apart from wrappers/blank lines. See SOURCE-ADOPTION.md and VISUAL-REVIEW.md for final decision, evidence boundaries and limitations.

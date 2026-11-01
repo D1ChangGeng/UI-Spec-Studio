@@ -9,7 +9,7 @@ context pressure and a human acceptance panel remain unverified.
 
 ## Execution inventory
 
-Observed 2026-11-01T09:03:18.252837+00:00. **9 of 18** registered cells have retained completed evidence records, with **5** completed child contexts. Execution coverage is distinct from product success and release approval.
+Observed 2026-11-01T09:12:38.094643+00:00. **10 of 18** registered cells have retained completed evidence records, with **5** completed child contexts. Execution coverage is distinct from product success and release approval.
 
 Fresh independent reviewer is examining eight anonymous durable products. Earlier five-product original review remains retained; the unavailable later nine-product original review is not used for current acceptance.
 
@@ -21,9 +21,9 @@ Fresh independent reviewer is examining eight anonymous durable products. Earlie
 | T1-G-final-runtime-r1 | G-final-runtime | [Completed record](runs/T1-G-final-runtime-r1/run.json) · [product](runs/T1-G-final-runtime-r1/FINAL.md) | 1 |
 | T2-A-r1 | A | [Completed record](runs/T2-A-r1/run.json) · [product](runs/T2-A-r1/FINAL.md) | 0 |
 | T2-B-r1 | B | [Completed record](runs/T2-B-r1/run.json) · [product](runs/T2-B-r1/FINAL.md) | 1 |
-| T2-C-r1 | C | Frozen inputs restored; fresh complete evidence required | — |
+| T2-C-r1 | C | Fresh execution active; terminal evidence not yet retained | Active |
 | T2-G-final-runtime-r1 | G-final-runtime | Frozen inputs restored; fresh complete evidence required | — |
-| T3-A-r1 | A | Fresh execution active; terminal evidence not yet retained | Active |
+| T3-A-r1 | A | [Completed record](runs/T3-A-r1/run.json) · [product](runs/T3-A-r1/FINAL.md) | 0 |
 | T3-B-r1 | B | [Completed record](runs/T3-B-r1/run.json) · [product](runs/T3-B-r1/FINAL.md) | 1 |
 | T3-C-r1 | C | Frozen inputs restored; fresh complete evidence required | — |
 | T3-G-final-runtime-r1 | G-final-runtime | Frozen inputs restored; fresh complete evidence required | — |

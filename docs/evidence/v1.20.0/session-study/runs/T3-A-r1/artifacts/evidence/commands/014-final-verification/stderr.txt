@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w09/support/verify_product.py", line 161, in <module>
+    asyncio.run(main())
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w09/support/verify_product.py", line 75, in main
+    await confirm(page);disk=await disk_matches(modified)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w09/support/verify_product.py", line 39, in disk_matches
+    actual=body(ROOT/'app/wiki/tiddlers/note-04.tid')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w09/support/verify_product.py", line 11, in body
+    def body(path):return path.read_text().split('\n\n',1)[1].rstrip('\n')
+                          ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/708e8b7f118e/ui-study/worksets/w09/app/wiki/tiddlers/note-04.tid'
