@@ -108,15 +108,18 @@ function findPython() {
 }
 function runAdapter(config, action, options, preflight = false) {
   if (!config.adapter) return;
-  if (config.adapter.runtime !== 'python') fail(`Unsupported adapter runtime: ${config.adapter.runtime}`);
   const entry = safeRelative(config.adapter.entry);
   if (!entry.startsWith('adapters/')) fail('Invalid adapter entry');
-  const python = findPython();
   const flags = options.global ? ['--user'] : ['--project', options.projectRoot];
-  const args = [...python.prefix, join(payload, ...entry.split('/')), action, ...flags];
+  const runtime = config.adapter.runtime === 'python'
+    ? findPython()
+    : config.adapter.runtime === 'node'
+      ? { cmd: process.execPath, prefix: [] }
+      : fail(`Unsupported adapter runtime: ${config.adapter.runtime}`);
+  const args = [...runtime.prefix, join(payload, ...entry.split('/')), action, ...flags];
   if (action === 'install' && options.upgrade) args.push('--upgrade');
   if (preflight) args.push('--dry-run');
-  const result = spawnSync(python.cmd, args, { encoding: 'utf8', maxBuffer: 1024 * 1024 * 5 });
+  const result = spawnSync(runtime.cmd, args, { encoding: 'utf8', maxBuffer: 1024 * 1024 * 5 });
   if (result.status !== 0) fail(`Harness adapter ${action} failed (no Skill changes retained):\n${result.stderr || result.stdout || result.error}`);
   if (!preflight) process.stdout.write(result.stdout);
 }
