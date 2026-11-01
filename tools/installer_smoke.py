@@ -2,6 +2,7 @@
 """Offline end-to-end checks for the release tarball and its managed host adapters."""
 from __future__ import annotations
 import hashlib
+import os
 import json
 import shutil
 from pathlib import Path
@@ -169,22 +170,35 @@ def run() -> dict[str, object]:
         linked_target.parent.mkdir(parents=True)
         shutil.copytree(source_skill, linked_store)
         linked_bytes = (linked_store / 'SKILL.md').read_bytes()
+        linked_created = False
         try:
-            linked_target.symlink_to(linked_store, target_is_directory=True)
+            if sys.platform == 'win32':
+                # Directory junctions do not require Windows Developer Mode.
+                cmd = subprocess.run(['cmd', '/c', 'mklink', '/J', str(linked_target), str(linked_store)],
+                                     capture_output=True, text=True, timeout=15)
+                linked_created = cmd.returncode == 0
+                if not linked_created:
+                    raise AssertionError('Windows Junction creation failed: ' + cmd.stderr)
+            else:
+                linked_target.symlink_to(Path(os.path.relpath(linked_store, linked_target.parent)),
+                                         target_is_directory=True)
+                linked_created = True
         except (OSError, NotImplementedError):
-            pass  # Windows hosts without Developer Mode cannot create this fixture.
-        else:
+            if sys.platform == 'win32':
+                raise  # Junction compatibility must be tested, not skipped.
+        if linked_created:
             flags = ['--agent', 'codex', '--project', str(linked)]
             status = json.loads(command(cli_command + ['status', *flags], base).stdout)
             if status['status'] != 'legacy-link':
-                raise AssertionError('Linked legacy installation was not detected')
+                raise AssertionError('Linked/Junction legacy installation was not detected')
             result = json.loads(command(cli_command + ['install', *flags, '--migrate'], base).stdout)
             archived_link = Path(result['backup'])
-            if not archived_link.is_symlink() or not linked_target.is_dir() or linked_target.is_symlink():
+            is_link = lambda path: path.is_symlink() or (hasattr(path, 'is_junction') and path.is_junction())
+            if not is_link(archived_link) or not linked_target.is_dir() or is_link(linked_target):
                 raise AssertionError('Linked source was not safely replaced by ordinary Skill files')
             command(cli_command + ['uninstall', *flags], base)
-            if not linked_target.is_symlink() or (linked_store / 'SKILL.md').read_bytes() != linked_bytes:
-                raise AssertionError('Legacy symlink or its source was modified on recovery')
+            if not is_link(linked_target) or (linked_store / 'SKILL.md').read_bytes() != linked_bytes:
+                raise AssertionError('Legacy link or its backing source was modified on recovery')
 
         # An existing lock is a conflict rather than permission to race another installer.
         locked = base / 'locked'
