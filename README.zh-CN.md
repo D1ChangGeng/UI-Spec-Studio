@@ -198,7 +198,7 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-1.20.3.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-1.20.3.zip --skill ui-spec -a codex
 ```
 
 统一安装器也支持 Claude Code、Cursor 和 OpenCode（通过 `--agent`）；Codex 的原生四角色适配器由同一命令处理。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。

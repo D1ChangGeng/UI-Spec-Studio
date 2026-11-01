@@ -4,6 +4,7 @@ import ast
 import copy
 import hashlib
 import json
+import re
 from pathlib import Path
 import shutil
 import tempfile
@@ -96,6 +97,22 @@ class ContractTests(unittest.TestCase):
         self.assertTrue((ROOT / f"docs/releases/v{version}.md").is_file())
         for filename in ("README.md", "README.zh-CN.md"):
             self.assertIn(f"releases/download/v{version}/ui-spec-installer.tgz", (ROOT / filename).read_text(encoding="utf-8"))
+
+    def test_primary_distribution_urls_are_version_consistent(self):
+        version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+        url = re.compile(
+            r"https://github\.com/D1ChangGeng/UI-Spec-Studio/releases/download/"
+            r"(v\d+\.\d+\.\d+)/"
+            r"(ui-spec(?:-codex)?-\d+\.\d+\.\d+\.zip|ui-spec-installer\.tgz)"
+        )
+        for filename in ("README.md", "README.zh-CN.md", "docs/INSTALL.md", "docs/NPM-DISTRIBUTION.md"):
+            body = (ROOT / filename).read_text(encoding="utf-8")
+            links = url.findall(body)
+            self.assertTrue(links, f"No release links found in {filename}")
+            for tag, asset in links:
+                self.assertEqual(tag, "v" + version, f"Outdated release link in {filename}")
+                if asset != "ui-spec-installer.tgz":
+                    self.assertIn(version, asset, f"ZIP filename and release tag differ in {filename}")
 
     def test_standalone_bundle_has_all_reference_files(self):
         with tempfile.TemporaryDirectory() as td:
