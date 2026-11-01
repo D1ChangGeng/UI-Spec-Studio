@@ -81,6 +81,10 @@ jobs:
       - name: Verify real interactive terminal wizard
         if: matrix.os == 'ubuntu-latest'
         run: python tools/installer_tui_smoke.py
+      - name: Verify maintainer bootstrap checksum and npm packaging (no publish)
+        if: matrix.os == 'windows-latest'
+        shell: pwsh
+        run: ./tools/bootstrap-npm.ps1 -DryRun
   publication:
     # Playwright 1.57's dependency definitions support this fixed OS release.
     runs-on: ubuntu-24.04
