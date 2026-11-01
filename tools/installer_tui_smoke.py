@@ -88,7 +88,11 @@ def run() -> None:
         target = project / '.agents/skills/ui-spec'
         target.parent.mkdir(parents=True)
         shutil.copytree(package / 'payload/skill', target)
-        before = (target / 'SKILL.md').read_bytes().replace(b'version: "1.20.2"', b'version: "1.20.1"')
+        current_version = (ROOT / 'VERSION').read_text(encoding='utf-8').strip().encode('ascii')
+        fresh = (target / 'SKILL.md').read_bytes()
+        before = fresh.replace(b'version: "' + current_version + b'"', b'version: "1.20.1"')
+        if before == fresh:
+            raise AssertionError('Failed to construct the legacy-version TUI fixture')
         (target / 'SKILL.md').write_bytes(before)
         cmd = ['node', str(package / 'bin/ui-spec.mjs'), 'install', '--agent', 'codex',
                '--project', str(project), '--lang', 'en']
