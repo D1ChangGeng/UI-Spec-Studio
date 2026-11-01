@@ -54,7 +54,7 @@ class ContentTests(unittest.TestCase):
     def test_release_gate_includes_actual_browser(self):
         ci=(ROOT/'.github/workflows/validate.yml').read_text(encoding='utf-8')
         self.assertIn('python tools/validate_content.py --output-dir scenario-evidence/content',ci)
-        self.assertIn('needs: [test, install, publication, scenario]',ci)
+        self.assertIn('needs: [test, install, installer-portability, publication, scenario]',ci)
 
     def test_package_and_local_references(self):
         self.assertEqual(validator.validate(ROOT),[])
