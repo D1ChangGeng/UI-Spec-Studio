@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.20.3 — 2026-11-02
+
+- Prepare the official `ui-spec-studio` npm package name, with semantic version resolution and package provenance metadata.
+- Add default interactive install, `--version` diagnostics and explicit project/user installation scope selection.
+- Provide a validated npm candidate artifact and a manual OIDC trusted-publishing workflow. npm publication still requires the registry account holder's one-time package bootstrap and trust authorization.
+- Replace mutable GitHub latest-tarball quick-start with a pinned release fallback until npm publication is actually verified; retain explicit reversible migration of existing unowned Skills.
+- Keep the 37-file Skill payload and v1.20.2 professional UI methods unchanged except for distribution metadata.
+
+
 ## 1.20.2 — 2026-11-02
 
 - Add a guided terminal installer based on mature Clack interactions, with real install-stage progress, bilingual labels and stable headless output.
