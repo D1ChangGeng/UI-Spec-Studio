@@ -17,12 +17,28 @@ on:
         required: true
         type: boolean
         default: false
+  # After the first npm owner bootstrap and OIDC setup, every successful
+  # validated main-branch GitHub release can publish npm automatically.
+  workflow_run:
+    workflows:
+      - Validate and release
+    types:
+      - completed
+    branches:
+      - main
 
 permissions:
   contents: read
 
 jobs:
   candidate:
+    # Never run privileged publication steps based on a PR workflow result.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.head_branch == 'main' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -61,6 +77,19 @@ jobs:
           npm pack --dry-run ./dist/ui-spec-installer.tgz --json > "$RUNNER_TEMP/pack-report.json"
           node -e "const r=require(process.argv[1]); if(r.length!==1 || r[0].name!=='ui-spec-studio' || !['bin/ui-spec.mjs','payload/skill/SKILL.md','README.md','LICENSE'].every(n=>r[0].files.some(f=>f.path===n)))process.exit(1);" "$RUNNER_TEMP/pack-report.json"
           npx --yes --offline "file://$PWD/dist/ui-spec-installer.tgz" --version | grep -F "ui-spec-studio $(cat VERSION)"
+      - name: Check npm registration (public, read-only; never infer ownership from availability)
+        shell: bash
+        run: |
+          set -euo pipefail
+          response="$(npm view ui-spec-studio name version repository --json --prefer-online --fetch-retries=0 2>&1)" && code=0 || code=$?
+          if [[ "$code" == 0 ]]; then
+            printf 'REGISTRY_REGISTERED %s\n' "$response"
+          elif grep -q E404 <<< "$response"; then
+            echo 'NPM_BOOTSTRAP_REQUIRED: package not yet owned; first npm publish requires a logged-in account with 2FA'
+          else
+            echo "npm registry unavailable or returned a non-404 error: $response" >&2
+            exit 1
+          fi
       - name: Provide standalone npm bootstrap artifact
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
@@ -70,7 +99,14 @@ jobs:
           retention-days: 14
 
   publish:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.publish
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+       github.ref == 'refs/heads/main' && inputs.publish) ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.head_branch == 'main' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
     needs: candidate
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -89,16 +125,77 @@ jobs:
           node-version: '24'
           registry-url: https://registry.npmjs.org
           package-manager-cache: false
-      - name: Require published Git tag and exact main commit
+      - name: Require exact validated release and prevent stale-event publishing
+        id: release_gate
+        shell: bash
+        env:
+          EVENT_KIND: ${{ github.event_name }}
+          VALIDATED_SHA: ${{ github.event.workflow_run.head_sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          actual_sha="$(git rev-parse HEAD)"
+          if [[ "$EVENT_KIND" == "workflow_run" && "$actual_sha" != "$VALIDATED_SHA" ]]; then
+            echo 'A newer main commit superseded this validation run; skip npm publication'
+            echo 'eligible=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          ver="$(cat VERSION)"
+          if ! git fetch --depth=1 origin "refs/tags/v$ver:refs/tags/v$ver"; then
+            if [[ "$EVENT_KIND" == "workflow_run" ]]; then
+              echo 'No version tag for this validated main commit; skip npm publication'
+              echo 'eligible=false' >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Missing published tag v$ver" >&2
+            exit 1
+          fi
+          if [[ "$actual_sha" != "$(git rev-parse "v$ver^{commit}")" ]]; then
+            if [[ "$EVENT_KIND" == "workflow_run" ]]; then
+              echo 'Version tag does not match this commit; no new npm version to publish'
+              echo 'eligible=false' >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo 'Manual npm publish requires the exact tagged release commit' >&2
+            exit 1
+          fi
+          gh release view "v$ver" --json tagName,isDraft --jq 'select(.tagName == "v" + env.VER and .isDraft == false)' >/dev/null || true
+          if [[ "$(gh release view "v$ver" --json isDraft --jq '.isDraft')" != 'false' ]]; then
+            echo "GitHub release v$ver is not publicly published" >&2
+            exit 1
+          fi
+          echo 'eligible=true' >> "$GITHUB_OUTPUT"
+      - name: Check npm bootstrap ownership and prevent package name hijacking
+        id: registry_gate
+        if: steps.release_gate.outputs.eligible == 'true'
         shell: bash
         run: |
           set -euo pipefail
-          ver="$(cat VERSION)"
-          git fetch --depth=1 origin "refs/tags/v$ver:refs/tags/v$ver"
-          test "$(git rev-parse HEAD)" = "$(git rev-parse "v$ver^{commit}")"
+          response="$(npm view ui-spec-studio name repository --json --prefer-online --fetch-retries=0 2>&1)" && code=0 || code=$?
+          if [[ "$code" != 0 ]]; then
+            if grep -q E404 <<< "$response"; then
+              echo 'First npm registration still needed; see docs/NPM-DISTRIBUTION.md'
+              echo 'registered=false' >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "npm registry read failed: $response" >&2
+            exit 1
+          fi
+          node -e '
+            const r = JSON.parse(process.argv[1]);
+            const repo = typeof r.repository === "string" ? r.repository : r.repository?.url;
+            const url = repo?.replace(/^git\+/, "").replace(/\.git$/, "");
+            if(r.name !== "ui-spec-studio" || url !== "https://github.com/D1ChangGeng/UI-Spec-Studio") {
+              console.error("npm package identity mismatch; refusing to publish to a different owner/package");
+              process.exit(1);
+            }
+          ' "$response"
+          echo 'registered=true' >> "$GITHUB_OUTPUT"
       - name: Build byte-identical npm artifact
+        if: steps.release_gate.outputs.eligible == 'true' && steps.registry_gate.outputs.registered == 'true'
         run: python tools/package_installer.py
       - name: Publish only a new or byte-identical npm version
+        if: steps.release_gate.outputs.eligible == 'true' && steps.registry_gate.outputs.registered == 'true'
         shell: bash
         run: |
           set -euo pipefail
