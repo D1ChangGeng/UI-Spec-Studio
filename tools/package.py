@@ -11,7 +11,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 TOP = {"README.md", "README.zh-CN.md", "LICENSE", "VERSION", "AGENTS.md", ".gitignore", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md", ".gitattributes"}
 DIRS = {"skills", "docs", "examples", "tools", "tests", ".github", "integrations", "installer"}
-SUFFIXES = {".toml", ".md", ".py", ".json", ".yml", ".yaml", ".txt", ".svg", ".html", ".css", ".js", ".mjs", ".png", ".mp4"}
+SUFFIXES = {".toml", ".md", ".py", ".json", ".yml", ".yaml", ".txt", ".svg", ".html", ".css", ".js", ".png", ".mp4"}
 # Preserve declared study inputs and local replay assets in the full source package.
 # This does not enlarge the portable Skill's asset policy.
 EVIDENCE_SUFFIXES = {".csv", ".jsonl", ".mjs", ".log", ".woff2", ".webm", ".zip", ".jpg", ".jpeg", ".sha256"}
@@ -31,7 +31,8 @@ def source_files(root: Path) -> list[Path]:
                           and path.suffix in EVIDENCE_SUFFIXES)
         allowed = (len(rel.parts) == 1 and rel.name in TOP) or evidence_asset or (
             len(rel.parts) > 1 and rel.parts[0] in DIRS and
-            (path.suffix in SUFFIXES or path.name == "LICENSE"))
+            (path.suffix in SUFFIXES or path.name == "LICENSE" or
+             (rel.parts[0] == "installer" and path.suffix == ".mjs")))
         if allowed:
             result.append(path)
     return sorted(result, key=lambda p: p.relative_to(root).as_posix())
