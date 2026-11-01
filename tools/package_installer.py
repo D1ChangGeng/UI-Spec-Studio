@@ -22,10 +22,23 @@ def build_installer(root: Path = ROOT, output_dir: Path | None = None) -> Path:
     if package.get('version') != version or package.get('bin') != {'ui-spec': 'bin/ui-spec.mjs'}:
         raise ValueError('Installer package metadata and VERSION disagree')
     registry = json.loads((root / 'installer/harnesses.json').read_text(encoding='utf-8'))
-    if registry.get('schema_version') != 1 or set(registry.get('harnesses', {})) != {'codex', 'claude-code', 'cursor', 'opencode'}:
+    if registry.get('schema_version') != 1 or not {'codex', 'claude-code', 'cursor', 'opencode'}.issubset(registry.get('harnesses', {})):
         raise ValueError('Unexpected Harness registry')
     items: dict[str, bytes] = {}
-    for folder, prefix in ((root / 'skills/ui-spec', 'skill'), (root / 'integrations/codex', 'adapters/codex')):
+    included_adapters = set()
+    for harness in registry['harnesses'].values():
+        adapter = harness.get('adapter')
+        if adapter:
+            entry = adapter.get('entry', '')
+            parts = entry.split('/')
+            if len(parts) < 3 or parts[0] != 'adapters' or any(part in ('', '.', '..') for part in parts):
+                raise ValueError(f'Unsafe adapter entry: {entry}')
+            included_adapters.add(parts[1])
+    folders = [(root / 'skills/ui-spec', 'skill')]
+    folders += [(root / 'integrations' / name, f'adapters/{name}') for name in sorted(included_adapters)]
+    for folder, prefix in folders:
+        if not folder.is_dir():
+            raise ValueError(f'Missing adapter source: {folder}')
         for file in sorted(folder.rglob('*')):
             if file.is_symlink():
                 raise ValueError(f'Refusing symlink in installer: {file}')
@@ -39,6 +52,10 @@ def build_installer(root: Path = ROOT, output_dir: Path | None = None) -> Path:
     for role in ('ui_researcher', 'ui_integrator', 'ui_challenger', 'ui_experience_observer'):
         if f'adapters/codex/agents/{role}.toml' not in items:
             raise ValueError(f'Missing Codex role: {role}')
+    for harness in registry['harnesses'].values():
+        adapter = harness.get('adapter')
+        if adapter and adapter['entry'] not in items:
+            raise ValueError(f"Adapter entry is not bundled: {adapter['entry']}")
     manifest = {'schema_version': 1, 'version': version,
                 'files': {path: hashlib.sha256(content).hexdigest() for path, content in sorted(items.items())}}
     files = {
