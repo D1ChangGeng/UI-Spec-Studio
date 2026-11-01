@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Self-contained distribution installer: never clones or downloads a source repository.
-import { readFile, writeFile, readdir, mkdir, mkdtemp, rename, rm, lstat, readlink, open } from 'node:fs/promises';
+import { readFile, writeFile, readdir, mkdir, mkdtemp, rename, rm, rmdir, lstat, readlink, open } from 'node:fs/promises';
 import { createHash, randomUUID } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { homedir } from 'node:os';
@@ -245,6 +245,7 @@ async function stageSkill(target, files, receipt, onFile = () => {}) {
       const dest = join(staging, ...rel.split('/'));
       await mkdir(dirname(dest), { recursive: true });
       await writeFile(dest, await readFile(join(payload, 'skill', ...rel.split('/'))));
+      if (sha(await readFile(dest)) !== files[rel]) fail('Staged file failed SHA-256 verification: ' + rel);
       onFile(rel);
     }
     await writeFile(join(staging, receiptFile), receiptBytes(receipt.version, files, receipt.extra));
@@ -263,17 +264,22 @@ function show(ui, options, result, heading) {
       ui.tr('Scope', '范围') + ': ' + result.scope,
       ui.tr('Skill files', 'Skill 文件') + ': ' + result.skill_files,
       ui.tr('Destination', '目标目录') + ': ' + result.skill,
+      ...(result.status ? [ui.tr('Status', '状态') + ': ' + result.status] : []),
+      ...(result.installed_version ? [ui.tr('Installed version', '已安装版本') + ': ' + result.installed_version] : []),
       ...(result.backup ? [ui.tr('Saved original', '原安装备份') + ': ' + result.backup] : []),
     ].join('\n'), heading);
-    ui.end(result.result === 'cancelled' ? ui.tr('No changes', '未作修改') : ui.tr('Ready — restart your coding agent if necessary', '安装完成；如有需要请重新启动编码 Agent'));
+    const unchanged = ['cancelled', 'not-installed', 'unmanaged-preserved', 'status'].includes(result.result);
+    ui.end(unchanged ? ui.tr('No changes made', '未作修改') : ui.tr('Ready — restart your coding agent if necessary', '安装完成；如有需要请重新启动编码 Agent'));
   }
 }
+let currentPresentation = null;
 async function main() {
   const options = parse(process.argv.slice(2));
   if (options.action === 'help') { process.stdout.write(usage); return; }
   options.projectRoot = resolve(options.project || process.cwd());
   const pkg = JSON.parse((await readFile(join(root, 'package.json'))).toString());
   const ui = await createPresentation({ ...options, version: pkg.version });
+  currentPresentation = ui;
   ui.intro();
   const { registry, manifest } = await ui.step(
     ui.tr('Checking release integrity', '校验正式分发包'),
@@ -357,7 +363,16 @@ async function main() {
     }
     const result = { ...plan, dry_run: true, decision, installed_version: installed.version || null };
     if (!ui.active || options.json) console.log(JSON.stringify(result, null, 2));
-    else { ui.summary(JSON.stringify(result, null, 2), ui.tr('Dry run — no files written', '预览：未写入任何文件')); ui.end(ui.tr('No changes', '未作修改')); }
+    else {
+      ui.summary([
+        ui.tr('Action', '操作') + ': ' + result.action,
+        ui.tr('Strategy', '执行策略') + ': ' + decision,
+        ui.tr('Harness', '宿主') + ': ' + result.agent,
+        ui.tr('Target', '目标目录') + ': ' + result.skill,
+        ui.tr('Runtime files', '运行时文件') + ': ' + result.skill_files,
+      ].join('\n'), ui.tr('Dry run — no files written', '预览：未写入任何文件'));
+      ui.end(ui.tr('No changes', '未作修改'));
+    }
     return;
   }
   if (options.action === 'install') await ui.step(
@@ -388,6 +403,9 @@ async function main() {
         try { await rename(recovered, target); }
         catch (err) { await rename(holding, target); throw err; }
         await rm(holding, { recursive: true });
+        // Remove only empty installer-created backup directories.
+        try { await rmdir(dirname(recovered)); await rmdir(dirname(dirname(recovered))); }
+        catch (e) { if (!['ENOTEMPTY', 'EEXIST', 'ENOENT'].includes(e.code)) throw e; }
         return { ...plan, result: 'original-restored', backup: target };
       }
       await rm(target, { recursive: true });
@@ -448,6 +466,9 @@ async function main() {
   show(ui, options, outcome, ui.tr('Installation complete', '安装完成'));
 }
 main().catch(err => {
-  console.error('ui-spec: ' + err.message);
+  if (currentPresentation?.active) {
+    currentPresentation.error(err.message);
+    currentPresentation.end(currentPresentation.tr('Installer stopped; review the message above', '安装已停止，请查看上方错误信息'));
+  } else console.error('ui-spec: ' + err.message);
   process.exitCode = 1;
 });
