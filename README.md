@@ -16,7 +16,7 @@ A portable [Agent Skill](https://agentskills.io/specification) for **product int
 ## Start in your project
 
 ```bash
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex
 ```
 
 Then give your coding agent a goal; a finished design brief is optional:
@@ -33,7 +33,7 @@ After reviewing, **“Approved, continue”** carries the accepted direction int
 
 The main agent owns the complete product goal, formal UI SPEC, source selection and final visual review. Independent specialists can explore consequential questions, inspect actual examples and return the candidates, evidence and unresolved differences that matter for the next decision. Clearly bounded integration can be delegated once its source and design are settled.
 
-The [Codex adapter](integrations/codex/README.md) installs four roles with one explicit command: `ui_researcher`, `ui_integrator`, `ui_challenger` and `ui_experience_observer`. The main agent calls them when useful; the portable Skill also supports direct work by one agent. Roles inherit the host's available models, tools and permissions.
+The standalone release installer installs the Skill without cloning GitHub. Its [Codex adapter](integrations/codex/README.md) installs four roles with the same command: `ui_researcher`, `ui_integrator`, `ui_challenger` and `ui_experience_observer`. The main agent calls them when useful; the portable Skill also supports direct work by one agent. Roles inherit the host's available models, tools and permissions.
 
 [Installation and natural delegation](integrations/codex/README.md) · [Version evidence and limits](docs/REVIEW-v1.20.0.md)
 
@@ -202,14 +202,17 @@ Before substantive work, the agent reads **eight common references in full**: [w
 ## Install, inspect, maintain
 
 ```bash
-# Install for Codex in the current project
-npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec -a codex
+# Install Skill and native Codex roles from the lightweight release package
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download/ui-spec-installer.tgz install --agent codex
 
-# Pin the published skill release
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.20.0 --skill ui-spec
+# Pin this installer to an immutable release version
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.1/ui-spec-installer.tgz install --agent codex
+
+# Standard Skills CLI: install only the portable Skill ZIP (not native roles)
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.1/ui-spec-1.20.1.zip --skill ui-spec -a codex
 ```
 
-The installer is also exercised with Claude Code and OpenCode targets. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).
+The unified installer also supports Claude Code, Cursor and OpenCode through `--agent`; Codex alone activates the separately registered four-role adapter. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).
 
 Package checks cover references, helpers, installation paths and reproducible archives. The publication checks exercise the bilingual README, its responsive images and rendered layouts. A consuming project's design quality and connected behavior have their own verification evidence. [Assurance scope](docs/EVALUATION.md) · [CI](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/workflows/validate.yml) · [Changelog](CHANGELOG.md)
 
