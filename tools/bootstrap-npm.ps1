@@ -30,11 +30,11 @@ try {
     Invoke-WebRequest -Uri "$UrlBase/SHA256SUMS.txt" -OutFile $Sums -UseBasicParsing
 
     Write-Host '2/5  Verify downloaded bytes against the published SHA-256 checksum'
-    $Matches = @(Get-Content -LiteralPath $Sums | Where-Object {
+    $ChecksumRows = @(Get-Content -LiteralPath $Sums | Where-Object {
         $_ -match '^[0-9a-fA-F]{64}\s+\*?ui-spec-installer\.tgz\s*$'
     })
-    if ($Matches.Count -ne 1) { throw 'Expected exactly one installer SHA-256 entry in the release.' }
-    $Expected = ($Matches[0].Trim() -split '\s+')[0].ToLowerInvariant()
+    if ($ChecksumRows.Count -ne 1) { throw 'Expected exactly one installer SHA-256 entry in the release.' }
+    $Expected = ($ChecksumRows[0].Trim() -split '\s+')[0].ToLowerInvariant()
     $Observed = (Get-FileHash -LiteralPath $Tarball -Algorithm SHA256).Hash.ToLowerInvariant()
     if ($Expected -ne $Observed) {
         throw "Checksum mismatch; refusing npm publication. expected=$Expected observed=$Observed"
@@ -79,7 +79,7 @@ try {
     }
 
     Write-Host '5/5  Sign into your npm account with 2FA; explicit approval is required to publish'
-    & npm whoami --registry $Registry 2>$null | Out-Null
+    & npm whoami --registry $Registry | Out-Null
     if ($LASTEXITCODE -ne 0) {
         Write-Host 'npm login required: browser-based account authentication and 2FA'
         & npm login --registry $Registry
@@ -109,7 +109,10 @@ try {
     } finally {
         $Sha512.Dispose()
     }
-    if ($Metadata.dist.integrity -ne $ExpectedIntegrity) {
+    # npm view can return either a dotted field name or a nested dist object.
+    $RemoteIntegrity = $Metadata.'dist.integrity'
+    if (-not $RemoteIntegrity -and $null -ne $Metadata.dist) { $RemoteIntegrity = $Metadata.dist.integrity }
+    if ($RemoteIntegrity -ne $ExpectedIntegrity) {
         throw "Published registry integrity differs from the checked tarball. Inspect publication before promoting README."
     }
     Write-Host "PUBLISHED AND VERIFIED: $PackageName@$Version"
