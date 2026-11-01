@@ -1,0 +1,70 @@
+{
+  "cell_id": "T4-F-integrator-r1",
+  "run_directory_name": "T4-F-integrator-r1-takeover",
+  "agent_id": "/root/product_17_takeover",
+  "preview_command": "cd reconstructed-workspace/app && python3 -m http.server 4417 --bind 127.0.0.1",
+  "capture_conditions": "Playwright 1.57.0 / Chromium headless-shell 143.0.7499.4, DPR 1 and Noto CJK via the registered FONTCONFIG_FILE. CSS viewports 1440x900, 1280x600 and 390x844 with light/en and dark/zh. Observed browser locale en-US and timezone America/New_York; persisted timestamps remain ISO UTC. Native animation retained; settled static captures wait for opacity 1. Ordered episode frames do not establish natural-time playback viewing.",
+  "final_capture_prefixes": [
+    "evidence/main-product-review-003",
+    "evidence/main-episode-004",
+    "evidence/main-neighbors-001"
+  ],
+  "primary_view_globs": [
+    "evidence/main-product-review-003/view-*.json",
+    "evidence/main-episode-004/view-*.json",
+    "evidence/main-neighbors-001/view-*.json"
+  ],
+  "behavior_log_globs": [
+    "evidence/commands/*/command.json",
+    "evidence/commands/*/stdout.txt",
+    "evidence/commands/*/stderr.txt"
+  ],
+  "additional_tool_exports": [
+    "evidence/source-review/view-1.json",
+    "evidence/source-review/view-2.json"
+  ],
+  "children": [
+    {
+      "agent_id": "/root/product_17_takeover/ui_integrator",
+      "role": "ui_integrator",
+      "prompt": "evidence/delegation/dispatch.json",
+      "spawn": "evidence/delegation/spawn-result.json",
+      "completion": "evidence/delegation/final-notification.json",
+      "result": "evidence/integrator/REPORT.md",
+      "command_globs": [
+        "evidence/integrator/commands/*/command.json",
+        "evidence/integrator/commands/*/stdout.txt",
+        "evidence/integrator/commands/*/stderr.txt"
+      ],
+      "tool_exports": [
+        "evidence/integrator/view-source.json",
+        "evidence/integrator/view-settled-failure-light.json",
+        "evidence/integrator/view-settled-success-light.json",
+        "evidence/integrator/view-settled-failure-dark-zh-mobile.json",
+        "evidence/integrator/view-failure-light.json",
+        "evidence/integrator/view-success-light.json",
+        "evidence/integrator/view-failure-dark-zh-mobile.json"
+      ]
+    }
+  ],
+  "audit_observations": [
+    "The fresh primary and its one fresh bounded ui_integrator instruction-role child returned actual final notifications. The primary dispatch matches the frozen prompt bytes. The independently preserved child request and returned identity remain available; native role binding is not attested.",
+    "The child exclusively implemented the settled toast in three allowed product files. The primary inspected original source/baseline pixels, exercised the assembled product separately from the child, and opened 24 final product PNGs. Primary inspection is independent of the child report, but it is not the separate final product review.",
+    "The final matrix passed 150 assertions in six conditions, with focused menu recovery, stale-result ordering, pending dismissal and keyboard episode follow-ups. Source, store and preview protection are checked against retained pre-change bytes.",
+    "Actual wrong-Toast-global initialization failures and Save focus loss from native disabled were retained and repaired within the run. Early fade/scroll captures remain distinguished from settled output. The integrator explicitly reports overwritten unviewed intermediate PNGs; those absent original bytes cannot be recovered or claimed complete.",
+    "The fixed prescribed top-right placement overlaps header utilities and the narrow menu center while visible. Close and Retry remain reachable, and dismissing restores menu access in the exercised states. This is a retained settled-design limitation, not silently reinterpreted as unobstructed access.",
+    "The completed product uses a unique evidence directory because a redundant prior unconfirmed snapshot remained visible after deletion attempts. The earlier attempt is retained separately and not counted. Replaying all input/overlay archives verified 506 captured files with zero frozen method or role changes."
+  ],
+  "limitations": "Instruction-role session simulation; native role binding, resolved backend model/effort, tokens and cost unavailable. Some unviewed child intermediate PNGs were overwritten and are unavailable; every surviving original, directly viewed child export and retained primary attempt is captured. Prescribed toast placement obscures header utilities until dismissal. Store concurrency policy remains unchanged and can persist an older externally initiated operation, while presentation ignores stale outcomes and normal UI suppresses duplicate intent. No natural-time video playback, assistive-technology speech, physical mobile keyboard or human preference acceptance. The primary's inspection does not substitute for the separate final reviewer.",
+  "report_files": [
+    "SOURCE-MANIFEST.json",
+    "DESIGN-RECORD.md",
+    "VISUAL-REVIEW.md",
+    "DELEGATION.json",
+    "evidence/integrator/REPORT.md",
+    "evidence/integrator/VISUAL-REVIEW.md",
+    "evidence/code-review/summary.json",
+    "evidence/verified-source-003/sha256.json"
+  ],
+  "capture_lineage": "Final product images are from main-product-review-003, main-episode-004 and main-neighbors-001. All 24 primary-view exports in those directories identify actual final images. Earlier failed initialization, native fade and unfinished-scroll captures remain in the full immutable workspace and are not substituted for settled final observations. The child reports some overwritten unviewed intermediate PNGs; this loss is explicit, not reconstructed."
+}
