@@ -1,7 +1,7 @@
 {
-  "name": "ui-spec-studio-installer",
+  "name": "ui-spec-studio",
   "version": "1.20.2",
-  "description": "Interactive, reversible UI Spec Studio Skill and Harness installer",
+  "description": "Official UI Spec Studio CLI — guided Skill and native Harness installation",
   "type": "module",
   "bin": {
     "ui-spec": "bin/ui-spec.mjs"
@@ -12,5 +12,31 @@
   "license": "MIT",
   "optionalDependencies": {
     "@clack/prompts": "1.8.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/D1ChangGeng/UI-Spec-Studio"
+  },
+  "homepage": "https://github.com/D1ChangGeng/UI-Spec-Studio#readme",
+  "bugs": {
+    "url": "https://github.com/D1ChangGeng/UI-Spec-Studio/issues"
+  },
+  "keywords": [
+    "ui-spec",
+    "agent-skills",
+    "codex",
+    "claude-code",
+    "installer",
+    "harness"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "payload/",
+    "harnesses.json"
+  ]
 }
