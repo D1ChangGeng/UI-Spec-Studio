@@ -45,7 +45,7 @@ To recover specifically from the older `Existing unowned Skill directory` messag
 npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex --global --migrate
 ```
 
-The `--global` target is `~/.agents/skills/ui-spec`, and the installer backs up older valid Skill copies and Windows Junctions before replacing them. For diagnostics, run the identical pinned package with `--version`. Never copy the Markdown link syntax `[URL](URL)` into PowerShell; paste a plain URL or quoted URL.
+The `--global` target is `~/.agents/skills/ui-spec`, and the installer backs up older valid Skill copies and Windows Junctions before replacing them. For diagnostics, run the identical pinned package with `--version`. Never copy the Markdown link syntax `bracketed Markdown hyperlink syntax` into PowerShell; paste a plain URL or quoted URL.
 
 If the target already contains a copy installed by `npx skills add`, the wizard detects the old `SKILL.md` (including Windows symlinks/junctions) and presents a real choice: **adopt identical files**, **back up and upgrade**, or **leave unchanged**. There is no implicit overwrite. A migrated original is saved outside any Harness Skill scanning directory, in the host's `ui-spec-studio/backups/` area, and is automatically restored when the managed Skill is uninstalled.
 
