@@ -215,7 +215,7 @@ npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20
 npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex
 
 # Standard Skills CLI: install only the portable Skill ZIP (not native roles)
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.2/ui-spec-1.20.3.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-1.20.3.zip --skill ui-spec -a codex
 ```
 
 The unified installer also supports Claude Code, Cursor and OpenCode through `--agent`; Codex alone activates the separately registered four-role adapter. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).
