@@ -128,7 +128,7 @@ jobs:
         run: python tools/preview_readme.py --output-dir publication-evidence/github --live-commit "$GITHUB_SHA" --browser-path "${{ steps.browser.outputs.browser_path }}"
       - name: Store publication evidence
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: publication-evidence
           path: publication-evidence/
@@ -178,7 +178,7 @@ jobs:
         run: python tools/validate_temporal.py --output-dir scenario-evidence/temporal --browser-path "${{ steps.browser.outputs.browser_path }}"
       - name: Store scenario evidence
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: product-intent-evidence
           path: scenario-evidence/
