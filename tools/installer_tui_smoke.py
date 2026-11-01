@@ -43,7 +43,7 @@ def wizard(cmd: list[str], project: Path, keys: bytes, *, timeout: float = 35) -
                 break
         if proc.poll() is None:
             proc.kill()
-            raise AssertionError('Installer terminal flow did not complete')
+            raise AssertionError('Installer terminal flow did not complete; keys sent=' + str(sent) + '\n' + text.decode('utf-8', 'replace')[-4500:])
         output = text.decode('utf-8', 'replace')
         if not sent:
             raise AssertionError('No interactive migration choice was shown: ' + output[-1000:])
