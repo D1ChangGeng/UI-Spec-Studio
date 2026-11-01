@@ -101,9 +101,9 @@ class ContractTests(unittest.TestCase):
     def test_primary_distribution_urls_are_version_consistent(self):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
         url = re.compile(
-            r"https://github\\.com/D1ChangGeng/UI-Spec-Studio/releases/download/"
-            r"(v\\d+\\.\\d+\\.\\d+)/"
-            r"(ui-spec(?:-codex)?-\\d+\\.\\d+\\.\\d+\\.zip|ui-spec-installer\\.tgz)"
+            r"https://github\.com/D1ChangGeng/UI-Spec-Studio/releases/download/"
+            r"(v\d+\.\d+\.\d+)/"
+            r"(ui-spec(?:-codex)?-\d+\.\d+\.\d+\.zip|ui-spec-installer\.tgz)"
         )
         for filename in ("README.md", "README.zh-CN.md", "docs/INSTALL.md", "docs/NPM-DISTRIBUTION.md"):
             body = (ROOT / filename).read_text(encoding="utf-8")
