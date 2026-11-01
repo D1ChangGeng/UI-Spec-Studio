@@ -1,0 +1,32 @@
+name: Retain original v1.20.0 publication evidence
+on:
+  push:
+    branches: [validation/v1.20.0-evidence-20261101]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  retain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Preserve original final-main publication artifact without modifying source
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo=D1ChangGeng/UI-Spec-Studio
+          expected=eb91a3839ae964e20ae9b2888fecf8100b493d04
+          test "$(gh api repos/$repo/commits/v1.20.0 --jq .sha)" = "$expected"
+          test "$(gh release view v1.20.0 --repo "$repo" --json isDraft --jq .isDraft)" = false
+          test "$(gh api repos/$repo/actions/artifacts/13087036660 --jq .workflow_run.head_sha)" = "$expected"
+          test "$(gh api repos/$repo/actions/artifacts/13087036660 --jq .expired)" = false
+          gh api repos/$repo/actions/artifacts/13087036660/zip > v1.20.0-main-publication-evidence.zip
+          printf '%s  %s\n' af61c1fc4b1ede5843960cbfabb97894a7b13fb169ff8ef530addca0f229fc94 v1.20.0-main-publication-evidence.zip | sha256sum -c -
+          gh release upload v1.20.0 v1.20.0-main-publication-evidence.zip --repo "$repo"
+          mkdir downloaded
+          gh release download v1.20.0 --repo "$repo" --pattern v1.20.0-main-publication-evidence.zip --dir downloaded
+          cmp v1.20.0-main-publication-evidence.zip downloaded/v1.20.0-main-publication-evidence.zip
+          sha256sum downloaded/v1.20.0-main-publication-evidence.zip
+          echo 'Original final-main publication evidence retained unchanged on the formal release; complete asset download compared byte-for-byte.'
