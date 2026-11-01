@@ -17,7 +17,6 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '24'
-          registry-url: https://registry.npmjs.org
           package-manager-cache: false
       - name: Probe npm's public package names (not ownership)
         shell: bash
@@ -25,8 +24,8 @@ jobs:
           set -uo pipefail
           for name in ui-spec-studio ui-spec-studio-installer; do
             echo "Checking package name: $name"
-            result=$(npm view "$name" name version --json --fetch-retries=0 --fetch-timeout=15000 2>&1)
-            code=$?
+            code=0
+            result=$(npm view "$name" name version --json --fetch-retries=0 --fetch-timeout=15000 2>&1) || code=$?
             if [ "$code" -eq 0 ]; then
               echo "REGISTERED $name: $result"
             elif grep -q 'E404' <<< "$result"; then
