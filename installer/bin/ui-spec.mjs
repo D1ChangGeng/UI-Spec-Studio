@@ -123,9 +123,13 @@ function runAdapter(config, action, options, preflight = false) {
 function skillDirectory(spec, options) {
   const home = homedir();
   if (!options.global) return resolve(options.projectRoot, ...safeRelative(spec.project_skill_dir).split('/'));
-  const base = spec.user_base === 'xdg-config' ? (process.env.XDG_CONFIG_HOME || join(home, '.config')) : (options.agent === 'claude-code' ? (process.env.CLAUDE_CONFIG_DIR || join(home, '.claude')) : home);
-  const rel = spec.user_base === 'xdg-config' ? spec.user_skill_dir : (options.agent === 'claude-code' ? spec.user_skill_dir.replace(/^\.claude\//, '') : spec.user_skill_dir);
-  return resolve(base, ...safeRelative(rel).split('/'));
+  let base;
+  if (spec.user_base === 'home') base = home;
+  else if (spec.user_base === 'xdg-config') base = process.env.XDG_CONFIG_HOME || (process.platform === 'win32' && process.env.APPDATA) || join(home, '.config');
+  else if (spec.user_base === 'env-fallback' && spec.user_env && spec.user_fallback)
+    base = process.env[spec.user_env] || join(home, safeRelative(spec.user_fallback));
+  else fail('Invalid Harness user-scope configuration');
+  return resolve(base, ...safeRelative(spec.user_skill_dir).split('/'));
 }
 async function main() {
   const options = parse(process.argv.slice(2));
