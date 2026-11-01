@@ -78,6 +78,9 @@ jobs:
           node-version: '24'
           package-manager-cache: false
       - run: python tools/installer_smoke.py
+      - name: Verify real interactive terminal wizard
+        if: matrix.os == 'ubuntu-latest'
+        run: python tools/installer_tui_smoke.py
   publication:
     # Playwright 1.57's dependency definitions support this fixed OS release.
     runs-on: ubuntu-24.04
