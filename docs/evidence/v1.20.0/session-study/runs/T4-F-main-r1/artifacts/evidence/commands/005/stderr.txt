@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w16/support/verify_product.py", line 133, in <module>
-    run()
-  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w16/support/verify_product.py", line 39, in run
-    state(page,'pending')
-  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w16/support/verify_product.py", line 11, in state
-    page.wait_for_function('(state)=>document.querySelector("#save-notification").dataset.state===state',expected)
-TypeError: Page.wait_for_function() takes 2 positional arguments but 3 were given

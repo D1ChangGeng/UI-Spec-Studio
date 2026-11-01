@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w17/evidence/integrator/check.py", line 32, in <module>
-    submit(page);wait_state(page,'pending')
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/scratch/708e8b7f118e/ui-study/worksets/w17/evidence/integrator/check.py", line 17, in wait_state
-    page.wait_for_function('(s) => document.querySelector("#save-notification").dataset.state === s',name)
-TypeError: Page.wait_for_function() takes 2 positional arguments but 3 were given

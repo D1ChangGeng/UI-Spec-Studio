@@ -1,0 +1,114 @@
+name: Verify and publish immutable v1.20.0
+on:
+  push:
+    branches: [validation/v1.20.0-publish-20261101]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ui-spec-immutable-v120-publish
+  cancel-in-progress: false
+jobs:
+  macos:
+    if: github.repository == 'D1ChangGeng/UI-Spec-Studio'
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: eb91a3839ae964e20ae9b2888fecf8100b493d04
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - name: Verify exact reviewed checkout and unchanged release guard
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess, sys
+          assert subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip() == 'eb91a3839ae964e20ae9b2888fecf8100b493d04'
+          assert subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip() == '802f3c36ae5982d2a960f4c87146ad9058e13e75'
+          sys.path.insert(0,'tools')
+          from check_adaptive_release import candidate_identity, require_release_evidence
+          assert candidate_identity(Path.cwd()) == 'eb7752a1b0eb4af180e9bb4bd0922587a3c9c96744e24ec8cf299517516e8759'
+          print(require_release_evidence(Path.cwd()))
+          PY
+      - run: python tools/validate_package.py
+      - run: python tools/catalog_docs.py --check
+      - run: python tools/readme_art.py --check
+      - name: Complete unchanged upstream unit suite
+        run: python -m unittest discover -s tests -v
+      - name: Build unchanged distributions
+        run: python tools/package.py
+  publish:
+    if: github.repository == 'D1ChangGeng/UI-Spec-Studio'
+    needs: macos
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: eb91a3839ae964e20ae9b2888fecf8100b493d04
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.13'
+      - name: Require exact source and all other successful main checks
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, os, subprocess, urllib.request
+          from pathlib import Path
+          assert subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip() == 'eb91a3839ae964e20ae9b2888fecf8100b493d04'
+          assert subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip() == '802f3c36ae5982d2a960f4c87146ad9058e13e75'
+          assert Path('VERSION').read_text().strip() == '1.20.0'
+          base='https://api.github.com/repos/D1ChangGeng/UI-Spec-Studio'
+          def get(path):
+              request=urllib.request.Request(base+path,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'})
+              with urllib.request.urlopen(request,timeout=60) as response:
+                  return json.load(response)
+          run=get('/actions/runs/41315403725')
+          assert run['head_sha'] == 'eb91a3839ae964e20ae9b2888fecf8100b493d04'
+          assert get('/git/ref/heads/main')['object']['sha'] == 'eb91a3839ae964e20ae9b2888fecf8100b493d04'
+          jobs={row['name']:row for row in get('/actions/runs/41315403725/jobs?filter=latest&per_page=100')['jobs']}
+          required={'install','publication','scenario','test (ubuntu-latest, 3.10)','test (ubuntu-latest, 3.13)','test (windows-latest, 3.13)'}
+          assert all(jobs[name]['conclusion']=='success' for name in required)
+          print(json.dumps({'reviewed_commit':run['head_sha'],'other_main_checks':sorted(required),'macos':'Complete unchanged suite passed as this job dependency; thirty-minute budget, no skipped tests.'},indent=2))
+          PY
+          python tools/check_adaptive_release.py
+      - name: Publish using unchanged guarded publisher and verify downloaded assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/publish.py --owner D1ChangGeng --name UI-Spec-Studio --execute
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install actual published tag and verify complete Skill and helpers
+        run: python tools/install_smoke.py --source https://github.com/D1ChangGeng/UI-Spec-Studio/tree/v1.20.0
+      - name: Install actual verified standalone archive with all four roles
+        run: |
+          python - <<'PY'
+          import hashlib, json, subprocess, sys, tempfile, zipfile
+          from pathlib import Path
+          with tempfile.TemporaryDirectory(prefix='v120-standalone-release-') as temporary:
+              root=Path(temporary)
+              with zipfile.ZipFile('dist/ui-spec-codex-1.20.0.zip') as archive:
+                  archive.extractall(root)
+              adapter=root/'ui-spec-codex'
+              project=root/'owned-test-project'
+              project.mkdir()
+              subprocess.run([sys.executable,str(adapter/'install.py'),'install','--project',str(project)],check=True)
+              roles=['ui_researcher','ui_integrator','ui_challenger','ui_experience_observer']
+              for role in roles:
+                  assert (project/'.codex/agents'/(role+'.toml')).read_bytes() == (adapter/'agents'/(role+'.toml')).read_bytes()
+              print(json.dumps({'installed_archive':'ui-spec-codex-1.20.0.zip','verified_roles':roles,'scope':'Archive bytes were download-verified by the unchanged publisher; explicit project installation/file identity only. Native role/model execution remains unverified.'},indent=2))
+              subprocess.run([sys.executable,str(adapter/'install.py'),'uninstall','--project',str(project)],check=True)
+          PY
+

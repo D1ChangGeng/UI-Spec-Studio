@@ -1,7 +1,0 @@
-from pathlib import Path
-source=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/review_cohort02_conversations.py").read_text()
-source=source.replace("conversations-cohort02-001","conversations-cohort02-P04-001")
-source=source.replace('enumerate(["P17"])','enumerate(["P04"])')
-source=source.replace('port=4727+i','port=4724+i')
-source=source.replace('查看附件：','查看附件: ').replace('Details for ','View attachment: ')
-exec(compile(source,"cohort02-P04-adapted-review","exec"))

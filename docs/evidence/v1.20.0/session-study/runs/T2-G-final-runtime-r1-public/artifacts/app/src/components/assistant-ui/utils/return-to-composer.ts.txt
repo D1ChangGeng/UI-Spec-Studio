@@ -1,8 +1,0 @@
-// Focus repair for source actions that remove their own trigger. Keep the
-// runtime's action/state owner and avoid moving the conversation scrollport.
-export function returnToComposer(event: { currentTarget: HTMLElement }) {
-  const input = event.currentTarget
-    .closest('[data-aui-composer-type="thread"]')
-    ?.querySelector<HTMLTextAreaElement>('.aui-composer-input');
-  requestAnimationFrame(() => input?.focus({ preventScroll: true }));
-}

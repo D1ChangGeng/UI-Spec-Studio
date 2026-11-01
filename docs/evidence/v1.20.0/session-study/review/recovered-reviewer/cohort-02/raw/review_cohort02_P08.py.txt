@@ -1,8 +1,0 @@
-from pathlib import Path
-source=Path("/workspace/scratch/e1cfe6e447ee/ui-study/independent-review-recovery/review_settings.py").read_text()
-source=source.replace("settings-001","settings-cohort02-P08-001")
-source=source.replace('IDS=["P01","P03","P06","P16","P18"]','IDS=["P08"]')
-source=source.replace('["P01","P18"]','["P08"]')
-source=source.replace('if pid=="P01":','if pid=="P08":')
-source=source.replace('port=4701+i','port=4728+i')
-exec(compile(source,"cohort02-P08-adapted-review","exec"))

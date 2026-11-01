@@ -1,4 +1,0 @@
-// Task copy follows the same explicit query-string locale as the supplied adapter.
-const chinese = new URLSearchParams(location.search).get("lang") === "zh";
-export const taskText = (english: string, chineseText: string) =>
-  chinese ? chineseText : english;

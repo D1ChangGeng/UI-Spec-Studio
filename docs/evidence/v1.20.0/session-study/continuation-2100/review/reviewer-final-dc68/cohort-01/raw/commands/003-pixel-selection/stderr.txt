@@ -1,4 +1,0 @@
-  File "<string>", line 1
-    from PIL import Image,ImageStat; import pathlib; root=pathlib.Path('review-pack/products'); [print(p.name, sorted([(round(ImageStat.Stat(Image.open(f).convert('L')).resize((1,1))).mean[0]) if False else round(ImageStat.Stat(Image.open(f).convert('L')).mean[0]), f.name) for f in (p/'captures').glob('*.png')])[:2], sorted([(round(ImageStat.Stat(Image.open(f).convert('L')).mean[0]), f.name) for f in (p/'captures').glob('*.png')])[-2:]) for p in sorted(root.iterdir())]
-                                                                                                                                                                                                                                                                                ^
-SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
