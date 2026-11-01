@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "harnesses": {
+    "codex": {
+      "project_skill_dir": ".agents/skills/ui-spec",
+      "user_skill_dir": ".agents/skills/ui-spec",
+      "adapter": {
+        "runtime": "python",
+        "entry": "adapters/codex/install.py"
+      }
+    },
+    "claude-code": {
+      "project_skill_dir": ".claude/skills/ui-spec",
+      "user_skill_dir": ".claude/skills/ui-spec"
+    },
+    "cursor": {
+      "project_skill_dir": ".agents/skills/ui-spec",
+      "user_skill_dir": ".cursor/skills/ui-spec"
+    },
+    "opencode": {
+      "project_skill_dir": ".agents/skills/ui-spec",
+      "user_skill_dir": "opencode/skills/ui-spec",
+      "user_base": "xdg-config"
+    }
+  }
+}
