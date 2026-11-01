@@ -1,10 +1,14 @@
 # Adaptive research study — current and historical evidence
 
-## Current continuation status
+## Current recovery status — 2026-11-01 UTC
 
-Seven registered primary executions currently have retained completed records: T1-A/B/C, T2-A/B, T3-B and T4-F-main. The new T3-B product has a byte-verified 9,257-file snapshot and 18 final PNGs. Its original combined six-image tool-return export stalled and was lost; three fresh post-boundary image observations of unchanged PNGs are separately dated and retained. This evidence deviation and the bounded product findings remain explicit. The full [live evidence inventory](../../evidence/v1.20.0/session-study/README.md) is authoritative for later progress. Independent review and publication remain pending.
+Eight registered executions have complete retained product records: T1-A/B/C, T2-A/B, T3-B, T4-F-main and T4-G. Their source and evidence were reconstructed again after the interruption; all recorded file hashes matched. The [live inventory](../../evidence/v1.20.0/session-study/README.md) gives the exact current coverage, original evidence and active participants. Completed execution does not establish product acceptance.
 
-The original T2-C/T3-A delivered files lacked a retained primary terminal notification. Their complete recovered workspaces, including large original traces, remain under `session-study/incomplete-attempts/`; successful reconstructions covered 377 and 9,526 files. They are excluded from completed counts and their exact frozen inputs were restored for fresh independent executions. The unchanged candidate passed all 512 tests again. Prior checkpoint sections below retain their dated historical findings.
+At the 08:30 recovery observation, the prior uncommitted workspaces were unavailable. An interrupted third evidence upload had preserved three exact Git blobs but had not created its tree, commit or branch update. Four later product completion notifications and a nine-product reviewer notification therefore do not establish complete recoverable results. Surviving original blobs, upload receipts/failures, derived manifests, and explicitly labeled notifications are retained separately. The bounded provider recovery checks did not recover those original workspaces. They do not prove that no copy exists elsewhere.
+
+The ten missing cells now have new disposable copies verified against the original frozen input archives. T1-G and T3-A have fresh independent executions in progress. The same pinned browser, recorder and CJK font bytes were reverified. Frozen registration, task inputs, candidate runtime, role instructions and the original substantive time bounds remain unchanged. Host continuity and acquisition/cache conditions limit interpretation; unavailable attempts are not silently replaced in the historical record.
+
+The earlier five-product independent raw review remains retained. A fresh complete anonymous review is required because the later nine-product review's original tool and image evidence was not recovered. Negative comparator products remain intact. Final G-product acceptance, all remaining comparisons and publication are pending. The recovery checkpoint [cf322884e4c9f66c517b11c778dfa9dd529a1bfa](https://github.com/D1ChangGeng/UI-Spec-Studio/commit/cf322884e4c9f66c517b11c778dfa9dd529a1bfa) passed its existing CI workflow. Earlier dated sections below remain historical observations.
 
 ## Owner-authorized session study — checkpoint, 2026-11-01 JST
 

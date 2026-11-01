@@ -1,69 +1,39 @@
 {
-  "status": "blocked_by_native_approval_and_unavailable_environment",
-  "scope": "New exact-candidate campaign; historical attempts and capability probes are separate.",
-  "observed_at_utc": "2026-10-31T18:29:34Z",
-  "source_commit": "4819c38af71d797e83bd80e6b253df7fa07b6d0a",
-  "candidate_identity": "6aeba48963d8b72cf1906cb9e8b4500eeb4d9934daa5e7c5b575d867a5e177bc",
-  "independent_agent_runs": 0,
-  "actual_ui_comparisons": 0,
-  "model_comparisons": 0,
-  "historical_attempts_recovered_locally": 18,
-  "historical_locked_reviews": 5,
-  "historical_raw_archive_uploaded": false,
-  "native_role_metadata_verified": [
-    "ui_researcher"
+  "schema_version": 2,
+  "status": "owner_authorized_session_study_recovery_in_progress",
+  "observed_at_utc": "2026-11-01T08:44:31.532264+00:00",
+  "candidate_identity": "eb7752a1b0eb4af180e9bb4bd0922587a3c9c96744e24ec8cf299517516e8759",
+  "acceptance_route": "owner_authorized_session_simulation",
+  "registered_primary_cells": 18,
+  "completed_primary_cells": 8,
+  "completed_child_contexts": 4,
+  "completed_cell_ids": [
+    "T1-A-r1",
+    "T1-B-r1",
+    "T1-C-r1",
+    "T2-A-r1",
+    "T2-B-r1",
+    "T3-B-r1",
+    "T4-F-main-r1",
+    "T4-G-final-runtime-r1"
   ],
-  "four_roles_installed_by_default": true,
-  "native_gui_verified": false,
-  "source_ci": "passed",
-  "hosted_unit_tests": 489,
-  "hosted_windows_skips": 8,
+  "active_primary_cells": {
+    "T1-G-final-runtime-r1": "/root/product_04_recovered",
+    "T3-A-r1": "/root/product_09_recovered"
+  },
+  "active_review_agent": null,
+  "independent_product_acceptance": "Earlier five-product raw review retained. Nine-product reviewer completion message survived, but original reviewer bytes were not recovered; fresh full review required.",
+  "native_cloud_campaign_completed": false,
+  "native_role_binding_authenticated": false,
+  "resolved_models_authenticated": false,
+  "native_usage_available": false,
+  "historical_native_archive_available": false,
+  "latest_verified_remote_evidence_commit": "cf322884e4c9f66c517b11c778dfa9dd529a1bfa",
   "release_decision": "pending",
   "merged": false,
   "tag_created": false,
   "formal_release_created": false,
-  "current_record": "docs/experiments/adaptive-research/RESULTS.md",
-  "continuation_record": "docs/evidence/v1.20.0/continuation-4819c38.json",
-  "previous_observation_ref": "79d1083f10428ce1b5b1cda720ed7de6ac439714",
-  "blockers": [
-    {
-      "kind": "automatic_approval_rejection",
-      "action": "180-second inherited-profile ephemeral native browser smoke with one parent and one generic child",
-      "reason": "Possible direct/indirect writes to protected /root/.codex/sessions or related configuration paths; automatic review acknowledged user authorization but rejected the action.",
-      "reconsideration": "Actual ephemeral:true/path:null and local SQLite/log metadata supplied; launch still rejected.",
-      "native_execution_started": false,
-      "record_kind": "attributed summary, not a complete verbatim approval transcript"
-    },
-    {
-      "kind": "safer_environment_unavailable",
-      "action": "bwrap read-only mount namespace capability check running only /bin/true",
-      "result": "EPERM under ordinary execution and an approved elevated capability check; no Codex launch or credential access"
-    },
-    {
-      "kind": "execution_environment_unavailable",
-      "environment_id": "ccarenv_b64_Y2NhcmVudl82YWEyYzkyMzlmZjg4MTkxYjk0NGY1MmMwMGU3OTU4NA",
-      "state": "unavailable",
-      "exec_tool_result": "No usable execution environment is available. Wait for an environment to become available before using this tool.",
-      "fallback_reads": "The two connected ACS filesystems did not expose the known scratch paths."
-    }
-  ],
-  "boundary": "This status is a derived checkpoint. Local original archives and media remain unuploaded and inaccessible while the execution environment is unavailable.",
-  "cloud_preflight_20261101": {
-    "source_commit": "f34201d9ef119e86d8f2d60e759daae6600fccd4",
-    "candidate_identity": "6aeba48963d8b72cf1906cb9e8b4500eeb4d9934daa5e7c5b575d867a5e177bc",
-    "status": "blocked_by_proxy_policy_and_missing_starters",
-    "formal_cells_executed": 0,
-    "native_smoke_status": "timed_out",
-    "native_smoke_seconds": 90.035,
-    "native_specialist_verified": false,
-    "browser_fixture_checks": 18,
-    "unit_tests_passed": 489,
-    "historical_raw_archive_recovered": false,
-    "evidence": "docs/evidence/v1.20.0/cloud-preflight-20261101/index.json",
-    "network_draft_saved": [
-      "chatgpt.com",
-      "api.github.com"
-    ],
-    "network_draft_applied": false
-  }
+  "current_record": "docs/evidence/v1.20.0/session-study/README.md",
+  "recovery_record": "docs/evidence/v1.20.0/session-study/coordination/recovery-0830/recovery-observation.json",
+  "boundary": "Actual completion messages for lost attempts are historical observations only. A counted current run requires complete retained source/capture/tool evidence and verified reconstruction. Frozen registration and candidate runtime are unchanged."
 }
