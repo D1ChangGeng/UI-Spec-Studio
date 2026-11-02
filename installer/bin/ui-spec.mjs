@@ -12,20 +12,51 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const payload = join(root, 'payload');
 const receiptFile = '.ui-spec-install.json';
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
-const usage = 'UI Spec Studio — official Skill and Harness installer\n'
-  + 'Quick start: npx --yes ui-spec-studio@latest\n'
-  + 'Usage: ui-spec install|status|uninstall [--agent HOST] [--project PATH|--global]\n'
-  + '  install: --upgrade | --migrate | --adopt | --dry-run | --no-tui | --yes\n'
-  + '  all commands: --lang en|zh | --json | --no-tui\n'
-  + 'Existing unmanaged installations require interactive consent or explicit --migrate.\n';
+function helpText(lang) {
+  const chinese = (lang || Intl.DateTimeFormat().resolvedOptions().locale).toLowerCase().startsWith('zh');
+  return (chinese ? [
+    'UI Spec Studio',
+    '安装：npx --yes ui-spec-studio@latest',
+    '',
+    '用法：ui-spec install|status|uninstall [选项]',
+    '  --agent TOOL       Codex、Claude Code、Cursor 或 OpenCode',
+    '  --project PATH     安装到指定项目（默认当前项目）',
+    '  --global           安装到当前用户的所有项目',
+    '  --migrate          备份并替换旧安装',
+    '  --upgrade          更新由本安装器安装的版本',
+    '  --adopt            保留并使用一致的现有文件',
+    '  --dry-run          仅预览，不修改文件',
+    '  --lang en|zh       选择语言',
+    '  --no-tui | --json  非交互模式',
+  ] : [
+    'UI Spec Studio',
+    'Install: npx --yes ui-spec-studio@latest',
+    '',
+    'Usage: ui-spec install|status|uninstall [options]',
+    '  --agent TOOL       Codex, Claude Code, Cursor or OpenCode',
+    '  --project PATH     Install into a project (default: current project)',
+    '  --global           Install for all projects of this user',
+    '  --migrate          Back up and replace an existing installation',
+    '  --upgrade          Update a version installed by this tool',
+    '  --adopt            Keep and use identical existing files',
+    '  --dry-run          Preview without changing files',
+    '  --lang en|zh       Choose a language',
+    '  --no-tui | --json  Non-interactive output',
+  ]).join('\n') + '\n';
+}
 
 function fail(message) { throw new Error(message); }
 function parse(argv) {
+  const helpLanguage = (() => {
+    const index = argv.indexOf('--lang');
+    return index >= 0 ? argv[index + 1] : null;
+  })();
   const first = argv.shift();
   const action = (!first || (first.startsWith('-') && !['-h', '--help', '--version', '-V'].includes(first)))
     ? 'install' : first;
   if (first?.startsWith('-') && action === 'install') argv.unshift(first);
-  if (['--help', '-h', 'help'].includes(action)) return { action: 'help' };
+  if (['--help', '-h', 'help'].includes(action) || argv.includes('--help') || argv.includes('-h'))
+    return { action: 'help', lang: helpLanguage };
   if (['--version', '-V', 'version'].includes(action)) return { action: 'version' };
   if (!['install', 'status', 'uninstall'].includes(action)) fail(`Unknown action: ${action}`);
   const out = { action, agent: null, project: null, global: false, upgrade: false, migrate: false, adopt: false, yes: false, noTui: false, json: false, lang: null, dryRun: false };
@@ -280,7 +311,7 @@ function show(ui, options, result, heading) {
 let currentPresentation = null;
 async function main() {
   const options = parse(process.argv.slice(2));
-  if (options.action === 'help') { process.stdout.write(usage); return; }
+  if (options.action === 'help') { process.stdout.write(helpText(options.lang)); return; }
   if (options.action === 'version') {
     const pkg = JSON.parse((await readFile(join(root, 'package.json'))).toString());
     console.log(pkg.name + ' ' + pkg.version);
