@@ -8,6 +8,11 @@ on:
       - skills/ui-spec/**
       - tools/package_installer.py
       - tools/installer_smoke.py
+      - tools/bootstrap-npm.ps1
+      - tools/official_npm_smoke.py
+      - docs/NPM-DISTRIBUTION.md
+      - README.md
+      - README.zh-CN.md
       - VERSION
       - .github/workflows/npm-publish.yml
   workflow_dispatch:

@@ -16,12 +16,18 @@ A portable [Agent Skill](https://agentskills.io/specification) for **product int
 ## Start in your project
 
 ```bash
-npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex
+npx --yes ui-spec-studio@latest
 ```
 
-**Distribution note:** The primary installer remains a pinned GitHub release while the official npm package `ui-spec-studio` completes its first registry publication. Reusing the old mutable `latest/download` tarball URL can select stale npm cache content. Once the npm package has been published and verified, the permanent version-independent entry point will be `npx --yes ui-spec-studio@latest install --agent codex`.
+The official `ui-spec-studio` npm package has been published and independently verified against the exact GitHub Release archive. The guided installer offers the supported coding Harnesses; the default installation scope is the current project. It downloads **only the compact installer and Skill files**, never the multi-GB source repository.
 
-For an older Skills CLI installation, run the pinned command with `--global --migrate` to back up the existing Skill before replacing it. The installer also provides an interactive migration choice.
+For Codex installation in your user scope, or for a safe migration from the old Skills CLI:
+
+```bash
+npx --yes ui-spec-studio@latest install --agent codex --global --migrate
+```
+
+Use `--migrate` only when an unmanaged Skill already exists; it backs up the old directory and restores it on uninstall. The installer also offers an interactive migration choice. For an immutable fallback without npm registry resolution, use the [pinned GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.20.3). Avoid the mutable GitHub `releases/latest/download/*.tgz` address as an `npx` package specifier; it can select a stale cache entry.
 
 The installer uses a guided terminal flow with live verification, host-specific registration and reversible migration of older Skills CLI installations. A pre-existing unowned Skill is **not** silently replaced: interactive users can select a backed-up migration; headless users may explicitly pass `--migrate`. The original installation is restored on uninstall. For Chinese prompts, append `--lang zh`.
 
