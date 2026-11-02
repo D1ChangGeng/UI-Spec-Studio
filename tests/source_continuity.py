@@ -2,6 +2,7 @@
 from __future__ import annotations
 import hashlib
 import json
+import re
 from pathlib import Path
 
 
@@ -9,11 +10,11 @@ from pathlib import Path
 def runtime_v119(root: Path, path: str) -> bytes:
     """Recover exact v1.19 bytes through v1.20, without modifying old evidence."""
     current = (root / path).read_bytes()
-    # v1.20.1 changes only the Skill's published version scalar. Restore that
-    # exact known one-line delta before checking the immutable v1.20.0 ledger.
-    # Any other content change must still fail the prior SHA-256 identity check.
+    # v1.20.x distribution patches change only the Skill's published version
+    # scalar. Restore this exact one-line delta before checking the immutable
+    # v1.20.0 ledger. Never normalize other release families or other content.
     if (path == 'skills/ui-spec/SKILL.md' and (root / 'VERSION').is_file()
-            and (root / 'VERSION').read_text(encoding='utf-8').strip() in {'1.20.1', '1.20.2', '1.20.3'}):
+            and re.fullmatch(r'1\.20\.[1-9][0-9]*', (root / 'VERSION').read_text(encoding='utf-8').strip())):
         version = (root / 'VERSION').read_text(encoding='utf-8').strip()
         patch = ('  version: "' + version + '"\n').encode('utf-8')
         prior = b'  version: "1.20.0"\n'
