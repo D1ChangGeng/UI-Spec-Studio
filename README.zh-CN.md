@@ -16,12 +16,18 @@
 ## 在项目中直接开始
 
 ```bash
-npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex
+npx --yes ui-spec-studio@latest
 ```
 
-**安装渠道说明：** 由于旧版 GitHub `latest/download` tarball 地址可能命中 npm 的旧缓存，正式 npm 包 `ui-spec-studio` 首次上架前，暂时使用固定发行版地址。npm 包真正发布并验证后，长期推荐命令将统一为 `npx --yes ui-spec-studio@latest install --agent codex`，无需填写版本或 GitHub URL。
+官方 npm 包 `ui-spec-studio` 已公开发布，并通过与 GitHub 正式发行包的完整性比对和真实安装测试。运行上述命令进入终端安装向导，选择 Codex、Claude Code、Cursor 或 OpenCode。默认安装到当前项目，**只下载轻量安装器及 Skill 本体，不克隆数 GB 的 GitHub 仓库**。
 
-如果你已有旧版 Skill，请给上述命令增加 `--global --migrate`，以备份旧安装并完成迁移；交互终端也可在向导里选择。
+如果要给当前 Windows 用户全局安装 Codex，并安全迁移旧版 `skills add` 安装，请运行：
+
+```powershell
+npx --yes ui-spec-studio@latest install --agent codex --global --migrate --lang zh
+```
+
+`--migrate` 会备份旧安装并在卸载时恢复；没有旧版未托管目录时，不需要此参数。交互终端也可直接选择备份迁移。作为独立备用渠道，仍保留 [v1.20.3 固定版本的 GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.20.3)，但不要用 GitHub `releases/latest/download/*.tgz` 作为 `npx` 地址，以免命中旧缓存。
 
 安装器采用分步终端向导，显示文件校验、宿主检测、安装与注册进展。检测到旧版 `skills add` 安装时，可选择**备份后升级**；不会直接覆盖原目录，卸载时可恢复旧安装。无人值守环境可以显式添加 `--migrate`；需要中文交互可添加 `--lang zh`。
 
