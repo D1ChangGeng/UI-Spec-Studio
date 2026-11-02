@@ -86,6 +86,19 @@ def latest_metadata(
             pending = "npm latest still returns E404"
         else:
             data = json.loads(query.stdout)
+            if not isinstance(data, dict):
+                if not require_published:
+                    raise RuntimeError("Registry latest metadata is not a JSON object")
+                pending = "npm latest metadata is not yet a complete object"
+                if attempt == attempts:
+                    raise RuntimeError(
+                        f"OFFICIAL_NPM_LATEST_READBACK_PENDING after {attempts} checks: {pending}. "
+                        "Never republish an already accepted npm version."
+                    )
+                print(f"OFFICIAL_NPM_LATEST_READBACK_PENDING ({attempt}/{attempts}): {pending}",
+                      file=sys.stderr, flush=True)
+                pause(min(2 * attempt, 10))
+                continue
             actual_repo = registry_field(data, "repository.url")
             if actual_repo:
                 actual_repo = actual_repo.removeprefix("git+").removesuffix(".git")
