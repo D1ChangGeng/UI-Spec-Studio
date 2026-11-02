@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.20.4 — 2026-11-02
+
+- Release the previously validated npm post-publication fixes with the canonical npm package, installed Skill metadata, and GitHub release version aligned.
+- Preserve the 37-file professional Skill structure and the existing Harness integration behavior; this patch contains no new UI methods or model capability claims.
+- Verify the first npm GitHub Actions OIDC trusted-publisher publication through a new immutable version, followed by public SHA-512, latest tag, CLI migration and restoration checks. Treat OIDC acceptance and provenance as unverified until the actual release run succeeds.
+- Keep publication idempotent and distinguish accepted npm publishing from eventual registry-readback delays; do not republish an accepted version.
+
 ## 1.20.3 — 2026-11-02
 
 - Prepare the official `ui-spec-studio` npm package name, with semantic version resolution and package provenance metadata.

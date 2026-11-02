@@ -2,7 +2,7 @@
 
 ## Current authoritative status
 
-**Public npm package registered and verified:** `ui-spec-studio@1.20.3`, with the `latest` dist-tag. On 2026-11-02, GitHub Actions [npm candidate verification](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41397846037) independently confirmed the public registry package identity, byte-for-byte SHA-512 parity with the **v1.20.3 GitHub Release** installer, successful `npx --yes ui-spec-studio@latest` installation, all 37 Skill files, four Codex roles, and reversible migration/restoration of an unmanaged copy.
+**Initial public npm release registered and independently verified:** `ui-spec-studio@1.20.3`; at initial publication its `latest` dist-tag was verified. Each subsequent version, including `1.20.4`, must pass a new actual OIDC publication and public-registry readback before being described as verified. On 2026-11-02, GitHub Actions [npm candidate verification](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41397846037) independently confirmed the public registry package identity, byte-for-byte SHA-512 parity with the **v1.20.3 GitHub Release** installer, successful `npx --yes ui-spec-studio@latest` installation, all 37 Skill files, four Codex roles, and reversible migration/restoration of an unmanaged copy.
 
 The initial npm first-publish command succeeded but its immediate `npm view` returned a transient 404 while the registry processed the new package. A subsequent public readback and actual `npx` execution succeeded. **Do not republish the same package version.** `tools/bootstrap-npm.ps1` now detects an already-published byte-identical version and accepts it without a registry write. After a new first publish, it retries registry verification and distinguishes accepted publication from eventual public readback.
 
@@ -15,7 +15,7 @@ npx --yes ui-spec-studio@latest
 A fixed GitHub Release URL remains an immutable fallback. Do not use `releases/latest/download/ui-spec-installer.tgz` as an npm package specifier: npm may reuse stale cached bytes for its unchanged URL.
 
 ```powershell
-npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex --global --migrate
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-installer.tgz" install --agent codex --global --migrate
 ```
 
 ### Legacy Windows installation migration
@@ -45,9 +45,9 @@ Get-Content $script
 
 The script is intentionally not `irm | iex`: inspect the downloaded file before running it. It can verify an already published matching version idempotently; it will refuse an unexpected npm owner, archive or repository identity. The first `npm publish` action is complete.
 
-### One-time trusted publisher connection
+### Trusted publisher connection and first OIDC validation
 
-Now that `ui-spec-studio@1.20.3` is publicly registered and its `dist.integrity` matches the verified release tarball, **the package owner must connect npm Trusted publishing (OIDC)**:
+Now that `ui-spec-studio@1.20.3` is publicly registered and its `dist.integrity` matches the verified release tarball, **the package owner has configured npm Trusted publishing (OIDC) for the GitHub Actions workflow; the first successful OIDC publish is still required to validate this configuration**. The owner confirmed `Pending validation` on 2026-11-02, with a deadline of 2026-11-04 09:35 UTC. The following setup remains applicable when a publisher needs to be created or renewed:
 
 1. On npmjs.com, open `ui-spec-studio → Settings → Trusted publishing` and add **GitHub Actions**.
 2. GitHub user/organization: **D1ChangGeng**; repository: **UI-Spec-Studio**; workflow filename: **npm-publish.yml**; environment: blank unless subsequently configured.
@@ -97,4 +97,4 @@ The official public installer is now the primary entry point in both READMEs. Th
 5. Cross-platform installer and actual terminal UX CI passes; the install path never clones the full repository.
 6. Both READMEs and `docs/INSTALL.md` use the same canonical npm entry point.
 
-**The remaining separate authorization** is for the npm owner to configure and validate `npm-publish.yml` as an OIDC Trusted publisher. A manual npm first-publish does **not** prove future GitHub Actions OIDC publishing works; validate that with an actual later version release. A passing `npm pack --dry-run` alone is never proof of registry publication.
+**The remaining separate acceptance** is to complete the first real `npm-publish.yml` publication through the now-configured npm OIDC Trusted publisher and independently verify its public metadata, integrity and installer. A manual npm first-publish does **not** prove future GitHub Actions OIDC publishing works; validate that with an actual later version release. A passing `npm pack --dry-run` alone is never proof of registry publication.
