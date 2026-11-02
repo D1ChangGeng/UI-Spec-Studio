@@ -1,13 +1,14 @@
 # Versioned release procedure
 
-The distribution source is `D1ChangGeng/UI-Spec-Studio`. GitHub Releases
-continue to distribute the self-contained, fixed-name `ui-spec-installer.tgz`
-without cloning the multi-GB GitHub source repository. The separate canonical
-registry distribution is the **`ui-spec-studio` npm package**, resolved by npm's
-`latest` dist-tag. Registry publication requires account ownership: first a
-verified, authorized bootstrap, then OIDC trusted publishing from
-`.github/workflows/npm-publish.yml`. Until that external registry setup is
-complete, the pinned GitHub Release tarball remains the working primary entry.
+The distribution source is `D1ChangGeng/UI-Spec-Studio`. The **public
+`ui-spec-studio` npm package** (initially v1.20.3) is the official
+version-independent installer, resolved with `npx --yes ui-spec-studio@latest`.
+GitHub Releases also distribute a separately verified
+`ui-spec-installer.tgz` as an **immutable, version-pinned fallback** without
+cloning the multi-GB source repository. The first npm package registration has
+succeeded and was independently verified against GitHub's release archive.
+Ongoing automated publication additionally requires the npm account owner to
+configure OIDC trusted publishing for `.github/workflows/npm-publish.yml`.
 
 ## Prepare the version
 
@@ -74,13 +75,19 @@ assets retain the release tool's identity and checksum protections.
 
 ## Official npm registry release
 
-The public npm name `ui-spec-studio` must be claimed by an authorized npm
-account before users can run `npx --yes ui-spec-studio@latest`. Do not confuse
-a green npm candidate build or a GitHub Release upload with npm publication.
-The npm packaging workflow verifies the same deterministic `ui-spec-installer.tgz`
-asset, exposes a small candidate artifact for first registration, and supports
-explicit GitHub Actions OIDC publication after the npm publisher is configured.
-See [the npm distribution procedure](NPM-DISTRIBUTION.md).
+`ui-spec-studio@1.20.3` has been publicly published. The npm candidate
+workflow has verified SHA-512 equality with the immutable GitHub release,
+actually executed the `npx --yes ui-spec-studio@latest` CLI, installed the
+37-file Skill and Codex roles, migrated an unmanaged installation and restored
+the original on uninstall. Changes to the bootstrap script now handle registry
+replication delays and refuse duplicate publishes of a matching version.
+
+After a successful main-branch `Validate and release` workflow for a new
+version, `npm-publish.yml` can publish via GitHub OIDC using an npm
+**Trusted publishing** configuration. This authorization must still be set
+up by the npm account owner, and its effectiveness is not established until a
+later version is actually published through that workflow. No long-lived npm
+token is required. See [the npm distribution procedure](NPM-DISTRIBUTION.md).
 
 ## Manual publication from an authorized checkout
 
