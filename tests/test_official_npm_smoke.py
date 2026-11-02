@@ -72,6 +72,14 @@ class OfficialNpmSmokePropagationTests(unittest.TestCase):
                               require_published=False, pause=lambda _: self.fail("Unexpected delay")))
         invoke.assert_called_once()
 
+    def test_incomplete_latest_metadata_waits_but_never_becomes_success(self):
+        pending = subprocess.CompletedProcess(["npm"], 0, "null", "")
+        with mock.patch.object(smoke, "invoke", side_effect=[pending, response()]) as invoke:
+            data = smoke.latest_metadata("npm", VERSION, require_published=True,
+                                         attempts=2, pause=lambda _: None)
+        self.assertEqual(data["version"], VERSION)
+        self.assertEqual(invoke.call_count, 2)
+
     def test_wrong_package_identity_is_hard_failure_without_retry(self):
         with mock.patch.object(smoke, "invoke",
                                return_value=response(repo="https://github.com/other/repo")) as invoke:
