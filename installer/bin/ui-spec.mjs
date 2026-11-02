@@ -353,7 +353,7 @@ function show(ui, options, result) {
     case 'already-current':
       title = tr('Already up to date', '已是当前版本');
       lines = context;
-      ending = tr('No update needed', '无需更新');
+      ending = tr('Ready to use', '可以直接使用');
       break;
     case 'adopted-without-replacement':
       title = tr('Existing files are ready to use', '现有文件已可使用');
@@ -366,7 +366,7 @@ function show(ui, options, result) {
       ending = tr('Done', '完成');
       break;
     case 'uninstalled':
-      title = tr('Uninstalled', '已卸载');
+      title = tr('UI Spec Studio uninstalled', '已卸载 UI Spec Studio');
       lines = [location];
       ending = tr('Done', '完成');
       break;
