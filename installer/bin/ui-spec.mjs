@@ -484,27 +484,26 @@ async function main() {
     return;
   }
   if (options.dryRun) {
-    if (options.action === 'install') {
-      await ui.step(ui.tr('Checking native adapter plan', '预检原生适配器'),
-        () => runAdapter(spec, 'install', options, true), ui.tr('Preflight complete', '预检完成'));
+    if (options.action === 'install' && spec.adapter) {
+      await ui.step(ui.tr('Checking Codex setup', '检查 Codex 环境'),
+        () => runAdapter(spec, 'install', options, true), ui.tr('Codex ready', 'Codex 已就绪'));
     }
     const result = { ...plan, dry_run: true, decision, installed_version: installed.version || null };
     if (!ui.active || options.json) console.log(JSON.stringify(result, null, 2));
     else {
       ui.summary([
-        ui.tr('Action', '操作') + ': ' + result.action,
-        ui.tr('Strategy', '执行策略') + ': ' + decision,
-        ui.tr('Harness', '宿主') + ': ' + result.agent,
-        ui.tr('Target', '目标目录') + ': ' + result.skill,
-        ui.tr('Runtime files', '运行时文件') + ': ' + result.skill_files,
-      ].join('\n'), ui.tr('Dry run — no files written', '预览：未写入任何文件'));
-      ui.end(ui.tr('No changes', '未作修改'));
+        ui.tr('Action', '操作') + ': ' + actionLabel(ui, decision),
+        ui.tr('Tool', '工具') + ': ' + ui.name(result.agent),
+        ui.tr('Install for', '安装范围') + ': ' + scopeLabel(ui, result.scope),
+        ui.tr('Location', '位置') + ': ' + result.skill,
+      ].join('\n'), ui.tr('Preview', '预览'));
+      ui.end(ui.tr('No files changed', '未修改文件'));
     }
     return;
   }
-  if (options.action === 'install') await ui.step(
-    ui.tr('Checking native Harness adapter', '检查宿主原生适配器'),
-    () => runAdapter(spec, 'install', options, true), ui.tr('Adapter ready', '适配器就绪')
+  if (options.action === 'install' && spec.adapter) await ui.step(
+    ui.tr('Checking Codex setup', '检查 Codex 环境'),
+    () => runAdapter(spec, 'install', options, true), ui.tr('Codex ready', 'Codex 已就绪')
   );
   const outcome = await exclusive(target, async () => {
     // Refresh managed and legacy identity inside the lock.
@@ -518,8 +517,8 @@ async function main() {
         await assertSafeDestination(dirname(recovered), boundary);
         if (!await exists(recovered)) fail('Original backup is missing; refusing uninstall: ' + recovered);
       }
-      await ui.step(ui.tr('Removing native Harness registration', '卸载宿主原生配置'),
-        () => runAdapter(spec, 'uninstall', options), ui.tr('Native registration handled', '原生配置已处理'));
+      if (spec.adapter) await ui.step(ui.tr('Removing Codex roles', '移除 Codex 角色'),
+        () => runAdapter(spec, 'uninstall', options), ui.tr('Codex roles removed', 'Codex 角色已移除'));
       if (current.adopted) {
         await rm(join(target, receiptFile));
         return { ...plan, result: 'adopted-copy-preserved' };
@@ -541,16 +540,16 @@ async function main() {
     if (decision === 'migration-required' || decision === 'upgrade-required')
       fail('Explicit migration or upgrade required');
     if (current.kind === 'managed' && current.identical) {
-      await ui.step(ui.tr('Checking installed Harness roles', '检查已安装的宿主角色'),
-        () => runAdapter(spec, 'install', options), ui.tr('Already current', '当前版本已就绪'));
+      if (spec.adapter) await ui.step(ui.tr('Checking Codex roles', '检查 Codex 角色'),
+        () => runAdapter(spec, 'install', options), ui.tr('Roles ready', '角色已就绪'));
       return { ...plan, result: 'already-current' };
     }
     if (decision === 'adopt') {
       if (!current.identical || current.kind !== 'legacy') fail('Adoption identity changed; no files written');
       await writeFile(join(target, receiptFile), receiptBytes(manifest.version, files, { adopted: true }), { flag: 'wx' });
       try {
-        await ui.step(ui.tr('Registering native Harness roles', '注册原生宿主角色'),
-          () => runAdapter(spec, 'install', options), ui.tr('Native roles registered', '原生角色已注册'));
+        if (spec.adapter) await ui.step(ui.tr('Setting up Codex roles', '配置 Codex 角色'),
+          () => runAdapter(spec, 'install', options), ui.tr('Codex roles ready', 'Codex 角色已就绪'));
       } catch (err) { await rm(join(target, receiptFile), { force: true }); throw err; }
       return { ...plan, result: 'adopted-without-replacement' };
     }
@@ -579,8 +578,8 @@ async function main() {
       }
       await rename(staging, target);
       swapped = true;
-      await ui.step(ui.tr('Registering native Harness components', '注册宿主原生组件'),
-        () => runAdapter(spec, 'install', options), ui.tr('Native components ready', '原生组件已就绪'));
+      if (spec.adapter) await ui.step(ui.tr('Setting up Codex roles', '配置 Codex 角色'),
+        () => runAdapter(spec, 'install', options), ui.tr('Codex roles ready', 'Codex 角色已就绪'));
       if (backup && temporaryBackup) await rm(backup, { recursive: true });
       return { ...plan, result: current.exists ? 'upgraded' : 'installed',
         ...(migration ? { backup: backupLocation(target, migration.backupName) } : {}) };
