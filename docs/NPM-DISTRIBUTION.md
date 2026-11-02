@@ -2,7 +2,7 @@
 
 ## Current authoritative status
 
-**Initial public npm release registered and independently verified:** `ui-spec-studio@1.20.3`; at initial publication its `latest` dist-tag was verified. Each subsequent version, including `1.20.5`, must pass a new actual OIDC publication and public-registry readback before being described as verified. On 2026-11-02, GitHub Actions [npm candidate verification](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41397846037) independently confirmed the public registry package identity, byte-for-byte SHA-512 parity with the **v1.20.3 GitHub Release** installer, successful `npx --yes ui-spec-studio@latest` installation, all 37 Skill files, four Codex roles, and reversible migration/restoration of an unmanaged copy.
+**Current verified official release: `ui-spec-studio@1.20.5`.** The package was published directly from the verified GitHub Actions OIDC Trusted Publisher on 2026-11-02, with signed build provenance and public SHA-512 parity against the immutable GitHub Release asset. The same [npm workflow](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41429988499) passed its second attempt after the initial post-publish CLI read returned stale npm `latest` metadata. The initial manual-bootstrap release `1.20.3` remains independently verified. On 2026-11-02, GitHub Actions [npm candidate verification](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41397846037) independently confirmed the public registry package identity, byte-for-byte SHA-512 parity with the **v1.20.3 GitHub Release** installer, successful `npx --yes ui-spec-studio@latest` installation, all 37 Skill files, four Codex roles, and reversible migration/restoration of an unmanaged copy.
 
 The initial npm first-publish command succeeded but its immediate `npm view` returned a transient 404 while the registry processed the new package. A subsequent public readback and actual `npx` execution succeeded. **Do not republish the same package version.** `tools/bootstrap-npm.ps1` now detects an already-published byte-identical version and accepts it without a registry write. After a new first publish, it retries registry verification and distinguishes accepted publication from eventual public readback.
 
@@ -45,9 +45,9 @@ Get-Content $script
 
 The script is intentionally not `irm | iex`: inspect the downloaded file before running it. It can verify an already published matching version idempotently; it will refuse an unexpected npm owner, archive or repository identity. The first `npm publish` action is complete.
 
-### Trusted publisher connection and first OIDC validation
+### Trusted publisher connection — successfully validated
 
-Now that `ui-spec-studio@1.20.3` is publicly registered and its `dist.integrity` matches the verified release tarball, **the package owner has configured npm Trusted publishing (OIDC) for the GitHub Actions workflow; the first successful OIDC publish is still required to validate this configuration**. The owner confirmed `Pending validation` on 2026-11-02, with a deadline of 2026-11-04 09:35 UTC. The following setup remains applicable when a publisher needs to be created or renewed:
+Now that `ui-spec-studio@1.20.3` is publicly registered and its `dist.integrity` matches the verified release tarball, **the package owner has configured npm Trusted publishing (OIDC) and the first GitHub Actions OIDC publish succeeded for `1.20.5`**. The setup previously showed `Pending validation` with a November 4 deadline, but the signed new-version publication was accepted before that deadline. The following setup remains applicable if a publisher needs to be recreated:
 
 1. On npmjs.com, open `ui-spec-studio → Settings → Trusted publishing` and add **GitHub Actions**.
 2. GitHub user/organization: **D1ChangGeng**; repository: **UI-Spec-Studio**; workflow filename: **npm-publish.yml**; environment: blank unless subsequently configured.
@@ -55,11 +55,11 @@ Now that `ui-spec-studio@1.20.3` is publicly registered and its `dist.integrity`
 4. Confirm the package's repository metadata points to `https://github.com/D1ChangGeng/UI-Spec-Studio`.
 5. No long-lived `NPM_TOKEN` is needed; `.github/workflows/npm-publish.yml` uses GitHub's `id-token: write` OIDC permission in its publish job.
 
-Only after this connection is active should the package owner consider npm's "require 2FA and disallow tokens" publishing restriction. Restricting tokens must not break the necessary one-time bootstrap.
+The OIDC publication has now succeeded; the package owner can separately review npm's more restrictive 2FA/token publishing access options without altering the now-tested GitHub Actions OIDC workflow.
 
 ## The v1.20.4 GitHub Release and OIDC preflight repair
 
-The immutable v1.20.4 GitHub Release was successfully created and validated, but the npm publish job stopped **before** executing `npm publish`: a malformed npm CLI preflight interpreted a nonempty lookup result as a conflicting remote archive. This was not a confirmed OIDC authentication failure and is not grounds to republish or move the v1.20.4 Git tag. The v1.20.5 release replaces that unreliable query with exact public HTTP version metadata and blocks on unknown states. The publish job also avoids setup-node's placeholder `_authToken` configuration, which can prevent OIDC authentication. Real OIDC acceptance still requires a successful new-version npm publish and registry/CLI verification.
+The immutable v1.20.4 GitHub Release was successfully created and validated, but the npm publish job stopped **before** executing `npm publish`: a malformed npm CLI preflight interpreted a nonempty lookup result as a conflicting remote archive. This was not a confirmed OIDC authentication failure and is not grounds to republish or move the v1.20.4 Git tag. The v1.20.5 release replaces that unreliable query with exact public HTTP version metadata and blocks on unknown states. The publish job also avoids setup-node's placeholder `_authToken` configuration, which can prevent OIDC authentication. This acceptance was subsequently fulfilled by actual OIDC publication of `1.20.5` and a successful verified second workflow attempt.
 
 ## Verified-release automation after bootstrap
 
@@ -69,6 +69,8 @@ The immutable v1.20.4 GitHub Release was successfully created and validated, but
 - **Production:** on a successful **Validate and release** workflow run for a main-branch push, it checks the exact validated head SHA, requires the same published version tag and a public GitHub Release, checks the npm package identity, and then uses OIDC to publish the deterministic tarball. Already published byte-identical versions are accepted without republishing. Unexpected version identity or archive conflicts are rejected.
 
 After an OIDC `npm publish` completes, the workflow performs a **read-only, bounded public-registry readback** with fresh HTTPS requests. It requires both the exact published version SHA-512 to match the deterministic installer and the public `latest` dist-tag to point to that version before continuing to real `npx` migration smoke tests. Transient 404/replication delays are retried. If the retries are exhausted, CI reports `PUBLIC_READBACK_PENDING` rather than claiming the registry rejected the already-accepted publish; **do not republish that version**. Conflicting identity or SHA-512 remains a hard failure. The readback does not authenticate or mutate npm.
+
+The post-publish public `npx` smoke can temporarily observe an older npm CLI `@latest` response even after the exact-version registry metadata and dist-tags have converged. The smoke performs **bounded retries** with a **fresh isolated npm cache per attempt** for both the `npm view` read and actual `npx --version` resolution. Only the expected package, repository, SHA-512 and resolved CLI version permit the subsequent installation, migration and uninstall checks. If propagation does not converge, CI reports an explicit pending state and requires investigation rather than a second `npm publish`.
 
 The npm name is already bootstrapped. For a new GitHub version, the automated production path still requires a correctly configured npm OIDC Trusted publisher. An existing version with exactly matching bytes is a no-op. A manually dispatched publish remains available as an authorized recovery path; it enforces the same exact tag, public release, package identity, and archive checksum safety.
 
@@ -101,4 +103,4 @@ The official public installer is now the primary entry point in both READMEs. Th
 5. Cross-platform installer and actual terminal UX CI passes; the install path never clones the full repository.
 6. Both READMEs and `docs/INSTALL.md` use the same canonical npm entry point.
 
-**The remaining separate acceptance** is to complete the first real `npm-publish.yml` publication through the now-configured npm OIDC Trusted publisher and independently verify its public metadata, integrity and installer. A manual npm first-publish does **not** prove future GitHub Actions OIDC publishing works; validate that with an actual later version release. A passing `npm pack --dry-run` alone is never proof of registry publication.
+**First OIDC publication acceptance completed:** `1.20.5` was published by the trusted GitHub Actions workflow with signed provenance; the independent public `npx` smoke returned PASS for 37 Skill files, native roles, reversible migration and restore. Retain the actual [publication logs](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41429988499) and [GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.20.5) as evidence. A mere `npm pack --dry-run` or green skipped publish job is never sufficient.
