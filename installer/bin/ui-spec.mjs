@@ -416,11 +416,8 @@ async function main() {
   const ui = await createPresentation({ ...options, version: pkg.version });
   currentPresentation = ui;
   ui.intro();
-  const { registry, manifest } = await ui.step(
-    ui.tr('Checking release integrity', '校验正式分发包'),
-    verifyBundle,
-    ui.tr('Release verified', '安装包校验通过')
-  );
+  // Validate bundled files before any installation choice; no extra progress screen.
+  const { registry, manifest } = await verifyBundle();
   if (!options.agent) {
     options.agent = await ui.chooseAgent(Object.keys(registry.harnesses));
     if (!options.agent) return;
@@ -438,36 +435,26 @@ async function main() {
     Object.entries(manifest.files).filter(([name]) => name.startsWith('skill/'))
       .map(([name, hash]) => [name.slice(6), hash])
   );
-  const installed = await ui.step(
-    ui.tr('Inspecting Harness and existing Skill', '检查宿主与现有 Skill'),
-    () => inspectTarget(target, { version: manifest.version, files }),
-    ui.tr('Environment inspected', '环境检查完成')
-  );
+  const installed = await inspectTarget(target, { version: manifest.version, files });
   const plan = {
     action: options.action, version: manifest.version, agent: options.agent,
     scope: options.global ? 'user' : 'project', skill: target, skill_files: Object.keys(files).length,
     adapter: spec.adapter?.entry || null, previously_installed: installed.exists,
   };
-  ui.info(ui.tr('npm has already downloaded the compact release package; no repository clone is used.',
-    'npm 已下载轻量发布包；不会克隆源码仓库。'));
-  if (!options.global && options.projectRoot === resolve(homedir())) ui.warning(
-    ui.tr('Current directory is your home folder; this is a project-scoped install. Use --global for user scope.',
-      '当前目录是用户主目录；本次属于项目级安装。如需用户级安装请使用 --global。'));
-  ui.summary([
-    ui.tr('Harness', '宿主') + ': ' + options.agent,
-    ui.tr('Scope', '范围') + ': ' + plan.scope,
-    ui.tr('Target', '目标') + ': ' + target,
-    ui.tr('Runtime files', '运行时文件') + ': ' + Object.keys(files).length,
-    ui.tr('Native adapter', '原生适配器') + ': ' + (spec.adapter ? 'Codex / ' + spec.adapter.runtime : ui.tr('not needed', '无需安装')),
-  ].join('\n'));
+  if (options.action === 'install' && !options.global && options.projectRoot === resolve(homedir())) {
+    ui.warning(ui.tr(
+      'This project is your home folder. Choose --global to install for all your projects.',
+      '当前项目指向用户主目录。如需在所有项目中使用，请选择 --global。'
+    ));
+  }
   if (options.action === 'status') {
     const status = !installed.exists ? 'absent' : installed.kind === 'managed'
       ? (installed.identical ? 'current' : 'outdated') : installed.kind;
-    show(ui, options, { ...plan, status, installed_version: installed.version || null, result: 'status' }, ui.tr('Installation status', '安装状态'));
+    show(ui, options, { ...plan, status, installed_version: installed.version || null, result: 'status' });
     return;
   }
   if (options.action === 'uninstall' && installed.kind !== 'managed') {
-    show(ui, options, { ...plan, result: installed.exists ? 'unmanaged-preserved' : 'not-installed' }, ui.tr('No managed Skill removed', '没有删除未托管 Skill'));
+    show(ui, options, { ...plan, result: installed.exists ? 'unmanaged-preserved' : 'not-installed' });
     return;
   }
   let decision = 'install';
@@ -493,7 +480,7 @@ async function main() {
   }
   if (decision === 'upgrade') options.upgrade = true;
   if (decision === 'keep') {
-    show(ui, options, { ...plan, result: 'cancelled' }, ui.tr('Existing installation preserved', '保留旧安装'));
+    show(ui, options, { ...plan, result: 'cancelled' });
     return;
   }
   if (options.dryRun) {
@@ -603,7 +590,7 @@ async function main() {
       throw err;
     } finally { await rm(staging, { recursive: true, force: true }); }
   });
-  show(ui, options, outcome, ui.tr('Installation complete', '安装完成'));
+  show(ui, options, outcome);
 }
 main().catch(err => {
   if (currentPresentation?.active) {
