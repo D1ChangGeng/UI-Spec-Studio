@@ -14,6 +14,10 @@ npx --yes ui-spec-studio@latest
 
 A fixed GitHub Release URL remains an immutable fallback. Do not use `releases/latest/download/ui-spec-installer.tgz` as an npm package specifier: npm may reuse stale cached bytes for its unchanged URL.
 
+```powershell
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex --global --migrate
+```
+
 ### Legacy Windows installation migration
 
 From the user's Windows PowerShell, for an existing old Codex Skill in the home directory:
