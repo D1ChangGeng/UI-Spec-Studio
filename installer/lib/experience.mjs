@@ -37,13 +37,13 @@ export async function createPresentation({ noTui = false, json = false, lang, ve
     async copyFiles(total, operation) {
       if (!active) return await operation(() => {});
       const bar = p.progress({ max: total });
-      bar.start(tr('Copying ' + total + ' Skill files', '正在复制 ' + total + ' 个 Skill 文件'));
+      bar.start(tr('Installing UI Spec Studio', '正在安装 UI Spec Studio'));
       try {
         const result = await operation(() => bar.advance(1));
-        bar.stop(tr('Files copied and verified', '文件已复制并验证'));
+        bar.stop(tr('Files verified', '文件校验完成'));
         return result;
       } catch (err) {
-        bar.stop(tr('Could not copy files', '文件复制失败'));
+        bar.stop(tr('Installation failed', '安装失败'));
         throw err;
       }
     },
