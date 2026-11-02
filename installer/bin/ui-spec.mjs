@@ -12,20 +12,51 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const payload = join(root, 'payload');
 const receiptFile = '.ui-spec-install.json';
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
-const usage = 'UI Spec Studio — official Skill and Harness installer\n'
-  + 'Quick start: npx --yes ui-spec-studio@latest\n'
-  + 'Usage: ui-spec install|status|uninstall [--agent HOST] [--project PATH|--global]\n'
-  + '  install: --upgrade | --migrate | --adopt | --dry-run | --no-tui | --yes\n'
-  + '  all commands: --lang en|zh | --json | --no-tui\n'
-  + 'Existing unmanaged installations require interactive consent or explicit --migrate.\n';
+function helpText(lang) {
+  const chinese = (lang || Intl.DateTimeFormat().resolvedOptions().locale).toLowerCase().startsWith('zh');
+  return (chinese ? [
+    'UI Spec Studio',
+    '安装：npx --yes ui-spec-studio@latest',
+    '',
+    '用法：ui-spec install|status|uninstall [选项]',
+    '  --agent TOOL       Codex、Claude Code、Cursor 或 OpenCode',
+    '  --project PATH     安装到指定项目（默认当前项目）',
+    '  --global           安装到当前用户的所有项目',
+    '  --migrate          备份并替换旧安装',
+    '  --upgrade          更新由本安装器安装的版本',
+    '  --adopt            保留并使用一致的现有文件',
+    '  --dry-run          仅预览，不修改文件',
+    '  --lang en|zh       选择语言',
+    '  --no-tui | --json  非交互模式',
+  ] : [
+    'UI Spec Studio',
+    'Install: npx --yes ui-spec-studio@latest',
+    '',
+    'Usage: ui-spec install|status|uninstall [options]',
+    '  --agent TOOL       Codex, Claude Code, Cursor or OpenCode',
+    '  --project PATH     Install into a project (default: current project)',
+    '  --global           Install for all projects of this user',
+    '  --migrate          Back up and replace an existing installation',
+    '  --upgrade          Update a version installed by this tool',
+    '  --adopt            Keep and use identical existing files',
+    '  --dry-run          Preview without changing files',
+    '  --lang en|zh       Choose a language',
+    '  --no-tui | --json  Non-interactive output',
+  ]).join('\n') + '\n';
+}
 
 function fail(message) { throw new Error(message); }
 function parse(argv) {
+  const helpLanguage = (() => {
+    const index = argv.indexOf('--lang');
+    return index >= 0 ? argv[index + 1] : null;
+  })();
   const first = argv.shift();
   const action = (!first || (first.startsWith('-') && !['-h', '--help', '--version', '-V'].includes(first)))
     ? 'install' : first;
   if (first?.startsWith('-') && action === 'install') argv.unshift(first);
-  if (['--help', '-h', 'help'].includes(action)) return { action: 'help' };
+  if (['--help', '-h', 'help'].includes(action) || argv.includes('--help') || argv.includes('-h'))
+    return { action: 'help', lang: helpLanguage };
   if (['--version', '-V', 'version'].includes(action)) return { action: 'version' };
   if (!['install', 'status', 'uninstall'].includes(action)) fail(`Unknown action: ${action}`);
   const out = { action, agent: null, project: null, global: false, upgrade: false, migrate: false, adopt: false, yes: false, noTui: false, json: false, lang: null, dryRun: false };
@@ -260,27 +291,121 @@ async function stageSkill(target, files, receipt, onFile = () => {}) {
     throw err;
   }
 }
-function show(ui, options, result, heading) {
+function scopeLabel(ui, scope) {
+  return scope === 'user'
+    ? ui.tr('All my projects', '当前用户的所有项目')
+    : ui.tr('This project', '当前项目');
+}
+function statusLabel(ui, status) {
+  const names = {
+    absent: ui.tr('Not installed', '未安装'),
+    current: ui.tr('Up to date', '已是当前版本'),
+    outdated: ui.tr('Update available', '可更新'),
+    legacy: ui.tr('Installed previously', '已有旧安装'),
+    'legacy-link': ui.tr('Installed via linked folder', '已有链接安装'),
+  };
+  return names[status] || status;
+}
+function actionLabel(ui, decision) {
+  const names = {
+    install: ui.tr('Install', '安装'),
+    migrate: ui.tr('Back up and update', '备份并更新'),
+    adopt: ui.tr('Keep existing files', '使用现有文件'),
+    upgrade: ui.tr('Update', '更新'),
+    'migration-required': ui.tr('Backup and update required', '需先备份并更新'),
+    'upgrade-required': ui.tr('Update required', '需要更新'),
+  };
+  return names[decision] || decision;
+}
+function show(ui, options, result) {
   if (!ui.active || options.json) {
     console.log(JSON.stringify(result, null, 2));
-  } else {
-    ui.summary([
-      ui.tr('Harness', '宿主') + ': ' + result.agent,
-      ui.tr('Scope', '范围') + ': ' + result.scope,
-      ui.tr('Skill files', 'Skill 文件') + ': ' + result.skill_files,
-      ui.tr('Destination', '目标目录') + ': ' + result.skill,
-      ...(result.status ? [ui.tr('Status', '状态') + ': ' + result.status] : []),
-      ...(result.installed_version ? [ui.tr('Installed version', '已安装版本') + ': ' + result.installed_version] : []),
-      ...(result.backup ? [ui.tr('Saved original', '原安装备份') + ': ' + result.backup] : []),
-    ].join('\n'), heading);
-    const unchanged = ['cancelled', 'not-installed', 'unmanaged-preserved', 'status'].includes(result.result);
-    ui.end(unchanged ? ui.tr('No changes made', '未作修改') : ui.tr('Ready — restart your coding agent if necessary', '安装完成；如有需要请重新启动编码 Agent'));
+    return;
   }
+  const tr = ui.tr;
+  const location = tr('Location', '位置') + ': ' + result.skill;
+  const context = [
+    tr('Tool', '工具') + ': ' + ui.name(result.agent),
+    tr('Install for', '安装范围') + ': ' + scopeLabel(ui, result.scope),
+    location,
+  ];
+  let title, lines, ending;
+  switch (result.result) {
+    case 'status':
+      title = tr('Installation status', '安装状态');
+      lines = [
+        tr('Status', '状态') + ': ' + statusLabel(ui, result.status),
+        ...(result.installed_version ? [tr('Version', '版本') + ': ' + result.installed_version] : []),
+        ...context,
+      ];
+      ending = tr('Checked', '查询完成');
+      break;
+    case 'installed':
+    case 'upgraded':
+      title = result.result === 'installed'
+        ? tr('Installed ' + result.version, '已安装 ' + result.version)
+        : tr('Updated to ' + result.version, '已更新到 ' + result.version);
+      lines = [...context, ...(result.backup
+        ? [tr('Previous version backed up', '旧版备份位置') + ': ' + result.backup] : [])];
+      ending = tr('Restart ' + ui.name(result.agent) + ' if it is already open',
+        '如 ' + ui.name(result.agent) + ' 已打开，请重新启动后使用');
+      break;
+    case 'already-current':
+      title = tr('Already up to date', '已是当前版本');
+      lines = context;
+      ending = tr('Ready to use', '可以直接使用');
+      break;
+    case 'adopted-without-replacement':
+      title = tr('Existing files are ready to use', '现有文件已可使用');
+      lines = context;
+      ending = tr('Original files were kept', '保留了原有文件');
+      break;
+    case 'original-restored':
+      title = tr('Previous installation restored', '已恢复原安装');
+      lines = [location];
+      ending = tr('Done', '完成');
+      break;
+    case 'uninstalled':
+      title = tr('UI Spec Studio uninstalled', '已卸载 UI Spec Studio');
+      lines = [location];
+      ending = tr('Done', '完成');
+      break;
+    case 'adopted-copy-preserved':
+      title = tr('Existing files kept', '已保留原有文件');
+      lines = [location];
+      ending = tr('Done', '完成');
+      break;
+    case 'unmanaged-preserved':
+      title = tr('Installation left unchanged', '已有安装未修改');
+      lines = [
+        tr('This installation was created by another installer and was not removed.',
+          '此版本由其他安装方式创建，本次未卸载。'),
+        location,
+      ];
+      ending = tr('No files changed', '未修改文件');
+      break;
+    case 'not-installed':
+      title = tr('Not installed', '未找到安装');
+      lines = [location];
+      ending = tr('No files changed', '未修改文件');
+      break;
+    case 'cancelled':
+      title = tr('Existing version kept', '已保留当前版本');
+      lines = [location];
+      ending = tr('No files changed', '未修改文件');
+      break;
+    default:
+      title = tr('Completed', '已完成');
+      lines = context;
+      ending = tr('Done', '完成');
+  }
+  ui.summary(lines.join('\n'), title);
+  ui.end(ending);
 }
 let currentPresentation = null;
 async function main() {
   const options = parse(process.argv.slice(2));
-  if (options.action === 'help') { process.stdout.write(usage); return; }
+  if (options.action === 'help') { process.stdout.write(helpText(options.lang)); return; }
   if (options.action === 'version') {
     const pkg = JSON.parse((await readFile(join(root, 'package.json'))).toString());
     console.log(pkg.name + ' ' + pkg.version);
@@ -291,11 +416,8 @@ async function main() {
   const ui = await createPresentation({ ...options, version: pkg.version });
   currentPresentation = ui;
   ui.intro();
-  const { registry, manifest } = await ui.step(
-    ui.tr('Checking release integrity', '校验正式分发包'),
-    verifyBundle,
-    ui.tr('Release verified', '安装包校验通过')
-  );
+  // Validate bundled files before any installation choice; no extra progress screen.
+  const { registry, manifest } = await verifyBundle();
   if (!options.agent) {
     options.agent = await ui.chooseAgent(Object.keys(registry.harnesses));
     if (!options.agent) return;
@@ -313,36 +435,26 @@ async function main() {
     Object.entries(manifest.files).filter(([name]) => name.startsWith('skill/'))
       .map(([name, hash]) => [name.slice(6), hash])
   );
-  const installed = await ui.step(
-    ui.tr('Inspecting Harness and existing Skill', '检查宿主与现有 Skill'),
-    () => inspectTarget(target, { version: manifest.version, files }),
-    ui.tr('Environment inspected', '环境检查完成')
-  );
+  const installed = await inspectTarget(target, { version: manifest.version, files });
   const plan = {
     action: options.action, version: manifest.version, agent: options.agent,
     scope: options.global ? 'user' : 'project', skill: target, skill_files: Object.keys(files).length,
     adapter: spec.adapter?.entry || null, previously_installed: installed.exists,
   };
-  ui.info(ui.tr('npm has already downloaded the compact release package; no repository clone is used.',
-    'npm 已下载轻量发布包；不会克隆源码仓库。'));
-  if (!options.global && options.projectRoot === resolve(homedir())) ui.warning(
-    ui.tr('Current directory is your home folder; this is a project-scoped install. Use --global for user scope.',
-      '当前目录是用户主目录；本次属于项目级安装。如需用户级安装请使用 --global。'));
-  ui.summary([
-    ui.tr('Harness', '宿主') + ': ' + options.agent,
-    ui.tr('Scope', '范围') + ': ' + plan.scope,
-    ui.tr('Target', '目标') + ': ' + target,
-    ui.tr('Runtime files', '运行时文件') + ': ' + Object.keys(files).length,
-    ui.tr('Native adapter', '原生适配器') + ': ' + (spec.adapter ? 'Codex / ' + spec.adapter.runtime : ui.tr('not needed', '无需安装')),
-  ].join('\n'));
+  if (options.action === 'install' && !options.global && options.projectRoot === resolve(homedir())) {
+    ui.warning(ui.tr(
+      'This project is your home folder. Choose --global to install for all your projects.',
+      '当前项目指向用户主目录。如需在所有项目中使用，请选择 --global。'
+    ));
+  }
   if (options.action === 'status') {
     const status = !installed.exists ? 'absent' : installed.kind === 'managed'
       ? (installed.identical ? 'current' : 'outdated') : installed.kind;
-    show(ui, options, { ...plan, status, installed_version: installed.version || null, result: 'status' }, ui.tr('Installation status', '安装状态'));
+    show(ui, options, { ...plan, status, installed_version: installed.version || null, result: 'status' });
     return;
   }
   if (options.action === 'uninstall' && installed.kind !== 'managed') {
-    show(ui, options, { ...plan, result: installed.exists ? 'unmanaged-preserved' : 'not-installed' }, ui.tr('No managed Skill removed', '没有删除未托管 Skill'));
+    show(ui, options, { ...plan, result: installed.exists ? 'unmanaged-preserved' : 'not-installed' });
     return;
   }
   let decision = 'install';
@@ -368,31 +480,30 @@ async function main() {
   }
   if (decision === 'upgrade') options.upgrade = true;
   if (decision === 'keep') {
-    show(ui, options, { ...plan, result: 'cancelled' }, ui.tr('Existing installation preserved', '保留旧安装'));
+    show(ui, options, { ...plan, result: 'cancelled' });
     return;
   }
   if (options.dryRun) {
-    if (options.action === 'install') {
-      await ui.step(ui.tr('Checking native adapter plan', '预检原生适配器'),
-        () => runAdapter(spec, 'install', options, true), ui.tr('Preflight complete', '预检完成'));
+    if (options.action === 'install' && spec.adapter) {
+      await ui.step(ui.tr('Checking Codex setup', '检查 Codex 环境'),
+        () => runAdapter(spec, 'install', options, true), ui.tr('Codex ready', 'Codex 已就绪'));
     }
     const result = { ...plan, dry_run: true, decision, installed_version: installed.version || null };
     if (!ui.active || options.json) console.log(JSON.stringify(result, null, 2));
     else {
       ui.summary([
-        ui.tr('Action', '操作') + ': ' + result.action,
-        ui.tr('Strategy', '执行策略') + ': ' + decision,
-        ui.tr('Harness', '宿主') + ': ' + result.agent,
-        ui.tr('Target', '目标目录') + ': ' + result.skill,
-        ui.tr('Runtime files', '运行时文件') + ': ' + result.skill_files,
-      ].join('\n'), ui.tr('Dry run — no files written', '预览：未写入任何文件'));
-      ui.end(ui.tr('No changes', '未作修改'));
+        ui.tr('Action', '操作') + ': ' + actionLabel(ui, decision),
+        ui.tr('Tool', '工具') + ': ' + ui.name(result.agent),
+        ui.tr('Install for', '安装范围') + ': ' + scopeLabel(ui, result.scope),
+        ui.tr('Location', '位置') + ': ' + result.skill,
+      ].join('\n'), ui.tr('Preview', '预览'));
+      ui.end(ui.tr('No files changed', '未修改文件'));
     }
     return;
   }
-  if (options.action === 'install') await ui.step(
-    ui.tr('Checking native Harness adapter', '检查宿主原生适配器'),
-    () => runAdapter(spec, 'install', options, true), ui.tr('Adapter ready', '适配器就绪')
+  if (options.action === 'install' && spec.adapter) await ui.step(
+    ui.tr('Checking Codex setup', '检查 Codex 环境'),
+    () => runAdapter(spec, 'install', options, true), ui.tr('Codex ready', 'Codex 已就绪')
   );
   const outcome = await exclusive(target, async () => {
     // Refresh managed and legacy identity inside the lock.
@@ -406,8 +517,8 @@ async function main() {
         await assertSafeDestination(dirname(recovered), boundary);
         if (!await exists(recovered)) fail('Original backup is missing; refusing uninstall: ' + recovered);
       }
-      await ui.step(ui.tr('Removing native Harness registration', '卸载宿主原生配置'),
-        () => runAdapter(spec, 'uninstall', options), ui.tr('Native registration handled', '原生配置已处理'));
+      if (spec.adapter) await ui.step(ui.tr('Removing Codex roles', '移除 Codex 角色'),
+        () => runAdapter(spec, 'uninstall', options), ui.tr('Codex roles removed', 'Codex 角色已移除'));
       if (current.adopted) {
         await rm(join(target, receiptFile));
         return { ...plan, result: 'adopted-copy-preserved' };
@@ -429,16 +540,16 @@ async function main() {
     if (decision === 'migration-required' || decision === 'upgrade-required')
       fail('Explicit migration or upgrade required');
     if (current.kind === 'managed' && current.identical) {
-      await ui.step(ui.tr('Checking installed Harness roles', '检查已安装的宿主角色'),
-        () => runAdapter(spec, 'install', options), ui.tr('Already current', '当前版本已就绪'));
+      if (spec.adapter) await ui.step(ui.tr('Checking Codex roles', '检查 Codex 角色'),
+        () => runAdapter(spec, 'install', options), ui.tr('Roles ready', '角色已就绪'));
       return { ...plan, result: 'already-current' };
     }
     if (decision === 'adopt') {
       if (!current.identical || current.kind !== 'legacy') fail('Adoption identity changed; no files written');
       await writeFile(join(target, receiptFile), receiptBytes(manifest.version, files, { adopted: true }), { flag: 'wx' });
       try {
-        await ui.step(ui.tr('Registering native Harness roles', '注册原生宿主角色'),
-          () => runAdapter(spec, 'install', options), ui.tr('Native roles registered', '原生角色已注册'));
+        if (spec.adapter) await ui.step(ui.tr('Setting up Codex roles', '配置 Codex 角色'),
+          () => runAdapter(spec, 'install', options), ui.tr('Codex roles ready', 'Codex 角色已就绪'));
       } catch (err) { await rm(join(target, receiptFile), { force: true }); throw err; }
       return { ...plan, result: 'adopted-without-replacement' };
     }
@@ -467,8 +578,8 @@ async function main() {
       }
       await rename(staging, target);
       swapped = true;
-      await ui.step(ui.tr('Registering native Harness components', '注册宿主原生组件'),
-        () => runAdapter(spec, 'install', options), ui.tr('Native components ready', '原生组件已就绪'));
+      if (spec.adapter) await ui.step(ui.tr('Setting up Codex roles', '配置 Codex 角色'),
+        () => runAdapter(spec, 'install', options), ui.tr('Codex roles ready', 'Codex 角色已就绪'));
       if (backup && temporaryBackup) await rm(backup, { recursive: true });
       return { ...plan, result: current.exists ? 'upgraded' : 'installed',
         ...(migration ? { backup: backupLocation(target, migration.backupName) } : {}) };
@@ -478,12 +589,46 @@ async function main() {
       throw err;
     } finally { await rm(staging, { recursive: true, force: true }); }
   });
-  show(ui, options, outcome, ui.tr('Installation complete', '安装完成'));
+  show(ui, options, outcome);
+}
+function userError(ui, message) {
+  const tr = ui.tr;
+  if (message.startsWith('Codex adapter requires Python 3.11+'))
+    return tr('Codex requires Python 3.11 or newer. No Skill files changed.',
+      'Codex 角色需要 Python 3.11 或更新版本，未修改 Skill 文件。');
+  if (message.startsWith('Unsupported Harness:'))
+    return tr('Unsupported tool. Choose Codex, Claude Code, Cursor or OpenCode.',
+      '不支持此工具，请选择 Codex、Claude Code、Cursor 或 OpenCode。');
+  if (message.startsWith('Another installation may be running.'))
+    return tr('Another installation may be running. Check the lock file: ',
+      '可能有其他安装正在进行。请检查锁文件：') + message.split(': ').slice(1).join(': ');
+  if (message.startsWith('Existing directory is not a recognizable ui-spec Skill'))
+    return tr('This folder contains a different Skill. Nothing was replaced.',
+      '该位置已有其他 Skill，未替换任何文件。');
+  if (message.startsWith('Existing directory has no regular SKILL.md'))
+    return tr('This folder is not a UI Spec Studio installation. Nothing was replaced.',
+      '该位置不是 UI Spec Studio 的安装目录，未替换任何文件。');
+  if (message.startsWith('Managed Skill contains a modified file:'))
+    return tr('An installed file has changed. It was not overwritten: ',
+      '已有文件被修改，未覆盖：') + message.slice('Managed Skill contains a modified file: '.length);
+  if (message.startsWith('Managed Skill has added or missing files'))
+    return tr('Installed files have changed. Nothing was replaced.',
+      '已有安装的文件发生变化，未替换任何文件。');
+  if (message.startsWith('Unreadable managed receipt') || message.startsWith('Unrecognized managed installation receipt'))
+    return tr('The existing installation record cannot be read. No files changed.',
+      '无法读取现有安装记录，未修改文件。');
+  if (message.startsWith('Installation changed during preparation'))
+    return tr('The installation changed while checking it. Please try again.',
+      '检查期间安装内容发生变化，请重试。');
+  if (message.startsWith('Invalid distribution') || message.startsWith('Distribution contains'))
+    return tr('The installation files could not be verified. Download the installer again.',
+      '安装文件校验失败，请重新获取安装包。');
+  return message;
 }
 main().catch(err => {
   if (currentPresentation?.active) {
-    currentPresentation.error(err.message);
-    currentPresentation.end(currentPresentation.tr('Installer stopped; review the message above', '安装已停止，请查看上方错误信息'));
+    currentPresentation.error(userError(currentPresentation, err.message));
+    currentPresentation.end(currentPresentation.tr('Installation not completed', '安装未完成'));
   } else console.error('ui-spec: ' + err.message);
   process.exitCode = 1;
 });

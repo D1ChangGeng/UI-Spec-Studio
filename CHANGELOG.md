@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.20.6 — 2026-11-02
+
+- Rewrite the English/Chinese interactive installer for Skill users rather than maintainers: tool and scope choices, existing-installation decisions, meaningful progress, and outcome-specific completion.
+- Remove redundant implementation and repository-cloning explanations, duplicate pre-install technical summaries and unnecessary internal Harness/adapter labels.
+- Make `--help --lang zh` available and simplify the npm package README and description for installers.
+- Keep safety checks, explicit legacy migration/backup, reversible uninstall, real native Codex role registration, headless JSON contracts and the 37-file professional Skill structure. Exercise the actual bilingual terminal wizard and cross-platform installation paths.
+
 ## 1.20.5 — 2026-11-02
 
 - Fix the npm automatic publisher preflight that falsely classified an unpublished candidate as a conflicting archive before npm publish ran.

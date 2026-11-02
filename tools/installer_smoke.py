@@ -57,6 +57,19 @@ def run() -> dict[str, object]:
             raise AssertionError('CLI --version does not report the actual installed package')
         if 'ui-spec-studio@latest' not in command(['node', str(cli), '--help'], base).stdout:
             raise AssertionError('Installer help does not advertise the official npm command')
+        english_help = command(['node', str(cli), '--help', '--lang', 'en'], base).stdout
+        chinese_help = command(['node', str(cli), '--help', '--lang', 'zh'], base).stdout
+        for term in ('Which tool', 'Harness', 'Native adapter', 'runtime files'):
+            if term in english_help:
+                raise AssertionError('User-facing English help contains internal installation terminology: ' + term)
+        if 'Install:' not in english_help or '--migrate' not in english_help:
+            raise AssertionError('English help omits basic user actions')
+        if '安装：' not in chinese_help or '备份并替换旧安装' not in chinese_help:
+            raise AssertionError('Chinese help omits install and migration instructions')
+        if command(['node', str(cli), 'install', '--help', '--lang', 'zh'], base).stdout != chinese_help:
+            raise AssertionError('Chinese help should work with subcommand ordering')
+        if 'npm has already downloaded the compact release package' in cli.read_text(encoding='utf-8'):
+            raise AssertionError('Unnecessary npm implementation explanation remains visible to Skill users')
         project_checks = []
         for agent in ('codex', 'claude-code', 'cursor', 'opencode'):
             project = base / agent

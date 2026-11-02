@@ -124,8 +124,8 @@ existing release before retrying.
 ## Verify what users receive
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.5/ui-spec-installer.tgz install --agent codex
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.5/ui-spec-1.20.5.zip --skill ui-spec -a codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.6/ui-spec-installer.tgz install --agent codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.6/ui-spec-1.20.6.zip --skill ui-spec -a codex
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
