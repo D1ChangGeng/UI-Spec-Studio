@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.20.5 — 2026-11-02
+
+- Fix the npm automatic publisher preflight that falsely classified an unpublished candidate as a conflicting archive before npm publish ran.
+- Require an exact public HTTP 404 to permit a new version; reject conflicting or incomplete registry metadata and fail closed on network errors.
+- Prevent setup-node from writing a placeholder npm auth token in the OIDC publication job; preserve GitHub id-token permissions and registry-controlled npm publish.
+- Add live read-only candidate registry probing, automated preflight regression tests and a new immutable release for first Trusted Publisher validation.
+- Preserve the 37-file Skill and all professional UI methods except the published version scalar; the prior v1.20.4 GitHub Release remains immutable.
+
 ## 1.20.4 — 2026-11-02
 
 - Release the previously validated npm post-publication fixes with the canonical npm package, installed Skill metadata, and GitHub release version aligned.
