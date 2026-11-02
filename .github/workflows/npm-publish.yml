@@ -14,6 +14,7 @@ on:
       - tools/npm_registry_readback.py
       - tests/test_npm_registry_readback.py
       - tools/official_npm_smoke.py
+      - tests/test_official_npm_smoke.py
       - docs/NPM-DISTRIBUTION.md
       - README.md
       - README.zh-CN.md
@@ -243,6 +244,8 @@ jobs:
       - name: Verify exact public npm metadata and latest with bounded retries
         if: steps.release_gate.outputs.eligible == 'true' && steps.registry_gate.outputs.registered == 'true'
         run: python tools/npm_registry_readback.py --tarball dist/ui-spec-installer.tgz
+      # Raw registry dist-tag convergence can precede ordinary npm CLI @latest
+      # cache/edge propagation; the smoke uses fresh caches and bounded retries.
       - name: Verify public npm-named CLI and reversible legacy migration
         if: steps.release_gate.outputs.eligible == 'true' && steps.registry_gate.outputs.registered == 'true'
         run: python tools/official_npm_smoke.py --require-published
