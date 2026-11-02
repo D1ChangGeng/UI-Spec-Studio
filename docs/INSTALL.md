@@ -1,68 +1,62 @@
 # Installation and invocation
 
-## Primary: lightweight release installer (cache-safe fallback)
+## Official npm installer (recommended)
 
-The official npm package `ui-spec-studio` is being prepared as the long-term, version-independent entry point. **Do not use its `npx` package-name command until the first registry publish is verified.** During bootstrap, use the exact tagged release URL below. Reusing GitHub's mutable `latest/download` tarball URL can return an older cached npm package even after a new GitHub release.
-
-Once the verified npm package becomes public, the recommended command will become:
+The public npm package `ui-spec-studio@1.20.3` and its `latest` dist-tag have been verified via the registry, the actual npm-named CLI, and an independent SHA-512 comparison with the exact GitHub Release tarball. The **canonical, version-independent** terminal entry point is:
 
 ```powershell
-npx --yes ui-spec-studio@latest install --agent codex --global
+npx --yes ui-spec-studio@latest
 ```
 
-See [npm publication and verification](NPM-DISTRIBUTION.md) for the authorization-dependent rollout.
+The installer selects a coding Harness interactively; without `--global`, the default scope is the current project. The archive contains only the portable `ui-spec` Skill and the necessary native Harness integration, not the several-gigabyte GitHub source repository. Node.js 20+ is required; the Codex native adapter additionally requires Python 3.11+. The optional `@clack/prompts` dependency provides the interactive terminal presentation, while non-TTY sessions keep machine-readable output.
 
-Run this from the consumer project. Node.js 20+ and network access to download the small release-hosted npm tarball are required; the installer has no required npm dependencies and never clones the GitHub repository. When online, npm may install its optional, version-pinned `@clack/prompts` terminal UI dependency; offline/headless execution retains deterministic command output.
+For explicit Harness-specific project installation:
 
-```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex
+```powershell
+npx --yes ui-spec-studio@latest install --agent codex
+npx --yes ui-spec-studio@latest install --agent claude-code
+npx --yes ui-spec-studio@latest install --agent cursor
+npx --yes ui-spec-studio@latest install --agent opencode
 ```
 
-This **one command** installs the portable `ui-spec` Skill (all its references, scripts, templates and assets) and the separately implemented native Codex adapter with its four roles. Codex adapter setup also requires Python **3.11+**, because it safely validates and merges native TOML configuration. The roles are available for on-demand use; no agent is invoked by installation.
+The Codex adapter installs four native roles: `ui_researcher`, `ui_integrator`, `ui_challenger`, and `ui_experience_observer`. They are registered but not launched by installation.
 
-The same installer selects other supported Harness locations without installing Codex-specific roles:
+Use `--global` for the host's **user scope** or `--project PATH` for a specific consumer project; never combine them. `--dry-run` previews the action without writing; `status` and `uninstall` must use the same Harness and scope as the original installation:
 
-```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent claude-code
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent cursor
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent opencode
+```powershell
+npx --yes ui-spec-studio@latest install --agent codex --global --dry-run
+npx --yes ui-spec-studio@latest status --agent codex --global
+npx --yes ui-spec-studio@latest install --agent codex --global --upgrade
+npx --yes ui-spec-studio@latest uninstall --agent codex --global
 ```
 
-The default scope is the current directory. Use `--project /absolute/path` to select another consumer project or `--global` to install to the host's user scope; never combine them. `--dry-run` previews the exact destination and checks the Codex adapter without writing. Use `--upgrade` only after inspecting an existing managed copy. `status` and `uninstall` use the same `--agent` and scope options.
+### Existing Skills CLI installation / migration
 
-```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex --dry-run
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz status --agent codex
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex --upgrade
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz uninstall --agent codex
+An older installation in `C:\Users\<username>\.agents\skills\ui-spec` may have no unified-installer ownership receipt. This is normal if it was installed with `npx skills add`; **do not manually delete the directory**. On Windows, to migrate it into a managed user-scoped Codex installation:
+
+```powershell
+npx --yes ui-spec-studio@latest install --agent codex --global --migrate --lang zh
 ```
 
-### Existing installation / migration
+The default interactive workflow also offers to **adopt** a byte-identical Skill, **back up and migrate** an older or edited Skill, or **keep it unchanged**. `--migrate` explicitly authorizes a backup first; `--yes` alone does not authorize replacement. Windows Junctions and POSIX symlinks are treated as links: the installer migrates the Skill location without altering its backing source. Uninstall restores the original copy or link.
 
-To recover specifically from the older `Existing unowned Skill directory` message without deleting your data, execute the `v1.20.3` tagged tarball rather than the cached mutable `latest` alias:
+A safe preview is available:
+
+```powershell
+npx --yes ui-spec-studio@latest install --agent codex --global --migrate --dry-run
+```
+
+The packaged manifest verifies every file with SHA-256, staged files are checked before replacement, and native Harness registrations remain separately guarded. Do not run the same installer in multiple terminals against the same Skill directory.
+
+### Immutable GitHub Release fallback
+
+If npm registry resolution is unavailable, use the **specific public release**, not the mutable `releases/latest/download/ui-spec-installer.tgz` URL. npm can reuse stale cached bytes for an unchanged tarball URL:
 
 ```powershell
 npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex --global --migrate
 ```
 
-The `--global` target is `~/.agents/skills/ui-spec`, and the installer backs up older valid Skill copies and Windows Junctions before replacing them. For diagnostics, run the identical pinned package with `--version`. Never copy the Markdown link syntax `bracketed Markdown hyperlink syntax` into PowerShell; paste a plain URL or quoted URL.
-
-If the target already contains a copy installed by `npx skills add`, the wizard detects the old `SKILL.md` (including Windows symlinks/junctions) and presents a real choice: **adopt identical files**, **back up and upgrade**, or **leave unchanged**. There is no implicit overwrite. A migrated original is saved outside any Harness Skill scanning directory, in the host's `ui-spec-studio/backups/` area, and is automatically restored when the managed Skill is uninstalled.
-
-```bash
-# Non-interactive, explicit and reversible migration
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex --migrate --no-tui
-# Preview without changing files
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex --migrate --dry-run
-# Chinese prompt labels
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex --lang zh
-```
-
-In non-interactive mode, an existing unmanaged Skill requires `--migrate` or, only if every file is byte-identical, `--adopt`. `--yes` alone never authorizes a replacement. A file-integrity mismatch in a managed Skill remains a hard stop. The wizard uses real file and adapter operations; npm downloads the release tarball **before** the installer starts, so it does not falsely display simulated network-download percentages.
-
-The installer embeds a deterministic SHA-256 manifest of every packaged file, installs only the Skill files (plus a small ownership receipt), refuses unowned or locally edited Skill folders, and stages upgrades before swapping. Native role configuration remains owned and protected by its dedicated Harness adapter. If an adapter fails while installing a new Skill folder, the installer rolls back that Skill folder. Use a new terminal/Agent session where Skill discovery is cached.
-
-The GitHub source repository contains multiple gigabytes of historical evidence. **Do not use `npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec` as the recommended install:** current Skills CLI versions may clone that complete repository into a temporary directory before copying the requested Skill.
+The fixed-version release is a standard npm-executable tarball. Avoid `npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec` as the recommended installation; some Skills CLI versions first clone the entire multi-gigabyte repository.
 
 ## Standard Skills CLI compatibility: portable Skill only
 
@@ -72,7 +66,7 @@ For a host that already manages Skill installation through the [Skills CLI](http
 npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-1.20.3.zip --skill ui-spec -a codex
 ```
 
-This installs the **portable Skill alone**, not the four Codex native agents. The Codex adapter is separately available as `ui-spec-codex-1.20.2.zip` for manual installation. Do not use both installers against an already managed Skill directory without first examining ownership receipts; neither will silently take over a copy managed by the other.
+This installs the **portable Skill alone**, not the four Codex native agents. The Codex adapter is separately available as `ui-spec-codex-1.20.3.zip` for manual installation. Do not use both installers against an already managed Skill directory without first examining ownership receipts; neither will silently take over a copy managed by the other.
 
 For a fixed independent-installer version rather than the latest release:
 
