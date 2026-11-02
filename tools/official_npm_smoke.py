@@ -7,13 +7,15 @@ reported as an explicit SKIP unless --require-published is given.
 from __future__ import annotations
 
 import argparse
+import base64
+import hashlib
 import json
 from pathlib import Path
 import shutil
 import subprocess
 import sys
 import tempfile
-import time
+from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = "ui-spec-studio"
@@ -74,6 +76,18 @@ def run(*, require_published: bool = False) -> dict:
         return {"registry": "registered", "result": "SKIP_NEW_CANDIDATE",
                 "expected_version": version, "published_version": published}
 
+    # Establish byte identity independently of the npm registry and npx cache:
+    # the published npm tarball must be the exact pinned GitHub release asset.
+    release_url = (
+        f"https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/"
+        f"v{version}/ui-spec-installer.tgz"
+    )
+    with urlopen(release_url, timeout=30) as source:
+        release_bytes = source.read()
+    expected_integrity = "sha512-" + base64.b64encode(hashlib.sha512(release_bytes).digest()).decode("ascii")
+    if integrity != expected_integrity:
+        raise RuntimeError("Public npm SHA-512 differs from the exact GitHub Release asset")
+
     with tempfile.TemporaryDirectory(prefix="ui-spec-official-npm-") as td:
         base = Path(td)
         clean = base / "clean"
@@ -122,6 +136,7 @@ def run(*, require_published: bool = False) -> dict:
             "package": NAME,
             "version": version,
             "integrity": integrity,
+            "release_tarball_sha512_match": True,
             "public_cli": "npx --yes ui-spec-studio@latest",
             "skill_files": installation["skill_files"],
             "native_codex": True,
