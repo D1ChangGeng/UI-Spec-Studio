@@ -291,22 +291,116 @@ async function stageSkill(target, files, receipt, onFile = () => {}) {
     throw err;
   }
 }
-function show(ui, options, result, heading) {
+function scopeLabel(ui, scope) {
+  return scope === 'user'
+    ? ui.tr('All my projects', '当前用户的所有项目')
+    : ui.tr('This project', '当前项目');
+}
+function statusLabel(ui, status) {
+  const names = {
+    absent: ui.tr('Not installed', '未安装'),
+    current: ui.tr('Up to date', '已是当前版本'),
+    outdated: ui.tr('Update available', '可更新'),
+    legacy: ui.tr('Installed previously', '已有旧安装'),
+    'legacy-link': ui.tr('Installed via linked folder', '已有链接安装'),
+  };
+  return names[status] || status;
+}
+function actionLabel(ui, decision) {
+  const names = {
+    install: ui.tr('Install', '安装'),
+    migrate: ui.tr('Back up and update', '备份并更新'),
+    adopt: ui.tr('Keep existing files', '使用现有文件'),
+    upgrade: ui.tr('Update', '更新'),
+    'migration-required': ui.tr('Backup and update required', '需先备份并更新'),
+    'upgrade-required': ui.tr('Update required', '需要更新'),
+  };
+  return names[decision] || decision;
+}
+function show(ui, options, result) {
   if (!ui.active || options.json) {
     console.log(JSON.stringify(result, null, 2));
-  } else {
-    ui.summary([
-      ui.tr('Harness', '宿主') + ': ' + result.agent,
-      ui.tr('Scope', '范围') + ': ' + result.scope,
-      ui.tr('Skill files', 'Skill 文件') + ': ' + result.skill_files,
-      ui.tr('Destination', '目标目录') + ': ' + result.skill,
-      ...(result.status ? [ui.tr('Status', '状态') + ': ' + result.status] : []),
-      ...(result.installed_version ? [ui.tr('Installed version', '已安装版本') + ': ' + result.installed_version] : []),
-      ...(result.backup ? [ui.tr('Saved original', '原安装备份') + ': ' + result.backup] : []),
-    ].join('\n'), heading);
-    const unchanged = ['cancelled', 'not-installed', 'unmanaged-preserved', 'status'].includes(result.result);
-    ui.end(unchanged ? ui.tr('No changes made', '未作修改') : ui.tr('Ready — restart your coding agent if necessary', '安装完成；如有需要请重新启动编码 Agent'));
+    return;
   }
+  const tr = ui.tr;
+  const location = tr('Location', '位置') + ': ' + result.skill;
+  const context = [
+    tr('Tool', '工具') + ': ' + ui.name(result.agent),
+    tr('Install for', '安装范围') + ': ' + scopeLabel(ui, result.scope),
+    location,
+  ];
+  let title, lines, ending;
+  switch (result.result) {
+    case 'status':
+      title = tr('Installation status', '安装状态');
+      lines = [
+        tr('Status', '状态') + ': ' + statusLabel(ui, result.status),
+        ...(result.installed_version ? [tr('Version', '版本') + ': ' + result.installed_version] : []),
+        ...context,
+      ];
+      ending = tr('Checked', '查询完成');
+      break;
+    case 'installed':
+    case 'upgraded':
+      title = result.result === 'installed'
+        ? tr('Installed ' + result.version, '已安装 ' + result.version)
+        : tr('Updated to ' + result.version, '已更新到 ' + result.version);
+      lines = [...context, ...(result.backup
+        ? [tr('Previous version backed up', '旧版备份位置') + ': ' + result.backup] : [])];
+      ending = tr('Restart ' + ui.name(result.agent) + ' if it is already open',
+        '如 ' + ui.name(result.agent) + ' 已打开，请重新启动后使用');
+      break;
+    case 'already-current':
+      title = tr('Already up to date', '已是当前版本');
+      lines = context;
+      ending = tr('No update needed', '无需更新');
+      break;
+    case 'adopted-without-replacement':
+      title = tr('Existing files are ready to use', '现有文件已可使用');
+      lines = context;
+      ending = tr('Original files were kept', '保留了原有文件');
+      break;
+    case 'original-restored':
+      title = tr('Previous installation restored', '已恢复原安装');
+      lines = [location];
+      ending = tr('Done', '完成');
+      break;
+    case 'uninstalled':
+      title = tr('Uninstalled', '已卸载');
+      lines = [location];
+      ending = tr('Done', '完成');
+      break;
+    case 'adopted-copy-preserved':
+      title = tr('Existing files kept', '已保留原有文件');
+      lines = [location];
+      ending = tr('Done', '完成');
+      break;
+    case 'unmanaged-preserved':
+      title = tr('Installation left unchanged', '已有安装未修改');
+      lines = [
+        tr('This installation was created by another installer and was not removed.',
+          '此版本由其他安装方式创建，本次未卸载。'),
+        location,
+      ];
+      ending = tr('No files changed', '未修改文件');
+      break;
+    case 'not-installed':
+      title = tr('Not installed', '未找到安装');
+      lines = [location];
+      ending = tr('No files changed', '未修改文件');
+      break;
+    case 'cancelled':
+      title = tr('Existing version kept', '已保留当前版本');
+      lines = [location];
+      ending = tr('No files changed', '未修改文件');
+      break;
+    default:
+      title = tr('Completed', '已完成');
+      lines = context;
+      ending = tr('Done', '完成');
+  }
+  ui.summary(lines.join('\n'), title);
+  ui.end(ending);
 }
 let currentPresentation = null;
 async function main() {
