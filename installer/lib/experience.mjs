@@ -1,22 +1,30 @@
-// Mature terminal interaction primitives supplied by @clack/prompts (MIT).
-// Non-TTY and CI keep stable machine-readable output without animations.
+// Clack owns interactive presentation; headless output remains machine-readable.
+const toolNames = {
+  codex: 'Codex',
+  'claude-code': 'Claude Code',
+  cursor: 'Cursor',
+  opencode: 'OpenCode',
+};
+
 export async function createPresentation({ noTui = false, json = false, lang, version }) {
   const chinese = (lang || Intl.DateTimeFormat().resolvedOptions().locale).toLowerCase().startsWith('zh');
   const tr = (en, zh) => chinese ? zh : en;
+  const name = (id) => toolNames[id] || id;
   const eligible = !noTui && !json && !!process.stdin.isTTY && !!process.stdout.isTTY && process.env.CI !== 'true';
   let p = null;
   if (eligible) {
     try { p = await import('@clack/prompts'); }
-    catch { /* Optional dependency can be skipped for fully offline installation. */ }
+    catch { /* Offline or headless installation must remain available. */ }
   }
   const active = Boolean(p);
+  const cancel = () => p.cancel(tr('Cancelled', '已取消'));
   return {
-    active, tr,
+    active, tr, name,
     intro() { if (active) p.intro('UI SPEC STUDIO  v' + version); },
     info(message) { if (active) p.log.info(message); },
     warning(message) { if (active) p.log.warn(message); },
     success(message) { if (active) p.log.success(message); },
-    summary(message, heading = tr('Installation plan', '安装方案')) {
+    summary(message, heading = tr('Details', '详细信息')) {
       if (active) p.note(message, heading);
     },
     async step(message, fn, finished = tr('Done', '完成')) {
@@ -24,18 +32,18 @@ export async function createPresentation({ noTui = false, json = false, lang, ve
       const spin = p.spinner();
       spin.start(message);
       try { const result = await fn(); spin.stop(finished); return result; }
-      catch (err) { spin.stop(tr('Action failed', '操作失败')); throw err; }
+      catch (err) { spin.stop(tr('Could not complete', '未能完成')); throw err; }
     },
     async copyFiles(total, operation) {
       if (!active) return await operation(() => {});
       const bar = p.progress({ max: total });
-      bar.start(tr('Preparing ' + total + ' Skill files', '正在准备 ' + total + ' 个 Skill 文件'));
+      bar.start(tr('Copying ' + total + ' Skill files', '正在复制 ' + total + ' 个 Skill 文件'));
       try {
         const result = await operation(() => bar.advance(1));
-        bar.stop(tr('All files copied and verified', '所有 Skill 文件已复制并验证'));
+        bar.stop(tr('Files copied and verified', '文件已复制并验证'));
         return result;
       } catch (err) {
-        bar.stop(tr('File preparation failed', '文件准备失败'));
+        bar.stop(tr('Could not copy files', '文件复制失败'));
         throw err;
       }
     },
@@ -44,66 +52,70 @@ export async function createPresentation({ noTui = false, json = false, lang, ve
       const isHome = projectRoot.toLowerCase() === homeRoot.toLowerCase();
       const project = {
         value: 'project',
-        label: tr('Current project', '当前项目'),
+        label: tr('This project', '当前项目'),
         hint: projectRoot,
       };
       const user = {
         value: 'user',
-        label: tr('User-wide (all projects)', '用户级（所有项目）'),
-        hint: tr('Native user Skill directory', '宿主的用户级 Skill 目录'),
+        label: tr('All my projects', '当前用户的所有项目'),
       };
       const chosen = await p.select({
-        message: tr('Where should the Skill be installed?', '将 Skill 安装到什么范围？'),
+        message: tr('Where should it be installed?', '安装到哪里？'),
         options: isHome ? [user, project] : [project, user],
       });
-      if (p.isCancel(chosen)) {
-        p.cancel(tr('No files changed', '未修改任何文件'));
-        return 'cancel';
-      }
+      if (p.isCancel(chosen)) { cancel(); return 'cancel'; }
       return chosen;
     },
-    async chooseAgent(names) {
-      if (!active) throw new Error(tr('Select a Harness with --agent or use an interactive terminal', '请通过 --agent 指定宿主，或使用交互终端'));
+    async chooseAgent(ids) {
+      if (!active) throw new Error(tr('Choose a tool with --agent, or use an interactive terminal.',
+        '请使用 --agent 指定工具，或在交互终端中安装。'));
       const value = await p.select({
-        message: tr('Which coding Harness will use UI Spec Studio?', '将 UI Spec Studio 安装到哪个编码宿主？'),
-        options: names.map(name => ({ value: name, label: name })),
+        message: tr('Which tool will you use?', '在哪个工具中使用？'),
+        options: ids.map(id => ({ value: id, label: name(id) })),
       });
-      if (p.isCancel(value)) { p.cancel(tr('No files changed', '未修改任何文件')); return null; }
+      if (p.isCancel(value)) { cancel(); return null; }
       return value;
     },
     async resolveExisting({ kind, identical, version: installed, path }) {
       if (!active) return null;
       p.note([
-        tr('Existing version: ', '已有版本：') + (installed || tr('unknown', '未知')),
-        tr('Type: ', '类型：') + (kind === 'legacy-link' ? tr('link/junction', '链接 / Junction') : tr('unmanaged folder', '未托管目录')),
-        tr('Files match this release: ', '与新版本文件一致：') + (identical ? tr('yes', '是') : tr('no / unverified', '否 / 未验证')),
+        ...(installed ? [tr('Installed version: ', '已有版本：') + installed] : []),
         tr('Location: ', '位置：') + path,
+        ...(kind === 'legacy-link' ? [tr('The existing installation uses a linked folder.',
+          '现有安装使用了目录链接。')] : []),
+        ...(identical ? [tr('Its files already match this version.', '文件与当前版本一致。')] : []),
       ].join('\n'), tr('Existing installation', '检测到已有安装'));
       const options = [];
       if (identical && kind !== 'legacy-link') options.push({
-        value: 'adopt', label: tr('Adopt identical files; no replacement', '接管相同文件，不重新复制'),
-        hint: tr('Original files remain on uninstall', '卸载时保留原有文件'),
+        value: 'adopt',
+        label: tr('Keep and use these files', '直接使用现有文件'),
+        hint: tr('No replacement; these files remain on uninstall', '不替换文件，卸载后仍会保留'),
       });
       options.push({
-        value: 'migrate', label: tr('Back up existing installation, then update', '备份原安装后更新（推荐）'),
-        hint: tr('Reversible; original restored on uninstall', '可恢复，卸载时自动还原旧安装'),
+        value: 'migrate',
+        label: tr('Back up and update', '备份并更新'),
+        hint: tr('The previous installation is restored on uninstall', '卸载时恢复原安装'),
       }, {
-        value: 'keep', label: tr('Keep existing installation unchanged', '保留现有安装，不作修改'),
+        value: 'keep',
+        label: tr('Keep the current version', '保留当前版本'),
       });
-      const value = await p.select({ message: tr('How should this Skill be handled?', '如何处理这个 Skill？'), options });
-      if (p.isCancel(value)) { p.cancel(tr('No files changed', '未修改任何文件')); return 'keep'; }
+      const value = await p.select({
+        message: tr('What would you like to do with the existing version?', '如何处理已有版本？'),
+        options,
+      });
+      if (p.isCancel(value)) { cancel(); return 'keep'; }
       return value;
     },
     async resolveUpgrade(installed) {
       if (!active) return null;
       const value = await p.select({
-        message: tr('Managed version ' + installed + ' detected', '检测到已托管的 ' + installed),
+        message: tr('Installed version: ' + installed, '已有版本：' + installed),
         options: [
-          { value: 'upgrade', label: tr('Upgrade to this release', '升级到当前版本') },
-          { value: 'keep', label: tr('Keep existing version', '保留现有版本') },
+          { value: 'upgrade', label: tr('Update to ' + version, '更新到 ' + version) },
+          { value: 'keep', label: tr('Keep the current version', '保留当前版本') },
         ],
       });
-      if (p.isCancel(value)) { p.cancel(tr('No files changed', '未修改任何文件')); return 'keep'; }
+      if (p.isCancel(value)) { cancel(); return 'keep'; }
       return value;
     },
     end(message) { if (active) p.outro(message); },
