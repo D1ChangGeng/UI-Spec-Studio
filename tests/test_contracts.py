@@ -98,6 +98,14 @@ class ContractTests(unittest.TestCase):
         for filename in ("README.md", "README.zh-CN.md"):
             self.assertIn(f"releases/download/v{version}/ui-spec-installer.tgz", (ROOT / filename).read_text(encoding="utf-8"))
 
+    def test_official_npm_is_first_documented_install_command(self):
+        # Prevent stale GitHub-tarball-first READMEs after npm is public.
+        for filename in ("README.md", "README.zh-CN.md", "docs/INSTALL.md", "docs/NPM-DISTRIBUTION.md"):
+            body = (ROOT / filename).read_text(encoding="utf-8")
+            first = re.search(r"```(?:bash|powershell)\s*\n([^\r\n]+)", body)
+            self.assertIsNotNone(first, f"No installation code block in {filename}")
+            self.assertEqual(first.group(1).strip(), "npx --yes ui-spec-studio@latest", filename)
+
     def test_primary_distribution_urls_are_version_consistent(self):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
         url = re.compile(
