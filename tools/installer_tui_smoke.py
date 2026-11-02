@@ -188,7 +188,7 @@ def run() -> None:
         zh_output = guided_install(package, guided_zh, lang='zh')
         if '在哪个工具中使用？' not in zh_output or '安装到哪里？' not in zh_output:
             raise AssertionError('Chinese guided install did not use user-facing prompts')
-        if '文件已复制并验证' not in zh_output or '已安装' not in zh_output:
+        if '文件校验完成' not in zh_output or '已安装' not in zh_output:
             raise AssertionError('Chinese guided install omitted meaningful progress and result')
         print('Clack English/Chinese prompts, migration choices, file progress, restore and guided install: PASS')
 
