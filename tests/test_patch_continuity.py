@@ -26,7 +26,7 @@ class PatchContinuityTests(unittest.TestCase):
         shutil.copyfile(ROOT / "VERSION", self.root / "VERSION")
         self.original_skill = (self.root / SKILL).read_bytes()
         self.base_version = (self.root / "VERSION").read_text(encoding="utf-8").strip()
-        self.assertEqual(self.base_version, "1.20.4")
+        self.assertRegex(self.base_version, r"^1\.20\.[1-9][0-9]*$")
         self.expected = runtime_v119(ROOT, SKILL.as_posix())
 
     def replace_version(self, new_version: str):
@@ -40,7 +40,8 @@ class PatchContinuityTests(unittest.TestCase):
         self.assertEqual(runtime_v119(self.root, SKILL.as_posix()), self.expected)
 
     def test_later_patch_metadata_remains_reconstructable(self):
-        self.replace_version("1.20.14")
+        next_patch = 1 + int(self.base_version.split(".")[-1])
+        self.replace_version(f"1.20.{next_patch}")
         self.assertEqual(runtime_v119(self.root, SKILL.as_posix()), self.expected)
 
     def test_other_minor_version_not_normalized(self):
@@ -54,7 +55,8 @@ class PatchContinuityTests(unittest.TestCase):
             runtime_v119(self.root, SKILL.as_posix())
 
     def test_version_and_skill_metadata_must_agree(self):
-        (self.root / "VERSION").write_text("1.20.5\n", encoding="utf-8")
+        next_patch = 1 + int(self.base_version.split(".")[-1])
+        (self.root / "VERSION").write_text(f"1.20.{next_patch}\n", encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "Current source differs"):
             runtime_v119(self.root, SKILL.as_posix())
 
