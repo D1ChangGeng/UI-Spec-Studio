@@ -2,7 +2,7 @@
 
 ## Official npm installer (recommended)
 
-The public npm package `ui-spec-studio@1.20.3` and its `latest` dist-tag have been verified via the registry, the actual npm-named CLI, and an independent SHA-512 comparison with the exact GitHub Release tarball. The **canonical, version-independent** terminal entry point is:
+The official `ui-spec-studio` npm package was first publicly verified at version `1.20.3`, through registry readback, the actual npm-named CLI and SHA-512 comparison with the immutable GitHub Release. The `latest` dist-tag resolves the currently published version; each newer version, including `1.20.4`, requires its own release and public integrity acceptance. The **canonical, version-independent** terminal entry point is:
 
 ```powershell
 npx --yes ui-spec-studio@latest
@@ -53,7 +53,7 @@ The packaged manifest verifies every file with SHA-256, staged files are checked
 If npm registry resolution is unavailable, use the **specific public release**, not the mutable `releases/latest/download/ui-spec-installer.tgz` URL. npm can reuse stale cached bytes for an unchanged tarball URL:
 
 ```powershell
-npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex --global --migrate
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-installer.tgz" install --agent codex --global --migrate
 ```
 
 The fixed-version release is a standard npm-executable tarball. Avoid `npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec` as the recommended installation; some Skills CLI versions first clone the entire multi-gigabyte repository.
@@ -63,15 +63,15 @@ The fixed-version release is a standard npm-executable tarball. Avoid `npx skill
 For a host that already manages Skill installation through the [Skills CLI](https://skills.sh/docs/cli), install the independent release ZIP (not the source repository) explicitly:
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-1.20.3.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-1.20.4.zip --skill ui-spec -a codex
 ```
 
-This installs the **portable Skill alone**, not the four Codex native agents. The Codex adapter is separately available as `ui-spec-codex-1.20.3.zip` for manual installation. Do not use both installers against an already managed Skill directory without first examining ownership receipts; neither will silently take over a copy managed by the other.
+This installs the **portable Skill alone**, not the four Codex native agents. The Codex adapter is separately available as `ui-spec-codex-1.20.4.zip` for manual installation. Do not use both installers against an already managed Skill directory without first examining ownership receipts; neither will silently take over a copy managed by the other.
 
 For a fixed independent-installer version rather than the latest release:
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-installer.tgz install --agent codex
 ```
 
 The GitHub fallback package is a standard npm executable tarball. The **separately named official npm distribution** requires npm registry ownership and a one-time bootstrap; GitHub repository permission alone does not authorize npm publication. Other Harness adapter modules can be declared in `installer/harnesses.json` and bundled under `integrations/` without adding host-specific logic to the Skill instructions.
@@ -145,7 +145,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Fixed version
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-installer.tgz install --agent codex
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
