@@ -20,7 +20,8 @@ sys.path.insert(0, str(ROOT / "tools"))
 from package_installer import build_installer
 
 
-def wizard(cmd: list[str], project: Path, keys: bytes, *, timeout: float = 35) -> str:
+def wizard(cmd: list[str], project: Path, keys: bytes, *, timeout: float = 35,
+           prompt: bytes = b'What would you like to do with the existing version?') -> str:
     master, slave = pty.openpty()
     # pty.openpty() has zero terminal columns on some CI runners; Clack
     # will wrap every character if this width is not initialized.
@@ -42,7 +43,7 @@ def wizard(cmd: list[str], project: Path, keys: bytes, *, timeout: float = 35) -
                     chunk = b''
                 if chunk:
                     text.extend(chunk)
-                    if not sent and b'How should this Skill be handled?' in text:
+                    if not sent and prompt in text:
                         os.write(master, keys)
                         sent = True
             if proc.poll() is not None:
@@ -65,19 +66,22 @@ def wizard(cmd: list[str], project: Path, keys: bytes, *, timeout: float = 35) -
         proc.wait(timeout=5)
 
 
-def guided_install(package: Path, project: Path, *, timeout: float = 35) -> str:
+def guided_install(package: Path, project: Path, *, timeout: float = 35, lang: str = 'en') -> str:
     """Exercise the package's zero-argument Harness and scope menus."""
-    cmd = ['node', str(package / 'bin/ui-spec.mjs'), '--lang', 'en']
+    cmd = ['node', str(package / 'bin/ui-spec.mjs'), '--lang', lang]
     master, slave = pty.openpty()
     fcntl.ioctl(slave, termios.TIOCSWINSZ, struct.pack('HHHH', 44, 140, 0, 0))
     env = dict(os.environ, CI='false', TERM='xterm-256color', NO_COLOR='1')
     proc = subprocess.Popen(cmd, cwd=project, env=env, stdin=slave, stdout=slave, stderr=slave,
                             start_new_session=True)
     os.close(slave)
-    prompts = [
-        b'Which coding Harness will use UI Spec Studio?',
-        b'Where should the Skill be installed?',
-    ]
+    prompts = ([
+        '在哪个工具中使用？'.encode('utf-8'),
+        '安装到哪里？'.encode('utf-8'),
+    ] if lang == 'zh' else [
+        b'Which tool will you use?',
+        b'Where should it be installed?',
+    ])
     index = 0
     output = bytearray()
     deadline = time.monotonic() + timeout
@@ -150,8 +154,17 @@ def run() -> None:
         output = wizard(cmd, project, b'\x1b[B\r')
         if (target / 'SKILL.md').read_bytes() != before or (target / '.ui-spec-install.json').exists():
             raise AssertionError('Cancel/keep choice unexpectedly modified the existing installation')
-        if 'No changes' not in output and 'No changes' not in output.replace('\r', ''):
+        if 'No files changed' not in output.replace('\r', ''):
             raise AssertionError('Expected a clear cancellation/keep result')
+        # A second language must preserve the same migration and cancellation semantics.
+        zh_cmd = ['node', str(package / 'bin/ui-spec.mjs'), 'install', '--agent', 'codex',
+                  '--project', str(project), '--lang', 'zh']
+        zh_output = wizard(zh_cmd, project, b'\x1b[B\r',
+                           prompt='如何处理已有版本？'.encode('utf-8'))
+        if '已有版本' not in zh_output or '未修改文件' not in zh_output:
+            raise AssertionError('Chinese migration choice omitted its user-facing status')
+        if (target / 'SKILL.md').read_bytes() != before:
+            raise AssertionError('Chinese keep choice modified the existing Skill')
         # Default choice: make a reversible backup and install the new Skill.
         output = wizard(cmd, project, b'\r')
         if not (target / '.ui-spec-install.json').is_file():
@@ -170,7 +183,14 @@ def run() -> None:
         output = guided_install(package, guided)
         if 'UI SPEC STUDIO' not in output or 'files' not in output.lower():
             raise AssertionError('Zero-argument terminal experience lacks its product summary')
-        print('Clack terminal prompts, choice preservation, file progress, restore and zero-argument wizard: PASS')
+        guided_zh = root / 'guided-project-zh'
+        guided_zh.mkdir()
+        zh_output = guided_install(package, guided_zh, lang='zh')
+        if '在哪个工具中使用？' not in zh_output or '安装到哪里？' not in zh_output:
+            raise AssertionError('Chinese guided install did not use user-facing prompts')
+        if '文件已复制并验证' not in zh_output or '已安装' not in zh_output:
+            raise AssertionError('Chinese guided install omitted meaningful progress and result')
+        print('Clack English/Chinese prompts, migration choices, file progress, restore and guided install: PASS')
 
 
 if __name__ == '__main__':
