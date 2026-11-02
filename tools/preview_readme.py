@@ -32,6 +32,24 @@ def render_document(markdown: str, language: str) -> str:
     return f'<!doctype html><html lang="{language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UI Spec Studio — README preview</title><style>{STYLE}</style></head><body><div class="preview-label">Local Markdown preview · GitHub-like stylesheet · not a GitHub screenshot</div><article class="markdown-body">{body}</article></body></html>'
 
 
+def capture_verified_frame(page, path: Path, *, full_page: bool) -> None:
+    """Capture real browser evidence; retry transient Chromium CDP failures only.
+
+    A retry is never treated as success without an actual written screenshot.
+    Other errors, including invalid clipping or navigation failures, propagate.
+    """
+    for attempt in range(3):
+        try:
+            page.screenshot(path=str(path), full_page=full_page, timeout=30000)
+            if not path.is_file() or path.stat().st_size < 1024:
+                raise ValueError(f"Missing or invalid screenshot: {path}")
+            return
+        except Exception as exc:
+            if 'Page.captureScreenshot' not in str(exc) or attempt == 2:
+                raise
+            page.wait_for_timeout(400 * (attempt + 1))
+
+
 def _inspect(page, article, path: Path) -> dict:
     page.evaluate('document.fonts.ready')
     page.wait_for_function('''() => [...document.querySelectorAll('article img')].every(i=>i.complete&&i.naturalWidth>0)''',timeout=30000)
@@ -41,8 +59,8 @@ def _inspect(page, article, path: Path) -> dict:
     overflow=page.evaluate('document.documentElement.scrollWidth>innerWidth+1')
     if overflow: raise ValueError('Document overflows the actual viewport')
     # Preserve the original viewport for both visible and document-length captures.
-    page.screenshot(path=str(path.with_suffix('.png')),full_page=False)
-    page.screenshot(path=str(path.with_name(path.name+'-full.png')),full_page=True)
+    capture_verified_frame(page, path.with_suffix('.png'), full_page=False)
+    capture_verified_frame(page, path.with_name(path.name+'-full.png'), full_page=True)
     details=article.locator('details').first
     if details.count():
         details.locator('summary').click()
