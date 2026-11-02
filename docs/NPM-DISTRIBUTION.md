@@ -2,7 +2,7 @@
 
 ## Current authoritative status
 
-**Initial public npm release registered and independently verified:** `ui-spec-studio@1.20.3`; at initial publication its `latest` dist-tag was verified. Each subsequent version, including `1.20.4`, must pass a new actual OIDC publication and public-registry readback before being described as verified. On 2026-11-02, GitHub Actions [npm candidate verification](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41397846037) independently confirmed the public registry package identity, byte-for-byte SHA-512 parity with the **v1.20.3 GitHub Release** installer, successful `npx --yes ui-spec-studio@latest` installation, all 37 Skill files, four Codex roles, and reversible migration/restoration of an unmanaged copy.
+**Initial public npm release registered and independently verified:** `ui-spec-studio@1.20.3`; at initial publication its `latest` dist-tag was verified. Each subsequent version, including `1.20.5`, must pass a new actual OIDC publication and public-registry readback before being described as verified. On 2026-11-02, GitHub Actions [npm candidate verification](https://github.com/D1ChangGeng/UI-Spec-Studio/actions/runs/41397846037) independently confirmed the public registry package identity, byte-for-byte SHA-512 parity with the **v1.20.3 GitHub Release** installer, successful `npx --yes ui-spec-studio@latest` installation, all 37 Skill files, four Codex roles, and reversible migration/restoration of an unmanaged copy.
 
 The initial npm first-publish command succeeded but its immediate `npm view` returned a transient 404 while the registry processed the new package. A subsequent public readback and actual `npx` execution succeeded. **Do not republish the same package version.** `tools/bootstrap-npm.ps1` now detects an already-published byte-identical version and accepts it without a registry write. After a new first publish, it retries registry verification and distinguishes accepted publication from eventual public readback.
 
@@ -15,7 +15,7 @@ npx --yes ui-spec-studio@latest
 A fixed GitHub Release URL remains an immutable fallback. Do not use `releases/latest/download/ui-spec-installer.tgz` as an npm package specifier: npm may reuse stale cached bytes for its unchanged URL.
 
 ```powershell
-npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-installer.tgz" install --agent codex --global --migrate
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.5/ui-spec-installer.tgz" install --agent codex --global --migrate
 ```
 
 ### Legacy Windows installation migration
@@ -56,6 +56,10 @@ Now that `ui-spec-studio@1.20.3` is publicly registered and its `dist.integrity`
 5. No long-lived `NPM_TOKEN` is needed; `.github/workflows/npm-publish.yml` uses GitHub's `id-token: write` OIDC permission in its publish job.
 
 Only after this connection is active should the package owner consider npm's "require 2FA and disallow tokens" publishing restriction. Restricting tokens must not break the necessary one-time bootstrap.
+
+## The v1.20.4 GitHub Release and OIDC preflight repair
+
+The immutable v1.20.4 GitHub Release was successfully created and validated, but the npm publish job stopped **before** executing `npm publish`: a malformed npm CLI preflight interpreted a nonempty lookup result as a conflicting remote archive. This was not a confirmed OIDC authentication failure and is not grounds to republish or move the v1.20.4 Git tag. The v1.20.5 release replaces that unreliable query with exact public HTTP version metadata and blocks on unknown states. The publish job also avoids setup-node's placeholder `_authToken` configuration, which can prevent OIDC authentication. Real OIDC acceptance still requires a successful new-version npm publish and registry/CLI verification.
 
 ## Verified-release automation after bootstrap
 

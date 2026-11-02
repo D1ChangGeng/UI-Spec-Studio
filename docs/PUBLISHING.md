@@ -73,6 +73,18 @@ A correction to an unpublished version can complete its release after every gate
 passes: a missing version tag activates publication. Existing published tags and
 assets retain the release tool's identity and checksum protections.
 
+## First OIDC activation recovery
+
+A successful `v1.20.4` GitHub Release did not complete npm publishing: its
+GitHub Actions publish job failed in the preflight before `npm publish` was
+called. The initial npm CLI lookup could return a nonempty value without proving
+a public version existed. The v1.20.5 release fixes this by probing the exact
+registry version over HTTPS and allowing a first publish only on HTTP 404. It
+also avoids the placeholder `_authToken` from setup-node, which can suppress
+OIDC. The immutable v1.20.4 tag remains unchanged. The real first OIDC
+publication must be verified independently, including its public SHA-512,
+`latest` resolution and actual `npx` migration.
+
 ## Official npm registry release
 
 `ui-spec-studio@1.20.3` has been publicly published. The npm candidate
@@ -107,8 +119,8 @@ existing release before retrying.
 ## Verify what users receive
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-installer.tgz install --agent codex
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-1.20.4.zip --skill ui-spec -a codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.5/ui-spec-installer.tgz install --agent codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.5/ui-spec-1.20.5.zip --skill ui-spec -a codex
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep

@@ -9,6 +9,8 @@ on:
       - tools/package_installer.py
       - tools/installer_smoke.py
       - tools/bootstrap-npm.ps1
+      - tools/npm_publish_preflight.py
+      - tests/test_npm_publish_preflight.py
       - tools/npm_registry_readback.py
       - tests/test_npm_registry_readback.py
       - tools/official_npm_smoke.py
@@ -97,6 +99,15 @@ jobs:
             echo "npm registry unavailable or returned a non-404 error: $response" >&2
             exit 1
           fi
+      - name: Confirm exact candidate npm version by registry HTTP (read-only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$(python tools/npm_publish_preflight.py --tarball dist/ui-spec-installer.tgz)"
+          case "$state" in
+            NOT_PUBLISHED|ALREADY_PUBLISHED_MATCH) echo "REGISTRY_VERSION_PREFLIGHT $state" ;;
+            *) echo "Unexpected npm registry state: $state" >&2; exit 1 ;;
+          esac
       - name: Rehearse the account owner's SHA-256 verified first-publication flow
         shell: pwsh
         run: ./tools/bootstrap-npm.ps1 -DryRun
@@ -132,10 +143,12 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.13'
+      # Do not configure registry-url here: setup-node adds an _authToken
+      # placeholder to .npmrc and can short-circuit npm's OIDC exchange.
+      # The official npm registry is selected explicitly by the CLI below.
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '24'
-          registry-url: https://registry.npmjs.org
           package-manager-cache: false
       - name: Require exact validated release and prevent stale-event publishing
         id: release_gate
@@ -211,18 +224,22 @@ jobs:
         run: |
           set -euo pipefail
           version="$(cat VERSION)"
-          local_integrity="$(node -e "const c=require('node:crypto'),f=require('node:fs'); console.log('sha512-'+c.createHash('sha512').update(f.readFileSync('dist/ui-spec-installer.tgz')).digest('base64'))")"
-          remote_integrity="$(npm view "ui-spec-studio@$version" dist.integrity --json --prefer-online 2>/dev/null || true)"
-          remote_integrity="${remote_integrity//\"/}"
-          if [[ "$remote_integrity" == "$local_integrity" ]]; then
-            echo "Identical npm version already published; no duplicate publication"
-          elif [[ -n "$remote_integrity" ]]; then
-            echo "Existing registry version has conflicting archive identity; refusing publication" >&2
-            exit 1
-          else
-            npm publish ./dist/ui-spec-installer.tgz --access public
-          fi
-          echo "PUBLISH_ACCEPTED_OR_ALREADY_VERIFIED: ui-spec-studio@$version"
+          # Only an exact public HTTP 404 establishes that a version is absent.
+          # Do not turn npm view's null/JSON/error text into an integrity conflict.
+          outcome="$(python tools/npm_publish_preflight.py --tarball dist/ui-spec-installer.tgz)"
+          case "$outcome" in
+            NOT_PUBLISHED)
+              npm publish ./dist/ui-spec-installer.tgz --access public --registry https://registry.npmjs.org
+              echo "PUBLISH_ACCEPTED: ui-spec-studio@$version"
+              ;;
+            ALREADY_PUBLISHED_MATCH)
+              echo "ALREADY_PUBLISHED_VERIFIED: ui-spec-studio@$version (no duplicate publish)"
+              ;;
+            *)
+              echo "Unexpected preflight outcome; refusing npm publication: $outcome" >&2
+              exit 1
+              ;;
+          esac
       - name: Verify exact public npm metadata and latest with bounded retries
         if: steps.release_gate.outputs.eligible == 'true' && steps.registry_gate.outputs.registered == 'true'
         run: python tools/npm_registry_readback.py --tarball dist/ui-spec-installer.tgz
