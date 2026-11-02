@@ -63,7 +63,8 @@ def verify_once(version: str, expected_integrity: str, fetch=fetch_json) -> None
         repo_url = repo_url.removeprefix("git+").removesuffix(".git")
     if metadata.get("name") != NAME or metadata.get("version") != version or repo_url != REPOSITORY:
         raise IntegrityConflict("Registry name, version or repository does not match the approved release")
-    remote_integrity = metadata.get("dist", {}).get("integrity")
+    dist = metadata.get("dist")
+    remote_integrity = dist.get("integrity") if isinstance(dist, dict) else None
     if remote_integrity != expected_integrity:
         raise IntegrityConflict("Registry SHA-512 differs from the exact release tarball")
 
