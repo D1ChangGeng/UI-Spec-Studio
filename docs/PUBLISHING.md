@@ -84,9 +84,10 @@ replication delays and refuse duplicate publishes of a matching version.
 
 After a successful main-branch `Validate and release` workflow for a new
 version, `npm-publish.yml` can publish via GitHub OIDC using an npm
-**Trusted publishing** configuration. This authorization must still be set
-up by the npm account owner, and its effectiveness is not established until a
-later version is actually published through that workflow. No long-lived npm
+**Trusted publishing** configuration. The npm account owner has configured the GitHub Actions Trusted Publisher, but
+its status remains pending validation until a new version is actually published
+through this OIDC workflow. The first publish must occur before the setup expiry
+shown in the npm package settings. No long-lived npm
 token is required. See [the npm distribution procedure](NPM-DISTRIBUTION.md).
 
 ## Manual publication from an authorized checkout
@@ -106,8 +107,8 @@ existing release before retrying.
 ## Verify what users receive
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz install --agent codex
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-1.20.3.zip --skill ui-spec -a codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-installer.tgz install --agent codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.4/ui-spec-1.20.4.zip --skill ui-spec -a codex
 ```
 
 Read back the repository commit, tag, Actions result and release assets. Keep
