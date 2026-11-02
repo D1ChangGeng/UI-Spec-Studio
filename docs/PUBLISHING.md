@@ -7,8 +7,9 @@ GitHub Releases also distribute a separately verified
 `ui-spec-installer.tgz` as an **immutable, version-pinned fallback** without
 cloning the multi-GB source repository. The first npm package registration has
 succeeded and was independently verified against GitHub's release archive.
-Ongoing automated publication additionally requires the npm account owner to
-configure OIDC trusted publishing for `.github/workflows/npm-publish.yml`.
+Automated publication through the npm account owner's configured GitHub Actions
+OIDC Trusted Publisher has now been independently validated by the successful
+`ui-spec-studio@1.20.5` release.
 
 ## Prepare the version
 
@@ -81,9 +82,11 @@ called. The initial npm CLI lookup could return a nonempty value without proving
 a public version existed. The v1.20.5 release fixes this by probing the exact
 registry version over HTTPS and allowing a first publish only on HTTP 404. It
 also avoids the placeholder `_authToken` from setup-node, which can suppress
-OIDC. The immutable v1.20.4 tag remains unchanged. The real first OIDC
-publication must be verified independently, including its public SHA-512,
-`latest` resolution and actual `npx` migration.
+OIDC. The immutable v1.20.4 tag remains unchanged. The first real
+OIDC publication succeeded for v1.20.5 on 2026-11-02, with signed provenance,
+public SHA-512 and `latest` verified. An immediate npm CLI read temporarily saw
+an older `latest`; the second run passed the full `npx` migration and restore
+smoke without publishing a duplicate version.
 
 ## Official npm registry release
 
@@ -95,12 +98,14 @@ the original on uninstall. Changes to the bootstrap script now handle registry
 replication delays and refuse duplicate publishes of a matching version.
 
 After a successful main-branch `Validate and release` workflow for a new
-version, `npm-publish.yml` can publish via GitHub OIDC using an npm
-**Trusted publishing** configuration. The npm account owner has configured the GitHub Actions Trusted Publisher, but
-its status remains pending validation until a new version is actually published
-through this OIDC workflow. The first publish must occur before the setup expiry
-shown in the npm package settings. No long-lived npm
-token is required. See [the npm distribution procedure](NPM-DISTRIBUTION.md).
+version, `npm-publish.yml` publishes through the already validated GitHub OIDC
+**Trusted Publisher**. The first new-version OIDC publication was `1.20.5`,
+with verified signed provenance and the official npm-named CLI, not a manual
+owner login or long-lived npm token. Registry propagation may temporarily make
+ordinary npm CLI `@latest` resolution stale after the registry's immutable
+version and tag endpoints are already correct. The public CLI smoke now retries
+only these transient readings with a fresh isolated npm cache, without
+republishing an accepted version. See [the npm distribution procedure](NPM-DISTRIBUTION.md).
 
 ## Manual publication from an authorized checkout
 
