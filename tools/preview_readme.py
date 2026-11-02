@@ -50,8 +50,10 @@ def _inspect(page, article, path: Path) -> dict:
         details.locator('summary').click()
         page.evaluate('scrollTo(0,0)')
     install=article.locator('pre').first.inner_text()
-    if 'npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.3/ui-spec-installer.tgz" install --agent codex' not in install:
-        raise ValueError('Primary installation command is not selectable native text')
+    # Verify the currently advertised canonical entry in both README locales,
+    # not a legacy fixed-version GitHub fallback hidden further down the page.
+    if install.strip() != 'npx --yes ui-spec-studio@latest':
+        raise ValueError('Official npm install command must be selectable native text')
     if not image.get_attribute('alt'): raise ValueError('Artwork needs alternative text')
     return {'viewport':page.viewport_size,'article':box,'artwork':img,'document_overflow':overflow,
             'native_install_command':True,'disclosure':'exercised','image_alt':True,
