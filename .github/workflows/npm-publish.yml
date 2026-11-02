@@ -99,6 +99,15 @@ jobs:
             echo "npm registry unavailable or returned a non-404 error: $response" >&2
             exit 1
           fi
+      - name: Confirm exact candidate npm version by registry HTTP (read-only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          state="$(python tools/npm_publish_preflight.py --tarball dist/ui-spec-installer.tgz)"
+          case "$state" in
+            NOT_PUBLISHED|ALREADY_PUBLISHED_MATCH) echo "REGISTRY_VERSION_PREFLIGHT $state" ;;
+            *) echo "Unexpected npm registry state: $state" >&2; exit 1 ;;
+          esac
       - name: Rehearse the account owner's SHA-256 verified first-publication flow
         shell: pwsh
         run: ./tools/bootstrap-npm.ps1 -DryRun
