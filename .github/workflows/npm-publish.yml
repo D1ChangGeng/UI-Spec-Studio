@@ -9,6 +9,8 @@ on:
       - tools/package_installer.py
       - tools/installer_smoke.py
       - tools/bootstrap-npm.ps1
+      - tools/npm_registry_readback.py
+      - tests/test_npm_registry_readback.py
       - tools/official_npm_smoke.py
       - docs/NPM-DISTRIBUTION.md
       - README.md
@@ -220,7 +222,10 @@ jobs:
           else
             npm publish ./dist/ui-spec-installer.tgz --access public
           fi
-          npm view "ui-spec-studio@$version" version dist.integrity --json --prefer-online
+          echo "PUBLISH_ACCEPTED_OR_ALREADY_VERIFIED: ui-spec-studio@$version"
+      - name: Verify exact public npm metadata and latest with bounded retries
+        if: steps.release_gate.outputs.eligible == 'true' && steps.registry_gate.outputs.registered == 'true'
+        run: python tools/npm_registry_readback.py --tarball dist/ui-spec-installer.tgz
       - name: Verify public npm-named CLI and reversible legacy migration
         if: steps.release_gate.outputs.eligible == 'true' && steps.registry_gate.outputs.registered == 'true'
         run: python tools/official_npm_smoke.py --require-published
