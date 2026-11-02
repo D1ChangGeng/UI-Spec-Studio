@@ -591,10 +591,44 @@ async function main() {
   });
   show(ui, options, outcome);
 }
+function userError(ui, message) {
+  const tr = ui.tr;
+  if (message.startsWith('Codex adapter requires Python 3.11+'))
+    return tr('Codex requires Python 3.11 or newer. No Skill files changed.',
+      'Codex 角色需要 Python 3.11 或更新版本，未修改 Skill 文件。');
+  if (message.startsWith('Unsupported Harness:'))
+    return tr('Unsupported tool. Choose Codex, Claude Code, Cursor or OpenCode.',
+      '不支持此工具，请选择 Codex、Claude Code、Cursor 或 OpenCode。');
+  if (message.startsWith('Another installation may be running.'))
+    return tr('Another installation may be running. Check the lock file: ',
+      '可能有其他安装正在进行。请检查锁文件：') + message.split(': ').slice(1).join(': ');
+  if (message.startsWith('Existing directory is not a recognizable ui-spec Skill'))
+    return tr('This folder contains a different Skill. Nothing was replaced.',
+      '该位置已有其他 Skill，未替换任何文件。');
+  if (message.startsWith('Existing directory has no regular SKILL.md'))
+    return tr('This folder is not a UI Spec Studio installation. Nothing was replaced.',
+      '该位置不是 UI Spec Studio 的安装目录，未替换任何文件。');
+  if (message.startsWith('Managed Skill contains a modified file:'))
+    return tr('An installed file has changed. It was not overwritten: ',
+      '已有文件被修改，未覆盖：') + message.slice('Managed Skill contains a modified file: '.length);
+  if (message.startsWith('Managed Skill has added or missing files'))
+    return tr('Installed files have changed. Nothing was replaced.',
+      '已有安装的文件发生变化，未替换任何文件。');
+  if (message.startsWith('Unreadable managed receipt') || message.startsWith('Unrecognized managed installation receipt'))
+    return tr('The existing installation record cannot be read. No files changed.',
+      '无法读取现有安装记录，未修改文件。');
+  if (message.startsWith('Installation changed during preparation'))
+    return tr('The installation changed while checking it. Please try again.',
+      '检查期间安装内容发生变化，请重试。');
+  if (message.startsWith('Invalid distribution') || message.startsWith('Distribution contains'))
+    return tr('The installation files could not be verified. Download the installer again.',
+      '安装文件校验失败，请重新获取安装包。');
+  return message;
+}
 main().catch(err => {
   if (currentPresentation?.active) {
-    currentPresentation.error(err.message);
-    currentPresentation.end(currentPresentation.tr('Installer stopped; review the message above', '安装已停止，请查看上方错误信息'));
+    currentPresentation.error(userError(currentPresentation, err.message));
+    currentPresentation.end(currentPresentation.tr('Installation not completed', '安装未完成'));
   } else console.error('ui-spec: ' + err.message);
   process.exitCode = 1;
 });
