@@ -1,4 +1,4 @@
-# Optional Codex adapter — v1.20.3
+# Optional Codex adapter — v1.21.0
 
 The recommended **unified installer** installs the portable Skill and this native adapter in one invocation without cloning the GitHub source repository:
 
@@ -8,9 +8,9 @@ npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/latest/download
 
 The instructions below are the independent manual adapter path for advanced consumers.
 
-This is an optional host adapter, not a replacement for `ui-spec`. Install the complete Skill first through your established Skills workflow. The main agent and substantive specialist work retain its eight-reference reading contract. Models and permissions come from the actual host; a role file cannot create a sandbox, a browser, a login or a separate desktop.
+This is an optional host adapter, not a replacement for `ui-spec`. Install the complete Skill first through your established Skills workflow. The main agent and substantive specialist work retain its eight-reference reading contract and `references/delegation.md` boundaries. Models and permissions come from the actual host; a role file cannot create a sandbox, a browser, a login or a separate desktop.
 
-The release build includes `ui-spec-codex-1.20.3.zip` as a separate asset, with its digest in `SHA256SUMS.txt`. Extract its `ui-spec-codex/` directory and run `python install.py install --project /path/to/product` from that directory. It includes the installer, launcher, doctor, four role files, model guidance and license. The complete Skill is distributed separately as `ui-spec-1.20.3.zip`.
+The release build includes `ui-spec-codex-1.21.0.zip` as a separate asset, with its digest in `SHA256SUMS.txt`. Extract its `ui-spec-codex/` directory and run `python install.py install --project /path/to/product` from that directory. It includes the installer, launcher, doctor, four role files, model guidance and license. The complete Skill is distributed separately as `ui-spec-1.21.0.zip`.
 
 ## Install without overwriting personal work
 
@@ -23,7 +23,7 @@ python integrations/codex/install.py install --project /path/to/product
 
 From inside `integrations/codex`, use `python install.py ...`. On Windows, `py -3 install.py ...` uses the selected Python interpreter. Install in the environment that actually runs Codex: WSL and Windows have separate home/configuration locations. `--user` explicitly targets `CODEX_HOME` (or `~/.codex`); it is never selected implicitly.
 
-An explicit `install` command installs **all four roles by default**: `ui_researcher`, `ui_integrator`, `ui_challenger` and `ui_experience_observer`. It registers their paths and descriptions through four native `[agents.<name>]` entries in a clearly marked, owned block in `config.toml`. The dry-run report includes that configuration change. Existing settings, model choices and permissions remain intact. The latter two roles remain **on-demand for actual delegation**, not opt-in for installation; installation alone never invokes a role or establishes an experimentally proven benefit. Legacy `--with-optional` is accepted as a no-op for earlier candidate commands. The installer does not change `AGENTS.md` or Skill knowledge. Review `AGENTS-snippet.md` and merge its meaning into existing project instructions without replacing them.
+An explicit `install` command installs **all four roles by default**: `ui_researcher` (multi-tier wide high-craft hunting and craft-mechanic extraction), `ui_integrator` (bounded deep-reuse integration, token harmonization, `@layer` cascade isolation and rendering-fidelity repairs), `ui_challenger` (evidence-grounded taste, AI-slop and craft-degradation critique) and `ui_experience_observer` (side-by-side target-demo vs. integrated-UI capture, immutable pre/post evidence, optical crops and temporal/ergonomic episodes). It registers their paths and descriptions through four native `[agents.<name>]` entries in a clearly marked, owned block in `config.toml`. The dry-run report includes that configuration change. Existing settings, model choices and permissions remain intact. The latter two roles remain **on-demand for actual delegation**, not opt-in for installation; installation alone never invokes a role or establishes an experimentally proven benefit. Legacy `--with-optional` is accepted as a no-op for earlier candidate commands. The installer does not change `AGENTS.md` or Skill knowledge. Review `AGENTS-snippet.md` and merge its meaning into existing project instructions without replacing them.
 
 ```bash
 python integrations/codex/install.py status --project /path/to/product
@@ -57,9 +57,9 @@ Registration does not add a custom-role selector to a host or model interface th
 
 Ask the main agent to investigate the important unresolved relationship, for example:
 
-> Use ui-spec. Ask an independent researcher to investigate mature composer-and-reading-space implementations. Inspect actual growth, attachment and scrolling behavior and return strong candidates, viewed evidence, adoptable sources and significant unknowns. Keep the final product decision and integrated visual review in the main thread.
+> Use ui-spec. Ask an independent researcher to hunt elite products and high-craft component registries for mature composer-and-reading-space implementations, rejecting generic stock layouts. Inspect actual growth, attachment and scrolling behavior and return extracted craft mechanics, viewed evidence, verified adoptable sources and significant unknowns. Keep the final product decision and integrated visual review in the main thread.
 
-For integration, identify the selected source/variant, protected visual relationships, permitted modules, data/state contracts and actual checks. This is not permission to invent unspecified layout or motion.
+For integration, identify the selected source/variant, protected visual relationships, canonical token harmonization, `@layer` cascade boundaries, permitted modules, data/state contracts and actual checks. This is not permission to invent unspecified layout or motion.
 
 ## Verify the actual runtime
 
