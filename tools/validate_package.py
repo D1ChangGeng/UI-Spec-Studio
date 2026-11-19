@@ -54,6 +54,9 @@ REQUIRED += ["docs/REVIEW-v1.17.0.md", "docs/evidence/v1.17.0/continuity.json",
              "docs/experiments/adaptive-granularity/baseline-identity.json",
              "docs/experiments/adaptive-granularity/judgment-module.md",
              "docs/experiments/adaptive-granularity/tasks.json"]
+REQUIRED += ["skills/ui-spec/references/delegation.md",
+             "docs/REVIEW-v1.21.0.md",
+             "docs/evidence/v1.21.0/continuity.json"]
 IGNORED = {".git", "dist", "node_modules", "__pycache__", ".pytest_cache"}
 
 

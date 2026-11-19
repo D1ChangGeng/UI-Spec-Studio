@@ -6,7 +6,7 @@ import shutil
 import tempfile
 import unittest
 
-from source_continuity import runtime_v119
+from source_continuity import runtime_v119, runtime_v120
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,13 +19,21 @@ class PatchContinuityTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        for path in [SKILL, LEDGER]:
-            dest = self.root / path
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(ROOT / path, dest)
-        shutil.copyfile(ROOT / "VERSION", self.root / "VERSION")
+        dest_ledger = self.root / LEDGER
+        dest_ledger.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(ROOT / LEDGER, dest_ledger)
+        self.base_version = "1.20.6"
+        v120_skill = runtime_v120(ROOT, SKILL.as_posix())
+        patched_skill = v120_skill.replace(
+            b'  version: "1.20.0"\n',
+            ('  version: "' + self.base_version + '"\n').encode("utf-8"),
+            1,
+        )
+        dest_skill = self.root / SKILL
+        dest_skill.parent.mkdir(parents=True, exist_ok=True)
+        dest_skill.write_bytes(patched_skill)
+        (self.root / "VERSION").write_text(self.base_version + "\n", encoding="utf-8")
         self.original_skill = (self.root / SKILL).read_bytes()
-        self.base_version = (self.root / "VERSION").read_text(encoding="utf-8").strip()
         self.assertRegex(self.base_version, r"^1\.20\.[1-9][0-9]*$")
         self.expected = runtime_v119(ROOT, SKILL.as_posix())
 

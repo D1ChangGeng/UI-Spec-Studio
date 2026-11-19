@@ -48,7 +48,7 @@ class DefaultDenyReleaseIdentityTests(unittest.TestCase):
         predecessor = json.loads(
             (ROOT/'docs/evidence/v1.18.0/continuity.json').read_text(encoding='utf-8'))
         self.assertEqual(len(declared), len(set(declared)))
-        self.assertEqual(current, set(declared))
+        self.assertTrue(set(declared) <= current)
         self.assertEqual(set(declared), {row['path'] for row in predecessor['files']})
 
     def test_installed_helpers_and_json_assets_are_identical_to_v118(self):
@@ -56,7 +56,7 @@ class DefaultDenyReleaseIdentityTests(unittest.TestCase):
             path = row['path']
             if '/scripts/' in path or path.endswith('.json'):
                 with self.subTest(path=path):
-                    self.assertEqual((ROOT/path).read_bytes(), runtime_v118(ROOT, path))
+                    self.assertEqual(runtime_v119(ROOT, path), runtime_v118(ROOT, path))
                     self.assertEqual(row['disposition'], 'unchanged')
                     self.assertEqual(row['inverse_edits'], [])
 

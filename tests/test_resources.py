@@ -21,12 +21,16 @@ class ResourceTests(unittest.TestCase):
 
     def test_catalog_schema(self):
         self.assertEqual(lookup.validate_catalog(self.data), [])
-        self.assertEqual(len(self.data['resources']), 37)
+        self.assertEqual(len(self.data['resources']), 80)
         self.assertEqual(len(self.data['access_mechanisms']), 7)
 
     def test_snapshot_and_entry_dates_are_preserved(self):
         self.assertEqual(self.data['snapshot_date'], '2026-10-24')
-        self.assertTrue(all(x['reviewed_on'] == '2026-10-24' for x in self.data['resources']))
+        self.assertEqual(self.data.get('catalog_updated_on'), '2026-11-18')
+        original_dated = [x for x in self.data['resources'] if x['reviewed_on'] == '2026-10-24']
+        added_dated = [x for x in self.data['resources'] if x['reviewed_on'] == '2026-11-18']
+        self.assertEqual(len(original_dated), 37)
+        self.assertEqual(len(added_dated), 43)
         self.assertTrue(all(x['project_validation'] == 'evaluate_in_project' for x in self.data['resources']))
 
     def test_vue_motion_preserves_stack_identity(self):

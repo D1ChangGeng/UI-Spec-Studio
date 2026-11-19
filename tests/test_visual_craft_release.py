@@ -22,6 +22,7 @@ class VisualCraftReleaseTests(unittest.TestCase):
     def setUpClass(cls):
         cls.ledger = json.loads((ROOT / 'docs/evidence/v1.16.0/continuity.json').read_text(encoding='utf-8'))
         cls.catalog = lookup.load_catalog()
+        cls.v116_catalog = json.loads(runtime_v116(ROOT, 'skills/ui-spec/assets/resource-catalog.json'))
         cls.prior_catalog = json.loads(predecessor_runtime(ROOT, 'skills/ui-spec/assets/resource-catalog.json'))
 
     def test_prior_runtime_identity_and_all_files_preserved(self):
@@ -33,7 +34,7 @@ class VisualCraftReleaseTests(unittest.TestCase):
                   if p.is_relative_to(ROOT / 'skills/ui-spec')}
         # This is this release's historical identity, not a limit on future scope.
         self.assertEqual(len(rows), 37)
-        self.assertEqual(paths, actual)
+        self.assertTrue(paths <= actual)
         self.assertEqual(len(paths), len(rows))
         for row in rows:
             current = runtime_v116(ROOT, row['path'])
@@ -97,23 +98,29 @@ class VisualCraftReleaseTests(unittest.TestCase):
             predecessor_runtime(ROOT, 'skills/ui-spec/not-a-historical-file.md')
 
     def test_old_catalog_entries_dates_and_source_claims_survive(self):
+        v116 = {r['id']: r for r in self.v116_catalog['resources']}
         current = {r['id']: r for r in self.catalog['resources']}
         prior = {r['id']: r for r in self.prior_catalog['resources']}
-        self.assertEqual(set(current), set(prior))
-        self.assertEqual(len(current), 37)
+        self.assertEqual(set(v116), set(prior))
+        self.assertEqual(len(v116), 37)
+        self.assertTrue(set(prior) <= set(current))
         for ident, row in prior.items():
             for key, value in row.items():
                 if key in {'aliases', 'forms'}:
+                    self.assertTrue(set(value) <= set(v116[ident][key]), (ident, key))
                     self.assertTrue(set(value) <= set(current[ident][key]), (ident, key))
                 else:
+                    self.assertEqual(value, v116[ident][key], (ident, key))
                     self.assertEqual(value, current[ident][key], (ident, key))
         self.assertEqual(self.catalog['snapshot_date'], self.prior_catalog['snapshot_date'])
         for row in self.prior_catalog['release_spot_checks']:
             self.assertIn(row, self.catalog['release_spot_checks'])
 
     def test_profiles_are_documentary_not_quality_scores(self):
+        v116_profiles = [r['craft_profile'] for r in self.v116_catalog['resources'] if 'craft_profile' in r]
+        self.assertEqual(len(v116_profiles), 15)
         profiles = [r['craft_profile'] for r in self.catalog['resources'] if 'craft_profile' in r]
-        self.assertEqual(len(profiles), 15)
+        self.assertGreaterEqual(len(profiles), 15)
         for profile in profiles:
             for key in ('roles', 'reuse_scopes', 'visual_forms', 'sources'):
                 self.assertIsInstance(profile[key], list)
@@ -125,7 +132,8 @@ class VisualCraftReleaseTests(unittest.TestCase):
 
     def test_visual_form_query_keeps_stack_and_alphabetic_order(self):
         rows = lookup.select(self.catalog, form='visual-component', stack='vue', limit=100)
-        self.assertEqual({r['id'] for r in rows}, {'vue-bits', 'inspira'})
+        self.assertTrue({'vue-bits', 'inspira'} <= {r['id'] for r in rows})
+        self.assertNotIn('react-bits', {r['id'] for r in rows})
         self.assertEqual([r['name'].casefold() for r in rows], sorted(r['name'].casefold() for r in rows))
         self.assertTrue(all('craft_profile' in r for r in rows))
         self.assertEqual(lookup.select(self.catalog, 'absent-visual-source-xyz'), [])
@@ -163,11 +171,14 @@ class VisualCraftReleaseTests(unittest.TestCase):
 
     def test_no_new_upstream_showcase_or_font_in_installed_bundle(self):
         previous = {row['path'].removeprefix('skills/ui-spec/') for row in self.ledger['files']}
+        current_skill = {p.relative_to(ROOT / 'skills/ui-spec').as_posix() for p in package.source_files(ROOT)
+                         if p.is_relative_to(ROOT / 'skills/ui-spec')}
         with tempfile.TemporaryDirectory() as td:
             artifacts = package.build(ROOT, Path(td))
             with zipfile.ZipFile(artifacts[1]) as z:
                 names = set(z.namelist())
-                self.assertEqual(names, {'ui-spec/' + p for p in previous})
+                self.assertTrue({'ui-spec/' + p for p in previous} <= names)
+                self.assertEqual(names, {'ui-spec/' + p for p in current_skill})
                 self.assertFalse(any(p.lower().endswith(('.woff', '.woff2', '.ttf', '.otf')) for p in names))
                 for p in ('references/component-sourcing.md', 'references/principles.md',
                           'references/interaction-and-variants.md', 'references/verification.md'):

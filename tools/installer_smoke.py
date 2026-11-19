@@ -40,7 +40,7 @@ def run() -> dict[str, object]:
                 raise AssertionError('Installer includes unsafe/non-file entries')
             if any(m.name.startswith(('package/docs/', 'package/tests/', 'package/.git/')) for m in members):
                 raise AssertionError('Repository maintenance files reached installer payload')
-            tar.extractall(base / 'unpacked', filter='data')
+            tar.extractall(base / 'unpacked', **({'filter': 'data'} if hasattr(tarfile, 'data_filter') else {}))
         package = base / 'unpacked/package'
         cli = package / 'bin/ui-spec.mjs'
         manifest = json.loads((package / 'payload/manifest.json').read_text())
