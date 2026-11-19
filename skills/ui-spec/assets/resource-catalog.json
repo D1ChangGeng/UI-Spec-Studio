@@ -1,8 +1,9 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-24",
+  "catalog_updated_on": "2026-11-18",
   "purpose": "Open, task-oriented discovery map. Resolve exact items and verify them in the target product.",
-  "scope": "Curated from the accepted 2026-10-24 documentation/public-source research. The selected entries require current item, demo and project verification.",
+  "scope": "Curated from the accepted 2026-10-24 documentation/public-source research and expanded on 2026-11-18 with high-craft registries, specialist engines, typography, icon and design-reference entries. Original observation dates are preserved per entry; all entries require current item, demo and project verification.",
   "provenance": {
     "source_name": "UI_Resource_Catalog_2026-10-24.json",
     "sha256": "40119fe08cb18352c2bd18bc1d83433467b707e525b5f29db0e88149e70d749d"
@@ -320,7 +321,28 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "effect",
+          "visual-component"
+        ],
+        "visual_forms": [
+          "shader-surface",
+          "procedural-texture",
+          "background"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://shaders.paper.design/dot-grid",
+          "https://shaders.paper.design/liquid-metal"
+        ]
+      }
     },
     {
       "id": "uiverse",
@@ -349,7 +371,30 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "discovery-and-reference",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component",
+          "visual-component",
+          "effect"
+        ],
+        "visual_forms": [
+          "community-controls",
+          "loaders",
+          "cards",
+          "css-effects"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://uiverse.io/"
+        ]
+      }
     },
     {
       "id": "21st",
@@ -714,7 +759,29 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component-family",
+          "block",
+          "tokens"
+        ],
+        "visual_forms": [
+          "coordinated-controls",
+          "themed-system",
+          "product-layouts"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://ui.nuxt.com/llms.txt"
+        ]
+      }
     },
     {
       "id": "mui",
@@ -743,7 +810,28 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component-family",
+          "tokens"
+        ],
+        "visual_forms": [
+          "material-system",
+          "dense-controls",
+          "data-views"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://mui.com/material-ui/getting-started/mcp/"
+        ]
+      }
     },
     {
       "id": "ant-design",
@@ -772,7 +860,28 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component-family",
+          "tokens"
+        ],
+        "visual_forms": [
+          "enterprise-system",
+          "dense-forms",
+          "data-tables"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://ant.design/docs/react/llms/"
+        ]
+      }
     },
     {
       "id": "motion",
@@ -895,7 +1004,28 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "implementation-route",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "effect",
+          "interaction-mechanism",
+          "scene"
+        ],
+        "visual_forms": [
+          "state-machine-animation",
+          "interactive-vector"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://rive.app/docs/runtimes/getting-started"
+        ]
+      }
     },
     {
       "id": "lottiefiles",
@@ -923,7 +1053,28 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "discovery-and-reference",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "effect",
+          "imagery"
+        ],
+        "visual_forms": [
+          "authored-vector-animation",
+          "loaders",
+          "feedback-graphics"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://lottiefiles.com/developers"
+        ]
+      }
     },
     {
       "id": "lucide",
@@ -950,7 +1101,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "icons"
+        ],
+        "visual_forms": [
+          "line-icon-family",
+          "svg-symbols"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://lucide.dev/guide/"
+        ]
+      }
     },
     {
       "id": "iconify",
@@ -977,7 +1146,26 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "discovery-and-reference",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "icons"
+        ],
+        "visual_forms": [
+          "multi-collection-icon-directory",
+          "svg-delivery"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://iconify.design/docs/"
+        ]
+      }
     },
     {
       "id": "fontsource",
@@ -1005,7 +1193,27 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "implementation-route",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "typography"
+        ],
+        "visual_forms": [
+          "self-hosted-fonts",
+          "variable-typefaces"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://fontsource.org/docs/getting-started/introduction",
+          "https://fontsource.org/docs/getting-started/ai-and-llms"
+        ]
+      }
     },
     {
       "id": "open-props",
@@ -1032,7 +1240,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "tokens"
+        ],
+        "visual_forms": [
+          "css-custom-properties",
+          "spacing-color-easing-scales"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://open-props.style/"
+        ]
+      }
     },
     {
       "id": "radix-colors",
@@ -1059,7 +1285,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "tokens"
+        ],
+        "visual_forms": [
+          "perceptual-color-scales",
+          "light-dark-surface-ramps"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.radix-ui.com/colors"
+        ]
+      }
     },
     {
       "id": "utopia",
@@ -1088,7 +1332,27 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "tokens",
+          "typography"
+        ],
+        "visual_forms": [
+          "fluid-type-scales",
+          "fluid-space-and-grid"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://utopia.fyi/"
+        ]
+      }
     },
     {
       "id": "tanstack-table",
@@ -1115,7 +1379,24 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation"
+        ],
+        "reuse_scopes": [
+          "interaction-mechanism"
+        ],
+        "visual_forms": [
+          "headless-table-state-visual-treatment-selected-separately"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://tanstack.com/table/latest"
+        ]
+      }
     },
     {
       "id": "embla",
@@ -1144,7 +1425,27 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "interaction-mechanism",
+          "effect"
+        ],
+        "visual_forms": [
+          "physics-carousel-track",
+          "drag-slide-motion"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.embla-carousel.com/"
+        ]
+      }
     },
     {
       "id": "floating-ui",
@@ -1171,7 +1472,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "interaction-mechanism"
+        ],
+        "visual_forms": [
+          "floating-positioning-and-collision-engine"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://floating-ui.com/"
+        ]
+      }
     },
     {
       "id": "tiptap",
@@ -1198,7 +1517,26 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "component",
+          "interaction-mechanism"
+        ],
+        "visual_forms": [
+          "headless-rich-text-editor-visual-chrome-selected-separately"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://tiptap.dev/docs/editor/getting-started/overview"
+        ]
+      }
     },
     {
       "id": "echarts",
@@ -1229,7 +1567,29 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "imagery"
+        ],
+        "visual_forms": [
+          "canvas-and-svg-charts",
+          "interactive-data-visualization"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://echarts.apache.org/handbook/en/basics/import/",
+          "https://echarts.apache.org/handbook/en/best-practices/canvas-vs-svg/",
+          "https://echarts.apache.org/handbook/en/how-to/cross-platform/server/"
+        ]
+      }
     },
     {
       "id": "codrops",
@@ -1258,7 +1618,28 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "effect",
+          "visual-component",
+          "page"
+        ],
+        "visual_forms": [
+          "creative-web-demos",
+          "webgl-and-css-motion-studies"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://tympanus.net/codrops/"
+        ]
+      }
     },
     {
       "id": "mobbin",
@@ -1285,7 +1666,27 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "page",
+          "block"
+        ],
+        "visual_forms": [
+          "shipped-product-screens",
+          "multi-step-user-flows"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://mobbin.com/"
+        ]
+      }
     },
     {
       "id": "finesse",
@@ -1360,7 +1761,25 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "imagery"
+        ],
+        "visual_forms": [
+          "recolorable-flat-svg-illustrations"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://undraw.co/",
+          "https://undraw.co/license"
+        ]
+      }
     },
     {
       "id": "penpot",
@@ -1390,7 +1809,2365 @@
       ],
       "reviewed_on": "2026-10-24",
       "evidence_scope": "documentation_or_public_source",
-      "project_validation": "evaluate_in_project"
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "page",
+          "tokens",
+          "component-family"
+        ],
+        "visual_forms": [
+          "editable-design-files",
+          "design-tokens-mapping"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://help.penpot.app/mcp/",
+          "https://help.penpot.app/user-guide/design-systems/design-tokens/"
+        ]
+      }
+    },
+    {
+      "id": "coss-ui",
+      "name": "coss ui",
+      "needs": [
+        "controls",
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "registry",
+        "visual-component"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Base UI and Tailwind CSS component particles and blocks (successor to Origin UI) with accessible state wiring.",
+      "access": "Component/particle catalog, live previews, shadcn-compatible registry CLI and public GitHub source.",
+      "adoption_notes": "Confirm Base UI vs Radix API contracts when integrating alongside existing shadcn components; inspect Tailwind v4 token mappings and portal focus behavior.",
+      "aliases": [
+        "base-ui",
+        "origin-ui",
+        "particles",
+        "shadcn-compatible",
+        "组件",
+        "区块",
+        "注册表"
+      ],
+      "sources": [
+        "https://coss.com/ui",
+        "https://github.com/cosscom/ui"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component",
+          "block",
+          "component-family",
+          "visual-component"
+        ],
+        "visual_forms": [
+          "base-ui-particles",
+          "coordinated-controls",
+          "product-blocks"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://coss.com/ui",
+          "https://github.com/cosscom/ui"
+        ]
+      }
+    },
+    {
+      "id": "kokonut-ui",
+      "name": "Kokonut UI",
+      "needs": [
+        "visual-effects",
+        "motion",
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "visual-component"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Tailwind CSS and Motion interactive cards, tactile controls and expressive UI blocks.",
+      "access": "Component catalog, live previews, copyable source, registry install and public GitHub repository.",
+      "adoption_notes": "Inspect settled-card text crispness and flatten resting 3D transforms (translateZ/perspective/will-change) if subpixel blur appears; check Motion bundle footprint, reduced-motion handling and mobile viewport height.",
+      "aliases": [
+        "motion",
+        "cards",
+        "interactive-blocks",
+        "卡片",
+        "动效",
+        "区块",
+        "视觉组件"
+      ],
+      "sources": [
+        "https://kokonutui.com/",
+        "https://github.com/kokonut-labs/kokonutui"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "block",
+          "effect"
+        ],
+        "visual_forms": [
+          "interactive-cards",
+          "motion-blocks",
+          "tactile-controls"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://kokonutui.com/",
+          "https://github.com/kokonut-labs/kokonutui"
+        ]
+      }
+    },
+    {
+      "id": "motion-primitives",
+      "name": "Motion Primitives",
+      "needs": [
+        "motion",
+        "visual-effects",
+        "typography"
+      ],
+      "forms": [
+        "source",
+        "visual-component"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Open-source React, Motion and Tailwind CSS motion primitives for text transitions, surfaces and micro-interactions.",
+      "access": "Component demos, copyable source, CLI registry entries and MIT-licensed GitHub repository.",
+      "adoption_notes": "Match Motion library major version, verify prefers-reduced-motion behavior and test text-split/layout animations with real multiline and localized copy.",
+      "aliases": [
+        "ibelick",
+        "micro-interactions",
+        "text-motion",
+        "动效原语",
+        "文字动画",
+        "视觉组件"
+      ],
+      "sources": [
+        "https://github.com/ibelick/motion-primitives"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "effect",
+          "interaction-mechanism"
+        ],
+        "visual_forms": [
+          "text-motion",
+          "border-effects",
+          "spring-micro-interactions"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://github.com/ibelick/motion-primitives"
+        ]
+      }
+    },
+    {
+      "id": "cult-ui",
+      "name": "Cult UI",
+      "needs": [
+        "visual-effects",
+        "motion",
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "visual-component"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Design-engineer React, Tailwind CSS and Motion blocks, expandable surfaces and interactive cards.",
+      "access": "Interactive docs, source code, shadcn-compatible installs and public GitHub repository.",
+      "adoption_notes": "Verify free vs separately distributed items, check Motion/Tailwind dependencies and inspect keyboard focus and touch parity on hover-driven effects.",
+      "aliases": [
+        "design-engineering",
+        "blocks",
+        "cards",
+        "交互区块",
+        "卡片",
+        "动效",
+        "视觉组件"
+      ],
+      "sources": [
+        "https://github.com/nolly-studio/cult-ui"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "block",
+          "effect"
+        ],
+        "visual_forms": [
+          "tactile-cards",
+          "expandable-blocks",
+          "motion-compositions"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://github.com/nolly-studio/cult-ui"
+        ]
+      }
+    },
+    {
+      "id": "animate-ui",
+      "name": "Animate UI",
+      "needs": [
+        "motion",
+        "controls",
+        "visual-effects"
+      ],
+      "forms": [
+        "source",
+        "registry",
+        "visual-component"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Animated React, Tailwind CSS and Motion component distribution covering primitives, controls and visual effects.",
+      "access": "Documentation, live demos, registry CLI installation and editable component source.",
+      "adoption_notes": "Check primitive dependencies, animation timing defaults and reduced-motion fallbacks; avoid mixing multiple incompatible motion engines in one surface.",
+      "aliases": [
+        "animated-primitives",
+        "registry",
+        "动效组件",
+        "注册表",
+        "视觉组件"
+      ],
+      "sources": [
+        "https://animate-ui.com/docs"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "component",
+          "effect"
+        ],
+        "visual_forms": [
+          "animated-controls",
+          "state-transitions",
+          "registry-motion-components"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://animate-ui.com/docs"
+        ]
+      }
+    },
+    {
+      "id": "smoothui",
+      "name": "SmoothUI",
+      "needs": [
+        "motion",
+        "controls",
+        "visual-effects"
+      ],
+      "forms": [
+        "source",
+        "visual-component"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Animated React and Tailwind CSS micro-interaction components and spring-driven UI controls.",
+      "access": "Interactive component catalog, live demos and copyable source snippets.",
+      "adoption_notes": "Inspect spring stiffness, focus-visible rings, keyboard operation and mobile touch targets when adapting showcase micro-interactions into production controls.",
+      "aliases": [
+        "micro-interactions",
+        "spring-ui",
+        "微交互",
+        "动效组件",
+        "视觉组件"
+      ],
+      "sources": [
+        "https://smoothui.dev/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "component",
+          "effect"
+        ],
+        "visual_forms": [
+          "micro-interactions",
+          "animated-controls",
+          "spring-transitions"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://smoothui.dev/"
+        ]
+      }
+    },
+    {
+      "id": "tailark",
+      "name": "Tailark",
+      "needs": [
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "registry"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Marketing and landing-page sections built on shadcn/ui and Tailwind CSS.",
+      "access": "Section gallery, responsive previews, registry install and public GitHub blocks repository.",
+      "adoption_notes": "De-template showcase placeholder copy and generic palettes; harmonize section typography, spacing cadence and semantic color tokens with the product identity.",
+      "aliases": [
+        "marketing-blocks",
+        "landing-page",
+        "hero",
+        "营销区块",
+        "落地页",
+        "区块"
+      ],
+      "sources": [
+        "https://tailark.com/",
+        "https://github.com/tailark/blocks"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "block",
+          "page"
+        ],
+        "visual_forms": [
+          "marketing-sections",
+          "hero-compositions",
+          "pricing-and-feature-grids"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://tailark.com/",
+          "https://github.com/tailark/blocks"
+        ]
+      }
+    },
+    {
+      "id": "tweakcn",
+      "name": "tweakcn",
+      "needs": [
+        "foundations"
+      ],
+      "forms": [
+        "tokens",
+        "generator",
+        "reference"
+      ],
+      "stacks": [
+        "react",
+        "framework-neutral"
+      ],
+      "use_for": "OKLCH theme presets and interactive semantic token editor for shadcn/ui and Tailwind CSS v4.",
+      "access": "Live theme previewer, CSS custom property export, presets and open-source GitHub repository.",
+      "adoption_notes": "Verify WCAG contrast ratios across light and dark semantic pairs under real text sizes, and map exported variables into one canonical project token plane.",
+      "aliases": [
+        "oklch",
+        "theme-presets",
+        "tailwind-v4",
+        "shadcn-theme",
+        "主题预设",
+        "语义令牌",
+        "配色"
+      ],
+      "sources": [
+        "https://tweakcn.com/",
+        "https://github.com/jnsahaj/tweakcn"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "tokens"
+        ],
+        "visual_forms": [
+          "oklch-color-themes",
+          "semantic-token-presets",
+          "surface-elevation-ramps"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://tweakcn.com/",
+          "https://github.com/jnsahaj/tweakcn"
+        ]
+      }
+    },
+    {
+      "id": "sonner",
+      "name": "Sonner",
+      "needs": [
+        "controls",
+        "motion"
+      ],
+      "forms": [
+        "package",
+        "visual-component"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Opinionated stacked toast notification component with swipe-to-dismiss and promise states.",
+      "access": "Package installation, API documentation and open-source GitHub repository.",
+      "adoption_notes": "Coordinate toast styling with project surface tokens, configure accessible live-region politeness and verify z-index layering above dialogs and drawers.",
+      "aliases": [
+        "toast",
+        "notifications",
+        "snackbar",
+        "轻提示",
+        "通知",
+        "反馈"
+      ],
+      "sources": [
+        "https://github.com/emilkowalski/sonner"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "component",
+          "interaction-mechanism"
+        ],
+        "visual_forms": [
+          "stacked-toast-notifications",
+          "gesture-dismiss-feedback"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://github.com/emilkowalski/sonner"
+        ]
+      }
+    },
+    {
+      "id": "vaul",
+      "name": "Vaul",
+      "needs": [
+        "controls",
+        "motion"
+      ],
+      "forms": [
+        "package",
+        "primitive"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Touch-physics drawer and bottom-sheet primitive with snap points and background scaling.",
+      "access": "Package installation, usage examples and GitHub repository.",
+      "adoption_notes": "Check the upstream README maintenance status (the author has marked Vaul unmaintained and points to alternatives such as Base UI); verify explicit aria-modal, DialogTitle, focus return and mobile keyboard viewport behavior in the project.",
+      "aliases": [
+        "drawer",
+        "bottom-sheet",
+        "sheet",
+        "抽屉",
+        "底部面板",
+        "手势"
+      ],
+      "sources": [
+        "https://github.com/emilkowalski/vaul"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "primitive",
+          "interaction-mechanism"
+        ],
+        "visual_forms": [
+          "touch-physics-drawer",
+          "bottom-sheet-snap-points"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://github.com/emilkowalski/vaul"
+        ]
+      }
+    },
+    {
+      "id": "cmdk",
+      "name": "cmdk",
+      "needs": [
+        "controls",
+        "complex-information"
+      ],
+      "forms": [
+        "package",
+        "primitive"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Fast, composable command palette and searchable menu primitive with keyboard navigation.",
+      "access": "Package installation, API examples and open-source GitHub repository.",
+      "adoption_notes": "Pair with a deliberately sourced dialog surface and semantic tokens; verify async filtering, empty states, IME composition for CJK input and screen-reader announcements.",
+      "aliases": [
+        "command-palette",
+        "command-menu",
+        "search-modal",
+        "命令面板",
+        "快捷搜索"
+      ],
+      "sources": [
+        "https://github.com/dip/cmdk"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation"
+        ],
+        "reuse_scopes": [
+          "primitive",
+          "interaction-mechanism"
+        ],
+        "visual_forms": [
+          "composable-command-palette-visual-chrome-selected-in-context"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://github.com/dip/cmdk"
+        ]
+      }
+    },
+    {
+      "id": "number-flow",
+      "name": "NumberFlow",
+      "needs": [
+        "motion",
+        "typography"
+      ],
+      "forms": [
+        "package",
+        "visual-component"
+      ],
+      "stacks": [
+        "react",
+        "vue",
+        "svelte",
+        "javascript",
+        "multi-framework"
+      ],
+      "use_for": "Smoothly animated numeric, currency and percentage transitions with tabular digit choreography.",
+      "access": "Framework packages (React, Vue, Svelte, vanilla), interactive demos and GitHub repository.",
+      "adoption_notes": "Pair with tabular-nums font features and locale-aware Intl formatting; verify prefers-reduced-motion behavior and accessible live numeric announcements without announcement spam.",
+      "aliases": [
+        "animated-numbers",
+        "counter",
+        "tabular-nums",
+        "数字动画",
+        "滚动数字",
+        "计数"
+      ],
+      "sources": [
+        "https://number-flow.barvian.me",
+        "https://github.com/barvian/number-flow"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "effect",
+          "typography"
+        ],
+        "visual_forms": [
+          "rolling-numeric-transitions",
+          "tabular-kpi-motion"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://number-flow.barvian.me",
+          "https://github.com/barvian/number-flow"
+        ]
+      }
+    },
+    {
+      "id": "lenis",
+      "name": "Lenis",
+      "needs": [
+        "motion",
+        "layout"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "javascript",
+        "framework-neutral"
+      ],
+      "use_for": "Smooth scroll interpolation engine by Darkroom Engineering for editorial and choreographed scroll experiences.",
+      "access": "Documentation, framework wrappers, demos and open-source GitHub repository.",
+      "adoption_notes": "Verify native keyboard scrolling, trackpad/wheel latency, hash anchor jumps, nested scroll containers, browser scroll restoration and prefers-reduced-motion bypass before enabling globally.",
+      "aliases": [
+        "smooth-scroll",
+        "scroll-engine",
+        "平滑滚动",
+        "滚动引擎"
+      ],
+      "sources": [
+        "https://lenis.dev/",
+        "https://github.com/darkroomengineering/lenis"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "interaction-mechanism",
+          "effect"
+        ],
+        "visual_forms": [
+          "smooth-scroll-interpolation"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://lenis.dev/",
+          "https://github.com/darkroomengineering/lenis"
+        ]
+      }
+    },
+    {
+      "id": "prompt-kit",
+      "name": "prompt-kit",
+      "needs": [
+        "controls",
+        "layout",
+        "complex-information"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "registry"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Core UI building blocks for AI chat composers, message streams and prompt workflows on shadcn/ui.",
+      "access": "Component documentation, demos, shadcn registry install and GitHub repository.",
+      "adoption_notes": "Test multiline composer growth, scroll-to-bottom anchoring during streaming, mobile keyboard viewport height and real backend error/cancel states.",
+      "aliases": [
+        "ai-ui",
+        "chat-composer",
+        "llm-interface",
+        "对话界面",
+        "输入框",
+        "AI组件"
+      ],
+      "sources": [
+        "https://github.com/ibelick/prompt-kit"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "block",
+          "component"
+        ],
+        "visual_forms": [
+          "ai-prompt-composers",
+          "chat-message-blocks",
+          "streaming-response-ui"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://github.com/ibelick/prompt-kit"
+        ]
+      }
+    },
+    {
+      "id": "assistant-ui",
+      "name": "assistant-ui",
+      "needs": [
+        "controls",
+        "layout",
+        "complex-information"
+      ],
+      "forms": [
+        "package",
+        "primitive",
+        "blocks"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Composable AI chat and thread UI primitives, streaming runtime adapters and turnkey conversation blocks.",
+      "access": "Packages, primitive APIs, starter blocks and open-source GitHub repository.",
+      "adoption_notes": "Separate primitive thread state from visual surface styling; verify accessibility, streaming auto-scroll interruption and tool-call rendering under real latency and failures.",
+      "aliases": [
+        "ai-chat",
+        "thread-ui",
+        "assistant",
+        "对话线程",
+        "AI助手",
+        "聊天原语"
+      ],
+      "sources": [
+        "https://github.com/assistant-ui/assistant-ui"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "primitive",
+          "block",
+          "component-family"
+        ],
+        "visual_forms": [
+          "composable-chat-threads",
+          "tool-call-and-composer-blocks"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://github.com/assistant-ui/assistant-ui"
+        ]
+      }
+    },
+    {
+      "id": "xyflow",
+      "name": "xyflow / React Flow",
+      "needs": [
+        "complex-information",
+        "layout"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "react",
+        "svelte",
+        "multi-framework"
+      ],
+      "use_for": "Interactive node-based canvases, workflow editors and pan-zoom graph UIs for React and Svelte.",
+      "access": "Official docs (React Flow and Svelte Flow), interactive examples, packages and GitHub monorepo.",
+      "adoption_notes": "Check MIT core vs Pro examples/templates separately; test large-graph rendering performance, keyboard node traversal, zoom/minimap legibility and custom node contrast.",
+      "aliases": [
+        "react-flow",
+        "svelte-flow",
+        "node-editor",
+        "workflow-graph",
+        "节点画布",
+        "流程图",
+        "拓扑图"
+      ],
+      "sources": [
+        "https://reactflow.dev/",
+        "https://xyflow.com/",
+        "https://github.com/xyflow/xyflow"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "component",
+          "interaction-mechanism",
+          "scene"
+        ],
+        "visual_forms": [
+          "node-edge-canvas",
+          "pan-zoom-workflow-graphs"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://reactflow.dev/",
+          "https://xyflow.com/",
+          "https://github.com/xyflow/xyflow"
+        ]
+      }
+    },
+    {
+      "id": "tldraw",
+      "name": "tldraw",
+      "needs": [
+        "complex-information",
+        "layout",
+        "imagery"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Infinite whiteboard and spatial canvas SDK with vector drawing, multiplayer primitives and custom shapes.",
+      "access": "SDK documentation, interactive examples, packages and public GitHub repository.",
+      "adoption_notes": "Verify the tldraw commercial/source-available license and watermark or production license requirements explicitly before adopting; inspect bundle weight and keyboard/touch canvas ergonomics.",
+      "aliases": [
+        "whiteboard",
+        "infinite-canvas",
+        "spatial-canvas",
+        "白板",
+        "无限画布",
+        "绘图引擎"
+      ],
+      "sources": [
+        "https://tldraw.dev/",
+        "https://github.com/tldraw/tldraw"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "page",
+          "scene",
+          "interaction-mechanism"
+        ],
+        "visual_forms": [
+          "infinite-spatial-whiteboard",
+          "vector-drawing-canvas"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://tldraw.dev/",
+          "https://github.com/tldraw/tldraw"
+        ]
+      }
+    },
+    {
+      "id": "tremor",
+      "name": "Tremor",
+      "needs": [
+        "complex-information",
+        "layout",
+        "controls"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "visual-component"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Dashboard blocks, KPI cards and chart components built with Tailwind CSS and Radix Primitives.",
+      "access": "Copyable component source, dashboard blocks, documentation and GitHub repository.",
+      "adoption_notes": "Check free components vs separately licensed blocks, align chart palettes with project semantic tokens and verify numeric alignment and dense-data readability on narrow viewports.",
+      "aliases": [
+        "dashboard",
+        "kpi-cards",
+        "analytics-blocks",
+        "仪表盘",
+        "数据看板",
+        "指标卡"
+      ],
+      "sources": [
+        "https://tremor.so/",
+        "https://github.com/tremorlabs/tremor"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "block",
+          "visual-component",
+          "component-family"
+        ],
+        "visual_forms": [
+          "kpi-cards",
+          "analytics-dashboard-blocks",
+          "data-charts"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://tremor.so/",
+          "https://github.com/tremorlabs/tremor"
+        ]
+      }
+    },
+    {
+      "id": "observable-plot",
+      "name": "Observable Plot",
+      "needs": [
+        "complex-information",
+        "imagery"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "javascript",
+        "framework-neutral"
+      ],
+      "use_for": "Publication-grade grammar-of-graphics library for concise, faceted statistical SVG data visualizations.",
+      "access": "Official documentation, gallery examples, package install and GitHub repository.",
+      "adoption_notes": "Wrap SVG output with explicit responsive container sizing, project typography tokens and accessible titles/descriptions or tabular fallbacks for screen readers.",
+      "aliases": [
+        "grammar-of-graphics",
+        "data-viz",
+        "editorial-charts",
+        "数据可视化",
+        "统计图表"
+      ],
+      "sources": [
+        "https://observablehq.github.io/plot/",
+        "https://github.com/observablehq/plot"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "imagery"
+        ],
+        "visual_forms": [
+          "editorial-svg-charts",
+          "faceted-statistical-graphics"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://observablehq.github.io/plot/",
+          "https://github.com/observablehq/plot"
+        ]
+      }
+    },
+    {
+      "id": "recharts",
+      "name": "Recharts",
+      "needs": [
+        "complex-information",
+        "imagery"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Composable React SVG charting library for line, bar, area, radar and scatter visualizations.",
+      "access": "API docs, live chart examples and package installation.",
+      "adoption_notes": "Verify responsive container sizing on initial mount/SSR, customize axis typography and tooltip surfaces to project tokens and check high-series-count SVG performance.",
+      "aliases": [
+        "charts",
+        "svg-charts",
+        "react-charts",
+        "图表",
+        "折线图",
+        "柱状图"
+      ],
+      "sources": [
+        "https://recharts.github.io/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "visual-component",
+          "imagery"
+        ],
+        "visual_forms": [
+          "composable-svg-charts",
+          "responsive-data-series"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://recharts.github.io/"
+        ]
+      }
+    },
+    {
+      "id": "fumadocs",
+      "name": "Fumadocs",
+      "needs": [
+        "layout",
+        "typography",
+        "complex-information"
+      ],
+      "forms": [
+        "package",
+        "system",
+        "blocks"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "High-craft documentation and editorial shell framework for React and Next.js with search, TOC and MDX components.",
+      "access": "Documentation, starter templates, packages and open-source GitHub repository.",
+      "adoption_notes": "Confirm framework router compatibility (Next.js App Router, React Router, TanStack Start), customize typography and surface tokens so the docs shell fits the host product identity.",
+      "aliases": [
+        "docs-shell",
+        "documentation-framework",
+        "mdx",
+        "文档框架",
+        "阅读布局",
+        "知识库"
+      ],
+      "sources": [
+        "https://www.fumadocs.dev/",
+        "https://github.com/fuma-nama/fumadocs"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "page",
+          "block",
+          "component-family",
+          "typography"
+        ],
+        "visual_forms": [
+          "editorial-documentation-shell",
+          "sidebar-toc-search-system"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.fumadocs.dev/",
+          "https://github.com/fuma-nama/fumadocs"
+        ]
+      }
+    },
+    {
+      "id": "react-three-fiber",
+      "name": "React Three Fiber & Drei",
+      "needs": [
+        "visual-effects",
+        "imagery",
+        "motion"
+      ],
+      "forms": [
+        "package",
+        "engine"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Declarative React renderer for Three.js paired with Drei helpers for lighting, cameras, shaders and spatial controls.",
+      "access": "Documentation sites, packages and public Pmndrs GitHub repositories.",
+      "adoption_notes": "Match React and Three.js major versions, budget GPU/battery load with on-demand frameloop or static poster fallbacks and verify reduced-motion and WebGL-unavailable degradation.",
+      "aliases": [
+        "r3f",
+        "drei",
+        "threejs",
+        "webgl",
+        "3d-scene",
+        "三维渲染",
+        "着色器"
+      ],
+      "sources": [
+        "https://r3f.docs.pmnd.rs/",
+        "https://drei.docs.pmnd.rs/",
+        "https://github.com/pmndrs/react-three-fiber",
+        "https://github.com/pmndrs/drei"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "scene",
+          "effect"
+        ],
+        "visual_forms": [
+          "declarative-webgl-scenes",
+          "3d-lighting-and-materials"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://r3f.docs.pmnd.rs/",
+          "https://drei.docs.pmnd.rs/",
+          "https://github.com/pmndrs/react-three-fiber",
+          "https://github.com/pmndrs/drei"
+        ]
+      }
+    },
+    {
+      "id": "unicorn-studio",
+      "name": "Unicorn Studio",
+      "needs": [
+        "visual-effects",
+        "motion",
+        "imagery"
+      ],
+      "forms": [
+        "tool",
+        "asset",
+        "demo"
+      ],
+      "stacks": [
+        "javascript",
+        "framework-neutral"
+      ],
+      "use_for": "Interactive WebGL shader scene authoring and embeddable visual backgrounds.",
+      "access": "Web authoring tool, hosted/exported WebGL runtime embeds and interactive showcase demos.",
+      "adoption_notes": "Check account/export license terms, pause offscreen rendering, supply a static poster/fallback for WebGL-restricted or reduced-motion devices and verify foreground text contrast.",
+      "aliases": [
+        "webgl-shaders",
+        "interactive-background",
+        "shader-studio",
+        "着色器场景",
+        "动态背景"
+      ],
+      "sources": [
+        "https://www.unicorn.studio/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "scene",
+          "effect",
+          "imagery"
+        ],
+        "visual_forms": [
+          "interactive-webgl-backgrounds",
+          "layered-shader-scenes"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.unicorn.studio/"
+        ]
+      }
+    },
+    {
+      "id": "spline",
+      "name": "Spline",
+      "needs": [
+        "visual-effects",
+        "imagery",
+        "motion"
+      ],
+      "forms": [
+        "tool",
+        "asset",
+        "engine"
+      ],
+      "stacks": [
+        "multi-runtime",
+        "design-tool"
+      ],
+      "use_for": "Interactive 3D scene authoring tool supporting static image, video and WebGL runtime exports.",
+      "access": "Design tool, export FAQ/docs and framework runtime embeds.",
+      "adoption_notes": "Choose static render, pre-rendered video or live WebGL export by actual interaction need and payload budget; verify account export rights, watermark terms and fallback states.",
+      "aliases": [
+        "3d-design",
+        "3d-export",
+        "interactive-3d",
+        "三维场景",
+        "3D交互"
+      ],
+      "sources": [
+        "https://spline.design/",
+        "https://docs.spline.design/basics/faq"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "visual-implementation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "scene",
+          "imagery",
+          "effect"
+        ],
+        "visual_forms": [
+          "authored-3d-scenes",
+          "static-video-or-webgl-exports"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://spline.design/",
+          "https://docs.spline.design/basics/faq"
+        ]
+      }
+    },
+    {
+      "id": "fffuel",
+      "name": "fffuel",
+      "needs": [
+        "imagery",
+        "visual-effects",
+        "foundations"
+      ],
+      "forms": [
+        "generator",
+        "asset"
+      ],
+      "stacks": [
+        "framework-neutral",
+        "html-css"
+      ],
+      "use_for": "Curated suite of SVG noise/grain, mesh gradient, organic shape and geometric pattern generators.",
+      "access": "Browser-based parametric SVG/CSS generators with direct SVG and code copy.",
+      "adoption_notes": "Optimize exported SVG markup, keep texture opacity subtle enough to preserve text legibility and check filter performance (such as feTurbulence) on mobile GPUs.",
+      "aliases": [
+        "svg-texture",
+        "noise-grain",
+        "mesh-gradient",
+        "svg-patterns",
+        "噪点纹理",
+        "网格渐变",
+        "矢量图案"
+      ],
+      "sources": [
+        "https://www.fffuel.co/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation",
+          "implementation-route"
+        ],
+        "reuse_scopes": [
+          "imagery",
+          "effect"
+        ],
+        "visual_forms": [
+          "svg-grain-textures",
+          "mesh-gradients",
+          "geometric-patterns"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.fffuel.co/"
+        ]
+      }
+    },
+    {
+      "id": "poly-haven",
+      "name": "Poly Haven",
+      "needs": [
+        "imagery",
+        "visual-effects"
+      ],
+      "forms": [
+        "asset"
+      ],
+      "stacks": [
+        "framework-neutral",
+        "design-tool"
+      ],
+      "use_for": "CC0 library of HDRI environment maps, PBR material textures and 3D models.",
+      "access": "Public asset library with resolution/format downloads and documented CC0 asset license.",
+      "adoption_notes": "Downloadable HDRIs, textures and 3D models are published under CC0, whereas Poly Haven site logos, branding and example renders remain separate from the CC0 asset license; downsample textures to fit web delivery budgets.",
+      "aliases": [
+        "hdri",
+        "pbr-textures",
+        "3d-models",
+        "cc0",
+        "环境贴图",
+        "材质贴图",
+        "三维素材"
+      ],
+      "sources": [
+        "https://polyhaven.com/license"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "imagery",
+          "scene"
+        ],
+        "visual_forms": [
+          "cc0-hdri-lighting",
+          "pbr-material-textures",
+          "3d-models"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://polyhaven.com/license"
+        ]
+      }
+    },
+    {
+      "id": "unsplash",
+      "name": "Unsplash",
+      "needs": [
+        "imagery"
+      ],
+      "forms": [
+        "asset"
+      ],
+      "stacks": [
+        "framework-neutral"
+      ],
+      "use_for": "Editorial photography library for art-directed imagery, backgrounds and product storytelling.",
+      "access": "Searchable photography catalog, API guidelines and public license page.",
+      "adoption_notes": "Verify the exact item tier (free vs Unsplash+) and any model, property or trademark permissions required by the product context; avoid uncached hotlinking and inspect real aspect-ratio crops.",
+      "aliases": [
+        "photography",
+        "editorial-photos",
+        "stock-photos",
+        "摄影",
+        "图片素材"
+      ],
+      "sources": [
+        "https://unsplash.com/license"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "imagery"
+        ],
+        "visual_forms": [
+          "editorial-photography",
+          "subject-imagery"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://unsplash.com/license"
+        ]
+      }
+    },
+    {
+      "id": "fontshare",
+      "name": "Fontshare",
+      "needs": [
+        "typography",
+        "foundations"
+      ],
+      "forms": [
+        "font",
+        "reference"
+      ],
+      "stacks": [
+        "framework-neutral"
+      ],
+      "use_for": "Free curated editorial, display and neo-grotesque font service by Indian Type Foundry (e.g. Satoshi, Clash Display, Switzer, Cabinet Grotesk, Boska).",
+      "access": "Type specimen catalog, variable font downloads, CSS delivery and pairing previews.",
+      "adoption_notes": "Verify individual typeface license terms (ITF Free Font License vs commercial variants), inspect script/diacritic coverage and pair with local CJK fallback fonts where multilingual text is required.",
+      "aliases": [
+        "satoshi",
+        "clash-display",
+        "switzer",
+        "cabinet-grotesk",
+        "boska",
+        "editorial-fonts",
+        "字体库",
+        "展示字体",
+        "无衬线"
+      ],
+      "sources": [
+        "https://www.fontshare.com/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "typography"
+        ],
+        "visual_forms": [
+          "editorial-display-typefaces",
+          "neo-grotesque-families",
+          "variable-fonts"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.fontshare.com/"
+        ]
+      }
+    },
+    {
+      "id": "fonts-in-use",
+      "name": "Fonts In Use",
+      "needs": [
+        "design-reference",
+        "typography"
+      ],
+      "forms": [
+        "reference"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "Searchable archive of real-world typographic art direction, editorial layouts and typeface pairings.",
+      "access": "Public archive searchable by typeface, industry, format and topic.",
+      "adoption_notes": "Use as typographic art-direction and pairing evidence; confirm licensing and web-rendering behavior of any identified commercial typeface or select an appropriately licensed substitute.",
+      "aliases": [
+        "typography-archive",
+        "font-pairings",
+        "editorial-direction",
+        "字体搭配",
+        "排版案例",
+        "字型参考"
+      ],
+      "sources": [
+        "https://fontsinuse.com/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "typography",
+          "page"
+        ],
+        "visual_forms": [
+          "real-world-type-specimens",
+          "typographic-pairings"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://fontsinuse.com/"
+        ]
+      }
+    },
+    {
+      "id": "phosphor-icons",
+      "name": "Phosphor Icons",
+      "needs": [
+        "icons"
+      ],
+      "forms": [
+        "asset",
+        "package"
+      ],
+      "stacks": [
+        "framework-neutral",
+        "multi-framework"
+      ],
+      "use_for": "Flexible icon family with six coordinated weights (thin, light, regular, bold, fill, duotone) across web frameworks.",
+      "access": "Interactive icon picker, framework packages, raw SVG and open-source GitHub repository.",
+      "adoption_notes": "Commit to a deliberate weight mapping (for example regular for default actions and fill/duotone for active states) rather than mixing unrelated icon families; preserve accessible names and hit targets.",
+      "aliases": [
+        "duotone-icons",
+        "six-weights",
+        "icon-family",
+        "多字重图标",
+        "双色图标",
+        "图标"
+      ],
+      "sources": [
+        "https://phosphoricons.com/",
+        "https://github.com/phosphor-icons/homepage"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "icons"
+        ],
+        "visual_forms": [
+          "six-weight-icon-family",
+          "duotone-and-fill-icons"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://phosphoricons.com/",
+          "https://github.com/phosphor-icons/homepage"
+        ]
+      }
+    },
+    {
+      "id": "tabler-icons",
+      "name": "Tabler Icons",
+      "needs": [
+        "icons"
+      ],
+      "forms": [
+        "asset",
+        "package"
+      ],
+      "stacks": [
+        "framework-neutral",
+        "multi-framework"
+      ],
+      "use_for": "Extensive MIT-licensed library of 6,500+ SVG icons with customizable stroke width across React, Vue, Svelte, Solid and HTML.",
+      "access": "Icon browser, framework packages, raw SVG downloads and GitHub repository.",
+      "adoption_notes": "Standardize stroke-width across sizes so small 16px icons stay crisp without clogging; import individual tree-shaken icons rather than bundling the full sprite.",
+      "aliases": [
+        "svg-icons",
+        "stroke-icons",
+        "mit-icons",
+        "矢量图标",
+        "线性图标",
+        "图标库"
+      ],
+      "sources": [
+        "https://tabler.io/icons",
+        "https://github.com/tabler/tabler-icons"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "icons"
+        ],
+        "visual_forms": [
+          "customizable-stroke-svg-icons",
+          "filled-and-outline-glyphs"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://tabler.io/icons",
+          "https://github.com/tabler/tabler-icons"
+        ]
+      }
+    },
+    {
+      "id": "lucide-animated",
+      "name": "lucide-animated",
+      "needs": [
+        "icons",
+        "motion"
+      ],
+      "forms": [
+        "source",
+        "asset",
+        "visual-component"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Smoothly animated Lucide SVG icons powered by Motion for tactile micro-interaction feedback.",
+      "access": "Interactive icon preview gallery, copyable source, registry install and GitHub repository.",
+      "adoption_notes": "Reserve animated icons for purposeful state or hover confirmation rather than perpetual motion; verify reduced-motion fallback and align stroke weight with static Lucide icons in the same toolbar.",
+      "aliases": [
+        "animated-icons",
+        "motion-icons",
+        "lucide",
+        "动态图标",
+        "微交互图标"
+      ],
+      "sources": [
+        "https://lucide-animated.com/",
+        "https://github.com/pqoqubbw/icons"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "icons",
+          "visual-component",
+          "effect"
+        ],
+        "visual_forms": [
+          "motion-animated-svg-icons",
+          "hover-and-state-icon-feedback"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://lucide-animated.com/",
+          "https://github.com/pqoqubbw/icons"
+        ]
+      }
+    },
+    {
+      "id": "shadcn-svelte",
+      "name": "shadcn-svelte",
+      "needs": [
+        "controls",
+        "layout"
+      ],
+      "forms": [
+        "source",
+        "blocks",
+        "registry"
+      ],
+      "stacks": [
+        "svelte"
+      ],
+      "use_for": "Editable Svelte and Bits UI component registry, accessible controls and product blocks.",
+      "access": "Component documentation, CLI registry install and public GitHub repository.",
+      "adoption_notes": "Confirm Svelte 5 / Bits UI version compatibility and Tailwind token configuration before installing; copied components carry local maintenance ownership.",
+      "aliases": [
+        "bits-ui",
+        "svelte-components",
+        "registry",
+        "组件",
+        "区块",
+        "注册表"
+      ],
+      "sources": [
+        "https://github.com/huntabyte/shadcn-svelte"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component",
+          "block"
+        ],
+        "visual_forms": [
+          "coordinated-controls",
+          "svelte-product-blocks"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://github.com/huntabyte/shadcn-svelte"
+        ]
+      }
+    },
+    {
+      "id": "ark-ui",
+      "name": "Ark UI",
+      "needs": [
+        "controls"
+      ],
+      "forms": [
+        "package",
+        "primitive"
+      ],
+      "stacks": [
+        "react",
+        "vue",
+        "svelte",
+        "solid",
+        "multi-framework"
+      ],
+      "use_for": "Zag.js state-machine headless accessible UI primitives for React, Vue, Svelte and Solid.",
+      "access": "Multi-framework documentation, package APIs and open-source GitHub repository.",
+      "adoption_notes": "Pair headless state-machine behavior with a deliberately selected visual system and tokens; verify framework-specific styling hooks and keyboard/ARIA attributes in the assembled page.",
+      "aliases": [
+        "zag-js",
+        "state-machines",
+        "headless-primitives",
+        "无样式原语",
+        "状态机组件",
+        "可访问性"
+      ],
+      "sources": [
+        "https://ark-ui.com/",
+        "https://github.com/chakra-ui/ark"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation"
+        ],
+        "reuse_scopes": [
+          "primitive",
+          "component-family"
+        ],
+        "visual_forms": [
+          "state-machine-headless-primitives-visual-treatment-selected-in-context"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://ark-ui.com/",
+          "https://github.com/chakra-ui/ark"
+        ]
+      }
+    },
+    {
+      "id": "web-awesome",
+      "name": "Web Awesome",
+      "needs": [
+        "controls",
+        "layout",
+        "foundations"
+      ],
+      "forms": [
+        "package",
+        "system"
+      ],
+      "stacks": [
+        "web-components",
+        "html-css",
+        "framework-neutral"
+      ],
+      "use_for": "Framework-neutral Web Components UI library (successor to Shoelace) working across plain HTML and major frameworks.",
+      "access": "Component docs, CDN/package installs, theme stylesheets and open-source GitHub repository.",
+      "adoption_notes": "Check open-source vs Pro component availability, Shadow DOM styling parts/CSS custom properties and SSR/hydration behavior in the target framework.",
+      "aliases": [
+        "shoelace",
+        "custom-elements",
+        "shadow-dom",
+        "原生组件",
+        "跨框架组件库"
+      ],
+      "sources": [
+        "https://webawesome.com/",
+        "https://github.com/shoelace-style/webawesome"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component-family",
+          "tokens"
+        ],
+        "visual_forms": [
+          "web-components-design-system",
+          "custom-element-controls"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://webawesome.com/",
+          "https://github.com/shoelace-style/webawesome"
+        ]
+      }
+    },
+    {
+      "id": "mantine",
+      "name": "Mantine",
+      "needs": [
+        "controls",
+        "layout",
+        "complex-information",
+        "foundations"
+      ],
+      "forms": [
+        "package",
+        "system",
+        "blocks"
+      ],
+      "stacks": [
+        "react"
+      ],
+      "use_for": "Comprehensive React component library paired with prebuilt responsive UI blocks (ui.mantine.dev).",
+      "access": "Component API docs, Mantine UI block gallery and package installation.",
+      "adoption_notes": "Match Mantine PostCSS/CSS-layer order with any coexisting utility CSS to avoid cascade collisions; customize theme radii, font family and surface tokens so products avoid stock appearance.",
+      "aliases": [
+        "mantine-ui",
+        "react-blocks",
+        "forms-and-hooks",
+        "组件库",
+        "响应式区块",
+        "主题系统"
+      ],
+      "sources": [
+        "https://mantine.dev/",
+        "https://ui.mantine.dev/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "functional-foundation",
+          "visual-implementation"
+        ],
+        "reuse_scopes": [
+          "component-family",
+          "block",
+          "tokens"
+        ],
+        "visual_forms": [
+          "coordinated-react-system",
+          "prebuilt-responsive-blocks"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://mantine.dev/",
+          "https://ui.mantine.dev/"
+        ]
+      }
+    },
+    {
+      "id": "refero",
+      "name": "Refero",
+      "needs": [
+        "design-reference",
+        "layout"
+      ],
+      "forms": [
+        "reference"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "Real shipped web product UI screens and multi-step user-flow reference archive.",
+      "access": "Searchable screen/flow gallery filtered by UI pattern, product type and page role.",
+      "adoption_notes": "Use to study real product conventions, navigation hierarchy and state transitions; screenshots are design-reference evidence, not permission to copy proprietary branding or rebuild without mature implementation sources.",
+      "aliases": [
+        "web-app-screens",
+        "user-flows",
+        "saas-patterns",
+        "产品界面参考",
+        "用户流程",
+        "真实截图"
+      ],
+      "sources": [
+        "https://refero.design/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "page",
+          "block"
+        ],
+        "visual_forms": [
+          "shipped-web-product-screens",
+          "multi-screen-user-flows"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://refero.design/"
+        ]
+      }
+    },
+    {
+      "id": "awwwards",
+      "name": "Awwwards",
+      "needs": [
+        "design-reference",
+        "visual-effects",
+        "motion"
+      ],
+      "forms": [
+        "reference"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "Art-directed web craft, expressive typography, layout pacing and interaction award showcase.",
+      "access": "Public award directory, element collections and live links to original published sites.",
+      "adoption_notes": "Follow through to the live published site to inspect real responsiveness, motion restraint and readability; treat showcase art direction as expressive calibration while verifying product usability independently.",
+      "aliases": [
+        "art-direction",
+        "creative-web",
+        "awards",
+        "艺术指导",
+        "创意网站",
+        "视觉标杆"
+      ],
+      "sources": [
+        "https://www.awwwards.com/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "page",
+          "effect",
+          "typography"
+        ],
+        "visual_forms": [
+          "art-directed-websites",
+          "expressive-motion-and-editorial-craft"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.awwwards.com/"
+        ]
+      }
+    },
+    {
+      "id": "typewolf",
+      "name": "Typewolf",
+      "needs": [
+        "design-reference",
+        "typography"
+      ],
+      "forms": [
+        "reference"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "Curated archive of real-world web typography pairings, live site specimens and font-stack notes.",
+      "access": "Public site-of-the-day archive, typeface pages and pairing guides.",
+      "adoption_notes": "Inspect the live specimen sites to evaluate actual rendering scale, line-height and measure; verify webfont licensing before adopting any commercial display or text family.",
+      "aliases": [
+        "font-combinations",
+        "web-typography",
+        "site-specimens",
+        "字体搭配",
+        "网页排版参考"
+      ],
+      "sources": [
+        "https://www.typewolf.com/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "typography",
+          "page"
+        ],
+        "visual_forms": [
+          "curated-web-font-pairings",
+          "live-site-type-specimens"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.typewolf.com/"
+        ]
+      }
+    },
+    {
+      "id": "siteinspire",
+      "name": "SiteInspire",
+      "needs": [
+        "design-reference",
+        "layout"
+      ],
+      "forms": [
+        "reference"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "Curated directory of interactive, editorial and minimalist web design with faceted style and subject filters.",
+      "access": "Public faceted website gallery linking directly to live sites.",
+      "adoption_notes": "Use to benchmark grid restraint, whitespace proportion and editorial pacing across industries; inspect live sites across desktop and mobile viewports rather than judging thumbnails alone.",
+      "aliases": [
+        "editorial-web",
+        "minimalist-sites",
+        "web-directory",
+        "极简网站",
+        "编排参考",
+        "设计目录"
+      ],
+      "sources": [
+        "https://www.siteinspire.com/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "page",
+          "block"
+        ],
+        "visual_forms": [
+          "editorial-and-minimalist-websites",
+          "grid-and-pacing-references"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.siteinspire.com/"
+        ]
+      }
+    },
+    {
+      "id": "godly",
+      "name": "Godly",
+      "needs": [
+        "design-reference",
+        "layout",
+        "visual-effects"
+      ],
+      "forms": [
+        "reference"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "High-craft web design gallery indexed by both complete websites and section-level UI compositions.",
+      "access": "Public website and section galleries with video/motion previews and live site links.",
+      "adoption_notes": "Use the sections index to compare hero, bento, pricing and footer composition craft directly; check live sites for motion cost, foreground contrast and real content density.",
+      "aliases": [
+        "section-gallery",
+        "high-craft-sites",
+        "web-sections",
+        "高工艺网站",
+        "区块参考",
+        "视觉灵感"
+      ],
+      "sources": [
+        "https://godly.design/websites/",
+        "https://godly.design/sections/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "page",
+          "block",
+          "effect"
+        ],
+        "visual_forms": [
+          "high-craft-websites",
+          "section-level-ui-compositions"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://godly.design/websites/",
+          "https://godly.design/sections/"
+        ]
+      }
+    },
+    {
+      "id": "design-spells",
+      "name": "Design Spells",
+      "needs": [
+        "design-reference",
+        "motion"
+      ],
+      "forms": [
+        "reference"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "Curated archive of micro-interactions, subtle state transitions and memorable UI craft details.",
+      "access": "Public video/clip gallery organized by product and interaction detail.",
+      "adoption_notes": "Study trigger timing, feedback clarity and restraint so micro-interactions reinforce task comprehension rather than distracting from core workflows.",
+      "aliases": [
+        "micro-interactions",
+        "ui-details",
+        "delightful-details",
+        "微交互细节",
+        "状态过渡",
+        "交互灵感"
+      ],
+      "sources": [
+        "https://www.designspells.com/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "effect",
+          "interaction-mechanism",
+          "component"
+        ],
+        "visual_forms": [
+          "micro-interaction-clips",
+          "state-transition-craft-details"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://www.designspells.com/"
+        ]
+      }
+    },
+    {
+      "id": "component-gallery",
+      "name": "The Component Gallery",
+      "needs": [
+        "design-reference",
+        "controls",
+        "foundations"
+      ],
+      "forms": [
+        "reference"
+      ],
+      "stacks": [
+        "reference"
+      ],
+      "use_for": "Cross-design-system component taxonomy and live directory of public design systems.",
+      "access": "Public component-by-component comparison pages and live design-system index.",
+      "adoption_notes": "Use to compare naming conventions, anatomy, accessibility states and variant coverage across mature public design systems before finalizing component contracts.",
+      "aliases": [
+        "design-systems-directory",
+        "component-taxonomy",
+        "设计系统目录",
+        "组件分类",
+        "规范对比"
+      ],
+      "sources": [
+        "https://component.gallery/"
+      ],
+      "reviewed_on": "2026-11-18",
+      "evidence_scope": "documentation_or_public_source",
+      "project_validation": "evaluate_in_project",
+      "craft_profile": {
+        "roles": [
+          "design-reference",
+          "discovery-and-reference"
+        ],
+        "reuse_scopes": [
+          "component-family",
+          "component",
+          "tokens"
+        ],
+        "visual_forms": [
+          "cross-system-component-taxonomy",
+          "live-design-system-directory"
+        ],
+        "quality_status": "Not rated — inspect actual demo and current-project result",
+        "basis": "Public documentation and source structure; not a visual audit or runtime endorsement.",
+        "reviewed_on": "2026-11-18",
+        "sources": [
+          "https://component.gallery/"
+        ]
+      }
     }
   ],
   "access_mechanisms": [
@@ -1507,6 +4284,22 @@
         "https://inspira-ui.com/docs"
       ],
       "identity_note": "mouse-lin/finesse-skill was read as a method source; it is distinct from the finesseui.com catalog entry."
+    },
+    {
+      "release": "1.21.0",
+      "date": "2026-11-18",
+      "scope": "Expanded catalog from 37 to 80 entries across high-craft code/motion registries, specialist interaction/3D/canvas/data engines, editorial typography/icon sources and curated design-reference archives; completed neutral descriptive craft_profile metadata for all 22 previously unprofiled baseline entries and all 43 new entries. All 37 original entries retain their 2026-10-24 observation dates and source claims verbatim. No quality scores or endorsements.",
+      "sources": [
+        "https://coss.com/ui",
+        "https://kokonutui.com/",
+        "https://github.com/ibelick/motion-primitives",
+        "https://tweakcn.com/",
+        "https://number-flow.barvian.me",
+        "https://www.fontshare.com/",
+        "https://phosphoricons.com/",
+        "https://refero.design/",
+        "https://godly.design/sections/"
+      ]
     }
   ],
   "craft_discovery": {

@@ -14,6 +14,16 @@ CATALOG = Path(__file__).resolve().parents[1] / 'assets/resource-catalog.json'
 LIMITS = ('Results are documented discovery leads, not installation instructions or '
           'project acceptance. Current source, exact-item fit and real integration are not assessed.')
 ID = re.compile(r'^[a-z0-9][a-z0-9-]*$')
+ASCII_TOKEN = re.compile(r'^[a-z0-9][a-z0-9_-]*$', re.ASCII)
+CODE_STACKS = frozenset({
+    'react', 'vue', 'svelte', 'solid', 'javascript', 'html-css', 'web-components',
+})
+NEUTRAL_OR_MULTI_STACKS = frozenset({
+    'framework-neutral', 'multi-framework', 'multi-runtime',
+})
+STACKS = frozenset({
+    *CODE_STACKS, *NEUTRAL_OR_MULTI_STACKS, 'reference', 'design-tool',
+})
 
 
 def _text(value: Any) -> bool:
@@ -22,6 +32,23 @@ def _text(value: Any) -> bool:
 
 def _strings(value: Any) -> bool:
     return isinstance(value, list) and bool(value) and all(_text(x) for x in value)
+
+
+def _valid_https_url(url: Any) -> bool:
+    if not _text(url):
+        return False
+    try:
+        parsed = urlsplit(url)
+        return parsed.scheme == 'https' and bool(parsed.hostname) and not parsed.username and not parsed.password
+    except ValueError:
+        return False
+
+
+def _term_matches(term: str, searchable: str) -> bool:
+    if ASCII_TOKEN.fullmatch(term):
+        suffix = '(?:e?s)?' if len(term) >= 4 and term.isalpha() else ''
+        return bool(re.search(rf'(?<![a-z0-9]){re.escape(term)}{suffix}(?![a-z0-9])', searchable))
+    return term in searchable
 
 
 def validate_catalog(data: Any) -> list[str]:
@@ -38,6 +65,11 @@ def validate_catalog(data: Any) -> list[str]:
         date.fromisoformat(data.get('snapshot_date', ''))
     except (TypeError, ValueError):
         errors.append('snapshot_date must be an ISO date')
+    if 'catalog_updated_on' in data:
+        try:
+            date.fromisoformat(data.get('catalog_updated_on', ''))
+        except (TypeError, ValueError):
+            errors.append('catalog_updated_on must be an ISO date')
     needs = data.get('needs')
     if not isinstance(needs, dict) or not needs or any(not _text(k) or not _text(v) for k, v in needs.items()):
         errors.append('needs must be a nonempty label map')
@@ -70,11 +102,8 @@ def validate_catalog(data: Any) -> list[str]:
                 errors.append(f'{label}: sources must identify official evidence')
             else:
                 for url in item['sources']:
-                    try:
-                        parsed = urlsplit(url)
-                        valid = parsed.scheme == 'https' and bool(parsed.hostname) and not parsed.username and not parsed.password
-                    except ValueError: valid = False
-                    if not valid: errors.append(f'{label}: source must be an HTTPS URL without credentials')
+                    if not _valid_https_url(url):
+                        errors.append(f'{label}: source must be an HTTPS URL without credentials')
             if collection == 'resources':
                 for key in ('needs', 'forms', 'stacks', 'aliases'):
                     if not _strings(item.get(key)): errors.append(f'{label}: {key} must be nonempty strings')
@@ -96,6 +125,18 @@ def validate_catalog(data: Any) -> list[str]:
             values = profile.get(key)
             if not isinstance(values, list) or any(not _text(x) for x in values):
                 errors.append(f'resources[{i}].craft_profile: {key} must be a string list')
+        if 'reviewed_on' in profile:
+            try:
+                date.fromisoformat(profile.get('reviewed_on', ''))
+            except (TypeError, ValueError):
+                errors.append(f'resources[{i}].craft_profile: invalid reviewed_on')
+        if 'sources' in profile:
+            if not _strings(profile.get('sources')):
+                errors.append(f'resources[{i}].craft_profile: sources must be nonempty strings')
+            else:
+                for url in profile['sources']:
+                    if not _valid_https_url(url):
+                        errors.append(f'resources[{i}].craft_profile: source must be an HTTPS URL without credentials')
     return errors
 
 
@@ -106,14 +147,12 @@ def load_catalog(path: Path = CATALOG) -> dict[str, Any]:
     return data
 
 
-def select(data: dict[str, Any], query: str = '', *, need: str | None = None,
-           stack: str | None = None, form: str | None = None, identifier: str | None = None,
-           limit: int = 10, role: str | None = None, reuse_scope: str | None = None) -> list[dict[str, Any]]:
-    if type(limit) is not int or not 1 <= limit <= 100:
-        raise ValueError('limit must be between 1 and 100')
+def match_resources(data: dict[str, Any], query: str = '', *, need: str | None = None,
+                    stack: str | None = None, form: str | None = None, identifier: str | None = None,
+                    role: str | None = None, reuse_scope: str | None = None) -> list[dict[str, Any]]:
     if need and need not in data['needs']:
         raise ValueError(f'Unknown need: {need}; use --list-filters')
-    known_stacks = {s for r in data['resources'] for s in r['stacks']}
+    known_stacks = {s for r in data['resources'] for s in r['stacks']} | STACKS
     known_forms = {s for r in data['resources'] for s in r['forms']}
     if stack and stack not in known_stacks:
         raise ValueError(f'Unknown stack: {stack}; use --list-filters')
@@ -129,22 +168,36 @@ def select(data: dict[str, Any], query: str = '', *, need: str | None = None,
     for item in data['resources']:
         if identifier and item['id'] != identifier: continue
         if need and need not in item['needs']: continue
-        # Neutral resources are candidates for each code stack. Adapter support is
-        # intentionally left to the exact resource's documentation.
+        # Concrete code stacks also surface framework-neutral, multi-framework
+        # and multi-runtime candidates; exact adapter support is checked in
+        # primary documentation. Reference and design-tool stacks stay exact.
         if stack and stack not in item['stacks']:
-            if stack in {'reference', 'design-tool', 'multi-runtime', 'multi-framework'} or 'framework-neutral' not in item['stacks']:
+            if stack not in CODE_STACKS or not NEUTRAL_OR_MULTI_STACKS.intersection(item['stacks']):
                 continue
         if form and form not in item['forms']: continue
         profile = item.get('craft_profile', {})
         if role and role not in profile.get('roles', []): continue
         if reuse_scope and reuse_scope not in profile.get('reuse_scopes', []): continue
-        searchable = ' '.join([item['id'],item['name'],item['use_for'],item['access'],
-                               *item['needs'],*item['forms'],*item['stacks'],*item['aliases'],
-                               *profile.get('roles', []), *profile.get('reuse_scopes', []),
-                               *profile.get('visual_forms', [])]).casefold()
-        if not all(term in searchable for term in terms): continue
+        searchable = ' '.join([
+            item['id'], item['name'], item['use_for'], item['access'], item['adoption_notes'],
+            *item['needs'], *item['forms'], *item['stacks'], *item['aliases'],
+            *profile.get('roles', []), *profile.get('reuse_scopes', []),
+            *profile.get('visual_forms', []),
+        ]).casefold()
+        if not all(_term_matches(term, searchable) for term in terms): continue
         matches.append(item)
-    return sorted(matches, key=lambda x: (x['name'].casefold(), x['id']))[:limit]
+    return sorted(matches, key=lambda x: (x['name'].casefold(), x['id']))
+
+
+def select(data: dict[str, Any], query: str = '', *, need: str | None = None,
+           stack: str | None = None, form: str | None = None, identifier: str | None = None,
+           limit: int = 10, role: str | None = None, reuse_scope: str | None = None) -> list[dict[str, Any]]:
+    if type(limit) is not int or not 1 <= limit <= 100:
+        raise ValueError('limit must be between 1 and 100')
+    return match_resources(
+        data, query, need=need, stack=stack, form=form,
+        identifier=identifier, role=role, reuse_scope=reuse_scope,
+    )[:limit]
 
 
 def main() -> int:
@@ -162,18 +215,41 @@ def main() -> int:
                       'roles':sorted({s for r in data['resources'] for s in r.get('craft_profile', {}).get('roles', [])}),
                       'reuse_scopes':sorted({s for r in data['resources'] for s in r.get('craft_profile', {}).get('reuse_scopes', [])}), 'limits':LIMITS}
         else:
-            items = select(data, args.query, need=args.need, stack=args.stack, form=args.form, identifier=args.identifier, limit=args.limit, role=args.role, reuse_scope=args.reuse_scope)
-            result = {'snapshot_date':data['snapshot_date'], 'results':items, 'count':len(items),
-                      'ordering':'alphabetical; no design-quality ranking',
-                      'result_kind':'dated_catalog_matches',
-                      'facet_scope':'Literal declared labels only; an unclassified entry is not unavailable or lower quality.',
-                      'source_note_scope':'Catalog-authored guidance is source material, not a tool-selected next action.', 'limits':LIMITS}
+            if type(args.limit) is not int or not 1 <= args.limit <= 100:
+                raise ValueError('limit must be between 1 and 100')
+            all_matches = match_resources(
+                data, args.query, need=args.need, stack=args.stack, form=args.form,
+                identifier=args.identifier, role=args.role, reuse_scope=args.reuse_scope,
+            )
+            items = all_matches[:args.limit]
+            total_matches = len(all_matches)
+            truncated = total_matches > len(items)
+            result = {
+                'snapshot_date': data['snapshot_date'],
+                'results': items,
+                'count': len(items),
+                'total_matches': total_matches,
+                'truncated': truncated,
+                'ordering': 'alphabetical; no design-quality ranking',
+                'result_kind': 'dated_catalog_matches',
+                'facet_scope': 'Literal declared labels only; an unclassified entry is not unavailable or lower quality.',
+                'source_note_scope': 'Catalog-authored guidance is source material, not a tool-selected next action.',
+                'limits': LIMITS,
+            }
+            if data.get('catalog_updated_on'):
+                result['catalog_updated_on'] = data['catalog_updated_on']
             if not items:
                 result['query_observation'] = 'No bundled catalog entry matches the supplied filters; external availability and task fit are not assessed.'
         if args.json or args.list_filters:
             print(json.dumps(result, ensure_ascii=True, indent=2))
         else:
-            print(f"Resource leads | research snapshot {data['snapshot_date']}")
+            header = f"Resource leads | research snapshot {data['snapshot_date']}"
+            if data.get('catalog_updated_on'):
+                header += f" (updated {data['catalog_updated_on']})"
+            header += f" | showing {result['count']} of {result['total_matches']} matches"
+            if result['truncated']:
+                header += ' (truncated; raise --limit to inspect more)'
+            print(header)
             for item in result['results']:
                 print(f"\n{item['name']} ({item['id']}) — {item['use_for']}")
                 print(f"  Needs: {', '.join(item['needs'])}; forms: {', '.join(item['forms'])}")
