@@ -7,19 +7,45 @@ from pathlib import Path
 
 
 
+def runtime_v120(root: Path, path: str) -> bytes:
+    """Recover exact v1.20.0 bytes through v1.21, without modifying old evidence."""
+    current = (root / path).read_bytes()
+    extension = root / 'docs/evidence/v1.21.0/continuity.json'
+    if not extension.is_file():
+        # v1.20.x distribution patches change only the Skill's published version
+        # scalar. Restore this exact one-line delta before checking the immutable
+        # v1.20.0 ledger. Never normalize other release families or other content.
+        if (path == 'skills/ui-spec/SKILL.md' and (root / 'VERSION').is_file()
+                and re.fullmatch(r'1\.20\.[1-9][0-9]*', (root / 'VERSION').read_text(encoding='utf-8').strip())):
+            version = (root / 'VERSION').read_text(encoding='utf-8').strip()
+            patch = ('  version: "' + version + '"\n').encode('utf-8')
+            prior = b'  version: "1.20.0"\n'
+            if current.count(patch) == 1:
+                current = current.replace(patch, prior, 1)
+        return current
+    ledger = json.loads(extension.read_text(encoding='utf-8'))
+    rows = [row for row in ledger['files'] if row['path'] == path]
+    if len(rows) != 1:
+        raise ValueError(f'Unknown or duplicate v1.21 continuity path: {path}')
+    row = rows[0]
+    if hashlib.sha256(current).hexdigest() != row['current_sha256']:
+        raise ValueError(f'Current source differs from v1.21 identity: {path}')
+    lines = current.decode('utf-8').splitlines(keepends=True)
+    for edit in reversed(row['inverse_edits']):
+        a, b = edit['current_start_line'], edit['current_end_line']
+        fragment = ''.join(lines[a:b]).encode('utf-8')
+        if hashlib.sha256(fragment).hexdigest() != edit['current_fragment_sha256']:
+            raise ValueError(f'Inverse v1.21 fragment differs: {path}')
+        lines[a:b] = edit['prior_text'].splitlines(keepends=True)
+    prior = ''.join(lines).encode('utf-8')
+    if hashlib.sha256(prior).hexdigest() != row['prior_sha256']:
+        raise ValueError(f'Restored v1.20 source differs: {path}')
+    return prior
+
+
 def runtime_v119(root: Path, path: str) -> bytes:
     """Recover exact v1.19 bytes through v1.20, without modifying old evidence."""
-    current = (root / path).read_bytes()
-    # v1.20.x distribution patches change only the Skill's published version
-    # scalar. Restore this exact one-line delta before checking the immutable
-    # v1.20.0 ledger. Never normalize other release families or other content.
-    if (path == 'skills/ui-spec/SKILL.md' and (root / 'VERSION').is_file()
-            and re.fullmatch(r'1\.20\.[1-9][0-9]*', (root / 'VERSION').read_text(encoding='utf-8').strip())):
-        version = (root / 'VERSION').read_text(encoding='utf-8').strip()
-        patch = ('  version: "' + version + '"\n').encode('utf-8')
-        prior = b'  version: "1.20.0"\n'
-        if current.count(patch) == 1:
-            current = current.replace(patch, prior, 1)
+    current = runtime_v120(root, path)
     extension = root / 'docs/evidence/v1.20.0/continuity.json'
     if not extension.is_file():
         return current

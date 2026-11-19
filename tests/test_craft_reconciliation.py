@@ -8,7 +8,9 @@ class CraftReconciliationTests(unittest.TestCase):
     def setUp(self):self.data=lookup.load_catalog()
     def test_role_scope_and_stack_intersect(self):
         rows=lookup.select(self.data,role='visual-implementation',reuse_scope='visual-component',stack='vue',limit=100)
-        self.assertEqual({x['id'] for x in rows},{'vue-bits','inspira'})
+        ids={x['id'] for x in rows}
+        self.assertTrue({'vue-bits','inspira'}<=ids)
+        self.assertNotIn('react-bits',ids)
     def test_functional_foundation_does_not_include_react_bits(self):
         ids={x['id'] for x in lookup.select(self.data,role='functional-foundation',limit=100)}
         self.assertIn('radix-primitives',ids);self.assertNotIn('react-bits',ids)
@@ -16,9 +18,14 @@ class CraftReconciliationTests(unittest.TestCase):
         rows=lookup.select(self.data,role='visual-implementation',reuse_scope='block',limit=100)
         self.assertTrue(rows);self.assertTrue(all('block' in x['craft_profile']['reuse_scopes'] for x in rows))
     def test_unclassified_lead_still_exists(self):
-        row=next(x for x in self.data['resources'] if 'craft_profile' not in x)
-        self.assertTrue(lookup.select(self.data,identifier=row['id']))
-        self.assertEqual(lookup.select(self.data,identifier=row['id'],role='visual-implementation'),[])
+        hist=json.loads(runtime_v1161(ROOT,'skills/ui-spec/assets/resource-catalog.json'))
+        row=next(x for x in hist['resources'] if 'craft_profile' not in x)
+        self.assertTrue(lookup.select(hist,identifier=row['id']))
+        self.assertEqual(lookup.select(hist,identifier=row['id'],role='visual-implementation'),[])
+        sample=copy.deepcopy(self.data);sample['resources'][0].pop('craft_profile',None)
+        unclassified_id=sample['resources'][0]['id']
+        self.assertTrue(lookup.select(sample,identifier=unclassified_id))
+        self.assertEqual(lookup.select(sample,identifier=unclassified_id,role='visual-implementation'),[])
     def test_legacy_catalog_without_profiles(self):
         for row in self.data['resources']:row.pop('craft_profile',None)
         self.assertEqual(lookup.validate_catalog(self.data),[])

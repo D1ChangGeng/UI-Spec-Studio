@@ -274,3 +274,29 @@ The owner authorization changes the acceptance scope; it does not certify native
 Codex roles, resolved model identities, native usage or the original campaign.
 Keep schema-v1 native checks and historical failures intact. A substitute release
 is always limited, with explicit unavailable evidence and scoped final UI findings.
+
+## Version 1.21: wide high-craft discovery, deep reuse and taste calibration
+
+Preserve the complete eight-common-reference full-reading contract, default-deny
+original construction (`W1`–`W3` closed allowlist), neutral read-only helpers,
+and exact inverse continuity to `v1.20.0` via `docs/evidence/v1.21.0/continuity.json`.
+Keep conditional multi-agent delegation rules centralized in
+`skills/ui-spec/references/delegation.md` (38 portable Skill files) and require
+all four Codex roles to keep unconditional eight-common-reference reading.
+
+Maintain the 80-entry catalog in `skills/ui-spec/assets/resource-catalog.json`
+with original observation dates preserved, 100% neutral descriptive `craft_profile`
+metadata (never scores or rankings), and `tools/catalog_docs.py --check` parity.
+Keep `find_resources.py` strictly local, read-only and alphabetical, including
+`framework-neutral`/`multi-framework`/`multi-runtime` leads under concrete code
+stack filters and safe word-boundary token matching.
+
+Distinguish the five permitted deep-reuse operations (de-templating, token/cascade
+harmonization, rendering/ergonomic repair, license-checked inspected-source
+architectural porting, and state/accessibility completion) from prohibited original
+construction requiring `W1`–`W3`. Keep AI-slop diagnostics and craft calibrations
+diagnostic and domain-grounded rather than dogmatic style bans, and keep maintainer
+comparative-benchmark rules out of runtime Skill instructions. Report deterministic
+checks, bounded single-agent smoke probes, Chromium browser scenarios, comparative
+campaigns and human owner acceptance strictly separately.
+

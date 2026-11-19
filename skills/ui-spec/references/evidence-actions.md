@@ -6,6 +6,18 @@ relations. **The required constraint is the relationship between an important
 choice, its actual support and the scope of the next commitment.** A particular
 file, JSON schema, tool or additional approval meeting is not required.
 
+## Contents
+
+- [Before a consequential commitment](#before-a-consequential-commitment)
+- [Gap-to-action rules](#gap-to-action-rules)
+- [Access constraints and exceptions](#access-constraints-and-exceptions)
+- [Carry reuse into visible implementation](#carry-reuse-into-visible-implementation)
+- [Reopen only the affected decisions](#reopen-only-the-affected-decisions)
+- [Worked decision: a companion panel](#worked-decision-a-companion-panel)
+- [Three separate claims of success](#three-separate-claims-of-success)
+- [The Agent interprets structural observations](#the-agent-interprets-structural-observations)
+- [Coordinate auxiliary findings](#coordinate-auxiliary-findings)
+
 ## Before a consequential commitment
 
 Before selecting a new shell, expanding a defining component, committing to a
@@ -120,16 +132,9 @@ focused text/reflow check instead of repeating the entire product study.
 previously valid knowledge. **Agent behavior:** actual tool traces and outputs
 show that discovery, viewing, comparison and gap-directed action happened.
 **UI quality:** the real output shows mature perception, meaningful interaction,
-expressive completion and reliable operation. A structural inspector describes record shapes and links. It cannot certify
-professional correctness, actual Agent behavior or resulting UI quality.
-
-For comparisons, use independently started sessions, frozen skill variants,
-matched tasks/tools/models/budgets and auditable outputs. Keep a structure-only
-condition separate from the additional action-guidance condition. Examine
-supported convergence as well as deeper exploration; do not reward needless
-work or fluent reports. A script replaying authored records is an engineering
-fixture, not a real agent experiment. Report unrun comparisons as pending and
-avoid claiming a measured design improvement from publication or unit tests.
+expressive completion and reliable operation. A structural inspector describes
+record shapes and links; it cannot certify professional correctness, actual
+Agent behavior or resulting UI quality.
 
 ## The Agent interprets structural observations
 
@@ -155,8 +160,6 @@ link their reasons in meaningful revisions and keep original evidence available.
 Reopen an approved or previously verified choice when relevant new evidence exposes
 a real problem, while preserving the user's authorization scope and unaffected work.
 
-## Let auxiliary findings change the responsible action
+## Coordinate auxiliary findings
 
-When an independent investigation returns, identify the design question it actually resolved and the important conditions it did not observe. Useful outcomes include new high-quality candidates, a corrected experience hypothesis, an adoptable mature source, a credible counterexample or a more precise unresolved gap. A completed report alone does not justify implementation expansion.
-
-The main agent chooses targeted follow-up, direct visual comparison, a local trial, supported integration or retention of the current choice. Inspect pivotal visual evidence rather than simply ratify a recommendation. If a trial loses source craft or conflicts with surrounding content, return to the source, adaptation or composition question that the actual failure implicates. Keep independent work moving while dependent quality remains unresolved. No failed research path lifts the default-deny original-construction rule.
+When an independent specialist investigation returns, follow [delegation guidance](delegation.md) to evaluate what was actually observed vs. left open, inspect pivotal visual evidence directly and choose targeted follow-up, visual comparison, local trial, supported integration or craft repair. Neither a completed report nor a failed research path lifts the default-deny original-construction rule.

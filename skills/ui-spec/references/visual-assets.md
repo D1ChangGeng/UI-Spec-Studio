@@ -8,7 +8,20 @@ Apply [default-deny original UI construction](component-sourcing.md#default-deny
 
 ## Contents
 
-[Role and conditions](#establish-the-role-and-the-viewing-condition) · [Research and selection](#research-compare-and-choose-a-production-route) · [Identity](#brand-and-icon-craft) · [Type](#type-glyphs-and-wordmarks) · [2D](#2d-preparation-and-image-direction) · [Spatial production](#spatial-and-3d-production) · [Dynamic assets](#dynamic-assets-and-procedural-presentation) · [Delivery and acceptance](#engineer-masters-derivatives-and-placements)
+- [Establish the role and the viewing condition](#establish-the-role-and-the-viewing-condition)
+- [Understand the asset family](#understand-the-asset-family)
+- [Research, compare and choose a production route](#research-compare-and-choose-a-production-route)
+- [Select a resolved visual asset before substituting a homemade effect](#select-a-resolved-visual-asset-before-substituting-a-homemade-effect)
+- [Brand and icon craft](#brand-and-icon-craft)
+- [Type, glyphs and wordmarks](#type-glyphs-and-wordmarks)
+- [2D preparation and image direction](#2d-preparation-and-image-direction)
+- [Optical asset-to-surface integration](#optical-asset-to-surface-integration)
+- [Spatial and 3D production](#spatial-and-3d-production)
+- [Dynamic assets and procedural presentation](#dynamic-assets-and-procedural-presentation)
+- [Engineer masters, derivatives and placements](#engineer-masters-derivatives-and-placements)
+- [Accept the asset in use](#accept-the-asset-in-use)
+- [Source support](#source-support)
+- [Link high-impact assets across design scales](#link-high-impact-assets-across-design-scales)
 
 ## Establish the role and the viewing condition
 
@@ -41,9 +54,23 @@ Before an image transformation, establish the usable input and its authorized sc
 
 For identity-changing or otherwise consequential alternatives, show a small, researched set at equivalent sizes, backgrounds and placements. Explain the differences the user can perceive and recommend one. Preserve actual approval scope; routine adjustments proceed under the established direction.
 
+## Select a resolved visual asset before substituting a homemade effect
+
+For a defining photograph, spatial object, moving background or graphic system, study mature assets and implementations while the page composition is still open. A sourced shader or authored scene may already resolve lighting, material, color progression and movement; a selected photograph may supply subject, narrative and negative space. Replacing either with the agent's default gradient or geometric placeholder changes the design target, even when the replacement is technically valid.
+
+Diagnose generic dated stock tropes early so they do not become the default filler. Unadapted flat unDraw-style vector clip-art, uncurated cliché stock photographs sitting inside harsh rectangular cutout boxes, and default decorative purple radial blobs are low-taste baselines that weaken product credibility when a purposeful editorial photograph, a crisp architectural diagram, a subtle SVG grain or mesh texture (such as `fffuel` generators), or a coherently lit spatial scene belongs instead. Evaluate asset style by fit and coherence rather than banning vectors or gradients outright: an illustration or gradient succeeds when it belongs to an intentional visual language harmonized with the surrounding UI.
+
+Judge the asset's **visual completeness at its useful scope** independently from format or production complexity. A resolved two-dimensional image may serve the intended composition better than an elaborate real-time scene. A small procedural background can carry a distinctive material, but does not provide the page's typography or functional layout. Source royalty/licensing terms, editable access and runtime compatibility remain separate adoption decisions. Public viewing does not establish permission to redistribute originals, paid templates or fonts.
+
+For photography and illustration, compare subject relevance, crop tolerance, focal direction, depth cues, color relationships and text-safe regions with the intended page. Examine actual derivatives and narrow crops; an image's quiet area can disappear at another aspect ratio. Avoid using a screenshot of another product as editable implementation or presenting illustrative people/data as customer evidence. Prefer an actual rights-bearing source with sufficient resolution and a maintainable replacement path.
+
+For spatial and procedural material, inspect the relationship of camera, light, texture scale, depth and motion to readable DOM content. A glossy object and a matte interface can coexist deliberately, but contradictory light directions or unrelated contrast roles need reconciliation. Preserve a chosen source's distinctive optical mechanism through configuration and focused adaptation. Replacing that mechanism with new shaders or scene logic requires the default-deny and allowlist judgment before implementation; a retained source name does not preserve its craft. Test full motion range, resize, device-pixel ratio, quiet/offscreen behavior, renderer unavailability and cleanup as relevant. Canvas-rendered text or images do not automatically inherit the semantics, selection and loading behavior of native content.
+
+If an asset degrades in context, compare the original demonstration, local placement and assembled viewport. Determine whether the cause is crop, color treatment, density, layering, unhandled content, a changed parameter or runtime delivery. Reopen source selection when adaptation would remove the quality that justified it. Preserve a project-specific expressive direction rather than treating a technical fallback as universal artistic approval.
+
 ## Brand and icon craft
 
-For functional icons, start with an established family and choose the correct semantic item. Coordinate stroke, fill, apparent weight, baseline and optical size rather than forcing equal bounding boxes. Keep the interaction target usable independently of the drawing's size. Pair unfamiliar symbols with language; name actions at the control. Brand-library availability and permission to use a particular mark are different checks. Consult current owner guidance for service logos, with accurate attribution and relationship claims.
+For functional icons, start with an established family and choose the correct semantic item. Coordinate stroke, fill, apparent weight, baseline and optical size rather than forcing equal bounding boxes. Align inline icons optically against the adjacent text's cap-height or x-height center — not merely the raw line-box top or bottom — and match icon stroke weight to the companion font's apparent stroke thickness so icons never read as timid hairlines beside bold labels or clunky blocks beside light text. Keep the interaction target usable independently of the drawing's size. Pair unfamiliar symbols with language; name actions at the control. Brand-library availability and permission to use a particular mark are different checks. Consult current owner guidance for service logos, with accurate attribution and relationship claims.
 
 For an original mark authorized within W1, explore silhouette and positive/negative space before adding material or motion. Tune contour, proportion, joins and balance at actual display sizes. Establish a recognizable core that can support a small mark, full lockup and optional expressive treatment. A favicon may need optical simplification rather than a mechanically reduced illustration. App-icon masks and safety regions follow the target platform. Inspect monochrome and inverse uses, dark/light grounds, browser-tab size and larger identity contexts. Screen geometry supports judgment; actual perceived balance decides the refinement. This identity scope does not authorize original navigation, cards or other general UI.
 
@@ -62,6 +89,15 @@ Select mature material at a quality suitable for its largest required use, then 
 For reconstruction, compositing or vectorization, inspect masks, contour economy, local color, repeated textures and artifacts at delivery size as well as close up. Retain editable layers/paths when later changes need them. Apply an intentional color pipeline; compare exported colors, transparency and gradients in the target browser or host. Preserve factual product representation, and label illustrative substitutes where interpretation depends on it.
 
 Choose SVG for suitable vector forms and supported raster formats for their content, alpha, decoder compatibility and measured visual/byte tradeoff. Inspect SVG before use for scripts, external fetches, embedded data and ID collisions according to the actual trust boundary. Use responsive image sources and intrinsic dimensions so layout remains predictable while files load. Critical imagery gets appropriate loading priority; secondary media can defer. Test the final generated/optimized file, since compression or conversion can alter the intended result.
+
+## Optical asset-to-surface integration
+
+An individually strong image, diagram or icon degrades an interface when it sits pasted onto the surface without tonal, spatial or edge integration. Harmonize every placed asset against its live UI surroundings in both light and dark themes:
+
+- **Color temperature and tonal bridging:** check that photographic warmth, shadow tint and highlight intensity agree with the surrounding surface palette. Avoid dropping a stark cold studio cutout onto warm editorial paper — or a bright unframed white rectangle onto a dark charcoal canvas — without deliberate framing, tonal grading or background transparency.
+- **Contrast floor behind overlaid text:** whenever headlines, badges or controls sit over imagery or textured gradients, establish a reliable contrast floor using a directional multi-stop scrim or eased gradient (`linear-gradient` with smooth intermediate alpha stops) matched to the ground hue. Avoid both unbacked text lost in busy image highlights and flat, muddy gray overlay slabs that dull the subject and cause visible color banding.
+- **Edge and crop discipline across themes:** when a light-toned photograph rests on a light canvas or a dark render rests on a dark surface, anchor the perimeter with a subtle translucent inner hairline (`inset 0 0 0 1px` alpha ring) so the frame reads crisply without heavy borders. Verify that focal subjects and cropped margins do not clip heads, product hardware or diagrams across desktop and narrow responsive aspect ratios.
+- **Baseline and visual-weight alignment:** pair icons, avatars and inline thumbnails optically with adjacent text rhythm and concentric corner radii (`R_outer = R_inner + padding`) so media frames and UI chrome read as one architectural system.
 
 ## Spatial and 3D production
 
@@ -114,16 +150,3 @@ The [asset source map](asset-sources.md) links primary material for icon provena
 Use the shared asset or decision ID in [the map](evidence-map.md) to connect intended character, affected regions, perceptual details, master/source, delivery variants and inspected placements. Do not infer research depth from asset area: a favicon or defining typeface can carry high product impact. If material changes, revisit dependent text contrast, reading space, component weight and relevant dynamic conditions as well as the isolated asset.
 
 Acquired rights, available files, viewed craft, actual integration and owner preference remain distinct. A blocked authorized asset route needs an explicit research gap; a replacement should retain the original quality question and identify any scoped change in direction.
-
-
-## Select a resolved visual asset before substituting a homemade effect
-
-For a defining photograph, spatial object, moving background or graphic system, study mature assets and implementations while the page composition is still open. A sourced shader or authored scene may already resolve lighting, material, color progression and movement; a selected photograph may supply subject, narrative and negative space. Replacing either with the agent's default gradient or geometric placeholder changes the design target, even when the replacement is technically valid.
-
-Judge the asset's **visual completeness at its useful scope** independently from format or production complexity. A resolved two-dimensional image may serve the intended composition better than an elaborate real-time scene. A small procedural background can carry a distinctive material, but does not provide the page's typography or functional layout. Source royalty/licensing terms, editable access and runtime compatibility remain separate adoption decisions. Public viewing does not establish permission to redistribute originals, paid templates or fonts.
-
-For photography and illustration, compare subject relevance, crop tolerance, focal direction, depth cues, color relationships and text-safe regions with the intended page. Examine actual derivatives and narrow crops; an image's quiet area can disappear at another aspect ratio. Avoid using a screenshot of another product as editable implementation or presenting illustrative people/data as customer evidence. Prefer an actual rights-bearing source with sufficient resolution and a maintainable replacement path.
-
-For spatial and procedural material, inspect the relationship of camera, light, texture scale, depth and motion to readable DOM content. A glossy object and a matte interface can coexist deliberately, but contradictory light directions or unrelated contrast roles need reconciliation. Preserve a chosen source's distinctive optical mechanism through configuration and focused adaptation. Replacing that mechanism with new shaders or scene logic requires the default-deny and allowlist judgment before implementation; a retained source name does not preserve its craft. Test full motion range, resize, device-pixel ratio, quiet/offscreen behavior, renderer unavailability and cleanup as relevant. Canvas-rendered text or images do not automatically inherit the semantics, selection and loading behavior of native content.
-
-If an asset degrades in context, compare the original demonstration, local placement and assembled viewport. Determine whether the cause is crop, color treatment, density, layering, unhandled content, a changed parameter or runtime delivery. Reopen source selection when adaptation would remove the quality that justified it. Preserve a project-specific expressive direction rather than treating a technical fallback as universal artistic approval.

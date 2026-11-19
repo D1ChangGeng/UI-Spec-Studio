@@ -14,15 +14,19 @@ TARGET = ROOT/'skills/ui-spec/references/resource-catalog.md'
 
 
 def render(data: dict) -> str:
+    snapshot_line = f"Research snapshot: **{data['snapshot_date']}**"
+    if data.get('catalog_updated_on'):
+        snapshot_line += f" · Catalog updated: **{data['catalog_updated_on']}**"
+    snapshot_line += f" · **{len(data['resources'])} resources** · **{len(data['access_mechanisms'])} access mechanisms**."
     out = ['# UI resource map', '', 'Find a useful starting point by need, then read the exact item and its current primary source.',
            'Apply [the common sourcing method](component-sourcing.md) throughout selection and integration.', '',
-           f"Research snapshot: **{data['snapshot_date']}** · **{len(data['resources'])} resources** · **{len(data['access_mechanisms'])} access mechanisms**.",
+           snapshot_line,
            data['scope'], '', '## Use the map', '',
            'Read the relevant section, use the [structured catalog](../assets/resource-catalog.json), or query the optional local helper:', '',
            '```bash', 'python <skill-dir>/scripts/find_resources.py --need motion --stack vue --json',
            'python <skill-dir>/scripts/find_resources.py --id fontsource --json',
            'python <skill-dir>/scripts/find_resources.py --list-filters', '```', '',
-           'Queries match all supplied terms; filters combine. Results are alphabetical discovery leads. A stack filter includes framework-neutral candidates; exact adapter compatibility is checked in primary documentation. A missing match invites wider research. The helper reads local data and performs no installation or network operation.', '',
+           'Queries match all supplied terms; ASCII alphanumeric terms match at token boundaries while CJK and punctuated terms match as substrings. Filters combine, and results are alphabetical discovery leads with `total_matches` and `truncated` counts. A concrete code-stack filter includes framework-neutral, multi-framework and multi-runtime candidates while excluding mismatched concrete stacks; reference and design-tool stacks stay exact. Check exact adapter compatibility in primary documentation. A missing match invites wider research. The helper reads local data and performs no installation or network operation.', '',
            'Platform documentation, item inspection and project acceptance have different scopes. Review dates identify the source research, and use-time checks establish current fit. Keep actual adoption records in the project. Maintain shared entries through authorized review and normal version control.', '',
            '## Needs and delivery forms', '', '| Need | Scope |', '|---|---|']
     out += [f'| `{key}` | {value} |' for key,value in data['needs'].items()]
@@ -30,8 +34,9 @@ def render(data: dict) -> str:
     craft = data.get('craft_discovery')
     if craft:
         out += ['## Discover resolved visual work', '', craft['purpose'], '',
+                '**Shared craft-profile observation boundary:** Every `craft_profile` in this catalog is **Not rated — inspect actual demo and current-project result; public documentation/source structure, not a visual audit** or runtime endorsement. Each resource card below retains its own observation dates and primary source URLs.', '',
                 '**Reuse Scope** and **Visual Completeness** are independent. The former locates useful responsibility; the latter requires observing the exact item. A broad primitive library does not settle visual craft, and a resolved small effect does not settle a complete page.', '',
-                'Search complete pages and functional blocks when composition is the need; search visual components and assets when their material or motion supplies the defining relationship. Discover usable external mature work first and assess validated project work alongside it; select by observed quality, fit and continuity. Routine matching-condition inheritance can reuse that foundation. Original construction remains outside normal candidates under the [default-deny policy](component-sourcing.md#default-deny-original-ui-construction).', '',
+                'Search complete pages and functional blocks when composition is the need; search visual components and assets when their material or motion supplies the defining relationship. Discover usable external mature work first and assess validated project work alongside it; select by observed quality, fit and continuity. Routine matching-condition inheritance can reuse that foundation. Original construction remains outside normal candidates under the default-deny policy in [component-sourcing.md](component-sourcing.md#default-deny-original-ui-construction).', '',
                 '| Source role | Responsibility to inspect | Boundary |',
                 '|---|---|---|',
                 '| Resolved page or design system | Composition, space, visual language and coordinated components | Broad scope does not guarantee high visual completeness |',
@@ -58,14 +63,20 @@ def render(data: dict) -> str:
                 f"**Find by:** {', '.join(x['needs'])}. **Form:** {', '.join(x['forms'])}. **Stack scope:** {', '.join(x['stacks'])}.",
                 f"**Access:** {x['access']}", f"**Adoption judgment:** {x['adoption_notes']}",
                 '**Primary sources:** '+' · '.join(f'[Source {i+1}]({u})' for i,u in enumerate(x['sources'])),
-                f"**Evidence:** {x['evidence_scope']}; reviewed {x['reviewed_on']}; project use: {x['project_validation']}.", '']
+                f"**Evidence:** {x['evidence_scope']}; reviewed {x['reviewed_on']}; project use: {x['project_validation']}."]
         profile = x.get('craft_profile')
         if profile:
-            out += [f"**Craft discovery:** roles: {', '.join(profile['roles'])}; potential scope: {', '.join(profile['reuse_scopes'])}; forms: {', '.join(profile['visual_forms'])}.",
-                    f"**Profile basis:** {profile['basis']} Reviewed {profile['reviewed_on']}. {profile['quality_status']}",
-                    '**Profile sources:** ' + ' · '.join(f'[Source {i+1}]({u})' for i,u in enumerate(profile['sources'])), '']
+            line = (f"**Craft discovery** (reviewed {profile.get('reviewed_on', x['reviewed_on'])}): "
+                    f"roles: {', '.join(profile['roles'])}; "
+                    f"potential scope: {', '.join(profile['reuse_scopes'])}; "
+                    f"forms: {', '.join(profile['visual_forms'])}.")
+            extra_sources = [u for u in profile.get('sources', []) if u not in x['sources']]
+            if extra_sources:
+                line += ' **Profile sources:** ' + ' · '.join(f'[Source {i+1}]({u})' for i, u in enumerate(extra_sources))
+            out.append(line)
             if profile.get('identity_boundary'):
-                out += [profile['identity_boundary'], '']
+                out.append(profile['identity_boundary'])
+        out.append('')
     out += ['## Access mechanisms', '']
     for x in data['access_mechanisms']:
         out += [f"### {x['name']}", '', x['use'], '', x['boundary'], '',

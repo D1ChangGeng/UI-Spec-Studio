@@ -194,7 +194,11 @@ def run(*, require_published: bool = False) -> dict:
         original = root / "SKILL.md"
         if not original.is_file() or not (clean / ".codex/agents/ui_researcher.toml").is_file():
             raise RuntimeError("Official npm package omitted the Skill or native Codex adapter")
-        if installation.get("skill_files") != 37:
+        expected_skill_files = sum(
+            1 for p in (ROOT / "skills/ui-spec").rglob("*")
+            if p.is_file() and "__pycache__" not in p.parts and p.suffix != ".pyc"
+        )
+        if installation.get("skill_files") != expected_skill_files:
             raise RuntimeError("Unexpected portable Skill file inventory")
         old_root = legacy / ".agents/skills/ui-spec"
         old_root.parent.mkdir(parents=True)

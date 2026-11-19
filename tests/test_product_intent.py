@@ -106,8 +106,8 @@ class ProductIntentTests(unittest.TestCase):
 
     def test_catalog_identity_is_retained(self):
         data=json.loads((ROOT/'skills/ui-spec/assets/resource-catalog.json').read_text(encoding='utf-8'))
-        self.assertEqual(len(data['resources']),37)
-        self.assertEqual(len({r['id'] for r in data['resources']}),37)
+        self.assertGreaterEqual(len(data['resources']),37)
+        self.assertEqual(len({r['id'] for r in data['resources']}),len(data['resources']))
 
     def test_new_text_readers_declare_utf8(self):
         for name in ('tests/test_product_intent.py', 'tools/validate_scenario.py'):

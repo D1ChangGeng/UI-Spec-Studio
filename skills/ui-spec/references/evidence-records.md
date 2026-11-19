@@ -7,6 +7,16 @@ relationships. The [map](evidence-map.md) organizes them; the
 JSON is optional. Neither a schema nor a tool return decides research sufficiency,
 implementation readiness, design correctness or task completion.
 
+## Contents
+
+- [Read-only use and report semantics](#read-only-use-and-report-semantics)
+- [Small core and optional detail](#small-core-and-optional-detail)
+- [Optional formal-increment declarations](#optional-formal-increment-declarations)
+- [Source and file facts](#source-and-file-facts)
+- [Records are not independent verification](#records-are-not-independent-verification)
+- [Theory is not applicability](#theory-is-not-applicability)
+- [Relations, revision and current applicability](#relations-revision-and-current-applicability)
+
 ## Read-only use and report semantics
 
 ```bash

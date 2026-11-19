@@ -2,7 +2,23 @@
 
 ## Contents
 
-[Alignment target](#establish-the-products-target-experience) · [Experience dimensions](#nine-dimensions-one-coherent-experience) · [Evidence planning](#plan-evidence-around-the-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Product model](#recognize-the-product-through-its-use) · [Direction](#confirm-consequential-direction-with-useful-options) · [Formal SPEC scope](#choose-a-bounded-increment) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)
+- [Establish the product's target experience](#establish-the-products-target-experience)
+- [Nine dimensions, one coherent experience](#nine-dimensions-one-coherent-experience)
+- [Formulate an inspectable aesthetic direction and reference craft breakdown](#formulate-an-inspectable-aesthetic-direction-and-reference-craft-breakdown)
+- [Plan evidence around the experience](#plan-evidence-around-the-experience)
+- [Use theory to investigate real design work](#use-theory-to-investigate-real-design-work)
+- [Recognize the product through its use](#recognize-the-product-through-its-use)
+- [Establish the reuse boundary for this assignment](#establish-the-reuse-boundary-for-this-assignment)
+- [Confirm consequential direction with useful options](#confirm-consequential-direction-with-useful-options)
+- [Lead users at different levels of design direction](#lead-users-at-different-levels-of-design-direction)
+- [Reason about uncertainty](#reason-about-uncertainty)
+- [Define each surface by responsibility](#define-each-surface-by-responsibility)
+- [Choose a bounded increment](#choose-a-bounded-increment)
+- [Design the understanding before the arrangement](#design-the-understanding-before-the-arrangement)
+- [Choose a representation before a component](#choose-a-representation-before-a-component)
+- [Organize actions, content and operating life](#organize-actions-content-and-operating-life)
+- [Read references as mechanisms and carry decisions forward](#read-references-as-mechanisms-and-carry-decisions-forward)
+- [Coordinate auxiliary research](#coordinate-auxiliary-research)
 
 ## Establish the product's target experience
 
@@ -34,6 +50,23 @@ Use these dimensions together, grounded in user outcomes, authoritative facts, i
 
 Follow cross-dimensional effects: content reshapes navigation, assets affect composition, latency changes preparation, and maintenance changes editing flows. Use [content](content-design.md), [principles](principles.md), [assets](visual-assets.md), [interaction](interaction-and-variants.md), [verification](verification.md) and [integration](integration.md) together.
 
+## Formulate an inspectable aesthetic direction and reference craft breakdown
+
+Before searching implementation libraries, decompose top-tier product, editorial and cross-domain visual references into **concrete, inspectable craft mechanisms**. Doing this first ensures your taste bar governs multi-tier component discovery rather than letting the first convenient package dictate a generic default aesthetic.
+
+Extract six structural and perceptual specifications from observed references:
+
+| Craft layer | Concrete mechanism to extract before sourcing |
+|---|---|
+| **Spatial skeleton & occupancy** | How canvas, navigation chrome, primary work region and negative space proportion themselves at desktop and mobile (`390px`) first screens—including reading measure and column rhythm. |
+| **Typographic pairing & tension** | Display, body and tabular/mono font roles, size jumps, weight contrast, tracking and line-height cadence that carry editorial or utilitarian voice. |
+| **Surface luminance ladder** | Distinct elevation steps (canvas → raised panel → inset control → overlay) calibrated separately for light and dark themes using cohesive neutral tinting rather than raw black/white inversion. |
+| **Hairline, shadow & radius grammar** | Border contrast, directional top-edge highlights, ambient-plus-contact shadow hierarchy and concentric corner nesting (`R_outer = R_inner + padding`). |
+| **Signature focal craft moment** | The deliberate visual centerpiece—tactile material, crisp editorial typography, spatial lighting or purposeful motion choreography—that separates the surface from an interchangeable template. |
+| **Motion & responsiveness character** | Easing curves or spring weight, shared-anchor continuity, interruptibility and reduced-motion poise. |
+
+Derive the overarching concept from audience, subject, emotion, task and available visual material using [art direction and expressive contrast](principles.md#art-direction-and-expressive-contrast); let defining assets ([visual assets](visual-assets.md)) participate while composition is still fluid. When a brief asks for “refined,” “tactile,” “expressive” or “mature” UI, translate each adjective into the visible/interactive relationship it requires, then turn it into a concrete **resource question**: which mature page, block, visual component or asset already resolves this relationship? Keep **reuse scope**, **observed visual completeness** and **functional dependencies** distinct—do not infer visual quality from the tech stack or product category. Let an initial craft question open discovery rather than lock one mechanism prematurely (for example, testing whether moving light around stable content, editorial typography or a photographic subject best carries the goal), allowing a strong mature resource to elevate the initial hypothesis.
+
 ## Plan evidence around the experience
 
 Map the important **parts, states and relationships** across the task: pages, regions, working objects, transitions, content growth and device conditions. Prioritize questions that could change the product model or overall direction, then investigate consequential structures and details. Findings at any scale can reopen another scale. A companion panel changes input continuity, reading width, focus and layout; evidence about the panel alone leaves those relationships open.
@@ -48,11 +81,11 @@ Map the important **parts, states and relationships** across the task: pages, re
 
 Use **text, visual and behavioral evidence** together. Text explains purpose and conditions; rendered views support appearance; operation and time sequences support interaction. Follow a documented mechanism to its observable interface, and investigate a visual discovery through its semantics and implementation. Retain date/version, platform, role and viewing conditions where they change applicability. Promotional editing, isolated stills and source code each support their own scope.
 
-Plan by the decision to resolve, then choose sources and actions. Assess coverage breadth, inspection depth, temporal coverage, relevance and reliability together. A coherent verified system can cover routine instances; a consequential unseen state remains a gap. Keep observed facts, sourced descriptions, professional interpretations and missing evidence distinguishable.
+For consequential choices, organize coverage and decisions through the [design evidence map](evidence-map.md): **L0** intended experience, **L1** journeys, **L2** page/region architecture, **L3** functional regions/components, **L4** perceptual relationships and **L5** realization/assurance linked at every scale, with state/time, conditions, shared dependencies and evidence tracked as cross-links rather than forced into a single tree. Run **Coverage Discovery & Challenge** from both directions—derive coverage from user tasks, then challenge it against real mature-product navigation, tutorials, states and continuous use, recording *include*, *exclude with reason* or *open question* decisions so a self-consistent initial list never disguises omitted flows. Group consequential choices into **Design Decision Units** (purpose, question, actual evidence, judgment, materially different alternatives, implementation/adaptation, verification/next action) sized by impact and uncertainty rather than per CSS property; a verified routine family can inherit a short scoped decision under matching conditions.
 
 ## Use theory to investigate real design work
 
-Turn hypotheses into questions that can change a choice. Apply the [perceptual method](principles.md#inspect-from-whole-to-detail-and-back) from normal-scale whole through structure and detail, then back to use. Explain which relationships produce the impression and which causes need testing. A bright panel may outweigh the task; retained selection may preserve orientation. Find implementations that can preserve the useful relationship and test it in context.
+Turn hypotheses into questions that can change a choice. Apply the [perceptual method](principles.md#inspect-from-whole-to-detail-and-back) from normal-scale whole through structure and detail, then back to use. Explain which relationships produce the impression and which causes need testing. A bright panel may outweigh the task; retained selection may preserve orientation. Find mature implementations that can preserve the useful relationship and test it in context.
 
 Let each observation determine a useful next action: explore a newly important font, inspect a hidden state, compare another interaction model or trial a mechanism. Product, component, asset and design-language research can change one another. Keep reference, original demo, local trial and journey evidence distinct; [verification](verification.md) owns observation conditions and claim limits.
 
@@ -75,7 +108,7 @@ Treat these as hypotheses; include other models when needed. A hybrid identifies
 
 ## Establish the reuse boundary for this assignment
 
-Identify the request as a local improvement, visual refresh, interaction redesign or combined redesign; clarify only a consequential ambiguity. Preserve business rules, data contracts, permissions and necessary capabilities. Evaluate existing presentation and external candidates against the same target.
+Identify the request as a local improvement, visual refresh, interaction redesign or combined redesign; clarify only a consequential ambiguity. Preserve business rules, data contracts, permissions and necessary capabilities. Evaluate existing presentation and external candidates against the same target using [component sourcing](component-sourcing.md); catalog leads always require project verification.
 
 Code establishes current capability; explicit acceptance establishes approved design. Link visual inheritance to that acceptance or a current fit assessment. Keep suitable internal work and change its presentation where the task benefits. Scope framework and architecture changes to the required experience.
 
@@ -125,67 +158,37 @@ Choose an outcome that can run, be inspected and be revised coherently: a page, 
 
 ### Find the minimum sufficient experience closure
 
-Use **Minimum Sufficient Experience Closure** to define a formal SPEC: include the design objects and relationships needed to understand, realize and actually judge one important experience or visual-quality goal, with sufficient focus to perform the required professional work. “Minimum” concerns unnecessary independent responsibility, not the smallest visible area or code change. “Sufficient” concerns this goal's necessary experience relationships, not completion of the entire product or business lifecycle.
+Use **Minimum Sufficient Experience Closure** to define a formal SPEC: include the coupled design objects and relationships needed to understand, realize and judge one cohesive experience or visual-quality goal, while preserving focus for deep research and craft. “Minimum” excludes unrelated independent responsibilities—not small area or code size. “Sufficient” covers this goal's necessary relationships—not the entire product lifecycle.
 
-Distinguish the **Visible Surface** from its **Visual Quality-Bearing Objects** and the **Experience-Cohesive SPEC** that develops their relationships. A visually stable conversation workspace can contain a growing composer, changing message height, streamed content and user-controlled scroll following. The important quality may lie in their continuous coordination. Separate component trials can inform the work, but a SPEC responsible for that continuity includes the participating state, space and time relationships. Conversely, an independent background art study can have its own formal purpose while returning to this same workspace for foreground readability and motion review.
+Distinguish the **Visible Surface**, its **Visual Quality-Bearing Objects** and the **Experience-Cohesive SPEC** connecting them. A conversation workspace's quality may lie in continuous coordination across a growing composer, changing message height, streamed content and scroll following—so a SPEC owning that continuity keeps those state, space and time relations together even when component files differ. Conversely, a signature background art study can stand as its own formal SPEC while returning to the workspace for foreground legibility and motion verification.
 
-A suitable boundary has a cohesive purpose, retains necessary dependencies, permits adequate research and implementation depth, produces an actually reviewable result in its product context, and can integrate with current work. Reconsider it when evidence changes any of these conditions. It need not run separately from the product.
-
-| Factor | Consequence for the boundary |
+| Boundary factor | Consequence for scope |
 |---|---|
-| Visual complexity | Concentrated work on composition, typography, material, lighting or asset craft may merit its own increment even in a small object. A large conventional region may inherit a proven system. |
-| State and time complexity | Include the meaningful trigger, changing states, asynchronous feedback, interruption, reversal and recovery needed to judge the quality. Several static endpoints cannot define the complete episode. |
-| Cross-component dependency | Keep coupled size, position, focus, scroll and state relationships together when they produce the target experience. Implementation ownership does not divide that experience automatically. |
-| Research uncertainty | Focus investigation where a consequential choice is unresolved; sometimes a broader product-level direction must be settled before useful local boundaries can be chosen. |
-| Actual mature-resource scope | A well-fitting page, block or interaction implementation can preserve several related mechanisms together. Different objects requiring unrelated sources or methods may benefit from separate increments. |
-| Quality impact and verification | Give high-impact qualities a scope in which their actual result can be observed. Choose contextual views or continuous use by the claim rather than relying on a page-wide screenshot. |
+| Visual complexity | High-craft typography, material, lighting or asset work may warrant its own increment even in a small object; a large conventional region may inherit a verified system. |
+| State and time complexity | Include trigger, changing states, async feedback, interruption, reversal and recovery needed to judge the episode. |
+| Cross-component dependency | Keep coupled size, position, focus, scroll and state mechanisms together regardless of module boundaries. |
+| Research uncertainty | Focus investigation on unresolved high-impact questions; settle product-level direction before locking local slices. |
+| Mature-resource fit | A cohesive mature block or template can unify related responsibilities; unrelated craft sources may separate cleanly. |
+| Quality impact & verification | Give defining qualities a scope where actual contextual renders or continuous episodes—not just a distant full-page screenshot—can prove them. |
 
-Weigh these factors together as professional judgment. Page count, component count, feature count, search steps, code budget or a weighted complexity score cannot determine the right boundary.
+Weigh these factors as professional judgment; page area, component count, feature count, search steps or complexity scores never determine formal standing.
 
 ### Keep, split, merge or redraw with evidence
 
 | Choice | When it helps | What to preserve and explain |
 |---|---|---|
-| **Keep** | The goal is cohesive, necessary relations are understood, available mature work fits and important qualities can receive adequate depth. | Explain the current closure and observation conditions; a larger well-supported scope can be appropriate. |
-| **Split** | Several relatively independent goals each need substantial research, craft or verification that the combined scope would dilute. | Retain the complete product goal, explain each increment's experience value and dependencies, and keep deferred commitments visible. |
-| **Merge** | Separately planned objects share the state, spatial or temporal mechanism that produces the intended experience. | Own and inspect that complete relation together; preserve useful internal trials without treating every component as a separate formal unit. |
-| **Redraw** | Research, source discovery, a local trial or integration reveals that the current grouping misses a necessary relation or mixes unrelated responsibilities. | Record what changed, why, the affected goals and quality gaps, their current responsibility and the effect on later candidates. |
+| **Keep** | Cohesive goal, understood relations, fitting mature work and adequate depth for owned qualities. | State the closure and observation conditions; a larger well-supported scope can be appropriate. |
+| **Split** | Independent goals each require concentrated research, craft or verification that combining would dilute. | Retain the overall product goal, explain each slice's experience value/dependencies and keep deferred goals visible. |
+| **Merge** | Separately planned objects share the state, spatial or temporal mechanism creating the intended experience. | Own and inspect the coupled relation together (e.g., composer-to-streaming continuity, or card flip + data readiness + neighboring layout). |
+| **Redraw** | Research, source discovery, trials or integration expose a missed relation or mixed responsibilities. | Record what changed, why, affected goals/quality gaps, current responsibility and effect on later candidates. |
 
-For example, a conventional settings page using an already inspected system can remain one SPEC. “SaaS” alone does not justify that decision: a special permission interaction or dense typography problem may change it. A composer-to-streaming episode can merge several components because their continuity is the objective. A fine-grained card flip may need data preparation and neighboring layout included after an actual trial exposes their coupling. An entire mature workspace implementation can make a formerly split plan coherent, provided its real adaptation and verification needs are understood.
+For example, a conventional settings page built on an already inspected system can stay one SPEC, whereas a specialized permission workflow or dense typography problem can split it; an entire fitting mature workspace implementation can unify a formerly split plan once its adaptation and verification needs are understood. Explain the concrete quality risk when revising an unsuitable single-iteration scope. Routine evidence-supported adjustments use existing authority; material shifts to accepted commitments are surfaced to the user while independent authorized work continues. Repartitioning never marks unfinished quality complete.
 
-Explain the concrete quality risk when declining an unsuitable single-iteration scope, then organize an achievable path through the full goal. Routine evidence-supported adjustments use existing authorization. Present the consequences and recommendation for material changes to accepted direction, commitments or delivery scope; continue independent authorized work. An unfinished goal remains unfinished after repartitioning. Preserve its origin and current responsibility instead of treating a new SPEC label as a successful handover.
+### Connect source responsibility, three scopes and quality ownership
 
-### Let source responsibility and SPEC scope inform each other
+Before formal visual implementation, connect each owned quality to the mature source that carries it—preserving coherent page/block/system provenance rather than stripping simple CSS pieces out to hand-build them. Source discoveries can merge or narrow a SPEC while keeping the complete goal and any unresolved source gap explicit under [default-deny sourcing](component-sourcing.md#preserve-unresolved-responsibilities). Keep three overlapping scopes distinguishable: **Research & Observation Scope** (broader products/states studied for context), **Primary Design & Implementation Scope** (the increment's promised objects and relationships) and **Integration & Regression Scope** (neighboring regions, shared systems and journeys checked for side effects).
 
-Before formal visual implementation, connect owned quality to the mature source that actually supplies it. A whole input block may coordinate typography, attachment layout, material, growth and action feedback; preserve that coherent responsibility instead of classifying its simple CSS pieces as free original work. A shared token system can cover background, type and borders across many pages without repeating searches for each element. A source's functional API alone does not settle these visual relationships.
-
-Source discoveries can expand or merge a SPEC when mature work already solves its connected mechanisms. A special motion or genuinely unmet domain expression may need concentrated research and a narrower implementation boundary. Keep the full product goal, the remaining quality and its responsible increment through either change. Scope reduction cannot turn a rough probe into an acceptable foundation or erase an unresolved resource gap. Distinguish actual resource fit from an unsupported claim of uniqueness; [default-deny sourcing](component-sourcing.md#preserve-unresolved-responsibilities) governs the next route without adding another planning lifecycle.
-
-### Separate research, implementation and regression scopes
-
-| Scope | Purpose |
-|---|---|
-| **Research & Observation Scope** | Study the wider products, tasks, states and relationships needed to understand the intended quality. |
-| **Primary Design & Implementation Scope** | Define the actual design increment and the relationships whose quality this SPEC undertakes to realize. |
-| **Integration & Regression Scope** | Inspect the neighboring regions, shared systems and journeys affected by that change. |
-
-These scopes may overlap without being identical. A composer refinement can study a complete conversation, change the input's typography and growth behavior, and recheck the message area, bottom space, focus and scrolling. Studying the whole page does not add all its features to this SPEC; narrowing implementation does not remove necessary contextual research or regression. A shared font change may implement one system choice while checking many pages for wrapping and hierarchy.
-
-### Give the increment visual quality ownership
-
-State the important visual and interaction qualities the SPEC is responsible for, with a review condition that can reveal each one. For an input region this can include contour, material, type, internal spacing, action hierarchy and growth within adjacent space; for streaming it can include content growth, feedback, scroll continuity and user control. A background can own subject, lighting, material, compositional contribution, motion rhythm and foreground reading. Select the qualities that actually matter to the goal.
-
-Trace **target quality → real visual reference → mature resource, faithful authorized design translation or qualifying authorized W1–W3 implementation → actual presentation in the current product → remaining quality gap**. Research volume, dependency installation and a functioning prototype each establish their own facts. Verify the consequential relationship in actual use before claiming the design value was delivered. This is professional accountability, not a requirement to fill a fixed schema.
-
-For a new product, choose an initial closure that can demonstrate the core experience and visual direction at a quality worth inheriting. A representative conversation entrance and reading space can establish composition, type and mature interaction before advanced tools are added. Keep undeveloped capabilities visibly truthful. An exploratory scaffold can answer a question, but its provisional roughness should not silently become the shared visual foundation. Subsequent evidence can still revise an accepted foundation. Progress can remove, merge, replace or reorganize content as well as add it.
-
-## Preserve the right facts
-
-Intent establishes the goal, approval the accepted design, source/runtime current capability and tests their exercised behavior. Resolve tensions at the responsible layer. Keep architecture proportional; operating products retain real data and availability obligations. Save consequential decisions and useful evidence in existing project records; source and Git retain implementation history.
-
-## Make content decisions with the product model
-
-Establish fact ownership and needed understanding at each step. Study mature language with visual references while preserving current commitments. Align consequential terms with their owner; the [content method](content-design.md) governs actual copy and typography.
+State the increment's concrete visual and interaction quality obligations with review conditions that actually reveal them, tracing **target quality → real visual reference → mature resource, faithful authorized design translation or qualifying authorized W1–W3 implementation → actual presentation in the current product → remaining quality gap**. For a new product, choose a first closure that demonstrates core experience and visual direction at a caliber worth inheriting—keeping unfinished features visibly truthful and never letting an exploratory rough probe silently become the shared foundation.
 
 ## Design the understanding before the arrangement
 
@@ -208,55 +211,18 @@ Match the person's cognitive operation to a useful form; inspect mature examples
 
 These are candidates, with fit established through content and use. A strong resource can refine the representation. A graph earns its complexity when topology aids the task. Distinguish categories, quantities, sequence and uncertainty; preserve units, scale, baseline and missingness. Label simulated charts as fixtures.
 
-## Organize actions around the object and real choices
+## Organize actions, content and operating life
 
-Associate recognized objects, information, actions and feedback. Select cards, rows, messages or editors from actual use; preserve identity through movement, expansion and return. Inventory real choices: alternatives need selection, one valid value needs clear presentation, and an earlier choice needs a summary and permitted revision. Determine primary/secondary, peer, sequential or consequential action relationships before assigning visual weight. Keep necessary conditions visible.
+- **Objects, actions and real choices:** associate recognized objects, information, actions and feedback; preserve object identity through movement, expansion and return. Inventory actual choices (alternatives need selection, a single valid value needs clear display, an earlier choice needs a summary and permitted revision) and establish primary/secondary, peer, sequential or consequential weight before styling.
+- **Content authority with the product model:** establish fact ownership and needed understanding at every step; study mature product language alongside visual references while aligning consequential terms with their business owner ([content method](content-design.md)).
+- **Operating life and maintenance:** establish content owners, update cadence, repeated workload and templates-vs.-overrides behavior (exposing effective content and blast radius). Derive batch work from real scale, selection and recovery, expressing authoritative state appropriately for consumers vs. operators ([integration](integration.md)).
 
-## Understand the operating life of the design
+## Read references as mechanisms and carry decisions forward
 
-Establish content owners, update frequency, repeated workload and individual differences. Use shared templates and deliberate overrides where useful; expose effective content and change impact. Derive batch work from real scale, selection and recovery. Express authoritative conditions for each role: consumers may need availability and next action; operators may need causes and repair. Content and integration references govern publication, conflicts and partial results.
+Explain visual impressions through observed attention, proportion, material and rhythm while keeping inferred causes and audience effects labeled as hypotheses. For an opening companion panel, inspect width, retained input/selection, reading measure, focus and transition—preserving the continuity relationship through suitable mature resources verified under current content.
 
-## Form a concept that carries across surfaces
+Preserve authoritative boundaries: intent sets the goal, approval sets accepted design, source/runtime establishes capability and tests cover their exercised checks. Connect consequential choices to intent, evidence, inferred mechanism, adopted source, tradeoff and recheck, keeping representative viewed frames or intervals beside the preview and exposing adjustable controls via canonical tokens, content, variants, composition, focal points and timing.
 
-Derive the concept from audience, subject, emotion, task and available material. Identify familiar relationships, intended perception and connecting expression; investigate cross-domain sources to develop that expression. Use the [art-direction method](principles.md#art-direction-and-expressive-contrast) to coordinate focal/supporting roles and test clarity, distinctiveness, feasibility and continuity with real content. Preserve aesthetic commitments while repairing concrete failures; make necessary direction changes explicit.
+## Coordinate auxiliary research
 
-## Read references as mechanisms
-
-Explain impressions through observed attention, proportion, material and rhythm; inferred causes/user effects remain hypotheses. For an opening companion panel, inspect width, retained input/selection, reading measure, focus and transition. Preserve the useful continuity relationship through suitable resources and current-content verification.
-
-## Make decisions explainable and adjustable
-
-Connect important choices to intent, evidence, inferred mechanism, adoption, tradeoff and recheck. Keep representative viewed frames/intervals beside the preview and identify remaining inference. Expose meaningful controls through tokens, content, variants, composition, focal points or timing; retain reusable lessons with applicable conditions.
-
-## Let available excellence inform the solution
-
-Compare internal, native and external work by observed quality, behavior and total cost within the binding direction. The [sourcing method](component-sourcing.md) governs adoption; catalog leads require project verification.
-
-## Let assets participate in the concept
-
-Inspect defining material while composition can change. The [asset method](visual-assets.md) covers icons, accurate third-party marks, original identity and type/spatial production. Compare consequential candidates in equivalent placements; rights, tools and observed fit can change the route.
-
-## Multiscale coverage and decision units
-
-Use the [design evidence map](evidence-map.md) for important product/visual choices. L0 establishes the target experience; L1 connects task journeys; L2 explains page/region architecture; L3 describes functional regions and components; L4 examines perceptual relationships; L5 links actual realization and assurance at every scale. Keep state/time, conditions, shared dependencies and evidence as cross-links rather than forcing all information into a containment tree.
-
-Perform **Coverage Discovery & Challenge** from two directions: derive necessary experience from user tasks, then test that inventory against observed mature-product navigation, tutorials, states and continuous use. Include newly relevant findings, explain justified exclusions, and retain uncertain findings with their evidence question. A map complete relative to its own initial list is not proof of complete product coverage. Current-product needs absent from the main reference warrant other suitable sources.
-
-Use a **Design Decision Unit** for each consequential choice rather than each CSS property: purpose, question, actual evidence, judgment, meaningful alternatives/choice, implementation/adaptation, verification/next action. Expand detail by impact and uncertainty. A high-impact small mark warrants deeper work; a verified routine family can support a short inherited decision under matching conditions. The map's three views share IDs and facts; none is a separate mandatory report.
-
-
-## Turn intended craft into a resource question
-
-When a brief asks for refined, tactile, expressive or mature UI, identify the visible/interactive relationship the adjective should describe. Then ask which existing page, block, visual component or asset already resolves it. Distinguish the desired reuse scope from observed visual completeness and from the functional dependencies already chosen. Do not infer the interface's visual quality from the stack or the product category.
-
-Use an initial question to discover, not to fix the answer: does the task need moving content, moving light around stable content, a photographic subject, or a different type/composition relationship? Study materially different relevant implementations, allowing a strong resource to improve the experience hypothesis. Keep comparison depth proportional to impact, uncertainty and potential gain. Unknown access or inadequate candidates can justify wider research or a bounded trial. Evidence and product constraints justify supported adaptation; original visual construction additionally requires a qualifying authorized W1–W3 scope. Routine supported work need not reopen the entire ecosystem.
-
-## Choose auxiliary research by its value to the next decision
-
-Keep the main agent's complete product understanding and formal SPEC responsibility intact. Consider auxiliary research when a consequential question needs wider independent exploration, deeper perceptual or temporal observation, difficult source tracing, or serious challenge to a plausible favorite. Weigh design impact, evidence uncertainty, potential improvement, independence of the inquiry and coordination cost together. A routine change under an inspected mature system may need no delegation; a small identity-bearing effect may need extensive inquiry. These considerations are professional judgment, not a weighted score or a minimum agent count.
-
-Choose a coherent question that an investigator can understand and pursue through its own search–observation–analysis–comparison loop. Protect coupled relations: composer growth, reading position and neighboring workspace geometry may need to be studied together even when their files differ. Different investigations can overlap when they provide different evidence or independent alternatives. Split by a useful question or exploration direction, not automatically by website, page, DOM object or visual discipline.
-
-Keep research breadth, formal implementation responsibility and affected-product regression distinct. Additional research capacity does not automatically enlarge a formal SPEC; narrowing implementation does not eliminate contextual research. Mature-source discovery can justify keeping, splitting, merging or redrawing the increment, but the main agent explains the changed relationship and preserves unfinished quality commitments.
-
-Before delegation, establish enough intent for useful research: the quality sought, current conditions, what is already known, the important unknown and the permitted scope. Use concise prose and existing references instead of a compulsory task form. A researcher can refine its inquiry and identify an incomplete premise; a material product-level or scope change returns to the main agent. Resolve consequential ambiguity without asking the user to supply routine search instructions.
+When a high-impact unknown warrants independent multi-tier discovery, deeper perceptual/temporal capture or an adversarial challenge to a leading direction, apply [delegation guidance](delegation.md). Frame coherent questions that protect coupled experience relationships, keep research breadth distinct from formal SPEC boundaries, and retain product-level synthesis, scope decisions and final source selection in the main agent.
