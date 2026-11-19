@@ -4,6 +4,27 @@ Read these when a concrete technique helps the current design. They are original
 
 Use these patterns to identify useful mature implementations, diagnose them and adapt their supported relationships. A reasoning example is neither an adopted visual implementation nor permission to recreate one. Apply [default-deny original UI construction](component-sourcing.md#default-deny-original-ui-construction): each visible relationship inherits a mature source or complete approved design, with original construction limited to the [authorized allowlist](component-sourcing.md#closed-original-construction-allowlist). Host-provided Markdown, native controls and established diagram renderers can carry their actual visual responsibilities; their use does not authorize an unrelated custom shell. [Technical probes](component-sourcing.md#separate-probes-from-formal-delivery) retain their research scope; a formal implementation needs an actual mature foundation, complete approved design or authorized original exception and its own verification.
 
+## Contents
+
+- [A comparison that makes differences legible](#a-comparison-that-makes-differences-legible)
+- [Evidence beside a conclusion](#evidence-beside-a-conclusion)
+- [A focused task with balanced presence](#a-focused-task-with-balanced-presence)
+- [An option change that preserves orientation](#an-option-change-that-preserves-orientation)
+- [A publication that helps a reader begin](#a-publication-that-helps-a-reader-begin)
+- [An explanatory diagram with semantic integrity](#an-explanatory-diagram-with-semantic-integrity)
+- [Familiar work with an expressive visual language](#familiar-work-with-an-expressive-visual-language)
+- [A faithful source becomes an authored sequence](#a-faithful-source-becomes-an-authored-sequence)
+- [A material-rich card without moving the reading surface](#a-material-rich-card-without-moving-the-reading-surface)
+- [A mature input block with a product-specific identity](#a-mature-input-block-with-a-product-specific-identity)
+- [Expressive work that retains readable motion-free states](#expressive-work-that-retains-readable-motion-free-states)
+- [Preserve task entry when a mature block changes responsive placement](#preserve-task-entry-when-a-mature-block-changes-responsive-placement)
+- [Observe settled overlay behavior before changing a mature mechanism](#observe-settled-overlay-behavior-before-changing-a-mature-mechanism)
+- [De-templating an adopted component library](#de-templating-an-adopted-component-library)
+- [Multi-source token and cascade harmonization](#multi-source-token-and-cascade-harmonization)
+- [Eliminating resting 3D transform blur and cramped demo geometry](#eliminating-resting-3d-transform-blur-and-cramped-demo-geometry)
+- [Layered depth without card-box soup](#layered-depth-without-card-box-soup)
+- [Preserve a useful technique](#preserve-a-useful-technique)
+
 ## A comparison that makes differences legible
 
 **Problem.** Several options repeat the same attributes, while users must compare values before choosing.
@@ -84,11 +105,6 @@ Use these patterns to identify useful mature implementations, diagnose them and 
 
 **Inspect.** View source, keyframes, intermediate states, seam and final playback at useful scale. Differences locate unintended departures; perceived composition and rhythm need visual judgment. This establishes an authored work. A live product additionally needs semantic controls, variable content, user interruption and actual completion authority; its responsiveness cannot be inferred from the deterministic film.
 
-## Preserve a useful technique
-
-When adapting one of these patterns, keep a short record only if it will improve future work: the task, the transferable relationship, local constraints, editable source, inspected evidence and limits. Separate the project's aesthetic choice from the general mechanism. Add new shared patterns through an authorized maintenance change, with provenance and a concrete counterexample that shows where the technique should change.
-
-
 ## A material-rich card without moving the reading surface
 
 **Problem.** A research library needs distinct material and pointer response, while long titles and reading actions should remain spatially stable.
@@ -118,7 +134,6 @@ When adapting one of these patterns, keep a short record only if it will improve
 **Adopt and adapt.** Compose a selected asset with an existing mature functional block. Adapt public controls, crop, layer order and type roles while retaining the asset mechanism; original replacement follows the closed allowlist. Keep one governing visual language while allowing different responsibilities to have different treatments. For reduced motion or limited rendering, use a source-supported still, derivative or simpler representation that retains the recognizable subject and usable task. Preserve any unsolved fallback quality as an explicit gap rather than inventing an unrelated substitute.
 
 **Inspect.** Use populated work, long reading, navigation and repeated input in both active and quiet states. If the background overwhelms a result, test its local placement/intensity and content layer rather than automatically removing all expression. The selected asset and mature function still require whole-page verification; source quality does not add together automatically.
-
 
 ## Preserve task entry when a mature block changes responsive placement
 
@@ -157,3 +172,52 @@ through reopen where the task needs it; do not imply server persistence.
 return at the actual conditions. A longer wait is an observation condition, not
 a universal animation duration or a way to conceal an actual interaction defect.
 Frame samples with screenshot overhead are not proof of smooth natural delivery.
+
+## De-templating an adopted component library
+
+**Problem.** An application built on a mature kit (`shadcn/ui`, `coss`, `Mantine` or Radix-styled components) works reliably but looks immediately recognizable as an unmodified starter template with flat gray borders and generic typography.
+
+**Mechanism.** Replace stock theme variables with a coherent product-specific visual grammar while keeping every adopted component's layout contracts, ARIA semantics, keyboard handling and state machines intact. Deep token customization is source-preserving adaptation, not an unauthorized rewrite.
+
+**Realization.** Configure the library's public CSS custom properties and theme slots across five levers together:
+1. Substitute a sourced display and reading type pairing (with appropriate fallback metrics, tightened Latin display tracking and `tabular-nums` for numbers).
+2. Replace raw untinted default grays with a single temperature-matched neutral ramp (such as warm stone, cool slate or tinted charcoal in OKLCH/HSL) and explicitly re-author dark-mode luminance elevation plus subtle top-edge specular hairlines.
+3. Enforce concentric corner-radius math (`R_outer = R_inner + padding`) across cards, inputs, badges and popovers.
+4. Shift opaque gray borders to translucent alpha-blended hairlines and quiet shadows tuned to one consistent light direction.
+5. Reserve saturated brand accent strictly for primary action and active state, matching icon stroke weight optically to the chosen font.
+
+**Inspect.** Compare light and dark themes across populated workspaces, dialogs, tables and empty states. Verify that focus rings, disabled controls and dense text remain crisp and that the product communicates its own character without losing the library's accessible behavior.
+
+## Multi-source token and cascade harmonization
+
+**Problem.** Combining mature resources from different ecosystems (for example, a core UI kit, a motion showcase block and a headless table engine) introduces conflicting box shadows, mismatched corner radii, uneven icon weights, or CSS specificity wars where `!important` or global root rules break neighboring components.
+
+**Mechanism.** Establish a single explicit CSS cascade order and normalize visual seams at the token layer so every adopted block inherits one governing light, type, radius and motion language.
+
+**Realization.** Wrap imported stylesheets and base resets inside explicit CSS `@layer` declarations (such as `@layer reset, vendor, tokens, components, overrides;`) so product token overrides win cleanly without `!important` escalation. Audit imported styles for leaked global rules — particularly root `scroll-behavior: smooth` interfering with programmatic scroll restoration, unprefixed `@keyframes` collisions or conflicting `* { border-color }` defaults. Map each library's internal variables (`--radius`, `--border`, `--ring`, easing curves, shadow elevation and icon stroke width) onto the project's canonical token set while preserving each source's internal DOM structure and interaction logic.
+
+**Inspect.** Render components from different adopted sources side by side in the same view (such as a table inside a shell alongside a motion popover and modal dialog). Check hover, focus, active selection, dark/light switching and reduced-motion episodes to confirm zero visual seams or style leaks.
+
+## Eliminating resting 3D transform blur and cramped demo geometry
+
+**Problem.** An adopted interactive 3D flip card, rotating showcase block or slide-out drawer looks sharp in its marketing preview, yet produces soft, blurry subpixel text at rest or cramps real multi-line editing inside tiny fixed demo dimensions.
+
+**Mechanism.** Persistent 3D compositing layers (`translateZ`, `perspective`, active `transform` or permanent `will-change: transform`) force rasterized texture scaling even when the element is completely stationary, while showcase demos often size containers for one-line marketing slogans rather than real user input.
+
+**Realization.** Retain the adopted component's 3D flip geometry, pivot, easing curve and drag/dismissal mechanics during active transitions, then flatten the settled face back to an ordinary 2D resting layer (`transform: none`, clearing `will-change` and redundant `translateZ`) once the transition completes so browser subpixel text rendering and 1px hairlines snap back to razor sharpness. Synchronize `inert`/`aria-hidden` and active pointer hit-testing with the live visible face geometry across the entire transition so `Shift+Tab` never enters the hidden side mid-flip. Expand fixed showcase boxes into honest reading and writing measures tested with real multi-line notes, and strip unused framework island wrappers imported solely for the demo page while keeping source attribution intact.
+
+**Inspect.** Zoom into resting text and hairline borders before and after a full flip/close cycle across standard and high-DPI displays; test mid-flight `Shift+Tab`, reversal, long CJK/Latin strings and mobile keyboard heights.
+
+## Layered depth without card-box soup
+
+**Problem.** A dashboard or multi-column workspace wraps every metric, filter bar, section and list row in identical bordered rounded cards — or nests cards inside cards — creating visual noise, wasted padding and ambiguous hierarchy.
+
+**Mechanism.** Replace redundant borders with an architectural hierarchy built on spatial cadence, shared alignment rails and quiet tonal plane shifts, reserving elevated cards for genuine interactive objects or focal groupings.
+
+**Realization.** Start by subtracting unnecessary inner borders and box shadows inside the adopted layout foundation. Establish clear proximity-vs-separation ratios (`internal padding < sibling gap < section break`), lock headings, numeric columns and controls onto shared vertical and horizontal rails, and separate regions through subtle surface luminance steps (recessed well → base canvas → raised plane) or quiet translucent hairlines (`rgba`/OKLCH alpha). Keep bordered or raised surfaces for distinct interactive records, dialogs, popovers and primary focal panels so each elevated surface earns its visual weight.
+
+**Inspect.** View the full workspace at normal operating scale in both light and dark themes with messy real data (long names, empty states, wrapped headings, wide tables). Verify that sections read immediately by alignment and rhythm without counting boxes, and check that subtracting chrome improved scan speed without hiding interactive hit boundaries.
+
+## Preserve a useful technique
+
+When adapting one of these patterns, keep a short record only if it will improve future work: the task, the transferable relationship, local constraints, editable source, inspected evidence and limits. Separate the project's aesthetic choice from the general mechanism. Add new shared patterns through an authorized maintenance change, with provenance and a concrete counterexample that shows where the technique should change.

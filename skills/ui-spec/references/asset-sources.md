@@ -39,4 +39,19 @@ Preserve native scenes and their authorized dependencies where reproducibility n
 | [WAI image roles](https://www.w3.org/WAI/tutorials/images/) | Informative, decorative and functional image alternatives | Choose the alternative by the placement's meaning; native text or controls carry essential information and action |
 | [Reduced motion](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) | User-preference detection for motion adaptation | Provide a meaningful quiet state and inspect the actual renderer/animation behavior |
 
+## Web-native craft, type, icons and generative assets (2026-11-18)
+
+Additional web-native typography, icon, texture and interactive shader/3D starting points inspected through public documentation and source repositories on **2026-11-18** (documentation inspection, not execution or visual endorsement of each tool):
+
+| Source | Use | Adoption check |
+|---|---|---|
+| [Fontshare](https://www.fontshare.com/) | Free curated editorial, display and neo-grotesque typefaces (e.g., Satoshi, Clash Display, Switzer, Cabinet Grotesk, Boska) | Verify individual ITF Free Font License vs commercial terms, check diacritic/glyph coverage and pair with local CJK fallbacks where multilingual text is needed |
+| [Fonts In Use](https://fontsinuse.com/) | Real-world archive of typographic art direction, editorial grids and typeface pairings | Use as design-reference evidence; verify commercial font licensing and web rendering before adopting a sighted typeface or choosing an open substitute |
+| [Phosphor Icons](https://phosphoricons.com/) and [repository](https://github.com/phosphor-icons/homepage) | Six-weight icon family (thin, light, regular, bold, fill, duotone) across web frameworks | Establish one deliberate weight mapping across default and active states; preserve accessible names and adequate hit targets |
+| [Tabler Icons](https://tabler.io/icons) and [repository](https://github.com/tabler/tabler-icons) | 6,500+ MIT SVG icons with adjustable stroke width across React, Vue, Svelte, Solid and HTML | Standardize stroke width so 16px glyphs remain legible without clogging; import individual tree-shaken icons rather than bundling the full set |
+| [lucide-animated](https://lucide-animated.com/) and [repository](https://github.com/pqoqubbw/icons) | Motion-animated Lucide SVG icons for tactile state and hover confirmation | Reserve animated icons for purposeful state confirmation, supply a quiet `prefers-reduced-motion` path and match stroke weight with static Lucide icons |
+| [fffuel](https://www.fffuel.co/) | Parametric SVG noise/grain, mesh gradient, organic shape and geometric pattern generators | Optimize exported SVG markup, keep texture opacity restrained so text contrast holds and test `feTurbulence` or filter cost on mobile GPUs |
+| [React Three Fiber](https://r3f.docs.pmnd.rs/) and [Drei](https://drei.docs.pmnd.rs/) | Declarative Three.js/WebGL scene authoring with lighting, camera, material and shader helpers | Align React and Three.js versions, use on-demand frameloop or static poster fallbacks to bound GPU cost and test reduced-motion and WebGL-unavailable states |
+| [Unicorn Studio](https://www.unicorn.studio/) | Interactive WebGL shader scenes and layered visual backgrounds | Verify account/export terms, pause offscreen rendering, supply a static fallback image and verify foreground text contrast across viewport sizes |
+
 Add new providers or techniques through the same source, item and project checks. Keep raw-resource rights, reference inspiration, hosted account capability and execution evidence separate. This list extends the ecosystem without replacing a task-specific search or mandating a particular vendor.

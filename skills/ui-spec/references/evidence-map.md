@@ -12,7 +12,22 @@ express the same relationships as an optional structured record.
 
 ## Contents
 
-[Minimum contract](#the-minimum-contract-and-its-scale) · [Design scales](#six-design-scales-with-cross-scale-navigation) · [Formal increments](#connect-formal-increments-to-the-current-product) · [Transverse relationships](#four-transverse-relationships) · [Coverage](#coverage-discovery--challenge) · [Decision units](#design-decision-unit) · [Three views](#one-record-three-useful-views) · [Tool boundary](#tool-boundary) · [Current model and history](#current-model-meaningful-revisions-and-evidence-archive)
+- [The minimum contract and its scale](#the-minimum-contract-and-its-scale)
+- [Six design scales, with cross-scale navigation](#six-design-scales-with-cross-scale-navigation)
+- [Connect formal increments to the current product](#connect-formal-increments-to-the-current-product)
+- [Four transverse relationships](#four-transverse-relationships)
+- [Coverage Discovery & Challenge](#coverage-discovery--challenge)
+- [Design Decision Unit](#design-decision-unit)
+- [States are scoped facts, not a single progress ladder](#states-are-scoped-facts-not-a-single-progress-ladder)
+- [One record, three useful views](#one-record-three-useful-views)
+- [Tool boundary](#tool-boundary)
+- [Theory, declarations and task-specific applicability](#theory-declarations-and-task-specific-applicability)
+- [Four independent responsibilities](#four-independent-responsibilities)
+- [Current model, meaningful revisions and evidence archive](#current-model-meaningful-revisions-and-evidence-archive)
+- [Local change and revisable state](#local-change-and-revisable-state)
+- [Connect visual-craft discovery to current decisions](#connect-visual-craft-discovery-to-current-decisions)
+- [Carry visual provenance without multiplying records](#carry-visual-provenance-without-multiplying-records)
+- [Coordinate auxiliary investigations](#coordinate-auxiliary-investigations)
 
 ## The minimum contract and its scale
 
@@ -262,24 +277,7 @@ to guide the current SPEC's action even after it has been shown to the user.
 
 ## Tool boundary
 
-The optional [structured profile](evidence-records.md) and
-[structural inspector](../scripts/check_design_evidence.py) describes IDs, field
-shapes, declared state labels, reference resolution, local file metadata and
-explicit target-to-record links. It reports theoretical categories not explicitly
-tagged and paths reachable through declared relations. It does not evaluate
-evidence adequacy, candidate differences, source/check compatibility, version
-applicability or whether an action is justified. Readability and structural
-observations stay separate; neither authorizes progress or certifies completion.
-The Agent interprets these facts using the actual task, professional knowledge
-and real evidence. Existing project records remain sufficient when they express
-the same design relationships.
-
-Where formal SPEC declarations are present, the inspector may describe their
-literal object and decision references, candidate/formal distinction and supplied
-scope relationships. It does not select a partition, infer inheritance, rank
-increment importance, require a new SPEC or certify closure and visual quality.
-Formal identity, structural record completeness, actual implementation and
-observed product quality remain separate observations.
+The optional [structured profile](evidence-records.md) and [structural inspector](../scripts/check_design_evidence.py) describe declared IDs, field shapes, state labels, reference resolution, local file metadata, optional formal-SPEC links and untagged theoretical categories without assessing evidence adequacy, scope suitability, visual quality or readiness. Read [evidence-records.md](evidence-records.md) for exact field and report semantics; existing Markdown and project records remain fully sufficient when they capture the same design relationships.
 
 ## Theory, declarations and task-specific applicability
 
@@ -371,26 +369,16 @@ selection. No structural flag, stage label or past approval freezes those choice
 
 ## Connect visual-craft discovery to current decisions
 
-For an important resource choice, link the perceptual goal to the actual reference, the specific candidate and source variant, original-demo observation, local trial, adopted location/configuration and integrated-use finding. Record the resolved relationships that motivated selection and which survived adaptation. This extends the existing decision unit; it does not require a new record for every CSS property or a fixed number of candidates.
+For an important resource choice, link the perceptual goal to the actual reference, specific candidate and source variant, original-demo observation, local trial, adopted location/configuration and integrated-use finding inside the existing decision unit. Record which resolved relationships motivated selection and which survived adaptation—no per-property record or candidate count quota is required.
 
-Keep reuse scope, observed visual completeness, functional responsibility and final perceived fit distinct in professional reasoning. A background can connect L0 identity, L2 composition, L4 material/motion and L5 configuration/performance. A primitive may connect interaction semantics without claiming to carry that background or the page's visual craft. New sources can revise earlier targets, and local failures can reopen source selection.
-
-Use the current model for actual adopted choices, meaningful revisions for replacements and their reasons, and the archive for original observations. A catalog entry is a discovery lead, not a project adoption record. Structural inspectors describe only declared fields, IDs, references and relationships: they neither rate visual completeness nor judge reuse suitability, research sufficiency or the next action. All such judgments remain with the Agent and scoped actual verification.
+Keep reuse scope, observed visual completeness, functional responsibility and final perceived fit distinct in reasoning (for example, a background connecting L0 identity, L2 composition, L4 material/motion and L5 cost vs. a headless primitive covering interaction semantics). Record active choices in the current model, replacements and reasons in meaningful revisions, and original observations in the archive; catalog entries remain discovery leads, and all quality/suitability judgments stay with the Agent and scoped verification ([record boundary](evidence-records.md)).
 
 ## Carry visual provenance without multiplying records
 
-Apply the [default-deny source policy](component-sourcing.md#default-deny-original-ui-construction) to design responsibilities at every visible scale. Link **target quality → mature design source → actual implementation/configuration → retained relationships in the current UI → remaining gap** within the existing decision unit. One mature page, block, component family or established system can carry several related decisions; inherited child elements can refer to that same source. Do not create an obligatory record for every element, color value or CSS declaration.
+Apply the [default-deny source policy](component-sourcing.md#default-deny-original-ui-construction) to design responsibilities at every visible scale, linking **target quality → mature design source → actual implementation/configuration → retained relationships in the current UI → remaining gap** inside the existing decision unit. One coherent mature page, block, component family or validated system covers its inherited child elements without per-element records.
 
-Keep Resource Acquisition, Resource Adoption and Craft Retention as distinct facts. Source possession supports acquisition; an actual placement or call site supports adoption; viewed comparison under relevant conditions supports retained quality. Record meaningful lost or replaced relationships even when the original file/name remains. Functional dependencies cover their real scope without being presented as the visual foundation for unrelated composition, typography or material.
+Keep **Resource Acquisition**, **Resource Adoption** and **Craft Retention** distinct: source possession establishes acquisition, actual call sites establish adoption, and viewed comparison under matched conditions establishes retained craft. Record lost or overwritten relationships even when the original file remains. For faithful design translation, link the complete user-supplied/confirmed design and fidelity evidence; for an authorized W1–W3 responsibility, record concrete necessity, mature candidates/limits, narrow original boundary, retained mature foundation, actual user authorization and verification in the same decision. Keep unresolved sourcing and provisional technical probes explicitly tagged with their next action and responsible SPEC.
 
-For faithful design translation, identify the complete user-supplied/confirmed design and its specified scope, then link fidelity evidence. For an original W1–W3 responsibility, preserve the concrete necessity, actual mature candidates and limits, narrow original boundary, retained source, real user authorization and verification in the same decision. Existing approval may already provide the required authority; presentation alone does not. A declaration or inspector-resolved reference cannot judge qualification or confer permission.
+## Coordinate auxiliary investigations
 
-Keep unresolved sourcing and temporary technical probes identifiable, with the next discovery, trial, adaptation or scoped decision that can change their status. When source fit changes the formal SPEC boundary, preserve the original quality obligation and its current responsible increment. These are extensions of existing current-model relationships, not a new schema, approval state machine or quality certification mechanism.
-
-## Absorb independent investigations into one current model
-
-An auxiliary investigation can span several design scales without owning a second design model. Relate its purpose and important findings to the existing objects and decisions. The main agent selects which findings become current understanding, which remain hypotheses and which stay archived candidates. Preserve the original evidence identity and limits rather than promoting a report's confidence to verified fact.
-
-Keep decision-useful synthesis near the current choice, with original sources and captured material retrievable on demand. A research report is a supporting artifact, not another authoritative product plan. Reconcile conflicts by source, observation conditions and actual product relevance. An agent identifier, readable report, completed task or new record does not establish that the resource was viewed, adopted or accepted.
-
-Do not expand the neutral structural inspector into a delegation scheduler, research-sufficiency judge or UI-quality certifier. No new agent count, candidate count, report schema or design lifecycle is required. The main agent's substantive visual review and integrated verification remain separate evidence.
+Auxiliary research, critique and capture can span L0–L5 without creating a second design model. Follow [delegation guidance](delegation.md) to absorb selected findings into this single Current Design Model, inspect pivotal visual evidence directly, reconcile conflicts by viewing conditions and keep neutral structural inspectors strictly descriptive.

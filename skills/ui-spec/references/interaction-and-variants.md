@@ -6,17 +6,29 @@ Apply [default-deny original UI construction](component-sourcing.md#default-deny
 
 ## Contents
 
-- [Controls, objects and choices](#control-semantics-and-focus)
-- [Language and themes](#language-and-content)
-- [Motion and temporal qualities](#motion)
-- [Scrolling and growth](#scrolling-and-content-growth)
-- [Task and resource continuity](#continuity-is-a-user-visible-contract)
-- [Responsiveness and preparation](#preserve-the-primary-loop-and-perceived-responsiveness)
-- [Asset and content states](#assets-have-runtime-states)
+- [Control semantics and focus](#control-semantics-and-focus)
+- [Objects, choices and action relationships](#objects-choices-and-action-relationships)
+- [Language and content](#language-and-content)
+- [Themes and perception](#themes-and-perception)
+- [Motion](#motion)
+- [Read motion through perceptible qualities](#read-motion-through-perceptible-qualities)
+- [Resilience](#resilience)
+- [Scrolling and content growth](#scrolling-and-content-growth)
+- [Continuity is a user-visible contract](#continuity-is-a-user-visible-contract)
+- [Choreograph attention across elements](#choreograph-attention-across-elements)
+- [Interactive time and authored time](#interactive-time-and-authored-time)
+- [Published documents and screen artifacts](#published-documents-and-screen-artifacts)
+- [Preserve behavior across resource boundaries](#preserve-behavior-across-resource-boundaries)
+- [Preserve the primary loop and perceived responsiveness](#preserve-the-primary-loop-and-perceived-responsiveness)
+- [Inherit behavior at its useful scope](#inherit-behavior-at-its-useful-scope)
+- [Assets have runtime states](#assets-have-runtime-states)
+- [Content communicates state and intent](#content-communicates-state-and-intent)
+- [Map episodes across components and conditions](#map-episodes-across-components-and-conditions)
+- [Select motion by effect, control ownership and source maturity](#select-motion-by-effect-control-ownership-and-source-maturity)
 
 ## Control semantics and focus
 
-Use native elements or suitable accessible primitives. Name icon-only controls and provide usable targets; hover hints supplement names and touch. Follow each control pattern's focus entry, movement, dismissal and return. When a control disappears, return focus to a usable, visible task element.
+Use native elements or suitable accessible primitives. Name icon-only controls and provide usable targets; hover hints supplement names and touch. Follow each control pattern's focus entry, movement, dismissal and return. When a control disappears, disables itself or closes, never leave keyboard focus stranded on `BODY` or trapped inside a hidden dialog or off-screen panel — after Stop, Save failure, cancellation, item deletion or modal/drawer dismissal, move focus explicitly to the originating trigger, the logical next item or the visible recovery control.
 
 Separate their responsibilities: native controls can carry their platform-provided visual treatment when it fits the target, while unstyled primitives supply semantics, focus and state. A custom visual layer around a primitive still needs its mature visual foundation; using an accessible dependency does not satisfy the whole component's design-source obligation.
 
@@ -43,13 +55,26 @@ Define locale initialization, preference priority and persistence; preserve the 
 
 Inherit the selected design system's semantic roles for surfaces, type, borders, focus, status, elevation and effects, then configure supported themes for the product. View each theme under actual backgrounds and font rendering: brightness and contrast affect perceived weight and legibility. A missing theme is a source/adaptation question, not automatic permission to invent a new surface system.
 
+**Dedicated dark and light mode re-authoring:** dark mode is not inverted light mode. Treat each supported theme as a separately calibrated optical environment within the chosen token system:
+
+- **Elevation physics:** on light surfaces, softly tinted directional drop shadows and quiet borders establish depth; on dark surfaces, black drop shadows largely vanish against dark grounds. Re-author dark elevation through **stepped surface luminance** (higher layers step subtly lighter from recessed well → base canvas → raised surface → floating overlay) paired with subtle **top-edge specular hairlines** (`rgba`/OKLCH light rim) so depth remains legible without harsh outlines.
+- **Chromatic accent calibration:** highly saturated accents and bright semantic borders that sit cleanly on light paper often bloom with optical halation and vibration on dark grounds. Slightly desaturate or step lightness for dark-theme accents, badges and focus rings so meaning stays vivid without glowing painfully.
+- **Glare and neutral temperature:** avoid harsh unmodulated `#000000` / `#FFFFFF` glare for sustained reading unless high-contrast art direction intentionally calls for it and passes optical review; prefer subtly temperature-matched near-blacks, charcoal elevations and soft off-white ink/paper grounds that harmonize across both themes.
+- **Optical font-weight bloom and boundary legibility:** light text on a dark surface optically blooms heavier and brighter than the same font weight set dark-on-light. Inspect actual rendered glyphs, thin dividers, disabled controls, placeholder text and focus-ring contrast in *both* themes at intended use scale rather than assuming symmetric token contrast behaves identically.
+
 Define initialization, system preference and explicit overrides; establish theme before meaningful paint. Keep all components coherent and retain task state during switching. Controls communicate action or current state consistently. Group locale, theme, identity and navigation utilities by meaning.
 
 ## Motion
 
 Name the event and purpose: entry, navigation, manipulation, local change, feedback or expressive emphasis. Select a mature mechanism and configure timing, trajectory and easing for its meaning and frequency while retaining its defining relationships. Inspect corresponding reference, demo, trial and integrated episodes; recheck affected motion after theme, container or state-adapter changes. Endpoints leave the transition unresolved.
 
-Preserve object identity through expansion, reversal and return. A flip needs coordinated faces, pivot, visibility and active hit regions; test reversal from intermediate positions. Acknowledgment can begin before data arrives, while pending presentation carries unresolved work. A completed animation does not establish business completion.
+**Tactile motion personality (diagnostic starting ranges for tuning adopted mechanisms):**
+
+- **Easing and settling:** favor fast-start exponential-out curves or critically damped spring settling for crisp, immediate responsiveness; avoid sluggish linear ramps or cartoonish overshoot/bounce on routine professional controls unless expressive art direction explicitly calls for elastic playfulness.
+- **Distance and frequency scaling:** keep timing proportional to travel distance and repetition — snappy micro-feedback (`~100–180ms`) for toggles, buttons and focus shifts; structural transitions (`~200–350ms`) for drawers, panels and layout shifts; make exits slightly faster and quieter than entries (`~70–85%` of entry duration) so dismissed surfaces clear promptly without stealing attention.
+- **Zero-jitter tactile feedback:** tune hover, active press and selection responses (subtle surface luminance shift, crisp hairline brightening or restrained scale press) so neighboring text, icons and sibling controls never experience layout jitter or subpixel blur.
+
+Preserve object identity through expansion, reversal and return. A flip needs coordinated faces, pivot, visibility and active hit regions; test reversal from intermediate positions. During 3D flips, sliding drawers or animated panel swaps, synchronize `inert`/`aria-hidden`, keyboard tabbability and pointer hit-testing with the **live visible transform and geometry** — not merely the logical target state — so `Shift+Tab`, `Tab` and mid-flight clicks never enter an invisible or back-facing surface mid-transition. Acknowledgment can begin before data arrives, while pending presentation carries unresolved work. A completed animation does not establish business completion.
 
 Compose the full movement: rotation, scaling, particles, shadows and brightness extend beyond a resting box and shift visual weight. Observe text clearance, hierarchy and material coherence across the range. Adjust amplitude, layers, masks, layout or delivery, then judge the complete scene again. Deliberate overlap retains readable content, recognizable motion and operable targets.
 
@@ -73,13 +98,15 @@ A stationary trigger can clarify expansion; an unrelated shifting panel can weak
 
 ## Resilience
 
-Exercise short heights, text/browser zoom, mobile keyboards, safe areas, slow assets, offline/errors and repeated actions where relevant. Reflow preserves content and operation. A table or editor may use scoped horizontal scrolling while the surrounding page remains usable.
+Exercise short heights, text/browser zoom, mobile keyboards, safe areas, slow assets, offline/errors and repeated actions where relevant. Reflow preserves content and operation. A table or editor may use scoped horizontal scrolling while the surrounding page remains usable; verify that narrow containers keep horizontal overflow visually discoverable, keyboard-reachable and unobstructed by sticky headers or fixed overlays.
 
 Use fixtures for reproducible scenarios and real integration for service responses, authorization and persistence.
 
 ## Scrolling and content growth
 
 Choose scroll ownership from the task and content growth: continuous reading often suits a document; workspaces may retain navigation around a local region. Give regions clear roles. Observe entry, hold, exit and reverse browsing with scroll position/direction retained. Test wheel, touch, keyboard, focus reveal, sticky controls and overlays at relevant short heights and virtual-keyboard conditions.
+
+For narrow or dense tables and horizontal containers, preserve explicit scroll affordances (subtle edge-fade cues or visible scrollbars) and keyboard horizontal access (a focusable scrollable container or cell/arrow navigation) so off-screen columns remain discoverable without a trackpad. Ensure sticky headers, floating action bars and fixed toasts carry coordinated z-index and `scroll-padding` clearances so they never occlude table column headers, active controls or the first visible reading line.
 
 Preserve reading position as content arrives or expands. Decide when to reveal a new result, retain an existing reading point or restore an object's position on return. Following a live feed and reading older material are distinct intentions. Pagination or virtualization needs stable anchors and usable search/focus/assistive behavior.
 
@@ -89,7 +116,7 @@ Coordinate scrollbar visibility, color and width with theme and platform behavio
 
 Distinguish first entry, navigation, local edits and asynchronous feedback. Retain meaningful input, focus, selection and scroll; transition the part whose meaning changes. For rapid requests, show the latest valid intent and reconcile optimistic state with its authority.
 
-Overlays need deliberate positioning, dismissal and focus return at supported sizes. Latency, denied actions and recovery receive the same content and material care as the default state. Inspect the departure, intervening presentation and arrival across related views; stable endpoints alone can conceal a shared-shell flash or context loss.
+Overlays need deliberate positioning, dismissal and focus return at supported sizes; verify after Stop, Save failure, deletion or modal/drawer close that focus lands on an active visible task element rather than falling back to `BODY` or an inert hidden node. Latency, denied actions and recovery receive the same content and material care as the default state. Inspect the departure, intervening presentation and arrival across related views; stable endpoints alone can conceal a shared-shell flash or context loss.
 
 ## Choreograph attention across elements
 
@@ -155,6 +182,7 @@ Associate a meaningful transition with the journey, affected page/regions and sh
 
 Conditions belong to the observed episode: viewport, theme, language, content growth, motion preference, device/input and service timing may change its behavior. Viewed endpoints or a downloaded clip leave intervening claims open. When a dependency changes, preserve historical observations and identify affected conditions for recheck; do not promote every related state from one successful run.
 
+When delegating interaction observation or integration work across agents, follow the [delegation guidance](delegation.md) to keep continuous episodes, browser-session boundaries and main-agent authority intact.
 
 ## Select motion by effect, control ownership and source maturity
 
@@ -176,16 +204,8 @@ Read the actual platform contract before changing gesture ownership. With Pointe
 
 ### Preserve identity, readability and actual outcome
 
-For a card flip, inspect the source's pivot, front/back geometry, face visibility, active hit regions, illumination and reversal. A cosmetic rotation does not by itself supply those relationships. Keep result readiness at its authoritative owner; do not animate a false completed quote or payment. Prepare predictable data earlier when appropriate, so the chosen effect does not conceal avoidable critical-path waiting.
+For a card flip, inspect the source's pivot, front/back geometry, face visibility, active hit regions, illumination and reversal. Synchronize `inert`/`aria-hidden` and active hit regions with the live visible face geometry across the transition so keyboard `Shift+Tab` and pointer events never enter a face that is still turned away. A cosmetic rotation does not by itself supply those relationships. Keep result readiness at its authoritative owner; do not animate a false completed quote or payment. Prepare predictable data earlier when appropriate, so the chosen effect does not conceal avoidable critical-path waiting.
 
 For reordering or expansion, identify whether the source preserves the same object or crossfades separate surfaces. FLIP (First, Last, Invert, Play) is a possible implementation technique, not a requirement to rebuild a mature layout component. Font arrival, content insertion, scrolling and interruption can invalidate measured geometry; verify the retained mechanism under those conditions before altering it.
 
 For authored motion, inspect the trigger, first readable feedback, stable holds, full progression and return/seam. Reduced motion needs a deliberately composed readable state or simpler equivalent, not hidden content frozen at the start. A generic near-zero duration rule can leave content invisible or produce unintended event ordering. Keep meaningful controls operable without optional pointer effects. Measure actual rendering cost in the integrated task; a smooth-looking sampled clip cannot establish device-wide frame rate or input latency.
-
-## Preserve continuous relationships across delegated work
-
-Delegate observation or integration around meaningful interaction relationships rather than isolated frames. Composer growth, streamed content, reading position and adjacent panes may form one episode even when their implementation modules differ. Specify the actual relevant states and user control, allowing investigators to discover additional consequential transitions.
-
-Retain trigger, progression, settlement, reversal, interruption and repeated input where they affect the intended experience. A specialist may reproduce the episode and explain observed changes, but the main agent decides which mature mechanism fits the product and checks the integrated continuity. Tool latency, sparse frame samples and source-code inspection cannot by themselves establish natural visual smoothness.
-
-Coordinate access to shared browsers, user sessions and native desktops. Use isolated contexts when supported, preserve real permission boundaries and avoid irreversible external actions in observation tasks. When tools cannot reach the required state, record the limitation and pursue another authorized evidence route rather than infer success.

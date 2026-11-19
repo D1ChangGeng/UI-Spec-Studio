@@ -2,16 +2,20 @@
 
 ## Contents
 
-- [Purpose and product understanding](#treat-words-as-product-behavior-and-design-material)
-- [Information placement](#give-information-a-home-along-the-journey)
-- [Element-level writing](#write-at-the-scale-of-the-element)
-- [Voice and tone](#establish-voice-and-adapt-tone)
-- [Text and composition](#compose-actual-words-with-the-interface)
-- [State language](#write-every-meaningful-state)
-- [Localization](#localize-the-message-and-its-composition)
-- [Roles and maintenance](#maintain-content-through-roles-and-updates)
-- [Decisions and verification](#keep-a-traceable-content-decision-where-it-matters)
-- [Design-execution output and product language](#distinguish-design-execution-output-from-product-language)
+- [Treat words as product behavior and design material](#treat-words-as-product-behavior-and-design-material)
+- [Begin with the person's understanding](#begin-with-the-persons-understanding)
+- [Give information a home along the journey](#give-information-a-home-along-the-journey)
+- [Write at the scale of the element](#write-at-the-scale-of-the-element)
+- [Establish voice and adapt tone](#establish-voice-and-adapt-tone)
+- [Compose actual words with the interface](#compose-actual-words-with-the-interface)
+- [Write every meaningful state](#write-every-meaningful-state)
+- [Localize the message and its composition](#localize-the-message-and-its-composition)
+- [Maintain content through roles and updates](#maintain-content-through-roles-and-updates)
+- [Keep a traceable content decision where it matters](#keep-a-traceable-content-decision-where-it-matters)
+- [Verify through comprehension and real behavior](#verify-through-comprehension-and-real-behavior)
+- [Put language relationships on the same evidence map](#put-language-relationships-on-the-same-evidence-map)
+- [Explain the visible result before naming its implementation](#explain-the-visible-result-before-naming-its-implementation)
+- [Distinguish design-execution output from product language](#distinguish-design-execution-output-from-product-language)
 
 ## Treat words as product behavior and design material
 
@@ -58,7 +62,7 @@ Choose the best expression for the information. A short label can replace a para
 | Dialog and confirmation | State the decision and its effects; make action labels answer it | A reader can identify the consequences of each choice |
 | Help, editorial and published docs | Start with the question/answer or task, then supporting evidence and depth | The reading path supports scanning and following through |
 
-Write natural, specific language at the reading distance of the component. Use short copy where the meaning fits; give a consequential task enough precise explanation. A label, heading and adjacent explanation should each add information rather than paraphrase one another. Text that is meaningful at one step can be better placed in another step when the task evolves.
+Write natural, specific language at the reading distance of the component. Use short copy where the meaning fits; give a consequential task enough precise explanation. Practice **editorial restraint** inside product chrome: eliminate redundant marketing filler, repetitive helper sentences that merely paraphrase the heading or button label, and inflated generic modifiers ("seamless", "effortless", "powerful", "elevated") where concrete task facts communicate more clearly. A label, heading and adjacent explanation should each add distinct information rather than echo one another. Text that is meaningful at one step can be better placed in another step when the task evolves.
 
 ## Establish voice and adapt tone
 
@@ -66,7 +70,7 @@ Write natural, specific language at the reading distance of the component. Use s
 
 Choose a voice from the actual brand and users; describe it through observable writing characteristics and a few approved examples. Establish conventions for point of view, formality, technical language, sentence style, punctuation and terminology when these decisions recur. A style reference gives candidates and reasons; the current product owns the final choice.
 
-Write and review for accuracy, natural rhythm and semantic precision. Prefer the user's vocabulary and active, concrete verbs when actions are involved. Sentence fragments can serve headings and control labels; complete sentences clarify relationships and causes. Use punctuation according to language, component and meaning: labels and short headings commonly need no terminal period, while warnings, instructions, explanations and errors may need normal sentence punctuation. Respect intentional brand expression where it serves recognition.
+Write and review for accuracy, natural rhythm and semantic precision. Prefer the user's vocabulary and active, concrete verbs when actions are involved. Sentence fragments can serve headings and control labels; complete sentences clarify relationships and causes. Use punctuation according to language, component and meaning: labels and short headings commonly need no terminal period, while warnings, instructions, explanations and errors may need normal sentence punctuation. Respect intentional brand expression where it serves recognition, while keeping working chrome crisp and free of filler adjectives.
 
 Preserve necessary qualifiers. Money, eligibility, delivery, privacy, permissions and guarantees need authoritative rules or approval. Customer counts, testimonials, cases and service promises use confirmed facts; mark illustrative content clearly. Preview actions and messages describe their actual simulated boundary.
 
@@ -76,13 +80,22 @@ Text occupies space. Consider wording, typography and the container together: le
 
 Identify the mature type system and layout relationships carrying those roles. Configure and adapt them for real language while retaining their hierarchy and rhythm; a font file alone does not resolve the composition. Original lettering or a new visible text mechanism follows the [closed allowlist](component-sourcing.md#closed-original-construction-allowlist), while truthful wording and source-preserving reflow remain normal product work.
 
-Assign clear roles to display titles, headings, body, labels, supporting explanations, alerts and comparable data. A heading may need semantic line breaks and artistic rhythm; dense operational content needs scannable alignment; reading text needs sustained measure and line rhythm. Text size, wrapping and visible occupancy must remain useful across supported viewports, zoom and themes. Validate actual font readiness, fallback, numeral treatment, punctuation and mixed scripts in the renderer. Adjust theme-specific optical weight only when observation shows a real imbalance. Check that user text-spacing overrides preserve content and controls; accessibility test values describe supported overrides, not default typography tokens.
+Assign clear roles to display titles, headings, body, labels, supporting explanations, alerts and comparable data. A heading may need semantic line breaks and artistic rhythm; dense operational content needs scannable alignment; reading text needs sustained measure and line rhythm. Calibrate typography to script and reading distance rather than applying one setting uniformly:
+
+- **Readability floor:** keep primary reading text, inputs, table headers, helper hints and interactive controls comfortably legible (commonly `14–16px` for body/inputs, avoiding cramped `9–12px` micro-text on real labels, placeholders or actionable status badges). Never hide required format rules inside vanishing placeholders.
+- **CJK and Latin measure and leading:** Latin prose reads comfortably around `~45–75ch` with `~1.45–1.65` line-height, whereas square-em CJK glyphs pack denser strokes and benefit from narrower character counts (`~28–42` full-width characters per line) and taller leading (`~1.65–1.85`).
+- **Mixed-script spacing, tracking and baseline harmony:** tighten display tracking (`-0.02em` to `-0.04em`) selectively for Latin headlines, never blindly onto CJK strings where negative tracking causes glyph collision. Inspect optical weight and vertical baseline alignment whenever a Latin primary face falls back to a CJK face, adjusting fallback weight or sizing so mixed phrases read as one line rather than alternating heavy and light patches.
+- **Numeral consistency and punctuation rhythm:** apply `tabular-nums` (`font-variant-numeric: tabular-nums`) on comparable numbers, tables, timers and prices, preserve consistent unit spacing across locales, and control phrase breaks to avoid awkward dangling punctuation or single-word widows on headings.
+
+Text size, wrapping and visible occupancy must remain useful across supported viewports, zoom and themes. Validate actual font readiness, fallback, numeral treatment, punctuation and mixed scripts in the renderer. Adjust theme-specific optical weight only when observation shows a real imbalance. Check that user text-spacing overrides preserve content and controls; accessibility test values describe supported overrides, not default typography tokens.
 
 When content grows, choose precise editing, variable layout, wrapping, disclosure or another representation by the user's need. Text and design influence each other: a simpler name can improve navigation; a consequential condition can require another section; an image can change text placement. Preserve factual meaning. Observe font arrival, expanding content and changing feedback through time for readable holds, reflow and attention; settled text alone cannot establish the reading continuity of that process.
 
 ## Write every meaningful state
 
 Design the initial state and the state transitions together. For an asynchronous action, connect **user intent → immediate acknowledgment → pending explanation → authoritative outcome → next action**. Distinguish request receipt, saved data and completed service work when those are separate boundaries. A timeout can leave the outcome unknown: describe what is known and offer the supported status check or recovery path. Retry wording must match whether repeating the action is safe. For partial completion, identify the affected scope and remaining work. Progress, animation and words refer to the same operation; repeated, cancelled or stale requests follow the latest valid task state. Preserve useful input through recovery.
+
+State concurrency and record-lifecycle outcomes truthfully rather than collapsing distinct server responses into one generic banner. Explicitly distinguish **remote deletion**, **concurrent edit conflict**, **permission revocation** and **network failure** — never report a remotely deleted item as a "new saved version" or a generic "save failed" error when the authoritative server state proves the record no longer exists. Explain what happened to the record, preserve the user's local draft, and label the actual recovery choices accurately (such as saving as a new copy, comparing against the latest server version or discarding).
 
 Errors identify the affected item or operation, explain what can be done when known and support the actual recovery path. Associate input errors with their fields; a page-level summary can aid navigation for complex forms. Present service failures, capacity limits and permission conditions where their task-level effect can be explained. Warnings state consequences before commitments. Empty states reflect whether no record exists, no result matches the filter or access is restricted; those conditions lead to different next steps. Keep live announcements useful and proportionate, and preserve focus unless the task requires moving it.
 
@@ -96,7 +109,7 @@ For each supported locale, produce natural target-language copy while preserving
 
 Use complete, contextual translation units. Preserve translator context for the object, action, state and variable meanings; allow variables and clauses to be reordered. Reuse a message when its meaning and grammatical role are shared, rather than because individual source-language words happen to match. Use the project's localization format for plurality and interpolation, and escape substitutions safely.
 
-Consider script width, punctuation, case, date/time/unit formatting, numbers and language-specific line breaking. Verify the UI with actual strings, long names, supported writing direction and font fallbacks. Keep locale switching compatible with task state. Currency and business terms follow their real authority; language selection changes their presentation only within that authority.
+Consider script width, punctuation, case, date/time/unit formatting, numbers and language-specific line breaking. For CJK and mixed CJK+Latin interfaces, verify full-width versus half-width punctuation consistency, optical spacing between Latin tokens/numerals and CJK text, punctuation compression at line edges (`line-break` rules preventing orphaned closing punctuation at line starts), and script-appropriate leading and measure so neither language feels cramped or overly sparse. Verify the UI with actual strings, long names, supported writing direction and font fallbacks. Keep locale switching compatible with task state. Currency and business terms follow their real authority; language selection changes their presentation only within that authority.
 
 A locale can use different lengths or sentence structures while preserving information and brand character. Revisit component dimensions, image-text balance, reading order and line wraps as needed. Judge both language versions at their actual viewports and themes rather than assuming a string-level equivalence proves layout equivalence.
 
@@ -123,7 +136,6 @@ The strongest content outcome makes the next meaningful decision understandable 
 ## Put language relationships on the same evidence map
 
 Connect consequential copy to its journey question, owning surface/state, factual authority, locale/type treatment and actual checked conditions using [the shared map](evidence-map.md). A new product term can alter L2 navigation, L3 control roles and L4 wrapping; trace those dependents instead of duplicating decision records. Preserve actual source authority for promises and approvals. A translation entry establishes available text; rendered inspection and actual user comprehension require separate evidence. Routine supported wording edits can inherit the established system and retain a short scoped check.
-
 
 ## Explain the visible result before naming its implementation
 

@@ -4,14 +4,22 @@ Read this reference for finish and whenever a design depends on actual data, aut
 
 ## Contents
 
-- [Reconcile the scope](#1-reconcile-the-accepted-scope-with-the-actual-system)
-- [Establish the contract](#2-establish-the-behavior-contract)
-- [Sequence and connect outcomes](#3-sequence-complete-user-outcomes)
-- [Verify and deliver](#5-verify-design-and-behavior-together)
-- [Preserve design and resource decisions](#preserve-design-intent-at-four-boundaries)
-- [Connect assets and content](#carry-asset-sources-and-delivery-through-finish)
+- [1. Reconcile the accepted scope with the actual system](#1-reconcile-the-accepted-scope-with-the-actual-system)
+- [2. Establish the behavior contract](#2-establish-the-behavior-contract)
+- [3. Sequence complete user outcomes](#3-sequence-complete-user-outcomes)
+- [4. Connect in the current implementation](#4-connect-in-the-current-implementation)
+- [5. Verify design and behavior together](#5-verify-design-and-behavior-together)
+- [6. Deliver the completed scope accurately](#6-deliver-the-completed-scope-accurately)
+- [Preserve design intent at four boundaries](#preserve-design-intent-at-four-boundaries)
+- [Carry adopted resources through the real boundary](#carry-adopted-resources-through-the-real-boundary)
+- [Carry the selected product model and its decision record](#carry-the-selected-product-model-and-its-decision-record)
+- [Preserve the foundation through real integration](#preserve-the-foundation-through-real-integration)
+- [Carry asset sources and delivery through Finish](#carry-asset-sources-and-delivery-through-finish)
+- [Connect content to real product truth](#connect-content-to-real-product-truth)
 - [Prepare data with correct authority and lifetime](#prepare-data-with-correct-authority-and-lifetime)
 - [Support content maintenance and operational work](#support-content-maintenance-and-operational-work)
+- [Carry decision identity through implementation](#carry-decision-identity-through-implementation)
+- [Coordinate bounded integration](#coordinate-bounded-integration)
 
 ## 1. Reconcile the accepted scope with the actual system
 
@@ -88,9 +96,15 @@ A precise handover explains what can be adjusted, where the authoritative conten
 
 ## Carry adopted resources through the real boundary
 
-Reconcile each consequential adopted item with its exact source, version/variant, local trial, preserved mechanisms, modifications and ownership. Retain proven resources while conditions hold; replace fixture adapters without rebuilding their effective UI. Check actual dependency/CSS impact, SSR or hydration where relevant, cleanup, content growth and real data states. Source copies retain local maintenance responsibility; package updates follow their compatibility contracts.
+Reconcile each consequential adopted item with its exact source, version/variant, local trial, preserved mechanisms, modifications and ownership. Retain proven resources while conditions hold; replace fixture adapters without rebuilding their effective UI or regressing into generic styling fallbacks when live APIs, async states or SSR/hydration arrive.
 
-Map demo callbacks and sample data to real intent and trusted outcomes. Protected prices, permissions, entitlements and workflow decisions remain with their authorities. Recheck the affected visual/state relationships under real loading, denial and failure. An adaptation that replaces the source's defining layout, material, state presentation or motion is a new visual responsibility: reconsider the mature source/configuration first and apply the closed allowlist before any original construction. An authorized extension retains the mature implementation's main role and receives scoped independent validation. A rewrite does not become authorized merely because it can be tested. Validate components and the integrated journey separately; diagnose a quality gap at its source rather than silently changing the accepted target.
+Preserve four craft-critical layers across live data wiring:
+- **Canonical token harmonization:** keep adopted surfaces bound to the project's semantic typography, luminance, hairline and concentric radius tokens across real loading, empty, error and dynamic-content states rather than letting unstyled defaults leak back in.
+- **Cascade isolation:** preserve CSS `@layer` boundaries, scoped custom properties and non-clipping wrapper geometry through bundle/SSR builds so shadows, backdrop filters, glows and focus rings remain intact.
+- **Rendering-fidelity and ergonomic repairs:** carry forward fixes such as flattened resting 3D transforms (preventing crisp text blur), verified webfont loading, mobile first-screen spacing, keyboard focus return and mid-transition `inert` synchronization.
+- **Authorized source-derived ports:** where a verified cross-framework port or complete-design translation was authorized, preserve its exact state, optical and motion mechanics under real latency, hydration and cleanup rather than simplifying it into a bare substitute.
+
+Check actual dependency/CSS impact, SSR or hydration, cleanup, content growth and real data states. Source copies retain local maintenance responsibility; package updates follow their compatibility contracts. Map demo callbacks and sample data to real intent and trusted outcomes—protected prices, permissions, entitlements and workflow decisions remain with their authorities. Recheck affected visual and state relationships under real loading, denial and failure. An adaptation that replaces the source's defining layout, material, state presentation or motion is a new visual responsibility: reconsider the mature source/configuration first and apply the [closed allowlist](component-sourcing.md#closed-original-construction-allowlist) before any original construction. Validate components and the integrated journey separately, diagnosing craft loss at its source rather than silently lowering the target.
 
 Keep license notices, asset permission and reproducible configuration with the resulting source. Capture integration evidence in project records and propose reusable lessons through authorized maintenance. Final connection quality is the actual product's behavior and appearance, supported by its observed conditions.
 
@@ -144,12 +158,6 @@ Resolve important decisions in [the evidence map](evidence-map.md) to actual com
 
 For consequential unresolved fit or visual questions, apply [the action rules](evidence-actions.md): advance supported independent connections, use bounded probes where they resolve uncertainty, and keep unsupported dependent commitments provisional. Record actual approval or a scoped exception separately from verified product behavior.
 
-## Delegate bounded integration without transferring design ownership
+## Coordinate bounded integration
 
-A scoped integrator can configure, compose and connect an already selected mature implementation under the main agent's visual direction. Before writing, establish the source/version/variant, protected proportions/type/material/motion, allowed modules, shared interfaces, real data/state ownership and observable acceptance conditions. Natural-language instructions and authoritative project references can express these relationships; a fixed delegation schema is unnecessary.
-
-Permit source-supported adaptation, routing, data and event wiring, responsive connections and compatibility repairs while retaining the reason the source was chosen. An unmade design choice is not a deterministic implementation task. Return material layout, visual-language, motion or source-selection questions to the main agent instead of silently inventing CSS or rebuilding a mature component. Original visual responsibility still requires the exact authorized W1–W3 scope.
-
-Assign non-overlapping files or isolated worktrees where useful and agree on shared contracts before parallel writes. Do not assume that different agent names create separate filesystems. Verify the actual checkout, preserve unrelated changes and stop conflicting writes. Integrating multiple contributions requires a main-agent whole-product pass; isolated component success does not establish coherent density, type, focus, scrolling or continuous task behavior.
-
-Return actual changes, exact adopted sources, checks performed, viewed evidence and unresolved risks. Tests passing, dependency installation and code imports establish their own facts, not retained craft or final SPEC acceptance. Trial or integration failures can trigger targeted source investigation; keep unresolved quality visible within its responsible formal SPEC.
+When delegating bounded integration of an already selected mature source to `ui_integrator`, follow [delegation guidance](delegation.md): lock source/variant, protected craft relationships, allowed modules, shared contracts and non-overlapping checkout boundaries before parallel writes, escalate unresolved visual/source choices back to the main agent instead of improvising CSS, and complete whole-product visual and behavioral verification in the main thread.
