@@ -15,7 +15,7 @@ npx --yes ui-spec-studio@latest
 A fixed GitHub Release URL remains an immutable fallback. Do not use `releases/latest/download/ui-spec-installer.tgz` as an npm package specifier: npm may reuse stale cached bytes for its unchanged URL.
 
 ```powershell
-npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.6/ui-spec-installer.tgz" install --agent codex --global --migrate
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz" install --agent codex --global --migrate
 ```
 
 ### Legacy Windows installation migration
@@ -98,7 +98,7 @@ The official public installer is now the primary entry point in both READMEs. Th
 
 1. Public npm registry reports the expected `ui-spec-studio@VERSION` and `dist-tags.latest`, and the published `repository` identity is correct.
 2. The public npm tarball integrity matches the reviewed GitHub candidate (or any explicitly reviewed alternative with provenance).
-3. On a clean project, `npx --yes ui-spec-studio@latest` installs the complete 37-file Skill and correct native Harness adapters.
+3. On a clean project, `npx --yes ui-spec-studio@latest` installs the complete portable Skill (38 files in `v1.21+`) and correct native Harness adapters.
 4. On Windows, the **npm-named** command safely migrates an older unowned Codex Skill with original backup and uninstall restoration.
 5. Cross-platform installer and actual terminal UX CI passes; the install path never clones the full repository.
 6. Both READMEs and `docs/INSTALL.md` use the same canonical npm entry point.

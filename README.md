@@ -27,7 +27,7 @@ For Codex installation in your user scope, or for a safe migration from the old 
 npx --yes ui-spec-studio@latest install --agent codex --global --migrate
 ```
 
-Use `--migrate` only when an unmanaged Skill already exists; it backs up the old directory and restores it on uninstall. The installer also offers an interactive migration choice. For an immutable fallback without npm registry resolution, use the [pinned GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.20.6). Avoid the mutable GitHub `releases/latest/download/*.tgz` address as an `npx` package specifier; it can select a stale cache entry.
+Use `--migrate` only when an unmanaged Skill already exists; it backs up the old directory and restores it on uninstall. The installer also offers an interactive migration choice. For an immutable fallback without npm registry resolution, use the [pinned GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.21.0). Avoid the mutable GitHub `releases/latest/download/*.tgz` address as an `npx` package specifier; it can select a stale cache entry.
 
 The installer uses a guided terminal flow with live verification, host-specific registration and reversible migration of older Skills CLI installations. A pre-existing unowned Skill is **not** silently replaced: interactive users can select a backed-up migration; headless users may explicitly pass `--migrate`. The original installation is restored on uninstall. For Chinese prompts, append `--lang zh`.
 
@@ -41,13 +41,24 @@ and build the first reviewable SPEC. Show the result and the evidence behind it.
 
 After reviewing, **“Approved, continue”** carries the accepted direction into the next useful work. **“Use ui-spec: finish”** connects an accepted design to its actual content, behavior and delivery boundary. [Installation and agent options](docs/INSTALL.md) · [Multi-round guide](docs/GUIDE.md)
 
+## Discover high-craft foundations, deepen reuse, sharpen taste
+
+Version **1.21** upgrades the skill across wide discovery, deep reuse and operational design taste while consolidating its runtime spine:
+
+- **Wide high-craft discovery (80 live-verified leads):** a 4-tier discovery ladder and Generic-Default Rejection Floor paired with an expanded [80-entry resource catalog](skills/ui-spec/references/resource-catalog.md) (100% neutral `craft_profile` coverage) and an upgraded stack-aware, word-boundary `find_resources.py` helper.
+- **Deep reuse & craft-elevating improvement:** five explicitly permitted operations—de-templating, canonical token-plane & cascade harmonization, rendering-fidelity & ergonomic repair, inspected-source architectural porting (license-checked), and state/accessibility completion—cleanly bounded against default-deny `W1`–`W3` original construction.
+- **Operational UI design taste:** diagnostic AI-slop failure signatures (without dogmatic bans), six operational craft calibrations, dedicated optical dark/light re-authoring, tactile motion personality, a Taste-Critique -> Upgrade -> Re-Inspect loop, and Target-Demo vs. Integrated-App visual delta verification.
+- **Lean runtime & consolidated delegation:** `SKILL.md` trimmed by 53% with multi-agent delegation centralized into conditional [delegation guidance](skills/ui-spec/references/delegation.md) (38 portable Skill files) and aligned across all four Codex roles.
+
+[v1.21 review & content-integrity disposition](docs/REVIEW-v1.21.0.md) · [v1.21.0 release notes](docs/releases/v1.21.0.md)
+
 ## Deepen research while keeping design ownership clear
 
 The main agent owns the complete product goal, formal UI SPEC, source selection and final visual review. Independent specialists can explore consequential questions, inspect actual examples and return the candidates, evidence and unresolved differences that matter for the next decision. Clearly bounded integration can be delegated once its source and design are settled.
 
 The standalone release installer installs the Skill without cloning GitHub. Its [Codex adapter](integrations/codex/README.md) installs four roles with the same command: `ui_researcher`, `ui_integrator`, `ui_challenger` and `ui_experience_observer`. The main agent calls them when useful; the portable Skill also supports direct work by one agent. Roles inherit the host's available models, tools and permissions.
 
-[Installation and natural delegation](integrations/codex/README.md) · [Version evidence and limits](docs/REVIEW-v1.20.0.md)
+[Installation and natural delegation](integrations/codex/README.md) · [Delegation reference](skills/ui-spec/references/delegation.md) · [v1.20 evidence and limits](docs/REVIEW-v1.20.0.md)
 
 ## Mature foundations, bounded originality
 
@@ -107,7 +118,7 @@ composition. [Asset practice](docs/VISUAL-ASSETS.md) · [Browser review fixture]
 
 Review the assembled interface and continuous task again. The adoption record shows which implementation actually carries the intended quality, what changed and what was verified; studying a source and using it are recorded separately. [Product alignment and exploration](docs/PRODUCT-ALIGNMENT.md) · [Resource reuse guide](docs/RESOURCE-REUSE.md)
 
-[37 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md)
+[80 dated resource leads](skills/ui-spec/references/resource-catalog.md) · [Design decision record](docs/DESIGN-DECISIONS.md)
 
 ## Reuse visual craft, not only functionality
 
@@ -215,13 +226,13 @@ Before substantive work, the agent reads **eight common references in full**: [w
 
 ```bash
 # Install Skill and native Codex roles from the lightweight release package
-npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.6/ui-spec-installer.tgz" install --agent codex
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz" install --agent codex
 
 # Pin this installer to an immutable release version
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.6/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz install --agent codex
 
 # Standard Skills CLI: install only the portable Skill ZIP (not native roles)
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.6/ui-spec-1.20.6.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-1.21.0.zip --skill ui-spec -a codex
 ```
 
 The unified installer also supports Claude Code, Cursor and OpenCode through `--agent`; Codex alone activates the separately registered four-role adapter. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.21.0 — 2026-11-18
+
+- Expand `skills/ui-spec/assets/resource-catalog.json` from 37 to 80 live-verified resource leads (preserving all 37 original `2026-10-24` leads verbatim and adding 43 `2026-11-18` craft-oriented entries) with 100% neutral `craft_profile` coverage; regenerate `references/resource-catalog.md` and harden `tools/catalog_docs.py`.
+- Upgrade `skills/ui-spec/scripts/find_resources.py` so concrete code-stack filters include `framework-neutral`, `multi-framework` and `multi-runtime` leads, add safe ASCII word-boundary/plural query matching across `adoption_notes` and `craft_profile`, and report `total_matches`/`truncated` while keeping read-only alphabetical neutrality.
+- Add a 4-tier high-craft discovery ladder, the Generic-Default Rejection Floor, and five explicitly permitted deep-reuse operations (Source-Preserving De-Templating, Canonical Token-Plane & Cascade Harmonization, Adopted-Component Rendering-Fidelity & Ergonomic Repair, Source-Derived Architectural Porting & Weight-Stripping under inspected source/license checks, and Craft-Elevating State/Accessibility Completion) cleanly bounded against default-deny `W1`–`W3` original construction.
+- Add actionable UI design taste and craft discrimination across the eight common references: 6 diagnostic AI-slop failure signatures (without dogmatic style bans), 6 operational craft calibrations, optical dark/light re-authoring, tactile motion personality, editorial copy craft, 6-layer reference deconstruction, Taste-Critique -> Upgrade -> Re-Inspect loops, Target-Demo vs. Integrated-App visual delta checks, empirical regression guardrails, and four concrete deep-reuse recipes.
+- Consolidate nine scattered v1.20 delegation sections into conditional `skills/ui-spec/references/delegation.md` (38 portable Skill files total), cut `SKILL.md` by 53.1%, remove leaked maintainer benchmark language from runtime instructions, align all H2 TOCs/anchors, and upgrade all four Codex roles (`integrations/codex/`) with unconditional eight-common-reference reading and refreshed SHA-256 digests.
+- Add exact `docs/evidence/v1.21.0/continuity.json` inverse recovery back to `v1.20.0`, preserve all historical evidence unchanged, and document content-integrity disposition and evidence boundaries in `docs/REVIEW-v1.21.0.md`.
+
 ## 1.20.6 — 2026-11-02
 
 - Rewrite the English/Chinese interactive installer for Skill users rather than maintainers: tool and scope choices, existing-installation decisions, meaningful progress, and outcome-specific completion.

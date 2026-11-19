@@ -27,7 +27,7 @@ npx --yes ui-spec-studio@latest
 npx --yes ui-spec-studio@latest install --agent codex --global --migrate --lang zh
 ```
 
-`--migrate` 会备份旧安装并在卸载时恢复；没有旧版未托管目录时，不需要此参数。交互终端也可直接选择备份迁移。作为独立备用渠道，仍保留 [v1.20.6 固定版本的 GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.20.6)，但不要用 GitHub `releases/latest/download/*.tgz` 作为 `npx` 地址，以免命中旧缓存。
+`--migrate` 会备份旧安装并在卸载时恢复；没有旧版未托管目录时，不需要此参数。交互终端也可直接选择备份迁移。作为独立备用渠道，仍保留 [v1.21.0 固定版本的 GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.21.0)，但不要用 GitHub `releases/latest/download/*.tgz` 作为 `npx` 地址，以免命中旧缓存。
 
 安装器采用分步终端向导，显示文件校验、宿主检测、安装与注册进展。检测到旧版 `skills add` 安装时，可选择**备份后升级**；不会直接覆盖原目录，卸载时可恢复旧安装。无人值守环境可以显式添加 `--migrate`；需要中文交互可添加 `--lang zh`。
 
@@ -41,13 +41,24 @@ npx --yes ui-spec-studio@latest install --agent codex --global --migrate --lang 
 
 审阅通过后，只需说 **「本轮通过，继续」**，Agent 就会沿已确认的方向推进下一项有价值的工作；使用 **「ui-spec: finish」**，则会将已确认的设计接入真实内容、功能或作品的发布环境。[安装与宿主选项](docs/INSTALL.md) · [多轮使用指南](docs/GUIDE.md)
 
+## 广泛搜寻高品位资源，深化复用改造，校准设计品味
+
+**v1.21** 在不削弱原有安全、连续性与中性工具边界的前提下，系统调优了整套 Skill 与 Codex 四角色适配器：
+
+- **高品位 UI 资源广泛发现（80 项实核线索）：** 建立四层发现阶梯与“平庸默认拒绝底线”，将[本地资源目录](skills/ui-spec/references/resource-catalog.md)扩充至 **80** 项（100% 附带中性 `craft_profile`），并升级 `find_resources.py` 支持跨框架/多运行时技术栈过滤与词边界精准检索。
+- **深度复用与工艺提升改造：** 明确定义五类允许的深度复用操作——去模板化、规范 Token 平面与多源层叠和谐化、已采纳组件的渲染保真与人体工学修复、经源码与许可证核查的架构移植与减重、以及状态与无障碍完整化——并与 `W1`–`W3` 默认禁止原创边界清晰区隔。
+- **可落地的 UI 设计品味校准：** 引入 6 类诊断式 AI 平庸失真特征（不设教条式风格禁令）、6 项可操作工艺校准、明暗模式光学重绘、触感化动效性格、“品味审视 -> 升级 -> 复检”闭环，以及“目标 Demo 对比集成应用”的视觉落差验证。
+- **精简入口与集中委派参考：** `SKILL.md` 体积精简 53%，将分散的委派说明统一收口至条件加载的[多 Agent 委派参考](skills/ui-spec/references/delegation.md)（共 38 个可移植文件），并同步升级四类 Codex 角色。
+
+[v1.21 评审与内容完整性记录](docs/REVIEW-v1.21.0.md) · [v1.21.0 发布说明](docs/releases/v1.21.0.md)
+
 ## 深入研究，保持清晰的设计责任
 
 主 Agent 持有完整产品目标、正式 UI SPEC、最终资源选择与关键视觉验收。独立研究员可以深入调查重要问题，实际观察成熟案例，返回能够影响下一步判断的候选、证据与未决差异；来源和设计已经确定的有界集成也可以委派。
 
 轻量级独立安装器无需克隆 GitHub 仓库即可安装 Skill；同一命令还能通过 [Codex 适配器](integrations/codex/README.md)注册四类角色：`ui_researcher`、`ui_integrator`、`ui_challenger` 和 `ui_experience_observer`。主 Agent 按实际价值调用，通用 Skill 也支持单 Agent 直接工作。模型、工具与权限来自实际运行环境。
 
-[安装与自然语言委派](integrations/codex/README.md) · [版本证据与限制](docs/REVIEW-v1.20.0.md)
+[安装与自然语言委派](integrations/codex/README.md) · [委派参考](skills/ui-spec/references/delegation.md) · [v1.20 版本证据与限制](docs/REVIEW-v1.20.0.md)
 
 ## 成熟成果承接视觉品质，原创遵守明确边界
 
@@ -105,7 +116,7 @@ Agent 研究成熟素材、判断制作路径、维护可编辑母版与交付�
 
 整合后的界面与连续任务再次接受审阅。采用记录说明实际由哪个实现承担目标品质、进行了哪些改动、验证到什么程度，并区分研究来源与最终采用。[产品对齐与主动探索](docs/PRODUCT-ALIGNMENT.md) · [资源复用指南](docs/RESOURCE-REUSE.md)
 
-[37 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md)
+[80 项带来源记录的资源线索](skills/ui-spec/references/resource-catalog.md) · [设计决策记录](docs/DESIGN-DECISIONS.md)
 
 ## 复用视觉工艺，不止基础功能
 
@@ -201,10 +212,10 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 
 ```bash
 # 固定版本安装
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.6/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz install --agent codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.20.6/ui-spec-1.20.6.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-1.21.0.zip --skill ui-spec -a codex
 ```
 
 统一安装器也支持 Claude Code、Cursor 和 OpenCode（通过 `--agent`）；Codex 的原生四角色适配器由同一命令处理。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。
