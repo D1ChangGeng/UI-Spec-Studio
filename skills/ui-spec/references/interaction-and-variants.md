@@ -121,6 +121,15 @@ Assign focus, selection, scrolling, portals and request state clear owners. Pref
 
 Coordinate listeners, engines and cleanup. Exercise combined controls with keyboard/touch, re-entry, reversal, delayed results, real text, themes, growth and reduced motion. Judge cumulative attention and runtime cost.
 
+When old and new component families coexist during [staged foundation migrations](component-sourcing.md#migrate-shared-foundations-across-existing-surfaces-in-stages), protect interactive continuity explicitly across every seam where migrated and legacy surfaces meet:
+
+- **Single focus and keyboard ownership:** prevent competing focus traps, duplicate `Escape` or shortcut handlers and dropped focus return when a migrated control opens a legacy overlay or a legacy page triggers a migrated dialog, drawer or menu.
+- **Coherent overlay, portal and backdrop stacking:** align stacking contexts, portal containers and modal inertness/backdrop isolation across both libraries so active menus, tooltips, popovers and dialogs never render behind stale z-index layers or leave orphaned dimmers.
+- **Shared scroll and layout-lock ownership:** coordinate document scroll locking, scrollbar-gutter compensation and sticky headers so opening an overlay from either family does not shift page width or leave scrolling locked after dismissal.
+- **Synchronized theme, locale and reduced-motion state:** drive migrated and legacy surfaces from one shared preference source and initialization path so switching themes, languages or reduced-motion settings updates both sides immediately without split theme flashes, mismatched contrast or stale localized labels.
+
+Inspect these boundary transitions directly as part of [migration seam regression](verification.md#scope-regression-across-shared-migrations-and-evolving-code) before advancing to wider rollout waves.
+
 ## Preserve the primary loop and perceived responsiveness
 
 Identify the continuing operation: conversation preserves its composer; editing preserves the object and selection; task work preserves filters and progress. Supporting evidence or artifacts retain a clear return to that primary work.

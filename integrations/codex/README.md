@@ -1,4 +1,4 @@
-# Optional Codex adapter — v1.20.3
+# Optional Codex adapter — v1.21.0
 
 The recommended **unified installer** installs the portable Skill and this native adapter in one invocation without cloning the GitHub source repository:
 
@@ -10,7 +10,7 @@ The instructions below are the independent manual adapter path for advanced cons
 
 This is an optional host adapter, not a replacement for `ui-spec`. Install the complete Skill first through your established Skills workflow. The main agent and substantive specialist work retain its eight-reference reading contract. Models and permissions come from the actual host; a role file cannot create a sandbox, a browser, a login or a separate desktop.
 
-The release build includes `ui-spec-codex-1.20.3.zip` as a separate asset, with its digest in `SHA256SUMS.txt`. Extract its `ui-spec-codex/` directory and run `python install.py install --project /path/to/product` from that directory. It includes the installer, launcher, doctor, four role files, model guidance and license. The complete Skill is distributed separately as `ui-spec-1.20.3.zip`.
+The release build includes `ui-spec-codex-1.21.0.zip` as a separate asset, with its digest in `SHA256SUMS.txt`. Extract its `ui-spec-codex/` directory and run `python install.py install --project /path/to/product` from that directory. It includes the installer, launcher, doctor, four role files, model guidance and license. The complete Skill is distributed separately as `ui-spec-1.21.0.zip`.
 
 ## Install without overwriting personal work
 
@@ -59,7 +59,7 @@ Ask the main agent to investigate the important unresolved relationship, for exa
 
 > Use ui-spec. Ask an independent researcher to investigate mature composer-and-reading-space implementations. Inspect actual growth, attachment and scrolling behavior and return strong candidates, viewed evidence, adoptable sources and significant unknowns. Keep the final product decision and integrated visual review in the main thread.
 
-For integration, identify the selected source/variant, protected visual relationships, permitted modules, data/state contracts and actual checks. This is not permission to invent unspecified layout or motion.
+For integration, identify the selected source/variant, protected visual relationships, permitted modules, data/state contracts and actual checks. This is not permission to invent unspecified layout or motion. In long-lived multi-session projects, the four specialist roles also support inheriting settled foundations, reconciling brownfield code and contract drift without discarding valid fixes, inspecting staged migration seams and hotfix regressions, and distinguishing settled commitments from lingering provisional probes or open design debt.
 
 ## Verify the actual runtime
 

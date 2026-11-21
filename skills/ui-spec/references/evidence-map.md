@@ -12,7 +12,7 @@ express the same relationships as an optional structured record.
 
 ## Contents
 
-[Minimum contract](#the-minimum-contract-and-its-scale) · [Design scales](#six-design-scales-with-cross-scale-navigation) · [Formal increments](#connect-formal-increments-to-the-current-product) · [Transverse relationships](#four-transverse-relationships) · [Coverage](#coverage-discovery--challenge) · [Decision units](#design-decision-unit) · [Three views](#one-record-three-useful-views) · [Tool boundary](#tool-boundary) · [Current model and history](#current-model-meaningful-revisions-and-evidence-archive)
+[Minimum contract](#the-minimum-contract-and-its-scale) · [Design scales](#six-design-scales-with-cross-scale-navigation) · [Formal increments](#connect-formal-increments-to-the-current-product) · [Transverse relationships](#four-transverse-relationships) · [Coverage](#coverage-discovery--challenge) · [Decision units](#design-decision-unit) · [Three views](#one-record-three-useful-views) · [Tool boundary](#tool-boundary) · [Current model and history](#current-model-meaningful-revisions-and-evidence-archive) · [Compaction and open obligations](#compact-active-records-without-evaporating-open-obligations)
 
 ## The minimum contract and its scale
 
@@ -343,6 +343,23 @@ Adding several attachments can expose wrapping and focus problems. Keep the old
 observation intact, update the current object's conditions and open questions,
 explain the revision, and inspect the changed layout. The new issue does not erase
 the historical test, and the old pass does not certify the expanded use case.
+
+### Compact active records without evaporating open obligations
+
+Over months of iteration, active design records must stay proportional to the **active product and its open obligations** (`O(active product + open obligations)`), not grow unboundedly with total historical turns. Keep the `Current Design Model` focused on active product goals, settled and adopted foundations/tokens/assets with their active W1–W3 authorizations, active and horizon SPECs with their dispositions (`candidate`, `active`, `completed`, `superseded`, `consolidated`, `retired`), current per-scope verification and approval facts, and all live open obligations.
+
+**Promote superseded exploration into `Meaningful Revisions` and cold `Evidence Archive`.** When rounds accumulate superseded candidate comparisons, closed intermediate trials, resolved mismatches or retired-surface details, distill the transition into a concise `Meaningful Revisions` entry recording what changed, why and with what evidence, the affected objects and conditions, the superseding versus superseded identity, and an archive pointer. Move raw captures, trial logs, rejected candidate dossiers and superseded snapshots into the linked `Evidence Archive`, retrieved selectively on demand when a settled claim is challenged or reopened rather than loaded wholesale on cold start. Compact according to signal-to-noise and superseded state—never fixed round counts, line ceilings or byte budgets.
+
+**Preserve four classes of open obligation inside existing records.** Track unresolved commitments directly in the existing decision and SPEC records (never as a separate parallel tracker):
+
+| Obligation class | What remains open |
+|---|---|
+| **Visual & Craft Debt** | A known perceptual, composition, typography, asset, material, motion or responsive quality gap on a visible surface or relationship. |
+| **Provisional Probe & Migration Bridge Debt** | A temporary technical probe or staged compatibility bridge (token alias, CSS layer shim or adapter seam) awaiting mature replacement or legacy foundation decommission. |
+| **Integration & Contract Debt** | A fixture or mocked boundary, pending backend/domain contract alignment or deferred real-service wiring awaiting `finish`. |
+| **Verification Scope Debt** | An uninspected viewport, locale, theme, device, input mode, migration seam or continuous temporal episode. |
+
+**Enforce the Debt Anti-Evaporation Rule.** Neither record compaction, SPEC splitting, merging or redrawing, nor opening a new SPEC identifier may drop an open obligation. Every open obligation retains its owning object or SPEC, concrete reopen trigger and current status until it is verified closed with inspected evidence, explicitly transferred to a successor SPEC with unbroken provenance, or retired with a documented product cause in `Meaningful Revisions`.
 
 ## Local change and revisable state
 

@@ -4,6 +4,7 @@
 
 - [Coverage and assurance](#build-the-coverage-inventory-from-reality)
 - [Formal increment and related-product verification](#verify-the-increment-and-its-product-relationships)
+- [Migration and drift regression](#scope-regression-across-shared-migrations-and-evolving-code)
 - [First reviewable result](#inspect-and-show-the-first-reviewable-result)
 - [Evidence sufficiency](#judge-evidence-for-the-decision)
 - [Viewing conditions and actual interaction](#capture-the-actual-viewing-condition)
@@ -37,6 +38,18 @@ Keep research/observation scope, primary design/implementation scope and integra
 For a composer-height change, observe text growth, send, response growth and user-controlled scrolling with the neighboring reading space. If these jointly carry the goal, keep the relationship in the current SPEC's review scope. For a shared font change, inspect dependent pages' wrapping, hierarchy, control geometry and relevant locales rather than judging only the specimen. For motion, observe trigger, preparation, progression, settling, reversal and interruption where applicable, including other components that must remain spatially or semantically continuous. For a dynamic background, examine moving emphasis and foreground reading/input conditions in the assembled task. A static frame, component-area estimate or passing geometry assertion supports only its actual observation.
 
 Trace each important quality through its observed reference, actual mature implementation, faithful authorized design translation or qualifying authorized W1–W3 work, current rendered result and remaining difference. Judge scope suitability, research depth and visual maturity from that evidence. Formal SPEC identity, record structure, actual implementation and perceived quality require separate conclusions; neither a smaller scope nor a completed structural report establishes them.
+
+### Scope regression across shared migrations and evolving code
+
+In long-lived products undergoing [staged shared-foundation migrations](component-sourcing.md#migrate-shared-foundations-across-existing-surfaces-in-stages) or [ongoing engineering co-evolution](integration.md#reconcile-ongoing-engineering-and-contract-drift-between-rounds), replace both impossible whole-application re-audits and silent neighbor breakage with **dependency-scoped proportional regression**:
+
+1. **Derive blast radius from actual shared dependencies:** inspect which surfaces share the changed font metrics, semantic surface or contrast tokens, shared shell geometry, overlay/portal stacking layer, scroll container, navigation chrome or control primitive. Scope regression from real dependency coupling rather than fixed route quotas or blanket version invalidation.
+2. **Inspect three targeted scopes proportionally:**
+   - **Primary changed slice:** perform full perceptual, state, content and temporal verification for the active SPEC's own promised qualities.
+   - **Migration seam transitions:** exercise real navigation and cross-component transitions where migrated and unmigrated surfaces meet, confirming shared navigation anchor stability, theme/locale/reduced-motion parity, single keyboard/focus ownership and clean overlay/portal layering.
+   - **Representative high-risk extremum consumers:** inspect downstream surfaces that stress the changed shared dependency hardest—such as high data density tables or dense workbenches, narrow or short viewports, long or mixed-script localized text, and dark/light or reduced-motion variants—where token contrast, wrapping or container overflow breaks first.
+3. **Verify brownfield hotfix craft repairs and clean surface retirement:** when repairing visual craft on top of an emergency engineering or accessibility hotfix, confirm that the preserved functional, accessibility or security fix still passes alongside the restored visual craft, token role and mature-source provenance. When a SPEC supersedes or retires an obsolete surface, verify that zero dead navigation entries, stale internal links, orphaned controls or contradictory copy remain in the active product UI.
+4. **Keep unmigrated and uninspected scope explicit:** record remaining not-yet-migrated routes, active compatibility bridges and deferred viewport or variant checks honestly as open horizon items or [Verification Scope Debt](evidence-map.md#compact-active-records-without-evaporating-open-obligations) rather than implying uninspected pages passed.
 
 ## Inspect and show the first reviewable result
 

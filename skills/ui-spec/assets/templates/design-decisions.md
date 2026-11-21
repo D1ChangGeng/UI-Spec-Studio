@@ -131,6 +131,8 @@ evidence maturity. Consider breadth, depth, temporal coverage, relevance and rel
 together. State which open question could overturn the decision and how the next
 action will resolve or contain it. User approval keeps its actual scope.
 
+Surface any active open obligations (**Visual & Craft Debt**, **Provisional Probe & Migration Bridge Debt**, **Integration & Contract Debt**, or **Verification Scope Debt**) attached to touched objects or approaching `finish`, with owner, reopen trigger and current status so deferred commitments never evaporate across sessions.
+
 ## Asset production and placement
 
 For identity-bearing or other consequential visual assets, link the shared asset ID
@@ -250,6 +252,8 @@ evidence/reason, affected increment relationships and where unresolved responsib
 continues. Refinements serving the same goal remain within the same SPEC. A new
 SPEC identifies a distinct design purpose and review boundary; it does not reset
 the current product or turn an open quality gap into a completed result.
+
+Keep the active `Current Design Model` proportional to the active product and its open obligations ([compaction and debt anti-evaporation](../../references/evidence-map.md#compact-active-records-without-evaporating-open-obligations)). Distill closed intermediate exploration, superseded candidates and retired-surface details into concise `Meaningful Revisions` entries linked to the cold `Evidence Archive`, while carrying every unresolved Visual & Craft, Provisional Probe & Migration Bridge, Integration & Contract and Verification Scope obligation forward with its owning object/SPEC and reopen trigger until verified closed, transferred or retired with documented cause.
 
 ### Reading a structural report
 
