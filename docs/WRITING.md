@@ -289,3 +289,33 @@ source-preserving adaptation and authorized specialist production. Explain actua
 retained relationships and observed integration conflicts in user-facing results.
 A permission request names a concrete unresolved original responsibility and why
 the existing instruction does not cover it; existing scoped permission is reused.
+
+## Write for long-term continuation and brownfield evolution
+
+Author runtime continuation guidance in final-state language around the enduring
+objects of the project—`Overall Product Goal`, `Current Design Model`, live
+`Current Product UI`, living SPEC horizon dispositions and linked `Meaningful
+Revisions` / `Evidence Archive`—never around release numbers, changelog narration
+or version-history storytelling inside `skills/ui-spec/`.
+
+State resumption-ready current models by separating settled commitments (retained
+under stated conditions) from reopenable claims, provisional probes, migration
+bridges and explicit open obligations. Explain causal reopening triggers (changed
+intent, invalidated operating or contract conditions, observed perceptual or
+functional failure) rather than inventing staleness timers, fixed round intervals
+or line/byte compaction caps.
+
+Write revision and compaction entries causally: record what changed, why it
+changed, which objects and conditions were affected, what the active judgment now
+is, and where cold archived evidence lives. Name all four open obligation classes
+(Visual & Craft Debt, Provisional Probe & Migration Bridge Debt, Integration &
+Contract Debt, Verification Scope Debt) explicitly so compaction and SPEC
+repartitioning carry concrete follow-up responsibilities instead of abstract
+summaries that hide unfinished work.
+
+Describe brownfield drift reconciliation, staged shared-system migrations and
+dependency-scoped regression through concrete causal paths and shared-object
+dependencies (primary changed slice, coexistence seams, high-risk extremum
+consumers) while keeping valid engineering fixes and default-deny W1–W3 provenance
+separate and inspectable. Do not encode mechanical pass/fail thresholds or
+bureaucratic approval gates into prose or neutral structural records.
