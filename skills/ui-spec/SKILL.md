@@ -1,11 +1,11 @@
 ---
 name: ui-spec
-description: "Design coherent screen-based experiences and connect approved designs to real behavior. Use for product UI, UI SPECs, READMEs, docs, diagrams and visual media; intent-grounded product research, experience alignment, evidence planning, deep visual exploration, meaningful candidate comparison, art direction, expressive contrast, perceptual and temporal inspection, default-deny original UI construction with scoped W1-W3 authorization, mature-resource adoption, local trials, asset engineering, brand/type/2D/3D/media craft, content design, UX writing, multilingual typography, responsive/accessibility review, complete states, theme/language variants, performance and real integration. Expand named-product analogies into experience questions; combine textual, visual and behavioral evidence; calibrate research to impact, uncertainty and improvement potential. Leads from a goal or continuation through init, iterate, audit, finish and optional shape, preserving independent expression and verifying actual use."
+description: "Design coherent screen experiences and connect approved designs to real behavior. For product UI, UI SPECs, READMEs, docs, diagrams, visual media; intent-grounded research, experience alignment, evidence planning, visual exploration, candidate comparison, art direction, expressive contrast, perceptual/temporal inspection, default-deny original UI construction with scoped W1-W3 authorization, mature-resource adoption, local trials, asset engineering, brand/type/2D/3D/media craft, content design, UX writing, multilingual type, responsive/a11y review, complete states, theme/language variants, performance, real integration, cross-session resumption, living SPEC horizon, brownfield drift reconciliation, staged shared-system migrations, sustainable record compaction. Expand analogies into experience questions; combine text/visual/behavioral evidence by impact and uncertainty. Leads goal or continuation via init, iterate, audit, finish and optional shape, preserving independent expression and verifying actual use."
 license: MIT
 compatibility: "A coding agent with project-file access. Implementation needs project execution; visual review needs browser and image-inspection tools. Network access supports reference research. Optional record helpers require Python 3.10+."
 metadata:
   author: D1ChangGeng
-  version: "1.20.6"
+  version: "1.21.0"
 ---
 
 # UI Spec Studio
