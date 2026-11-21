@@ -27,7 +27,7 @@ For Codex installation in your user scope, or for a safe migration from the old 
 npx --yes ui-spec-studio@latest install --agent codex --global --migrate
 ```
 
-Use `--migrate` only when an unmanaged Skill already exists; it backs up the old directory and restores it on uninstall. The installer also offers an interactive migration choice. For an immutable fallback without npm registry resolution, use the [pinned GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.21.0). Avoid the mutable GitHub `releases/latest/download/*.tgz` address as an `npx` package specifier; it can select a stale cache entry.
+Use `--migrate` only when an unmanaged Skill already exists; it backs up the old directory and restores it on uninstall. The installer also offers an interactive migration choice. For an immutable fallback without npm registry resolution, use the [pinned GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.22.0). Avoid the mutable GitHub `releases/latest/download/*.tgz` address as an `npx` package specifier; it can select a stale cache entry.
 
 The installer uses a guided terminal flow with live verification, host-specific registration and reversible migration of older Skills CLI installations. A pre-existing unowned Skill is **not** silently replaced: interactive users can select a backed-up migration; headless users may explicitly pass `--migrate`. The original installation is restored on uninstall. For Chinese prompts, append `--lang zh`.
 
@@ -40,6 +40,17 @@ and build the first reviewable SPEC. Show the result and the evidence behind it.
 ```
 
 After reviewing, **“Approved, continue”** carries the accepted direction into the next useful work. **“Use ui-spec: finish”** connects an accepted design to its actual content, behavior and delivery boundary. [Installation and agent options](docs/INSTALL.md) · [Multi-round guide](docs/GUIDE.md)
+
+## Sustain multi-session and brownfield development
+
+Version **1.22** builds directly on `v1.21`'s wide discovery, deep reuse and taste calibrations so long-lived products remain manageable across fresh host sessions, concurrent engineering commits and multi-round migrations—without adding ticket state machines, quotas or routine approval gates:
+
+- **Cross-session resumption & anti-relitigation:** reconcile the `Overall Product Goal`, `Current Design Model` and live `Current Product UI` on re-entry; inherit settled foundations without repeating broad discovery and leave resumption-ready handovers at both completed increments and mid-SPEC pauses.
+- **Living multi-SPEC horizon & safe retirement:** sequence increments across dependencies, anchor-slice leverage and parallel worktrees (`candidate`, `active`, `completed`, `superseded`, `consolidated`, `retired`) while transferring valid user tasks and open obligations before removing obsolete surfaces.
+- **Brownfield drift & staged shared-system migrations:** reconcile external commits, backend contract updates and ad-hoc UI hotfixes without discarding valid functional/accessibility fixes; upgrade shared tokens and mature component families in waves via scoped W1–W3 coexistence bridges and dependency-scoped proportional regression (primary slice, seams, extremum consumers).
+- **Bounded `O(active product)` compaction & Debt Anti-Evaporation:** compact closed history into causal `Meaningful Revisions` and cold `Evidence Archive` pointers while keeping **Visual & Craft**, **Provisional Probe & Migration Bridge**, **Integration & Contract** and **Verification Scope** obligations visible until verified closed or explicitly retired.
+
+[v1.22 review & content-integrity disposition](docs/REVIEW-v1.22.0.md) · [v1.22.0 release notes](docs/releases/v1.22.0.md)
 
 ## Discover high-craft foundations, deepen reuse, sharpen taste
 
@@ -226,13 +237,13 @@ Before substantive work, the agent reads **eight common references in full**: [w
 
 ```bash
 # Install Skill and native Codex roles from the lightweight release package
-npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz" install --agent codex
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.22.0/ui-spec-installer.tgz" install --agent codex
 
 # Pin this installer to an immutable release version
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.22.0/ui-spec-installer.tgz install --agent codex
 
 # Standard Skills CLI: install only the portable Skill ZIP (not native roles)
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-1.21.0.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.22.0/ui-spec-1.22.0.zip --skill ui-spec -a codex
 ```
 
 The unified installer also supports Claude Code, Cursor and OpenCode through `--agent`; Codex alone activates the separately registered four-role adapter. Core guidance is Markdown; optional record helpers require Python 3.10+ and the standard library. [Offline installation and updates](docs/INSTALL.md).

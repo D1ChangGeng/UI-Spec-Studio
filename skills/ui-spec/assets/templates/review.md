@@ -12,7 +12,11 @@ For formal SPEC review, identify the increment, its experience goal and visual
 responsibilities in the current product. Distinguish the broader research scope,
 primary implementation and affected-product regression. Identify inherited
 decisions and shared dependencies relevant to this review; references to existing
-records are sufficient.
+records are sufficient. For shared migrations or ongoing brownfield changes, state
+the [dependency-scoped proportional regression](../../references/verification.md#scope-regression-across-shared-migrations-and-evolving-code)
+coverage: primary changed slice, migrated-to-legacy seam transitions and representative
+high-risk extremum consumers (dense content, narrow/short viewports, long localized text,
+theme/reduced-motion variants).
 
 ## Observation
 
@@ -59,7 +63,10 @@ interval and connected path after changes; keep residual gaps and target changes
 Keep repairs and reinspection serving the promised goal within the current SPEC.
 If new evidence changes its boundary, record the reason, original finding,
 preserved product goal and the scope now responsible for unresolved work. A new
-increment does not establish that the earlier finding was resolved.
+increment does not establish that the earlier finding was resolved. When repairing
+visual craft on top of a brownfield engineering or accessibility hotfix, verify both
+that the preserved functional/security/accessibility behavior still passes and that
+restored visual craft respects the adopted mature foundation.
 
 ## Result
 
@@ -91,6 +98,10 @@ working/renderable entry and decisive evidence in the conversation, with importa
 choices and the next useful increment; writing this record alone is not delivery.
 For a product UI, inspect whether real tasks and visual/interaction results carry
 the design, with internal method explanations kept in their appropriate record.
+When superseding or retiring a surface, confirm zero dead navigation entries, stale
+links or orphaned controls remain, and confirm every unresolved open obligation was
+either closed with evidence, explicitly transferred to a successor SPEC or retired
+with documented product cause.
 
 For a research or selection decision, assess coverage breadth, inspection depth,
 temporal completeness, relevance and reliability together. Identify evidence that
