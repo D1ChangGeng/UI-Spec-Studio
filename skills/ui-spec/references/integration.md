@@ -8,6 +8,7 @@ Read this reference for finish and whenever a design depends on actual data, aut
 - [Establish the contract](#2-establish-the-behavior-contract)
 - [Sequence and connect outcomes](#3-sequence-complete-user-outcomes)
 - [Verify and deliver](#5-verify-design-and-behavior-together)
+- [Reconcile ongoing engineering and contract drift](#reconcile-ongoing-engineering-and-contract-drift-between-rounds)
 - [Preserve design and resource decisions](#preserve-design-intent-at-four-boundaries)
 - [Connect assets and content](#carry-asset-sources-and-delivery-through-finish)
 - [Prepare data with correct authority and lifetime](#prepare-data-with-correct-authority-and-lifetime)
@@ -70,6 +71,29 @@ A request to finish authorizes the scoped implementation. Production operations,
 General implementation, continuation or finish authority does not expand into original visual construction. Reuse any already explicit original-design authorization for its actual W1–W3 responsibility without asking again. When that authority is absent, resolve the concrete resource gap and original necessity before requesting the scoped decision; continue independent authorized connections.
 
 Complete independent work while credentials or external services are pending. Describe the next required resource and the behavior it will verify. Final handover states what is working and observed, so the next developer can continue directly from the current source and evidence.
+
+## Reconcile ongoing engineering and contract drift between rounds
+
+In long-lived products, backend APIs, domain rules, dependencies and production bug fixes continue evolving between UI rounds. On re-entry—as part of establishing the [Continuation Baseline](workflow.md#establish-the-continuation-baseline-before-changing-work)—run a targeted **tri-way drift reconnaissance** before mutating UI or reusing prior verification claims:
+
+1. **Current Design Model:** accepted commitments, adopted mature sources, verified conditions and open obligations.
+2. **Code and Service Contract Reality:** recent Git commits, modified routes or components, API/schema types, permission rules, error contracts and dependency updates.
+3. **Rendered Product UI:** what the running interface currently displays and how key states behave under live or fixture data.
+
+Classify each observed divergence by causal layer and apply the matching reconciliation path:
+
+| Drift class | Typical evidence between rounds | Causal reconciliation action |
+|---|---|---|
+| **Compatible engineering evolution** | Internal refactors, state-management cleanup, performance optimizations, dependency patches or non-breaking backend adjustments that preserve rendered UI, copy, states and timing | Keep existing visual approvals and verified claims intact; update tracked module or file paths in the `Current Design Model` only where recorded, without triggering needless redesign or blanket re-audits. |
+| **Authoritative backend, domain, permission or error contract change** | New required inputs, renamed business entities, altered pagination or streaming schemas, tightened role permissions, rate limits or new async error and timeout states | Treat the trusted backend and domain contract as authoritative fact owner. Preserve real backend wiring rather than reverting it or hiding new contract states behind stale fixtures; open or extend a bounded UI adaptation inheriting the established mature visual system and product content voice so loading, denied, partial and recovery states remain truthful. |
+| **Ad-hoc UI hotfix or unreviewed surface drift** | Emergency production patches, accessibility fixes, security guards or unstyled developer-scaffolded controls landed outside a formal UI round | Inspect the live rendered UI and Git history before editing. Preserve the functional, accessibility, security or edge-case fix that landed, diagnose whether visual craft, spacing, semantic token roles, layout/scroll ownership or [default-deny visual provenance](component-sourcing.md#default-deny-original-ui-construction) degraded, repair the visual relationship on top of the preserved behavior using the adopted mature component and token system, and re-verify both the repaired craft and the preserved fix. |
+| **Product requirement or direction pivot** | Confirmed changes in stakeholder priority, workflow scope, target audience or explicit art direction since prior SPECs | Scope invalidation strictly to affected L0–L5 objects, states and approval scopes while keeping unaffected verified surfaces intact. Record a concise `Meaningful Revision` explaining what changed, why and how open obligations transferred or retired; surface a focused user choice only when binding prior commitments conflict. |
+
+**Co-evolve cleanly during active integration and parallel engineering.** Multi-round brownfield work routinely overlaps with phased backend delivery and concurrent engineering branches:
+
+- **Feature flags, phased rollouts and contract version skew:** design and verify truthful states for both enabled and fallback paths when capabilities roll out gradually. Keep unfinished controls behind explicit capability gates and isolate transient payload versions behind an adapter boundary so visual components remain stable.
+- **Deterministic review fixtures alongside evolving live adapters:** update fixture adapters whenever authoritative backend contracts change so visual regression fixtures express current domain truth while keeping fixture checks distinct from live boundary verification.
+- **Concurrent branch integration:** when parallel engineering changes touch shared schemas, routes or shells during an active UI increment, reconcile the merged behavior and re-inspect affected seams before delivery rather than overwriting concurrent commits.
 
 ## Preserve design intent at four boundaries
 
@@ -150,6 +174,6 @@ A scoped integrator can configure, compose and connect an already selected matur
 
 Permit source-supported adaptation, routing, data and event wiring, responsive connections and compatibility repairs while retaining the reason the source was chosen. An unmade design choice is not a deterministic implementation task. Return material layout, visual-language, motion or source-selection questions to the main agent instead of silently inventing CSS or rebuilding a mature component. Original visual responsibility still requires the exact authorized W1–W3 scope.
 
-Assign non-overlapping files or isolated worktrees where useful and agree on shared contracts before parallel writes. Do not assume that different agent names create separate filesystems. Verify the actual checkout, preserve unrelated changes and stop conflicting writes. Integrating multiple contributions requires a main-agent whole-product pass; isolated component success does not establish coherent density, type, focus, scrolling or continuous task behavior.
+Assign non-overlapping files or isolated worktrees where useful and agree on shared contracts before parallel writes. Do not assume that different agent names create separate filesystems. Verify the actual checkout and recent contract commits before writing, preserve unrelated changes and stop conflicting writes. When a scoped integrator encounters unexpected external commits, API or schema drift, or an unstyled functional hotfix inside its assigned scope, preserve the functional fix and report the divergence (what changed and which contract or visual relationship is affected) back to the main agent rather than silently improvising visual UI or overwriting unrelated engineering commits. Integrating multiple contributions requires a main-agent whole-product pass; isolated component success does not establish coherent density, type, focus, scrolling or continuous task behavior.
 
-Return actual changes, exact adopted sources, checks performed, viewed evidence and unresolved risks. Tests passing, dependency installation and code imports establish their own facts, not retained craft or final SPEC acceptance. Trial or integration failures can trigger targeted source investigation; keep unresolved quality visible within its responsible formal SPEC.
+Return actual changes, exact adopted sources, checks performed, viewed evidence, surfaced external drift and unresolved risks. Tests passing, dependency installation and code imports establish their own facts, not retained craft or final SPEC acceptance. Trial or integration failures can trigger targeted source investigation; keep unresolved quality visible within its responsible formal SPEC.

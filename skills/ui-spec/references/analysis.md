@@ -2,7 +2,7 @@
 
 ## Contents
 
-[Alignment target](#establish-the-products-target-experience) · [Experience dimensions](#nine-dimensions-one-coherent-experience) · [Evidence planning](#plan-evidence-around-the-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Product model](#recognize-the-product-through-its-use) · [Direction](#confirm-consequential-direction-with-useful-options) · [Formal SPEC scope](#choose-a-bounded-increment) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)
+[Alignment target](#establish-the-products-target-experience) · [Experience dimensions](#nine-dimensions-one-coherent-experience) · [Evidence planning](#plan-evidence-around-the-experience) · [Visual reasoning](#use-theory-to-investigate-real-design-work) · [Product model](#recognize-the-product-through-its-use) · [Direction](#confirm-consequential-direction-with-useful-options) · [Formal SPEC scope](#choose-a-bounded-increment) · [Horizon governance](#govern-the-multi-spec-horizon-and-retire-obsolete-scope) · [Content and representation](#design-the-understanding-before-the-arrangement) · [Reference study](#read-references-as-mechanisms)
 
 ## Establish the product's target experience
 
@@ -178,6 +178,35 @@ State the important visual and interaction qualities the SPEC is responsible for
 Trace **target quality → real visual reference → mature resource, faithful authorized design translation or qualifying authorized W1–W3 implementation → actual presentation in the current product → remaining quality gap**. Research volume, dependency installation and a functioning prototype each establish their own facts. Verify the consequential relationship in actual use before claiming the design value was delivered. This is professional accountability, not a requirement to fill a fixed schema.
 
 For a new product, choose an initial closure that can demonstrate the core experience and visual direction at a quality worth inheriting. A representative conversation entrance and reading space can establish composition, type and mature interaction before advanced tools are added. Keep undeveloped capabilities visibly truthful. An exploratory scaffold can answer a question, but its provisional roughness should not silently become the shared visual foundation. Subsequent evidence can still revise an accepted foundation. Progress can remove, merge, replace or reorganize content as well as add it.
+
+### Govern the multi-SPEC horizon and retire obsolete scope
+
+Over multi-month product evolution spanning dozens of increments, manage candidate and past SPECs as a **living horizon** over one evolving product rather than a static initial plan or an append-only archive of historical rounds. Use descriptive dispositions to make each increment's current role clear across sessions and engineers:
+
+| Disposition | Meaning in the living horizon |
+|---|---|
+| `candidate` | A proposed future closure whose scope, dependencies and priority remain revisable as evidence develops. |
+| `active` | A formal UI SPEC currently owning research, implementation or verification work on the product. |
+| `completed` | A delivered increment whose design commitments and adopted work remain active in the current product. |
+| `superseded` | A prior SPEC whose direction, interaction model or shared foundation has been deliberately replaced by a newer increment. |
+| `consolidated` | A formerly separate SPEC merged into a unified workflow or shared foundation increment. |
+| `retired` | An increment whose UI surface or product capability has been removed from the active product. |
+
+These dispositions are descriptive planning facts kept in the project's existing design records—never a rigid ticket state machine, a SPEC-count quota or a structural inspector gate.
+
+**Sequence by user value, dependency and leverage.** Order candidate SPECs using three complementary criteria alongside user urgency:
+
+- **Cross-SPEC dependency:** place shared application shells, primary navigation frames, semantic token or typography systems and blocking domain contracts ahead of downstream consuming routes when leaving them unresolved would force systemic rework across many surfaces.
+- **Risk-reduction leverage:** when a shared visual system, mature component family or complex interaction pattern carries high uncertainty, validate it first on one representative high-signal anchor slice with realistic content and states before expanding across remaining routes.
+- **Parallelizable boundaries:** identify independent candidate increments with disjoint surfaces, non-overlapping source modules and stable shared contracts that can advance concurrently across engineers or isolated worktrees without artificial serialization. Name the shared interface boundary before parallel work begins so concurrent increments do not drift apart.
+
+When a foundational SPEC changes an assumption relied upon by queued candidates—such as navigation depth, typography measure, theme structure or state ownership—re-check only the affected candidate boundaries and dependencies instead of discarding or rewriting the entire horizon.
+
+**Reprioritize on evidence and retire obsolete scope safely.** Concrete triggers that warrant reshaping the horizon include shifted product priorities, newly surfaced backend or service constraints, discovery of a mature resource that cleanly unifies several planned slices, or operational evidence from live use. Whenever superseding an earlier SPEC, consolidating two workflows or retiring an obsolete UI surface, apply a three-part safety rule:
+
+1. **Account for valid user task paths:** establish where every still-valid user task, entry point, deep link or recovery path moves in the successor surface, or confirm explicit product removal of that capability.
+2. **Transfer or explicitly close owned obligations:** trace every visual quality commitment and unresolved debt item owned by the departing SPEC—either transfer it to the successor SPEC with unbroken provenance and reopen triggers, or close it as obsolete with the concrete product cause recorded in `Meaningful Revisions` ([Current model, meaningful revisions and evidence archive](evidence-map.md#current-model-meaningful-revisions-and-evidence-archive)).
+3. **Remove orphaned UI from the active product:** delete dead navigation entries, stale internal links, orphaned controls and contradictory copy from the `Current Product UI` so the live interface never contradicts its active architecture.
 
 ## Preserve the right facts
 

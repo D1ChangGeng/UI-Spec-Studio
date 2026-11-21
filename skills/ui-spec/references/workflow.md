@@ -2,7 +2,7 @@
 
 ## Contents
 
-[Current scope](#operate-on-the-current-scope) · [Observable execution](#make-consequential-design-work-observable) · [Init](#init--establish-a-useful-working-understanding) · [Shape](#shape--resolve-just-enough-direction-to-build-well) · [Iterate](#iterate--deliver-one-meaningful-increment) · [Audit](#audit--inspect-an-identified-scope) · [Finish](#finish--complete-real-connection-work) · [Continuity](#continuity-with-lightweight-records) · [Evidence map](#use-the-evidence-map-inside-each-operation)
+[Current scope](#operate-on-the-current-scope) · [Observable execution](#make-consequential-design-work-observable) · [Re-entry and handoff](#re-enter-and-hand-off-across-sessions-without-losing-direction) · [Init](#init--establish-a-useful-working-understanding) · [Shape](#shape--resolve-just-enough-direction-to-build-well) · [Iterate](#iterate--deliver-one-meaningful-increment) · [Audit](#audit--inspect-an-identified-scope) · [Finish](#finish--complete-real-connection-work) · [Continuity](#continuity-with-lightweight-records) · [Evidence map](#use-the-evidence-map-inside-each-operation)
 
 ## Operate on the current scope
 
@@ -47,6 +47,39 @@ For an important resource choice, show which mature implementation will carry th
 
 Use **Selective Strong Disclosure**: make important commitments, consequential choices, first meaningful results, major mismatches and delivery visible when they occur, while merging related low-impact events and omitting invented ones. Reuse research evidence already produced for design judgment. Maintain the current model when a disclosed choice changes; the old message remains history rather than an irrevocable design decision. Presentation detail follows the active SPEC's qualities: background work may need material/foreground comparison, while streaming work may need scroll and interruption evidence. Neither output quantity nor polished reporting certifies research, implementation or quality. Host-required progress messages retain their own purpose and do not become extra design milestones.
 
+## Re-enter and hand off across sessions without losing direction
+
+Long-lived products span many sessions, branches and engineers. Re-entry orientation, inter-round drift triage, horizon updates and active-record compaction happen inside the existing operations (`init`, optional `shape`, `iterate`, `audit` and `finish`), without adding workflow phases, fixed turn or round quotas, or extra approval gates for routine continuation.
+
+### Establish the continuation baseline before changing work
+
+When entering an ongoing product in a fresh session or handoff—after reading all eight common references in full—reconcile three live authorities before editing code or starting broad research:
+
+1. **Overall Product Goal and confirmed constraints:** verify the complete intended experience, explicit aesthetic direction, user tasks, non-negotiable business rules and remaining candidate horizon.
+2. **Current Design Model:** inspect the active or next-recommended Formal UI SPEC, settled visual and interaction foundations, adopted mature resources with their approval provenance, shared system rules and all open obligations, provisional probes or unresolved decision units.
+3. **Live Current Product UI:** inspect the actual repository files, routes, runnable preview, recent Git commits and any external service, schema or dependency changes that landed since the last recorded state.
+
+Reconciling all three prevents two recurring multi-session failures: relying on prior records alone misses engineering commits and contract shifts, while reading code alone erases approval provenance, settled aesthetic intent and the distinction between an adopted foundation and a temporary probe. When live code or contracts diverge from the last recorded state, diagnose the cause before modifying UI using [ongoing engineering and contract drift reconciliation](integration.md#reconcile-ongoing-engineering-and-contract-drift-between-rounds).
+
+### Preserve settled commitments and avoid relitigation
+
+Separate **settled commitments** from **reopenable claims** before planning new exploration:
+
+- **Settled commitments** include approved art direction, the established primary interaction model, validated shared tokens and typography, and adopted mature implementations whose operating conditions and supporting evidence still hold. Inherit them directly. A fresh session, a new engineer or routine continuation is not a reason to restart broad ecosystem discovery, re-debate resolved product models or silently swap mature foundations.
+- **Reopenable claims** include provisional assumptions, unverified viewports/states/locales, unresolved decision units, temporary technical probes, deferred quality gaps and prior choices contradicted by newly observed code, service contracts or visual evidence.
+
+Reopen a settled commitment only on a concrete trigger: changed user intent, changed operating or service-contract conditions, or an observed visual, craft or behavioral failure at the responsible object and condition. Scope the reopening to the affected objects and dependents rather than discarding unrelated verified work, and record the cause and changed scope in `Meaningful Revisions`.
+
+### Leave a resumption-ready handover at increment exit and mid-SPEC pauses
+
+Whether closing a completed increment or pausing mid-SPEC because of context limits, pending credentials or external services, awaiting a high-impact user choice, or splitting work across days, update the `Current Design Model` and provide a concise conversation handover containing:
+
+- **Runnable entry and active state:** exact preview command, route or fixture path needed to inspect the current surface immediately.
+- **Distinct per-scope maturity facts:** record `implemented`, `inspected`, `approved`, `connected` and `verified` separately for each touched scope, along with the actual viewing and runtime conditions checked.
+- **Artifact identity and provenance:** distinguish **temporary technical probes**, **local trials** and **integrated UI** explicitly so the next session never mistakes an exploratory probe or fixture adapter for an adopted mature foundation.
+- **Open obligations and blockers:** preserve every unresolved visual or craft gap, provisional probe or migration bridge, pending real-service wiring, uninspected verification condition and active blocker with the concrete condition or evidence needed to resolve it.
+- **Next concrete action:** state the specific next evidence-producing check, bounded trial, implementation repair or integration step so a fresh session can resume in one pass without repeating settled exploration.
+
 ## init — establish a useful working understanding
 
 Read requirements, accepted decisions, code, actual screens, dependencies and run/test instructions. Separate required behavior, explicit aesthetic goals and revisable conventions. Establish people, primary working objects, task loop, result location, content authority and operating conditions. Distinguish a live product, representative demo and authored output. View the normal-scale whole; retain important unobserved conditions, asset rights and production capabilities.
@@ -60,6 +93,8 @@ The initial inventory includes the existing project, accepted screens and decisi
 Preserve the complete product goal separately from the first formal SPEC. Identify the current implementation and applicable mature foundations, then find the consequential visual objects, state/time relationships and shared dependencies that may need concentrated work. Use the [minimum sufficient experience closure](analysis.md#choose-a-bounded-increment) to form a provisional structure of meaningful candidate SPECs, their important dependencies and a justified first priority. A candidate is planning context, not an already started formal increment or a promise of a permanently fixed sequence. Keep important goals with uncertain boundaries visible as open planning questions.
 
 Present that understanding in the conversation: the intended overall result, the current foundation, the proposed increments and why the first scope can be completed and reviewed well. State what could change the grouping. A complete mature implementation may support a larger first increment; uncertain interaction relationships may need further study before later boundaries become useful. For a new product, select a representative core experience with visual quality worth carrying forward. Continue authorized research and implementation without requiring approval for ordinary planning refinements.
+
+When adopting a continuing product or returning after substantial elapsed work, establish the [Continuation Baseline](#establish-the-continuation-baseline-before-changing-work) from existing goals, design records and live code, and express the candidate sequence as a living horizon (`candidate`, `active`, `completed`, `superseded`, `consolidated`, `retired`) using [multi-SPEC horizon governance](analysis.md#govern-the-multi-spec-horizon-and-retire-obsolete-scope) rather than treating the initial list as a frozen backlog.
 
 ## shape — resolve just enough direction to build well
 
@@ -79,7 +114,7 @@ Choose research, trial or expansion by what the evidence supports. Similar new r
 
 ## iterate — deliver one meaningful increment
 
-**Orient and choose.** Reconcile feedback, accepted decisions, current code, incomplete journeys and findings. A continuation request is sufficient: choose and state the next useful outcome. Continue the active SPEC when fulfilling its established objective or resolving its quality gaps. Begin a new formal SPEC when undertaking a new cohesive design objective with its own meaningful review boundary; an additional search, repair or execution pass remains internal work.
+**Orient and choose.** Establish the [Continuation Baseline](#establish-the-continuation-baseline-before-changing-work) by reconciling user feedback, accepted decisions, current code, incomplete journeys and prior findings. Before modifying UI on a continuing codebase, run a focused check for commits, hotfixes or API/schema shifts since the last round via [ongoing engineering and contract drift reconciliation](integration.md#reconcile-ongoing-engineering-and-contract-drift-between-rounds). Inherit settled commitments whose conditions still hold without re-litigating resolved direction, and update the living horizon via [multi-SPEC horizon governance](analysis.md#govern-the-multi-spec-horizon-and-retire-obsolete-scope) when evidence warrants reprioritizing, consolidating, superseding or retiring scope. A continuation request is sufficient: choose and state the next useful outcome. Continue the active SPEC when fulfilling its established objective or resolving its quality gaps. Begin a new formal SPEC when undertaking a new cohesive design objective with its own meaningful review boundary; an additional search, repair or execution pass remains internal work.
 
 **Define the slice.** Identify affected pages/states, dependencies, intended user outcome and observation conditions. Keep connected tasks and shared families coherent. State the formal SPEC's quality responsibility, the objects and relationships that must be handled together, and the applicable current-product decisions it inherits. Distinguish research/observation, primary design/implementation and integration/regression scopes. Apply the analysis method to keep, split, merge or redraw the proposed boundary; explain important scope choices and their product implications to the user before broad work depends on them.
 
@@ -103,7 +138,7 @@ For performance or operating work, observe the sequence through input, usable re
 
 **Present and continue.** Supply the working entry, important choices and inspected outcome. Connect goals, evidence, actual adoption, retained mechanisms and adaptations. Distinguish studied, compared, trialled and adopted resources; use representative frames/intervals where useful. State consequential gaps, observed conditions, approval scope and next useful work. The user need not restate the method.
 
-Make the delivery useful in the conversation, not only in saved records. Show the actual operable or renderable increment, significant visual references/comparisons, adopted resources and observed results at a depth proportional to their design impact. Explain the contribution to the complete product and the current candidate for subsequent work. During research, surface a finding or local result when it materially changes a design choice. Link detailed records for traceability while keeping the user-facing account focused on what can be seen, used or decided.
+Make the delivery useful in the conversation, not only in saved records. Show the actual operable or renderable increment, significant visual references/comparisons, adopted resources and observed results at a depth proportional to their design impact. Explain the contribution to the complete product and the current candidate for subsequent work. During research, surface a finding or local result when it materially changes a design choice. Link detailed records for traceability while keeping the user-facing account focused on what can be seen, used or decided. Whether delivering a completed increment or pausing mid-SPEC, leave a [resumption-ready handover](#leave-a-resumption-ready-handover-at-increment-exit-and-mid-spec-pauses) in the `Current Design Model`, update affected horizon dispositions and compact superseded exploration or closed intermediate trials into `Meaningful Revisions` and linked `Evidence Archive` while keeping every open obligation visible ([Current model, meaningful revisions and evidence archive](evidence-map.md#current-model-meaningful-revisions-and-evidence-archive)).
 
 ### Turn subjective feedback into a useful repair
 
@@ -113,17 +148,17 @@ Treat an observation as an experience to investigate; a suggested implementation
 
 Respect review-only versus repair scope. Reconcile routes, navigation, roles, overlays and tasks; inspect structure, families, regions and details, then the complete journey. Use [verification](verification.md) for coverage and evidence.
 
-Connect a viewed frame/interval to perceptual or task impact, the relevant principle, a cause to test and repair scope. Use the nine experience dimensions to find missing responsibilities. Shared issues need related-page/sequence checks. Distinguish actually viewed coverage, captured media and the inventory; preserve pending, blocked, failed and approved-exception meanings.
+Connect a viewed frame/interval to perceptual or task impact, the relevant principle, a cause to test and repair scope. Use the nine experience dimensions to find missing responsibilities. Shared issues need related-page/sequence checks. Distinguish actually viewed coverage, captured media and the inventory; preserve pending, blocked, failed and approved-exception meanings. In a continuing repository, establish the [Continuation Baseline](#establish-the-continuation-baseline-before-changing-work) and apply [ongoing engineering and contract drift reconciliation](integration.md#reconcile-ongoing-engineering-and-contract-drift-between-rounds) before classifying a divergence as a defect so authoritative backend contract changes and functional hotfixes are distinguished from visual regressions and stale records.
 
 ## finish — complete real connection work
 
 Read integration and follow **reconcile → contract → sequence → connect → verify → deliver**.
 
-Reconcile the accepted experience, art direction, reference/resource choices and actual services, data, permissions and code. Preserve primary actions and continuation while resolving missing behavior at its owner. Connect complete tasks, inspect real content and asynchronous/error states, and verify both visual and product outcomes. Check experience alignment, expressive completion and engineering reliability at their actual boundaries.
+Reconcile the accepted experience, art direction, reference/resource choices and actual services, data, permissions and code, including any commits, hotfixes or contract changes that landed since visual review ([ongoing engineering and contract drift reconciliation](integration.md#reconcile-ongoing-engineering-and-contract-drift-between-rounds)). Preserve primary actions and continuation while resolving missing behavior at its owner. Connect complete tasks, inspect real content and asynchronous/error states, and verify both visual and product outcomes. Check experience alignment, expressive completion and engineering reliability at their actual boundaries.
 
 Carry resource configuration, attribution, modification ownership, asset masters/exports, delivery variants and rights into handover. Verify controlled state, delayed responses, combined runtime behavior and necessary fallbacks. Connect authoritative content and localization; exercise relevant freshness, duplicate actions, partial completion and unknown results. Identify the observed conditions and responsible maintenance sources.
 
-A material change to accepted appearance, task meaning or user commitment returns the affected decision for review; continue independent work. Deployment and real-world actions follow existing authorization. Static, local and service-backed products finish against their respective content, host and service boundaries.
+A material change to accepted appearance, task meaning or user commitment returns the affected decision for review; continue independent work. Deployment and real-world actions follow existing authorization. Static, local and service-backed products finish against their respective content, host and service boundaries. Before concluding, update the living horizon disposition (`completed`, plus any dependent, consolidated or retired follow-up scope), compact closed intermediate exploration while preserving any remaining external or verification obligations, and leave a [resumption-ready handover](#leave-a-resumption-ready-handover-at-increment-exit-and-mid-spec-pauses) for subsequent rounds.
 
 ## Continuity with lightweight records
 
@@ -132,6 +167,8 @@ Keep accepted direction, current outcome, key evidence/choices, shared rules, re
 Let formally equal increments act on that same current product through four relationships: **Inherit** applicable tasks, visual systems and mechanisms with their supporting conditions; **Extend** them with a coherent new experience; **Adapt** existing layout, shared styles or state behavior to accommodate the increment; **Revisit** earlier decisions when new evidence changes their fit. These are descriptions of design work, not additional phases or record states. Prior approval keeps its actual scope and history while a changed decision receives the appropriate review.
 
 Reuse supported research and implementation instead of restarting for every SPEC. A new increment may remove redundant copy, replace a coarse component or merge fragmented controls. Progress is the improvement in the product's intended experience, not a growing count of pages, components or SPECs. Keep deferred goals and unresolved quality visible across scope changes; the formal record's status cannot settle the actual design result.
+
+Keep the `Current Design Model` proportional to the active product and its open obligations rather than total historical rounds. When active records accumulate superseded candidates, closed intermediate trial logs or retired surface details, compact that closed history into concise `Meaningful Revisions` with cold links to the `Evidence Archive` ([Current model, meaningful revisions and evidence archive](evidence-map.md#current-model-meaningful-revisions-and-evidence-archive)). Compaction never drops an unresolved visual gap, provisional probe or migration bridge, pending integration adapter or uninspected verification condition: every open obligation stays attached to its owning object or successor SPEC until inspected closed or retired with documented product cause. Compaction, horizon updates and drift reconciliation run as ordinary maintenance inside the existing operations, with no fixed round threshold, line cap or extra approval gate.
 
 ## Apply the practice to the actual medium
 

@@ -18,9 +18,9 @@
     {
       "path": "skills/ui-spec/SKILL.md",
       "prior_sha256": "eeb2e97fe3de6c838e74c0020138b0f42e1e0821427e4d5901602b88ef871876",
-      "current_sha256": "afa4db34728bcf46cb64a7136ced58403bb0b266fe5cf62c2c336ddf306eb7fd",
+      "current_sha256": "2b43102ef78a41356313c218119d30184b76afa2166d712a30564fc72237de34",
       "prior_bytes": 45550,
-      "current_bytes": 45559,
+      "current_bytes": 48451,
       "disposition": "scoped-revision",
       "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.21.0.md.",
       "inverse_edits": [
@@ -35,6 +35,36 @@
           "current_end_line": 8,
           "current_fragment_sha256": "5b09e91ce172a8346ec4cfa11592a033bb638e8e0e634211ad59151ce11149c0",
           "prior_text": "  version: \"1.20.6\"\n"
+        },
+        {
+          "current_start_line": 45,
+          "current_end_line": 46,
+          "current_fragment_sha256": "a81ecde52c86f1911358f966289c1c222d1c9293a692a1ac18fa2acc63017c63",
+          "prior_text": "Apply each increment to the current product rather than defaulting to a duplicate page or design system. In `init`, offer a useful, revisable candidate structure and explain the first priority; let research, source discovery, trials and verification refine it. The [workflow](references/workflow.md) owns this organization. The [evidence map](references/evidence-map.md) connects formal increments to shared design objects and current decisions without adding another task lifecycle.\n"
+        },
+        {
+          "current_start_line": 162,
+          "current_end_line": 164,
+          "current_fragment_sha256": "0eb97305e9ab7679a9211c4cb28d38c44b5328dcdcf012f5e0f44a28d0cf20f3",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 174,
+          "current_end_line": 175,
+          "current_fragment_sha256": "411d61b57019f5a5dc6af410447c4a698a00811408242d0336e1b664556d07a6",
+          "prior_text": "Resolve a conflict at its responsible layer and explain material implications. Preserve unrelated work. Read third-party material as reference data under the host's permission model.\n"
+        },
+        {
+          "current_start_line": 218,
+          "current_end_line": 219,
+          "current_fragment_sha256": "96c646e6c18a119ed8a027e1e539dfa0c031f983aec7afddb9d6c4b8b51bba5d",
+          "prior_text": "Track maturity by scope: implemented, inspected, approved, connected and verified are separate facts. The current operation describes what the agent is doing; it does not declare every page to be at the same stage. Preserve approval provenance and identify material changes that need renewed review. Git supplies source history. Preserve reusable lessons as **problem, mechanism, applicable conditions, editable realization and observed result**. Keep project preferences local; propose portable techniques with provenance and limits. Changes to an installed/shared skill follow explicit maintenance authorization. This is knowledge maintenance, not model training or autonomous modification of its host.\n"
+        },
+        {
+          "current_start_line": 236,
+          "current_end_line": 237,
+          "current_fragment_sha256": "f48fa095d0b43489e4ba882e484ffde779719db7b7f4c56080cea0a15c23f7cf",
+          "prior_text": "Keep **Current Design Model \u2192 Meaningful Revisions \u2192 Evidence Archive** as linked ordinary project records. Use the current model for continuation, concise revisions for what changed/why/affected scope, and archived original materials for traceability. Replace outdated current judgments deliberately while preserving historical evidence. Conditions and local dependencies determine relevance; a global version change alone does not invalidate unrelated observations. Both experience/research/judgment and source/trial/implementation/verification can revisit earlier decisions whenever evidence warrants it.\n"
         }
       ]
     },
@@ -151,12 +181,25 @@
     {
       "path": "skills/ui-spec/references/analysis.md",
       "prior_sha256": "16519bf4b90ab7e059f2363f65428a2cfdd2118d6c4651248dcb4520eb8eaf95",
-      "current_sha256": "16519bf4b90ab7e059f2363f65428a2cfdd2118d6c4651248dcb4520eb8eaf95",
+      "current_sha256": "aac68b7c6b803d5507707bf871147fac923539863fbc7ccf3c802c06d3bbfb24",
       "prior_bytes": 37584,
-      "current_bytes": 37584,
-      "disposition": "unchanged",
+      "current_bytes": 41732,
+      "disposition": "scoped-revision",
       "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.21.0.md.",
-      "inverse_edits": []
+      "inverse_edits": [
+        {
+          "current_start_line": 4,
+          "current_end_line": 5,
+          "current_fragment_sha256": "c450fa203e952fcb175e4b591085904f1efef0d51909514d9d0379db721e8ec1",
+          "prior_text": "[Alignment target](#establish-the-products-target-experience) \u00b7 [Experience dimensions](#nine-dimensions-one-coherent-experience) \u00b7 [Evidence planning](#plan-evidence-around-the-experience) \u00b7 [Visual reasoning](#use-theory-to-investigate-real-design-work) \u00b7 [Product model](#recognize-the-product-through-its-use) \u00b7 [Direction](#confirm-consequential-direction-with-useful-options) \u00b7 [Formal SPEC scope](#choose-a-bounded-increment) \u00b7 [Content and representation](#design-the-understanding-before-the-arrangement) \u00b7 [Reference study](#read-references-as-mechanisms)\n"
+        },
+        {
+          "current_start_line": 181,
+          "current_end_line": 210,
+          "current_fragment_sha256": "e2198a275dc76a78d1397afb077191d2e0b7fa2ffe98567a6eacdde9961992c2",
+          "prior_text": ""
+        }
+      ]
     },
     {
       "path": "skills/ui-spec/references/asset-sources.md",
@@ -241,12 +284,37 @@
     {
       "path": "skills/ui-spec/references/integration.md",
       "prior_sha256": "b849c6486310a5164d46d165efe9a3a6776fb4c1c66cd2fcb0b50788be162660",
-      "current_sha256": "b849c6486310a5164d46d165efe9a3a6776fb4c1c66cd2fcb0b50788be162660",
+      "current_sha256": "e8c82de86203c5cd1e352e79c1cd938000fea81705e9794d23bfae3897ec8a4b",
       "prior_bytes": 22459,
-      "current_bytes": 22459,
-      "disposition": "unchanged",
+      "current_bytes": 27369,
+      "disposition": "scoped-revision",
       "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.21.0.md.",
-      "inverse_edits": []
+      "inverse_edits": [
+        {
+          "current_start_line": 10,
+          "current_end_line": 11,
+          "current_fragment_sha256": "56664076210b66e0b6281bb6122bbb20ed015550697ff1eefe48df19adff71c8",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 73,
+          "current_end_line": 96,
+          "current_fragment_sha256": "6631c7c8823d5b5c8026852c8ae40d7495440fa868fb7323347dd49890cff66a",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 176,
+          "current_end_line": 177,
+          "current_fragment_sha256": "80409da42c7e30e0ff71c214e7f0d3b9e100cf7ff784233ecb1c55ec67563809",
+          "prior_text": "Assign non-overlapping files or isolated worktrees where useful and agree on shared contracts before parallel writes. Do not assume that different agent names create separate filesystems. Verify the actual checkout, preserve unrelated changes and stop conflicting writes. Integrating multiple contributions requires a main-agent whole-product pass; isolated component success does not establish coherent density, type, focus, scrolling or continuous task behavior.\n"
+        },
+        {
+          "current_start_line": 178,
+          "current_end_line": 179,
+          "current_fragment_sha256": "cad2e0a5292e979cd33e2961ea9e1d113b663b9e9799563899c089c3f5840e29",
+          "prior_text": "Return actual changes, exact adopted sources, checks performed, viewed evidence and unresolved risks. Tests passing, dependency installation and code imports establish their own facts, not retained craft or final SPEC acceptance. Trial or integration failures can trigger targeted source investigation; keep unresolved quality visible within its responsible formal SPEC.\n"
+        }
+      ]
     },
     {
       "path": "skills/ui-spec/references/interaction-and-variants.md",
@@ -321,12 +389,67 @@
     {
       "path": "skills/ui-spec/references/workflow.md",
       "prior_sha256": "8be6dd5dc692d7ee682663bba4ac9a48036f771d77043837ea54dfd0a749bdc6",
-      "current_sha256": "8be6dd5dc692d7ee682663bba4ac9a48036f771d77043837ea54dfd0a749bdc6",
+      "current_sha256": "87bc75471b98b66005d21f15c512a51ed00c8e9085eb244b01d5d12f34cf8746",
       "prior_bytes": 36033,
-      "current_bytes": 36033,
-      "disposition": "unchanged",
+      "current_bytes": 44523,
+      "disposition": "scoped-revision",
       "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.21.0.md.",
-      "inverse_edits": []
+      "inverse_edits": [
+        {
+          "current_start_line": 4,
+          "current_end_line": 5,
+          "current_fragment_sha256": "e83a41beea14e01e34f68e8573dc7d91b425f317129cb9862b6a47e5c76f2b11",
+          "prior_text": "[Current scope](#operate-on-the-current-scope) \u00b7 [Observable execution](#make-consequential-design-work-observable) \u00b7 [Init](#init--establish-a-useful-working-understanding) \u00b7 [Shape](#shape--resolve-just-enough-direction-to-build-well) \u00b7 [Iterate](#iterate--deliver-one-meaningful-increment) \u00b7 [Audit](#audit--inspect-an-identified-scope) \u00b7 [Finish](#finish--complete-real-connection-work) \u00b7 [Continuity](#continuity-with-lightweight-records) \u00b7 [Evidence map](#use-the-evidence-map-inside-each-operation)\n"
+        },
+        {
+          "current_start_line": 49,
+          "current_end_line": 82,
+          "current_fragment_sha256": "3f770ef366909de43e83e3a5e2ab52c25fe320beebc68a05493b4b7d1cb04b78",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 95,
+          "current_end_line": 97,
+          "current_fragment_sha256": "e17de9e6f77f05c68bec5361fd93d721ecb7974d2680eaa4ea76342d6a480dc6",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 116,
+          "current_end_line": 117,
+          "current_fragment_sha256": "753c06a7232aec34b35a5ec9239fbd07864eaf01d2a1715809b36195de6306ff",
+          "prior_text": "**Orient and choose.** Reconcile feedback, accepted decisions, current code, incomplete journeys and findings. A continuation request is sufficient: choose and state the next useful outcome. Continue the active SPEC when fulfilling its established objective or resolving its quality gaps. Begin a new formal SPEC when undertaking a new cohesive design objective with its own meaningful review boundary; an additional search, repair or execution pass remains internal work.\n"
+        },
+        {
+          "current_start_line": 140,
+          "current_end_line": 141,
+          "current_fragment_sha256": "3eed78724a9649303bad22bbf67a31ccd2f5ca78a869ae2aed4834a4c3a6c772",
+          "prior_text": "Make the delivery useful in the conversation, not only in saved records. Show the actual operable or renderable increment, significant visual references/comparisons, adopted resources and observed results at a depth proportional to their design impact. Explain the contribution to the complete product and the current candidate for subsequent work. During research, surface a finding or local result when it materially changes a design choice. Link detailed records for traceability while keeping the user-facing account focused on what can be seen, used or decided.\n"
+        },
+        {
+          "current_start_line": 150,
+          "current_end_line": 151,
+          "current_fragment_sha256": "e1b2af4e8a8c4aa45b6c3a6f77895f9c54ec5a79d73051779d59b085ec438c94",
+          "prior_text": "Connect a viewed frame/interval to perceptual or task impact, the relevant principle, a cause to test and repair scope. Use the nine experience dimensions to find missing responsibilities. Shared issues need related-page/sequence checks. Distinguish actually viewed coverage, captured media and the inventory; preserve pending, blocked, failed and approved-exception meanings.\n"
+        },
+        {
+          "current_start_line": 156,
+          "current_end_line": 157,
+          "current_fragment_sha256": "2e8acf072462e832b3afe13cc8589cd631e82707e6b25a3625eef18387af6ecb",
+          "prior_text": "Reconcile the accepted experience, art direction, reference/resource choices and actual services, data, permissions and code. Preserve primary actions and continuation while resolving missing behavior at its owner. Connect complete tasks, inspect real content and asynchronous/error states, and verify both visual and product outcomes. Check experience alignment, expressive completion and engineering reliability at their actual boundaries.\n"
+        },
+        {
+          "current_start_line": 160,
+          "current_end_line": 161,
+          "current_fragment_sha256": "5a7203d844385a220f384c8d5fa66c8d8b528bf8c2654b146bdf0ddefde1faf2",
+          "prior_text": "A material change to accepted appearance, task meaning or user commitment returns the affected decision for review; continue independent work. Deployment and real-world actions follow existing authorization. Static, local and service-backed products finish against their respective content, host and service boundaries.\n"
+        },
+        {
+          "current_start_line": 169,
+          "current_end_line": 171,
+          "current_fragment_sha256": "9c7ceef42d12eafae648f1d2fb7fcd97b4fdb17fcd2b0cf2a39f652043046612",
+          "prior_text": ""
+        }
+      ]
     },
     {
       "path": "skills/ui-spec/scripts/check_design_evidence.py",
