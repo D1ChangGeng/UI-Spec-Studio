@@ -274,3 +274,50 @@ The owner authorization changes the acceptance scope; it does not certify native
 Codex roles, resolved model identities, native usage or the original campaign.
 Keep schema-v1 native checks and historical failures intact. A substitute release
 is always limited, with explicit unavailable evidence and scoped final UI findings.
+
+## Version 1.21: sustainable long-term product and engineering loop
+
+Preserve the complete professional foundation, eight-reference full-reading contract,
+H01–H11 restoration sites, v1.15 neutral inspector boundaries and v1.17–v1.20
+responsibilities while making multi-month, multi-session, brownfield product
+development manageable inside the existing operations (`init`, optional `shape`,
+`iterate`, `audit`, `finish`) without new state machines, fixed quotas, staleness
+timers or routine-continuation approval gates.
+
+Re-enter existing projects across cold sessions by reconciling the Continuation
+Baseline (`Overall Product Goal`, `Current Design Model` and live `Current Product UI`).
+Inherit settled foundations and scoped approvals under matching conditions without
+relitigation; reopen claims only when user intent, rendered evidence or operating
+conditions change. Leave resumption-ready handovers at both completed increments
+and interrupted mid-SPEC pauses, keeping implemented, inspected, approved, connected
+and verified facts distinct.
+
+Govern multiple increments as a living horizon (`candidate`, `active`, `completed`,
+`superseded`, `consolidated`, `retired`) ordered by user value, cross-SPEC
+dependencies, representative anchor-slice leverage and parallel-worktree boundaries.
+Consolidating, superseding or retiring a SPEC or UI surface must account for where
+still-valid user tasks and open quality obligations move and remove dead entry points.
+
+Reconcile external engineering commits, emergency hotfixes, backend API/schema or
+permission changes and requirement pivots that land between rounds through four
+causal paths: preserve compatible refactors and valid functional/accessibility fixes
+while adopting authoritative service truth and repairing visual craft or default-deny
+provenance on top of live implementations.
+
+Execute shared design-system, semantic-token and mature-component migrations in
+stages: prove fit on a representative anchor slice first, maintain explicit
+coexistence boundaries and scoped compatibility bridges strictly under default-deny
+W1–W3 rules, track legacy foundation decommission, and focus regression proportionally
+on the primary changed slice, migration seams and high-risk extremum consumers rather
+than unguided whole-app re-audits.
+
+Keep `Current Design Model` proportional to `O(active product + open obligations)` by
+compacting closed exploration and retired surface details into concise
+`Meaningful Revisions` and cold-linked `Evidence Archive` records while enforcing
+Debt Anti-Evaporation across Visual & Craft Debt, Provisional Probe & Migration
+Bridge Debt, Integration & Contract Debt and Verification Scope Debt. Preserve the
+exact 37-file portable skill inventory, 100% byte-identical installed scripts and
+JSON assets, 8-hop inverse continuity (`docs/evidence/v1.21.0/continuity.json`),
+synchronized Codex specialist metadata and strict separation between deterministic
+fixture checks and unexecuted independent Agent comparisons.
+

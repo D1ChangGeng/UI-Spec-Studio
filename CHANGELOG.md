@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.21.0 — Sustainable long-term product and engineering loop (pre-merge branch)
+
+- Add cross-session cold-start re-entry (`Continuation Baseline` across `Overall Product Goal`, `Current Design Model` and live `Current Product UI`), anti-relitigation of settled foundations and scoped approvals, and resumption-ready handovers for both completed increments and interrupted mid-SPEC pauses.
+- Add living multi-SPEC horizon governance (`candidate`, `active`, `completed`, `superseded`, `consolidated`, `retired`) with dependency/leverage/parallel-worktree sequencing and safe consolidation, supersession and surface retirement rules that preserve valid task paths, transfer or close open obligations and remove orphaned navigation entries.
+- Add four-path inter-round brownfield engineering, emergency hotfix, backend API/schema/permission contract and requirement-pivot drift reconciliation so valid functional/accessibility/security fixes and authoritative backend contracts stay intact while visual craft and default-deny provenance are repaired on top.
+- Add staged shared-system, semantic-token and mature-component migration guidance with anchor-slice trials, explicit coexistence boundaries and scoped compatibility bridges strictly under default-deny W1–W3 rules, legacy decommission tracking and dependency-scoped proportional regression across primary slice, migration seams and high-risk extremum consumers.
+- Add bounded `O(active product + open obligations)` record compaction into causal `Meaningful Revisions` and cold-linked `Evidence Archive` pointers with four-class Debt Anti-Evaporation (Visual & Craft, Provisional Probe & Migration Bridge, Integration & Contract, Verification Scope).
+- Synchronize the optional Codex four-role adapter (`integrations/codex/manifest.json` `"version": "1.21.0"` and updated role SHA-256 digests), add `docs/REVIEW-v1.21.0.md`, `docs/evidence/v1.21.0/continuity.json` (8-hop reverse continuity back to `v1.15.0`) and `tests/test_sustainable_loop_release.py`, and update maintainer architecture and bilingual user guides (`AGENTS.md`, `docs/MODEL.md`, `docs/WRITING.md`, `docs/GUIDE.md`, `README.md`, `README.zh-CN.md`).
+- Preserve the exact 37-file portable Skill inventory (15 updated Markdown files, 22 unchanged), 100% byte-identical installed Python helpers and JSON assets (neutral read-only inspectors with zero completion/veto fields), all eight common references and all `H01`–`H11` restoration sites. Local deterministic checks and fixture verification remain separate from unexecuted independent multi-session Agent comparison studies and post-merge release publication.
+
 ## 1.20.6 — 2026-11-02
 
 - Rewrite the English/Chinese interactive installer for Skill users rather than maintainers: tool and scope choices, existing-installation decisions, meaningful progress, and outcome-specific completion.

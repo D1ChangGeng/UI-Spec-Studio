@@ -49,6 +49,18 @@ The standalone release installer installs the Skill without cloning GitHub. Its 
 
 [Installation and natural delegation](integrations/codex/README.md) · [Version evidence and limits](docs/REVIEW-v1.20.0.md)
 
+## Sustain real long-term product and engineering loops
+
+Real products evolve across fresh sessions, shifting priorities, ongoing engineering commits and multi-round design-system upgrades. UI Spec Studio carries design quality across months inside the same five operations (`init`, optional `shape`, `iterate`, `audit`, `finish`)—with no new ticket state machines, quotas or routine approval gates:
+
+- **Cross-session re-entry without relitigation:** Reconcile the `Overall Product Goal`, `Current Design Model` and live `Current Product UI` on cold start; inherit settled foundations under matching conditions and leave resumption-ready handovers at both increment exits and interrupted mid-SPEC pauses.
+- **Living multi-SPEC horizon and safe retirement:** Order `candidate`, `active`, `completed`, `superseded`, `consolidated` and `retired` SPECs by value, dependency and anchor-slice leverage; transfer valid user tasks and open obligations before retiring obsolete surfaces.
+- **Brownfield engineering and contract drift reconciliation:** Preserve compatible refactors and landed functional/accessibility hotfixes, adopt authoritative backend API/permission changes honestly inside the mature visual system, and repair visual craft or default-deny provenance on top.
+- **Staged shared-system migrations and proportional regression:** Prove shared tokens, shells or component families on an anchor slice first, isolate transitional seams with scoped bridges under W1–W3 rules, track legacy decommission, and inspect the primary slice, migration seams and high-risk extremum consumers.
+- **Bounded `O(active product)` compaction with non-evaporating debt:** Distill closed exploration into `Meaningful Revisions` and cold `Evidence Archive` links while keeping Visual & Craft, Provisional Probe & Migration Bridge, Integration & Contract, and Verification Scope debt explicit until verified closed or retired with cause.
+
+[v1.21.0 source-lineage review](docs/REVIEW-v1.21.0.md) · [v1.21.0 release notes](docs/releases/v1.21.0.md) · [Long-term walkthroughs](docs/GUIDE.md)
+
 ## Mature foundations, bounded originality
 
 **Original UI construction is prohibited by default.** The agent discovers mature external work, compares applicable project resources and carries their design relationships into the result. New business wiring, configuration and necessary adaptation remain normal engineering. A coherent block or validated token system can cover many visible elements without repeated searches.

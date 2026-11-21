@@ -339,6 +339,70 @@ When adaptations change type, material, space or state behavior, recheck the aff
 
 重要设计选择可以在现有项目记录中按[多尺度设计证据地图](DESIGN-EVIDENCE.md)展开。先看整体目标和覆盖，再深查有影响的对象，最后检查实际采用、验证条件与行动。新发现可以修订范围；重大缺口限制依赖它的实现承诺，已证实的局部调整可以直接收敛。记录形式可选，证据关联与实际行动不能由文字上的完整度代替。
 
+## Sustain multi-session and brownfield evolution
+
+Long-lived products span fresh host sessions, concurrent engineering commits, shifting priorities and multi-round design-system upgrades. The same five operations (`init`, optional `shape`, `iterate`, `audit`, `finish`) handle these realities directly without adding a ticket state machine, fixed compaction quotas or extra routine approval gates.
+
+### 1. Resume cold across sessions and hand off mid-SPEC without relitigation
+
+```text
+Continue this product with ui-spec. Reconcile our Overall Product Goal,
+Current Design Model and live Current Product UI before editing. Keep settled
+foundations and approved visual direction intact, pick up the paused billing
+drawer SPEC from its last verified checkpoint, and leave a resumption-ready
+handover when finished.
+```
+
+On re-entry, the agent reads all eight common references in full, establishes the **Continuation Baseline**, and separates settled commitments (inherited under matching conditions without repeating broad discovery) from reopenable claims, provisional probes and open obligations. Both completed increments and interrupted mid-SPEC pauses end with the runnable preview entry, distinct `implemented`, `inspected`, `approved`, `connected` and `verified` scope facts, active obligations and the next concrete action. See [re-entry and handoff](../skills/ui-spec/references/workflow.md#re-enter-and-hand-off-across-sessions-without-losing-direction).
+
+### 2. Reprioritize, consolidate, supersede or retire SPECs and obsolete surfaces
+
+```text
+Use ui-spec: iterate. Product priorities shifted: consolidate the old
+quick-filter and saved-views candidate SPECs into one unified filter-bar SPEC,
+retire the legacy report-export screen, transfer its CSV accessibility and
+error-state obligations, and remove orphaned navigation links.
+```
+
+Candidate and formal SPECs operate as a living horizon (`candidate`, `active`, `completed`, `superseded`, `consolidated`, `retired`) ordered by user value, cross-SPEC dependencies, anchor-slice leverage and parallel-worktree boundaries. Before consolidating, superseding or retiring a SPEC or UI surface, the agent verifies where still-valid user task paths move, transfers or explicitly closes open visual/integration obligations in `Meaningful Revisions`, and cleans up dead routes and navigation entries. See [horizon governance and safe retirement](../skills/ui-spec/references/analysis.md#govern-the-multi-spec-horizon-and-retire-obsolete-scope).
+
+### 3. Reconcile external engineering commits, hotfixes and backend contract drift
+
+```text
+Use ui-spec: iterate on the Orders workspace. Backend engineers shipped cursor
+pagination, a new bulk-refund permission guard and an urgent empty-state hotfix
+between rounds. Reconcile our design model with live code and rendered UI, keep
+the landed functional and accessibility fixes, and repair any visual or
+provenance drift.
+```
+
+Between-round drift across `Current Design Model`, live code/service contracts and the rendered UI is resolved through four causal paths: compatible refactors preserve visual approvals while updating tracked paths; authoritative backend/schema/permission or error contract changes become the new business truth expressed cleanly inside the mature visual system; unreviewed UI hotfixes are inspected live so their bug/accessibility/security fixes stay intact while visual craft, token roles and default-deny provenance are repaired on top; and requirement pivots invalidate only affected L0–L5 objects and conditions. See [inter-round drift reconciliation](../skills/ui-spec/references/integration.md#reconcile-ongoing-engineering-and-contract-drift-between-rounds).
+
+### 4. Run staged shared-system, token and mature-component migrations
+
+```text
+Use ui-spec: iterate. Migrate our semantic surface tokens and data-table family
+in stages. Prove the new mature foundation on the high-density Orders anchor
+slice first, define a scoped coexistence bridge for pending routes, and run
+dependency-scoped proportional regression across the primary slice, navigation
+seams and narrow/localized extremum consumers.
+```
+
+Multi-route products upgrade shared foundations incrementally: trial the new mature source on a representative high-signal anchor slice first, isolate transitional styling and runtime continuity through scoped compatibility bridges strictly under default-deny W1–W3 rules (preserving single focus/keyboard ownership, overlay stacking, scroll stability and theme/locale parity across migrated-to-legacy seams), and track legacy foundation decommission so dual systems do not ossify. Regression follows shared dependencies across the primary changed slice, migration seams and extremum consumers while recording unmigrated surfaces explicitly in the horizon. See [staged foundation migrations](../skills/ui-spec/references/component-sourcing.md#migrate-shared-foundations-across-existing-surfaces-in-stages) and [dependency-scoped regression](../skills/ui-spec/references/verification.md#scope-regression-across-shared-migrations-and-evolving-code).
+
+### 5. Compact long-lived records without evaporating open debt
+
+```text
+Use ui-spec: audit and compact our active design records. Move closed candidate
+comparisons and retired screen history into Meaningful Revisions and cold
+Evidence Archive links so Current Design Model reflects the active product,
+while keeping all open visual, bridge, integration and verification obligations
+explicitly attached to their owning objects.
+```
+
+As rounds accumulate, `Current Design Model` stays proportional to `O(active product + open obligations)` by distilling closed exploration into causal `Meaningful Revisions` and cold-linked `Evidence Archive` pointers—triggered by signal-to-noise and superseded state rather than arbitrary round or line caps. Four obligation classes—**Visual & Craft Debt**, **Provisional Probe & Migration Bridge Debt**, **Integration & Contract Debt** and **Verification Scope Debt**—are governed by Debt Anti-Evaporation: compaction, SPEC repartitioning or opening a new SPEC ID never drops an open obligation without inspected closure evidence, explicit successor carry-over or documented product retirement. See [record compaction and debt anti-evaporation](../skills/ui-spec/references/evidence-map.md#compact-active-records-without-evaporating-open-obligations).
+
 ## Optional adaptive research support
 
-The portable Skill still works with a single agent. See [the Codex adapter](../integrations/codex/README.md) for explicit installation of all four roles, natural delegation, model/GUI limitations and safe upgrade/uninstall. Role installation does not install or authenticate Codex and does not change permissions. See [the current development review](REVIEW-v1.20.0.md) before treating this candidate as validated.
+The portable Skill still works with a single agent. See [the Codex adapter](../integrations/codex/README.md) for explicit installation of all four roles, natural delegation, model/GUI limitations and safe upgrade/uninstall. Role installation does not install or authenticate Codex and does not change permissions. See [the v1.21.0 source-lineage review](REVIEW-v1.21.0.md) alongside [the earlier v1.20.0 study review](REVIEW-v1.20.0.md) for current and historical evidence boundaries.
+
