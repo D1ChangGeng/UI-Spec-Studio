@@ -1,0 +1,743 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "12d6ec7814c5d4da87bdd947272f4dfe2f8f8821",
+  "prior_runtime_version": "1.21.0",
+  "baseline_runtime_release": "v1.21.0",
+  "candidate_version": "1.22.0",
+  "limits": "Exact source identity and reversible history only; semantic policy continuity, Agent behavior and perceived UI quality require their separate review and observed evidence.",
+  "files": [
+    {
+      "path": "skills/ui-spec/LICENSE",
+      "prior_sha256": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db",
+      "current_sha256": "31300adb6a91bd114f05e26cb1a1e15a4d39c5e00ad039d624d8d615baf377db",
+      "prior_bytes": 1068,
+      "current_bytes": 1068,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/SKILL.md",
+      "prior_sha256": "52adb354aee3e0b992c5f7fd705281d6e7758614f7379c0fe272c4057fb6cb61",
+      "current_sha256": "c5caf4da11bd202f73770af2934e47b99827194b6b8ee41aac71417b9353bace",
+      "prior_bytes": 21374,
+      "current_bytes": 23932,
+      "disposition": "scoped-revision",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 2,
+          "current_end_line": 3,
+          "current_fragment_sha256": "a7a7bcf77f0a2d4c64929cddae613d86fcecaf0b033a08cfef45ed940e7d1ea9",
+          "prior_text": "description: \"Design coherent screen-based experiences and connect approved designs to real behavior. Use for product UI, UI SPECs, READMEs, docs, diagrams and visual media; intent-grounded product research, experience alignment, evidence planning, deep visual exploration, meaningful candidate comparison, art direction, expressive contrast, perceptual and temporal inspection, default-deny original UI construction with scoped W1-W3 authorization, mature-resource adoption, local trials, asset engineering, brand/type/2D/3D/media craft, content design, UX writing, multilingual typography, responsive/accessibility review, complete states, theme/language variants, performance and real integration. Expand named-product analogies into experience questions; combine textual, visual and behavioral evidence; calibrate research to impact, uncertainty and improvement potential. Leads from a goal or continuation through init, iterate, audit, finish and optional shape, preserving independent expression and verifying actual use.\"\n"
+        },
+        {
+          "current_start_line": 7,
+          "current_end_line": 8,
+          "current_fragment_sha256": "0acfa88bb54f5b40b8c96d268a9a3d0b4b7e122596e49ed480e7712ef9e8eae6",
+          "prior_text": "  version: \"1.21.0\"\n"
+        },
+        {
+          "current_start_line": 83,
+          "current_end_line": 85,
+          "current_fragment_sha256": "0c8adca350e7fb33f6003d71e8bfaf1ff79e6dc7848279a11e4a7246cdaf4ce3",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 94,
+          "current_end_line": 95,
+          "current_fragment_sha256": "032aae135f8429be415c965fea6abac14bea5accb392d3fd39062b3a19313699",
+          "prior_text": "Choose each formal SPEC boundary through the [minimum sufficient experience closure](references/analysis.md#choose-a-bounded-increment): include the coupled objects and relationships needed to understand, realize and judge one quality goal while keeping enough focus for deep work. A page, component family, background, shared type system or continuous interaction holds equal formal standing; area and file count do not decide scope. Explicitly recommend keeping, splitting, merging or redrawing a boundary as evidence develops\u2014retaining the full goal, unresolved quality gaps, change reason and current responsibility across repartitioning.\n"
+        },
+        {
+          "current_start_line": 106,
+          "current_end_line": 107,
+          "current_fragment_sha256": "c37a6a70297b477688ef6e1e0d28c054d787d11a8c34ff808296afbd43084922",
+          "prior_text": "At handover, present both the project record and a concise conversation summary: working entry path, inspected scope, consequential choices and adopted sources, representative visuals/episodes, executed checks, open gaps, approval scope and next useful work. Track maturity separately by scope (**implemented**, **visually inspected**, **owner-approved**, **connected**, **verified**), keep project preferences local, and preserve reusable lessons as *problem, mechanism, applicable conditions, editable realization and observed result*.\n"
+        },
+        {
+          "current_start_line": 110,
+          "current_end_line": 111,
+          "current_fragment_sha256": "3f0848c9084f7b0e5aae85ad856a6b9bb17c33da771a145a2f6049e7796509e0",
+          "prior_text": "1. **Visual provenance, acquisition, adoption and craft retention stay separate.** Track target reference \u2192 candidate original demo \u2192 local project trial \u2192 integrated UI at their own boundaries (`references/component-sourcing.md`, `references/verification.md`). Dependency installs, copied files, code volume and passing DOM assertions never prove retained visual craft. Before expanding a consequential component or structure across the product, verify it in a local trial with current fonts, content, themes and states; preserve valuable mechanisms through configuration and source-preserving adaptation, and repair concrete integration losses (font fallback, clipped lighting, resting 3D text blur, broken spacing or focus regressions) at the responsible layer.\n"
+        },
+        {
+          "current_start_line": 113,
+          "current_end_line": 114,
+          "current_fragment_sha256": "3400b93ac559cbeacd5cbc91d55a1223b07daa35e14fadaff965b1529b6cc059",
+          "prior_text": "4. **Multiscale evidence, four responsibilities and neutral inspectors.** Maintain L0\u2013L5 coverage, decision traceability and gap-to-action discipline across consequential work (`references/evidence-map.md`, `references/evidence-actions.md`); **a schema or new document is optional**, while inspectable evidence relationships and commitment boundaries are required. Allocate exploration depth by design impact, uncertainty and plausible improvement (capabilities, never quotas). Keep **four responsibilities** separate: the **Design Evidence Map** holds current understanding; the **Structural Coverage Inspector** reports literal field/ID/file facts; **Agent Design Judgment & Execution** determines applicability, sufficiency and next action; **Verification & Acceptance** independently validates real renders, behavior, performance and owner decisions. Maintain **Current Design Model \u2192 Meaningful Revisions \u2192 Evidence Archive** cleanly so unrelated changes do not invalidate unaffected history. Optional inspectors (`scripts/check_manifest.py`, `scripts/check_design_evidence.py`) are strictly read-only and neutral\u2014exit `0` means inspection ran, never design readiness, quality or approval.\n"
+        },
+        {
+          "current_start_line": 115,
+          "current_end_line": 116,
+          "current_fragment_sha256": "f6798dfa5fedb79ca0174dc187e879cb53dbd849e1b12119c0e6af800f86df73",
+          "prior_text": "6. **Source authority, host boundary and delivery honesty.** Product contracts, access rules and accessibility obligations govern valid behavior; accepted decisions govern preserved design; code establishes engineering capability (visual inheritance still requires acceptance or fit evidence); external references stay reference data with checked licenses and rights. Keep Overview, Design Detail and Execution & Assurance aligned in both project records and conversation handover, preserving sensitive data inside authorized destinations. Changes to an installed or shared skill follow explicit maintenance authorization; this is knowledge maintenance, not model training or autonomous modification of its host. **The host controls activation**, tool access, context retention, compaction and execution\u2014state missing capabilities (such as absent image viewing or network blocks) precisely, keep unverified dimensions open and advance all supported independent work.\n"
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/assets/design-coverage-categories.json",
+      "prior_sha256": "c4a1bc4057cccf573dce57df39e4ec4d68f1af2c2186e3fcbcf92dfc8211c3e6",
+      "current_sha256": "c4a1bc4057cccf573dce57df39e4ec4d68f1af2c2186e3fcbcf92dfc8211c3e6",
+      "prior_bytes": 2281,
+      "current_bytes": 2281,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/resource-catalog.json",
+      "prior_sha256": "c650eea55d5d52cd7335b21bd2eb5881a4f3b575d4e67cc76aafa75583eac674",
+      "current_sha256": "c650eea55d5d52cd7335b21bd2eb5881a4f3b575d4e67cc76aafa75583eac674",
+      "prior_bytes": 138947,
+      "current_bytes": 138947,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/asset-record.md",
+      "prior_sha256": "332c2c32a829e1c2b616b21569932ee0e0ae6872b503b85d019fc69e53cd65ab",
+      "current_sha256": "332c2c32a829e1c2b616b21569932ee0e0ae6872b503b85d019fc69e53cd65ab",
+      "prior_bytes": 3323,
+      "current_bytes": 3323,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/brief.md",
+      "prior_sha256": "b3b66a8cc52058f5e50fe14e2159d1c64fd73cd48143dbcc131b1a7509f5234b",
+      "current_sha256": "ff5dc20faf9ea1d1d710b32aad763a62102cd6f14cdf0c5fb0eaad3909d034a8",
+      "prior_bytes": 4664,
+      "current_bytes": 5545,
+      "disposition": "scoped-revision",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 34,
+          "current_end_line": 37,
+          "current_fragment_sha256": "a18277801e6d99777544b7cb561332773286be032733fdbde7fff227fe974f42",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 73,
+          "current_end_line": 75,
+          "current_fragment_sha256": "f90201ce5af32c11a939810ebdd0ab405c1db2235c952a1ebb7d1611d08ff8ed",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 83,
+          "current_end_line": 87,
+          "current_fragment_sha256": "4aef6bcd6c1792f598595523b38e29f842cd64f1fc44e19b43c07d99123f48fd",
+          "prior_text": "SPEC or a narrower current scope does not itself resolve a quality gap. Keep\nthe actual preview, important choices and observed results visible in the\n"
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/content-decisions.md",
+      "prior_sha256": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd",
+      "current_sha256": "7f0102f03ae268541f2a6a3f9017e7445f0162022ab57486171397825c2b1ccd",
+      "prior_bytes": 2057,
+      "current_bytes": 2057,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-decisions.md",
+      "prior_sha256": "fcd4c32058ac0d3187653a1999b55e71d86b79108fa649f400711e3d5f572fa5",
+      "current_sha256": "ce23a0be8b20d4a4f9969bee9ea48341231a8b6eb44c917886c0851736e3dd9f",
+      "prior_bytes": 16689,
+      "current_bytes": 17697,
+      "disposition": "append-only",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 133,
+          "current_end_line": 135,
+          "current_fragment_sha256": "016dc9f3af08870352c310cf699f391eb9bed7f3406611ed804ee7df47551b67",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 255,
+          "current_end_line": 257,
+          "current_fragment_sha256": "e78b03bc22182ded70c00b0c7ae1c98e11cea3bf689c5a20db20ed8ee1bf8f2f",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-evidence.json",
+      "prior_sha256": "a47fa907d4d3ff4851748c9ec8585510aceaf232c14b39e45212dbece72a303f",
+      "current_sha256": "a47fa907d4d3ff4851748c9ec8585510aceaf232c14b39e45212dbece72a303f",
+      "prior_bytes": 352,
+      "current_bytes": 352,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/design-system.md",
+      "prior_sha256": "3ca23ba7c545fe33407d8ec9e86f20aea7d684abe9fb329f0818b84457d8f218",
+      "current_sha256": "6084633eb1167535b61621d9032be20033560e4c7541863b1e48c56dcee12374",
+      "prior_bytes": 2471,
+      "current_bytes": 3643,
+      "disposition": "append-only",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 51,
+          "current_end_line": 62,
+          "current_fragment_sha256": "b1503e886dc77705adb401eac2e5f50e7b04f82b5c1a80078a5421f262d42e46",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/manifest.json",
+      "prior_sha256": "882275fee230397d8491d65fbf3d7a69f39814583f4a7b7cc71a3e2b8b9e49ca",
+      "current_sha256": "882275fee230397d8491d65fbf3d7a69f39814583f4a7b7cc71a3e2b8b9e49ca",
+      "prior_bytes": 360,
+      "current_bytes": 360,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/resource-adoption.md",
+      "prior_sha256": "a427d45b449353a877f22d736cfca79d958c79adabf9dad1b8bbef0dd44c9b16",
+      "current_sha256": "a427d45b449353a877f22d736cfca79d958c79adabf9dad1b8bbef0dd44c9b16",
+      "prior_bytes": 4450,
+      "current_bytes": 4450,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/assets/templates/review.md",
+      "prior_sha256": "5c65d06e13854f6866125abef664ae53252e0d9501860cf4b255f4cafe737911",
+      "current_sha256": "233bb96f02113dae8986355371efa58283f3fe967e831b833863a7562ed3c0a6",
+      "prior_bytes": 6702,
+      "current_bytes": 7641,
+      "disposition": "scoped-revision",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 14,
+          "current_end_line": 19,
+          "current_fragment_sha256": "19fb4dc2aef1d5fc5c73662b9379f72c673dd394bbfcdba98d80b15d506ee977",
+          "prior_text": "records are sufficient.\n"
+        },
+        {
+          "current_start_line": 65,
+          "current_end_line": 69,
+          "current_fragment_sha256": "c1a62ba9d3ea3cf410eaaf60c427bed5add70f68c4f905f2fc6acb394ebc88c1",
+          "prior_text": "increment does not establish that the earlier finding was resolved.\n"
+        },
+        {
+          "current_start_line": 100,
+          "current_end_line": 104,
+          "current_fragment_sha256": "2a64d56eb088c5f70e00739b03731f7eaf26475a807a2aa6db5e3d38d462c938",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/analysis.md",
+      "prior_sha256": "b7d8faddbdee5fb651d55869dfb92fe0329bb6eb4d3c813cbe3e15a90724f0b0",
+      "current_sha256": "f78b067aa0da1b5f48405058d45c0256688daeb859fcab25ac933c9092a4e77f",
+      "prior_bytes": 32019,
+      "current_bytes": 36203,
+      "disposition": "append-only",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 16,
+          "current_end_line": 17,
+          "current_fragment_sha256": "5571369418a7156a60092788861ed4dd45163b4369aef3aacba0c8ffe2a87203",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 193,
+          "current_end_line": 222,
+          "current_fragment_sha256": "e2198a275dc76a78d1397afb077191d2e0b7fa2ffe98567a6eacdde9961992c2",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/asset-sources.md",
+      "prior_sha256": "e3c8a81fc7b9d111610ce5d288b3abcdfa0f5045b164bf7f4f2e5adf95f5aee4",
+      "current_sha256": "e3c8a81fc7b9d111610ce5d288b3abcdfa0f5045b164bf7f4f2e5adf95f5aee4",
+      "prior_bytes": 9483,
+      "current_bytes": 9483,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/component-sourcing.md",
+      "prior_sha256": "cc1074514e16855f5bc0d3882be7bac23b99a0ee0efce9175ee0c6eff84736f3",
+      "current_sha256": "e297e4eade0a6cbb33f6c41e7bdc47328d05c273ace41e76a37c8a58caf44a11",
+      "prior_bytes": 53951,
+      "current_bytes": 58095,
+      "disposition": "scoped-revision",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 4,
+          "current_end_line": 5,
+          "current_fragment_sha256": "d96c279c1f8d102126214fbea82941cd02fc148dea69b0082e4470691d2a7a55",
+          "prior_text": "[Default-deny boundary](#default-deny-original-ui-construction) \u00b7 [Closed exceptions](#closed-original-construction-allowlist) \u00b7 [Unresolved responsibilities](#preserve-unresolved-responsibilities) \u00b7 [Technical probes](#separate-probes-from-formal-delivery) \u00b7 [Reuse scope and foundations](#reuse-visual-craft-at-the-appropriate-scope) \u00b7 [Multi-tier high-craft discovery](#multi-tier-high-craft-discovery-and-generic-default-rejection) \u00b7 [Need framing and discovery](#discover-efficiently-and-learn-how-the-source-works) \u00b7 [Acquisition routes](#match-the-acquisition-route-to-the-evidence-needed) \u00b7 [Exploration loop](#follow-visual-clues-to-answer-design-questions) \u00b7 [Demo and implementation study](#understand-the-demonstration-and-the-implementation-together) \u00b7 [Candidate comparison](#challenge-the-leading-candidate) \u00b7 [Adoption operations](#choose-the-adoption-operation-and-the-responsibilities-it-creates) \u00b7 [Local trials](#confirm-consequential-parts-in-a-local-trial) \u00b7 [Deep reuse and adaptation](#deep-reuse-de-genericization-and-craft-elevating-adaptation) \u00b7 [Selection records and provenance](#make-selection-visible-and-bind-records-to-decisions) \u00b7 [Material, assets and copy](#material-assets-and-mature-language-patterns)\n"
+        },
+        {
+          "current_start_line": 297,
+          "current_end_line": 313,
+          "current_fragment_sha256": "dc7dedd45074d2503d0ec8023a0a3dd96b5695ecc70125825082d6defb99e88f",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/content-design.md",
+      "prior_sha256": "e0219fdd904417d0fac9be26c0fb7da588f7eca5ae3b800c771e6a5c9966f1f1",
+      "current_sha256": "e0219fdd904417d0fac9be26c0fb7da588f7eca5ae3b800c771e6a5c9966f1f1",
+      "prior_bytes": 26308,
+      "current_bytes": 26308,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/content-sources.md",
+      "prior_sha256": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45",
+      "current_sha256": "968c2fa6b75e90b83027cca2bb7fabd50cfb2dfdc396aed738ce3cc4a2e7cd45",
+      "prior_bytes": 5465,
+      "current_bytes": 5465,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/delegation.md",
+      "prior_sha256": "19fdebd857c953f520eaecccabcd930f42347b48c245c235f7be48de5bfa1bfe",
+      "current_sha256": "19fdebd857c953f520eaecccabcd930f42347b48c245c235f7be48de5bfa1bfe",
+      "prior_bytes": 17387,
+      "current_bytes": 17387,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/evidence-actions.md",
+      "prior_sha256": "9b77e41fdd0c168fbe48b4cb9ebe4d73306fa6ad96b0279ef341c73d69e535bd",
+      "current_sha256": "cdacb9e29b648b2f09f4bd5f205a77201b4fae7e4e31c1b79543692fd1b2c01f",
+      "prior_bytes": 12465,
+      "current_bytes": 14637,
+      "disposition": "append-only",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 56,
+          "current_end_line": 58,
+          "current_fragment_sha256": "1d8e3f083ddd9d723ae81d49aa656c844c3d8c2fa8a3809523dd4935e42a8f5d",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 105,
+          "current_end_line": 125,
+          "current_fragment_sha256": "ab4adb7c280bd28b6ddb9f1df888e9497ac6f6fb585fefc9938ef904a04901f3",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/evidence-map.md",
+      "prior_sha256": "cf6c766078e6f5c495eefd1c7fbfb57b96a7ef7b392722028451cb4919ec8cde",
+      "current_sha256": "f4be702f3b4f5378bcfa96d0361f135287b417ef4e2478693a0fa30397e790b1",
+      "prior_bytes": 28038,
+      "current_bytes": 31010,
+      "disposition": "append-only",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 26,
+          "current_end_line": 27,
+          "current_fragment_sha256": "d4a550f52321d7d7fb7d07b667a9abaa6780f73a73f65fd44f1dd901d4f50a10",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 345,
+          "current_end_line": 362,
+          "current_fragment_sha256": "e7711c6706929b00a4fac51d37ed6268f33fe38db4ea69492e6200d03d59bb8b",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/evidence-records.md",
+      "prior_sha256": "6f6d7fab7fbd182d9a34e8f7df376b7069f28c71659abf57ec1dc94039cf4315",
+      "current_sha256": "52acf9affaaaf0ecc1bd83483a2d5cc54379ed69e4d51c70f3ce533c01c2dc0b",
+      "prior_bytes": 14460,
+      "current_bytes": 16791,
+      "disposition": "append-only",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 14,
+          "current_end_line": 15,
+          "current_fragment_sha256": "059001d43317bfd9c13afcce47c28ec74d9b30b40bd0e7d30f4610dfc87d9bc6",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 131,
+          "current_end_line": 151,
+          "current_fragment_sha256": "fdec940384da5751e8ce48fd7059f0e68a56d8bbd42b6f2a6a8f49978c48c6b8",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/examples.md",
+      "prior_sha256": "e4cb664b448675d038e8f86a42dc3a0a7ca8412bfd37f94553fad330a140bb12",
+      "current_sha256": "e4cb664b448675d038e8f86a42dc3a0a7ca8412bfd37f94553fad330a140bb12",
+      "prior_bytes": 11928,
+      "current_bytes": 11928,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/integration.md",
+      "prior_sha256": "434437a849b84905971806ae97bdff38355cf1df1cb119ceaf85627c447bbfa0",
+      "current_sha256": "50f5386ad3babe986dddc70ee44c9d1e3dd1b14a987e7bf4eb770b9779ca318a",
+      "prior_bytes": 22963,
+      "current_bytes": 27891,
+      "disposition": "scoped-revision",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 12,
+          "current_end_line": 13,
+          "current_fragment_sha256": "5df1eb019b0d530e977fb6852e640aae1ae6cd80270fd42299873ab8f84e6fb3",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 81,
+          "current_end_line": 104,
+          "current_fragment_sha256": "6631c7c8823d5b5c8026852c8ae40d7495440fa868fb7323347dd49890cff66a",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 186,
+          "current_end_line": 187,
+          "current_fragment_sha256": "0dc46455438cd0a617f53e0106659ffa425c6fba1c9d34d18f3b50a4bc7d58f9",
+          "prior_text": "When delegating bounded integration of an already selected mature source to `ui_integrator`, follow [delegation guidance](delegation.md): lock source/variant, protected craft relationships, allowed modules, shared contracts and non-overlapping checkout boundaries before parallel writes, escalate unresolved visual/source choices back to the main agent instead of improvising CSS, and complete whole-product visual and behavioral verification in the main thread.\n"
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/interaction-and-variants.md",
+      "prior_sha256": "007f71266e953ae3bc3116ebb2f0a3570d4d4633d3f54c72051d904e408ff857",
+      "current_sha256": "7ee9e9721548220f59873effe581bd254988f25238a31e648b967bfa9ffd9013",
+      "prior_bytes": 29538,
+      "current_bytes": 31091,
+      "disposition": "append-only",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 150,
+          "current_end_line": 159,
+          "current_fragment_sha256": "ebf3d42d5a8e0f55089e37df44cdc5dc5e14149a31879b72ab7751613381cd4a",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/patterns.md",
+      "prior_sha256": "9c5401fe3dfe12e25a02b880e8bdf20fa0c53bb68bd58694b2d4a84f857684c4",
+      "current_sha256": "9c5401fe3dfe12e25a02b880e8bdf20fa0c53bb68bd58694b2d4a84f857684c4",
+      "prior_bytes": 25796,
+      "current_bytes": 25796,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/principles.md",
+      "prior_sha256": "e8b5bb3c9d31f631c4004256fed961c6bf2a2a22a97f86b6773536cf94c77836",
+      "current_sha256": "f0aadaf7afa463ab49fb2a20029a0be60e13ca4dc71127fbb78180f21b521a9f",
+      "prior_bytes": 43225,
+      "current_bytes": 44437,
+      "disposition": "append-only",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 178,
+          "current_end_line": 180,
+          "current_fragment_sha256": "5388b5513b9b5cd31f9929713da1be3798973d059c8f638df329b1f5e8a72de8",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 209,
+          "current_end_line": 211,
+          "current_fragment_sha256": "c843b58bc301ce5246569d22ba389a0c65fa399f8c7c385d02428c03eb0e0822",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/resource-catalog.md",
+      "prior_sha256": "16bd5d82a9a0eee440bb9c08eefbd4575281f523e95cbc3d8a095ff64c4ad6ad",
+      "current_sha256": "16bd5d82a9a0eee440bb9c08eefbd4575281f523e95cbc3d8a095ff64c4ad6ad",
+      "prior_bytes": 87576,
+      "current_bytes": 87576,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/sources.md",
+      "prior_sha256": "248cf43a5a72cc792940ae80821043d790ecdfe38b29c1f4f704a359b81ca741",
+      "current_sha256": "248cf43a5a72cc792940ae80821043d790ecdfe38b29c1f4f704a359b81ca741",
+      "prior_bytes": 17495,
+      "current_bytes": 17495,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/verification.md",
+      "prior_sha256": "7d8d3f8d8637cf03215dcd09a6d24731ef36c3e0c44cbdc27b9231ed97e4e8af",
+      "current_sha256": "f9f4c1617b989abecc142ff8142df69824c3b0c545179a226879e2b6a1b56eee",
+      "prior_bytes": 32785,
+      "current_bytes": 35478,
+      "disposition": "append-only",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 6,
+          "current_end_line": 7,
+          "current_fragment_sha256": "7e87a4b14b0d892bb1d5ffd18a897ab931cb79d13cc998757a7357f6bedf590b",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 42,
+          "current_end_line": 54,
+          "current_fragment_sha256": "711c819d652a939faeffaf85550eaf4100063e3035711d41b36885c68a221c99",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/references/visual-assets.md",
+      "prior_sha256": "cccdbe47327ed5b9bc756876ed128503b113f795da362140029eac03f47cff1c",
+      "current_sha256": "cccdbe47327ed5b9bc756876ed128503b113f795da362140029eac03f47cff1c",
+      "prior_bytes": 26147,
+      "current_bytes": 26147,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/references/workflow.md",
+      "prior_sha256": "9406b07119d3f915f5b8340d7206dc131d6de8087e83ce859c4465d233ffa461",
+      "current_sha256": "d0ed20d9d6ff874576114516a1ed7fd3d3db792ece9950149d1a537d43e9350c",
+      "prior_bytes": 28561,
+      "current_bytes": 37087,
+      "disposition": "scoped-revision",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": [
+        {
+          "current_start_line": 6,
+          "current_end_line": 7,
+          "current_fragment_sha256": "4cc2cf954c8add4613a0ce981f20c15105ee0202fcd50b3e409c5c655f5ed208",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 53,
+          "current_end_line": 86,
+          "current_fragment_sha256": "3f770ef366909de43e83e3a5e2ab52c25fe320beebc68a05493b4b7d1cb04b78",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 95,
+          "current_end_line": 97,
+          "current_fragment_sha256": "e17de9e6f77f05c68bec5361fd93d721ecb7974d2680eaa4ea76342d6a480dc6",
+          "prior_text": ""
+        },
+        {
+          "current_start_line": 114,
+          "current_end_line": 115,
+          "current_fragment_sha256": "8c2aae6b8621e260f73da12c22abcc430fcc1cb16cfc2c072917a318ce251960",
+          "prior_text": "**Orient and define the slice.** Reconcile feedback, accepted decisions, current code, incomplete journeys and findings. Continue the active SPEC while fulfilling its established objective or resolving its open quality gaps; begin a new formal SPEC only for a distinct cohesive design objective with its own review boundary (additional searches, trials, repairs and execution passes remain internal work). State the SPEC's owned visual and interaction qualities, coupled relationships, inherited current-product decisions, and separate research, primary implementation and affected-product regression scopes. Apply Keep, Split, Merge or Redraw from [analysis](analysis.md#choose-a-bounded-increment) as evidence develops, explaining consequential scope shifts in the conversation while preserving prior goals and unresolved defects.\n"
+        },
+        {
+          "current_start_line": 134,
+          "current_end_line": 135,
+          "current_fragment_sha256": "fe4c68be057423367a3cbd0002ba8610aabbcc259ba939bd2e9e8eb6ba17c800",
+          "prior_text": "**Present and continue.** Deliver the working entry, consequential choices, actual adopted sources (distinguishing studied, compared, trialed and adopted items), representative visuals/episodes, observed local and related-product checks, remaining gaps, approval scope and next useful work in both the conversation and current project records. Surface key findings and the first reviewable result while they can still inform integration.\n"
+        },
+        {
+          "current_start_line": 156,
+          "current_end_line": 157,
+          "current_fragment_sha256": "1978d7d353c580be4b11ce37fb51f4c3031c1f2ad6180a8b419ce183ec0f4b1d",
+          "prior_text": "Connect every viewed frame or episode to its perceptual or task impact, governing principle, testable cause and repair scope; check shared dependants when fixing common layers. Keep actually viewed coverage, captured media and declared inventories distinct, preserving `planned`, `pass`, `fail`, `blocked` and `waived` meanings honestly ([verification](verification.md)).\n"
+        },
+        {
+          "current_start_line": 162,
+          "current_end_line": 163,
+          "current_fragment_sha256": "3a23d548e3efc08efcd3298357694a59b3e99c2ec9fc42f30eba924ce25aac5f",
+          "prior_text": "Reconcile accepted experience, art direction, reference/resource decisions and actual services, data, permissions and code. Preserve primary actions, continuation and adopted visual craft\u2014including canonical token harmonization, cascade isolation (`@layer`), rendering-fidelity fixes and authorized source-derived ports\u2014across live data, SSR/hydration, loading, denial and error states. Carry exact source, variant, public configuration, rights, attribution, modification ownership, asset masters/exports and maintenance sources into handover.\n"
+        },
+        {
+          "current_start_line": 164,
+          "current_end_line": 165,
+          "current_fragment_sha256": "f24bd5e1ad385f41260af1dda4b4c5facd047178172be82c4cedc15c6082bf68",
+          "prior_text": "Connect authoritative content and localization; verify freshness, duplicate actions, concurrency, cancellation, partial completion and unknown results. During audit and finish, compare current claims with real outputs and scoped tests across both design and product tracks, checking experience validity, expressive completion and engineering reliability at their actual boundaries. Any material change to accepted appearance, task meaning or user commitment returns only the affected scope for review while independent work continues; deployment and real-world actions follow actual authorization.\n"
+        },
+        {
+          "current_start_line": 171,
+          "current_end_line": 173,
+          "current_fragment_sha256": "9c7ceef42d12eafae648f1d2fb7fcd97b4fdb17fcd2b0cf2a39f652043046612",
+          "prior_text": ""
+        }
+      ]
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_design_evidence.py",
+      "prior_sha256": "e3cd9e614616dadd1fa8118843ec51e536bfccd4e5241b99be033c3db40496c8",
+      "current_sha256": "e3cd9e614616dadd1fa8118843ec51e536bfccd4e5241b99be033c3db40496c8",
+      "prior_bytes": 17982,
+      "current_bytes": 17982,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_file_integrity.py",
+      "prior_sha256": "c6ac2182a1a4ee4545bacc281bb2a483df1ee93f73cbec91aacbf1878bb79c3f",
+      "current_sha256": "c6ac2182a1a4ee4545bacc281bb2a483df1ee93f73cbec91aacbf1878bb79c3f",
+      "prior_bytes": 1882,
+      "current_bytes": 1882,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/scripts/check_manifest.py",
+      "prior_sha256": "08d674858363368531f4168b1fd6e9aa746c0d6780adfc33bbad848d01be3497",
+      "current_sha256": "08d674858363368531f4168b1fd6e9aa746c0d6780adfc33bbad848d01be3497",
+      "prior_bytes": 12782,
+      "current_bytes": 12782,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/scripts/find_resources.py",
+      "prior_sha256": "7b949efdac704c07b1d416fa152cc783c43511626ce748c9ebd6b06cf09ace0a",
+      "current_sha256": "7b949efdac704c07b1d416fa152cc783c43511626ce748c9ebd6b06cf09ace0a",
+      "prior_bytes": 13890,
+      "current_bytes": 13890,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/scripts/prepare.py",
+      "prior_sha256": "35db530142cc044a697596075c8cd365761f4000d26cb48837dd0800840a7a85",
+      "current_sha256": "35db530142cc044a697596075c8cd365761f4000d26cb48837dd0800840a7a85",
+      "prior_bytes": 3595,
+      "current_bytes": 3595,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    },
+    {
+      "path": "skills/ui-spec/scripts/structural_records.py",
+      "prior_sha256": "d8a7de77ce352b973c58d0063551a88247eaf9f5932524d80ff6e43feffccf4f",
+      "current_sha256": "d8a7de77ce352b973c58d0063551a88247eaf9f5932524d80ff6e43feffccf4f",
+      "prior_bytes": 11689,
+      "current_bytes": 11689,
+      "disposition": "unchanged",
+      "reason": "Exact source identity and reversible delta; semantic dispositions are reviewed separately in docs/REVIEW-v1.22.0.md.",
+      "inverse_edits": []
+    }
+  ],
+  "historical_evidence_unchanged": [
+    {
+      "path": "docs/evidence/v1.13.0/lineage.json",
+      "sha256": "3035a6cd459ce87beaedd4249258e3ff9046b3ee2493a64a2d3e554b28db2ae6"
+    },
+    {
+      "path": "docs/evidence/v1.14.0/source-preservation.json",
+      "sha256": "9d957d6161e285dc18db5cd1a06946d239ee6f7ec7bc68b3f4c7be090d0a10f7"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/baseline-runtime.json",
+      "sha256": "1df417f0d0892e1a1693302d7d1c47f479e1fadf93757bfffd8c21b45266b210"
+    },
+    {
+      "path": "docs/evidence/v1.15.0/continuity.json",
+      "sha256": "027534488744cb8b8c69e424e6fb7ece9936989e2470a60e842a851de5cf2dc8"
+    },
+    {
+      "path": "docs/evidence/v1.16.0/continuity.json",
+      "sha256": "06dc1de98c6f036c74f3b6cdaf9817b6b68cade14eed9558a22044de49d6d033"
+    },
+    {
+      "path": "docs/evidence/v1.16.1/continuity.json",
+      "sha256": "ce9e516fc533170b7ca7fa886ddad31182a5cc5788891205cd764377c03f41f4"
+    },
+    {
+      "path": "docs/evidence/v1.17.0/continuity.json",
+      "sha256": "bf85c8c7d0015d5d4c7039d0850cc17da43ae52b81cdb45e4d7c8e6e7a575612"
+    },
+    {
+      "path": "docs/evidence/v1.18.0/continuity.json",
+      "sha256": "069439d7130775ff4ce55940507ccbce2634c9627d31c06561d64f6906389aad"
+    },
+    {
+      "path": "docs/evidence/v1.19.0/continuity.json",
+      "sha256": "710c6422a787471c1c3b5f2bd4a2e15105f23379c3406b45e5b3ff1a78900a74"
+    },
+    {
+      "path": "docs/evidence/v1.19.0/local-validation.json",
+      "sha256": "d7cab6f940c71d609bc237bb0b59954a3383bb1627db84e1fb2f1367d00018fb"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/continuity.json",
+      "sha256": "3845781b12948a18728ae41574d037aa597d90cfb795829bbc3a61303851aaca"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/release-decision.json",
+      "sha256": "3154f1e373f6088acac24057653e62140896830d3c71a47476b941ec2e8e6feb"
+    },
+    {
+      "path": "docs/evidence/v1.20.0/session-study/registration.json",
+      "sha256": "3072de1df10611c922273e62ae3c6e66dfd2790627727e265410075b1ee43ab6"
+    },
+    {
+      "path": "docs/evidence/v1.21.0/continuity.json",
+      "sha256": "29456e4fb8ee43c04c6f9c93de8d55b463419230b0dc40325c9c68f284c9b210"
+    },
+    {
+      "path": "docs/experiments/adaptive-granularity/registration.json",
+      "sha256": "114db787322410a9aa1f495e251159c5c21a71ed0e6879a5be5b5fb97aabb3a4"
+    },
+    {
+      "path": "docs/experiments/observable-execution/registration.json",
+      "sha256": "0f20afb75fe6715daf039e5cea7ec28d87b4f0ab1aa71a89f48a1845c016d618"
+    },
+    {
+      "path": "docs/experiments/default-deny/registration.json",
+      "sha256": "f021e5540000cb2f29324143475d5d0989751b3aeb6cd83b9405dab16cb8a013"
+    },
+    {
+      "path": "docs/experiments/adaptive-research/execution-status.json",
+      "sha256": "01a4ac40b94422de05856bf9668ddd944002a3d6040ca215103c70275a4ed9ad"
+    }
+  ]
+}

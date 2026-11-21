@@ -176,6 +176,8 @@ One source can carry many related details. A mature surface token can establish 
 
 Preserve purposeful differences through roles: display and reading type, expressive results and direct repeated feedback can share one system. Separate identity, page-family anchors and local composition; explain exceptional treatments and where they apply. Validate real content and related pages when shared rules change.
 
+During a [staged migration](component-sourcing.md#migrate-shared-foundations-across-existing-surfaces-in-stages) of shared foundations, preserve **token role stability** through **semantic token aliases** rather than mixing incompatible raw color, spacing or typography values across routes. Map legacy semantic surface, border, text, emphasis and elevation tokens onto the incoming foundation's corresponding roles across active coexistence seams so visual hierarchy, foreground/background contrast and reading rhythm stay coherent while consumers migrate in waves. Keep legacy token aliases clearly scoped as temporary compatibility bridges destined for removal once remaining consumers move to the new foundation.
+
 ### 3. Core scale and composition occupancy
 
 Judge control scale and total composition separately. Stable control sizes can coexist with responsive containers, columns, context areas and outer space.
@@ -205,6 +207,8 @@ Reserve space for the full visible motion envelope: rotation, expansion, particl
 Within the chosen system, keep shared headers, navigation and content origins predictable at corresponding viewport/scroll conditions. A redesigned composition can establish new anchors; verify its orientation cues. Let each region handle growth.
 
 Switch through related views to observe retained identity, focus, input and selection. Necessary intrinsic changes need deliberate effects on neighbors. Include late content, loading and errors, then inspect both the transition and settled result.
+
+When users cross between migrated and not-yet-migrated routes during a staged system upgrade, keep shared shell geometry, primary navigation landmarks, active-route indicators, header height and content origins aligned across the seam. If a new shell layout intentionally shifts those anchors, isolate the transition at a clear workspace boundary and inspect actual cross-route navigation so users do not experience disorienting chrome jumps or split visual identities between adjacent tasks.
 
 ### 7. Choose layout by task shape
 

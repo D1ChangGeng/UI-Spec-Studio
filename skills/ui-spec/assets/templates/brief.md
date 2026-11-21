@@ -33,6 +33,9 @@ experience goals, necessary relationships, likely dependencies and the first use
 scope. Keep this plan revisable as research, resource discovery and trials change
 understanding. Explain the initial scope and its reason to the user.
 
+Express multi-round increments as a living horizon (`candidate`, `active`, `completed`,
+`superseded`, `consolidated`, `retired`) using [horizon governance](../../references/analysis.md#govern-the-multi-spec-horizon-and-retire-obsolete-scope), noting upstream foundational dependencies, anchor-slice trials and safe retirement or successor links.
+
 ## Accepted direction
 
 Visual identity, typography/language coverage, palette roles, density, composition,
@@ -68,6 +71,8 @@ primary implementation and integration/regression scopes. Note what is inherited
 extended, adapted or reconsidered in the current product. Keep internal research,
 repairs and refinement under this SPEC while they serve its promised goal.
 
+For cold-start re-entry or an interrupted mid-SPEC pause, record the **Continuation Baseline**: runnable preview command or entry route, settled foundations and approvals to inherit without re-litigation, recent engineering or contract drift reconciled, provisional probes versus adopted UI, active open obligations and the single next concrete action.
+
 ## Scope continuity
 
 Identify implemented, inspected, approved, connected and verified scopes separately.
@@ -76,8 +81,10 @@ operation describes current work; individual scopes can have different maturity.
 
 When a boundary changes, preserve the complete goal, why the change is justified,
 where the responsibility now sits and the original unresolved findings. A new
-SPEC or a narrower current scope does not itself resolve a quality gap. Keep
-the actual preview, important choices and observed results visible in the
+SPEC or a narrower current scope does not itself resolve a quality gap. Carry active
+Visual & Craft, Provisional Probe & Migration Bridge, Integration & Contract, and
+Verification Scope obligations explicitly through every handover and horizon change.
+Keep the actual preview, important choices and observed results visible in the
 conversation alongside the full project record.
 
 ## User-level product model
