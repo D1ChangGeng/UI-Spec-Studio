@@ -19,7 +19,7 @@ function helpText(lang) {
     '安装：npx --yes ui-spec-studio@latest',
     '',
     '用法：ui-spec install|status|uninstall [选项]',
-    '  --agent TOOL       Codex、Claude Code、Cursor 或 OpenCode',
+    '  --agent TOOL       Codex、Claude Code、Cursor、OpenCode 或 Antigravity',
     '  --project PATH     安装到指定项目（默认当前项目）',
     '  --global           安装到当前用户的所有项目',
     '  --migrate          备份并替换旧安装',
@@ -33,7 +33,7 @@ function helpText(lang) {
     'Install: npx --yes ui-spec-studio@latest',
     '',
     'Usage: ui-spec install|status|uninstall [options]',
-    '  --agent TOOL       Codex, Claude Code, Cursor or OpenCode',
+    '  --agent TOOL       Codex, Claude Code, Cursor, OpenCode or Antigravity',
     '  --project PATH     Install into a project (default: current project)',
     '  --global           Install for all projects of this user',
     '  --migrate          Back up and replace an existing installation',
@@ -597,8 +597,8 @@ function userError(ui, message) {
     return tr('Codex requires Python 3.11 or newer. No Skill files changed.',
       'Codex 角色需要 Python 3.11 或更新版本，未修改 Skill 文件。');
   if (message.startsWith('Unsupported Harness:'))
-    return tr('Unsupported tool. Choose Codex, Claude Code, Cursor or OpenCode.',
-      '不支持此工具，请选择 Codex、Claude Code、Cursor 或 OpenCode。');
+    return tr('Unsupported tool. Choose Codex, Claude Code, Cursor, OpenCode or Antigravity.',
+      '不支持此工具，请选择 Codex、Claude Code、Cursor、OpenCode 或 Antigravity。');
   if (message.startsWith('Another installation may be running.'))
     return tr('Another installation may be running. Check the lock file: ',
       '可能有其他安装正在进行。请检查锁文件：') + message.split(': ').slice(1).join(': ');

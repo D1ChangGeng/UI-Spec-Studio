@@ -8,8 +8,12 @@ import re
 import subprocess
 import sys
 import tempfile
-import tomllib
 import unittest
+
+try:
+    import tomllib
+except ModuleNotFoundError:
+    tomllib = None
 
 from source_continuity import (
     predecessor_runtime,
@@ -301,10 +305,26 @@ class SustainableLoopCodexAndDocsSyncTests(unittest.TestCase):
             with self.subTest(role=role_name):
                 self.assertRegex(entry["sha256"], r"^[0-9a-f]{64}$")
                 self.assertEqual(sha256_bytes(raw), entry["sha256"])
-                parsed = tomllib.loads(raw.decode("utf-8"))
-                self.assertEqual(set(parsed.keys()), {"name", "description", "developer_instructions"})
-                self.assertEqual(parsed["name"], role_name)
-                instructions = parsed["developer_instructions"]
+                decoded = raw.decode("utf-8")
+                if tomllib is not None:
+                    parsed = tomllib.loads(decoded)
+                    self.assertEqual(set(parsed.keys()), {"name", "description", "developer_instructions"})
+                    self.assertEqual(parsed["name"], role_name)
+                    instructions = parsed["developer_instructions"]
+                else:
+                    # Python 3.10 stdlib fallback: verify exact 3 top-level keys outside triple-quoted block.
+                    stripped_block = re.sub(r'"""[\s\S]*?"""', '""', decoded)
+                    top_keys = re.findall(r"(?m)^([A-Za-z0-9_-]+)\s*=", stripped_block)
+                    self.assertEqual(set(top_keys), {"name", "description", "developer_instructions"})
+                    self.assertEqual(len(top_keys), 3)
+                    name_match = re.search(r'(?m)^name\s*=\s*"([^"]+)"\s*$', stripped_block)
+                    self.assertIsNotNone(name_match)
+                    self.assertEqual(name_match.group(1), role_name)
+                    inst_match = re.search(
+                        r'developer_instructions\s*=\s*"""([\s\S]*?)"""', decoded
+                    )
+                    self.assertIsNotNone(inst_match)
+                    instructions = inst_match.group(1)
                 lower = instructions.casefold()
                 self.assertIn("main agent", lower)
                 self.assertTrue(
@@ -339,7 +359,7 @@ class SustainableLoopCodexAndDocsSyncTests(unittest.TestCase):
         self.assertRegex(changelog, r"(?m)^##\s+1\.21\.0\b")
 
         release_note = (ROOT / "docs/releases/v1.22.0.md").read_text(encoding="utf-8")
-        self.assertIn("feat/sustainable-long-term-loop-v1.22.0", release_note)
+        self.assertIn("Version 1.22.0", release_note)
         self.assertIn("REVIEW-v1.22.0.md", release_note)
 
         readme_en = (ROOT / "README.md").read_text(encoding="utf-8")
@@ -349,6 +369,24 @@ class SustainableLoopCodexAndDocsSyncTests(unittest.TestCase):
         readme_zh = (ROOT / "README.zh-CN.md").read_text(encoding="utf-8")
         self.assertIn("docs/REVIEW-v1.22.0.md", readme_zh)
         self.assertIn("docs/releases/v1.22.0.md", readme_zh)
+
+    def test_antigravity_installer_harness_registration_and_paths(self):
+        registry = json.loads((ROOT / "installer/harnesses.json").read_text(encoding="utf-8"))
+        self.assertIn("antigravity", registry["harnesses"])
+        antigravity = registry["harnesses"]["antigravity"]
+        self.assertEqual(antigravity["project_skill_dir"], ".agents/skills/ui-spec")
+        self.assertEqual(antigravity["user_skill_dir"], ".gemini/config/skills/ui-spec")
+        self.assertEqual(antigravity["user_base"], "home")
+
+        experience = (ROOT / "installer/lib/experience.mjs").read_text(encoding="utf-8")
+        self.assertIn("antigravity: 'Antigravity'", experience)
+
+        cli = (ROOT / "installer/bin/ui-spec.mjs").read_text(encoding="utf-8")
+        self.assertIn("Antigravity", cli)
+
+        pkg = json.loads((ROOT / "installer/package.json").read_text(encoding="utf-8"))
+        self.assertIn("Antigravity", pkg["description"])
+        self.assertIn("antigravity", pkg["keywords"])
 
 
 class SustainableLoopNeutralInspectorFixtureTests(unittest.TestCase):

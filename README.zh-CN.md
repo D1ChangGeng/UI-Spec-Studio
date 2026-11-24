@@ -19,7 +19,7 @@
 npx --yes ui-spec-studio@latest
 ```
 
-官方 npm 包 `ui-spec-studio` 已公开发布，并通过与 GitHub 正式发行包的完整性比对和真实安装测试。运行上述命令进入终端安装向导，选择 Codex、Claude Code、Cursor 或 OpenCode。默认安装到当前项目，**只下载轻量安装器及 Skill 本体，不克隆数 GB 的 GitHub 仓库**。
+官方 npm 包 `ui-spec-studio` 已公开发布，并通过与 GitHub 正式发行包的完整性比对和真实安装测试。运行上述命令进入终端安装向导，选择 Codex、Claude Code、Cursor、OpenCode 或 Antigravity。默认安装到当前项目，**只下载轻量安装器及 Skill 本体，不克隆数 GB 的 GitHub 仓库**。
 
 如果要给当前 Windows 用户全局安装 Codex，并安全迁移旧版 `skills add` 安装，请运行：
 

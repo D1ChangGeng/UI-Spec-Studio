@@ -19,7 +19,7 @@ A portable [Agent Skill](https://agentskills.io/specification) for **product int
 npx --yes ui-spec-studio@latest
 ```
 
-The official `ui-spec-studio` npm package has been published and independently verified against the exact GitHub Release archive. The guided installer offers the supported coding Harnesses; the default installation scope is the current project. It downloads **only the compact installer and Skill files**, never the multi-GB source repository.
+The official `ui-spec-studio` npm package has been published and independently verified against the exact GitHub Release archive. The guided installer supports **Codex, Claude Code, Cursor, OpenCode and Antigravity**; the default installation scope is the current project. It downloads **only the compact installer and Skill files**, never the multi-GB source repository.
 
 For Codex installation in your user scope, or for a safe migration from the old Skills CLI:
 

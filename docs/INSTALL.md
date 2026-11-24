@@ -17,9 +17,10 @@ npx --yes ui-spec-studio@latest install --agent codex
 npx --yes ui-spec-studio@latest install --agent claude-code
 npx --yes ui-spec-studio@latest install --agent cursor
 npx --yes ui-spec-studio@latest install --agent opencode
+npx --yes ui-spec-studio@latest install --agent antigravity
 ```
 
-The Codex adapter installs four native roles: `ui_researcher`, `ui_integrator`, `ui_challenger`, and `ui_experience_observer`. They are registered but not launched by installation.
+The Codex adapter installs four native roles: `ui_researcher`, `ui_integrator`, `ui_challenger`, and `ui_experience_observer`. They are registered but not launched by installation. For Antigravity, project scope installs to `.agents/skills/ui-spec` and `--global` installs to `~/.gemini/config/skills/ui-spec` (shared across Antigravity App, Antigravity IDE, and Antigravity CLI).
 
 Use `--global` for the host's **user scope** or `--project PATH` for a specific consumer project; never combine them. `--dry-run` previews the action without writing; `status` and `uninstall` must use the same Harness and scope as the original installation:
 
@@ -139,6 +140,7 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Sources
 
 - [Agent Skills format](https://agentskills.io/specification)
+- [Google Antigravity Agent skills](https://antigravity.google/docs/skills/)
 - [Skills CLI repository](https://github.com/vercel-labs/skills)
 - [Skills CLI documentation](https://skills.sh/docs/cli)
 
