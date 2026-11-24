@@ -2,7 +2,7 @@
 
 ## Official npm installer (recommended)
 
-The official `ui-spec-studio` npm package was first publicly verified at version `1.20.3`, through registry readback, the actual npm-named CLI and SHA-512 comparison with the immutable GitHub Release. The `latest` dist-tag resolves the currently published version; each newer version, including `1.21.0`, requires its own release and public integrity acceptance. The **canonical, version-independent** terminal entry point is:
+The official `ui-spec-studio` npm package was first publicly verified at version `1.20.3`, through registry readback, the actual npm-named CLI and SHA-512 comparison with the immutable GitHub Release. The `latest` dist-tag resolves the currently published version; each newer version, including `1.22.0`, requires its own release and public integrity acceptance. The **canonical, version-independent** terminal entry point is:
 
 ```powershell
 npx --yes ui-spec-studio@latest
@@ -17,9 +17,10 @@ npx --yes ui-spec-studio@latest install --agent codex
 npx --yes ui-spec-studio@latest install --agent claude-code
 npx --yes ui-spec-studio@latest install --agent cursor
 npx --yes ui-spec-studio@latest install --agent opencode
+npx --yes ui-spec-studio@latest install --agent antigravity
 ```
 
-The Codex adapter installs four native roles: `ui_researcher`, `ui_integrator`, `ui_challenger`, and `ui_experience_observer`. They are registered but not launched by installation.
+The Codex adapter installs four native roles: `ui_researcher`, `ui_integrator`, `ui_challenger`, and `ui_experience_observer`. They are registered but not launched by installation. For Antigravity, project scope installs to `.agents/skills/ui-spec` and `--global` installs to `~/.gemini/config/skills/ui-spec` (shared across Antigravity App, Antigravity IDE, and Antigravity CLI).
 
 Use `--global` for the host's **user scope** or `--project PATH` for a specific consumer project; never combine them. `--dry-run` previews the action without writing; `status` and `uninstall` must use the same Harness and scope as the original installation:
 
@@ -53,7 +54,7 @@ The packaged manifest verifies every file with SHA-256, staged files are checked
 If npm registry resolution is unavailable, use the **specific public release**, not the mutable `releases/latest/download/ui-spec-installer.tgz` URL. npm can reuse stale cached bytes for an unchanged tarball URL:
 
 ```powershell
-npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz" install --agent codex --global --migrate
+npx --yes "https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.22.0/ui-spec-installer.tgz" install --agent codex --global --migrate
 ```
 
 The fixed-version release is a standard npm-executable tarball. Avoid `npx skills add D1ChangGeng/UI-Spec-Studio --skill ui-spec` as the recommended installation; some Skills CLI versions first clone the entire multi-gigabyte repository.
@@ -63,15 +64,15 @@ The fixed-version release is a standard npm-executable tarball. Avoid `npx skill
 For a host that already manages Skill installation through the [Skills CLI](https://skills.sh/docs/cli), install the independent release ZIP (not the source repository) explicitly:
 
 ```bash
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-1.21.0.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.22.0/ui-spec-1.22.0.zip --skill ui-spec -a codex
 ```
 
-This installs the **portable Skill alone**, not the four Codex native agents. The Codex adapter is separately available as `ui-spec-codex-1.21.0.zip` for manual installation. Do not use both installers against an already managed Skill directory without first examining ownership receipts; neither will silently take over a copy managed by the other.
+This installs the **portable Skill alone**, not the four Codex native agents. The Codex adapter is separately available as `ui-spec-codex-1.22.0.zip` for manual installation. Do not use both installers against an already managed Skill directory without first examining ownership receipts; neither will silently take over a copy managed by the other.
 
 For a fixed independent-installer version rather than the latest release:
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.22.0/ui-spec-installer.tgz install --agent codex
 ```
 
 The GitHub fallback package is a standard npm executable tarball. The **separately named official npm distribution** requires npm registry ownership and a one-time bootstrap; GitHub repository permission alone does not authorize npm publication. Other Harness adapter modules can be declared in `installer/harnesses.json` and bundled under `integrations/` without adding host-specific logic to the Skill instructions.
@@ -139,13 +140,14 @@ A standard skill format is a portability mechanism. Actual host invocation, brow
 ## Sources
 
 - [Agent Skills format](https://agentskills.io/specification)
+- [Google Antigravity Agent skills](https://antigravity.google/docs/skills/)
 - [Skills CLI repository](https://github.com/vercel-labs/skills)
 - [Skills CLI documentation](https://skills.sh/docs/cli)
 
 ## Fixed version
 
 ```bash
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.22.0/ui-spec-installer.tgz install --agent codex
 ```
 
 Inspect installed files before applying upgrades to a customized local copy. The
@@ -212,7 +214,7 @@ match/mismatch applies only to those bytes.
 
 ## Optional adaptive research support
 
-The portable Skill still works with a single agent. See [the Codex adapter](../integrations/codex/README.md) for explicit installation of all four roles, natural delegation, model/GUI limitations and safe upgrade/uninstall. Role installation does not install or authenticate Codex and does not change permissions. See [the current development review](REVIEW-v1.20.0.md) before treating this candidate as validated.
+The portable Skill still works with a single agent. See [the Codex adapter](../integrations/codex/README.md) for explicit installation of all four roles, natural delegation, model/GUI limitations and safe upgrade/uninstall. Role installation does not install or authenticate Codex and does not change permissions. See [the v1.22.0 source-lineage review](REVIEW-v1.22.0.md), [the v1.21.0 review](REVIEW-v1.21.0.md) and [the earlier v1.20.0 study review](REVIEW-v1.20.0.md) for current and historical evidence boundaries.
 
 When the host does not load the installed project registrations, the adapter's optional Python 3.11+ launcher registers the installed roles for one Codex invocation:
 

@@ -4,6 +4,7 @@ const toolNames = {
   'claude-code': 'Claude Code',
   cursor: 'Cursor',
   opencode: 'OpenCode',
+  antigravity: 'Antigravity',
 };
 
 export async function createPresentation({ noTui = false, json = false, lang, version }) {

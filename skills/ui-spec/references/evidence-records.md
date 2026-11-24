@@ -12,6 +12,7 @@ implementation readiness, design correctness or task completion.
 - [Read-only use and report semantics](#read-only-use-and-report-semantics)
 - [Small core and optional detail](#small-core-and-optional-detail)
 - [Optional formal-increment declarations](#optional-formal-increment-declarations)
+- [Express long-term horizon, migrations, compaction and open obligations](#express-long-term-horizon-migrations-compaction-and-open-obligations)
 - [Source and file facts](#source-and-file-facts)
 - [Records are not independent verification](#records-are-not-independent-verification)
 - [Theory is not applicability](#theory-is-not-applicability)
@@ -127,6 +128,26 @@ resolves declared references; it neither creates a plan nor certifies a minimum
 sufficient experience closure, research depth, visual quality or completion.
 Missing optional fields are not a request to fill them. There are no automatic
 SPEC status transitions, count targets or new approval stages.
+
+## Express long-term horizon, migrations, compaction and open obligations
+
+Long-lived projects can represent multi-month evolution inside existing Markdown
+records or the unchanged optional `ui-spec-evidence/1` JSON profile without adding
+a new schema, a parallel debt tracker or mechanical workflow rules:
+
+| Long-term concern | Compatible expression in `ui-spec-evidence/1` or Markdown |
+|---|---|
+| **Living SPEC horizon dispositions** | Record descriptive `disposition` values (`candidate`, `active`, `completed`, `superseded`, `consolidated`, `retired`) on `candidate_specs` and `formal_specs` entries to clarify each increment's current role. |
+| **Cross-SPEC dependencies & supersession** | Link upstream foundations, successor increments and retired scopes through `related_specs` on `candidate_specs`/`formal_specs` and capture why a boundary or direction changed in `revisions`. |
+| **Staged migration waves & coexistence bridges** | Connect shared tokens, shells, compatibility bridges and consuming routes through `relations` (`shares`, `depends_on`, `affects`) so `--changed <id>` surfaces relation-derived migration-seam and extremum review candidates. |
+| **Compacted history & cold archive** | Move superseded or retired object IDs into `revisions[].historical_objects` and store cold raw captures, trial logs and prior snapshots in `archive` entries so the root `objects` and `decisions` collections stay proportional to the active product. |
+| **Four-class open obligations** | Record active **Visual & Craft Debt**, **Provisional Probe & Migration Bridge Debt**, **Integration & Contract Debt** and **Verification Scope Debt** inside `decisions[].gaps` (or descriptive prose fields) with the owning object/SPEC, concrete reopen trigger and status so compaction and repartitioning never drop them. |
+
+Both optional structural inspectors (`check_design_evidence.py` and `check_manifest.py`)
+remain unchanged, read-only descriptive tools. They resolve declared IDs, inspect
+local file metadata and traverse listed relations without schema vetoes, completion
+verdicts, aggregate `ok` flags or mechanical enforcement of horizon order, compaction
+timing or debt closure.
 
 ## Source and file facts
 

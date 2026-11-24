@@ -49,3 +49,14 @@ Identity/functional icon roles, type/glyph intent, image crop/lighting/material,
 spatial and motion relationships. Link significant masters and variants to the
 asset records; preserve their source, rights, runtime/fallback and acceptance.
 Evaluate each asset on its own and in the shared composition.
+
+## Staged migration waves, coexistence bridges and legacy decommission
+
+When upgrading shared tokens, typography, navigation chrome or mature component
+families across existing surfaces ([staged migrations](../../references/component-sourcing.md#migrate-shared-foundations-across-existing-surfaces-in-stages)),
+record only the active coordination facts needed across rounds:
+
+- **Anchor-slice validation:** representative route/surface trialed with real content, themes, locales and states before broader rollout.
+- **Wave ownership:** migrated surfaces, pending consumer routes and shared-seam boundaries (navigation anchors, focus/keyboard, overlay/portal stacking, scroll and theme/locale sync).
+- **Scoped coexistence bridges:** semantic token aliases, scoped CSS layers or adapter seams kept strictly as bounded integration glue under the [closed W1–W3 allowlist](../../references/component-sourcing.md#closed-original-construction-allowlist), never as permanent custom visual foundations.
+- **Legacy decommission targets:** superseded tokens, stylesheets, duplicate engines and temporary bridges scheduled for deletion once remaining consumers migrate or retire.

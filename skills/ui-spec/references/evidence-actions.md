@@ -54,6 +54,8 @@ verified quality.
 | Real implementation exposes a quality gap | Locate its scale/cause: experience model, reference, source, adaptation, content, composition or runtime; repair and recheck | Affected claims and dependent conditions are revalidated without silently lowering the target |
 | A shared dependency or evidence condition changes | Revisit affected decisions and claims; preserve unaffected evidence and historic approval scope | Recheck or a specific applicability argument establishes which prior results still apply |
 | A low-impact change inherits current, matching-condition evidence | Make the narrow change and verify its local consequences | The inherited rule and scope are identified; avoid restarting unrelated broad discovery |
+| An active open obligation sits on an object or dependency touched by the next increment or approaching `finish` | Surface the Visual & Craft, Provisional Probe/Migration Bridge, Integration/Contract or Verification Scope Debt item and resolve or explicitly bound it | Inspected evidence closes the gap, a successor SPEC inherits it with an explicit reopen trigger, or documented product retirement closes it |
+| External engineering commits, backend contract shifts or migration wave transitions alter a shared dependency | Run [drift reconciliation](integration.md#reconcile-ongoing-engineering-and-contract-drift-between-rounds) and reopen only the affected objects, seams and claims | Preserved functional fixes and restored visual/behavioral checks establish current validity without invalidating unaffected settled commitments |
 
 These are evidence/action relationships, not a fixed task count or time quota.
 Research may go through many independent sources when a small object has large
@@ -101,6 +103,26 @@ brand mark. Follow explicit dependency and shared-use links to identify likely
 review scope. Recheck meaningful parent composition as well as local details.
 Keep passing, failed, blocked and unexamined conditions visible instead of
 replacing them with a single maturity score.
+
+Bind active [open obligations](evidence-map.md#compact-active-records-without-evaporating-open-obligations)
+to concrete cross-round reopen triggers so deferred work never drifts silently across
+sessions:
+
+- **Touch or finish trigger:** when a follow-up increment modifies an object, shared
+  token, layout shell or service adapter that carries active **Visual & Craft Debt**,
+  **Provisional Probe & Migration Bridge Debt**, **Integration & Contract Debt** or
+  **Verification Scope Debt**—or when that scope approaches `finish`—surface the
+  obligation directly and either resolve it with inspected evidence or keep its
+  bounded carry-forward scope explicit.
+- **External drift or wave-transition trigger:** when engineering commits, backend
+  schema or permission changes, dependency upgrades or staged migration waves alter
+  an underlying contract, token alias or coexistence seam, reopen only the affected
+  decisions, seam checks and extremum consumers while preserving unaffected settled
+  commitments and historical approval provenance.
+- **Scoped waiver expiry or condition change:** when an excepted condition changes
+  (for example, a formerly excluded locale, viewport or real backend endpoint enters
+  active scope), reopen that waiver explicitly rather than letting historical exception
+  text silence a new defect.
 
 At handover, show what is supported now, the actual preview, a representative
 piece of evidence for important choices, the unresolved dependency and the next

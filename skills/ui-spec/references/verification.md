@@ -4,6 +4,7 @@
 
 - [Build the coverage inventory from reality](#build-the-coverage-inventory-from-reality)
 - [Verify the increment and its product relationships](#verify-the-increment-and-its-product-relationships)
+- [Scope regression across shared migrations and evolving code](#scope-regression-across-shared-migrations-and-evolving-code)
 - [Inspect and show the first reviewable result](#inspect-and-show-the-first-reviewable-result)
 - [Judge evidence for the decision](#judge-evidence-for-the-decision)
 - [Capture the actual viewing condition](#capture-the-actual-viewing-condition)
@@ -39,6 +40,18 @@ Treat the formal SPEC as a design increment in the current product. Identify its
 Keep research/observation scope, primary design/implementation scope and integration/regression scope distinguishable. Broad research does not broaden promised implementation, and a narrow implementation change can require wider regression across shared dependants without automatically repeating unrelated product studies.
 
 For a composer-height change, observe text growth, send, response growth and user-controlled scrolling alongside neighboring reading space. For a shared font change, inspect dependent pages' wrapping, hierarchy, control geometry and locales rather than only a specimen. For motion, observe trigger, preparation, progression, settling, reversal and interruption, including coupled neighbors. For a dynamic background, verify moving emphasis alongside foreground reading/input legibility. Trace each important quality through observed reference, actual mature implementation (or faithful authorized design translation / qualifying authorized W1–W3 work), current rendered result and remaining difference.
+
+### Scope regression across shared migrations and evolving code
+
+In long-lived products undergoing [staged shared-foundation migrations](component-sourcing.md#migrate-shared-foundations-across-existing-surfaces-in-stages) or [ongoing engineering co-evolution](integration.md#reconcile-ongoing-engineering-and-contract-drift-between-rounds), replace both impossible whole-application re-audits and silent neighbor breakage with **dependency-scoped proportional regression**:
+
+1. **Derive blast radius from actual shared dependencies:** inspect which surfaces share the changed font metrics, semantic surface or contrast tokens, shared shell geometry, overlay/portal stacking layer, scroll container, navigation chrome or control primitive. Scope regression from real dependency coupling rather than fixed route quotas or blanket version invalidation.
+2. **Inspect three targeted scopes proportionally:**
+   - **Primary changed slice:** perform full perceptual, state, content and temporal verification for the active SPEC's own promised qualities.
+   - **Migration seam transitions:** exercise real navigation and cross-component transitions where migrated and unmigrated surfaces meet, confirming shared navigation anchor stability, theme/locale/reduced-motion parity, single keyboard/focus ownership and clean overlay/portal layering.
+   - **Representative high-risk extremum consumers:** inspect downstream surfaces that stress the changed shared dependency hardest—such as high data density tables or dense workbenches, narrow or short viewports, long or mixed-script localized text, and dark/light or reduced-motion variants—where token contrast, wrapping or container overflow breaks first.
+3. **Verify brownfield hotfix craft repairs and clean surface retirement:** when repairing visual craft on top of an emergency engineering or accessibility hotfix, confirm that the preserved functional, accessibility or security fix still passes alongside the restored visual craft, token role and mature-source provenance. When a SPEC supersedes or retires an obsolete surface, verify that zero dead navigation entries, stale internal links, orphaned controls or contradictory copy remain in the active product UI.
+4. **Keep unmigrated and uninspected scope explicit:** record remaining not-yet-migrated routes, active compatibility bridges and deferred viewport or variant checks honestly as open horizon items or [Verification Scope Debt](evidence-map.md#compact-active-records-without-evaporating-open-obligations) rather than implying uninspected pages passed.
 
 ## Inspect and show the first reviewable result
 

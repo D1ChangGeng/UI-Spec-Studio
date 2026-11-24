@@ -22,7 +22,7 @@ def build_installer(root: Path = ROOT, output_dir: Path | None = None) -> Path:
     if package.get('version') != version or package.get('bin') != {'ui-spec': 'bin/ui-spec.mjs'}:
         raise ValueError('Installer package metadata and VERSION disagree')
     registry = json.loads((root / 'installer/harnesses.json').read_text(encoding='utf-8'))
-    if registry.get('schema_version') != 1 or not {'codex', 'claude-code', 'cursor', 'opencode'}.issubset(registry.get('harnesses', {})):
+    if registry.get('schema_version') != 1 or not {'codex', 'claude-code', 'cursor', 'opencode', 'antigravity'}.issubset(registry.get('harnesses', {})):
         raise ValueError('Unexpected Harness registry')
     items: dict[str, bytes] = {}
     included_adapters = set()

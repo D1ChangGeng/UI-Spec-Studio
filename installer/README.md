@@ -1,6 +1,6 @@
 # UI Spec Studio
 
-Use the UI Spec Studio Skill with **Codex, Claude Code, Cursor or OpenCode**.
+Use the UI Spec Studio Skill with **Codex, Claude Code, Cursor, OpenCode or Antigravity**.
 
 ## Install
 
@@ -10,10 +10,11 @@ npx --yes ui-spec-studio@latest
 
 Choose your tool and whether to install for the current project or all projects under your user account.
 
-To install directly for Codex:
+To install directly for Codex or Antigravity:
 
 ```powershell
 npx --yes ui-spec-studio@latest install --agent codex --global --lang zh
+npx --yes ui-spec-studio@latest install --agent antigravity --global
 ```
 
 ## Already have UI Spec Studio?

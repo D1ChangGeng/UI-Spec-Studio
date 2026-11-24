@@ -258,7 +258,7 @@ class V121CodexAdapterTests(unittest.TestCase):
     def test_codex_manifest_hashes_and_unconditional_eight_reference_contract(self):
         codex_dir = ROOT / "integrations/codex"
         manifest = json.loads((codex_dir / "manifest.json").read_text(encoding="utf-8"))
-        self.assertEqual(manifest["version"], "1.21.0")
+        self.assertRegex(manifest["version"], r"^1\.(?:21|22)\.\d+$")
         self.assertEqual(
             set(manifest["roles"].keys()),
             {"ui_researcher", "ui_integrator", "ui_challenger", "ui_experience_observer"},

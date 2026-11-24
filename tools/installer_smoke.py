@@ -71,7 +71,7 @@ def run() -> dict[str, object]:
         if 'npm has already downloaded the compact release package' in cli.read_text(encoding='utf-8'):
             raise AssertionError('Unnecessary npm implementation explanation remains visible to Skill users')
         project_checks = []
-        for agent in ('codex', 'claude-code', 'cursor', 'opencode'):
+        for agent in ('codex', 'claude-code', 'cursor', 'opencode', 'antigravity'):
             project = base / agent
             project.mkdir()
             if agent == 'codex':
@@ -118,6 +118,29 @@ def run() -> dict[str, object]:
                 if not native_role.is_file():
                     raise AssertionError('An unowned standalone Codex registration was removed')
                 command([sys.executable, str(native), 'uninstall', '--project', str(project)], project)
+            if agent == 'antigravity':
+                # Verify Antigravity global scope (~/.gemini/config/skills/ui-spec) in an isolated home.
+                fake_home = base / 'antigravity-home'
+                fake_home.mkdir()
+                ag_env = dict(os.environ, HOME=str(fake_home), USERPROFILE=str(fake_home))
+                ag_global = fake_home / '.gemini/config/skills/ui-spec'
+                for sub_args in (
+                    ['install', '--agent', 'antigravity', '--global'],
+                    ['status', '--agent', 'antigravity', '--global'],
+                    ['uninstall', '--agent', 'antigravity', '--global'],
+                ):
+                    proc = subprocess.run(
+                        prefix + sub_args, cwd=project, env=ag_env,
+                        text=True, encoding='utf-8', capture_output=True, timeout=90,
+                    )
+                    if proc.returncode != 0:
+                        raise AssertionError(f'Antigravity global {sub_args[0]} failed:\n{proc.stdout}\n{proc.stderr}')
+                    if sub_args[0] == 'status':
+                        st = json.loads(proc.stdout)
+                        if st['status'] != 'current' or st['skill_files'] != len(expected) or not (ag_global / 'SKILL.md').is_file():
+                            raise AssertionError('Antigravity global install did not populate ~/.gemini/config/skills/ui-spec')
+                if ag_global.exists():
+                    raise AssertionError('Antigravity global uninstall left Skill files behind')
             project_checks.append(agent)
         # The legacy Skills CLI has no ownership receipt. It may have copied
         # ordinary files or linked a shared Skill through a Windows Junction.

@@ -14,6 +14,7 @@
 - [Reason about uncertainty](#reason-about-uncertainty)
 - [Define each surface by responsibility](#define-each-surface-by-responsibility)
 - [Choose a bounded increment](#choose-a-bounded-increment)
+- [Govern the multi-SPEC horizon and retire obsolete scope](#govern-the-multi-spec-horizon-and-retire-obsolete-scope)
 - [Design the understanding before the arrangement](#design-the-understanding-before-the-arrangement)
 - [Choose a representation before a component](#choose-a-representation-before-a-component)
 - [Organize actions, content and operating life](#organize-actions-content-and-operating-life)
@@ -189,6 +190,35 @@ For example, a conventional settings page built on an already inspected system c
 Before formal visual implementation, connect each owned quality to the mature source that carries it—preserving coherent page/block/system provenance rather than stripping simple CSS pieces out to hand-build them. Source discoveries can merge or narrow a SPEC while keeping the complete goal and any unresolved source gap explicit under [default-deny sourcing](component-sourcing.md#preserve-unresolved-responsibilities). Keep three overlapping scopes distinguishable: **Research & Observation Scope** (broader products/states studied for context), **Primary Design & Implementation Scope** (the increment's promised objects and relationships) and **Integration & Regression Scope** (neighboring regions, shared systems and journeys checked for side effects).
 
 State the increment's concrete visual and interaction quality obligations with review conditions that actually reveal them, tracing **target quality → real visual reference → mature resource, faithful authorized design translation or qualifying authorized W1–W3 implementation → actual presentation in the current product → remaining quality gap**. For a new product, choose a first closure that demonstrates core experience and visual direction at a caliber worth inheriting—keeping unfinished features visibly truthful and never letting an exploratory rough probe silently become the shared foundation.
+
+### Govern the multi-SPEC horizon and retire obsolete scope
+
+Over multi-month product evolution spanning dozens of increments, manage candidate and past SPECs as a **living horizon** over one evolving product rather than a static initial plan or an append-only archive of historical rounds. Use descriptive dispositions to make each increment's current role clear across sessions and engineers:
+
+| Disposition | Meaning in the living horizon |
+|---|---|
+| `candidate` | A proposed future closure whose scope, dependencies and priority remain revisable as evidence develops. |
+| `active` | A formal UI SPEC currently owning research, implementation or verification work on the product. |
+| `completed` | A delivered increment whose design commitments and adopted work remain active in the current product. |
+| `superseded` | A prior SPEC whose direction, interaction model or shared foundation has been deliberately replaced by a newer increment. |
+| `consolidated` | A formerly separate SPEC merged into a unified workflow or shared foundation increment. |
+| `retired` | An increment whose UI surface or product capability has been removed from the active product. |
+
+These dispositions are descriptive planning facts kept in the project's existing design records—never a rigid ticket state machine, a SPEC-count quota or a structural inspector gate.
+
+**Sequence by user value, dependency and leverage.** Order candidate SPECs using three complementary criteria alongside user urgency:
+
+- **Cross-SPEC dependency:** place shared application shells, primary navigation frames, semantic token or typography systems and blocking domain contracts ahead of downstream consuming routes when leaving them unresolved would force systemic rework across many surfaces.
+- **Risk-reduction leverage:** when a shared visual system, mature component family or complex interaction pattern carries high uncertainty, validate it first on one representative high-signal anchor slice with realistic content and states before expanding across remaining routes.
+- **Parallelizable boundaries:** identify independent candidate increments with disjoint surfaces, non-overlapping source modules and stable shared contracts that can advance concurrently across engineers or isolated worktrees without artificial serialization. Name the shared interface boundary before parallel work begins so concurrent increments do not drift apart.
+
+When a foundational SPEC changes an assumption relied upon by queued candidates—such as navigation depth, typography measure, theme structure or state ownership—re-check only the affected candidate boundaries and dependencies instead of discarding or rewriting the entire horizon.
+
+**Reprioritize on evidence and retire obsolete scope safely.** Concrete triggers that warrant reshaping the horizon include shifted product priorities, newly surfaced backend or service constraints, discovery of a mature resource that cleanly unifies several planned slices, or operational evidence from live use. Whenever superseding an earlier SPEC, consolidating two workflows or retiring an obsolete UI surface, apply a three-part safety rule:
+
+1. **Account for valid user task paths:** establish where every still-valid user task, entry point, deep link or recovery path moves in the successor surface, or confirm explicit product removal of that capability.
+2. **Transfer or explicitly close owned obligations:** trace every visual quality commitment and unresolved debt item owned by the departing SPEC—either transfer it to the successor SPEC with unbroken provenance and reopen triggers, or close it as obsolete with the concrete product cause recorded in `Meaningful Revisions` ([Current model, meaningful revisions and evidence archive](evidence-map.md#current-model-meaningful-revisions-and-evidence-archive)).
+3. **Remove orphaned UI from the active product:** delete dead navigation entries, stale internal links, orphaned controls and contradictory copy from the `Current Product UI` so the live interface never contradicts its active architecture.
 
 ## Design the understanding before the arrangement
 

@@ -19,7 +19,7 @@
 npx --yes ui-spec-studio@latest
 ```
 
-官方 npm 包 `ui-spec-studio` 已公开发布，并通过与 GitHub 正式发行包的完整性比对和真实安装测试。运行上述命令进入终端安装向导，选择 Codex、Claude Code、Cursor 或 OpenCode。默认安装到当前项目，**只下载轻量安装器及 Skill 本体，不克隆数 GB 的 GitHub 仓库**。
+官方 npm 包 `ui-spec-studio` 已公开发布，并通过与 GitHub 正式发行包的完整性比对和真实安装测试。运行上述命令进入终端安装向导，选择 Codex、Claude Code、Cursor、OpenCode 或 Antigravity。默认安装到当前项目，**只下载轻量安装器及 Skill 本体，不克隆数 GB 的 GitHub 仓库**。
 
 如果要给当前 Windows 用户全局安装 Codex，并安全迁移旧版 `skills add` 安装，请运行：
 
@@ -27,7 +27,7 @@ npx --yes ui-spec-studio@latest
 npx --yes ui-spec-studio@latest install --agent codex --global --migrate --lang zh
 ```
 
-`--migrate` 会备份旧安装并在卸载时恢复；没有旧版未托管目录时，不需要此参数。交互终端也可直接选择备份迁移。作为独立备用渠道，仍保留 [v1.21.0 固定版本的 GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.21.0)，但不要用 GitHub `releases/latest/download/*.tgz` 作为 `npx` 地址，以免命中旧缓存。
+`--migrate` 会备份旧安装并在卸载时恢复；没有旧版未托管目录时，不需要此参数。交互终端也可直接选择备份迁移。作为独立备用渠道，仍保留 [v1.22.0 固定版本的 GitHub Release](https://github.com/D1ChangGeng/UI-Spec-Studio/releases/tag/v1.22.0)，但不要用 GitHub `releases/latest/download/*.tgz` 作为 `npx` 地址，以免命中旧缓存。
 
 安装器采用分步终端向导，显示文件校验、宿主检测、安装与注册进展。检测到旧版 `skills add` 安装时，可选择**备份后升级**；不会直接覆盖原目录，卸载时可恢复旧安装。无人值守环境可以显式添加 `--migrate`；需要中文交互可添加 `--lang zh`。
 
@@ -40,6 +40,17 @@ npx --yes ui-spec-studio@latest install --agent codex --global --migrate --lang 
 ```
 
 审阅通过后，只需说 **「本轮通过，继续」**，Agent 就会沿已确认的方向推进下一项有价值的工作；使用 **「ui-spec: finish」**，则会将已确认的设计接入真实内容、功能或作品的发布环境。[安装与宿主选项](docs/INSTALL.md) · [多轮使用指南](docs/GUIDE.md)
+
+## 面向真实长期开发的可持续多轮迭代
+
+**v1.22** 在完整保留 `v1.21` 广泛发现、深度复用与设计品味校准的基础上，系统强化了跨会话、多工程师、长周期存量项目的演进闭环，且不增加工单状态机、固定配额或额外常规审批门槛：
+
+- **跨会话冷启动接续与防重复争论：** 重入时核对**完整产品目标**、**当前设计模型**与**实时产品 UI**，直接继承前提仍成立的已确认基础，并在增量完成与 SPEC 中途暂停时均留下可直接续跑的交接信息。
+- **多 SPEC 活视野治理与安全退场：** 通过描述性处置状态（`candidate`、`active`、`completed`、`superseded`、`consolidated`、`retired`）按依赖、锚点杠杆与并行工作树边界排序；合并、取代或退役旧界面前明确转交有效任务路径与未结义务并清理死入口。
+- **存量工程漂移协调与分阶段共享体系迁移：** 区分兼容重构、权威后端/权限契约变更、紧急 UI 热修与需求转向，在不丢弃已落地功能/无障碍修复的前提下补回视觉工艺与来源纪律；通过锚点切片验证、受控 W1–W3 共存桥接与按依赖比例回归（主切片、迁移缝隙、极值消费者）分波升级共享体系。
+- **`O(active product)` 记录收敛与四类债务防蒸发：** 将已关闭的历史探索收敛至因果 `Meaningful Revisions` 与冷链接 `Evidence Archive`，同时确保**视觉与工艺债**、**临时探针与迁移桥接债**、**接线与契约债**、**验证范围债**在收敛与范围重划中绝不静默消失。
+
+[v1.22 评审与内容完整性记录](docs/REVIEW-v1.22.0.md) · [v1.22.0 发布说明](docs/releases/v1.22.0.md)
 
 ## 广泛搜寻高品位资源，深化复用改造，校准设计品味
 
@@ -212,10 +223,10 @@ Agent 需要判断**用户应该理解什么、信息由哪里承担、怎样自
 
 ```bash
 # 固定版本安装
-npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-installer.tgz install --agent codex
+npx --yes https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.22.0/ui-spec-installer.tgz install --agent codex
 
 # 固定正式发布版本
-npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.21.0/ui-spec-1.21.0.zip --skill ui-spec -a codex
+npx skills add https://github.com/D1ChangGeng/UI-Spec-Studio/releases/download/v1.22.0/ui-spec-1.22.0.zip --skill ui-spec -a codex
 ```
 
 统一安装器也支持 Claude Code、Cursor 和 OpenCode（通过 `--agent`）；Codex 的原生四角色适配器由同一命令处理。核心参考以 Markdown 提供；可选记录工具使用 Python 3.10+ 标准库。[离线安装与更新](docs/INSTALL.md)。
